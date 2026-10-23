@@ -1,10 +1,10 @@
-// === Module 11664: StageSectionHeader ===
+// === Module 11684: StageSectionHeader ===
 
-// Module 11664 (StageSectionHeader)
+// Module 11684 (StageSectionHeader)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import _modDef7234 from "module_7234" /* 7234 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import _modDef7247 from "module_7247" /* 7247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
     obj2.transform = items;
     return obj2;
   };
-  let obj2 = collapsed(5038);
-  fn.__closure = { withTiming: collapsed(5192).withTiming, collapsed };
+  let obj2 = collapsed(5050);
+  fn.__closure = { withTiming: collapsed(5204).withTiming, collapsed };
   fn.__workletHash = 8513320305499;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
         let tmp8 = cResult[5];
       }
       if (cResult[6] !== tmp4.collapseIcon) {
-        const obj4 = { source: _modDef7234, style: tmp4.collapseIcon };
+        const obj4 = { source: _modDef7247, style: tmp4.collapseIcon };
         const tmp16 = closure_6(collapsed(1202).Icon, obj4);
         cResult[6] = tmp4.collapseIcon;
         cResult[7] = tmp16;
@@ -132,12 +132,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj10 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   const items1 = [label, " \u2014 ", count];
   obj10.children = items1;
-  const tmp7 = closure_5(collapsed(5220).Text, obj10);
+  const tmp7 = closure_5(collapsed(5232).Text, obj10);
   cResult[0] = count;
   cResult[1] = label;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj3 = { withTiming: collapsed(5192).withTiming, collapsed };
+  const obj3 = { withTiming: collapsed(5204).withTiming, collapsed };
 }) : (function StageSectionHeader(collapsed) {
   collapsed = collapsed.collapsed;
   const children = collapsed.children;
@@ -158,9 +158,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
       return obj1;
     }
   }
-  let obj = collapsed(5038);
+  let obj = collapsed(5050);
   const tmp2 = collapsed;
-  T.__closure = { withTiming: collapsed(5192).withTiming, collapsed };
+  T.__closure = { withTiming: collapsed(5204).withTiming, collapsed };
   T.__workletHash = 13209446315864;
   T.__initData = __initData2;
   const obj3 = { style: tmp.section, children: null };
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj5 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   let items = [label, " \u2014 ", count];
   obj5.children = items;
-  const items1 = [closure_5(collapsed(5220).Text, obj5), , ];
+  const items1 = [closure_5(collapsed(5232).Text, obj5), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj6 = { style: tmp.children, children };
@@ -178,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   items1[1] = tmp5Result;
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
-  let obj2 = { withTiming: collapsed(5192).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7234, style: tmp.collapseIcon });
+  let obj2 = { withTiming: collapsed(5204).withTiming, collapsed };
+  obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7247, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

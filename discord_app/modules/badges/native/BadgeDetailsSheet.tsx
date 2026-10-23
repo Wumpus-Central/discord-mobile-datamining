@@ -1,26 +1,26 @@
-// === Module 11102: BadgeDetailsSheet ===
+// === Module 11125: BadgeDetailsSheet ===
 
-// Module 11102 (BadgeDetailsSheet)
+// Module 11125 (BadgeDetailsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8666 */;
-import BadgeUtils from "BadgeUtils" /* 11098 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11101 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11117 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8684 */;
+import BadgeUtils from "BadgeUtils" /* 11121 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11124 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8679 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const ActionSheetConstants = fn(5252);
+const ActionSheetConstants = fn(5264);
 ({ ACTION_SHEET_MAX_WIDTH: c10, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_11 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);

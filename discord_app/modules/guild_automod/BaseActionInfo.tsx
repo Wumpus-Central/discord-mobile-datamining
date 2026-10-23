@@ -1,14 +1,14 @@
-// === Module 18936: BaseActionInfo ===
+// === Module 18980: BaseActionInfo ===
 
-// Module 18936 (BaseActionInfo)
+// Module 18980 (BaseActionInfo)
 import util from "util" /* 1128 */;
-import useChannelName from "useChannelName" /* 5590 */;
+import useChannelName from "useChannelName" /* 5602 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Constants = fn(12750);
+const Constants = fn(12769);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: metroRequire } = Constants);
 const getFriendlyDurationString = fn(4883).getFriendlyDurationString;
 const size = fn(2);

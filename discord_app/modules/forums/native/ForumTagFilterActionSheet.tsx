@@ -1,16 +1,16 @@
-// === Module 13648: ForumTagFilterActionSheet ===
+// === Module 13671: ForumTagFilterActionSheet ===
 
-// Module 13648 (ForumTagFilterActionSheet)
+// Module 13671 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import EmojiDefault from "Emoji" /* 7212 */;
-import Tracking from "Tracking" /* 8275 */;
+import EmojiDefault from "Emoji" /* 7225 */;
+import Tracking from "Tracking" /* 8287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6710 */;
+import EmojiStore from "EmojiStore" /* 6723 */;
 
 require = fn;
-const ForumChannelStore = fn(13033);
+const ForumChannelStore = fn(13056);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);

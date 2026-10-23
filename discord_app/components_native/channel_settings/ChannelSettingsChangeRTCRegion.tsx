@@ -1,17 +1,17 @@
-// === Module 18228: ChannelSettingsChangeRTCRegion ===
+// === Module 18272: ChannelSettingsChangeRTCRegion ===
 
-// Module 18228 (ChannelSettingsChangeRTCRegion)
+// Module 18272 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import TableRadioRow from "TableRadioRow" /* 6969 */;
-import TableRadioGroup from "TableRadioGroup" /* 6970 */;
-import Form from "Form" /* 8926 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10070 */;
+import TableRadioRow from "TableRadioRow" /* 6982 */;
+import TableRadioGroup from "TableRadioGroup" /* 6983 */;
+import Form from "Form" /* 8949 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10092 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import RegionStore from "RegionStore" /* 18178 */;
+import RegionStore from "RegionStore" /* 18222 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -79,7 +79,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(10070).updateChannel({ rtcRegion: tmp });
+  self(10092).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });
@@ -104,7 +104,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(5023).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(5035).ThemeContext;
 const ReactCompilerGating = fn(558);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);

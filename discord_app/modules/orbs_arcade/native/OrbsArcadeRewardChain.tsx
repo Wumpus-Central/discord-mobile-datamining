@@ -1,14 +1,14 @@
-// === Module 16340: OrbsArcadeRewardChain ===
+// === Module 16390: OrbsArcadeRewardChain ===
 
-// Module 16340 (OrbsArcadeRewardChain)
+// Module 16390 (OrbsArcadeRewardChain)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16317 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16322 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16326 */;
-import useOrbsArcadeRewardAccentColorDefault from "useOrbsArcadeRewardAccentColor" /* 16331 */;
-import OrbsArcadeRewardChainCellDefault from "OrbsArcadeRewardChainCell" /* 16341 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16367 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16372 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16376 */;
+import useOrbsArcadeRewardAccentColorDefault from "useOrbsArcadeRewardAccentColor" /* 16381 */;
+import OrbsArcadeRewardChainCellDefault from "OrbsArcadeRewardChainCell" /* 16391 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
                     if (cResult[21] === id) {
                       let tmp31 = cResult[22];
                     }
-                    const orbsArcadeRewardChainTimeline = gameState(16341).useOrbsArcadeRewardChainTimeline(tmp31);
+                    const orbsArcadeRewardChainTimeline = gameState(16391).useOrbsArcadeRewardChainTimeline(tmp31);
                     const timeline = orbsArcadeRewardChainTimeline.timeline;
                     const getGrantAtMs = orbsArcadeRewardChainTimeline.getGrantAtMs;
                     const getFocusRingAtMs = orbsArcadeRewardChainTimeline.getFocusRingAtMs;
@@ -259,11 +259,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
                       cResult[50] = fn2;
                       tmp46 = fn2;
                     }
-                    const tmpResult = gameState(16341);
+                    const tmpResult = gameState(16391);
                     let tmp38 = null;
                     if (!tmpResult2.isThemeLight(theme)) {
                       let obj4 = { style: timeline.absoluteFill, start, end, colors: tmp35 };
-                      tmp38 = getFocusRingAtMs(tmp20(5244), obj4);
+                      tmp38 = getFocusRingAtMs(tmp20(5256), obj4);
                     }
                     cResult[27] = tmp35;
                     cResult[28] = theme;
@@ -387,9 +387,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   if (findLastResult == null) {
     first = memo[0];
   }
-  const tmp6Result = gameState(16331)(first);
+  const tmp6Result = gameState(16381)(first);
   closure_6 = tmp6Result;
-  let tmp6 = gameState(16331);
+  let tmp6 = gameState(16381);
   let obj3 = { grantedRewardIds: null, focusedRewardId: null, grantAnimatedOnOpenRewardIds: null };
   const found = memo.filter((item, index) => dependencyMap[index] !== OrbsArcadeTypes.OrbsArcadeRewardStatus.LOCKED);
   const mapped = found.map((id) => id.id);
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   }
   obj3.focusedRewardId = id;
   obj3.grantAnimatedOnOpenRewardIds = game.grantAnimatedOnOpenRewardIds;
-  const orbsArcadeRewardChainTimeline = game(16341).useOrbsArcadeRewardChainTimeline(obj3);
+  const orbsArcadeRewardChainTimeline = game(16391).useOrbsArcadeRewardChainTimeline(obj3);
   ({ timeline: c7, getGrantAtMs: c8, getFocusRingAtMs: c9 } = orbsArcadeRewardChainTimeline);
   let items2 = [tmp6Result];
   let obj4 = { style: tmp.chain, children: null };
@@ -415,11 +415,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   }, items2);
   const tmp12 = c7;
   const tmp13 = c5;
-  const tmp2Result = game(16341);
+  const tmp2Result = game(16391);
   let tmp14 = null;
   if (!tmp2Result2.isThemeLight(obj.useThemeContext().theme)) {
     let obj5 = { style: absoluteFill.absoluteFill, start, end, colors: memo1 };
-    tmp14 = closure_6(tmp5(5244), obj5);
+    tmp14 = closure_6(tmp5(5256), obj5);
   }
   let items3 = [
     tmp14,

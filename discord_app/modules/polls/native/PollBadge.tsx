@@ -1,12 +1,12 @@
-// === Module 18035: PollBadge ===
+// === Module 18079: PollBadge ===
 
-// Module 18035 (PollBadge)
+// Module 18079 (PollBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import _modDef18036 from "module_18036" /* 18036 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import _modDef18080 from "module_18080" /* 18080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollBadg
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18036 };
+      const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18080 };
       const tmp10 = React4(native.Icon, obj2);
       cResult[3] = tmp10;
       let tmp7 = tmp10;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollBadg
   const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18036 }), ];
+  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef18080 }), ];
   const obj3 = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RgIi2B);

@@ -1,18 +1,18 @@
-// === Module 13381: GuildPowerupsCardFooter ===
+// === Module 13404: GuildPowerupsCardFooter ===
 
-// Module 13381 (GuildPowerupsCardFooter)
+// Module 13404 (GuildPowerupsCardFooter)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6997 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7060 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7252 */;
-import BoostGemIcon from "BoostGemIcon" /* 9785 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13357 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 13382 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7010 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7073 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7265 */;
+import BoostGemIcon from "BoostGemIcon" /* 9807 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13380 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 13405 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

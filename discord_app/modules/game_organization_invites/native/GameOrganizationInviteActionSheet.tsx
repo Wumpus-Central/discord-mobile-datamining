@@ -1,18 +1,18 @@
-// === Module 15159: GameOrganizationInviteActionSheet ===
+// === Module 15184: GameOrganizationInviteActionSheet ===
 
-// Module 15159 (GameOrganizationInviteActionSheet)
+// Module 15184 (GameOrganizationInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9028 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9036 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9058 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 15160 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9051 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9059 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9081 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 15185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9041 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9064 */;
 
 require = fn;
 function isInvitableUserRow(type) {
@@ -32,7 +32,7 @@ function showInviteErrorToast() {
   ToastActionCreatorsDefault.open("GAME_ORGANIZATION_INVITE_SEND_ERROR", obj2);
 }
 const View = fn(17).View;
-let closure_6 = fn(9107).useInstantInviteSendStates;
+let closure_6 = fn(9130).useInstantInviteSendStates;
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
     const intl = formatToPlainString(1128).intl;
     let centeredText = combined;
     const stringResult = intl.string(combined(2406).nVMqjA);
-    const ActionSheet = formatToPlainString(7283).ActionSheet;
+    const ActionSheet = formatToPlainString(7296).ActionSheet;
     const _Symbol = Symbol;
     if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
       class F {
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
         }
       }
     }
-    const Stack = formatToPlainString(5963).Stack;
+    const Stack = formatToPlainString(5975).Stack;
     const PX_16 = centeredText(587).space.PX_16;
     const header = str.header;
     let obj2 = { spacing: centeredText(587).space.PX_4, children: null };
@@ -307,14 +307,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
     const intl2 = formatToPlainString(1128).intl;
     const obj6 = { noun: stringResult };
     obj3.children = intl2.formatToPlainString(centeredText(2406).EnTIIr, obj6);
-    const items3 = [closure_10(formatToPlainString(5220).Heading, obj3), ];
+    const items3 = [closure_10(formatToPlainString(5232).Heading, obj3), ];
     const obj7 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
     const intl3 = formatToPlainString(1128).intl;
     const obj8 = { noun: stringResult };
     obj7.children = intl3.formatToPlainString(centeredText(2406).BBk7Qw, obj8);
-    items3[1] = closure_10(formatToPlainString(5220).Text, obj7);
+    items3[1] = closure_10(formatToPlainString(5232).Text, obj7);
     obj2.children = items3;
-    const tmp25 = closure_11(formatToPlainString(5963).Stack, obj2);
+    const tmp25 = closure_11(formatToPlainString(5975).Stack, obj2);
     const intl4 = formatToPlainString(1128).intl;
     formatToPlainString = intl4.formatToPlainString;
     const obj9 = { noun: stringResult };
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
     cResult[27] = true;
     cResult[28] = true;
     cResult[29] = tmp21;
-    const SearchBar = formatToPlainString(7130).SearchBar;
+    const SearchBar = formatToPlainString(7143).SearchBar;
   }
   class U {
     constructor(arg0) {
@@ -450,25 +450,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
   const intl3 = guildId(1128).intl;
   obj6.children = intl3.formatToPlainString(combined(2406).EnTIIr, { noun: stringResult });
-  const items4 = [closure_10(guildId(5220).Heading, obj6), ];
+  const items4 = [closure_10(guildId(5232).Heading, obj6), ];
   const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl4 = guildId(1128).intl;
   obj7.children = intl4.formatToPlainString(combined(2406).BBk7Qw, { noun: stringResult });
-  items4[1] = closure_10(guildId(5220).Text, obj7);
+  items4[1] = closure_10(guildId(5232).Text, obj7);
   obj5.children = items4;
-  const items5 = [closure_11(guildId(5963).Stack, obj5), ];
+  const items5 = [closure_11(guildId(5975).Stack, obj5), ];
   const obj8 = { size: "md", round: true, onChange: callback, placeholder: null };
   const intl5 = guildId(1128).intl;
   obj8.placeholder = intl5.formatToPlainString(combined(2406).cRK6SQ, { noun: stringResult });
-  items5[1] = closure_10(guildId(7130).SearchBar, obj8);
+  items5[1] = closure_10(guildId(7143).SearchBar, obj8);
   obj4.children = items5;
-  obj3.header = closure_11(guildId(5963).Stack, obj4);
+  obj3.header = closure_11(guildId(5975).Stack, obj4);
   if (tmp7[0]) {
     let tmp14Result = closure_10(closure_15, {});
   } else {
     const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp14Result = closure_10(combined(15163), obj9);
+    tmp14Result = closure_10(combined(15188), obj9);
   }
   obj3.children = tmp14Result;
-  return closure_10(guildId(7283).ActionSheet, obj3);
+  return closure_10(guildId(7296).ActionSheet, obj3);
 });

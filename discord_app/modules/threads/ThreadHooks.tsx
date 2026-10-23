@@ -1,25 +1,25 @@
-// === Module 7354: ThreadHooks ===
+// === Module 7367: ThreadHooks ===
 
-// Module 7354 (ThreadHooks)
+// Module 7367 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6638 */;
-import AgeGateUtils from "AgeGateUtils" /* 6647 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6801 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7360 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7362 */;
-import useIsRemoteDefault from "useIsRemote" /* 7363 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7364 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6651 */;
+import AgeGateUtils from "AgeGateUtils" /* 6660 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6814 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7373 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7375 */;
+import useIsRemoteDefault from "useIsRemote" /* 7376 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5175 */;
+import createExperiment from "createExperiment" /* 5187 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6755 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7355 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6768 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7368 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {

@@ -1,15 +1,15 @@
-// === Module 7330: ConjureUtils ===
+// === Module 7343: ConjureUtils ===
 
-// Module 7330 (ConjureUtils)
+// Module 7343 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6759 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6793 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7331 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6772 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6806 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7344 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
 
 require = fn;
 function conjureChannelAppId(channel) {

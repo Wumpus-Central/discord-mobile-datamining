@@ -1,6 +1,6 @@
-// === Module 8278: ThreadMembersStore ===
+// === Module 8290: ThreadMembersStore ===
 
-// Module 8278 (ThreadMembersStore)
+// Module 8290 (ThreadMembersStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

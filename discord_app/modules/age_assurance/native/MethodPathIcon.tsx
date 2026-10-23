@@ -1,8 +1,8 @@
-// === Module 7946: MethodPathIcon ===
+// === Module 7959: MethodPathIcon ===
 
-// Module 7946 (MethodPathIcon)
+// Module 7959 (MethodPathIcon)
 import nativeDefault from "native" /* 587 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MethodPa
   let paths = icon.icon;
   const tmp3 = closure_5();
   const obj = token(576);
-  token = token(5238).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+  token = token(5250).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   if (cResult[0] === paths.paths) {
     if (cResult[1] === token) {
       if (cResult[5] !== cResult[2]) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MethodPa
   cResult[0] = paths;
   cResult[1] = token;
   cResult[2] = mapped;
-  const obj2 = token(5238);
+  const obj2 = token(5250);
 }) : (function MethodPathIcon(icon) {
   _require = undefined;
   const tmp = closure_5();

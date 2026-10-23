@@ -1,6 +1,6 @@
-// === Module 11003: fromServerGameOrganization ===
+// === Module 11026: fromServerGameOrganization ===
 
-// Module 11003 (fromServerGameOrganization)
+// Module 11026 (fromServerGameOrganization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/fromServerGameOrganization.tsx");
@@ -10,4 +10,7 @@ export const fromServerGameOrganization = function fromServerGameOrganization(ga
 };
 export const fromServerGameOrganizationApplication = function fromServerGameOrganizationApplication(application) {
   return { id: application.id, name: application.name, iconUrl: application.icon_url };
+};
+export const fromServerGameOrganizationGuild = function fromServerGameOrganizationGuild(guild) {
+  return { id: guild.id, name: guild.name, icon: guild.icon, memberCount: guild.approximate_member_count, presenceCount: guild.approximate_presence_count };
 };

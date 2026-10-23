@@ -1,13 +1,13 @@
-// === Module 18520: useDrawerToggle ===
+// === Module 18564: useDrawerToggle ===
 
-// Module 18520 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18521 */;
+// Module 18564 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18565 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
 const __initData = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
 const __initData2 = { code: "function useDrawerToggleTsx2(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
 const ReactCompilerGating = fn(558);

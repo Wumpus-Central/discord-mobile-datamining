@@ -1,11 +1,11 @@
-// === Module 16989: OrbOnboardingPill ===
+// === Module 17033: OrbOnboardingPill ===
 
-// Module 16989 (OrbOnboardingPill)
+// Module 17033 (OrbOnboardingPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import OrbsIcon from "OrbsIcon" /* 9405 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import OrbsIcon from "OrbsIcon" /* 9428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

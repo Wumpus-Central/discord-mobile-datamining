@@ -1,14 +1,14 @@
-// === Module 13405: openGuildPowerupsMultiPerkBottomSheet ===
+// === Module 13428: openGuildPowerupsMultiPerkBottomSheet ===
 
-// Module 13405 (openGuildPowerupsMultiPerkBottomSheet)
+// Module 13428 (openGuildPowerupsMultiPerkBottomSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 13374 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 13397 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx");
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13406, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
+  obj.openLazy(asyncRequireImpl(13429, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
 };

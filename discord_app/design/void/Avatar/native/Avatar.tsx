@@ -1,18 +1,18 @@
-// === Module 15369: Avatar ===
+// === Module 15390: Avatar ===
 
-// Module 15369 (Avatar)
+// Module 15390 (Avatar)
 import nativeDefault from "native" /* 587 */;
-import IconDefault from "Icon" /* 5232 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8626 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9381 */;
-import ClipView from "ClipView" /* 9382 */;
-import _modDef11404 from "module_11404" /* 11404 */;
-import _modDef11405 from "module_11405" /* 11405 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14261 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15358 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15359 */;
-import Status from "Status" /* 15360 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 15370 */;
+import IconDefault from "Icon" /* 5244 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8644 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9404 */;
+import ClipView from "ClipView" /* 9405 */;
+import _modDef11424 from "module_11424" /* 11424 */;
+import _modDef11425 from "module_11425" /* 11425 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14285 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15379 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15380 */;
+import Status from "Status" /* 15381 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 15391 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
@@ -149,11 +149,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("design/void/Avatar/native/Avatar.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar(channel) {
-  const cResult = channel(speakingColor[13]).c(80);
+  const cResult = channel(avatarDecoration[13]).c(79);
   channel = channel.channel;
   ({ streaming, isMobileOnline, isVROnline, status } = channel);
-  ({ size, animate, speaking, playingSoundboard, speakingColor } = channel);
-  const avatarDecoration = channel.avatarDecoration;
+  ({ size, animate, speaking, playingSoundboard, avatarDecoration } = channel);
   const mute = channel.mute;
   const deaf = channel.deaf;
   const statusStyle = channel.statusStyle;
@@ -163,19 +162,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const guildId = channel.guildId;
   const disablePlaceholder = channel.disablePlaceholder;
   ({ needsOffscreenAlphaCompositing, accessible, accessibilityLabel, typing, statusSizeOverride } = channel);
-  streaming = tmp4;
+  getAvatarStatusCutout = tmp4;
   isMobileOnline = tmp5;
   isVROnline = tmp6;
   if (undefined === size) {
     size = tmp(tmp2[7]).AvatarSizes.NORMAL;
   }
   animate = tmp7;
-  closure_18 = tmp8;
-  closure_19 = tmp9;
-  closure_20 = tmp10;
+  closure_17 = tmp8;
+  closure_18 = tmp9;
+  closure_19 = tmp10;
   typing = tmp12;
-  const tmp13 = guildId(size);
-  closure_22 = tmp13;
+  const tmp13 = disablePlaceholder(size);
+  closure_21 = tmp13;
   if (cResult[0] === cutout) {
     if (cResult[1] === autoStatusCutout) {
       if (cResult[2] === tmp5) {
@@ -236,71 +235,69 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                       if (cResult[48] === tmp9) {
                                                                         if (cResult[49] === size) {
                                                                           if (cResult[50] === tmp8) {
-                                                                            if (cResult[51] === speakingColor) {
-                                                                              if (cResult[52] === tmp13.soundboard) {
-                                                                                if (cResult[53] === tmp13.speaking) {
-                                                                                  if (cResult[54] === tmp13.stageSpeaking) {
-                                                                                    let tmp24 = cResult[55];
-                                                                                  }
-                                                                                  const tmp25 = tmp(tmp2[7]).styles[size];
-                                                                                  if (cResult[56] === style) {
-                                                                                    if (cResult[57] === tmp13.container) {
-                                                                                      if (cResult[58] === tmp25) {
-                                                                                        let tmp26 = cResult[59];
-                                                                                      }
-                                                                                      if (cResult[60] !== tmp24) {
-                                                                                        const tmp24Result = tmp24();
-                                                                                        cResult[60] = tmp24;
-                                                                                        cResult[61] = tmp24Result;
-                                                                                        let tmp27 = tmp24Result;
-                                                                                      } else {
-                                                                                        tmp27 = cResult[61];
-                                                                                      }
-                                                                                      if (cResult[62] !== tmp20) {
-                                                                                        const tmp20Result = tmp20();
-                                                                                        cResult[62] = tmp20;
-                                                                                        cResult[63] = tmp20Result;
-                                                                                        let tmp29 = tmp20Result;
-                                                                                      } else {
-                                                                                        tmp29 = cResult[63];
-                                                                                      }
-                                                                                      if (cResult[64] !== tmp21) {
-                                                                                        const tmp21Result = tmp21();
-                                                                                        cResult[64] = tmp21;
-                                                                                        cResult[65] = tmp21Result;
-                                                                                        let tmp31 = tmp21Result;
-                                                                                      } else {
-                                                                                        tmp31 = cResult[65];
-                                                                                      }
-                                                                                      if (cResult[66] !== tmp22) {
-                                                                                        const tmp22Result = tmp22();
-                                                                                        cResult[66] = tmp22;
-                                                                                        cResult[67] = tmp22Result;
-                                                                                        let tmp33 = tmp22Result;
-                                                                                      } else {
-                                                                                        tmp33 = cResult[67];
-                                                                                      }
-                                                                                      if (cResult[68] !== tmp23) {
-                                                                                        const tmp23Result = tmp23();
-                                                                                        cResult[68] = tmp23;
-                                                                                        cResult[69] = tmp23Result;
-                                                                                        let tmp35 = tmp23Result;
-                                                                                      } else {
-                                                                                        tmp35 = cResult[69];
-                                                                                      }
-                                                                                      if (cResult[70] === accessibilityLabel) {
-                                                                                        if (cResult[71] === accessible) {
-                                                                                          if (cResult[72] === tmp11) {
-                                                                                            if (cResult[73] === tmp26) {
-                                                                                              if (cResult[74] === tmp27) {
-                                                                                                if (cResult[75] === tmp29) {
-                                                                                                  if (cResult[76] === tmp31) {
-                                                                                                    if (cResult[77] === tmp33) {
-                                                                                                      if (cResult[78] === tmp35) {
-                                                                                                        let tmp37 = cResult[79];
-                                                                                                      }
-                                                                                                      return tmp37;
+                                                                            if (cResult[51] === tmp13.soundboard) {
+                                                                              if (cResult[52] === tmp13.speaking) {
+                                                                                if (cResult[53] === tmp13.stageSpeaking) {
+                                                                                  let tmp24 = cResult[54];
+                                                                                }
+                                                                                const tmp25 = tmp(tmp2[7]).styles[size];
+                                                                                if (cResult[55] === style) {
+                                                                                  if (cResult[56] === tmp13.container) {
+                                                                                    if (cResult[57] === tmp25) {
+                                                                                      let tmp26 = cResult[58];
+                                                                                    }
+                                                                                    if (cResult[59] !== tmp24) {
+                                                                                      const tmp24Result = tmp24();
+                                                                                      cResult[59] = tmp24;
+                                                                                      cResult[60] = tmp24Result;
+                                                                                      let tmp27 = tmp24Result;
+                                                                                    } else {
+                                                                                      tmp27 = cResult[60];
+                                                                                    }
+                                                                                    if (cResult[61] !== tmp20) {
+                                                                                      const tmp20Result = tmp20();
+                                                                                      cResult[61] = tmp20;
+                                                                                      cResult[62] = tmp20Result;
+                                                                                      let tmp29 = tmp20Result;
+                                                                                    } else {
+                                                                                      tmp29 = cResult[62];
+                                                                                    }
+                                                                                    if (cResult[63] !== tmp21) {
+                                                                                      const tmp21Result = tmp21();
+                                                                                      cResult[63] = tmp21;
+                                                                                      cResult[64] = tmp21Result;
+                                                                                      let tmp31 = tmp21Result;
+                                                                                    } else {
+                                                                                      tmp31 = cResult[64];
+                                                                                    }
+                                                                                    if (cResult[65] !== tmp22) {
+                                                                                      const tmp22Result = tmp22();
+                                                                                      cResult[65] = tmp22;
+                                                                                      cResult[66] = tmp22Result;
+                                                                                      let tmp33 = tmp22Result;
+                                                                                    } else {
+                                                                                      tmp33 = cResult[66];
+                                                                                    }
+                                                                                    if (cResult[67] !== tmp23) {
+                                                                                      const tmp23Result = tmp23();
+                                                                                      cResult[67] = tmp23;
+                                                                                      cResult[68] = tmp23Result;
+                                                                                      let tmp35 = tmp23Result;
+                                                                                    } else {
+                                                                                      tmp35 = cResult[68];
+                                                                                    }
+                                                                                    if (cResult[69] === accessibilityLabel) {
+                                                                                      if (cResult[70] === accessible) {
+                                                                                        if (cResult[71] === tmp11) {
+                                                                                          if (cResult[72] === tmp26) {
+                                                                                            if (cResult[73] === tmp27) {
+                                                                                              if (cResult[74] === tmp29) {
+                                                                                                if (cResult[75] === tmp31) {
+                                                                                                  if (cResult[76] === tmp33) {
+                                                                                                    if (cResult[77] === tmp35) {
+                                                                                                      let tmp37 = cResult[78];
                                                                                                     }
+                                                                                                    return tmp37;
                                                                                                   }
                                                                                                 }
                                                                                               }
@@ -308,30 +305,30 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                           }
                                                                                         }
                                                                                       }
-                                                                                      let obj2 = { style: tmp26, needsOffscreenAlphaCompositing: tmp11, accessible, accessibilityLabel, children: null };
-                                                                                      let items = [tmp27, tmp29, tmp31, tmp33, tmp35];
-                                                                                      obj2.children = items;
-                                                                                      const tmp40 = user(mute, obj2);
-                                                                                      cResult[70] = accessibilityLabel;
-                                                                                      cResult[71] = accessible;
-                                                                                      cResult[72] = tmp11;
-                                                                                      cResult[73] = tmp26;
-                                                                                      cResult[74] = tmp27;
-                                                                                      cResult[75] = tmp29;
-                                                                                      cResult[76] = tmp31;
-                                                                                      cResult[77] = tmp33;
-                                                                                      cResult[78] = tmp35;
-                                                                                      cResult[79] = tmp40;
-                                                                                      tmp37 = tmp40;
                                                                                     }
+                                                                                    let obj2 = { style: tmp26, needsOffscreenAlphaCompositing: tmp11, accessible, accessibilityLabel, children: null };
+                                                                                    let items = [tmp27, tmp29, tmp31, tmp33, tmp35];
+                                                                                    obj2.children = items;
+                                                                                    const tmp40 = guildId(deaf, obj2);
+                                                                                    cResult[69] = accessibilityLabel;
+                                                                                    cResult[70] = accessible;
+                                                                                    cResult[71] = tmp11;
+                                                                                    cResult[72] = tmp26;
+                                                                                    cResult[73] = tmp27;
+                                                                                    cResult[74] = tmp29;
+                                                                                    cResult[75] = tmp31;
+                                                                                    cResult[76] = tmp33;
+                                                                                    cResult[77] = tmp35;
+                                                                                    cResult[78] = tmp40;
+                                                                                    tmp37 = tmp40;
                                                                                   }
-                                                                                  let items1 = [tmp25, tmp13.container, style];
-                                                                                  cResult[56] = style;
-                                                                                  cResult[57] = tmp13.container;
-                                                                                  cResult[58] = tmp25;
-                                                                                  cResult[59] = items1;
-                                                                                  tmp26 = items1;
                                                                                 }
+                                                                                let items1 = [tmp25, tmp13.container, style];
+                                                                                cResult[55] = style;
+                                                                                cResult[56] = tmp13.container;
+                                                                                cResult[57] = tmp25;
+                                                                                cResult[58] = items1;
+                                                                                tmp26 = items1;
                                                                               }
                                                                             }
                                                                           }
@@ -339,35 +336,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                       }
                                                                     }
                                                                     function renderSpeakingIndicator() {
-                                                                      if (!closure_18) {
-                                                                        if (!closure_19) {
+                                                                      if (!closure_17) {
+                                                                        if (!closure_18) {
                                                                           return null;
                                                                         }
                                                                       }
                                                                       const sum = CutoutableAvatarImage.AVATAR_SIZE_MAP[size] + 4;
-                                                                      if (closure_20) {
-                                                                        const obj = { color: speakingColor, style: null };
-                                                                        const items = [closure_22.stageSpeaking, ];
+                                                                      if (closure_19) {
+                                                                        const obj2 = { style: null };
+                                                                        const items = [closure_21.stageSpeaking, ];
                                                                         size = { width: sum, height: sum, borderRadius: sum / 2 };
                                                                         items[1] = size;
-                                                                        obj.style = items;
-                                                                        let tmp5Result = closure_2_8(SpeakerPulseDefault, obj);
+                                                                        obj2.style = items;
+                                                                        let tmp5Result = closure_2_8(SpeakerPulseDefault, obj2);
                                                                       } else {
-                                                                        const items1 = [closure_19 ? closure_22.soundboard : closure_22.speaking, , ];
+                                                                        const obj = { style: null };
+                                                                        const items1 = [closure_18 ? closure_21.soundboard : closure_21.speaking, ];
                                                                         const size1 = { width: sum, height: sum, borderRadius: sum / 2 };
                                                                         items1[1] = size1;
-                                                                        let tmp11 = null;
-                                                                        if (null != speakingColor) {
-                                                                          tmp11 = null;
-                                                                          if (!tmp7) {
-                                                                            const obj2 = { borderColor: tmp9 };
-                                                                            tmp11 = obj2;
-                                                                          }
-                                                                        }
-                                                                        const obj3 = { style: null };
-                                                                        items1[2] = tmp11;
-                                                                        obj3.style = items1;
-                                                                        tmp5Result = closure_2_8(View, obj3);
+                                                                        obj.style = items1;
+                                                                        tmp5Result = closure_2_8(View, obj);
                                                                       }
                                                                       return tmp5Result;
                                                                     }
@@ -375,11 +363,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                     cResult[48] = tmp9;
                                                                     cResult[49] = size;
                                                                     cResult[50] = tmp8;
-                                                                    cResult[51] = speakingColor;
-                                                                    cResult[52] = tmp13.soundboard;
-                                                                    cResult[53] = tmp13.speaking;
-                                                                    cResult[54] = tmp13.stageSpeaking;
-                                                                    cResult[55] = renderSpeakingIndicator;
+                                                                    cResult[51] = tmp13.soundboard;
+                                                                    cResult[52] = tmp13.speaking;
+                                                                    cResult[53] = tmp13.stageSpeaking;
+                                                                    cResult[54] = renderSpeakingIndicator;
                                                                     tmp24 = renderSpeakingIndicator;
                                                                   }
                                                                 }
@@ -388,17 +375,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                 if (deaf) {
                                                                   const obj2 = { style: null, children: null };
                                                                   const items = [, ];
-                                                                  ({ status: arr2[0], voiceStatus: arr2[1] } = closure_22);
+                                                                  ({ status: arr2[0], voiceStatus: arr2[1] } = closure_21);
                                                                   obj2.style = items;
-                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11404, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11424, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj2.children = closure_2_8(IconDefault, obj3);
                                                                   let tmp2 = closure_2_8(View, obj2);
                                                                 } else if (mute) {
                                                                   const obj = { style: null, children: null };
                                                                   const items1 = [, ];
-                                                                  ({ status: arr[0], voiceStatus: arr[1] } = closure_22);
+                                                                  ({ status: arr[0], voiceStatus: arr[1] } = closure_21);
                                                                   obj.style = items1;
-                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11405, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11425, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj.children = closure_2_8(IconDefault, obj4);
                                                                   tmp2 = closure_2_8(View, obj);
                                                                 }
@@ -430,7 +417,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   let merged1 = null;
                                                   if (null != tmp3) {
                                                     const obj = { size: tmp3, isMobileOnline, isVROnline, status, streaming, style: null };
-                                                    const items = [closure_22.status, statusStyle];
+                                                    const items = [closure_21.status, statusStyle];
                                                     obj.style = items;
                                                     merged1 = obj;
                                                   }
@@ -478,7 +465,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                         const tmp6 = CutoutableAvatarDecorationDefault;
                                         obj.size = avatar_decorations_AvatarDecorationUtils.getDecorationSizeForAvatarSize(size);
                                         obj.avatarDecoration = avatarDecoration;
-                                        obj.decorationStyle = closure_22.decoration;
+                                        obj.decorationStyle = closure_21.decoration;
                                         obj.animate = animate;
                                         obj.cutout = decorationCutout;
                                         tmp2 = closure_2_8(tmp6, obj, avatarDecoration.asset);
@@ -570,8 +557,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[8] = cutout;
     tmp14 = cutout;
   } else {
-    let obj4 = { avatarSize: size, userStatus: status, isMobileOnline: tmp5, isVROnline: tmp6, padding: true === autoStatusCutout ? statusStyle : autoStatusCutout.padding, typing: tmp12, statusSizeOverride };
-    statusSizeOverride(obj4);
+    let obj4 = { avatarSize: size, userStatus: status, isMobileOnline: tmp5, isVROnline: tmp6, padding: true === autoStatusCutout ? avatarStyle : autoStatusCutout.padding, typing: tmp12, statusSizeOverride };
+    getAvatarStatusCutout(obj4);
   }
 }) : (function Avatar(isMobileOnline) {
   ({ channel, streaming } = isMobileOnline);
@@ -603,7 +590,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (flag5 === undefined) {
     flag5 = false;
   }
-  ({ speakingColor, avatarDecoration, cutout } = isMobileOnline);
+  ({ avatarDecoration, cutout } = isMobileOnline);
   const autoStatusCutout = isMobileOnline.autoStatusCutout;
   ({ isStageCall, mute, deaf, statusStyle, avatarStyle, style } = isMobileOnline);
   if (isStageCall === undefined) {
@@ -646,22 +633,22 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null == user) {
           if (null == channel) {
             items2[1] = null;
-            let tmp36 = null;
+            let tmp34 = null;
             if (null != avatarDecoration) {
               const obj3 = { size: null, avatarDecoration: null, decorationStyle: null, animate: null, cutout: null };
-              const tmp39 = flag2(tmp7[14]);
+              const tmp37 = flag2(tmp7[14]);
               obj3.size = StatusWithTyping(tmp7[11]).getDecorationSizeForAvatarSize(NORMAL);
               obj3.avatarDecoration = avatarDecoration;
               obj3.decorationStyle = tmp3.decoration;
               obj3.animate = flag3;
               obj3.cutout = decorationCutout;
-              tmp36 = decoration(tmp39, obj3, avatarDecoration.asset);
+              tmp34 = decoration(tmp37, obj3, avatarDecoration.asset);
               const StatusWithTypingResult = StatusWithTyping(tmp7[11]);
             }
-            items2[2] = tmp36;
-            let tmp40 = null;
+            items2[2] = tmp34;
+            let tmp38 = null;
             if (null != status) {
-              tmp40 = null;
+              tmp38 = null;
               if (status !== autoStatusCutout.UNKNOWN) {
                 if (statusSizeOverride == null) {
                   statusSizeOverride = getStatusSize(NORMAL);
@@ -674,13 +661,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   merged1 = obj4;
                 }
                 if (null == merged1) {
-                  tmp40 = null;
+                  tmp38 = null;
                 } else {
                   if (!typing) {
                     const obj5 = {};
                     const merged = Object.assign(merged1);
-                    let tmp51 = decoration(flag2(tmp7[15]), obj5);
-                    const tmp47 = flag2(tmp7[15]);
+                    let tmp49 = decoration(flag2(tmp7[15]), obj5);
+                    const tmp45 = flag2(tmp7[15]);
                   }
                   StatusWithTyping = StatusWithTyping(tmp7[15]).StatusWithTyping;
                   const obj6 = {};
@@ -688,31 +675,31 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   obj6.typing = typing;
                   user = user.id;
                   obj6.userId = user;
-                  tmp51 = decoration(StatusWithTyping, obj6);
+                  tmp49 = decoration(StatusWithTyping, obj6);
                 }
               }
             }
-            items2[3] = tmp40;
+            items2[3] = tmp38;
             if (deaf) {
               const obj7 = { style: null, children: null };
               const items4 = [, ];
-              ({ status: arr7[0], voiceStatus: arr7[1] } = tmp3);
+              ({ status: arr8[0], voiceStatus: arr8[1] } = tmp3);
               obj7.style = items4;
               const obj8 = { size: flag2(tmp7[16]).Sizes.REFRESH_SMALL_16, source: flag2(tmp7[17]), color: flag2(tmp7[6]).unsafe_rawColors.WHITE };
               obj7.children = decoration(flag2(tmp7[16]), obj8);
-              let tmp56 = decoration(cutout, obj7);
-              const tmp62 = flag2(tmp7[16]);
+              let tmp54 = decoration(cutout, obj7);
+              const tmp60 = flag2(tmp7[16]);
             } else if (mute) {
               const obj9 = { style: null, children: null };
               const items5 = [, ];
-              ({ status: arr6[0], voiceStatus: arr6[1] } = tmp3);
+              ({ status: arr7[0], voiceStatus: arr7[1] } = tmp3);
               obj9.style = items5;
               const obj10 = { size: flag2(tmp7[16]).Sizes.REFRESH_SMALL_16, source: flag2(tmp7[18]), color: flag2(tmp7[6]).unsafe_rawColors.WHITE };
               obj9.children = decoration(flag2(tmp7[16]), obj10);
-              tmp56 = decoration(cutout, obj9);
-              const tmp59 = flag2(tmp7[16]);
+              tmp54 = decoration(cutout, obj9);
+              const tmp57 = flag2(tmp7[16]);
             }
-            items2[4] = tmp56;
+            items2[4] = tmp54;
             obj.children = items2;
             return closure_9(cutout, obj);
           }
@@ -721,46 +708,36 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (null != source) {
         const obj11 = { source, size: NORMAL, animate: flag3 };
         obj2 = Object.assign(obj2);
-        let tmp17 = decoration(flag2(tmp7[7]), obj11);
-        const tmp32 = flag2(tmp7[7]);
+        let tmp15 = decoration(flag2(tmp7[7]), obj11);
+        const tmp30 = flag2(tmp7[7]);
       } else if (null != user) {
         const obj12 = { user, guildId, size: NORMAL, animate: flag3 };
         const merged2 = Object.assign(obj2);
-        tmp17 = decoration(flag2(tmp7[7]), obj12);
-        const tmp26 = flag2(tmp7[7]);
+        tmp15 = decoration(flag2(tmp7[7]), obj12);
+        const tmp24 = flag2(tmp7[7]);
       } else if (null != channel) {
         const obj13 = { channel, size: NORMAL, animate: flag3 };
         const merged3 = Object.assign(obj2);
-        tmp17 = decoration(flag2(tmp7[7]), obj13);
-        const tmp20 = flag2(tmp7[7]);
+        tmp15 = decoration(flag2(tmp7[7]), obj13);
+        const tmp18 = flag2(tmp7[7]);
       }
     }
   }
   const sum = StatusWithTyping(tmp7[7]).AVATAR_SIZE_MAP[NORMAL] + 4;
+  const obj14 = { style: null };
   if (isStageCall) {
-    const obj14 = { color: speakingColor, style: null };
-    speakingColor = [tmp3.stageSpeaking, ];
+    const items6 = [tmp3.stageSpeaking, ];
     const size = { width: sum, height: sum, borderRadius: sum / 2 };
-    speakingColor[1] = size;
-    obj14.style = speakingColor;
+    items6[1] = size;
+    obj14.style = items6;
     tmp10(flag2(tmp7[19]), obj14);
   } else {
-    const items6 = [flag5 ? tmp3.soundboard : tmp3.speaking, , ];
+    const items7 = [flag5 ? tmp3.soundboard : tmp3.speaking, ];
     const size1 = { width: sum, height: sum, borderRadius: sum / 2 };
-    items6[1] = size1;
-    let tmp12 = null;
-    if (null != speakingColor) {
-      tmp12 = null;
-      if (!flag5) {
-        const obj15 = { borderColor: speakingColor };
-        tmp12 = obj15;
-      }
-    }
-    const obj16 = { style: null };
-    items6[2] = tmp12;
-    obj16.style = items6;
-    tmp10(cutout, obj16);
+    items7[1] = size1;
+    obj14.style = items7;
+    tmp10(cutout, obj14);
   }
 }));
-export const AvatarSizes = fn(14261).AvatarSizes;
+export const AvatarSizes = fn(14285).AvatarSizes;
 export { getStatusSize };

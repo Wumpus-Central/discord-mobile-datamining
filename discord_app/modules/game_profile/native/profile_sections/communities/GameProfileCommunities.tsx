@@ -1,16 +1,16 @@
-// === Module 9482: GameProfileCommunities ===
+// === Module 9505: GameProfileCommunities ===
 
-// Module 9482 (GameProfileCommunities)
+// Module 9505 (GameProfileCommunities)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9221 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9227 */;
-import GameProfileNavTypes from "GameProfileNavTypes" /* 9271 */;
-import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 9483 */;
-import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 9486 */;
-import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 9488 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5208 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9244 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9250 */;
+import GameProfileNavTypes from "GameProfileNavTypes" /* 9294 */;
+import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 9506 */;
+import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 9509 */;
+import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 9511 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +26,8 @@ const isStaticChannelRoute = fn(4828).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4969);
-let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
-let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
+let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9299).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
+let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9299).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
 obj.heading = { flexShrink: 1 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -586,13 +586,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.heading, children: null };
   const intl = game(1128).intl;
   obj3.children = intl.string(game(1128).t.r6bvTh);
-  const items1 = [closure_11(game(5220).Heading, obj3), ];
+  const items1 = [closure_11(game(5232).Heading, obj3), ];
   if (showLocaleFilter) {
-    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(9490).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
+    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(9513).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
     const intl2 = tmp12(1128).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1128).t.OlOHDH);
     obj4.onPress = callback;
-    showLocaleFilter = closure_11(tmp12(7944).IconButton, obj4);
+    showLocaleFilter = closure_11(tmp12(7957).IconButton, obj4);
   }
   items1[1] = showLocaleFilter;
   obj2.children = items1;

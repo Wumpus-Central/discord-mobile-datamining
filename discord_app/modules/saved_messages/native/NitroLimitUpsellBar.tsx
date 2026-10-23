@@ -1,16 +1,16 @@
-// === Module 13992: NitroLimitUpsellBar ===
+// === Module 14015: NitroLimitUpsellBar ===
 
-// Module 13992 (NitroLimitUpsellBar)
+// Module 14015 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import WarningIcon from "WarningIcon" /* 7942 */;
-import _modDef9911 from "module_9911" /* 9911 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10155 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import WarningIcon from "WarningIcon" /* 7955 */;
+import _modDef9933 from "module_9933" /* 9933 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10177 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
     let tmp6Result = React4(WarningIcon.WarningIcon, obj6);
   } else {
-    const obj7 = { source: _modDef9911, style: tmp4.icon };
+    const obj7 = { source: _modDef9933, style: tmp4.icon };
     tmp6Result = React4(FastImageDefault, obj7);
   }
   cResult[0] = isAtLimit;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef9911, style: tmp.icon };
+    const obj3 = { source: _modDef9933, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

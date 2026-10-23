@@ -1,12 +1,12 @@
-// === Module 5570: Backdrop ===
+// === Module 5582: Backdrop ===
 
-// Module 5570 (Backdrop)
+// Module 5582 (Backdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import native from "native" /* 5023 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
+import native from "native" /* 5035 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

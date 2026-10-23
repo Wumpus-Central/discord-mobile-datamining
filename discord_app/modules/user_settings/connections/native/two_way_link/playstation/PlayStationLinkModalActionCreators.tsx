@@ -1,8 +1,8 @@
-// === Module 14031: PlayStationLinkModalActionCreators ===
+// === Module 14055: PlayStationLinkModalActionCreators ===
 
-// Module 14031 (PlayStationLinkModalActionCreators)
+// Module 14055 (PlayStationLinkModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "USER_SETTINGS_CONNECTIONS_PS_LINK_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default {
   showModal(locationStack, platformType) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14032, dependencyMap.paths), { locationStack, platformType }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14056, dependencyMap.paths), { locationStack, platformType }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

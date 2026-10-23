@@ -1,25 +1,25 @@
-// === Module 17943: GuildSettingsModalMembers ===
+// === Module 17987: GuildSettingsModalMembers ===
 
-// Module 17943 (GuildSettingsModalMembers)
+// Module 17987 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7350 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8948 */;
-import sortByMatchScore from "sortByMatchScore" /* 9043 */;
-import RolePillDefault from "RolePill" /* 10810 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7363 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8971 */;
+import sortByMatchScore from "sortByMatchScore" /* 9066 */;
+import RolePillDefault from "RolePill" /* 10833 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5180 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5192 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8982 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9005 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -29,7 +29,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [fn(9043).AutocompleterResultTypes.USER];
+let items = [fn(9066).AutocompleterResultTypes.USER];
 const createStyles = fn(4969);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchFieldContainer: null, roleList: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
@@ -272,10 +272,10 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(5975).getNickname(guild.id, undefined, user);
+      let str = guildMember(5987).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5018).getGlobalName(user);
-        const tmp9Result = tmp9(5018);
+        str = tmp9(5023).getGlobalName(user);
+        const tmp9Result = tmp9(5023);
       }
       if (str == null) {
         let username;
@@ -292,7 +292,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const intl = tmp2(1128).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1128).t["6eGpWx"], obj3);
-      const obj2 = guildMember(5975);
+      const obj2 = guildMember(5987);
       tmp9 = guildMember;
     }
     const obj4 = { userId: guildMember.userId, guildId: guild.id, accessibilityLabel: formatToPlainStringResult, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
@@ -308,7 +308,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_17(guildMember(10805), obj4);
+    return closure_17(guildMember(10828), obj4);
   }
   const obj = guild(1505);
 }));
@@ -898,12 +898,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9008), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(9031), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1128).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1128).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_17(closure_1_0(7470).HeaderActionButton, obj);
+            return closure_1_17(closure_1_0(7483).HeaderActionButton, obj);
           }
         });
       }

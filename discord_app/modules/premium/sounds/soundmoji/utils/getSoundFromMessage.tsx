@@ -1,9 +1,9 @@
-// === Module 15023: getSoundFromMessage ===
+// === Module 15047: getSoundFromMessage ===
 
-// Module 15023 (getSoundFromMessage)
+// Module 15047 (getSoundFromMessage)
 import MessageReferenceTypes from "MessageReferenceTypes" /* 1110 */;
-import SoundboardTypes from "SoundboardTypes" /* 7430 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import SoundboardTypes from "SoundboardTypes" /* 7443 */;
+import MessageStore from "MessageStore" /* 6008 */;
 
 require = fn;
 function getSoundFromSounds(arr, arg1) {
@@ -14,7 +14,7 @@ function getSoundFromSounds(arr, arg1) {
   }
   return found;
 }
-const DEFAULT_SOUND_GUILD_ID = fn(5994).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6006).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 

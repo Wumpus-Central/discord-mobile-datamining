@@ -1,11 +1,11 @@
-// === Module 18617: VoiceOrStageSummaryRow ===
+// === Module 18661: VoiceOrStageSummaryRow ===
 
-// Module 18617 (VoiceOrStageSummaryRow)
+// Module 18661 (VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import _modDef18017 from "module_18017" /* 18017 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import _modDef18061 from "module_18061" /* 18061 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -289,10 +289,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj4.style = items3;
-    let obj5 = { size: max(1202).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18017 };
+    let obj5 = { size: max(1202).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18061 };
     const items4 = [closure_4(max(1202).Icon, obj5), ];
     let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(5220).Text, obj6);
+    items4[1] = closure_4(max(5232).Text, obj6);
     obj4.children = items4;
     obj3.children = closure_5(tmp6, obj4);
     tmp8Result = tmp8(tmp6, obj3);

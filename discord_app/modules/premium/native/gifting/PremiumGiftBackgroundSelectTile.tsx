@@ -1,43 +1,43 @@
-// === Module 13837: PremiumGiftBackgroundSelectTile ===
+// === Module 13860: PremiumGiftBackgroundSelectTile ===
 
-// Module 13837 (PremiumGiftBackgroundSelectTile)
+// Module 13860 (PremiumGiftBackgroundSelectTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2600 from "module_2600" /* 2600 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef13839 from "module_13839" /* 13839 */;
-import _modDef13840 from "module_13840" /* 13840 */;
-import _modDef13841 from "module_13841" /* 13841 */;
-import _modDef13842 from "module_13842" /* 13842 */;
-import _modDef13843 from "module_13843" /* 13843 */;
-import _modDef13844 from "module_13844" /* 13844 */;
-import _modDef13845 from "module_13845" /* 13845 */;
-import _modDef13846 from "module_13846" /* 13846 */;
-import _modDef13847 from "module_13847" /* 13847 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef13862 from "module_13862" /* 13862 */;
+import _modDef13863 from "module_13863" /* 13863 */;
+import _modDef13864 from "module_13864" /* 13864 */;
+import _modDef13865 from "module_13865" /* 13865 */;
+import _modDef13866 from "module_13866" /* 13866 */;
+import _modDef13867 from "module_13867" /* 13867 */;
+import _modDef13868 from "module_13868" /* 13868 */;
+import _modDef13869 from "module_13869" /* 13869 */;
+import _modDef13870 from "module_13870" /* 13870 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1394).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(13838).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(13861).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef13839, [CAKE]: _modDef13840, [CHEST]: _modDef13841, [COFFEE]: _modDef13842 };
+const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef13862, [CAKE]: _modDef13863, [CHEST]: _modDef13864, [COFFEE]: _modDef13865 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef13843 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef13866 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef13843 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef13844 };
-let obj3 = { uri: _modDef13844 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef13845 };
-let obj4 = { uri: _modDef13845 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef13846 };
-let obj5 = { uri: _modDef13846 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef13847 };
+let obj2 = { uri: _modDef13866 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef13867 };
+let obj3 = { uri: _modDef13867 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef13868 };
+let obj4 = { uri: _modDef13868 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef13869 };
+let obj5 = { uri: _modDef13869 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef13870 };
 const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = { width: 78, height: 44, justifyContent: "center", marginEnd: nativeDefault.space.PX_8, marginStart: null };
@@ -53,7 +53,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   return obj;
 });
 const ReactCompilerGating = fn(558);
-const obj6 = { uri: _modDef13847 };
+const obj6 = { uri: _modDef13870 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
 

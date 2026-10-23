@@ -1,19 +1,19 @@
-// === Module 16468: QuestDockBountyHeader ===
+// === Module 16515: QuestDockBountyHeader ===
 
-// Module 16468 (QuestDockBountyHeader)
+// Module 16515 (QuestDockBountyHeader)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5233 */;
-import QuestTypes from "QuestTypes" /* 6698 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16370 */;
+import spring from "spring" /* 5245 */;
+import QuestTypes from "QuestTypes" /* 6711 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7799 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestConstants = fn(6695);
+const QuestConstants = fn(6708);
 ({ QuestDockMode: hasOwnProperty, QuestsExperimentLocations: metroRequire } = QuestConstants);
-const QuestDockConstants = fn(16354);
+const QuestDockConstants = fn(16404);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_7 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -44,14 +44,14 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountyHeader() {
   const cResult = activeQuestDockMode(576).c(67);
   let obj = activeQuestDockMode(576);
-  const questDockBounty = activeQuestDockMode(16382).useQuestDockBounty();
+  const questDockBounty = activeQuestDockMode(16432).useQuestDockBounty();
   const tmp5 = closure_11();
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
   }
-  activeQuestDockMode = noop.useContext(tmp(16355).QuestDockGestureContext).activeQuestDockMode;
-  let obj2 = activeQuestDockMode(16382);
+  activeQuestDockMode = noop.useContext(tmp(16405).QuestDockGestureContext).activeQuestDockMode;
+  let obj2 = activeQuestDockMode(16432);
   const fn = function o() {
     let num = 1;
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -59,12 +59,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  const tmpResult = activeQuestDockMode(5038);
-  fn.__closure = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const tmpResult = activeQuestDockMode(5050);
+  fn.__closure = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn.__workletHash = 16909083558605;
   fn.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
-  const obj3 = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj3 = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   const fn2 = function s() {
     let num = 0;
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -72,14 +72,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  const tmpResult7 = activeQuestDockMode(5038);
-  fn2.__closure = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, PROMOTED_LABEL_OPACITY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const tmpResult7 = activeQuestDockMode(5050);
+  fn2.__closure = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, PROMOTED_LABEL_OPACITY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn2.__workletHash = 273450441779;
   fn2.__initData = __initData2;
   const animatedStyle1 = tmpResult7.useAnimatedStyle(fn2);
-  const obj4 = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, PROMOTED_LABEL_OPACITY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
-  const tmp9 = bountyCreative(8739)(activeQuestDockMode);
-  const isBountiesAndroidQuestBarSmokeAnimationEnabled = activeQuestDockMode(16462).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
+  const obj4 = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, PROMOTED_LABEL_OPACITY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const tmp9 = bountyCreative(8757)(activeQuestDockMode);
+  const isBountiesAndroidQuestBarSmokeAnimationEnabled = activeQuestDockMode(16509).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
   if (cResult[0] !== isBountiesAndroidQuestBarSmokeAnimationEnabled) {
     const tmp12 = tmp(1384).isAndroid() && isBountiesAndroidQuestBarSmokeAnimationEnabled;
     cResult[0] = isBountiesAndroidQuestBarSmokeAnimationEnabled;
@@ -89,16 +89,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp11 = cResult[1];
   }
-  const tmpResult8 = activeQuestDockMode(16462);
-  const smokeArtSize = activeQuestDockMode(16461).useSmokeArtSize();
+  const tmpResult8 = activeQuestDockMode(16509);
+  const smokeArtSize = activeQuestDockMode(16508).useSmokeArtSize();
   ({ width, height } = smokeArtSize);
   if (cResult[2] === height) {
     if (cResult[3] === width) {
       let tmp14 = cResult[4];
     }
-    bountyCreative = tmp(16382).useBountyCreative(questDockBounty);
-    const tmpResult11 = tmp(16382);
-    const actionSheetPressHandler = tmp(16351).useActionSheetPressHandler(bountyCreative);
+    bountyCreative = tmp(16432).useBountyCreative(questDockBounty);
+    const tmpResult11 = tmp(16432);
+    const actionSheetPressHandler = tmp(16401).useActionSheetPressHandler(bountyCreative);
     if (cResult[5] !== bountyCreative) {
       const fn3 = function v() {
         const obj2 = { creative: bountyCreative, isTargetedDisclosure: true, trackingCtx: null };
@@ -114,7 +114,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp21 = closure_8(tmp8(16469), {});
+      const tmp21 = closure_8(tmp8(16516), {});
       cResult[7] = tmp21;
       let tmp19 = tmp21;
     } else {
@@ -133,12 +133,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           let tmp23 = cResult[13];
         }
         if (cResult[14] !== (tmp9 === QuestDockMode.EXPANDED)) {
-          const obj5 = { surface: tmp(16461).QuestDockBountySmokeSurface.COLLAPSED, paused: tmp24 };
-          const tmp28 = closure_8(tmp8(16461), obj5);
+          const obj5 = { surface: tmp(16508).QuestDockBountySmokeSurface.COLLAPSED, paused: tmp24 };
+          const tmp28 = closure_8(tmp8(16508), obj5);
           cResult[14] = tmp24;
           cResult[15] = tmp28;
           let tmp25 = tmp28;
-          const tmp8Result = tmp8(16461);
+          const tmp8Result = tmp8(16508);
         } else {
           tmp25 = cResult[15];
         }
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
                                   const intl = tmp(1128).intl;
                                   obj6.children = intl.string(tmp(1128).t.o6FLcF);
-                                  const tmp53 = closure_8(tmp(5220).Text, obj6);
+                                  const tmp53 = closure_8(tmp(5232).Text, obj6);
                                   cResult[44] = tmp53;
                                   let tmp51 = tmp53;
                                 } else {
@@ -203,7 +203,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                 }
                                 if (cResult[45] !== tmp17) {
                                   const obj7 = { onPress: tmp17, accessibilityRole: "button", children: tmp51 };
-                                  const tmp56 = closure_8(tmp(6893).PressableOpacity, obj7);
+                                  const tmp56 = closure_8(tmp(6906).PressableOpacity, obj7);
                                   cResult[45] = tmp17;
                                   cResult[46] = tmp56;
                                   let tmp54 = tmp56;
@@ -238,16 +238,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                     return tmp73;
                                                   }
                                                 }
-                                                const obj8 = { onSubmenuPress: actionSheetPressHandler, hideBlurWhenCollapsed: true, promotedLabelLeading: true, collapsedContent: tmp19, secondaryContentWidth: tmp(16469).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH, children: null };
+                                                const obj8 = { onSubmenuPress: actionSheetPressHandler, hideBlurWhenCollapsed: true, promotedLabelLeading: true, collapsedContent: tmp19, secondaryContentWidth: tmp(16516).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH, children: null };
                                                 const items = [tmp32, tmp69];
                                                 obj8.children = items;
-                                                const tmp76 = closure_9(tmp8(16451), obj8);
+                                                const tmp76 = closure_9(tmp8(16498), obj8);
                                                 cResult[63] = actionSheetPressHandler;
                                                 cResult[64] = tmp69;
                                                 cResult[65] = tmp32;
                                                 cResult[66] = tmp76;
                                                 tmp73 = tmp76;
-                                                const tmp8Result2 = tmp8(16451);
+                                                const tmp8Result2 = tmp8(16498);
                                               }
                                             }
                                             const obj9 = { style: tmp5.wrapper, children: null };
@@ -272,7 +272,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                         tmp65 = tmp68;
                                       }
                                       const obj11 = { style: tmp50, children: tmp58 };
-                                      const tmp64 = closure_8(tmp8(7153), obj11);
+                                      const tmp64 = closure_8(tmp8(7166), obj11);
                                       cResult[52] = tmp50;
                                       cResult[53] = tmp58;
                                       cResult[54] = tmp64;
@@ -296,7 +296,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                               tmp50 = items3;
                             }
                             const obj13 = { style: tmp39, children: tmp43 };
-                            const tmp49 = closure_8(tmp8(7153), obj13);
+                            const tmp49 = closure_8(tmp8(7166), obj13);
                             cResult[38] = tmp39;
                             cResult[39] = tmp43;
                             cResult[40] = tmp49;
@@ -314,7 +314,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       tmp43 = tmp46;
                     }
                     const obj15 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, accessible: false, style: tmp5.title, children: str };
-                    const tmp42 = closure_8(tmp(5220).Text, obj15);
+                    const tmp42 = closure_8(tmp(5232).Text, obj15);
                     cResult[30] = tmp5.title;
                     cResult[31] = str;
                     cResult[32] = tmp42;
@@ -331,7 +331,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   const obj16 = { style: tmp5.productIcon, source: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no" };
                   const obj17 = { uri: questDockBounty.productIcon };
                   obj16.source = obj17;
-                  tmp37 = closure_8(tmp8(5655), obj16);
+                  tmp37 = closure_8(tmp8(5667), obj16);
                 }
                 cResult[24] = questDockBounty.productIcon;
                 cResult[25] = tmp5.productIcon;
@@ -348,7 +348,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         const obj19 = { style: tmp23, needsOffscreenAlphaCompositing: tmp11, children: tmp25 };
-        const tmp31 = closure_8(tmp8(7153), obj19, str3);
+        const tmp31 = closure_8(tmp8(7166), obj19, str3);
         cResult[16] = tmp11;
         cResult[17] = str3;
         cResult[18] = tmp23;
@@ -367,14 +367,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[9] = tmp5.smokeArt;
     cResult[10] = items6;
     tmp22 = items6;
-    const tmpResult12 = tmp(16351);
+    const tmpResult12 = tmp(16401);
   }
   const size = { width, height };
   cResult[2] = height;
   cResult[3] = width;
   cResult[4] = size;
   tmp14 = size;
-  const tmpResult10 = activeQuestDockMode(16461);
+  const tmpResult10 = activeQuestDockMode(16508);
 }) : (function QuestDockBountyHeader() {
   const questDockBounty = activeQuestDockMode(height[9]).useQuestDockBounty();
   const tmp4 = closure_11();

@@ -1,14 +1,14 @@
-// === Module 11808: ConjureProjectIcon ===
+// === Module 11827: ConjureProjectIcon ===
 
-// Module 11808 (ConjureProjectIcon)
+// Module 11827 (ConjureProjectIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11809 */;
+import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11828 */;
 import noop from "module_19" /* 19 */;
 
 const AvatarUtils = obj(1417);
-const FastImageDefault = tmp3(5655);
-const AppsIcon = obj(8563);
+const FastImageDefault = tmp3(5667);
+const AppsIcon = obj(8575);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

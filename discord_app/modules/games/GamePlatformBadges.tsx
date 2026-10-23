@@ -1,9 +1,9 @@
-// === Module 13222: GamePlatformBadges ===
+// === Module 13245: GamePlatformBadges ===
 
-// Module 13222 (GamePlatformBadges)
+// Module 13245 (GamePlatformBadges)
 import util from "util" /* 1128 */;
-import GamePlatformAvailability from "GamePlatformAvailability" /* 13221 */;
-import GamePlatformAvailabilityUtils from "GamePlatformAvailabilityUtils" /* 13223 */;
+import GamePlatformAvailability from "GamePlatformAvailability" /* 13244 */;
+import GamePlatformAvailabilityUtils from "GamePlatformAvailabilityUtils" /* 13246 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/GamePlatformBadges.tsx");

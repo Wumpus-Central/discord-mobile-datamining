@@ -1,13 +1,13 @@
-// === Module 5132: useColorThemeBackground ===
+// === Module 5144: useColorThemeBackground ===
 
-// Module 5132 (useColorThemeBackground)
+// Module 5144 (useColorThemeBackground)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
-import GuildThemePresets from "GuildThemePresets" /* 5133 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5135 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5188 */;
+import GuildThemePresets from "GuildThemePresets" /* 5145 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5147 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5200 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useColor
   tmp15 = tmp16;
   const tmpResult3 = useStateFromStores;
 }) : (function useColorThemeBackground() {
-  const tmp = stateFromStores(5135)();
+  const tmp = stateFromStores(5147)();
   _require = tmp;
   const items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

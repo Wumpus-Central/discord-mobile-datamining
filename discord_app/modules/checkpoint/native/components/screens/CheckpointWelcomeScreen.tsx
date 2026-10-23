@@ -1,6 +1,6 @@
-// === Module 12909: CheckpointWelcomeScreen ===
+// === Module 12928: CheckpointWelcomeScreen ===
 
-// Module 12909 (CheckpointWelcomeScreen)
+// Module 12928 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -9,10 +9,10 @@ import util from "util" /* 1128 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import UserUtils from "UserUtils" /* 5018 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 12910 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12912 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12913 */;
+import UserUtils from "UserUtils" /* 5023 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 12929 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12931 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12932 */;
 import UserStore from "UserStore" /* 1392 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;

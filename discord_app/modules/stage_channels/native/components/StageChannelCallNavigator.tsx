@@ -1,16 +1,16 @@
-// === Module 11472: StageChannelCallNavigator ===
+// === Module 11492: StageChannelCallNavigator ===
 
-// Module 11472 (StageChannelCallNavigator)
+// Module 11492 (StageChannelCallNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import MessageManagerDefault from "MessageManager" /* 9694 */;
-import participantHasVideoDefault from "participantHasVideo" /* 10878 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 11478 */;
-import JoinStageViewDefault from "JoinStageView" /* 11542 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11687 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
+import MessageManagerDefault from "MessageManager" /* 9716 */;
+import participantHasVideoDefault from "participantHasVideo" /* 10901 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 11498 */;
+import JoinStageViewDefault from "JoinStageView" /* 11562 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -238,8 +238,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  const obj3 = showOverlay(5038);
-  fn.__closure = { withSpring: showOverlay(5233).withSpring, showOverlay, viewAnimationConfig };
+  const obj3 = showOverlay(5050);
+  fn.__closure = { withSpring: showOverlay(5245).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 3866068723381;
   fn.__initData = __initData3;
   const animatedStyle = obj3.useAnimatedStyle(fn);
@@ -296,7 +296,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   cResult[8] = tmp13;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-  const obj4 = { withSpring: showOverlay(5233).withSpring, showOverlay, viewAnimationConfig };
+  const obj4 = { withSpring: showOverlay(5245).withSpring, showOverlay, viewAnimationConfig };
 }) : (function JoinStageOverlay(channel) {
   showOverlay = undefined;
   importDefault = undefined;
@@ -308,8 +308,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(5038);
-  fn.__closure = { withSpring: showOverlay(5233).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(5050);
+  fn.__closure = { withSpring: showOverlay(5245).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 17555856853074;
   fn.__initData = __initData4;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -323,7 +323,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5233).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5245).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;

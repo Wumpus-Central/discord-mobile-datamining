@@ -1,6 +1,6 @@
-// === Module 18354: getFrameLaunchContextQueryParams ===
+// === Module 18398: getFrameLaunchContextQueryParams ===
 
-// Module 18354 (getFrameLaunchContextQueryParams)
+// Module 18398 (getFrameLaunchContextQueryParams)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");

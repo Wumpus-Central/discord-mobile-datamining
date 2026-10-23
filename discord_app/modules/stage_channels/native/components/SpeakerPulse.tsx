@@ -1,9 +1,9 @@
-// === Module 15370: SpeakerPulse ===
+// === Module 15391: SpeakerPulse ===
 
-// Module 15370 (SpeakerPulse)
+// Module 15391 (SpeakerPulse)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
@@ -28,9 +28,9 @@ let obj4 = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerPulse(arg0) {
-  const cResult = stateFromStores(sharedValue1[7]).c(28);
-  ({ color, style } = arg0);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerPulse(style) {
+  const cResult = stateFromStores(sharedValue1[7]).c(25);
+  style = style.style;
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -66,80 +66,56 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
           return !closure_1_5.useReducedMotion;
         }
       }
-      class A {
+      class R {
         constructor() {
           obj = { opacity: closure_1.get() };
           return obj;
         }
       }
       let obj2 = { animatedInnerOpacity: sharedValue };
-      A.__closure = obj2;
-      A.__workletHash = 202297893401;
-      A.__initData = __initData;
-      const animatedStyle = obj5.useAnimatedStyle(A);
-      class C {
+      R.__closure = obj2;
+      R.__workletHash = 202297893401;
+      R.__initData = __initData;
+      const animatedStyle = obj5.useAnimatedStyle(R);
+      class A {
         constructor() {
           obj = { opacity: closure_2.get() };
           return obj;
         }
       }
       let obj3 = { animatedOuterOpacity: sharedValue1 };
-      C.__closure = obj3;
-      C.__workletHash = 13537504931930;
-      C.__initData = __initData2;
-      const animatedStyle1 = tmp(tmp2[9]).useAnimatedStyle(C);
-      if (cResult[8] !== color) {
-        let tmp21 = null;
-        if (null != color) {
-          let obj4 = { backgroundColor: color };
-          tmp21 = obj4;
-        }
+      A.__closure = obj3;
+      A.__workletHash = 13537504931930;
+      A.__initData = __initData2;
+      const animatedStyle1 = tmp(tmp2[9]).useAnimatedStyle(A);
+      if (cResult[8] === style) {
+        const _Symbol = Symbol;
         class O {
           constructor() {
             return !closure_1_5.useReducedMotion;
           }
         }
-        class A {
+        class R {
           constructor() {
             obj = { opacity: closure_1.get() };
             return obj;
           }
         }
-        cResult[9] = tmp21;
-        let tmp20 = tmp21;
-      } else {
-        tmp20 = cResult[9];
-      }
-      if (cResult[10] === style) {
-        if (cResult[11] === tmp4.border) {
-          const _Symbol = Symbol;
-          class O {
-            constructor() {
-              return !closure_1_5.useReducedMotion;
-            }
+        const items2 = [tmp4.pulse, style, animatedStyle, tmp26];
+        { style: null }.style = items2;
+        class A {
+          constructor() {
+            obj = { opacity: closure_2.get() };
+            return obj;
           }
-          class A {
-            constructor() {
-              obj = { opacity: closure_1.get() };
-              return obj;
-            }
-          }
-          const items2 = [tmp4.pulse, style, animatedStyle, tmp28];
-          { style: null }.style = items2;
-          class C {
-            constructor() {
-              obj = { opacity: closure_2.get() };
-              return obj;
-            }
-          }
-          cResult[15] = animatedStyle;
-          cResult[16] = style;
-          cResult[17] = tmp4.pulse;
-          cResult[18] = tmp32;
-          let obj6 = { style: null };
         }
+        cResult[12] = animatedStyle;
+        cResult[13] = style;
+        cResult[14] = tmp4.pulse;
+        cResult[15] = tmp30;
+        let obj4 = { style: null };
       }
-      class I {
+      class D {
         constructor() {
           obj = closure_1;
           set = closure_1.set;
@@ -193,17 +169,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
           return;
         }
       }
-      const items3 = [tmp4.border, tmp20, style];
-      tmp25[0] = items3;
-      const tmp26 = closure_6(View, tmp25);
-      cResult[10] = style;
-      cResult[11] = tmp4.border;
-      cResult[12] = tmp20;
-      cResult[13] = tmp26;
+      const items3 = [tmp4.border, style];
+      tmp23[0] = items3;
+      const tmp24 = closure_6(View, tmp23);
+      cResult[8] = style;
+      cResult[9] = tmp4.border;
+      cResult[10] = tmp24;
       const tmpResult6 = tmp(tmp2[9]);
     }
   }
-  class I {
+  class D {
     constructor() {
       obj = closure_1;
       set = closure_1.set;
@@ -261,13 +236,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
   cResult[3] = sharedValue;
   cResult[4] = sharedValue1;
   cResult[5] = stateFromStores;
-  cResult[6] = I;
+  cResult[6] = D;
   cResult[7] = items4;
   tmp13 = items4;
-  tmp12 = I;
+  tmp12 = D;
   const tmpResult5 = stateFromStores(sharedValue1[9]);
-}) : (function SpeakerPulse(arg0) {
-  ({ color, style } = arg0);
+}) : (function SpeakerPulse(style) {
+  style = style.style;
   let stateFromStores;
   let sharedValue1;
   const tmp = closure_12();
@@ -305,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
     }
   }, items1);
   let obj3 = stateFromStores(sharedValue1[9]);
-  const fn = function v() {
+  const fn = function b() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { animatedInnerOpacity: sharedValue };
@@ -313,26 +288,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
   fn.__initData = __initData3;
   const animatedStyle = stateFromStores(sharedValue1[9]).useAnimatedStyle(fn);
   let obj4 = stateFromStores(sharedValue1[9]);
-  class D {
-    constructor() {
-      obj = { opacity: closure_2.get() };
-      return obj;
-    }
-  }
-  D.__closure = { animatedOuterOpacity: sharedValue1 };
-  D.__workletHash = 5118129808732;
-  D.__initData = __initData4;
-  const items2 = [tmp.border, , ];
-  let tmp13 = null;
-  const animatedStyle1 = stateFromStores(sharedValue1[9]).useAnimatedStyle(D);
-  if (null != color) {
-    let obj6 = { backgroundColor: color };
-    tmp13 = obj6;
-  }
-  let obj7 = { children: null };
-  items2[1] = tmp13;
-  items2[2] = style;
-  const items3 = [closure_6(View, { style: items2 }), , ];
+  const fn2 = function v() {
+    return { opacity: sharedValue1.get() };
+  };
+  fn2.__closure = { animatedOuterOpacity: sharedValue1 };
+  fn2.__workletHash = 5118129808732;
+  fn2.__initData = __initData4;
+  let obj6 = { children: null };
+  let obj7 = { style: null };
+  const items2 = [tmp.border, style];
+  obj7.style = items2;
+  const animatedStyle1 = stateFromStores(sharedValue1[9]).useAnimatedStyle(fn2);
+  const items3 = [closure_6(View, obj7), , ];
   let obj8 = { style: null };
   const items4 = [tmp.pulse, style, animatedStyle, ];
   let obj9 = { transform: null };
@@ -349,6 +316,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerP
   items6[3] = obj11;
   obj10.style = items6;
   items3[2] = closure_6(sharedValue(sharedValue1[9]).View, obj10);
-  obj7.children = items3;
-  return closure_8(closure_7, obj7);
+  obj6.children = items3;
+  return closure_8(closure_7, obj6);
 });

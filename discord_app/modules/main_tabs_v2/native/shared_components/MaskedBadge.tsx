@@ -1,10 +1,10 @@
-// === Module 9680: MaskedBadge ===
+// === Module 9702: MaskedBadge ===
 
-// Module 9680 (MaskedBadge)
+// Module 9702 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9681 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

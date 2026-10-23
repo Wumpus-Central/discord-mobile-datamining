@@ -1,31 +1,31 @@
-// === Module 13363: useBoostToUnlockFeaturedPowerup ===
+// === Module 13386: useBoostToUnlockFeaturedPowerup ===
 
-// Module 13363 (useBoostToUnlockFeaturedPowerup)
+// Module 13386 (useBoostToUnlockFeaturedPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5167 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5179 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_7 = fn(5168).GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
+let closure_7 = fn(5180).GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
 const GuildFeatures = fn(1087).GuildFeatures;
-let items = [{ skuId: fn(5171).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 }, , , , , , ];
-let obj = { skuId: fn(5171).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
-items[1] = { skuId: fn(5171).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
-const obj2 = { skuId: fn(5171).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
-items[2] = { skuId: fn(5171).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
-const obj3 = { skuId: fn(5171).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
-items[3] = { skuId: fn(5171).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
-const obj4 = { skuId: fn(5171).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
-items[4] = { skuId: fn(5171).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
-const obj5 = { skuId: fn(5171).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
-items[5] = { skuId: fn(5171).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
-const obj6 = { skuId: fn(5171).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
-items[6] = { skuId: fn(5171).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+let items = [{ skuId: fn(5183).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 }, , , , , , ];
+let obj = { skuId: fn(5183).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
+items[1] = { skuId: fn(5183).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+const obj2 = { skuId: fn(5183).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+items[2] = { skuId: fn(5183).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+const obj3 = { skuId: fn(5183).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+items[3] = { skuId: fn(5183).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+const obj4 = { skuId: fn(5183).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+items[4] = { skuId: fn(5183).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+const obj5 = { skuId: fn(5183).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+items[5] = { skuId: fn(5183).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+const obj6 = { skuId: fn(5183).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+items[6] = { skuId: fn(5183).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const ReactCompilerGating = fn(558);
-const obj7 = { skuId: fn(5171).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+const obj7 = { skuId: fn(5183).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
 
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBoost
       continue;
     }
     cResult[7] = tmp12;
-    cResult[8] = unlockedPowerups(8357)(arg0).available;
+    cResult[8] = unlockedPowerups(8369)(arg0).available;
     cResult[9] = stateFromStores1;
     cResult[10] = unlockedPowerups;
     cResult[11] = items2;

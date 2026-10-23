@@ -1,14 +1,14 @@
-// === Module 14351: UserProfileActivityEmptyStates ===
+// === Module 14375: UserProfileActivityEmptyStates ===
 
-// Module 14351 (UserProfileActivityEmptyStates)
+// Module 14375 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -270,7 +270,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
           }
         }
         const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
-        const tmp18 = closure_7(tmp(5230).Button, obj4);
+        const tmp18 = closure_7(tmp(5242).Button, obj4);
         cResult[10] = A;
         cResult[11] = tmp18;
       } else {
@@ -323,7 +323,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   let obj = name(576);
-  name = user(5975).getName(guildId, channelId, user);
+  name = user(5987).getName(guildId, channelId, user);
   const intl = tmp(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(name(1128).t.sjSitP, { name });
   cResult[0] = channelId;
@@ -332,15 +332,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[3] = name;
   cResult[4] = formatToPlainStringResult;
   tmp6 = formatToPlainStringResult;
-  let obj2 = user(5975);
+  let obj2 = user(5987);
 }) : (function UserProfileActivityEmptyOtherUser(user) {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(5975).getName(guildId, channelId, user);
+  name = name(5987).getName(guildId, channelId, user);
   const intl = user(1128).intl;
-  let obj = name(5975);
+  let obj = name(5987);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1128).t.sjSitP, { name }),
@@ -363,7 +363,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const intl2 = user(1128).intl;
   obj4.text = intl2.string(user(1128).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5230).Button, obj4);
+  obj3.children = closure_7(user(5242).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(closure_11, obj2);
 }));

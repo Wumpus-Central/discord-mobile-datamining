@@ -1,14 +1,14 @@
-// === Module 14114: components/GameIcon ===
+// === Module 14138: components/GameIcon ===
 
-// Module 14114 (components/GameIcon)
+// Module 14138 (components/GameIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5655 */;
+import FastImageDefault from "FastImage" /* 5667 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = PressableHighlight(6893);
-const FireIcon2 = PressableHighlight(14116);
+const Pressables = PressableHighlight(6906);
+const FireIcon2 = PressableHighlight(14140);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

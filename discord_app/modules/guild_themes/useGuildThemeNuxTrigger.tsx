@@ -1,6 +1,6 @@
-// === Module 17513: guild_themes/useGuildThemeNuxTrigger ===
+// === Module 17557: guild_themes/useGuildThemeNuxTrigger ===
 
-// Module 17513 (guild_themes/useGuildThemeNuxTrigger)
+// Module 17557 (guild_themes/useGuildThemeNuxTrigger)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 9576: QuestHomeHeroTypes ===
+// === Module 9599: QuestHomeHeroTypes ===
 
-// Module 9576 (QuestHomeHeroTypes)
-import AssetUtils from "AssetUtils" /* 9560 */;
-import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9577 */;
+// Module 9599 (QuestHomeHeroTypes)
+import AssetUtils from "AssetUtils" /* 9583 */;
+import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9600 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");

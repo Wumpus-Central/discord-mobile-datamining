@@ -1,23 +1,23 @@
-// === Module 16324: OrbsArcadeRewardShelf ===
+// === Module 16374: OrbsArcadeRewardShelf ===
 
-// Module 16324 (OrbsArcadeRewardShelf)
+// Module 16374 (OrbsArcadeRewardShelf)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import useCountdownDefault from "useCountdown" /* 7539 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9415 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16317 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16322 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16325 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16326 */;
-import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 16327 */;
-import useOrbsArcadeRewardAccentColorDefault from "useOrbsArcadeRewardAccentColor" /* 16331 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16332 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import useCountdownDefault from "useCountdown" /* 7552 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9438 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16367 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16372 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16375 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16376 */;
+import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 16377 */;
+import useOrbsArcadeRewardAccentColorDefault from "useOrbsArcadeRewardAccentColor" /* 16381 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16382 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16316 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16366 */;
 
 require = fn;
 function formatTimeUntil(tmp3Result) {
@@ -584,18 +584,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
             const obj6 = { "aria-label": null, shape: null, size: 53, gap: 2, depthX: 0.3, children: null };
             const mapped = rewards.map((name) => name.name);
             obj6["aria-label"] = mapped.join(", ");
-            obj6.shape = tmp(9382).CutoutShape.Circle;
+            obj6.shape = tmp(9405).CutoutShape.Circle;
             obj6.children = rewards.map((reward) => closure_1_8(closure_1_16, { reward, size: 53 }, reward.id));
-            const items3 = [closure_8(tmp(12881).Pile, obj6), ];
+            const items3 = [closure_8(tmp(12900).Pile, obj6), ];
             const obj7 = { style: rewardShelfCopy.rewardShelfCopy, children: null };
             const obj8 = { variant: "heading-sm/semibold", color: "text-default", children: null };
             const intl2 = tmp(1128).intl;
             obj8.children = intl2.string(tmp(1128).t.ehbzo8);
-            const items4 = [closure_8(tmp(5220).Text, obj8), ];
+            const items4 = [closure_8(tmp(5232).Text, obj8), ];
             const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
             const intl3 = tmp(1128).intl;
             obj9.children = intl3.string(tmp(1128).t["5Gt1dt"]);
-            items4[1] = closure_8(tmp(5220).Text, obj9);
+            items4[1] = closure_8(tmp(5232).Text, obj9);
             obj7.children = items4;
             items3[1] = closure_9(closure_6, obj7);
             obj5.children = items3;
@@ -618,12 +618,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
         cResult[16] = items5;
       }
     }
-    const orbsArcadeFocusedReward = tmp(16322).getOrbsArcadeFocusedReward(rewards, stateFromStores);
+    const orbsArcadeFocusedReward = tmp(16372).getOrbsArcadeFocusedReward(rewards, stateFromStores);
     cResult[7] = stateFromStores;
     cResult[8] = rewards;
     cResult[9] = orbsArcadeFocusedReward;
     tmp13 = orbsArcadeFocusedReward;
-    const tmpResult2 = tmp(16322);
+    const tmpResult2 = tmp(16372);
   }
   const tmpResult = game(504);
 }) : (function OrbsArcadeRewardShelf(game) {
@@ -642,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     return tmp;
   }, undefined);
   let obj = game(504);
-  const orbsArcadeFocusedReward = game(16322).getOrbsArcadeFocusedReward(rewards, stateFromStores);
+  const orbsArcadeFocusedReward = game(16372).getOrbsArcadeFocusedReward(rewards, stateFromStores);
   let tmp7 = orbsArcadeFocusedReward;
   if (orbsArcadeFocusedReward == null) {
     tmp7 = reduced;
@@ -710,7 +710,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       return openOrbsArcadeSheets.openOrbsArcadeRewardsSheet(game.id);
     };
     const obj5 = { style: closure_5.absoluteFill, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: memo };
-    const items4 = [closure_8(tmp8(5244), obj5), , ];
+    const items4 = [closure_8(tmp8(5256), obj5), , ];
     if (tmp12) {
       let tmp28 = null;
       if (tmp14) {
@@ -729,18 +729,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       const obj9 = { "aria-label": null, shape: null, size: 53, gap: 2, depthX: 0.3, children: null };
       const mapped = rewards.map((name) => name.name);
       obj9["aria-label"] = mapped.join(", ");
-      obj9.shape = tmp2(9382).CutoutShape.Circle;
+      obj9.shape = tmp2(9405).CutoutShape.Circle;
       obj9.children = rewards.map((reward) => closure_1_8(closure_1_16, { reward, size: 53 }, reward.id));
-      const items5 = [closure_8(tmp2(12881).Pile, obj9), ];
+      const items5 = [closure_8(tmp2(12900).Pile, obj9), ];
       const obj10 = { style: tmp.rewardShelfCopy, children: null };
       const obj11 = { variant: "heading-sm/semibold", color: "text-default", children: null };
       const intl2 = tmp2(1128).intl;
       obj11.children = intl2.string(tmp2(1128).t.ehbzo8);
-      const items6 = [closure_8(tmp2(5220).Text, obj11), ];
+      const items6 = [closure_8(tmp2(5232).Text, obj11), ];
       const obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp2(1128).intl;
       obj12.children = intl3.string(tmp2(1128).t["5Gt1dt"]);
-      items6[1] = closure_8(tmp2(5220).Text, obj12);
+      items6[1] = closure_8(tmp2(5232).Text, obj12);
       obj10.children = items6;
       items5[1] = closure_9(closure_6, obj10);
       obj8.children = items5;
@@ -749,12 +749,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     items4[1] = tmp20Result;
     let colors = tmp8(587).colors;
     const obj13 = { size: "md", color: tmp11 ? colors.CONTROL_ICON_ONLY_ICON_DEFAULT : colors.ICON_MUTED };
-    colors = closure_8(tmp2(7290).ChevronSmallRightIcon, obj13);
+    colors = closure_8(tmp2(7303).ChevronSmallRightIcon, obj13);
     items4[2] = colors;
     obj4.children = items4;
     obj4 = closure_9(closure_4, obj4);
     obj3.children = obj4;
     closure_8(closure_6, obj3);
   }
-  const obj2 = game(16322);
+  const obj2 = game(16372);
 });

@@ -1,12 +1,12 @@
-// === Module 17998: pages/ErrorScreen ===
+// === Module 18042: pages/ErrorScreen ===
 
-// Module 17998 (pages/ErrorScreen)
+// Module 18042 (pages/ErrorScreen)
 import c from "c" /* 576 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp(5220);
+const Text_Text = tmp(5232);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

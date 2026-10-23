@@ -1,11 +1,11 @@
-// === Module 17653: GuildsBarDnDStore ===
+// === Module 17697: GuildsBarDnDStore ===
 
-// Module 17653 (GuildsBarDnDStore)
+// Module 17697 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import _mod4884 from "module_4884" /* 4884 */;
-import SortedGuildStore from "SortedGuildStore" /* 6686 */;
+import SortedGuildStore from "SortedGuildStore" /* 6699 */;
 import identity from "module_1269" /* 1269 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }));
+      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "end", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

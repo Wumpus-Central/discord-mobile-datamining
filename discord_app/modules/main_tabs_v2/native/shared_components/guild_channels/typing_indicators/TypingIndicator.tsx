@@ -1,11 +1,11 @@
-// === Module 17429: typing_indicators/TypingIndicator ===
+// === Module 17473: typing_indicators/TypingIndicator ===
 
-// Module 17429 (typing_indicators/TypingIndicator)
+// Module 17473 (typing_indicators/TypingIndicator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5191 */;
+import useThemeDefault from "useTheme" /* 5203 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

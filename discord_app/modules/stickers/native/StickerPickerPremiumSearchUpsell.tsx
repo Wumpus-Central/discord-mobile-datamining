@@ -1,6 +1,6 @@
-// === Module 10166: StickerPickerPremiumSearchUpsell ===
+// === Module 10188: StickerPickerPremiumSearchUpsell ===
 
-// Module 10166 (StickerPickerPremiumSearchUpsell)
+// Module 10188 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;

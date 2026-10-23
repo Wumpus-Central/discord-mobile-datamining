@@ -1,10 +1,10 @@
-// === Module 15825: UserProfileEditTheme ===
+// === Module 15858: UserProfileEditTheme ===
 
-// Module 15825 (UserProfileEditTheme)
+// Module 15858 (UserProfileEditTheme)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import _modDef5790 from "module_5790" /* 5790 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import _modDef5802 from "module_5802" /* 5802 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = arg0;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5790;
+    tmp = _modDef5802;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15827, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15860, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

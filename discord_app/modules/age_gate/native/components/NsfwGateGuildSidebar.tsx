@@ -1,9 +1,9 @@
-// === Module 17647: NsfwGateGuildSidebar ===
+// === Module 17691: NsfwGateGuildSidebar ===
 
-// Module 17647 (NsfwGateGuildSidebar)
+// Module 17691 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7301 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7314 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7300).NsfwGateSource;
+const NsfwGateSource = fn(7313).NsfwGateSource;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         if (cResult[11] !== stateFromStores) {
           let obj2 = { guild: stateFromStores, showExtraButtons: false };
-          const tmp21 = closure_12(stateFromStores(17481), obj2);
+          const tmp21 = closure_12(stateFromStores(17525), obj2);
           cResult[11] = stateFromStores;
           cResult[12] = tmp21;
           let tmp18 = tmp21;
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp26 = stateFromStores(6636)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
-          const tmp27 = stateFromStores(6636)(constants3.PRIMARY_NORMAL, undefined, 14);
+          const tmp26 = stateFromStores(6649)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
+          const tmp27 = stateFromStores(6649)(constants3.PRIMARY_NORMAL, undefined, 14);
           cResult[13] = tmp26;
           cResult[14] = tmp27;
           let tmp23 = tmp27;

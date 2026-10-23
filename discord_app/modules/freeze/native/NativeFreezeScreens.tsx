@@ -1,8 +1,8 @@
-// === Module 17648: NativeFreezeScreens ===
+// === Module 17692: NativeFreezeScreens ===
 
-// Module 17648 (NativeFreezeScreens)
+// Module 17692 (NativeFreezeScreens)
 import _modDef38 from "module_38" /* 38 */;
-import enableScreens from "enableScreens" /* 5902 */;
+import enableScreens from "enableScreens" /* 5914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,7 +93,7 @@ export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled() 
                     }
                   }
                   const obj2 = { enabled: tmp4, hasTwoStates: true, style: tmp9.screens, nativeID: "native-freeze-screens-container", children: cResult[14] };
-                  const tmp27 = first(tmp(5902).ScreenContainer, obj2);
+                  const tmp27 = first(tmp(5914).ScreenContainer, obj2);
                   cResult[23] = tmp4;
                   cResult[24] = tmp9.screens;
                   cResult[25] = cResult[14];

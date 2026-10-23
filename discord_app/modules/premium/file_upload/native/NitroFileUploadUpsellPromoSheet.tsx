@@ -1,9 +1,9 @@
-// === Module 18337: NitroFileUploadUpsellPromoSheet ===
+// === Module 18381: NitroFileUploadUpsellPromoSheet ===
 
-// Module 18337 (NitroFileUploadUpsellPromoSheet)
+// Module 18381 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 587 */;
-import openUserSettings from "openUserSettings" /* 7475 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9893 */;
+import openUserSettings from "openUserSettings" /* 7488 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9915 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
     }
   }
   const obj = markAsDismissed(576);
-  const unmountEffect = markAsDismissed(5249).useUnmountEffect(tmp7);
+  const unmountEffect = markAsDismissed(5261).useUnmountEffect(tmp7);
   if (cResult[4] !== U) {
     class A {
       constructor() {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
   }
-  const tmpResult = markAsDismissed(5249);
+  const tmpResult = markAsDismissed(5261);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, A, constants.PREMIUM_UPSELL_FILE_UPLOAD));
   if (cResult[6] !== onPress) {
     class M {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const tmp16 = jsx(tmp(18333).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp16 = jsx(tmp(18377).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[10] = tmp16;
     const tmp15 = tmp16;
   } else {
@@ -265,13 +265,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
     const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-    const tmp31 = jsx(tmp(10828).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
+    const tmp31 = jsx(tmp(10851).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
     cResult[19] = tmp14;
     cResult[20] = tmp27;
     cResult[21] = tmp17;
     cResult[22] = tmp31;
   }
-  const tmp28 = jsx(markAsDismissed(5230).Button, { grow: true, size: "lg", variant: "primary", loading, text: tmp24, onPress: null });
+  const tmp28 = jsx(markAsDismissed(5242).Button, { grow: true, size: "lg", variant: "primary", loading, text: tmp24, onPress: null });
   cResult[16] = loading;
   cResult[17] = null;
   cResult[18] = tmp28;

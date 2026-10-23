@@ -1,6 +1,6 @@
-// === Module 16574: SettingsAppearancePickerUtils ===
+// === Module 16621: SettingsAppearancePickerUtils ===
 
-// Module 16574 (SettingsAppearancePickerUtils)
+// Module 16621 (SettingsAppearancePickerUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import getSystemThemeDefault from "getSystemTheme" /* 1245 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
 import utils_ColorDefault from "utils/Color" /* 4967 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5188 */;
-import useToken from "useToken" /* 5238 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5200 */;
+import useToken from "useToken" /* 5250 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -260,7 +260,7 @@ export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEn
   return tmp15;
 }) : (function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5238).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5250).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

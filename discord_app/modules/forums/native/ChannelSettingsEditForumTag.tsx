@@ -1,14 +1,14 @@
-// === Module 18229: ChannelSettingsEditForumTag ===
+// === Module 18273: ChannelSettingsEditForumTag ===
 
-// Module 18229 (ChannelSettingsEditForumTag)
+// Module 18273 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9704 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9726 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6710 */;
+import EmojiStore from "EmojiStore" /* 6723 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
@@ -287,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
         } else {
           children = string(t.zeVg5d);
         }
-        return closure_10(channelId(5220).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
+        return closure_10(channelId(5232).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
       }
     });
   }, items3);
@@ -392,22 +392,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
                   closure_6(null);
                   closure_8("");
                 },
-          children: tmp27(tmp3(7003).CircleXIcon, { size: "xs" })
+          children: tmp27(tmp3(7016).CircleXIcon, { size: "xs" })
         };
-        let tmp27Result = tmp27(tmp3(6893).PressableOpacity, obj12);
+        let tmp27Result = tmp27(tmp3(6906).PressableOpacity, obj12);
       } else {
         tmp27Result = null;
       }
       const obj13 = { children: null };
       const obj14 = { hasIcons: true, children: null };
       obj8.trailing = tmp27Result;
-      obj14.children = tmp27(tmp3(6888).TableRow, obj8);
-      const items6 = [tmp27(tmp3(6972).TableRowGroup, obj14), ];
+      obj14.children = tmp27(tmp3(6901).TableRow, obj8);
+      const items6 = [tmp27(tmp3(6985).TableRowGroup, obj14), ];
       const obj15 = { style: tmp.hint, children: null };
       const obj16 = { variant: "text-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1128).intl;
       obj16.children = intl2.string(tmp3(1128).t["3v8kZH"]);
-      obj15.children = tmp27(tmp3(5220).Text, obj16);
+      obj15.children = tmp27(tmp3(5232).Text, obj16);
       items6[1] = tmp27(tmp28, obj15);
       obj13.children = items6;
       const items7 = [tmp29(tmp28, obj13), , ];
@@ -431,8 +431,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
         }
         closure_10(tmp2);
       };
-      obj18.children = tmp27(tmp3(7280).TableSwitchRow, obj17);
-      items7[1] = tmp27(tmp3(6972).TableRowGroup, obj18);
+      obj18.children = tmp27(tmp3(7293).TableSwitchRow, obj17);
+      items7[1] = tmp27(tmp3(6985).TableRowGroup, obj18);
       let tmp27Result3 = null;
       if (!tmp2) {
         const obj19 = { hasIcons: false, children: null };
@@ -458,12 +458,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
           };
           actions_AlertActionCreatorsDefault.show(obj2);
         };
-        obj19.children = tmp27(tmp3(6888).TableRow, obj20);
-        tmp27Result3 = tmp27(tmp3(6972).TableRowGroup, obj19);
+        obj19.children = tmp27(tmp3(6901).TableRow, obj20);
+        tmp27Result3 = tmp27(tmp3(6985).TableRowGroup, obj19);
       }
       items7[2] = tmp27Result3;
       obj6.children = items7;
-      obj5.children = tmp29(tmp3(5963).Stack, obj6);
+      obj5.children = tmp29(tmp3(5975).Stack, obj6);
       return tmp27(tmp28, obj5);
     }
     const obj21 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
@@ -485,9 +485,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
       str2 = "";
     }
     obj21.name = str2;
-    tmp27Result4 = tmp27(tag(7212), obj21);
+    tmp27Result4 = tmp27(tag(7225), obj21);
     tmp31 = tag;
-    const tmp32 = tag(7212);
+    const tmp32 = tag(7225);
   }
-  tmp27Result4 = tmp27(tmp3(9326).ReactionIcon, {});
+  tmp27Result4 = tmp27(tmp3(9349).ReactionIcon, {});
 });

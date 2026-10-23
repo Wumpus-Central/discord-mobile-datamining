@@ -1,12 +1,12 @@
-// === Module 14339: UserProfileWidgetReportButton ===
+// === Module 14363: UserProfileWidgetReportButton ===
 
-// Module 14339 (UserProfileWidgetReportButton)
+// Module 14363 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9620 */;
-import ContextMenu from "ContextMenu" /* 9738 */;
-import FlagIcon from "FlagIcon" /* 9948 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 14340 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9643 */;
+import ContextMenu from "ContextMenu" /* 9760 */;
+import FlagIcon from "FlagIcon" /* 9970 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 14364 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         obj.accessibilityRole = "button";
         const intl = userId(1128).intl;
         obj.accessibilityLabel = intl.string(userId(1128).t.xpSHSk);
-        obj.children = jsx(userId(9620).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+        obj.children = jsx(userId(9643).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
         return <Pressable ref={ref.ref} />;
       };
       cResult[4] = fn;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
     if (cResult[5] !== tmp6) {
       const obj2 = { items: tmp6, children: tmp7 };
-      const tmp10 = jsx(tmp(9738).ContextMenu, { items: tmp6, children: tmp7 });
+      const tmp10 = jsx(tmp(9760).ContextMenu, { items: tmp6, children: tmp7 });
       cResult[5] = tmp6;
       cResult[6] = tmp10;
       let tmp8 = tmp10;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     {
       label: first,
       variant: "destructive",
-      IconComponent: userId(9948).FlagIcon,
+      IconComponent: userId(9970).FlagIcon,
       action() {
         return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
       }
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj3 = {
     label: first,
     variant: "destructive",
-    IconComponent: userId(9948).FlagIcon,
+    IconComponent: userId(9970).FlagIcon,
     action() {
       return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
     }

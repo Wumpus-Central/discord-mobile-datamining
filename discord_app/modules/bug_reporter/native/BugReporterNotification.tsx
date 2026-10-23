@@ -1,14 +1,14 @@
-// === Module 13736: BugReporterNotification ===
+// === Module 13759: BugReporterNotification ===
 
-// Module 13736 (BugReporterNotification)
+// Module 13759 (BugReporterNotification)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13692 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13694 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13715 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13717 */;
 import noop from "module_19" /* 19 */;
-import BugReportStore from "BugReportStore" /* 13737 */;
+import BugReportStore from "BugReportStore" /* 13760 */;
 
 require = fn;
 const View = fn(17).View;
@@ -31,9 +31,9 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   obj.children = jsx(FastImageDefault, { source: { uri: notification.imageUri }, style: tmp.preview });
   let obj2 = { source: { uri: notification.imageUri }, style: tmp.preview };
   const tmp3 = <View style={tmp.rightAccessoryContainer}>{null}</View>;
-  return jsx(notification(13729).NotificationPressable, {
+  return jsx(notification(13752).NotificationPressable, {
     header: memo,
-    children: jsx(notification(13701).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(13724).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <View style={tmp.rightAccessoryContainer}>{null}</View>,
     onPress() {
       if (!BugReportStore.getField("isReportOpen")) {
@@ -44,7 +44,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         InAppNotificationActionCreatorsDefault.clearNotification();
         BugReportStore.setState({ isReportOpen: true });
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13738, dependencyMap.paths), { screenshotUri: null, screenshot: null });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13761, dependencyMap.paths), { screenshotUri: null, screenshot: null });
         const obj10 = { screenshotUri: null, screenshot: null };
       }
     },

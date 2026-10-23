@@ -1,8 +1,8 @@
-// === Module 8075: SafetyTipsRow ===
+// === Module 8088: SafetyTipsRow ===
 
-// Module 8075 (SafetyTipsRow)
+// Module 8088 (SafetyTipsRow)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
       }
     }
     const obj2 = { icon: tmp6, label: tip, subLabel: description, end };
-    const tmp10 = jsx(tmp(6888).TableRow, { icon: tmp6, label: tip, subLabel: description, end });
+    const tmp10 = jsx(tmp(6901).TableRow, { icon: tmp6, label: tip, subLabel: description, end });
     cResult[5] = description;
     cResult[6] = end;
     cResult[7] = tmp6;

@@ -1,18 +1,18 @@
-// === Module 17040: BuildOverrideActiveSetting ===
+// === Module 17084: BuildOverrideActiveSetting ===
 
-// Module 17040 (BuildOverrideActiveSetting)
+// Module 17084 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2145 from "module_2145" /* 2145 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12656 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15779 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16072 */;
-import DevToolsContent from "DevToolsContent" /* 17038 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12675 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15800 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16105 */;
+import DevToolsContent from "DevToolsContent" /* 17082 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11000 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11023 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -58,7 +58,7 @@ ReactCompilerGating = fn(558);
 function useHasBuildOverrideActive() {
   return null != closure_7();
 }
-const SettingBuilders = fn(11181);
+const SettingBuilders = fn(11204);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
   const cResult = c.c(3);
   const tmp4 = closure_7();
@@ -136,7 +136,7 @@ let obj5 = {
     return intl.string(_modDef2145.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11740).RefreshIcon,
+  IconComponent: fn(11760).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();
@@ -219,7 +219,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2145.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11740).RefreshIcon,
+  IconComponent: fn(11760).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();

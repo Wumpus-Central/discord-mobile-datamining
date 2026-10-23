@@ -1,10 +1,10 @@
-// === Module 8970: BottomSheetTextInput ===
+// === Module 8993: BottomSheetTextInput ===
 
-// Module 8970 (BottomSheetTextInput)
+// Module 8993 (BottomSheetTextInput)
 import c from "c" /* 576 */;
-import NativeTextInput from "NativeTextInput" /* 7011 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7013 */;
-import TextInput_TextInputDefault from "TextInput/TextInput" /* 8971 */;
+import NativeTextInput from "NativeTextInput" /* 7024 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7026 */;
+import TextInput_TextInputDefault from "TextInput/TextInput" /* 8994 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

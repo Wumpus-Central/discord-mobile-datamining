@@ -1,9 +1,9 @@
-// === Module 17360: TabsPerformanceTracker ===
+// === Module 17404: TabsPerformanceTracker ===
 
-// Module 17360 (TabsPerformanceTracker)
+// Module 17404 (TabsPerformanceTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,12 +57,12 @@ export const useTrackTabPerformance = ReactCompilerGating.isReactCompilerEnabled
           const fn = function o() {
             return ReanimatedRexport.runOnJS(log)();
           };
-          let obj3 = { runOnJS: tab(5038).runOnJS, log };
+          let obj3 = { runOnJS: tab(5050).runOnJS, log };
           fn.__closure = obj3;
           fn.__workletHash = 7114578957129;
           fn.__initData = __initData;
-          tab(5038).runOnUI(fn)();
-          const obj2 = tab(5038);
+          tab(5050).runOnUI(fn)();
+          const obj2 = tab(5050);
         }
       }
       let obj = dependencyMap2[tmp2];
@@ -107,12 +107,12 @@ export const useTrackTabPerformance = ReactCompilerGating.isReactCompilerEnabled
           const fn = function o() {
             return ReanimatedRexport.runOnJS(log)();
           };
-          let obj3 = { runOnJS: tab(5038).runOnJS, log_0: log };
+          let obj3 = { runOnJS: tab(5050).runOnJS, log_0: log };
           fn.__closure = obj3;
           fn.__workletHash = 1184292963178;
           fn.__initData = __initData2;
-          tab(5038).runOnUI(fn)();
-          const obj2 = tab(5038);
+          tab(5050).runOnUI(fn)();
+          const obj2 = tab(5050);
         }
       }
       let obj = dependencyMap2[tmp2];
@@ -160,12 +160,12 @@ export const useTrackTabPerformance = ReactCompilerGating.isReactCompilerEnabled
         const fn = function n() {
           return ReanimatedRexport.runOnJS(log)();
         };
-        let obj3 = { runOnJS: tab(5038).runOnJS, log };
+        let obj3 = { runOnJS: tab(5050).runOnJS, log };
         fn.__closure = obj3;
         fn.__workletHash = 11082108471627;
         fn.__initData = __initData;
-        tab(5038).runOnUI(fn)();
-        const obj2 = tab(5038);
+        tab(5050).runOnUI(fn)();
+        const obj2 = tab(5050);
       }
     }
     let obj = dependencyMap2[tmp2];
@@ -199,12 +199,12 @@ export const useTrackTabPerformance = ReactCompilerGating.isReactCompilerEnabled
         const fn = function n() {
           return ReanimatedRexport.runOnJS(log_0)();
         };
-        let obj3 = { runOnJS: tab(5038).runOnJS, log_0 };
+        let obj3 = { runOnJS: tab(5050).runOnJS, log_0 };
         fn.__closure = obj3;
         fn.__workletHash = 341921734764;
         fn.__initData = __initData2;
-        tab(5038).runOnUI(fn)();
-        const obj2 = tab(5038);
+        tab(5050).runOnUI(fn)();
+        const obj2 = tab(5050);
       }
     }
     let obj = dependencyMap2[tmp2];

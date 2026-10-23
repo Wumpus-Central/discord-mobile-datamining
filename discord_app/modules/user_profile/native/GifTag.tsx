@@ -1,12 +1,12 @@
-// === Module 8459: GifTag ===
+// === Module 8471: GifTag ===
 
-// Module 8459 (GifTag)
+// Module 8471 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import createStyles from "createStyles" /* 4969 */;
 import n from "module_683" /* 683 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

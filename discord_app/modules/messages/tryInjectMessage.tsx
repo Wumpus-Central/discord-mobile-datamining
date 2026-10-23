@@ -1,11 +1,11 @@
-// === Module 12985: tryInjectMessage ===
+// === Module 13008: tryInjectMessage ===
 
-// Module 12985 (tryInjectMessage)
+// Module 13008 (tryInjectMessage)
 import FlagUtils from "FlagUtils" /* 1405 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5998 */;
-import createMessageDefault from "createMessage" /* 10184 */;
-import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 12986 */;
-import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 12987 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6010 */;
+import createMessageDefault from "createMessage" /* 10206 */;
+import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 13009 */;
+import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 13010 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

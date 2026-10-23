@@ -1,17 +1,17 @@
-// === Module 15818: UserProfileEditFormControls ===
+// === Module 15843: UserProfileEditFormControls ===
 
-// Module 15818 (UserProfileEditFormControls)
+// Module 15843 (UserProfileEditFormControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6893 */;
-import TableRowArrow from "TableRowArrow" /* 6897 */;
-import Input from "Input" /* 6994 */;
-import FormSwitch from "FormSwitch" /* 7281 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Pressables from "Pressables" /* 6906 */;
+import TableRowArrow from "TableRowArrow" /* 6910 */;
+import Input from "Input" /* 7007 */;
+import FormSwitch from "FormSwitch" /* 7294 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,8 +21,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
-let obj2 = { button: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md }, buttonDisabled: { opacity: 0.5 }, buttonTextContainer: { flexGrow: 1, flexShrink: 1, flexDirection: "column" }, formControlText: { marginRight: "auto", flexShrink: 1 }, labelTrailing: null, newBadge: null };
+let obj2 = { button: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md }, buttonDisabled: { opacity: 0.5 }, buttonGroup: null, buttonInGroup: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
 let obj3 = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md };
+obj2.buttonGroup = { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
+obj2.buttonInGroup = { borderWidth: 0 };
+obj2.buttonTextContainer = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
+obj2.formControlText = { marginRight: "auto", flexShrink: 1 };
+let obj4 = { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
 obj2.labelTrailing = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 };
 obj2.newBadge = { paddingTop: 0 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -77,7 +82,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormCo
   return tmp2;
 });
 fn(558);
-let obj4 = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 };
+let obj5 = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormLabelBadges(arg0) {
   const cResult = c.c(9);
@@ -164,78 +169,99 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileE
 });
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormButton(arg0) {
-  const cResult = c.c(31);
-  ({ label, labelTrailing, buttonText, buttonSubtext, content, onPress, leading, trailing, accessibilityValue, disabled, loading, hideArrow } = arg0);
+  const cResult = c.c(36);
+  ({ label, labelTrailing, buttonText, buttonSubtext, content, onPress, leading, trailing, accessibilityValue, disabled, loading, hideArrow, footer } = arg0);
   const tmp7 = closure_8();
   let buttonDisabled = tmp4;
   if (undefined !== disabled && disabled) {
     buttonDisabled = tmp7.buttonDisabled;
   }
   if (cResult[0] === tmp7.button) {
-    if (cResult[1] === buttonDisabled) {
-      let tmp8 = cResult[2];
-    }
-    if (cResult[3] !== tmp4) {
-      let stringResult;
-      if (!tmp4) {
-        const intl = util.intl;
-        stringResult = intl.string(util.t["4lAcxv"]);
+    if (cResult[1] === tmp8) {
+      if (cResult[2] === buttonDisabled) {
+        let tmp9 = cResult[3];
       }
-      cResult[3] = tmp4;
-      cResult[4] = stringResult;
-      let tmp9 = stringResult;
-    } else {
-      tmp9 = cResult[4];
-    }
-    if (cResult[5] === tmp4) {
-      if (cResult[6] === tmp5) {
-        let tmp11 = cResult[7];
+      if (cResult[4] !== tmp4) {
+        let stringResult;
+        if (!tmp4) {
+          const intl = util.intl;
+          stringResult = intl.string(util.t["4lAcxv"]);
+        }
+        cResult[4] = tmp4;
+        cResult[5] = stringResult;
+        let tmp10 = stringResult;
+      } else {
+        tmp10 = cResult[5];
       }
-      if (cResult[8] === buttonSubtext) {
-        if (cResult[9] === buttonText) {
-          if (cResult[10] === content) {
-            if (cResult[11] === tmp7.buttonTextContainer) {
-              let tmp12 = cResult[12];
-            }
-            if (cResult[13] !== tmp6) {
-              let tmp23 = !tmp6;
-              if (!tmp6) {
-                tmp23 = timestampProducer(TableRowArrow.TableRowArrow, {});
+      if (cResult[6] === tmp4) {
+        if (cResult[7] === tmp5) {
+          let tmp12 = cResult[8];
+        }
+        if (cResult[9] === buttonSubtext) {
+          if (cResult[10] === buttonText) {
+            if (cResult[11] === content) {
+              if (cResult[12] === tmp7.buttonTextContainer) {
+                let tmp13 = cResult[13];
               }
-              cResult[13] = tmp6;
-              cResult[14] = tmp23;
-              let tmp22 = tmp23;
-            } else {
-              tmp22 = cResult[14];
-            }
-            if (cResult[15] === accessibilityValue) {
-              if (cResult[16] === tmp4) {
-                if (cResult[17] === label) {
-                  if (cResult[18] === leading) {
-                    if (cResult[19] === onPress) {
-                      if (cResult[20] === tmp8) {
-                        if (cResult[21] === tmp9) {
-                          if (cResult[22] === tmp11) {
-                            if (cResult[23] === tmp12) {
-                              if (cResult[24] === tmp22) {
-                                if (cResult[25] === trailing) {
-                                  let tmp25 = cResult[26];
-                                }
-                                if (cResult[27] === label) {
-                                  if (cResult[28] === labelTrailing) {
-                                    if (cResult[29] === tmp25) {
-                                      let tmp28 = cResult[30];
-                                    }
-                                    return tmp28;
+              if (cResult[14] !== tmp6) {
+                let tmp23 = !tmp6;
+                if (!tmp6) {
+                  tmp23 = timestampProducer(TableRowArrow.TableRowArrow, {});
+                }
+                cResult[14] = tmp6;
+                cResult[15] = tmp23;
+                let tmp22 = tmp23;
+              } else {
+                tmp22 = cResult[15];
+              }
+              if (cResult[16] === accessibilityValue) {
+                if (cResult[17] === tmp4) {
+                  if (cResult[18] === label) {
+                    if (cResult[19] === leading) {
+                      if (cResult[20] === onPress) {
+                        if (cResult[21] === tmp22) {
+                          if (cResult[22] === tmp9) {
+                            if (cResult[23] === tmp10) {
+                              if (cResult[24] === tmp12) {
+                                if (cResult[25] === tmp13) {
+                                  if (cResult[26] === trailing) {
+                                    let tmp25 = cResult[27];
                                   }
+                                  if (cResult[28] === tmp25) {
+                                    if (cResult[29] === footer) {
+                                      if (cResult[30] === tmp7.buttonGroup) {
+                                        let tmp28 = cResult[31];
+                                      }
+                                      if (cResult[32] === label) {
+                                        if (cResult[33] === labelTrailing) {
+                                          if (cResult[34] === tmp28) {
+                                            let tmp32 = cResult[35];
+                                          }
+                                          return tmp32;
+                                        }
+                                      }
+                                      const obj2 = { label, labelTrailing, children: tmp28 };
+                                      const tmp34 = timestampProducer(Input.Input, obj2);
+                                      cResult[32] = label;
+                                      cResult[33] = labelTrailing;
+                                      cResult[34] = tmp28;
+                                      cResult[35] = tmp34;
+                                      tmp32 = tmp34;
+                                    }
+                                  }
+                                  let tmp29 = tmp25;
+                                  if (null != footer) {
+                                    const obj3 = { style: tmp7.buttonGroup, children: null };
+                                    const items = [tmp25, footer];
+                                    obj3.children = items;
+                                    tmp29 = React5(hasOwnProperty, obj3);
+                                  }
+                                  cResult[28] = tmp25;
+                                  cResult[29] = footer;
+                                  cResult[30] = tmp7.buttonGroup;
+                                  cResult[31] = tmp29;
+                                  tmp28 = tmp29;
                                 }
-                                const obj2 = { label, labelTrailing, children: tmp25 };
-                                const tmp30 = timestampProducer(Input.Input, obj2);
-                                cResult[27] = label;
-                                cResult[28] = labelTrailing;
-                                cResult[29] = tmp25;
-                                cResult[30] = tmp30;
-                                tmp28 = tmp30;
                               }
                             }
                           }
@@ -245,59 +271,60 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileE
                   }
                 }
               }
+              const obj4 = { onPress, style: tmp9, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: tmp10, accessibilityState: tmp12, disabled: tmp4, children: null };
+              const items1 = [leading, tmp13, trailing, tmp22];
+              obj4.children = items1;
+              const tmp27 = React5(Pressables.PressableHighlight, obj4);
+              cResult[16] = accessibilityValue;
+              cResult[17] = tmp4;
+              cResult[18] = label;
+              cResult[19] = leading;
+              cResult[20] = onPress;
+              cResult[21] = tmp22;
+              cResult[22] = tmp9;
+              cResult[23] = tmp10;
+              cResult[24] = tmp12;
+              cResult[25] = tmp13;
+              cResult[26] = trailing;
+              cResult[27] = tmp27;
+              tmp25 = tmp27;
             }
-            const obj3 = { onPress, style: tmp8, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: tmp9, accessibilityState: tmp11, disabled: tmp4, children: null };
-            const items = [leading, tmp12, trailing, tmp22];
-            obj3.children = items;
-            const tmp27 = React5(Pressables.PressableHighlight, obj3);
-            cResult[15] = accessibilityValue;
-            cResult[16] = tmp4;
-            cResult[17] = label;
-            cResult[18] = leading;
-            cResult[19] = onPress;
-            cResult[20] = tmp8;
-            cResult[21] = tmp9;
-            cResult[22] = tmp11;
-            cResult[23] = tmp12;
-            cResult[24] = tmp22;
-            cResult[25] = trailing;
-            cResult[26] = tmp27;
-            tmp25 = tmp27;
           }
         }
-      }
-      let tmp15Result = content;
-      if (content == null) {
-        const obj4 = { style: tmp7.buttonTextContainer, children: null };
-        let tmp17 = null != buttonText;
-        if (tmp17) {
-          const obj5 = { text: buttonText };
-          tmp17 = timestampProducer(closure_9, obj5);
+        let tmp15Result = content;
+        if (content == null) {
+          const obj5 = { style: tmp7.buttonTextContainer, children: null };
+          let tmp17 = null != buttonText;
+          if (tmp17) {
+            const obj6 = { text: buttonText };
+            tmp17 = timestampProducer(closure_9, obj6);
+          }
+          const items2 = [tmp17, ];
+          const obj7 = { text: buttonSubtext };
+          items2[1] = timestampProducer(closure_10, obj7);
+          obj5.children = items2;
+          tmp15Result = React5(hasOwnProperty, obj5);
         }
-        const items1 = [tmp17, ];
-        const obj6 = { text: buttonSubtext };
-        items1[1] = timestampProducer(closure_10, obj6);
-        obj4.children = items1;
-        tmp15Result = React5(hasOwnProperty, obj4);
+        cResult[9] = buttonSubtext;
+        cResult[10] = buttonText;
+        cResult[11] = content;
+        cResult[12] = tmp7.buttonTextContainer;
+        cResult[13] = tmp15Result;
+        tmp13 = tmp15Result;
       }
-      cResult[8] = buttonSubtext;
-      cResult[9] = buttonText;
-      cResult[10] = content;
-      cResult[11] = tmp7.buttonTextContainer;
-      cResult[12] = tmp15Result;
-      tmp12 = tmp15Result;
+      const obj8 = { disabled: tmp4, busy: tmp5 };
+      cResult[6] = tmp4;
+      cResult[7] = tmp5;
+      cResult[8] = obj8;
+      tmp12 = obj8;
     }
-    const obj7 = { disabled: tmp4, busy: tmp5 };
-    cResult[5] = tmp4;
-    cResult[6] = tmp5;
-    cResult[7] = obj7;
-    tmp11 = obj7;
   }
-  const items2 = [tmp7.button, buttonDisabled];
+  const items3 = [tmp7.button, null != footer && tmp7.buttonInGroup, buttonDisabled];
   cResult[0] = tmp7.button;
-  cResult[1] = buttonDisabled;
-  cResult[2] = items2;
-  tmp8 = items2;
+  cResult[1] = null != footer && tmp7.buttonInGroup;
+  cResult[2] = buttonDisabled;
+  cResult[3] = items3;
+  tmp9 = items3;
 }) : (function UserProfileEditFormButton(loading) {
   ({ label, buttonText, content, disabled } = loading);
   ({ labelTrailing, buttonSubtext, onPress, leading, trailing, accessibilityValue } = loading);
@@ -312,50 +339,64 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileE
   if (flag2 === undefined) {
     flag2 = false;
   }
+  const footer = loading.footer;
   const tmp = closure_8();
-  const obj = { label, labelTrailing, children: null };
-  const obj2 = { onPress, style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
-  const items = [tmp.button, ];
+  const obj = { onPress, style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
+  const items = [tmp.button, , ];
+  let buttonInGroup = null != footer;
+  if (buttonInGroup) {
+    buttonInGroup = tmp.buttonInGroup;
+  }
+  items[1] = buttonInGroup;
   let buttonDisabled = disabled;
   if (disabled) {
     buttonDisabled = tmp.buttonDisabled;
   }
-  items[1] = buttonDisabled;
-  obj2.style = items;
-  obj2.accessibilityLabel = label;
-  obj2.accessibilityValue = accessibilityValue;
+  items[2] = buttonDisabled;
+  obj.style = items;
+  obj.accessibilityLabel = label;
+  obj.accessibilityValue = accessibilityValue;
   let stringResult;
   if (!disabled) {
     const intl = util.intl;
     stringResult = intl.string(util.t["4lAcxv"]);
   }
-  obj2.accessibilityHint = stringResult;
-  obj2.accessibilityState = { disabled, busy: flag };
-  obj2.disabled = disabled;
+  obj.accessibilityHint = stringResult;
+  obj.accessibilityState = { disabled, busy: flag };
+  obj.disabled = disabled;
   const items1 = [leading, , , ];
   if (content == null) {
-    const obj3 = { style: tmp.buttonTextContainer, children: null };
-    let tmp2Result = null != buttonText;
-    if (tmp2Result) {
-      const obj4 = { text: buttonText };
-      tmp2Result = timestampProducer(closure_9, obj4);
+    const obj2 = { style: tmp.buttonTextContainer, children: null };
+    let tmp7 = null != buttonText;
+    if (tmp7) {
+      const obj3 = { text: buttonText };
+      tmp7 = timestampProducer(closure_9, obj3);
     }
-    const items2 = [tmp2Result, ];
-    const obj5 = { text: buttonSubtext };
-    items2[1] = timestampProducer(closure_10, obj5);
-    obj3.children = items2;
-    content = React5(hasOwnProperty, obj3);
+    const items2 = [tmp7, ];
+    const obj4 = { text: buttonSubtext };
+    items2[1] = timestampProducer(closure_10, obj4);
+    obj2.children = items2;
+    content = React5(hasOwnProperty, obj2);
   }
   items1[1] = content;
   items1[2] = trailing;
-  let tmp2Result2 = !flag2;
+  let tmp12 = !flag2;
   if (!flag2) {
-    tmp2Result2 = timestampProducer(TableRowArrow.TableRowArrow, {});
+    tmp12 = timestampProducer(TableRowArrow.TableRowArrow, {});
   }
-  items1[3] = tmp2Result2;
-  obj2.children = items1;
-  obj.children = React5(Pressables.PressableHighlight, obj2);
-  return timestampProducer(Input.Input, obj);
+  items1[3] = tmp12;
+  obj.children = items1;
+  const tmp2Result = React5(Pressables.PressableHighlight, obj);
+  const obj5 = { label, labelTrailing, children: null };
+  let tmp2Result2 = tmp2Result;
+  if (null != footer) {
+    const obj6 = { style: tmp.buttonGroup, children: null };
+    const items3 = [tmp2Result, footer];
+    obj6.children = items3;
+    tmp2Result2 = React5(hasOwnProperty, obj6);
+  }
+  obj5.children = tmp2Result2;
+  return timestampProducer(Input.Input, obj5);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
@@ -377,7 +418,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
       let tmp9 = cResult[2];
     }
     if (cResult[3] !== value) {
-      class L {
+      class I {
         constructor() {
           tmp = closure_2(value);
           return;
@@ -385,11 +426,11 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
       }
       const items = [value];
       cResult[3] = value;
-      cResult[4] = L;
+      cResult[4] = I;
       cResult[5] = items;
       let tmp11 = items;
     } else {
-      class L {
+      class I {
         constructor() {
           tmp = closure_2(value);
           return;
@@ -397,23 +438,23 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
       }
       tmp11 = cResult[5];
     }
-    const effect = noop.useEffect(L, tmp11);
+    const effect = noop.useEffect(I, tmp11);
     if (cResult[6] === onValueChange) {
-      class L {
+      class I {
         constructor() {
           tmp = closure_2(value);
           return;
         }
       }
       if (isAndroidResult) {
-        class L {
+        class I {
           constructor() {
             tmp = closure_2(value);
             return;
           }
         }
       } else {
-        class L {
+        class I {
           constructor() {
             tmp = closure_2(value);
             return;
@@ -421,7 +462,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         }
       }
       if (isAndroidResult) {
-        class L {
+        class I {
           constructor() {
             tmp = closure_2(value);
             return;
@@ -429,7 +470,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         }
       }
       if (accessibilityLabel == null) {
-        class L {
+        class I {
           constructor() {
             tmp = closure_2(value);
             return;
@@ -437,14 +478,14 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         }
       }
       if (cResult[9] === tmp8) {
-        class L {
+        class I {
           constructor() {
             tmp = closure_2(value);
             return;
           }
         }
         if (cResult[12] !== subLabel) {
-          class L {
+          class I {
             constructor() {
               tmp = closure_2(value);
               return;
@@ -455,7 +496,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
           cResult[12] = subLabel;
           cResult[13] = tmp18;
         } else {
-          class L {
+          class I {
             constructor() {
               tmp = closure_2(value);
               return;
@@ -463,7 +504,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
           }
         }
         if (cResult[14] === tmp4) {
-          class L {
+          class I {
             constructor() {
               tmp = closure_2(value);
               return;
@@ -471,7 +512,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
           }
         }
         const obj4 = { "aria-hidden": true, value, onValueChange: tmp9, disabled: tmp4 };
-        const tmp21 = timestampProducer(tmp(7281).FormSwitch, obj4);
+        const tmp21 = timestampProducer(tmp(7294).FormSwitch, obj4);
         cResult[14] = tmp4;
         cResult[15] = tmp9;
         cResult[16] = value;
@@ -523,7 +564,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(6893).PressableHighlight;
+    let PressableHighlight = tmp2(6906).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }

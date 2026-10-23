@@ -1,12 +1,12 @@
-// === Module 15656: UserSettingsProtoManager ===
+// === Module 15677: UserSettingsProtoManager ===
 
-// Module 15656 (UserSettingsProtoManager)
+// Module 15677 (UserSettingsProtoManager)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1250 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4802 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 15657 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 15658 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 15678 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 15679 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 require = fn;

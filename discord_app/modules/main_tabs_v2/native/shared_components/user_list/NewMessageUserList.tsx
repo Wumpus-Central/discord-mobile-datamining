@@ -1,12 +1,12 @@
-// === Module 13188: NewMessageUserList ===
+// === Module 13211: NewMessageUserList ===
 
-// Module 13188 (NewMessageUserList)
+// Module 13211 (NewMessageUserList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -95,7 +95,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10593).UserRowModes;
+const UserRowModes = fn(10615).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];

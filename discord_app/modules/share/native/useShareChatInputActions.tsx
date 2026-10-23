@@ -1,7 +1,7 @@
-// === Module 12865: useShareChatInputActions ===
+// === Module 12884: useShareChatInputActions ===
 
-// Module 12865 (useShareChatInputActions)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
+// Module 12884 (useShareChatInputActions)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,18 +1,18 @@
-// === Module 17068: UserSettingsDesignSystemTabs ===
+// === Module 17112: UserSettingsDesignSystemTabs ===
 
-// Module 17068 (UserSettingsDesignSystemTabs)
+// Module 17112 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import useToken from "useToken" /* 5238 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import TableSwitchRow from "TableSwitchRow" /* 7280 */;
-import SegmentedControlState from "SegmentedControlState" /* 8876 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 11120 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11804 */;
-import TabsGradientDefault from "TabsGradient" /* 13639 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import useToken from "useToken" /* 5250 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import TableSwitchRow from "TableSwitchRow" /* 7293 */;
+import SegmentedControlState from "SegmentedControlState" /* 8899 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11143 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11823 */;
+import TabsGradientDefault from "TabsGradient" /* 13662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

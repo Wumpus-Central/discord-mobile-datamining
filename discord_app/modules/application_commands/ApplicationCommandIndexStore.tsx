@@ -1,6 +1,6 @@
-// === Module 9626: ApplicationCommandIndexStore ===
+// === Module 9649: ApplicationCommandIndexStore ===
 
-// Module 9626 (ApplicationCommandIndexStore)
+// Module 9649 (ApplicationCommandIndexStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
@@ -8,26 +8,26 @@ import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Server from "Server" /* 2000 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7615 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9630 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9631 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9632 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9634 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 10182 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5632 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6825 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9653 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9654 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9655 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9657 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 10204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9627 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9650 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9628 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9651 */;
 
 const require = globalThis.__r;
 const initializeDefault = initialize;
@@ -197,60 +197,27 @@ function updateIndexAndFetchApplicationCommandIndex() {
   return applyArgumentsResult;
 }
 let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0) {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          const _AbortController = AbortController;
-          const abortController = new AbortController();
-          const future = new require("Future").Future();
-          const obj4 = { fetchState: null };
-          const obj5 = { fetching: true, abort: abortController, promise: future.promise };
-          obj4.fetchState = obj5;
-          updateIndex(closure_0, obj4, true);
-          const applicationCommandIndex = require("ApplicationCommandIndexActionCreators").fetchApplicationCommandIndex(closure_0, abortController);
-          const obj7 = require("ApplicationCommandIndexActionCreators");
-          c2 = 1;
-          c1 = 1;
-          const obj6 = { value: applicationCommandIndex.then(future.resolve).catch(future.reject), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        c1 = 3;
-        return { value: "IconComponent", done: null };
-      }
-    } catch (tmp5) {
-      c1 = tmp;
-      throw tmp5;
-    }
+  closure_3 = tmp4;
+  const _AbortController = AbortController;
+  const abortController = new AbortController();
+  const future = new require("Future").Future();
+  closure_131_0 = future;
+  updateIndex(closure_0, { fetchState: { fetching: true, abort: abortController, promise: future.promise } }, true);
+  const resolve = future.resolve;
+  await require("ApplicationCommandIndexActionCreators").fetchApplicationCommandIndex(closure_0, abortController);
+  if (1 === tmp7) {
+    c4 = 0;
+    closure_131_1 = closure_5;
+    closure_131_0.reject(closure_131_1);
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    resolve(value);
+    c4 = 0;
   }
+  return value;
 };
 function handleFetchSuccess(arg0) {
   let flag = arg1;
@@ -289,11 +256,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(7615);
+          let obj2 = id(7628);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7618);
+            let tmp19Result = tmp19(7631);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -315,7 +282,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7615).buildApplicationCommands(application_commands.map((description_default) => {
+    const applicationCommands = id(7628).buildApplicationCommands(application_commands.map((description_default) => {
       const obj = {};
       const merged = Object.assign(description_default);
       let str = description_default.description_default;
@@ -374,7 +341,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(7615);
+    const obj6 = id(7628);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -427,7 +394,7 @@ function handleStaleUserIndex() {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(9632).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9655).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -439,7 +406,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(9632).ScoreMethod.NONE;
+    NONE = NONE(9655).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -458,10 +425,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(9632).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(9632).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(9634).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(9634);
+  if (builtIns !== NONE(9655).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9655).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(9657).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(9657);
   } else {
     builtInCommands = [];
   }
@@ -630,7 +597,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(9634).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(9657).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -644,7 +611,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(9632).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9655).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -1047,7 +1014,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(5969);
+const ApplicationCommandConstants = fn(5981);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);
@@ -2675,7 +2642,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
         let tmp5 = cResult[3];
       }
       _require = tmp5;
-      const topCommands = tmp(9633).useTopCommands(tmp5);
+      const topCommands = tmp(9656).useTopCommands(tmp5);
       if (cResult[4] === tmp5) {
         if (cResult[5] === commands) {
           if (cResult[6] === descriptors) {
@@ -2770,7 +2737,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
               return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
             }
           }
-          tmp16[0] = tmp(9634).BUILT_IN_SECTIONS[constants.FRECENCY];
+          tmp16[0] = tmp(9657).BUILT_IN_SECTIONS[constants.FRECENCY];
           tmp16[1] = spliceResult;
           cResult[28] = spliceResult;
           cResult[29] = tmp16;
@@ -2815,7 +2782,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
         cResult[24] = sectionedCommands;
         cResult[25] = obj4;
       }
-      const tmpResult = tmp(9633);
+      const tmpResult = tmp(9656);
     }
   }
   let tmp6;

@@ -1,8 +1,8 @@
-// === Module 17005: SelectMenuNativeComponent ===
+// === Module 17049: SelectMenuNativeComponent ===
 
-// Module 17005 (SelectMenuNativeComponent)
+// Module 17049 (SelectMenuNativeComponent)
 import c from "c" /* 576 */;
-import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 17006 */;
+import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 17050 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

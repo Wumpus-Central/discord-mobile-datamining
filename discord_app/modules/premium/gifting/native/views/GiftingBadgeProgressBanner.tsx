@@ -1,15 +1,15 @@
-// === Module 10491: GiftingBadgeProgressBanner ===
+// === Module 10513: GiftingBadgeProgressBanner ===
 
-// Module 10491 (GiftingBadgeProgressBanner)
+// Module 10513 (GiftingBadgeProgressBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import _modDef2632 from "module_2632" /* 2632 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9337 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10482 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7251 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9360 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

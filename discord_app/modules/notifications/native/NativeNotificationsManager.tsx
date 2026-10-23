@@ -1,11 +1,11 @@
-// === Module 19253: NativeNotificationsManager ===
+// === Module 19297: NativeNotificationsManager ===
 
-// Module 19253 (NativeNotificationsManager)
+// Module 19297 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PushNotificationDefault from "PushNotification" /* 10730 */;
+import PushNotificationDefault from "PushNotification" /* 10752 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6799 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6812 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;
@@ -237,7 +237,7 @@ const prototype = function NativeNotificationsManager() {
           }
           logger = 6;
           c8 = 1;
-          const obj11 = { value: applyArgumentsResult(8676).removeFile(closure_131_0, closure_131_2), done: false };
+          const obj11 = { value: applyArgumentsResult(8694).removeFile(closure_131_0, closure_131_2), done: false };
           return obj11;
         }
       } catch (tmp39) {

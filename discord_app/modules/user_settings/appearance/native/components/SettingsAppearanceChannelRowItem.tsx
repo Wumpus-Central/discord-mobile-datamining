@@ -1,11 +1,11 @@
-// === Module 16565: SettingsAppearanceChannelRowItem ===
+// === Module 16612: SettingsAppearanceChannelRowItem ===
 
-// Module 16565 (SettingsAppearanceChannelRowItem)
+// Module 16612 (SettingsAppearanceChannelRowItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 10665 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 10687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelR
   items1[1] = React4(View, obj3);
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
-  const items3 = [React4(tmp6(5220).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(5220).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
+  const items3 = [React4(tmp6(5232).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(5232).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
   obj7.children = items3;
   const items4 = [hasOwnProperty(View, obj7), ];
   if (null == preview) {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelR
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    React4(tmp6(5220).Text, animatedStyles);
+    React4(tmp6(5232).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj8 = { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title };

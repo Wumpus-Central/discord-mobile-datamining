@@ -1,6 +1,6 @@
-// === Module 19160: useCreateCreatorMonetizationEnableRequest ===
+// === Module 19204: useCreateCreatorMonetizationEnableRequest ===
 
-// Module 19160 (useCreateCreatorMonetizationEnableRequest)
+// Module 19204 (useCreateCreatorMonetizationEnableRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

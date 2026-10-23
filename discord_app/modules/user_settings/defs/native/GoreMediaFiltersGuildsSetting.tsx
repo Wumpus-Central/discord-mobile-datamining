@@ -1,18 +1,18 @@
-// === Module 16063: GoreMediaFiltersGuildsSetting ===
+// === Module 16096: GoreMediaFiltersGuildsSetting ===
 
-// Module 16063 (GoreMediaFiltersGuildsSetting)
+// Module 16096 (GoreMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7383 */;
-import useUserIsTeen from "useUserIsTeen" /* 8109 */;
-import SettingsConstants from "SettingsConstants" /* 8318 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8572 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16055 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16056 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7396 */;
+import useUserIsTeen from "useUserIsTeen" /* 8122 */;
+import SettingsConstants from "SettingsConstants" /* 8330 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8584 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16088 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16089 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11181 */;
+import SettingBuilders from "SettingBuilders" /* 11204 */;
 import size from "module_2" /* 2 */;
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {

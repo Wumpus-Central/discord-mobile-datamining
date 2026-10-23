@@ -1,6 +1,6 @@
-// === Module 8700: UserProfileGradientUtils ===
+// === Module 8718: UserProfileGradientUtils ===
 
-// Module 8700 (UserProfileGradientUtils)
+// Module 8718 (UserProfileGradientUtils)
 import _mod12 from "module_12" /* 12 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;

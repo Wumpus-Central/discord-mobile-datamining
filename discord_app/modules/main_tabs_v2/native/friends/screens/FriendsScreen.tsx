@@ -1,18 +1,18 @@
-// === Module 18122: FriendsScreen ===
+// === Module 18166: FriendsScreen ===
 
-// Module 18122 (FriendsScreen)
+// Module 18166 (FriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import SendMessageIcon from "SendMessageIcon" /* 5666 */;
-import TableRow from "TableRow" /* 6888 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import NoResultsDefault from "NoResults" /* 12863 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16373 */;
-import _modDef17807 from "module_17807" /* 17807 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import SendMessageIcon from "SendMessageIcon" /* 5678 */;
+import TableRow from "TableRow" /* 6901 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import NoResultsDefault from "NoResults" /* 12882 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16423 */;
+import _modDef17851 from "module_17851" /* 17851 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7716 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7729 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 
 const require = globalThis.__r;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef17807, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef17851, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef17807 };
+      const obj8 = { source: _modDef17851 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

@@ -1,10 +1,10 @@
-// === Module 12870: CheckpointForwardPreview ===
+// === Module 12889: CheckpointForwardPreview ===
 
-// Module 12870 (CheckpointForwardPreview)
+// Module 12889 (CheckpointForwardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointConstants from "CheckpointConstants" /* 6001 */;
-import Checkpoint2025ForwardPreviewDefault from "Checkpoint2025ForwardPreview" /* 12871 */;
+import CheckpointConstants from "CheckpointConstants" /* 6013 */;
+import Checkpoint2025ForwardPreviewDefault from "Checkpoint2025ForwardPreview" /* 12890 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

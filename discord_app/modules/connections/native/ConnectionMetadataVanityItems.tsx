@@ -1,21 +1,21 @@
-// === Module 11243: ConnectionMetadataVanityItems ===
+// === Module 11266: ConnectionMetadataVanityItems ===
 
-// Module 11243 (ConnectionMetadataVanityItems)
+// Module 11266 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7260 */;
-import _modDef11244 from "module_11244" /* 11244 */;
-import _modDef11245 from "module_11245" /* 11245 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7273 */;
+import _modDef11267 from "module_11267" /* 11267 */;
+import _modDef11268 from "module_11268" /* 11268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7261);
+const Constants = fn(7274);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -434,7 +434,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11244;
+    obj2.imageSrc = _modDef11267;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -444,7 +444,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11245;
+    obj4.imageSrc = _modDef11268;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

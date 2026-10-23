@@ -1,11 +1,11 @@
-// === Module 8961: GuildProfileStore ===
+// === Module 8984: GuildProfileStore ===
 
-// Module 8961 (GuildProfileStore)
+// Module 8984 (GuildProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;
-import GuildProfileBuilders from "GuildProfileBuilders" /* 6835 */;
+import GuildProfileBuilders from "GuildProfileBuilders" /* 6848 */;
 import size from "module_2" /* 2 */;
 
 function handleUpdateStart(guildId) {

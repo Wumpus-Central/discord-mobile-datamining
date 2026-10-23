@@ -1,13 +1,13 @@
-// === Module 8762: useMediaViewerSyncer ===
+// === Module 8780: useMediaViewerSyncer ===
 
-// Module 8762 (useMediaViewerSyncer)
+// Module 8780 (useMediaViewerSyncer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8733 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8737 */;
-import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 8765 */;
-import resolveSelectedIndex from "resolveSelectedIndex" /* 8766 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8751 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8755 */;
+import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 8783 */;
+import resolveSelectedIndex from "resolveSelectedIndex" /* 8784 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -738,7 +738,7 @@ function buildThumbnailScrollPositions(sources) {
   }
   return items;
 }
-const Constants = fn(8763);
+const Constants = fn(8781);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1384);
 let closure_10 = PlatformUtils.isAndroid();

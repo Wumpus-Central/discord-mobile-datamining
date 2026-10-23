@@ -1,17 +1,17 @@
-// === Module 9342: WishlistItemCardBase ===
+// === Module 9365: WishlistItemCardBase ===
 
-// Module 9342 (WishlistItemCardBase)
+// Module 9365 (WishlistItemCardBase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import native from "native" /* 5023 */;
-import useToken from "useToken" /* 5238 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import LockIcon from "LockIcon" /* 8552 */;
-import useUserProfileColors from "useUserProfileColors" /* 8709 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9192 */;
-import useWishlistHooks from "useWishlistHooks" /* 9345 */;
+import native from "native" /* 5035 */;
+import useToken from "useToken" /* 5250 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
+import LockIcon from "LockIcon" /* 8564 */;
+import useUserProfileColors from "useUserProfileColors" /* 8727 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9215 */;
+import useWishlistHooks from "useWishlistHooks" /* 9368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -65,7 +65,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-    const tmp9 = closure_5(tmp(9343).HeartIcon, obj2);
+    const tmp9 = closure_5(tmp(9366).HeartIcon, obj2);
     cResult[2] = tmp9;
     let tmp6 = tmp9;
   } else {
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9343).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9366).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 });

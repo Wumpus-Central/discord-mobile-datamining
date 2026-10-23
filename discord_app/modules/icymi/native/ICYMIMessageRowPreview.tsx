@@ -1,16 +1,16 @@
-// === Module 17861: ICYMIMessageRowPreview ===
+// === Module 17905: ICYMIMessageRowPreview ===
 
-// Module 17861 (ICYMIMessageRowPreview)
+// Module 17905 (ICYMIMessageRowPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4797 */;
 import createStyles from "createStyles" /* 4969 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5588 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5629 */;
-import RowGeneratorDefault from "RowGenerator" /* 8118 */;
-import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8120 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8595 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5600 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5641 */;
+import RowGeneratorDefault from "RowGenerator" /* 8131 */;
+import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8133 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8607 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       tmp14 = cResult[7];
     }
     if (cResult[8] !== messageOptions) {
-      const obj4 = new tmp4(8118)();
+      const obj4 = new tmp4(8131)();
       const obj3 = { renderEmbeds: tmp10, inlineEmbedMedia: tmp12, inlineAttachmentMedia: tmp14, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       const merged = Object.assign(messageOptions);
       obj4.setOptions(obj3);
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       }
     }
     const obj5 = { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight };
-    const tmp26 = jsx(tmp4(9749), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
+    const tmp26 = jsx(tmp4(9771), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
     cResult[10] = maxHeight;
     cResult[11] = message;
     cResult[12] = messageSizeCacheRef;
@@ -406,7 +406,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5191)();
+  const tmp = messageOptions(5203)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -422,7 +422,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return jsx(messageOptions(9749), {
+  return jsx(messageOptions(9771), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -544,11 +544,11 @@ export const MessageRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEn
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5588)(message);
+  const tmp3 = merged(5600)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8120).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8133).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

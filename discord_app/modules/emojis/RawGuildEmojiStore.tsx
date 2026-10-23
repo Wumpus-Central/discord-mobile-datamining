@@ -1,6 +1,6 @@
-// === Module 6711: RawGuildEmojiStore ===
+// === Module 6724: RawGuildEmojiStore ===
 
-// Module 6711 (RawGuildEmojiStore)
+// Module 6724 (RawGuildEmojiStore)
 import EmojiTypes from "EmojiTypes" /* 4918 */;
 import _slicedToArray from "module_32" /* 32 */;
 

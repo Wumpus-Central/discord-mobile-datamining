@@ -1,9 +1,9 @@
-// === Module 7885: ModalScreen ===
+// === Module 7898: ModalScreen ===
 
-// Module 7885 (ModalScreen)
+// Module 7898 (ModalScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

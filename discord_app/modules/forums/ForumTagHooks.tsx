@@ -1,9 +1,9 @@
-// === Module 7367: ForumTagHooks ===
+// === Module 7380: ForumTagHooks ===
 
-// Module 7367 (ForumTagHooks)
+// Module 7380 (ForumTagHooks)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ReportToModUtils from "ReportToModUtils" /* 7368 */;
+import ReportToModUtils from "ReportToModUtils" /* 7381 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -357,8 +357,8 @@ export const useVisibleAppliedForumTags = ReactCompilerGating.isReactCompilerEna
   }
   let result1 = found;
   if (result) {
-    result1 = tmp(7368).sortedModeratorReportTags(found);
-    const tmpResult2 = tmp(7368);
+    result1 = tmp(7381).sortedModeratorReportTags(found);
+    const tmpResult2 = tmp(7381);
   }
   cResult[5] = arr;
   cResult[6] = parent_id;

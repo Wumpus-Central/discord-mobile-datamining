@@ -1,6 +1,6 @@
-// === Module 9841: PremiumUpsellAlert ===
+// === Module 9863: PremiumUpsellAlert ===
 
-// Module 9841 (PremiumUpsellAlert)
+// Module 9863 (PremiumUpsellAlert)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,26 +9,26 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
 import createStyles2 from "createStyles" /* 4969 */;
 import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5854 */;
-import FileSizeUtils from "FileSizeUtils" /* 6364 */;
-import TableSwitchRow from "TableSwitchRow" /* 7280 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7542 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9638 */;
-import _modDef9649 from "module_9649" /* 9649 */;
-import _modDef9650 from "module_9650" /* 9650 */;
-import _modDef9869 from "module_9869" /* 9869 */;
-import _modDef9870 from "module_9870" /* 9870 */;
-import _modDef9871 from "module_9871" /* 9871 */;
-import _modDef9872 from "module_9872" /* 9872 */;
-import _modDef9873 from "module_9873" /* 9873 */;
-import _modDef9874 from "module_9874" /* 9874 */;
-import _modDef9875 from "module_9875" /* 9875 */;
-import _modDef9876 from "module_9876" /* 9876 */;
-import PremiumFeatureUtils from "PremiumFeatureUtils" /* 9877 */;
-import _modDef9878 from "module_9878" /* 9878 */;
+import PremiumFeatureUtils from "PremiumFeatureUtils" /* 5029 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5866 */;
+import FileSizeUtils from "FileSizeUtils" /* 6377 */;
+import TableSwitchRow from "TableSwitchRow" /* 7293 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7555 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9661 */;
+import _modDef9672 from "module_9672" /* 9672 */;
+import _modDef9673 from "module_9673" /* 9673 */;
+import _modDef9892 from "module_9892" /* 9892 */;
+import _modDef9893 from "module_9893" /* 9893 */;
+import _modDef9894 from "module_9894" /* 9894 */;
+import _modDef9895 from "module_9895" /* 9895 */;
+import _modDef9896 from "module_9896" /* 9896 */;
+import _modDef9897 from "module_9897" /* 9897 */;
+import _modDef9898 from "module_9898" /* 9898 */;
+import _modDef9899 from "module_9899" /* 9899 */;
+import _modDef9900 from "module_9900" /* 9900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
@@ -38,7 +38,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, UpsellTypes: closure_9 } = Constants);
-const getIcons = fn(9842).getIcons;
+const getIcons = fn(9864).getIcons;
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -73,7 +73,7 @@ UpsellItem.prototype["render"] = function render() {
   obj.children = items1;
   return closure_1_14(View, obj);
 };
-UpsellItem.contextType = fn(5023).ThemeContext;
+UpsellItem.contextType = fn(5035).ThemeContext;
 UpsellItem.defaultProps = { isInitial: false };
 let ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumUpsellItem(arg0) {
@@ -253,7 +253,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     tmp20 = cResult[4];
   }
   if (cResult[5] !== tmp11) {
-    const obj6 = { image: _modDef9649, title: tmp20, description: tmp11 };
+    const obj6 = { image: _modDef9672, title: tmp20, description: tmp11 };
     cResult[5] = tmp11;
     cResult[6] = obj6;
     let tmp22 = obj6;
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     }
   }
   const obj5 = { alertWidth, upsellItem: null };
-  const obj6 = { image: _modDef9649, title: null, description: null };
+  const obj6 = { image: _modDef9672, title: null, description: null };
   const intl4 = util.intl;
   obj6.title = intl4.string(util.t.UNtcBV);
   obj6.description = formatResult1;
@@ -345,7 +345,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     cResult[2] = formatResult;
   } else {
     if (cResult[3] !== cResult[2]) {
-      const obj2 = { image: _modDef9650, title: first, description: tmp5 };
+      const obj2 = { image: _modDef9673, title: first, description: tmp5 };
       cResult[3] = tmp5;
       cResult[4] = obj2;
       let tmp10 = obj2;
@@ -367,7 +367,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   }
 }) : (function AnimatedEmojiUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9650, title: null, description: null };
+  const obj2 = { image: _modDef9673, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -391,9 +391,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9869;
+    let tmp5Result = _modDef9892;
   } else {
-    tmp5Result = _modDef9870;
+    tmp5Result = _modDef9893;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -435,9 +435,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9869;
+    let tmp4Result = _modDef9892;
   } else {
-    tmp4Result = _modDef9870;
+    tmp4Result = _modDef9893;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -453,7 +453,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   alertWidth = alertWidth.alertWidth;
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { image: _modDef9871, title: null, description: null };
+    const obj3 = { image: _modDef9894, title: null, description: null };
     const intl = util.intl;
     obj3.title = intl.string(util.t.rTY76D);
     const intl2 = util.intl;
@@ -477,7 +477,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   const obj4 = { alertWidth, imageStyle: legacyClassComponentStyles.customProfileUpsellImage, upsellItem: first };
 }) : (function CustomProfilesUpsell(alertWidth) {
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: createStyles2.useLegacyClassComponentStyles(closure_16).customProfileUpsellImage, upsellItem: null };
-  const obj3 = { image: _modDef9871, title: null, description: null };
+  const obj3 = { image: _modDef9894, title: null, description: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -608,7 +608,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     cResult[2] = formatResult;
   } else {
     if (cResult[3] !== cResult[2]) {
-      const obj2 = { image: _modDef9872, title: first, description: tmp5 };
+      const obj2 = { image: _modDef9895, title: first, description: tmp5 };
       cResult[3] = tmp5;
       cResult[4] = obj2;
       let tmp10 = obj2;
@@ -630,7 +630,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
   }
 }) : (function GlobalStickerUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9872, title: null, description: null };
+  const obj2 = { image: _modDef9895, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -655,9 +655,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Longer
   const tmp7 = useMessageMaxLengthDefault();
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9873;
+    let tmp5Result = _modDef9896;
   } else {
-    tmp5Result = _modDef9874;
+    tmp5Result = _modDef9897;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -709,9 +709,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Longer
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9873;
+    let tmp4Result = _modDef9896;
   } else {
-    tmp4Result = _modDef9874;
+    tmp4Result = _modDef9897;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -728,9 +728,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9875;
+    let tmp5Result = _modDef9898;
   } else {
-    tmp5Result = _modDef9876;
+    tmp5Result = _modDef9899;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -772,9 +772,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9875;
+    let tmp4Result = _modDef9898;
   } else {
-    tmp4Result = _modDef9876;
+    tmp4Result = _modDef9899;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -1006,7 +1006,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumUpsel
   obj6.confirmColor = initialUpsellKey(legacyClassComponentStyles[45]).ButtonColors.GREEN;
   obj6.confirmText = getNitroText;
   obj6.renderConfirmIcon = function renderConfirmIcon() {
-    const obj = { source: _modDef9878, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+    const obj = { source: _modDef9900, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
     if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
       if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
         if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {

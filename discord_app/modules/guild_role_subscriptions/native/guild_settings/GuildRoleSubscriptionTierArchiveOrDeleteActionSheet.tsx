@@ -1,18 +1,18 @@
-// === Module 19183: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 19227: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 19183 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 19227 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19184 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
+import BottomSheetModal from "BottomSheetModal" /* 5267 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19228 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

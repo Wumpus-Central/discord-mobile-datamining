@@ -1,14 +1,14 @@
-// === Module 18486: UserVideoFailed ===
+// === Module 18530: UserVideoFailed ===
 
-// Module 18486 (UserVideoFailed)
+// Module 18530 (UserVideoFailed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5837 */;
-import AVError from "AVError" /* 5883 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11390 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5737 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
+import AVError from "AVError" /* 5895 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11413 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 const require = globalThis.__r;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
                           const intl3 = tmp(1128).intl;
                           obj4.text = intl3.string(tmp(1128).t["hxmQ/e"]);
                           obj4.onPress = tmp13;
-                          tmp43 = closure_7(tmp(5230).Button, obj4);
+                          tmp43 = closure_7(tmp(5242).Button, obj4);
                         }
                         cResult[38] = tmp13;
                         cResult[39] = tmp6;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_0);
       AudioActionCreatorsDefault.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       const timerId = setTimeout(() => {
-        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, closure_0(5725).MediaEngineContextTypes.DEFAULT, false);
+        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, closure_0(5737).MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     }
     cResult[23] = str2;
@@ -175,14 +175,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
     }
     if (cResult[29] !== tmp10.text) {
       const obj6 = { variant: "text-md/semibold", color: "text-strong", style: formatToPlainString, children: ejOT95 };
-      const tmp29 = closure_7(tmp(5220).Text, obj6);
+      const tmp29 = closure_7(tmp(5232).Text, obj6);
       cResult[29] = tmp10.text;
       cResult[30] = tmp29;
       let tmp27 = tmp29;
     } else {
       tmp27 = cResult[30];
     }
-    const Text = tmp(5220).Text;
+    const Text = tmp(5232).Text;
     const text = tmp10.text;
     const intl2 = tmp(1128).intl;
     formatToPlainString = intl2.formatToPlainString;

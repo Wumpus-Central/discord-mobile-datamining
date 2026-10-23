@@ -1,6 +1,6 @@
-// === Module 7359: GuildMemberSubscriptions ===
+// === Module 7372: GuildMemberSubscriptions ===
 
-// Module 7359 (GuildMemberSubscriptions)
+// Module 7372 (GuildMemberSubscriptions)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;

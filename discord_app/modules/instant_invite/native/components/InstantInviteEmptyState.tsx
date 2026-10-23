@@ -1,13 +1,13 @@
-// === Module 9065: InstantInviteEmptyState ===
+// === Module 9088: InstantInviteEmptyState ===
 
-// Module 9065 (InstantInviteEmptyState)
+// Module 9088 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7016 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9028 */;
-import _modDef9066 from "module_9066" /* 9066 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7029 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9051 */;
+import _modDef9089 from "module_9089" /* 9089 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9027 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9050 */;
 
 require = fn;
 const View = fn(17).View;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
           }
           const _Symbol2 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp26 = closure_5(tmp(7473).SettingsIcon, {});
+            const tmp26 = closure_5(tmp(7486).SettingsIcon, {});
             cResult[15] = tmp26;
             let tmp24 = tmp26;
           } else {
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
                   }
                   if (cResult[29] !== onShare) {
                     const obj2 = { text: tmp39, onPress: onShare };
-                    const tmp43 = closure_5(tmp(5230).Button, obj2);
+                    const tmp43 = closure_5(tmp(5242).Button, obj2);
                     cResult[29] = onShare;
                     cResult[30] = tmp43;
                     let tmp41 = tmp43;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
                   tmp44 = tmp47;
                 }
                 const obj4 = { style: tmp4.expireCaption, variant: "text-xs/medium", color: "text-muted", children: tmp34 };
-                const tmp38 = closure_5(tmp(5220).Text, obj4);
+                const tmp38 = closure_5(tmp(5232).Text, obj4);
                 cResult[25] = tmp4.expireCaption;
                 cResult[26] = tmp34;
                 cResult[27] = tmp38;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
             tmp30 = tmp33;
           }
           const obj6 = { accessibilityLabel: tmp22, accessibilityRole: "button", onPress: onPressSettings, style: tmp4.settingsButton, children: tmp24 };
-          const tmp29 = closure_5(tmp(6893).PressableOpacity, obj6);
+          const tmp29 = closure_5(tmp(6906).PressableOpacity, obj6);
           cResult[16] = onPressSettings;
           cResult[17] = tmp4.settingsButton;
           cResult[18] = tmp29;
@@ -225,13 +225,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
     }
   }
   const tmpResult = stateFromStores(504);
-  const tmp15 = closure_5(stateFromStores(1202).RefreshEmptyState, { containerStyle: emptyStateContainer, imageStyle: emptyStateArt, titleStyle: emptyStateTitle, source: _modDef9066, title: tmp10, body: tmp11 });
+  const tmp15 = closure_5(stateFromStores(1202).RefreshEmptyState, { containerStyle: emptyStateContainer, imageStyle: emptyStateArt, titleStyle: emptyStateTitle, source: _modDef9089, title: tmp10, body: tmp11 });
   cResult[6] = tmp4.emptyStateArt;
   cResult[7] = tmp4.emptyStateContainer;
   cResult[8] = tmp4.emptyStateTitle;
   cResult[9] = tmp15;
   tmp14 = tmp15;
-  const obj8 = { containerStyle: emptyStateContainer, imageStyle: emptyStateArt, titleStyle: emptyStateTitle, source: _modDef9066, title: tmp10, body: tmp11 };
+  const obj8 = { containerStyle: emptyStateContainer, imageStyle: emptyStateArt, titleStyle: emptyStateTitle, source: _modDef9089, title: tmp10, body: tmp11 };
 }) : (function InstantInviteEmptyState(link) {
   let str = link.link;
   let stateFromStores;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9066, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9089, title: null, body: null };
   const intl = stateFromStores(1128).intl;
   obj3.title = intl.string(stateFromStores(1128).t.tQc0l8);
   const intl2 = stateFromStores(1128).intl;
@@ -261,8 +261,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   obj6.accessibilityLabel = intl3.string(stateFromStores(1128).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(7473).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(6893).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(7486).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(6906).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
     const intl5 = tmp2(1128).intl;
     obj8.text = intl5.string(tmp2(1128).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5230).Button, obj8);
+    items1[3] = closure_5(tmp2(5242).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {

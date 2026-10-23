@@ -1,13 +1,13 @@
-// === Module 13540: ContactSyncInviteFriends ===
+// === Module 13563: ContactSyncInviteFriends ===
 
-// Module 13540 (ContactSyncInviteFriends)
+// Module 13563 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import showShareActionSheet from "showShareActionSheet" /* 8826 */;
-import _modDef13541 from "module_13541" /* 13541 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import showShareActionSheet from "showShareActionSheet" /* 8849 */;
+import _modDef13564 from "module_13564" /* 13564 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp4.art) {
-    let obj2 = { style: tmp4.art, source: _modDef13541 };
+    let obj2 = { style: tmp4.art, source: _modDef13564 };
     const tmp14 = closure_7(FastImageDefault, obj2);
     cResult[4] = tmp4.art;
     cResult[5] = tmp14;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   }
   if (cResult[7] !== tmp4.title) {
     const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_7(tmp(5220).Text, obj3);
+    const tmp19 = closure_7(tmp(5232).Text, obj3);
     cResult[7] = tmp4.title;
     cResult[8] = tmp19;
     let tmp17 = tmp19;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   }
   if (cResult[10] !== tmp4.subtitle) {
     const obj4 = { style: tmp4.subtitle, variant: "text-sm/medium", color: "text-default", children: tmp20 };
-    const tmp24 = closure_7(tmp(5220).Text, obj4);
+    const tmp24 = closure_7(tmp(5232).Text, obj4);
     cResult[10] = tmp4.subtitle;
     cResult[11] = tmp24;
     let tmp22 = tmp24;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
         }
         if (cResult[18] !== tmp9) {
           const obj5 = { variant: "primary", size: "lg", text: tmp27, onPress: tmp9 };
-          const tmp31 = closure_7(tmp(5230).Button, obj5);
+          const tmp31 = closure_7(tmp(5242).Button, obj5);
           cResult[18] = tmp9;
           cResult[19] = tmp31;
           let tmp29 = tmp31;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef13541;
+  obj4.source = _modDef13564;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

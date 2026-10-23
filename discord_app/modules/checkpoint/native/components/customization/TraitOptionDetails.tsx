@@ -1,11 +1,11 @@
-// === Module 12968: TraitOptionDetails ===
+// === Module 12991: TraitOptionDetails ===
 
-// Module 12968 (TraitOptionDetails)
+// Module 12991 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import RarityBadgeDefault from "RarityBadge" /* 12969 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import RarityBadgeDefault from "RarityBadge" /* 12992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
   _require = tmp4;
   let tmp5 = null;
   if (!asset.hidden) {
-    if (asset.status === tmp(6025).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+    if (asset.status === tmp(6038).CheckpointTraitOptionStatus.NITRO_LOCKED) {
       if (cResult[0] !== tmp4) {
         const intl = tmp(1128).intl;
         const obj2 = {
@@ -34,9 +34,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                     style: subscribeLink.subscribeLink,
                     onPress() {
                       const obj = { analyticsLocations: null };
-                      const items = [closure_1_1(7263).CHECKPOINT];
+                      const items = [closure_1_1(7276).CHECKPOINT];
                       obj.analyticsLocations = items;
-                      return closure_1_1(9769)(obj);
+                      return closure_1_1(9791)(obj);
                     },
                     accessibilityRole: "link",
                     children
@@ -49,11 +49,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
       }
     } else {
       if (cResult[2] !== asset) {
-        const assetDescription = tmp(6347).getAssetDescription(asset);
+        const assetDescription = tmp(6360).getAssetDescription(asset);
         cResult[2] = asset;
         cResult[3] = assetDescription;
         let tmp6 = assetDescription;
-        const tmpResult = tmp(6347);
+        const tmpResult = tmp(6360);
       } else {
         tmp6 = cResult[3];
       }
@@ -92,9 +92,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                 style: subscribeLink.subscribeLink,
                 onPress() {
                   const obj = { analyticsLocations: null };
-                  const items = [closure_1_1(7263).CHECKPOINT];
+                  const items = [closure_1_1(7276).CHECKPOINT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(9769)(obj);
+                  return closure_1_1(9791)(obj);
                 },
                 accessibilityRole: "link",
                 children
@@ -103,8 +103,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
       };
       let formatResult = format(_modDef3088["3Wq/bk"], obj);
     } else {
-      formatResult = format(6347).getAssetDescription(asset);
-      const formatResult1 = format(6347);
+      formatResult = format(6360).getAssetDescription(asset);
+      const formatResult1 = format(6360);
     }
   }
 });

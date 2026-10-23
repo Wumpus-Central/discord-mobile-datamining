@@ -1,18 +1,18 @@
-// === Module 17336: RedesignNotificationModal ===
+// === Module 17380: RedesignNotificationModal ===
 
-// Module 17336 (RedesignNotificationModal)
+// Module 17380 (RedesignNotificationModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13247 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13248 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13527 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13270 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13271 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PermissionStateType = fn(13245).PermissionStateType;
-const NotificationPermissionConstants = fn(13246);
+const PermissionStateType = fn(13268).PermissionStateType;
+const NotificationPermissionConstants = fn(13269);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -92,7 +92,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
         return;
       }
     }
-    const tmp8 = jsx(tmp(17337).BellSpotIllustration, { width: 245, accessible: false });
+    const tmp8 = jsx(tmp(17381).BellSpotIllustration, { width: 245, accessible: false });
     cResult[4] = tmp8;
     const tmp7 = tmp8;
   } else {
@@ -227,7 +227,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
   }, items1);
   let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, headerInsideCard: true, title: null, subtitle: null };
   const tmp = closure_10();
-  obj2.header = jsx(onComplete(17337).BellSpotIllustration, { width: 245, accessible: false });
+  obj2.header = jsx(onComplete(17381).BellSpotIllustration, { width: 245, accessible: false });
   const intl = onComplete(1128).intl;
   obj2.title = intl.string(onComplete(1128).t["3nx0b5"]);
   const intl2 = onComplete(1128).intl;

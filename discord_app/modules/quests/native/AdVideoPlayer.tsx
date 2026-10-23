@@ -1,16 +1,16 @@
-// === Module 16263: AdVideoPlayer ===
+// === Module 16296: AdVideoPlayer ===
 
-// Module 16263 (AdVideoPlayer)
+// Module 16296 (AdVideoPlayer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import timing from "timing" /* 5192 */;
-import timingPresets from "timingPresets" /* 5195 */;
-import spring from "spring" /* 5233 */;
-import springPresets from "springPresets" /* 5234 */;
-import _modDef8771 from "module_8771" /* 8771 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16244 */;
+import timing from "timing" /* 5204 */;
+import timingPresets from "timingPresets" /* 5207 */;
+import spring from "spring" /* 5245 */;
+import springPresets from "springPresets" /* 5246 */;
+import media_playback_VideoDefault from "media_playback/Video" /* 8789 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
@@ -24,7 +24,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
-const _isNativeReflectConstruct = noop.memo(_modDef8771);
+const Video = noop.memo(media_playback_VideoDefault);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }

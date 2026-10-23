@@ -1,8 +1,8 @@
-// === Module 17386: MessagesItemPlaceholder ===
+// === Module 17430: MessagesItemPlaceholder ===
 
-// Module 17386 (MessagesItemPlaceholder)
+// Module 17430 (MessagesItemPlaceholder)
 import c from "c" /* 576 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9036 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

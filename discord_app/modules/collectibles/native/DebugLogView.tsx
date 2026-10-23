@@ -1,15 +1,15 @@
-// === Module 17162: DebugLogView ===
+// === Module 17206: DebugLogView ===
 
-// Module 17162 (DebugLogView)
+// Module 17206 (DebugLogView)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5223 */;
+import DevSettingsStore from "DevSettingsStore" /* 5235 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7649);
+const CollectiblesDebugStore = fn(7662);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: c10 } = jsxProd);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DebugLog
           }
           if (cResult[27] !== debugLogText.clearButtonText) {
             const obj5 = { variant: "text-xs/bold", style: debugLogText.clearButtonText, children: "Clear" };
-            const tmp31 = closure_10(tmp(5220).Text, obj5);
+            const tmp31 = closure_10(tmp(5232).Text, obj5);
             cResult[27] = debugLogText.clearButtonText;
             cResult[28] = tmp31;
             let tmp29 = tmp31;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DebugLog
         const obj8 = { variant: "text-xs/normal", style: tmp23, children: null };
         const items3 = ["Debug Log (", debugLogHeader.length, " entries)"];
         obj8.children = items3;
-        const tmp28 = closure_9(tmp(5220).Text, obj8);
+        const tmp28 = closure_9(tmp(5232).Text, obj8);
         cResult[24] = debugLogHeader.length;
         cResult[25] = tmp23;
         cResult[26] = tmp28;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DebugLog
       obj4.style = obj5;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj4.children = items2;
-      const items3 = [closure_9(tmp2(5220).Text, obj4), ];
+      const items3 = [closure_9(tmp2(5232).Text, obj4), ];
       const obj6 = {
         onPress: function handleClear() {
               closure_1();
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DebugLog
         children: null
       };
       const obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
-      obj6.children = closure_10(tmp2(5220).Text, obj7);
+      obj6.children = closure_10(tmp2(5232).Text, obj7);
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3), ];

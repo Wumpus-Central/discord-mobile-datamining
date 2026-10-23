@@ -1,11 +1,11 @@
-// === Module 16459: QuestDockVideoBackground ===
+// === Module 16506: QuestDockVideoBackground ===
 
-// Module 16459 (QuestDockVideoBackground)
+// Module 16506 (QuestDockVideoBackground)
 import _modDef683 from "module_683" /* 683 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1901 */;
-import spring from "spring" /* 5233 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7153 */;
-import QuestDockUtils from "QuestDockUtils" /* 16353 */;
+import spring from "spring" /* 5245 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7166 */;
+import QuestDockUtils from "QuestDockUtils" /* 16403 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -15,8 +15,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(6695).QuestDockMode;
-const QuestDockConstants = fn(16354);
+const QuestDockMode = fn(6708).QuestDockMode;
+const QuestDockConstants = fn(16404);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } = QuestDockConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
@@ -54,7 +54,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   const cResult = activeQuestDockMode(576).c(7);
   ({ children, style } = arg0);
   const tmp3 = closure_17();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16405).QuestDockGestureContext).activeQuestDockMode;
   let obj = activeQuestDockMode(576);
   const fn = function n() {
     let num = 0;
@@ -63,8 +63,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  const obj2 = activeQuestDockMode(5038);
-  fn.__closure = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj2 = activeQuestDockMode(5050);
+  fn.__closure = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn.__workletHash = 5908890006198;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -93,11 +93,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   cResult[2] = tmp3.media;
   cResult[3] = items;
   tmp5 = items;
-  const obj3 = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj3 = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
 }) : (function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16405).QuestDockGestureContext).activeQuestDockMode;
   const tmp = closure_17();
   const fn = function s() {
     let num = 0;
@@ -106,8 +106,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  let obj = activeQuestDockMode(5038);
-  fn.__closure = { withSpring: activeQuestDockMode(5233).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  let obj = activeQuestDockMode(5050);
+  fn.__closure = { withSpring: activeQuestDockMode(5245).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn.__workletHash = 9800697298933;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);

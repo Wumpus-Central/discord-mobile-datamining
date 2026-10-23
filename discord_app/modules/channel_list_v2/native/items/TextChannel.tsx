@@ -1,24 +1,24 @@
-// === Module 17575: TextChannel ===
+// === Module 17619: TextChannel ===
 
-// Module 17575 (TextChannel)
+// Module 17619 (TextChannel)
 import nativeDefault from "native" /* 587 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1126 */;
-import transitionToChannel from "transitionToChannel" /* 5693 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5979 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10668 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17576 */;
+import transitionToChannel from "transitionToChannel" /* 5705 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5991 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10690 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17620 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import GatedChannelStore from "GatedChannelStore" /* 4873 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6756 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
+import ReadStateStore from "ReadStateStore" /* 6769 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12014);
+const RedesignChannelListConstants = fn(12033);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

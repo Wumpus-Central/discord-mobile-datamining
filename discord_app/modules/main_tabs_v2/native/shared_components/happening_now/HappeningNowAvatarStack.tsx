@@ -1,11 +1,11 @@
-// === Module 17428: HappeningNowAvatarStack ===
+// === Module 17472: HappeningNowAvatarStack ===
 
-// Module 17428 (HappeningNowAvatarStack)
+// Module 17472 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
-import ClipView from "ClipView" /* 9382 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
+import ClipView from "ClipView" /* 9405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
@@ -15,7 +15,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(14262).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14286).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
@@ -81,7 +81,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   if (undefined !== isTyping && isTyping) {
     num6 = 1;
   }
-  const sharedValue = guildId(5038).useSharedValue(num6);
+  const sharedValue = guildId(5050).useSharedValue(num6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [LocaleStore];
     class M {
@@ -97,7 +97,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
     tmp10 = cResult[2];
     tmp11 = cResult[3];
   }
-  const tmpResult = guildId(5038);
+  const tmpResult = guildId(5050);
   const stateFromStores = guildId(573).useStateFromStores(tmp10, tmp11);
   const tmpResult3 = guildId(573);
   class J {
@@ -110,8 +110,8 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
       return obj;
     }
   }
-  const tmpResult4 = guildId(5038);
-  J.__closure = { interpolate: guildId(5038).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  const tmpResult4 = guildId(5050);
+  J.__closure = { interpolate: guildId(5050).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
   J.__workletHash = 14140918847743;
   J.__initData = __initData;
   const animatedStyle = tmpResult4.useAnimatedStyle(J);

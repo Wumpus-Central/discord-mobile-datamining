@@ -1,38 +1,38 @@
-// === Module 18418: VoicePanelHeader ===
+// === Module 18462: VoicePanelHeader ===
 
-// Module 18418 (VoicePanelHeader)
+// Module 18462 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import spring from "spring" /* 5233 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10879 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11491 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11646 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18395 */;
-import useStableParticipant from "useStableParticipant" /* 18423 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import spring from "spring" /* 5245 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10902 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11511 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11666 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18439 */;
+import useStableParticipant from "useStableParticipant" /* 18467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
-import ExperimentStore from "ExperimentStore" /* 5176 */;
-import StageMusicStore from "StageMusicStore" /* 11479 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6770 */;
+import ExperimentStore from "ExperimentStore" /* 5188 */;
+import StageMusicStore from "StageMusicStore" /* 11499 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import SpeakingStore from "SpeakingStore" /* 6670 */;
+import SpeakingStore from "SpeakingStore" /* 6683 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10873);
+const VoicePanelConstants = fn(10896);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10876).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
-const ParticipantTypes = fn(5618).ParticipantTypes;
+const EDGE_GUTTER = fn(10899).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
+const ParticipantTypes = fn(5630).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
@@ -482,7 +482,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
         cResult[2] = stateFromStores;
         cResult[3] = stringResult;
       } else {
-        const tmp4Result = importDefault(stateFromStores ? 11490 : 8447);
+        const tmp4Result = importDefault(stateFromStores ? 11510 : 8459);
         if (cResult[4] !== stateFromStores) {
           const fn2 = function p() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -536,7 +536,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11490 : 8447),
+        icon: importDefault(stateFromStores ? 11510 : 8459),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }

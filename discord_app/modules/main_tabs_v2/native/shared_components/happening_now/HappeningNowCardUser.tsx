@@ -1,15 +1,15 @@
-// === Module 17435: HappeningNowCardUser ===
+// === Module 17479: HappeningNowCardUser ===
 
-// Module 17435 (HappeningNowCardUser)
+// Module 17479 (HappeningNowCardUser)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5698 */;
+import PresenceStore from "PresenceStore" /* 5710 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16569).HappeningNowCardTrackingType;
+let closure_7 = fn(16616).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1202).AvatarSizes.LARGE;
@@ -39,8 +39,8 @@ export default noop.memo(function HappeningNowCardUser(index) {
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(8648, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8648, dependencyMap.paths);
+      asyncRequireImpl(8666, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8666, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

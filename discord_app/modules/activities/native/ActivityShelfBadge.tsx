@@ -1,11 +1,11 @@
-// === Module 12028: ActivityShelfBadge ===
+// === Module 12047: ActivityShelfBadge ===
 
-// Module 12028 (ActivityShelfBadge)
+// Module 12047 (ActivityShelfBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

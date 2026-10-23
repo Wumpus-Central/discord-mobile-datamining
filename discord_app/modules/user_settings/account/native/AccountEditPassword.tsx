@@ -1,9 +1,9 @@
-// === Module 15979: AccountEditPassword ===
+// === Module 16012: AccountEditPassword ===
 
-// Module 15979 (AccountEditPassword)
+// Module 16012 (AccountEditPassword)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 15980 */;
+import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 16013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 12929: CheckpointTopServerStatsScreen ===
+// === Module 12951: CheckpointTopServerStatsScreen ===
 
-// Module 12929 (CheckpointTopServerStatsScreen)
+// Module 12951 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12922 */;
-import CheckpointStore from "CheckpointStore" /* 12893 */;
-import CheckpointConstants from "CheckpointConstants" /* 6001 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12943 */;
+import CheckpointStore from "CheckpointStore" /* 12912 */;
+import CheckpointConstants from "CheckpointConstants" /* 6013 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -15,16 +15,16 @@ import size_mod from "module_2" /* 2 */;
 
 const initialize = intl(504);
 const util = intl(1128);
-const Text_Text = intl(5220);
-const GuildIcon = intl(6868);
-const GuildIconDefault = sIDTV1(6868);
-const ServerIcon = intl(9622);
-const CheckpointStatsUtils = intl(12896);
-const CheckpointTextDefault = sIDTV1(12911);
-const CheckpointScreenDefault = sIDTV1(12913);
-const CheckpointCountUpStatNumberDefault = sIDTV1(12920);
-const CheckpointGuildStatsDefault = sIDTV1(12927);
-const CheckpointRankTagDefault = sIDTV1(12928);
+const Text_Text = intl(5232);
+const GuildIcon = intl(6881);
+const GuildIconDefault = sIDTV1(6881);
+const ServerIcon = intl(9645);
+const CheckpointStatsUtils = intl(12915);
+const CheckpointTextDefault = sIDTV1(12930);
+const CheckpointScreenDefault = sIDTV1(12932);
+const CheckpointCountUpStatNumberDefault = sIDTV1(12940);
+const CheckpointGuildStatsDefault = sIDTV1(12949);
+const CheckpointRankTagDefault = sIDTV1(12950);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);

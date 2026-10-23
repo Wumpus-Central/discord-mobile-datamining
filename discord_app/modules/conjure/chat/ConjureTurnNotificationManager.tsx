@@ -1,20 +1,20 @@
-// === Module 18692: ConjureTurnNotificationManager ===
+// === Module 18736: ConjureTurnNotificationManager ===
 
-// Module 18692 (ConjureTurnNotificationManager)
+// Module 18736 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 4797 */;
-import ConjureUtils from "ConjureUtils" /* 7330 */;
-import conjureProjectMute from "conjureProjectMute" /* 10700 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10719 */;
-import SoundUtils from "SoundUtils" /* 11482 */;
-import conjureMentions from "conjureMentions" /* 12309 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7630 */;
+import ConjureUtils from "ConjureUtils" /* 7343 */;
+import conjureProjectMute from "conjureProjectMute" /* 10722 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10741 */;
+import SoundUtils from "SoundUtils" /* 11502 */;
+import conjureMentions from "conjureMentions" /* 12328 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7643 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13681 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13704 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6496 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 
 require = fn;
 function handleConjureTurnSettled(projectId) {

@@ -1,19 +1,19 @@
-// === Module 16738: UserSettingsText ===
+// === Module 16782: UserSettingsText ===
 
-// Module 16738 (UserSettingsText)
+// Module 16782 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5854 */;
-import TableRadioRow from "TableRadioRow" /* 6969 */;
-import TableRadioGroup from "TableRadioGroup" /* 6970 */;
-import TableRowGroup from "TableRowGroup" /* 6972 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7072 */;
-import TableSwitchRow from "TableSwitchRow" /* 7280 */;
-import _modDef10144 from "module_10144" /* 10144 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5866 */;
+import TableRadioRow from "TableRadioRow" /* 6982 */;
+import TableRadioGroup from "TableRadioGroup" /* 6983 */;
+import TableRowGroup from "TableRowGroup" /* 6985 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7085 */;
+import TableSwitchRow from "TableSwitchRow" /* 7293 */;
+import _modDef10166 from "module_10166" /* 10166 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef10144, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef10166, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {

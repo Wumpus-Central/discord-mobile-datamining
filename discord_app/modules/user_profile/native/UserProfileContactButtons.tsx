@@ -1,16 +1,16 @@
-// === Module 14387: UserProfileContactButtons ===
+// === Module 14411: UserProfileContactButtons ===
 
-// Module 14387 (UserProfileContactButtons)
+// Module 14411 (UserProfileContactButtons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7399 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11144 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13480 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13965 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7412 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11167 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13503 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13988 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -113,9 +113,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   ({ hasCustomProfileTheme, location: _location, ButtonComponent } = user);
   let obj = user(576);
   const tmp4 = trackUserProfileAction;
-  trackUserProfileAction = user(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = user(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (_location == null) {
-    _location = trackUserProfileAction(7238)().newestAnalyticsLocation;
+    _location = trackUserProfileAction(7251)().newestAnalyticsLocation;
   }
   if (cResult[0] !== _location) {
     let obj3 = { location: _location };
@@ -126,8 +126,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
     tmp5 = cResult[1];
   }
   dependencyMap = tmp5;
-  let obj2 = user(8659);
-  const gameFriendsForUser = user(14296).useGameFriendsForUser(user.id);
+  let obj2 = user(8677);
+  const gameFriendsForUser = user(14320).useGameFriendsForUser(user.id);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
     cResult[2] = items;
@@ -145,10 +145,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   } else {
     tmp8 = cResult[4];
   }
-  const tmpResult = user(14296);
+  const tmpResult = user(14320);
   const stateFromStores = user(504).useStateFromStores(tmp6, tmp8);
   const tmpResult2 = user(504);
-  const name = tmp4(5018).useName(user);
+  const name = tmp4(5023).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -157,9 +157,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp(14388).UserClockIcon;
+          let UserPlusIcon = tmp(14412).UserClockIcon;
         } else {
-          UserPlusIcon = tmp(5658).UserPlusIcon;
+          UserPlusIcon = tmp(5670).UserPlusIcon;
         }
         if (cResult[5] !== (stateFromStores === RelationshipTypes.PENDING_OUTGOING)) {
           const intl = tmp(1128).intl;
@@ -259,19 +259,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7238)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7251)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8659);
+  let obj = user(8677);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14296).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14296);
+  const gameFriendsForUser = user(14320).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14320);
   const items = [RelationshipStore];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5018).useName(user);
+  userDisplayName = tmp(5023).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -280,9 +280,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(14388).UserClockIcon;
+          let UserPlusIcon = tmp3(14412).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(5658).UserPlusIcon;
+          UserPlusIcon = tmp3(5670).UserPlusIcon;
         }
         const intl = tmp3(1128).intl;
         const string = intl.string;

@@ -1,6 +1,6 @@
-// === Module 16071: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 16104: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 16071 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 16104 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
 import _mod4884 from "module_4884" /* 4884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -119,7 +119,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11181);
+const SettingBuilders = fn(11204);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
   const cResult = c.c(2);
   const tmp2 = closure_8();
@@ -146,7 +146,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(8318).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8330).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -158,7 +158,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16072).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16105).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
     const cResult = c.c(2);
     const tmp2 = closure_8();

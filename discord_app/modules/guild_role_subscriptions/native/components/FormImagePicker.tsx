@@ -1,11 +1,11 @@
-// === Module 19179: FormImagePicker ===
+// === Module 19223: FormImagePicker ===
 
-// Module 19179 (FormImagePicker)
+// Module 19223 (FormImagePicker)
 import nativeDefault from "native" /* 587 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8140 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9017 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8152 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9040 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
           }
         }
         obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-        const tmp24 = closure_8(tmp(5230).Button, obj5);
+        const tmp24 = closure_8(tmp(5242).Button, obj5);
         cResult[15] = tmp15;
         cResult[16] = tmp5;
         cResult[17] = tmp14;
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
         tmp22 = tmp24;
       }
       const obj6 = { style: tmp13.imageDescription, variant: "text-sm/medium", color: "text-default", children: tmp4 };
-      const tmp21 = closure_8(tmp(5220).Text, obj6);
+      const tmp21 = closure_8(tmp(5232).Text, obj6);
       cResult[12] = tmp4;
       cResult[13] = tmp13.imageDescription;
       cResult[14] = tmp21;
@@ -358,8 +358,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
-    closure_8(tmp6(5220).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
-    closure_8(tmp6(5230).Button, {
+    closure_8(tmp6(5232).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
+    closure_8(tmp6(5242).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

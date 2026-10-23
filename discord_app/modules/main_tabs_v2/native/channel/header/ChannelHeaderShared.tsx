@@ -1,24 +1,24 @@
-// === Module 13974: ChannelHeaderShared ===
+// === Module 13997: ChannelHeaderShared ===
 
-// Module 13974 (ChannelHeaderShared)
+// Module 13997 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useToken from "useToken" /* 5238 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6893 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7060 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
-import BotTagDefault from "BotTag" /* 9110 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10638 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
-import _modDef13975 from "module_13975" /* 13975 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13976 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useToken from "useToken" /* 5250 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Pressables from "Pressables" /* 6906 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7073 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
+import BotTagDefault from "BotTag" /* 9133 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10660 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10687 */;
+import _modDef13998 from "module_13998" /* 13998 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef13975, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef13998, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -273,7 +273,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13975, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13998, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

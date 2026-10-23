@@ -1,12 +1,12 @@
-// === Module 19132: WarningNotice ===
+// === Module 19176: WarningNotice ===
 
-// Module 19132 (WarningNotice)
+// Module 19176 (WarningNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef14869 from "module_14869" /* 14869 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef14893 from "module_14893" /* 14893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WarningN
         let tmp5 = cResult[3];
       }
       if (cResult[4] !== tmp4.alertIcon) {
-        const obj2 = { style: tmp4.alertIcon, source: _modDef14869 };
+        const obj2 = { style: tmp4.alertIcon, source: _modDef14893 };
         const tmp10 = React4(FastImageDefault, obj2);
         cResult[4] = tmp4.alertIcon;
         cResult[5] = tmp10;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WarningN
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const obj3 = { style: tmp.alertIcon, source: _modDef14869 };
+  const obj3 = { style: tmp.alertIcon, source: _modDef14893 };
   const items1 = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

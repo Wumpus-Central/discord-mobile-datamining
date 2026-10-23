@@ -1,9 +1,9 @@
-// === Module 8943: useLegacyTextMigrationHighlight ===
+// === Module 8966: useLegacyTextMigrationHighlight ===
 
-// Module 8943 (useLegacyTextMigrationHighlight)
+// Module 8966 (useLegacyTextMigrationHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 5223 */;
+import DevSettingsStore from "DevSettingsStore" /* 5235 */;
 
 require = fn;
 const createStyles = fn(4969);

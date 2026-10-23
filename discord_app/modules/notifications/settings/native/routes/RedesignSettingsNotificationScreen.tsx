@@ -1,20 +1,20 @@
-// === Module 17242: RedesignSettingsNotificationScreen ===
+// === Module 17286: RedesignSettingsNotificationScreen ===
 
-// Module 17242 (RedesignSettingsNotificationScreen)
+// Module 17286 (RedesignSettingsNotificationScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2864 from "module_2864" /* 2864 */;
-import useMountEffectDefault from "useMountEffect" /* 5249 */;
-import SettingBuilders from "SettingBuilders" /* 11181 */;
-import SettingLayoutDefault from "SettingLayout" /* 15916 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16759 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16761 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17243 */;
+import useMountEffectDefault from "useMountEffect" /* 5261 */;
+import SettingBuilders from "SettingBuilders" /* 11204 */;
+import SettingLayoutDefault from "SettingLayout" /* 15949 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16803 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16805 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(16758).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8318).MobileUserSettings;
+let closure_4 = fn(16802).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

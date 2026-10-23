@@ -1,18 +1,18 @@
-// === Module 11031: UserProfileCustomStatusBubble ===
+// === Module 11054: UserProfileCustomStatusBubble ===
 
-// Module 11031 (UserProfileCustomStatusBubble)
+// Module 11054 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import EmojiDefault from "Emoji" /* 7212 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 11034 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import EmojiDefault from "Emoji" /* 7225 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7276 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 11057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_17 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(7289).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(7302).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);
@@ -253,7 +253,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       let obj4 = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: tmp10, children: null };
       let items = [tmp13, text, tmp15];
       obj4.children = items;
-      const tmp18 = closure_12(emoji(5220).Text, obj4);
+      const tmp18 = closure_12(emoji(5232).Text, obj4);
       cResult[10] = lineClamp;
       cResult[11] = onTextLayout;
       cResult[12] = tmp13;

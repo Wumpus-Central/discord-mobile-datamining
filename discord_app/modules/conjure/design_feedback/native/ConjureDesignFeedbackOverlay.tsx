@@ -1,9 +1,9 @@
-// === Module 11848: ConjureDesignFeedbackOverlay ===
+// === Module 11867: ConjureDesignFeedbackOverlay ===
 
-// Module 11848 (ConjureDesignFeedbackOverlay)
+// Module 11867 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 11849 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5208 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 11868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,8 +69,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
       return () => {
         closure_1_9.current = false;
         if (ref.current) {
-          first(5196).hideActionSheet(projectId(11849).CONJURE_DESIGN_REMARK_SHEET_KEY);
-          const obj = first(5196);
+          first(5208).hideActionSheet(projectId(11868).CONJURE_DESIGN_REMARK_SHEET_KEY);
+          const obj = first(5208);
         }
       };
     };
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   if (cResult[5] !== projectId) {
     const fn3 = function y() {
       return () => {
-        const result = projectId(10719).inspectConjurePreviewPoint(closure_1_0, projectId(10737).CONJURE_INSPECT_CLEAR_POINT);
+        const result = projectId(10741).inspectConjurePreviewPoint(closure_1_0, projectId(10759).CONJURE_INSPECT_CLEAR_POINT);
       };
     };
     const items2 = [projectId];
@@ -310,14 +310,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5196).hideActionSheet(projectId(11849).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(5196);
+        size(5208).hideActionSheet(projectId(11868).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5208);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(10719).inspectConjurePreviewPoint(closure_1_0, projectId(10737).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(10741).inspectConjurePreviewPoint(closure_1_0, projectId(10759).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(10719).inspectConjurePreviewPoint(point, point);
+        const result = projectId(10741).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
             closure_8(true);
           }
         });
-        const obj2 = projectId(10719);
+        const obj2 = projectId(10741);
       }
     }
   }, items4);
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(5220).Text, obj6);
+    obj5.children = tmp24(tmp16(5232).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

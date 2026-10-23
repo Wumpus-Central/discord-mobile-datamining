@@ -1,7 +1,7 @@
-// === Module 8946: useCreateChannelSubmit ===
+// === Module 8969: useCreateChannelSubmit ===
 
-// Module 8946 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8947 */;
+// Module 8969 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

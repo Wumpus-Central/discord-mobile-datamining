@@ -1,6 +1,6 @@
-// === Module 7866: StageInstanceActionCreators ===
+// === Module 7879: StageInstanceActionCreators ===
 
-// Module 7866 (StageInstanceActionCreators)
+// Module 7879 (StageInstanceActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

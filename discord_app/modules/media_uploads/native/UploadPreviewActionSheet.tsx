@@ -1,22 +1,22 @@
-// === Module 10394: UploadPreviewActionSheet ===
+// === Module 10416: UploadPreviewActionSheet ===
 
-// Module 10394 (UploadPreviewActionSheet)
+// Module 10416 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8140 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9641 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10395 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13923 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8152 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9664 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10417 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13946 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7616).DraftType;
+const DraftType = fn(7629).DraftType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4969);

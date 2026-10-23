@@ -1,6 +1,6 @@
-// === Module 13110: DoubleTapToReactChatInputBanner ===
+// === Module 13133: DoubleTapToReactChatInputBanner ===
 
-// Module 13110 (DoubleTapToReactChatInputBanner)
+// Module 13133 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,15 +9,15 @@ import native from "native" /* 1202 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6893 */;
-import XSmallIcon from "XSmallIcon" /* 6916 */;
-import EmojiDefault from "Emoji" /* 7212 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8315 */;
-import renderChannelBadge from "renderChannelBadge" /* 13111 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Pressables from "Pressables" /* 6906 */;
+import XSmallIcon from "XSmallIcon" /* 6929 */;
+import EmojiDefault from "Emoji" /* 7225 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8327 */;
+import renderChannelBadge from "renderChannelBadge" /* 13134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -90,7 +90,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13212, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13235, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -450,17 +450,17 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
     if (!tmp7) {
       let tmp10 = null != channel.lastMessageId;
       if (tmp10) {
-        tmp10 = emoji(8315)(channel);
+        tmp10 = emoji(8327)(channel);
       }
       tmp9 = tmp10;
     }
     tmp5 = tmp9;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fallbackDoubleTapDisambiguatedEmoji = tmp(8312).getFallbackDoubleTapDisambiguatedEmoji();
+    const fallbackDoubleTapDisambiguatedEmoji = tmp(8324).getFallbackDoubleTapDisambiguatedEmoji();
     cResult[0] = fallbackDoubleTapDisambiguatedEmoji;
     emoji = fallbackDoubleTapDisambiguatedEmoji;
-    const tmpResult = tmp(8312);
+    const tmpResult = tmp(8324);
   } else {
     emoji = cResult[0];
   }
@@ -491,7 +491,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
                   return tmp;
                 }
         };
-        tmp2 = closure_9(emoji(10385), obj2);
+        tmp2 = closure_9(emoji(10407), obj2);
         cResult[2] = channel;
         cResult[3] = tmp2;
       }

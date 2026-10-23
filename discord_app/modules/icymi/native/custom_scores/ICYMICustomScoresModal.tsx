@@ -1,6 +1,6 @@
-// === Module 17824: ICYMICustomScoresModal ===
+// === Module 17868: ICYMICustomScoresModal ===
 
-// Module 17824 (ICYMICustomScoresModal)
+// Module 17868 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = fn;
 let closure_3 = ["children"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9720);
+const NativeStackNavigator = fn(9742);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4969);
 let obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
@@ -39,12 +39,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
               const obj = { title: null, headerLeft: null };
               const intl = closure_0(1128).intl;
               obj.title = intl.string(closure_0(1128).t.jVshKt);
-              obj.headerLeft = closure_0(9676).getRenderModalCloseImage(navigation.navigation);
-              const merged = Object.assign(accessibilityNativeStackOptions(10008)());
+              obj.headerLeft = closure_0(9698).getRenderModalCloseImage(navigation.navigation);
+              const merged = Object.assign(accessibilityNativeStackOptions(10030)());
               return obj;
             },
         getComponent() {
-              return closure_0(17825).default;
+              return closure_0(17869).default;
             }
       };
       const tmp9 = closure_5(closure_7.Screen, obj3);
@@ -58,11 +58,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
       const obj4 = {
         name: "guild",
         options(navigation) {
-              const obj = { headerLeft: closure_0(9676).getRenderModalBackImage(navigation.navigation) };
+              const obj = { headerLeft: closure_0(9698).getRenderModalBackImage(navigation.navigation) };
               return obj;
             },
         getComponent() {
-              return closure_0(17826).default;
+              return closure_0(17870).default;
             }
       };
       const tmp13 = closure_5(closure_7.Screen, obj4);
@@ -126,22 +126,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
         const obj = { title: null, headerLeft: null };
         const intl = closure_0(1128).intl;
         obj.title = intl.string(closure_0(1128).t.jVshKt);
-        obj.headerLeft = closure_0(9676).getRenderModalCloseImage(navigation.navigation);
-        const merged = Object.assign(closure_1(10008)());
+        obj.headerLeft = closure_0(9698).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(10030)());
         return obj;
       },
       getComponent() {
-        return closure_0(17825).default;
+        return closure_0(17869).default;
       }
     }),
     closure_5(closure_7.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: closure_0(9676).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: closure_0(9698).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return closure_0(17826).default;
+        return closure_0(17870).default;
       }
     })
   ];

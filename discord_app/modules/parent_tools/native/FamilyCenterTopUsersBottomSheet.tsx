@@ -1,16 +1,16 @@
-// === Module 16127: FamilyCenterTopUsersBottomSheet ===
+// === Module 16160: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16127 (FamilyCenterTopUsersBottomSheet)
+// Module 16160 (FamilyCenterTopUsersBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import TableRow2 from "TableRow" /* 6888 */;
-import TableRowGroup from "TableRowGroup" /* 6972 */;
-import ActionSheet from "ActionSheet" /* 7283 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8113 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import TableRow2 from "TableRow" /* 6901 */;
+import TableRowGroup from "TableRowGroup" /* 6985 */;
+import ActionSheet from "ActionSheet" /* 7296 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8126 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -34,7 +34,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
         return tmp7;
       } else {
         if (cResult[11] !== tmp8) {
-          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
+          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
           const tmp20 = React4(native.Avatar, obj2);
           cResult[11] = tmp8;
           cResult[12] = tmp20;
@@ -92,7 +92,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow2.TableRow, obj2);
   }

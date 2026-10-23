@@ -1,31 +1,31 @@
-// === Module 17962: AppChannel ===
+// === Module 18006: AppChannel ===
 
-// Module 17962 (AppChannel)
+// Module 18006 (AppChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1899 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import transitionToChannel from "transitionToChannel" /* 5693 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 6792 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6794 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9693 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11837 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11840 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11841 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11842 */;
-import useFrameLifecycleDefault from "useFrameLifecycle" /* 17963 */;
-import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 17966 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 17973 */;
-import useAppChannelClosedDefault from "useAppChannelClosed" /* 17974 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 17975 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import transitionToChannel from "transitionToChannel" /* 5705 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 6805 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6807 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9715 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11856 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11859 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11860 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11861 */;
+import useFrameLifecycleDefault from "useFrameLifecycle" /* 18007 */;
+import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 18010 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18017 */;
+import useAppChannelClosedDefault from "useAppChannelClosed" /* 18018 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18019 */;
 import noop from "module_19" /* 19 */;
 
-const useChannelContentGate = obj(10865);
+const useChannelContentGate = obj(10888);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -60,15 +60,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
             ({ frame, state } = useFrameLifecycleDefault(tmp9));
             conjureBackgroundFramesDefault(applicationId, surface);
             const tmp10 = useFrameLifecycleDefault(tmp9);
-            useEdgeOnlySwipeExitDefault(state === tmp(17963).FrameLifecycleState.Launched);
+            useEdgeOnlySwipeExitDefault(state === tmp(18007).FrameLifecycleState.Launched);
             const tmp5Result = useEdgeOnlySwipeExitDefault;
             let tmp15 = null;
-            if (state === tmp(17963).FrameLifecycleState.Launched) {
+            if (state === tmp(18007).FrameLifecycleState.Launched) {
               tmp15 = applicationId;
             }
             useInlineFrameOAuthNavigationDefault(tmp15);
             const tmp5Result3 = useInlineFrameOAuthNavigationDefault;
-            const isConjureChannelCandidate = tmp(7330).useIsConjureChannelCandidate(channel, "AppChannel");
+            const isConjureChannelCandidate = tmp(7343).useIsConjureChannelCandidate(channel, "AppChannel");
             id = channel.id;
             if (cResult[9] !== id) {
               class M {
@@ -89,7 +89,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                 }
               }
             }
-            if (tmp(17963).FrameLifecycleState.Launched === state) {
+            if (tmp(18007).FrameLifecycleState.Launched === state) {
               class M {
                 constructor(arg0) {
                   obj = closure_0(closure_2[15]);
@@ -97,7 +97,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                   return;
                 }
               }
-              const obj2 = { frameId: frame.id, level: tmp(11846).FrameStackLevel.WithinAppContent, presentation: tmp7 };
+              const obj2 = { frameId: frame.id, level: tmp(11865).FrameStackLevel.WithinAppContent, presentation: tmp7 };
               const tmp22 = closure_5(FrameRenderTargetDefault, obj2);
               cResult[11] = frame.id;
               cResult[12] = tmp7;
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                 }
               }
             }
-            const tmpResult = tmp(7330);
+            const tmpResult = tmp(7343);
           }
           const obj3 = { applicationId, surface };
           cResult[6] = applicationId;
@@ -363,7 +363,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppCha
     cResult[8] = obj4;
     tmp6 = obj4;
   }
-  const obj5 = { type: channel(5612).EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id };
+  const obj5 = { type: channel(5624).EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id };
   cResult[0] = channel.guild_id;
   cResult[1] = channel.id;
   cResult[2] = obj5;

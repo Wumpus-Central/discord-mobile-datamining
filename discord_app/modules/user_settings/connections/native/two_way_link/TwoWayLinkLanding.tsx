@@ -1,16 +1,16 @@
-// === Module 9594: TwoWayLinkLanding ===
+// === Module 9617: TwoWayLinkLanding ===
 
-// Module 9594 (TwoWayLinkLanding)
+// Module 9617 (TwoWayLinkLanding)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import TableRow from "TableRow" /* 6888 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9595 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import TableRow from "TableRow" /* 6901 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9618 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6485 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6498 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -30,7 +30,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled() ? 
   ({ learnMoreLink, onNext } = platformType);
   const tmp4 = closure_8();
   const obj = platformType(576);
-  const twoWayLinkStyles = platformType(9595).useTwoWayLinkStyles();
+  const twoWayLinkStyles = platformType(9618).useTwoWayLinkStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConnectedAccountsStore];
     cResult[0] = items;
@@ -53,7 +53,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled() ? 
   } else {
     tmp8 = cResult[2];
   }
-  const obj2 = platformType(9595);
+  const obj2 = platformType(9618);
   const stateFromStores = platformType(504).useStateFromStores(first, tmp8);
   ({ container, content } = twoWayLinkStyles);
   if (imgStyle == null) {
@@ -154,21 +154,21 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled() ? 
           }
         }
         const obj5 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-        const tmp21 = closure_6(tmp(5220).Text, obj5);
+        const tmp21 = closure_6(tmp(5232).Text, obj5);
         cResult[12] = body;
         cResult[13] = twoWayLinkStyles.body;
         cResult[14] = tmp21;
         tmp19 = tmp21;
       }
       const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: tmp15 };
-      const tmp18 = closure_6(tmp(5220).Text, obj6);
+      const tmp18 = closure_6(tmp(5232).Text, obj6);
       cResult[9] = twoWayLinkStyles.title;
       cResult[10] = tmp15;
       cResult[11] = tmp18;
       tmp16 = tmp18;
     }
     const obj7 = { source: img, style: tmp10 };
-    const tmp14 = closure_6(valueProps(5655), obj7);
+    const tmp14 = closure_6(valueProps(5667), obj7);
     cResult[6] = img;
     cResult[7] = tmp10;
     cResult[8] = tmp14;
@@ -204,7 +204,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5655), obj5), , , ];
+  const items2 = [closure_6(valueProps(5667), obj5), , , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: null };
   let tmp11 = headerConnect;
   if (stateFromStores) {
@@ -217,7 +217,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled() ? 
   items2[1] = closure_6(Text_Text.Text, obj6);
   items2[2] = closure_6(Text_Text.Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
   const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5655);
+  const tmp10 = valueProps(5667);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

@@ -1,11 +1,11 @@
-// === Module 12247: useConjureLiveParts ===
+// === Module 12266: useConjureLiveParts ===
 
-// Module 12247 (useConjureLiveParts)
+// Module 12266 (useConjureLiveParts)
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5180 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5192 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
 
 const require = globalThis.__r;
 

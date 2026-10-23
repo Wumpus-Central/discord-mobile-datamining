@@ -1,9 +1,9 @@
-// === Module 15229: ContextMenuContainer ===
+// === Module 15254: ContextMenuContainer ===
 
-// Module 15229 (ContextMenuContainer)
-import OverlayViewDefault from "OverlayView" /* 5901 */;
-import Dialog from "Dialog" /* 5953 */;
-import ContextMenuPopout from "ContextMenuPopout" /* 15230 */;
+// Module 15254 (ContextMenuContainer)
+import OverlayViewDefault from "OverlayView" /* 5913 */;
+import Dialog from "Dialog" /* 5965 */;
+import ContextMenuPopout from "ContextMenuPopout" /* 15255 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -111,7 +111,7 @@ export const ContextMenuContainer = ReactCompilerGating.isReactCompilerEnabled()
           return tmp19;
         }
         const obj3 = { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey };
-        const tmp23 = jsx(tmp(5023).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
+        const tmp23 = jsx(tmp(5035).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
         cResult[10] = tmp6;
         cResult[11] = tmp18;
         cResult[12] = tmp23;

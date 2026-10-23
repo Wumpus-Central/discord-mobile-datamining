@@ -1,15 +1,15 @@
-// === Module 11481: StageMusicManager ===
+// === Module 11501: StageMusicManager ===
 
-// Module 11481 (StageMusicManager)
-import StageChannelParticipants from "StageChannelParticipants" /* 6673 */;
+// Module 11501 (StageMusicManager)
+import StageChannelParticipants from "StageChannelParticipants" /* 6686 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6626 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6639 */;
 import StageInstanceStore from "StageInstanceStore" /* 4826 */;
-import StageMusicStore from "StageMusicStore" /* 11479 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import StageMusicStore from "StageMusicStore" /* 11499 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 
 const require = globalThis.__r;
 
@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11482);
+const SoundUtils = fn(11502);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 const ReactCompilerGating = fn(558);
 class StageMusicManager extends tmp3 {
@@ -156,7 +156,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   const tmpResult = require("initialize");
-  const stageParticipants = require("StageChannelParticipantStoreHooks").useStageParticipants(arg0, tmp(6673).StageChannelParticipantNamedIndex.SPEAKER);
+  const stageParticipants = require("StageChannelParticipantStoreHooks").useStageParticipants(arg0, tmp(6686).StageChannelParticipantNamedIndex.SPEAKER);
   if (cResult[3] !== stageParticipants) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {

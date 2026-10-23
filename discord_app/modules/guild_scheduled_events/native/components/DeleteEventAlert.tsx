@@ -1,10 +1,10 @@
-// === Module 9022: DeleteEventAlert ===
+// === Module 9045: DeleteEventAlert ===
 
-// Module 9022 (DeleteEventAlert)
+// Module 9045 (DeleteEventAlert)
 import util from "util" /* 1128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6769 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
 
 const require = globalThis.__r;
 
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8863);
+            const obj8 = v1(8886);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             const obj = { value, done: true };
             return obj;
           }
-          v1(5196).hideActionSheet();
+          v1(5208).hideActionSheet();
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }

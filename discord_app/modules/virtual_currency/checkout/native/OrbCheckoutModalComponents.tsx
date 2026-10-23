@@ -1,21 +1,21 @@
-// === Module 14423: OrbCheckoutModalComponents ===
+// === Module 14447: OrbCheckoutModalComponents ===
 
-// Module 14423 (OrbCheckoutModalComponents)
+// Module 14447 (OrbCheckoutModalComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6997 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7327 */;
-import OrbsIcon from "OrbsIcon" /* 9405 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13831 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13833 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14422 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14424 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7010 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7340 */;
+import OrbsIcon from "OrbsIcon" /* 9428 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13854 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13856 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14446 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14448 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -314,10 +314,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutL
   const obj3 = { style: tmp4.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: tmp5 };
 }) : (function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(14422).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(14446).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-  return closure_6(skuId(5220).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });
+  return closure_6(skuId(5232).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx");

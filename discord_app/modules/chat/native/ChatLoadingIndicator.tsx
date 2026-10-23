@@ -1,18 +1,18 @@
-// === Module 13972: ChatLoadingIndicator ===
+// === Module 13995: ChatLoadingIndicator ===
 
-// Module 13972 (ChatLoadingIndicator)
+// Module 13995 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6481 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
+import MessageStore from "MessageStore" /* 6008 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 import UserStore from "UserStore" /* 1392 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
@@ -493,8 +493,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  const PressableOpacityResult2 = PressableOpacity(5038);
-  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(5038).withRepeat, withSequence: PressableOpacity(5038).withSequence, withTiming: PressableOpacity(5192).withTiming, Easing: PressableOpacity(5038).Easing };
+  const PressableOpacityResult2 = PressableOpacity(5050);
+  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(5050).withRepeat, withSequence: PressableOpacity(5050).withSequence, withTiming: PressableOpacity(5204).withTiming, Easing: PressableOpacity(5050).Easing };
   fn3.__workletHash = 17454673879926;
   fn3.__initData = __initData;
   const animatedStyle = PressableOpacityResult2.useAnimatedStyle(fn3);
@@ -507,7 +507,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = PressableOpacity(1128).intl;
       obj3.children = intl.string(PressableOpacity(1128).t.JwIJMV);
-      const tmp17 = closure_13(PressableOpacity(5220).Text, obj3);
+      const tmp17 = closure_13(PressableOpacity(5232).Text, obj3);
       cResult[7] = tmp17;
       let tmp15 = tmp17;
     } else {
@@ -520,7 +520,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       if (!stateFromStores1) {
         return tmp18;
       } else if (cResult[11] !== tmp18) {
-        PressableOpacity = PressableOpacity(6893).PressableOpacity;
+        PressableOpacity = PressableOpacity(6906).PressableOpacity;
         let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
         tmp = closure_13(PressableOpacity, obj4);
         cResult[11] = tmp18;
@@ -544,7 +544,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   cResult[5] = tmp3.pulse;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(5038).withRepeat, withSequence: PressableOpacity(5038).withSequence, withTiming: PressableOpacity(5192).withTiming, Easing: PressableOpacity(5038).Easing };
+  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(5050).withRepeat, withSequence: PressableOpacity(5050).withSequence, withTiming: PressableOpacity(5204).withTiming, Easing: PressableOpacity(5050).Easing };
 }) : (function ChannelHeaderLoadingIndicator() {
   const tmp = closure_16();
   let items = [AccessibilityStore];
@@ -592,8 +592,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(5038);
-  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(5038).withRepeat, withSequence: stateFromStores(5038).withSequence, withTiming: stateFromStores(5192).withTiming, Easing: stateFromStores(5038).Easing };
+  let obj3 = stateFromStores(5050);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(5050).withRepeat, withSequence: stateFromStores(5050).withSequence, withTiming: stateFromStores(5204).withTiming, Easing: stateFromStores(5050).Easing };
   fn.__workletHash = 9356373946997;
   fn.__initData = __initData2;
   let obj5 = { style: tmp.container, children: null };
@@ -605,13 +605,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1128).intl;
   obj7.children = intl.string(stateFromStores(1128).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(5220).Text, obj7);
+  items3[1] = closure_13(stateFromStores(5232).Text, obj7);
   obj5.children = items3;
   const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(6893).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(6906).PressableOpacity, obj8);
   }
   return tmp7Result;
 });

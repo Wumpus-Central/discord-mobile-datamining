@@ -1,16 +1,16 @@
-// === Module 10676: ConjureChatStore ===
+// === Module 10698: ConjureChatStore ===
 
-// Module 10676 (ConjureChatStore)
+// Module 10698 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureChatTurns from "conjureChatTurns" /* 10677 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10678 */;
-import conjureChatHistory from "conjureChatHistory" /* 10679 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10680 */;
+import conjureChatTurns from "conjureChatTurns" /* 10699 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10700 */;
+import conjureChatHistory from "conjureChatHistory" /* 10701 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10702 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -187,7 +187,7 @@ function applyAgentReactions(arr) {
       for (const item10022 of steps) {
         if ("reaction" === item10022.kind) {
           if (null != item10022.message_id) {
-            let obj2 = map(10680);
+            let obj2 = map(10702);
             let result = obj2.agentReactionFromStep(item10022);
             if (null != result) {
               let result1 = map.set(item10022.message_id, tmp10);
@@ -264,6 +264,13 @@ prototype["isThinking"] = function isThinking(projectId) {
 prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
   return map5.has(projectId);
 };
+prototype["getHistoryLoads"] = function getHistoryLoads(arg0) {
+  let num = map6.get(arg0);
+  if (num == null) {
+    num = 0;
+  }
+  return num;
+};
 prototype["isHistoryUnavailable"] = function isHistoryUnavailable(projectId) {
   return set2.has(projectId);
 };
@@ -303,6 +310,7 @@ prototype["getActivityOrderedProjectIds"] = function getActivityOrderedProjectId
 };
 const map5 = new Map();
 const set2 = new Set();
+const map6 = new Map();
 const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (0 === map.size) {
@@ -341,7 +349,12 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     ({ projectId, entries, cursor, degraded } = arg0);
     set = undefined;
     c1 = undefined;
-    let num;
+    let num2;
+    let num = map6.get(projectId);
+    if (num == null) {
+      num = 0;
+    }
+    const result = map6.set(projectId, num + 1);
     value = map5.get(projectId);
     if (map5.has(projectId)) {
       value2 = map.get(projectId);
@@ -352,11 +365,11 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     } else {
       items = [];
     }
-    let tmp4 = cursor;
+    let tmp5 = cursor;
     if (cursor == null) {
-      tmp4 = null;
+      tmp5 = null;
     }
-    const result = map5.set(projectId, tmp4);
+    const result1 = map5.set(projectId, tmp5);
     if (true === degraded) {
       set2.add(projectId);
     } else {
@@ -381,33 +394,33 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     });
     const messagesFromHistoryResult = conjureChatHistory.messagesFromHistory(found);
     c1 = messagesFromHistoryResult;
-    num = -1;
+    num2 = -1;
     if (null != cursor) {
-      num = -1;
+      num2 = -1;
       if (true !== degraded) {
-        num = messagesFromHistoryResult.findIndex((id) => null != id.id);
+        num2 = messagesFromHistoryResult.findIndex((id) => null != id.id);
       }
     }
-    let num2 = -1;
-    if (-1 !== num) {
-      num2 = items.findIndex((id) => id.id === _undefined[num].id);
-    }
+    let num3 = -1;
     if (-1 !== num2) {
+      num3 = items.findIndex((id) => id.id === _undefined[num2].id);
+    }
+    if (-1 !== num3) {
       if (value == null) {
         value = null;
       }
-      const result1 = map5.set(projectId, value);
+      const result2 = map5.set(projectId, value);
     }
-    let tmp20 = messagesFromHistoryResult;
-    if (-1 !== num2) {
+    let tmp21 = messagesFromHistoryResult;
+    if (-1 !== num3) {
       const items1 = [];
-      HermesBuiltin.arraySpread(messagesFromHistoryResult.slice(num), HermesBuiltin.arraySpread(items.slice(0, num2), 0));
-      tmp20 = items1;
-      const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, num2), 0);
+      HermesBuiltin.arraySpread(messagesFromHistoryResult.slice(num2), HermesBuiltin.arraySpread(items.slice(0, num3), 0));
+      tmp21 = items1;
+      const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, num3), 0);
     }
-    const result2 = map.set(projectId, applyAgentReactions(conjureChatHistory.foldDividers(tmp20)));
+    const result3 = map.set(projectId, applyAgentReactions(conjureChatHistory.foldDividers(tmp21)));
     recordThinkingTransition(projectId);
-    const tmp15Result = conjureChatHistory;
+    const tmp16Result = conjureChatHistory;
   },
   CONJURE_CHAT_HISTORY_PREPEND: function handleChatHistoryPrepend(cursor) {
     ({ projectId, entries } = cursor);
@@ -443,38 +456,70 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   CONJURE_CHAT_MESSAGE_APPEND: function handleChatMessageAppend(optimisticId) {
     ({ projectId, id } = optimisticId);
     optimisticId = optimisticId.optimisticId;
+    const held = optimisticId.held;
+    c2 = undefined;
     ({ content, userId, timestamp, attachments } = optimisticId);
     let items2 = map.get(projectId);
     if (items2 == null) {
       items2 = [];
     }
-    if (items2.some((id) => id.id === id)) {
+    const findIndexResult = items2.findIndex((id) => id.id === id);
+    c2 = findIndexResult;
+    if (-1 !== findIndexResult) {
+      if (true === items2[findIndexResult].held) {
+        if (true !== held) {
+          const mapped = items2.map((item, index) => {
+            let tmp = item;
+            if (index === c2) {
+              const obj = {};
+              const merged = Object.assign(item);
+              obj.held = undefined;
+              tmp = obj;
+            }
+            return tmp;
+          });
+          if (!obj4.hasOpenTurn(mapped)) {
+            mapped.push(conjureChatHistory.newMessage("assistant", ""));
+            const tmp16Result = conjureChatHistory;
+          }
+          const result = map.set(projectId, mapped);
+          recordThinkingTransition(projectId);
+          obj4 = conjureChatTurns;
+        }
+      }
       return false;
     } else {
-      const obj3 = { ts: timestamp, id, userId, attachments };
-      const newMessageResult = conjureChatHistory.newMessage("user", content, obj3);
-      let num2 = -1;
-      if (null != optimisticId) {
-        num2 = items2.findIndex((id) => id.id === optimisticId);
+      const obj2 = { ts: timestamp, id, userId, attachments };
+      const newMessageResult = conjureChatHistory.newMessage("user", content, obj2);
+      let hasOpenTurnResult = true === held;
+      if (hasOpenTurnResult) {
+        newMessageResult.held = true;
       }
-      if (-1 !== num2) {
-        newMessageResult.render_id = items2[num2].render_id;
+      let num = -1;
+      if (null != optimisticId) {
+        num = items2.findIndex((id) => id.id === optimisticId);
+      }
+      if (-1 !== num) {
+        newMessageResult.render_id = items2[num].render_id;
         const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(items2.slice(0, num2), 0);
+        const arraySpreadResult = HermesBuiltin.arraySpread(items2.slice(0, num), 0);
         items[arraySpreadResult] = newMessageResult;
-        HermesBuiltin.arraySpread(items2.slice(num2 + 1), arraySpreadResult + 1);
-        const result = map.set(projectId, items);
+        HermesBuiltin.arraySpread(items2.slice(num + 1), arraySpreadResult + 1);
+        const result1 = map.set(projectId, items);
         recordThinkingTransition(projectId);
       } else {
         const items1 = [];
         items1[HermesBuiltin.arraySpread(items2, 0)] = newMessageResult;
-        if (!tmpResult.hasOpenTurn(items1)) {
-          items1.push(conjureChatHistory.newMessage("assistant", ""));
-          const tmpResult2 = conjureChatHistory;
+        if (!hasOpenTurnResult) {
+          hasOpenTurnResult = conjureChatTurns.hasOpenTurn(items1);
+          const tmp22Result = conjureChatTurns;
         }
-        const result1 = map.set(projectId, items1);
+        if (!hasOpenTurnResult) {
+          items1.push(conjureChatHistory.newMessage("assistant", ""));
+          const tmp22Result2 = conjureChatHistory;
+        }
+        const result2 = map.set(projectId, items1);
         recordThinkingTransition(projectId);
-        tmpResult = conjureChatTurns;
       }
     }
   },
@@ -747,7 +792,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10679).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10701).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -765,7 +810,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10677);
+        tmpResult = id(10699);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -792,9 +837,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10679).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10701).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10679);
+          const tmpResult2 = id(10701);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -808,7 +853,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10679);
+      const obj2 = id(10701);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -904,8 +949,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     if (!tmp2) {
       let tmp5 = null != value;
       if (tmp5) {
-        tmp5 = -1 !== step(10677).resolveTurnIndex(value, undefined);
-        let obj2 = step(10677);
+        tmp5 = -1 !== step(10699).resolveTurnIndex(value, undefined);
+        let obj2 = step(10699);
       }
       tmp2 = tmp5;
     }

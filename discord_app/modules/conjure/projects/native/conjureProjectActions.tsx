@@ -1,20 +1,20 @@
-// === Module 11739: conjureProjectActions ===
+// === Module 11759: conjureProjectActions ===
 
-// Module 11739 (conjureProjectActions)
+// Module 11759 (conjureProjectActions)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ToastUtils from "ToastUtils" /* 5648 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import CopyIcon from "CopyIcon" /* 5668 */;
-import AlertModal from "AlertModal" /* 5900 */;
-import ChannelUtils from "ChannelUtils" /* 5980 */;
-import ClipboardUtils from "ClipboardUtils" /* 7270 */;
-import conjureProjectMute from "conjureProjectMute" /* 10700 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 11710 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11748 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11753 */;
+import ToastUtils from "ToastUtils" /* 5660 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
+import CopyIcon from "CopyIcon" /* 5680 */;
+import AlertModal from "AlertModal" /* 5912 */;
+import ChannelUtils from "ChannelUtils" /* 5992 */;
+import ClipboardUtils from "ClipboardUtils" /* 7283 */;
+import conjureProjectMute from "conjureProjectMute" /* 10722 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 11730 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11768 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11773 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10691 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10713 */;
 
 const require = globalThis.__r;
 
@@ -88,13 +88,13 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11710).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
+          await tmp3(11730).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;
-            tmp3(5648).presentError(intl.string(v2(3830)["Q+l4Hv"]));
+            tmp3(5660).presentError(intl.string(v2(3830)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(5648);
+            tmp3(5660);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -122,9 +122,9 @@ let closure_11 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10675);
+const ConjureConnectionStore = fn(10697);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(6758);
+const ConjureProjectStore = fn(6771);
 ({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
 const StaticChannelRoute = fn(4828).StaticChannelRoute;
 const size = fn(2);
@@ -233,7 +233,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1128).intl;
-        project(5648).presentError(intl.string(closure_1_1(3830)["Q+l4Hv"]));
+        project(5660).presentError(intl.string(closure_1_1(3830)["Q+l4Hv"]));
       });
     };
     items1.push(obj6);
@@ -333,7 +333,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         obj3.onConfirm = function onConfirm() {
           const result = project(muted[34]).deleteProjectInBackground(id.id, () => {
             const intl = id(1128).intl;
-            return id(5648).presentError(intl.string(closure_1_1(3830)["0XDHob"]));
+            return id(5660).presentError(intl.string(closure_1_1(3830)["0XDHob"]));
           });
         };
         AlertModal.showConfirmModal(obj3);

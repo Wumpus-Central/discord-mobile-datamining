@@ -1,15 +1,15 @@
-// === Module 8891: Button/HeaderButton ===
+// === Module 8914: Button/HeaderButton ===
 
-// Module 8891 (Button/HeaderButton)
+// Module 8914 (Button/HeaderButton)
 import c from "c" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 5231 */;
+import BaseTextButton from "BaseTextButton" /* 5243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let c3 = "heading-md/bold";
-const diff = fn(5236).SMALL_BUTTON_HEIGHT - 2 * fn(5236).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(5220).TextStyleSheet["heading-md/bold"].lineHeight;
+const diff = fn(5248).SMALL_BUTTON_HEIGHT - 2 * fn(5248).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(5232).TextStyleSheet["heading-md/bold"].lineHeight;
 const createStyles = fn(4969);
 let closure_4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
 const ReactCompilerGating = fn(558);
@@ -42,7 +42,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderButton
   obj.variant = "secondary-overlay";
   return jsx(BaseTextButton.BaseTextButton, { accessibilityRole: "header" });
 });
-tmp5.Icon = fn(5231).BaseTextButton.Icon;
+tmp5.Icon = fn(5243).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

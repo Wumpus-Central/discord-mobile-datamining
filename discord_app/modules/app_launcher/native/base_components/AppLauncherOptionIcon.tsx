@@ -1,6 +1,6 @@
-// === Module 12144: AppLauncherOptionIcon ===
+// === Module 12163: AppLauncherOptionIcon ===
 
-// Module 12144 (AppLauncherOptionIcon)
+// Module 12163 (AppLauncherOptionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;

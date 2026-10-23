@@ -1,23 +1,23 @@
-// === Module 13620: HubEmailConnectionGuildSelect ===
+// === Module 13643: HubEmailConnectionGuildSelect ===
 
-// Module 13620 (HubEmailConnectionGuildSelect)
+// Module 13643 (HubEmailConnectionGuildSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import GuildIconDefault from "GuildIcon" /* 6868 */;
-import Form from "Form" /* 8926 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import GuildIconDefault from "GuildIcon" /* 6881 */;
+import Form from "Form" /* 8949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13597).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13620).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -347,7 +347,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13611).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(13634).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -358,7 +358,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6359).APIError(closure_128_0);
+                  const aPIError = new id(6372).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

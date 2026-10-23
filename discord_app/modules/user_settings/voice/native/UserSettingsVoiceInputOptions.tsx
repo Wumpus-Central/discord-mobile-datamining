@@ -1,10 +1,10 @@
-// === Module 11576: UserSettingsVoiceInputOptions ===
+// === Module 11596: UserSettingsVoiceInputOptions ===
 
-// Module 11576 (UserSettingsVoiceInputOptions)
+// Module 11596 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1128 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5837 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7275 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 11577 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7288 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 11597 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             tmp26[0] = tmp8;
             const items1 = [tmp16, tmp21];
             tmp26[2] = items1;
-            const tmp27 = closure_8(tmp(11570).UserSettingsTableRowGroup, tmp26);
+            const tmp27 = closure_8(tmp(11590).UserSettingsTableRowGroup, tmp26);
             cResult[14] = tmp16;
             cResult[15] = tmp21;
             cResult[16] = tmp27;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         obj3.onValueChange = function onValueChange(autoThreshold) {
           return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
         };
-        const items2 = [closure_6(tmp(7280).TableSwitchRow, obj3), ];
+        const items2 = [closure_6(tmp(7293).TableSwitchRow, obj3), ];
         const obj4 = { label: null, subLabel: null };
         const intl6 = tmp(1128).intl;
         obj4.label = intl6.string(tmp(1128).t["o+2oMK"]);
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         };
         obj5.children = closure_6(VoiceSensitivityDefault, obj6);
         obj4.subLabel = closure_6(View, obj5);
-        items2[1] = closure_6(tmp(6888).TableRow, obj4);
+        items2[1] = closure_6(tmp(6901).TableRow, obj4);
         obj2.children = items2;
         const tmp23 = closure_8(closure_7, obj2);
       }
@@ -194,9 +194,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     tmp18[0] = tmp10;
     const obj7 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: cResult[5] };
-    tmp18[1] = closure_6(tmp(5220).Text, obj7);
+    tmp18[1] = closure_6(tmp(5232).Text, obj7);
     tmp18[2] = handleInputModePress;
-    const tmp20 = closure_6(tmp(6888).TableRow, tmp18);
+    const tmp20 = closure_6(tmp(6901).TableRow, tmp18);
     cResult[6] = iter.value;
     cResult[7] = cResult[5];
     cResult[8] = tmp20;
@@ -224,9 +224,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     stringResult = intl3.string(tmp(1128).t.cHCEOJ);
   }
   obj4.children = stringResult;
-  obj3.trailing = closure_6(inputMode(5220).Text, obj4);
+  obj3.trailing = closure_6(inputMode(5232).Text, obj4);
   obj3.onPress = handleInputModePress;
-  const items1 = [closure_6(inputMode(6888).TableRow, obj3), ];
+  const items1 = [closure_6(inputMode(6901).TableRow, obj3), ];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj5 = { children: null };
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj6.onValueChange = function onValueChange(autoThreshold) {
       return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
     };
-    const items2 = [closure_6(tmp(7280).TableSwitchRow, obj6), ];
+    const items2 = [closure_6(tmp(7293).TableSwitchRow, obj6), ];
     const obj7 = { label: null, subLabel: null };
     const intl6 = tmp(1128).intl;
     obj7.label = intl6.string(tmp(1128).t["o+2oMK"]);
@@ -251,12 +251,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     };
     obj8.children = closure_6(VoiceSensitivityDefault, obj9);
     obj7.subLabel = closure_6(View, obj8);
-    items2[1] = closure_6(tmp(6888).TableRow, obj7);
+    items2[1] = closure_6(tmp(6901).TableRow, obj7);
     obj5.children = items2;
     tmp4Result = closure_8(closure_7, obj5);
   }
   items1[1] = tmp4Result;
   obj2.children = items1;
-  return closure_8(inputMode(11570).UserSettingsTableRowGroup, obj2);
+  return closure_8(inputMode(11590).UserSettingsTableRowGroup, obj2);
 });
 export { handleInputModePress };

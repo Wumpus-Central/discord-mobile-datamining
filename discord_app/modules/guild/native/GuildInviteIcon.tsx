@@ -1,12 +1,12 @@
-// === Module 13598: GuildInviteIcon ===
+// === Module 13621: GuildInviteIcon ===
 
-// Module 13598 (GuildInviteIcon)
+// Module 13621 (GuildInviteIcon)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import StringUtils from "StringUtils" /* 2033 */;
-import FastImageDefault from "FastImage" /* 5655 */;
+import FastImageDefault from "FastImage" /* 5667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ GuildInviteIcon.prototype["render"] = function render() {
 };
 GuildInviteIcon.defaultProps = { size: Sizes.SMALL, textScale: 1 };
 GuildInviteIcon.Sizes = Sizes;
-GuildInviteIcon.contextType = fn(5023).ThemeContext;
+GuildInviteIcon.contextType = fn(5035).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild/native/GuildInviteIcon.tsx");
 

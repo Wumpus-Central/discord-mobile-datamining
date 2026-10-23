@@ -1,10 +1,11 @@
-// === Module 5691: MarkupUtils ===
+// === Module 5703: MarkupUtils ===
 
-// Module 5691 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 5692 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5967 */;
-import MarkupRulesDefault from "MarkupRules" /* 5968 */;
-import MarkupParserAll from "MarkupParser" /* 8330 */;
+// Module 5703 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 5704 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5979 */;
+import MarkupRulesDefault from "MarkupRules" /* 5980 */;
+import MarkupParserAll from "MarkupParser" /* 8342 */;
+import reactParserFor from "reactParserFor" /* 15060 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -138,29 +139,29 @@ let closure_19 = apply.once(() => {
   return tmp.omit.apply(items2);
 });
 let apply = apply_mod;
-let closure_20 = apply.once(() => MarkupParserAll.reactParserFor(closure_6()));
+let closure_20 = apply.once(() => reactParserFor.default(closure_6()));
 let apply = apply_mod;
-let closure_21 = apply.once(() => MarkupParserAll.reactParserFor(closure_7()));
+let closure_21 = apply.once(() => reactParserFor.default(closure_7()));
 let apply = apply_mod;
-let closure_22 = apply.once(() => MarkupParserAll.reactParserFor(closure_9()));
+let closure_22 = apply.once(() => reactParserFor.default(closure_9()));
 let apply = apply_mod;
-let closure_23 = apply.once(() => MarkupParserAll.reactParserFor(closure_10()));
+let closure_23 = apply.once(() => reactParserFor.default(closure_10()));
 let apply = apply_mod;
-let closure_24 = apply.once(() => MarkupParserAll.reactParserFor(closure_11()));
+let closure_24 = apply.once(() => reactParserFor.default(closure_11()));
 let apply = apply_mod;
-let closure_25 = apply.once(() => MarkupParserAll.reactParserFor(closure_12()));
+let closure_25 = apply.once(() => reactParserFor.default(closure_12()));
 let apply = apply_mod;
-let closure_26 = apply.once(() => MarkupParserAll.reactParserFor(closure_13()));
+let closure_26 = apply.once(() => reactParserFor.default(closure_13()));
 let apply = apply_mod;
-let closure_27 = apply.once(() => MarkupParserAll.reactParserFor(closure_14()));
+let closure_27 = apply.once(() => reactParserFor.default(closure_14()));
 let apply = apply_mod;
-let closure_28 = apply.once(() => MarkupParserAll.reactParserFor(closure_15()));
+let closure_28 = apply.once(() => reactParserFor.default(closure_15()));
 let apply = apply_mod;
-let closure_29 = apply.once(() => MarkupParserAll.reactParserFor(closure_16()));
+let closure_29 = apply.once(() => reactParserFor.default(closure_16()));
 let apply = apply_mod;
-let closure_30 = apply.once(() => MarkupParserAll.reactParserFor(closure_18()));
+let closure_30 = apply.once(() => reactParserFor.default(closure_18()));
 let apply = apply_mod;
-let closure_31 = apply.once(() => MarkupParserAll.reactParserFor(closure_8()));
+let closure_31 = apply.once(() => reactParserFor.default(closure_8()));
 let apply = apply_mod;
 let closure_32 = apply.once(() => MarkupParserAll.astParserFor(closure_6()));
 let apply = apply_mod;
@@ -188,7 +189,7 @@ Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17()
 Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = MarkupParserAll.reactParserFor;
+obj3.reactParserFor = fn(15060).default;
 obj3.parse = function parse() {
   const items = [...arguments];
   return closure_20()(...items);

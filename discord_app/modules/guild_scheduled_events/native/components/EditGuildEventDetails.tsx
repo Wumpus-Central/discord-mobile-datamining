@@ -1,11 +1,11 @@
-// === Module 8990: EditGuildEventDetails ===
+// === Module 9013: EditGuildEventDetails ===
 
-// Module 8990 (EditGuildEventDetails)
+// Module 9013 (EditGuildEventDetails)
 import util from "util" /* 1128 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8864 */;
-import ScheduleUtils from "ScheduleUtils" /* 8865 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8887 */;
+import ScheduleUtils from "ScheduleUtils" /* 8888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function assertGuildEventDetailsValid(guildEvent) {
     throw error;
   }
 }
-let closure_6 = fn(6769).isGuildScheduledEventActive;
+let closure_6 = fn(6782).isGuildScheduledEventActive;
 let constants = fn(4827).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

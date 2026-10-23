@@ -1,10 +1,10 @@
-// === Module 15374: LiveTag ===
+// === Module 15395: LiveTag ===
 
-// Module 15374 (LiveTag)
+// Module 15395 (LiveTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

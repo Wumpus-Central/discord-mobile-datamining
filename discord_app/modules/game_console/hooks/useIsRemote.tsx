@@ -1,9 +1,9 @@
-// === Module 7363: useIsRemote ===
+// === Module 7376: useIsRemote ===
 
-// Module 7363 (useIsRemote)
+// Module 7376 (useIsRemote)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GameConsoleStore from "GameConsoleStore" /* 5701 */;
+import GameConsoleStore from "GameConsoleStore" /* 5713 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

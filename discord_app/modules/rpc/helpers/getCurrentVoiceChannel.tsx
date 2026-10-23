@@ -1,9 +1,9 @@
-// === Module 7466: getCurrentVoiceChannel ===
+// === Module 7479: getCurrentVoiceChannel ===
 
-// Module 7466 (getCurrentVoiceChannel)
+// Module 7479 (getCurrentVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");

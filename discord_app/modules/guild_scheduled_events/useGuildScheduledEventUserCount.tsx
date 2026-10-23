@@ -1,9 +1,9 @@
-// === Module 8861: useGuildScheduledEventUserCount ===
+// === Module 8884: useGuildScheduledEventUserCount ===
 
-// Module 8861 (useGuildScheduledEventUserCount)
+// Module 8884 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8862 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6769 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8885 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

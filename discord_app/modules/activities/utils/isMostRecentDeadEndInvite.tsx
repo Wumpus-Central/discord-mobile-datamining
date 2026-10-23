@@ -1,8 +1,8 @@
-// === Module 14510: isMostRecentDeadEndInvite ===
+// === Module 14534: isMostRecentDeadEndInvite ===
 
-// Module 14510 (isMostRecentDeadEndInvite)
+// Module 14534 (isMostRecentDeadEndInvite)
 import Constants from "Constants" /* 1087 */;
-import isInviteActiveDefault from "isInviteActive" /* 11303 */;
+import isInviteActiveDefault from "isInviteActive" /* 11326 */;
 import size from "module_2" /* 2 */;
 
 const ActivityActionTypes = Constants.ActivityActionTypes;

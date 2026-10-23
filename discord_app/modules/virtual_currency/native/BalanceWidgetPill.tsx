@@ -1,13 +1,13 @@
-// === Module 13903: virtual_currency/BalanceWidgetPill ===
+// === Module 13926: virtual_currency/BalanceWidgetPill ===
 
-// Module 13903 (virtual_currency/BalanceWidgetPill)
+// Module 13926 (virtual_currency/BalanceWidgetPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 13904 */;
-import OrbLottieAnimation from "OrbLottieAnimation" /* 13905 */;
-import BalanceCounter from "BalanceCounter" /* 13910 */;
-import AnimationUtils from "AnimationUtils" /* 13911 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 13927 */;
+import OrbLottieAnimation from "OrbLottieAnimation" /* 13928 */;
+import BalanceCounter from "BalanceCounter" /* 13933 */;
+import AnimationUtils from "AnimationUtils" /* 13934 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const createStyles = fn(4969);
-let obj2 = { container: { minHeight: fn(5236).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 }, orbsLottieContainer: { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" }, balanceCounterContainer: { justifyContent: "center", alignItems: "flex-end" }, balanceText: null };
+let obj2 = { container: { minHeight: fn(5248).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 }, orbsLottieContainer: { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" }, balanceCounterContainer: { justifyContent: "center", alignItems: "flex-end" }, balanceText: null };
 let obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
 const PlatformUtils = fn(1384);
 let num;

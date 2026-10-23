@@ -1,7 +1,7 @@
-// === Module 18347: updateVisualRefresh ===
+// === Module 18391: updateVisualRefresh ===
 
-// Module 18347 (updateVisualRefresh)
-import NativeThemeModuleDefault from "NativeThemeModule" /* 15643 */;
+// Module 18391 (updateVisualRefresh)
+import NativeThemeModuleDefault from "NativeThemeModule" /* 15664 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");

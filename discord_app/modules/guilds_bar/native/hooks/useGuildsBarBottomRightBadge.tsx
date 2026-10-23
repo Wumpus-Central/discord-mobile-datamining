@@ -1,10 +1,10 @@
-// === Module 17665: useGuildsBarBottomRightBadge ===
+// === Module 17709: useGuildsBarBottomRightBadge ===
 
-// Module 17665 (useGuildsBarBottomRightBadge)
+// Module 17709 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1202 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17666 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17667 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17671 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17710 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17711 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   [first, dependencyMap] = noop.useState(tmp5);
   const obj = mentionCount(576);
-  const token = mentionCount(5238).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmpResult = mentionCount(5238);
-  const token1 = mentionCount(5238).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token = mentionCount(5250).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmpResult = mentionCount(5250);
+  const token1 = mentionCount(5250).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const diff = token1 - tmp(1202).BADGE_PADDING;
   if (cResult[2] !== diff) {
     const obj2 = { bottom: diff };
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(17666)(obj4);
+      const tmp23 = tmp8(17710)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(17667), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(17711), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   cResult[5] = tmp12;
   cResult[6] = items;
   tmp13 = items;
-  const tmpResult2 = mentionCount(5238);
+  const tmpResult2 = mentionCount(5250);
 }) : (function useGuildsBarBottomRightBadge(mentionCount) {
   mentionCount = mentionCount.mentionCount;
   const isMentionLowImportance = mentionCount.isMentionLowImportance;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "toCharArray$esjava$1" };
+      return { badge: null, cutout: "end", cutouts: "toCharArray$esjava$1" };
     }
   }, items1);
 });

@@ -1,12 +1,12 @@
-// === Module 17457: openFavoritesGuildCategorySettingsModal ===
+// === Module 17501: openFavoritesGuildCategorySettingsModal ===
 
-// Module 17457 (openFavoritesGuildCategorySettingsModal)
+// Module 17501 (openFavoritesGuildCategorySettingsModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildCategorySettingsModal.tsx");
 
 export default function openFavoritesGuildCategorySettingsModal(categoryId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17458, dependencyMap.paths), { categoryId });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17502, dependencyMap.paths), { categoryId });
 };

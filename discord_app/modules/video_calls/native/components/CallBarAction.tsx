@@ -1,12 +1,12 @@
-// === Module 11337: CallBarAction ===
+// === Module 11360: CallBarAction ===
 
-// Module 11337 (CallBarAction)
+// Module 11360 (CallBarAction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6893 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11339 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Pressables from "Pressables" /* 6906 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11362 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10855).resetFocusTimer;
+const resetFocusTimer = fn(10878).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ColorUtils = fn(4966);
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                                   }
                                                 }
                                                 const obj3 = { accessibilityLabel, accessibilityRole: "button", accessibilityState, onPress: tmp15, disabled: false, style: tmp16, children: tmp42 };
-                                                const tmp48 = closure_10(onPress(6893).PressableOpacity, obj3);
+                                                const tmp48 = closure_10(onPress(6906).PressableOpacity, obj3);
                                                 cResult[46] = accessibilityLabel;
                                                 cResult[47] = accessibilityState;
                                                 cResult[48] = tmp42;
@@ -177,13 +177,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                 if (tmp5) {
                                   const obj5 = { style: null };
                                   const items1 = [tmp7.badge, ];
-                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11339).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
-                                  const tmpResult = onPress(11339);
-                                  size1.left = onPress(11339).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
+                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11362).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
+                                  const tmpResult = onPress(11362);
+                                  size1.left = onPress(11362).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
                                   items1[1] = size1;
                                   obj5.style = items1;
                                   tmp38 = closure_10(View, obj5);
-                                  const tmpResult2 = onPress(11339);
+                                  const tmpResult2 = onPress(11362);
                                 }
                                 cResult[34] = tmp11.badgeRadius;
                                 cResult[35] = tmp11.buttonRadius;

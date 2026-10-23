@@ -1,29 +1,29 @@
-// === Module 9922: CustomEmojiContent ===
+// === Module 9944: CustomEmojiContent ===
 
-// Module 9922 (CustomEmojiContent)
+// Module 9944 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4923 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import openUserSettings from "openUserSettings" /* 7475 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9769 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9920 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9924 */;
-import StarIcon from "StarIcon" /* 9926 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9929 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
+import openUserSettings from "openUserSettings" /* 7488 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9791 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9942 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9946 */;
+import StarIcon from "StarIcon" /* 9948 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9951 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4924 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6869).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6882).EmojiSourceDataTypes;
 const Constants = fn(1087);
 ({ UserSettingsSections: closure_11, AnalyticEvents: closure_12, AnalyticsPages: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
@@ -277,7 +277,7 @@ export default function CustomEmojiContent(emojiNode) {
       if (sourceType !== isFavoriteEmoji.PACK) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9928, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9950, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
         }
         const intl5 = tmp2(nonce[28]).intl;
         obj22.accessibilityLabel = intl5.string(tmp2(nonce[28]).t.PdRCRg);

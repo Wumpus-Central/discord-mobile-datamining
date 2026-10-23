@@ -1,6 +1,6 @@
-// === Module 12004: ApplicationDirectoryCollectionsStore ===
+// === Module 12023: ApplicationDirectoryCollectionsStore ===
 
-// Module 12004 (ApplicationDirectoryCollectionsStore)
+// Module 12023 (ApplicationDirectoryCollectionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

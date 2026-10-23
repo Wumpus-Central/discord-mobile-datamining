@@ -1,10 +1,10 @@
-// === Module 17671: InvitesDisabledBadge ===
+// === Module 17715: InvitesDisabledBadge ===
 
-// Module 17671 (InvitesDisabledBadge)
+// Module 17715 (InvitesDisabledBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _modDef13604 from "module_13604" /* 13604 */;
+import _modDef13627 from "module_13627" /* 13627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.pause) {
-      const obj2 = { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13604 };
-      const tmp9 = jsx(native.ThemedIcon, { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13604 });
+      const obj2 = { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13627 };
+      const tmp9 = jsx(native.ThemedIcon, { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13627 });
       cResult[3] = tmp4.pause;
       cResult[4] = tmp9;
       let tmp6 = tmp9;
@@ -72,7 +72,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = { style: null, children: null };
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
-  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13604 }) };
-  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13604 })}</View>;
+  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13627 }) };
+  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13627 })}</View>;
   return <View style={null}>{null}</View>;
 }));

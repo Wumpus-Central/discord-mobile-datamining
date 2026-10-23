@@ -1,10 +1,10 @@
-// === Module 5151: PortalKeyboard ===
+// === Module 5163: PortalKeyboard ===
 
-// Module 5151 (PortalKeyboard)
+// Module 5163 (PortalKeyboard)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
-import Portal from "Portal" /* 5152 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5148 */;
+import Portal from "Portal" /* 5164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

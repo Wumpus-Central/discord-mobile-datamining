@@ -1,8 +1,8 @@
-// === Module 11097: ProfileCustomizationNavigationStore ===
+// === Module 11120: ProfileCustomizationNavigationStore ===
 
-// Module 11097 (ProfileCustomizationNavigationStore)
+// Module 11120 (ProfileCustomizationNavigationStore)
 import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
-import ZustandStore from "ZustandStore" /* 5149 */;
+import ZustandStore from "ZustandStore" /* 5161 */;
 import size from "module_2" /* 2 */;
 
 const constants = UserSettingsConstants.ProfileCustomizationSubsection;

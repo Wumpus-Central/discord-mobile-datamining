@@ -1,16 +1,16 @@
-// === Module 17966: conjureBackgroundFrames ===
+// === Module 18010: conjureBackgroundFrames ===
 
-// Module 17966 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6763 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10705 */;
-import leaveFrame from "leaveFrame" /* 10742 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10743 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15662 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 17967 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 17969 */;
+// Module 18010 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6776 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10727 */;
+import leaveFrame from "leaveFrame" /* 10764 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10765 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15683 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18011 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18013 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6760 */;
+import FramesStore from "FramesStore" /* 6773 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 const require = globalThis.__r;
@@ -98,7 +98,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6761);
+const FramesConstants = fn(6774);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 17674: HomeDrawerShared ===
+// === Module 17718: HomeDrawerShared ===
 
-// Module 17674 (HomeDrawerShared)
+// Module 17718 (HomeDrawerShared)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 17440: MessagesItemEmptyState ===
+// === Module 17484: MessagesItemEmptyState ===
 
-// Module 17440 (MessagesItemEmptyState)
+// Module 17484 (MessagesItemEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

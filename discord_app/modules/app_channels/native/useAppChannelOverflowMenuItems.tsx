@@ -1,22 +1,22 @@
-// === Module 13955: useAppChannelOverflowMenuItems ===
+// === Module 13978: useAppChannelOverflowMenuItems ===
 
-// Module 13955 (useAppChannelOverflowMenuItems)
+// Module 13978 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1128 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import FlagIcon2 from "FlagIcon" /* 9948 */;
-import restartFrames from "restartFrames" /* 10741 */;
-import DoorExitIcon2 from "DoorExitIcon" /* 11494 */;
-import RefreshIcon from "RefreshIcon" /* 11740 */;
-import closeFrameDefault from "closeFrame" /* 13799 */;
-import openAppChannelReportModalDefault from "openAppChannelReportModal" /* 13956 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import FlagIcon2 from "FlagIcon" /* 9970 */;
+import restartFrames from "restartFrames" /* 10763 */;
+import DoorExitIcon2 from "DoorExitIcon" /* 11514 */;
+import RefreshIcon from "RefreshIcon" /* 11760 */;
+import closeFrameDefault from "closeFrame" /* 13822 */;
+import openAppChannelReportModalDefault from "openAppChannelReportModal" /* 13979 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6761).isLaunched;
+const isLaunched = fn(6774).isLaunched;
 const app_channel_header_mobile = "app_channel_header_mobile";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
     if (cResult[1] === application_id.id) {
       let tmp4 = cResult[2];
     }
-    const tmp6 = application_id(11839)(application_id, tmp4);
+    const tmp6 = application_id(11858)(application_id, tmp4);
     dependencyMap = tmp6;
-    const appChannelApplication = tmp(7331).useAppChannelApplication(application_id);
+    const appChannelApplication = tmp(7344).useAppChannelApplication(application_id);
     let bot;
     if (appChannelApplication != null) {
       bot = appChannelApplication.bot;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
             return restartFrames.restartFrame(closure_2);
           }
           if (cResult[7] !== t3) {
-            const obj2 = { label: tmp14, IconComponent: tmp(11740).RefreshIcon, action: t3 };
+            const obj2 = { label: tmp14, IconComponent: tmp(11760).RefreshIcon, action: t3 };
             cResult[7] = t3;
             cResult[8] = obj2;
             let tmp16 = obj2;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
           }
           if (cResult[10] !== t6) {
             const obj3 = { label: DoorExitIcon, IconComponent: null, action: null };
-            DoorExitIcon = tmp(11494).DoorExitIcon;
+            DoorExitIcon = tmp(11514).DoorExitIcon;
             obj3.IconComponent = DoorExitIcon;
             obj3.action = t6;
             cResult[10] = t6;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
           cResult[15] = items2;
         }
         const obj4 = { label: tmp26, IconComponent: null, variant: "destructive", action: null };
-        FlagIcon = tmp(9948).FlagIcon;
+        FlagIcon = tmp(9970).FlagIcon;
         obj4.IconComponent = FlagIcon;
         obj4.action = function action() {
           return openAppChannelReportModalDefault(application_id, closure_0, app_channel_header_mobile);
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
         }
         const obj5 = {
           label: id,
-          IconComponent: tmp(5672).CircleInformationIcon,
+          IconComponent: tmp(5684).CircleInformationIcon,
           action() {
                   return showUserProfileActionSheetDefault({ userId: bot.id, channelId: application_id.id, localUser: bot });
                 }
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
       }
       return tmp10;
     }
-    const tmpResult = tmp(7331);
+    const tmpResult = tmp(7344);
   }
   const obj6 = { type: require("EmbeddedSurfaceType").EmbeddedSurfaceType.APP_CHANNEL, channelId: application_id.id, guildId: application_id.guild_id };
   cResult[0] = application_id.guild_id;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
   let items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = application_id);
   const memo = bot.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: application_id.id, guildId: application_id.guild_id }), items);
-  const tmp3 = application_id(11839)(application_id, memo);
+  const tmp3 = application_id(11858)(application_id, memo);
   dependencyMap = tmp3;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(application_id);
   bot = undefined;

@@ -1,15 +1,15 @@
-// === Module 11637: ChannelCallSingleController ===
+// === Module 11657: ChannelCallSingleController ===
 
-// Module 11637 (ChannelCallSingleController)
+// Module 11657 (ChannelCallSingleController)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ParticipantTypes = fn(5618).ParticipantTypes;
+const ParticipantTypes = fn(5630).ParticipantTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -99,7 +99,7 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
         }
       }
       let tmp17 = channel;
-      tmp17 = tmp17(tmp15 ? 11638 : 11640);
+      tmp17 = tmp17(tmp15 ? 11658 : 11660);
       let obj2 = { participant: selectedParticipant, channel };
       const tmp16Result = <tmp17 participant={selectedParticipant} channel={channel} />;
       cResult[7] = channel;
@@ -133,13 +133,13 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11638 : 11640);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11658 : 11660);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(11641), { participant: selectedParticipant, channel });
+    return jsx(channel(11661), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

@@ -1,17 +1,17 @@
-// === Module 12802: AppealIngestionConfirmSubmission ===
+// === Module 12821: AppealIngestionConfirmSubmission ===
 
-// Module 12802 (AppealIngestionConfirmSubmission)
+// Module 12821 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7882 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12773 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12779 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12782 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12798 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12803 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7895 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12792 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12798 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12801 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12817 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12822 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7907 */;
+import SafetyHubStore from "SafetyHubStore" /* 7920 */;
 
 const require = globalThis.__r;
 
@@ -85,10 +85,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(584).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(584);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5196).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5208).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5196).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5208).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             }
           });
         },

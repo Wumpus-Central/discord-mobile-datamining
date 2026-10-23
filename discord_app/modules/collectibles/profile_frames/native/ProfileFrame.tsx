@@ -1,23 +1,23 @@
-// === Module 8691: ProfileFrame ===
+// === Module 8709: ProfileFrame ===
 
-// Module 8691 (ProfileFrame)
+// Module 8709 (ProfileFrame)
 import c from "c" /* 576 */;
-import timing from "timing" /* 5192 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8693 */;
-import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8696 */;
+import timing from "timing" /* 5204 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8711 */;
+import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8674).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8692);
+let closure_5 = fn(8692).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8710);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } = ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(5038).Easing;
-source.easing = Easing.in(fn(5038).Easing.ease);
+const Easing = fn(5050).Easing;
+source.easing = Easing.in(fn(5050).Easing.ease);
 const createStyles = fn(4969);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
@@ -788,7 +788,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8693).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(8711).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -801,12 +801,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
       return result;
     });
   }, items);
-  let obj = frame(8693);
+  let obj = frame(8711);
   let num = 0;
   if (settled) {
     num = 1;
   }
-  sharedValue = frame(5038).useSharedValue(num);
+  sharedValue = frame(5050).useSharedValue(num);
   const items1 = [settled, sharedValue];
   const effect = profileThemeType.useEffect(() => {
     let num = 0;
@@ -819,14 +819,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
       if (settled) {
-        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8695)(frame, containerWidth));
+        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8713)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container, ];
         const obj5 = { opacity: sharedValue };
         items2[1] = obj5;
         obj4.style = items2;
         obj4.children = memo.map((layer) => <closure_11 key={layer.id} skuId={frame.skuId} layer={layer} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />);
-        return jsx(containerWidth(5038).View, { style: null, children: null });
+        return jsx(containerWidth(5050).View, { style: null, children: null });
       }
     }
   }

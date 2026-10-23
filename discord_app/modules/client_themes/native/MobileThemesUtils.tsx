@@ -1,15 +1,20 @@
-// === Module 5188: MobileThemesUtils ===
+// === Module 5200: MobileThemesUtils ===
 
-// Module 5188 (MobileThemesUtils)
+// Module 5200 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
 import _modDef2768 from "module_2768" /* 2768 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5190 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4996 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4997 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5202 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5189 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5201 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function getCustomThemesName() {
@@ -17,9 +22,12 @@ function getCustomThemesName() {
   return intl.string(_modDef2768.yl1iMm);
 }
 const ClientThemesConstants = fn(1255);
-({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } = ClientThemesConstants);
+({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_7, HEXAGON_GRADIENT_PRESET: closure_8, REFRESH_STANDARD_BACKGROUND_THEMES: closure_9 } = ClientThemesConstants);
+const HexagonCampaignConstants = fn(4994);
+({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
+const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomBackgroundGradient(arg0) {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomBackgroundGradient(arg0) {
   let CUSTOM_BACKGROUND_GRADIENT = dependencyMap;
   const cResult = c.c(3);
   customTheme = useCustomThemeDisplaySettings.useCustomThemeDisplaySettings(arg0);
@@ -47,9 +55,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomBac
   }
   return tmp4;
 });
-let closure_9 = tmp3;
+let closure_14 = tmp4;
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerModeCustomBackgroundGradient(arg0) {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerModeCustomBackgroundGradient(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +68,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerModeCu
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function o() {
       if (null == closure_0) {
         return null;
       } else {
@@ -112,10 +120,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerModeCu
     }
   });
 });
-let closure_10 = tmp4;
+let closure_15 = tmp5;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedCustomTheme() {
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedCustomTheme() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SavedCustomThemeStore];
@@ -144,7 +152,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedCust
   }
   return tmp2;
 });
-let closure_11 = tmp6;
+let closure_16 = tmp7;
+function isHexagonCampaignMobileTheme(themes) {
+  let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+  if (result) {
+    result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(themes.id);
+    const tmpResult = HexagonCampaignUtils;
+  }
+  return result;
+}
 function getCustomBackgroundGradient() {
   const customThemeDisplaySettings = CustomThemeMobileStore.getCustomThemeDisplaySettings();
   let tmp2 = null;
@@ -156,11 +172,29 @@ function getCustomBackgroundGradient() {
   return tmp2;
 }
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
+let result = size.fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
+export { isHexagonCampaignMobileTheme };
+export const isNitroGatedMobileTheme = function isNitroGatedMobileTheme(themes) {
+  let tmp3 = themes.type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME;
+  if (tmp3) {
+    let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+    if (result) {
+      result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(themes.id);
+      const tmpResult = HexagonCampaignUtils;
+    }
+    let tmp5 = !result;
+    if (result) {
+      tmp5 = HexagonCampaignPerkAvailability.getHexagonCampaignPerkAvailabilityForCurrentUser(constants.CLIENT_THEME, MobileThemesUtils) !== constants2.SELECTABLE;
+      const tmpResult2 = HexagonCampaignPerkAvailability;
+    }
+    tmp3 = tmp5;
+  }
+  return tmp3;
+};
 export { getCustomBackgroundGradient };
-export const useCustomBackgroundGradient = tmp3;
-export const usePerModeCustomBackgroundGradient = tmp4;
+export const useCustomBackgroundGradient = tmp4;
+export const usePerModeCustomBackgroundGradient = tmp5;
 export const getAllMobileThemes = function getAllMobileThemes() {
   const customThemeDisplaySettings = CustomThemeMobileStore.getCustomThemeDisplaySettings();
   let tmp2 = null;
@@ -169,55 +203,153 @@ export const getAllMobileThemes = function getAllMobileThemes() {
     ({ baseTheme: obj.theme, customTheme: obj.customThemeSettings } = customThemeDisplaySettings);
     tmp2 = obj;
   }
-  if (null != tmp2) {
-    const items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(React5, 0);
-    items[arraySpreadResult] = tmp2;
-    HermesBuiltin.arraySpread(timestampProducer, arraySpreadResult + 1);
-    let items1 = items;
-  } else {
-    items1 = [];
-    HermesBuiltin.arraySpread(timestampProducer, HermesBuiltin.arraySpread(React5, 0));
+  const gradientPreset = ClientThemesBackgroundStore.gradientPreset;
+  const hexagonCampaignPerkAvailabilityForCurrentUser = HexagonCampaignPerkAvailability.getHexagonCampaignPerkAvailabilityForCurrentUser(constants.CLIENT_THEME, MobileThemesUtils);
+  if (gradientPreset != null) {
+    const id = gradientPreset.id;
   }
-  return items1;
+  if (hexagonCampaignPerkAvailabilityForCurrentUser !== constants2.HIDDEN) {
+    const items = [closure_1_8];
+    HermesBuiltin.arraySpread(React5, 1);
+    let tmp14 = items;
+  } else {
+    if (tmp6Result.isHexagonCampaignClientThemePreset(id)) {
+      if (!tmp6Result2.isHexagonCampaignPerkExpiredForCurrentUser(constants.CLIENT_THEME)) {
+        const items1 = [closure_1_8];
+        HermesBuiltin.arraySpread(React5, 1);
+        tmp14 = items1;
+      }
+      tmp6Result2 = HexagonCampaignPerkAvailability;
+    }
+    tmp14 = React5;
+    tmp6Result = HexagonCampaignUtils;
+  }
+  if (null != tmp2) {
+    const items2 = [];
+    const arraySpreadResult6 = HermesBuiltin.arraySpread(React6, 0);
+    items2[arraySpreadResult6] = tmp2;
+    HermesBuiltin.arraySpread(tmp14, arraySpreadResult6 + 1);
+    let items3 = items2;
+  } else {
+    items3 = [];
+    HermesBuiltin.arraySpread(tmp14, HermesBuiltin.arraySpread(React6, 0));
+  }
+  return items3;
 };
 export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllMobileThemes(arg0) {
-  const cResult = c.c(2);
-  let tmp2 = closure_9(closure_11());
+  _require = arg0;
+  const cResult = require("c").c(7);
+  let tmp4 = closure_14(closure_16());
   if (null != arg0) {
-    tmp2 = closure_10(arg0);
+    tmp4 = closure_15(arg0);
   }
-  if (cResult[0] !== tmp2) {
-    if (null != tmp2) {
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(React5, 0);
-      items[arraySpreadResult] = tmp2;
-      HermesBuiltin.arraySpread(timestampProducer, arraySpreadResult + 1);
-      let items1 = items;
-    } else {
-      items1 = [];
-      HermesBuiltin.arraySpread(timestampProducer, HermesBuiltin.arraySpread(React5, 0));
-    }
-    cResult[0] = tmp2;
-    cResult[1] = items1;
+  const obj = require("c");
+  const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, MobileThemesUtils);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ClientThemesBackgroundStore, ThemeStore];
+    cResult[0] = items;
+    let first = items;
   } else {
-    return cResult[1];
+    first = cResult[0];
   }
+  if (cResult[1] !== arg0) {
+    const fn = function u() {
+      if (null != closure_0) {
+        const syncedClientTheme = ThemeStore.getSyncedClientTheme(tmp);
+        let prop;
+        if (syncedClientTheme != null) {
+          prop = syncedClientTheme.backgroundGradientPresetId;
+        }
+        let id = prop;
+      } else {
+        const gradientPreset = ClientThemesBackgroundStore.gradientPreset;
+        if (gradientPreset != null) {
+          id = gradientPreset.id;
+        }
+      }
+      return id;
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp10 = fn;
+  } else {
+    tmp10 = cResult[2];
+  }
+  const tmpResult = require("HexagonCampaignPerkAvailability");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp10);
+  if (cResult[3] === stateFromStores) {
+    if (cResult[4] === hexagonCampaignPerkAvailability) {
+      if (cResult[5] === tmp4) {
+        return cResult[6];
+      }
+    }
+  }
+  if (hexagonCampaignPerkAvailability !== constants2.HIDDEN) {
+    const items1 = [closure_8];
+    HermesBuiltin.arraySpread(closure_7, 1);
+    let tmp16 = items1;
+  } else {
+    if (tmpResult5.isHexagonCampaignClientThemePreset(stateFromStores)) {
+      if (!tmpResult6.isHexagonCampaignPerkExpiredForCurrentUser(constants.CLIENT_THEME)) {
+        const items2 = [closure_8];
+        HermesBuiltin.arraySpread(closure_7, 1);
+        tmp16 = items2;
+      }
+      tmpResult6 = tmp(4997);
+    }
+    tmp16 = closure_7;
+    tmpResult5 = tmp(4996);
+  }
+  if (null != tmp4) {
+    const items3 = [];
+    const arraySpreadResult6 = HermesBuiltin.arraySpread(closure_9, 0);
+    items3[arraySpreadResult6] = tmp4;
+    HermesBuiltin.arraySpread(tmp16, arraySpreadResult6 + 1);
+    let items4 = items3;
+  } else {
+    items4 = [];
+    HermesBuiltin.arraySpread(tmp16, HermesBuiltin.arraySpread(closure_9, 0));
+  }
+  cResult[3] = stateFromStores;
+  cResult[4] = hexagonCampaignPerkAvailability;
+  cResult[5] = tmp4;
+  cResult[6] = items4;
+  const tmpResult4 = require("initialize");
 }) : (function useAllMobileThemes(arg0) {
-  let tmp = closure_9(closure_11());
+  _require = arg0;
+  let tmp = closure_14(closure_16());
   if (null != arg0) {
-    tmp = closure_10(arg0);
+    tmp = closure_15(arg0);
+  }
+  const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, MobileThemesUtils);
+  require("initialize");
+  const items = [ClientThemesBackgroundStore, ThemeStore];
+  if (hexagonCampaignPerkAvailability !== constants2.HIDDEN) {
+    const items1 = [closure_8];
+    HermesBuiltin.arraySpread(closure_7, 1);
+    let tmp12 = items1;
+  } else {
+    if (tmp2Result.isHexagonCampaignClientThemePreset(tmp7)) {
+      if (!tmp2Result2.isHexagonCampaignPerkExpiredForCurrentUser(constants.CLIENT_THEME)) {
+        const items2 = [closure_8];
+        HermesBuiltin.arraySpread(closure_7, 1);
+        tmp12 = items2;
+      }
+      tmp2Result2 = tmp2(4997);
+    }
+    tmp12 = closure_7;
+    tmp2Result = tmp2(4996);
   }
   if (null != tmp) {
-    const items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(React5, 0);
-    items[arraySpreadResult] = tmp;
-    HermesBuiltin.arraySpread(timestampProducer, arraySpreadResult + 1);
-    let items1 = items;
+    const items3 = [];
+    const arraySpreadResult6 = HermesBuiltin.arraySpread(closure_9, 0);
+    items3[arraySpreadResult6] = tmp;
+    HermesBuiltin.arraySpread(tmp12, arraySpreadResult6 + 1);
+    let items4 = items3;
   } else {
-    items1 = [];
-    HermesBuiltin.arraySpread(timestampProducer, HermesBuiltin.arraySpread(React5, 0));
+    items4 = [];
+    HermesBuiltin.arraySpread(tmp12, HermesBuiltin.arraySpread(closure_9, 0));
   }
-  return items1;
+  return items4;
 });
-export const useSavedCustomTheme = tmp6;
+export const useSavedCustomTheme = tmp7;

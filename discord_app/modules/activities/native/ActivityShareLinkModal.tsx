@@ -1,15 +1,15 @@
-// === Module 15695: ActivityShareLinkModal ===
+// === Module 15716: ActivityShareLinkModal ===
 
-// Module 15695 (ActivityShareLinkModal)
+// Module 15716 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ToastUtils from "ToastUtils" /* 5648 */;
-import LinkIcon from "LinkIcon" /* 5664 */;
-import ClipboardUtils from "ClipboardUtils" /* 7270 */;
-import HeaderActionButton from "HeaderActionButton" /* 7470 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12076 */;
-import formatResults from "formatResults" /* 12844 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15694 */;
+import ToastUtils from "ToastUtils" /* 5660 */;
+import LinkIcon from "LinkIcon" /* 5676 */;
+import ClipboardUtils from "ClipboardUtils" /* 7283 */;
+import HeaderActionButton from "HeaderActionButton" /* 7483 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12095 */;
+import formatResults from "formatResults" /* 12863 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15715 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10593).UserRowModes;
+let UserRowModes = fn(10615).UserRowModes;
 const MessageSendLocation = fn(4974).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(12844).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(12863).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-          closure_128_1 = tmp2(15696).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_1 = tmp2(15717).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(7551);
+                        const obj2 = closure_2_1(7564);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7740).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7753).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -321,16 +321,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(15696);
+          let obj5 = tmp2(15717);
           let obj7 = { text: null };
           const intl = tmp2(1128).intl;
           const obj8 = { applicationName: closure_129_14.name };
           obj7.text = intl.formatToPlainString(tmp2(1128).t.jQULqL, obj8);
-          tmp3(5649).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
+          tmp3(5661).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_4(true, closure_129_7);
-          let obj6 = tmp3(5649);
-          const result = tmp2(15694).closeActivityShareLinkModal();
-          const obj9 = tmp2(15694);
+          let obj6 = tmp3(5661);
+          const result = tmp2(15715).closeActivityShareLinkModal();
+          const obj9 = tmp2(15715);
         }
         c3 = 3;
         let obj = { value, done: true };

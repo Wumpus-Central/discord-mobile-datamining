@@ -1,19 +1,19 @@
-// === Module 16520: SettingsVoiceScreen ===
+// === Module 16567: SettingsVoiceScreen ===
 
-// Module 16520 (SettingsVoiceScreen)
+// Module 16567 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import SettingBuilders from "SettingBuilders" /* 11181 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11587 */;
-import KrispLogo from "KrispLogo" /* 11590 */;
-import _modDef11591 from "module_11591" /* 11591 */;
-import _modDef11592 from "module_11592" /* 11592 */;
-import SettingLayoutDefault from "SettingLayout" /* 15916 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import SettingBuilders from "SettingBuilders" /* 11204 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11607 */;
+import KrispLogo from "KrispLogo" /* 11610 */;
+import _modDef11611 from "module_11611" /* 11611 */;
+import _modDef11612 from "module_11612" /* 11612 */;
+import SettingLayoutDefault from "SettingLayout" /* 15949 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2067 */;
@@ -85,7 +85,7 @@ function getVoiceSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8318).MobileUserSettings;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
@@ -98,9 +98,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp4 = closure_12();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeLight(tmp6)) {
-    let tmp5Result = _modDef11591;
+    let tmp5Result = _modDef11611;
   } else {
-    tmp5Result = _modDef11592;
+    tmp5Result = _modDef11612;
   }
   ({ krisp, logo } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -162,9 +162,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11591;
+    let tmp2Result = _modDef11611;
   } else {
-    tmp2Result = _modDef11592;
+    tmp2Result = _modDef11612;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

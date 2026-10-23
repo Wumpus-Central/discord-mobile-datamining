@@ -1,21 +1,21 @@
-// === Module 14578: VoiceChannelHeader ===
+// === Module 14602: VoiceChannelHeader ===
 
-// Module 14578 (VoiceChannelHeader)
+// Module 14602 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useChannelNameDefault from "useChannelName" /* 5590 */;
-import Pressables from "Pressables" /* 6893 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7187 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9026 */;
-import _modDef10833 from "module_10833" /* 10833 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11261 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11518 */;
-import CallStateHooks from "CallStateHooks" /* 14579 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14580 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14581 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useChannelNameDefault from "useChannelName" /* 5602 */;
+import Pressables from "Pressables" /* 6906 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7200 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9049 */;
+import _modDef10856 from "module_10856" /* 10856 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11284 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11538 */;
+import CallStateHooks from "CallStateHooks" /* 14603 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14604 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 14605 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   }
   const obj = channel(576);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-  const tmp10 = stateFromStores1(11518)(channel);
+  const tmp10 = stateFromStores1(11538)(channel);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[3] = items1;
@@ -193,7 +193,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const tmp9 = stateFromStores1;
   const tmpResult = channel(504);
   stateFromStores1 = channel(504).useStateFromStores(tmp11, A, tmp15);
-  const tmp17 = tmp9(5590)(channel);
+  const tmp17 = tmp9(5602)(channel);
   if (stateFromStores != null) {
     class A {
       constructor() {
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                 }
               }
               let obj2 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: tmp17 };
-              const tmp34 = closure_10(tmp(5220).Text, obj2);
+              const tmp34 = closure_10(tmp(5232).Text, obj2);
             }
             cResult[21] = tmp17;
             cResult[22] = tmp34;
@@ -269,7 +269,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                 }
               }
               const obj3 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: tmp18 };
-              const tmp36 = closure_10(tmp(5220).Text, obj3);
+              const tmp36 = closure_10(tmp(5232).Text, obj3);
             }
             cResult[23] = tmp18;
             cResult[24] = tmp36;
@@ -414,9 +414,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(14583);
+    let tmp5Result = tmp5(14607);
   } else {
-    tmp5Result = tmp5(11625);
+    tmp5Result = tmp5(11645);
   }
   obj6.source = tmp5Result;
   obj6.style = tmp.icons;
@@ -425,13 +425,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   let tmp14Result = formatToPlainStringResult;
   if (typeof formatToPlainStringResult === "string") {
     const obj8 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-    tmp14Result = closure_10(tmp2(5220).Text, obj8);
+    tmp14Result = closure_10(tmp2(5232).Text, obj8);
   }
   const items4 = [tmp14Result, ];
   let tmp14Result3 = name;
   if (typeof name === "string") {
     const obj9 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: name };
-    tmp14Result3 = closure_10(tmp2(5220).Text, obj9);
+    tmp14Result3 = closure_10(tmp2(5232).Text, obj9);
   }
   items4[1] = tmp14Result3;
   obj7.children = items4;
@@ -466,14 +466,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
     }
     return tmp7;
   }
-  const tmp8 = v65535(closure_15, { onPress, iconSource: _modDef10833, iconStyle: tmp4.icons, accessibilityLabel: first });
+  const tmp8 = v65535(closure_15, { onPress, iconSource: _modDef10856, iconStyle: tmp4.icons, accessibilityLabel: first });
   cResult[1] = onPress;
   cResult[2] = tmp4.icons;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { onPress, iconSource: _modDef10833, iconStyle: tmp4.icons, accessibilityLabel: first };
+  const obj2 = { onPress, iconSource: _modDef10856, iconStyle: tmp4.icons, accessibilityLabel: first };
 }) : (function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10833, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10856, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return v65535(closure_15, obj);

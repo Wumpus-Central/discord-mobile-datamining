@@ -1,15 +1,15 @@
-// === Module 17673: HomeDrawerFolderRow ===
+// === Module 17717: HomeDrawerFolderRow ===
 
-// Module 17673 (HomeDrawerFolderRow)
+// Module 17717 (HomeDrawerFolderRow)
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10847 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10870 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6799 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6812 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import SortedGuildStore from "SortedGuildStore" /* 6686 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import SortedGuildStore from "SortedGuildStore" /* 6699 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
 
 require = fn;
 const View = fn(17).View;
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(5142).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(5154).MobileHomeDrawerExperiment;
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -858,7 +858,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5142).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5154).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

@@ -1,15 +1,15 @@
-// === Module 18273: RestrictedMessagePreviewList ===
+// === Module 18317: RestrictedMessagePreviewList ===
 
-// Module 18273 (RestrictedMessagePreviewList)
+// Module 18317 (RestrictedMessagePreviewList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8538 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 18276 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8550 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 18320 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import MessageStore from "MessageStore" /* 6008 */;
 
 const require = globalThis.__r;
 
@@ -55,10 +55,10 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
 const createStyles = fn(4969);
-let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(18274).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(18274).RESTRICTED_CONTENT_INSET, height: fn(18274).RESTRICTED_AVATAR_SIZE };
+let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(18318).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let size = { position: "absolute", top: 0, left: 0, width: fn(18318).RESTRICTED_CONTENT_INSET, height: fn(18318).RESTRICTED_AVATAR_SIZE };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(18274).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(18318).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -77,7 +77,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Hidden
     if (cResult[1] === tmp4.mediaPlaceholderCard) {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = closure_6(tmp(5672).CircleInformationIcon, { size: "sm", color: "text-muted" });
+        const tmp11 = closure_6(tmp(5684).CircleInformationIcon, { size: "sm", color: "text-muted" });
         cResult[5] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -88,7 +88,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Hidden
         let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
         let intl = tmp(1128).intl;
         obj2.children = intl.string(tmp(1128).t["VGf+K3"]);
-        const tmp14 = closure_6(tmp(5220).Text, obj2);
+        const tmp14 = closure_6(tmp(5232).Text, obj2);
         cResult[6] = tmp14;
         let tmp12 = tmp14;
       } else {

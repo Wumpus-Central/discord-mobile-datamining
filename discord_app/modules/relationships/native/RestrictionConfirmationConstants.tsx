@@ -1,6 +1,6 @@
-// === Module 10932: RestrictionConfirmationConstants ===
+// === Module 10955: RestrictionConfirmationConstants ===
 
-// Module 10932 (RestrictionConfirmationConstants)
+// Module 10955 (RestrictionConfirmationConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");

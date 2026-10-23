@@ -1,14 +1,14 @@
-// === Module 19008: GuildSettingsServerTagUpsellCard ===
+// === Module 19052: GuildSettingsServerTagUpsellCard ===
 
-// Module 19008 (GuildSettingsServerTagUpsellCard)
+// Module 19052 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 587 */;
-import Powerups from "Powerups" /* 5171 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13347 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13377 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13380 */;
+import Powerups from "Powerups" /* 5183 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13370 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13400 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13403 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5167 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5179 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           }
         }
         const obj5 = { variant: "heading-xl/semibold", color: "text-strong", style: centerText, children: tmp35 };
-        const tmp38 = closure_6(tmp(5220).Text, obj5);
+        const tmp38 = closure_6(tmp(5232).Text, obj5);
         cResult[22] = tmp4.centerText;
         cResult[23] = tmp38;
       } else {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp39, children: tmp40 };
-          const tmp43 = closure_6(tmp(5220).Text, obj6);
+          const tmp43 = closure_6(tmp(5232).Text, obj6);
           cResult[28] = tmp39;
           cResult[29] = tmp43;
         } else {
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj7 = { spacing: nativeDefault.space.PX_8, style: textBlock, children: null };
         const items5 = [tmp37, tmp42];
         obj7.children = items5;
-        const tmp46 = closure_7(tmp(5963).Stack, obj7);
+        const tmp46 = closure_7(tmp(5975).Stack, obj7);
         cResult[30] = tmp4.textBlock;
         cResult[31] = tmp37;
         cResult[32] = tmp42;
@@ -432,24 +432,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
   const intl = tmp2(1128).intl;
   obj10.children = intl.string(guildId(1128).t["2QmKZ2"]);
-  const items6 = [closure_6(guildId(5220).Text, obj10), ];
+  const items6 = [closure_6(guildId(5232).Text, obj10), ];
   const obj11 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
   const items7 = [, ];
   ({ centerText: arr8[0], body: arr8[1] } = tmp);
   obj11.style = items7;
   const intl2 = tmp2(1128).intl;
   obj11.children = intl2.string(guildId(1128).t.Tg0fDm);
-  items6[1] = closure_6(guildId(5220).Text, obj11);
+  items6[1] = closure_6(guildId(5232).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(guildId(5963).Stack, obj9);
+  items5[1] = closure_7(guildId(5975).Stack, obj9);
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1128).intl;
   obj12.text = intl3.string(guildId(1128).t.kMRDWs);
-  obj12.icon = closure_6(guildId(17569).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(17613).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
-  items5[2] = closure_6(guildId(5230).Button, obj12);
+  items5[2] = closure_6(guildId(5242).Button, obj12);
   obj6.children = items5;
-  items4[3] = closure_7(guildId(5963).Stack, obj6);
+  items4[3] = closure_7(guildId(5975).Stack, obj6);
   obj2.children = items4;
   return closure_7(closure_4, obj2);
 });

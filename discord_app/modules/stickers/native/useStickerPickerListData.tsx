@@ -1,18 +1,18 @@
-// === Module 10165: useStickerPickerListData ===
+// === Module 10187: useStickerPickerListData ===
 
-// Module 10165 (useStickerPickerListData)
+// Module 10187 (useStickerPickerListData)
 import _modDef12 from "module_12" /* 12 */;
-import StickersTypes from "StickersTypes" /* 6474 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9835 */;
+import StickersTypes from "StickersTypes" /* 6487 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let useStickerPickerStore = fn(10134).useStickerPickerStore;
-const StickerPickerConstants = fn(10101);
+let useStickerPickerStore = fn(10156).useStickerPickerStore;
+const StickerPickerConstants = fn(10123);
 ({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: metroRequire, STICKER_SIZE: closure_7, LABEL_HEIGHT } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 const sectionSize = LABEL_HEIGHT + 2 * fn(1243).PADDING_VERTICAL;
-let closure_10 = fn(9884).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9884).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(9906).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9906).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");

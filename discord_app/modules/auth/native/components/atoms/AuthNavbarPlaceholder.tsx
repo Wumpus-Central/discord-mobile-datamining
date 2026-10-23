@@ -1,9 +1,9 @@
-// === Module 7056: AuthNavbarPlaceholder ===
+// === Module 7069: AuthNavbarPlaceholder ===
 
-// Module 7056 (AuthNavbarPlaceholder)
+// Module 7069 (AuthNavbarPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import NavigatorHeader from "NavigatorHeader" /* 6922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

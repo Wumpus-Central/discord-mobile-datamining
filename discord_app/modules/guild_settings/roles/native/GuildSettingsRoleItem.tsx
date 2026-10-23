@@ -1,8 +1,8 @@
-// === Module 19043: GuildSettingsRoleItem ===
+// === Module 19087: GuildSettingsRoleItem ===
 
-// Module 19043 (GuildSettingsRoleItem)
+// Module 19087 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let c9 = "text-md/semibold";
 const createStyles = fn(4969);
 let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 }, label: null, sparkleIcon: null, dragHandlePressable: null, container: null, gradient: null, image: null };
-let prop = fn(5220).TextStyleSheet["text-md/semibold"];
+let prop = fn(5232).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -958,7 +958,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               } else if (closure_1_5) {
                 c1 = 1;
                 c2 = 1;
-                const obj6 = { value: tmp2(11241).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                const obj6 = { value: tmp2(11264).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -969,7 +969,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj = { value, done: true };
               return obj;
             }
-            onPress(6815).deleteRole(guildId, tmp2.id);
+            onPress(6828).deleteRole(guildId, tmp2.id);
             c2 = 3;
             return { value: "IconComponent", done: null };
           } catch (tmp16) {
@@ -1100,7 +1100,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11241).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11264).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {
@@ -1224,7 +1224,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     let tmp24Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9840"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9862"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[13]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[13]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

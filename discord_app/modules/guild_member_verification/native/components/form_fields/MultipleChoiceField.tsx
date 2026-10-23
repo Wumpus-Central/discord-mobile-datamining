@@ -1,9 +1,9 @@
-// === Module 7168: MultipleChoiceField ===
+// === Module 7181: MultipleChoiceField ===
 
-// Module 7168 (MultipleChoiceField)
+// Module 7181 (MultipleChoiceField)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6636 */;
+import TextStyles from "TextStyles" /* 6649 */;
 
 const require = globalThis.__r;
 
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Multiple
           }
         }
         const obj2 = { defaultValue: response, onChange: M, hasIcons, children: tmp14 };
-        const tmp20 = closure_4(onChange(6970).TableRadioGroup, obj2);
+        const tmp20 = closure_4(onChange(6983).TableRadioGroup, obj2);
         cResult[11] = hasIcons;
         cResult[12] = response;
         cResult[13] = M;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Multiple
       }
     }
     const obj3 = { style: tmp4.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: label };
-    const tmp11 = closure_4(onChange(5220).Text, obj3);
+    const tmp11 = closure_4(onChange(5232).Text, obj3);
     cResult[3] = label;
     cResult[4] = tmp4.formHeader;
     cResult[5] = tmp11;

@@ -1,9 +1,9 @@
-// === Module 14569: VoiceMemberEmbeddedActivity ===
+// === Module 14593: VoiceMemberEmbeddedActivity ===
 
-// Module 14569 (VoiceMemberEmbeddedActivity)
+// Module 14593 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11415 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const XSMALL = fn(1202).AvatarSizes.XSMALL;

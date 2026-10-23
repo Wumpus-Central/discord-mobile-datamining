@@ -1,8 +1,8 @@
-// === Module 8376: getRoleIcon ===
+// === Module 8388: getRoleIcon ===
 
-// Module 8376 (getRoleIcon)
+// Module 8388 (getRoleIcon)
 import util from "util" /* 1128 */;
-import useRoleIconProps from "useRoleIconProps" /* 7267 */;
+import useRoleIconProps from "useRoleIconProps" /* 7280 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");

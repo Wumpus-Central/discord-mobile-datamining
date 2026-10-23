@@ -1,19 +1,19 @@
-// === Module 15360: Status ===
+// === Module 15381: Status ===
 
-// Module 15360 (Status)
+// Module 15381 (Status)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5233 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15358 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15359 */;
-import _modDef15361 from "module_15361" /* 15361 */;
-import _modDef15362 from "module_15362" /* 15362 */;
-import _modDef15363 from "module_15363" /* 15363 */;
-import _modDef15364 from "module_15364" /* 15364 */;
-import _modDef15365 from "module_15365" /* 15365 */;
-import _modDef15366 from "module_15366" /* 15366 */;
-import _modDef15367 from "module_15367" /* 15367 */;
+import spring from "spring" /* 5245 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15379 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15380 */;
+import _modDef15382 from "module_15382" /* 15382 */;
+import _modDef15383 from "module_15383" /* 15383 */;
+import _modDef15384 from "module_15384" /* 15384 */;
+import _modDef15385 from "module_15385" /* 15385 */;
+import _modDef15386 from "module_15386" /* 15386 */;
+import _modDef15387 from "module_15387" /* 15387 */;
+import _modDef15388 from "module_15388" /* 15388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1203).STATUS_PADDING;
 const StatusTypes = fn(1087).StatusTypes;
-const ChannelAnimationConstants = fn(14262);
+const ChannelAnimationConstants = fn(14286);
 ({ TYPING_ENTERING: closure_7, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -110,23 +110,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
           }
         }
         if (tmp5) {
-          let tmp14 = _modDef15361;
+          let tmp14 = _modDef15382;
         } else if (tmp4) {
-          tmp14 = _modDef15362;
+          tmp14 = _modDef15383;
         } else if (tmp3) {
-          tmp14 = _modDef15363;
+          tmp14 = _modDef15384;
         } else if (StatusTypes.IDLE === status) {
-          tmp14 = _modDef15364;
+          tmp14 = _modDef15385;
         } else {
           if (StatusTypes.DND === status) {
-            tmp14 = _modDef15365;
+            tmp14 = _modDef15386;
           } else if (StatusTypes.OFFLINE !== status) {
             if (StatusTypes.INVISIBLE !== status) {
               const ONLINE = StatusTypes.ONLINE;
-              tmp14 = _modDef15367;
+              tmp14 = _modDef15388;
             }
           }
-          tmp14 = _modDef15366;
+          tmp14 = _modDef15387;
         }
         cResult[7] = tmp3;
         cResult[8] = tmp4;
@@ -166,23 +166,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15361;
+    let tmp4Result = _modDef15382;
   } else if (flag2) {
-    tmp4Result = _modDef15362;
+    tmp4Result = _modDef15383;
   } else if (flag) {
-    tmp4Result = _modDef15363;
+    tmp4Result = _modDef15384;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15364;
+    tmp4Result = _modDef15385;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15365;
+    tmp4Result = _modDef15386;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15367;
+        tmp4Result = _modDef15388;
       }
     }
-    tmp4Result = _modDef15366;
+    tmp4Result = _modDef15387;
   }
   obj2.source = tmp4Result;
   obj.children = v65535(FastImageDefault, obj2);

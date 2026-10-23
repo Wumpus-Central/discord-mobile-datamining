@@ -1,15 +1,15 @@
-// === Module 11286: PublicGuildAnnouncementProfile ===
+// === Module 11309: PublicGuildAnnouncementProfile ===
 
-// Module 11286 (PublicGuildAnnouncementProfile)
+// Module 11309 (PublicGuildAnnouncementProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8391 */;
-import _modDef11287 from "module_11287" /* 11287 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8403 */;
+import _modDef11310 from "module_11310" /* 11310 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef11287, disableColor: true };
+    const obj3 = { source: _modDef11310, disableColor: true };
     const tmp14 = React4(native.Icon, obj3);
     cResult[3] = tmp14;
     let tmp11 = tmp14;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11287, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11310, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

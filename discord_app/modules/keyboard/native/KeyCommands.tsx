@@ -1,8 +1,8 @@
-// === Module 5959: KeyCommands ===
+// === Module 5971: KeyCommands ===
 
-// Module 5959 (KeyCommands)
+// Module 5971 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5960 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5972 */;
 
 const require = globalThis.__r;
 

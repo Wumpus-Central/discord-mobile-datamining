@@ -1,12 +1,12 @@
-// === Module 5032: BaseRive ===
+// === Module 5044: BaseRive ===
 
-// Module 5032 (BaseRive)
+// Module 5044 (BaseRive)
 import c from "c" /* 576 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4983 */;
-import DataBindByName from "DataBindByName" /* 5033 */;
-import ManaContext from "ManaContext" /* 5082 */;
-import useRivePlayback from "useRivePlayback" /* 5083 */;
-import RiveTypes from "RiveTypes" /* 5084 */;
+import DataBindByName from "DataBindByName" /* 5045 */;
+import ManaContext from "ManaContext" /* 5094 */;
+import useRivePlayback from "useRivePlayback" /* 5095 */;
+import RiveTypes from "RiveTypes" /* 5096 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

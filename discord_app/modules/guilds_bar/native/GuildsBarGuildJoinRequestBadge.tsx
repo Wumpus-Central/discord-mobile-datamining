@@ -1,14 +1,14 @@
-// === Module 17667: GuildsBarGuildJoinRequestBadge ===
+// === Module 17711: GuildsBarGuildJoinRequestBadge ===
 
-// Module 17667 (GuildsBarGuildJoinRequestBadge)
+// Module 17711 (GuildsBarGuildJoinRequestBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef13109 from "module_13109" /* 13109 */;
-import _modDef17668 from "module_17668" /* 17668 */;
-import _modDef17669 from "module_17669" /* 17669 */;
-import _modDef17670 from "module_17670" /* 17670 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5003 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef13132 from "module_13132" /* 13132 */;
+import _modDef17712 from "module_17712" /* 17712 */;
+import _modDef17713 from "module_17713" /* 17713 */;
+import _modDef17714 from "module_17714" /* 17714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const createStyles = fn(4969);
 let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6692).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(6705).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -31,17 +31,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
   const tmp4 = closure_5();
   if (cResult[0] !== joinRequestState) {
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-      let tmp6 = _modDef17668;
+      let tmp6 = _modDef17712;
     } else {
       if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-        tmp6 = _modDef17669;
+        tmp6 = _modDef17713;
       } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED !== joinRequestState) {
         tmp6 = null;
         if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-          tmp6 = _modDef13109;
+          tmp6 = _modDef13132;
         }
       }
-      tmp6 = _modDef17670;
+      tmp6 = _modDef17714;
     }
     cResult[0] = joinRequestState;
     cResult[1] = tmp6;
@@ -81,15 +81,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef17668;
+    let tmp4 = _modDef17712;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef17669;
+    tmp4 = _modDef17713;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef17670;
+    tmp4 = _modDef17714;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13109;
+      tmp4 = _modDef13132;
     }
   }
   let tmp9 = null;

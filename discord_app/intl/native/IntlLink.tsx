@@ -1,9 +1,9 @@
-// === Module 10758: IntlLink ===
+// === Module 10780: IntlLink ===
 
-// Module 10758 (IntlLink)
+// Module 10780 (IntlLink)
 import nativeDefault from "native" /* 587 */;
 import _modDef1951 from "module_1951" /* 1951 */;
-import LinkingDefault from "Linking" /* 5646 */;
+import LinkingDefault from "Linking" /* 5658 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

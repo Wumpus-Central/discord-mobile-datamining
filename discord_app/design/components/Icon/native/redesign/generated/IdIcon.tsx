@@ -1,10 +1,10 @@
-// === Module 10389: IdIcon ===
+// === Module 10411: IdIcon ===
 
-// Module 10389 (IdIcon)
+// Module 10411 (IdIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod10390 from "module_10390" /* 10390 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod10412 from "module_10412" /* 10412 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const IdIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function I
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10390;
+    const tmpResult = _mod10412;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const IdIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function I
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10390, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10412, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

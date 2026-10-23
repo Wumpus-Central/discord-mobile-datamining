@@ -1,6 +1,6 @@
-// === Module 7484: useSelectedDismissibleContentShared ===
+// === Module 7497: useSelectedDismissibleContentShared ===
 
-// Module 7484 (useSelectedDismissibleContentShared)
+// Module 7497 (useSelectedDismissibleContentShared)
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4808 */;
 

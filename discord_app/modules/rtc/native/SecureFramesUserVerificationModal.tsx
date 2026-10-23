@@ -1,13 +1,13 @@
-// === Module 9177: SecureFramesUserVerificationModal ===
+// === Module 9200: SecureFramesUserVerificationModal ===
 
-// Module 9177 (SecureFramesUserVerificationModal)
+// Module 9200 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9172 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9175 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9195 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9198 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9173);
+const SecureFramesConstants = fn(9196);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_8, USER_VERIFICATION_LENGTH: closure_9, USER_VERIFICATION_NUM_COLUMNS: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const Constants = fn(1087);
 ({ AnalyticsLocations: closure_12, AnalyticsSections: map1 } = Constants);
@@ -250,15 +250,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
         const obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9172).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9172);
+          let userVerificationDeeplink = showShareActionSheet(9195).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9195);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }
-        showShareActionSheet = showShareActionSheet(8826).showShareActionSheet;
+        showShareActionSheet = showShareActionSheet(8849).showShareActionSheet;
         obj2 = { message: userVerificationDeeplink };
         showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(8826);
+        const showShareActionSheetResult1 = showShareActionSheet(8849);
       }
     }
   }, items4);

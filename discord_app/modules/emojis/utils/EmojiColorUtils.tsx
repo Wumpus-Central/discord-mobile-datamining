@@ -1,6 +1,6 @@
-// === Module 8301: EmojiColorUtils ===
+// === Module 8313: EmojiColorUtils ===
 
-// Module 8301 (EmojiColorUtils)
+// Module 8313 (EmojiColorUtils)
 import _modDef683 from "module_683" /* 683 */;
 import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4925 */;
 import ColorUtils from "ColorUtils" /* 4966 */;

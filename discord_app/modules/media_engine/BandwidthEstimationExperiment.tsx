@@ -1,7 +1,7 @@
-// === Module 5892: BandwidthEstimationExperiment ===
+// === Module 5904: BandwidthEstimationExperiment ===
 
-// Module 5892 (BandwidthEstimationExperiment)
-import createExperiment from "module_5174" /* 5174 */;
+// Module 5904 (BandwidthEstimationExperiment)
+import createExperiment from "module_5186" /* 5186 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2024-06_rtc_pacer__simulcast", label: "RTC Pacer & Golive Simulcast", defaultConfig: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/", simulcastEnabled: false }, treatments: null };

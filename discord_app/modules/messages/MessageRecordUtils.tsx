@@ -1,16 +1,16 @@
-// === Module 5998: MessageRecordUtils ===
+// === Module 6010: MessageRecordUtils ===
 
-// Module 5998 (MessageRecordUtils)
+// Module 6010 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import findCodedLinksDefault from "findCodedLinks" /* 5685 */;
-import useMessageAuthor from "useMessageAuthor" /* 6351 */;
-import isMessageMentioned from "isMessageMentioned" /* 6356 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6357 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 6470 */;
-import EmbedUtils from "EmbedUtils" /* 6471 */;
-import StickersUtils from "StickersUtils" /* 6473 */;
-import InteractionRecord from "InteractionRecord" /* 5999 */;
+import findCodedLinksDefault from "findCodedLinks" /* 5697 */;
+import useMessageAuthor from "useMessageAuthor" /* 6364 */;
+import isMessageMentioned from "isMessageMentioned" /* 6369 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6370 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 6483 */;
+import EmbedUtils from "EmbedUtils" /* 6484 */;
+import StickersUtils from "StickersUtils" /* 6486 */;
+import InteractionRecord from "InteractionRecord" /* 6011 */;
 import MessageRecord_mod from "MessageRecord" /* 4912 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

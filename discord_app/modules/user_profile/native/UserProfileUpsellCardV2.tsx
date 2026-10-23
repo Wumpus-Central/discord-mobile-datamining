@@ -1,18 +1,18 @@
-// === Module 15880: UserProfileUpsellCardV2 ===
+// === Module 15913: UserProfileUpsellCardV2 ===
 
-// Module 15880 (UserProfileUpsellCardV2)
+// Module 15913 (UserProfileUpsellCardV2)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7529).Gradients;
+const Gradients = fn(7542).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);

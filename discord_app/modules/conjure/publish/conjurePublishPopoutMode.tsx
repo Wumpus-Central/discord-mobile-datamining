@@ -1,7 +1,7 @@
-// === Module 12249: conjurePublishPopoutMode ===
+// === Module 12268: conjurePublishPopoutMode ===
 
-// Module 12249 (conjurePublishPopoutMode)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10781 */;
+// Module 12268 (conjurePublishPopoutMode)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10803 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishPopoutMode.tsx");

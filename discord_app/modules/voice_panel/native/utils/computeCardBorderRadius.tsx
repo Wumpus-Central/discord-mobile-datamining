@@ -1,7 +1,7 @@
-// === Module 18479: computeCardBorderRadius ===
+// === Module 18523: computeCardBorderRadius ===
 
-// Module 18479 (computeCardBorderRadius)
-import VoicePanelConstants from "VoicePanelConstants" /* 10873 */;
+// Module 18523 (computeCardBorderRadius)
+import VoicePanelConstants from "VoicePanelConstants" /* 10896 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

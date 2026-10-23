@@ -1,13 +1,13 @@
-// === Module 16421: PremiumRewardGradient ===
+// === Module 16471: PremiumRewardGradient ===
 
-// Module 16421 (PremiumRewardGradient)
+// Module 16471 (PremiumRewardGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import design_shared from "design/shared" /* 4977 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import useToken from "useToken" /* 5238 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import _modDef6951 from "module_6951" /* 6951 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import useToken from "useToken" /* 5250 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import _modDef6964 from "module_6964" /* 6964 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -245,7 +245,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
         tmp28 = tmp31;
       }
       const obj5 = { style: tmp11, maskElement: tmp13, children: tmp19 };
-      const tmp27 = timestampProducer(_modDef6951, obj5);
+      const tmp27 = timestampProducer(_modDef6964, obj5);
       cResult[11] = tmp11;
       cResult[12] = tmp19;
       cResult[13] = tmp27;
@@ -278,7 +278,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   }
   const obj3 = { style: items1, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: tmp2, start, end }) };
   items1[1] = glowLight;
-  const items2 = [timestampProducer(_modDef6951, obj3), children];
+  const items2 = [timestampProducer(_modDef6964, obj3), children];
   obj2.children = items2;
   return React5(hasOwnProperty, obj2);
 });

@@ -1,14 +1,14 @@
-// === Module 15813: UserProfileDisplayNameStylesEditButton ===
+// === Module 15835: UserProfileDisplayNameStylesEditButton ===
 
-// Module 15813 (UserProfileDisplayNameStylesEditButton)
+// Module 15835 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10638 */;
-import _modDef14444 from "module_14444" /* 14444 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15815 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15816 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10660 */;
+import _modDef14468 from "module_14468" /* 14468 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15840 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15841 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -18,32 +18,34 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const HexagonCampaignConstants = fn(4994);
+({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
 obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileDisplayNameStylesEditButton(user) {
-  const cResult = user(isTryItOut[9]).c(39);
+  const cResult = user(isTryItOut[10]).c(42);
   user = user.user;
   const guildId = user.guildId;
   isTryItOut = user.isTryItOut;
-  const tmp4 = closure_11();
+  const tmp4 = closure_14();
   _slicedToArray = tmp4;
-  let obj = user(isTryItOut[9]);
-  const nativeStackNavigation = user(isTryItOut[10]).useNativeStackNavigation();
-  let obj2 = user(isTryItOut[10]);
-  const isDisplayNameStylesFlywheelSettersEnabled = user(isTryItOut[11]).useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
+  let obj = user(isTryItOut[10]);
+  const nativeStackNavigation = user(isTryItOut[11]).useNativeStackNavigation();
+  let obj2 = user(isTryItOut[11]);
+  const isDisplayNameStylesFlywheelSettersEnabled = user(isTryItOut[12]).useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
   if (cResult[0] !== isDisplayNameStylesFlywheelSettersEnabled) {
     if (isDisplayNameStylesFlywheelSettersEnabled) {
-      const items = [tmp(tmp2[12]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
+      const items = [tmp(tmp2[13]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
       let items1 = items;
     } else {
       items1 = [];
@@ -59,10 +61,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     } else {
       tmp9 = cResult[2];
     }
-    const tmp11 = _slicedToArray(tmp(tmp2[13]).useSelectedDismissibleContent(cResult[1], tmp9), 2);
-    closure_5 = tmp12;
-    const tmpResult = tmp(tmp2[13]);
-    const guildMemberOrUserPendingDisplayNameStyles = tmp(tmp2[14]).useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
+    [first] = tmp(tmp2[14]).useSelectedDismissibleContent(cResult[1], tmp9);
+    closure_5 = tmp13;
+    const tmpResult = tmp(tmp2[14]);
+    const guildMemberOrUserPendingDisplayNameStyles = tmp(tmp2[15]).useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
     let tryItOutDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.pendingDisplayNameStyles;
     if (isTryItOut) {
       tryItOutDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.tryItOutDisplayNameStyles;
@@ -70,172 +72,638 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     if (cResult[3] === guildId) {
       if (cResult[4] === tryItOutDisplayNameStyles) {
         if (cResult[5] === user.id) {
-          let tmp14 = cResult[6];
+          let tmp15 = cResult[6];
         }
-        const tmp16 = guildId(tmp2[15])(tmp14);
-        closure_6 = tmp16;
+        const tmp17 = guildId(tmp2[16])(tmp15);
+        closure_6 = tmp17;
         let effectId;
-        if (tmp16 != null) {
-          effectId = tmp16.effectId;
+        if (tmp17 != null) {
+          effectId = tmp17.effectId;
         }
         if (effectId == null) {
-          effectId = tmp(tmp2[17]).DisplayNameEffect.SOLID;
+          effectId = tmp(tmp2[18]).DisplayNameEffect.SOLID;
         }
-        let str2 = tmp(tmp2[16]).useDisplayNameStylesEffectConfig(effectId);
+        let str2 = tmp(tmp2[17]).useDisplayNameStylesEffectConfig(effectId);
+        const tmpResult6 = tmp(tmp2[17]);
+        let tmp22 = tmp(tmp2[19]).useHexagonCampaignPerkAvailability(constants3.DISPLAY_NAME_STYLE, "UserProfileDisplayNameStylesEditButton") === constants4.SELECTABLE;
+        if (tmp22) {
+          tmp22 = true !== isTryItOut;
+        }
+        if (tmp22) {
+          let fontId;
+          if (tmp17 != null) {
+            fontId = tmp17.fontId;
+          }
+          tmp22 = fontId !== closure_10;
+        }
+        tmp(tmp2[20]);
         if (cResult[7] === guildId) {
           if (cResult[8] === isTryItOut) {
-            if (cResult[9] === tmp12) {
+            if (cResult[9] === tmp13) {
               if (cResult[10] === nativeStackNavigation) {
-                let tmp19 = cResult[11];
+                let tmp26 = cResult[11];
               }
-              if (null != tmp16) {
-                if (cResult[13] !== tmp16.fontId) {
-                  const intl2 = tmp(tmp2[19]).intl;
-                  const stringResult = intl2.string(tmp15(tmp2[20])(tmp16.fontId));
-                  cResult[13] = tmp16.fontId;
+              if (null != tmp17) {
+                if (cResult[13] !== tmp17.fontId) {
+                  const intl2 = tmp(tmp2[22]).intl;
+                  const stringResult = intl2.string(tmp16(tmp2[23])(tmp17.fontId));
+                  cResult[13] = tmp17.fontId;
                   cResult[14] = stringResult;
-                  let tmp22 = stringResult;
+                  let tmp29 = stringResult;
                 } else {
-                  tmp22 = cResult[14];
+                  tmp29 = cResult[14];
                 }
                 const _HermesInternal = HermesInternal;
                 str2 = "";
-                const combined = "" + tmp22 + " + " + str2.name;
+                const combined = "" + tmp29 + " + " + str2.name;
               } else {
                 const _Symbol2 = Symbol;
                 if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl = tmp(tmp2[19]).intl;
-                  const stringResult1 = intl.string(tmp(tmp2[19]).t.PoWNfe);
+                  const intl = tmp(tmp2[22]).intl;
+                  const stringResult1 = intl.string(tmp(tmp2[22]).t.PoWNfe);
                   cResult[12] = stringResult1;
-                  let tmp20 = stringResult1;
+                  let tmp27 = stringResult1;
                 } else {
-                  tmp20 = cResult[12];
+                  tmp27 = cResult[12];
                 }
-                if (cResult[15] === tmp16) {
+                if (cResult[15] === tmp17) {
                   if (cResult[16] === guildId) {
                     if (cResult[17] === tmp4.ggContainer) {
                       if (cResult[18] === tmp4.noneIcon) {
                         if (cResult[19] === user.id) {
-                          let tmp25 = cResult[20];
+                          let tmp32 = cResult[20];
                         }
-                        if (cResult[21] !== tmp16) {
-                          const fn2 = function k() {
-                            let tmp3Result = null;
-                            if (null != closure_6) {
-                              let colors;
-                              if (closure_6 != null) {
-                                colors = closure_6.colors;
+                        if (cResult[21] !== tmp17) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
                               }
-                              if (colors == null) {
-                                colors = [];
-                              }
-                              const obj = { colors, effectId: null };
-                              let effectId;
-                              if (closure_6 != null) {
-                                effectId = closure_6.effectId;
-                              }
-                              obj.effectId = effectId;
-                              tmp3Result = jsx(DisplayNameStylesColorSwatchDefault, { colors, effectId: null });
+                              return tmp3Result;
                             }
-                            return tmp3Result;
-                          };
-                          cResult[21] = tmp16;
-                          cResult[22] = fn2;
-                          let tmp26 = fn2;
+                          }
+                          cResult[21] = tmp17;
+                          cResult[22] = K;
                         } else {
-                          tmp26 = cResult[22];
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
                         }
                         const _Symbol3 = Symbol;
                         if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                          const intl3 = tmp(tmp2[19]).intl;
-                          const stringResult2 = intl3.string(tmp15(tmp2[25])["86GtGH"]);
-                          cResult[23] = stringResult2;
-                          let tmp27 = stringResult2;
-                        } else {
-                          tmp27 = cResult[23];
-                        }
-                        const tmp29 = tmp11[0] === tmp(tmp2[12]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE;
-                        if (cResult[24] !== tmp29) {
-                          const obj5 = { showPremiumIcon: true, showNewBadge: tmp29 };
-                          const tmp32 = jsx(tmp(tmp2[26]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp29 });
-                          cResult[24] = tmp29;
-                          cResult[25] = tmp32;
-                          let tmp30 = tmp32;
-                        } else {
-                          tmp30 = cResult[25];
-                        }
-                        if (cResult[26] !== tmp20) {
-                          const obj6 = { text: tmp20 };
-                          cResult[26] = tmp20;
-                          cResult[27] = obj6;
-                          let tmp33 = obj6;
-                        } else {
-                          tmp33 = cResult[27];
-                        }
-                        if (cResult[28] !== tmp25) {
-                          const tmp25Result = tmp25();
-                          cResult[28] = tmp25;
-                          cResult[29] = tmp25Result;
-                          let tmp34 = tmp25Result;
-                        } else {
-                          tmp34 = cResult[29];
-                        }
-                        if (cResult[30] !== tmp26) {
-                          const tmp26Result = tmp26();
-                          cResult[30] = tmp26;
-                          cResult[31] = tmp26Result;
-                          let tmp36 = tmp26Result;
-                        } else {
-                          tmp36 = cResult[31];
-                        }
-                        if (cResult[32] === tmp20) {
-                          if (cResult[33] === tmp19) {
-                            if (cResult[34] === tmp30) {
-                              if (cResult[35] === tmp33) {
-                                if (cResult[36] === tmp34) {
-                                  if (cResult[37] === tmp36) {
-                                    let tmp38 = cResult[38];
-                                  }
-                                  return tmp38;
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
                                 }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
                               }
+                              return tmp3Result;
+                            }
+                          }
+                          const stringResult2 = obj10.string(tmp16(tmp2[28])["86GtGH"]);
+                          cResult[23] = stringResult2;
+                          const tmp34 = stringResult2;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
                             }
                           }
                         }
-                        class Y {
-                          constructor() {
-                            obj = closure_1(closure_2[18]);
-                            trackResult = obj.track(AnalyticEvents.DISPLAY_NAME_STYLES_FROM_SETTINGS);
-                            obj1 = { guildId, isTryItOut };
-                            navigateResult = closure_4.navigate(UserSettingsSections.DISPLAY_NAME_STYLES, obj1);
-                            tmp3 = closure_5(ContentDismissActionType.TAKE_ACTION);
-                            return;
+                        if (tmp22) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
                           }
                         }
-                        tmp40[0] = tmp27;
-                        tmp40[1] = tmp30;
-                        tmp40[2] = tmp20;
-                        tmp40[3] = tmp33;
-                        tmp40[4] = tmp19;
-                        tmp40[5] = tmp34;
-                        tmp40[6] = tmp36;
-                        const tmp41 = jsx(tmp(tmp2[26]).UserProfileEditFormButton, tmp40);
-                        cResult[32] = tmp20;
-                        cResult[33] = tmp19;
-                        cResult[34] = tmp30;
-                        cResult[35] = tmp33;
-                        cResult[36] = tmp34;
-                        cResult[37] = tmp36;
-                        cResult[38] = tmp41;
-                        tmp38 = tmp41;
+                        if (!tmp22) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[24] !== tmp22) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                          const obj5 = { showPremiumIcon: true, showNewBadge: tmp36 };
+                          const tmp38 = jsx(tmp(tmp2[29]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp36 });
+                          cResult[24] = tmp36;
+                          cResult[25] = tmp38;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[26] !== tmp27) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                          tmp40[0] = tmp27;
+                          cResult[26] = tmp27;
+                          cResult[27] = tmp40;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[28] !== tmp32) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                          cResult[28] = tmp32;
+                          cResult[29] = tmp42;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[30] !== K) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                          cResult[30] = K;
+                          cResult[31] = tmp44;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[32] !== tmp22) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                          if (tmp22) {
+                            class K {
+                              constructor() {
+                                tmp = closure_6;
+                                tmp3Result = null;
+                                if (null != closure_6) {
+                                  tmp4 = closure_1;
+                                  tmp5 = closure_2;
+                                  tmp3 = jsx;
+                                  colors = undefined;
+                                  tmp6 = closure_1(closure_2[27]);
+                                  if (tmp != null) {
+                                    colors = tmp.colors;
+                                  }
+                                  if (colors == null) {
+                                    colors = [];
+                                  }
+                                  obj = { colors: null, effectId: null };
+                                  obj.colors = colors;
+                                  effectId = undefined;
+                                  if (tmp != null) {
+                                    effectId = tmp.effectId;
+                                  }
+                                  obj.effectId = effectId;
+                                  tmp3Result = tmp3(tmp6, obj);
+                                }
+                                return tmp3Result;
+                              }
+                            }
+                            const tmp46 = jsx(tmp16(tmp2[30]), {});
+                          }
+                          cResult[32] = tmp22;
+                          cResult[33] = tmp46;
+                        } else {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        if (cResult[34] === tmp27) {
+                          class K {
+                            constructor() {
+                              tmp = closure_6;
+                              tmp3Result = null;
+                              if (null != closure_6) {
+                                tmp4 = closure_1;
+                                tmp5 = closure_2;
+                                tmp3 = jsx;
+                                colors = undefined;
+                                tmp6 = closure_1(closure_2[27]);
+                                if (tmp != null) {
+                                  colors = tmp.colors;
+                                }
+                                if (colors == null) {
+                                  colors = [];
+                                }
+                                obj = { colors: null, effectId: null };
+                                obj.colors = colors;
+                                effectId = undefined;
+                                if (tmp != null) {
+                                  effectId = tmp.effectId;
+                                }
+                                obj.effectId = effectId;
+                                tmp3Result = tmp3(tmp6, obj);
+                              }
+                              return tmp3Result;
+                            }
+                          }
+                        }
+                        const obj6 = { label: tmp34, labelTrailing: tmp37, buttonText: tmp27, accessibilityValue: tmp40, onPress: tmp26, leading: tmp42, trailing: tmp44, footer: tmp45 };
+                        const tmp49 = jsx(tmp(tmp2[29]).UserProfileEditFormButton, { label: tmp34, labelTrailing: tmp37, buttonText: tmp27, accessibilityValue: tmp40, onPress: tmp26, leading: tmp42, trailing: tmp44, footer: tmp45 });
+                        cResult[34] = tmp27;
+                        cResult[35] = tmp26;
+                        cResult[36] = tmp37;
+                        cResult[37] = tmp40;
+                        cResult[38] = tmp42;
+                        cResult[39] = tmp44;
+                        cResult[40] = tmp45;
+                        cResult[41] = tmp49;
                       }
                     }
                   }
                 }
-                const fn = function x() {
+                const fn2 = function $() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef14444, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef14444, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef14468, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef14468, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -244,43 +712,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                   }
                   return tmp10;
                 };
-                cResult[15] = tmp16;
+                cResult[15] = tmp17;
                 cResult[16] = guildId;
                 cResult[17] = tmp4.ggContainer;
-                class Y {
-                  constructor() {
-                    obj = closure_1(closure_2[18]);
-                    trackResult = obj.track(AnalyticEvents.DISPLAY_NAME_STYLES_FROM_SETTINGS);
-                    obj1 = { guildId, isTryItOut };
-                    navigateResult = closure_4.navigate(UserSettingsSections.DISPLAY_NAME_STYLES, obj1);
-                    tmp3 = closure_5(ContentDismissActionType.TAKE_ACTION);
-                    return;
-                  }
-                }
+                cResult[18] = tmp4.noneIcon;
                 cResult[19] = user.id;
-                cResult[20] = fn;
-                tmp25 = fn;
+                cResult[20] = fn2;
+                tmp32 = fn2;
               }
             }
           }
         }
-        class Y {
-          constructor() {
-            obj = closure_1(closure_2[18]);
-            trackResult = obj.track(AnalyticEvents.DISPLAY_NAME_STYLES_FROM_SETTINGS);
-            obj1 = { guildId, isTryItOut };
-            navigateResult = closure_4.navigate(UserSettingsSections.DISPLAY_NAME_STYLES, obj1);
-            tmp3 = closure_5(ContentDismissActionType.TAKE_ACTION);
-            return;
-          }
-        }
+        const fn = function h() {
+          AnalyticsUtilsDefault.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
+          nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, { guildId, isTryItOut });
+          closure_5(ContentDismissActionType.TAKE_ACTION);
+        };
         cResult[7] = guildId;
         cResult[8] = isTryItOut;
-        cResult[9] = tmp12;
+        cResult[9] = tmp13;
         cResult[10] = nativeStackNavigation;
-        cResult[11] = Y;
-        tmp19 = Y;
-        const tmpResult4 = tmp(tmp2[16]);
+        cResult[11] = fn;
+        tmp26 = fn;
+        const tmpResult7 = tmp(tmp2[19]);
       }
     }
     const obj7 = { userId: user.id, guildId, pendingDisplayNameStyles: tryItOutDisplayNameStyles, ignoreDisabledStylesSetting: true };
@@ -288,10 +742,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     cResult[4] = tryItOutDisplayNameStyles;
     cResult[5] = user.id;
     cResult[6] = obj7;
-    tmp14 = obj7;
-    const tmpResult3 = tmp(tmp2[14]);
+    tmp15 = obj7;
+    const tmpResult5 = tmp(tmp2[15]);
   }
-  let obj3 = user(isTryItOut[11]);
+  let obj3 = user(isTryItOut[12]);
 }) : (function UserProfileDisplayNameStylesEditButton(user) {
   user = user.user;
   const guildId = user.guildId;
@@ -299,45 +753,58 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   closure_5 = undefined;
   closure_6 = undefined;
   let displayNameStylesEffectConfig;
-  const tmp = closure_11();
+  const tmp = closure_14();
   _slicedToArray = tmp;
-  const nativeStackNavigation = user(isTryItOut[10]).useNativeStackNavigation();
-  let obj = user(isTryItOut[10]);
-  const isDisplayNameStylesFlywheelSettersEnabled = user(isTryItOut[11]).useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
-  let obj2 = user(isTryItOut[11]);
+  const nativeStackNavigation = user(isTryItOut[11]).useNativeStackNavigation();
+  let obj = user(isTryItOut[11]);
+  const isDisplayNameStylesFlywheelSettersEnabled = user(isTryItOut[12]).useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
+  let obj2 = user(isTryItOut[12]);
   if (isDisplayNameStylesFlywheelSettersEnabled) {
-    const items = [tmp2(tmp3[12]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
+    const items = [tmp2(tmp3[13]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
     let items1 = items;
   } else {
     items1 = [];
   }
-  let tmp6 = _slicedToArray(user(isTryItOut[13]).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }), 2);
+  let tmp6 = _slicedToArray(user(isTryItOut[14]).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }), 2);
   closure_5 = tmp7;
-  let obj3 = user(isTryItOut[13]);
-  const guildMemberOrUserPendingDisplayNameStyles = user(isTryItOut[14]).useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
-  ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
+  let obj3 = user(isTryItOut[14]);
+  const guildMemberOrUserPendingDisplayNameStyles = user(isTryItOut[15]).useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
+  let tryItOutDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.pendingDisplayNameStyles;
   const obj4 = { userId: user.id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
-  const tmp2Result = user(isTryItOut[14]);
-  const tmp9 = guildId;
+  const tmp2Result = user(isTryItOut[15]);
   if (isTryItOut) {
-    pendingDisplayNameStyles = tryItOutDisplayNameStyles;
+    tryItOutDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.tryItOutDisplayNameStyles;
   }
-  obj4.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  const tmp10Result = guildId(isTryItOut[15])(obj4);
+  obj4.pendingDisplayNameStyles = tryItOutDisplayNameStyles;
+  const tmp10Result = guildId(isTryItOut[16])(obj4);
   closure_6 = tmp10Result;
-  let tmp10 = guildId(isTryItOut[15]);
+  let tmp10 = guildId(isTryItOut[16]);
   let effectId;
   if (tmp10Result != null) {
     effectId = tmp10Result.effectId;
   }
   if (effectId == null) {
-    effectId = tmp2(tmp3[17]).DisplayNameEffect.SOLID;
+    effectId = tmp2(tmp3[18]).DisplayNameEffect.SOLID;
   }
-  displayNameStylesEffectConfig = user(isTryItOut[16]).useDisplayNameStylesEffectConfig(effectId);
+  displayNameStylesEffectConfig = user(isTryItOut[17]).useDisplayNameStylesEffectConfig(effectId);
+  const tmp2Result4 = user(isTryItOut[17]);
+  let tmp14 = user(isTryItOut[19]).useHexagonCampaignPerkAvailability(constants3.DISPLAY_NAME_STYLE, "UserProfileDisplayNameStylesEditButton") === constants4.SELECTABLE;
+  if (tmp14) {
+    tmp14 = true !== isTryItOut;
+  }
+  if (tmp14) {
+    let fontId;
+    if (tmp10Result != null) {
+      fontId = tmp10Result.fontId;
+    }
+    tmp14 = fontId !== closure_10;
+  }
+  const tmp2Result5 = user(isTryItOut[19]);
   const items2 = [guildId, isTryItOut, nativeStackNavigation, tmp6[1]];
+  const hexagonCampaignHasVisitedDisplayNameStyles = user(isTryItOut[20]).useHexagonCampaignHasVisitedDisplayNameStyles();
   const items3 = [displayNameStylesEffectConfig, tmp10Result];
-  const tmp2Result2 = user(isTryItOut[16]);
-  const tmp15 = closure_5(() => {
+  const tmp2Result6 = user(isTryItOut[20]);
+  const tmp19 = closure_5(() => {
     if (null == closure_6) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t.PoWNfe);
@@ -350,15 +817,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items3);
   const items4 = [tmp10Result, guildId, user.id, tmp];
   const items5 = [tmp10Result];
-  const tmp14 = nativeStackNavigation(() => {
+  const tmp18 = nativeStackNavigation(() => {
     AnalyticsUtilsDefault.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
     nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, { guildId, isTryItOut });
     closure_5(ContentDismissActionType.TAKE_ACTION);
   }, items2);
-  const tmp16 = nativeStackNavigation(() => {
+  const tmp20 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef14444, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef14444, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14468, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14468, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -367,10 +834,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
     return tmp10;
   }, items4);
-  const obj5 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null };
-  let intl = tmp2(tmp3[19]).intl;
-  obj5.label = intl.string(tmp9(isTryItOut[25])["86GtGH"]);
-  const tmp17 = nativeStackNavigation(() => {
+  const obj5 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, footer: null };
+  let intl = tmp2(tmp3[22]).intl;
+  obj5.label = intl.string(guildId(isTryItOut[28])["86GtGH"]);
+  let tmp23 = tmp14;
+  if (tmp14) {
+    tmp23 = !hexagonCampaignHasVisitedDisplayNameStyles;
+  }
+  if (!tmp23) {
+    tmp23 = tmp6[0] === tmp2(tmp3[13]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE;
+  }
+  obj5.labelTrailing = jsx(user(isTryItOut[29]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp23 });
+  obj5.buttonText = tmp19;
+  obj5.accessibilityValue = { text: tmp19 };
+  obj5.onPress = tmp18;
+  obj5.leading = tmp20();
+  obj5.trailing = nativeStackNavigation(() => {
     let tmp3Result = null;
     if (null != closure_6) {
       let colors;
@@ -389,12 +868,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       tmp3Result = jsx(DisplayNameStylesColorSwatchDefault, { colors, effectId: null });
     }
     return tmp3Result;
-  }, items5);
-  obj5.labelTrailing = jsx(user(isTryItOut[26]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp6[0] === user(isTryItOut[12]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE });
-  obj5.buttonText = tmp15;
-  obj5.accessibilityValue = { text: tmp15 };
-  obj5.onPress = tmp14;
-  obj5.leading = tmp16();
-  obj5.trailing = tmp17();
-  return jsx(user(isTryItOut[26]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null });
+  }, items5)();
+  let tmp22Result;
+  if (tmp14) {
+    tmp22Result = jsx(tmp9(tmp3[30]), {});
+  }
+  obj5.footer = tmp22Result;
+  return jsx(user(isTryItOut[29]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, footer: null });
 });

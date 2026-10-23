@@ -1,8 +1,8 @@
-// === Module 8169: DiscordImageFactory ===
+// === Module 8181: DiscordImageFactory ===
 
-// Module 8169 (DiscordImageFactory)
-import detectFile from "detectFile" /* 8170 */;
-import DiscordImagePng2 from "DiscordImagePng" /* 8197 */;
+// Module 8181 (DiscordImageFactory)
+import detectFile from "detectFile" /* 8182 */;
+import DiscordImagePng2 from "DiscordImagePng" /* 8209 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");

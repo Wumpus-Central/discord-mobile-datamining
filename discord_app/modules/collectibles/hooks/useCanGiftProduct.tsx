@@ -1,12 +1,12 @@
-// === Module 14429: useCanGiftProduct ===
+// === Module 14453: useCanGiftProduct ===
 
-// Module 14429 (useCanGiftProduct)
+// Module 14453 (useCanGiftProduct)
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2065 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7646 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7647 */;
-import useCurrentUser from "useCurrentUser" /* 8647 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7659 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7660 */;
+import useCurrentUser from "useCurrentUser" /* 8665 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

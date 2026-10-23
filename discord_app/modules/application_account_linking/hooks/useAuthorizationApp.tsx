@@ -1,8 +1,8 @@
-// === Module 7241: useAuthorizationApp ===
+// === Module 7254: useAuthorizationApp ===
 
-// Module 7241 (useAuthorizationApp)
+// Module 7254 (useAuthorizationApp)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7242 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7255 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;

@@ -1,13 +1,13 @@
-// === Module 17261: VEVOOPropBlurEffectName ===
+// === Module 17305: VEVOOPropBlurEffectName ===
 
-// Module 17261 (VEVOOPropBlurEffectName)
+// Module 17305 (VEVOOPropBlurEffectName)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VEVOOStore = fn(5573);
+const VEVOOStore = fn(5585);
 ({ getVisualEffectViewOverrides: closure_4, setVisualEffectViewOverides: hasOwnProperty } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);

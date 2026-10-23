@@ -1,14 +1,14 @@
-// === Module 17173: updatePersistentCodesEnabled ===
+// === Module 17217: updatePersistentCodesEnabled ===
 
-// Module 17173 (updatePersistentCodesEnabled)
+// Module 17217 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9172 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9176 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9195 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(6619).disconnect();
-                                  const obj = c1(6619);
-                                  const voiceChannel = c1(6619).selectVoiceChannel(dependencyMap);
+                                  c1(6632).disconnect();
+                                  const obj = c1(6632);
+                                  const voiceChannel = c1(6632).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -276,7 +276,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9173).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9196).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1087).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");

@@ -1,10 +1,10 @@
-// === Module 10488: PremiumGiftCountdownBadge ===
+// === Module 10510: PremiumGiftCountdownBadge ===
 
-// Module 10488 (PremiumGiftCountdownBadge)
+// Module 10510 (PremiumGiftCountdownBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

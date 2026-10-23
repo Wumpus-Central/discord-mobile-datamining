@@ -1,12 +1,12 @@
-// === Module 10724: ? ===
+// === Module 10746: ? ===
 
-// Module 10724
+// Module 10746
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import transitionToGuild from "transitionToGuild" /* 7434 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import transitionToGuild from "transitionToGuild" /* 7447 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_15();
-  guild(8795);
+  guild(8818);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -475,11 +475,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
               return;
             }
           }
-          tmp52[0] = application(10725);
-          const tmp53 = closure_12(application(5655), tmp52);
+          tmp52[0] = application(10747);
+          const tmp53 = closure_12(application(5667), tmp52);
           cResult[26] = tmp53;
           const tmp49 = tmp53;
-          const tmp51 = application(5655);
+          const tmp51 = application(5667);
         } else {
           class M {
             constructor() {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj4.children = tmp56;
-          const tmp58 = closure_12(tmp(5220).Text, obj4);
+          const tmp58 = closure_12(tmp(5232).Text, obj4);
           cResult[28] = tmp4.text;
           cResult[29] = tmp58;
         } else {
@@ -633,7 +633,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj6.children = tmp7;
-          tmp60 = closure_12(tmp(5220).Text, obj6);
+          tmp60 = closure_12(tmp(5232).Text, obj6);
         }
         cResult[30] = tmp4.text;
         cResult[31] = tmp7;

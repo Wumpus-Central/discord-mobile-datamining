@@ -1,6 +1,6 @@
-// === Module 6700: QuestContent ===
+// === Module 6713: QuestContent ===
 
-// Module 6700 (QuestContent)
+// Module 6713 (QuestContent)
 import size from "module_2" /* 2 */;
 
 const obj = { DISMISSIBLE: new Set([0, 1, 4, 5, 10, 13]), TARGETED: null, DESKTOP_DELIVERY: null, MOBILE_DELIVERY: null };

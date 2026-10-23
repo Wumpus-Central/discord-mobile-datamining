@@ -1,21 +1,21 @@
-// === Module 9908: PremiumFeatureUpsell ===
+// === Module 9930: PremiumFeatureUpsell ===
 
-// Module 9908 (PremiumFeatureUpsell)
+// Module 9930 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
-import spring from "spring" /* 5233 */;
-import springPresets from "springPresets" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9656 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9659 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5028 */;
+import spring from "spring" /* 5245 */;
+import springPresets from "springPresets" /* 5246 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9679 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Gradients = fn(7529).Gradients;
+const Gradients = fn(7542).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4969);
@@ -479,11 +479,11 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5233).withSpring, springStandard: fn(5234).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5245).withSpring, springStandard: fn(5246).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5233).withSpring, springStandard: fn(5234).springStandard };
+let obj3 = { withSpring: fn(5245).withSpring, springStandard: fn(5246).springStandard };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 

@@ -1,17 +1,17 @@
-// === Module 18383: ActivityPanelFocusedView ===
+// === Module 18427: ActivityPanelFocusedView ===
 
-// Module 18383 (ActivityPanelFocusedView)
+// Module 18427 (ActivityPanelFocusedView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import native from "native" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import spring from "spring" /* 5233 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11416 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18376 */;
-import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 18384 */;
+import native from "native" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import spring from "spring" /* 5245 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11436 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18420 */;
+import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 18428 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -21,12 +21,12 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityLayoutMode = fn(2026).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5595);
+const ActivityPanelConstants = fn(5607);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18285);
+const ActivityPanelNativeConstants = fn(18329);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1087).ThemeTypes;
-const IS_IOS = fn(10873).IS_IOS;
+const IS_IOS = fn(10896).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };

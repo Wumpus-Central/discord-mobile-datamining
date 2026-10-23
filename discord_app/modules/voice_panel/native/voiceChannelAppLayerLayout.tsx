@@ -1,9 +1,9 @@
-// === Module 18511: voiceChannelAppLayerLayout ===
+// === Module 18555: voiceChannelAppLayerLayout ===
 
-// Module 18511 (voiceChannelAppLayerLayout)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 10871 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 10876 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10879 */;
+// Module 18555 (voiceChannelAppLayerLayout)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 10894 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 10899 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10902 */;
 import size from "module_2" /* 2 */;
 
 const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;

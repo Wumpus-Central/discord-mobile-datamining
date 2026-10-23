@@ -1,10 +1,10 @@
-// === Module 16652: EmojiFaceWithSpiralEyesIcon ===
+// === Module 16696: EmojiFaceWithSpiralEyesIcon ===
 
-// Module 16652 (EmojiFaceWithSpiralEyesIcon)
+// Module 16696 (EmojiFaceWithSpiralEyesIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod16653 from "module_16653" /* 16653 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod16697 from "module_16697" /* 16697 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16653;
+    const tmpResult = _mod16697;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16653, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16697, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

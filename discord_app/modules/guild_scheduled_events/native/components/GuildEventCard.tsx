@@ -1,18 +1,18 @@
-// === Module 9003: GuildEventCard ===
+// === Module 9026: GuildEventCard ===
 
-// Module 9003 (GuildEventCard)
+// Module 9026 (GuildEventCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonGroup from "ButtonGroup" /* 6681 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 8877 */;
+import ButtonGroup from "ButtonGroup" /* 6694 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 8900 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(6769).isGuildScheduledEventActive;
+let closure_5 = fn(6782).isGuildScheduledEventActive;
 fn(4827).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

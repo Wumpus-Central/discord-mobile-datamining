@@ -1,30 +1,30 @@
-// === Module 10017: ExecutedApplicationCommandPopout ===
+// === Module 10039: ExecutedApplicationCommandPopout ===
 
-// Module 10017 (ExecutedApplicationCommandPopout)
+// Module 10039 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import Server from "Server" /* 2000 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
-import ToastUtils from "ToastUtils" /* 5648 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8586 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 10018 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5632 */;
+import ToastUtils from "ToastUtils" /* 5660 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8598 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 10040 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import MessageStore from "MessageStore" /* 6008 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9626 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9649 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -65,7 +65,7 @@ function getCommandOptionComponents(option) {
             },
             children: null
           };
-          const items = [closure_1_21, channel(5018).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_21, channel(5023).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_23(user(1202).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -84,11 +84,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5590).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5602).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1202).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5590);
+            const tmp6Result = tmp6(5602);
           }
         } else {
           function getRoleComponent(role) {
@@ -299,11 +299,11 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5969).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5981).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1087);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5970);
+const ChannelAutocompleteConstants = fn(5982);
 ({ CHANNEL_SENTINEL: closure_19, COMMAND_SENTINEL: closure_20, MENTION_SENTINEL: closure_21 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
@@ -1154,7 +1154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
     }
     const stateFromStores = channelId(504).useStateFromStores(first, tmp7);
     const tmpResult = channelId(504);
-    const analyticsLocations = messageId(7238)(messageId(7263).EXECUTED_COMMAND).analyticsLocations;
+    const analyticsLocations = messageId(7251)(messageId(7276).EXECUTED_COMMAND).analyticsLocations;
     if (cResult[4] === channelId) {
       let interactionData1;
       if (stateFromStores != null) {
@@ -1200,7 +1200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
                                 const obj2 = { value: analyticsLocations, children: tmp34 };
                                 cResult[26] = analyticsLocations;
                                 cResult[27] = tmp34;
-                                cResult[28] = closure_22(channelId(7238).AnalyticsLocationProvider, obj2);
+                                cResult[28] = closure_22(channelId(7251).AnalyticsLocationProvider, obj2);
                                 class S {
                                   constructor() {
                                     tmp = closure_2;
@@ -1237,12 +1237,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
                                     return;
                                   }
                                 }
-                                const tmp39 = closure_22(channelId(7238).AnalyticsLocationProvider, obj2);
+                                const tmp39 = closure_22(channelId(7251).AnalyticsLocationProvider, obj2);
                               }
                               const obj3 = { startExpanded: true, bodyStyles: tmp4.container, children: tmp22 };
                               cResult[23] = tmp4.container;
                               cResult[24] = tmp22;
-                              cResult[25] = closure_22(channelId(5251).BottomSheet, obj3);
+                              cResult[25] = closure_22(channelId(5263).BottomSheet, obj3);
                               class S {
                                 constructor() {
                                   tmp = closure_2;
@@ -1279,7 +1279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
                                   return;
                                 }
                               }
-                              const tmp36 = closure_22(channelId(5251).BottomSheet, obj3);
+                              const tmp36 = closure_22(channelId(5263).BottomSheet, obj3);
                             }
                           }
                         }
@@ -1493,7 +1493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
     cResult[6] = messageId;
     cResult[7] = S;
     tmp13 = S;
-    const tmp10 = messageId(7238);
+    const tmp10 = messageId(7251);
   }
   const fn = function l() {
     return MessageStore.getMessage(channelId, messageId);
@@ -1542,7 +1542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7238)(messageId(7263).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7251)(messageId(7276).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -1572,6 +1572,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Executed
     tmp9Result = closure_22(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_22(channelId(5251).BottomSheet, obj3);
-  return closure_22(channelId(7238).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_22(channelId(5263).BottomSheet, obj3);
+  return closure_22(channelId(7251).AnalyticsLocationProvider, obj2);
 });

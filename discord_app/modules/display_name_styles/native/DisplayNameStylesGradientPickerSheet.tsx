@@ -1,10 +1,10 @@
-// === Module 16625: DisplayNameStylesGradientPickerSheet ===
+// === Module 16670: DisplayNameStylesGradientPickerSheet ===
 
-// Module 16625 (DisplayNameStylesGradientPickerSheet)
+// Module 16670 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import HapticUtils from "HapticUtils" /* 5198 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import HapticUtils from "HapticUtils" /* 5210 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj10.alignItems = "center";
 obj10.justifyContent = "center";
 obj2.checkmarkOverlay = obj10;
-const size1 = { width: fn(16626).CHECKMARK_SIZE, height: fn(16626).CHECKMARK_SIZE };
+const size1 = { width: fn(16671).CHECKMARK_SIZE, height: fn(16671).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F162158 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F162488 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F162158 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F162488 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };

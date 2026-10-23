@@ -1,14 +1,14 @@
-// === Module 14446: EditCollectiblesPreviewDetails ===
+// === Module 14470: EditCollectiblesPreviewDetails ===
 
-// Module 14446 (EditCollectiblesPreviewDetails)
+// Module 14470 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7647 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8642 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7660 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8660 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 

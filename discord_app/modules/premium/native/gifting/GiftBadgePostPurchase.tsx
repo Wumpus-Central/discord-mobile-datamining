@@ -1,29 +1,29 @@
-// === Module 13849: GiftBadgePostPurchase ===
+// === Module 13872: GiftBadgePostPurchase ===
 
-// Module 13849 (GiftBadgePostPurchase)
+// Module 13872 (GiftBadgePostPurchase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2632 from "module_2632" /* 2632 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
-import HapticUtils from "HapticUtils" /* 5198 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import BadgeId from "BadgeId" /* 8653 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10479 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10482 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13851 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13852 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4999 */;
+import HapticUtils from "HapticUtils" /* 5210 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5211 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import BadgeId from "BadgeId" /* 8671 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10501 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10504 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13874 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13875 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8679 */;
 
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13850);
+const GiftingBadgeConstants = fn(13873);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -106,7 +106,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
       }
     }
     const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-    const tmp10 = closure_10(tmp(12825).GiftIcon, obj2);
+    const tmp10 = closure_10(tmp(12844).GiftIcon, obj2);
     const intl = tmp(1128).intl;
     const stringResult = intl.string(_modDef2632.g86YiI);
     cResult[3] = tmp10;
@@ -144,7 +144,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
       }
     }
     const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
-    const tmp13 = closure_10(tmp(5230).Button, obj3);
+    const tmp13 = closure_10(tmp(5242).Button, obj3);
     cResult[5] = tmp6;
     cResult[6] = tmp13;
   } else {
@@ -180,7 +180,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
     const intl2 = tmp(1128).intl;
     obj4.text = intl2.string(_modDef2632["sa/cfM"]);
     obj4.onPress = T;
-    const tmp15 = closure_10(tmp(5230).Button, obj4);
+    const tmp15 = closure_10(tmp(5242).Button, obj4);
     cResult[7] = tmp15;
     const tmp14 = tmp15;
   } else {
@@ -232,23 +232,23 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(5137).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(5149).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(12825).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(12844).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1128).intl;
   obj2.text = intl.string(_modDef2632.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5230).Button, obj2), ];
+  const items1 = [closure_10(onSendGift(5242).Button, obj2), ];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1128).intl;
   obj4.text = intl2.string(_modDef2632["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5230).Button, obj4);
+  items1[1] = closure_10(onSendGift(5242).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 });

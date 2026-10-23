@@ -1,19 +1,19 @@
-// === Module 5237: ButtonHooks ===
+// === Module 5249: ButtonHooks ===
 
-// Module 5237 (ButtonHooks)
+// Module 5249 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import shared from "shared" /* 4976 */;
-import native from "native" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Icon from "Icon" /* 5232 */;
-import spring from "spring" /* 5233 */;
-import springPresets from "springPresets" /* 5234 */;
-import ButtonConstants from "ButtonConstants" /* 5236 */;
-import useToken from "useToken" /* 5238 */;
-import useFontScale from "useFontScale" /* 5239 */;
+import native from "native" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Icon from "Icon" /* 5244 */;
+import spring from "spring" /* 5245 */;
+import springPresets from "springPresets" /* 5246 */;
+import ButtonConstants from "ButtonConstants" /* 5248 */;
+import useToken from "useToken" /* 5250 */;
+import useFontScale from "useFontScale" /* 5251 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -214,7 +214,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
             tmp33 = cResult[13];
           }
           if (cResult[14] !== tmp31) {
-            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "Array" };
+            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "r" };
             cResult[14] = tmp31;
             cResult[15] = obj5;
             let tmp35 = obj5;
@@ -247,7 +247,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
                 tmp18 = cResult[23];
               }
               if (cResult[24] !== tmp16) {
-                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "Array" };
+                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "r" };
                 cResult[24] = tmp16;
                 cResult[25] = obj6;
                 let tmp20 = obj6;
@@ -325,7 +325,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj9.backgroundColor = items2;
       const items3 = [c4, c4];
@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj11.backgroundColor = items4;
       const items5 = [c4, c4];

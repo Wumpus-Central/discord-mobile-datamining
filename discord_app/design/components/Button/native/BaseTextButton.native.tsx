@@ -1,14 +1,14 @@
-// === Module 5231: BaseTextButton ===
+// === Module 5243: BaseTextButton ===
 
-// Module 5231 (BaseTextButton)
+// Module 5243 (BaseTextButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
-import HapticUtils from "HapticUtils" /* 5198 */;
-import IconDefault from "Icon" /* 5232 */;
-import spring from "spring" /* 5233 */;
-import springPresets from "springPresets" /* 5234 */;
-import ButtonHooks from "ButtonHooks" /* 5237 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5050 */;
+import HapticUtils from "HapticUtils" /* 5210 */;
+import IconDefault from "Icon" /* 5244 */;
+import spring from "spring" /* 5245 */;
+import springPresets from "springPresets" /* 5246 */;
+import ButtonHooks from "ButtonHooks" /* 5249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -236,14 +236,17 @@ let closure_23 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5236).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5236).MINIMUM_HIT_AREA - fn(5236).SMALL_BUTTON_HEIGHT) / 2, 0);
-obj6.sm = { top: bound, left: "Array", right: "toCharArray$esjava$1", bottom: bound };
-const LARGE_BUTTON_HEIGHT2 = fn(5236).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5236).MINIMUM_HIT_AREA - fn(5236).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-obj6.md = { top: bound1, left: "Array", right: "toCharArray$esjava$1", bottom: bound1 };
-const bound2 = Math.max((fn(5236).MINIMUM_HIT_AREA - fn(5236).LARGE_BUTTON_HEIGHT) / 2, 0);
-obj6.lg = { top: bound2, left: "Array", right: "toCharArray$esjava$1", bottom: bound2 };
+const LARGE_BUTTON_HEIGHT = fn(5248).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5248).MINIMUM_HIT_AREA - fn(5248).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "toCharArray$esjava$1", bottom: bound };
+obj6.sm = rect;
+const LARGE_BUTTON_HEIGHT2 = fn(5248).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5248).MINIMUM_HIT_AREA - fn(5248).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "toCharArray$esjava$1", bottom: bound1 };
+obj6.md = rect1;
+const bound2 = Math.max((fn(5248).MINIMUM_HIT_AREA - fn(5248).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "toCharArray$esjava$1", bottom: bound2 };
+obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }

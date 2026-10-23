@@ -1,8 +1,8 @@
-// === Module 14195: ZoomLayoutPager ===
+// === Module 14219: ZoomLayoutPager ===
 
-// Module 14195 (ZoomLayoutPager)
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
+// Module 14219 (ZoomLayoutPager)
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let __closure = {};
-let merged = Object.assign(fn(5234).springStandard);
+let merged = Object.assign(fn(5246).springStandard);
 __closure.stiffness = 100;
 __closure.overshootClamping = true;
 let closure_8 = { code: "function ZoomLayoutPagerNativeTsx1(){const{cancelAnimation,translateX,dragging,onEndDrag,onMomentumEnd,isPaging}=this.__closure;var _onMomentumEnd;cancelAnimation(translateX);if(dragging.get()){var _onEndDrag;dragging.set(false);(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();isPaging.set(false);}" };

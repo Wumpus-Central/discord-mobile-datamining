@@ -1,10 +1,10 @@
-// === Module 19070: InviteEmpty ===
+// === Module 19114: InviteEmpty ===
 
-// Module 19070 (InviteEmpty)
+// Module 19114 (InviteEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4976 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _mod8704 from "module_8704" /* 8704 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _mod8722 from "module_8722" /* 8722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_10813");
+          return require("module_10836");
         },
       darker() {
-          return require("module_19071");
+          return require("module_19115");
         },
       light() {
-          return require("module_10812");
+          return require("module_10835");
         }
     };
-    const illustrationSource = _mod8704.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8722.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8704;
+    const tmpResult = _mod8722;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useInviteEmptySource() {
   const obj = shared;
-  return _mod8704.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8722.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10813");
+      return require("module_10836");
     },
     darker() {
-      return require("module_19071");
+      return require("module_19115");
     },
     light() {
-      return require("module_10812");
+      return require("module_10835");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getInviteEmptySource(theme) {
-  return _mod8704.getIllustrationSource(theme, {
+  return _mod8722.getIllustrationSource(theme, {
     dark() {
-      return require("module_10813");
+      return require("module_10836");
     },
     darker() {
-      return require("module_19071");
+      return require("module_19115");
     },
     light() {
-      return require("module_10812");
+      return require("module_10835");
     }
   });
 }

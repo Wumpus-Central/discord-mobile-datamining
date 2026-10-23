@@ -1,6 +1,6 @@
-// === Module 5082: ManaContext ===
+// === Module 5094: ManaContext ===
 
-// Module 5082 (ManaContext)
+// Module 5094 (ManaContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

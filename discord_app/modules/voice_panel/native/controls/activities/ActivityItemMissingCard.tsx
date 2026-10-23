@@ -1,9 +1,9 @@
-// === Module 18491: ActivityItemMissingCard ===
+// === Module 18535: ActivityItemMissingCard ===
 
-// Module 18491 (ActivityItemMissingCard)
+// Module 18535 (ActivityItemMissingCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NativeViewDefault from "NativeView" /* 6871 */;
+import NativeViewDefault from "NativeView" /* 6884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

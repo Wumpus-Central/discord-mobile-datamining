@@ -1,6 +1,6 @@
-// === Module 10056: canForwardMessage ===
+// === Module 10078: canForwardMessage ===
 
-// Module 10056 (canForwardMessage)
+// Module 10078 (canForwardMessage)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import GatedChannelStore from "GatedChannelStore" /* 4873 */;
 import ChannelStore from "ChannelStore" /* 4821 */;

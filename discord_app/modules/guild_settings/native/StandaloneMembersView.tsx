@@ -1,15 +1,15 @@
-// === Module 17940: StandaloneMembersView ===
+// === Module 17984: StandaloneMembersView ===
 
-// Module 17940 (StandaloneMembersView)
+// Module 17984 (StandaloneMembersView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
-import useActiveTheme from "useActiveTheme" /* 9687 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10602 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12721 */;
-import KickConfirmDefault from "KickConfirm" /* 12735 */;
-import BanConfirmDefault from "BanConfirm" /* 12739 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 17941 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9004 */;
+import useActiveTheme from "useActiveTheme" /* 9709 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10624 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12740 */;
+import KickConfirmDefault from "KickConfirm" /* 12754 */;
+import BanConfirmDefault from "BanConfirm" /* 12758 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 17985 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -130,11 +130,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   }
   dependencyMap = tmp10;
   if (cResult[5] !== navigation) {
-    const headerCloseButton = tmp(6909).getHeaderCloseButton(() => navigation.goBack());
+    const headerCloseButton = tmp(6922).getHeaderCloseButton(() => navigation.goBack());
     cResult[5] = navigation;
     cResult[6] = headerCloseButton;
     let tmp11 = headerCloseButton;
-    const tmpResult = tmp(6909);
+    const tmpResult = tmp(6922);
   } else {
     tmp11 = cResult[6];
   }
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
       const obj = { title: null };
       const intl = guildId(1128).intl;
       obj.title = intl.string(guildId(1128).t["9Oq93m"]);
-      return closure_1_6(guildId(6909).NavigatorHeader, obj);
+      return closure_1_6(guildId(6922).NavigatorHeader, obj);
     };
     cResult[7] = fn2;
     let tmp13 = fn2;

@@ -1,6 +1,6 @@
-// === Module 10602: ThemedGradient ===
+// === Module 10624: ThemedGradient ===
 
-// Module 10602 (ThemedGradient)
+// Module 10624 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,12 +10,12 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
 import utils_ColorDefault from "utils/Color" /* 4967 */;
 import shared from "shared" /* 4976 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5130 */;
-import GuildThemePresets from "GuildThemePresets" /* 5133 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5135 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5190 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5142 */;
+import GuildThemePresets from "GuildThemePresets" /* 5145 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5147 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5202 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
@@ -380,7 +380,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     tmp4 = cResult[1];
   }
   dependencyMap = tmp4;
-  const tmp5 = mixColorOverride(5191)();
+  const tmp5 = mixColorOverride(5203)();
   theme = tmp5;
   if (cResult[2] === mix) {
     if (cResult[3] === tmp4) {
@@ -445,7 +445,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }
   }
   let obj = mix(576);
-  const guildThemePresetAppearance = mix(5133).getGuildThemePresetAppearance(preset, tmp5);
+  const guildThemePresetAppearance = mix(5145).getGuildThemePresetAppearance(preset, tmp5);
   if (cResult[11] === mix) {
     if (cResult[12] === tmp4) {
       if (cResult[13] === mixColorOverride) {
@@ -524,7 +524,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   cResult[14] = tmp5;
   cResult[15] = A;
   tmp10 = A;
-  const tmpResult = mix(5133);
+  const tmpResult = mix(5145);
 }) : (function GuildThemePresetGradient(mixColorOverride) {
   ({ angleOverride, mix: require, mixAmount } = mixColorOverride);
   ({ preset, absolute, wide, tall, componentStyles } = mixColorOverride);
@@ -941,8 +941,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_10(reduced(5244), obj);
-    const tmp2Result = reduced(5244);
+    tmp10Result = closure_10(reduced(5256), obj);
+    const tmp2Result = reduced(5256);
   }
   return tmp10Result;
 });

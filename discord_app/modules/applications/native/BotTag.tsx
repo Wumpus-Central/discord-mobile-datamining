@@ -1,11 +1,11 @@
-// === Module 9110: BotTag ===
+// === Module 9133: BotTag ===
 
-// Module 9110 (BotTag)
+// Module 9133 (BotTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9111 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -241,7 +241,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotTag(arg
   if ("sm" === size) {
     str3 = "text-xxs/semibold";
   }
-  items1[1] = hasOwnProperty(tmp17(5220).Text, { variant: str3, lineClamp: 1, maxFontSizeMultiplier: 2, style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal, children: getBotLabel(BOT) });
+  items1[1] = hasOwnProperty(tmp17(5232).Text, { variant: str3, lineClamp: 1, maxFontSizeMultiplier: 2, style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal, children: getBotLabel(BOT) });
   obj2.children = items1;
   return timestampProducer(View, obj2);
 });

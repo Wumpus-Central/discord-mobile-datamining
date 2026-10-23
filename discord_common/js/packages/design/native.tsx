@@ -1,8 +1,8 @@
-// === Module 5023: native ===
+// === Module 5035: native ===
 
-// Module 5023 (native)
-import ManaContext from "ManaContext" /* 5082 */;
-import GraphicTypes from "GraphicTypes" /* 5123 */;
+// Module 5035 (native)
+import ManaContext from "ManaContext" /* 5094 */;
+import GraphicTypes from "GraphicTypes" /* 5135 */;
 import size from "module_2" /* 2 */;
 import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4984 */;
 
@@ -65,8 +65,8 @@ for (const key10071 in require("ThemeContextFlags")) {
   arg5[key10071] = require("ThemeContextFlags")[key10071];
   continue;
 }
-for (const key10075 in require("module_5030")) {
-  arg5[key10075] = require("module_5030")[key10075];
+for (const key10075 in require("module_5042")) {
+  arg5[key10075] = require("module_5042")[key10075];
   continue;
 }
 for (const key10079 in require("Colors")) {

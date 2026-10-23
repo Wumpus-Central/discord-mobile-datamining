@@ -1,19 +1,19 @@
-// === Module 11550: useScreenshareUtils ===
+// === Module 11570: useScreenshareUtils ===
 
-// Module 11550 (useScreenshareUtils)
+// Module 11570 (useScreenshareUtils)
 import util from "util" /* 1128 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import inject from "inject" /* 2016 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5837 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6630 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
-import StreamActionCreators from "StreamActionCreators" /* 7814 */;
-import CallsUtils from "CallsUtils" /* 9129 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10076 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 11545 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11556 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6643 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7251 */;
+import StreamActionCreators from "StreamActionCreators" /* 7827 */;
+import CallsUtils from "CallsUtils" /* 9152 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10098 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 11565 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11576 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ function startStream() {
   obj = inject;
 }
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
-const Features = fn(5704).Features;
+const Features = fn(5716).Features;
 const DeviceUtils = fn(4926);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
@@ -125,7 +125,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenshareUtils(arg0) {
   const cResult = require("c").c(24);
-  const tmp5 = analyticsLocations(11545)(arg0);
+  const tmp5 = analyticsLocations(11565)(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[0] = closure_8 >= 12;
     let first = tmp8;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp13 = cResult[3];
   }
   const tmpResult = require("initialize");
-  const showMobileGoLiveUpsell = analyticsLocations(11556).useConfig(tmp13).showMobileGoLiveUpsell;
+  const showMobileGoLiveUpsell = analyticsLocations(11576).useConfig(tmp13).showMobileGoLiveUpsell;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationStreamingStore];
     class E {
@@ -171,9 +171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp14 = cResult[4];
     tmp15 = cResult[5];
   }
-  const tmp4Result = analyticsLocations(11556);
+  const tmp4Result = analyticsLocations(11576);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-  analyticsLocations = tmp4(7238)().analyticsLocations;
+  analyticsLocations = tmp4(7251)().analyticsLocations;
   let tmp18 = null != stateFromStores1;
   if (tmp18) {
     tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
                     return closure_1_4.getCurrentUserActiveStream();
                   }
                 }
-                tmp4(tmp18 ? 11561 : 11562);
+                tmp4(tmp18 ? 11581 : 11582);
               }
             }
           }

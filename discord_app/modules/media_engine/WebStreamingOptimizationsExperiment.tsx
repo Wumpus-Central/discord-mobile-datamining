@@ -1,6 +1,6 @@
-// === Module 5822: WebStreamingOptimizationsExperiment ===
+// === Module 5834: WebStreamingOptimizationsExperiment ===
 
-// Module 5822 (WebStreamingOptimizationsExperiment)
+// Module 5834 (WebStreamingOptimizationsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

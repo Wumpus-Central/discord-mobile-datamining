@@ -355,10 +355,25 @@ const obj23 = {
 };
 const items25 = [{ token: "BG_GRADIENT_EASTER_EGG_1", stop: 4 }, { token: "BG_GRADIENT_EASTER_EGG_2", stop: 96 }];
 obj23.colors = items25;
-const items26 = [...items11, obj22, obj23];
-const items27 = [obj22, ];
-items27[HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items11, 1))] = obj23;
-const items28 = [
+const obj24 = {
+  type: ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET,
+  id: preloaded_user_settings.BackgroundGradientPresetId.HEXAGON,
+  theme: DARK,
+  colors: null,
+  angle: 135,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t["+xs8ZP"]);
+  },
+  midpointPercentage: 35,
+  unsupported_overlayOpacityMultiplier: 0.8
+};
+const items26 = [{ token: "BG_GRADIENT_HEXAGON_4", stop: 0 }, { token: "BG_GRADIENT_HEXAGON_3", stop: 33.33 }, { token: "BG_GRADIENT_HEXAGON_2", stop: 66.67 }, { token: "BG_GRADIENT_HEXAGON_1", stop: 100 }];
+obj24.colors = items26;
+const items27 = [...items11, obj22, obj23];
+const items28 = [obj22, ];
+items28[HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items11, 1))] = obj23;
+const items29 = [
   {
     type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
     theme: DARK,
@@ -371,7 +386,7 @@ const items28 = [
 ,
 
 ];
-const obj24 = {
+const obj25 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: DARK,
   getName() {
@@ -379,55 +394,55 @@ const obj24 = {
     return intl.string(util.t.b8Cei3);
   }
 };
-items28[1] = {
+items29[1] = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.LIGHT,
   getName() {
     const intl = util.intl;
     return intl.string(util.t.K2sFfo);
-  }
-};
-const obj25 = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: ThemeTypes.LIGHT,
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.K2sFfo);
-  }
-};
-items28[2] = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: ThemeTypes.ONYX,
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.Do4ZJx);
   }
 };
 const obj26 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: ThemeTypes.LIGHT,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.K2sFfo);
+  }
+};
+items29[2] = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.ONYX,
   getName() {
     const intl = util.intl;
     return intl.string(util.t.Do4ZJx);
   }
 };
-items28[3] = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: "system",
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.zlvNOj);
-  }
-};
 const obj27 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: ThemeTypes.ONYX,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.Do4ZJx);
+  }
+};
+items29[3] = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
     const intl = util.intl;
     return intl.string(util.t.zlvNOj);
   }
 };
-const items29 = [
+const obj28 = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: "system",
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.zlvNOj);
+  }
+};
+const items30 = [
   {
     type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
     theme: ThemeTypes.LIGHT,
@@ -441,7 +456,7 @@ const items29 = [
 ,
 
 ];
-const obj28 = {
+const obj29 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.LIGHT,
   getName() {
@@ -449,55 +464,55 @@ const obj28 = {
     return intl.string(util.t.K2sFfo);
   }
 };
-items29[1] = {
+items30[1] = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.ASH,
   getName() {
     const intl = util.intl;
     return intl.string(util.t.SMPT1k);
-  }
-};
-const obj29 = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: ThemeTypes.ASH,
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.SMPT1k);
-  }
-};
-items29[2] = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: ThemeTypes.DARK,
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.b8Cei3);
   }
 };
 const obj30 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: ThemeTypes.ASH,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.SMPT1k);
+  }
+};
+items30[2] = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.DARK,
   getName() {
     const intl = util.intl;
     return intl.string(util.t.b8Cei3);
   }
 };
-items29[3] = {
-  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
-  theme: ThemeTypes.ONYX,
-  getName() {
-    const intl = util.intl;
-    return intl.string(util.t.Do4ZJx);
-  }
-};
 const obj31 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: ThemeTypes.DARK,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.b8Cei3);
+  }
+};
+items30[3] = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.ONYX,
   getName() {
     const intl = util.intl;
     return intl.string(util.t.Do4ZJx);
   }
 };
-items29[4] = {
+const obj32 = {
+  type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
+  theme: ThemeTypes.ONYX,
+  getName() {
+    const intl = util.intl;
+    return intl.string(util.t.Do4ZJx);
+  }
+};
+items30[4] = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
@@ -505,7 +520,9 @@ items29[4] = {
     return intl.string(util.t.zlvNOj);
   }
 };
-const obj32 = {
+const items31 = [];
+items31[HermesBuiltin.arraySpread(items27, 0)] = obj24;
+const obj33 = {
   type: ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
@@ -521,10 +538,11 @@ export const isSelectableGradientPreset = function isSelectableGradientPreset(id
 };
 export const LIGHT_BACKGROUND_GRADIENT_PRESETS = items2;
 export const DARK_BACKGROUND_GRADIENT_PRESETS = items11;
-export const BACKGROUND_GRADIENT_PRESETS = items26;
-export const BACKGROUND_GRADIENT_PRESETS_MOBILE = items27;
+export const HEXAGON_GRADIENT_PRESET = obj24;
+export const BACKGROUND_GRADIENT_PRESETS = items27;
+export const BACKGROUND_GRADIENT_PRESETS_MOBILE = items28;
 export const StandardBackgroundThemeIndex = { DARK: 0, [0]: "DARK", LIGHT: 1, [1]: "LIGHT", SYSTEM: 2, [2]: "SYSTEM" };
-export const LEGACY_STANDARD_BACKGROUND_THEMES = items28;
-export const REFRESH_STANDARD_BACKGROUND_THEMES = items29;
-export const BACKGROUND_GRADIENT_PRESETS_MAP = apply.keyBy(items26, "id");
+export const LEGACY_STANDARD_BACKGROUND_THEMES = items29;
+export const REFRESH_STANDARD_BACKGROUND_THEMES = items30;
+export const BACKGROUND_GRADIENT_PRESETS_MAP = apply.keyBy(items31, "id");
 export const ThemeIconSizes = { SIZE_48: 48, [48]: "SIZE_48", SIZE_60: 60, [60]: "SIZE_60" };

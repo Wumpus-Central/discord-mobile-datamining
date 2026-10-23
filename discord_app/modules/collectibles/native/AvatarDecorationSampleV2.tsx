@@ -1,13 +1,13 @@
-// === Module 9379: AvatarDecorationSampleV2 ===
+// === Module 9402: AvatarDecorationSampleV2 ===
 
-// Module 9379 (AvatarDecorationSampleV2)
+// Module 9402 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef9380 from "module_9380" /* 9380 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9381 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef9403 from "module_9403" /* 9403 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9404 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDe
       let tmp7 = cResult[2];
     }
     if (null == avatarSource) {
-      avatarSource = _modDef9380;
+      avatarSource = _modDef9403;
     }
     if (cResult[3] === tmp7) {
       if (cResult[4] === avatarSource) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDe
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9380;
+    avatarSource = _modDef9403;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

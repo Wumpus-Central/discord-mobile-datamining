@@ -1,6 +1,6 @@
-// === Module 10760: conjurePausedPreviewViews ===
+// === Module 10782: conjurePausedPreviewViews ===
 
-// Module 10760 (conjurePausedPreviewViews)
+// Module 10782 (conjurePausedPreviewViews)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

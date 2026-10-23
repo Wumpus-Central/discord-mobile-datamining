@@ -1,9 +1,9 @@
-// === Module 7115: NavigatorScreen ===
+// === Module 7128: NavigatorScreen ===
 
-// Module 7115 (NavigatorScreen)
+// Module 7128 (NavigatorScreen)
 import c from "c" /* 576 */;
-import config from "config" /* 7116 */;
-import PostponeRender from "PostponeRender" /* 7117 */;
+import config from "config" /* 7129 */;
+import PostponeRender from "PostponeRender" /* 7130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 5829: Avx512EntropyHistogramExperiment ===
+// === Module 5841: Avx512EntropyHistogramExperiment ===
 
-// Module 5829 (Avx512EntropyHistogramExperiment)
+// Module 5841 (Avx512EntropyHistogramExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

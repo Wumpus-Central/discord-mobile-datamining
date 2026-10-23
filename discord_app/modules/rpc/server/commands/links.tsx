@@ -1,20 +1,20 @@
-// === Module 15689: links ===
+// === Module 15710: links ===
 
-// Module 15689 (links)
+// Module 15710 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4975 */;
-import openUserSettings from "openUserSettings" /* 7475 */;
-import RPCErrorDefault from "RPCError" /* 9240 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11432 */;
-import RPCHelpers from "RPCHelpers" /* 11435 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15663 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15690 */;
-import internalDeepLinks from "internalDeepLinks" /* 15691 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15692 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15694 */;
+import openUserSettings from "openUserSettings" /* 7488 */;
+import RPCErrorDefault from "RPCError" /* 9263 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11452 */;
+import RPCHelpers from "RPCHelpers" /* 11455 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15684 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15711 */;
+import internalDeepLinks from "internalDeepLinks" /* 15712 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15713 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15715 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -162,7 +162,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5642)(href);
+                  closure_1(5654)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -225,7 +225,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6363);
+let Constants = fn(6376);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -235,7 +235,7 @@ const items = [, ];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15678);
+let CONTEXT_MENU_ICON_NAMES = fn(15699);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -367,7 +367,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15678);
+CONTEXT_MENU_ICON_NAMES = fn(15699);
 let obj6 = {
   scope: null,
   handler(arg0) {

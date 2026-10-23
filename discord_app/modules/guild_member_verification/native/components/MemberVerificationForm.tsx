@@ -1,18 +1,18 @@
-// === Module 6878: MemberVerificationForm ===
+// === Module 6891: MemberVerificationForm ===
 
-// Module 6878 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import useInitialValueDefault from "useInitialValue" /* 5585 */;
+// Module 6891 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5003 */;
+import useInitialValueDefault from "useInitialValue" /* 5597 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6860 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6873 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6860).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6873).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1087).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReq
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(5585)(tmp6);
+    return initialVerification(5597)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;
@@ -379,7 +379,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1128).intl;
                   obj2.text = intl.string(closure_1_0(1128).t.StC497);
-                  closure_1_1(5649).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(5661).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

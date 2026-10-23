@@ -1,7 +1,7 @@
-// === Module 8917: useGetEventChannelsByType ===
+// === Module 8940: useGetEventChannelsByType ===
 
-// Module 8917 (useGetEventChannelsByType)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8919 */;
+// Module 8940 (useGetEventChannelsByType)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8942 */;
 import StageInstanceStore from "StageInstanceStore" /* 4826 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -52,7 +52,7 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
   }
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(4899).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(8918);
+const PermissionsConstants = fn(8941);
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
 fn(558);
 let ReactCompilerGating = fn(558);

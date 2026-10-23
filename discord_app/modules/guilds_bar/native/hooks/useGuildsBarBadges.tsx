@@ -1,14 +1,14 @@
-// === Module 17695: useGuildsBarBadges ===
+// === Module 17739: useGuildsBarBadges ===
 
-// Module 17695 (useGuildsBarBadges)
+// Module 17739 (useGuildsBarBadges)
 import native from "native" /* 1202 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4997 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17666 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17697 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5002 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17710 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17741 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11211 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11234 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5001 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -271,11 +271,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(17696)(arg0);
+    const tmp20 = stateFromStores(17740)(arg0);
     const tmpResult6 = tmp(504);
-    const token = tmp(5238).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-    const tmpResult7 = tmp(5238);
-    const token1 = tmp(5238).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+    const token = tmp(5250).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+    const tmpResult7 = tmp(5250);
+    const token1 = tmp(5250).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
     const diff = token1 - tmp(1202).BADGE_PADDING;
     if (cResult[12] !== diff) {
       class U {
@@ -792,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     cResult[14] = tmp4.topRightBadge;
     cResult[15] = tmp25;
     cResult[16] = items4;
-    const tmpResult8 = tmp(5238);
+    const tmpResult8 = tmp(5250);
   }
   class C {
     constructor() {

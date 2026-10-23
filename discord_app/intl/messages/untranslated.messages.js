@@ -1,15 +1,15 @@
-// === Module 15387: ? ===
+// === Module 15408: ? ===
 
-// Module 15387
+// Module 15408
 import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
-import _mod15388 from "module_15388" /* 15388 */;
+import _mod15409 from "module_15409" /* 15409 */;
 import module_1167_mod from "module_1167" /* 1167 */;
 import size from "module_2" /* 2 */;
 
 let module_1167 = module_1167_mod;
 const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15388);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15409);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

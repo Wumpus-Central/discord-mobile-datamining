@@ -1,9 +1,9 @@
-// === Module 14693: useReferralProgramBannerDetails ===
+// === Module 14717: useReferralProgramBannerDetails ===
 
-// Module 14693 (useReferralProgramBannerDetails)
+// Module 14717 (useReferralProgramBannerDetails)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7547 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7560 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

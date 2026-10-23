@@ -1,6 +1,6 @@
-// === Module 10841: MessageRequestTypes ===
+// === Module 10864: MessageRequestTypes ===
 
-// Module 10841 (MessageRequestTypes)
+// Module 10864 (MessageRequestTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestTypes.tsx");

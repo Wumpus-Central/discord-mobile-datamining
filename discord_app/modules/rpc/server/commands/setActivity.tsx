@@ -1,6 +1,6 @@
-// === Module 15701: setActivity ===
+// === Module 15722: setActivity ===
 
-// Module 15701 (setActivity)
+// Module 15722 (setActivity)
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,7 +9,7 @@ import ChannelStore from "ChannelStore" /* 4821 */;
 
 const require = fn;
 let closure_3 = ["buttons"];
-let Constants = fn(6363);
+let Constants = fn(6376);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -19,10 +19,10 @@ let closure_15 = ["1402418171662569542"];
 let items = [, , ];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15678);
+const CONTEXT_MENU_ICON_NAMES = fn(15699);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items1 = [fn(8802).OAuth2Scopes.RPC, fn(8802).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+let items1 = [fn(8825).OAuth2Scopes.RPC, fn(8825).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
 obj4[RPC_SCOPE_CONFIG.ANY] = items1;
 obj3.scope = obj4;
 obj3.handler = function handler(isSocketConnected) {

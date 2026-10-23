@@ -1,14 +1,14 @@
-// === Module 14978: message_previews/MessagePreviewStore ===
+// === Module 15002: message_previews/MessagePreviewStore ===
 
-// Module 14978 (message_previews/MessagePreviewStore)
+// Module 15002 (message_previews/MessagePreviewStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import requireSortedDescending from "requireSortedDescending" /* 6480 */;
-import PreviewData from "PreviewData" /* 14979 */;
+import requireSortedDescending from "requireSortedDescending" /* 6493 */;
+import PreviewData from "PreviewData" /* 15003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import MessageStore from "MessageStore" /* 6008 */;
 
 require = fn;
 let c6 = -Infinity;

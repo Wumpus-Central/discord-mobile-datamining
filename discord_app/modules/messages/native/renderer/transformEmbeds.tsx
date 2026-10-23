@@ -1,23 +1,23 @@
-// === Module 8573: transformEmbeds ===
+// === Module 8585: transformEmbeds ===
 
-// Module 8573 (transformEmbeds)
+// Module 8585 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1087 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5985 */;
-import EmbedUtils from "EmbedUtils" /* 6471 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6639 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7374 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7380 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8263 */;
-import MarkupParsers from "MarkupParsers" /* 8449 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8574 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8575 */;
-import utils from "utils" /* 8576 */;
-import NativeChatCapabilities from "NativeChatCapabilities" /* 8577 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5997 */;
+import EmbedUtils from "EmbedUtils" /* 6484 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6652 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7387 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7393 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
+import MarkupParsers from "MarkupParsers" /* 8461 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8586 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8587 */;
+import utils from "utils" /* 8588 */;
+import NativeChatCapabilities from "NativeChatCapabilities" /* 8589 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -230,14 +230,14 @@ export default function transformEmbeds(arg0) {
                           const mapped1 = fields.map((rawName) => {
                             let result = null;
                             if (null != rawName.rawName) {
-                              result = channelId(8449).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                              const obj = channelId(8449);
+                              result = channelId(8461).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                              const obj = channelId(8461);
                             }
                             let result1 = null;
                             if (null != rawName.rawValue) {
                               const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                              result1 = channelId(8449).parseEmbedDescriptionMarkup(obj3);
-                              const obj2 = channelId(8449);
+                              result1 = channelId(8461).parseEmbedDescriptionMarkup(obj3);
+                              const obj2 = channelId(8461);
                             }
                             const obj4 = {};
                             const merged = Object.assign(rawName);

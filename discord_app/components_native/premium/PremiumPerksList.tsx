@@ -1,8 +1,8 @@
-// === Module 16982: PremiumPerksList ===
+// === Module 17026: PremiumPerksList ===
 
-// Module 16982 (PremiumPerksList)
+// Module 17026 (PremiumPerksList)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

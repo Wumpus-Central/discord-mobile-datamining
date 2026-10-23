@@ -1,8 +1,8 @@
-// === Module 13049: ForumPostTitle ===
+// === Module 13072: ForumPostTitle ===
 
-// Module 13049 (ForumPostTitle)
+// Module 13072 (ForumPostTitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

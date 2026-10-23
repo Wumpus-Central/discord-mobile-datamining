@@ -1,6 +1,6 @@
-// === Module 6176: ? ===
+// === Module 6189: ? ===
 
-// Module 6176
+// Module 6189
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/astronaut_solar.png.js");

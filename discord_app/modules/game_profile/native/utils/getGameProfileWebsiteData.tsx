@@ -1,20 +1,20 @@
-// === Module 9467: getGameProfileWebsiteData ===
+// === Module 9490: getGameProfileWebsiteData ===
 
-// Module 9467 (getGameProfileWebsiteData)
+// Module 9490 (getGameProfileWebsiteData)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1128 */;
-import AppleNeutralIcon from "AppleNeutralIcon" /* 7926 */;
-import XNeutralIcon from "XNeutralIcon" /* 8462 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8464 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8466 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9221 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9249 */;
-import GooglePlayNeutralIcon from "GooglePlayNeutralIcon" /* 9294 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9468 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 9470 */;
-import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 9472 */;
-import RedditNeutralIcon from "RedditNeutralIcon" /* 9474 */;
-import TwitchNeutralIcon from "TwitchNeutralIcon" /* 9476 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 7939 */;
+import XNeutralIcon from "XNeutralIcon" /* 8474 */;
+import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8476 */;
+import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8478 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9244 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9272 */;
+import GooglePlayNeutralIcon from "GooglePlayNeutralIcon" /* 9317 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9491 */;
+import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 9493 */;
+import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 9495 */;
+import RedditNeutralIcon from "RedditNeutralIcon" /* 9497 */;
+import TwitchNeutralIcon from "TwitchNeutralIcon" /* 9499 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

@@ -1,9 +1,9 @@
-// === Module 8734: useVideoControls ===
+// === Module 8752: useVideoControls ===
 
-// Module 8734 (useVideoControls)
+// Module 8752 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8732 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8735 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8750 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8753 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;

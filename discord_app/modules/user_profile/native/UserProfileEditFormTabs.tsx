@@ -1,19 +1,19 @@
-// === Module 15893: UserProfileEditFormTabs ===
+// === Module 15926: UserProfileEditFormTabs ===
 
-// Module 15893 (UserProfileEditFormTabs)
+// Module 15926 (UserProfileEditFormTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ChatInputUtils from "ChatInputUtils" /* 5145 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8712 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14326 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15892 */;
+import ChatInputUtils from "ChatInputUtils" /* 5157 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8730 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14350 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15925 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7289).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7302).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);

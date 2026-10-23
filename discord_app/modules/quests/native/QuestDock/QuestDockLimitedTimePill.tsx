@@ -1,11 +1,11 @@
-// === Module 16472: QuestDockLimitedTimePill ===
+// === Module 16519: QuestDockLimitedTimePill ===
 
-// Module 16472 (QuestDockLimitedTimePill)
+// Module 16519 (QuestDockLimitedTimePill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import TimerIcon from "TimerIcon" /* 11276 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import TimerIcon from "TimerIcon" /* 11299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

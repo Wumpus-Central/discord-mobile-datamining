@@ -1,10 +1,10 @@
-// === Module 17515: BoostProgressBarCoachmark ===
+// === Module 17559: BoostProgressBarCoachmark ===
 
-// Module 17515 (BoostProgressBarCoachmark)
+// Module 17559 (BoostProgressBarCoachmark)
 import util from "util" /* 1128 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import BoostThisServerRive from "BoostThisServerRive" /* 5087 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
+import BoostThisServerRive from "BoostThisServerRive" /* 5099 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
         if (cResult[12] === tmp13) {
           let tmp16 = cResult[13];
         }
-        const coachmark = tmp(9817).useCoachmark(guild.targetRef, tmp16);
+        const coachmark = tmp(9839).useCoachmark(guild.targetRef, tmp16);
         return null;
       }
     }
@@ -125,6 +125,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(9817).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(9839).useCoachmark(guild.targetRef, memo);
   return null;
 });

@@ -1,6 +1,6 @@
-// === Module 5232: Icon ===
+// === Module 5244: Icon ===
 
-// Module 5232 (Icon)
+// Module 5244 (Icon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 15264: WGCDirtyRegionsAllExperiment ===
+// === Module 15285: WGCDirtyRegionsAllExperiment ===
 
-// Module 15264 (WGCDirtyRegionsAllExperiment)
+// Module 15285 (WGCDirtyRegionsAllExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

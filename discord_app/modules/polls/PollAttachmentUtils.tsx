@@ -1,6 +1,6 @@
-// === Module 12188: PollAttachmentUtils ===
+// === Module 12207: PollAttachmentUtils ===
 
-// Module 12188 (PollAttachmentUtils)
+// Module 12207 (PollAttachmentUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_2 = async function _downloadPollGif() {
@@ -22,7 +22,7 @@ let closure_2 = async function _downloadPollGif() {
   await closure_130_0.blob();
   return convertBlobToBase64(value);
 };
-const POLL_ATTACHMENT_FOLDER = fn(8296).POLL_ATTACHMENT_FOLDER;
+const POLL_ATTACHMENT_FOLDER = fn(8308).POLL_ATTACHMENT_FOLDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
 

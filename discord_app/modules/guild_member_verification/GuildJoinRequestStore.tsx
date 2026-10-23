@@ -1,12 +1,12 @@
-// === Module 6829: GuildJoinRequestStore ===
+// === Module 6842: GuildJoinRequestStore ===
 
-// Module 6829 (GuildJoinRequestStore)
+// Module 6842 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4997 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5002 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5003 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -82,7 +82,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(4996).joinRequestFromServer;
+const joinRequestFromServer = fn(5001).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};

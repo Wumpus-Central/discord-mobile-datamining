@@ -1,9 +1,9 @@
-// === Module 10991: UnreadSettingNotice ===
+// === Module 11014: UnreadSettingNotice ===
 
-// Module 10991 (UnreadSettingNotice)
+// Module 11014 (UnreadSettingNotice)
 import nativeDefault from "native" /* 587 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10992 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10993 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11015 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11016 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl = tmp(1128).intl;
     obj3.children = intl.string(tmp(1128).t.i4xQ5o);
-    const tmp11 = closure_5(tmp(5220).Text, obj3);
+    const tmp11 = closure_5(tmp(5232).Text, obj3);
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
     const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
     const intl2 = tmp(1128).intl;
     obj5.children = intl2.string(tmp(1128).t.KyUKhT);
-    const tmp19 = closure_5(tmp(5220).Text, obj5);
+    const tmp19 = closure_5(tmp(5232).Text, obj5);
     cResult[7] = tmp19;
     let tmp17 = tmp19;
   } else {

@@ -1,24 +1,24 @@
-// === Module 12772: ClassificationDetail ===
+// === Module 12791: ClassificationDetail ===
 
-// Module 12772 (ClassificationDetail)
+// Module 12791 (ClassificationDetail)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _modDef3154 from "module_3154" /* 3154 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import LinkingDefault from "Linking" /* 5646 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6453 */;
-import MetricEvents from "MetricEvents" /* 6458 */;
-import TableRow from "TableRow" /* 6888 */;
-import SafetyHubModels from "SafetyHubModels" /* 7884 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9017 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12776 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12778 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import LinkingDefault from "Linking" /* 5658 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6466 */;
+import MetricEvents from "MetricEvents" /* 6471 */;
+import TableRow from "TableRow" /* 6901 */;
+import SafetyHubModels from "SafetyHubModels" /* 7897 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9040 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12795 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12797 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import SafetyHubStore from "SafetyHubStore" /* 7907 */;
+import SafetyHubStore from "SafetyHubStore" /* 7920 */;
 
 require = fn;
 function ClassificationPolicyCard(policyExplainerLink) {
@@ -42,7 +42,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10926).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10949).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -69,7 +69,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5220).Text, obj5);
+      const tmp28 = closure_13(tmp10(5232).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -120,14 +120,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10926).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10949).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11), ];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1128).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1128).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5220).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5232).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -136,7 +136,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7883);
+const SafetyHubConstants = fn(7896);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -298,7 +298,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Classi
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5220).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5232).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 });
 ReactCompilerGating = fn(558);
@@ -905,7 +905,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function LetUsK
   }
   if (cResult[2] !== tmp4) {
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-    const tmp8 = closure_13(tmp(5220).Text, obj3);
+    const tmp8 = closure_13(tmp(5232).Text, obj3);
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;

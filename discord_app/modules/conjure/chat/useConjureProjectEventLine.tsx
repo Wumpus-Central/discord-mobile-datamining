@@ -1,7 +1,7 @@
-// === Module 12325: useConjureProjectEventLine ===
+// === Module 12344: useConjureProjectEventLine ===
 
-// Module 12325 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12308 */;
+// Module 12344 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12327 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;

@@ -1,21 +1,21 @@
-// === Module 17872: ReactActionSheet ===
+// === Module 17916: ReactActionSheet ===
 
-// Module 17872 (ReactActionSheet)
+// Module 17916 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5211 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8816 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
-import ICYMIContext from "ICYMIContext" /* 17820 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13071 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5223 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8839 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9824 */;
+import ICYMIContext from "ICYMIContext" /* 17864 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -751,10 +751,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
               return obj3;
             } else {
               closure_5(true);
-              v1(8816).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8816);
+              v1(8839).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8839);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8816).feedItemActioned(obj4);
+              v1(8839).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };

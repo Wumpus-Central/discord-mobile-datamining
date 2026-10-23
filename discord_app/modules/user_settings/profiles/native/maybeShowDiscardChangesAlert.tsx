@@ -1,8 +1,8 @@
-// === Module 10005: maybeShowDiscardChangesAlert ===
+// === Module 10027: maybeShowDiscardChangesAlert ===
 
-// Module 10005 (maybeShowDiscardChangesAlert)
+// Module 10027 (maybeShowDiscardChangesAlert)
 import util from "util" /* 1128 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -32,8 +32,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     obj2.onCancel = function onCancel() {
       onConfirm(dependencyMap[0]).close();
     };
-    let showResult = onConfirm(5895).show(obj2);
-    const obj = onConfirm(5895);
+    let showResult = onConfirm(5907).show(obj2);
+    const obj = onConfirm(5907);
   } else {
     showResult = onConfirm();
   }

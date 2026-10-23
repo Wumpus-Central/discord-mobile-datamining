@@ -1,13 +1,13 @@
-// === Module 17724: GuildsBarDragPreview ===
+// === Module 17768: GuildsBarDragPreview ===
 
-// Module 17724 (GuildsBarDragPreview)
+// Module 17768 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
 import _mod4884 from "module_4884" /* 4884 */;
-import native from "native" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
+import native from "native" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17653 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17697 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -16,8 +16,8 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6686).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17650).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6699).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17694).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: "justifyContent", children: "position" };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: 137438953, children: 868236524 };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: "justifyContent", children: "position" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: 137438953, children: 868236524 };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null != dragSpecs) {
           if (null != overSpecs) {
             const state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", scrollPosition: null, dragRegion: 90, windowSize: null, dropComplete: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE", listInsets: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST" };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: 752280, scrollPosition: 9215590, dragRegion: 5600251, windowSize: 6553557, dropComplete: 2790911, listInsets: 10747860 };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", scrollPosition: null, dragRegion: 90, windowSize: null, dropComplete: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE", listInsets: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: 752280, scrollPosition: 9215590, dragRegion: 5600251, windowSize: 6553557, dropComplete: 2790911, listInsets: 10747860 };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

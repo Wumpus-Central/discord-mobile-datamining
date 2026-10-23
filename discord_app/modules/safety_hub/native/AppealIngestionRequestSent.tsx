@@ -1,16 +1,16 @@
-// === Module 12804: AppealIngestionRequestSent ===
+// === Module 12823: AppealIngestionRequestSent ===
 
-// Module 12804 (AppealIngestionRequestSent)
-import FastImageDefault from "FastImage" /* 5655 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12799 */;
-import _modDef12805 from "module_12805" /* 12805 */;
+// Module 12823 (AppealIngestionRequestSent)
+import FastImageDefault from "FastImage" /* 5667 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12818 */;
+import _modDef12824 from "module_12824" /* 12824 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7883);
+const SafetyHubConstants = fn(7896);
 ({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionRequestSent() {
   const cResult = emitAppealIngestionEvent(576).c(20);
   const obj = emitAppealIngestionEvent(576);
-  emitAppealIngestionEvent = emitAppealIngestionEvent(12781).useEmitAppealIngestionEvent();
+  emitAppealIngestionEvent = emitAppealIngestionEvent(12800).useEmitAppealIngestionEvent();
   const tmp5 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp5.checkboxPng) {
-    const obj3 = { source: _modDef12805, style: tmp5.checkboxPng };
+    const obj3 = { source: _modDef12824, style: tmp5.checkboxPng };
     const tmp14 = closure_6(FastImageDefault, obj3);
     cResult[2] = tmp5.checkboxPng;
     cResult[3] = tmp14;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { headerText: first, subHeaderText: tmp8 };
-    const tmp17 = closure_6(tmp(12779).AppealIngestionModalHeader, obj4);
+    const tmp17 = closure_6(tmp(12798).AppealIngestionModalHeader, obj4);
     cResult[4] = tmp17;
     let tmp15 = tmp17;
   } else {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[6] !== tmp5.actionsHeader) {
     const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp5.actionsHeader, children: tmp18 };
-    const tmp22 = closure_6(tmp(5220).Text, obj5);
+    const tmp22 = closure_6(tmp(5232).Text, obj5);
     cResult[6] = tmp5.actionsHeader;
     cResult[7] = tmp22;
     let tmp20 = tmp22;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   const items = [tmp10, tmp15, tmp20, tmp25, tmp32];
   obj9.children = items;
   obj8.children = closure_7(View, obj9);
-  const tmp38 = closure_6(emitAppealIngestionEvent(12779).AppealIngestionModalScreen, obj8);
+  const tmp38 = closure_6(emitAppealIngestionEvent(12798).AppealIngestionModalScreen, obj8);
   cResult[14] = tmp5.container;
   cResult[15] = tmp32;
   cResult[16] = tmp10;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   cResult[18] = tmp25;
   cResult[19] = tmp38;
   tmp37 = tmp38;
-  const obj2 = emitAppealIngestionEvent(12781);
+  const obj2 = emitAppealIngestionEvent(12800);
 }) : (function AppealIngestionRequestSent() {
   _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
   const tmp = closure_8();
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef12805;
+  obj4.source = _modDef12824;
   obj4.style = tmp.checkboxPng;
   const items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };

@@ -1,20 +1,20 @@
-// === Module 9644: showUploadFileSizeError ===
+// === Module 9667: showUploadFileSizeError ===
 
-// Module 9644 (showUploadFileSizeError)
+// Module 9667 (showUploadFileSizeError)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
-import FileSizeUtils from "FileSizeUtils" /* 6364 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
-import UploadUtils from "UploadUtils" /* 8131 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8132 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8140 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 9645 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9646 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9647 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9648 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5030 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
+import FileSizeUtils from "FileSizeUtils" /* 6377 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7276 */;
+import UploadUtils from "UploadUtils" /* 8144 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8152 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 9668 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9669 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9670 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9671 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 import UserStore from "UserStore" /* 1392 */;
 

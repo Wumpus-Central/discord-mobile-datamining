@@ -1,13 +1,13 @@
-// === Module 8324: useIsCallActive ===
+// === Module 8336: useIsCallActive ===
 
-// Module 8324 (useIsCallActive)
-import CallStore from "CallStore" /* 6482 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+// Module 8336 (useIsCallActive)
+import CallStore from "CallStore" /* 6495 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6770 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(5618).ParticipantTypes;
+const ParticipantTypes = fn(5630).ParticipantTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCallActive(arg0, arg1) {

@@ -1,14 +1,14 @@
-// === Module 8651: UserProfileSpeedBumpActionSheet ===
+// === Module 8669: UserProfileSpeedBumpActionSheet ===
 
-// Module 8651 (UserProfileSpeedBumpActionSheet)
+// Module 8669 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import TableRow from "TableRow" /* 6888 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import UserActionCreators from "UserActionCreators" /* 8650 */;
-import _modDef8654 from "module_8654" /* 8654 */;
+import TableRow from "TableRow" /* 6901 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import UserActionCreators from "UserActionCreators" /* 8668 */;
+import _modDef8672 from "module_8672" /* 8672 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -17,7 +17,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8652).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8670).UserProfileAnalyticsTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -49,11 +49,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
   speedBumpType = speedBumpType.speedBumpType;
   if (cResult[0] !== speedBumpType) {
     if (typeof SPEEDBUMP_ROWS === "function") {
-      const obj2 = { icon: _modDef8654, text: null };
+      const obj2 = { icon: _modDef8672, text: null };
       const intl = map(1128).intl;
       obj2.text = intl.string(map(1128).t.kcuWva);
       items = [obj2, ];
-      const obj3 = { icon: _modDef8654, text: null };
+      const obj3 = { icon: _modDef8672, text: null };
       if ("block" === speedBumpType) {
         const intl3 = map(1128).intl;
         let stringResult = intl3.string(map(1128).t.QxrDY1);
@@ -63,7 +63,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
       }
       obj3.text = stringResult;
       items[1] = obj3;
-      TableRowGroup = map(6972).TableRowGroup;
+      TableRowGroup = map(6985).TableRowGroup;
       map = items.map;
       const mapped = map((icon, arg1) => {
         const obj = { start: 0 === arg1, end: items.length === arg1, icon: __initData(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
@@ -97,11 +97,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
 }) : (function InformationTable(arg0) {
   let items;
   if (typeof SPEEDBUMP_ROWS === "function") {
-    let obj = { icon: _modDef8654, text: null };
+    let obj = { icon: _modDef8672, text: null };
     const intl = items(1128).intl;
     obj.text = intl.string(items(1128).t.kcuWva);
     items = [obj, ];
-    const obj2 = { icon: _modDef8654, text: null };
+    const obj2 = { icon: _modDef8672, text: null };
     if ("block" === tmp) {
       const intl3 = tmp4(1128).intl;
       let stringResult = intl3.string(tmp4(1128).t.QxrDY1);
@@ -118,7 +118,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
           return __initData(TableRow.TableRow, obj, index);
         })
     };
-    return closure_12(items(6972).TableRowGroup, obj3);
+    return closure_12(items(6985).TableRowGroup, obj3);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

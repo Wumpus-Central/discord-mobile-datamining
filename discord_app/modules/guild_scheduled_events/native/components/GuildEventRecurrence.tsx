@@ -1,13 +1,13 @@
-// === Module 9007: GuildEventRecurrence ===
+// === Module 9030: GuildEventRecurrence ===
 
-// Module 9007 (GuildEventRecurrence)
+// Module 9030 (GuildEventRecurrence)
 import nativeDefault from "native" /* 587 */;
-import ScheduleUtils from "ScheduleUtils" /* 8865 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8881 */;
+import ScheduleUtils from "ScheduleUtils" /* 8888 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8904 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6769 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
 
 require = fn;
 const View = fn(17).View;
@@ -407,8 +407,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj2 = guildEventId(8872)(recurrenceId, id);
-  const tmp6 = guildEventId(8872);
+  let obj2 = guildEventId(8895)(recurrenceId, id);
+  const tmp6 = guildEventId(8895);
   const items1 = [c6];
   stateFromStores1 = recurrenceId(504).useStateFromStores(items1, () => {
     let guild_id;
@@ -430,9 +430,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
-  closure_5 = recurrenceId(8919).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-  const tmp2Result5 = recurrenceId(8919);
-  const eventScheduleById = recurrenceId(8873).useEventScheduleById(guildEventId, recurrenceId);
+  closure_5 = recurrenceId(8942).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
+  const tmp2Result5 = recurrenceId(8942);
+  const eventScheduleById = recurrenceId(8896).useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
   if (eventScheduleById != null) {
     const startTime = eventScheduleById.startTime;
@@ -493,14 +493,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
       children: null
     };
     const obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
-    obj4.children = closure_8(tmp2(8877).GuildEventCardHeader, obj5);
-    const items5 = [closure_8(tmp2(6893).PressableOpacity, obj4), ];
+    obj4.children = closure_8(tmp2(8900).GuildEventCardHeader, obj5);
+    const items5 = [closure_8(tmp2(6906).PressableOpacity, obj4), ];
     const obj6 = { style: tmp.actions, children: null };
     if (tmp21Result) {
       const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1128).intl;
       obj7.children = intl2.string(tmp2(1128).t.fyBVRm);
-      tmp21Result = closure_8(tmp2(5220).Text, obj7);
+      tmp21Result = closure_8(tmp2(5232).Text, obj7);
     }
     const items6 = [tmp21Result, ];
     const obj8 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -516,13 +516,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
       }
     };
     obj8.style = tmp.secondarySmallButton;
-    const obj9 = { source: tmp5(9008), size: tmp2(1202).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    const obj9 = { source: tmp5(9031), size: tmp2(1202).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
     obj8.children = closure_8(tmp2(1202).Icon, obj9);
-    items6[1] = closure_8(tmp2(6893).PressableOpacity, obj8);
+    items6[1] = closure_8(tmp2(6906).PressableOpacity, obj8);
     obj6.children = items6;
     items5[1] = closure_9(stateFromStores1, obj6);
     obj3.children = items5;
     return closure_9(stateFromStores1, obj3);
   }
-  const tmp2Result6 = recurrenceId(8873);
+  const tmp2Result6 = recurrenceId(8896);
 });

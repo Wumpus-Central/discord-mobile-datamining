@@ -1,17 +1,17 @@
-// === Module 11701: ConjureStandaloneScreen ===
+// === Module 11721: ConjureStandaloneScreen ===
 
-// Module 11701 (ConjureStandaloneScreen)
-import ConjureActionCreators from "ConjureActionCreators" /* 10697 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11702 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 11703 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 11812 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12481 */;
+// Module 11721 (ConjureStandaloneScreen)
+import ConjureActionCreators from "ConjureActionCreators" /* 10719 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11722 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 11723 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 11831 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7306 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7319 */;
 
 require = fn;
 const Permissions = fn(1087).Permissions;

@@ -1,10 +1,10 @@
-// === Module 10103: ExpressionPicker ===
+// === Module 10125: ExpressionPicker ===
 
-// Module 10103 (ExpressionPicker)
+// Module 10125 (ExpressionPicker)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9808 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9833 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5709 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9830 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9855 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (cResult[1] === visibleTabs) {
       let tmp5 = cResult[2];
     }
-    const tmp7 = expressionPickerViewType(10104)(tmp5);
+    const tmp7 = expressionPickerViewType(10126)(tmp5);
     ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
     const prop = tmp7.expressionPickerTabStrings;
     if (cResult[3] !== channel) {
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           }
         }
-        const segmentedControlState = tmp(8876).useSegmentedControlState(tmp19);
+        const segmentedControlState = tmp(8899).useSegmentedControlState(tmp19);
         if (cResult[15] !== expressionPickerViewType) {
           class Z {
             constructor() {
@@ -306,9 +306,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
         }
-        const tmp28 = expressionPickerViewType(10105)(tmp27);
-        const tmpResult = tmp(8876);
-        const isScreenReaderEnabled = tmp(5253).useIsScreenReaderEnabled();
+        const tmp28 = expressionPickerViewType(10127)(tmp27);
+        const tmpResult = tmp(8899);
+        const isScreenReaderEnabled = tmp(5265).useIsScreenReaderEnabled();
         if (cResult[20] === tmp28) {
           class Z {
             constructor() {
@@ -432,7 +432,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[20] = tmp28;
         cResult[21] = isScreenReaderEnabled;
         cResult[22] = tmp31;
-        const tmpResult2 = tmp(5253);
+        const tmpResult2 = tmp(5265);
       }
       let obj3 = { pageWidth: 0, defaultIndex: expressionPickerSelectedIndex, onSetActiveIndex: L, items: tmp15 };
       cResult[12] = expressionPickerSelectedIndex;

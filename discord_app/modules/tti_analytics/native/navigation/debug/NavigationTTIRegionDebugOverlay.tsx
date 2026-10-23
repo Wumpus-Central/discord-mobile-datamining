@@ -1,12 +1,12 @@
-// === Module 17904: NavigationTTIRegionDebugOverlay ===
+// === Module 17948: NavigationTTIRegionDebugOverlay ===
 
-// Module 17904 (NavigationTTIRegionDebugOverlay)
+// Module 17948 (NavigationTTIRegionDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12790 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 12792 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17902 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12809 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 12811 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17946 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -487,7 +487,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
           }
         }
         let obj3 = { variant: "text-xs/bold", color: str6, style: tmp4.badgeText, lineClamp: 1, accessible: false, children: tmp7 };
-        const tmp16 = closure_8(surface(5220).Text, obj3);
+        const tmp16 = closure_8(surface(5232).Text, obj3);
         cResult[8] = tmp7;
         cResult[9] = tmp4.badgeText;
         cResult[10] = str6;
@@ -637,12 +637,12 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
   ({ regionId, tracking, descendantTracking, includedDescendants, excludedDescendants, hierarchyDepth, violation } = name);
   const tmp4 = closure_11();
   let obj = name(576);
-  const navTTISurface = name(12789).useNavTTISurface();
-  let obj2 = name(12789);
+  const navTTISurface = name(12808).useNavTTISurface();
+  let obj2 = name(12808);
   let obj3 = noop;
   [tmp7, dependencyMap] = noop.useState(false);
   if (typeof useNavigationTTIDebugFreezeTarget === "function") {
-    const syncExternalStore = obj3.useSyncExternalStore(tmp(12792).subscribeNavigationTTIDebugFreezeTarget, tmp(12792).getNavigationTTIDebugFreezeTarget, tmp(12792).getNavigationTTIDebugFreezeTarget);
+    const syncExternalStore = obj3.useSyncExternalStore(tmp(12811).subscribeNavigationTTIDebugFreezeTarget, tmp(12811).getNavigationTTIDebugFreezeTarget, tmp(12811).getNavigationTTIDebugFreezeTarget);
     if (cResult[0] === name) {
       if (cResult[1] === regionId) {
         if (cResult[2] === tracking) {
@@ -902,7 +902,7 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
                                               }
                                             }
                                             const obj9 = { variant: "text-xs/bold", color: str30, style: tmp4.badgeText, lineClamp: num32, accessible: false, children: combined1 };
-                                            const tmp61 = closure_8(tmp(5220).Text, obj9);
+                                            const tmp61 = closure_8(tmp(5232).Text, obj9);
                                             cResult[32] = combined1;
                                             cResult[33] = tmp4.badgeText;
                                             cResult[34] = num32;
@@ -1027,12 +1027,12 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_11();
-  const navTTISurface = name(12789).useNavTTISurface();
-  let obj = name(12789);
+  const navTTISurface = name(12808).useNavTTISurface();
+  let obj = name(12808);
   let obj2 = noop;
   [tmp6, c2] = noop.useState(false);
   if (typeof useNavigationTTIDebugFreezeTarget === "function") {
-    const syncExternalStore = obj2.useSyncExternalStore(tmp2(12792).subscribeNavigationTTIDebugFreezeTarget, tmp2(12792).getNavigationTTIDebugFreezeTarget, tmp2(12792).getNavigationTTIDebugFreezeTarget);
+    const syncExternalStore = obj2.useSyncExternalStore(tmp2(12811).subscribeNavigationTTIDebugFreezeTarget, tmp2(12811).getNavigationTTIDebugFreezeTarget, tmp2(12811).getNavigationTTIDebugFreezeTarget);
     let obj3 = { name, regionId: name.regionId, tracking };
     const tmp9 = closure_12(obj3);
     let tmp12 = "exclude" === tracking;
@@ -1249,7 +1249,7 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
       }
       obj7.lineClamp = num;
       obj7.children = combined1;
-      obj5.children = closure_8(tmp2(5220).Text, obj7);
+      obj5.children = closure_8(tmp2(5232).Text, obj7);
       const items2 = [closure_8(closure_5, obj5), ];
       let tmp39Result = null;
       if (0 === hierarchyDepth) {

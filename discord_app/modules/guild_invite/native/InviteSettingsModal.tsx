@@ -1,19 +1,19 @@
-// === Module 19241: InviteSettingsModal ===
+// === Module 19285: InviteSettingsModal ===
 
-// Module 19241 (InviteSettingsModal)
+// Module 19285 (InviteSettingsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
-import NavigatorHeader from "NavigatorHeader" /* 6909 */;
-import Navigator from "Navigator" /* 7080 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9033 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 19242 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
+import NavigatorHeader from "NavigatorHeader" /* 6922 */;
+import Navigator from "Navigator" /* 7093 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9056 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 19286 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9027 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9050 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 
@@ -172,7 +172,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
         }
       }
     }
-    const unmountEffect = tmp(5249).useUnmountEffect(O);
+    const unmountEffect = tmp(5261).useUnmountEffect(O);
     if (cResult[9] !== channel) {
       class V {
         constructor() {
@@ -277,7 +277,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
                     const obj = { onPress, text: null };
                     const intl = navigation(1128).intl;
                     obj.text = intl.string(navigation(1128).t["R3BPH+"]);
-                    tmp = jsx(navigation(7470).HeaderActionButton, { onPress, text: null });
+                    tmp = jsx(navigation(7483).HeaderActionButton, { onPress, text: null });
                   }
                   return tmp;
                 }
@@ -292,7 +292,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
     cResult[13] = navigation;
     cResult[14] = P;
     cResult[15] = items2;
-    const tmpResult3 = tmp(5249);
+    const tmpResult3 = tmp(5261);
   }
   const tmpResult = navigation(504);
   const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -355,8 +355,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5249).useUnmountEffect(() => {
-    channel(9033).resetSettings();
+  const unmountEffect = navigation(5261).useUnmountEffect(() => {
+    channel(9056).resetSettings();
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -383,39 +383,39 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
           const obj = { onPress, text: null };
           const intl = navigation(1128).intl;
           obj.text = intl.string(navigation(1128).t["R3BPH+"]);
-          tmp = jsx(navigation(7470).HeaderActionButton, { onPress, text: null });
+          tmp = jsx(navigation(7483).HeaderActionButton, { onPress, text: null });
         }
         return tmp;
       }
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(9033).updateSettings({ maxUses });
+    channel(9056).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(9033).updateSettings({ maxAge });
+    channel(9056).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(9033).updateSettings({ temporary });
+    channel(9056).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(9033).updateSettings({ flags });
+    channel(9056).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(9033).updateSettings({ roleIds });
+    channel(9056).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
-  const tmp2Result2 = navigation(5249);
-  obj5.maxUsesOptions = channel(9028).getMaxUsesOptions;
+  const tmp2Result2 = navigation(5261);
+  obj5.maxUsesOptions = channel(9051).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(19243), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
-  return jsx(navigation(8926).Form, { contentContainerStyle: tmp.formContainer, children: null });
+  obj4.children = jsx(channel(19287), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  return jsx(navigation(8949).Form, { contentContainerStyle: tmp.formContainer, children: null });
 });
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

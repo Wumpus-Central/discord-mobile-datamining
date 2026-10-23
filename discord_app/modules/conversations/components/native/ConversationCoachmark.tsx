@@ -1,10 +1,10 @@
-// === Module 13959: ConversationCoachmark ===
+// === Module 13982: ConversationCoachmark ===
 
-// Module 13959 (ConversationCoachmark)
+// Module 13982 (ConversationCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -108,7 +108,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         return closure_1_6(closure_1_10, {});
       }
     }
-    const coachmark = tmp(9817).useCoachmark(ref, obj5);
+    const coachmark = tmp(9839).useCoachmark(ref, obj5);
     if (cResult[8] !== tmp7) {
       class N {
         constructor() {
@@ -180,7 +180,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     cResult[10] = children;
     cResult[11] = N;
     cResult[12] = childrenResult;
-    const tmpResult = tmp(9817);
+    const tmpResult = tmp(9839);
   }
   obj5 = { title: tmp8, description: tmp9, position: "bottom", visible: tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK, onDismiss: tmp13, renderImgComponent: E };
   cResult[5] = tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK;
@@ -192,7 +192,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
   ({ children, isLast } = arg0);
   const ref = noop.useRef(null);
   const tmp = closure_9();
-  const tmp3 = _slicedToArray(first(7481).useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(first(7494).useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
@@ -211,8 +211,8 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     };
     return obj;
   }, items);
-  let obj = first(7481);
-  const coachmark = first(9817).useCoachmark(ref, memo);
+  let obj = first(7494);
+  const coachmark = first(9839).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   const callback = noop.useCallback(() => {
@@ -222,7 +222,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
   const obj3 = { style: coachmarkWrapper, children: null };
-  const obj2 = first(9817);
+  const obj2 = first(9839);
   obj3.children = <View ref={ref}>{children(callback)}</View>;
   return <View style={coachmarkWrapper}>{null}</View>;
 });

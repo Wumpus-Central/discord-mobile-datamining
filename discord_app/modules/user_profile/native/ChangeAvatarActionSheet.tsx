@@ -1,18 +1,18 @@
-// === Module 15875: ChangeAvatarActionSheet ===
+// === Module 15908: ChangeAvatarActionSheet ===
 
-// Module 15875 (ChangeAvatarActionSheet)
+// Module 15908 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import TableRow from "TableRow" /* 6888 */;
-import TableRowGroup from "TableRowGroup" /* 6972 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
-import ActionSheet from "ActionSheet" /* 7283 */;
-import Form from "Form" /* 8926 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15792 */;
+import TableRow from "TableRow" /* 6901 */;
+import TableRowGroup from "TableRowGroup" /* 6985 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
+import ActionSheet from "ActionSheet" /* 7296 */;
+import Form from "Form" /* 8949 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15813 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

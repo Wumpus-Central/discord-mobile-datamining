@@ -1,6 +1,6 @@
-// === Module 18144: UsernameSearchScreen ===
+// === Module 18188: UsernameSearchScreen ===
 
-// Module 18144 (UsernameSearchScreen)
+// Module 18188 (UsernameSearchScreen)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
     [tmp5, tmp6] = cResult;
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const insets = ref(5579)().insets;
+  const insets = ref(5591)().insets;
   const tmp4 = closure_10();
   if (cResult[2] !== navigation) {
     class T {
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5253).getIsScreenReaderEnabled();
-            const obj = navigation(5253);
+            closing = navigation(5265).getIsScreenReaderEnabled();
+            const obj = navigation(5265);
           }
           if (!closing) {
             const current = ref.current;
@@ -76,8 +76,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5253).getIsScreenReaderEnabled();
-            const obj = navigation(5253);
+            closing = navigation(5265).getIsScreenReaderEnabled();
+            const obj = navigation(5265);
           }
           if (!closing) {
             const current = ref.current;
@@ -92,15 +92,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   }
   const effect1 = noop.useEffect(T, tmp10);
   ref = noop.useRef(null);
-  const clientThemesOverride = navigation(9685).useClientThemesOverride();
+  const clientThemesOverride = navigation(9707).useClientThemesOverride();
   if (cResult[5] === insets.top) {
     class T {
       constructor() {
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5253).getIsScreenReaderEnabled();
-            const obj = navigation(5253);
+            closing = navigation(5265).getIsScreenReaderEnabled();
+            const obj = navigation(5265);
           }
           if (!closing) {
             const current = ref.current;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
       }
     }
   }
-  const tmpResult = navigation(9685);
+  const tmpResult = navigation(9707);
   let tmp13 = null;
   if (tmpResult2.isIOS()) {
     class T {
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5253).getIsScreenReaderEnabled();
-            const obj = navigation(5253);
+            closing = navigation(5265).getIsScreenReaderEnabled();
+            const obj = navigation(5265);
           }
           if (!closing) {
             const current = ref.current;
@@ -138,8 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
           return navigation.addListener("transitionEnd", (data) => {
             let closing = data.data.closing;
             if (!closing) {
-              closing = navigation(5253).getIsScreenReaderEnabled();
-              const obj = navigation(5253);
+              closing = navigation(5265).getIsScreenReaderEnabled();
+              const obj = navigation(5265);
             }
             if (!closing) {
               const current = ref.current;
@@ -157,8 +157,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
             return navigation.addListener("transitionEnd", (data) => {
               let closing = data.data.closing;
               if (!closing) {
-                closing = navigation(5253).getIsScreenReaderEnabled();
-                const obj = navigation(5253);
+                closing = navigation(5265).getIsScreenReaderEnabled();
+                const obj = navigation(5265);
               }
               if (!closing) {
                 const current = ref.current;
@@ -184,14 +184,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   const effect = noop.useEffect(() => {
     ref(1267).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(5579)().insets;
+  const insets = ref(5591)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(5253).getIsScreenReaderEnabled();
-      const obj = navigation(5253);
+      closing = navigation(5265).getIsScreenReaderEnabled();
+      const obj = navigation(5265);
     }
     if (!closing) {
       const current = ref.current;
@@ -200,8 +200,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
       }
     }
   }), items);
-  const clientThemesOverride = navigation(9685).useClientThemesOverride();
-  let obj = navigation(9685);
+  const clientThemesOverride = navigation(9707).useClientThemesOverride();
+  let obj = navigation(9707);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -217,10 +217,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
   obj2 = navigation(1384);
-  const items2 = [closure_8(ref(10602), { absolute: true }), ];
+  const items2 = [closure_8(ref(10624), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
-  const tmp3Result = ref(7120);
+  const tmp3Result = ref(7133);
   items3[2] = { paddingBottom: insets.bottom + ref(587).space.PX_16 };
   obj5.contentContainerStyle = items3;
   const obj7 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   obj7.headerText = intl.string(navigation(1128).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(15045), obj7);
+  obj5.children = closure_8(ref(15070), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

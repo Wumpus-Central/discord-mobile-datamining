@@ -1,17 +1,17 @@
-// === Module 12779: AppealIngestionModal ===
+// === Module 12798: AppealIngestionModal ===
 
-// Module 12779 (AppealIngestionModal)
+// Module 12798 (AppealIngestionModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12778 */;
-import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 12780 */;
-import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 12800 */;
-import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 12802 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12797 */;
+import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 12799 */;
+import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 12819 */;
+import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 12821 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7907 */;
+import SafetyHubStore from "SafetyHubStore" /* 7920 */;
 
 const require = globalThis.__r;
 
@@ -96,7 +96,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(7883);
+const SafetyHubConstants = fn(7896);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -571,7 +571,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(12774).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(12793).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -584,8 +584,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(7882).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(7882);
+            closure_129_4(safetyHubAppealSignal(7895).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(7895);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

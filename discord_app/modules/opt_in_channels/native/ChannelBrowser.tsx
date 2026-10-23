@@ -1,14 +1,14 @@
-// === Module 11222: ChannelBrowser ===
+// === Module 11245: ChannelBrowser ===
 
-// Module 11222 (ChannelBrowser)
+// Module 11245 (ChannelBrowser)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7626 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7192 */;
+import NewChannelsStore from "NewChannelsStore" /* 7639 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7205 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp4 = closure_15();
-  const tmp5 = onChannelClick(5590)(channel);
+  const tmp5 = onChannelClick(5602)(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildSettingsStore];
     cResult[0] = items;
@@ -71,7 +71,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       tmp10 = cResult[5];
     }
     const tmpResult = tmp(504);
-    const checkboxA11yNative = tmp(5025).useCheckboxA11yNative(tmp10);
+    const checkboxA11yNative = tmp(5037).useCheckboxA11yNative(tmp10);
     if (cResult[6] === channel.guild_id) {
       if (cResult[7] === channel.id) {
         if (cResult[8] === onChannelClick) {
@@ -116,7 +116,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       return onChannelClick(channel.guild_id, channel.id, channel.id);
                     }
                   }
-                  const tmp27 = closure_12(tmp(6893).PressableOpacity, obj3);
+                  const tmp27 = closure_12(tmp(6906).PressableOpacity, obj3);
                   cResult[21] = tmp4.categoryContainer;
                   cResult[22] = tmp12;
                   cResult[23] = str2;
@@ -149,12 +149,12 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 return onChannelClick(channel.guild_id, channel.id, channel.id);
               }
             }
-            obj6.children = closure_12(tmp(6886).FormCheckbox, { checked: null });
+            obj6.children = closure_12(tmp(6899).FormCheckbox, { checked: null });
             const items2 = [closure_12(View, obj6), ];
             const obj8 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
             const intl = tmp(1128).intl;
             obj8.children = intl.string(tmp(1128).t.mSQwnW);
-            items2[1] = closure_12(tmp(5220).Text, obj8);
+            items2[1] = closure_12(tmp(5232).Text, obj8);
             obj5.children = items2;
             tmp17 = closure_13(View, obj5);
             const obj7 = { checked: null };
@@ -177,7 +177,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         const obj9 = { style: tmp4.categoryTitle, title: tmp5, lineClamp: 1 };
-        const tmp15 = closure_12(tmp(6972).TableRowGroupTitle, obj9);
+        const tmp15 = closure_12(tmp(6985).TableRowGroupTitle, obj9);
         cResult[10] = tmp5;
         cResult[11] = tmp4.categoryTitle;
         cResult[12] = tmp15;
@@ -194,7 +194,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[8] = onChannelClick;
     cResult[9] = T;
     tmp12 = T;
-    const tmpResult2 = tmp(5025);
+    const tmpResult2 = tmp(5037);
   }
   const fn = function l() {
     return UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id);
@@ -208,11 +208,11 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_15();
-  const tmp3 = onChannelClick(5590)(channel);
+  const tmp3 = onChannelClick(5602)(channel);
   const items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj = channel(504);
-  const checkboxA11yNative = channel(5025).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(5037).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -232,24 +232,24 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj3.accessibilityState = accessibilityState;
-  const items1 = [closure_12(channel(6972).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
+  const items1 = [closure_12(channel(6985).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = closure_12(tmp4(6886).FormCheckbox, obj7);
+    obj6.children = closure_12(tmp4(6899).FormCheckbox, obj7);
     const items2 = [closure_12(View, obj6), ];
     const obj8 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1128).intl;
     obj8.children = intl.string(tmp4(1128).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5220).Text, obj8);
+    items2[1] = closure_12(tmp4(5232).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(6893).PressableOpacity, obj3);
+  return closure_12(channel(6906).PressableOpacity, obj3);
 }));
 ReactCompilerGating = fn(558);
 let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRow(channel) {

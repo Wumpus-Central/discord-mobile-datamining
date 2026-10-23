@@ -1,12 +1,12 @@
-// === Module 12232: ConjureNativeMarkdown ===
+// === Module 12251: ConjureNativeMarkdown ===
 
-// Module 12232 (ConjureNativeMarkdown)
+// Module 12251 (ConjureNativeMarkdown)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import conjureMarkup from "conjureMarkup" /* 11776 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12233 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12234 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import conjureMarkup from "conjureMarkup" /* 11795 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12252 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,11 +34,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(12233).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(12252).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(12233);
+    const tmpResult = tmp(12252);
   } else {
     marker = cResult[1];
   }
@@ -91,11 +91,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
         const obj = { style: null, children: null };
         const items = [list.item, { paddingLeft: children.depth * PX_16 }];
         obj.style = items;
-        const obj3 = { style: list.marker, children: closure_2_4(closure_0(5220).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+        const obj3 = { style: list.marker, children: closure_2_4(closure_0(5232).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
         const items1 = [closure_2_4(View, obj3), ];
         const obj5 = { style: list.itemText, children: null };
-        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(11776).parseConjureMarkup(children.text, true, obj2) };
-        obj5.children = closure_2_4(closure_0(5220).Text, obj6);
+        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(11795).parseConjureMarkup(children.text, true, obj2) };
+        obj5.children = closure_2_4(closure_0(5232).Text, obj6);
         items1[1] = closure_2_4(View, obj5);
         obj.children = items1;
         return closure_2_5(View, obj, index);

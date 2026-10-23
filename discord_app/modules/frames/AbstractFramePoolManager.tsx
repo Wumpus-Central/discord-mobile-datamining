@@ -1,7 +1,7 @@
-// === Module 11845: AbstractFramePoolManager ===
+// === Module 11864: AbstractFramePoolManager ===
 
-// Module 11845 (AbstractFramePoolManager)
-import FrameStackLevel from "FrameStackLevel" /* 11846 */;
+// Module 11864 (AbstractFramePoolManager)
+import FrameStackLevel from "FrameStackLevel" /* 11865 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

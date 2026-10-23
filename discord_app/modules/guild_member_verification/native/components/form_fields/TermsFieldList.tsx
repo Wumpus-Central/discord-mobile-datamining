@@ -1,12 +1,12 @@
-// === Module 6882: TermsFieldList ===
+// === Module 6895: TermsFieldList ===
 
-// Module 6882 (TermsFieldList)
+// Module 6895 (TermsFieldList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5691 */;
-import TableRowDivider from "TableRowDivider" /* 6883 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5703 */;
+import TableRowDivider from "TableRowDivider" /* 6896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TermsFie
   const intl = rules(1128).intl;
   obj2.children = intl.string(rules(1128).t.prJqwT);
   let items = [
-    closure_5(rules(5220).Text, obj2),
+    closure_5(rules(5232).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

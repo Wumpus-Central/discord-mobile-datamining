@@ -1,6 +1,6 @@
-// === Module 6047: ? ===
+// === Module 6060: ? ===
 
-// Module 6047
+// Module 6060
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/cobalt.png.js");

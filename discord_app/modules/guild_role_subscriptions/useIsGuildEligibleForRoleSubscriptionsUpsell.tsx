@@ -1,6 +1,6 @@
-// === Module 17601: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 17645: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 17601 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 17645 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1087 */;
 import GuildRecord from "GuildRecord" /* 4839 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGui
         return closure_3.getGuild(closure_0);
       }
     }
-    const isUserInCreatorMonetizationEligibleCountry = tmp(7346).useIsUserInCreatorMonetizationEligibleCountry();
+    const isUserInCreatorMonetizationEligibleCountry = tmp(7359).useIsUserInCreatorMonetizationEligibleCountry();
     if (stateFromStores != null) {
       class E {
         constructor() {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGui
     cResult[9] = tmp11;
     cResult[10] = isUserInCreatorMonetizationEligibleCountry;
     cResult[11] = tmp17;
-    const tmpResult4 = tmp(7346);
+    const tmpResult4 = tmp(7359);
   }
   let tmp12 = null != stateFromStores;
   if (tmp12) {

@@ -1,6 +1,6 @@
-// === Module 5212: BurstReactionAnimation ===
+// === Module 5224: BurstReactionAnimation ===
 
-// Module 5212 (BurstReactionAnimation)
+// Module 5224 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4927 */;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
         if (null == burstReactionAnimationSource) {
           return null;
         } else {
-          const tmp25 = importDefault(tmp14 ? 5213 : 5214);
+          const tmp25 = importDefault(tmp14 ? 5225 : 5226);
           if (cResult[15] === tmp8) {
             if (cResult[16] === tmp14) {
               let num13 = 1.2;
@@ -148,6 +148,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 5213 : 5214), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 5225 : 5226), { style: tmp2.content, loop: false, speed: null });
   }
 });

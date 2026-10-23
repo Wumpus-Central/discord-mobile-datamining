@@ -1,13 +1,13 @@
-// === Module 11408: AnimatedEffectEmoji ===
+// === Module 11428: AnimatedEffectEmoji ===
 
-// Module 11408 (AnimatedEffectEmoji)
+// Module 11428 (AnimatedEffectEmoji)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import native from "native" /* 1202 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import FastImageDefault from "FastImage" /* 5655 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import FastImageDefault from "FastImage" /* 5667 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 

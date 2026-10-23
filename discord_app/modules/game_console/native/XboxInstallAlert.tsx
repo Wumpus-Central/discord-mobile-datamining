@@ -1,17 +1,17 @@
-// === Module 11623: XboxInstallAlert ===
+// === Module 11643: XboxInstallAlert ===
 
-// Module 11623 (XboxInstallAlert)
+// Module 11643 (XboxInstallAlert)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import LinkingDefault from "Linking" /* 5646 */;
-import common_AlertDefault from "common/Alert" /* 5964 */;
-import _modDef11624 from "module_11624" /* 11624 */;
+import LinkingDefault from "Linking" /* 5658 */;
+import common_AlertDefault from "common/Alert" /* 5976 */;
+import _modDef11644 from "module_11644" /* 11644 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9602);
+const GameConsoleConstants = fn(9625);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[4] !== tmp4.externalLinkIcon) {
     const fn = function _() {
-      return jsx(native.Icon, { source: _modDef11624, style: closure_0.externalLinkIcon });
+      return jsx(native.Icon, { source: _modDef11644, style: closure_0.externalLinkIcon });
     };
     cResult[4] = tmp4.externalLinkIcon;
     cResult[5] = fn;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef11624, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef11644, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1384);

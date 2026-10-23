@@ -1,7 +1,7 @@
-// === Module 10809: InviteRolesDisplay ===
+// === Module 10832: InviteRolesDisplay ===
 
-// Module 10809 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 10810 */;
+// Module 10832 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 10833 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
       }
       if (cResult[6] !== tmp4.label) {
         const obj2 = { variant: "text-xs/semibold", color: "text-muted", style: label, children: tmp9 };
-        const tmp13 = closure_5(tmp(5220).Text, obj2);
+        const tmp13 = closure_5(tmp(5232).Text, obj2);
         cResult[6] = tmp4.label;
         cResult[7] = tmp13;
         let tmp11 = tmp13;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1128).intl;
     obj3.children = intl.string(tmp2(1128).t.stcSfI);
-    const items2 = [closure_5(tmp2(5220).Text, obj3), ];
+    const items2 = [closure_5(tmp2(5232).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

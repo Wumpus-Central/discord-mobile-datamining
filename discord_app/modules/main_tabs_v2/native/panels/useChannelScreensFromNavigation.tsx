@@ -1,14 +1,14 @@
-// === Module 17345: useChannelScreensFromNavigation ===
+// === Module 17389: useChannelScreensFromNavigation ===
 
-// Module 17345 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
-import useChatLayoutDefault from "useChatLayout" /* 5139 */;
+// Module 17389 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5148 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
+import useChatLayoutDefault from "useChatLayout" /* 5151 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
 
 const require = globalThis.__r;
 
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5139).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5151).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

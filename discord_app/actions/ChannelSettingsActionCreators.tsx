@@ -1,11 +1,11 @@
-// === Module 10070: ChannelSettingsActionCreators ===
+// === Module 10092: ChannelSettingsActionCreators ===
 
-// Module 10070 (ChannelSettingsActionCreators)
+// Module 10092 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10071 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10093 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
@@ -200,8 +200,8 @@ let closure_9 = async function _saveChannel(arg0) {
             tmp5 = isThreadResult;
           }
           if (!tmp5) {
-            const result = closure_1(7409).checkGuildTemplateDirty(guildId);
-            const tmpResult = closure_1(7409);
+            const result = closure_1(7422).checkGuildTemplateDirty(guildId);
+            const tmpResult = closure_1(7422);
           }
           return arg0;
         }, (body) => {

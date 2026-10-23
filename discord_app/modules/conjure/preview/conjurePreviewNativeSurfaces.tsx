@@ -1,8 +1,8 @@
-// === Module 10739: conjurePreviewNativeSurfaces ===
+// === Module 10761: conjurePreviewNativeSurfaces ===
 
-// Module 10739 (conjurePreviewNativeSurfaces)
+// Module 10761 (conjurePreviewNativeSurfaces)
 import Constants from "Constants" /* 1087 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 9245 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9268 */;
 import size from "module_2" /* 2 */;
 
 function asString(str) {
@@ -164,8 +164,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: "Arbeit" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: "Arbeit" })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: "<string:3672396257>" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: "<string:3672396257>" })
 };
 let closure_5 = {
   drain() {
@@ -198,8 +198,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(9245).setRpcCommandInterceptor(answerFor);
-      obj = obj2(9245);
+      let result = obj2(9268).setRpcCommandInterceptor(answerFor);
+      obj = obj2(9268);
     }
     const obj3 = {
       iframeId,

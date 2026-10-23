@@ -1,9 +1,9 @@
-// === Module 13056: ForumPostMessageContent ===
+// === Module 13079: ForumPostMessageContent ===
 
-// Module 13056 (ForumPostMessageContent)
+// Module 13079 (ForumPostMessageContent)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 13057 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 13080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

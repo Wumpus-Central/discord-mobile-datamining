@@ -1,20 +1,20 @@
-// === Module 12777: AutomatedUnderageAppealActionSheet ===
+// === Module 12796: AutomatedUnderageAppealActionSheet ===
 
-// Module 12777 (AutomatedUnderageAppealActionSheet)
+// Module 12796 (AutomatedUnderageAppealActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6642 */;
-import TableRow from "TableRow" /* 6888 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7868 */;
-import SafetyHubActionCreators from "SafetyHubActionCreators" /* 12774 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12776 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6655 */;
+import TableRow from "TableRow" /* 6901 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7881 */;
+import SafetyHubActionCreators from "SafetyHubActionCreators" /* 12793 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12795 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7907 */;
+import SafetyHubStore from "SafetyHubStore" /* 7920 */;
 
 require = fn;
 let View = fn(17).View;
-const SafetyHubConstants = fn(7883);
+const SafetyHubConstants = fn(7896);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
           }
         }
         obj2.children = obj6.string(tmp(1128).t["yvx//1"]);
-        const tmp29 = closure_8(tmp(5220).Text, obj2);
+        const tmp29 = closure_8(tmp(5232).Text, obj2);
         cResult[17] = tmp29;
         const tmp28 = tmp29;
       } else {
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
           }
         }
         tmp37[1] = tmp33;
-        obj4.children = closure_8(tmp(6972).TableRowGroup, tmp37);
+        obj4.children = closure_8(tmp(6985).TableRowGroup, tmp37);
         const tmp38 = closure_8(View, obj4);
         cResult[22] = tmp33;
         cResult[23] = tmp38;
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
         const intl2 = tmp(1128).intl;
         obj7.subLabel = intl2.string(tmp(1128).t.NHq382);
         obj7.onPress = tmp18;
-        obj5.children = closure_8(tmp(6888).TableRow, obj7);
+        obj5.children = closure_8(tmp(6901).TableRow, obj7);
         const tmp43 = closure_8(tmp42, obj5);
         cResult[25] = tmp43;
         const tmp41 = tmp43;
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
               return closure_5.getIsLoadingAgeVerification();
             }
           }
-          const tmp57 = closure_8(tmp(5220).Text, obj11);
+          const tmp57 = closure_8(tmp(5232).Text, obj11);
           cResult[35] = tmp4.learnMore;
           cResult[36] = tmp57;
         } else {
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
         cResult[40] = tmp61;
       }
       const obj14 = { onPress: Q, loading: stateFromStores1, disabled: stateFromStores1, text: tmp48 };
-      const tmp52 = closure_8(tmp(5230).Button, obj14);
+      const tmp52 = closure_8(tmp(5242).Button, obj14);
       cResult[31] = stateFromStores1;
       class R {
         constructor() {
@@ -693,16 +693,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1128).intl;
   obj8.children = intl.string(onClose(1128).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(5220).Text, obj8), ];
+  const items5 = [closure_8(onClose(5232).Text, obj8), ];
   const obj9 = { variant: "heading-md/medium", color: "text-default", children: null };
   const intl2 = onClose(1128).intl;
   obj9.children = intl2.string(onClose(1128).t["yvx//1"]);
-  items5[1] = closure_8(onClose(5220).Text, obj9);
+  items5[1] = closure_8(onClose(5232).Text, obj9);
   obj7.children = items5;
   const items6 = [closure_9(callback, obj7), , , ];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(6972).TableRowGroup, {
+  obj10.children = closure_8(onClose(6985).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
@@ -725,8 +725,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   obj14.onPress = function openForm() {
     return classificationId(number[16]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(6888).TableRow, obj14);
-  obj12.children = closure_8(onClose(6972).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(6901).TableRow, obj14);
+  obj12.children = closure_8(onClose(6985).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
@@ -739,15 +739,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   };
   const intl6 = onClose(1128).intl;
   obj16.text = intl6.string(onClose(1128).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5230).Button, obj16), ];
+  const items7 = [closure_8(onClose(5242).Button, obj16), ];
   const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1128).intl;
   obj17.children = intl7.format(onClose(1128).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(5220).Text, obj17);
+  items7[1] = closure_8(onClose(5232).Text, obj17);
   obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(5255).BottomSheetScrollView, obj4);
-  return closure_8(onClose(5251).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(5267).BottomSheetScrollView, obj4);
+  return closure_8(onClose(5263).BottomSheet, obj3);
 });

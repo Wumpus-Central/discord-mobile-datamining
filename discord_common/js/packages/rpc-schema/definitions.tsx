@@ -1,15 +1,15 @@
-// === Module 15679: definitions ===
+// === Module 15700: definitions ===
 
-// Module 15679 (definitions)
+// Module 15700 (definitions)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Constants2 from "Constants" /* 2027 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8802 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10626 */;
-import ActivityPlatform from "ActivityPlatform" /* 11431 */;
-import SKUTypes from "SKUTypes" /* 15680 */;
-import helpers from "helpers" /* 15681 */;
-import contextMenuIcons from "contextMenuIcons" /* 15682 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8825 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10648 */;
+import ActivityPlatform from "ActivityPlatform" /* 11451 */;
+import SKUTypes from "SKUTypes" /* 15701 */;
+import helpers from "helpers" /* 15702 */;
+import contextMenuIcons from "contextMenuIcons" /* 15703 */;
 import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
@@ -513,6 +513,58 @@ class Message {
     obj.author_color = allowResult64.optional();
     objectResult18 = global.object(obj);
     return objectResult18.meta({ className: "Message" });
+  }
+}
+class GuildMember {
+  constructor(arg0) {
+    obj = { user_id: null, guild_id: null, nick: null, avatar: null, avatar_decoration_data: null, banner: null, roles: null, joined_at: null, premium_since: null, communication_disabled_until: null, pending: null, flags: null };
+    stringResult = global.string();
+    requiredResult = stringResult.required();
+    obj.user_id = requiredResult.meta({ className: "UserId" });
+    stringResult1 = global.string();
+    requiredResult1 = stringResult1.required();
+    obj.guild_id = requiredResult1.meta({ className: "GuildId" });
+    stringResult2 = global.string();
+    allowResult = stringResult2.allow(null);
+    obj.nick = allowResult.required();
+    stringResult3 = global.string();
+    allowResult1 = stringResult3.allow(null);
+    obj.avatar = allowResult1.required();
+    obj1 = { asset: null, sku_id: null, expires_at: null };
+    stringResult4 = global.string();
+    obj1.asset = stringResult4.required();
+    stringResult5 = global.string();
+    optionalResult = stringResult5.optional();
+    obj1.sku_id = optionalResult.meta({ className: "SkuId" });
+    numberResult = global.number();
+    obj1.expires_at = numberResult.allow(null);
+    objectResult = global.object(obj1);
+    descriptionResult = objectResult.description("Details about avatar decoration");
+    metaResult = descriptionResult.meta({ className: "AvatarDecoration" });
+    allowResult2 = metaResult.allow(null);
+    obj.avatar_decoration_data = allowResult2.required();
+    stringResult6 = global.string();
+    allowResult3 = stringResult6.allow(null);
+    obj.banner = allowResult3.required();
+    arrayResult = global.array();
+    stringResult7 = global.string();
+    itemsResult = arrayResult.items(stringResult7.meta({ className: "GuildRoleId" }));
+    obj.roles = itemsResult.required();
+    stringResult8 = global.string();
+    allowResult4 = stringResult8.allow(null);
+    obj.joined_at = allowResult4.required();
+    stringResult9 = global.string();
+    allowResult5 = stringResult9.allow(null);
+    obj.premium_since = allowResult5.required();
+    stringResult10 = global.string();
+    allowResult6 = stringResult10.allow(null);
+    obj.communication_disabled_until = allowResult6.required();
+    booleanResult = global.boolean();
+    obj.pending = booleanResult.required();
+    numberResult1 = global.number();
+    obj.flags = numberResult1.required();
+    objectResult1 = global.object(obj);
+    return objectResult1.meta({ className: "GuildMember" });
   }
 }
 class Role {
@@ -1268,6 +1320,7 @@ let items = [
     return keys.meta({ className: "ActivityParticipant" });
   },
   Message,
+  GuildMember,
   Role,
   Sku
 ];
@@ -2121,7 +2174,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "applicationId", response: "justifyContent" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "application", response: "round" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2334,6 +2387,33 @@ export const RPCCommandSchemas = {
       const arrayResult = array.array();
       obj.roles = array.array().items(Role(array)).required();
       return obj;
+    }
+  },
+  [helpers.RPCCommand.GET_CURRENT_USER_GUILD_MEMBER]: {
+    embeddedAppSDK: true,
+    request(string) {
+      const obj = { guild_id: null };
+      const stringResult = string.string();
+      obj.guild_id = string.string().required().meta({ className: "GuildId" });
+      return obj;
+    },
+    response(string) {
+      return GuildMember(string).allow(null);
+    }
+  },
+  [helpers.RPCCommand.GET_GUILD_MEMBER]: {
+    embeddedAppSDK: true,
+    request(string) {
+      const obj = { guild_id: null, user_id: null };
+      const stringResult = string.string();
+      obj.guild_id = string.string().required().meta({ className: "GuildId" });
+      const requiredResult = string.string().required();
+      const stringResult1 = string.string();
+      obj.user_id = string.string().required().meta({ className: "UserId" });
+      return obj;
+    },
+    response(string) {
+      return GuildMember(string).allow(null);
     }
   },
   [helpers.RPCCommand.AUTHORIZE]: {

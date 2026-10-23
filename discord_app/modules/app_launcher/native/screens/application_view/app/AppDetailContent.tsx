@@ -1,39 +1,39 @@
-// === Module 12073: AppDetailContent ===
+// === Module 12092: AppDetailContent ===
 
-// Module 12073 (AppDetailContent)
+// Module 12092 (AppDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import TableRow from "TableRow" /* 6888 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7615 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9625 */;
-import AppLauncherContext from "AppLauncherContext" /* 11141 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11983 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11986 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 12048 */;
-import BillIcon from "BillIcon" /* 12080 */;
-import ShopIcon from "ShopIcon" /* 12082 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5632 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
+import TableRow from "TableRow" /* 6901 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9648 */;
+import AppLauncherContext from "AppLauncherContext" /* 11164 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12002 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12005 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 12067 */;
+import BillIcon from "BillIcon" /* 12099 */;
+import ShopIcon from "ShopIcon" /* 12101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9626);
+const ApplicationCommandIndexStore = fn(9649);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_12 = fn(5969).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5981).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(4969);
-let obj2 = { headerSpacer: { height: fn(12074).EXPANDED_HEADER_HEIGHT - fn(12074).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(12074).EXPANDED_HEADER_HEIGHT - fn(12074).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj2 = { headerSpacer: { height: fn(12093).EXPANDED_HEADER_HEIGHT - fn(12093).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(12093).EXPANDED_HEADER_HEIGHT - fn(12093).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
@@ -544,7 +544,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
     }
   }, items1);
   let obj2 = require("CommandRowButton");
-  return closure_13(tmp(6888).TableRow, {
+  return closure_13(tmp(6901).TableRow, {
     start: isFirstRow,
     end: isLastRow,
     label: command.displayName,

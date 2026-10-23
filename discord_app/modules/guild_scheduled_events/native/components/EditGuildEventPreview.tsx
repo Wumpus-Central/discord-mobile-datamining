@@ -1,13 +1,13 @@
-// === Module 8991: EditGuildEventPreview ===
+// === Module 9014: EditGuildEventPreview ===
 
-// Module 8991 (EditGuildEventPreview)
+// Module 9014 (EditGuildEventPreview)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8864 */;
-import ScheduleUtils from "ScheduleUtils" /* 8865 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 8993 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8887 */;
+import ScheduleUtils from "ScheduleUtils" /* 8888 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9016 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
@@ -64,7 +64,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   }
   let obj2 = str2(576);
   const stateFromStores = f55NX0(504).useStateFromStores(first, tmp4, tmp5);
-  const tmp8 = channel_id(5590)(stateFromStores);
+  const tmp8 = channel_id(5602)(stateFromStores);
   dependencyMap = tmp8;
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === tmp8) {
@@ -127,7 +127,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   }
   const f55NX0Result = f55NX0(504);
   const tmp7 = channel_id;
-  let locationFromEvent = f55NX0(8868).getLocationFromEvent(str);
+  let locationFromEvent = f55NX0(8891).getLocationFromEvent(str);
   let tmp19 = tmp8;
   if (tmp8 == null) {
     tmp19 = locationFromEvent;
@@ -150,14 +150,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     }
     if (cResult[25] !== str2.headerTitle) {
       const obj5 = { style: str2.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp23 };
-      const tmp27 = closure_6(f55NX0(5220).Text, obj5);
+      const tmp27 = closure_6(f55NX0(5232).Text, obj5);
       cResult[25] = str2.headerTitle;
       cResult[26] = tmp27;
       let tmp25 = tmp27;
     } else {
       tmp25 = cResult[26];
     }
-    const Text = f55NX0(5220).Text;
+    const Text = f55NX0(5232).Text;
     const headerSubtitle = str2.headerSubtitle;
     if (cResult[27] !== stateFromStores) {
       let formatToPlainStringResult;
@@ -165,7 +165,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
         const intl2 = f55NX0(1128).intl;
         const obj6 = { channelName: null };
         const obj7 = { channel: stateFromStores };
-        obj6.channelName = tmp7(8994)(obj7);
+        obj6.channelName = tmp7(9017)(obj7);
         formatToPlainStringResult = intl2.formatToPlainString(f55NX0(1128).t.sxcQPE, obj6);
       }
       cResult[27] = stateFromStores;
@@ -232,13 +232,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     cResult[19] = formatResult;
     cResult[20] = header;
   }
-  const f55NX0Result1 = f55NX0(8868);
-  const eventLocationIconSource = f55NX0(8992).getEventLocationIconSource(str, stateFromStores, true);
+  const f55NX0Result1 = f55NX0(8891);
+  const eventLocationIconSource = f55NX0(9015).getEventLocationIconSource(str, stateFromStores, true);
   cResult[21] = stateFromStores;
   cResult[22] = str;
   cResult[23] = eventLocationIconSource;
   tmp20 = eventLocationIconSource;
-  const f55NX0Result2 = f55NX0(8992);
+  const f55NX0Result2 = f55NX0(9015);
 }) : (function PreviewBody(event) {
   event = event.event;
   let eventLocationIconSource;
@@ -248,7 +248,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(5590)(stateFromStores);
+  const tmp6 = channel_id(5602)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -271,7 +271,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     const intl2 = tmp2(1128).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(8994)(obj7);
+    obj6.channelName = tmp5(9017)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1128).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;

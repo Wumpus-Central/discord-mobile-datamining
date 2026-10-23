@@ -1,17 +1,17 @@
-// === Module 11415: handlePressJoinActivity ===
+// === Module 11435: handlePressJoinActivity ===
 
-// Module 11415 (handlePressJoinActivity)
+// Module 11435 (handlePressJoinActivity)
 import util from "util" /* 1128 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11370 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11412 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11393 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11432 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;

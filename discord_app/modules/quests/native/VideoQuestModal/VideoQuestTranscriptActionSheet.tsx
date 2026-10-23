@@ -1,15 +1,15 @@
-// === Module 16413: VideoQuestTranscriptActionSheet ===
+// === Module 16463: VideoQuestTranscriptActionSheet ===
 
-// Module 16413 (VideoQuestTranscriptActionSheet)
+// Module 16463 (VideoQuestTranscriptActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import QuestActionCreators from "QuestActionCreators" /* 9547 */;
-import AssetUtils from "AssetUtils" /* 9560 */;
+import QuestActionCreators from "QuestActionCreators" /* 9570 */;
+import AssetUtils from "AssetUtils" /* 9583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7763);
+const VideoQuestUIStore = fn(7776);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -70,7 +70,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const obj2 = { title: null };
   const intl = quest(1128).intl;
   obj2.title = intl.string(quest(1128).t["1YS80z"]);
-  obj.header = closure_7(quest(7233).BottomSheetTitleHeader, obj2);
+  obj.header = closure_7(quest(7246).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -84,7 +84,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj4.children = items2;
-  obj3.children = closure_8(quest(5963).Stack, obj4);
-  obj.children = closure_7(quest(5255).BottomSheetScrollView, obj3);
-  return closure_7(quest(7283).ActionSheet, obj);
+  obj3.children = closure_8(quest(5975).Stack, obj4);
+  obj.children = closure_7(quest(5267).BottomSheetScrollView, obj3);
+  return closure_7(quest(7296).ActionSheet, obj);
 };

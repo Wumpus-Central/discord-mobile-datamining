@@ -1,20 +1,20 @@
-// === Module 12892: CheckpointModal ===
+// === Module 12911: CheckpointModal ===
 
-// Module 12892 (CheckpointModal)
+// Module 12911 (CheckpointModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 2000 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6008 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6348 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12839 */;
-import CheckpointFlows from "CheckpointFlows" /* 12897 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 12972 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6020 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6361 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12858 */;
+import CheckpointFlows from "CheckpointFlows" /* 12916 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 12995 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4912 */;
-import CheckpointStore from "CheckpointStore" /* 12893 */;
+import CheckpointStore from "CheckpointStore" /* 12912 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -274,9 +274,10 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   const obj13 = { style: null, children: null };
   const items6 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj13.style = items6;
-  const obj14 = { uri: null, style: null };
+  const obj14 = { animatedUri: null, staticUri: null, style: null };
   const tmp7Result2 = _slicedToArray(noop.useState(false), 2);
-  obj14.uri = require("module_8614");
+  obj14.animatedUri = require("module_8627");
+  obj14.staticUri = require("module_8628");
   obj14.style = tmp.logo;
   const items7 = [closure_15(require("CheckpointApngPlayer"), obj14), ];
   const obj15 = { style: tmp.headerActions, children: null };
@@ -320,15 +321,15 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     let tmp35Result = tmp14;
     if (tmp14) {
       const obj20 = { activeCustomizationOption: tmp23, onSelectOption: tmp24, disableSwitching: hasItem, disabled: tmp30 };
-      tmp35Result = closure_15(tmp5(tmp3[35]).FinalizeTraitTabs, obj20);
+      tmp35Result = closure_15(tmp5(tmp3[36]).FinalizeTraitTabs, obj20);
     }
     const items10 = [tmp35Result, ];
     const obj21 = { activeCustomizationOption: tmp23, disabled: tmp30, showEarnedCount: !tmp14, onSelectOption: tmp5(tmp3[12]).selectCharacterTrait };
-    items10[1] = closure_15(tmp2(tmp3[36]), obj21);
+    items10[1] = closure_15(tmp2(tmp3[37]), obj21);
     obj18.children = items10;
     result = closure_17(tmp37, obj18);
     const obj19 = { marginLeft: null, marginRight: null, marginBottom: null };
-    const tmp2Result11 = tmp2(tmp3[36]);
+    const tmp2Result11 = tmp2(tmp3[37]);
   }
   items4[3] = result;
   const obj22 = {
@@ -358,7 +359,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         message: tmp5,
         source: "checkpoint",
         customSendHandler() {
-          closure_0(first[40]).closeForwardModal();
+          closure_0(first[41]).closeForwardModal();
           transition(1, { skipThrottle: true });
           return Promise.resolve();
         }
@@ -367,7 +368,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         message: tmp5,
         source: "checkpoint",
         customSendHandler() {
-          closure_0(first[40]).closeForwardModal();
+          closure_0(first[41]).closeForwardModal();
           transition(1, { skipThrottle: true });
           return Promise.resolve();
         }
@@ -398,8 +399,8 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12893).CheckpointFetchStates;
-const CheckpointConstants = fn(6001);
+const CheckpointFetchStates = fn(12912).CheckpointFetchStates;
+const CheckpointConstants = fn(6013);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 const ThemeTypes = fn(1098).ThemeTypes;

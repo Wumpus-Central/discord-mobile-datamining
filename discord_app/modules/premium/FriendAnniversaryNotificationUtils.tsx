@@ -1,6 +1,6 @@
-// === Module 16778: FriendAnniversaryNotificationUtils ===
+// === Module 16822: FriendAnniversaryNotificationUtils ===
 
-// Module 16778 (FriendAnniversaryNotificationUtils)
+// Module 16822 (FriendAnniversaryNotificationUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4797 */;

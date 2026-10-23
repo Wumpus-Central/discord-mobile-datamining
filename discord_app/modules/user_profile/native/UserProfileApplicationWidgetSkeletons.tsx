@@ -1,9 +1,9 @@
-// === Module 11948: UserProfileApplicationWidgetSkeletons ===
+// === Module 11967: UserProfileApplicationWidgetSkeletons ===
 
-// Module 11948 (UserProfileApplicationWidgetSkeletons)
+// Module 11967 (UserProfileApplicationWidgetSkeletons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

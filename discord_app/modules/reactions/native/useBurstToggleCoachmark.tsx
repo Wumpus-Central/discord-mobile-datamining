@@ -1,10 +1,10 @@
-// === Module 9816: useBurstToggleCoachmark ===
+// === Module 9838: useBurstToggleCoachmark ===
 
-// Module 9816 (useBurstToggleCoachmark)
+// Module 9838 (useBurstToggleCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9783 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
         return closure_1_6.getCurrentUser();
       }
     }
-    const tmp11 = _slicedToArray(tmp(7481).useSelectedDismissibleContent(cResult[3]), 2);
+    const tmp11 = _slicedToArray(tmp(7494).useSelectedDismissibleContent(cResult[3]), 2);
     _require = tmp12;
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
           return closure_1_8(closure_1_11, {});
         }
       }
-      tmp(9817);
+      tmp(9839);
       class C {
         constructor() {
           return closure_1_6.getCurrentUser();
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     cResult[9] = tmp15;
     cResult[10] = tmp11[0] === closure_9;
     cResult[11] = obj2;
-    const tmpResult5 = tmp(7481);
+    const tmpResult5 = tmp(7494);
   }
   const tmpResult = require("initialize");
 }) : (function useBurstToggleCoachmark(arg0) {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     items2 = [];
   }
   obj2 = first(2053);
-  const tmp5 = _slicedToArray(first(7481).useSelectedDismissibleContent(items2), 2);
+  const tmp5 = _slicedToArray(first(7494).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7481);
-  const coachmark = first(9817).useCoachmark(arg0, memo);
+  const tmpResult = first(7494);
+  const coachmark = first(9839).useCoachmark(arg0, memo);
   return tmp5[1];
 });

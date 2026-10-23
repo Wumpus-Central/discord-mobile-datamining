@@ -1,6 +1,6 @@
-// === Module 11728: ConjureModelSettingsTypes ===
+// === Module 11748: ConjureModelSettingsTypes ===
 
-// Module 11728 (ConjureModelSettingsTypes)
+// Module 11748 (ConjureModelSettingsTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureModelSettingsTypes.tsx");

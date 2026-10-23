@@ -1,9 +1,9 @@
-// === Module 7502: LinkButton ===
+// === Module 7515: LinkButton ===
 
-// Module 7502 (LinkButton)
+// Module 7515 (LinkButton)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6893 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Pressables from "Pressables" /* 6906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

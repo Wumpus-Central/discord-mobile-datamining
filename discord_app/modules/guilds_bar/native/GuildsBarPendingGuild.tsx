@@ -1,16 +1,16 @@
-// === Module 17710: GuildsBarPendingGuild ===
+// === Module 17754: GuildsBarPendingGuild ===
 
-// Module 17710 (GuildsBarPendingGuild)
+// Module 17754 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6820 */;
-import GuildIcon from "GuildIcon" /* 6868 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17654 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17677 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5003 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6833 */;
+import GuildIcon from "GuildIcon" /* 6881 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17698 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17721 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SortedGuildStore from "SortedGuildStore" /* 6686 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5001 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import SortedGuildStore from "SortedGuildStore" /* 6699 */;
 
 require = fn;
 const GuildRecord = fn(4839);
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ accessibilityActions, onAccessibilityAction } = memo1);
   let tmp2Result = guildId(stateFromStores[12]);
   const sharedValue = guildId(stateFromStores[21]).useSharedValue(guildId);
-  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "onTapAttachmentLink" };
+  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "max" };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[21]);
   if (guildName == null) {
@@ -388,5 +388,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const tmp5Result2 = tmp5(tmp3[13]);
   }
   obj7.children = tmp19Result;
-  return jsx(token(stateFromStores[10]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "onTapAttachmentLink" });
+  return jsx(token(stateFromStores[10]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "max" });
 }));

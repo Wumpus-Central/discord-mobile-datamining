@@ -1,10 +1,10 @@
-// === Module 8895: FloatingActionButton ===
+// === Module 8918: FloatingActionButton ===
 
-// Module 8895 (FloatingActionButton)
+// Module 8918 (FloatingActionButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
-import ButtonConstants from "ButtonConstants" /* 5236 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
+import ButtonConstants from "ButtonConstants" /* 5248 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -199,8 +199,8 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
       return rect;
     }
   }
-  let obj = positionBottom(5038);
-  F.__closure = { withSpring: positionBottom(5233).withSpring, positionBottom, DEFAULT_POSITION_OFFSET, SPRING_CONFIG, positionRight };
+  let obj = positionBottom(5050);
+  F.__closure = { withSpring: positionBottom(5245).withSpring, positionBottom, DEFAULT_POSITION_OFFSET, SPRING_CONFIG, positionRight };
   F.__workletHash = 9924952956188;
   F.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(F);
@@ -217,6 +217,6 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
   }
   obj6.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-  obj3.children = jsx(positionBottom(7945).BaseIconButton, {});
-  return jsx(positionRight(5038).View, { style: animatedStyle, children: null });
+  obj3.children = jsx(positionBottom(7958).BaseIconButton, {});
+  return jsx(positionRight(5050).View, { style: animatedStyle, children: null });
 });

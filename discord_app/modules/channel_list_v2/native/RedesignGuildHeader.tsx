@@ -1,35 +1,35 @@
-// === Module 17479: RedesignGuildHeader ===
+// === Module 17523: RedesignGuildHeader ===
 
-// Module 17479 (RedesignGuildHeader)
+// Module 17523 (RedesignGuildHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import FavoritesUtils from "FavoritesUtils" /* 4846 */;
 import shared from "shared" /* 4976 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5039 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import spring from "spring" /* 5233 */;
-import springPresets from "springPresets" /* 5234 */;
-import ButtonConstants from "ButtonConstants" /* 5236 */;
-import useToken from "useToken" /* 5238 */;
-import useFontScale from "useFontScale" /* 5239 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9686 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10602 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11032 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12025 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15103 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17450 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17480 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17481 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5051 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import spring from "spring" /* 5245 */;
+import springPresets from "springPresets" /* 5246 */;
+import ButtonConstants from "ButtonConstants" /* 5248 */;
+import useToken from "useToken" /* 5250 */;
+import useFontScale from "useFontScale" /* 5251 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9708 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10624 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11055 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12044 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15128 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17494 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17524 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17525 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import ActionSheetStore from "ActionSheetStore" /* 5197 */;
+import ActionSheetStore from "ActionSheetStore" /* 5209 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(12014);
+const RedesignChannelListConstants = fn(12033);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);

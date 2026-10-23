@@ -1,12 +1,12 @@
-// === Module 13408: usePowerupGroupConfig ===
+// === Module 13431: usePowerupGroupConfig ===
 
-// Module 13408 (usePowerupGroupConfig)
+// Module 13431 (usePowerupGroupConfig)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import GuildTagUtils from "GuildTagUtils" /* 8634 */;
-import _modDef13409 from "module_13409" /* 13409 */;
-import _modDef13410 from "module_13410" /* 13410 */;
+import GuildTagUtils from "GuildTagUtils" /* 8652 */;
+import _modDef13432 from "module_13432" /* 13432 */;
+import _modDef13433 from "module_13433" /* 13433 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       const stringResult = intl.string(_modDef2568.KC9HRW);
       const intl2 = tmp(1128).intl;
       const stringResult1 = intl2.string(_modDef2568.GJiSmP);
-      const obj2 = { staticUrl: _modDef13409, animatedUrl: _modDef13410 };
+      const obj2 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       tmp14 = cResult[7];
     }
     if (cResult[8] !== tmp14) {
-      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: "IconComponent" };
+      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: false };
       cResult[8] = tmp14;
       cResult[9] = obj3;
       let tmp17 = obj3;
@@ -103,12 +103,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "IconComponent" };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: false };
       const intl = util.intl;
       obj2.title = intl.string(_modDef2568.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2568.GJiSmP);
-      const obj3 = { staticUrl: _modDef13409, animatedUrl: _modDef13410 };
+      const obj3 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

@@ -1,9 +1,9 @@
-// === Module 8406: PremiumGroupUtils ===
+// === Module 8418: PremiumGroupUtils ===
 
-// Module 8406 (PremiumGroupUtils)
+// Module 8418 (PremiumGroupUtils)
 import util from "util" /* 1128 */;
 import _modDef3250 from "module_3250" /* 3250 */;
-import UserUtils from "UserUtils" /* 5018 */;
+import UserUtils from "UserUtils" /* 5023 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -11,8 +11,8 @@ const PremiumGroupConstants = fn(2066);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
-for (const key10025 in require("module_8407")) {
-  arg5[key10025] = require("module_8407")[key10025];
+for (const key10025 in require("module_8419")) {
+  arg5[key10025] = require("module_8419")[key10025];
   continue;
 }
 

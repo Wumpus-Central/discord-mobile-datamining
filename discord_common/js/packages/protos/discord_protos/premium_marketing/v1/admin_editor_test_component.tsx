@@ -1,12 +1,12 @@
-// === Module 9523: admin_editor_test_component ===
+// === Module 9546: admin_editor_test_component ===
 
-// Module 9523 (admin_editor_test_component)
+// Module 9546 (admin_editor_test_component)
 import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9501 */;
-import help_article from "help_article" /* 9502 */;
-import cta_button from "cta_button" /* 9503 */;
-import gradient from "gradient" /* 9509 */;
-import theme_aware_asset from "theme_aware_asset" /* 9511 */;
+import localized_string from "localized_string" /* 9524 */;
+import help_article from "help_article" /* 9525 */;
+import cta_button from "cta_button" /* 9526 */;
+import gradient from "gradient" /* 9532 */;
+import theme_aware_asset from "theme_aware_asset" /* 9534 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

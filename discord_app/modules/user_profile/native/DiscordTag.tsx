@@ -1,12 +1,12 @@
-// === Module 9109: DiscordTag ===
+// === Module 9132: DiscordTag ===
 
-// Module 9109 (DiscordTag)
+// Module 9132 (DiscordTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BotTagDefault from "BotTag" /* 9110 */;
+import BotTagDefault from "BotTag" /* 9133 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5220);
+const Text_Text = Text(5232);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

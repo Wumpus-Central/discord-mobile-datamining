@@ -1,12 +1,12 @@
-// === Module 10967: ForumPostReactions ===
+// === Module 10990: ForumPostReactions ===
 
-// Module 10967 (ForumPostReactions)
+// Module 10990 (ForumPostReactions)
 import c from "c" /* 576 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10968 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 10991 */;
 import noop from "module_19" /* 19 */;
 
-const ForumHooks = ForumPostReactionButton(9702);
-const ForumPostReactionButton2 = ForumPostReactionButton(10970);
+const ForumHooks = ForumPostReactionButton(9724);
+const ForumPostReactionButton2 = ForumPostReactionButton(10993);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -155,12 +155,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaxForumPost
   ({ parentChannel, firstMessage, containerWidth, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(10968)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(10991)(thread).disableReactionCreates;
   let num = 28;
   if (disableReactionCreates) {
     num = 0;
   }
-  const maxPossibleForumPostReactions = thread(9702).useMaxPossibleForumPostReactions({ containerWidth: containerWidth - num, reactionEmojiWidth: 46, digitWidth: 7.5, message: firstMessage, parentChannel });
+  const maxPossibleForumPostReactions = thread(9724).useMaxPossibleForumPostReactions({ containerWidth: containerWidth - num, reactionEmojiWidth: 46, digitWidth: 7.5, message: firstMessage, parentChannel });
   ({ reactions, additionalReactionCount } = maxPossibleForumPostReactions);
   if (0 !== reactions.length) {
     const obj3 = { style: null, children: null };
@@ -183,13 +183,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaxForumPost
     let tmp8 = additionalReactionCount > 0;
     if (tmp8) {
       const obj4 = { count: additionalReactionCount, containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp8 = closure_4(tmp3(10970).AdditionalReactionCount, obj4);
+      tmp8 = closure_4(tmp3(10993).AdditionalReactionCount, obj4);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
     if (!disableReactionCreates) {
       const obj5 = { containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp10 = closure_4(tmp3(10970).AddReactionButton, obj5);
+      tmp10 = closure_4(tmp3(10993).AddReactionButton, obj5);
     }
     items1[2] = tmp10;
     obj3.children = items1;
@@ -206,7 +206,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
   ({ parentChannel, firstMessage, containerStyle, reactionContainerStyle } = thread);
   const tmp4 = closure_6();
   dependencyMap = tmp4;
-  const disableReactionCreates = reactionContainerStyle(10968)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(10991)(thread).disableReactionCreates;
   let num = 2;
   if (disableReactionCreates) {
     num = 3;
@@ -216,7 +216,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
       if (cResult[2] === num) {
         let tmp5 = cResult[3];
       }
-      const someForumPostReactions = tmp(9702).useSomeForumPostReactions(tmp5);
+      const someForumPostReactions = tmp(9724).useSomeForumPostReactions(tmp5);
       ({ reactions, additionalNonUniqueReactionCount } = someForumPostReactions);
       if (0 === reactions.length) {
         if (disableReactionCreates) {
@@ -272,7 +272,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
                         const items1 = [tmp4.actionBarReaction, reactionContainerStyle];
                         obj3.containerStyle = items1;
                         obj3.threadId = thread.id;
-                        tmp16 = closure_4(tmp(10970).AddReactionButton, obj3);
+                        tmp16 = closure_4(tmp(10993).AddReactionButton, obj3);
                       }
                       cResult[21] = disableReactionCreates;
                       cResult[22] = reactionContainerStyle;
@@ -289,7 +289,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
                   const items2 = [tmp4.actionBarReaction, reactionContainerStyle];
                   obj4.containerStyle = items2;
                   obj4.threadId = thread.id;
-                  tmp13 = closure_4(tmp(10970).AdditionalReactionCount, obj4);
+                  tmp13 = closure_4(tmp(10993).AdditionalReactionCount, obj4);
                 }
                 cResult[16] = additionalNonUniqueReactionCount;
                 cResult[17] = reactionContainerStyle;
@@ -336,7 +336,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
       cResult[5] = tmp4.container;
       cResult[6] = items3;
       tmp7 = items3;
-      const tmpResult = tmp(9702);
+      const tmpResult = tmp(9724);
     }
   }
   const obj5 = { message: firstMessage, parentChannel, sorted: false, count: num };
@@ -352,14 +352,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
   ({ parentChannel, firstMessage, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(10968)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(10991)(thread).disableReactionCreates;
   const obj2 = { message: firstMessage, parentChannel, sorted: false, count: null };
   let num = 2;
   if (disableReactionCreates) {
     num = 3;
   }
   obj2.count = num;
-  const someForumPostReactions = thread(9702).useSomeForumPostReactions(obj2);
+  const someForumPostReactions = thread(9724).useSomeForumPostReactions(obj2);
   ({ reactions, additionalNonUniqueReactionCount } = someForumPostReactions);
   if (0 !== reactions.length) {
     const obj3 = { style: null, children: null };
@@ -385,7 +385,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
       const items2 = [tmp.actionBarReaction, reactionContainerStyle];
       obj4.containerStyle = items2;
       obj4.threadId = thread.id;
-      tmp8 = closure_4(tmp3(10970).AdditionalReactionCount, obj4);
+      tmp8 = closure_4(tmp3(10993).AdditionalReactionCount, obj4);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
@@ -394,7 +394,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAct
       const items3 = [tmp.actionBarReaction, reactionContainerStyle];
       obj5.containerStyle = items3;
       obj5.threadId = thread.id;
-      tmp10 = closure_4(tmp3(10970).AddReactionButton, obj5);
+      tmp10 = closure_4(tmp3(10993).AddReactionButton, obj5);
     }
     items1[2] = tmp10;
     obj3.children = items1;

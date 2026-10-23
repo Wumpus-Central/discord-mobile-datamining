@@ -1,6 +1,6 @@
-// === Module 16776: GoLiveNotificationUtils ===
+// === Module 16820: GoLiveNotificationUtils ===
 
-// Module 16776 (GoLiveNotificationUtils)
+// Module 16820 (GoLiveNotificationUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4797 */;

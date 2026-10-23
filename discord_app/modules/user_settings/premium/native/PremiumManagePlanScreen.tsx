@@ -1,8 +1,8 @@
-// === Module 16219: PremiumManagePlanScreen ===
+// === Module 16252: PremiumManagePlanScreen ===
 
-// Module 16219 (PremiumManagePlanScreen)
+// Module 16252 (PremiumManagePlanScreen)
 import c from "c" /* 576 */;
-import PremiumManagePlanDefault from "PremiumManagePlan" /* 14755 */;
+import PremiumManagePlanDefault from "PremiumManagePlan" /* 14779 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

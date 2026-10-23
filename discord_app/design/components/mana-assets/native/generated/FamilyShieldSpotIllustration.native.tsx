@@ -1,23 +1,23 @@
-// === Module 12832: FamilyShieldSpotIllustration ===
+// === Module 12851: FamilyShieldSpotIllustration ===
 
-// Module 12832 (FamilyShieldSpotIllustration)
+// Module 12851 (FamilyShieldSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6980 */;
-import _modDef12833 from "module_12833" /* 12833 */;
-import _modDef12834 from "module_12834" /* 12834 */;
-import _modDef12835 from "module_12835" /* 12835 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import assetHelpers from "assetHelpers" /* 6993 */;
+import _modDef12852 from "module_12852" /* 12852 */;
+import _modDef12853 from "module_12853" /* 12853 */;
+import _modDef12854 from "module_12854" /* 12854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12833 }, 3: null };
-let obj2 = { uri: _modDef12833 };
-obj[2] = { uri: _modDef12834 };
-const obj3 = { uri: _modDef12834 };
-obj[3] = { uri: _modDef12835 };
+let obj = { 1: null, 2: { uri: _modDef12852 }, 3: null };
+let obj2 = { uri: _modDef12852 };
+obj[2] = { uri: _modDef12853 };
+const obj3 = { uri: _modDef12853 };
+obj[3] = { uri: _modDef12854 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12835 };
+const obj4 = { uri: _modDef12854 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
 

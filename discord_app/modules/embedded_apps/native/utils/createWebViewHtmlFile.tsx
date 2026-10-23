@@ -1,10 +1,10 @@
-// === Module 11442: createWebViewHtmlFile ===
+// === Module 11462: createWebViewHtmlFile ===
 
-// Module 11442 (createWebViewHtmlFile)
+// Module 11462 (createWebViewHtmlFile)
 import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import bridgeProtocol from "bridgeProtocol" /* 11425 */;
-import _modDef11443 from "module_11443" /* 11443 */;
+import bridgeProtocol from "bridgeProtocol" /* 11445 */;
+import _modDef11463 from "module_11463" /* 11463 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function generateWebViewHtml(arg0) {
     str2 = " csp=\"" + iframeCsp + "\"";
   }
   if (null != shimBridgeSecret) {
-    const tmp4 = _modDef11443;
+    const tmp4 = _modDef11463;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
@@ -164,7 +164,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
     }
   }
 };
-let closure_4 = fn(10736).EMBEDDED_APP_FRAME_ELEMENT_ID;
+let closure_4 = fn(10758).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
 let c7 = null;
 const size = fn(2);

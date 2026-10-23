@@ -1,6 +1,6 @@
-// === Module 12201: PollCreationInputError ===
+// === Module 12220: PollCreationInputError ===
 
-// Module 12201 (PollCreationInputError)
+// Module 12220 (PollCreationInputError)
 import nativeDefault from "native" /* 587 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
 import noop from "module_19" /* 19 */;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollCrea
   }
   if (cResult[5] !== message) {
     const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children: message };
-    const tmp13 = closure_4(tmp(5220).Text, obj2);
+    const tmp13 = closure_4(tmp(5232).Text, obj2);
     cResult[5] = message;
     cResult[6] = tmp13;
     let tmp11 = tmp13;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollCrea
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1202).WarningCircle, size), closure_4(message(5220).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1202).WarningCircle, size), closure_4(message(5232).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 });

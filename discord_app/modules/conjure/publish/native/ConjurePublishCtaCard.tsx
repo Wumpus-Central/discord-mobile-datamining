@@ -1,14 +1,14 @@
-// === Module 12433: ConjurePublishCtaCard ===
+// === Module 12452: ConjurePublishCtaCard ===
 
-// Module 12433 (ConjurePublishCtaCard)
+// Module 12452 (ConjurePublishCtaCard)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11828 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12241 */;
-import conjurePublishCard from "conjurePublishCard" /* 12259 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12434 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12435 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11847 */;
+import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12260 */;
+import conjurePublishCard from "conjurePublishCard" /* 12278 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12453 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12454 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePublishActionDefault = useConjurePublishAction;
@@ -21,7 +21,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   const cResult = projectId(576).c(7);
   projectId = projectId.projectId;
   const publish = projectId.publish;
-  const context = noop.useContext(projectId(11828).ConjurePublishActionContext);
+  const context = noop.useContext(projectId(11847).ConjurePublishActionContext);
   if (cResult[0] === context) {
     if (cResult[1] === projectId) {
       let tmp6 = cResult[2];
@@ -36,8 +36,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
     }
     const obj2 = { direction: "horizontal", children: null };
     const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: tmp5, onPress: tmp6 };
-    obj2.children = closure_4(tmp(5230).Button, obj3);
-    const tmp9 = closure_4(tmp(5963).Stack, obj2);
+    obj2.children = closure_4(tmp(5242).Button, obj3);
+    const tmp9 = closure_4(tmp(5975).Stack, obj2);
     cResult[3] = publish.label;
     cResult[4] = tmp5;
     cResult[5] = tmp6;

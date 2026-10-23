@@ -1,8 +1,8 @@
-// === Module 6641: AgeVerificationConstants ===
+// === Module 6654: AgeVerificationConstants ===
 
-// Module 6641 (AgeVerificationConstants)
+// Module 6654 (AgeVerificationConstants)
 import _modDef3090 from "module_3090" /* 3090 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6642 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6655 */;
 import size from "module_2" /* 2 */;
 
 const items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];

@@ -1,10 +1,10 @@
-// === Module 17542: AccountLinkBanner ===
+// === Module 17586: AccountLinkBanner ===
 
-// Module 17542 (AccountLinkBanner)
+// Module 17586 (AccountLinkBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonConstants from "ButtonConstants" /* 5236 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11032 */;
+import ButtonConstants from "ButtonConstants" /* 5248 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11055 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -18,8 +18,8 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7246).GameIconSizes.NORMAL;
-let closure_14 = fn(7246).GameIconImageSize[NORMAL];
+const NORMAL = fn(7259).GameIconSizes.NORMAL;
+let closure_14 = fn(7259).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
@@ -210,7 +210,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     items3[2] = closure_6(View, obj9);
     obj6.children = items3;
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
     items2[2] = closure_6(require("native").Avatar, obj10);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);

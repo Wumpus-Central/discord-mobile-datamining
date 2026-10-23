@@ -1,6 +1,6 @@
-// === Module 6231: ? ===
+// === Module 6244: ? ===
 
-// Module 6231
+// Module 6244
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/face/cry_baby.png.js");

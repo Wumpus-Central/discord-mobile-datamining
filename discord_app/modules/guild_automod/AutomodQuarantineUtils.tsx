@@ -1,17 +1,17 @@
-// === Module 12759: AutomodQuarantineUtils ===
+// === Module 12778: AutomodQuarantineUtils ===
 
-// Module 12759 (AutomodQuarantineUtils)
+// Module 12778 (AutomodQuarantineUtils)
 import util from "util" /* 1128 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4907 */;
-import openUserSettings2 from "openUserSettings" /* 7475 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11162 */;
+import openUserSettings2 from "openUserSettings" /* 7488 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11185 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11097 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11120 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
 
 require = fn;
 const Constants = fn(1087);
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "Array", bio: "Reflect" };
+      const obj = { nick: "cix", bio: "unicodeVersion" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "Reflect" };
+    const obj = { nick: "cix", bio: "unicodeVersion" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

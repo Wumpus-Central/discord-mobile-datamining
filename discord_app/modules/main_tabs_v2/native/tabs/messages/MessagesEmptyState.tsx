@@ -1,16 +1,16 @@
-// === Module 17396: MessagesEmptyState ===
+// === Module 17440: MessagesEmptyState ===
 
-// Module 17396 (MessagesEmptyState)
+// Module 17440 (MessagesEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import useNavigation from "useNavigation" /* 1505 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8671 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9337 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16359 */;
-import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 17397 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8689 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9360 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16409 */;
+import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 17441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

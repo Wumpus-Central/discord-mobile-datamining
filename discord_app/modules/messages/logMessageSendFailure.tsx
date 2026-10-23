@@ -1,8 +1,8 @@
-// === Module 9645: logMessageSendFailure ===
+// === Module 9668: logMessageSendFailure ===
 
-// Module 9645 (logMessageSendFailure)
+// Module 9668 (logMessageSendFailure)
 import Constants from "Constants" /* 1087 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

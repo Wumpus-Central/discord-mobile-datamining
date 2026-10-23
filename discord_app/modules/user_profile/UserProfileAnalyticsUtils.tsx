@@ -1,20 +1,20 @@
-// === Module 8660: UserProfileAnalyticsUtils ===
+// === Module 8678: UserProfileAnalyticsUtils ===
 
-// Module 8660 (UserProfileAnalyticsUtils)
+// Module 8678 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import useDisplayProfile from "useDisplayProfile" /* 8655 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8667 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7188 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7717 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
+import useDisplayProfile from "useDisplayProfile" /* 8673 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8685 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8679 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7201 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7730 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import PresenceStore from "PresenceStore" /* 5698 */;
+import PresenceStore from "PresenceStore" /* 5710 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7688 */;
+import UserProfileStore from "UserProfileStore" /* 7701 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -259,8 +259,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7188).FetchState;
-const constants = fn(8652).TrackUserProfileProperties;
+const FetchState = fn(7201).FetchState;
+const constants = fn(8670).TrackUserProfileProperties;
 const Constants = fn(1087);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
 const StatusTypes = fn(1098).StatusTypes;

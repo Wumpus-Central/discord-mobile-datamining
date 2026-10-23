@@ -1,16 +1,16 @@
-// === Module 10870: ChannelSpoiler ===
+// === Module 10893: ChannelSpoiler ===
 
-// Module 10870 (ChannelSpoiler)
+// Module 10893 (ChannelSpoiler)
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
-import useChannelNameDefault from "useChannelName" /* 5590 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
-import GatedContentDefault from "GatedContent" /* 10869 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10872 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
+import useChannelNameDefault from "useChannelName" /* 5602 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
+import GatedContentDefault from "GatedContent" /* 10892 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6770 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4969);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(10872)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(10895)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -186,14 +186,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(8488).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(8488);
+    channelIconComponent = tmp(8500).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(8500);
   }
   if (null != channelIconComponent) {
     let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
     const items4 = [closure_10(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
     const obj5 = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: { flexShrink: 1 }, children: tmp7 };
-    items4[1] = closure_10(tmp(5220).Text, obj5);
+    items4[1] = closure_10(tmp(5232).Text, obj5);
     obj3.children = items4;
     let stringResult = closure_11(View, obj3);
   } else {
@@ -212,29 +212,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
       const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
       const obj8 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
       const obj9 = { channelId: stateFromStores1.id };
-      obj8.children = tmp6(5691).parseTopic(stateFromStores1.topic, true, obj9);
-      obj7.children = closure_10(tmp(5220).Text, obj8);
+      obj8.children = tmp6(5703).parseTopic(stateFromStores1.topic, true, obj9);
+      obj7.children = closure_10(tmp(5232).Text, obj8);
       const items5 = [closure_10(View, obj7), , , ];
       const obj10 = { color: "text-muted", variant: "text-md/medium", style: tmp4.subtitle, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
-      const tmp6Result = tmp6(5691);
+      const tmp6Result = tmp6(5703);
       const obj11 = { channelId: stateFromStores1.id };
-      obj10.children = tmp6(5691).parseTopic(stateFromStores1.topic, true, obj11);
-      items5[1] = closure_10(tmp(5220).Text, obj10);
+      obj10.children = tmp6(5703).parseTopic(stateFromStores1.topic, true, obj11);
+      items5[1] = closure_10(tmp(5232).Text, obj10);
       let tmp24Result = null;
       if (tmp5[0]) {
         const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
         const obj13 = { variant: "text-sm/medium", color: "text-brand", style: { textDecorationLine: "underline" }, children: null };
         const intl2 = tmp(1128).intl;
         obj13.children = intl2.string(tmp(1128).t["/QvRak"]);
-        obj12.children = closure_10(tmp(5220).Text, obj13);
-        tmp24Result = closure_10(tmp(6893).PressableHighlight, obj12);
+        obj12.children = closure_10(tmp(5232).Text, obj13);
+        tmp24Result = closure_10(tmp(6906).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };
       items5[3] = closure_10(View, obj14);
       obj6.children = items5;
-      tmp23Result = closure_11(tmp(5963).Stack, obj6);
-      const tmp6Result3 = tmp6(5691);
+      tmp23Result = closure_11(tmp(5975).Stack, obj6);
+      const tmp6Result3 = tmp6(5703);
     }
     str = stateFromStores1.topic;
   }

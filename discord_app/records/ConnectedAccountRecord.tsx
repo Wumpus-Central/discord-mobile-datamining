@@ -1,6 +1,6 @@
-// === Module 6486: ConnectedAccountRecord ===
+// === Module 6499: ConnectedAccountRecord ===
 
-// Module 6486 (ConnectedAccountRecord)
+// Module 6499 (ConnectedAccountRecord)
 import Record from "Record" /* 1407 */;
 
 const size = fn(2);

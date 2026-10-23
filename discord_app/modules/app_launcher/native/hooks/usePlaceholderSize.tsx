@@ -1,6 +1,6 @@
-// === Module 11986: usePlaceholderSize ===
+// === Module 12005: usePlaceholderSize ===
 
-// Module 11986 (usePlaceholderSize)
+// Module 12005 (usePlaceholderSize)
 import noop from "module_19" /* 19 */;
 
 const ReactCompilerGating = fn(558);

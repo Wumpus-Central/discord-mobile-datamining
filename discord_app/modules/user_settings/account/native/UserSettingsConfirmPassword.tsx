@@ -1,17 +1,17 @@
-// === Module 7074: UserSettingsConfirmPassword ===
+// === Module 7087: UserSettingsConfirmPassword ===
 
-// Module 7074 (UserSettingsConfirmPassword)
+// Module 7087 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6992 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7018 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7075 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7076 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7078 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7005 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7031 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7088 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7089 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

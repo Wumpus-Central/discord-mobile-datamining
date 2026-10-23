@@ -1,32 +1,32 @@
-// === Module 10427: NativeGiftContext ===
+// === Module 10449: NativeGiftContext ===
 
-// Module 10427 (NativeGiftContext)
+// Module 10449 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import BillingUtils from "BillingUtils" /* 4785 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
-import ContextUtilsDefault from "ContextUtils" /* 7525 */;
-import BadgeId from "BadgeId" /* 8653 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8666 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10425 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10474 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7276 */;
+import ContextUtilsDefault from "ContextUtils" /* 7538 */;
+import BadgeId from "BadgeId" /* 8671 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8684 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10447 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10496 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
-import PromotionsStore from "PromotionsStore" /* 9496 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10428 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8679 */;
+import PromotionsStore from "PromotionsStore" /* 9519 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10450 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-fn(7510).GPlayBillingResult;
+fn(7523).GPlayBillingResult;
 const PremiumConstants = fn(1394);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1098).PaymentGateways;
@@ -839,7 +839,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyn
     obj3 = externalGatewayFacet;
     let tmp6 = planId(externalGatewayFacet.useState(0), 2);
   }
-  let obj4 = { orderId: "a", planId: 8572086538160443000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, planSelection: { premiumType, planInterval }, giftInfo: 15189860918287978000000000000000000000000000000000000000000000000000000000000000000 };
+  let obj4 = { orderId: "a", planId: "computer", planSelection: { premiumType, planInterval }, giftInfo: "hotspot" };
   cResult[0] = planInterval;
   cResult[1] = premiumType;
   cResult[2] = obj4;
@@ -858,7 +858,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyn
   const setPremiumType = order.setPremiumType;
   const setPlanInterval = order.setPlanInterval;
   const setError = order.setError;
-  let obj = { orderId: "a", planId: 8572086538160443000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, planSelection: { premiumType, planInterval }, giftInfo: 15189860918287978000000000000000000000000000000000000000000000000000000000000000000 };
+  let obj = { orderId: "a", planId: "computer", planSelection: { premiumType, planInterval }, giftInfo: "hotspot" };
   closure_13 = externalGatewayFacet.useRef(obj);
   externalGatewayFacet.useRef(false);
   externalGatewayFacet.useRef(null);

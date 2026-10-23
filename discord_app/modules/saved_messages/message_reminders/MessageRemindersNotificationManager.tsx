@@ -1,9 +1,9 @@
-// === Module 18863: MessageRemindersNotificationManager ===
+// === Module 18907: MessageRemindersNotificationManager ===
 
-// Module 18863 (MessageRemindersNotificationManager)
+// Module 18907 (MessageRemindersNotificationManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10054 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10076 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 
 function scheduleNextNotification() {
   if (null != timeout) {

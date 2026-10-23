@@ -1,9 +1,9 @@
-// === Module 10084: ChatRestrictions ===
+// === Module 10106: ChatRestrictions ===
 
-// Module 10084 (ChatRestrictions)
+// Module 10106 (ChatRestrictions)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10085 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10107 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;
@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "application"
+    animation: "channelId"
   },
   {
     check(arg0) {

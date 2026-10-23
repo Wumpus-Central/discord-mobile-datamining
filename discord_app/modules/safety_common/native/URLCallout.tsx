@@ -1,10 +1,10 @@
-// === Module 14153: URLCallout ===
+// === Module 14177: URLCallout ===
 
-// Module 14153 (URLCallout)
+// Module 14177 (URLCallout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import SharedStateUtils from "SharedStateUtils" /* 14154 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import SharedStateUtils from "SharedStateUtils" /* 14178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

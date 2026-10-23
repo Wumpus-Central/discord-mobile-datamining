@@ -1,6 +1,6 @@
-// === Module 13617: HubEmailConnectionWaitlist ===
+// === Module 13640: HubEmailConnectionWaitlist ===
 
-// Module 13617 (HubEmailConnectionWaitlist)
+// Module 13640 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,12 +29,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
     }
     const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
     if (cResult[4] !== tmp4.header) {
-      const obj3 = { source: navigation(13618), style: tmp4.header };
-      const tmp14 = closure_5(navigation(5655), obj3);
+      const obj3 = { source: navigation(13641), style: tmp4.header };
+      const tmp14 = closure_5(navigation(5667), obj3);
       cResult[4] = tmp4.header;
       cResult[5] = tmp14;
       let tmp10 = tmp14;
-      const tmp13 = navigation(5655);
+      const tmp13 = navigation(5667);
     } else {
       tmp10 = cResult[5];
     }
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       }
       if (cResult[15] !== onClose) {
         const obj6 = { size: "lg", text: tmp26, onPress: onClose };
-        const tmp30 = closure_5(onClose(5230).Button, obj6);
+        const tmp30 = closure_5(onClose(5242).Button, obj6);
         cResult[15] = onClose;
         cResult[16] = tmp30;
         let tmp28 = tmp30;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       tmp31 = tmp34;
     }
     const obj9 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp21 };
-    const tmp25 = closure_5(onClose(5220).Text, obj9);
+    const tmp25 = closure_5(onClose(5232).Text, obj9);
     cResult[11] = tmp4.description;
     cResult[12] = tmp21;
     cResult[13] = tmp25;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1128).intl;
         obj.text = intl.string(onClose(1128).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7470).HeaderActionButton, obj);
+        return closure_2_5(onClose(7483).HeaderActionButton, obj);
       }
     });
   };
@@ -161,16 +161,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1128).intl;
         obj.text = intl.string(onClose(1128).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7470).HeaderActionButton, obj);
+        return closure_2_5(onClose(7483).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1505);
-  obj3.source = navigation(13618);
+  obj3.source = navigation(13641);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(5655), obj3), , , ];
+  const items1 = [closure_5(navigation(5667), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1128).intl;
   obj4.children = intl.string(onClose(1128).t.OaloU5);
@@ -178,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1128).intl;
   obj5.children = intl2.format(onClose(1128).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5220).Text, obj5);
+  items1[2] = closure_5(onClose(5232).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1128).intl;
   obj7.text = intl3.string(onClose(1128).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5230).Button, obj7);
+  obj6.children = closure_5(onClose(5242).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

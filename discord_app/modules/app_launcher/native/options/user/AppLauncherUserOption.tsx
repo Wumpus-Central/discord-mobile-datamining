@@ -1,14 +1,14 @@
-// === Module 12148: AppLauncherUserOption ===
+// === Module 12167: AppLauncherUserOption ===
 
-// Module 12148 (AppLauncherUserOption)
+// Module 12167 (AppLauncherUserOption)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12140 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12144 */;
-import UsernameTextDefault from "UsernameText" /* 12146 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12149 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12159 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12163 */;
+import UsernameTextDefault from "UsernameText" /* 12165 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -67,7 +67,7 @@ export default function AppLauncherUserOption(option) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(12149, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
+    obj2.openLazy(asyncRequireImpl(12168, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {
@@ -87,7 +87,7 @@ export default function AppLauncherUserOption(option) {
     const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1202).AvatarSizes.REFRESH_MEDIUM_32 };
     let tmp9Result = tmp9(tmp2(1202).Avatar, obj3);
   } else {
-    const obj4 = { icon: tmp9(tmp2(10791).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    const obj4 = { icon: tmp9(tmp2(10814).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);
     const tmp10Result = AppLauncherOptionIconDefault;
   }
@@ -99,7 +99,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(5220).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(5232).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

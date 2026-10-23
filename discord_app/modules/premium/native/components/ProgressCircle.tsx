@@ -1,8 +1,8 @@
-// === Module 13451: ProgressCircle ===
+// === Module 13474: ProgressCircle ===
 
-// Module 13451 (ProgressCircle)
+// Module 13474 (ProgressCircle)
 import nativeDefault from "native" /* 587 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -48,7 +48,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };
-ProgressCircle.contextType = fn(5023).ThemeContext;
+ProgressCircle.contextType = fn(5035).ThemeContext;
 ProgressCircle.defaultProps = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");

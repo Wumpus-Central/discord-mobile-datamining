@@ -1,6 +1,6 @@
-// === Module 6715: dedupeEmojisByNameOrId ===
+// === Module 6728: dedupeEmojisByNameOrId ===
 
-// Module 6715 (dedupeEmojisByNameOrId)
+// Module 6728 (dedupeEmojisByNameOrId)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import size from "module_2" /* 2 */;
 

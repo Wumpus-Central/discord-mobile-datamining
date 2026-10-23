@@ -1,10 +1,10 @@
-// === Module 9963: TabBar ===
+// === Module 9985: TabBar ===
 
-// Module 9963 (TabBar)
+// Module 9985 (TabBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
-import _mod7205 from "module_7205" /* 7205 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import _mod7218 from "module_7218" /* 7218 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -32,8 +32,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab(ar
   } else {
     tmp5 = cResult[1];
   }
-  const tmpResult = _mod7205;
-  [tmp7, tmp8] = _mod7205.useRecyclingState(false, tmp5);
+  const tmpResult = _mod7218;
+  [tmp7, tmp8] = _mod7218.useRecyclingState(false, tmp5);
   if (cResult[2] !== tmp8) {
     const fn = function k() {
       return tmp8(true);
@@ -136,14 +136,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab(ar
   cResult[7] = onSelect;
   cResult[8] = E;
   tmp11 = E;
-  const tmp6 = _slicedToArray(_mod7205.useRecyclingState(false, tmp5), 2);
+  const tmp6 = _slicedToArray(_mod7218.useRecyclingState(false, tmp5), 2);
 }) : (function Tab(index) {
   index = index.index;
   ({ isSelected, onSelect } = index);
   ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_10();
   const items = [tabKey];
-  [tmp3, tmp4] = _mod7205.useRecyclingState(false, items);
+  [tmp3, tmp4] = _mod7218.useRecyclingState(false, items);
   c2 = tmp4;
   const items1 = [tmp4];
   const items2 = [tmp4];

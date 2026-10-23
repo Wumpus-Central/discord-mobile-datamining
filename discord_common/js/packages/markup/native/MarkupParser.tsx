@@ -1,8 +1,8 @@
-// === Module 8331: markup/MarkupParser ===
+// === Module 8343: markup/MarkupParser ===
 
-// Module 8331 (markup/MarkupParser)
+// Module 8343 (markup/MarkupParser)
 import _modDef1951 from "module_1951" /* 1951 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 8332 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8344 */;
 import size from "module_2" /* 2 */;
 
 function saferParse(fn, arg1, inline, arg3, arg4) {
@@ -64,10 +64,10 @@ export default {
       return result;
     };
   },
-  reactParserFor(importDefaultResultResult) {
-    closure_0 = _modDef1951.parserFor(importDefaultResultResult);
+  reactParserFor(rules) {
+    closure_0 = _modDef1951.parserFor(rules);
     let obj2 = _modDef1951;
-    importDefault = obj2.reactFor(_modDef1951.ruleOutput(importDefaultResultResult, "react"));
+    importDefault = obj2.reactFor(_modDef1951.ruleOutput(rules, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

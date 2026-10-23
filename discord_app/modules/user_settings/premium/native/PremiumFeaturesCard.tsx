@@ -1,30 +1,30 @@
-// === Module 9771: PremiumFeaturesCard ===
+// === Module 9793: PremiumFeaturesCard ===
 
-// Module 9771 (PremiumFeaturesCard)
+// Module 9793 (PremiumFeaturesCard)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
-import PriceUtils from "PriceUtils" /* 7324 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7490 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7519 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8406 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9400 */;
-import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9772 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9780 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9791 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9792 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9794 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9799 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7251 */;
+import PriceUtils from "PriceUtils" /* 7337 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7503 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7532 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8418 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9423 */;
+import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9794 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9802 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9813 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9814 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9816 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2057 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import TextStyles_mod from "TextStyles" /* 6636 */;
+import TextStyles_mod from "TextStyles" /* 6649 */;
 
 const usePremiumPlanPriceDefault = usePremiumPlanPrice;
 
@@ -589,15 +589,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const obj = premiumType(576);
   const tmp6 = undefined !== hidePrice && hidePrice;
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7542).usePremiumTrialOffer();
-  const tmpResult = premiumType(7542);
-  const premiumDiscountOffer = premiumType(8417).usePremiumDiscountOffer();
-  const tmpResult13 = premiumType(8417);
-  const activeDiscountInfo = premiumType(8415).useActiveDiscountInfo();
+  const premiumTrialOffer = premiumType(7555).usePremiumTrialOffer();
+  const tmpResult = premiumType(7555);
+  const premiumDiscountOffer = premiumType(8429).usePremiumDiscountOffer();
+  const tmpResult13 = premiumType(8429);
+  const activeDiscountInfo = premiumType(8427).useActiveDiscountInfo();
   const tmp14 = useFractionalPremiumInfoDefault();
-  const tmpResult14 = premiumType(8415);
+  const tmpResult14 = premiumType(8427);
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7541).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7554).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       } else {
         tmp56 = cResult[13];
       }
-      const discountedPriceString = tmp(9789).useDiscountedPremiumProductInfo(premiumDiscountOffer, tmp56).discountedPriceString;
+      const discountedPriceString = tmp(9811).useDiscountedPremiumProductInfo(premiumDiscountOffer, tmp56).discountedPriceString;
       if (cResult[14] !== premiumType) {
         function getCTA() {
           if (premiumType === PremiumTypes.TIER_0) {
@@ -894,7 +894,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                                                 }
                                                                 obj4.price = priceString;
                                                                 tmp99[2] = intl4.format(tmp(1128).t.pC4tcv, obj4);
-                                                                obj3.children = closure_20(tmp(5220).Text, tmp99);
+                                                                obj3.children = closure_20(tmp(5232).Text, tmp99);
                                                                 tmp98Result = closure_20(tmp62, obj3);
                                                               }
                                                               if (cResult[56] === tmp8Result) {
@@ -1016,7 +1016,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                                             return items;
                                                           }
                                                         }
-                                                        closure_20(tmp(9401).NitroWheelIcon, obj11);
+                                                        closure_20(tmp(9424).NitroWheelIcon, obj11);
                                                       }
                                                       class K {
                                                         constructor() {
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         }
       }
       const obj15 = { style: tmp7.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer };
-      const tmp66 = closure_20(tmp(7538).PremiumPill, obj15);
+      const tmp66 = closure_20(tmp(7551).PremiumPill, obj15);
       cResult[16] = premiumDiscountOffer;
       cResult[17] = premiumType;
       cResult[18] = null != premiumDiscountOffer && null != discountedPriceString;
@@ -1190,10 +1190,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       cResult[21] = premiumTrialOffer;
       cResult[22] = tmp66;
       tmp64 = tmp66;
-      const tmpResult21 = tmp(9789);
+      const tmpResult21 = tmp(9811);
     }
     const tmpResult19 = tmp(504);
-    const premiumBundleWithPredicate = tmp(7503).getPremiumBundleWithPredicate((additionalPlans) => {
+    const premiumBundleWithPredicate = tmp(7516).getPremiumBundleWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
       if (tmp) {
@@ -1214,7 +1214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     cResult[10] = premiumType;
     cResult[11] = premiumBundleWithPredicate;
     tmp54 = premiumBundleWithPredicate;
-    const tmpResult23 = tmp(7503);
+    const tmpResult23 = tmp(7516);
   } else {
     class K {
       constructor() {
@@ -1224,10 +1224,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         return items;
       }
     }
-    const trialCtaOverride = tmp(9778).getTrialCtaOverride(premiumTrialOffer, tmp24);
-    const tmpResult24 = tmp(9778);
+    const trialCtaOverride = tmp(9800).getTrialCtaOverride(premiumTrialOffer, tmp24);
+    const tmpResult24 = tmp(9800);
   }
-  const tmpResult15 = premiumType(7541);
+  const tmpResult15 = premiumType(7554);
 }) : (function PremiumFeaturesCard(premiumType) {
   premiumType = premiumType.premiumType;
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: _slicedToArray, hideButton } = premiumType);
@@ -1257,15 +1257,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   let premiumBundleWithPredicate;
   const tmp3 = closure_23();
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7542).usePremiumTrialOffer();
-  const obj = premiumType(7542);
-  const premiumDiscountOffer = premiumType(8417).usePremiumDiscountOffer();
-  const obj2 = premiumType(8417);
-  const activeDiscountInfo = premiumType(8415).useActiveDiscountInfo();
-  const obj3 = premiumType(8415);
+  const premiumTrialOffer = premiumType(7555).usePremiumTrialOffer();
+  const obj = premiumType(7555);
+  const premiumDiscountOffer = premiumType(8429).usePremiumDiscountOffer();
+  const obj2 = premiumType(8429);
+  const activeDiscountInfo = premiumType(8427).useActiveDiscountInfo();
+  const obj3 = premiumType(8427);
   const tmp12 = useFractionalPremiumInfoDefault();
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7541).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7554).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
@@ -1327,7 +1327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       interval1 = constants.MONTH;
     }
     const tmp34 = usePremiumFeaturesDefault(premiumType, flag, UNSPECIFIED);
-    premiumBundleWithPredicate = tmp8(7503).getPremiumBundleWithPredicate((additionalPlans) => {
+    premiumBundleWithPredicate = tmp8(7516).getPremiumBundleWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
       if (tmp) {
@@ -1345,9 +1345,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       return tmp;
     });
     _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
-    const tmp8Result13 = tmp8(7503);
+    const tmp8Result13 = tmp8(7516);
     const items3 = [premiumBundleWithPredicate];
-    const discountedPriceString = tmp8(9789).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
+    const discountedPriceString = tmp8(9811).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
     let tmp43 = tmp35;
     if (null != first && stateFromStores && tmp27[1] && !isBoostOnly) {
       let flag4 = false;
@@ -1365,11 +1365,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     const tmp45 = usePremiumPlanPriceDefault(premiumBundleWithPredicate.basePlanId);
     const obj5 = { style: tmp3.containerWrapper, onLayout, children: null };
     const obj6 = { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer };
-    const items4 = [closure_20(tmp8(7538).PremiumPill, obj6), ];
+    const items4 = [closure_20(tmp8(7551).PremiumPill, obj6), ];
     const obj7 = { premiumType, style, children: null };
     const obj8 = { style: tmp3.card, children: null };
     const obj9 = { style: tmp3.logoContainer, children: null };
-    const tmp8Result14 = tmp8(9789);
+    const tmp8Result14 = tmp8(9811);
     if (flag3) {
       let tmp48Result = closure_20(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
     } else {
@@ -1416,7 +1416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         }
         obj16.price = priceString;
         obj15.children = intl6.format(tmp8(1128).t.pC4tcv, obj16);
-        obj14.children = closure_20(tmp8(5220).Text, obj15);
+        obj14.children = closure_20(tmp8(5232).Text, obj15);
         tmp48Result6 = closure_20(tmp47, obj14);
       }
       items6[1] = tmp48Result6;
@@ -1430,7 +1430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         const obj18 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
         const intl5 = tmp8(1128).intl;
         obj18.children = intl5.string(tmp8(1128).t["j+wlhy"]);
-        obj17.children = closure_20(tmp8(5220).Text, obj18);
+        obj17.children = closure_20(tmp8(5232).Text, obj18);
         let obj19 = obj17;
       } else {
         obj19 = { style: tmp3.button, children: null };
@@ -1438,7 +1438,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           const obj20 = { text: stringResult, icon: null, iconPosition: null, variant: null, size: "md", grow: true, shiny: null, disabled: null, onPress: null };
           if (null != premiumDiscountOffer) {
             const obj22 = { style: tmp3.buttonIcon, color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, size: "sm" };
-            const tmp48Result7 = closure_20(tmp8(9401).NitroWheelIcon, obj22);
+            const tmp48Result7 = closure_20(tmp8(9424).NitroWheelIcon, obj22);
           }
           obj20.icon = tmp48Result7;
           let str2;
@@ -1479,8 +1479,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     } else {
       TIER_2 = closure_13.TIER_2;
     }
-    const trialCtaOverride = tmp8(9778).getTrialCtaOverride(premiumTrialOffer, TIER_2);
-    const tmp8Result16 = tmp8(9778);
+    const trialCtaOverride = tmp8(9800).getTrialCtaOverride(premiumTrialOffer, TIER_2);
+    const tmp8Result16 = tmp8(9800);
   }
-  const obj4 = premiumType(7541);
+  const obj4 = premiumType(7554);
 });

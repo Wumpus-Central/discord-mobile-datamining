@@ -1,9 +1,9 @@
-// === Module 12255: ConjureModeTabBar ===
+// === Module 12274: ConjureModeTabBar ===
 
-// Module 12255 (ConjureModeTabBar)
+// Module 12274 (ConjureModeTabBar)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

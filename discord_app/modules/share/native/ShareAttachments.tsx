@@ -1,14 +1,14 @@
-// === Module 15099: ShareAttachments ===
+// === Module 15124: ShareAttachments ===
 
-// Module 15099 (ShareAttachments)
+// Module 15124 (ShareAttachments)
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
-import timing from "timing" /* 5192 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8140 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 12123 */;
+import timing from "timing" /* 5204 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8152 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 12142 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
 
 const require = globalThis.__r;
 

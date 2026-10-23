@@ -1,19 +1,19 @@
-// === Module 17976: SwipeForMemberListWrapper ===
+// === Module 18020: SwipeForMemberListWrapper ===
 
-// Module 17976 (SwipeForMemberListWrapper)
+// Module 18020 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
-import useChatLayout from "useChatLayout" /* 5139 */;
-import ChatInputUtils from "ChatInputUtils" /* 5145 */;
-import useMountEffect from "useMountEffect" /* 5249 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11838 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17357 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5148 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
+import useChatLayout from "useChatLayout" /* 5151 */;
+import ChatInputUtils from "ChatInputUtils" /* 5157 */;
+import useMountEffect from "useMountEffect" /* 5261 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5709 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11857 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,9 +24,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9689);
+const ChannelDetailsStore = fn(9711);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9677).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9699).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);

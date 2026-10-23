@@ -1,6 +1,6 @@
-// === Module 7813: AndroidStopAndPauseVideoExperiment ===
+// === Module 7826: AndroidStopAndPauseVideoExperiment ===
 
-// Module 7813 (AndroidStopAndPauseVideoExperiment)
+// Module 7826 (AndroidStopAndPauseVideoExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

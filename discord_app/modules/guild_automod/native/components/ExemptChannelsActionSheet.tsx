@@ -1,11 +1,11 @@
-// === Module 18961: ExemptChannelsActionSheet ===
+// === Module 19005: ExemptChannelsActionSheet ===
 
-// Module 18961 (ExemptChannelsActionSheet)
-import TableRow from "TableRow" /* 6888 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7193 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+// Module 19005 (ExemptChannelsActionSheet)
+import TableRow from "TableRow" /* 6901 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7206 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7192 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7205 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
       }
     }
   }
-  const tmp16 = jsx(stateFromStores(18960), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
+  const tmp16 = jsx(stateFromStores(19004), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
   cResult[8] = exemptChannels;
   cResult[9] = onSave;
   cResult[10] = tmp9;
@@ -228,5 +228,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
   obj2.renderLabel = getChannelOptionName;
   obj2.renderIcon = callback;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(18960), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(19004), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 });

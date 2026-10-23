@@ -1,9 +1,9 @@
-// === Module 14566: JoinVoiceChannelButton ===
+// === Module 14590: JoinVoiceChannelButton ===
 
-// Module 14566 (JoinVoiceChannelButton)
+// Module 14590 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11518 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6632 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11538 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
         }
       }
       const obj2 = { disabled: flag, text: tmp10, onPress: N };
-      const tmp21 = jsx(tmp(5230).Button, { disabled: flag, text: tmp10, onPress: N });
+      const tmp21 = jsx(tmp(5242).Button, { disabled: flag, text: tmp10, onPress: N });
       cResult[11] = tmp10;
       cResult[12] = flag;
       cResult[13] = N;
@@ -157,6 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5230).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5242).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 });

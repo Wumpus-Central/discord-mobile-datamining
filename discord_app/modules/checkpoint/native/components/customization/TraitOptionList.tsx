@@ -1,12 +1,12 @@
-// === Module 12964: TraitOptionList ===
+// === Module 12987: TraitOptionList ===
 
-// Module 12964 (TraitOptionList)
+// Module 12987 (TraitOptionList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import HapticUtils from "HapticUtils" /* 5198 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6347 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import HapticUtils from "HapticUtils" /* 5210 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6360 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
@@ -15,7 +15,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6001);
+const CheckpointConstants = fn(6013);
 ({ CHECKPOINT_PRIMARY: metroRequire, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 const jsxProd = fn(21);
@@ -391,18 +391,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
                                   arr1 = Array.from(obj, (arg0, arg1) => {
                                     const diff = closure_4 - arg1 - 1;
                                     closure_0 = diff;
-                                    let obj = options(5038);
+                                    let obj = options(5050);
                                     const obj3 = { duration: 100, easing: null };
-                                    const Easing = options(5038).Easing;
-                                    obj3.easing = Easing.out(options(5038).Easing.cubic);
+                                    const Easing = options(5050).Easing;
+                                    obj3.easing = Easing.out(options(5050).Easing.cubic);
                                     const fn = function o(arg0) {
                                       if (true === arg0) {
                                         options(disabled[13]).runOnJS(onIntroStep)(diff);
                                         const obj = options(disabled[13]);
                                       }
                                     };
-                                    const obj2 = options(5192);
-                                    fn.__closure = { runOnJS: options(5038).runOnJS, onIntroStep, target: diff };
+                                    const obj2 = options(5204);
+                                    fn.__closure = { runOnJS: options(5050).runOnJS, onIntroStep, target: diff };
                                     fn.__workletHash = 1164546249137;
                                     fn.__initData = __initData;
                                     return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -506,18 +506,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
             arr1 = Array.from(obj, (arg0, arg1) => {
               const diff = closure_4 - arg1 - 1;
               closure_0 = diff;
-              let obj = options(5038);
+              let obj = options(5050);
               const obj3 = { duration: 100, easing: null };
-              const Easing = options(5038).Easing;
-              obj3.easing = Easing.out(options(5038).Easing.cubic);
+              const Easing = options(5050).Easing;
+              obj3.easing = Easing.out(options(5050).Easing.cubic);
               const fn = function o(arg0) {
                 if (true === arg0) {
                   options(disabled[13]).runOnJS(onIntroStep)(diff);
                   const obj = options(disabled[13]);
                 }
               };
-              const obj2 = options(5192);
-              fn.__closure = { runOnJS: options(5038).runOnJS, onIntroStep, target: diff };
+              const obj2 = options(5204);
+              fn.__closure = { runOnJS: options(5050).runOnJS, onIntroStep, target: diff };
               fn.__workletHash = 1164546249137;
               fn.__initData = __initData;
               return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -633,18 +633,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
       HermesBuiltin.arraySpread(Array.from(obj, (arg0, arg1) => {
         const diff = closure_4 - arg1 - 1;
         closure_0 = diff;
-        let obj = options(5038);
+        let obj = options(5050);
         const obj3 = { duration: 100, easing: null };
-        const Easing = options(5038).Easing;
-        obj3.easing = Easing.out(options(5038).Easing.cubic);
+        const Easing = options(5050).Easing;
+        obj3.easing = Easing.out(options(5050).Easing.cubic);
         const fn = function o(arg0) {
           if (true === arg0) {
             options(disabled[13]).runOnJS(onIntroStep)(diff);
             const obj = options(disabled[13]);
           }
         };
-        const obj2 = options(5192);
-        fn.__closure = { runOnJS: options(5038).runOnJS, onIntroStep, target: diff };
+        const obj2 = options(5204);
+        fn.__closure = { runOnJS: options(5050).runOnJS, onIntroStep, target: diff };
         fn.__workletHash = 1402521414610;
         fn.__initData = __initData;
         return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -691,8 +691,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
           if (null != tmp6) {
             if (tmp6.optionId !== importDefault) {
               onSelectOption(tmp6.trait, tmp6.optionId);
-              const result = x(5198).triggerHapticFeedback(x(5198).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = x(5198);
+              const result = x(5210).triggerHapticFeedback(x(5210).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = x(5210);
             }
           }
         }
@@ -754,8 +754,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
       closure_10.current = false;
       if (traitOption.optionId !== importDefault) {
         onSelectOption(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5198).triggerHapticFeedback(traitOption(5198).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj2 = traitOption(5198);
+        const result = traitOption(5210).triggerHapticFeedback(traitOption(5210).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj2 = traitOption(5210);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

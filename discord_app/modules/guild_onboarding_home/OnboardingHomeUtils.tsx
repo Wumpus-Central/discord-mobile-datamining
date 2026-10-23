@@ -1,14 +1,14 @@
-// === Module 7309: OnboardingHomeUtils ===
+// === Module 7322: OnboardingHomeUtils ===
 
-// Module 7309 (OnboardingHomeUtils)
+// Module 7322 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 4846 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7186 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7311 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7312 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7199 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7324 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7325 */;
 import ImpersonateStore from "ImpersonateStore" /* 4874 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7310 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7323 */;
 
 const require = globalThis.__r;
 

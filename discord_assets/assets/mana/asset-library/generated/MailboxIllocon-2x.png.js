@@ -1,6 +1,6 @@
-// === Module 13334: ? ===
+// === Module 13357: ? ===
 
-// Module 13334
+// Module 13357
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MailboxIllocon-2x.png.js");

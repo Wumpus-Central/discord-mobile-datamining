@@ -1,14 +1,14 @@
-// === Module 11205: MediaModalOverlayAltTextSheet ===
+// === Module 11228: MediaModalOverlayAltTextSheet ===
 
-// Module 11205 (MediaModalOverlayAltTextSheet)
+// Module 11228 (MediaModalOverlayAltTextSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8671 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11206 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8689 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

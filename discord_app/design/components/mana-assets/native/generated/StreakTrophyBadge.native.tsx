@@ -1,23 +1,23 @@
-// === Module 10655: StreakTrophyBadge ===
+// === Module 10677: StreakTrophyBadge ===
 
-// Module 10655 (StreakTrophyBadge)
+// Module 10677 (StreakTrophyBadge)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6980 */;
-import _modDef10656 from "module_10656" /* 10656 */;
-import _modDef10657 from "module_10657" /* 10657 */;
-import _modDef10658 from "module_10658" /* 10658 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import assetHelpers from "assetHelpers" /* 6993 */;
+import _modDef10678 from "module_10678" /* 10678 */;
+import _modDef10679 from "module_10679" /* 10679 */;
+import _modDef10680 from "module_10680" /* 10680 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10656 }, 3: null };
-let obj2 = { uri: _modDef10656 };
-obj[2] = { uri: _modDef10657 };
-const obj3 = { uri: _modDef10657 };
-obj[3] = { uri: _modDef10658 };
+let obj = { 1: null, 2: { uri: _modDef10678 }, 3: null };
+let obj2 = { uri: _modDef10678 };
+obj[2] = { uri: _modDef10679 };
+const obj3 = { uri: _modDef10679 };
+obj[3] = { uri: _modDef10680 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10658 };
+const obj4 = { uri: _modDef10680 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StreakTrophyBadge.native.tsx");
 

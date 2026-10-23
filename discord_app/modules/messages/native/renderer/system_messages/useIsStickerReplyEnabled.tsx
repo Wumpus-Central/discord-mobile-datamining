@@ -1,7 +1,7 @@
-// === Module 8343: useIsStickerReplyEnabled ===
+// === Module 8355: useIsStickerReplyEnabled ===
 
-// Module 8343 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7354 */;
+// Module 8355 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7367 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;

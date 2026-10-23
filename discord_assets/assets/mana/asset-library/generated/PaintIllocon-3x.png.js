@@ -1,6 +1,6 @@
-// === Module 13574: ? ===
+// === Module 13597: ? ===
 
-// Module 13574
+// Module 13597
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintIllocon-3x.png.js");

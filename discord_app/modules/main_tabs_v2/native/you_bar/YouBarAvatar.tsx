@@ -1,24 +1,24 @@
-// === Module 17753: YouBarAvatar ===
+// === Module 17797: YouBarAvatar ===
 
-// Module 17753 (YouBarAvatar)
+// Module 17797 (YouBarAvatar)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import native2 from "native" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import spring from "spring" /* 5233 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
-import ClipView from "ClipView" /* 9382 */;
+import native2 from "native" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import spring from "spring" /* 5245 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import ClipView from "ClipView" /* 9405 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6496 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16357);
+const YouBarConstants = fn(16407);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);
@@ -72,33 +72,33 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
   let result = tmp(1202).AVATAR_SIZE_MAP[closure_13] / height;
   dependencyMap = result;
   let result1 = (height - tmp(1202).AVATAR_SIZE_MAP[closure_13]) / 2;
-  const tmp16 = transitionState === transitionState(5023).TransitionStates.MOUNTED;
+  const tmp16 = transitionState === transitionState(5035).TransitionStates.MOUNTED;
   const tmpResult10 = transitionState(504);
   let num5 = 0;
   if (tmp16) {
     num5 = 1;
   }
-  const sharedValue = transitionState(5038).useSharedValue(num5);
-  const tmpResult11 = transitionState(5038);
+  const sharedValue = transitionState(5050).useSharedValue(num5);
+  const tmpResult11 = transitionState(5050);
   let num6 = 1;
   if (!tmp16) {
     num6 = result;
   }
-  const sharedValue1 = transitionState(5038).useSharedValue(num6);
-  const tmpResult12 = transitionState(5038);
+  const sharedValue1 = transitionState(5050).useSharedValue(num6);
+  const tmpResult12 = transitionState(5050);
   if (tmp16) {
     let tmp19 = -closure_17;
   } else {
     tmp19 = -result1;
   }
-  const sharedValue2 = transitionState(5038).useSharedValue(tmp19);
-  const tmpResult13 = transitionState(5038);
+  const sharedValue2 = transitionState(5050).useSharedValue(tmp19);
+  const tmpResult13 = transitionState(5050);
   if (tmp16) {
     let diff = -closure_17 - (height - closure_15) / 2;
   } else {
     diff = -result1;
   }
-  const sharedValue3 = transitionState(5038).useSharedValue(diff);
+  const sharedValue3 = transitionState(5050).useSharedValue(diff);
   if (cResult[4] === sharedValue2) {
     if (cResult[5] === sharedValue) {
       if (cResult[6] === sharedValue1) {
@@ -136,7 +136,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
             OFFLINE = StatusTypes.OFFLINE;
           }
           if (null == OFFLINE) {
-            tmp(5038);
+            tmp(5050);
             function et() {
               const rect = { transform: null, left: null, top: null, opacity: null };
               let obj = { scale: spring.withSpring(sharedValue1.get(), YOU_BAR_SPRING_CONFIG) };
@@ -168,23 +168,23 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
                 return closure_1_8.animateYouBarAvatarDeco;
               }
             }
-            rect.withSpring = tmp(5233).withSpring;
+            rect.withSpring = tmp(5245).withSpring;
             rect.scale = sharedValue1;
             rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
             rect.left = sharedValue2;
             rect.top = sharedValue3;
             rect.opacity = sharedValue;
             rect.transitionState = transitionState;
-            rect.TransitionStates = tmp(5023).TransitionStates;
-            rect.runOnJS = tmp(5038).runOnJS;
+            rect.TransitionStates = tmp(5035).TransitionStates;
+            rect.runOnJS = tmp(5050).runOnJS;
             rect.cleanup = cleanup;
             et.__closure = rect;
             et.__workletHash = 15831722009842;
             et.__initData = __initData;
             const tmp45Result = tmp45(et);
-            const token = tmp(5238).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
-            const tmpResult17 = tmp(5238);
-            const token1 = tmp(5238).useToken(cleanup(587).colors.BORDER_SUBTLE);
+            const token = tmp(5250).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+            const tmpResult17 = tmp(5250);
+            const token1 = tmp(5250).useToken(cleanup(587).colors.BORDER_SUBTLE);
             if (null == stateFromStores1) {
               return null;
             } else {
@@ -211,7 +211,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
               cResult[16] = tmp4.avatarShadow;
               cResult[17] = items3;
             }
-            const tmpResult18 = tmp(5238);
+            const tmpResult18 = tmp(5250);
           } else {
             let result2 = closure_16 / 2;
             let sum = result2 + tmp(1202).STATUS_PADDING;
@@ -295,7 +295,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
   cResult[10] = items4;
   tmp27 = items4;
   tmp26 = J;
-  const tmpResult14 = transitionState(5038);
+  const tmpResult14 = transitionState(5050);
 }) : (function YouBarAvatarLarge(transitionState) {
   transitionState = transitionState.transitionState;
   const cleanup = transitionState.cleanup;
@@ -449,7 +449,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[19]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "user" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "updateConnectionVoiceProcessing" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -655,7 +655,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
           tmp23 = tmp25;
         }
       }
-      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz" };
+      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi" };
       const tmp22 = closure_22(tmp(tmp2[15]).Avatar, obj4);
       cResult[11] = avatarDecoration;
       cResult[12] = OFFLINE;
@@ -738,7 +738,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
     const rect = { position: "absolute", top: -result, left: -result };
     const items3 = [rect, animatedStyle];
     obj6.style = items3;
-    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }

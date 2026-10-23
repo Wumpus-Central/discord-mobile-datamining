@@ -1,9 +1,9 @@
-// === Module 13500: useChatPlaceholderAnimatedStyles ===
+// === Module 13523: useChatPlaceholderAnimatedStyles ===
 
-// Module 13500 (useChatPlaceholderAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import timingPresets from "timingPresets" /* 5195 */;
+// Module 13523 (useChatPlaceholderAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import timingPresets from "timingPresets" /* 5207 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;

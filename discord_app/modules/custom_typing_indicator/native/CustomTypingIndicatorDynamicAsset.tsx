@@ -1,7 +1,7 @@
-// === Module 13009: CustomTypingIndicatorDynamicAsset ===
+// === Module 13032: CustomTypingIndicatorDynamicAsset ===
 
-// Module 13009 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 5655 */;
+// Module 13032 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 5667 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
                     const obj2 = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
                     const items = [tmp10, tmp17];
                     obj2.children = items;
-                    const tmp22 = closure_5(tmp(5963).Stack, obj2);
+                    const tmp22 = closure_5(tmp(5975).Stack, obj2);
                     cResult[20] = spacing;
                     cResult[21] = style;
                     cResult[22] = tmp10;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
               }
             }
             const obj3 = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: tmp14, children: tmp15 };
-            const tmp19 = closure_4(tmp(5220).Text, obj3);
+            const tmp19 = closure_4(tmp(5232).Text, obj3);
             cResult[14] = lineClamp;
             cResult[15] = tmp14;
             cResult[16] = tmp15;
@@ -84,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
           }
           const intl = tmp(1128).intl;
           const obj4 = { name };
-          const formatResult = intl.format(tmp(13003).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
+          const formatResult = intl.format(tmp(13026).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
           cResult[11] = name;
           cResult[12] = suggestion;
           cResult[13] = formatResult;
           tmp15 = formatResult;
-          const tmpResult = tmp(13003);
+          const tmpResult = tmp(13026);
         }
         const items1 = [tmp4Result.text, textStyle];
         cResult[8] = tmp4Result.text;

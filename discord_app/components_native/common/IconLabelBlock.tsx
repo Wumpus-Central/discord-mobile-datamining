@@ -1,12 +1,12 @@
-// === Module 18225: IconLabelBlock ===
+// === Module 18269: IconLabelBlock ===
 
-// Module 18225 (IconLabelBlock)
+// Module 18269 (IconLabelBlock)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import shared from "shared" /* 4976 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import IconUploaderDefault from "IconUploader" /* 10011 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import IconUploaderDefault from "IconUploader" /* 10033 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React5(View, obj);
 };
-IconLabelBlock.contextType = fn(5023).ThemeContext;
+IconLabelBlock.contextType = fn(5035).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

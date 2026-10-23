@@ -1,10 +1,10 @@
-// === Module 12891: openCheckpoint ===
+// === Module 12910: openCheckpoint ===
 
-// Module 12891 (openCheckpoint)
+// Module 12910 (openCheckpoint)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -17,5 +17,5 @@ export const openCheckpoint = function openCheckpoint(devtools, arg1) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source: devtools });
   const obj2 = { source: devtools };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12892, dependencyMap.paths), { didPlayerShareDataWithDiscord: flag }, "CHECKPOINT_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12911, dependencyMap.paths), { didPlayerShareDataWithDiscord: flag }, "CHECKPOINT_MODAL");
 };

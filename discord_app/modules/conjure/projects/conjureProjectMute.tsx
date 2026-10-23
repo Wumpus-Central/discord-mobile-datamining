@@ -1,6 +1,6 @@
-// === Module 10700: conjureProjectMute ===
+// === Module 10722: conjureProjectMute ===
 
-// Module 10700 (conjureProjectMute)
+// Module 10722 (conjureProjectMute)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 

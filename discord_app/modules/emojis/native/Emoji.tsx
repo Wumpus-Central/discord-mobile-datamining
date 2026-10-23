@@ -1,11 +1,11 @@
-// === Module 7212: Emoji ===
+// === Module 7225: Emoji ===
 
-// Module 7212 (Emoji)
+// Module 7225 (Emoji)
 import c from "c" /* 576 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef7213 from "module_7213" /* 7213 */;
-import _modDef7214 from "module_7214" /* 7214 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef7226 from "module_7226" /* 7226 */;
+import _modDef7227 from "module_7227" /* 7227 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -58,9 +58,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(ar
         if ("" !== tmp2) {
           const obj5 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
           if (LegacyTextResult.isThemeDark(ThemeStore.theme)) {
-            let tmp9Result = _modDef7213;
+            let tmp9Result = _modDef7226;
           } else {
-            tmp9Result = _modDef7214;
+            tmp9Result = _modDef7227;
           }
           obj5.placeholder = tmp9Result;
           const obj6 = { uri: tmp2 };
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(ar
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef7213;
+          let tmp9Result = _modDef7226;
         } else {
-          tmp9Result = _modDef7214;
+          tmp9Result = _modDef7227;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

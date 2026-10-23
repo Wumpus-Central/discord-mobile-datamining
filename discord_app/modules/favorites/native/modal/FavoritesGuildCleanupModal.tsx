@@ -1,16 +1,16 @@
-// === Module 17487: FavoritesGuildCleanupModal ===
+// === Module 17531: FavoritesGuildCleanupModal ===
 
-// Module 17487 (FavoritesGuildCleanupModal)
+// Module 17531 (FavoritesGuildCleanupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import useChannelNameDefault from "useChannelName" /* 5590 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6885 */;
-import TableRadioRow from "TableRadioRow" /* 6969 */;
-import Modal from "Modal" /* 11122 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17490 */;
+import useChannelNameDefault from "useChannelName" /* 5602 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6898 */;
+import TableRadioRow from "TableRadioRow" /* 6982 */;
+import Modal from "Modal" /* 11145 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17534 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       const intl = closure_1_0(1128).intl;
       obj.text = intl.string(closure_1_0(1128).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5230).Button, obj);
+      return closure_1_6(closure_1_0(5242).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

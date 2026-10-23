@@ -1,8 +1,8 @@
-// === Module 8364: GuildDiscoverySystemMessage ===
+// === Module 8376: GuildDiscoverySystemMessage ===
 
-// Module 8364 (GuildDiscoverySystemMessage)
+// Module 8376 (GuildDiscoverySystemMessage)
 import util from "util" /* 1128 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8320 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 

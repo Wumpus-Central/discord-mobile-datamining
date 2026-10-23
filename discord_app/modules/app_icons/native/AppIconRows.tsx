@@ -1,31 +1,33 @@
-// === Module 16805: AppIconRows ===
+// === Module 16848: AppIconRows ===
 
-// Module 16805 (AppIconRows)
+// Module 16848 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppIconTypes from "AppIconTypes" /* 9843 */;
-import AppIconUtils from "AppIconUtils" /* 14715 */;
-import AppIconRowDefault from "AppIconRow" /* 16806 */;
+import AppIconTypes from "AppIconTypes" /* 9865 */;
+import AppIconUtils from "AppIconUtils" /* 14739 */;
+import AppIconRowDefault from "AppIconRow" /* 16849 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16850 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13071 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13094 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
+const isHexagonCampaignAppIcon = fn(9864).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4969);
-let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
+let closure_13 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
   const cResult = merged(576).c(11);
   _objectDestructuringEmpty(arg0);
   merged = Object.assign({}, arg0);
-  const tmp6 = closure_12();
+  const tmp6 = closure_13();
   let obj = merged(576);
   [importDefault, dependencyMap] = onLongPress(noop.useState(false), 2);
   ({ icons, title } = merged);
@@ -41,7 +43,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6972).TableRowGroup;
+  const TableRowGroup = tmp(6985).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -74,7 +76,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
           }
         }
         const obj2 = { style: tmp6.container, children: tmp13 };
-        const tmp17 = closure_9(View, obj2);
+        const tmp17 = closure_10(View, obj2);
         cResult[7] = View;
         cResult[8] = tmp6.container;
         cResult[9] = tmp13;
@@ -83,7 +85,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       }
     }
   }
-  const tmp14 = closure_9(TableRowGroup, { title, accessibilityRole: "radiogroup", accessibilityLabel: tmp10, hasIcons: true, children: mapped });
+  const tmp14 = closure_10(TableRowGroup, { title, accessibilityRole: "radiogroup", accessibilityLabel: tmp10, hasIcons: true, children: mapped });
   cResult[2] = TableRowGroup;
   cResult[3] = tmp10;
   cResult[4] = mapped;
@@ -105,7 +107,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       }
       return tmp;
     }
-    const tmp4 = closure_12();
+    const tmp4 = closure_13();
     [c1, c2] = onLongPress(noop.useState(false), 2);
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
@@ -121,18 +123,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(6972).TableRowGroup, obj2);
-    return closure_9(View, obj);
+    obj.children = closure_10(merged(6985).TableRowGroup, obj2);
+    return closure_10(View, obj);
   }
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconRows(onSelect) {
-  const cResult = c.c(26);
-  onSelect = onSelect.onSelect;
-  const tmp4 = closure_12();
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconRows(arg0) {
+  const cResult = c.c(36);
+  ({ onSelect, pendingAppIconId } = arg0);
+  closure_13();
   const appIcons = AppIconUtils.useAppIcons();
   ({ officialAppIcons, limitedTimeAppIcons, currentAppIcon } = appIcons);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -152,141 +154,243 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconR
     const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumResult;
-    let tmp10 = isPremiumResult;
     const tmpResult2 = PremiumTypeUtils;
-  } else {
-    tmp10 = cResult[3];
   }
   if (cResult[4] !== limitedTimeAppIcons) {
-    const tmp13 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
-    cResult[4] = limitedTimeAppIcons;
-    cResult[5] = tmp13;
-    let tmp12 = tmp13;
-  } else {
-    tmp12 = cResult[5];
-  }
-  if (cResult[6] === currentAppIcon) {
-    if (cResult[7] === tmp12) {
-      if (cResult[8] === tmp10) {
-        if (cResult[9] === limitedTimeAppIcons) {
-          if (cResult[10] === onSelect) {
-            let tmp14 = cResult[11];
-          }
-          let bottomUpsellPadding = !tmp10;
-          if (!tmp10) {
-            bottomUpsellPadding = tmp4.bottomUpsellPadding;
-          }
-          if (cResult[12] !== tmp12) {
-            let stringResult;
-            if (tmp12) {
-              const intl2 = util.intl;
-              stringResult = intl2.string(util.t.Ipxkog);
-            }
-            cResult[12] = tmp12;
-            cResult[13] = stringResult;
-            let tmp18 = stringResult;
-          } else {
-            tmp18 = cResult[13];
-          }
-          if (cResult[14] === currentAppIcon) {
-            if (cResult[15] === tmp10) {
-              if (cResult[16] === officialAppIcons) {
-                if (cResult[17] === onSelect) {
-                  if (cResult[18] === tmp18) {
-                    let tmp20 = cResult[19];
-                  }
-                  if (cResult[20] === bottomUpsellPadding) {
-                    if (cResult[21] === tmp20) {
-                      let tmp24 = cResult[22];
-                    }
-                    if (cResult[23] === tmp14) {
-                      if (cResult[24] === tmp24) {
-                        let tmp28 = cResult[25];
-                      }
-                      return tmp28;
-                    }
-                    const obj3 = { children: null };
-                    const items1 = [tmp14, tmp24];
-                    obj3.children = items1;
-                    const tmp31 = closure_1_11(v65535, obj3);
-                    cResult[23] = tmp14;
-                    cResult[24] = tmp24;
-                    cResult[25] = tmp31;
-                    tmp28 = tmp31;
-                  }
-                  const obj4 = { style: bottomUpsellPadding, children: tmp20 };
-                  const tmp27 = React6(View, obj4);
-                  cResult[20] = bottomUpsellPadding;
-                  cResult[21] = tmp20;
-                  cResult[22] = tmp27;
-                  tmp24 = tmp27;
-                }
-              }
-            }
-          }
-          const obj5 = { hasNitro: tmp10, icons: officialAppIcons, currentAppIcon, title: tmp18, onSelect };
-          const tmp23 = React6(closure_13, obj5);
-          cResult[14] = currentAppIcon;
-          cResult[15] = tmp10;
-          cResult[16] = officialAppIcons;
-          cResult[17] = onSelect;
-          cResult[18] = tmp18;
-          cResult[19] = tmp23;
-          tmp20 = tmp23;
+    const _Symbol = Symbol;
+    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+      class F {
+        constructor(arg0) {
+          return closure_1_8(arg0.id);
+        }
+      }
+      cResult[6] = F;
+    } else {
+      class F {
+        constructor(arg0) {
+          return closure_1_8(arg0.id);
         }
       }
     }
+    const someResult = limitedTimeAppIcons.some(F);
+    cResult[4] = limitedTimeAppIcons;
+    cResult[5] = someResult;
+  } else {
+    class F {
+      constructor(arg0) {
+        return closure_1_8(arg0.id);
+      }
+    }
+    if (cResult[7] !== limitedTimeAppIcons) {
+      class F {
+        constructor(arg0) {
+          return closure_1_8(arg0.id);
+        }
+      }
+      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        class C {
+          constructor(arg0) {
+            tmp = closure_1_8(arg0.id);
+            tmp2 = !tmp;
+            if (!tmp) {
+              tmp2 = !arg0.isHidden;
+            }
+            return tmp2;
+          }
+        }
+        cResult[9] = C;
+      } else {
+        class C {
+          constructor(arg0) {
+            tmp = closure_1_8(arg0.id);
+            tmp2 = !tmp;
+            if (!tmp) {
+              tmp2 = !arg0.isHidden;
+            }
+            return tmp2;
+          }
+        }
+      }
+      const found = limitedTimeAppIcons.filter(C);
+      cResult[7] = limitedTimeAppIcons;
+      cResult[8] = found;
+    } else {
+      class C {
+        constructor(arg0) {
+          tmp = closure_1_8(arg0.id);
+          tmp2 = !tmp;
+          if (!tmp) {
+            tmp2 = !arg0.isHidden;
+          }
+          return tmp2;
+        }
+      }
+      if (tmp12) {
+        class C {
+          constructor(arg0) {
+            tmp = closure_1_8(arg0.id);
+            tmp2 = !tmp;
+            if (!tmp) {
+              tmp2 = !arg0.isHidden;
+            }
+            return tmp2;
+          }
+        }
+        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+          class C {
+            constructor(arg0) {
+              tmp = closure_1_8(arg0.id);
+              tmp2 = !tmp;
+              if (!tmp) {
+                tmp2 = !arg0.isHidden;
+              }
+              return tmp2;
+            }
+          }
+          const stringResult = obj6.string(util.t.w9v0yp);
+          cResult[10] = stringResult;
+        } else {
+          class C {
+            constructor(arg0) {
+              tmp = closure_1_8(arg0.id);
+              tmp2 = !tmp;
+              if (!tmp) {
+                tmp2 = !arg0.isHidden;
+              }
+              return tmp2;
+            }
+          }
+        }
+      } else {
+        class C {
+          constructor(arg0) {
+            tmp = closure_1_8(arg0.id);
+            tmp2 = !tmp;
+            if (!tmp) {
+              tmp2 = !arg0.isHidden;
+            }
+            return tmp2;
+          }
+        }
+        if (tmp19) {
+          class C {
+            constructor(arg0) {
+              tmp = closure_1_8(arg0.id);
+              tmp2 = !tmp;
+              if (!tmp) {
+                tmp2 = !arg0.isHidden;
+              }
+              return tmp2;
+            }
+          }
+          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+            class C {
+              constructor(arg0) {
+                tmp = closure_1_8(arg0.id);
+                tmp2 = !tmp;
+                if (!tmp) {
+                  tmp2 = !arg0.isHidden;
+                }
+                return tmp2;
+              }
+            }
+            const stringResult1 = obj5.string(util.t.Ipxkog);
+            cResult[11] = stringResult1;
+          } else {
+            class C {
+              constructor(arg0) {
+                tmp = closure_1_8(arg0.id);
+                tmp2 = !tmp;
+                if (!tmp) {
+                  tmp2 = !arg0.isHidden;
+                }
+                return tmp2;
+              }
+            }
+          }
+        }
+        if (cResult[12] === currentAppIcon) {
+          class C {
+            constructor(arg0) {
+              tmp = closure_1_8(arg0.id);
+              tmp2 = !tmp;
+              if (!tmp) {
+                tmp2 = !arg0.isHidden;
+              }
+              return tmp2;
+            }
+          }
+        }
+        let tmp27 = null;
+        if (tmp12) {
+          class C {
+            constructor(arg0) {
+              tmp = closure_1_8(arg0.id);
+              tmp2 = !tmp;
+              if (!tmp) {
+                tmp2 = !arg0.isHidden;
+              }
+              return tmp2;
+            }
+          }
+          const obj3 = { currentAppIcon, isPending: pendingAppIconId === AppIconTypes.LimitedTimeAppIconIds.HEXAGON, onSelect };
+          tmp27 = v65535(HexagonCampaignAppIconSectionDefault, obj3);
+        }
+        cResult[12] = currentAppIcon;
+        cResult[13] = tmp12;
+        cResult[14] = onSelect;
+        cResult[15] = pendingAppIconId;
+        cResult[16] = tmp27;
+      }
+      tmp19 = arr2.length > 0;
+    }
   }
-  let tmp15 = null;
-  if (tmp12) {
-    const obj6 = { hasNitro: tmp10, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
-    const intl = util.intl;
-    obj6.title = intl.string(util.t.anqaFd);
-    obj6.onSelect = onSelect;
-    tmp15 = React6(closure_13, obj6);
-  }
-  cResult[6] = currentAppIcon;
-  cResult[7] = tmp12;
-  cResult[8] = tmp10;
-  cResult[9] = limitedTimeAppIcons;
-  cResult[10] = onSelect;
-  cResult[11] = tmp15;
-  tmp14 = tmp15;
   const tmpResult = initialize;
 }) : (function AppIconRows(onSelect) {
   onSelect = onSelect.onSelect;
-  const tmp = closure_12();
+  let tmp = closure_13();
   const appIcons = AppIconUtils.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
-  const tmp7 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
-  let tmp10 = null;
-  if (tmp7) {
-    const obj4 = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
+  const someResult = limitedTimeAppIcons.some((id) => isHexagonCampaignAppIcon(id.id));
+  const found = limitedTimeAppIcons.filter((id) => {
+    const tmp = isHexagonCampaignAppIcon(id.id);
+    let tmp2 = !tmp;
+    if (!tmp) {
+      tmp2 = !id.isHidden;
+    }
+    return tmp2;
+  });
+  if (someResult) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.w9v0yp);
+  } else if (tmp8) {
     const intl = util.intl;
-    obj4.title = intl.string(util.t.anqaFd);
-    obj4.onSelect = onSelect;
-    tmp10 = React6(closure_13, obj4);
+    stringResult = intl.string(util.t.Ipxkog);
   }
-  const items1 = [tmp10, ];
+  let tmp12 = null;
+  if (someResult) {
+    const obj4 = { currentAppIcon, isPending: onSelect.pendingAppIconId === AppIconTypes.LimitedTimeAppIconIds.HEXAGON, onSelect };
+    tmp12 = v65535(HexagonCampaignAppIconSectionDefault, obj4);
+  }
+  const items1 = [tmp12, , ];
+  let tmp16 = null;
+  if (found.length > 0) {
+    const obj5 = { hasNitro: isPremiumResult, icons: found, currentAppIcon, title: null, onSelect: null };
+    const intl3 = util.intl;
+    obj5.title = intl3.string(util.t.anqaFd);
+    obj5.onSelect = onSelect;
+    tmp16 = v65535(closure_14, obj5);
+  }
+  items1[1] = tmp16;
   let bottomUpsellPadding = !isPremiumResult;
   if (!isPremiumResult) {
     bottomUpsellPadding = tmp.bottomUpsellPadding;
   }
-  const obj5 = { style: bottomUpsellPadding, children: null };
-  const obj6 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: null, onSelect: null };
-  let stringResult;
-  if (tmp7) {
-    const intl2 = util.intl;
-    stringResult = intl2.string(util.t.Ipxkog);
-  }
-  const obj7 = { children: null };
-  obj6.title = stringResult;
-  obj6.onSelect = onSelect;
-  obj5.children = React6(closure_13, obj6);
-  items1[1] = React6(View, obj5);
-  obj7.children = items1;
-  return closure_1_11(v65535, obj7);
+  const obj6 = { children: null };
+  items1[2] = v65535(View, { style: bottomUpsellPadding, children: v65535(closure_14, { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: stringResult, onSelect }) });
+  obj6.children = items1;
+  return __initData(closure_1_11, obj6);
 });

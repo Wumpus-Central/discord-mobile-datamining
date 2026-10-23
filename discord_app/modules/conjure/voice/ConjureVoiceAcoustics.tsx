@@ -1,6 +1,6 @@
-// === Module 15665: ConjureVoiceAcoustics ===
+// === Module 15686: ConjureVoiceAcoustics ===
 
-// Module 15665 (ConjureVoiceAcoustics)
+// Module 15686 (ConjureVoiceAcoustics)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceAcoustics.tsx");

@@ -1,20 +1,20 @@
-// === Module 17662: GuildsBarAnimatedItemWrapper ===
+// === Module 17706: GuildsBarAnimatedItemWrapper ===
 
-// Module 17662 (GuildsBarAnimatedItemWrapper)
+// Module 17706 (GuildsBarAnimatedItemWrapper)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import native from "native" /* 5023 */;
-import spring from "spring" /* 5233 */;
-import useToken from "useToken" /* 5238 */;
+import native from "native" /* 5035 */;
+import spring from "spring" /* 5245 */;
+import useToken from "useToken" /* 5250 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5241).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(17650);
+const IOS_POINTER_STYLE = fn(5253).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(17694);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

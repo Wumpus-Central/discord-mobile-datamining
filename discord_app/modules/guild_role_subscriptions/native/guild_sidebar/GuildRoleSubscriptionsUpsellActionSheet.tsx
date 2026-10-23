@@ -1,13 +1,13 @@
-// === Module 17592: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 17636: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 17592 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 17636 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
-import _modDef17593 from "module_17593" /* 17593 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9004 */;
+import _modDef17637 from "module_17637" /* 17637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,11 +43,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: markAsDismissed(17593) };
-      const tmp12 = closure_6(markAsDismissed(5655), obj2);
+      const obj2 = { source: markAsDismissed(17637) };
+      const tmp12 = closure_6(markAsDismissed(5667), obj2);
       cResult[5] = tmp12;
       let tmp8 = tmp12;
-      const tmp11 = markAsDismissed(5655);
+      const tmp11 = markAsDismissed(5667);
     } else {
       tmp8 = cResult[5];
     }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[7] !== tmp4.title) {
       const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp13 };
-      const tmp17 = closure_6(tmp(5220).Text, obj3);
+      const tmp17 = closure_6(tmp(5232).Text, obj3);
       cResult[7] = tmp4.title;
       cResult[8] = tmp17;
       let tmp15 = tmp17;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[10] !== tmp4.description) {
       const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-      const tmp22 = closure_6(tmp(5220).Text, obj4);
+      const tmp22 = closure_6(tmp(5232).Text, obj4);
       cResult[10] = tmp4.description;
       cResult[11] = tmp22;
       let tmp20 = tmp22;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[13] !== tmp5) {
       const obj5 = { onPress: tmp5, text: tmp23 };
-      const tmp27 = closure_6(tmp(5230).Button, obj5);
+      const tmp27 = closure_6(tmp(5242).Button, obj5);
       cResult[13] = tmp5;
       cResult[14] = tmp27;
       let tmp25 = tmp27;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
         }
       }
       const obj7 = { onPress: T, text: tmp29, variant: "secondary" };
-      const tmp32 = closure_6(tmp(5230).Button, obj7);
+      const tmp32 = closure_6(tmp(5242).Button, obj7);
       cResult[18] = T;
       cResult[19] = tmp32;
     } else {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
       const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
       obj8.children = items;
-      const tmp39 = closure_7(tmp(5251).BottomSheet, obj8);
+      const tmp39 = closure_7(tmp(5263).BottomSheet, obj8);
       cResult[23] = tmp25;
       cResult[24] = tmp33;
       cResult[25] = tmp6;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     },
     children: null
   };
-  const obj2 = { source: _modDef17593 };
+  const obj2 = { source: _modDef17637 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

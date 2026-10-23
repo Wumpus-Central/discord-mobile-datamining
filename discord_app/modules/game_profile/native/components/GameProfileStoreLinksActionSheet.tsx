@@ -1,16 +1,16 @@
-// === Module 9272: GameProfileStoreLinksActionSheet ===
+// === Module 9295: GameProfileStoreLinksActionSheet ===
 
-// Module 9272 (GameProfileStoreLinksActionSheet)
+// Module 9295 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import LinkingDefault from "Linking" /* 5646 */;
-import ActionSheet from "ActionSheet" /* 7283 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9230 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import BottomSheetModal from "BottomSheetModal" /* 5267 */;
+import LinkingDefault from "Linking" /* 5658 */;
+import ActionSheet from "ActionSheet" /* 7296 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   if (cResult[3] !== tmp4.headerText) {
     const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp9 };
-    const tmp13 = closure_4(trackAction(5220).Text, obj3);
+    const tmp13 = closure_4(trackAction(5232).Text, obj3);
     cResult[3] = tmp4.headerText;
     cResult[4] = tmp13;
     let tmp11 = tmp13;
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 const obj6 = { contentContainerStyle: tmp8, children: null };
                 const items = [tmp18, tmp27];
                 obj6.children = items;
-                obj5.children = closure_5(trackAction(5255).BottomSheetScrollView, obj6);
-                const tmp34 = closure_4(trackAction(7283).ActionSheet, obj5);
+                obj5.children = closure_5(trackAction(5267).BottomSheetScrollView, obj6);
+                const tmp34 = closure_4(trackAction(7296).ActionSheet, obj5);
                 cResult[24] = tmp18;
                 cResult[25] = tmp27;
                 cResult[26] = tmp8;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     cResult[13] = tmp21;
     tmp18 = tmp21;
   }
-  const tmp17 = closure_4(trackAction(5220).Text, { variant: "text-md/medium", color: "text-subtle", style: tmp4.headerText, children: tmp14 });
+  const tmp17 = closure_4(trackAction(5232).Text, { variant: "text-md/medium", color: "text-subtle", style: tmp4.headerText, children: tmp14 });
   cResult[7] = tmp4.headerText;
   cResult[8] = tmp14;
   cResult[9] = tmp17;

@@ -1,39 +1,39 @@
-// === Module 19221: GuildSettingsRoleSubscriptionTierEdit ===
+// === Module 19265: GuildSettingsRoleSubscriptionTierEdit ===
 
-// Module 19221 (GuildSettingsRoleSubscriptionTierEdit)
+// Module 19265 (GuildSettingsRoleSubscriptionTierEdit)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import ToastUtils from "ToastUtils" /* 5648 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7338 */;
-import FormHeaderDefault from "FormHeader" /* 9020 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10386 */;
-import ErrorBlockDefault from "ErrorBlock" /* 12194 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16485 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19173 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19184 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19190 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19196 */;
-import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 19214 */;
-import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 19216 */;
-import _modDef19222 from "module_19222" /* 19222 */;
-import ActionableNoticeDefault from "ActionableNotice" /* 19223 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import ToastUtils from "ToastUtils" /* 5660 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7351 */;
+import FormHeaderDefault from "FormHeader" /* 9043 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10408 */;
+import ErrorBlockDefault from "ErrorBlock" /* 12213 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16532 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19217 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19228 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19234 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19240 */;
+import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 19258 */;
+import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 19260 */;
+import _modDef19266 from "module_19266" /* 19266 */;
+import ActionableNoticeDefault from "ActionableNotice" /* 19267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4894 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19178 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19222 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const FetchState = fn(4894).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(16478).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(16525).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -72,7 +72,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19222 };
+        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19266 };
         const tmp17 = closure_1_14(native.Icon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
@@ -156,7 +156,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19222 });
+  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19266 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {

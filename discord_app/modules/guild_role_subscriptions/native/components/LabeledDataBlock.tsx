@@ -1,13 +1,13 @@
-// === Module 16493: LabeledDataBlock ===
+// === Module 16540: LabeledDataBlock ===
 
-// Module 16493 (LabeledDataBlock)
+// Module 16540 (LabeledDataBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6893 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Pressables from "Pressables" /* 6906 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6636 */;
+import TextStyles from "TextStyles" /* 6649 */;
 
 require = fn;
 const View = fn(17).View;

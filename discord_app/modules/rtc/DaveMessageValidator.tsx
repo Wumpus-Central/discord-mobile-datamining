@@ -1,6 +1,6 @@
-// === Module 5893: DaveMessageValidator ===
+// === Module 5905: DaveMessageValidator ===
 
-// Module 5893 (DaveMessageValidator)
+// Module 5905 (DaveMessageValidator)
 import size from "module_2" /* 2 */;
 
 const DaveSignal = { INIT: "init", EPOCH: "epoch", TRANSITION: "transition" };

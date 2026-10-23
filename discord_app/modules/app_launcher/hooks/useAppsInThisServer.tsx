@@ -1,17 +1,17 @@
-// === Module 12065: useAppsInThisServer ===
+// === Module 12084: useAppsInThisServer ===
 
-// Module 12065 (useAppsInThisServer)
+// Module 12084 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10181 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10183 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10203 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10205 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9626).useGuildIndexState;
-const limit = fn(5969).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9649).useGuildIndexState;
+const limit = fn(5981).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppsI
           }
         }
       }
-      const sortApplicationsViaFrecency = tmp(12064).useSortApplicationsViaFrecency(tmp29);
+      const sortApplicationsViaFrecency = tmp(12083).useSortApplicationsViaFrecency(tmp29);
       if (cResult[14] === stateFromStores) {
         class I {
           constructor(arg0, arg1) {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppsI
           }
         }
       }
-      const tmpResult2 = tmp(12064);
+      const tmpResult2 = tmp(12083);
       const obj8 = stateFromStores(12);
       const found = stateFromStores(12).compact(sortApplicationsViaFrecency.map(R)).filter(tmp32);
       mapped = found.map(E);

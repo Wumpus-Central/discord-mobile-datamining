@@ -1,8 +1,8 @@
-// === Module 14531: InAppReportsBreadCrumbs ===
+// === Module 14555: InAppReportsBreadCrumbs ===
 
-// Module 14531 (InAppReportsBreadCrumbs)
+// Module 14555 (InAppReportsBreadCrumbs)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
       if (0 === found.length) {
         return null;
       } else if (cResult[2] !== menuName) {
-        const REPORT_TO_MOD = tmp(8096).ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = tmp(8109).ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(menuName);
         const intl = tmp(1128).intl;
         const string = intl.string;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
           tmp17 = tmp19;
         }
         const obj4 = { style: tmp5.title, accessibilityRole: "header", variant: "text-xs/bold", children: cResult[3] };
-        const tmp15 = closure_7(tmp(5220).Text, obj4);
+        const tmp15 = closure_7(tmp(5232).Text, obj4);
         cResult[4] = tmp5.title;
         cResult[5] = cResult[3];
         cResult[6] = tmp15;

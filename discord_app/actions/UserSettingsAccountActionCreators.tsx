@@ -1,12 +1,12 @@
-// === Module 7063: UserSettingsAccountActionCreators ===
+// === Module 7076: UserSettingsAccountActionCreators ===
 
-// Module 7063 (UserSettingsAccountActionCreators)
+// Module 7076 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6653 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 7070 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7072 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6666 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 7083 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -125,7 +125,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
 };
 const Constants = fn(1087);
 ({ Endpoints: closure_4, Routes: hasOwnProperty, DEVICE_TOKEN: metroRequire, DEVICE_VOIP_TOKEN: closure_7 } = Constants);
-const PushNotificationConstants = fn(6656);
+const PushNotificationConstants = fn(6669);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -146,11 +146,11 @@ export const disableAccount = function disableAccount(password, arg1) {
   });
 };
 export { saveProfileAndAccountRequest };
-export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(accountUpdateForUpdateRequest) {
-  const avatar = accountUpdateForUpdateRequest.avatar;
-  const avatarId = accountUpdateForUpdateRequest.avatarId;
-  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, vadColors, typingIndicatorStyle } = accountUpdateForUpdateRequest);
-  ({ username, discriminator, email, emailToken, password, avatarDescription, newPassword, globalName, legacyUsername, avatarOriginalMd5 } = accountUpdateForUpdateRequest);
+export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(avatar) {
+  avatar = avatar.avatar;
+  const avatarId = avatar.avatarId;
+  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = avatar);
+  ({ username, discriminator, email, emailToken, password, avatarDescription, newPassword, globalName, legacyUsername, avatarOriginalMd5 } = avatar);
   avatarId(584).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
   const user = { username, email, email_token: emailToken, password, avatar, avatar_description: avatarDescription, avatar_id: avatarId, discriminator, global_name: globalName, legacy_username: legacyUsername, new_password: newPassword };
   if (undefined !== avatarDecoration) {
@@ -183,9 +183,6 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     user.display_name_effect_id = null;
     user.display_name_colors = null;
   }
-  if (undefined !== vadColors) {
-    user.vad_colors = vadColors;
-  }
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
@@ -214,8 +211,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7064).buildHeadersForMd5({ [avatar(7068).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
-  let tmpResult = avatarId(7064);
+  obj4.headers = avatarId(7077).buildHeadersForMd5({ [avatar(7081).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  let tmpResult = avatarId(7077);
   return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

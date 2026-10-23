@@ -1,13 +1,13 @@
-// === Module 12846: ForwardDestinationUtils ===
+// === Module 12865: ForwardDestinationUtils ===
 
-// Module 12846 (ForwardDestinationUtils)
+// Module 12865 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import StickersUtils from "StickersUtils" /* 6473 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7746 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 12847 */;
+import StickersUtils from "StickersUtils" /* 6486 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7759 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 12866 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6751 */;
+import StickersStore from "StickersStore" /* 6764 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -25,7 +25,7 @@ let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedDestinationChannel(arr) {
   const cResult = require("c").c(8);
   if (cResult[0] !== arr) {
-    const mapped = arr.map(tmp(12844).getChannelIdFromDestinationId);
+    const mapped = arr.map(tmp(12863).getChannelIdFromDestinationId);
     const found = mapped.find(tmp(1388).isNotNullish);
     cResult[0] = arr;
     cResult[1] = found;
@@ -71,7 +71,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedD
   }
   return tmp11;
 }) : (function useSelectedDestinationChannel(arr) {
-  const mapped = arr.map(found(12844).getChannelIdFromDestinationId);
+  const mapped = arr.map(found(12863).getChannelIdFromDestinationId);
   found = mapped.find(found(1388).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -107,8 +107,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
           if (null != user) {
             nickname = nickname.getNickname(user.id);
             if (nickname == null) {
-              nickname = closure_1_1(5018).getName(user);
-              const obj2 = closure_1_1(5018);
+              nickname = closure_1_1(5023).getName(user);
+              const obj2 = closure_1_1(5023);
             }
             tmp13 = nickname;
           }
@@ -117,7 +117,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
           channel = channel.getChannel(id);
           let channelName = null;
           if (null != channel) {
-            const obj = closure_1_0(5590);
+            const obj = closure_1_0(5602);
             channelName = obj.computeChannelName(channel, user, nickname, true);
           }
           return channelName;
@@ -150,8 +150,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(5018).getName(user);
-            const obj2 = closure_1_1(5018);
+            nickname = closure_1_1(5023).getName(user);
+            const obj2 = closure_1_1(5023);
           }
           tmp13 = nickname;
         }
@@ -160,7 +160,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(5590);
+          const obj = closure_1_0(5602);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;
@@ -208,7 +208,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(6647);
+          tmp12(6660);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1128).intl;
@@ -224,10 +224,10 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let result = tmp12(6639).shouldShowTiggerPawtect();
+          let result = tmp12(6652).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5630).isFeatureAgeGated(tmp12(6644).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5630);
+            result = tmp12(5642).isFeatureAgeGated(tmp12(6657).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5642);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -238,9 +238,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             disableAgeRestrictedDestinations = ForwardAgeRestrictedDestinationsExperimentDefault.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(6639);
+          const tmp12Result9 = tmp12(6652);
         }
-        tmp12Result8 = tmp12(6647);
+        tmp12Result8 = tmp12(6660);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -267,9 +267,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1128).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(6471);
+              tmp12Result12 = tmp12(6484);
             }
-            tmp12Result11 = tmp12(6471);
+            tmp12Result11 = tmp12(6484);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -280,12 +280,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1128).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(6471);
+            tmp12Result13 = tmp12(6484);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(6473);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6473).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(6486);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6486).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -317,7 +317,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6473).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6486).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");

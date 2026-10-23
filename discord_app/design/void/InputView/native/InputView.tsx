@@ -1,14 +1,14 @@
-// === Module 15381: InputView ===
+// === Module 15402: InputView ===
 
-// Module 15381 (InputView)
+// Module 15402 (InputView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import shared from "shared" /* 4976 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CircleXIcon from "CircleXIcon" /* 7003 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12119 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CircleXIcon from "CircleXIcon" /* 7016 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12138 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,15 +24,15 @@ let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignIte
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6692).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6705).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6692).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6705).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6692).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6692).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6705).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6705).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -382,7 +382,7 @@ prototype["render"] = function render() {
   obj.children = v65535(hasOwnProperty, obj2);
   return React6(React5, obj);
 };
-InputView.contextType = fn(5023).ThemeContext;
+InputView.contextType = fn(5035).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

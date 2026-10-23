@@ -1,6 +1,6 @@
-// === Module 8640: useShopProductItems ===
+// === Module 8658: useShopProductItems ===
 
-// Module 8640 (useShopProductItems)
+// Module 8658 (useShopProductItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;

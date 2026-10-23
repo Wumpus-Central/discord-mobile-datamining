@@ -1,12 +1,12 @@
-// === Module 11118: BadgeProgressSection ===
+// === Module 11141: BadgeProgressSection ===
 
-// Module 11118 (BadgeProgressSection)
+// Module 11141 (BadgeProgressSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11090 */;
-import BadgeDetailsUtils from "BadgeDetailsUtils" /* 11106 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11113 */;
+import BadgeDetailsUtils from "BadgeDetailsUtils" /* 11129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

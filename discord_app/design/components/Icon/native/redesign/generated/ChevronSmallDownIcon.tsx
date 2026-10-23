@@ -1,10 +1,10 @@
-// === Module 11052: ChevronSmallDownIcon ===
+// === Module 11075: ChevronSmallDownIcon ===
 
-// Module 11052 (ChevronSmallDownIcon)
+// Module 11075 (ChevronSmallDownIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod11053 from "module_11053" /* 11053 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod11076 from "module_11076" /* 11076 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChevronSmallDownIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11053;
+    const tmpResult = _mod11076;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChevronSmallDownIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11053, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11076, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

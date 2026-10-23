@@ -1,11 +1,11 @@
-// === Module 11665: StageGridRow ===
+// === Module 11685: StageGridRow ===
 
-// Module 11665 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 6673 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8671 */;
-import SpeakerTileDefault from "SpeakerTile" /* 11657 */;
-import StageTileTypes from "StageTileTypes" /* 11658 */;
-import MediaTileDefault from "MediaTile" /* 11666 */;
+// Module 11685 (StageGridRow)
+import StageChannelParticipants from "StageChannelParticipants" /* 6686 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8689 */;
+import SpeakerTileDefault from "SpeakerTile" /* 11677 */;
+import StageTileTypes from "StageTileTypes" /* 11678 */;
+import MediaTileDefault from "MediaTile" /* 11686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,21 +24,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const participants = channel.participants;
   const tmp3 = closure_5();
   let obj = channel(576);
-  const isScreenLandscape = channel(8671).useIsScreenLandscape();
+  const isScreenLandscape = channel(8689).useIsScreenLandscape();
   let num = 3;
   if (0 === channel.row) {
     num = participants.length;
   }
   if (cResult[0] !== num) {
     if (1 === num) {
-      StageTileSize = tmp(11658).StageTileSize;
+      StageTileSize = tmp(11678).StageTileSize;
       let HALF = StageTileSize.FULL;
       cResult[0] = num;
       cResult[1] = HALF;
     } else if (2 !== num) {
-      HALF = tmp(11658).StageTileSize.THIRD;
+      HALF = tmp(11678).StageTileSize.THIRD;
     }
-    HALF = tmp(11658).StageTileSize.HALF;
+    HALF = tmp(11678).StageTileSize.HALF;
   } else {
     const size = tmp5;
     let containerLandscape = isScreenLandscape;
@@ -115,7 +115,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[4] = items;
     tmp7 = items;
   }
-  let obj2 = channel(8671);
+  let obj2 = channel(8689);
 }) : (function StageGridRow(row) {
   ({ channel: require, participants } = row);
   let THIRD;

@@ -1,11 +1,11 @@
-// === Module 5814: DesktopGamePerfExperiment ===
+// === Module 5826: DesktopGamePerfExperiment ===
 
-// Module 5814 (DesktopGamePerfExperiment)
+// Module 5826 (DesktopGamePerfExperiment)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-10-desktop-game-perf", kind: "user", defaultConfig: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false }, variations: { 0: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false }, 1: { nativeSystemCpuTimes: true, overlayOnlyAnimatesItself: true, fullscreenPopupOcclusion: true, overlayHiddenWavePaused: true } } });
+let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-10-desktop-game-perf", kind: "user", defaultConfig: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false, renderOverlayWhileMinimized: false, notificationIconCpuCanvas: false }, variations: { 0: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false, renderOverlayWhileMinimized: false, notificationIconCpuCanvas: false }, 1: { nativeSystemCpuTimes: true, overlayOnlyAnimatesItself: true, fullscreenPopupOcclusion: true, overlayHiddenWavePaused: true, renderOverlayWhileMinimized: true, notificationIconCpuCanvas: true } } });
 const result = size.fileFinishedImporting("modules/desktop_perf/DesktopGamePerfExperiment.tsx");
 
 export const getDesktopGamePerfExperimentConfig = function getDesktopGamePerfExperimentConfig(location) {
@@ -51,4 +51,23 @@ export const getIsOverlayHiddenWavePausedEnabled = function getIsOverlayHiddenWa
     overlayHiddenWavePaused = closure_2.getConfig({ location: "overlay_voice_user" }).overlayHiddenWavePaused;
   }
   return overlayHiddenWavePaused;
+};
+export const getIsRenderOverlayWhileMinimizedEnabled = function getIsRenderOverlayWhileMinimizedEnabled(location) {
+  let renderOverlayWhileMinimized = PlatformUtils.isDesktop();
+  if (renderOverlayWhileMinimized) {
+    renderOverlayWhileMinimized = PlatformUtils.isWindows();
+    const tmpResult = PlatformUtils;
+  }
+  if (renderOverlayWhileMinimized) {
+    const obj2 = { location };
+    renderOverlayWhileMinimized = closure_2.getConfig(obj2).renderOverlayWhileMinimized;
+  }
+  return renderOverlayWhileMinimized;
+};
+export const getIsNotificationIconCpuCanvasEnabled = function getIsNotificationIconCpuCanvasEnabled() {
+  let notificationIconCpuCanvas = PlatformUtils.isDesktop();
+  if (notificationIconCpuCanvas) {
+    notificationIconCpuCanvas = closure_2.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
+  }
+  return notificationIconCpuCanvas;
 };

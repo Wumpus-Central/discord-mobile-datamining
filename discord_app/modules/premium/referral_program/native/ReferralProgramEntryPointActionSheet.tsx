@@ -1,11 +1,11 @@
-// === Module 18338: ReferralProgramEntryPointActionSheet ===
+// === Module 18382: ReferralProgramEntryPointActionSheet ===
 
-// Module 18338 (ReferralProgramEntryPointActionSheet)
+// Module 18382 (ReferralProgramEntryPointActionSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef8411 from "module_8411" /* 8411 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef8423 from "module_8423" /* 8423 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14698, dependencyMap.paths), "referral-program-share-action-sheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14722, dependencyMap.paths), "referral-program-share-action-sheet");
   }, items);
   const callback1 = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
@@ -41,26 +41,26 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const obj = { onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef8411 };
+  const obj4 = { uri: _modDef8423 };
   obj3.source = obj4;
   obj3.style = tmp.image;
   const items2 = [closure_6(FastImageDefault, obj3), , , ];
   const obj5 = { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/extrabold", children: null };
   const intl = markAsDismissed(1128).intl;
   obj5.children = intl.string(markAsDismissed(1128).t.u1CFbS);
-  items2[1] = closure_6(markAsDismissed(5220).Text, obj5);
+  items2[1] = closure_6(markAsDismissed(5232).Text, obj5);
   const obj6 = { style: tmp.body, color: "text-default", variant: "text-sm/normal", children: null };
   const intl2 = markAsDismissed(1128).intl;
   obj6.children = intl2.string(markAsDismissed(1128).t.k2ibMz);
-  items2[2] = closure_6(markAsDismissed(5220).Text, obj6);
+  items2[2] = closure_6(markAsDismissed(5232).Text, obj6);
   const obj7 = { style: tmp.buttonContainer, children: null };
   const obj8 = { text: null, size: "lg", onPress: null, variant: "primary" };
   const intl3 = markAsDismissed(1128).intl;
   obj8.text = intl3.string(markAsDismissed(1128).t.TI8qgg);
   obj8.onPress = callback;
-  obj7.children = closure_6(markAsDismissed(5230).Button, obj8);
+  obj7.children = closure_6(markAsDismissed(5242).Button, obj8);
   items2[3] = closure_6(View, obj7);
   obj2.children = items2;
   obj.children = closure_7(View, obj2);
-  return closure_6(markAsDismissed(5251).BottomSheet, obj);
+  return closure_6(markAsDismissed(5263).BottomSheet, obj);
 };

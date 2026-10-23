@@ -1,11 +1,11 @@
-// === Module 15349: NewTag ===
+// === Module 15370: NewTag ===
 
-// Module 15349 (NewTag)
+// Module 15370 (NewTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

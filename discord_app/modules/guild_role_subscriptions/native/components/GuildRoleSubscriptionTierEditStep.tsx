@@ -1,15 +1,15 @@
-// === Module 19180: GuildRoleSubscriptionTierEditStep ===
+// === Module 19224: GuildRoleSubscriptionTierEditStep ===
 
-// Module 19180 (GuildRoleSubscriptionTierEditStep)
+// Module 19224 (GuildRoleSubscriptionTierEditStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
-import FormSeparatorDefault from "FormSeparator" /* 16490 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
+import FormSeparatorDefault from "FormSeparator" /* 16537 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -167,7 +167,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Footer
   const tmp = closure_10();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = closure_1_8(tmp5(5230).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = closure_1_8(tmp5(5242).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return closure_1_8(timestampProducer, obj);
 });
 ReactCompilerGating = fn(558);

@@ -1,13 +1,13 @@
-// === Module 16942: DevToolsProfilingScreen ===
+// === Module 16986: DevToolsProfilingScreen ===
 
-// Module 16942 (DevToolsProfilingScreen)
+// Module 16986 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import TableRow from "TableRow" /* 6888 */;
-import TableRowGroup from "TableRowGroup" /* 6972 */;
-import ComponentProfiler from "ComponentProfiler" /* 13746 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 16943 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import TableRow from "TableRow" /* 6901 */;
+import TableRowGroup from "TableRowGroup" /* 6985 */;
+import ComponentProfiler from "ComponentProfiler" /* 13769 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 16987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,10 +47,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const tmp5 = closure_8();
   dependencyMap = tmp5;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const componentRenderStats = tmp(13746).getComponentRenderStats();
+    const componentRenderStats = tmp(13769).getComponentRenderStats();
     cResult[1] = componentRenderStats;
     let tmp6 = componentRenderStats;
-    const tmpResult = tmp(13746);
+    const tmpResult = tmp(13769);
   } else {
     tmp6 = cResult[1];
   }
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       let obj2 = { children: null };
       let obj3 = { title: "Component Profiler", hasIcons: false, children: null };
       const obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
-      obj3.children = closure_5(tmp(6888).TableRow, obj4);
-      let items = [closure_5(tmp(6972).TableRowGroup, obj3), ];
+      obj3.children = closure_5(tmp(6901).TableRow, obj4);
+      let items = [closure_5(tmp(6985).TableRowGroup, obj3), ];
       const _Object2 = Object;
       const keys1 = Object.keys(tmp6);
       items[1] = keys1.map((item) => {
@@ -97,18 +97,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const obj6 = { label: "No components rendered yet.", subLabel: null };
       const obj7 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const obj8 = { variant: "text-xs/semibold", style: tmp5.monospace, children: "<ComponentProfiler />" };
-      const items1 = ["Make sure you wrap your component in ", closure_5(tmp(5220).Text, obj8), " to enable measurements."];
+      const items1 = ["Make sure you wrap your component in ", closure_5(tmp(5232).Text, obj8), " to enable measurements."];
       obj7.children = items1;
-      obj6.subLabel = closure_7(tmp(5220).Text, obj7);
-      obj5.children = closure_5(tmp(6888).TableRow, obj6);
-      tmp12 = closure_5(tmp(6972).TableRowGroup, obj5);
+      obj6.subLabel = closure_7(tmp(5232).Text, obj7);
+      obj5.children = closure_5(tmp(6901).TableRow, obj6);
+      tmp12 = closure_5(tmp(6985).TableRowGroup, obj5);
     }
     cResult[3] = tmp5.monospace;
     cResult[4] = tmp12;
   } else {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(16943).DevToolsProfilingUseStateFromStores, {});
+      const tmp19 = closure_5(tmp(16987).DevToolsProfilingUseStateFromStores, {});
       cResult[5] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const obj9 = { spacing: 16, children: null };
       const items2 = [tmp9, tmp17];
       obj9.children = items2;
-      const tmp22 = closure_7(tmp(5963).Stack, obj9);
+      const tmp22 = closure_7(tmp(5975).Stack, obj9);
       cResult[6] = tmp9;
       cResult[7] = tmp22;
       let tmp20 = tmp22;

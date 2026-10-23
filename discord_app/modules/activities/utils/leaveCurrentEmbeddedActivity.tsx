@@ -1,7 +1,7 @@
-// === Module 10746: leaveCurrentEmbeddedActivity ===
+// === Module 10768: leaveCurrentEmbeddedActivity ===
 
-// Module 10746 (leaveCurrentEmbeddedActivity)
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10747 */;
+// Module 10768 (leaveCurrentEmbeddedActivity)
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10769 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;

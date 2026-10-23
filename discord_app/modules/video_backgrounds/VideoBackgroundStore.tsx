@@ -1,9 +1,9 @@
-// === Module 5848: VideoBackgroundStore ===
+// === Module 5860: VideoBackgroundStore ===
 
-// Module 5848 (VideoBackgroundStore)
+// Module 5860 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5737 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;

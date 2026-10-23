@@ -1,10 +1,10 @@
-// === Module 9914: MessageEmojiActionSheet ===
+// === Module 9936: MessageEmojiActionSheet ===
 
-// Module 9914 (MessageEmojiActionSheet)
+// Module 9936 (MessageEmojiActionSheet)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 9915 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 9922 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 9937 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 9944 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -86,7 +86,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     return tmp11;
   }
   const obj3 = { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> };
-  tmp11 = jsx(nonce(5251).BottomSheet, { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> });
+  tmp11 = jsx(nonce(5263).BottomSheet, { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> });
   cResult[4] = tmp4.contentWrapper;
   cResult[5] = tmp8;
   cResult[6] = tmp11;
@@ -170,7 +170,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
               const obj3 = { startExpanded: true, onDismiss: tmp10, children: null };
               const obj4 = { style: tmp4.contentWrapper, children: tmp11 };
               obj3.children = <View style={tmp4.contentWrapper}>{tmp11}</View>;
-              const tmp18 = jsx(tmp(5251).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
+              const tmp18 = jsx(tmp(5263).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
               cResult[11] = tmp4.contentWrapper;
               cResult[12] = tmp11;
               cResult[13] = tmp18;
@@ -213,7 +213,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     const obj5 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
     obj4.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
     obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-    return jsx(tmp2(5251).BottomSheet, {
+    return jsx(tmp2(5263).BottomSheet, {
       startExpanded: true,
       onDismiss() {
           AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });

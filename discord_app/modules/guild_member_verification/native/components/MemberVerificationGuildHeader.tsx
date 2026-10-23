@@ -1,15 +1,15 @@
-// === Module 6866: MemberVerificationGuildHeader ===
+// === Module 6879: MemberVerificationGuildHeader ===
 
-// Module 6866 (MemberVerificationGuildHeader)
+// Module 6879 (MemberVerificationGuildHeader)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6861);
+const MemberVerificationFormConstants = fn(6874);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     let obj2 = require("AvatarUtils");
   } else {
     tmp5 = importDefault;
-    guildBannerSource = require("module_6867");
+    guildBannerSource = require("module_6880");
   }
   const tmp8 = useBannerHeight();
   importDefault = tmp8;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     let obj = require("AvatarUtils");
   } else {
     tmp3 = top;
-    guildBannerSource = require("module_6867");
+    guildBannerSource = require("module_6880");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

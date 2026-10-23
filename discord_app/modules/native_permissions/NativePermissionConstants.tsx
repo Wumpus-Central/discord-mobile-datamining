@@ -1,6 +1,6 @@
-// === Module 7853: NativePermissionConstants ===
+// === Module 7866: NativePermissionConstants ===
 
-// Module 7853 (NativePermissionConstants)
+// Module 7866 (NativePermissionConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");

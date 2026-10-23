@@ -1,7 +1,7 @@
-// === Module 9358: StorefrontPromotionRecord ===
+// === Module 9381: StorefrontPromotionRecord ===
 
-// Module 9358 (StorefrontPromotionRecord)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9359 */;
+// Module 9381 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1407 */;
 
@@ -170,8 +170,8 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let tmp36 = require;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
         const subtype = collectibles.subtype;
-        if (tmp36(9359).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
-          const obj7 = { type: tmp36(9359).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9359).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+        if (tmp36(9382).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
+          const obj7 = { type: tmp36(9382).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9382).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
           const obj8 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
           const reward_states = collectibles.shop_home.reward_states;
           const obj9 = { inProgress: null, earned: null, consumed: null };
@@ -213,8 +213,8 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj7.indexPage = obj14;
           collectibles = parseCollectiblesShared(collectibles.shared);
           obj7.shared = collectibles;
-        } else if (tmp36(9359).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
-          const obj20 = { type: tmp36(9359).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9359).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+        } else if (tmp36(9382).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
+          const obj20 = { type: tmp36(9382).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9382).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
           const obj21 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, style: null };
           let tmp48;
           if (tmp14 != collectibles.shop_home.style) {
@@ -233,7 +233,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj20.indexPage = obj23;
           obj20.shared = parseCollectiblesShared(collectibles.shared);
         }
-      } else if (tmp36(9359).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+      } else if (tmp36(9382).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
         const reward = collectibles.reward;
         let nagbar;
         if (reward != tmp14) {
@@ -270,13 +270,13 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           if (tmp14 == offer_notice) {
             if (tmp14 == tmp41) {
               if (tmp14 == flavor) {
-                const obj25 = { type: tmp36(9359).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                const obj25 = { type: tmp36(9382).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
                 let obj26 = obj25;
               }
             }
           }
         }
-        obj26 = { type: tmp36(9359).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        obj26 = { type: tmp36(9382).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
         let tmp43;
         if (tmp14 != nagbar) {
           const header_text = nagbar.header_text;

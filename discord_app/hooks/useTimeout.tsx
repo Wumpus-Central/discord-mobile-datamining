@@ -1,6 +1,6 @@
-// === Module 10490: useTimeout ===
+// === Module 10512: useTimeout ===
 
-// Module 10490 (useTimeout)
+// Module 10512 (useTimeout)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

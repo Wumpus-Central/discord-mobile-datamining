@@ -1,6 +1,6 @@
-// === Module 13916: ? ===
+// === Module 13939: ? ===
 
-// Module 13916
+// Module 13939
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js");

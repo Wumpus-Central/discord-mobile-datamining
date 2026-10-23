@@ -1,6 +1,6 @@
-// === Module 7765: LocalStorageWrapper ===
+// === Module 7778: LocalStorageWrapper ===
 
-// Module 7765 (LocalStorageWrapper)
+// Module 7778 (LocalStorageWrapper)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

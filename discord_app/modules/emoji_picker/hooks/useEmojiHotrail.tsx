@@ -1,11 +1,11 @@
-// === Module 9811: useEmojiHotrail ===
+// === Module 9833: useEmojiHotrail ===
 
-// Module 9811 (useEmojiHotrail)
+// Module 9833 (useEmojiHotrail)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EMOJI_ROW_SIZE = fn(6713).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(6726).EMOJI_ROW_SIZE;
 const ReactCompilerGating = fn(558);
 function getEmojiHotrail(arg0) {
   ({ topEmojis, newlyAddedEmojis, rowSize } = arg0);

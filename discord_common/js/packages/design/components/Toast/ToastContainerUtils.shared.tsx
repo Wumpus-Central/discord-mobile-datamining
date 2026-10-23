@@ -1,6 +1,6 @@
-// === Module 15237: DEFAULT_TOAST_POSITION ===
+// === Module 15262: DEFAULT_TOAST_POSITION ===
 
-// Module 15237 (DEFAULT_TOAST_POSITION)
+// Module 15262 (DEFAULT_TOAST_POSITION)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -252,7 +252,7 @@ export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[6] = items1;
   tmp15 = items1;
   tmp14 = E;
-  tmpResult = require("module_5651");
+  tmpResult = require("module_5663");
 }) : (function useToastContainer(arg0) {
   _require = arg0;
   const tmp = closure_7(arg0, noop.useId());

@@ -1,6 +1,6 @@
-// === Module 15774: MainNavigationLogger ===
+// === Module 15795: MainNavigationLogger ===
 
-// Module 15774 (MainNavigationLogger)
+// Module 15795 (MainNavigationLogger)
 import LoggerDefault from "Logger" /* 3 */;
 
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 9052: GameSearchFilterGroup ===
+// === Module 9075: GameSearchFilterGroup ===
 
-// Module 9052 (GameSearchFilterGroup)
+// Module 9075 (GameSearchFilterGroup)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameSearchFilterGroup.tsx");

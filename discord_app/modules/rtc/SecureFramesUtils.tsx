@@ -1,27 +1,27 @@
-// === Module 9172: SecureFramesUtils ===
+// === Module 9195: SecureFramesUtils ===
 
-// Module 9172 (SecureFramesUtils)
+// Module 9195 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
-import _mod9157 from "module_9157" /* 9157 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9174 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9175 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9176 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5987 */;
+import _mod9180 from "module_9180" /* 9180 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9197 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9198 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7812 */;
 import UserStore from "UserStore" /* 1392 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5718 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5730 */;
 
 const require = globalThis.__r;
 
@@ -419,7 +419,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9173);
+const SecureFramesConstants = fn(9196);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1087);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
@@ -449,7 +449,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9157.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9180.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);

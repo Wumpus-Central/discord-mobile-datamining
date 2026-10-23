@@ -1,12 +1,12 @@
-// === Module 11384: StreamQualityLiveIndicator ===
+// === Module 11407: StreamQualityLiveIndicator ===
 
-// Module 11384 (StreamQualityLiveIndicator)
+// Module 11407 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import timing from "timing" /* 5192 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9769 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9770 */;
+import timing from "timing" /* 5204 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9791 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9792 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const PremiumConstants = fn(1394);
 ({ PremiumTypes: metroRequire, PremiumUpsellTypes: closure_7 } = PremiumConstants);
-const ResolutionTypes = fn(5704).ResolutionTypes;
+const ResolutionTypes = fn(5716).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);

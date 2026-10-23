@@ -1,10 +1,10 @@
-// === Module 14979: PreviewData ===
+// === Module 15003: PreviewData ===
 
-// Module 14979 (PreviewData)
+// Module 15003 (PreviewData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5998 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6010 */;
 import MessageRecord from "MessageRecord" /* 4912 */;
-import ReadStateStore from "ReadStateStore" /* 6756 */;
+import ReadStateStore from "ReadStateStore" /* 6769 */;
 
 require = fn;
 const size = fn(2);

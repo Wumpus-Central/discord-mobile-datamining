@@ -1,15 +1,15 @@
-// === Module 19235: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19279: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 19235 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19279 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import PriceUtils from "PriceUtils" /* 7324 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9017 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16504 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5037 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import PriceUtils from "PriceUtils" /* 7337 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9040 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
     if (cResult[3] === containerSelected) {
       let tmp8 = cResult[4];
     }
-    const tmp9Result = importDefault(selected ? 19141 : 17934);
+    const tmp9Result = importDefault(selected ? 19185 : 17978);
     if (cResult[5] === tmp4.rowStatusIcon) {
       if (cResult[6] === tmp9Result) {
         let tmp11 = cResult[7];
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 19141 : 17934);
+  obj3.source = importDefault(selected ? 19185 : 17978);
   const items1 = [React6(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;

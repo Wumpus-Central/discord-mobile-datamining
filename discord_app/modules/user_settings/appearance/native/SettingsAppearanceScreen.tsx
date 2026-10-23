@@ -1,16 +1,16 @@
-// === Module 16537: SettingsAppearanceScreen ===
+// === Module 16584: SettingsAppearanceScreen ===
 
-// Module 16537 (SettingsAppearanceScreen)
+// Module 16584 (SettingsAppearanceScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import useMountEffectDefault from "useMountEffect" /* 5249 */;
-import HeaderShared from "HeaderShared" /* 9676 */;
-import SettingBuilders from "SettingBuilders" /* 11181 */;
-import SettingLayoutDefault from "SettingLayout" /* 15916 */;
+import useMountEffectDefault from "useMountEffect" /* 5261 */;
+import HeaderShared from "HeaderShared" /* 9698 */;
+import SettingBuilders from "SettingBuilders" /* 11204 */;
+import SettingLayoutDefault from "SettingLayout" /* 15949 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
@@ -71,9 +71,9 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16538);
+const FontScaleStore = fn(16585);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8318).MobileUserSettings;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

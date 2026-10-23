@@ -1,11 +1,11 @@
-// === Module 18110: ChannelDetailsTopic ===
+// === Module 18154: ChannelDetailsTopic ===
 
-// Module 18110 (ChannelDetailsTopic)
+// Module 18154 (ChannelDetailsTopic)
 import c from "c" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import spring from "spring" /* 5233 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5691 */;
-import ChannelUtils from "ChannelUtils" /* 5980 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import spring from "spring" /* 5245 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5703 */;
+import ChannelUtils from "ChannelUtils" /* 5992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10001);
+const ChannelDetailsConstants = fn(10023);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
@@ -474,7 +474,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     }
     if (cResult[5] === tmp7) {
     }
-    Text = Text(5220).Text;
+    Text = Text(5232).Text;
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp7, children: stateFromStores };
     tmp = closure_11(Text, obj3);
     cResult[5] = tmp7;
@@ -503,7 +503,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5220).Text, obj2);
+    tmp4 = closure_11(channel(5232).Text, obj2);
   }
   return tmp4;
 });
@@ -546,7 +546,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
     }
     if (cResult[5] === tmp7) {
     }
-    Text = Text(5220).Text;
+    Text = Text(5232).Text;
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp7, children: stateFromStores };
     tmp = closure_11(Text, obj3);
     cResult[5] = tmp7;
@@ -564,7 +564,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5220).Text, obj2);
+    tmp4 = closure_11(channel(5232).Text, obj2);
   }
   return tmp4;
 });

@@ -1,10 +1,10 @@
-// === Module 18484: VoicePanelNoVideoParticipantsCard ===
+// === Module 18528: VoicePanelNoVideoParticipantsCard ===
 
-// Module 18484 (VoicePanelNoVideoParticipantsCard)
+// Module 18528 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import NativeViewDefault from "NativeView" /* 6871 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10872 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
+import NativeViewDefault from "NativeView" /* 6884 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10895 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[3] !== tmp5.label) {
     const obj2 = { style: label, variant: "text-md/semibold", color: "text-overlay-light", children: tmp7 };
-    const tmp11 = closure_5(tmp(5220).Text, obj2);
+    const tmp11 = closure_5(tmp(5232).Text, obj2);
     cResult[3] = tmp5.label;
     cResult[4] = tmp11;
     let tmp9 = tmp11;
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[7] !== tmp5.buttonText) {
     const obj3 = { variant: "text-sm/semibold", style: tmp5.buttonText, children: tmp14 };
-    const tmp18 = closure_5(tmp(5220).Text, obj3);
+    const tmp18 = closure_5(tmp(5232).Text, obj3);
     cResult[7] = tmp5.buttonText;
     cResult[8] = tmp18;
     let tmp16 = tmp18;
@@ -124,14 +124,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1128).intl;
   obj2.children = intl.string(channelId(1128).t["8eBJ73"]);
-  const items1 = [closure_5(channelId(5220).Text, obj2), ];
+  const items1 = [closure_5(channelId(5232).Text, obj2), ];
   const obj3 = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl2 = channelId(1128).intl;
   obj3.accessibilityLabel = intl2.string(channelId(1128).t.kLQySL);
   const obj4 = { variant: "text-sm/semibold", style: tmp.buttonText, children: null };
   const intl3 = channelId(1128).intl;
   obj4.children = intl3.string(channelId(1128).t.kLQySL);
-  obj3.children = closure_5(channelId(5220).Text, obj4);
+  obj3.children = closure_5(channelId(5232).Text, obj4);
   items1[1] = closure_5(Pressable, obj3);
   obj.children = items1;
   return closure_6(NativeViewDefault, obj);

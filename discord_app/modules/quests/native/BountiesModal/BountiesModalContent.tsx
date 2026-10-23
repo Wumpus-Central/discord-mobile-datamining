@@ -1,29 +1,29 @@
-// === Module 16288: BountiesModalContent ===
+// === Module 16320: BountiesModalContent ===
 
-// Module 16288 (BountiesModalContent)
+// Module 16320 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import timing from "timing" /* 5192 */;
-import timingPresets from "timingPresets" /* 5195 */;
-import Patterns from "Patterns" /* 5200 */;
-import QuestContent from "QuestContent" /* 6700 */;
-import AdCreativeType from "AdCreativeType" /* 6702 */;
-import QuestDataUtils from "QuestDataUtils" /* 7757 */;
-import AnalyticsActions from "AnalyticsActions" /* 7777 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
-import AnimationUtils from "AnimationUtils" /* 13911 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14057 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14079 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14094 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16232 */;
+import timing from "timing" /* 5204 */;
+import timingPresets from "timingPresets" /* 5207 */;
+import Patterns from "Patterns" /* 5212 */;
+import QuestContent from "QuestContent" /* 6713 */;
+import AdCreativeType from "AdCreativeType" /* 6715 */;
+import QuestDataUtils from "QuestDataUtils" /* 7770 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7799 */;
+import AnimationUtils from "AnimationUtils" /* 13934 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14081 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14103 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14118 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16265 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7760 */;
+import BountyStore from "BountyStore" /* 7773 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,9 +54,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6695);
+const QuestConstants = fn(6708);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16236);
+const BountiesModalConstants = fn(16269);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9426).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9426);
+                          const balance = tmp(9449).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9449);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {
@@ -699,8 +699,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   const height = useWindowDimensionsDefault().height;
   const size = closure_20();
   let obj = sharedValue(576);
-  sharedValue = sharedValue(5038).useSharedValue(0);
-  let obj2 = sharedValue(5038);
+  sharedValue = sharedValue(5050).useSharedValue(0);
+  let obj2 = sharedValue(5050);
   [tmp4, importDefault] = noop.useState(null);
   dependencyMap = noop.useRef(null);
   bounty = noop.useRef(0);

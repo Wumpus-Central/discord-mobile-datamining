@@ -1,25 +1,25 @@
-// === Module 14062: AppStoreOverlayBody ===
+// === Module 14086: AppStoreOverlayBody ===
 
-// Module 14062 (AppStoreOverlayBody)
+// Module 14086 (AppStoreOverlayBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import useToken from "useToken" /* 5238 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import AnalyticsActions from "AnalyticsActions" /* 7777 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14063 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14066 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14071 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import useToken from "useToken" /* 5250 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14087 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14090 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1087).VerticalGradient;
-let closure_6 = fn(5252).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(5264).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -74,7 +74,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOv
           }
           if (cResult[12] !== metadata.title) {
             const obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title };
-            const tmp21 = closure_7(onOverlaySurfaceClick(5220).Text, obj2);
+            const tmp21 = closure_7(onOverlaySurfaceClick(5232).Text, obj2);
             cResult[12] = metadata.title;
             cResult[13] = tmp21;
             let tmp19 = tmp21;
@@ -88,7 +88,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOv
             }
             if (tmp23) {
               const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-              tmp23 = closure_7(onOverlaySurfaceClick(5220).Text, obj3);
+              tmp23 = closure_7(onOverlaySurfaceClick(5232).Text, obj3);
             }
             cResult[14] = metadata.subtitle;
             cResult[15] = tmp23;
@@ -180,7 +180,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOv
                     const obj8 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
                     const intl = onOverlaySurfaceClick(1128).intl;
                     obj8.children = intl.string(onOverlaySurfaceClick(1128).t["EV1W/L"]);
-                    const items2 = [closure_7(onOverlaySurfaceClick(5220).Text, obj8), ];
+                    const items2 = [closure_7(onOverlaySurfaceClick(5232).Text, obj8), ];
                     const obj9 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
                     items2[1] = closure_7(AppStoreOverlayMediaCarouselDefault, obj9);
                     obj7.children = items2;
@@ -303,14 +303,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOv
   }
   const items3 = [tmp13, , , , ];
   const obj8 = { style: tmp.textBlock, children: null };
-  const items4 = [closure_7(onOverlaySurfaceClick(5220).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title }), ];
+  const items4 = [closure_7(onOverlaySurfaceClick(5232).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title }), ];
   let tmp17Result = null != metadata.subtitle;
   if (tmp17Result) {
     tmp17Result = "" !== metadata.subtitle;
   }
   if (tmp17Result) {
     const obj10 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-    tmp17Result = closure_7(onOverlaySurfaceClick(5220).Text, obj10);
+    tmp17Result = closure_7(onOverlaySurfaceClick(5232).Text, obj10);
   }
   items4[1] = tmp17Result;
   obj8.children = items4;
@@ -333,7 +333,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOv
     const obj13 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = onOverlaySurfaceClick(1128).intl;
     obj13.children = intl.string(onOverlaySurfaceClick(1128).t["EV1W/L"]);
-    const items5 = [closure_7(onOverlaySurfaceClick(5220).Text, obj13), ];
+    const items5 = [closure_7(onOverlaySurfaceClick(5232).Text, obj13), ];
     const obj14 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
     items5[1] = closure_7(AppStoreOverlayMediaCarouselDefault, obj14);
     obj12.children = items5;
@@ -462,7 +462,7 @@ export const AppStoreOverlayFooter = ReactCompilerGating.isReactCompilerEnabled(
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
   const bottom = token(1633)().bottom;
-  token = bottom(5238).useToken(token(587).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = bottom(5250).useToken(token(587).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
   const memo = noop.useMemo(() => {
@@ -472,13 +472,13 @@ export const AppStoreOverlayFooter = ReactCompilerGating.isReactCompilerEnabled(
   }, items);
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
-  const items2 = [closure_7(token(5244), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
+  const items2 = [closure_7(token(5256), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
   const obj4 = { style: memo1, children: null };
   const obj5 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1128).intl;
   obj5.text = intl.string(bottom(1128).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5230).Button, obj5);
+  obj4.children = closure_7(bottom(5242).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

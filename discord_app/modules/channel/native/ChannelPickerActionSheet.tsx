@@ -1,11 +1,11 @@
-// === Module 11788: ChannelPickerActionSheet ===
+// === Module 11807: ChannelPickerActionSheet ===
 
-// Module 11788 (ChannelPickerActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import TableRowIcon from "TableRowIcon" /* 6896 */;
-import TableRadioRow from "TableRadioRow" /* 6969 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+// Module 11807 (ChannelPickerActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import TableRowIcon from "TableRowIcon" /* 6909 */;
+import TableRadioRow from "TableRadioRow" /* 6982 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -595,7 +595,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelP
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_11789") };
+    let obj4 = { source: require("module_11808") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

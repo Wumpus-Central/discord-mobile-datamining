@@ -1,11 +1,11 @@
-// === Module 17285: ChooseAccount ===
+// === Module 17329: ChooseAccount ===
 
-// Module 17285 (ChooseAccount)
+// Module 17329 (ChooseAccount)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13253 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13276 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13249).MultiAccountTokenStatus;
-let Constants = fn(13250);
+const MultiAccountTokenStatus = fn(13272).MultiAccountTokenStatus;
+let Constants = fn(13273);
 ({ MAX_ACCOUNTS: closure_7, MultiAccountSwitchLocation: closure_8 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AuthStates: c10 } = Constants);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
   let obj = navigation(576);
   navigation = navigation(1505).useNavigation();
   let obj2 = navigation(1505);
-  const multiAccountUsers = navigation(17286).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = navigation(17330).useMultiAccountUsers().multiAccountUsers;
   if (cResult[0] !== navigation) {
     function handlePressUser(tokenStatus) {
       if (tokenStatus.tokenStatus === MultiAccountTokenStatus.INVALID) {
@@ -109,10 +109,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
                 intl2 = navigation(1128).intl;
                 string = intl2.string;
                 obj5.cancelText = string(navigation(1128).t["ETE/oC"]);
-                obj5 = tmp2(5895).confirm(obj5);
+                obj5 = tmp2(5907).confirm(obj5);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = tmp2(5895);
+                const obj8 = tmp2(5907);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -123,10 +123,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
               return obj7;
             } else {
               if (value) {
-                tmp2(5196).hideActionSheet();
-                const obj = tmp2(5196);
-                tmp5(13253).removeAccount(closure_129_0.id);
-                const obj2 = tmp5(13253);
+                tmp2(5208).hideActionSheet();
+                const obj = tmp2(5208);
+                tmp5(13276).removeAccount(closure_129_0.id);
+                const obj2 = tmp5(13276);
               }
               c4 = 3;
               return { value: "IconComponent", done: null };
@@ -156,8 +156,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
     if (cResult[6] !== tmp6) {
       function handlePressMore(arg0) {
         closure_0 = arg0;
-        multiAccountUsers(5196).hideActionSheet();
-        const obj = multiAccountUsers(5196);
+        multiAccountUsers(5208).hideActionSheet();
+        const obj = multiAccountUsers(5208);
         const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
         const obj4 = { label: null, onPress: null };
         const intl = navigation(1128).intl;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
         };
         items[1] = obj5;
         obj3.options = items;
-        const result = navigation(7275).showSimpleActionSheet(obj3);
+        const result = navigation(7288).showSimpleActionSheet(obj3);
       }
       cResult[6] = tmp6;
       cResult[7] = handlePressMore;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
       let obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
       let intl2 = tmp(1128).intl;
       obj4.children = intl2.string(tmp(1128).t["0M5fN7"]);
-      const tmp17 = closure_11(tmp(5220).Text, obj4);
+      const tmp17 = closure_11(tmp(5232).Text, obj4);
       cResult[9] = tmp17;
       let tmp15 = tmp17;
     } else {
@@ -208,8 +208,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
         if (cResult[12] === multiAccountUsers) {
           const _Symbol4 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            let obj5 = { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: tmp(1202).Icon.Sizes.SMALL_20, source: multiAccountUsers(17288) };
-            const tmp28 = closure_11(tmp(8926).FormRow.Icon, obj5);
+            let obj5 = { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: tmp(1202).Icon.Sizes.SMALL_20, source: multiAccountUsers(17332) };
+            const tmp28 = closure_11(tmp(8949).FormRow.Icon, obj5);
             let intl3 = tmp(1128).intl;
             const stringResult1 = intl3.string(tmp(1128).t.bPP34Q);
             cResult[17] = stringResult1;
@@ -235,8 +235,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
                   }
                   return tmp37;
                 }
-                let obj6 = { headerText: tmp13, subHeader: tmp15, backgroundImageSource: multiAccountUsers(15054), backgroundImageCover: true, contentStyle: tmp18, children: tmp33 };
-                const tmp40 = multiAccountUsers(7050);
+                let obj6 = { headerText: tmp13, subHeader: tmp15, backgroundImageSource: multiAccountUsers(15079), backgroundImageCover: true, contentStyle: tmp18, children: tmp33 };
+                const tmp40 = multiAccountUsers(7063);
                 cResult[26] = tmp4.container;
                 cResult[27] = tmp33;
                 class R {
@@ -263,8 +263,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
                     return closure_1_11(tmp, obj, arg0.id);
                   }
                 }
-                tmp37 = closure_11(multiAccountUsers(7050), obj6);
-                const tmp41 = closure_11(multiAccountUsers(7050), obj6);
+                tmp37 = closure_11(multiAccountUsers(7063), obj6);
+                const tmp41 = closure_11(multiAccountUsers(7063), obj6);
               }
             }
             let obj7 = { style: tmp19, children: null };
@@ -328,8 +328,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
               return closure_1_11(tmp, obj, arg0.id);
             }
           }
-          tmp30 = closure_11(tmp(8926).FormRow, obj8);
-          const tmp32 = closure_11(tmp(8926).FormRow, obj8);
+          tmp30 = closure_11(tmp(8949).FormRow, obj8);
+          const tmp32 = closure_11(tmp(8949).FormRow, obj8);
         }
       }
     }
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
   cResult[3] = navigation;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-  let obj3 = navigation(17286);
+  let obj3 = navigation(17330);
 }) : (function ChooseAccount() {
   closure_2 = async function _handlePressRemove2(arg0) {
     if (c4 === 2) {
@@ -426,10 +426,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
             intl2 = closure_0(1128).intl;
             string = intl2.string;
             obj5.cancelText = string(closure_0(1128).t["ETE/oC"]);
-            obj5 = tmp2(5895).confirm(obj5);
+            obj5 = tmp2(5907).confirm(obj5);
             dependencyMap = 1;
             c4 = 1;
-            const obj8 = tmp2(5895);
+            const obj8 = tmp2(5907);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -440,10 +440,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
           return obj7;
         } else {
           if (value) {
-            tmp2(5196).hideActionSheet();
-            const obj = tmp2(5196);
-            tmp5(13253).removeAccount(closure_129_0.id);
-            const obj2 = tmp5(13253);
+            tmp2(5208).hideActionSheet();
+            const obj = tmp2(5208);
+            tmp5(13276).removeAccount(closure_129_0.id);
+            const obj2 = tmp5(13276);
           }
           c4 = 3;
           return { value: "IconComponent", done: null };
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
   let intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t["0M5fN7"]);
   obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-  obj3.backgroundImageSource = multiAccountUsers(15054);
+  obj3.backgroundImageSource = multiAccountUsers(15079);
   obj3.contentStyle = tmp.container;
   let obj5 = { style: tmp.mainCard, children: null };
   let items = [
@@ -479,8 +479,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
             multiAccountUsers(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
             const obj2 = multiAccountUsers(1267);
           } else {
-            closure_1_2(13253).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-            const obj = closure_1_2(13253);
+            closure_1_2(13276).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+            const obj = closure_1_2(13276);
           }
           return tmp4;
         },
@@ -489,8 +489,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
       let obj2 = {
         accessibilityRole: "button",
         onPress() {
-          multiAccountUsers(5196).hideActionSheet();
-          let obj = multiAccountUsers(5196);
+          multiAccountUsers(5208).hideActionSheet();
+          let obj = multiAccountUsers(5208);
           const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
           const obj4 = { label: null, onPress: null };
           const intl = user(1128).intl;
@@ -501,8 +501,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
               closure_1_1(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
               const obj2 = closure_1_1(1267);
             } else {
-              closure_1_2(13253).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-              const obj = closure_1_2(13253);
+              closure_1_2(13276).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+              const obj = closure_1_2(13276);
             }
             return tmp4;
           };
@@ -524,20 +524,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChooseAc
           };
           items[1] = obj5;
           obj3.options = items;
-          const result = user(7275).showSimpleActionSheet(obj3);
+          const result = user(7288).showSimpleActionSheet(obj3);
         },
         children: null
       };
-      const tmp = multiAccountUsers(17287);
-      obj2.children = closure_1_11(user(1202).Icon, { size: user(1202).Icon.Sizes.SMALL_20, source: multiAccountUsers(9008), disableColor: true });
-      obj.trailing = closure_1_11(user(6893).PressableOpacity, obj2);
+      const tmp = multiAccountUsers(17331);
+      obj2.children = closure_1_11(user(1202).Icon, { size: user(1202).Icon.Sizes.SMALL_20, source: multiAccountUsers(9031), disableColor: true });
+      obj.trailing = closure_1_11(user(6906).PressableOpacity, obj2);
       return closure_1_11(tmp, obj, user.id);
     }),
 
   ];
   let obj6 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(7050);
-  obj6.leading = closure_11(require("Form").FormRow.Icon, { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(17288) });
+  const tmp2 = multiAccountUsers(7063);
+  obj6.leading = closure_11(require("Form").FormRow.Icon, { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(17332) });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);
   obj6.labelStyle = tmp.addAccountLabel;

@@ -1,14 +1,14 @@
-// === Module 18361: ExternalPipViewVideo ===
+// === Module 18405: ExternalPipViewVideo ===
 
-// Module 18361 (ExternalPipViewVideo)
+// Module 18405 (ExternalPipViewVideo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
-import ExternalPipDefault from "ExternalPip" /* 5810 */;
-import VideoActionCreators from "VideoActionCreators" /* 18363 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 18364 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
+import ExternalPipDefault from "ExternalPip" /* 5822 */;
+import VideoActionCreators from "VideoActionCreators" /* 18407 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 18408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -94,26 +94,33 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStr
     cResult[9] = obj3;
     tmp10 = obj3;
   }
-  const fn2 = function h() {
-    if (null == first) {
-      const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => {
-        closure_1_4(true);
-      }, num);
-      return () => {
-        clearTimeout(closure_0);
-      };
-    } else {
-      closure_4(false);
+  class R {
+    constructor() {
+      if (null == closure_2) {
+        tmp3 = globalThis;
+        _setTimeout = setTimeout;
+        tmp4 = closure_1;
+        closure_0 = setTimeout(() => {
+          closure_1_4(true);
+        }, closure_1);
+        return () => {
+          clearTimeout(closure_0);
+        };
+      } else {
+        tmp = closure_4;
+        flag = false;
+        tmp2 = closure_4(false);
+        return;
+      }
     }
-  };
+  }
   const items = [streamReady, num];
   cResult[2] = streamReady;
   cResult[3] = num;
-  cResult[4] = fn2;
+  cResult[4] = R;
   cResult[5] = items;
   tmp8 = items;
-  tmp7 = fn2;
+  tmp7 = R;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }) : (function useStreamReady(arg0) {
   closure_0 = arg0;
@@ -198,7 +205,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalPipViewVideoUser(userId) {
-  const cResult = userId(576).c(33);
+  const cResult = userId(576).c(29);
   userId = userId.userId;
   const channelId = userId.channelId;
   const speaking = userId.speaking;
@@ -246,120 +253,105 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
   }
   const tmpResult = userId(504);
   const stateFromStores1 = userId(504).useStateFromStores(tmp8, tmp10);
-  const tmpResult4 = userId(504);
-  const avatarDecoration = userId(6767).useAvatarDecoration(stateFromStores, stateFromStores1);
+  const tmpResult3 = userId(504);
+  const avatarDecoration = userId(6780).useAvatarDecoration(stateFromStores, stateFromStores1);
   if (cResult[6] === stateFromStores1) {
-    if (cResult[7] === userId) {
+    if (cResult[7] === stateFromStores) {
       let tmp13 = cResult[8];
     }
-    const avatarSpeakingColor = tmp(11399).useAvatarSpeakingColor(tmp13);
     if (cResult[9] === stateFromStores1) {
-      if (cResult[10] === stateFromStores) {
-        let tmp15 = cResult[11];
-      }
-      if (cResult[12] === stateFromStores1) {
-        if (cResult[13] === tmp15) {
-          if (cResult[14] === userId) {
-            let tmp18 = cResult[15];
+      if (cResult[10] === tmp13) {
+        if (cResult[11] === userId) {
+          let tmp15 = cResult[12];
+        }
+        ({ gradientStops, backgroundColor } = channelId(18406)(tmp15));
+        if (cResult[13] !== backgroundColor) {
+          const obj2 = { backgroundColor };
+          cResult[13] = backgroundColor;
+          cResult[14] = obj2;
+          let tmp18 = obj2;
+        } else {
+          tmp18 = cResult[14];
+        }
+        if (cResult[15] === tmp4.user) {
+          if (cResult[16] === tmp18) {
+            let tmp19 = cResult[17];
           }
-          ({ gradientStops, backgroundColor } = channelId(18362)(tmp18));
-          if (cResult[16] !== backgroundColor) {
-            const obj2 = { backgroundColor };
-            cResult[16] = backgroundColor;
-            cResult[17] = obj2;
-            let tmp21 = obj2;
+          if (cResult[18] !== gradientStops) {
+            let tmp21 = null;
+            if (null != gradientStops) {
+              const obj3 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
+              tmp21 = closure_11(tmp16(5256), obj3);
+            }
+            cResult[18] = gradientStops;
+            cResult[19] = tmp21;
+            let tmp20 = tmp21;
           } else {
-            tmp21 = cResult[17];
+            tmp20 = cResult[19];
           }
-          if (cResult[18] === tmp4.user) {
-            if (cResult[19] === tmp21) {
-              let tmp22 = cResult[20];
-            }
-            if (cResult[21] !== gradientStops) {
-              let tmp24 = null;
-              if (null != gradientStops) {
-                const obj3 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-                tmp24 = closure_11(tmp19(5244), obj3);
-              }
-              cResult[21] = gradientStops;
-              cResult[22] = tmp24;
-              let tmp23 = tmp24;
-            } else {
-              tmp23 = cResult[22];
-            }
-            if (cResult[23] === avatarDecoration) {
-              if (cResult[24] === stateFromStores1) {
-                if (cResult[25] === speaking) {
-                  if (cResult[26] === avatarSpeakingColor) {
-                    if (cResult[27] === stateFromStores) {
+          if (cResult[20] === avatarDecoration) {
+            if (cResult[21] === stateFromStores1) {
+              if (cResult[22] === speaking) {
+                if (cResult[23] === stateFromStores) {
+                  let tmp26 = cResult[24];
+                }
+                if (cResult[25] === tmp26) {
+                  if (cResult[26] === tmp20) {
+                    if (cResult[27] === tmp19) {
                       let tmp29 = cResult[28];
                     }
-                    if (cResult[29] === tmp23) {
-                      if (cResult[30] === tmp29) {
-                        if (cResult[31] === tmp22) {
-                          let tmp32 = cResult[32];
-                        }
-                        return tmp32;
-                      }
-                    }
-                    const obj4 = { style: tmp22, children: null };
-                    const items2 = [tmp23, tmp29];
-                    obj4.children = items2;
-                    const tmp35 = closure_12(closure_7, obj4);
-                    cResult[29] = tmp23;
-                    cResult[30] = tmp29;
-                    cResult[31] = tmp22;
-                    cResult[32] = tmp35;
-                    tmp32 = tmp35;
+                    return tmp29;
                   }
                 }
+                const obj4 = { style: tmp19, children: null };
+                const items2 = [tmp20, tmp26];
+                obj4.children = items2;
+                const tmp32 = closure_12(closure_7, obj4);
+                cResult[25] = tmp26;
+                cResult[26] = tmp20;
+                cResult[27] = tmp19;
+                cResult[28] = tmp32;
+                tmp29 = tmp32;
               }
             }
-            let tmp30 = null;
-            if (null != stateFromStores) {
-              const obj5 = { user: stateFromStores, avatarDecoration, guildId: stateFromStores1, size: tmp(1202).AvatarSizes.XXLARGE, speaking, speakingColor: avatarSpeakingColor };
-              tmp30 = closure_11(tmp(1202).Avatar, obj5);
-            }
-            cResult[23] = avatarDecoration;
-            cResult[24] = stateFromStores1;
-            cResult[25] = speaking;
-            cResult[26] = avatarSpeakingColor;
-            cResult[27] = stateFromStores;
-            cResult[28] = tmp30;
-            tmp29 = tmp30;
           }
-          const items3 = [tmp4.user, tmp21];
-          cResult[18] = tmp4.user;
-          cResult[19] = tmp21;
-          cResult[20] = items3;
-          tmp22 = items3;
-          tmp19 = channelId;
-          const tmp20 = channelId(18362)(tmp18);
+          let tmp27 = null;
+          if (null != stateFromStores) {
+            const obj5 = { user: stateFromStores, avatarDecoration, guildId: stateFromStores1, size: tmp(1202).AvatarSizes.XXLARGE, speaking };
+            tmp27 = closure_11(tmp(1202).Avatar, obj5);
+          }
+          cResult[20] = avatarDecoration;
+          cResult[21] = stateFromStores1;
+          cResult[22] = speaking;
+          cResult[23] = stateFromStores;
+          cResult[24] = tmp27;
+          tmp26 = tmp27;
         }
+        const items3 = [tmp4.user, tmp18];
+        cResult[15] = tmp4.user;
+        cResult[16] = tmp18;
+        cResult[17] = items3;
+        tmp19 = items3;
+        tmp16 = channelId;
+        const tmp17 = channelId(18406)(tmp15);
       }
-      const obj6 = { userId, guildId: stateFromStores1, avatarURI: tmp15, location: "ExternalPipViewVideo-native" };
-      cResult[12] = stateFromStores1;
-      cResult[13] = tmp15;
-      cResult[14] = userId;
-      cResult[15] = obj6;
-      tmp18 = obj6;
     }
-    let avatarURL;
-    if (stateFromStores != null) {
-      avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
-    }
+    const obj6 = { userId, guildId: stateFromStores1, avatarURI: tmp13, location: "ExternalPipViewVideo-native" };
     cResult[9] = stateFromStores1;
-    cResult[10] = stateFromStores;
-    cResult[11] = avatarURL;
-    tmp15 = avatarURL;
-    const tmpResult6 = tmp(11399);
+    cResult[10] = tmp13;
+    cResult[11] = userId;
+    cResult[12] = obj6;
+    tmp15 = obj6;
   }
-  const obj7 = { userId, guildId: stateFromStores1 };
+  let avatarURL;
+  if (stateFromStores != null) {
+    avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
+  }
   cResult[6] = stateFromStores1;
-  cResult[7] = userId;
-  cResult[8] = obj7;
-  tmp13 = obj7;
-  const tmpResult5 = userId(6767);
+  cResult[7] = stateFromStores;
+  cResult[8] = avatarURL;
+  tmp13 = avatarURL;
+  const tmpResult4 = userId(6780);
 }) : (function ExternalPipViewVideoUser(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -379,41 +371,39 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     return guild_id;
   });
   const obj3 = userId(504);
-  const avatarDecoration = userId(6767).useAvatarDecoration(stateFromStores, stateFromStores1);
-  const obj4 = userId(6767);
-  const avatarSpeakingColor = userId(11399).useAvatarSpeakingColor({ userId, guildId: stateFromStores1 });
+  const avatarDecoration = userId(6780).useAvatarDecoration(stateFromStores, stateFromStores1);
   const obj2 = { userId, guildId: stateFromStores1, avatarURI: null, location: "ExternalPipViewVideo-native" };
   let avatarURL;
-  const obj5 = userId(11399);
-  const tmp7 = channelId;
+  const obj4 = userId(6780);
+  const tmp6 = channelId;
   if (stateFromStores != null) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp8 = channelId(18362);
-  ({ gradientStops, backgroundColor } = channelId(18362)(obj2));
+  const tmp7 = channelId(18406);
+  ({ gradientStops, backgroundColor } = channelId(18406)(obj2));
   const items2 = [tmp.user, backgroundColor];
-  const obj6 = {
+  const obj5 = {
     style: noop.useMemo(() => {
       const items = [user.user, { backgroundColor }];
       return items;
     }, items2),
     children: null
   };
-  let tmp13 = null;
+  let tmp12 = null;
   if (null != gradientStops) {
-    const obj7 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-    tmp13 = closure_11(tmp7(5244), obj7);
+    const obj6 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
+    tmp12 = closure_11(tmp6(5256), obj6);
   }
-  const items3 = [tmp13, ];
-  let tmp18 = null;
+  const items3 = [tmp12, ];
+  let tmp17 = null;
   if (null != stateFromStores) {
-    const obj8 = { user: stateFromStores, avatarDecoration, guildId: stateFromStores1, size: tmp2(1202).AvatarSizes.XXLARGE, speaking: userId.speaking, speakingColor: avatarSpeakingColor };
-    tmp18 = closure_11(tmp2(1202).Avatar, obj8);
+    const obj7 = { user: stateFromStores, avatarDecoration, guildId: stateFromStores1, size: tmp2(1202).AvatarSizes.XXLARGE, speaking: userId.speaking };
+    tmp17 = closure_11(tmp2(1202).Avatar, obj7);
   }
-  items3[1] = tmp18;
-  obj6.children = items3;
-  return closure_12(closure_7, obj6);
+  items3[1] = tmp17;
+  obj5.children = items3;
+  return closure_12(closure_7, obj5);
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalPipViewVideoStream(streamId) {
@@ -427,7 +417,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     first = cResult[0];
   }
   let obj = streamId(576);
-  const surfaceDirectRendererExperiment = streamId(5824).useSurfaceDirectRendererExperiment(streamId.userId, first);
+  const surfaceDirectRendererExperiment = streamId(5836).useSurfaceDirectRendererExperiment(streamId.userId, first);
   const tmp6 = closure_17(streamId);
   const streamReady = tmp6.streamReady;
   ({ streamReadLongTime, streamReadyCallback } = tmp6);
@@ -465,7 +455,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     if (cResult[7] === tmp11) {
       let tmp12 = cResult[8];
     }
-    const token = tmp(5238).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
+    const token = tmp(5250).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
     dependencyMap = closure_8.get();
     if (cResult[9] !== streamId) {
       const fn2 = function w(nativeEvent) {
@@ -535,7 +525,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
       }
     }
     const obj7 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: tmp12, streamId, onReady: streamReadyCallback, onLayout: tmp16 };
-    const tmp19 = closure_11(streamReady(11392), obj7);
+    const tmp19 = closure_11(streamReady(11415), obj7);
     cResult[11] = tmp16;
     cResult[12] = streamId;
     cResult[13] = streamReadyCallback;
@@ -543,17 +533,17 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     cResult[15] = surfaceDirectRendererExperiment;
     cResult[16] = tmp19;
     tmp17 = tmp19;
-    const tmpResult2 = tmp(5238);
+    const tmpResult2 = tmp(5250);
   }
   const items2 = [tmp10.video, tmp11];
   cResult[6] = tmp10.video;
   cResult[7] = tmp11;
   cResult[8] = items2;
   tmp12 = items2;
-  const tmpResult = streamId(5824);
+  const tmpResult = streamId(5836);
 }) : (function ExternalPipViewVideoStream(streamId) {
   streamId = streamId.streamId;
-  const surfaceDirectRendererExperiment = streamId(5824).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(5836).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   const tmp2 = closure_17(streamId);
   const streamReady = tmp2.streamReady;
   let items = [streamReady];
@@ -575,8 +565,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     items[1] = { opacity: num };
     return items;
   }, items1);
-  let obj = streamId(5824);
-  const token = streamId(5238).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(5836);
+  const token = streamId(5250).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
   value = closure_8.get();
   c3 = value;
   const items2 = [streamId, value];
@@ -587,7 +577,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
       VideoActionCreators.updateVideoSize(tmp, size, 1);
     }
   }, items2);
-  const children = [closure_11(streamReady(11392), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: streamReadyCallback, onLayout: callback }), ];
+  const children = [closure_11(streamReady(11415), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: streamReadyCallback, onLayout: callback }), ];
   let tmp11Result = null;
   if (null == streamReady) {
     tmp11Result = null;
@@ -602,7 +592,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
   return closure_12(closure_13, { children });
 });
 ReactCompilerGating = fn(558);
-let obj8 = { marginLeft: nativeDefault.space.PX_4, textAlign: "center" };
+const obj8 = { marginLeft: nativeDefault.space.PX_4, textAlign: "center" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/ExternalPipViewVideo.android.tsx");
 
@@ -614,7 +604,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ channelId, participantType, selectedParticipantStreamId, selectedParticipantUserId, selectedParticipantSpeaking } = useExternalPipParticipantDefault());
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      closure_1(dependencyMap[20]).refreshPipUi();
+      closure_1(dependencyMap[19]).refreshPipUi();
     };
     cResult[0] = fn;
     let first = fn;
@@ -645,12 +635,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   }
                 }
                 const obj2 = { style: tmp2.container, onLayout: tmp10, children: null };
-                class R {
+                class E {
                   constructor(arg0) {
                     if (!closure_1) {
                       tmp = closure_1;
                       tmp2 = closure_2;
-                      obj = closure_1(closure_2[20]);
+                      obj = closure_1(closure_2[19]);
                       setPipContentReadyResult = obj.setPipContentReady();
                     }
                     if (onLayout != null) {
@@ -681,12 +671,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         cResult[8] = channelId;
         cResult[9] = selectedParticipantSpeaking;
-        class R {
+        class E {
           constructor(arg0) {
             if (!closure_1) {
               tmp = closure_1;
               tmp2 = closure_2;
-              obj = closure_1(closure_2[20]);
+              obj = closure_1(closure_2[19]);
               setPipContentReadyResult = obj.setPipContentReady();
             }
             if (onLayout != null) {
@@ -700,12 +690,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[11] = selectedParticipantUserId;
         cResult[12] = tmp14;
       }
-      class R {
+      class E {
         constructor(arg0) {
           if (!closure_1) {
             tmp = closure_1;
             tmp2 = closure_2;
-            obj = closure_1(closure_2[20]);
+            obj = closure_1(closure_2[19]);
             setPipContentReadyResult = obj.setPipContentReady();
           }
           if (onLayout != null) {
@@ -717,8 +707,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       cResult[5] = null != selectedParticipantStreamId;
       cResult[6] = onLayout;
-      cResult[7] = R;
-      tmp10 = R;
+      cResult[7] = E;
+      tmp10 = E;
     }
   }
   const items = [selectedParticipantStreamId, selectedParticipantUserId, participantType];
@@ -735,7 +725,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [selectedParticipantStreamId, selectedParticipantUserId, ];
   ({ participantType: arr[2], channelId, selectedParticipantSpeaking } = tmp2);
   const effect = noop.useEffect(() => {
-    closure_1(dependencyMap[20]).refreshPipUi();
+    closure_1(dependencyMap[19]).refreshPipUi();
   }, items);
   importDefault = tmp4;
   const items1 = [null != selectedParticipantStreamId, onLayout];

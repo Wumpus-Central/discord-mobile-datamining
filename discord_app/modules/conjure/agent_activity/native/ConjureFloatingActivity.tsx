@@ -1,10 +1,10 @@
-// === Module 12443: ConjureFloatingActivity ===
+// === Module 12462: ConjureFloatingActivity ===
 
-// Module 12443 (ConjureFloatingActivity)
+// Module 12462 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   ({ line, onJumpToActivity, bottom, todos, todosLive, agents } = arg0);
   const tmp4 = closure_8();
   const obj = sharedValue(576);
-  sharedValue = sharedValue(5038).useSharedValue(0);
+  sharedValue = sharedValue(5050).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function y() {
       const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const tmpResult = sharedValue(5038);
+  const tmpResult = sharedValue(5050);
   class B {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   B.__closure = { opacity: sharedValue };
   B.__workletHash = 451170179306;
   B.__initData = __initData;
-  const animatedStyle = sharedValue(5038).useAnimatedStyle(B);
-  const tmpResult2 = sharedValue(5038);
+  const animatedStyle = sharedValue(5050).useAnimatedStyle(B);
+  const tmpResult2 = sharedValue(5050);
   [r10047, importDefault] = noop.useState(false);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class D {
@@ -121,13 +121,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   let sharedValue;
   importDefault = undefined;
   const tmp = closure_8();
-  sharedValue = sharedValue(5038).useSharedValue(0);
+  sharedValue = sharedValue(5050).useSharedValue(0);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
     return () => sharedValue(dependencyMap[8]).cancelAnimation(closure_1_0);
   }, items);
-  const obj = sharedValue(5038);
+  const obj = sharedValue(5050);
   class T {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -137,8 +137,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   T.__closure = { opacity: sharedValue };
   T.__workletHash = 4327855830857;
   T.__initData = __initData2;
-  const animatedStyle = sharedValue(5038).useAnimatedStyle(T);
-  const obj2 = sharedValue(5038);
+  const animatedStyle = sharedValue(5050).useAnimatedStyle(T);
+  const obj2 = sharedValue(5050);
   [tmp8, c1] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
       const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj4.children = closure_6(tmp11(12391), obj5);
+      obj4.children = closure_6(tmp11(12410), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -161,19 +161,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   obj7.accessibilityLabel = intl.formatToPlainString(_modDef3830.xuQfOT, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(12298).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
+  const items3 = [closure_6(sharedValue(12317).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(5220).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
+  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(5232).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(6893).PressableOpacity, obj7), ];
+  const items4 = [closure_7(sharedValue(6906).PressableOpacity, obj7), ];
   let tmp16Result = null;
   if (null != todos) {
     const obj10 = { style: tmp.checklistButton, children: null };
-    const obj11 = { variant: "default", size: "sm", icon: tmp11(6826), pressed: tmp8, accessibilityLabel: null, onPress: null };
+    const obj11 = { variant: "default", size: "sm", icon: tmp11(6839), pressed: tmp8, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1128).intl;
     obj11.accessibilityLabel = intl2.string(tmp11(3830).Qp2isI);
     obj11.onPress = callback;
-    obj10.children = closure_6(tmp2(12444).ToggleIconButton, obj11);
+    obj10.children = closure_6(tmp2(12463).ToggleIconButton, obj11);
     tmp16Result = closure_6(View, obj10);
   }
   items4[1] = tmp16Result;

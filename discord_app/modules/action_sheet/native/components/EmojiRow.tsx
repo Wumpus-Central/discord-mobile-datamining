@@ -1,24 +1,24 @@
-// === Module 13941: EmojiRow ===
+// === Module 13964: EmojiRow ===
 
-// Module 13941 (EmojiRow)
+// Module 13964 (EmojiRow)
 import ReactionUtils from "ReactionUtils" /* 4913 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import HapticUtils from "HapticUtils" /* 5198 */;
-import useToken from "useToken" /* 5238 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8272 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9760 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9813 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13942 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13943 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13944 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import HapticUtils from "HapticUtils" /* 5210 */;
+import useToken from "useToken" /* 5250 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7564 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8284 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9782 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9835 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13965 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13966 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiRow
       return reactions_ReactionUtils.handleAddNewReactions(channel, _require.id, ReactionActionCreators.ReactionLocations.MESSAGE);
     }
   };
-  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7263).MESSAGE_LONG_PRESS_MENU });
+  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7276).MESSAGE_LONG_PRESS_MENU });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);
 });

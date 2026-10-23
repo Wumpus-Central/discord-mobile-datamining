@@ -1,18 +1,18 @@
-// === Module 9141: VoiceStateIcons ===
+// === Module 9164: VoiceStateIcons ===
 
-// Module 9141 (VoiceStateIcons)
+// Module 9164 (VoiceStateIcons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9142 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9143 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9145 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9147 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9149 */;
-import _modDef9151 from "module_9151" /* 9151 */;
-import _modDef9152 from "module_9152" /* 9152 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9165 */;
+import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9166 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9168 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9170 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9172 */;
+import _modDef9174 from "module_9174" /* 9174 */;
+import _modDef9175 from "module_9175" /* 9175 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -314,7 +314,7 @@ export const VideoIcon = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
       }
       const obj2 = {};
       const merged = Object.assign(tmp4);
-      obj2.source = _modDef9151;
+      obj2.source = _modDef9174;
       obj2.style = tmp25;
       const tmp32 = React5(native.Icon, obj2);
       cResult[6] = tmp4;
@@ -343,7 +343,7 @@ export const VideoIcon = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
     if (cResult[11] !== tmp4) {
       const obj4 = {};
       const merged2 = Object.assign(tmp4);
-      obj4.source = _modDef9152;
+      obj4.source = _modDef9175;
       const tmp17 = React5(native.Icon, obj4);
       cResult[11] = tmp4;
       cResult[12] = tmp17;
@@ -362,7 +362,7 @@ export const VideoIcon = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef9151;
+    obj.source = _modDef9174;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React5(native.Icon, obj);
@@ -373,7 +373,7 @@ export const VideoIcon = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef9152;
+    obj3.source = _modDef9175;
     return React5(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

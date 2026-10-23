@@ -1,10 +1,10 @@
-// === Module 5660: UserPlatformIcon ===
+// === Module 5672: UserPlatformIcon ===
 
-// Module 5660 (UserPlatformIcon)
+// Module 5672 (UserPlatformIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod5661 from "module_5661" /* 5661 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod5673 from "module_5673" /* 5673 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const UserPlatformIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod5661;
+    const tmpResult = _mod5673;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const UserPlatformIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5661, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5673, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

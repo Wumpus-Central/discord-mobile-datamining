@@ -1,12 +1,12 @@
-// === Module 11133: BioText ===
+// === Module 11156: BioText ===
 
-// Module 11133 (BioText)
+// Module 11156 (BioText)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import isChangelogUserDefault from "isChangelogUser" /* 4870 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LinkingDefault from "Linking" /* 5646 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11134 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LinkingDefault from "Linking" /* 5658 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
                 }
               }
               const obj4 = { variant: str, color: str3, lineClamp, style: tmp4.span, children: tmp19 };
-              const tmp23 = closure_8(lineClamp(5220).Text, obj4, "changelog-cta");
+              const tmp23 = closure_8(lineClamp(5232).Text, obj4, "changelog-cta");
               cResult[12] = lineClamp;
               cResult[13] = tmp4.span;
               cResult[14] = tmp19;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
         const obj5 = { variant: str, color: str4, lineClamp, style: tmp4.text, children: null };
         const items1 = [tmp14, "\n"];
         obj5.children = items1;
-        const tmp18 = closure_7(lineClamp(5220).Text, obj5, "changelog-bio");
+        const tmp18 = closure_7(lineClamp(5232).Text, obj5, "changelog-bio");
         cResult[5] = lineClamp;
         cResult[6] = tmp4.text;
         cResult[7] = str4;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
           }
         }
         const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-        const tmp12 = closure_8(lineClamp(5220).Text, obj6);
+        const tmp12 = closure_8(lineClamp(5232).Text, obj6);
         cResult[21] = lineClamp;
         cResult[22] = tmp4.text;
         cResult[23] = str2;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
   }
   const obj = lineClamp(576);
   const obj7 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-  const tmpResult = lineClamp(11134);
+  const tmpResult = lineClamp(11157);
   let num;
   if (tmpResult2.isAndroid()) {
     num = 3;

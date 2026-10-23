@@ -1,9 +1,9 @@
-// === Module 17898: useMainTabsChannelScreenStyles ===
+// === Module 17942: useMainTabsChannelScreenStyles ===
 
-// Module 17898 (useMainTabsChannelScreenStyles)
+// Module 17942 (useMainTabsChannelScreenStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

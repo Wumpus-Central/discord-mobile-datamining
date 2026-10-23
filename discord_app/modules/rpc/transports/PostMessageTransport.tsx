@@ -1,19 +1,19 @@
-// === Module 11428: PostMessageTransport ===
+// === Module 11448: PostMessageTransport ===
 
-// Module 11428 (PostMessageTransport)
+// Module 11448 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1104 */;
-import RPCErrorDefault from "RPCError" /* 9240 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11429 */;
+import RPCErrorDefault from "RPCError" /* 9263 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import FramesStore from "FramesStore" /* 6760 */;
+import FramesStore from "FramesStore" /* 6773 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6363).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6376).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, RPCCloseCodes: c10, RPCErrors: closure_11, RPCCommands: closure_12 } = Constants);
-const asLaunched = fn(6761).asLaunched;
+const asLaunched = fn(6774).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();

@@ -1,20 +1,20 @@
-// === Module 19299: AVErrorAnalytics ===
+// === Module 19343: AVErrorAnalytics ===
 
-// Module 19299 (AVErrorAnalytics)
+// Module 19343 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1378 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4975 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5809 */;
-import VideoQualityStats from "VideoQualityStats" /* 5886 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5821 */;
+import VideoQualityStats from "VideoQualityStats" /* 5898 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5717 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5865 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5729 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5877 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
-import RTCRegionStore from "RTCRegionStore" /* 5799 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import RTCRegionStore from "RTCRegionStore" /* 5811 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7812 */;
 
 const require = globalThis.__r;
 
@@ -72,9 +72,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5719).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5731).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Constants = fn(5704);
+const Constants = fn(5716);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

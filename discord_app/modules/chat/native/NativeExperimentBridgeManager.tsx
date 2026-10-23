@@ -1,18 +1,19 @@
-// === Module 19264: NativeExperimentBridgeManager ===
+// === Module 19308: NativeExperimentBridgeManager ===
 
-// Module 19264 (NativeExperimentBridgeManager)
+// Module 19308 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6479 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7733 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19265 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19266 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19267 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6492 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7746 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19309 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19310 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19311 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import MediaPlaybackExperiment_mod from "MediaPlaybackExperiment" /* 8790 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 import size from "module_2" /* 2 */;
 
 function syncYYTextReplacementExperiment() {
@@ -83,6 +84,8 @@ function updateAndroidExperiments() {
   }
 }
 const NativeModules = _mod17.NativeModules;
+let MediaPlaybackExperiment = MediaPlaybackExperiment_mod;
+MediaPlaybackExperiment = MediaPlaybackExperiment.initializeMediaPlaybackExperiment();
 const prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   if (obj.isIOS()) {
@@ -97,9 +100,9 @@ const prototype = function NativeExperimentBridgeManager() {
   applyArgumentsResult.actions = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
+class prototype extends tmp3 {
 }
 const prototype1 = new prototype();
-let result = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
+let result1 = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
 
 export default prototype1;

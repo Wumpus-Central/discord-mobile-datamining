@@ -1,12 +1,12 @@
-// === Module 18292: BurstReactionAnimationContainer ===
+// === Module 18336: BurstReactionAnimationContainer ===
 
-// Module 18292 (BurstReactionAnimationContainer)
+// Module 18336 (BurstReactionAnimationContainer)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import native from "native" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
         dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
         closure_1_4(true);
         ref.current = true;
-        const result = fill(5198).triggerHapticFeedback(first(5199).IMPACT_HEAVY);
+        const result = fill(5210).triggerHapticFeedback(first(5211).IMPACT_HEAVY);
       }
       const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
       return () => {
@@ -119,8 +119,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
     }
     return obj2;
   };
-  let tmpResult = fill(5038);
-  fn2.__closure = { animationData, showAnimation: dismissTextContainer, withTiming: fill(5192).withTiming, runOnJS: fill(5038).runOnJS, handleComponentFinish };
+  let tmpResult = fill(5050);
+  fn2.__closure = { animationData, showAnimation: dismissTextContainer, withTiming: fill(5204).withTiming, runOnJS: fill(5050).runOnJS, handleComponentFinish };
   fn2.__workletHash = 3096942457868;
   fn2.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn2);
@@ -174,7 +174,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
                 closure_1_7();
               }
             };
-            tmpResult = animatedStyle(first(5212), obj7);
+            tmpResult = animatedStyle(first(5224), obj7);
           }
           obj5.children = tmpResult;
           items1[1] = animatedStyle(handleComponentFinish, obj5);
@@ -184,7 +184,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
             const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
             const intl = fill(1128).intl;
             obj9.children = intl.string(fill(1128).t.QpPMih);
-            const items2 = [animatedStyle(fill(5220).Text, obj9), ];
+            const items2 = [animatedStyle(fill(5232).Text, obj9), ];
             const obj17 = { style: tmp4.dismissTextBackground };
             items2[1] = animatedStyle(handleComponentFinish, obj17);
             obj8.children = items2;
@@ -193,11 +193,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           items1[2] = tmp6Result;
           obj3.children = items1;
           obj2.children = closure_1_10(closure_5, obj3);
-          obj.children = animatedStyle(first(5038).View, obj2);
+          obj.children = animatedStyle(first(5050).View, obj2);
           return animatedStyle(fill(1202).OverlayView, obj);
         }
     };
-    tmp2 = animatedStyle(animationData(10385), obj4);
+    tmp2 = animatedStyle(animationData(10407), obj4);
     cResult[4] = animatedStyle;
     cResult[5] = animationData;
     cResult[6] = dismissTextContainer;
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       ref.current = true;
-      const result = handleEffectReceived(5198).triggerHapticFeedback(first(5199).IMPACT_HEAVY);
+      const result = handleEffectReceived(5210).triggerHapticFeedback(first(5211).IMPACT_HEAVY);
     }
     const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(5212), obj7);
+        tmpResult = closure_1_8(first(5224), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
@@ -311,7 +311,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
         const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
         const intl = closure_0(1128).intl;
         obj9.children = intl.string(closure_0(1128).t.QpPMih);
-        const items2 = [closure_1_8(closure_0(5220).Text, obj9), ];
+        const items2 = [closure_1_8(closure_0(5232).Text, obj9), ];
         const obj17 = { style: tmp4.dismissTextBackground };
         items2[1] = closure_1_8(handleComponentFinish, obj17);
         obj8.children = items2;
@@ -320,11 +320,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       items1[2] = tmp6Result;
       obj3.children = items1;
       obj2.children = closure_1_10(closure_5, obj3);
-      obj.children = closure_1_8(first(5038).View, obj2);
+      obj.children = closure_1_8(first(5050).View, obj2);
       return closure_1_8(closure_0(1202).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10385), obj3);
-    let tmp11 = animationData(10385);
+    tmp8 = closure_8(animationData(10407), obj3);
+    let tmp11 = animationData(10407);
   }
   return tmp8;
 });

@@ -1,6 +1,6 @@
-// === Module 11448: EmbeddedAppShimExperiment ===
+// === Module 11468: EmbeddedAppShimExperiment ===
 
-// Module 11448 (EmbeddedAppShimExperiment)
+// Module 11468 (EmbeddedAppShimExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

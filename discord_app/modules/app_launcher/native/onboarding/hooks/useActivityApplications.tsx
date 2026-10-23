@@ -1,7 +1,7 @@
-// === Module 11970: useActivityApplications ===
+// === Module 11989: useActivityApplications ===
 
-// Module 11970 (useActivityApplications)
-import fetchShelf from "fetchShelf" /* 11344 */;
+// Module 11989 (useActivityApplications)
+import fetchShelf from "fetchShelf" /* 11367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
   } else {
     tmp3 = cResult[1];
   }
-  const arr = fetchesShelf(11971)(tmp3);
+  const arr = fetchesShelf(11990)(tmp3);
   if (cResult[2] !== arr) {
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -64,7 +64,7 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(11971)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(11990)({ guildId }).map((application) => application.application);
   const effect = noop.useEffect(() => {
     if (fetchesShelf) {
       const obj2 = { guildId };

@@ -1,11 +1,11 @@
-// === Module 8770: common/Video ===
+// === Module 8788: common/Video ===
 
-// Module 8770 (common/Video)
+// Module 8788 (common/Video)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7118 */;
-import openMediaModal from "openMediaModal" /* 8731 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7131 */;
+import openMediaModal from "openMediaModal" /* 8749 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
   }
   _require = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(8771);
+    const tmpResult = tmp(8789);
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
     props = controls.props;
   }
   const merged = Object.assign(props);
-  return jsx(pauseWhileAppInactive(8771).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
+  return jsx(pauseWhileAppInactive(8789).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
 });
 let closure_10 = tmp4;
 const PureComponent = noop.PureComponent;
@@ -352,7 +352,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5023).ThemeContext;
+Video.contextType = fn(5035).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

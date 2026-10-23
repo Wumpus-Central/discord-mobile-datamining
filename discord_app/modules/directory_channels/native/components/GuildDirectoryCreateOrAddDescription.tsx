@@ -1,7 +1,7 @@
-// === Module 13139: GuildDirectoryCreateOrAddDescription ===
+// === Module 13162: GuildDirectoryCreateOrAddDescription ===
 
-// Module 13139 (GuildDirectoryCreateOrAddDescription)
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13137 */;
+// Module 13162 (GuildDirectoryCreateOrAddDescription)
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -102,11 +102,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = directoryChannelId(1128).intl;
   obj4.children = intl.string(directoryChannelId(1128).t["5bQcoa"]);
-  const items = [closure_6(directoryChannelId(5220).Text, obj4), ];
+  const items = [closure_6(directoryChannelId(5232).Text, obj4), ];
   let obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1128).intl;
   obj5.children = intl2.string(directoryChannelId(1128).t.Ie60Wc);
-  items[1] = closure_6(directoryChannelId(5220).Text, obj5);
+  items[1] = closure_6(directoryChannelId(5232).Text, obj5);
   obj3.children = items;
   const items1 = [closure_7(closure_4, obj3), ];
   let obj6 = {
@@ -129,5 +129,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(directoryChannelId(13129).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(13152).GuildDirectoryAddModalScreen, obj);
 };

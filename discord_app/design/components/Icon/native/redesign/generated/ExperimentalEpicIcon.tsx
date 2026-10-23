@@ -1,10 +1,10 @@
-// === Module 11112: ExperimentalEpicIcon ===
+// === Module 11135: ExperimentalEpicIcon ===
 
-// Module 11112 (ExperimentalEpicIcon)
+// Module 11135 (ExperimentalEpicIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod11113 from "module_11113" /* 11113 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod11136 from "module_11136" /* 11136 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ExperimentalEpicIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11113;
+    const tmpResult = _mod11136;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ExperimentalEpicIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11113, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11136, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

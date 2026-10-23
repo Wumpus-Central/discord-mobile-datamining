@@ -1,10 +1,10 @@
-// === Module 8115: InAppReportsTextLineElement ===
+// === Module 8128: InAppReportsTextLineElement ===
 
-// Module 8115 (InAppReportsTextLineElement)
+// Module 8128 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 587 */;
-import ToastUtils from "ToastUtils" /* 5648 */;
-import CustomMarkupAll from "CustomMarkup" /* 5965 */;
-import ClipboardUtils from "ClipboardUtils" /* 7270 */;
+import ToastUtils from "ToastUtils" /* 5660 */;
+import CustomMarkupAll from "CustomMarkup" /* 5977 */;
+import ClipboardUtils from "ClipboardUtils" /* 7283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
   } else {
     first = cResult[0];
   }
-  const tmp8 = sms_body(5585)(first);
+  const tmp8 = sms_body(5597)(first);
   if (data.is_localized) {
     if (cResult[1] !== sms) {
       function handleCopyPress() {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
                   }
                   if (cResult[22] !== sms) {
                     let obj2 = { variant: "text-sm/semibold", color: "interactive-text-active", children: sms };
-                    const tmp31 = closure_9(tmp(5220).Text, obj2);
+                    const tmp31 = closure_9(tmp(5232).Text, obj2);
                     cResult[22] = sms;
                     cResult[23] = tmp31;
                     let tmp29 = tmp31;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
                             }
                             if (cResult[37] !== tmp12) {
                               let obj3 = { text: tmp46, size: "md", onPress: tmp12 };
-                              const tmp50 = closure_9(tmp(5230).Button, obj3);
+                              const tmp50 = closure_9(tmp(5242).Button, obj3);
                               cResult[37] = tmp12;
                               cResult[38] = tmp50;
                               let tmp48 = tmp50;
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
                       tmp38 = tmp41;
                     }
                     const obj9 = { text: cResult[25], size: "sm", onPress: tmp10, variant: "secondary" };
-                    const tmp37 = closure_9(tmp(5230).Button, obj9);
+                    const tmp37 = closure_9(tmp(5242).Button, obj9);
                     cResult[26] = tmp10;
                     cResult[27] = cResult[25];
                     cResult[28] = tmp37;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
                 tmp28 = items3;
               }
               const obj10 = { style: tmp21, variant: "text-md/medium", children: tmp22 };
-              const tmp26 = closure_9(tmp(5220).Text, obj10);
+              const tmp26 = closure_9(tmp(5232).Text, obj10);
               cResult[16] = tmp4.description;
               cResult[17] = tmp22;
               cResult[18] = tmp26;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
             tmp22 = tmp8Result;
           }
           const obj11 = { style: tmp4.header, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
-          const tmp20 = closure_9(tmp(5220).Text, obj11);
+          const tmp20 = closure_9(tmp(5232).Text, obj11);
           cResult[10] = tmp4.header;
           cResult[11] = title;
           cResult[12] = tmp20;
@@ -311,8 +311,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextLine
             return obj5;
           } else {
             if (value) {
-              sms_body(5646).openURL(closure_128_0);
-              const obj = sms_body(5646);
+              sms_body(5658).openURL(closure_128_0);
+              const obj = sms_body(5658);
             }
             dependencyMap = 3;
             return { value: "IconComponent", done: null };

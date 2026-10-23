@@ -1,9 +1,9 @@
-// === Module 18107: ChannelDetailsMoreButton ===
+// === Module 18151: ChannelDetailsMoreButton ===
 
-// Module 18107 (ChannelDetailsMoreButton)
-import _modDef9008 from "module_9008" /* 9008 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9682 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10668 */;
+// Module 18151 (ChannelDetailsMoreButton)
+import _modDef9031 from "module_9031" /* 9031 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9704 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10690 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreButt
     }
     if (cResult[3] !== tmp3) {
       let obj2 = { children: null };
-      HeaderIconButton = HeaderIconButton(9676).HeaderIconButton;
+      HeaderIconButton = HeaderIconButton(9698).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, source: null, onPress: null };
-      tmp = _modDef9008;
+      tmp = _modDef9031;
       obj3.source = tmp;
       obj3.onPress = tmp3;
       obj2.children = <HeaderIconButton accessibilityLabel={tmp6} source={null} onPress={null} />;
@@ -72,9 +72,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreButt
       let obj2 = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1128).intl;
       obj2.accessibilityLabel = intl.string(channel(1128).t["UKOtz+"]);
-      obj2.source = _modDef9008;
+      obj2.source = _modDef9031;
       obj2.onPress = tmp;
-      obj.children = jsx(channel(9676).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(9698).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;

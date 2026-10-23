@@ -1,10 +1,10 @@
-// === Module 18666: AutomodRemovedContentActionCreators ===
+// === Module 18710: AutomodRemovedContentActionCreators ===
 
-// Module 18666 (AutomodRemovedContentActionCreators)
+// Module 18710 (AutomodRemovedContentActionCreators)
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
@@ -30,5 +30,5 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
   }
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18667, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18711, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
 };

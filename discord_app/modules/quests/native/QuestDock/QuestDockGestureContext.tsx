@@ -1,22 +1,22 @@
-// === Module 16355: QuestDockGestureContext ===
+// === Module 16405: QuestDockGestureContext ===
 
-// Module 16355 (QuestDockGestureContext)
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12479 */;
+// Module 16405 (QuestDockGestureContext)
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12498 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16352 */;
+import QuestDockStore from "QuestDockStore" /* 16402 */;
 
 const require = fn;
-const QuestDockMode = fn(6695).QuestDockMode;
-const height = fn(16354).QUEST_DOCK_COLLAPSED_HEIGHT;
+const QuestDockMode = fn(6708).QuestDockMode;
+const height = fn(16404).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
-let ReanimatedHelperTypes = fn(7154);
+let ReanimatedHelperTypes = fn(7167);
 obj.questDockWrapperSpecs = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0, x: 0, y: 0, prevDeltaY: 0 });
-ReanimatedHelperTypes = fn(7154);
+ReanimatedHelperTypes = fn(7167);
 obj.windowDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0, maxContentHeight: 0, landscape: false });
-ReanimatedHelperTypes = fn(7154);
+ReanimatedHelperTypes = fn(7167);
 obj.activeQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
-ReanimatedHelperTypes = fn(7154);
+ReanimatedHelperTypes = fn(7167);
 obj.minExpandedContentHeight = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 let size = fn(2);

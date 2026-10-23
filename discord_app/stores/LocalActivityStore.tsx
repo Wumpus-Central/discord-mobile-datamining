@@ -1,25 +1,25 @@
-// === Module 11167: LocalActivityStore ===
+// === Module 11190: LocalActivityStore ===
 
-// Module 11167 (LocalActivityStore)
+// Module 11190 (LocalActivityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11175 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11168 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11169 */;
-import SpotifyStore from "SpotifyStore" /* 6484 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11191 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11192 */;
+import SpotifyStore from "SpotifyStore" /* 6497 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import DetectableGameStore from "DetectableGameStore" /* 2039 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11172 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11195 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SessionsStore from "SessionsStore" /* 5702 */;
+import SessionsStore from "SessionsStore" /* 5714 */;
 
 require = fn;
 function updateActivities() {

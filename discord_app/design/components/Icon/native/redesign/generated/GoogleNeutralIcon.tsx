@@ -1,10 +1,10 @@
-// === Module 7924: GoogleNeutralIcon ===
+// === Module 7937: GoogleNeutralIcon ===
 
-// Module 7924 (GoogleNeutralIcon)
+// Module 7937 (GoogleNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod7925 from "module_7925" /* 7925 */;
+import BaseIconImage from "BaseIconImage" /* 5666 */;
+import _mod7938 from "module_7938" /* 7938 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const GoogleNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7925;
+    const tmpResult = _mod7938;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const GoogleNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7925, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7938, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

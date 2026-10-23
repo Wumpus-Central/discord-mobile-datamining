@@ -1,15 +1,15 @@
-// === Module 18215: IntegrationsSettingsWebhooksOverview ===
+// === Module 18259: IntegrationsSettingsWebhooksOverview ===
 
-// Module 18215 (IntegrationsSettingsWebhooksOverview)
+// Module 18259 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import NavScrim from "NavScrim" /* 5578 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import Form from "Form" /* 8926 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 18217 */;
+import NavScrim from "NavScrim" /* 5590 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import Form from "Form" /* 8949 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 18261 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import GuildChannelStore_mod from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import WebhooksStore from "WebhooksStore" /* 18216 */;
+import WebhooksStore from "WebhooksStore" /* 18260 */;
 
 require = fn;
 let closure_3 = ["channelId", "user"];
@@ -559,7 +559,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_20(webhookType(5220).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_20(webhookType(5232).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -567,7 +567,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(18220).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(18264).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1128).intl;
       dkHRkE = webhookType(1128).t.dkHRkE;
@@ -589,7 +589,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6972).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6985).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }
@@ -602,7 +602,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_22(guild, obj);
 };
-WebhooksOverview.contextType = fn(5023).ThemeContext;
+WebhooksOverview.contextType = fn(5035).ThemeContext;
 let closure_28 = [];
 ReactCompilerGating = fn(558);
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

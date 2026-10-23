@@ -1,8 +1,8 @@
-// === Module 8721: VideoBackgroundManager ===
+// === Module 8739: VideoBackgroundManager ===
 
-// Module 8721 (VideoBackgroundManager)
+// Module 8739 (VideoBackgroundManager)
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
 
 const prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

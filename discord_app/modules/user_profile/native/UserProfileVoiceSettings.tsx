@@ -1,17 +1,17 @@
-// === Module 14276: UserProfileVoiceSettings ===
+// === Module 14300: UserProfileVoiceSettings ===
 
-// Module 14276 (UserProfileVoiceSettings)
+// Module 14300 (UserProfileVoiceSettings)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5837 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9176 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13480 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9199 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13503 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5992 */;
+import SoundboardStore from "SoundboardStore" /* 6004 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
 
 require = fn;
 const View = fn(17).View;
@@ -391,7 +391,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   const style = channel.style;
   const tmp4 = closure_13();
   const obj = channel(576);
-  const trackUserProfileAction = channel(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = channel(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
     const fn = function n() {
@@ -404,7 +404,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = channel(8659);
+  const obj2 = channel(8677);
   const stateFromStores = channel(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PermissionStore];
@@ -616,8 +616,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
         }
         const obj3 = { children: null };
         const obj4 = { label: tmp16, icon: tmp19, onPress: P };
-        obj3.children = closure_11(tmp(7288).UserProfileFormRow, obj4, "mute");
-        const tmp23 = closure_11(tmp(7288).UserProfileCardRows, obj3);
+        obj3.children = closure_11(tmp(7301).UserProfileFormRow, obj4, "mute");
+        const tmp23 = closure_11(tmp(7301).UserProfileCardRows, obj3);
         cResult[13] = tmp16;
         cResult[14] = tmp19;
         cResult[15] = P;
@@ -635,8 +635,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   ({ user, style } = channel);
   const tmp = closure_13();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8659);
+  const trackUserProfileAction = channel(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8677);
   const items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -669,9 +669,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9149).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9172).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(11602).MicrophoneIcon;
+      MicrophoneIcon = tmp2(11622).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -679,11 +679,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_11(tmp2(7288).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_11(tmp2(7288).UserProfileCardRows, obj6);
+    obj6.children = closure_11(tmp2(7301).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_11(tmp2(7301).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_11(trackUserProfileAction(7288), obj4);
-    const tmp6Result = trackUserProfileAction(7288);
+    closure_11(trackUserProfileAction(7301), obj4);
+    const tmp6Result = trackUserProfileAction(7301);
   }
   return tmp8;
 });

@@ -1,24 +1,24 @@
-// === Module 9278: GameProfileHeader ===
+// === Module 9301: GameProfileHeader ===
 
-// Module 9278 (GameProfileHeader)
+// Module 9301 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import SKUUtils from "SKUUtils" /* 9279 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9280 */;
-import GameCoverArtDefault from "GameCoverArt" /* 9281 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 9283 */;
-import _modDef9285 from "module_9285" /* 9285 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import SKUUtils from "SKUUtils" /* 9302 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9303 */;
+import GameCoverArtDefault from "GameCoverArt" /* 9304 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 9306 */;
+import _modDef9308 from "module_9308" /* 9308 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9276);
+const GameProfileConstants = fn(9299);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   const items8 = [timestampProducer(Text_Text.Text, obj13), ];
   let tmp12Result3 = game.id === hasOwnProperty;
   if (tmp12Result3) {
-    const obj14 = { source: _modDef9285, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj14 = { source: _modDef9308, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp12Result3 = timestampProducer(FastImageDefault, obj14);
     const tmp6Result = FastImageDefault;
   }

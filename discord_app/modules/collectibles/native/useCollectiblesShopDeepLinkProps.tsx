@@ -1,9 +1,9 @@
-// === Module 17119: useCollectiblesShopDeepLinkProps ===
+// === Module 17163: useCollectiblesShopDeepLinkProps ===
 
-// Module 17119 (useCollectiblesShopDeepLinkProps)
+// Module 17163 (useCollectiblesShopDeepLinkProps)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7635 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7674 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7648 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7687 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

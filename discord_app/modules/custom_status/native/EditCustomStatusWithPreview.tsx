@@ -1,6 +1,6 @@
-// === Module 11035: EditCustomStatusWithPreview ===
+// === Module 11058: EditCustomStatusWithPreview ===
 
-// Module 11035 (EditCustomStatusWithPreview)
+// Module 11058 (EditCustomStatusWithPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,18 +8,18 @@ import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import shared from "shared" /* 4976 */;
-import ChatInputUtils from "ChatInputUtils" /* 5145 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5957 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import Pressables from "Pressables" /* 6893 */;
-import NavigatorHeader from "NavigatorHeader" /* 6909 */;
-import _modDef7017 from "module_7017" /* 7017 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11039 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11041 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11044 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11046 */;
+import ChatInputUtils from "ChatInputUtils" /* 5157 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5969 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import Pressables from "Pressables" /* 6906 */;
+import NavigatorHeader from "NavigatorHeader" /* 6922 */;
+import _modDef7030 from "module_7030" /* 7030 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9824 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11062 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11064 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11067 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11069 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -259,7 +259,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[12]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11126, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11149, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[32]).Text, obj19);
@@ -297,7 +297,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11036).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11059).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;
@@ -346,7 +346,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
     tmp8 = cResult[2];
   }
   if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef7017, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+    const obj3 = { source: _modDef7030, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
     const tmp12 = map1(native.Icon, obj3);
     cResult[3] = tmp4.closeIcon;
     cResult[4] = tmp12;
@@ -372,7 +372,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = map1(native.Icon, { source: _modDef7017, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  obj.children = map1(native.Icon, { source: _modDef7030, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
   return map1(Pressables.PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       analyticsLocations(1385);
       obj3.headerStatusBarHeight = 12;
       obj3.headerStyle = tmp6;
-      const tmp8Result = closure_13(analyticsLocations(7080).Navigator, obj3);
+      const tmp8Result = closure_13(analyticsLocations(7093).Navigator, obj3);
       cResult[4] = tmp4;
       cResult[5] = tmp8Result;
       let tmp7 = tmp8Result;
@@ -421,10 +421,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     const obj = { title: null };
     const intl = analyticsLocations(1128).intl;
     obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-    return closure_1_13(analyticsLocations(9676).GenericHeaderTitle, obj);
+    return closure_1_13(analyticsLocations(9698).GenericHeaderTitle, obj);
   };
   const obj = analyticsLocations(576);
-  obj5.headerLeft = analyticsLocations(6909).getHeaderCloseButton(_prompt(6657).pop);
+  obj5.headerLeft = analyticsLocations(6922).getHeaderCloseButton(_prompt(6670).pop);
   obj5.render = function render(arg0, navigation) {
     return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[46]).pop, analyticsLocations, prompt: _prompt });
   };
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
   cResult[1] = _prompt;
   cResult[2] = obj4;
   tmp4 = obj4;
-  const tmpResult4 = analyticsLocations(6909);
+  const tmpResult4 = analyticsLocations(6922);
 }) : (function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       const obj = { title: null };
       const intl = analyticsLocations(1128).intl;
       obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9676).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9698).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -464,5 +464,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(7080).Navigator, obj);
+  return closure_13(analyticsLocations(7093).Navigator, obj);
 });

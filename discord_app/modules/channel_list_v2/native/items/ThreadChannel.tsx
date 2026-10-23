@@ -1,30 +1,30 @@
-// === Module 17459: ThreadChannel ===
+// === Module 17503: ThreadChannel ===
 
-// Module 17459 (ThreadChannel)
+// Module 17503 (ThreadChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5693 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10972 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17460 */;
+import transitionToChannel from "transitionToChannel" /* 5705 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10995 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17504 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6756 */;
+import ReadStateStore from "ReadStateStore" /* 6769 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5703 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5715 */;
 
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12014);
+const RedesignChannelListConstants = fn(12033);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1087).Permissions;
-const UnreadSetting = fn(6690).UnreadSetting;
+const UnreadSetting = fn(6703).UnreadSetting;
 let closure_16 = fn(1127).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);

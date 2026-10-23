@@ -1,13 +1,13 @@
-// === Module 13297: ChatInputGuardReturnToGameProfile ===
+// === Module 13320: ChatInputGuardReturnToGameProfile ===
 
-// Module 13297 (ChatInputGuardReturnToGameProfile)
+// Module 13320 (ChatInputGuardReturnToGameProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 10727 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13291 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 10749 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13314 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

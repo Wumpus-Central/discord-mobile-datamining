@@ -1,10 +1,10 @@
-// === Module 14434: ProductDetailsActionSheetSkeleton ===
+// === Module 14458: ProductDetailsActionSheetSkeleton ===
 
-// Module 14434 (ProductDetailsActionSheetSkeleton)
+// Module 14458 (ProductDetailsActionSheetSkeleton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -28,7 +28,7 @@ obj2.price = size2;
 let obj5 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-obj2.purchaseButton = { height: fn(5236).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5248).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function ProductDetailsActionSheetSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
@@ -37,7 +37,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePul
   const cResult = sharedValue(576).c(3);
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(5038).useSharedValue(0.3);
+  sharedValue = sharedValue(5050).useSharedValue(0.3);
   if (cResult[0] !== sharedValue) {
     const fn = function o() {
       const obj = ReanimatedRexport;
@@ -54,32 +54,32 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePul
     tmp6 = cResult[2];
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const obj2 = sharedValue(5038);
+  const obj2 = sharedValue(5050);
   const fn2 = function l() {
     return { opacity: sharedValue.get() };
   };
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 4141895524740;
   fn2.__initData = __initData;
-  return tmp(5038).useAnimatedStyle(fn2);
+  return tmp(5050).useAnimatedStyle(fn2);
 }) : (function usePulseStyle() {
-  sharedValue = sharedValue(5038).useSharedValue(0.3);
+  sharedValue = sharedValue(5050).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(5038);
+  let obj = sharedValue(5050);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 5056040834599;
   fn.__initData = __initData2;
-  return sharedValue(5038).useAnimatedStyle(fn);
+  return sharedValue(5050).useAnimatedStyle(fn);
 });
 ReactCompilerGating = fn(558);
-let obj7 = { height: fn(5236).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+let obj7 = { height: fn(5248).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 

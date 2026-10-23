@@ -1,8 +1,8 @@
-// === Module 11615: GameConsoleAlert ===
+// === Module 11635: GameConsoleAlert ===
 
-// Module 11615 (GameConsoleAlert)
+// Module 11635 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5701 */;
+import GameConsoleStore from "GameConsoleStore" /* 5713 */;
 
 const require = fn;
 const View = fn(17).View;

@@ -1,30 +1,30 @@
-// === Module 11650: RTCDebugOverlay ===
+// === Module 11670: RTCDebugOverlay ===
 
-// Module 11650 (RTCDebugOverlay)
+// Module 11670 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5724 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11651 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5736 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11671 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
-import RTCDebugStore from "RTCDebugStore" /* 5723 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import RTCDebugStore from "RTCDebugStore" /* 5735 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7812 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 let closure_4 = ["type"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5716).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 function asString(arg0) {
@@ -434,7 +434,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function RTCDeb
   }
   const tmpResult3 = guildId(504);
   const stateFromStores1 = guildId(504).useStateFromStores(tmp14, tmp16, tmp17);
-  const tmp19 = channelId(5590)(stateFromStores1);
+  const tmp19 = channelId(5602)(stateFromStores1);
   let name = null;
   if (null != stateFromStores) {
     name = stateFromStores.name;
@@ -497,9 +497,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function RTCDeb
   }
   const obj5 = { title: "general", children: null };
   obj6 = { obj: null };
-  const tmp4 = channelId(5590)(stateFromStores1);
+  const tmp4 = channelId(5602)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5590)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5602)(stateFromStores1) } };
   obj5.children = closure_17(ObjectKV, obj6);
   return closure_17(closure_23, obj5);
 });

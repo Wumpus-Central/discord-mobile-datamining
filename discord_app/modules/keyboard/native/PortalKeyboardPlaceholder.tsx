@@ -1,6 +1,6 @@
-// === Module 13081: PortalKeyboardPlaceholder ===
+// === Module 13104: PortalKeyboardPlaceholder ===
 
-// Module 13081 (PortalKeyboardPlaceholder)
+// Module 13104 (PortalKeyboardPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,10 +8,10 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1899 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5147 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5582 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7023 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9685 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5159 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5594 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7036 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

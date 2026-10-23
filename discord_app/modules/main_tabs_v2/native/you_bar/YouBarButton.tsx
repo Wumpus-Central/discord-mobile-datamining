@@ -1,18 +1,18 @@
-// === Module 17758: YouBarButton ===
+// === Module 17802: YouBarButton ===
 
-// Module 17758 (YouBarButton)
+// Module 17802 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import IconButton from "IconButton" /* 7944 */;
-import ClipView from "ClipView" /* 9382 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9681 */;
+import IconButton from "IconButton" /* 7957 */;
+import ClipView from "ClipView" /* 9405 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9703 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16357);
+const YouBarConstants = fn(16407);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "application", bottom: "w", padding: "T", minWidth: "r" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "application", bottom: "duration", padding: "exports", minWidth: "r" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "application", bottom: "w", padding: "T", minWidth: "r" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "application", bottom: "duration", padding: "exports", minWidth: "r" };
     return rect;
   }, items);
 });

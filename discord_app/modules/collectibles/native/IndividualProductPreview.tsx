@@ -1,20 +1,20 @@
-// === Module 14401: IndividualProductPreview ===
+// === Module 14425: IndividualProductPreview ===
 
-// Module 14401 (IndividualProductPreview)
+// Module 14425 (IndividualProductPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import useCurrentUser from "useCurrentUser" /* 8647 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11028 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11146 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14402 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14403 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import useCurrentUser from "useCurrentUser" /* 8665 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11051 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11169 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14426 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14427 */;
 import noop from "module_19" /* 19 */;
 
 const FractionalPremiumSKUs = FractionalNitroPreview(1090);
-const FractionalNitroPreview2 = FractionalNitroPreview(14404);
-const OrbBadgePreview = FractionalNitroPreview(14407);
+const FractionalNitroPreview2 = FractionalNitroPreview(14428);
+const OrbBadgePreview = FractionalNitroPreview(14431);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -97,7 +97,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
         tmp14 = tmp17;
       }
       const obj4 = { style: tmp3.profilePreviewGradient, start: tmp6, end: tmp7, colors: tmp9 };
-      const tmp13 = closure_7(onTrackPress(5244), obj4);
+      const tmp13 = closure_7(onTrackPress(5256), obj4);
       cResult[8] = tmp3.profilePreviewGradient;
       cResult[9] = tmp9;
       cResult[10] = tmp13;
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
     }
     if (cResult[3] !== product) {
       const obj2 = { product };
-      const tmp8 = closure_7(onTrackPress(14402), obj2);
+      const tmp8 = closure_7(onTrackPress(14426), obj2);
       cResult[3] = product;
       cResult[4] = tmp8;
       let tmp5 = tmp8;

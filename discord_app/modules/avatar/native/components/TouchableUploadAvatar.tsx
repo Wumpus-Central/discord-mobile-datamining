@@ -1,14 +1,14 @@
-// === Module 18816: TouchableUploadAvatar ===
+// === Module 18860: TouchableUploadAvatar ===
 
-// Module 18816 (TouchableUploadAvatar)
+// Module 18860 (TouchableUploadAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6893 */;
-import _modDef13657 from "module_13657" /* 13657 */;
-import _modDef15052 from "module_15052" /* 15052 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Pressables from "Pressables" /* 6906 */;
+import _modDef13680 from "module_13680" /* 13680 */;
+import _modDef15077 from "module_15077" /* 15077 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
   ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
   const tmp5 = closure_6();
   if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-    let tmp7 = _modDef15052;
+    let tmp7 = _modDef15077;
   } else {
     tmp7 = avatarSource;
   }
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
         let tmp13 = cResult[3];
       }
       if (cResult[4] !== tmp5.uploadAvatarIcon) {
-        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13657, style: tmp5.uploadAvatarIcon };
+        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13680, style: tmp5.uploadAvatarIcon };
         const tmp20 = React4(native.Icon, obj2);
         cResult[4] = tmp5.uploadAvatarIcon;
         cResult[5] = tmp20;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef15052;
+    let tmp3 = _modDef15077;
   } else {
     tmp3 = avatarSource;
   }
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj4), ];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13657, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13680, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;

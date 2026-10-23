@@ -1,28 +1,28 @@
-// === Module 16839: ViewDebugLogsSetting ===
+// === Module 16883: ViewDebugLogsSetting ===
 
-// Module 16839 (ViewDebugLogsSetting)
+// Module 16883 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ClockIcon from "ClockIcon" /* 5677 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
-import ActionSheetRow from "ActionSheetRow" /* 7279 */;
-import ActionSheet from "ActionSheet" /* 7283 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10007 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10849 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15032 */;
-import WrenchIcon from "WrenchIcon" /* 16840 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16842 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16845 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16846 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ClockIcon from "ClockIcon" /* 5689 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
+import ActionSheetRow from "ActionSheetRow" /* 7292 */;
+import ActionSheet from "ActionSheet" /* 7296 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10029 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10872 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15056 */;
+import WrenchIcon from "WrenchIcon" /* 16884 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16886 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16889 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16890 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11181 */;
+import SettingBuilders from "SettingBuilders" /* 11204 */;
 import size from "module_2" /* 2 */;
 
 const Suspense = _mod19.Suspense;
@@ -75,7 +75,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewDeb
 }) : (function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7279).ActionSheetRow, {
+  return closure_5(title(7292).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {

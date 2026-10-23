@@ -1,12 +1,12 @@
-// === Module 13729: Notification ===
+// === Module 13752: Notification ===
 
-// Module 13729 (Notification)
+// Module 13752 (Notification)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import spring from "spring" /* 5233 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13692 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import spring from "spring" /* 5245 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5709 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13715 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["notification", "icon", "children", "accessoryLabelNode", "rightAccessory", "header", "onPress", "onSettingsPress"];
-const InAppNotificationConstants = fn(13693);
+const InAppNotificationConstants = fn(13716);
 ({ MIN_SWIPE_VELOCITY: metroRequire, STARTED_SWIPE_THRESHOLD: closure_7, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -70,11 +70,11 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
   }
   panning();
   if (cResult[10] !== tmp9) {
-    let result = tmp(13692).extractMetadataFromNotification(tmp9);
+    let result = tmp(13715).extractMetadataFromNotification(tmp9);
     cResult[10] = tmp9;
     cResult[11] = result;
     let tmp17 = result;
-    const tmpResult = tmp(13692);
+    const tmpResult = tmp(13715);
   } else {
     tmp17 = cResult[11];
   }
@@ -86,14 +86,14 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
     channelId = tmp19.channelId;
     const messageId = tmp19.messageId;
     const type = tmp19.type;
-    const inAppNotificationContext = tmp(13709).useInAppNotificationContext();
+    const inAppNotificationContext = tmp(13732).useInAppNotificationContext();
     const notificationGestureY = inAppNotificationContext.notificationGestureY;
     const velocityY = inAppNotificationContext.velocityY;
     const handleDismissNotification = inAppNotificationContext.handleDismissNotification;
     const initialized = inAppNotificationContext.initialized;
     panning = inAppNotificationContext.panning;
-    const tmpResult5 = tmp(13709);
-    const sharedValue = tmp(5038).useSharedValue(1);
+    const tmpResult5 = tmp(13732);
+    const sharedValue = tmp(5050).useSharedValue(1);
     if (cResult[15] !== sharedValue) {
       class L {
         constructor() {
@@ -124,7 +124,7 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
     }
-    const tmpResult6 = tmp(5038);
+    const tmpResult6 = tmp(5050);
     class X {
       constructor() {
         obj = { transform: null };
@@ -137,11 +137,11 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
         return obj;
       }
     }
-    let obj2 = { withSpring: tmp(5233).withSpring, scale: sharedValue, ON_PRESS_SPRING_CONFIG: sharedValue };
+    let obj2 = { withSpring: tmp(5245).withSpring, scale: sharedValue, ON_PRESS_SPRING_CONFIG: sharedValue };
     X.__closure = obj2;
     X.__workletHash = 5485274967370;
     X.__initData = sharedValue1;
-    const animatedStyle = tmp(5038).useAnimatedStyle(X);
+    const animatedStyle = tmp(5050).useAnimatedStyle(X);
     const _Symbol = Symbol;
     if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
       class U {
@@ -157,8 +157,8 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
     }
-    const tmpResult7 = tmp(5038);
-    sharedValue1 = tmp(5038).useSharedValue(100);
+    const tmpResult7 = tmp(5050);
+    sharedValue1 = tmp(5050).useSharedValue(100);
     __initData = tmp32;
     if (cResult[20] === handleDismissNotification) {
       class U {
@@ -176,8 +176,8 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
             const obj2 = { duration: value / 100 * tmp, easing: ReanimatedRexport.Easing.linear };
             const fn = function n(arg0) {
               if (arg0) {
-                closure_0(5038).runOnJS(handleDismissNotification)("timeout");
-                const obj = closure_0(5038);
+                closure_0(5050).runOnJS(handleDismissNotification)("timeout");
+                const obj = closure_0(5050);
               }
             };
             const obj3 = { runOnJS: ReanimatedRexport.runOnJS, handleDismissNotification };
@@ -186,7 +186,7 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
             fn.__initData = __initData;
             const result = sharedValue1.set(obj.withTiming(0, obj2, "animate-always", fn));
             return () => {
-              closure_0(5038).cancelAnimation(sharedValue1);
+              closure_0(5050).cancelAnimation(sharedValue1);
             };
           }
         }
@@ -199,7 +199,7 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
     cResult[24] = sharedValue1;
     cResult[25] = tmp9.duration !== Infinity;
     cResult[26] = fn;
-    const tmpResult8 = tmp(5038);
+    const tmpResult8 = tmp(5050);
   }
   let obj3 = { type: tmp9.type };
   const merged = Object.assign(tmp17);

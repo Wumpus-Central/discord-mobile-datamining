@@ -1,12 +1,12 @@
-// === Module 9077: components_native/QRCode ===
+// === Module 9100: components_native/QRCode ===
 
-// Module 9077 (components_native/QRCode)
+// Module 9100 (components_native/QRCode)
 import nativeDefault from "native" /* 587 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5572 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8716 */;
-import QRCodeDefault from "QRCode" /* 9078 */;
-import _mod9092 from "module_9092" /* 9092 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5584 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8734 */;
+import QRCodeDefault from "QRCode" /* 9101 */;
+import _mod9115 from "module_9115" /* 9115 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ QRCode.prototype["render"] = function render() {
   obj.children = closure_1_8(hasOwnProperty, obj2);
   return React5(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(5023).ThemeContext;
+QRCode.contextType = fn(5035).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {
@@ -67,7 +67,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9092 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9115 };
   obj3.children = React5(FastImageDefault, obj4);
   items[1] = React5(hasOwnProperty, obj3);
   let tmp6Result = null;
@@ -79,7 +79,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   obj.children = items;
   return closure_1_8(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(5023).ThemeContext;
+QRCodeWithOverlay.contextType = fn(5035).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

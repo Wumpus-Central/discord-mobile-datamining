@@ -1,12 +1,12 @@
-// === Module 9703: ForumPostUnreadCountStore ===
+// === Module 9725: ForumPostUnreadCountStore ===
 
-// Module 9703 (ForumPostUnreadCountStore)
+// Module 9725 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6775 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6788 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6756 */;
+import ReadStateStore from "ReadStateStore" /* 6769 */;
 
 const dependencyMap = {};
 let set = new Set();

@@ -1,8 +1,8 @@
-// === Module 15107: useIsServerThemeAvailableForGuild ===
+// === Module 15132: useIsServerThemeAvailableForGuild ===
 
-// Module 15107 (useIsServerThemeAvailableForGuild)
-import GuildThemeResolver from "GuildThemeResolver" /* 5163 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5173 */;
+// Module 15132 (useIsServerThemeAvailableForGuild)
+import GuildThemeResolver from "GuildThemeResolver" /* 5175 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5185 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

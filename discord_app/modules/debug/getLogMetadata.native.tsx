@@ -1,6 +1,6 @@
-// === Module 13747: getLogMetadata ===
+// === Module 13770: getLogMetadata ===
 
-// Module 13747 (getLogMetadata)
+// Module 13770 (getLogMetadata)
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;
 import DeviceUtils from "DeviceUtils" /* 4926 */;
 import size from "module_2" /* 2 */;

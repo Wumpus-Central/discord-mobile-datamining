@@ -1,9 +1,9 @@
-// === Module 9438: CollectiblesShopPricePlaceholder ===
+// === Module 9461: CollectiblesShopPricePlaceholder ===
 
-// Module 9438 (CollectiblesShopPricePlaceholder)
+// Module 9461 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -26,7 +26,7 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
   const tmp4 = closure_5();
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(5038).useSharedValue(0.3);
+  sharedValue = sharedValue(5050).useSharedValue(0.3);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
       const obj = ReanimatedRexport;
@@ -43,7 +43,7 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const obj2 = sharedValue(5038);
+  const obj2 = sharedValue(5050);
   class C {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -53,7 +53,7 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
   C.__closure = { opacity: sharedValue };
   C.__workletHash = 10107093534072;
   C.__initData = __initData;
-  const animatedStyle = tmp(5038).useAnimatedStyle(C);
+  const animatedStyle = tmp(5050).useAnimatedStyle(C);
   if (cResult[3] === animatedStyle) {
     if (cResult[4] === style) {
       if (cResult[5] === tmp4.skeletonContainer) {
@@ -71,24 +71,24 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
   cResult[5] = tmp4.skeletonContainer;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-  const tmpResult = tmp(5038);
+  const tmpResult = tmp(5050);
 }) : (function CollectiblesShopPricePlaceholder(style) {
   let sharedValue;
   const tmp = closure_5();
-  sharedValue = sharedValue(5038).useSharedValue(0.3);
+  sharedValue = sharedValue(5050).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(5038);
+  let obj = sharedValue(5050);
   const fn = function h() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 5265836727291;
   fn.__initData = __initData2;
-  const animatedStyle = sharedValue(5038).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(5050).useAnimatedStyle(fn);
   const obj3 = { style: null };
   const items1 = [tmp.skeletonContainer, style.style, animatedStyle];
   obj3.style = items1;

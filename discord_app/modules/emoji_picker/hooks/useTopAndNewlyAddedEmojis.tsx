@@ -1,7 +1,7 @@
-// === Module 9810: useTopAndNewlyAddedEmojis ===
+// === Module 9832: useTopAndNewlyAddedEmojis ===
 
-// Module 9810 (useTopAndNewlyAddedEmojis)
-import EmojiStore from "EmojiStore" /* 6710 */;
+// Module 9832 (useTopAndNewlyAddedEmojis)
+import EmojiStore from "EmojiStore" /* 6723 */;
 
 const require = globalThis.__r;
 

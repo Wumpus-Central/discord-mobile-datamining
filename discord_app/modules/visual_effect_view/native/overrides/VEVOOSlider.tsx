@@ -1,10 +1,10 @@
-// === Module 17259: VEVOOSlider ===
+// === Module 17303: VEVOOSlider ===
 
-// Module 17259 (VEVOOSlider)
+// Module 17303 (VEVOOSlider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
-import _modDef8749 from "module_8749" /* 8749 */;
+import _modDef8767 from "module_8767" /* 8767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -68,7 +68,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const obj3 = { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 };
-    const tmp15 = jsx(_modDef8749, { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 });
+    const tmp15 = jsx(_modDef8767, { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 });
     cResult[6] = disabled;
     cResult[7] = onValueChange;
     cResult[8] = tmp7;

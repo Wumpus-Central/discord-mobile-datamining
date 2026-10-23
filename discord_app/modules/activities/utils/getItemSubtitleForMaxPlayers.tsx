@@ -1,6 +1,6 @@
-// === Module 12091: getItemSubtitleForMaxPlayers ===
+// === Module 12110: getItemSubtitleForMaxPlayers ===
 
-// Module 12091 (getItemSubtitleForMaxPlayers)
+// Module 12110 (getItemSubtitleForMaxPlayers)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

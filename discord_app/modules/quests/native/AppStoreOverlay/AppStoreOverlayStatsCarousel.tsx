@@ -1,16 +1,16 @@
-// === Module 14063: AppStoreOverlayStatsCarousel ===
+// === Module 14087: AppStoreOverlayStatsCarousel ===
 
-// Module 14063 (AppStoreOverlayStatsCarousel)
+// Module 14087 (AppStoreOverlayStatsCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
-import AnalyticsActions from "AnalyticsActions" /* 7777 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14064 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14065 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7799 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14088 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14089 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
     first = cResult[0];
   }
   let obj = onRatingPress(576);
-  const nativeGesture = onRatingPress(5283).useNativeGesture(first);
+  const nativeGesture = onRatingPress(5295).useNativeGesture(first);
   dependencyMap = length.useRef(0);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function h() {
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   cResult[6] = R;
   tmp11 = R;
   tmp7 = stats.length <= 2;
-  const tmpResult = onRatingPress(5283);
+  const tmpResult = onRatingPress(5295);
 }) : (function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require, onCarouselScroll } = arg0);
   let length;

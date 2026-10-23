@@ -1,6 +1,6 @@
-// === Module 13846: ? ===
+// === Module 13869: ? ===
 
-// Module 13846
+// Module 13869
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js");

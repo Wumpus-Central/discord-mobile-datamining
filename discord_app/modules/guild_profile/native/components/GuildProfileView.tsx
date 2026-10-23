@@ -1,23 +1,23 @@
-// === Module 9205: GuildProfileView ===
+// === Module 9228: GuildProfileView ===
 
-// Module 9205 (GuildProfileView)
+// Module 9228 (GuildProfileView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import themes from "themes" /* 4991 */;
-import native from "native" /* 5023 */;
-import useThemeDefault from "useTheme" /* 5191 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useToken from "useToken" /* 5238 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9206 */;
-import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9207 */;
-import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9208 */;
-import GuildProfileGamesDefault from "GuildProfileGames" /* 9220 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 14120 */;
+import native from "native" /* 5035 */;
+import useThemeDefault from "useTheme" /* 5203 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useToken from "useToken" /* 5250 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9229 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9230 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9231 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 9243 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 14144 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   }
   if (tmp5Result) {
     const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_7(guildProfile(5220).Text, obj3);
+    tmp5Result = closure_7(guildProfile(5232).Text, obj3);
   }
   const items2 = [tmp5Result, closure_7(GuildProfileGamesDefault, { profile: guildProfile }), closure_7(GuildProfileTraitsDefault, { profile: guildProfile })];
   obj2.children = items2;

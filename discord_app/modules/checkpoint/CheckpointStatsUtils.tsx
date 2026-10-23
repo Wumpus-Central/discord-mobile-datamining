@@ -1,6 +1,6 @@
-// === Module 12896: CheckpointStatsUtils ===
+// === Module 12915: CheckpointStatsUtils ===
 
-// Module 12896 (CheckpointStatsUtils)
+// Module 12915 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import UserRecord from "UserRecord" /* 1406 */;

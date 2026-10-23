@@ -1,8 +1,8 @@
-// === Module 7726: AuthenticationUtils ===
+// === Module 7739: AuthenticationUtils ===
 
-// Module 7726 (AuthenticationUtils)
+// Module 7739 (AuthenticationUtils)
 import TokenManagerAll from "TokenManager" /* 1113 */;
-import _mod7727 from "module_7727" /* 7727 */;
+import _mod7740 from "module_7740" /* 7740 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/AuthenticationUtils.tsx");
@@ -18,7 +18,7 @@ export const getArtForPath = function getArtForPath(arg0) {
   if (null != arg0) {
     tmp = null;
     if (obj.test(arg0)) {
-      tmp = _mod7727;
+      tmp = _mod7740;
     }
     obj = /^\/developers/;
   }

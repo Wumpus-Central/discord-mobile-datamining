@@ -1,9 +1,9 @@
-// === Module 13059: GameInviteVoiceCount ===
+// === Module 13082: GameInviteVoiceCount ===
 
-// Module 13059 (GameInviteVoiceCount)
+// Module 13082 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5703 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5715 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameInvi
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-      const tmp12 = closure_5(tmp(8558).VoiceNormalIcon, obj2);
+      const tmp12 = closure_5(tmp(8570).VoiceNormalIcon, obj2);
       cResult[4] = tmp12;
       let tmp9 = tmp12;
     } else {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameInvi
     }
     if (cResult[5] !== stateFromStores) {
       const obj3 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-      const tmp15 = closure_5(tmp(5220).Text, obj3);
+      const tmp15 = closure_5(tmp(5232).Text, obj3);
       cResult[5] = stateFromStores;
       cResult[6] = tmp15;
       let tmp13 = tmp15;
@@ -85,9 +85,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameInvi
   if (0 !== stateFromStores) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(8558).VoiceNormalIcon, obj3), ];
+    const items2 = [closure_5(tmp2(8570).VoiceNormalIcon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(5220).Text, obj4);
+    items2[1] = closure_5(tmp2(5232).Text, obj4);
     obj2.children = items2;
     tmp5 = closure_6(View, obj2);
   }

@@ -1,6 +1,6 @@
-// === Module 10050: MessageDataSnowflakeUtils ===
+// === Module 10072: MessageDataSnowflakeUtils ===
 
-// Module 10050 (MessageDataSnowflakeUtils)
+// Module 10072 (MessageDataSnowflakeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");

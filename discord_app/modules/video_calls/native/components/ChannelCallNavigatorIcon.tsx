@@ -1,10 +1,10 @@
-// === Module 11505: ChannelCallNavigatorIcon ===
+// === Module 11525: ChannelCallNavigatorIcon ===
 
-// Module 11505 (ChannelCallNavigatorIcon)
+// Module 11525 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5572 */;
-import Pressables from "Pressables" /* 6893 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5584 */;
+import Pressables from "Pressables" /* 6906 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(10855).resetFocusTimer;
+const resetFocusTimer = fn(10878).resetFocusTimer;
 const Constants = fn(1087);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
                       const obj3 = { accessibilityRole: "button", accessibilityLabel, disabled, style: tmp6.pressable, onPress: tmp7, children: null };
                       const items = [tmp24, children];
                       obj3.children = items;
-                      const tmp30 = closure_8(tmp(6893).PressableOpacity, obj3);
+                      const tmp30 = closure_8(tmp(6906).PressableOpacity, obj3);
                       cResult[21] = accessibilityLabel;
                       cResult[22] = children;
                       cResult[23] = disabled;

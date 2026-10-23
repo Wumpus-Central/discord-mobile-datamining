@@ -1,11 +1,11 @@
-// === Module 13970: PrivateChannelHeader ===
+// === Module 13993: PrivateChannelHeader ===
 
-// Module 13970 (PrivateChannelHeader)
+// Module 13993 (PrivateChannelHeader)
 import nativeDefault from "native" /* 587 */;
-import ChannelHeader from "ChannelHeader" /* 13967 */;
+import ChannelHeader from "ChannelHeader" /* 13990 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import PresenceStore from "PresenceStore" /* 5698 */;
+import PresenceStore from "PresenceStore" /* 5710 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 

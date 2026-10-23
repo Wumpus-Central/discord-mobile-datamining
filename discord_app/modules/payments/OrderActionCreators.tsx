@@ -1,6 +1,6 @@
-// === Module 7329: OrderActionCreators ===
+// === Module 7342: OrderActionCreators ===
 
-// Module 7329 (OrderActionCreators)
+// Module 7342 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

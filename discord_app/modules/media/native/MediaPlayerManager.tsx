@@ -1,6 +1,6 @@
-// === Module 15753: MediaPlayerManager ===
+// === Module 15774: MediaPlayerManager ===
 
-// Module 15753 (MediaPlayerManager)
+// Module 15774 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1087 */;
 import Constants2 from "Constants" /* 1098 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RootNavigationRef from "RootNavigationRef" /* 5137 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5595 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
+import RootNavigationRef from "RootNavigationRef" /* 5149 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5607 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7564 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import VoicePanelStore from "VoicePanelStore" /* 6789 */;
+import VoicePanelStore from "VoicePanelStore" /* 6802 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5996 */;
+import MessageStore from "MessageStore" /* 6008 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15754 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15775 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Reflect",
-    showPip: true,
+    showPip: "PLAY_ON_PLAYSTATION",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 24
+    currentlyDisplayedChannelId: "ACHIEVEMENT_IN_GAME"
   };
   return obj;
 });

@@ -1,7 +1,7 @@
-// === Module 12265: conjurePendingPlan ===
+// === Module 12284: conjurePendingPlan ===
 
-// Module 12265 (conjurePendingPlan)
-import conjureChatTurns from "conjureChatTurns" /* 10677 */;
+// Module 12284 (conjurePendingPlan)
+import conjureChatTurns from "conjureChatTurns" /* 10699 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePendingPlan.tsx");

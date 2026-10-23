@@ -1,28 +1,28 @@
-// === Module 18606: LaunchPadSearchResults ===
+// === Module 18650: LaunchPadSearchResults ===
 
-// Module 18606 (LaunchPadSearchResults)
+// Module 18650 (LaunchPadSearchResults)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import GuildIconDefault from "GuildIcon" /* 6868 */;
-import transitionToGuild from "transitionToGuild" /* 7434 */;
-import sortByMatchScore from "sortByMatchScore" /* 9043 */;
-import RedesignCategory from "RedesignCategory" /* 17452 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 18023 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18024 */;
-import renderChannelContentDefault from "renderChannelContent" /* 18025 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 18607 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 18608 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 18609 */;
-import shared_TextChannelDefault from "shared/TextChannel" /* 18610 */;
-import shared_DMChannelDefault from "shared/DMChannel" /* 18615 */;
-import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 18616 */;
-import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 18618 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import GuildIconDefault from "GuildIcon" /* 6881 */;
+import transitionToGuild from "transitionToGuild" /* 7447 */;
+import sortByMatchScore from "sortByMatchScore" /* 9066 */;
+import RedesignCategory from "RedesignCategory" /* 17496 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18066 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 18067 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18068 */;
+import renderChannelContentDefault from "renderChannelContent" /* 18069 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 18651 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 18652 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 18653 */;
+import shared_TextChannelDefault from "shared/TextChannel" /* 18654 */;
+import shared_DMChannelDefault from "shared/DMChannel" /* 18659 */;
+import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 18660 */;
+import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 18662 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6799 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6812 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
@@ -63,7 +63,7 @@ function renderSearchResultsSection() {
   return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6690).UnreadSetting;
+const UnreadSetting = fn(6703).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
@@ -149,7 +149,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp9, tmp11);
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const tmpResult = guild(504);
-  const fontScale = guild(5239).useFontScale();
+  const fontScale = guild(5251).useFontScale();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
@@ -176,7 +176,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
     tmp15 = cResult[7];
   }
-  const tmpResult3 = guild(5239);
+  const tmpResult3 = guild(5251);
   const stateFromStores = guild(504).useStateFromStores(tmp14, tmp15);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
@@ -305,8 +305,8 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const stateFromStoresObject = guild(504).useStateFromStoresObject(items1, () => ({ unread: GuildReadStateStore.hasUnread(guild.id), mentionCount: GuildReadStateStore.getMentionCount(guild.id), isMentionLowImportance: GuildReadStateStore.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5239).useFontScale();
-  const obj2 = guild(5239);
+  const fontScale = guild(5251).useFontScale();
+  const obj2 = guild(5251);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -327,7 +327,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(6893).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(6906).PressableHighlight, obj4));
 }));
 ReactCompilerGating = fn(558);
 let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CategoryItemInner(arg0) {

@@ -1,11 +1,11 @@
-// === Module 16388: QuestModalContentCloudBackground ===
+// === Module 16438: QuestModalContentCloudBackground ===
 
-// Module 16388 (QuestModalContentCloudBackground)
+// Module 16438 (QuestModalContentCloudBackground)
 import c from "c" /* 576 */;
 import themes from "themes" /* 4991 */;
-import useTheme from "useTheme" /* 5191 */;
-import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5655 */;
+import useTheme from "useTheme" /* 5203 */;
+import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import FastImageDefault from "FastImage" /* 5667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
               if (cResult[11] === tmp16) {
                 let tmp17 = cResult[12];
               }
-              const tmp18Result = importDefault(tmp6 ? 16389 : 16390);
+              const tmp18Result = importDefault(tmp6 ? 16439 : 16440);
               if (cResult[13] === str) {
                 if (cResult[14] === tmp17) {
                   if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 16389 : 16390);
+    obj6.source = importDefault(isThemeDarkResult ? 16439 : 16440);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

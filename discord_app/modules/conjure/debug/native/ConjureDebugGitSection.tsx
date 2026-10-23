@@ -1,12 +1,12 @@
-// === Module 12501: ConjureDebugGitSection ===
+// === Module 12520: ConjureDebugGitSection ===
 
-// Module 12501 (ConjureDebugGitSection)
+// Module 12520 (ConjureDebugGitSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import AlertModal from "AlertModal" /* 5900 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12497 */;
-import ConjureDebugGit from "ConjureDebugGit" /* 12514 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import AlertModal from "AlertModal" /* 5912 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12516 */;
+import ConjureDebugGit from "ConjureDebugGit" /* 12533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,17 +24,17 @@ obj2.restartAgentRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "ce
 obj2.clearAlarm = { flexShrink: 1 };
 obj2.disabled = { opacity: 0.5 };
 let closure_9 = createStyles.createStyles(obj2);
-let obj5 = { checkout: fn(8531).FolderIcon, edit: fn(10097).PencilIcon, remote: fn(12502).CloudIcon, commits: fn(12504).ListNumberedIcon, calendar: fn(9023).CalendarIcon, save: fn(12506).SaveIcon, objects: fn(9622).ServerIcon, download: fn(12508).CloudDownloadIcon, size: fn(11557).SpeedometerIcon, file: fn(11782).FileIcon };
+let obj5 = { checkout: fn(8543).FolderIcon, edit: fn(10119).PencilIcon, remote: fn(12521).CloudIcon, commits: fn(12523).ListNumberedIcon, calendar: fn(9046).CalendarIcon, save: fn(12525).SaveIcon, objects: fn(9645).ServerIcon, download: fn(12527).CloudDownloadIcon, size: fn(11577).SpeedometerIcon, file: fn(11801).FileIcon };
 let obj6 = { ok: null, warning: null, error: null, ahead: null, behind: null };
-let items = [fn(7252).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
+let items = [fn(7265).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
 obj6.ok = items;
-let items1 = [fn(7942).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
+let items1 = [fn(7955).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
-let items2 = [fn(7003).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
+let items2 = [fn(7016).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(12510).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(12529).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(12512).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(12531).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 fn(558);
 let obj4 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };

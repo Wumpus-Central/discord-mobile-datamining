@@ -1,11 +1,11 @@
-// === Module 10526: PremiumGiftWishlistBanner ===
+// === Module 10548: PremiumGiftWishlistBanner ===
 
-// Module 10526 (PremiumGiftWishlistBanner)
+// Module 10548 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import useWishlistHooks from "useWishlistHooks" /* 9345 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10531 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import useWishlistHooks from "useWishlistHooks" /* 9368 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10553 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,13 +14,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(7316).WishlistRecommendationReason;
+let constants = fn(7329).WishlistRecommendationReason;
 const PremiumConstants = fn(1394);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1089).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8652).UserProfileSections;
+const UserProfileSections = fn(8670).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;

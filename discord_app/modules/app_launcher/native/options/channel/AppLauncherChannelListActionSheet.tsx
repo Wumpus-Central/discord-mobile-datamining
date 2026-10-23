@@ -1,16 +1,16 @@
-// === Module 12155: AppLauncherChannelListActionSheet ===
+// === Module 12174: AppLauncherChannelListActionSheet ===
 
-// Module 12155 (AppLauncherChannelListActionSheet)
+// Module 12174 (AppLauncherChannelListActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useChannelNameDefault from "useChannelName" /* 5590 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6693 */;
-import TableRow from "TableRow" /* 6888 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
-import TextIcon3 from "TextIcon" /* 8537 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12144 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useChannelNameDefault from "useChannelName" /* 5602 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6706 */;
+import TableRow from "TableRow" /* 6901 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
+import TextIcon3 from "TextIcon" /* 8549 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;

@@ -9,9 +9,9 @@ import dismissible_content from "dismissible_content" /* 4805 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4809 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 4812 */;
 import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4819 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5016 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5627 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5628 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5021 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5639 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
@@ -614,7 +614,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

@@ -1,13 +1,13 @@
-// === Module 11568: useIsVideoMode ===
+// === Module 11588: useIsVideoMode ===
 
-// Module 11568 (useIsVideoMode)
+// Module 11588 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import VoiceStateStore from "VoiceStateStore" /* 5628 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,25 +1,25 @@
-// === Module 12668: AcceptStep ===
+// === Module 12687: AcceptStep ===
 
-// Module 12668 (AcceptStep)
+// Module 12687 (AcceptStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2406 from "module_2406" /* 2406 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import components_Button_Button from "components/Button/Button" /* 5230 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import ButtonGroup from "ButtonGroup" /* 6681 */;
-import ModalScreen from "ModalScreen" /* 7885 */;
-import ModalContent from "ModalContent" /* 7886 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12664 */;
-import ModalFooter from "ModalFooter" /* 12667 */;
-import GameOrganizationLinkedServerCardDefault from "GameOrganizationLinkedServerCard" /* 12669 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import components_Button_Button from "components/Button/Button" /* 5242 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import ButtonGroup from "ButtonGroup" /* 6694 */;
+import ModalScreen from "ModalScreen" /* 7898 */;
+import ModalContent from "ModalContent" /* 7899 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12683 */;
+import ModalFooter from "ModalFooter" /* 12686 */;
+import GameOrganizationLinkedServerCardDefault from "GameOrganizationLinkedServerCard" /* 12688 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const onPress = fn(12662).closeGameOrganizationJoinModal;
+const onPress = fn(12681).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
@@ -115,7 +115,7 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   if (null == tmp6) {
     return null;
   } else {
-    ({ displayNoun, organization } = tmp6);
+    ({ displayNoun, linkedGuild } = tmp6);
     if (cResult[1] !== displayNoun) {
       const intl = util.intl;
       let str = displayNoun;
@@ -134,10 +134,10 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled() ? (functi
       if (cResult[4] === tmp8) {
         let tmp10 = cResult[5];
       }
-      if (cResult[6] !== organization.iconUrl) {
-        const obj3 = { name: "Fang\u2019s Corner", iconUrl: organization.iconUrl, presenceCount: 20, memberCount: 200 };
+      if (cResult[6] !== linkedGuild) {
+        const obj3 = { linkedGuild };
         const tmp15 = timestampProducer(GameOrganizationLinkedServerCardDefault, obj3);
-        cResult[6] = organization.iconUrl;
+        cResult[6] = linkedGuild;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -278,7 +278,7 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     const obj6 = { displayNoun: str };
     obj4.children = intl6.formatToPlainString(_modDef2406.WmxMAI, obj6);
     const items = [timestampProducer(Text_Text.Text, obj4), ];
-    const obj7 = { name: "Fang\u2019s Corner", iconUrl: tmp4.organization.iconUrl, presenceCount: 20, memberCount: 200 };
+    const obj7 = { linkedGuild: tmp4.linkedGuild };
     items[1] = timestampProducer(GameOrganizationLinkedServerCardDefault, obj7);
     obj3.children = items;
     const items1 = [React5(Stack_Stack.Stack, obj3), ];

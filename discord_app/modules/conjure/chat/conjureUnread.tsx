@@ -1,13 +1,13 @@
-// === Module 10699: conjureUnread ===
+// === Module 10721: conjureUnread ===
 
-// Module 10699 (conjureUnread)
+// Module 10721 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectMute from "conjureProjectMute" /* 10700 */;
+import conjureProjectMute from "conjureProjectMute" /* 10722 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import ReadStateStore from "ReadStateStore" /* 6756 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
+import ReadStateStore from "ReadStateStore" /* 6769 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6690).ReadStateTypes;
+const ReadStateTypes = fn(6703).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectBadge(arg0) {

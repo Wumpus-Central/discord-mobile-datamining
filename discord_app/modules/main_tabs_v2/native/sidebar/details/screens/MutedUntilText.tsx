@@ -1,9 +1,9 @@
-// === Module 10982: MutedUntilText ===
+// === Module 11005: MutedUntilText ===
 
-// Module 10982 (MutedUntilText)
+// Module 11005 (MutedUntilText)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
+import Text_Text from "Text/Text" /* 5232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MutedUnt
         return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(5220).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(5232).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -174,6 +174,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MutedUnt
     return null;
   }
   obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(5220).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
+  return jsx(tmp3(5232).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
 });
 export { MuteSettingType };

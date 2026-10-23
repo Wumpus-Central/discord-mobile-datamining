@@ -1,7 +1,7 @@
-// === Module 10769: conjureMediaTickets ===
+// === Module 10791: conjureMediaTickets ===
 
-// Module 10769 (conjureMediaTickets)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10702 */;
+// Module 10791 (conjureMediaTickets)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10724 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

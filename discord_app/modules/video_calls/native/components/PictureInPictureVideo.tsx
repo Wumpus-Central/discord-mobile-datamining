@@ -1,32 +1,31 @@
-// === Module 11372: PictureInPictureVideo ===
+// === Module 11395: PictureInPictureVideo ===
 
-// Module 11372 (PictureInPictureVideo)
+// Module 11395 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useToken2 from "useToken" /* 5238 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8600 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11320 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11330 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11333 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11334 */;
-import VideoRenderer from "VideoRenderer" /* 11387 */;
-import UserTileDefault from "UserTile" /* 11397 */;
-import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 11399 */;
-import _modDef11402 from "module_11402" /* 11402 */;
+import useToken2 from "useToken" /* 5250 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8612 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11343 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11353 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11356 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11357 */;
+import VideoRenderer from "VideoRenderer" /* 11410 */;
+import UserTileDefault from "UserTile" /* 11420 */;
+import _modDef11422 from "module_11422" /* 11422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6770 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SpeakingStore from "SpeakingStore" /* 6670 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11327 */;
+import SpeakingStore from "SpeakingStore" /* 6683 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11350 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -36,9 +35,9 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10855);
+const ChannelCallStore = fn(10878);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5618).ParticipantTypes;
+const ParticipantTypes = fn(5630).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4969);
@@ -560,7 +559,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
     tmp8 = cResult[2];
   }
   if (cResult[3] !== channelId) {
-    const fn2 = function v() {
+    const fn2 = function h() {
       const items = [ChannelRTCStore.getParticipants(channelId), ChannelRTCStore.getVideoParticipants(channelId), ChannelRTCStore.getParticipantsVersion(channelId)];
       return items;
     };
@@ -822,7 +821,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
 });
 ReactCompilerGating = fn(558);
 let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPictureInPictureVideo(arg0) {
-  const cResult = c.c(30);
+  const cResult = c.c(26);
   ({ channel, selfParticipant } = arg0);
   const tmp4 = closure_19();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -855,116 +854,96 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         let tmp19 = cResult[7];
       }
       const tmp23 = useAvatarColorDefault(tmp19, tmp16);
-      let id;
-      if (tmp13 != null) {
-        id = tmp13.user.id;
-      }
-      if (cResult[8] === channel.guild_id) {
-        if (cResult[9] === id) {
-          let tmp26 = cResult[10];
+      if (null == tmp13) {
+        return null;
+      } else {
+        let tmp26 = null != tmp13.streamId;
+        if (tmp26) {
+          const voiceState = tmp13.voiceState;
+          let selfVideo;
+          if (voiceState != null) {
+            selfVideo = voiceState.selfVideo;
+          }
+          tmp26 = selfVideo;
         }
-        const avatarSpeakingColor = useAvatarSpeakingColor.useAvatarSpeakingColor(tmp26);
-        if (null == tmp13) {
-          return null;
+        if (cResult[8] !== tmp23) {
+          const obj2 = { backgroundColor: tmp23 };
+          cResult[8] = tmp23;
+          cResult[9] = obj2;
+          let tmp27 = obj2;
         } else {
-          let tmp29 = null != tmp13.streamId;
-          if (tmp29) {
-            const voiceState = tmp13.voiceState;
-            let selfVideo;
-            if (voiceState != null) {
-              selfVideo = voiceState.selfVideo;
-            }
-            tmp29 = selfVideo;
+          tmp27 = cResult[9];
+        }
+        if (cResult[10] === tmp4.avatarContainer) {
+          if (cResult[11] === tmp27) {
+            let tmp28 = cResult[12];
           }
-          if (cResult[11] !== tmp23) {
-            const obj2 = { backgroundColor: tmp23 };
-            cResult[11] = tmp23;
-            cResult[12] = obj2;
-            let tmp30 = obj2;
-          } else {
-            tmp30 = cResult[12];
-          }
-          if (cResult[13] === tmp4.avatarContainer) {
-            if (cResult[14] === tmp30) {
-              let tmp31 = cResult[15];
-            }
-            if (cResult[16] === channel) {
-              if (cResult[17] === tmp10) {
-                if (cResult[18] === tmp13) {
-                  if (cResult[19] === avatarSpeakingColor) {
-                    if (cResult[20] === tmp29) {
-                      if (cResult[22] === tmp9) {
-                        if (cResult[23] === tmp4.thermalAlertIcon) {
-                          if (cResult[24] === tmp4.thermalAlertIconContainer) {
-                            let tmp38 = cResult[25];
+          if (cResult[13] === channel) {
+            if (cResult[14] === tmp10) {
+              if (cResult[15] === tmp13) {
+                if (cResult[16] === tmp26) {
+                  if (cResult[18] === tmp9) {
+                    if (cResult[19] === tmp4.thermalAlertIcon) {
+                      if (cResult[20] === tmp4.thermalAlertIconContainer) {
+                        let tmp35 = cResult[21];
+                      }
+                      if (cResult[22] === tmp28) {
+                        if (cResult[23] === tmp29) {
+                          if (cResult[24] === tmp35) {
+                            let tmp39 = cResult[25];
                           }
-                          if (cResult[26] === tmp38) {
-                            if (cResult[27] === tmp31) {
-                              if (cResult[28] === tmp32) {
-                                let tmp42 = cResult[29];
-                              }
-                              return tmp42;
-                            }
-                          }
-                          const obj3 = { style: tmp31, children: null };
-                          const items1 = [tmp32, tmp38];
-                          obj3.children = items1;
-                          const tmp45 = collapsedCategories(hasOwnProperty, obj3);
-                          cResult[26] = tmp38;
-                          cResult[27] = tmp31;
-                          cResult[28] = tmp32;
-                          cResult[29] = tmp45;
-                          tmp42 = tmp45;
+                          return tmp39;
                         }
                       }
-                      let tmp39 = null;
-                      if (tmp9) {
-                        const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11402, color: tmp4.thermalAlertIcon.color };
-                        obj4.children = value3(native2.Icon, obj5);
-                        tmp39 = value3(hasOwnProperty, obj4);
-                      }
-                      cResult[22] = tmp9;
-                      cResult[23] = tmp4.thermalAlertIcon;
-                      cResult[24] = tmp4.thermalAlertIconContainer;
-                      cResult[25] = tmp39;
-                      tmp38 = tmp39;
+                      const obj3 = { style: tmp28, children: null };
+                      const items1 = [tmp29, tmp35];
+                      obj3.children = items1;
+                      const tmp42 = collapsedCategories(hasOwnProperty, obj3);
+                      cResult[22] = tmp28;
+                      cResult[23] = tmp29;
+                      cResult[24] = tmp35;
+                      cResult[25] = tmp42;
+                      tmp39 = tmp42;
                     }
                   }
+                  let tmp36 = null;
+                  if (tmp9) {
+                    const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
+                    const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11422, color: tmp4.thermalAlertIcon.color };
+                    obj4.children = value3(native2.Icon, obj5);
+                    tmp36 = value3(hasOwnProperty, obj4);
+                  }
+                  cResult[18] = tmp9;
+                  cResult[19] = tmp4.thermalAlertIcon;
+                  cResult[20] = tmp4.thermalAlertIconContainer;
+                  cResult[21] = tmp36;
+                  tmp35 = tmp36;
                 }
               }
             }
-            if (tmp29) {
-              if (!tmp10) {
-                const obj6 = { participant: tmp13, avatarSize: native2.AvatarSizes.PROFILE, resizeMode: VideoRenderer.ResizeMode.COVER };
-                let tmp35 = value3(UserTileDefault, obj6);
-                const tmp15Result = UserTileDefault;
-              }
-              cResult[16] = channel;
-              cResult[17] = tmp10;
-              cResult[18] = tmp13;
-              cResult[19] = avatarSpeakingColor;
-              cResult[20] = tmp29;
-              cResult[21] = tmp35;
-            }
-            const obj7 = { size: native2.AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null, speakingColor: null };
-            ({ user: obj8.user, speaking: obj8.speaking } = tmp13);
-            obj7.speakingColor = avatarSpeakingColor;
-            tmp35 = value3(native2.Avatar, obj7);
           }
-          const items2 = [tmp4.avatarContainer, tmp30];
-          cResult[13] = tmp4.avatarContainer;
-          cResult[14] = tmp30;
-          cResult[15] = items2;
-          tmp31 = items2;
+          if (tmp26) {
+            if (!tmp10) {
+              const obj7 = { participant: tmp13, avatarSize: native2.AvatarSizes.PROFILE, resizeMode: VideoRenderer.ResizeMode.COVER };
+              let tmp32 = value3(UserTileDefault, obj7);
+              const tmp15Result = UserTileDefault;
+            }
+            cResult[13] = channel;
+            cResult[14] = tmp10;
+            cResult[15] = tmp13;
+            cResult[16] = tmp26;
+            cResult[17] = tmp32;
+          }
+          const obj8 = { size: native2.AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null };
+          ({ user: obj6.user, speaking: obj6.speaking } = tmp13);
+          tmp32 = value3(native2.Avatar, obj8);
         }
-        const tmpResult4 = useAvatarSpeakingColor;
+        const items2 = [tmp4.avatarContainer, tmp27];
+        cResult[10] = tmp4.avatarContainer;
+        cResult[11] = tmp27;
+        cResult[12] = items2;
+        tmp28 = items2;
       }
-      const obj9 = { userId: id, guildId: channel.guild_id };
-      cResult[8] = channel.guild_id;
-      cResult[9] = id;
-      cResult[10] = obj9;
-      tmp26 = obj9;
     }
     let avatarURL;
     if (tmp13 != null) {
@@ -979,13 +958,13 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[6] = user2;
     cResult[7] = avatarURL;
     tmp19 = avatarURL;
-    const tmpResult3 = useToken2;
+    const tmpResult2 = useToken2;
   }
-  const obj10 = { channelId: channel.id, selfParticipant };
+  const obj9 = { channelId: channel.id, selfParticipant };
   cResult[2] = channel.id;
   cResult[3] = selfParticipant;
-  cResult[4] = obj10;
-  tmp11 = obj10;
+  cResult[4] = obj9;
+  tmp11 = obj9;
   const tmp8 = _slicedToArray(initialize.useStateFromStoresArray(tmp5, tmp6), 2);
 }) : (function ActivityPictureInPictureVideo(channel) {
   channel = channel.channel;
@@ -1001,59 +980,52 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
     return items;
   }), 2);
-  let avatarURL;
   const token = useToken2.useToken(nativeDefault.unsafe_rawColors.PRIMARY_800);
   if (tmp7 != null) {
     const user = tmp7.user;
-    avatarURL = user.getAvatarURL(channel.guild_id, 80);
-  }
-  useAvatarSpeakingColor;
-  if (tmp7 != null) {
-    const id = tmp7.user.id;
+    const avatarURL = user.getAvatarURL(channel.guild_id, 80);
   }
   if (null == tmp7) {
     return null;
   } else {
-    let tmp15 = null != tmp7.streamId;
-    if (tmp15) {
+    let tmp13 = null != tmp7.streamId;
+    if (tmp13) {
       const voiceState = tmp7.voiceState;
       let selfVideo;
       if (voiceState != null) {
         selfVideo = voiceState.selfVideo;
       }
-      tmp15 = selfVideo;
+      tmp13 = selfVideo;
     }
     const obj4 = { style: null, children: null };
     const items1 = [tmp.avatarContainer, ];
     const obj5 = { backgroundColor: tmp11 };
     items1[1] = obj5;
     obj4.style = items1;
-    if (tmp15) {
+    if (tmp13) {
       if (!tmp6) {
-        let tmp18 = value3;
+        let tmp16 = value3;
         const obj6 = { participant: tmp7, avatarSize: native2.AvatarSizes.PROFILE, resizeMode: VideoRenderer.ResizeMode.COVER };
-        let tmp20 = value3(UserTileDefault, obj6);
+        let tmp18 = value3(UserTileDefault, obj6);
         const tmp8Result = UserTileDefault;
       }
-      const items2 = [tmp20, ];
-      let tmp18Result = null;
+      const items2 = [tmp18, ];
+      let tmp16Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11402, color: tmp.thermalAlertIcon.color };
-        obj8.children = tmp18(native2.Icon, obj9);
-        tmp18Result = tmp18(hasOwnProperty, obj8);
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11422, color: tmp.thermalAlertIcon.color };
+        obj8.children = tmp16(native2.Icon, obj9);
+        tmp16Result = tmp16(hasOwnProperty, obj8);
       }
-      items2[1] = tmp18Result;
+      items2[1] = tmp16Result;
       obj4.children = items2;
-      return tmp16(hasOwnProperty, obj4);
+      return tmp14(hasOwnProperty, obj4);
     }
-    const obj16 = { size: native2.AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null, speakingColor: null };
+    const obj16 = { size: native2.AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null };
     ({ user: obj7.user, speaking: obj7.speaking } = tmp7);
-    obj16.speakingColor = tmp13;
-    tmp20 = value3(native2.Avatar, obj16);
-    tmp18 = value3;
+    tmp18 = value3(native2.Avatar, obj16);
+    tmp16 = value3;
   }
-  tmp11 = useAvatarColorDefault(avatarURL, token);
 }));
 ReactCompilerGating = fn(558);
 let obj7 = { borderRadius: nativeDefault.radii.lg, overflow: "hidden" };

@@ -1,10 +1,10 @@
-// === Module 14738: PremiumTier2LogoSmall ===
+// === Module 14762: PremiumTier2LogoSmall ===
 
-// Module 14738 (PremiumTier2LogoSmall)
+// Module 14762 (PremiumTier2LogoSmall)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5238 */;
-import inlineStyles from "inlineStyles" /* 7947 */;
+import useToken from "useToken" /* 5250 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

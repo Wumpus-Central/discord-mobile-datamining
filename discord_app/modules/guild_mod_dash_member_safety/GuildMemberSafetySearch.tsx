@@ -1,10 +1,10 @@
-// === Module 7613: GuildMemberSafetySearch ===
+// === Module 7626: GuildMemberSafetySearch ===
 
-// Module 7613 (GuildMemberSafetySearch)
+// Module 7626 (GuildMemberSafetySearch)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4888 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4907 */;
-import _modDef5790 from "module_5790" /* 5790 */;
+import _modDef5802 from "module_5802" /* 5802 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -50,7 +50,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef5790(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef5802(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {

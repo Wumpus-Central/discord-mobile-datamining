@@ -1,20 +1,20 @@
-// === Module 13212: DoubleTapToReactActionSheet ===
+// === Module 13235: DoubleTapToReactActionSheet ===
 
-// Module 13212 (DoubleTapToReactActionSheet)
+// Module 13235 (DoubleTapToReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 4797 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
-import spring from "spring" /* 5233 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8312 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
+import spring from "spring" /* 5245 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import EmojiStore from "EmojiStore" /* 6710 */;
+import EmojiStore from "EmojiStore" /* 6723 */;
 
 const require = globalThis.__r;
 
@@ -179,18 +179,18 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiC
   const top = children.top;
   ({ bottom, left } = children);
   ({ right, leading: dependencyMap } = children);
-  const sharedValue = top(5038).useSharedValue(0);
-  let obj = top(5038);
-  const sharedValue1 = top(5038).useSharedValue(0);
-  const obj2 = top(5038);
-  const sharedValue2 = top(5038).useSharedValue(0.2);
-  const obj3 = top(5038);
-  const sharedValue3 = top(5038).useSharedValue(0);
-  let obj4 = top(5038);
-  const mountLayoutEffect = top(5249).useMountLayoutEffect(() => {
+  const sharedValue = top(5050).useSharedValue(0);
+  let obj = top(5050);
+  const sharedValue1 = top(5050).useSharedValue(0);
+  const obj2 = top(5050);
+  const sharedValue2 = top(5050).useSharedValue(0.2);
+  const obj3 = top(5050);
+  const sharedValue3 = top(5050).useSharedValue(0);
+  let obj4 = top(5050);
+  const mountLayoutEffect = top(5261).useMountLayoutEffect(() => {
     randomizeAnimationValues({ positionValue: sharedValue, rotationValue: sharedValue1, sizeValue: sharedValue2, opacityValue: sharedValue3, leading });
   });
-  const obj5 = top(5249);
+  const obj5 = top(5261);
   class S {
     constructor() {
       obj = { scale: closure_5.get() };
@@ -228,8 +228,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiC
   S.__closure = { sizeValue: sharedValue2, left, rotationValue: sharedValue1, top, positionValue: sharedValue, opacityValue: sharedValue3 };
   S.__workletHash = 17194622427708;
   S.__initData = __initData2;
-  const style = top(5038).useAnimatedStyle(S);
-  return closure_11(left(5038).View, { style, children: children.emojiComponent });
+  const style = top(5050).useAnimatedStyle(S);
+  return closure_11(left(5050).View, { style, children: children.emojiComponent });
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiBurstAnimation(emojiComponent) {
@@ -1029,7 +1029,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7263).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7276).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);

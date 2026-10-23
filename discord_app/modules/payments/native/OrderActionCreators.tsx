@@ -1,6 +1,6 @@
-// === Module 7526: payments/OrderActionCreators ===
+// === Module 7539: payments/OrderActionCreators ===
 
-// Module 7526 (payments/OrderActionCreators)
+// Module 7539 (payments/OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -1306,7 +1306,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(5684).OrderStatus;
+const OrderStatus = fn(5696).OrderStatus;
 const Endpoints = fn(1087).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

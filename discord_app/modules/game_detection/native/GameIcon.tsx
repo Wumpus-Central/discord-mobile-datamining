@@ -1,13 +1,13 @@
-// === Module 7246: GameIcon ===
+// === Module 7259: GameIcon ===
 
-// Module 7246 (GameIcon)
+// Module 7259 (GameIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef7247 from "module_7247" /* 7247 */;
-import _modDef7248 from "module_7248" /* 7248 */;
-import _modDef7249 from "module_7249" /* 7249 */;
-import _modDef7250 from "module_7250" /* 7250 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import _modDef7260 from "module_7260" /* 7260 */;
+import _modDef7261 from "module_7261" /* 7261 */;
+import _modDef7262 from "module_7262" /* 7262 */;
+import _modDef7263 from "module_7263" /* 7263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -119,7 +119,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
             }
           }
           if (null == tmp17) {
-            tmp17 = _modDef7250;
+            tmp17 = _modDef7263;
             items1.push(tmp4.placeholder);
           }
           cResult[5] = game;
@@ -135,17 +135,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
           tmp8 = items1;
         } else {
           if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-            let tmp11 = _modDef7247;
+            let tmp11 = _modDef7260;
             cResult[14] = skuId;
             cResult[15] = tmp11;
           } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
             if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
-              tmp11 = _modDef7249;
+              tmp11 = _modDef7262;
             } else {
               tmp11 = null;
             }
           }
-          tmp11 = _modDef7248;
+          tmp11 = _modDef7261;
         }
       }
     }
@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
       }
     }
     if (null == tmp12) {
-      tmp12 = _modDef7250;
+      tmp12 = _modDef7263;
       items.push(tmp2.placeholder);
     }
     const obj3 = { style: null, children: null };

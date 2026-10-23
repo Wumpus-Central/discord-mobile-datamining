@@ -1,7 +1,7 @@
-// === Module 17480: useStickyServerHeaderSubtitle ===
+// === Module 17524: useStickyServerHeaderSubtitle ===
 
-// Module 17480 (useStickyServerHeaderSubtitle)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5180 */;
+// Module 17524 (useStickyServerHeaderSubtitle)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5192 */;
 
 const require = globalThis.__r;
 

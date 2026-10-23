@@ -1,12 +1,12 @@
-// === Module 14448: AvatarGrid ===
+// === Module 14472: AvatarGrid ===
 
-// Module 14448 (AvatarGrid)
+// Module 14472 (AvatarGrid)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PresenceStore from "PresenceStore" /* 5698 */;
+import PresenceStore from "PresenceStore" /* 5710 */;
 
 require = fn;
 const View = fn(17).View;
@@ -94,7 +94,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
               }
             }
           }
-          const tmpResult4 = tmp(8718);
+          const tmpResult4 = tmp(8736);
           class E {
             constructor() {
               return closure_1_3.useReducedMotion;
@@ -165,7 +165,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(8718);
+    const tmp2Result = tmp2(8736);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;

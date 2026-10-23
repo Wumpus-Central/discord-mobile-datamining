@@ -1,7 +1,7 @@
-// === Module 6821: MemberVerificationAlertSuccess ===
+// === Module 6834: MemberVerificationAlertSuccess ===
 
-// Module 6821 (MemberVerificationAlertSuccess)
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5214 */;
+// Module 6834 (MemberVerificationAlertSuccess)
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5226 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -87,13 +87,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       const _Symbol2 = Symbol;
       ({ alert: _alert, illustrationContainer } = tmp10);
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        cResult[14] = tmp(6822);
+        cResult[14] = tmp(6835);
         class M {
           constructor() {
             return closure_1_6.useReducedMotion;
           }
         }
-        const tmpResult4 = tmp(6822);
+        const tmpResult4 = tmp(6835);
       } else {
         const tmp23 = cResult[14];
       }
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             }
           }
           const obj3 = { style: tmp10.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp33 };
-          const tmp37 = closure_8(tmp(5220).Heading, obj3);
+          const tmp37 = closure_8(tmp(5232).Heading, obj3);
           cResult[23] = tmp10.header;
           cResult[24] = tmp33;
           cResult[25] = tmp37;

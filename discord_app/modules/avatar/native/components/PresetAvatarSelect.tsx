@@ -1,20 +1,20 @@
-// === Module 18807: PresetAvatarSelect ===
+// === Module 18851: PresetAvatarSelect ===
 
-// Module 18807 (PresetAvatarSelect)
+// Module 18851 (PresetAvatarSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6893 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 18808 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 18809 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 18810 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 18811 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 18812 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 18813 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 18814 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 18815 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Pressables from "Pressables" /* 6906 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 18852 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 18853 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 18854 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 18855 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 18856 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 18857 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 18858 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 18859 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresetAv
     let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
     let intl = tmp(1128).intl;
     obj2.children = intl.string(tmp(1128).t.yP28YL);
-    const tmp7 = closure_4(tmp(5220).Text, obj2);
+    const tmp7 = closure_4(tmp(5232).Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
   } else {

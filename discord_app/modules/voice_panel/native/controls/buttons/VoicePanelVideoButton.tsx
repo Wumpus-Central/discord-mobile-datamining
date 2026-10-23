@@ -1,19 +1,19 @@
-// === Module 18546: VoicePanelVideoButton ===
+// === Module 18590: VoicePanelVideoButton ===
 
-// Module 18546 (VoicePanelVideoButton)
+// Module 18590 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import CameraRive from "CameraRive" /* 5093 */;
-import useAlertStore from "useAlertStore" /* 5896 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6637 */;
-import CallsUtils from "CallsUtils" /* 9129 */;
-import VideoIcon from "VideoIcon" /* 11283 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11347 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13966 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14279 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18547 */;
+import CameraRive from "CameraRive" /* 5105 */;
+import useAlertStore from "useAlertStore" /* 5908 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6650 */;
+import CallsUtils from "CallsUtils" /* 9152 */;
+import VideoIcon from "VideoIcon" /* 11306 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11370 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13989 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14303 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18591 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11327 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11350 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -21,7 +21,7 @@ import PermissionStore from "PermissionStore" /* 4901 */;
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5704).Features;
+const Features = fn(5716).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

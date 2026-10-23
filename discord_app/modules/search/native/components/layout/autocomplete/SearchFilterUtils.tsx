@@ -1,20 +1,20 @@
-// === Module 17985: SearchFilterUtils ===
+// === Module 18029: SearchFilterUtils ===
 
-// Module 17985 (SearchFilterUtils)
+// Module 18029 (SearchFilterUtils)
 import util from "util" /* 1128 */;
-import AtIcon from "AtIcon" /* 8547 */;
-import CalendarIcon from "CalendarIcon" /* 9023 */;
-import TrackingConstants from "TrackingConstants" /* 9690 */;
-import AttachmentIcon from "AttachmentIcon" /* 10400 */;
-import RobotIcon from "RobotIcon" /* 11751 */;
-import UserIcon from "UserIcon" /* 11792 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12192 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13158 */;
-import SearchTokens from "SearchTokens" /* 13166 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13183 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15032 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 17986 */;
-import SearchConstants from "SearchConstants" /* 9691 */;
+import AtIcon from "AtIcon" /* 8559 */;
+import CalendarIcon from "CalendarIcon" /* 9046 */;
+import TrackingConstants from "TrackingConstants" /* 9712 */;
+import AttachmentIcon from "AttachmentIcon" /* 10422 */;
+import RobotIcon from "RobotIcon" /* 11771 */;
+import UserIcon from "UserIcon" /* 11811 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12211 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13181 */;
+import SearchTokens from "SearchTokens" /* 13189 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13206 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15056 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 18030 */;
+import SearchConstants from "SearchConstants" /* 9713 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -213,7 +213,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(13166));
+  const keys = Object.keys(items(13189));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

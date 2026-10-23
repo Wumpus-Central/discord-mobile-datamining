@@ -1,17 +1,17 @@
-// === Module 11056: TieredTenureBadgeActionSheet ===
+// === Module 11079: TieredTenureBadgeActionSheet ===
 
-// Module 11056 (TieredTenureBadgeActionSheet)
+// Module 11079 (TieredTenureBadgeActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import openUserSettings from "openUserSettings" /* 7475 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7697 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8648 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11057 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11082 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import openUserSettings from "openUserSettings" /* 7488 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7710 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8666 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11080 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11105 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

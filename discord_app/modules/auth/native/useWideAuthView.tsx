@@ -1,8 +1,8 @@
-// === Module 7022: useWideAuthView ===
+// === Module 7035: useWideAuthView ===
 
-// Module 7022 (useWideAuthView)
+// Module 7035 (useWideAuthView)
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7023 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7036 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

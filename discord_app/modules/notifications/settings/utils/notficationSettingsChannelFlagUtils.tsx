@@ -1,20 +1,20 @@
-// === Module 10964: notficationSettingsChannelFlagUtils ===
+// === Module 10987: notficationSettingsChannelFlagUtils ===
 
-// Module 10964 (notficationSettingsChannelFlagUtils)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7195 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7200 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8285 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10962 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10965 */;
+// Module 10987 (notficationSettingsChannelFlagUtils)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7208 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7213 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8297 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10985 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UnreadSetting = fn(6690).UnreadSetting;
+const UnreadSetting = fn(6703).UnreadSetting;
 const constants = fn(1097).ChannelNotificationSettingsFlags;
 fn(558);
 const ReactCompilerGating = fn(558);

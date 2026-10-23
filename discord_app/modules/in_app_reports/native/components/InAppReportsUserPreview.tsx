@@ -1,13 +1,13 @@
-// === Module 14525: InAppReportsUserPreview ===
+// === Module 14549: InAppReportsUserPreview ===
 
-// Module 14525 (InAppReportsUserPreview)
+// Module 14549 (InAppReportsUserPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7059 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrev
                 let tmp17 = cResult[15];
               }
               if (cResult[16] !== user) {
-                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
+                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
                 const tmp20 = React3(native.Avatar, obj4);
                 cResult[16] = user;
                 cResult[17] = tmp20;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrev
   const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj5.style = items2;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
+  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" }), ];
   const obj7 = { style: tmp.userProfileInfo, children: null };
   let tmp8Result = null != user.globalName;
   if (tmp8Result) {

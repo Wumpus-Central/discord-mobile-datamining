@@ -1,7 +1,7 @@
-// === Module 9309: GameProfileSummary ===
+// === Module 9332: GameProfileSummary ===
 
-// Module 9309 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9221 */;
+// Module 9332 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

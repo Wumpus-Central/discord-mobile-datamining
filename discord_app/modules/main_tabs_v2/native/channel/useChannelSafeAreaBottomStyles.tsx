@@ -1,18 +1,18 @@
-// === Module 10893: useChannelSafeAreaBottomStyles ===
+// === Module 10916: useChannelSafeAreaBottomStyles ===
 
-// Module 10893 (useChannelSafeAreaBottomStyles)
+// Module 10916 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import useToken from "useToken" /* 5238 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9685 */;
+import useToken from "useToken" /* 5250 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9707 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6481 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
 import LurkingStore from "LurkingStore" /* 4902 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
 
 require = fn;
 const InputModes = fn(1087).InputModes;
@@ -301,9 +301,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   }
   return prop;
 }) : (function useChannelSafeAreaBottomStyles(arg0) {
-  const token = gradientBottom(5238).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-  let obj = gradientBottom(5238);
-  gradientBottom = gradientBottom(9685).useGradientBottom();
+  const token = gradientBottom(5250).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let obj = gradientBottom(5250);
+  gradientBottom = gradientBottom(9707).useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {
     backgroundColor1 = gradientBottom.backgroundColor;

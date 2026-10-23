@@ -1,7 +1,7 @@
-// === Module 8481: transformNativeMarkupNode ===
+// === Module 8493: transformNativeMarkupNode ===
 
-// Module 8481 (transformNativeMarkupNode)
-import MarkupTypes from "MarkupTypes" /* 5966 */;
+// Module 8493 (transformNativeMarkupNode)
+import MarkupTypes from "MarkupTypes" /* 5978 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function transformNode(type, channelId) {
       const obj10 = { type: require("MarkupTypes").AST_KEY.STRIKETHROUGH, content: transformNativeInline(type.value, channelId) };
       return obj10;
     case "spoiler":
-      const obj11 = { type: require("MarkupTypes").AST_KEY.SPOILER, content: transformNativeInline(type.value, channelId), channelId: channelId.channelId };
+      const obj11 = { type: require("MarkupTypes").AST_KEY.SPOILER, id: type.value.id, content: transformNativeInline(type.value.content, channelId), channelId: channelId.channelId };
       return obj11;
     case "code":
       const obj12 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: type.value };
@@ -73,7 +73,7 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp52(5966).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp52(5978).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }

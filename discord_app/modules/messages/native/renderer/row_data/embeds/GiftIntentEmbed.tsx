@@ -1,15 +1,15 @@
-// === Module 8433: GiftIntentEmbed ===
+// === Module 8445: GiftIntentEmbed ===
 
-// Module 8433 (GiftIntentEmbed)
+// Module 8445 (GiftIntentEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import _modDef5653 from "module_5653" /* 5653 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8263 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8437 */;
-import _modDef8438 from "module_8438" /* 8438 */;
-import _modDef8439 from "module_8439" /* 8439 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8434 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import _modDef5665 from "module_5665" /* 5665 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8449 */;
+import _modDef8450 from "module_8450" /* 8450 */;
+import _modDef8451 from "module_8451" /* 8451 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8446 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -65,11 +65,11 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.giftIntentType = giftIntentType;
         ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5653);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5665);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8438);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8439);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8450);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8451);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

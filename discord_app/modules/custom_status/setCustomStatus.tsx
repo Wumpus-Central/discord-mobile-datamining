@@ -1,12 +1,12 @@
-// === Module 11039: setCustomStatus ===
+// === Module 11062: setCustomStatus ===
 
-// Module 11039 (setCustomStatus)
+// Module 11062 (setCustomStatus)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import Constants2 from "Constants" /* 11036 */;
-import getClearAfterDurationDefault from "getClearAfterDuration" /* 11040 */;
+import Constants2 from "Constants" /* 11059 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 11063 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants2.ClearAfterValues;

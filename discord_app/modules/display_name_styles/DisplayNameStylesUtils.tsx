@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const DisplayNameStylesConstants = fn(1410);
-({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: metroRequire } = DisplayNameStylesConstants);
+({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: metroRequire, HEXAGON_CAMPAIGN_FONTS: closure_7 } = DisplayNameStylesConstants);
 let items = [fn(1411).DisplayNameEffect.NEON, fn(1411).DisplayNameEffect.TOON, fn(1411).DisplayNameEffect.POP, fn(1411).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
@@ -154,12 +154,33 @@ export const parseServerDisplayNameStyles = function parseServerDisplayNameStyle
   return tmp;
 };
 export const generateRandomDisplayNameStyles = function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
+  let arr = visibleFontOrder;
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
-  const arr = timestampProducer(tmp);
-  const obj = { fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)], effectId: tmp, colors: null };
-  const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
+  const found = visibleFontOrder.filter((item) => !closure_1_7.includes(item));
+  if (found.length > 0) {
+    arr = found;
+  }
+  const arr3 = timestampProducer(tmp);
+  const obj = { fontId: arr[Math.floor(Math, Math.random(Math) * arr.length)], effectId: tmp, colors: null };
+  const items = [...arr3[Math.floor(Math, Math.random(Math) * arr3.length)]];
   obj.colors = items;
   return obj;
+};
+export const normalizeDisplayNameStylesForApply = function normalizeDisplayNameStylesForApply(effectId, defaultColor) {
+  let tmp = effectId;
+  if (effectId.effectId === DisplayNameEffect.DisplayNameEffect.SOLID) {
+    tmp = effectId;
+    if (effectId.colors.length > 0) {
+      tmp = effectId;
+      if (effectId.colors[0] === defaultColor) {
+        const obj = {};
+        const merged = Object.assign(effectId);
+        obj.colors = [];
+        tmp = obj;
+      }
+    }
+  }
+  return tmp;
 };
 export const hasNonLatinLetters = function hasNonLatinLetters(displayName) {
   if (null == displayName) {

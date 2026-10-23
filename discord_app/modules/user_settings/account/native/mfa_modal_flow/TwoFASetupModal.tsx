@@ -1,19 +1,19 @@
-// === Module 15985: TwoFASetupModal ===
+// === Module 16018: TwoFASetupModal ===
 
-// Module 15985 (TwoFASetupModal)
+// Module 16018 (TwoFASetupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useInitialValueDefault from "useInitialValue" /* 5585 */;
-import Navigator from "Navigator" /* 7080 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 15984 */;
-import TwoFASetupScanDefault from "TwoFASetupScan" /* 15991 */;
-import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 15992 */;
+import useInitialValueDefault from "useInitialValue" /* 5597 */;
+import Navigator from "Navigator" /* 7093 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 16017 */;
+import TwoFASetupScanDefault from "TwoFASetupScan" /* 16024 */;
+import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 16025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(15986).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(16019).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
@@ -81,9 +81,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupMo
         stringResult = intl.string(tmp(1128).t.XiOHRX);
       }
       obj6.text = stringResult;
-      obj6 = closure_6(tmp(5230).Button, obj6);
+      obj6 = closure_6(tmp(5242).Button, obj6);
       obj5.children = obj6;
-      closure_6(tmp(7206).SafeAreaPaddingView, obj5);
+      closure_6(tmp(7219).SafeAreaPaddingView, obj5);
     }
   }
   const fn = function l() {
@@ -128,9 +128,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupMo
       stringResult = intl.string(tmp2(1128).t.XiOHRX);
     }
     obj5.text = stringResult;
-    obj5 = closure_6(tmp2(5230).Button, obj5);
+    obj5 = closure_6(tmp2(5242).Button, obj5);
     obj4.children = obj5;
-    closure_6(tmp2(7206).SafeAreaPaddingView, obj4);
+    closure_6(tmp2(7219).SafeAreaPaddingView, obj4);
   }
   const obj2 = navigation(1506);
 });
@@ -145,21 +145,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      closure_0 = closure_0(7029).generateTotpSecret();
+      closure_0 = closure_0(7042).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = closure_0(7029);
-      obj3.headerLeft = closure_0(6909).getHeaderCloseButton(closure_1(15984).close);
+      const obj = closure_0(7042);
+      obj3.headerLeft = closure_0(6922).getHeaderCloseButton(closure_1(16017).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15988), {});
+        return closure_1_6(closure_1_1(16021), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -167,20 +167,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
         }
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = closure_0(6909);
-      obj5.headerLeft = closure_0(6909).getHeaderCloseButton(closure_1(15984).close);
+      const obj4 = closure_0(6922);
+      obj5.headerLeft = closure_0(6922).getHeaderCloseButton(closure_1(16017).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15995), {});
+        return closure_1_6(closure_1_1(16028), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;
@@ -218,21 +218,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   let obj = {
     initialRouteName: LANDING,
     screens: useInitialValueDefault(() => {
-      totpSecret = totpSecret(7029).generateTotpSecret();
+      totpSecret = totpSecret(7042).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = totpSecret(7029);
-      obj3.headerLeft = totpSecret(6909).getHeaderCloseButton(closure_1(15984).close);
+      const obj = totpSecret(7042);
+      obj3.headerLeft = totpSecret(6922).getHeaderCloseButton(closure_1(16017).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15988), {});
+        return closure_1_6(closure_1_1(16021), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -240,20 +240,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15987).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16020).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
         }
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = totpSecret(6909);
-      obj5.headerLeft = totpSecret(6909).getHeaderCloseButton(closure_1(15984).close);
+      const obj4 = totpSecret(6922);
+      obj5.headerLeft = totpSecret(6922).getHeaderCloseButton(closure_1(16017).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15995), {});
+        return closure_1_6(closure_1_1(16028), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;

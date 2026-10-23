@@ -1,10 +1,10 @@
-// === Module 18061: useSearchHostSurface ===
+// === Module 18105: useSearchHostSurface ===
 
-// Module 18061 (useSearchHostSurface)
+// Module 18105 (useSearchHostSurface)
 import nativeDefault from "native" /* 587 */;
 import Link from "Link" /* 1506 */;
-import useToken from "useToken" /* 5238 */;
-import SearchNavigatorConstants from "SearchNavigatorConstants" /* 18003 */;
+import useToken from "useToken" /* 5250 */;
+import SearchNavigatorConstants from "SearchNavigatorConstants" /* 18047 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

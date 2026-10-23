@@ -1,8 +1,8 @@
-// === Module 6667: SpoilerChannelUtils ===
+// === Module 6680: SpoilerChannelUtils ===
 
-// Module 6667 (SpoilerChannelUtils)
+// Module 6680 (SpoilerChannelUtils)
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6668 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6681 */;
 
 const require = globalThis.__r;
 

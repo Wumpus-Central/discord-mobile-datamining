@@ -1,16 +1,16 @@
-// === Module 10803: InstantInviteCode ===
+// === Module 10826: InstantInviteCode ===
 
-// Module 10803 (InstantInviteCode)
+// Module 10826 (InstantInviteCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import useChannelName from "useChannelName" /* 5590 */;
-import ClockIcon from "ClockIcon" /* 5677 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
-import TextIcon2 from "TextIcon" /* 8537 */;
-import CountDownDefault from "CountDown" /* 10013 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import useChannelName from "useChannelName" /* 5602 */;
+import ClockIcon from "ClockIcon" /* 5689 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
+import TextIcon2 from "TextIcon" /* 8549 */;
+import CountDownDefault from "CountDown" /* 10035 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -222,12 +222,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
-  const items1 = [closure_8(invite(5220).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
+  const items1 = [closure_8(invite(5232).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
   const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5963).Stack, obj2);
+  obj.children = closure_9(invite(5975).Stack, obj2);
   return closure_8(View, obj);
 });
 export const InstantInviteDetails = tmp3;

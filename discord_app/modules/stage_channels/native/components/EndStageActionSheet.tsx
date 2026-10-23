@@ -1,16 +1,16 @@
-// === Module 14550: EndStageActionSheet ===
+// === Module 14574: EndStageActionSheet ===
 
-// Module 14550 (EndStageActionSheet)
+// Module 14574 (EndStageActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7858 */;
-import CallsUtils from "CallsUtils" /* 9129 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 14135 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7871 */;
+import CallsUtils from "CallsUtils" /* 9152 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 14159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6622).EXPLICIT_END_STAGE_SHEET_KEY;
+let closure_4 = fn(6635).EXPLICIT_END_STAGE_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
     }
     if (cResult[9] !== tmp4.subtitle) {
       const obj3 = { style: tmp4.subtitle, variant: "text-md/medium", color: "text-default", children: tmp13 };
-      const tmp17 = closure_5(tmp(5220).Text, obj3);
+      const tmp17 = closure_5(tmp(5232).Text, obj3);
       cResult[9] = tmp4.subtitle;
       cResult[10] = tmp17;
       let tmp15 = tmp17;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
     }
     if (cResult[12] !== tmp5) {
       const obj4 = { variant: "secondary", text: tmp18, onPress: tmp5 };
-      const tmp22 = closure_5(tmp(5230).Button, obj4);
+      const tmp22 = closure_5(tmp(5242).Button, obj4);
       cResult[12] = tmp5;
       cResult[13] = tmp22;
       let tmp20 = tmp22;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
       }
       if (cResult[18] !== tmp6) {
         const obj5 = { variant: "destructive", text: tmp27, onPress: tmp6 };
-        const tmp31 = closure_5(tmp(5230).Button, obj5);
+        const tmp31 = closure_5(tmp(5242).Button, obj5);
         cResult[18] = tmp6;
         cResult[19] = tmp31;
         let tmp29 = tmp31;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
   const obj4 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1128).intl;
   obj4.children = intl2.string(channel(1128).t.mT7jwN);
-  items[1] = closure_5(channel(5220).Text, obj4);
+  items[1] = closure_5(channel(5232).Text, obj4);
   const obj5 = { style: tmp.cancelButton, children: null };
   const obj6 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1128).intl;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj5.children = closure_5(channel(5230).Button, obj6);
+  obj5.children = closure_5(channel(5242).Button, obj6);
   items[2] = closure_5(View, obj5);
   const obj7 = { style: tmp.confirmButton, children: null };
   const obj8 = { variant: "destructive", text: null, onPress: null };
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndStage
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj7.children = closure_5(channel(5230).Button, obj8);
+  obj7.children = closure_5(channel(5242).Button, obj8);
   items[3] = closure_5(View, obj7);
   obj2.children = items;
   obj.children = closure_6(View, obj2);

@@ -1,17 +1,17 @@
-// === Module 7352: GuildOfficialMessageUtils ===
+// === Module 7365: GuildOfficialMessageUtils ===
 
-// Module 7352 (GuildOfficialMessageUtils)
+// Module 7365 (GuildOfficialMessageUtils)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
 import shared from "shared" /* 4976 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6801 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7353 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6814 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7366 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 
-const ThreadHooks = tmp(7354);
+const ThreadHooks = tmp(7367);
 require = fn;
 let closure_5 = fn(4974).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1087);

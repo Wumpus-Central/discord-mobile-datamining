@@ -1,10 +1,10 @@
-// === Module 9004: GuildEventRecurrences ===
+// === Module 9027: GuildEventRecurrences ===
 
-// Module 9004 (GuildEventRecurrences)
+// Module 9027 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9005 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9007 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9028 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9030 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   const obj2 = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1128).intl;
   obj2.children = intl.string(guildEventId(1128).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(5220).Text, obj2), , ];
+  const items = [closure_6(guildEventId(5232).Text, obj2), , ];
   const tmp4 = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
   const tmp6 = c4;
   items[1] = closure_6(closure_5, {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5230).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5242).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

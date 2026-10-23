@@ -1,6 +1,6 @@
-// === Module 7791: NativeAdsModule ===
+// === Module 7804: NativeAdsModule ===
 
-// Module 7791 (NativeAdsModule)
+// Module 7804 (NativeAdsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

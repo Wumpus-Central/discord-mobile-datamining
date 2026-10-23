@@ -1,30 +1,30 @@
-// === Module 11629: FocusedExpandedControls ===
+// === Module 11649: FocusedExpandedControls ===
 
-// Module 11629 (FocusedExpandedControls)
+// Module 11649 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import FastImageDefault from "FastImage" /* 5655 */;
-import Form from "Form" /* 8926 */;
-import CallsUtils from "CallsUtils" /* 9129 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9136 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11550 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11579 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11600 */;
-import _modDef11630 from "module_11630" /* 11630 */;
-import _modDef11631 from "module_11631" /* 11631 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11632 */;
-import useDeafStatesDefault from "useDeafStates" /* 11633 */;
+import FastImageDefault from "FastImage" /* 5667 */;
+import Form from "Form" /* 8949 */;
+import CallsUtils from "CallsUtils" /* 9152 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9159 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11570 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11599 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11620 */;
+import _modDef11650 from "module_11650" /* 11650 */;
+import _modDef11651 from "module_11651" /* 11651 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11652 */;
+import useDeafStatesDefault from "useDeafStates" /* 11653 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5716).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
         return tmp5;
       } else {
         if (cResult[3] !== tmp4.sparkle2) {
-          const obj2 = { style: tmp4.sparkle2, source: _modDef11630 };
+          const obj2 = { style: tmp4.sparkle2, source: _modDef11650 };
           const tmp13 = React5(FastImageDefault, obj2);
           cResult[3] = tmp4.sparkle2;
           cResult[4] = tmp13;
@@ -59,7 +59,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
           tmp9 = cResult[4];
         }
         if (cResult[5] !== tmp4.sparkle) {
-          const obj3 = { style: tmp4.sparkle, source: _modDef11631 };
+          const obj3 = { style: tmp4.sparkle, source: _modDef11651 };
           const tmp18 = React5(FastImageDefault, obj3);
           cResult[5] = tmp4.sparkle;
           cResult[6] = tmp18;
@@ -100,10 +100,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef11630 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef11650 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef11631;
+      obj4.source = _modDef11651;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = closure_1_8(View, obj);
@@ -364,7 +364,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   channelId = channelId.channelId;
   const isConnectedToVoiceChannel = channelId.isConnectedToVoiceChannel;
   const obj = channelId(576);
-  const routeSource = channelId(9129).useMaskedSpeakerStates().routeSource;
+  const routeSource = channelId(9152).useMaskedSpeakerStates().routeSource;
   if (cResult[0] === channelId) {
     if (cResult[1] === isConnectedToVoiceChannel) {
       let tmp4 = cResult[2];
@@ -398,7 +398,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   cResult[1] = isConnectedToVoiceChannel;
   cResult[2] = fn;
   tmp4 = fn;
-  const obj2 = channelId(9129);
+  const obj2 = channelId(9152);
 }) : (function AudioRouteButton(arg0) {
   ({ channelId: require, isConnectedToVoiceChannel: importDefault } = arg0);
   const obj2 = {
@@ -473,7 +473,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp7 = cResult[1];
   }
   const onPress = tmp7.onPress;
-  const tmp5Result = importDefault(tmp7.deaf ? 11634 : 11635);
+  const tmp5Result = importDefault(tmp7.deaf ? 11654 : 11655);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
     const stringResult = intl.string(util.t.wjcRFX);
@@ -503,7 +503,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11634 : 11635), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11654 : 11655), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(closure_12, obj2);

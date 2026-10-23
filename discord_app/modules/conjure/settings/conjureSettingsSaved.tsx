@@ -1,13 +1,13 @@
-// === Module 11774: conjureSettingsSaved ===
+// === Module 11793: conjureSettingsSaved ===
 
-// Module 11774 (conjureSettingsSaved)
+// Module 11793 (conjureSettingsSaved)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureSettingsConnection from "conjureSettingsConnection" /* 10785 */;
-import ConjureChatStore from "ConjureChatStore" /* 10676 */;
+import conjureSettingsConnection from "conjureSettingsConnection" /* 10807 */;
+import ConjureChatStore from "ConjureChatStore" /* 10698 */;
 
 require = fn;
-const sendUserMessage = fn(10675).sendUserMessage;
+const sendUserMessage = fn(10697).sendUserMessage;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsSaved.tsx");
 

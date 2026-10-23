@@ -1,6 +1,6 @@
-// === Module 17120: MobileNitroUpsellInShopFeedExperiment ===
+// === Module 17164: MobileNitroUpsellInShopFeedExperiment ===
 
-// Module 17120 (MobileNitroUpsellInShopFeedExperiment)
+// Module 17164 (MobileNitroUpsellInShopFeedExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
 
 const obj = { GET_NITRO: "getNitro", LEARN_MORE: "learnMore" };

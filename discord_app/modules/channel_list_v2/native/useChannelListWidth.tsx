@@ -1,11 +1,11 @@
-// === Module 17366: useChannelListWidth ===
+// === Module 17410: useChannelListWidth ===
 
-// Module 17366 (useChannelListWidth)
+// Module 17410 (useChannelListWidth)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import useChatLayoutDefault from "useChatLayout" /* 5139 */;
-import useToken from "useToken" /* 5238 */;
-import useDrawerWidth from "useDrawerWidth" /* 11197 */;
+import useChatLayoutDefault from "useChatLayout" /* 5151 */;
+import useToken from "useToken" /* 5250 */;
+import useDrawerWidth from "useDrawerWidth" /* 11220 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

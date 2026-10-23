@@ -1,20 +1,20 @@
-// === Module 18967: GuildSettingsModalAuditLogFilter ===
+// === Module 19011: GuildSettingsModalAuditLogFilter ===
 
-// Module 18967 (GuildSettingsModalAuditLogFilter)
+// Module 19011 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
-import FormRadio from "FormRadio" /* 6973 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10805 */;
-import AuditLogUtils from "AuditLogUtils" /* 18965 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 18968 */;
+import UserUtilsDefault from "UserUtils" /* 5023 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5037 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6825 */;
+import FormRadio from "FormRadio" /* 6986 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10828 */;
+import AuditLogUtils from "AuditLogUtils" /* 19009 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18963 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19007 */;
 
 const require = globalThis.__r;
 
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(7130).SearchBar, obj5);
+                          const tmp26 = closure_9(filterType(7143).SearchBar, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;

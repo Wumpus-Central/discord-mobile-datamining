@@ -1,10 +1,10 @@
-// === Module 17873: ContentInventoryEntryContainer ===
+// === Module 17917: ContentInventoryEntryContainer ===
 
-// Module 17873 (ContentInventoryEntryContainer)
+// Module 17917 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8816 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8839 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(17819);
+const createICYMIStyles = fn(17863);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
               let tmp14 = cResult[10];
             }
             if (cResult[11] !== stateFromStores) {
-              let obj2 = { animate: true, size: tmp(type[12]).AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+              let obj2 = { animate: true, size: tmp(type[12]).AvatarSizes.NORMAL, user: stateFromStores, guildId: "application" };
               const tmp17 = closure_6(tmp(type[12]).Avatar, obj2, stateFromStores.id);
               cResult[11] = stateFromStores;
               cResult[12] = tmp17;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
     items2[1] = screenshotContainer;
     obj4.style = items2;
     let obj5 = { style: tmp.header, children: null };
-    let obj6 = { animate: true, size: tmp3(tmp4[12]).AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+    let obj6 = { animate: true, size: tmp3(tmp4[12]).AvatarSizes.NORMAL, user: stateFromStores, guildId: "application" };
     const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj6, stateFromStores.id), ];
     let obj7 = { style: tmp.headerInfo, children: null };
     const obj8 = { style: tmp.title, children: title };

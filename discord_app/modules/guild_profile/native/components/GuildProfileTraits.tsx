@@ -1,12 +1,12 @@
-// === Module 14120: GuildProfileTraits ===
+// === Module 14144: GuildProfileTraits ===
 
-// Module 14120 (GuildProfileTraits)
+// Module 14144 (GuildProfileTraits)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import EmojiDefault from "Emoji" /* 7212 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import EmojiDefault from "Emoji" /* 7225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

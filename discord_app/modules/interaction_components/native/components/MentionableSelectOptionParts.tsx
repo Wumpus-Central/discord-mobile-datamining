@@ -1,20 +1,20 @@
-// === Module 11791: MentionableSelectOptionParts ===
+// === Module 11810: MentionableSelectOptionParts ===
 
-// Module 11791 (MentionableSelectOptionParts)
+// Module 11810 (MentionableSelectOptionParts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6008 */;
-import RoleIconUtils from "RoleIconUtils" /* 7268 */;
-import RoleIconDefault from "RoleIcon" /* 7286 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8966 */;
-import DiscordTagDefault from "DiscordTag" /* 9109 */;
-import UserIcon from "UserIcon" /* 11792 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6020 */;
+import RoleIconUtils from "RoleIconUtils" /* 7281 */;
+import RoleIconDefault from "RoleIcon" /* 7299 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8989 */;
+import DiscordTagDefault from "DiscordTag" /* 9132 */;
+import UserIcon from "UserIcon" /* 11811 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
-import PresenceStore from "PresenceStore" /* 5698 */;
+import PresenceStore from "PresenceStore" /* 5710 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

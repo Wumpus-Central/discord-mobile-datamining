@@ -1,25 +1,25 @@
-// === Module 10100: ExpressionPickerActionSheet ===
+// === Module 10122: ExpressionPickerActionSheet ===
 
-// Module 10100 (ExpressionPickerActionSheet)
+// Module 10122 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import useKeyboardType from "useKeyboardType" /* 5147 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import NavigatorConstants from "NavigatorConstants" /* 5254 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9829 */;
-import KeyboardUtils from "KeyboardUtils" /* 10102 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10103 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import useKeyboardType from "useKeyboardType" /* 5159 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
+import NavigatorConstants from "NavigatorConstants" /* 5266 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9851 */;
+import KeyboardUtils from "KeyboardUtils" /* 10124 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10125 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
-let closure_5 = fn(5252).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10101).STICKER_FORMATS;
+let closure_5 = fn(5264).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10123).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

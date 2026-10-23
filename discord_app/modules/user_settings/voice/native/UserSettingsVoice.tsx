@@ -1,26 +1,26 @@
-// === Module 11570: UserSettingsVoice ===
+// === Module 11590: UserSettingsVoice ===
 
-// Module 11570 (UserSettingsVoice)
+// Module 11590 (UserSettingsVoice)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5220 */;
-import Stack_Stack from "Stack/Stack" /* 5963 */;
-import TableRowGroup from "TableRowGroup" /* 6972 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11573 */;
-import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 11574 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 11576 */;
-import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 11578 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 11582 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 11583 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 11585 */;
-import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 11593 */;
+import Text_Text from "Text/Text" /* 5232 */;
+import Stack_Stack from "Stack/Stack" /* 5975 */;
+import TableRowGroup from "TableRowGroup" /* 6985 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11593 */;
+import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 11594 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 11596 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 11598 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 11602 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 11603 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 11605 */;
+import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 11613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(11571).isMobileOverlaySupported;
-const guideURL = fn(11572).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(11591).isMobileOverlaySupported;
+const guideURL = fn(11592).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);

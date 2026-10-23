@@ -1,11 +1,11 @@
-// === Module 19218: components/StepsIndicator ===
+// === Module 19262: components/StepsIndicator ===
 
-// Module 19218 (components/StepsIndicator)
+// Module 19262 (components/StepsIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import timing from "timing" /* 5192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import timing from "timing" /* 5204 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
