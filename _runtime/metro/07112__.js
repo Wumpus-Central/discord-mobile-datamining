@@ -1,14 +1,17 @@
 // === Module 7112: ? ===
 
 // Module 7112
+import _mod7113 from "module_7113" /* 7113 */;
 
-export const findLastIndex = function findLastIndex(arg0, fn) {
-  let diff = arg0.length - 1;
-  if (0 <= diff) {
-    while (!fn(arg0[diff])) {
-      diff = diff - 1;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
+  const invertedMultiplier = _mod7113.getInvertedMultiplier(gestureDirection, arg2);
+  if ("vertical" !== gestureDirection) {
+    if ("vertical-inverted" !== gestureDirection) {
+      return layout.width * invertedMultiplier;
     }
-    return diff;
   }
-  return -1;
+  return layout.height * invertedMultiplier;
 };

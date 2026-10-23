@@ -2,70 +2,81 @@
 
 // Module 5451
 import jsxProd from "jsxProd" /* 21 */;
-import value22 from "value2" /* 5256 */;
+import value2 from "value2" /* 5268 */;
 import _mod5452 from "module_5452" /* 5452 */;
 import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
 let noop = noop_mod;
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+({ useMemo: c2, useRef: c3 } = noop);
 let noop = noop_mod;
+({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-const __initData = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
-const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
-  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
-  let num = animatedFooterPosition.bottomInset;
+const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
+  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
+  if (topInset === undefined) {
+    topInset = 0;
+  }
+  let num = bottomInset.bottomInset;
   if (num === undefined) {
     num = 0;
   }
-  const style = animatedFooterPosition.style;
-  const children = animatedFooterPosition.children;
-  let animatedStyle;
-  const tmp = animatedStyle(null);
-  const bottomSheetInternal = animatedFooterPosition(style[2]).useBottomSheetInternal();
-  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
-  let obj = animatedFooterPosition(style[2]);
-  const tmp2 = style;
-  const fn = function c() {
-    value = animatedFooterPosition.get();
-    value2 = animatedKeyboardState.get();
-    let diff = value;
-    if (value2 !== value22.KEYBOARD_STATE.SHOWN) {
-      diff = value - num;
-    }
-    const obj = { transform: null };
-    const items = [{ translateY: Math.max(0, diff) }];
-    obj.transform = items;
-    return obj;
-  };
-  const obj2 = animatedFooterPosition(style[3]);
-  fn.__closure = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
-  fn.__workletHash = 5322275157644;
-  fn.__initData = __initData;
-  let items = [num, animatedKeyboardState, animatedFooterPosition];
-  animatedStyle = obj2.useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const items2 = [animatedFooterHeight];
-  const obj3 = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
-  const items3 = [animatedFooterHeight];
-  const tmp5 = animatedKeyboardState(() => {
-    const items = [_mod5452.styles.container, style, animatedStyle];
-    return items;
-  }, items1);
-  const tmp6 = animatedFooterHeight((nativeEvent) => {
-    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
-  }, items2);
-  const tmp7 = animatedFooterHeight((height) => {
-    const result = animatedFooterHeight.set(height.height);
-  }, items3);
-  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
-  let tmp9 = null;
-  if (null !== children) {
-    const obj5 = { ref: tmp, onLayout: tmp6, style: tmp5, children };
-    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
+  let flag = bottomInset.shouldCalculateHeight;
+  if (flag === undefined) {
+    flag = true;
   }
-  return tmp9;
+  const detached = bottomInset.detached;
+  const style = bottomInset.style;
+  const tmp = num(null);
+  const ref = tmp;
+  let items = [style, detached, topInset, num];
+  const tmp2 = topInset(() => {
+    const items = [style, _mod5452.styles.container, ];
+    const rect = { top: topInset, bottom: num, overflow: null };
+    let str = "hidden";
+    if (detached) {
+      str = "visible";
+    }
+    rect.overflow = str;
+    items[2] = rect;
+    return items;
+  }, items);
+  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
+  let stableCallback;
+  if (flag) {
+    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
+      const height = nativeEvent.nativeEvent.layout.height;
+      height.value = height;
+      const current = ref.current;
+      if (current != null) {
+        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
+          if (value.value) {
+            num = arg5;
+            let num2 = arg5;
+            if (arg5 == null) {
+              num2 = 0;
+            }
+            const rect = { top: num2, left: 0, right: 0, bottom: null };
+            if (num == null) {
+              num = 0;
+            }
+            let num3 = currentHeight.currentHeight;
+            const sum = num + height;
+            if (num3 == null) {
+              num3 = 0;
+            }
+            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
+            tmp.value = rect;
+          }
+        });
+      }
+    });
+  }
+  obj2.onLayout = stableCallback;
+  obj2.style = tmp2;
+  obj2.children = bottomInset.children;
+  return ref(style, obj2);
 });
-memoResult.displayName = "BottomSheetFooter";
+memoResult.displayName = "BottomSheetHostingContainer";
 
-export const BottomSheetFooter = memoResult;
+export const BottomSheetHostingContainer = memoResult;

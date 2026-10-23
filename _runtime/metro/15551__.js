@@ -1,14 +1,15 @@
 // === Module 15551: ? ===
 
 // Module 15551
-import _mod15524 from "module_15524" /* 15524 */;
+import _mod15546 from "module_15546" /* 15546 */;
+import _mod15552 from "module_15552" /* 15552 */;
 
 
 export default (arg0) => {
-  if (_mod15524(arg0)) {
+  if (_mod15546(arg0)) {
     return arg0;
   } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+    const tmp6 = new TypeError(_mod15552(arg0) + " is not a function");
+    throw tmp6;
   }
 };

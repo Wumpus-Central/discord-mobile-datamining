@@ -1,7 +1,15 @@
 // === Module 19151: ? ===
 
 // Module 19151
-import registerAsset from "module_1134" /* 1134 */;
+import _mod19152 from "module_19152" /* 19152 */;
+import capitalize from "capitalize" /* 19160 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 40, height: 40.5, scales: [2, 3], hash: "4247c923735157dd7bfbbedd55448819", name: "role_subscription_benefit_bunny_avatar", type: "png" });
+export default _mod19152((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
+});

@@ -1,15 +1,17 @@
 // === Module 8014: ? ===
 
 // Module 8014
-import _modDef7971 from "module_7971" /* 7971 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7998 from "module_7998" /* 7998 */;
+import _modDef7999 from "module_7999" /* 7999 */;
+import _modDef8015 from "module_8015" /* 8015 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const FeFlood = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +31,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Filter {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
-    tmp2 = closure_4;
-    obj = closure_4(Filter);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeFlood);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeFlood);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +53,30 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef7971);
+_inherits(FeFlood, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8015), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(FeFlood(7998).extractFilter(this.props));
+    const merged1 = Object.assign(_modDef7998(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -1,18 +1,23 @@
 // === Module 7113: ? ===
 
 // Module 7113
-import CardAnimationContext from "CardAnimationContext" /* 7107 */;
-import noop from "module_19" /* 19 */;
 
-require = arg1;
-
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export function getInvertedMultiplier(gestureDirection, arg1) {
+  if ("vertical" === gestureDirection) {
+    return 1;
+  } else if ("vertical-inverted" === gestureDirection) {
+    return -1;
+  } else if ("horizontal" === gestureDirection) {
+    let num2 = 1;
+    if (arg1) {
+      num2 = -1;
+    }
+    return num2;
+  } else if ("horizontal-inverted" === gestureDirection) {
+    let num = -1;
+    if (arg1) {
+      num = 1;
+    }
+    return num;
   }
-};
+}

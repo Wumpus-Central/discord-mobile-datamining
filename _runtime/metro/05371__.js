@@ -1,19 +1,11 @@
 // === Module 5371: ? ===
 
 // Module 5371
-import ComposedGestureName from "ComposedGestureName" /* 5342 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5351 */;
-import _mod5366 from "module_5366" /* 5366 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+({ useEffect, useRef } = noop);
+new Map();
 
-export const useFlingGesture = function useFlingGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod5366.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
-};
+export function useDetectorAttachmentGuard(tmp8Result5) {
+
+}

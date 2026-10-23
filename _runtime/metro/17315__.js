@@ -1,7 +1,17 @@
 // === Module 17315: ? ===
 
 // Module 17315
-import registerAsset from "module_1134" /* 1134 */;
+import _modDef17311 from "module_17311" /* 17311 */;
+import noop from "module_19" /* 19 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 151, height: 119, scales: [2, 3], hash: "2a93fa6b4a038d5a151d558000723423", name: "img_wump_trash_darker", type: "png" });
+export default function useReanimatedHeaderHeight() {
+  const context = noop.useContext(_modDef17311);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?");
+    throw error;
+  } else {
+    return context;
+  }
+};

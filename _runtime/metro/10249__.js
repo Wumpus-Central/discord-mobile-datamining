@@ -1,14 +1,13 @@
 // === Module 10249: ? ===
 
 // Module 10249
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import Filter from "Filter" /* 10233 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FRCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,66 +27,63 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FRCasualTimeParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class ENUnlikelyFormatFilter {
   constructor() {
     self = this;
-    tmp = c2(this, FRCasualTimeParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRCasualTimeParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    tmp = closure_0(this, ENUnlikelyFormatFilter);
+    tmp2 = c2;
+    obj = c2(ENUnlikelyFormatFilter);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ENUnlikelyFormatFilter;
+_inherits(ENUnlikelyFormatFilter, Filter.Filter);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
+  key: "isValid",
+  value: function isValid(text, text2) {
+    closure_0 = text2;
+    const str2 = text2.text.trim();
+    if (str2 === str3.trim()) {
+      return true;
+    } else {
+      if ("may" === str2.toLowerCase()) {
+        const str5 = text.text.substring(0, text2.index);
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          return false;
+        }
+        str6 = text.text.substring(0, text2.index).trim();
+      }
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          flag2 = false;
+        }
+        str9 = text.text.substring(text2.index + text2.text.length);
+      }
+      return flag2;
+    }
+    str3 = text.text;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      if ("apr\u00E8s-midi" !== formatted) {
-        if ("aprem" !== formatted) {
-          if ("soir" === formatted) {
-            parsingComponents.imply("hour", 18);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(10197).Meridiem.PM);
-          } else if ("matin" === formatted) {
-            parsingComponents.imply("hour", 8);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(10197).Meridiem.AM);
-          } else if ("a midi" === formatted) {
-            parsingComponents.imply("hour", 12);
-            parsingComponents.imply("minute", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(10197).Meridiem.AM);
-          } else if ("\u00E0 minuit" === formatted) {
-            parsingComponents.imply("hour", 0);
-            parsingComponents.imply("meridiem", FRCasualTimeParser(10197).Meridiem.AM);
-          }
-        }
-        return parsingComponents;
-      }
-      parsingComponents.imply("hour", 14);
-      parsingComponents.imply("minute", 0);
-      parsingComponents.imply("meridiem", FRCasualTimeParser(10197).Meridiem.PM);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(FRCasualTimeParser, items);
+export default _createClass(ENUnlikelyFormatFilter, items);

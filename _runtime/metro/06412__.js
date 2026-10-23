@@ -1,20 +1,52 @@
 // === Module 6412: ? ===
 
 // Module 6412
-import _mod1332 from "module_1332" /* 1332 */;
-import _mod1333 from "module_1333" /* 1333 */;
-import _mod1339 from "module_1339" /* 1339 */;
-import _mod6404 from "module_6404" /* 6404 */;
+import _mod1478 from "module_1478" /* 1478 */;
+import defineDataProperty from "defineDataProperty" /* 1479 */;
+import keys2 from "keys2" /* 6413 */;
 
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  const _Symbol = Symbol;
+  tmp = typeof Symbol("foo") === "symbol";
+}
+let closure_2 = tmp;
+const tmp2 = _mod1478();
+let closure_5 = tmp2;
+function defineProperty(arg0, arg1, arg2, arg3) {
 
-export default function isInteger(num) {
-  if (typeof num === "number") {
-    if (!_mod1339(num)) {
-      if (_mod6404(num)) {
-        const tmp = _mod1332(num);
-        return _mod1333(tmp) === tmp;
+}
+function defineProperties(prototype, ownPropertyDescriptors) {
+  const arr = keys2(ownPropertyDescriptors);
+  if (!closure_2) {
+    let num = 0;
+    if (0 < arr.length) {
+      while (typeof defineProperty === "function") {
+        if (!(tmp7 in prototype)) {
+          let tmp14 = defineDataProperty;
+          if (closure_5) {
+            let flag2 = true;
+            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
+          } else {
+            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
+          }
+        } else if (true !== tmp9) {
+          if (typeof tmp9 === "function") {
+            let call2 = toString.call;
+          }
+        }
+        num = num + 1;
       }
+      throw new TypeError("Trying to call a non-function");
     }
+  } else {
+    const call = concat.call;
+    const _Object = Object;
+    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
+    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
   }
-  return false;
-};
+  const tmp = arguments.length > 2 ? arguments[2] : {};
+}
+defineProperties.supportsDescriptors = tmp2;
+
+export default defineProperties;

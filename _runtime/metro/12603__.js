@@ -1,56 +1,78 @@
 // === Module 12603: ? ===
 
 // Module 12603
-const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
+import _mod12563 from "module_12563" /* 12563 */;
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
-  let mapped = items.map((item) => {
-    let str = obj;
-    if (Array.isArray(headers[item])) {
-      str = obj.join(";");
-    }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
-          }
-          return null;
-        } else {
-          return null;
-        }
-      })(str);
-    } else {
-      mapped = str;
-      if (str) {
-        let parts = str.split(",");
-        mapped = parts.map((item) => item.trim());
+require = arg1;
+const dependencyMap = arg6;
+
+export function makePromiseBuffer(bufferSize) {
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
       }
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
+        }
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first;
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
+      } else {
+        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
+      }
+    },
+    drain(arg0) {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod12563.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
+        }
+        arr = length;
+      });
     }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
-    }
-    return combined;
-  }, []);
-  return reduced.find((item) => {
-    let isMatch = null !== item;
-    if (isMatch) {
-      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
-      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
-    }
-    return isMatch;
-  }) || null;
-};
-export const ipHeaderNames = items;
+  };
+}

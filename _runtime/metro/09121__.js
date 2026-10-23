@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 20, height: 20, scales: [1, 2, 3], hash: "e955954d3b070442dffa061da0dc1d1a", name: "ic_clock", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });

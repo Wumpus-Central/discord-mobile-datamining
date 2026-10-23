@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "c9bfed678edd340afd56ab86412945dd", name: "da.messages.c9bfed678edd340afd56ab86412945dd.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ec58bf96c6588d5215316bd58185df8c", name: "HashmarkIcon", type: "png" });

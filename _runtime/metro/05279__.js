@@ -1,7 +1,10 @@
 // === Module 5279: ? ===
 
 // Module 5279
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export const findNodeHandle = _mod17.findNodeHandle;
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

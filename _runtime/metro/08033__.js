@@ -1,15 +1,16 @@
 // === Module 8033: ? ===
 
 // Module 8033
-import _modDef7971 from "module_7971" /* 7971 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7984 from "module_7984" /* 7984 */;
+import _modDef8034 from "module_8034" /* 8034 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Pattern = importDefault;
+const Line = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Pattern {
+class Line {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
-    tmp2 = closure_4;
-    obj = closure_4(Pattern);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Line);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Line);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,45 +52,27 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef7971);
+_inherits(Line, _modDef7984);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(7955)(patternTransform);
-    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8025)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8025)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
+    const obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(7975).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    const obj2 = Line(7975);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const tmp3 = Pattern(7955);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(7960)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8034), {
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8034, {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -96,8 +80,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
 
 export default importDefaultResultResult;

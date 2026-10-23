@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "89ef758cad16b0f89bf10bf57ab078db", name: "StatusDND", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "727899a26eec90f323c88c339b15535a", name: "ic_radio_square_24px", type: "png" });

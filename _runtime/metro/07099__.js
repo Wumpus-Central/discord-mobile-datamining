@@ -1,17 +1,21 @@
 // === Module 7099: ? ===
 
 // Module 7099
-import _mod7100 from "module_7100" /* 7100 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import GestureHandlerRefContext from "GestureHandlerRefContext" /* 7100 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7100.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
-    }
-  }
-  return layout.height * invertedMultiplier;
+export const PanGestureHandler = function PanGestureHandler(arg0) {
+  const ref = noop.useRef(null);
+  const obj = { value: ref, children: null };
+  const obj2 = {};
+  const merged = Object.assign(arg0);
+  obj2.ref = ref;
+  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
+  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
 };
+export const GestureHandlerRootView = fn(5295).GestureHandlerRootView;
+export const GestureState = fn(5295).State;

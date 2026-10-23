@@ -2,38 +2,48 @@
 
 // Module 5054
 import _mod17 from "module_17" /* 17 */;
-import _modAll65 from "module_65" /* 65 */;
+import _mod5055 from "module_5055" /* 5055 */;
+import _mod5056 from "module_5056" /* 5056 */;
 
-const Platform = _mod17.Platform;
-
-export const getHostComponent = function getHostComponent(RiveView, arg1) {
-  closure_0 = arg1;
-  if (null == _modAll65) {
-    const _Error = Error;
-    const error = new Error("NativeComponentRegistry is not available on android!");
+function getInstalledNitro() {
+  return global.NitroModulesProxy;
+}
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const installedNitro = getInstalledNitro();
+if (null != installedNitro) {
+  let installedNitro1 = installedNitro;
+  if (installedNitro.version !== _mod5055.version) {
+    const _Error2 = Error;
+    const version = installedNitro.version;
+    const _HermesInternal2 = HermesInternal;
+    const error = new Error("Nitro was installed twice: once with native version " + version + " and once with JS version " + _mod5055.version + ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).");
     throw error;
-  } else {
-    return _modAll65.get(RiveView, () => {
-      const tmp = closure_0();
-      const validAttributes = tmp.validAttributes;
-      (function wrapValidAttributes(validAttributes) {
-        const keys = Object.keys(validAttributes);
-        for (const item10009 of keys) {
-          let obj = {
-            diff(arg0, arg1) {
-                return arg0 !== arg1;
-              },
-            process(arg0) {
-                return arg0;
-              }
-          };
-          arg0[item10009] = obj;
-          continue;
-        }
-        return validAttributes;
-      })(validAttributes);
-      tmp.validAttributes = validAttributes;
-      return tmp;
-    });
   }
+} else {
+  try {
+    const enforcing = TurboModuleRegistry.getEnforcing("NitroModules");
+    const installResult = enforcing.install();
+    if (null != installResult) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error1 = new Error("Failed to install Nitro: " + installResult);
+      throw error1;
+    } else {
+      installedNitro1 = getInstalledNitro();
+      if (null == installedNitro1) {
+        const _Error3 = Error;
+        const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
+        const moduleNotFoundError = new _mod5056.ModuleNotFoundError(error2);
+        throw moduleNotFoundError;
+      }
+    }
+  } catch (tmp13) {
+    const moduleNotFoundError1 = new tmp3(tmp[2]).ModuleNotFoundError(tmp13);
+    throw moduleNotFoundError1;
+  }
+}
+
+export const NitroModules = installedNitro1;
+export const isRuntimeAlive = function isRuntimeAlive() {
+  return null != globalThis.__nitroJsiCache && null != globalThis.__nitroDispatcher;
 };

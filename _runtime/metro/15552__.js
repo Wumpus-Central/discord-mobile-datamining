@@ -2,4 +2,10 @@
 
 // Module 15552
 
-export const f = Object.getOwnPropertySymbols;
+export default (arg0) => {
+  try {
+    return String(arg0);
+  } catch (err) {
+    return "Object";
+  }
+};

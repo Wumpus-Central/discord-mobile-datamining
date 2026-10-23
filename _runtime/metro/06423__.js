@@ -1,46 +1,7 @@
 // === Module 6423: ? ===
 
 // Module 6423
-import _mod6424 from "module_6424" /* 6424 */;
-import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 6425 */;
+import _mod1475 from "module_1475" /* 1475 */;
 
-const tmp = _mod6424("%Reflect.construct%", true);
-let closure_0 = tmp;
-try {
-  const obj = {
-    () => {
 
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
-        }
-      };
-      const obj2 = {};
-    }
-  }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
-    }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
-}
+export default _mod1475;

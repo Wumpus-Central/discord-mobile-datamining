@@ -1,5 +1,14 @@
 // === Module 5289: ? ===
 
 // Module 5289
+const fn = function o() {
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
+
+export () => {
+
+}
+export const workletNoop = fn;

@@ -1,7 +1,21 @@
 // === Module 10461: ? ===
 
 // Module 10461
-import registerAsset from "module_1134" /* 1134 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef10462 from "module_10462" /* 10462 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 302, height: 42, scales: [2, 3], hash: "180afb9edd1653ca63d752893222f1c8", name: "img_plan_activated", type: "png" });
+export default function useStableMemo(cResult, cResult2) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  } else if (!_modDef10462(cResult2, tmp2.current)) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  }
+  return tmp.current;
+};

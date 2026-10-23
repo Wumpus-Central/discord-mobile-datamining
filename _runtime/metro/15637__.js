@@ -1,18 +1,34 @@
 // === Module 15637: ? ===
 
 // Module 15637
+let closure_0 = { url: "http://localhost:8081" };
 
-export const getHostFromUrl = function getHostFromUrl(scriptURL) {
-  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
-  let tmp2;
-  if (match != null) {
-    tmp2 = match[1];
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
   }
-  if (typeof tmp2 !== "string") {
-    const _Error = Error;
-    const error = new Error("Invalid URL - host not found");
-    throw error;
-  } else {
-    return tmp2;
-  }
+  return () => {
+    url = Object.assign({}, url, obj);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: payload.file, lineNumber: null };
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj.lineNumber = num;
+          const _fetch = fetch;
+          const request = { method: "POST", body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(obj);
+          const response = fetch(combined, request);
+        }
+      }
+    };
+    return obj;
+  };
 };

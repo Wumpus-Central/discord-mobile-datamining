@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 120, height: 96, scales: [2, 3], hash: "f9c127df442a3e2592e404fc380b1a52", name: "img_search_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 240, height: 152, scales: [2, 3], hash: "1c56c6a8d7541177ea8c3d88699db89c", name: "img_guild_cap_upsell_light", type: "png" });

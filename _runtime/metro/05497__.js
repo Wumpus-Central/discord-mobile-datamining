@@ -2,31 +2,11 @@
 
 // Module 5497
 import _mod5498 from "module_5498" /* 5498 */;
+import _mod5499 from "module_5499" /* 5499 */;
+import _mod5500 from "module_5500" /* 5500 */;
+import _mod5502 from "module_5502" /* 5502 */;
 
 
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod5498;
-      } else {
-        return "string" === str ? String : Number(arg0);
-      }
-    }
-  }
-  return arg0;
+export default function _slicedToArray(arg0, arg1) {
+  return _mod5498(arg0) || _mod5499(arg0, arg1) || _mod5500(arg0, arg1) || _mod5502();
 };

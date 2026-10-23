@@ -2,32 +2,31 @@
 
 // Module 5503
 import _mod5504 from "module_5504" /* 5504 */;
-import _slicedToArray from "module_5485" /* 5485 */;
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
 
-export const useLayoutState = function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod5504.useRecyclerViewContext();
-  const items = [tmp[0], ];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
-      }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
+    return {};
+  } else {
+    const tmp8 = _mod5504(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
+        }
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
       }
     }
-  }, items1);
-  return items;
+    return tmp8;
+  }
 };

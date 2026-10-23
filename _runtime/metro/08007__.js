@@ -1,14 +1,14 @@
 // === Module 8007: ? ===
 
 // Module 8007
-import _modDef7986 from "module_7986" /* 7986 */;
+import _modDef7999 from "module_7999" /* 7999 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeImage = arg1;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
+    tmp = c2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(FeImage);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,17 +48,17 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef7986);
+_inherits(FeDisplacementMap, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(7963).warnUnimplementedFilter();
+    const result = FeDisplacementMap(7976).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
+const importDefaultResultResult = _createClass(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

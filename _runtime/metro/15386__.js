@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "7744f404dfbb6c28fd6b6e2cf3cc40be", name: "llm-pilot.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "89ef758cad16b0f89bf10bf57ab078db", name: "StatusDND", type: "png" });

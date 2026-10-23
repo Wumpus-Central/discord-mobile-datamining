@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "45844ffe000e8da4174843bafa8614af", name: "SuperReactionIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "ba11c4394297d005e32400d962515cfe", name: "wumpus-luigi", type: "png" });

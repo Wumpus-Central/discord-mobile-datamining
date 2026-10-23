@@ -1,10 +1,20 @@
 // === Module 5380: ? ===
 
 // Module 5380
-import _mod26 from "module_26" /* 26 */;
-import module_65 from "module_65" /* 65 */;
+import _mod19 from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
+let useMemo = _mod19.useMemo;
 
-export default module_65.get("RNGestureHandlerButton", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = handlerTag;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
+  closure_3 = tmp;
+  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
+  }, items);
+};

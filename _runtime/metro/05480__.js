@@ -1,52 +1,111 @@
 // === Module 5480: ? ===
 
 // Module 5480
-import ErrorMessages from "ErrorMessages" /* 5482 */;
-import FlashList from "FlashList" /* 5483 */;
-import _mod5503 from "module_5503" /* 5503 */;
-import _mod5504 from "module_5504" /* 5504 */;
-import _mod5542 from "module_5542" /* 5542 */;
-import RenderTargetOptions from "RenderTargetOptions" /* 5543 */;
-import _modDef5544 from "module_5544" /* 5544 */;
-import _mod5545 from "module_5545" /* 5545 */;
-import Cancellable from "Cancellable" /* 5546 */;
-import JSFPSMonitor from "JSFPSMonitor" /* 5547 */;
-import _mod5549 from "module_5549" /* 5549 */;
-import runScrollBenchmark from "runScrollBenchmark" /* 5550 */;
-import _mod5551 from "module_5551" /* 5551 */;
-import _mod5552 from "module_5552" /* 5552 */;
-import _modDef5553 from "module_5553" /* 5553 */;
-import LayoutCommitObserver from "LayoutCommitObserver" /* 5554 */;
-import get_ActivityIndicator from "module_5481" /* 5481 */;
+import cancelAnimation from "cancelAnimation" /* 1658 */;
+import value2 from "value2" /* 5268 */;
+import _mod5272 from "module_5272" /* 5272 */;
+import _mod5279 from "module_5279" /* 5279 */;
+import _mod5481 from "module_5481" /* 5481 */;
+import ScrollableContainer from "ScrollableContainer" /* 5482 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-if (get_ActivityIndicator.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod5542.FlashListRef;
-  exports.FlashListProps = RenderTargetOptions.FlashListProps;
-  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
-  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
-  exports.RenderTarget = RenderTargetOptions.RenderTarget;
-  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
-  exports.AnimatedFlashList = _modDef5544;
-  exports.useBenchmark = _mod5545.useBenchmark;
-  exports.BenchmarkParams = _mod5545.BenchmarkParams;
-  exports.BenchmarkResult = _mod5545.BenchmarkResult;
-  exports.useDataMultiplier = _mod5549.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = _mod5503.useLayoutState;
-  exports.useRecyclingState = _mod5551.useRecyclingState;
-  exports.useMappingHelper = _mod5552.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef5553;
-  exports.useFlashListContext = _mod5504.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
-}
+require = fn;
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment", "overScrollMode", "keyboardDismissMode", "showsVerticalScrollIndicator", "contentContainerStyle", "refreshing", "onRefresh", "progressViewOffset", "refreshControl", "preserveScrollMomentum", "onScroll", "onScrollBeginDrag", "onScrollEndDrag", "lockableScrollableContentOffsetY", "onContentSizeChange"];
+let noop = fn(19);
+({ forwardRef: closure_4, useContext: hasOwnProperty, useImperativeHandle: metroRequire, useMemo: closure_7 } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+let closure_9 = { code: "function pnpm_createBottomSheetScrollableComponentTsx1(){const{preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE}=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};}" };
+
+export const createBottomSheetScrollableComponent = function createBottomSheetScrollableComponent(SCROLLVIEW, animatedComponent) {
+  const ScrollableComponent = animatedComponent;
+  return closure_4((overScrollMode, arg1) => {
+    ({ focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment } = overScrollMode);
+    overScrollMode = overScrollMode.overScrollMode;
+    let str = "never";
+    if (undefined !== overScrollMode) {
+      str = overScrollMode;
+    }
+    const keyboardDismissMode = overScrollMode.keyboardDismissMode;
+    let str2 = "interactive";
+    if (undefined !== keyboardDismissMode) {
+      str2 = keyboardDismissMode;
+    }
+    const showsVerticalScrollIndicator = overScrollMode.showsVerticalScrollIndicator;
+    SCROLLVIEW = tmp2;
+    ({ onRefresh, preserveScrollMomentum } = overScrollMode);
+    ({ onScroll, onContentSizeChange: closure_2 } = overScrollMode);
+    ({ contentContainerStyle, refreshing, progressViewOffset, refreshControl, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY } = overScrollMode);
+    const tmp6 = hasOwnProperty(_mod5279.BottomSheetDraggableContext);
+    closure_3 = tmp6;
+    const tmp = undefined !== enableFooterMarginAdjustment && enableFooterMarginAdjustment;
+    const tmp3 = _objectWithoutProperties(overScrollMode, closure_2);
+    const scrollHandler1 = _mod5272.useScrollHandler(scrollEventsHandlersHook, onScroll, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY);
+    const scrollableRef = scrollHandler1.scrollableRef;
+    ({ scrollableContentOffsetY, scrollHandler } = scrollHandler1);
+    const bottomSheetInternal = _mod5272.useBottomSheetInternal();
+    const animatedScrollableState = bottomSheetInternal.animatedScrollableState;
+    const setContentSize = _mod5481.useBottomSheetContentSizeSetter().setContentSize;
+    if (!tmp6) {
+      if (bottomSheetInternal.enableContentPanningGesture) {
+        throw "'Scrollable' cannot be used out of the BottomSheet!";
+      }
+    }
+    class J {
+      constructor() {
+        if (preserveScrollMomentum) {
+          obj = {};
+        } else {
+          obj = { decelerationRate: null };
+          tmp = closure_0;
+          tmp2 = closure_1;
+          tmp3 = animatedScrollableState;
+          obj.decelerationRate = closure_0(closure_1[7]).SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value];
+        }
+        obj1 = {};
+        merged = Object.assign(obj);
+        tmp5 = closure_0;
+        if (closure_0) {
+          tmp6 = animatedScrollableState;
+          tmp7 = closure_0;
+          tmp8 = closure_1;
+          tmp5 = animatedScrollableState.value === closure_0(closure_1[7]).SCROLLABLE_STATE.UNLOCKED;
+        }
+        obj1.showsVerticalScrollIndicator = tmp5;
+        return obj1;
+      }
+    }
+    const tmp4Result = cancelAnimation;
+    J.__closure = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, SCROLLABLE_STATE: value2.SCROLLABLE_STATE };
+    J.__workletHash = 1780437272380;
+    J.__initData = __initData;
+    const items = [animatedScrollableState, undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, preserveScrollMomentum];
+    const items1 = [tmp6];
+    const animatedProps = tmp4Result.useAnimatedProps(J, items);
+    const obj4 = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, SCROLLABLE_STATE: value2.SCROLLABLE_STATE };
+    const tmp10 = React5(() => {
+      let result1;
+      if (closure_3) {
+        const Gesture = closure_0(preserveScrollMomentum[8]).Gesture;
+        const result = Gesture.Native().simultaneousWithExternalGesture(tmp);
+        result1 = result.shouldCancelWhenOutside(false);
+        const NativeResult = Gesture.Native();
+      }
+      return result1;
+    }, items1);
+    const tmp4Result4 = _mod5272;
+    const stableCallback = _mod5272.useStableCallback((arg0, arg1) => {
+      setContentSize(arg1);
+      if (closure_1_2) {
+        tmp2(arg0, arg1);
+      }
+    });
+    const bottomSheetContentContainerStyle = _mod5272.useBottomSheetContentContainerStyle(tmp, contentContainerStyle);
+    timestampProducer(arg1, () => scrollableRef.current);
+    const tmp4Result5 = _mod5272;
+    const scrollableSetter = _mod5272.useScrollableSetter(scrollableRef, SCROLLVIEW, scrollableContentOffsetY, undefined !== onRefresh, focusHook);
+    let merged = Object.assign(tmp3);
+    return jsx(ScrollableContainer.ScrollableContainer, { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent, refreshControl });
+  });
+};

@@ -1,18 +1,15 @@
 // === Module 15521: ? ===
 
 // Module 15521
-import _mod15506 from "module_15506" /* 15506 */;
+import _mod15520 from "module_15520" /* 15520 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod15506(1.toString);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod15520, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod15520[tmp2] = tmp;
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

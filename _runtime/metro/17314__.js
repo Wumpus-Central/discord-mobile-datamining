@@ -1,7 +1,17 @@
 // === Module 17314: ? ===
 
 // Module 17314
-import registerAsset from "module_1134" /* 1134 */;
+import _modDef17312 from "module_17312" /* 17312 */;
+import noop from "module_19" /* 19 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 182, height: 128, scales: [2, 3], hash: "d91cbec9959285a2fc129da0bb393a90", name: "img_wump_trash_dark", type: "png" });
+export default function useReanimatedTransitionProgress() {
+  const context = noop.useContext(_modDef17312);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

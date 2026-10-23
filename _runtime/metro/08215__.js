@@ -1,24 +1,5 @@
 // === Module 8215: ? ===
 
 // Module 8215
-import _mod8200 from "module_8200" /* 8200 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
-
-export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8200.getStringFromDataView(dataView, c2, length.length) === length;
-    }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
-  }
-};
+export default { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };

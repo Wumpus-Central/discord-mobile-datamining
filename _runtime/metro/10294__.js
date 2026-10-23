@@ -1,15 +1,16 @@
 // === Module 10294: ? ===
 
 // Module 10294
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
-import _mod10286 from "module_10286" /* 10286 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10214 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10221 */;
+import _mod10295 from "module_10295" /* 10295 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLTimeUnitCasualRelativeFormatParser = require;
+const PTWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod10286.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-class NLTimeUnitCasualRelativeFormatParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10295.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
+class PTWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, PTWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(PTWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -50,7 +51,7 @@ class NLTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,18 +63,29 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10286).parseDuration(arg1[2]);
-      if ("vorig" !== formatted) {
-        if ("afgelopen" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
+      const formatted = arg1[2].toLowerCase();
+      const tmp4 = PTWeekdayParser(10295).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
+        let str5 = "this";
+        if ("passado" != formatted1) {
+          str5 = "next";
+          if ("pr\u00F3ximo" != formatted1) {
+            str5 = "next";
+            if ("proximo" != formatted1) {
+              str5 = null;
+              if ("este" == formatted1) {
+                str5 = "this";
+              }
+            }
+          }
         }
-        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10195).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        return PTWeekdayParser(10241).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10194).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(PTWeekdayParser, items);

@@ -1,173 +1,110 @@
 // === Module 12616: ? ===
 
 // Module 12616
-import errorCallback from "errorCallback" /* 12516 */;
-import _mod12520 from "module_12520" /* 12520 */;
-import _mod12521 from "module_12521" /* 12521 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12525 */;
-import _mod12534 from "module_12534" /* 12534 */;
-import _mod12547 from "module_12547" /* 12547 */;
+import _mod12546 from "module_12546" /* 12546 */;
 import _mod12548 from "module_12548" /* 12548 */;
-import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 12617 */;
-import __SENTRY_DEBUG__ from "module_12519" /* 12519 */;
 
-const require = globalThis.__r;
-
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  let client = obj.client;
-  if (!client) {
-    client = _mod12547.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-      const tmp3Result = spanTimeInputToSeconds;
+require = arg1;
+let dependencyMap = arg6;
+function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
+  _require = fn;
+  dependencyMap = arg1;
+  aggregateExceptionsFromError = arg2;
+  closure_3 = source;
+  if (arg5.length >= arg2 + 1) {
+    return arg5;
+  } else {
+    let items = [];
+    HermesBuiltin.arraySpread(arg5, 0);
+    length = items;
+    const _Error = Error;
+    if (obj3.isInstanceOf(errors[source], Error)) {
+      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
+      let obj = {};
+      let merged = Object.assign(mechanism.mechanism);
+      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
+      let merged1 = Object.assign(tmp3);
+      obj.exception_id = exception_id;
+      mechanism.mechanism = obj;
+      const tmp7 = fn(arg1, errors[source]);
+      length = length.length;
+      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
+      let obj2 = {};
+      let merged2 = Object.assign(tmp7.mechanism);
+      obj2.type = "chained";
+      obj2.source = source;
+      obj2.exception_id = length;
+      obj2.parent_id = exception_id;
+      tmp7.mechanism = obj2;
+      const items1 = [tmp7];
+      HermesBuiltin.arraySpread(length, 1);
+      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
     }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
-      const tmp3Result3 = spanTimeInputToSeconds;
+    const _Array = Array;
+    if (Array.isArray(errors.errors)) {
+      errors = errors.errors;
+      const item = errors.forEach((item, index) => {
+        if (obj.isInstanceOf(item, Error)) {
+          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
+          const obj2 = {};
+          const merged = Object.assign(tmp.mechanism);
+          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
+          const merged1 = Object.assign(tmp5);
+          obj2.exception_id = exception_id;
+          mechanism.mechanism = obj2;
+          const tmp12 = closure_0(closure_1, item);
+          length = length.length;
+          const _HermesInternal = HermesInternal;
+          mechanism = tmp12.mechanism;
+          const combined = "errors[" + index + "]";
+          if (!mechanism) {
+            mechanism = { type: "generic", handled: true };
+          }
+          tmp12.mechanism = mechanism;
+          const obj3 = {};
+          const merged2 = Object.assign(tmp12.mechanism);
+          obj3.type = "chained";
+          obj3.source = combined;
+          obj3.exception_id = length;
+          obj3.parent_id = exception_id;
+          tmp12.mechanism = obj3;
+          const items = [tmp12];
+          HermesBuiltin.arraySpread(length, 1);
+          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
+        }
+        obj = _mod12546;
+      });
     }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod12548.DEBUG_BUILD) {
-      const logger = _mod12520.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod12521.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
-    const tmp3Result4 = _mod12521;
+    return length;
   }
 }
-errorCallback;
 
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("module_12534").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      let obj = require("module_12534");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("module_12554").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
-
-        }, () => {
-          const timestampInSecondsResult = _mod12534.timestampInSeconds();
-          const diff = timestampInSecondsResult - c4;
-          const obj2 = {};
-          const merged = Object.assign(closure_3);
-          obj2.unit = "second";
-          let parsed = diff;
-          if (typeof diff === "string") {
-            const _parseInt = parseInt;
-            parsed = parseInt(diff);
+export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 250;
+  }
+  if (exception.exception) {
+    if (exception.exception.values) {
+      if (originalException) {
+        const _Error = Error;
+        if (obj.isInstanceOf(originalException.originalException, Error)) {
+          let tmp5;
+          if (exception.exception.values.length > 0) {
+            tmp5 = exception.exception.values[exception.exception.values.length - 1];
           }
-          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-          closure_0.end(timestampInSecondsResult);
-        });
-      });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+          if (tmp5) {
+            exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
+              if (value.value) {
+                value.value = _mod12548.truncate(value.value, num);
+              }
+              return value;
+            });
+            const arr = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+          }
+        }
+        obj = num(12546);
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
-    }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod12521.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
     }
   }
 };

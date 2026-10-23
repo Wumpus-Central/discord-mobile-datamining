@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "16c887e8a2a3597bff0b1e42c0c69934", name: "top_perk_vanity_url", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "25b28a12657775964c80c08fa4bc3ce7", name: "ic_gift", type: "png" });

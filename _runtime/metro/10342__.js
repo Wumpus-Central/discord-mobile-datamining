@@ -1,14 +1,15 @@
 // === Module 10342: ? ===
 
 // Module 10342
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10221 */;
+import REGEX_PARTS from "REGEX_PARTS" /* 10343 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ESCasualTimeParser = require;
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ESCasualTimeParser {
+let closure_6 = "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")" + REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESCasualTimeParser);
+    tmp = c2(this, RUTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ESCasualTimeParser);
+    obj = closure_4(RUTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,46 +50,36 @@ class ESCasualTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return RUTimeUnitWithinFormatParser(10343).REGEX_PARTS.leftBoundary;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(refDate, arg1) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const formatted = arg1[1].toLowerCase();
-      if ("tarde" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10197).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else if ("noche" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10197).Meridiem.PM);
-        parsingComponents.imply("hour", 22);
-      } else if ("ma\u00F1ana" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10197).Meridiem.AM);
-        parsingComponents.imply("hour", 6);
-      } else if ("medianoche" === formatted) {
-        const _Date = Date;
-        const date = new Date(refDate.getTime());
-        date.setDate(date.getDate() + 1);
-        ESCasualTimeParser(10198).assignSimilarDate(parsingComponents, date);
-        ESCasualTimeParser(10198).implySimilarTime(parsingComponents, date);
-        parsingComponents.imply("hour", 0);
-        parsingComponents.imply("minute", 0);
-        parsingComponents.imply("second", 0);
-      } else if ("mediodia" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10197).Meridiem.AM);
-        parsingComponents.imply("hour", 12);
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      const _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        let _RegExp1 = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(10343).REGEX_PARTS.flags);
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" + closure_6;
+        _RegExp1 = new _RegExp(combined, RUTimeUnitWithinFormatParser(10343).REGEX_PARTS.flags);
       }
-      return parsingComponents;
+      return _RegExp1;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = RUTimeUnitWithinFormatParser(10217).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitWithinFormatParser(10343).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(ESCasualTimeParser, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);

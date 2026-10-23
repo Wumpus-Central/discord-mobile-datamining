@@ -1,7 +1,0 @@
-// === Module 7092: ModalPresentationContext ===
-
-// Module 7092 (ModalPresentationContext)
-import noop from "module_19" /* 19 */;
-
-
-export const ModalPresentationContext = noop.createContext(false);

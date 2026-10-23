@@ -1,763 +1,388 @@
 // === Module 8235: ? ===
 
 // Module 8235
-import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
-import _modDef8236 from "module_8236" /* 8236 */;
-import calculateGPSValueDefault from "calculateGPSValue" /* 8238 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-
-const ParseError = arg1;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-function readTags(_raw, buffer, arg2) {
-  try {
-    let str = _raw._raw;
-    ({ doc, raw } = (function getDocument(byteLength, arg1) {
-      value = _modDef8236.get(arg1);
-      if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "string") {
-          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(dependencyMap[7]);
-        }
-        const obj2 = { doc: parseFromString(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1")), raw: str2 };
-        return obj2;
-      } else {
-        const _console = console;
-        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
-        const _Error = Error;
-        const error = new Error();
-        throw error;
-      }
-    })(buffer, arg2));
-    if (!str) {
-      str = "";
-    }
-    _raw._raw = str + raw;
-    const tmp4 = (function getDocument(byteLength, arg1) {
-      value = _modDef8236.get(arg1);
-      if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "string") {
-          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(dependencyMap[7]);
-        }
-        const obj2 = { doc: parseFromString(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1")), raw: str2 };
-        return obj2;
-      } else {
-        const _console = console;
-        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
-        const _Error = Error;
-        const error = new Error();
-        throw error;
-      }
-    })(buffer, arg2);
-    const tmp6 = getRDF(doc);
-    ParseError(8200).objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-function parseFromString(parseFromString, tmp13Result) {
-  try {
-    const parseFromStringResult = parseFromString.parseFromString(tmp13Result, "application/xml");
-    const elements = parseFromStringResult.getElementsByTagName("parsererror");
-    if (elements.length > 0) {
-      const tmp10 = new closure_8(elements[0].textContent);
-      throw tmp10;
-    } else {
-      return parseFromStringResult;
-    }
-  } catch (tmp12) {
-    if ("ParseError" === tmp12.name) {
-      if (obj2.isMissingNamespaceError(tmp12)) {
-        if (!tmp4) {
-          tmp13Result = ParseError(8237);
-          return parseFromString(tmp2, tmp13Result.addMissingNamespaces(tmp), true);
-        }
-      }
-      obj2 = ParseError(8237);
-    }
-    throw tmp12;
-  }
-}
-function getRDF(doc) {
-  let num = 0;
-  if (0 < doc.childNodes.length) {
-    while ("x:xmpmeta" !== doc.childNodes[num].tagName) {
-      if ("rdf:RDF" === doc.childNodes[num].tagName) {
-        return doc.childNodes[num];
-      } else {
-        num = num + 1;
-      }
-    }
-    return getRDF(doc.childNodes[num]);
-  }
-  const error = new Error();
-  throw error;
-}
-function convertToObject(childNodes, arg1) {
-  let length;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  let items = [];
-  let num = 0;
-  if (0 < childNodes.childNodes.length) {
-    do {
-      let arr = items.push(childNodes.childNodes[num]);
-      num = num + 1;
-      length = childNodes.childNodes.length;
-    } while (num < length);
-  }
-  let tmp2 = 1 === items.length;
-  if (tmp2) {
-    tmp2 = "#text" === items[0].nodeName;
-  }
-  if (tmp2) {
-    if (flag) {
-      let obj2 = {};
-    }
-  } else {
-    let attributes = {};
-    const item = items.forEach((nodeName) => {
-      let length;
-      nodeName = nodeName.nodeName;
-      if (nodeName) {
-        nodeName = "#text" !== nodeName.nodeName;
-      }
-      if (nodeName) {
-        attributes = {};
-        let num3 = 0;
-        if (0 < nodeName.attributes.length) {
-          do {
-            let _decodeURIComponent = decodeURIComponent;
-            let _escape = escape;
-            attributes[nodeName.attributes[num3].nodeName] = decodeURIComponent(escape(nodeName.attributes[num3].value));
-            num3 = num3 + 1;
-            length = nodeName.attributes.length;
-          } while (num3 < length);
-        }
-        const obj2 = { attributes, value: convertToObject(nodeName) };
-        if (undefined !== attributes[nodeName.nodeName]) {
-          const _Array = Array;
-          if (!Array.isArray(tmp3[nodeName.nodeName])) {
-            const items = [tmp3[nodeName.nodeName]];
-            tmp3[nodeName.nodeName] = items;
-          }
-          tmp3[nodeName.nodeName].push(obj2);
-        } else {
-          tmp3[nodeName.nodeName] = obj2;
-        }
-      }
-    });
-    return attributes;
-  }
-}
-function parseXMPObject(str) {
-  if (typeof str === "string") {
-    return str;
-  } else {
-    for (const key10002 in arg0) {
-      let tmp5 = arg0[key10002];
-      let _Array = Array;
-      let arr2 = tmp5;
-      if (!Array.isArray(tmp5)) {
-        let items = [tmp5];
-        arr2 = items;
-      }
-      let item = arr2.forEach((attributes) => {
-        obj = ParseError(8200);
-        obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
-        if (typeof attributes.value === "object") {
-          ParseError(8200).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
-          const tmpResult = ParseError(8200);
-        }
-        tmp3 = obj;
-      });
-      continue;
-    }
-    return obj;
-  }
-  obj = {};
-}
-function parseNodeAttributesAsTags(attributes) {
-  const obj = {};
-  for (const key10005 in arg0) {
-    try {
-      if (isTagAttribute(key10005)) {
-        let obj2 = { value: arg0[key10005], attributes: {}, description: null };
-        let tmp3 = getLocalName(key10005);
-        obj2.description = getDescription(arg0[key10005], key10005);
-        obj[tmp3] = obj2;
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function isTagAttribute(key10005) {
-  let tmp = "rdf:parseType" !== key10005;
-  if (tmp) {
-    tmp = "xmlns" !== key10005.split(":")[0];
-  }
-  return tmp;
-}
-function isNamespaceDefinition(key10005) {
-  return "xmlns" === key10005.split(":")[0];
-}
-function getLocalName(key10005) {
-  let str = "RatingPercent";
-  if (!obj.test(key10005)) {
-    str = key10005.split(":")[1];
-  }
-  return str;
-}
-function getDescription(arr) {
-  if (Array.isArray(arr)) {
-    const tmp11 = (function getDescriptionOfArray(arr) {
-      const mapped = arr.map((value) => {
-        if (undefined !== value.value) {
-          let tmp2 = closure_1_18(value.value);
-        } else {
-          tmp2 = closure_1_18(value);
-        }
-        return tmp2;
-      });
-      return mapped.join(", ");
-    })(arr);
-    let tmp12 = tmp11;
-    if (tmp2) {
-      tmp12 = tmp11;
-      if (typeof calculateGPSValueDefault[tmp2] === "function") {
-        tmp12 = calculateGPSValueDefault[tmp2](arr, tmp11);
-        const tmp13Result = calculateGPSValueDefault;
-      }
-    }
-    return tmp12;
-  } else if (typeof arr === "object") {
-    return (function getDescriptionOfObject(arr) {
-      const items = [];
-      for (const key10024 in arg0) {
-        let str8 = "CreatorCity";
-        if ("CiAdrCity" !== key10024) {
-          let str = "CreatorCountry";
-          if ("CiAdrCtry" !== key10024) {
-            let str2 = "CreatorAddress";
-            if ("CiAdrExtadr" !== key10024) {
-              let str3 = "CreatorPostalCode";
-              if ("CiAdrPcode" !== key10024) {
-                let str4 = "CreatorRegion";
-                if ("CiAdrRegion" !== key10024) {
-                  let str5 = "CreatorWorkEmail";
-                  if ("CiEmailWork" !== key10024) {
-                    let str6 = "CreatorWorkPhone";
-                    if ("CiTelWork" !== key10024) {
-                      let str7 = "CreatorWorkUrl";
-                      if ("CiUrlWork" !== key10024) {
-                        str7 = key10024;
-                      }
-                      str6 = str7;
-                    }
-                    str5 = str6;
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str8 = str;
-        }
-        let _HermesInternal = HermesInternal;
-        arr = items.push("" + str8 + ": " + getDescription(arg0[key10024].value));
-        continue;
-      }
-      return items.join("; ");
-    })(arr);
-  } else {
-    try {
-      if (tmp2) {
-        if (typeof calculateGPSValueDefault[tmp2] === "function") {
-          let decodeURIComponentResult = calculateGPSValueDefault[tmp2](arr);
-          const tmp4Result = calculateGPSValueDefault;
-        }
-        return decodeURIComponentResult;
-      }
-      const _decodeURIComponent = decodeURIComponent;
-      const _escape = escape;
-      decodeURIComponentResult = decodeURIComponent(escape(arr));
-    } catch (err) {
-      return tmp;
-    }
-  }
-}
-function parseNodeChildrenAsTags(value) {
-  const obj = {};
-  for (const key10005 in arg0) {
-    try {
-      if (!isNamespaceDefinition(key10005)) {
-        let tmp3 = getLocalName(key10005);
-        obj[tmp3] = parseNodeAsTag(arg0[key10005], key10005);
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function parseNodeAsTag(attributes, key10005) {
-  if (Array.isArray(attributes)) {
-    let tmp9 = parseNodeAsSimpleValue(attributes[attributes.length - 1], key10005);
-  } else {
-    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "string";
-    if (tmp) {
-      tmp = "" === attributes.value.trim();
-    }
-    if (tmp) {
-      const obj3 = { value: "", attributes: {}, description: "" };
-      tmp9 = obj3;
-    } else {
-      let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
-      if (tmp2) {
-        tmp2 = undefined !== attributes.value["rdf:value"];
-      }
-      if (!tmp2) {
-        tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-        let tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-      }
-      if (tmp2) {
-        tmp9 = parseNodeAsSimpleRdfDescription(attributes, key10005);
-      } else {
-        let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-        if (!tmp4) {
-          tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-          let tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-        }
-        if (tmp4) {
-          tmp9 = parseNodeAsStructureRdfDescription(attributes, key10005);
-        } else {
-          let _Object = Object;
-          let tmp6 = 0 === Object.keys(attributes.value).length;
-          if (tmp6) {
-            tmp6 = undefined === attributes.attributes["xml:lang"];
-          }
-          if (tmp6) {
-            tmp6 = undefined === attributes.attributes["rdf:resource"];
-          }
-          if (tmp6) {
-            const tmp16 = parseNodeAttributesAsTags(attributes.attributes);
-            const obj4 = { value: tmp16, attributes: {}, description: getDescription(tmp16, key10005) };
-            tmp9 = obj4;
-          } else {
-            value = attributes.value;
-            if (undefined !== tmp7) {
-              value2 = attributes.value;
-              const prop = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"].value["rdf:li"];
-              let obj = {};
-              for (const key10070 in arg0.attributes) {
-                let tmp11 = "rdf:parseType" === key10070;
-                if (!tmp11) {
-                  tmp11 = "rdf:resource" === key10070;
-                }
-                if (!tmp11) {
-                  tmp11 = "xmlns" === key10070.split(":")[0];
-                }
-                if (tmp11) {
-                  continue;
-                } else {
-                  let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-                  let str9 = "RatingPercent";
-                  if (!obj2.test(key10070)) {
-                    str9 = key10070.split(":")[1];
-                  }
-                  obj[str9] = arg0.attributes[key10070];
-                  continue;
-                }
-                continue;
-              }
-              const items = [];
-              if (undefined === prop) {
-                let items1 = [];
-              } else {
-                const _Array = Array;
-                items1 = prop;
-                if (!Array.isArray(prop)) {
-                  const items2 = [prop];
-                  items1 = items2;
-                }
-              }
-              const item = items1.forEach((attributes) => {
-                let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
-                if (tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:value"];
-                }
-                if (!tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                  const tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                }
-                if (tmp2) {
-                  value = parseNodeAsSimpleRdfDescription(attributes);
-                } else {
-                  let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-                  if (!tmp4) {
-                    tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                    const tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                  }
-                  if (tmp4) {
-                    value = parseNodeAsStructureRdfDescription(attributes).value;
-                  } else {
-                    const _Object = Object;
-                    let tmp7 = 0 === Object.keys(attributes.value).length;
-                    if (tmp7) {
-                      tmp7 = undefined === attributes.attributes["xml:lang"];
-                    }
-                    if (tmp7) {
-                      tmp7 = undefined === attributes.attributes["rdf:resource"];
-                    }
-                    if (tmp7) {
-                      const tmp10 = parseNodeAttributesAsTags(attributes.attributes);
-                      getDescription(tmp10, undefined);
-                      value = tmp10;
-                    } else {
-                      value = parseNodeAsSimpleValue(attributes);
-                    }
-                  }
-                }
-                items.push(value);
-              });
-              const obj5 = { value: items, attributes: obj, description: null };
-              obj = getDescription(items, key10005);
-              obj5.description = obj;
-              const iter = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"];
-            } else {
-              tmp9 = parseNodeAsSimpleValue(attributes, key10005);
-            }
-            tmp7 = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"];
-          }
-        }
-      }
-    }
-  }
-  return tmp9;
-}
-function parseNodeAsSimpleRdfDescription(attributes, key10005) {
-  const obj = {};
-  for (const key10009 in arg0.attributes) {
-    let tmp = "rdf:parseType" === key10009;
-    if (!tmp) {
-      tmp = "rdf:resource" === key10009;
-    }
-    if (!tmp) {
-      tmp = "xmlns" === key10009.split(":")[0];
-    }
-    if (tmp) {
-      continue;
-    } else {
-      let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj2.test(key10009)) {
-        str = key10009.split(":")[1];
-      }
-      obj[str] = arg0.attributes[key10009];
-      continue;
-    }
-    continue;
-  }
-  let iter = attributes;
-  if (undefined !== attributes.value["rdf:Description"]) {
-    iter = attributes.value["rdf:Description"];
-  }
-  const obj4 = {};
-  for (const key10035 in iter.attributes) {
-    let tmp2 = "rdf:parseType" === key10035;
-    if (!tmp2) {
-      tmp2 = "rdf:resource" === key10035;
-    }
-    if (!tmp2) {
-      tmp2 = "xmlns" === key10035.split(":")[0];
-    }
-    if (tmp2) {
-      continue;
-    } else {
-      let obj5 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str2 = "RatingPercent";
-      if (!obj5.test(key10035)) {
-        str2 = key10035.split(":")[1];
-      }
-      obj4[str2] = iter.attributes[key10035];
-      continue;
-    }
-    continue;
-  }
-  const obj6 = {};
-  for (const key10052 in iter.value) {
-    let tmp3 = "rdf:value" === key10052;
-    if (!tmp3) {
-      tmp3 = "xmlns" === key10052.split(":")[0];
-    }
-    if (tmp3) {
-      continue;
-    } else {
-      let obj7 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str3 = "RatingPercent";
-      if (!obj7.test(key10052)) {
-        str3 = key10052.split(":")[1];
-      }
-      obj6[str3] = iter.value[key10052].value;
-      continue;
-    }
-    continue;
-  }
-  ParseError(8200).objectAssign(obj, obj4, obj6);
-  const prop = iter.value["rdf:value"];
-  const obj3 = ParseError(8200);
-  return { value: prop.attributes && prop.attributes["rdf:resource"] || iter.value["rdf:value"].value, attributes: obj, description: getDescription(prop.attributes && prop.attributes["rdf:resource"] || iter.value["rdf:value"].value, key10005) };
-}
-function parseNodeAsStructureRdfDescription(value, key10005) {
-  const obj = { value: {}, attributes: {} };
-  let iter = value;
-  if (undefined !== value.value["rdf:Description"]) {
-    ParseError(8200).objectAssign(obj.value, parseNodeAttributesAsTags(value.value["rdf:Description"].attributes));
-    const obj4 = ParseError(8200);
-    const obj6 = {};
-    for (const key10008 in arg0.attributes) {
-      let tmp = "rdf:parseType" === key10008;
-      if (!tmp) {
-        tmp = "rdf:resource" === key10008;
-      }
-      if (!tmp) {
-        tmp = "xmlns" === key10008.split(":")[0];
-      }
-      if (tmp) {
-        continue;
-      } else {
-        let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-        let str = "RatingPercent";
-        if (!obj2.test(key10008)) {
-          str = key10008.split(":")[1];
-        }
-        obj6[str] = arg0.attributes[key10008];
-        continue;
-      }
-      continue;
-    }
-    ParseError(8200).objectAssign(obj.attributes, obj6);
-    iter = value.value["rdf:Description"];
-    const obj5 = ParseError(8200);
-  }
-  ParseError(8200).objectAssign(obj.value, parseNodeChildrenAsTags(iter.value));
-  obj.description = getDescription(obj.value, key10005);
-  return obj;
-}
-function parseNodeAsSimpleValue(attributes, key10005) {
-  let tmp2 = attributes.attributes && attributes.attributes["rdf:resource"];
-  if (!tmp2) {
-    value = attributes.value;
-    let obj = {};
-    let tmp3 = value;
-    if (typeof value !== "string") {
-      tmp3 = obj;
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        tmp3 = obj;
-        while (keys[tmp] !== undefined) {
-          let tmp11 = value[tmp4];
-          let _Array = Array;
-          let arr2 = tmp11;
-          if (!Array.isArray(tmp11)) {
-            let items = [tmp11];
-            arr2 = items;
-          }
-          let item = arr2.forEach((attributes) => {
-            obj = ParseError(8200);
-            obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
-            if (typeof attributes.value === "object") {
-              ParseError(8200).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
-              const tmpResult = ParseError(8200);
-            }
-            tmp3 = obj;
-          });
-          continue;
-        }
-      }
-    }
-    tmp2 = tmp3;
-  }
-  const obj2 = { value: tmp2, attributes: null, description: null };
-  const obj3 = {};
-  for (const key10021 in arg0.attributes) {
-    let tmp6 = "rdf:parseType" === key10021;
-    if (!tmp6) {
-      tmp6 = "rdf:resource" === key10021;
-    }
-    if (!tmp6) {
-      tmp6 = "xmlns" === key10021.split(":")[0];
-    }
-    if (tmp6) {
-      continue;
-    } else {
-      let obj4 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj4.test(key10021)) {
-        str = key10021.split(":")[1];
-      }
-      obj3[str] = arg0.attributes[key10021];
-      continue;
-    }
-    continue;
-  }
-  obj2.attributes = obj3;
-  obj2.description = getDescription(tmp2, key10005);
-  return obj2;
-}
-class ParseError {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_4(this, ParseError);
-    items = [];
-    items[0] = global;
-    tmp2 = metroRequire;
-    obj = metroRequire(ParseError);
-    tmp3 = hasOwnProperty;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.name = "ParseError";
-    return tmp3Result;
-  }
-}
-_inherits(ParseError, _wrapNativeSuperDefault(Error));
-let closure_8 = _createClass(ParseError);
 
 export default {
-  read(buffer, arr, arg2) {
-    let length;
-    let length2;
-    let length3;
-    const obj = {};
-    if (typeof buffer === "string") {
-      readTags(obj, buffer, arg2);
-      return obj;
-    } else {
-      if (0 === arr.length) {
-        let items = [];
-      } else {
-        const substr = arr.slice(0, 1);
-        const _Uint8Array5 = Uint8Array;
-        const uint8Array = new Uint8Array(substr.reduce((acc, item) => acc + item.length, 0));
-        let num2 = 0;
-        let num = 0;
-        if (0 < substr.length) {
-          do {
-            arr = substr[num2];
-            buffer = buffer.buffer;
-            let _Uint8Array = Uint8Array;
-            let tmp3 = new.target;
-            let tmp4 = new.target;
-            let uint8Array1 = new Uint8Array(buffer.slice(arr.dataOffset, arr.dataOffset + arr.length));
-            let result = uint8Array.set(uint8Array1, num);
-            num = num + arr.length;
-            num2 = num2 + 1;
-            length = substr.length;
-          } while (num2 < length);
-        }
-        const _DataView = DataView;
-        const dataView = new DataView(uint8Array.buffer);
-        const items1 = [dataView];
-        items = items1;
-        if (arr.length > 1) {
-          const substr1 = arr.slice(1);
-          const _Uint8Array6 = Uint8Array;
-          const uint8Array2 = new Uint8Array(substr1.reduce((acc, item) => acc + item.length, 0));
-          let num4 = 0;
-          let num3 = 0;
-          if (0 < substr1.length) {
-            do {
-              let arr5 = substr1[num4];
-              let buffer1 = buffer.buffer;
-              let _Uint8Array2 = Uint8Array;
-              let tmp12 = new.target;
-              let tmp13 = new.target;
-              let uint8Array3 = new Uint8Array(buffer1.slice(arr5.dataOffset, arr5.dataOffset + arr5.length));
-              let result1 = uint8Array2.set(uint8Array3, num3);
-              num3 = num3 + arr5.length;
-              num4 = num4 + 1;
-              length2 = substr1.length;
-            } while (num4 < length2);
-          }
-          const _DataView2 = DataView;
-          const dataView1 = new DataView(uint8Array2.buffer);
-          items1.push(dataView1);
-          items = items1;
-        }
+  ApertureValue(arg0) {
+    return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);
+  },
+  ColorSpace(parsed) {
+    let str = "sRGB";
+    if (1 !== parsed) {
+      let str2 = "Unknown";
+      if (65535 === parsed) {
+        str2 = "Uncalibrated";
       }
-      const tmp23 = _slicedToArray(items, 2);
-      let tmp25Result = readTags(obj, tmp23[0], arg2);
-      if (tmp23[1]) {
-        if (!tmp25Result) {
-          tmp25Result = readTags(obj, tmp24, arg2);
-        }
-        if (!tmp25Result) {
-          delete tmp[tmp2];
-          const _Uint8Array3 = Uint8Array;
-          const uint8Array4 = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-          let num7 = 0;
-          let num8 = 0;
-          if (0 < arr.length) {
-            do {
-              let arr7 = arr[num7];
-              let buffer2 = buffer.buffer;
-              let _Uint8Array4 = Uint8Array;
-              let tmp31 = new.target;
-              let tmp32 = new.target;
-              let uint8Array5 = new Uint8Array(buffer2.slice(arr7.dataOffset, arr7.dataOffset + arr7.length));
-              let result2 = uint8Array4.set(uint8Array5, num8);
-              num8 = num8 + arr7.length;
-              num7 = num7 + 1;
-              length3 = arr.length;
-            } while (num7 < length3);
-          }
-          const _DataView3 = DataView;
-          const dataView2 = new DataView(uint8Array4.buffer);
-          readTags(obj, dataView2, arg2);
-        }
-      }
-      return obj;
+      str = str2;
     }
+    return str;
+  },
+  ComponentsConfiguration(mapped) {
+    mapped = mapped.map((item) => {
+      let str = "Y";
+      if (49 !== item) {
+        let str2 = "Cb";
+        if (50 !== item) {
+          let str3 = "Cr";
+          if (51 !== item) {
+            let str4 = "R";
+            if (52 !== item) {
+              let str5 = "G";
+              if (53 !== item) {
+                let str6;
+                if (54 === item) {
+                  str6 = "B";
+                }
+                str5 = str6;
+              }
+              str4 = str5;
+            }
+            str3 = str4;
+          }
+          str2 = str3;
+        }
+        str = str2;
+      }
+      return str;
+    });
+    return mapped.join("");
+  },
+  Contrast(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Soft";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Hard";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  CustomRendered(arg0) {
+    let str = "Normal process";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Custom process";
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ExposureMode(arg0) {
+    let str = "Auto exposure";
+    if (0 !== arg0) {
+      let str2 = "Manual exposure";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Auto bracket";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ExposureProgram(arg0) {
+    let str = "Undefined";
+    if (0 !== arg0) {
+      let str10 = "Manual";
+      if (1 !== arg0) {
+        let str9 = "Normal program";
+        if (2 !== arg0) {
+          let str2 = "Aperture priority";
+          if (3 !== arg0) {
+            let str3 = "Shutter priority";
+            if (4 !== arg0) {
+              let str4 = "Creative program";
+              if (5 !== arg0) {
+                let str5 = "Action program";
+                if (6 !== arg0) {
+                  let str6 = "Portrait mode";
+                  if (7 !== arg0) {
+                    let str7 = "Landscape mode";
+                    if (8 !== arg0) {
+                      let str8 = "Unknown";
+                      if (9 === arg0) {
+                        str8 = "Bulb";
+                      }
+                      str7 = str8;
+                    }
+                    str6 = str7;
+                  }
+                  str5 = str6;
+                }
+                str4 = str5;
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str9 = str2;
+        }
+        str10 = str9;
+      }
+      str = str10;
+    }
+    return str;
+  },
+  ExposureTime(arg0) {
+    if (arg0[0] / arg0[1] > 0.25) {
+      const result = arg0[0] / arg0[1];
+      const _Number = Number;
+      if (Number.isInteger(result)) {
+        let text = `${obj}`;
+      } else {
+        text = result.toFixed(1);
+      }
+      return text;
+    } else {
+      if (0 !== arg0[0]) {
+        const _Math = Math;
+        const _HermesInternal2 = HermesInternal;
+        let combined = "1/" + Math.round(arg0[1] / arg0[0]);
+      } else {
+        const _HermesInternal = HermesInternal;
+        combined = "0/" + arg0[1];
+      }
+      return combined;
+    }
+  },
+  FNumber(arg0) {
+    return "f/" + Number(arg0[0] / arg0[1]).toFixed(1);
+  },
+  FocalLength(arg0) {
+    return arg0[0] / arg0[1] + " mm";
+  },
+  FocalPlaneResolutionUnit(arg0) {
+    let str = "inches";
+    if (2 !== arg0) {
+      let str2 = "centimeters";
+      if (3 !== arg0) {
+        let str3 = "Unknown";
+        if (4 === arg0) {
+          str3 = "millimeters";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  LightSource(arg0) {
+    let str = "Daylight";
+    if (1 !== arg0) {
+      let str20 = "Fluorescent";
+      if (2 !== arg0) {
+        let str19 = "Tungsten (incandescent light)";
+        if (3 !== arg0) {
+          let str18 = "Flash";
+          if (4 !== arg0) {
+            let str17 = "Fine weather";
+            if (9 !== arg0) {
+              let str16 = "Cloudy weather";
+              if (10 !== arg0) {
+                let str15 = "Shade";
+                if (11 !== arg0) {
+                  let str14 = "Daylight fluorescent (D 5700 \u2013 7100K)";
+                  if (12 !== arg0) {
+                    let str13 = "Day white fluorescent (N 4600 \u2013 5400K)";
+                    if (13 !== arg0) {
+                      let str12 = "Cool white fluorescent (W 3900 \u2013 4500K)";
+                      if (14 !== arg0) {
+                        let str11 = "White fluorescent (WW 3200 \u2013 3700K)";
+                        if (15 !== arg0) {
+                          let str10 = "Standard light A";
+                          if (17 !== arg0) {
+                            let str9 = "Standard light B";
+                            if (18 !== arg0) {
+                              let str2 = "Standard light C";
+                              if (19 !== arg0) {
+                                let str3 = "D55";
+                                if (20 !== arg0) {
+                                  let str4 = "D65";
+                                  if (21 !== arg0) {
+                                    let str5 = "D75";
+                                    if (22 !== arg0) {
+                                      let str6 = "D50";
+                                      if (23 !== arg0) {
+                                        let str7 = "ISO studio tungsten";
+                                        if (24 !== arg0) {
+                                          let str8 = "Unknown";
+                                          if (255 === arg0) {
+                                            str8 = "Other light source";
+                                          }
+                                          str7 = str8;
+                                        }
+                                        str6 = str7;
+                                      }
+                                      str5 = str6;
+                                    }
+                                    str4 = str5;
+                                  }
+                                  str3 = str4;
+                                }
+                                str2 = str3;
+                              }
+                              str9 = str2;
+                            }
+                            str10 = str9;
+                          }
+                          str11 = str10;
+                        }
+                        str12 = str11;
+                      }
+                      str13 = str12;
+                    }
+                    str14 = str13;
+                  }
+                  str15 = str14;
+                }
+                str16 = str15;
+              }
+              str17 = str16;
+            }
+            str18 = str17;
+          }
+          str19 = str18;
+        }
+        str20 = str19;
+      }
+      str = str20;
+    }
+    return str;
+  },
+  MeteringMode(arg0) {
+    let str = "Average";
+    if (1 !== arg0) {
+      let str2 = "CenterWeightedAverage";
+      if (2 !== arg0) {
+        let str3 = "Spot";
+        if (3 !== arg0) {
+          let str4 = "MultiSpot";
+          if (4 !== arg0) {
+            let str5 = "Pattern";
+            if (5 !== arg0) {
+              let str6 = "Partial";
+              if (6 !== arg0) {
+                let str7 = "Unknown";
+                if (255 === arg0) {
+                  str7 = "Other";
+                }
+                str6 = str7;
+              }
+              str5 = str6;
+            }
+            str4 = str5;
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ResolutionUnit(arg0) {
+    let str = "inches";
+    if (2 !== arg0) {
+      let str2 = "Unknown";
+      if (3 === arg0) {
+        str2 = "centimeters";
+      }
+      str = str2;
+    }
+    return str;
+  },
+  Saturation(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Low saturation";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "High saturation";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  FocalLengthIn35mmFilm(value7) {
+    let str = "Unknown";
+    if (0 !== value7) {
+      str = `${value7} mm`;
+    }
+    return str;
+  },
+  SceneCaptureType(arg0) {
+    let str = "Standard";
+    if (0 !== arg0) {
+      let str2 = "Landscape";
+      if (1 !== arg0) {
+        let str3 = "Portrait";
+        if (2 !== arg0) {
+          let str4 = "Unknown";
+          if (3 === arg0) {
+            str4 = "Night scene";
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  Sharpness(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Soft";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Hard";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ShutterSpeedValue(arg0) {
+    const powResult = Math.pow(2, arg0[0] / arg0[1]);
+    if (powResult <= 1) {
+      const _Math2 = Math;
+      const _HermesInternal2 = HermesInternal;
+      let combined = "" + Math.round(1 / powResult);
+    } else {
+      const _Math = Math;
+      const _HermesInternal = HermesInternal;
+      combined = "1/" + Math.round(powResult);
+    }
+    return combined;
+  },
+  WhiteBalance(arg0) {
+    let str = "Auto white balance";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Manual white balance";
+      }
+      str = str2;
+    }
+    return str;
+  },
+  XResolution(arg0) {
+    return "" + Math.round(arg0[0] / arg0[1]);
+  },
+  YResolution(arg0) {
+    return "" + Math.round(arg0[0] / arg0[1]);
   }
 };

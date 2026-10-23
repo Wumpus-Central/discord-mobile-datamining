@@ -1,8 +1,23 @@
 // === Module 5938: ? ===
 
 // Module 5938
-new Set();
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export default function warnOnce(arg0) {
-  const substr = [...arguments].slice();
+({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
+const items = ["ios", "android"];
+
+export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
+export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
+export const executeNativeBackPress = function executeNativeBackPress() {
+  React.exitApp();
+  return true;
 };
+export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
+  if (undefined === fullScreenSwipeEnabled) {
+    return "undefined";
+  } else if (true === fullScreenSwipeEnabled) {
+    return "true";
+  } else if (false === fullScreenSwipeEnabled) {
+    return "false";
+  }
+}

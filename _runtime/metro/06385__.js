@@ -1,34 +1,31 @@
 // === Module 6385: ? ===
 
 // Module 6385
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1341 */;
-import _mod1466 from "module_1466" /* 1466 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import requirePromise from "requirePromise" /* 6383 */;
+import PromiseResolve from "PromiseResolve" /* 6459 */;
+import callBind_mod from "callBind" /* 1476 */;
 
-let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1466();
+requirePromise();
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1307("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1307("%Promise.reject%"));
 
-export default function isString(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    let tmp2 = !str;
-    if (str) {
-      tmp2 = typeof str !== "object";
-    }
-    if (tmp2) {
-      tmp = !tmp2;
-    } else if (closure_2) {
-      let tmp5 = (function tryStringObject(arg0) {
-        try {
-          closure_1_0(arg0);
-          return true;
-        } catch (err) {
-          return false;
-        }
-      })(str);
-    } else {
-      tmp5 = "[object String]" === closure_1(str);
-    }
+export default function allSettled(arg0) {
+  const self = this;
+  if ("Object" !== self(6386)(this)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("`this` value must be an object");
+    throw typeError;
+  } else {
+    return closure_2(this, tmp(6392)(tmp(6389)(arg0), (arg0) => {
+      try {
+        return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
+      } catch (tmp3) {
+        return closure_3(tmp, tmp3);
+      }
+      promise = PromiseResolve(self, arg0);
+    }));
   }
-  return tmp;
 };

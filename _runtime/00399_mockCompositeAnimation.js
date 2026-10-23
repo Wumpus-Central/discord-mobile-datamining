@@ -36,8 +36,8 @@ export default {
     value = arg0;
     obj = {};
     const merged = Object.assign(value);
-    const f85393 = (fn) => {
-      value.setValue(f85393.toValue);
+    const f85567 = (fn) => {
+      value.setValue(f85567.toValue);
       if (fn != null) {
         fn({ finished: true });
       }
@@ -72,8 +72,8 @@ export default {
   spring(animation, arg1) {
     obj = {};
     const merged = Object.assign(animation);
-    const f85394 = (fn) => {
-      animation.setValue(f85394.toValue);
+    const f85568 = (fn) => {
+      animation.setValue(f85568.toValue);
       if (fn != null) {
         fn({ finished: true });
       }
@@ -118,7 +118,7 @@ export default {
     if (typeof mockCompositeAnimation === "function") {
       obj = {};
       const merged = Object.assign(obj);
-      const f85392 = (fn) => {
+      const f85566 = (fn) => {
         const item = c0.forEach((start) => start.start());
         if (fn != null) {
           fn({ finished: true });
@@ -158,7 +158,7 @@ export default {
     if (typeof mockCompositeAnimation === "function") {
       obj = {};
       const merged = Object.assign(obj);
-      const f85392 = (fn) => {
+      const f85566 = (fn) => {
         const item = c0.forEach((start) => start.start());
         if (fn != null) {
           fn({ finished: true });

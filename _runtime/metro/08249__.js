@@ -1,54 +1,69 @@
 // === Module 8249: ? ===
 
 // Module 8249
-import _modDef8217 from "module_8217" /* 8217 */;
+let closure_0 = { xmp: "http://ns.adobe.com/xap/1.0/", tiff: "http://ns.adobe.com/tiff/1.0/", exif: "http://ns.adobe.com/exif/1.0/", dc: "http://purl.org/dc/elements/1.1/", xmpMM: "http://ns.adobe.com/xap/1.0/mm/", stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#", stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#", photoshop: "http://ns.adobe.com/photoshop/1.0/" };
 
-importDefault = arg2;
-const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
-
-export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef8217.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+export const isMissingNamespaceError = function isMissingNamespaceError(message) {
+  const items = ["prefix is non-null and namespace is null", "prefix not bound to a namespace", "prefix inte bundet till en namnrymd", /Namespace prefix .+ is not defined/];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    return true;
+  }
+  return false;
+};
+export const addMissingNamespaces = function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    const items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(str);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
+        }
+        match1 = obj.exec(str);
+      } while (null !== match1);
     }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(str);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(str);
+      } while (null !== match2);
     }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = str;
+    if (0 !== found.length) {
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+      }
+      const _RegExp = RegExp;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
     }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef8217.getByteAt(getUint8, sum);
-    const tmpResult = _modDef8217;
-    const sum1 = byteAt1 + 256 * _modDef8217.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef8217;
-    const sum2 = sum1 + 65536 * _modDef8217.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef8217;
-    const byteAt2 = _modDef8217.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef8217;
-    const sum4 = byteAt2 + 256 * _modDef8217.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef8217;
-    const sum5 = sum4 + 65536 * _modDef8217.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
+    return replaced;
+  } else {
+    return str;
   }
 };

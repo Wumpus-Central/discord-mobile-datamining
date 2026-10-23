@@ -1,21 +1,12 @@
 // === Module 5469: ? ===
 
 // Module 5469
-import _mod19 from "module_19" /* 19 */;
-import _mod5260 from "module_5260" /* 5260 */;
+import _mod17 from "module_17" /* 17 */;
+import value2 from "value2" /* 5268 */;
 
-_mod19.useCallback;
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = { alignSelf: "center", width: 7.5 * value2.WINDOW_WIDTH / 100, height: 4, borderRadius: 4, backgroundColor: "rgba(0, 0, 0, 0.75)" };
+obj.indicator = size;
 
-export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  const bottomSheetInternal = _mod5260.useBottomSheetInternal();
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj2 = { setContentSize: null };
-  const items = [enableDynamicSizing, animatedContentHeight];
-  obj2.setContentSize = useCallback((arg0) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(arg0);
-    }
-  }, items);
-  return obj2;
-};
+export const styles = StyleSheet.create(obj);

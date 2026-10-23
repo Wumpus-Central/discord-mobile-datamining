@@ -1,105 +1,61 @@
 // === Module 12553: ? ===
 
 // Module 12553
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12540 from "module_12540" /* 12540 */;
 
-const SentryNonRecordingSpan = require;
-class SentryNonRecordingSpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
+}
+let timeOrigin;
+const _performance = _mod12540.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
     }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
-    }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
-    }
-    self._spanId = spanId;
-    return;
+    fn = () => (timeOrigin + _performance.now()) / 1000;
   }
 }
-const entry = {
-  key: "spanContext",
-  value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12525).TRACE_FLAG_NONE };
+const _performance2 = _mod12540.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
+    }
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
   }
-};
-const items = [
-  entry,
-  {
-    key: "end",
-    value: function end(arg0) {
+}
 
-    }
-  },
-  {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      return this;
-    }
-  },
-  {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "setStatus",
-    value: function setStatus(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "updateName",
-    value: function updateName(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "isRecording",
-    value: function isRecording() {
-      return false;
-    }
-  },
-  {
-    key: "addEvent",
-    value: function addEvent(arg0, arg1, arg2) {
-      return this;
-    }
-  },
-  {
-    key: "addLink",
-    value: function addLink(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {
-
-    }
-  }
-];
-
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

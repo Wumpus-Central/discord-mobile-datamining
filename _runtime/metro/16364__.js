@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "d34103fd5e89ba1cd4ca70f2429c1570", name: "ic_wreath", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign/images", width: 32, height: 32, scales: [2, 3, 4], hash: "4135aa1407cb9dccb86248e1e9e37285", name: "hexagon_campaign_legal_logo", type: "png" });

@@ -1,73 +1,194 @@
 // === Module 12628: ? ===
 
 // Module 12628
-import _mod12547 from "module_12547" /* 12547 */;
-import _flush from "_flush" /* 12568 */;
-import _mod12593 from "module_12593" /* 12593 */;
+import _mod12539 from "module_12539" /* 12539 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12542 */;
+import _mod12567 from "module_12567" /* 12567 */;
+import setupIntegration from "module_12595" /* 12595 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12547.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12547.withScope,
-    getClient() {
-      return _mod12547.getClient();
-    },
-    getScope: _mod12547.getCurrentScope,
-    getIsolationScope: _mod12547.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12547.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12547.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12593.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12547.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
+function _shouldDropEvent(message, message2) {
+  let tmp = message2;
+  if (tmp) {
+    message = message.message;
+    message2 = message2.message;
+    if (message) {
+      if (!message) {
+        if (message) {
+          let flag = false;
+          if (message === message2) {
+            flag = false;
+            if (_isSameFingerprint(message, message2)) {
+              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
+              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+              if (framesFromEvent) {
+                if (!framesFromEvent) {
+                  if (framesFromEvent) {
+                    let flag2 = false;
+                    if (framesFromEvent1.length === framesFromEvent.length) {
+                      let num = 0;
+                      flag2 = true;
+                      if (0 < framesFromEvent1.length) {
+                        flag2 = false;
+                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
+                          flag2 = false;
+                          if (tmp5.lineno !== tmp6.lineno) {
+                            break;
+                          } else {
+                            flag2 = false;
+                            if (tmp5.colno !== tmp6.colno) {
+                              break;
+                            } else {
+                              flag2 = false;
+                              if (tmp5.function !== tmp6.function) {
+                                break;
+                              } else {
+                                let sum = num + 1;
+                                num = sum;
+                                flag2 = true;
+                                if (sum >= framesFromEvent1.length) {
+                                  break;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    flag2 = false;
+                  }
+                } else {
+                  flag2 = false;
+                }
+              } else {
+                flag2 = true;
+              }
+              flag = false;
+              if (flag2) {
+                flag = true;
+              }
+            }
+          }
+        } else {
+          flag = false;
+        }
       } else {
-        const currentScope = _mod12547.getCurrentScope();
-        const tmpResult3 = _mod12547;
-        const client = _mod12547.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12547;
+        flag = false;
       }
+    } else {
+      flag = false;
     }
-  };
+    let tmp9 = flag;
+    if (!tmp9) {
+      let flag3 = false;
+      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
+        flag3 = false;
+        if (iter2) {
+          flag3 = false;
+          if (iter.type === iter2.type) {
+            flag3 = false;
+            if (iter.value === iter2.value) {
+              flag3 = false;
+              if (_isSameFingerprint(message, message2)) {
+                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
+                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+                if (framesFromEvent2) {
+                  if (!framesFromEvent2) {
+                    if (framesFromEvent2) {
+                      let flag4 = false;
+                      if (framesFromEvent3.length === framesFromEvent2.length) {
+                        let num2 = 0;
+                        flag4 = true;
+                        if (0 < framesFromEvent3.length) {
+                          flag4 = false;
+                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
+                            flag4 = false;
+                            if (tmp12.lineno !== tmp13.lineno) {
+                              break;
+                            } else {
+                              flag4 = false;
+                              if (tmp12.colno !== tmp13.colno) {
+                                break;
+                              } else {
+                                flag4 = false;
+                                if (tmp12.function !== tmp13.function) {
+                                  break;
+                                } else {
+                                  let sum1 = num2 + 1;
+                                  num2 = sum1;
+                                  flag4 = true;
+                                  if (sum1 >= framesFromEvent3.length) {
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      flag4 = false;
+                    }
+                  } else {
+                    flag4 = false;
+                  }
+                } else {
+                  flag4 = true;
+                }
+                flag3 = false;
+                if (flag4) {
+                  flag3 = true;
+                }
+              }
+            }
+          }
+        }
+      }
+      tmp9 = flag3;
+    }
+    tmp = tmp9;
+  }
+  return tmp;
+}
+function _isSameFingerprint(fingerprint, fingerprint2) {
+  fingerprint = fingerprint.fingerprint;
+  fingerprint2 = fingerprint2.fingerprint;
+  if (!fingerprint) {
+    if (!fingerprint2) {
+      return true;
+    }
+  }
+  if (!fingerprint) {
+    try {
+      const joined = fingerprint.join("");
+      return joined === fingerprint2.join("");
+    } catch (err) {
+      return false;
+    }
+  }
+  return false;
 }
 
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+export { _shouldDropEvent };
+export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
+  name: "Dedupe",
+  processEvent(type) {
+    if (type.type) {
+      return type;
+    } else {
+      try {
+        if (_shouldDropEvent(type, closure_0)) {
+          if (_mod12567.DEBUG_BUILD) {
+            const logger = _mod12539.logger;
+            logger.warn("Event dropped due to being a duplicate of previously captured event.");
+          }
+          return null;
+        } else {
+          closure_0 = type;
+          return type;
+        }
+      } catch (err) {
+      }
+    }
+  }
+}));

@@ -1,74 +1,105 @@
 // === Module 12572: ? ===
 
 // Module 12572
-const require = arg1;
-const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  _sentryDebugIds = require("module_12521").GLOBAL_OBJ._sentryDebugIds;
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
-      return reduced;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+
+const SentryNonRecordingSpan = require;
+class SentryNonRecordingSpan {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
     }
-    reduced = keys.reduce((acc, item) => {
-      let filename;
-      let tmp = obj;
-      if (!obj) {
-        obj = {};
-        tmp = obj;
-      }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
-      } else {
-        const arr = closure_0(item);
-        let diff = arr.length - 1;
-        if (0 <= diff) {
-          while (true) {
-            let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
-                break;
-              }
-            }
-            diff = diff - 1;
-          }
-          acc[filename] = tmp8;
-          const items = [filename, tmp8];
-          obj[item] = items;
-        }
-      }
-      return acc;
-    }, {});
-  } else {
-    return {};
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
+    if (!traceId) {
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
+      traceId = obj2.generateTraceId();
+    }
+    self._traceId = traceId;
+    spanId = obj.spanId;
+    if (!spanId) {
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
+      spanId = obj3.generateSpanId();
+    }
+    self._spanId = spanId;
+    return;
   }
 }
-
-export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
-        let arr = items.push(obj);
-      }
-      continue;
-    }
-    return items;
-  } else {
-    return items;
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12544).TRACE_FLAG_NONE };
   }
 };
-export { getFilenameToDebugIdMap };
+const items = [
+  entry,
+  {
+    key: "end",
+    value: function end(arg0) {
+
+    }
+  },
+  {
+    key: "setAttribute",
+    value: function setAttribute(arg0, arg1) {
+      return this;
+    }
+  },
+  {
+    key: "setAttributes",
+    value: function setAttributes(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "setStatus",
+    value: function setStatus(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "updateName",
+    value: function updateName(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "isRecording",
+    value: function isRecording() {
+      return false;
+    }
+  },
+  {
+    key: "addEvent",
+    value: function addEvent(arg0, arg1, arg2) {
+      return this;
+    }
+  },
+  {
+    key: "addLink",
+    value: function addLink(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "addLinks",
+    value: function addLinks(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "recordException",
+    value: function recordException(arg0, arg1) {
+
+    }
+  }
+];
+
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

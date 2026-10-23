@@ -1,39 +1,40 @@
 // === Module 15533: ? ===
 
 // Module 15533
-import _mod15524 from "module_15524" /* 15524 */;
-import _mod15525 from "module_15525" /* 15525 */;
-import _mod15532 from "module_15532" /* 15532 */;
+import withoutSetter from "withoutSetter" /* 15534 */;
+import _mod15545 from "module_15545" /* 15545 */;
+import _mod15547 from "module_15547" /* 15547 */;
+import _mod15550 from "module_15550" /* 15550 */;
+import _mod15553 from "module_15553" /* 15553 */;
+import _mod15554 from "module_15554" /* 15554 */;
 
+let closure_3 = withoutSetter("toPrimitive");
 
 export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod15525(toString)) {
-      const tmp4 = _mod15532(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
+  if (_mod15545(arg0)) {
+    if (!_mod15547(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod15550(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = _mod15553(tmp4, arg0, str);
+        if (_mod15545(tmp5)) {
+          if (!_mod15547(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
+          }
+        }
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
+        }
+        return _mod15554(arg0, str2);
       }
-      tmpResult = _mod15524;
     }
   }
-  const valueOf = arg0.valueOf;
-  if (_mod15525(valueOf)) {
-    const tmp8 = _mod15532(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod15524;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod15525(toString2)) {
-      const tmp10 = _mod15532(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod15524;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
+  return arg0;
 };

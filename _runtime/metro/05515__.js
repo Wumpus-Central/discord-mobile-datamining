@@ -1,23 +1,33 @@
 // === Module 5515: ? ===
 
 // Module 5515
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod5516 from "module_5516" /* 5516 */;
+import _slicedToArray from "module_5497" /* 5497 */;
 
-export default _getPrototypeOf;
+require = fn;
+const noop = fn(19);
+({ useState: c3, useCallback: closure_4 } = noop);
+
+export const useLayoutState = function useLayoutState(arg0) {
+  const tmp = _slicedToArray(React3(arg0), 2);
+  closure_0 = tmp[1];
+  const recyclerViewContext = _mod5516.useRecyclerViewContext();
+  const items = [tmp[0], ];
+  const items1 = [recyclerViewContext];
+  items[1] = React4((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_0((arg0) => {
+      let tmpResult = closure_0;
+      if (typeof closure_0 === "function") {
+        tmpResult = tmp(arg0);
+      }
+      return tmpResult;
+    });
+    if (!arg1) {
+      if (recyclerViewContext != null) {
+        recyclerViewContext.layout();
+      }
+    }
+  }, items1);
+  return items;
+};

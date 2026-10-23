@@ -1,12 +1,74 @@
 // === Module 5485: ? ===
 
 // Module 5485
-import _mod5486 from "module_5486" /* 5486 */;
-import _mod5487 from "module_5487" /* 5487 */;
-import _mod5488 from "module_5488" /* 5488 */;
-import _mod5490 from "module_5490" /* 5490 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import value2 from "value2" /* 5268 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
+import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1658 */;
 
+let noop = noop_mod;
+({ useContext: c2, useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
+const __initData = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
+const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
+  ({ onRefresh, scrollableGesture } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
+  let iter;
+  const tmp4 = iter(scrollableGesture(5279).BottomSheetDraggableContext);
+  dependencyMap = tmp4;
+  const bottomSheetInternal = scrollableGesture(5272).useBottomSheetInternal();
+  iter = bottomSheetInternal.animatedScrollableState;
+  if (!tmp4) {
+    if (bottomSheetInternal.enableContentPanningGesture) {
+      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
+    }
+  }
+  const obj = scrollableGesture(5272);
+  const fn = function f() {
+    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
+  };
+  const tmp2Result = scrollableGesture(1658);
+  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(5268).SCROLLABLE_STATE };
+  fn.__workletHash = 8403038560398;
+  fn.__initData = __initData;
+  let items = [iter.value];
+  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
+  const items1 = [tmp4, scrollableGesture];
+  const tmp7 = closure_3(() => {
+    let result;
+    if (closure_1) {
+      const Gesture = LegacyBaseButton.Gesture;
+      const NativeResult = Gesture.Native();
+      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
+      const items = [];
+      HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0));
+      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
+      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
+      const applyResult = HermesBuiltin.apply(items, NativeResult);
+    }
+    return result;
+  }, items1);
+  if (tmp7) {
+    const obj3 = { gesture: tmp7, children: null };
+    const obj4 = {};
+    const merged1 = Object.assign(merged);
+    obj4.onRefresh = onRefresh;
+    obj4.animatedProps = animatedProps;
+    obj3.children = <closure_5 />;
+    let tmp8Result = jsx(scrollableGesture(5295).GestureDetector, { gesture: tmp7, children: null });
+  } else {
+    const obj5 = {};
+    const merged2 = Object.assign(merged);
+    obj5.onRefresh = onRefresh;
+    obj5.animatedProps = animatedProps;
+    tmp8Result = <closure_5 />;
+  }
+  return tmp8Result;
+});
+memoResult.displayName = "BottomSheetRefreshControl";
 
-export default function _slicedToArray(arg0, arg1) {
-  return _mod5486(arg0) || _mod5487(arg0, arg1) || _mod5488(arg0, arg1) || _mod5490();
-};
+export default memoResult;

@@ -1,7 +1,8 @@
 // === Module 11734: ? ===
 
 // Module 11734
-import registerAsset from "module_1134" /* 1134 */;
+import _mod17 from "module_17" /* 17 */;
 
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9efbede8b87c94f401364acf34876922", name: "HammerIcon", type: "png" });
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

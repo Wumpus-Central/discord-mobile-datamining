@@ -1,9 +1,8 @@
 // === Module 5486: ? ===
 
 // Module 5486
+import _mod17 from "module_17" /* 17 */;
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
-  }
-};
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

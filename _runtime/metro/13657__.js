@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "eec9a2ec4dcc06384027a08d15add7ac", name: "ic_add_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/empty_channel", width: 48, height: 48, scales: [2, 3], hash: "8d7c88bf2a3c70b7581717d42e9c4ec1", name: "send_message_32px", type: "png" });

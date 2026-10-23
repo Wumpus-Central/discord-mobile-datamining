@@ -1,13 +1,15 @@
 // === Module 10318: ? ===
 
 // Module 10318
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10213 from "module_10213" /* 10213 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10221 */;
+import _mod10308 from "module_10308" /* 10308 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const NLTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,51 +29,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHansMergeDateTimeRefiner {
-  constructor() {
+const regExp = new RegExp("(" + _mod10308.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod10308.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
+class NLTimeUnitAgoFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = closure_0(this, ZHHansMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHansMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_classCallCheck = ZHHansMergeDateTimeRefiner;
-_inherits(ZHHansMergeDateTimeRefiner, fn(_mod10213).default);
+_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = NLTimeUnitAgoFormatParser(10308).parseDuration(arg1[1]);
+      const ParsingComponents = NLTimeUnitAgoFormatParser(10217).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitAgoFormatParser(10216).reverseDuration(NLTimeUnitAgoFormatParser(10308).parseDuration(arg1[1])));
+    }
+  }
+];
 
-export default _createClass(ZHHansMergeDateTimeRefiner, items);
+export default _createClass(NLTimeUnitAgoFormatParser, items);

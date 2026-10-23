@@ -1,14 +1,16 @@
 // === Module 5277: ? ===
 
 // Module 5277
-const fn = function o() {
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 5278 */;
 
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModal = () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
+  }
 };
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
-
-export () => {
-
-}
-export const workletNoop = fn;

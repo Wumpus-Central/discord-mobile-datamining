@@ -1,7 +1,12 @@
 // === Module 6951: ? ===
 
 // Module 6951
-import _modDef6952 from "module_6952" /* 6952 */;
 
-
-export default _modDef6952;
+export const getDefaultSidebarWidth = (width) => {
+  width = width.width;
+  let num = 360;
+  if (width - 56 <= 360) {
+    num = width - 56;
+  }
+  return num;
+};

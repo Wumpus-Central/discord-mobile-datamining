@@ -1,14 +1,35 @@
 // === Module 5393: ? ===
 
 // Module 5393
-import ComposedGestureName from "ComposedGestureName" /* 5342 */;
-import _mod5391 from "module_5391" /* 5391 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const Platform = _mod17.Platform;
 
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod5391.useComposedGesture.apply(items1);
+export const getTVProps = function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
+  }
+  return obj;
+};
+export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      const items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
 };

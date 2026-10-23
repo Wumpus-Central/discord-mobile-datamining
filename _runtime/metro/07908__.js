@@ -1,10 +1,14 @@
 // === Module 7908: ? ===
 
 // Module 7908
-import baseAssignValue from "baseAssignValue" /* 679 */;
-import _mod7909 from "module_7909" /* 7909 */;
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-
-export default _mod7909((arg0, arg1, arg2) => {
-  baseAssignValue(arg0, arg2, arg1);
-});
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

@@ -1,22 +1,15 @@
 // === Module 6404: ? ===
 
 // Module 6404
-import _mod1339 from "module_1339" /* 1339 */;
 
-
-export default function isFinite(num) {
-  let tmp = typeof num === "number";
-  if (typeof num !== "number") {
-    tmp = typeof num === "bigint";
-  }
-  if (tmp) {
-    tmp = !_mod1339(num);
-  }
-  if (tmp) {
-    tmp = num !== Infinity;
-  }
-  if (tmp) {
-    tmp = num !== -Infinity;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
   }
   return tmp;
 };

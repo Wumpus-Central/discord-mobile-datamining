@@ -1,14 +1,14 @@
 // === Module 7992: ? ===
 
 // Module 7992
-import _modDef7986 from "module_7986" /* 7986 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeConvolveMatrix = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +28,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+const jsx = fn(21).jsx;
+class Defs {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
+    tmp = c2(this, Defs);
     tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
+    obj = closure_4(Defs);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +49,15 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeConvolveMatrix, _modDef7986);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(7963).warnUnimplementedFilter();
-    return null;
+    return jsx(Defs(7993), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

@@ -1,9 +1,13 @@
 // === Module 5400: ? ===
 
 // Module 5400
-import module_65 from "module_65" /* 65 */;
+const require = globalThis.__r;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
-
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+for (const key10013 in require("module_5401")) {
+  arg5[key10013] = require("module_5401")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

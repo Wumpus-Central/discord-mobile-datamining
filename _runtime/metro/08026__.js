@@ -1,15 +1,14 @@
 // === Module 8026: ? ===
 
 // Module 8026
-import _modDef7971 from "module_7971" /* 7971 */;
+import _modDef7999 from "module_7999" /* 7999 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Marker = importDefault;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Marker {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    tmp = c2(this, FeTurbulence);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(FeTurbulence);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,32 +48,18 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef7971);
+_inherits(FeTurbulence, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(7960)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8027), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeTurbulence(7976).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

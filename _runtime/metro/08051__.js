@@ -1,16 +1,15 @@
 // === Module 8051: ? ===
 
 // Module 8051
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7971 from "module_7971" /* 7971 */;
-import _modDef8052 from "module_8052" /* 8052 */;
+import _modDef7984 from "module_7984" /* 7984 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Use = fn;
+const RadialGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Use {
+class RadialGradient {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, RadialGradient);
+    tmp2 = closure_4;
+    obj = closure_4(RadialGradient);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,46 +50,44 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Use, _modDef7971);
+_inherits(RadialGradient, _modDef7984);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
+    ({ rx, ry, r, cx, cy, fx } = props);
+    if (undefined === fx) {
+      fx = cx;
     }
-    let match = str;
-    if (str) {
-      match = str.match(Use(7963).idPattern);
+    let fy = props.fy;
+    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+    if (undefined === fy) {
+      fy = cy;
     }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
+    obj.fy = fy;
+    if (!rx) {
+      rx = r;
     }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
+    obj.rx = rx;
+    if (!ry) {
+      ry = r;
     }
-    const size = { href: tmp4, x, y, width, height };
-    const obj = {
+    obj.ry = ry;
+    obj.cx = cx;
+    obj.cy = cy;
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(RadialGradient(8037)(props, this));
+    return jsx(RadialGradient(8052), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
-    };
-    const merged = Object.assign(Use(7962).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = children;
-    return <tmp7 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(RadialGradient, items);
+importDefaultResultResult.displayName = "RadialGradient";
+importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
 
 export default importDefaultResultResult;

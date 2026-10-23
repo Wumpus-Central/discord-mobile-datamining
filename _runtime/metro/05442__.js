@@ -1,8 +1,27 @@
 // === Module 5442: ? ===
 
 // Module 5442
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export const useStableCallback = function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  framebus(() => () => {
+    ref.current = undefined;
+  }, []);
+  return React(() => {
+    const items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
+};

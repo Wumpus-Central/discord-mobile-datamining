@@ -1,11 +1,7 @@
 // === Module 5475: ? ===
 
 // Module 5475
-import cancelAnimation from "cancelAnimation" /* 1658 */;
+import _modDef5476 from "module_5476" /* 5476 */;
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_5468 = fn(5468);
-const memoResult = fn(19).memo(module_5468.createBottomSheetScrollableComponent(fn(5256).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
-memoResult.displayName = "BottomSheetSectionList";
 
-export default memoResult;
+export default _modDef5476;

@@ -1,15 +1,16 @@
 // === Module 10311: ? ===
 
 // Module 10311
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
-import _mod10307 from "module_10307" /* 10307 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10214 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10221 */;
+import _mod10308 from "module_10308" /* 10308 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHantWeekdayParser = require;
+const NLMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const keys = Object.keys(_mod10307.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
-class ZHHantWeekdayParser {
+const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10308.MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + _mod10308.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class NLMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantWeekdayParser);
+    tmp = c2(this, NLMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantWeekdayParser);
+    obj = closure_4(NLMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class ZHHantWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,43 +62,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantWeekdayParser(10307).WEEKDAY_OFFSET[index.groups.weekday];
-      if (undefined === tmp2) {
-        return null;
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      parsingComponents.imply("day", 1);
+      const tmp4 = NLMonthNameParser(10308).MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
+      parsingComponents.assign("month", tmp4);
+      if (arg1[2]) {
+        parsingComponents.assign("year", NLMonthNameParser(10308).parseYear(arg1[2]));
       } else {
-        const _Date = Date;
-        const refDate = createParsingResult.refDate;
-        const date = new Date(refDate.getTime());
-        const diff = tmp2 - date.getDay();
-        const _Math3 = Math;
-        const _Math4 = Math;
-        const absolute = Math.abs(diff - 7);
-        let diff1 = diff;
-        if (absolute < Math.abs(diff)) {
-          diff1 = diff - 7;
-        }
-        const _Math = Math;
-        const _Math2 = Math;
-        const absolute1 = Math.abs(diff1 + 7);
-        let sum = diff1;
-        if (absolute1 < Math.abs(diff1)) {
-          sum = diff1 + 7;
-        }
-        date.setDate(date.getDate() + sum);
-        const start = parsingResult.start;
-        start.assign("weekday", tmp2);
-        const start2 = parsingResult.start;
-        start2.imply("day", date.getDate());
-        const start3 = parsingResult.start;
-        start3.imply("month", date.getMonth() + 1);
-        const start4 = parsingResult.start;
-        start4.imply("year", date.getFullYear());
-        return parsingResult;
+        parsingComponents.imply("year", NLMonthNameParser(10215).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
       }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(ZHHantWeekdayParser, items);
+export default _createClass(NLMonthNameParser, items);

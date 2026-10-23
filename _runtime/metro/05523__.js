@@ -1,370 +1,183 @@
 // === Module 5523: ? ===
 
 // Module 5523
-import _modDef5513 from "module_5513" /* 5513 */;
-import _classCallCheck_mod from "module_5494" /* 5494 */;
-import _createClass from "module_5495" /* 5495 */;
-import _getPrototypeOf from "module_5515" /* 5515 */;
-import _get from "module_5516" /* 5516 */;
-import _inherits from "module_5518" /* 5518 */;
+import _modDef5507 from "module_5507" /* 5507 */;
+import _classCallCheck from "module_5506" /* 5506 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_modDef5513;
-class RVGridLayoutManagerImpl {
+const ViewabilityHelper = arg1;
+class ViewabilityHelper {
   constructor(arg0, arg1) {
-    self = this;
-    tmp = closure_0(this, RVGridLayoutManagerImpl);
-    items = [, ];
-    items[0] = global;
-    items[1] = fn;
-    tmp2 = c2;
-    obj = c2(RVGridLayoutManagerImpl);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.fullRelayoutRequired = false;
-    tmp3Result.boundedSize = global.windowSize.width;
-    return tmp3Result;
+    tmp = c2(this, ViewabilityHelper);
+    this.possiblyViewableIndices = [];
+    this.hasInteracted = false;
+    this.viewableIndices = [];
+    this.lastReportedViewableIndices = [];
+    set = new Set();
+    this.timers = set;
+    this.viewabilityConfig = global;
+    this.viewableIndicesChanged = arg1;
+    return;
   }
 }
-_classCallCheck = RVGridLayoutManagerImpl;
-_inherits(RVGridLayoutManagerImpl, fn(5520).RVLayoutManager);
 const entry = {
-  key: "updateLayoutParams",
-  value: function updateLayoutParams(windowSize) {
-    const self = this;
-    const tmp = _get(_getPrototypeOf(_classCallCheck.prototype), "updateLayoutParams", this);
-    closure_1 = tmp;
-    let fn = tmp;
-    if (typeof tmp === "function") {
-      fn = (items) => closure_1.apply(self, items);
-    }
-    const items = [windowSize];
-    !fn(items);
-    if (!tmp3) {
-      self.boundedSize = windowSize.windowSize.width;
-      if (self.layouts.length > 0) {
-        self.updateAllWidths();
-        self.recomputeLayouts(0, self.layouts.length - 1);
-        self.requiresRepaint = true;
-      }
-    }
+  key: "dispose",
+  value: function dispose() {
+    const timers = this.timers;
+    const item = timers.forEach(clearTimeout);
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "processLayoutInfo",
-    value: function processLayoutInfo(arg0, arg1) {
+    key: "updateViewableItems",
+    value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
       const self = this;
-      const iter = arg0[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp2 = self.layouts[nextResult.index];
-        tmp2.height = nextResult.dimensions.height;
-        tmp2.isHeightMeasured = true;
-        tmp2.isWidthMeasured = true;
-        continue;
+      closure_1 = arg0;
+      closure_2 = arg1;
+      closure_3 = arg2;
+      closure_4 = arg3;
+      closure_5 = arg4;
+      if (undefined !== possiblyViewableIndices) {
+        self.possiblyViewableIndices = possiblyViewableIndices;
       }
-      if (self.fullRelayoutRequired) {
-        self.updateAllWidths();
-        self.fullRelayoutRequired = false;
-        return 0;
+      let viewabilityConfig = self.viewabilityConfig;
+      let prop;
+      if (viewabilityConfig != null) {
+        prop = viewabilityConfig.itemVisiblePercentThreshold;
       }
-    }
-  },
-  {
-    key: "estimateLayout",
-    value: function estimateLayout(arg0) {
-      this.layouts[arg0].width = this.getWidth(arg0);
-      this.layouts[arg0].height = this.getEstimatedHeight(arg0);
-      this.layouts[arg0].isWidthMeasured = true;
-      this.layouts[arg0].enforcedWidth = true;
-    }
-  },
-  {
-    key: "handleSpanChange",
-    value: function handleSpanChange(arg0) {
-      this.fullRelayoutRequired = true;
-    }
-  },
-  {
-    key: "getLayoutSize",
-    value: function getLayoutSize() {
-      const self = this;
-      if (0 === this.layouts.length) {
-        return { width: 0, height: 0 };
-      } else {
-        const size = { width: self.boundedSize, height: self.computeTotalHeightTillRow(self.layouts.length - 1) };
-        return size;
-      }
-    }
-  },
-  {
-    key: "recomputeLayouts",
-    value: function recomputeLayouts(arg0, arg1) {
-      const self = this;
-      let result = this.locateFirstIndexInRow(Math.max(0, arg0 - 1));
-      const layout = this.getLayout(result);
-      ({ x, y } = layout);
-      if (result <= arg1) {
-        do {
-          let layout1 = self.getLayout(result);
-          let sum = y;
-          let num = x;
-          if (!self.checkBounds(x, layout1.width)) {
-            let result1 = self.processAndReturnTallestItemInRow(result - 1);
-            sum = result1.y + result1.height;
-            num = 0;
+      if (null !== prop) {
+        let viewabilityConfig2 = self.viewabilityConfig;
+        let prop1;
+        if (viewabilityConfig2 != null) {
+          prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
+        }
+        if (undefined !== prop1) {
+          const viewabilityConfig3 = self.viewabilityConfig;
+          let prop2;
+          if (viewabilityConfig3 != null) {
+            prop2 = viewabilityConfig3.viewAreaCoveragePercentThreshold;
           }
-          layout1.x = num;
-          layout1.y = sum;
-          x = num + layout1.width;
-          result = result + 1;
-          y = sum;
-        } while (result <= arg1);
-      }
-      if (arg1 === self.layouts.length - 1) {
-        const result2 = self.processAndReturnTallestItemInRow(arg1);
-      }
-    }
-  },
-  {
-    key: "getWidth",
-    value: function getWidth(sum) {
-      const result = this.boundedSize / this.maxColumns;
-      return result * this.getSpan(sum);
-    }
-  },
-  {
-    key: "processAndReturnTallestItemInRow",
-    value: function processAndReturnTallestItemInRow(arg0) {
-      const self = this;
-      const result = this.locateFirstIndexInRow(arg0);
-      let flag = false;
-      let tmp2 = result;
-      let num = 0;
-      let flag2 = false;
-      let num2 = 0;
-      let tmp4;
-      if (result <= arg0) {
-        while (true) {
-          let tmp5 = self.layouts[tmp2];
-          let BooleanResult = flag;
-          let tmp9 = tmp3;
-          if (!flag) {
-            let _Boolean = Boolean;
-            BooleanResult = Boolean(tmp5.isHeightMeasured);
-          }
-          let _Math = Math;
-          let bound = Math.max(num, tmp5.height);
-          ({ minHeight, height } = tmp5);
-          if (minHeight == null) {
-            minHeight = 0;
-          }
-          let tmp11 = height > minHeight;
-          if (tmp11) {
-            let num3;
-            if (tmp9 != null) {
-              num3 = tmp9.height;
+          if (null !== prop2) {
+            const viewabilityConfig4 = self.viewabilityConfig;
+            let prop3;
+            if (viewabilityConfig4 != null) {
+              prop3 = viewabilityConfig4.viewAreaCoveragePercentThreshold;
             }
-            if (num3 == null) {
-              num3 = 0;
-            }
-            tmp11 = tmp5.height > num3;
-          }
-          if (tmp11) {
-            tmp9 = tmp5;
-          }
-          let sum = tmp2 + 1;
-          flag2 = BooleanResult;
-          num2 = bound;
-          tmp4 = tmp9;
-          if (sum >= self.layouts.length) {
-            break;
-          } else {
-            flag = BooleanResult;
-            num = bound;
-            tmp3 = tmp9;
-            flag2 = BooleanResult;
-            num2 = bound;
-            tmp4 = tmp9;
-            tmp2 = sum;
-            if (sum > arg0) {
-              break;
+            if (undefined !== prop3) {
+              const _Error = Error;
+              const error = new Error(ViewabilityHelper(5494).ErrorMessages.multipleViewabilityThresholdTypesNotSupported);
+              throw error;
             }
           }
         }
       }
-      let tmp13 = !tmp4;
-      if (!tmp4) {
-        tmp13 = num2 > 0;
+      const viewabilityConfig5 = self.viewabilityConfig;
+      let waitForInteraction;
+      if (viewabilityConfig5 != null) {
+        waitForInteraction = viewabilityConfig5.waitForInteraction;
       }
-      if (tmp13) {
-        const _Number = Number;
-        num2 = Number.MAX_SAFE_INTEGER;
-      }
-      if (tmp4 == null) {
-        tmp4 = self.layouts[result];
-      }
-      if (flag2) {
-        if (tmp4) {
-          let num4 = tmp4.height;
-          if (num2 - tmp4.height > 1) {
-            self.requiresRepaint = true;
-            num4 = 0;
+      if (!waitForInteraction) {
+        const prop4 = self.possiblyViewableIndices;
+        const found = prop4.filter((item) => {
+          const viewabilityConfig = self.viewabilityConfig;
+          let prop;
+          if (viewabilityConfig != null) {
+            prop = viewabilityConfig.viewAreaCoveragePercentThreshold;
           }
-          if (result <= arg0) {
-            self.layouts[result].minHeight = num4;
-            if (num4 > 0) {
-              self.layouts[result].height = num4;
-            }
-            let sum1 = result + 1;
-            if (sum1 < self.layouts.length) {
-              while (sum1 <= arg0) {
-                self.layouts[sum1].minHeight = num4;
-                if (num4 > 0) {
-                  self.layouts[sum1].height = num4;
-                }
-                sum1 = sum1 + 1;
-                if (sum1 >= self.layouts.length) {
-                  break;
-                }
-              }
-            }
+          const viewabilityConfig2 = self.viewabilityConfig;
+          let prop1;
+          if (viewabilityConfig2 != null) {
+            prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
           }
-          tmp4.minHeight = 0;
+          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
+        });
+        self.viewableIndices = found;
+        const viewabilityConfig6 = self.viewabilityConfig;
+        let num;
+        if (viewabilityConfig6 != null) {
+          num = viewabilityConfig6.minimumViewTime;
         }
-        return tmp4;
-      } else {
-        return tmp4;
-      }
-    }
-  },
-  {
-    key: "computeTotalHeightTillRow",
-    value: function computeTotalHeightTillRow(arg0) {
-      const self = this;
-      const result = this.locateFirstIndexInRow(arg0);
-      let num = 0;
-      if (result <= arg0) {
-        const _Math = Math;
-        let bound = Math.max(0, self.layouts[result].height);
-        let sum = result + 1;
-        num = bound;
-        if (sum < self.layouts.length) {
-          num = bound;
-          while (sum <= arg0) {
-            let _Math2 = Math;
-            bound = Math.max(bound, self.layouts[sum].height);
-            sum = sum + 1;
-            num = bound;
-            if (sum >= self.layouts.length) {
-              break;
-            }
-          }
+        if (num == null) {
+          num = 250;
+        }
+        if (num > 0) {
+          const _setTimeout = setTimeout;
+          const timerId = setTimeout(() => {
+            const timers = self.timers;
+            timers.delete(timerId);
+            const result = self.checkViewableIndicesChanges(found);
+          }, num);
+          let timers = self.timers;
+          timers.add(timerId);
+        } else {
+          let result = self.checkViewableIndicesChanges(found);
         }
       }
-      return this.layouts[result].y + num;
     }
   },
   {
-    key: "updateAllWidths",
-    value: function updateAllWidths() {
-      let length;
+    key: "checkViewableIndicesChanges",
+    value: function checkViewableIndicesChanges(found) {
       const self = this;
-      let num = 0;
-      if (0 < this.layouts.length) {
-        do {
-          self.layouts[num].width = self.getWidth(num);
-          num = num + 1;
-          length = self.layouts.length;
-        } while (num < length);
+      found = found.filter((item) => {
+        const viewableIndices = self.viewableIndices;
+        return viewableIndices.includes(item);
+      });
+      const found1 = found.filter((item) => {
+        const lastReportedViewableIndices = self.lastReportedViewableIndices;
+        return !lastReportedViewableIndices.includes(item);
+      });
+      const prop = this.lastReportedViewableIndices;
+      const found2 = prop.filter((item) => !found.includes(item));
+      if (tmp) {
+        self.lastReportedViewableIndices = found;
+        const result = self.viewableIndicesChanged(found, found1, found2);
       }
     }
   },
   {
-    key: "checkBounds",
-    value: function checkBounds(arg0, width) {
-      return arg0 + width <= this.boundedSize + 0.9;
+    key: "clearLastReportedViewableIndices",
+    value: function clearLastReportedViewableIndices() {
+      this.lastReportedViewableIndices = [];
     }
   },
   {
-    key: "locateFirstIndexInRow",
-    value: function locateFirstIndexInRow(arg0) {
-      if (0 === arg0) {
-        return 0;
-      } else {
-        let tmp = arg0;
-        if (arg0 >= 0) {
-          let tmp3 = arg0;
-          tmp = arg0;
-          if (0 !== this.layouts[arg0].x) {
-            const diff = tmp3 - 1;
-            tmp = diff;
-            while (diff >= 0) {
-              tmp3 = diff;
-              tmp = diff;
-              if (0 === tmp2.layouts[diff].x) {
-                break;
-              }
-            }
-          }
-        }
-        const _Math = Math;
-        return Math.max(tmp, 0);
-      }
-    }
-  },
-  {
-    key: "isInLastRow",
-    value: function isInLastRow(arg0) {
-      const self = this;
-      if (0 === this.layouts.length) {
+    key: "isItemViewable",
+    value: function isItemViewable(item, arg1, arg2, arg3, width, prop, prop1, fn) {
+      const size = fn(item);
+      if (undefined === size) {
         return false;
       } else {
-        const diff = self.layouts.length - 1;
-        let tmp3 = arg0 === diff;
-        if (!tmp3) {
-          let y;
-          if (self.layouts[arg0] != null) {
-            y = tmp4.y;
-          }
-          let y1;
-          if (self.layouts[diff] != null) {
-            y1 = tmp7.y;
-          }
-          tmp3 = y === y1;
+        const diff = (arg1 ? size.x : size.y) - arg2;
+        const tmp3 = arg1 ? size.width : size.height;
+        if (arg1) {
+          width = width.width;
+        } else {
+          width = width.height - arg3;
         }
-        return tmp3;
+        const _Math = Math;
+        const _Math2 = Math;
+        const bound = Math.min(diff + tmp3, width);
+        const diff1 = bound - Math.max(diff, 0);
+        if (diff1 === tmp3) {
+          return true;
+        } else if (0 === diff1) {
+          return false;
+        } else {
+          if (null != prop) {
+            let result = 0.01 * prop;
+          } else {
+            let num2 = prop1;
+            if (prop1 == null) {
+              num2 = 0;
+            }
+            result = 0.01 * num2;
+          }
+          return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
+        }
       }
     }
   }
 ];
 
-export const RVGridLayoutManagerImpl = _createClass(RVGridLayoutManagerImpl, items);
+export default _modDef5507(ViewabilityHelper, items);

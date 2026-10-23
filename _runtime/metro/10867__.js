@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 274.5, height: 110, scales: [2, 3], hash: "43e5ff0d9ea5f04fe209ebfd15e2d439", name: "nsfw_gate_unavailable", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a97ebd26f28acc69dba8dec170283378", name: "ChatMarkUnreadIcon", type: "png" });
