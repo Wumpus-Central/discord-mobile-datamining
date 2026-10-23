@@ -1,9 +1,9 @@
-// === Module 7236: ApplicationConnectionCard ===
+// === Module 7237: ApplicationConnectionCard ===
 
-// Module 7236 (ApplicationConnectionCard)
+// Module 7237 (ApplicationConnectionCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6795 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6794 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 

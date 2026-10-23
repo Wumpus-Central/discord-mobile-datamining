@@ -1,16 +1,16 @@
-// === Module 12664: GuildIconUploader ===
+// === Module 12683: GuildIconUploader ===
 
-// Module 12664 (GuildIconUploader)
+// Module 12683 (GuildIconUploader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4976 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6894 */;
-import _modDef12665 from "module_12665" /* 12665 */;
-import _modDef12666 from "module_12666" /* 12666 */;
-import _modDef12667 from "module_12667" /* 12667 */;
-import _modDef12668 from "module_12668" /* 12668 */;
+import Pressables from "Pressables" /* 6893 */;
+import _modDef12684 from "module_12684" /* 12684 */;
+import _modDef12685 from "module_12685" /* 12685 */;
+import _modDef12686 from "module_12686" /* 12686 */;
+import _modDef12687 from "module_12687" /* 12687 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12665;
+      let tmp10Result = _modDef12684;
     } else {
-      tmp10Result = _modDef12666;
+      tmp10Result = _modDef12685;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12667;
+    obj5.source = _modDef12686;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12668 };
+    const obj7 = { source: _modDef12687 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

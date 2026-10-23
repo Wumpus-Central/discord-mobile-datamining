@@ -1,6 +1,6 @@
-// === Module 17860: ICYMIServerRecommendationRow ===
+// === Module 17882: ICYMIServerRecommendationRow ===
 
-// Module 17860 (ICYMIServerRecommendationRow)
+// Module 17882 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,16 +9,16 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import GuildIconDefault from "GuildIcon" /* 6869 */;
-import FastestListDefault from "FastestList" /* 7136 */;
-import ClipViewDefault from "ClipView" /* 9375 */;
-import ICYMIShared from "ICYMIShared" /* 17836 */;
+import GuildIconDefault from "GuildIcon" /* 6868 */;
+import FastestListDefault from "FastestList" /* 7135 */;
+import ClipViewDefault from "ClipView" /* 9382 */;
+import ICYMIShared from "ICYMIShared" /* 17858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import ICYMIStore from "ICYMIStore" /* 8791 */;
+import ICYMIStore from "ICYMIStore" /* 8798 */;
 
 require = fn;
 function FeaturedServer(guild) {
@@ -55,15 +55,15 @@ function FeaturedServer(guild) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             closure_1(true);
-            closure_1(8809).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
-            const obj17 = closure_1(8809);
+            closure_1(8816).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
+            const obj17 = closure_1(8816);
             let obj5 = { itemId: guild.id, itemType: "recommended_guilds", actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "join", actionDestinationType: "guild" } };
-            closure_1(8809).feedItemActioned(obj5);
-            const obj18 = closure_1(8809);
+            closure_1(8816).feedItemActioned(obj5);
+            const obj18 = closure_1(8816);
             const items = [guild.id];
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: closure_1(8809).gravityJoinGuild(items, "recommended_guilds"), done: false };
+            const obj6 = { value: closure_1(8816).gravityJoinGuild(items, "recommended_guilds"), done: false };
             return obj6;
           }
         } else if (1 === tmp5) {
@@ -81,9 +81,9 @@ function FeaturedServer(guild) {
             obj12.analyticsSource = obj13;
             obj11.state = obj12;
             closure_128_0 = obj11;
-            const result = closure_1(8809).addedRecommendedGuild();
-            let obj8 = closure_1(8809);
-            const dehydrated = closure_1(8809).fetchDehydrated({ isReloading: true, forceRefresh: true });
+            const result = closure_1(8816).addedRecommendedGuild();
+            let obj8 = closure_1(8816);
+            const dehydrated = closure_1(8816).fetchDehydrated({ isReloading: true, forceRefresh: true });
             dehydrated.then(asyncGeneratorStep(async () => {
               if (dependencyMap === 2) {
                 dependencyMap = 3;
@@ -112,7 +112,7 @@ function FeaturedServer(guild) {
                       closure_0 = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj5 = { value: v2(8809).reloadICYMITab(), done: false };
+                      const obj5 = { value: v2(8816).reloadICYMITab(), done: false };
                       return obj5;
                     }
                   } else if (1 === tmp4) {
@@ -126,7 +126,7 @@ function FeaturedServer(guild) {
                     } else {
                       v2 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: v2(8809).getGuildChannelScores(), done: false };
+                      const obj8 = { value: v2(8816).getGuildChannelScores(), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -137,7 +137,7 @@ function FeaturedServer(guild) {
                     const obj9 = { value, done: true };
                     return obj9;
                   } else {
-                    const recommendedGuilds = v2(8809).getRecommendedGuilds();
+                    const recommendedGuilds = v2(8816).getRecommendedGuilds();
                     dependencyMap = 3;
                     return { value: "IconComponent", done: null };
                   }
@@ -147,12 +147,12 @@ function FeaturedServer(guild) {
                 }
               }
             }));
-            let obj9 = closure_1(8809);
+            let obj9 = closure_1(8816);
             const obj14 = {};
             const merged = Object.assign(closure_128_0);
             dependencyMap = 2;
             c3 = 1;
-            const obj15 = { value: closure_1(6816).transitionToGuildSync(closure_129_0.id, obj14), done: false };
+            const obj15 = { value: closure_1(6815).transitionToGuildSync(closure_129_0.id, obj14), done: false };
             return obj15;
           } else {
             closure_129_1(false);
@@ -213,7 +213,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let c17 = 200;
-const createICYMIStyles = fn(17797);
+const createICYMIStyles = fn(17819);
 let closure_18 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginVertical: nativeDefault.space.PX_24 }, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   const obj2 = { marginVertical: nativeDefault.space.PX_24 };
@@ -271,7 +271,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
         }
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const size = { shape: tmp(9375).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+          const size = { shape: tmp(9382).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
           const items1 = [size];
           cResult[9] = items1;
           let tmp16 = items1;
@@ -306,7 +306,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
                     tmp31 = tmp34;
                   }
                 }
-                const obj4 = { style: tmp4.guildIcon, guild: tmp14, size: tmp(6869).GuildIconSizes.LARGE, animate: !stateFromStores };
+                const obj4 = { style: tmp4.guildIcon, guild: tmp14, size: tmp(6868).GuildIconSizes.LARGE, animate: !stateFromStores };
                 const tmp30 = closure_14(GuildIconDefault, obj4);
                 cResult[15] = tmp14;
                 cResult[16] = tmp4.guildIcon;
@@ -375,7 +375,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
   const obj4 = { cutouts: null, children: null };
   const size = { shape: null, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const obj = guild(504);
-  size.shape = guild(9375).CutoutShape.RoundedRect;
+  size.shape = guild(9382).CutoutShape.RoundedRect;
   const items2 = [size];
   obj4.cutouts = items2;
   if (null != guild.banner) {
@@ -391,7 +391,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
   obj4.children = tmp12Result;
   const items4 = [closure_14(ClipViewDefault, obj4), ];
   const obj7 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
-  obj7.size = guild(6869).GuildIconSizes.LARGE;
+  obj7.size = guild(6868).GuildIconSizes.LARGE;
   obj7.animate = !stateFromStores;
   items4[1] = closure_14(GuildIconDefault, obj7);
   obj3.children = items4;

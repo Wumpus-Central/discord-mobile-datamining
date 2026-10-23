@@ -1,14 +1,14 @@
-// === Module 16307: OrbsArcadeRewardPreview ===
+// === Module 16325: OrbsArcadeRewardPreview ===
 
-// Module 16307 (OrbsArcadeRewardPreview)
+// Module 16325 (OrbsArcadeRewardPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1989 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9372 */;
-import _modDef9373 from "module_9373" /* 9373 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9408 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16299 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9379 */;
+import _modDef9380 from "module_9380" /* 9380 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9415 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collect
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.avatar) {
-    const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9373, accessible: false };
+    const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9380, accessible: false };
     const tmp11 = React4(FastImageDefault, obj3);
     cResult[2] = tmp4.avatar;
     cResult[3] = tmp11;
@@ -87,7 +87,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collect
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9373;
+  obj4.source = _modDef9380;
   const items = [React4(FastImageDefault, obj4), ];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {

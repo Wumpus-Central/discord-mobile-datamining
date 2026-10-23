@@ -1,15 +1,15 @@
-// === Module 11520: GlobalStatusContent ===
+// === Module 11531: GlobalStatusContent ===
 
-// Module 11520 (GlobalStatusContent)
+// Module 11531 (GlobalStatusContent)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useThemeDefault from "useTheme" /* 5191 */;
-import StatusBarDefault from "StatusBar" /* 10854 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11312 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11336 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11513 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11516 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11521 */;
+import StatusBarDefault from "StatusBar" /* 10862 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11321 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11345 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11524 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11527 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11532 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11515).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11526).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1087).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
               }
               tmp22 = tmp5ResultResult;
             }
-            const isScreenLandscape = tmp(8664).useIsScreenLandscape();
+            const isScreenLandscape = tmp(8671).useIsScreenLandscape();
             if (cResult[15] !== isScreenLandscape) {
               let isModalOpenResult = isScreenLandscape;
               if (isScreenLandscape) {
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
             cResult[18] = num11;
             cResult[19] = obj4;
             tmp33 = obj4;
-            const tmpResult6 = tmp(8664);
+            const tmpResult6 = tmp(8671);
           }
         }
       }

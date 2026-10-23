@@ -1,13 +1,13 @@
-// === Module 13069: VoiceMessageUtils ===
+// === Module 13085: VoiceMessageUtils ===
 
-// Module 13069 (VoiceMessageUtils)
+// Module 13085 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 13070 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 13086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import apply from "module_12" /* 12 */;
@@ -263,9 +263,9 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(12979);
+const VoiceMessagesUIStore = fn(12995);
 ({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12980);
+const VoiceMessageConstants = fn(12996);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let c19 = null;

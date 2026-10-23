@@ -1,15 +1,15 @@
-// === Module 10765: conjurePublishConnection ===
+// === Module 10772: conjurePublishConnection ===
 
-// Module 10765 (conjurePublishConnection)
+// Module 10772 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10689 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10755 */;
-import promptConjureDevicePermissionsOnInstallDefault from "promptConjureDevicePermissionsOnInstall" /* 10766 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10768 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10696 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10762 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10773 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 10775 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10684 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10691 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -36,7 +36,8 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(["activity", "automod", "widget", "bot"]);
+let set = new Set(fn(10781).CONJURE_PUBLISH_PROGRESS_STAGES);
+const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishConnection.tsx");
@@ -140,12 +141,17 @@ export const publishStepHandlers = {
               return obj4;
             } else {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
-                const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
-                v1(tmp19[4]).dispatch(obj5);
-                v1 = 1;
-                c2 = 1;
-                const obj6 = { value: tmp2(tmp19[8])(tmp19[7], tmp19.paths), done: false };
-                return obj6;
+                if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
+                  c2 = 3;
+                  return { value: "IconComponent", done: null };
+                } else {
+                  const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
+                  v1(tmp21[4]).dispatch(obj5);
+                  v1 = 1;
+                  c2 = 1;
+                  const obj6 = { value: tmp2(tmp21[8])(tmp21[7], tmp21.paths), done: false };
+                  return obj6;
+                }
               } else {
                 c2 = 3;
               }
@@ -160,12 +166,33 @@ export const publishStepHandlers = {
           c2 = 3;
           const obj = { value, done: true };
           return obj;
-        } catch (tmp13) {
+        } catch (tmp15) {
           c2 = tmp;
-          throw tmp13;
+          throw tmp15;
         }
       }
     })();
+  },
+  publish_progress(stage, projectId) {
+    projectId = projectId.projectId;
+    if (set.has(stage.stage)) {
+      const _Number = Number;
+      let num2 = 0;
+      if (Number.isFinite(stage.stage_elapsed_ms)) {
+        const _Math = Math;
+        num2 = Math.max(0, stage.stage_elapsed_ms);
+      }
+      if ("approval" !== stage.stage) {
+        const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
+        DispatcherDefault.dispatch(obj2);
+      }
+      const obj4 = { type: "CONJURE_PROJECT_PUBLISH_PROGRESS", projectId, progress: null };
+      const obj5 = { stage: stage.stage, stageStartedAt: null };
+      const _Date = Date;
+      obj5.stageStartedAt = Date.now() - num2;
+      obj4.progress = obj5;
+      DispatcherDefault.dispatch(obj4);
+    }
   },
   publish_cta(publish_cta, arg1) {
     if (null != publish_cta.publish_cta) {
@@ -174,7 +201,7 @@ export const publishStepHandlers = {
       let tmp3 = null;
       if (null != surface) {
         tmp3 = null;
-        if (set.has(surface)) {
+        if (set1.has(surface)) {
           tmp3 = surface;
         }
       }
@@ -190,67 +217,89 @@ export const publishStepHandlers = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  publish_status(published, projectId) {
-    const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, published: true === published.published, hasUnpublishedChanges: true === published.has_unpublished_changes, surface: null, previewAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null };
-    const surface = published.surface;
-    let tmp2 = null;
-    if (null != surface) {
-      tmp2 = null;
-      if (set.has(surface)) {
-        tmp2 = surface;
+  publish_status(publish_state, projectId) {
+    DispatcherDefault;
+    let obj = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, publishState: null, surface: null, previewAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null };
+    if (typeof publish_state.publish_state === "string") {
+      if ("" !== publish_state.publish_state) {
+        let str = publish_state.publish_state;
       }
-    }
-    obj2.surface = tmp2;
-    if (Array.isArray(published.preview_app_channels)) {
-      const preview_app_channels = published.preview_app_channels;
-      let found = preview_app_channels.filter((item) => typeof item === "string");
-    } else {
-      found = [];
-    }
-    obj2.previewAppChannels = found;
-    if (Array.isArray(published.preview_device_permissions)) {
-      const prop = published.preview_device_permissions;
-      let found1 = prop.filter(conjureDevicePermissions.isConjureDevicePermissionName);
-    } else {
-      found1 = [];
-    }
-    obj2.previewDevicePermissions = found1;
-    let published_revision = null;
-    if (typeof published.published_revision === "number") {
-      published_revision = published.published_revision;
-    }
-    obj2.publishedRevision = published_revision;
-    let published_at = null;
-    if (typeof published.published_at === "string") {
-      published_at = published.published_at;
-    }
-    obj2.publishedAt = published_at;
-    obj2.publishing = true === published.publishing;
-    let flatMapResult;
-    if (Array.isArray(published.patch_notes_sent)) {
-      const patch_notes_sent = published.patch_notes_sent;
-      flatMapResult = patch_notes_sent.flatMap((published_revision) => {
-        published_revision = undefined;
-        if (published_revision != null) {
-          published_revision = published_revision.published_revision;
+      obj.publishState = str;
+      const surface = publish_state.surface;
+      let tmp5 = null;
+      if (null != surface) {
+        tmp5 = null;
+        if (set1.has(surface)) {
+          tmp5 = surface;
         }
-        if (typeof published_revision === "number") {
-          if (typeof published_revision.guild_id === "string") {
-            if (typeof published_revision.channel_id === "string") {
-              if (typeof published_revision.message_id === "string") {
-                const obj = { publishedRevision: null, guildId: null, channelId: null, messageId: null };
-                ({ published_revision: obj.publishedRevision, guild_id: obj.guildId, channel_id: obj.channelId, message_id: obj.messageId } = published_revision);
-                const items = [obj];
+      }
+      obj.surface = tmp5;
+      const _Array = Array;
+      if (Array.isArray(publish_state.preview_app_channels)) {
+        const preview_app_channels = publish_state.preview_app_channels;
+        let found = preview_app_channels.filter((item) => typeof item === "string");
+      } else {
+        found = [];
+      }
+      obj.previewAppChannels = found;
+      const _Array2 = Array;
+      if (Array.isArray(publish_state.preview_device_permissions)) {
+        const prop = publish_state.preview_device_permissions;
+        let found1 = prop.filter(conjureDevicePermissions.isConjureDevicePermissionName);
+      } else {
+        found1 = [];
+      }
+      obj.previewDevicePermissions = found1;
+      let published_revision = null;
+      if (typeof publish_state.published_revision === "number") {
+        published_revision = publish_state.published_revision;
+      }
+      obj.publishedRevision = published_revision;
+      let published_at = null;
+      if (typeof publish_state.published_at === "string") {
+        published_at = publish_state.published_at;
+      }
+      obj.publishedAt = published_at;
+      obj.publishing = true === publish_state.publishing;
+      const _Array3 = Array;
+      let flatMapResult;
+      if (Array.isArray(publish_state.patch_notes_sent)) {
+        const patch_notes_sent = publish_state.patch_notes_sent;
+        flatMapResult = patch_notes_sent.flatMap((published_revision) => {
+          published_revision = undefined;
+          if (published_revision != null) {
+            published_revision = published_revision.published_revision;
+          }
+          if (typeof published_revision === "number") {
+            if (typeof published_revision.guild_id === "string") {
+              if (typeof published_revision.channel_id === "string") {
+                if (typeof published_revision.message_id === "string") {
+                  const obj = { publishedRevision: null, guildId: null, channelId: null, messageId: null };
+                  ({ published_revision: obj.publishedRevision, guild_id: obj.guildId, channel_id: obj.channelId, message_id: obj.messageId } = published_revision);
+                  const items = [obj];
+                }
+                return [];
               }
-              return [];
             }
           }
-        }
-      });
+        });
+      }
+      obj.patchNotesSent = flatMapResult;
+      obj.newUiUnpublished = true === publish_state.new_ui_unpublished;
+      tmp3(obj);
     }
-    obj2.patchNotesSent = flatMapResult;
-    obj2.newUiUnpublished = true === published.new_ui_unpublished;
-    DispatcherDefault.dispatch(obj2);
+    if (true !== publish_state.published) {
+      let str2 = "nothing_built";
+      if (true === publish_state.has_unpublished_changes) {
+        str2 = "not_live";
+      }
+      str = str2;
+    } else {
+      str = "live_current";
+      if (true === publish_state.has_unpublished_changes) {
+        str = "live_outdated";
+      }
+    }
   },
   publish_result(ok, projectId) {
     projectId = projectId.projectId;
@@ -269,17 +318,10 @@ export const publishStepHandlers = {
       }
       ConjurePublishActionCreators.trackPublishFailed(projectId, str2, false);
     } else {
-      const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
-      if (null != publishStatus) {
-        const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId, published: true, hasUnpublishedChanges: false, surface: null, previewAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null };
-        ({ surface: obj4.surface, previewAppChannels: obj4.previewAppChannels, previewDevicePermissions: obj4.previewDevicePermissions, publishedRevision: obj4.publishedRevision, publishedAt: obj4.publishedAt } = publishStatus);
-        DispatcherDefault.dispatch(obj2);
-        const tmpResult = DispatcherDefault;
-      }
       const project = ConjureProjectStore.getProject(projectId);
-      const publishStatus1 = ConjurePublishStatusStore.getPublishStatus(projectId);
-      if (publishStatus1 != null) {
-        const previewDevicePermissions = publishStatus1.previewDevicePermissions;
+      const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
+      if (publishStatus != null) {
+        const previewDevicePermissions = publishStatus.previewDevicePermissions;
       }
       let install_scope;
       if (project != null) {
@@ -289,7 +331,7 @@ export const publishStepHandlers = {
         if ("" !== project.application_id) {
           if (null != previewDevicePermissions) {
             const application_id = project.application_id;
-            const obj3 = { applicationId: application_id, appName: null, permissions: null };
+            const obj2 = { applicationId: application_id, appName: null, iframeId: null, permissions: null };
             const application = ApplicationStore.getApplication(application_id);
             let name;
             if (application != null) {
@@ -298,10 +340,10 @@ export const publishStepHandlers = {
             if (name == null) {
               name = project.name;
             }
-            obj3.appName = name;
-            obj3.permissions = previewDevicePermissions;
-            promptConjureDevicePermissionsOnInstallDefault(obj3);
-            const tmpResult2 = promptConjureDevicePermissionsOnInstallDefault;
+            obj2.appName = name;
+            obj2.permissions = previewDevicePermissions;
+            requestConjureDevicePermissionsDefault(obj2);
+            const tmpResult = requestConjureDevicePermissionsDefault;
           }
         }
       }
@@ -542,6 +584,26 @@ export const rejectPendingPublish = function rejectPendingPublish(projectId, arg
   const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
 };
 export { rejectPendingPatchNotesDraft };
+export const publishStateFromFrame = function publishStateFromFrame(publish_state) {
+  if (typeof publish_state.publish_state === "string") {
+    if ("" !== publish_state.publish_state) {
+      let str = publish_state.publish_state;
+    }
+    return str;
+  }
+  if (true !== publish_state.published) {
+    let str2 = "nothing_built";
+    if (true === publish_state.has_unpublished_changes) {
+      str2 = "not_live";
+    }
+    str = str2;
+  } else {
+    str = "live_current";
+    if (true === publish_state.has_unpublished_changes) {
+      str = "live_outdated";
+    }
+  }
+};
 export const requestPublishOptions = function requestPublishOptions(id) {
   closure_0 = id;
   return new Promise((resolve, reject) => {

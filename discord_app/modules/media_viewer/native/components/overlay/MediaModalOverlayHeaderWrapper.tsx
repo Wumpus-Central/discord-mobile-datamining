@@ -1,6 +1,6 @@
-// === Module 8827: MediaModalOverlayHeaderWrapper ===
+// === Module 8834: MediaModalOverlayHeaderWrapper ===
 
-// Module 8827 (MediaModalOverlayHeaderWrapper)
+// Module 8834 (MediaModalOverlayHeaderWrapper)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import NavigatorConstants from "NavigatorConstants" /* 5254 */;

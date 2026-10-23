@@ -1,6 +1,6 @@
-// === Module 12280: conjureTipDismissals ===
+// === Module 12291: conjureTipDismissals ===
 
-// Module 12280 (conjureTipDismissals)
+// Module 12291 (conjureTipDismissals)
 import Storage3 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;

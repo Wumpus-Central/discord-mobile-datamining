@@ -1,6 +1,6 @@
-// === Module 7743: SlateUtils ===
+// === Module 7744: SlateUtils ===
 
-// Module 7743 (SlateUtils)
+// Module 7744 (SlateUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_text_area/slate/SlateUtils.tsx");

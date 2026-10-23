@@ -1,9 +1,9 @@
-// === Module 15161: GuildHeaderCountsStore ===
+// === Module 15174: GuildHeaderCountsStore ===
 
-// Module 15161 (GuildHeaderCountsStore)
+// Module 15174 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7356 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7357 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5180 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -56,21 +56,21 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "guild", onlineCount: "ix", memberCount: "Reflect" };
+      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "test", memberCount: "ix" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "guild", onlineCount: "ix", memberCount: "Reflect" };
+      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "test", memberCount: "ix" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "guild", onlineCount: "ix", memberCount: "Reflect" };
+      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "test", memberCount: "ix" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }

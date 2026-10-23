@@ -1,8 +1,8 @@
-// === Module 9524: outbound_promotion_popover ===
+// === Module 9531: outbound_promotion_popover ===
 
-// Module 9524 (outbound_promotion_popover)
+// Module 9531 (outbound_promotion_popover)
 import _mod1212 from "module_1212" /* 1212 */;
-import theme_aware_asset from "theme_aware_asset" /* 9504 */;
+import theme_aware_asset from "theme_aware_asset" /* 9511 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

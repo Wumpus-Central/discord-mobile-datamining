@@ -1,8 +1,8 @@
-// === Module 12275: conjureIdeasTip ===
+// === Module 12286: conjureIdeasTip ===
 
-// Module 12275 (conjureIdeasTip)
-import conjureTipImpressions from "conjureTipImpressions" /* 12274 */;
-import conjureIdeasIntroTip from "conjureIdeasIntroTip" /* 12276 */;
+// Module 12286 (conjureIdeasTip)
+import conjureTipImpressions from "conjureTipImpressions" /* 12285 */;
+import conjureIdeasIntroTip from "conjureIdeasIntroTip" /* 12287 */;
 import size from "module_2" /* 2 */;
 
 function resolveIdeasTip(turn) {

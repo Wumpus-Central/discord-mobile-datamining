@@ -1,26 +1,26 @@
-// === Module 13740: ReminderNotification ===
+// === Module 13754: ReminderNotification ===
 
-// Module 13740 (ReminderNotification)
+// Module 13754 (ReminderNotification)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ClockIcon from "ClockIcon" /* 5677 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10048 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13678 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 13687 */;
-import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 13717 */;
-import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 13719 */;
-import showForLaterModal from "showForLaterModal" /* 13741 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10055 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13692 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 13701 */;
+import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 13731 */;
+import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 13733 */;
+import showForLaterModal from "showForLaterModal" /* 13755 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13679);
+const InAppNotificationConstants = fn(13693);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = InAppNotificationConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -175,17 +175,17 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   const tmpResult = channel(504);
   const stateFromStores1 = channel(504).useStateFromStores(tmp7, tmp9);
   const tmpResult4 = channel(504);
-  const hasPreviewableMedia = channel(13678).useHasPreviewableMedia(message);
+  const hasPreviewableMedia = channel(13692).useHasPreviewableMedia(message);
   const tmp12 = channel.type === channel(1108).ChannelTypes.DM;
   let num7 = 1;
   if (tmp12) {
     num7 = closure_8;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const messagePreviewTextVariant = tmp(13678).getMessagePreviewTextVariant();
+    const messagePreviewTextVariant = tmp(13692).getMessagePreviewTextVariant();
     cResult[6] = messagePreviewTextVariant;
     let tmp13 = messagePreviewTextVariant;
-    const tmpResult6 = tmp(13678);
+    const tmpResult6 = tmp(13692);
   } else {
     tmp13 = cResult[6];
   }
@@ -220,7 +220,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
         if (!hasPreviewableMedia) {
           if (null == message.poll) {
             const obj4 = { channel, message, color: "text-default", layout: tmp(5629).ChannelListLayoutTypes.COZY, variant: tmp13, muted: false, lineClamp: num7 };
-            let tmp22 = closure_10(tmp(13689).ChannelRowPreview, obj4);
+            let tmp22 = closure_10(tmp(13703).ChannelRowPreview, obj4);
           }
           cResult[12] = channel;
           cResult[13] = hasPreviewableMedia;
@@ -244,7 +244,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   cResult[10] = stateFromStores1;
   cResult[11] = tmp16;
   tmp15 = tmp16;
-  const tmpResult5 = channel(13678);
+  const tmpResult5 = channel(13692);
 }) : (function NotificationBody(channel) {
   channel = channel.channel;
   const message = channel.message;
@@ -254,15 +254,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   const items1 = [ChannelStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
   const obj2 = channel(504);
-  const hasPreviewableMedia = channel(13678).useHasPreviewableMedia(message);
+  const hasPreviewableMedia = channel(13692).useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1108).ChannelTypes.DM;
   let num = 1;
   if (tmp6) {
     num = closure_8;
   }
-  obj3 = channel(13678);
+  obj3 = channel(13692);
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(13678).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(13692).getMessagePreviewTextVariant();
   if (!tmp6) {
     const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj4);
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
       const obj5 = { channel, message, color: "text-default", layout: tmp(5629).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
-      let tmp14 = closure_10(tmp(13689).ChannelRowPreview, obj5);
+      let tmp14 = closure_10(tmp(13703).ChannelRowPreview, obj5);
     }
     const obj6 = { children: null };
     items2[1] = tmp14;
@@ -280,7 +280,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   }
   tmp14 = closure_10(MessagePreviewTextDefault, { message, lineClamp: num, showMessageAuthor: true, maxHeight });
   const obj7 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
-  const tmpResult = channel(13678);
+  const tmpResult = channel(13692);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -345,7 +345,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const obj4 = { icon: tmp5, header: tmp8, onPress: tmp9, notification, rightAccessory: tmp10, children: tmp14 };
-      const tmp20 = closure_10(tmp(13715).NotificationPressable, obj4);
+      const tmp20 = closure_10(tmp(13729).NotificationPressable, obj4);
       cResult[11] = tmp5;
       cResult[12] = notification;
       cResult[13] = tmp9;
@@ -388,5 +388,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items);
   let obj = { user: notification.author, guildId: channel.guild_id };
   const tmp2 = closure_10(closure_15, { user: notification.author, guildId: channel.guild_id });
-  return closure_10(notification(13715).NotificationPressable, { icon: closure_10(closure_15, { user: notification.author, guildId: channel.guild_id }), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(closure_17, { channel, message }) });
+  return closure_10(notification(13729).NotificationPressable, { icon: closure_10(closure_15, { user: notification.author, guildId: channel.guild_id }), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(closure_17, { channel, message }) });
 }));

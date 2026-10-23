@@ -1,12 +1,12 @@
-// === Module 18342: useExternalPipParticipant ===
+// === Module 18364: useExternalPipParticipant ===
 
-// Module 18342 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 10870 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18343 */;
+// Module 18364 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 10878 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18365 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 14987 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15000 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
@@ -44,7 +44,7 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
   }
 }
 const ParticipantTypes = fn(5618).ParticipantTypes;
-const VoicePanelModes = fn(10865).VoicePanelModes;
+const VoicePanelModes = fn(10873).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
   const cResult = selectedParticipantStreamId(576).c(3);

@@ -1,11 +1,11 @@
-// === Module 9276: GameProfileRankPill ===
+// === Module 9283: GameProfileRankPill ===
 
-// Module 9276 (GameProfileRankPill)
+// Module 9283 (GameProfileRankPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import TrophyIcon from "TrophyIcon" /* 9277 */;
+import TrophyIcon from "TrophyIcon" /* 9284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

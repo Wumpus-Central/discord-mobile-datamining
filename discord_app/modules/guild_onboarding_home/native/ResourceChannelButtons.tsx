@@ -1,8 +1,8 @@
-// === Module 13086: ResourceChannelButtons ===
+// === Module 13102: ResourceChannelButtons ===
 
-// Module 13086 (ResourceChannelButtons)
+// Module 13102 (ResourceChannelButtons)
 import nativeDefault from "native" /* 587 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13088 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 6820: transitionToMemberVerification ===
+// === Module 6819: transitionToMemberVerification ===
 
-// Module 6820 (transitionToMemberVerification)
+// Module 6819 (transitionToMemberVerification)
 import router_utils from "router_utils" /* 1114 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6821 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6857 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6820 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6856 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
 

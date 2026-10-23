@@ -1,12 +1,12 @@
-// === Module 18248: RestrictedMessageRequestPreview ===
+// === Module 18270: RestrictedMessageRequestPreview ===
 
-// Module 18248 (RestrictedMessageRequestPreview)
+// Module 18270 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13451 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import MessageStore from "MessageStore" /* 5996 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -359,13 +359,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(18249), obj6), , ];
+      const items9 = [closure_10(tmp2(18271), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(18251), obj7);
+      items9[1] = closure_10(tmp2(18273), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(13477), obj8);
+        tmp19Result = closure_10(tmp2(13491), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(13269), obj11);
+      obj9.children = closure_10(tmp2(13283), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

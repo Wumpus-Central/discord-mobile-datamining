@@ -1,15 +1,15 @@
-// === Module 17919: GuildSettingsModalMembersWithTabs ===
+// === Module 17941: GuildSettingsModalMembersWithTabs ===
 
-// Module 17919 (GuildSettingsModalMembersWithTabs)
+// Module 17941 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7349 */;
-import ContextMenu from "ContextMenu" /* 9731 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 17920 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17921 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 17923 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 17928 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7350 */;
+import ContextMenu from "ContextMenu" /* 9738 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 17942 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17943 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 17945 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 17950 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -485,12 +485,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return closure_2_11(ContextMenu.ContextMenu, {
               items: membersManagementActions,
               children(ref) {
-                const obj = { source: closure_1_1(9001), accessibilityLabel: null, ref: null };
+                const obj = { source: closure_1_1(9008), accessibilityLabel: null, ref: null };
                 const intl = guildId(1128).intl;
                 obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
                 obj.ref = ref.ref;
                 const merged = Object.assign(navigation(ref, stateFromStores1));
-                return closure_1_11(guildId(7469).HeaderActionButton, obj);
+                return closure_1_11(guildId(7470).HeaderActionButton, obj);
               }
             });
           };
@@ -602,12 +602,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9001), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9008), accessibilityLabel: null, ref: null };
         const intl = guildId(1128).intl;
         obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_11(guildId(7469).HeaderActionButton, obj);
+        return closure_1_11(guildId(7470).HeaderActionButton, obj);
       }
     });
   }, items5);

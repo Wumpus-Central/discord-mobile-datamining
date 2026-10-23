@@ -1,9 +1,9 @@
-// === Module 13675: setUserStatus ===
+// === Module 13689: setUserStatus ===
 
-// Module 13675 (setUserStatus)
+// Module 13689 (setUserStatus)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7197 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6484 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7196 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
 
 const require = fn;
 let closure_7 = async function _setUserStatus() {
@@ -40,7 +40,7 @@ let closure_7 = async function _setUserStatus() {
       const obj2 = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1128).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(13676).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(13690).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1128).intl;

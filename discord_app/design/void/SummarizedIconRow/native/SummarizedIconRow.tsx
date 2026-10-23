@@ -1,6 +1,6 @@
-// === Module 15339: SummarizedIconRow ===
+// === Module 15352: SummarizedIconRow ===
 
-// Module 15339 (SummarizedIconRow)
+// Module 15352 (SummarizedIconRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;

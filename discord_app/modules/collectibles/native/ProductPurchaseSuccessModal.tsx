@@ -1,6 +1,6 @@
-// === Module 13883: ProductPurchaseSuccessModal ===
+// === Module 13897: ProductPurchaseSuccessModal ===
 
-// Module 13883 (ProductPurchaseSuccessModal)
+// Module 13897 (ProductPurchaseSuccessModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,17 +12,17 @@ import spring from "spring" /* 5233 */;
 import useToken from "useToken" /* 5238 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import XSmallIcon from "XSmallIcon" /* 6917 */;
-import _mod6919 from "module_6919" /* 6919 */;
-import tinycolorDefault from "tinycolor" /* 7644 */;
-import useCurrentUser from "useCurrentUser" /* 8640 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9359 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9372 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11019 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11137 */;
-import NameplatePreview from "NameplatePreview" /* 11138 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 13882 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 13884 */;
+import XSmallIcon from "XSmallIcon" /* 6916 */;
+import _mod6918 from "module_6918" /* 6918 */;
+import tinycolorDefault from "tinycolor" /* 7645 */;
+import useCurrentUser from "useCurrentUser" /* 8647 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9366 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9379 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11028 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11146 */;
+import NameplatePreview from "NameplatePreview" /* 11147 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 13896 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 13898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
@@ -138,7 +138,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cancel
       return tmp10;
     }
     const obj2 = { onPress: tmp5, backImage: tmp6, accessibilityLabel: tmp8, displayMode: "minimal" };
-    const tmp12 = closure_11(tmp(6919).HeaderBackButton, obj2);
+    const tmp12 = closure_11(tmp(6918).HeaderBackButton, obj2);
     cResult[6] = tmp5;
     cResult[7] = tmp6;
     cResult[8] = tmp12;
@@ -178,7 +178,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cancel
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_11(_mod6919.HeaderBackButton, obj);
+  return closure_11(_mod6918.HeaderBackButton, obj);
 });
 let c17 = 200;
 const __initData = { code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}" };
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
     tmp6 = orbBalancePriorToPurchase;
   }
   const currentUser = useCurrentUser.useCurrentUser();
-  const backgroundColors = currentUser(13884)(product.styles).backgroundColors;
+  const backgroundColors = currentUser(13898)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         _undefined.current = [];
       };
     }, items);
-    const avatarDecorationPreviewSizes = tmp(13886).useAvatarDecorationPreviewSizes();
+    const avatarDecorationPreviewSizes = tmp(13900).useAvatarDecorationPreviewSizes();
     ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -605,7 +605,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
     } else {
       [tmp16, tmp17] = cResult;
     }
-    const tmpResult10 = tmp(13886);
+    const tmpResult10 = tmp(13900);
     const stateFromStores = tmp(504).useStateFromStores(tmp16, N);
     let tmp20 = product.type === tmp(1995).CollectiblesItemType.PROFILE_EFFECT;
     if (!tmp20) {
@@ -614,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
     const tmpResult11 = tmp(504);
     ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_24(stateFromStores, tmp20));
     const tmp22 = closure_24(stateFromStores, tmp20);
-    const category = tmp(13887).useFetchCollectiblesProductCategory(product.skuId).category;
+    const category = tmp(13901).useFetchCollectiblesProductCategory(product.skuId).category;
     if (category != null) {
       let imageBackground = category.mobileBgUrl;
     }
@@ -624,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         if (cResult[4] === stageCollectibleChangeForEditProfile) {
           let tmp25 = cResult[5];
         }
-        const handleUseNow = tmp(11146).useHandleUseNow(tmp25);
+        const handleUseNow = tmp(11155).useHandleUseNow(tmp25);
         class N {
           constructor() {
             return closure_8.useReducedMotion;
@@ -636,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
             let tmp28 = cResult[8];
           }
           let avatarSource = tmp28;
-          tmp(9420);
+          tmp(9427);
           class N {
             constructor() {
               return closure_8.useReducedMotion;
@@ -664,7 +664,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
             tmp33 = cResult[10];
           }
           const effect1 = obj5.useEffect(tmp32, tmp33);
-          const shopProductItems = tmp(8633).useShopProductItems(product);
+          const shopProductItems = tmp(8640).useShopProductItems(product);
           const tmp23Result = avatarDecorationSize(obj5.useState(), 2);
           first1 = tmp23Result[0];
           closure_9 = tmp23Result[1];
@@ -861,7 +861,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
                                                                                     tmp98[0] = tmp48;
                                                                                     const items5 = [tmp61, tmp81, tmp93];
                                                                                     tmp98[5] = items5;
-                                                                                    const tmp99 = closure_12(tmp(7207).SafeAreaPaddingView, tmp98);
+                                                                                    const tmp99 = closure_12(tmp(7206).SafeAreaPaddingView, tmp98);
                                                                                     cResult[85] = tmp48;
                                                                                     cResult[86] = tmp61;
                                                                                     cResult[87] = tmp81;
@@ -972,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
                                                               tmp110[3] = intl2.format(tmp(1128).t.YNaxMp, obj9);
                                                               const items7 = [closure_11(tmp(5220).Text, tmp110), ];
                                                               const obj10 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp9.title, children: null };
-                                                              let result = tmp(7646).isPremiumCollectiblesProduct(product);
+                                                              let result = tmp(7647).isPremiumCollectiblesProduct(product);
                                                               const intl3 = tmp(1128).intl;
                                                               const format = intl3.format;
                                                               const t = tmp(1128).t;
@@ -988,7 +988,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
                                                               items7[1] = closure_11(tmp(5220).Text, obj10);
                                                               obj13.children = items7;
                                                               renderMessagesResult = closure_12(closure_13, obj13);
-                                                              const tmpResult16 = tmp(7646);
+                                                              const tmpResult16 = tmp(7647);
                                                             }
                                                             class N {
                                                               constructor() {
@@ -1187,14 +1187,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
           cResult[22] = tmp28;
           cResult[23] = renderProduct;
           tmp39 = renderProduct;
-          const tmpResult15 = tmp(8633);
+          const tmpResult15 = tmp(8640);
         }
         avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
         cResult[6] = avatarSize;
         cResult[7] = currentUser;
         cResult[8] = avatarSource;
         tmp28 = avatarSource;
-        const tmpResult13 = tmp(11146);
+        const tmpResult13 = tmp(11155);
       }
     }
     const obj21 = { product, onSuccess, stageCollectibleChangeForEditProfile };
@@ -1203,7 +1203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
     cResult[4] = stageCollectibleChangeForEditProfile;
     cResult[5] = obj21;
     tmp25 = obj21;
-    const tmpResult12 = tmp(13887);
+    const tmpResult12 = tmp(13901);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -1260,9 +1260,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         _undefined.current = [];
       };
     }, items);
-    const avatarDecorationPreviewSizes = tmp2(13886).useAvatarDecorationPreviewSizes();
+    const avatarDecorationPreviewSizes = tmp2(13900).useAvatarDecorationPreviewSizes();
     ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
-    const tmp2Result8 = tmp2(13886);
+    const tmp2Result8 = tmp2(13900);
     const items1 = [AccessibilityStore];
     const stateFromStores = tmp2(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
     let tmp15 = product.type === tmp2(1995).CollectiblesItemType.PROFILE_EFFECT;
@@ -1272,26 +1272,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
     const tmp2Result9 = tmp2(504);
     ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_24(stateFromStores, tmp15));
     const tmp17 = closure_24(stateFromStores, tmp15);
-    const category = tmp2(13887).useFetchCollectiblesProductCategory(product.skuId).category;
+    const category = tmp2(13901).useFetchCollectiblesProductCategory(product.skuId).category;
     if (category != null) {
       const mobileBgUrl = category.mobileBgUrl;
     }
-    const tmp2Result10 = tmp2(13887);
+    const tmp2Result10 = tmp2(13901);
     let obj2 = { product, onSuccess, stageCollectibleChangeForEditProfile: orbBalancePriorToPurchase.stageCollectibleChangeForEditProfile };
-    const handleUseNow1 = tmp2(11146).useHandleUseNow(obj2);
+    const handleUseNow1 = tmp2(11155).useHandleUseNow(obj2);
     const isApplying = handleUseNow1.isApplying;
     ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow1);
     const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
-    const tmp2Result11 = tmp2(11146);
+    const tmp2Result11 = tmp2(11155);
     const effect1 = noop.useEffect(() => {
       _undefined(dependencyMap[30]).lockOrientation(constants.PORTRAIT);
       return () => {
         const result = _undefined(closure_1_2[30]).restoreDefaultOrientation();
       };
     }, []);
-    const tmp2Result12 = tmp2(9420);
-    const shopProductItems = tmp2(8633).useShopProductItems(product);
-    const tmp2Result13 = tmp2(8633);
+    const tmp2Result12 = tmp2(9427);
+    const shopProductItems = tmp2(8640).useShopProductItems(product);
+    const tmp2Result13 = tmp2(8640);
     [tmp24, c0] = noop.useState();
     const obj4 = { style: tmp6.root, id: product.skuId, children: null };
     if (useCategoryImage) {
@@ -1318,7 +1318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
       const obj9 = { style: tmp6.headerLeading, children: null };
       if (showOrbBalancePill) {
         const obj10 = { initialRenderedBalance: prop, balance: tmp2Result12.useFetchVirtualCurrencyBalance().balance };
-        showOrbBalancePill = tmp32(tmp2(13888).BalanceWidgetPill, obj10);
+        showOrbBalancePill = tmp32(tmp2(13902).BalanceWidgetPill, obj10);
       }
       obj9.children = showOrbBalancePill;
       const items4 = [tmp32(closure_7, obj9), ];
@@ -1364,7 +1364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         tmp31Result2 = null;
         if (tmp2(1995).CollectiblesItemType.NAMEPLATE === type) {
           const obj19 = { user: currentUser, nameplate: product.items[0], animate: true };
-          tmp31Result2 = tmp31(tmp2(11138).NameplatePreview, obj19);
+          tmp31Result2 = tmp31(tmp2(11147).NameplatePreview, obj19);
         }
       }
       obj13.children = tmp31Result2;
@@ -1381,7 +1381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         obj21.children = intl3.format(tmp2(1128).t.YNaxMp, obj22);
         const items9 = [tmp32(tmp2(5220).Text, obj21), ];
         const obj23 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-        let result = tmp2(7646).isPremiumCollectiblesProduct(product);
+        let result = tmp2(7647).isPremiumCollectiblesProduct(product);
         const intl4 = tmp2(1128).intl;
         const format = intl4.format;
         const t = tmp2(1128).t;
@@ -1397,7 +1397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
         items9[1] = tmp32(tmp2(5220).Text, obj23);
         obj26.children = items9;
         renderMessagesResult = closure_12(closure_13, obj26);
-        const tmp2Result14 = tmp2(7646);
+        const tmp2Result14 = tmp2(7647);
       }
       obj20.children = renderMessagesResult;
       items7[1] = tmp32(ReanimatedRexportDefault.View, obj20);
@@ -1419,7 +1419,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductP
       obj28.children = tmp32(closure_7, obj29);
       items5[2] = tmp32(closure_7, obj28);
       rect.children = items5;
-      items2[1] = closure_12(tmp2(7207).SafeAreaPaddingView, rect);
+      items2[1] = closure_12(tmp2(7206).SafeAreaPaddingView, rect);
       const obj32 = { style: null, pointerEvents: "none" };
       const items10 = [tmp6.curtain, curtainViewStyle];
       obj32.style = items10;

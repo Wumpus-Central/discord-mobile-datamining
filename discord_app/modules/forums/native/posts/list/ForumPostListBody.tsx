@@ -1,19 +1,19 @@
-// === Module 13039: ForumPostListBody ===
+// === Module 13055: ForumPostListBody ===
 
-// Module 13039 (ForumPostListBody)
+// Module 13055 (ForumPostListBody)
 import c from "c" /* 576 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7363 */;
-import ForumPostUsername from "ForumPostUsername" /* 13021 */;
-import ForumPostMedia from "ForumPostMedia" /* 13026 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 13031 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 13032 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 13033 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 13040 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7364 */;
+import ForumPostUsername from "ForumPostUsername" /* 13037 */;
+import ForumPostMedia from "ForumPostMedia" /* 13042 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 13047 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 13048 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 13049 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 13056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7364).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7365).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);

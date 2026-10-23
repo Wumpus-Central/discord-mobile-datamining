@@ -1,6 +1,6 @@
-// === Module 13805: useConjureAppChannelSheet ===
+// === Module 13819: useConjureAppChannelSheet ===
 
-// Module 13805 (useConjureAppChannelSheet)
+// Module 13819 (useConjureAppChannelSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,9 +8,9 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import UserUtils from "UserUtils" /* 5018 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13806 */;
+import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13820 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (arg1) {
     tmp5 = guild_id;
   }
-  const appChannelApplication = guild_id(7330).useAppChannelApplication(tmp5);
+  const appChannelApplication = guild_id(7331).useAppChannelApplication(tmp5);
   let tmp7 = null;
   if (arg1) {
     let conjureProjectId;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  const tmpResult = guild_id(7330);
+  const tmpResult = guild_id(7331);
   const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
   let tmp16 = null != tmp7;
   const tmpResult3 = guild_id(504);

@@ -1,16 +1,16 @@
-// === Module 18624: RestrictedHoursModal ===
+// === Module 18646: RestrictedHoursModal ===
 
-// Module 18624 (RestrictedHoursModal)
+// Module 18646 (RestrictedHoursModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5959 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6654 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6866 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 18623 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 18627 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5958 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6653 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6865 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 18645 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 18649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -709,7 +709,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScr
       let tmp4 = cResult[2];
       let tmp5 = cResult[3];
     }
-    return tmp(7081).useNavigatorScreens(tmp4, tmp5);
+    return tmp(7080).useNavigatorScreens(tmp4, tmp5);
   }
   const fn = function o() {
     return {

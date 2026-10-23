@@ -1,23 +1,23 @@
-// === Module 6977: TrafficConeSpotIllustration ===
+// === Module 6976: TrafficConeSpotIllustration ===
 
-// Module 6977 (TrafficConeSpotIllustration)
+// Module 6976 (TrafficConeSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
+import _modDef6977 from "module_6977" /* 6977 */;
 import _modDef6978 from "module_6978" /* 6978 */;
 import _modDef6979 from "module_6979" /* 6979 */;
-import _modDef6980 from "module_6980" /* 6980 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef6978 }, 3: null };
-let obj2 = { uri: _modDef6978 };
-obj[2] = { uri: _modDef6979 };
-const obj3 = { uri: _modDef6979 };
-obj[3] = { uri: _modDef6980 };
+let obj = { 1: null, 2: { uri: _modDef6977 }, 3: null };
+let obj2 = { uri: _modDef6977 };
+obj[2] = { uri: _modDef6978 };
+const obj3 = { uri: _modDef6978 };
+obj[3] = { uri: _modDef6979 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef6980 };
+const obj4 = { uri: _modDef6979 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");
 

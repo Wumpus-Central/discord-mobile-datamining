@@ -1,12 +1,12 @@
-// === Module 7232: BottomSheetTitleHeader ===
+// === Module 7233: BottomSheetTitleHeader ===
 
-// Module 7232 (BottomSheetTitleHeader)
+// Module 7233 (BottomSheetTitleHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useToken from "useToken" /* 5238 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6911 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

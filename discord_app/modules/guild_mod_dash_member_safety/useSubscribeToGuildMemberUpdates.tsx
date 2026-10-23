@@ -1,7 +1,7 @@
-// === Module 17922: useSubscribeToGuildMemberUpdates ===
+// === Module 17944: useSubscribeToGuildMemberUpdates ===
 
-// Module 17922 (useSubscribeToGuildMemberUpdates)
-import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 7361 */;
+// Module 17944 (useSubscribeToGuildMemberUpdates)
+import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 7362 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

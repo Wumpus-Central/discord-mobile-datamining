@@ -1,16 +1,16 @@
-// === Module 15672: guilds ===
+// === Module 15685: guilds ===
 
-// Module 15672 (guilds)
+// Module 15685 (guilds)
 import GuildRecord from "GuildRecord" /* 4839 */;
-import Constants2 from "Constants" /* 6364 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8795 */;
-import RPCErrorDefault from "RPCError" /* 9233 */;
-import botScopedAccess from "botScopedAccess" /* 9236 */;
-import RPCHelpers from "RPCHelpers" /* 11424 */;
+import Constants2 from "Constants" /* 6363 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8802 */;
+import RPCErrorDefault from "RPCError" /* 9240 */;
+import botScopedAccess from "botScopedAccess" /* 9243 */;
+import RPCHelpers from "RPCHelpers" /* 11435 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import Constants from "Constants" /* 1087 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15665 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15678 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;

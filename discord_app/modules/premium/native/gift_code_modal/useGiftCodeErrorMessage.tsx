@@ -1,9 +1,9 @@
-// === Module 11010: useGiftCodeErrorMessage ===
+// === Module 11019: useGiftCodeErrorMessage ===
 
-// Module 11010 (useGiftCodeErrorMessage)
+// Module 11019 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7649 */;
-import GiftCodeStore from "GiftCodeStore" /* 10999 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7650 */;
+import GiftCodeStore from "GiftCodeStore" /* 11008 */;
 
 const require = globalThis.__r;
 

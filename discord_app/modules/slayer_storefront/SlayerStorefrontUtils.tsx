@@ -1,17 +1,17 @@
-// === Module 7314: SlayerStorefrontUtils ===
+// === Module 7315: SlayerStorefrontUtils ===
 
-// Module 7314 (SlayerStorefrontUtils)
+// Module 7315 (SlayerStorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import StoreUtils from "StoreUtils" /* 6369 */;
-import keysSorter from "keysSorter" /* 6708 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7318 */;
-import StorefrontUtils from "StorefrontUtils" /* 7319 */;
+import StoreUtils from "StoreUtils" /* 6368 */;
+import keysSorter from "keysSorter" /* 6707 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7319 */;
+import StorefrontUtils from "StorefrontUtils" /* 7320 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7316 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7317 */;
 
 const require = globalThis.__r;
 
@@ -54,17 +54,26 @@ function hasSocialLayerStorefront(guild) {
   }
 }
 function transformRewardRequirementServer(type) {
-  let tmp = null;
-  if (type.type === SocialLayerStorefrontTypes.RewardRequirementType.SUBSCRIPTION) {
-    const obj = { type: null, planIds: null, progress: null };
-    ({ type: obj.type, plan_ids: obj.planIds, progress } = type);
+  type = type.type;
+  if (SocialLayerStorefrontTypes.RewardRequirementType.SUBSCRIPTION === type) {
+    const obj3 = { type: null, planIds: null, progress: null };
+    ({ type: obj2.type, plan_ids: obj2.planIds, progress: progress2 } = type);
+    if (progress2 == null) {
+      progress2 = null;
+    }
+    obj3.progress = progress2;
+    return obj3;
+  } else if (SocialLayerStorefrontTypes.RewardRequirementType.OWNS_MIN_SKUS === type) {
+    const obj = { type: null, applicationId: null, skuIds: null, minCount: null, progress: null };
+    ({ type: obj.type, application_id: obj.applicationId, sku_ids: obj.skuIds, min_count: obj.minCount, progress } = type);
     if (progress == null) {
       progress = null;
     }
     obj.progress = progress;
-    tmp = obj;
+    return obj;
+  } else {
+    return null;
   }
-  return tmp;
 }
 function transformSlayerStorefrontPromotionServer(id) {
   const obj = { id: id.id, endsAt: null, flavor: null, pdp: null, storefront: null, checkout: null, vcStream: null, rewardRequirements: null };
@@ -141,14 +150,14 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7315).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7317);
+let closure_4 = fn(7316).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7318);
 ({ getChannelsGameShopPrefix: closure_9, STOREFRONT_MARKETING_GUILD_ID: c10, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_11 } = SocialLayerStorefrontConstants);
 const Constants = fn(1087);
 ({ GuildFeatures: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
 const CollectibleShopTab = fn(1089).CollectibleShopTab;
 let str = "jpg";
-if (fn(6369).SUPPORTS_WEBP) {
+if (fn(6368).SUPPORTS_WEBP) {
   str = "webp";
 }
 fn(558);
@@ -330,6 +339,9 @@ export const transformStorefrontMetadataServer = function transformStorefrontMet
   return obj;
 };
 export { getRequiredSubscriptionPlanIds };
+export const isOwnsMinSkusRewardRequirement = function isOwnsMinSkusRewardRequirement(type) {
+  return type.type === SocialLayerStorefrontTypes.RewardRequirementType.OWNS_MIN_SKUS;
+};
 export const getRewardRequirementPlanTargetingParams = function getRewardRequirementPlanTargetingParams(arr) {
   const found = arr.find(isSubscriptionRewardRequirement);
   let planIds = null;
@@ -450,7 +462,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "r", primaryIconLabel: "emoji" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "Reflect" };
         } else {
           const obj3 = StoreUtils;
           obj4 = { primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp")), primaryIconLabel: first.label };
@@ -460,7 +472,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "r", primaryIconLabel: "emoji" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "Reflect" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

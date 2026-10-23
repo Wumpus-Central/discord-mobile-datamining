@@ -1,6 +1,6 @@
-// === Module 12377: ConjureDuration ===
+// === Module 11833: ConjureDuration ===
 
-// Module 12377 (ConjureDuration)
+// Module 11833 (ConjureDuration)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import size from "module_2" /* 2 */;
@@ -55,12 +55,12 @@ export const describeTurnDuration = function describeTurnDuration(durationMs) {
     return formatToPlainStringResult;
   }
 };
-export const formatElapsed = function formatElapsed(conjureElapsedMs) {
+export const formatElapsed = function formatElapsed(formatElapsedResult2) {
   let num = 0;
-  if (Number.isFinite(conjureElapsedMs)) {
+  if (Number.isFinite(formatElapsedResult2)) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.max(0, Math.floor(conjureElapsedMs / 1000));
+    num = Math.max(0, Math.floor(formatElapsedResult2 / 1000));
   }
   const rounded = Math.floor(num / 3600);
   const result = Math.floor(num / 60) % 60;

@@ -1,17 +1,17 @@
-// === Module 10174: ApplicationCommandQueryApi ===
+// === Module 10181: ApplicationCommandQueryApi ===
 
-// Module 10174 (ApplicationCommandQueryApi)
+// Module 10181 (ApplicationCommandQueryApi)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7614 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9625 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9627 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 10175 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7615 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9632 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9634 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 10182 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9619 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9626 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -55,10 +55,10 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9619);
+let ApplicationCommandIndexStore = fn(9626);
 ({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5970).BuiltInSectionId;
+const BuiltInSectionId = fn(5969).BuiltInSectionId;
 const NOOP = fn(1087).NOOP;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -240,7 +240,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscovery
               cResult[33] = items3;
               tmp37 = items3;
             } else {
-              const tmp53 = tmp(9627).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+              const tmp53 = tmp(9634).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
               const _Symbol2 = Symbol;
               if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                 const items4 = [tmp53];
@@ -825,7 +825,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "guild", command: "ix", section: "Reflect" };
+    return { application: "toCharArray$esjava$1", command: "test", section: "ix" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -872,7 +872,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "guild", command: "ix", section: "Reflect" };
+    return { application: "toCharArray$esjava$1", command: "test", section: "ix" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -1013,7 +1013,7 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "r", application: "emoji" };
+    return { command: "Array", application: "Reflect" };
   }, items);
 };
 export const useCommandsForApplication = tmp6;

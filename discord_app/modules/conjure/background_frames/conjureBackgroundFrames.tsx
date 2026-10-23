@@ -1,16 +1,16 @@
-// === Module 17944: conjureBackgroundFrames ===
+// === Module 17966: conjureBackgroundFrames ===
 
-// Module 17944 (conjureBackgroundFrames)
+// Module 17966 (conjureBackgroundFrames)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6764 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10698 */;
-import leaveFrame from "leaveFrame" /* 10735 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15649 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 17945 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 17947 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6763 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10705 */;
+import leaveFrame from "leaveFrame" /* 10742 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10743 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15662 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 17967 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 17969 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6761 */;
+import FramesStore from "FramesStore" /* 6760 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 const require = globalThis.__r;
@@ -20,6 +20,13 @@ function releaseConjureFrame(frameId) {
   const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
     let result = conjureBackgroundFrameRules.shouldRunInBackgroundOnRelease(frame);
+    if (result) {
+      result = !conjureBackgroundFrameRules.isBuilderPreviewFrame(frame);
+      const tmp13Result = conjureBackgroundFrameRules;
+    }
+    if (result) {
+      result = !conjureBackgroundFramePlatformDefault.hasOwnPictureInPicture(frame);
+    }
     if (result) {
       result = !conjureBackgroundFramePlatformDefault.isInHostWindow(frame);
     }
@@ -91,7 +98,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

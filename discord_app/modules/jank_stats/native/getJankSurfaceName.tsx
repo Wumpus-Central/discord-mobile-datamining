@@ -1,8 +1,8 @@
-// === Module 17335: getJankSurfaceName ===
+// === Module 17357: getJankSurfaceName ===
 
-// Module 17335 (getJankSurfaceName)
-import getJankScreenName from "getJankScreenName" /* 17330 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17334 */;
+// Module 17357 (getJankSurfaceName)
+import getJankScreenName from "getJankScreenName" /* 17352 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17356 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5197 */;
 
@@ -85,7 +85,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17331);
+const JankScreenConstants = fn(17353);
 ({ CHANNEL_DETAILS_SCREEN: hasOwnProperty, INTERACTION_NONE: metroRequire, PANEL_SURFACE: closure_7, SHEET_SURFACE: closure_8 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);
 const main = "main";
@@ -179,16 +179,21 @@ export const attachJankActionSheetReporter = function attachJankActionSheetRepor
   if (!c15) {
     c15 = true;
     ActionSheetStore.getStack().length;
+    let stack = ActionSheetStore.getStack();
+    importDefault = stack.at(-1);
     ActionSheetStore.addChangeListener(() => {
-      length = ActionSheetStore.getStack().length;
-      const tmp2 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-      const obj = NativeJankSessionModuleDefault;
-      if (tmp) {
-        obj.surfaceClosed(tmp2);
-      } else {
-        obj.setScreenContext(tmp2, timestampProducer);
+      const stack = ActionSheetStore.getStack();
+      if (stack.length !== length) {
+        const tmp8 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+        const obj = NativeJankSessionModuleDefault;
+        if (tmp4) {
+          obj.surfaceClosed(tmp8);
+        } else {
+          obj.setScreenContext(tmp8, timestampProducer);
+        }
+        tmp4 = stack.length < stack.length;
       }
-      tmp = length < length;
+      atResult = stack.at(-1);
     });
   }
 };

@@ -1,18 +1,18 @@
-// === Module 17589: useGuildActionRows ===
+// === Module 17611: useGuildActionRows ===
 
-// Module 17589 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 7310 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13186 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13356 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17551 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 17590 */;
+// Module 17611 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 7311 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13202 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13370 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17573 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 17612 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7309 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7310 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7627).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7628).ChannelListGuildActionRow;
 const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         if (premiumProgressBarEnabled) {
           items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
         }
-        tmpResult18 = tmp(7480);
+        tmpResult18 = tmp(7481);
       }
     }
   }

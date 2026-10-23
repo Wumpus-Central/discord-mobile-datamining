@@ -1,6 +1,6 @@
-// === Module 11271: ChannelMembersActionSheet ===
+// === Module 11280: ChannelMembersActionSheet ===
 
-// Module 11271 (ChannelMembersActionSheet)
+// Module 11280 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,18 +10,18 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196
 import Text_Text from "Text/Text" /* 5220 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
 import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import Pressables from "Pressables" /* 6894 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
-import SettingsIcon from "SettingsIcon" /* 7472 */;
-import InlineNotice from "InlineNotice" /* 7937 */;
-import RowButton from "RowButton" /* 8921 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8941 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8958 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10063 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10824 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11270 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11272 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11273 */;
+import Pressables from "Pressables" /* 6893 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
+import SettingsIcon from "SettingsIcon" /* 7473 */;
+import InlineNotice from "InlineNotice" /* 7938 */;
+import RowButton from "RowButton" /* 8928 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8948 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8965 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10070 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10832 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11279 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11281 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11282 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelM
   navigation = channelId(1505).useNavigation();
   tmp5(5590)(stateFromStores);
   const tmpResult7 = channelId(1505);
-  const appChannelBotUserId = channelId(11272).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11281).useAppChannelBotUserId(stateFromStores);
   if (null != stateFromStores) {
     class B {
       constructor() {

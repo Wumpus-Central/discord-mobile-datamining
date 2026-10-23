@@ -1,6 +1,6 @@
-// === Module 9901: PremiumFeatureUpsell ===
+// === Module 9908: PremiumFeatureUpsell ===
 
-// Module 9901 (PremiumFeatureUpsell)
+// Module 9908 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
@@ -10,9 +10,9 @@ import PremiumUtils from "PremiumUtils" /* 2053 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9649 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9652 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9656 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9659 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
@@ -54,7 +54,7 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Gradients = fn(7528).Gradients;
+const Gradients = fn(7529).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4969);

@@ -1,13 +1,13 @@
-// === Module 5865: StreamQualityUtils ===
+// === Module 5864: StreamQualityUtils ===
 
-// Module 5865 (StreamQualityUtils)
+// Module 5864 (StreamQualityUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5867 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5866 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5866 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5865 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;

@@ -1,8 +1,8 @@
-// === Module 13386: useGuildPowerupOnDeactivate ===
+// === Module 13400: useGuildPowerupOnDeactivate ===
 
-// Module 13386 (useGuildPowerupOnDeactivate)
+// Module 13400 (useGuildPowerupOnDeactivate)
 import c from "c" /* 576 */;
-import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 13381 */;
+import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 13395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 12861: DestinationFailedAlertModal ===
+// === Module 12879: DestinationFailedAlertModal ===
 
-// Module 12861 (DestinationFailedAlertModal)
+// Module 12879 (DestinationFailedAlertModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
-import AlertModal from "AlertModal" /* 5901 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
+import AlertModal from "AlertModal" /* 5900 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -152,7 +152,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
       }
     }
     tmp16[0] = tmp4.row;
-    const obj2 = { user, guildId: "Boolean", status: true, isMobileOnline: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isVROnline: null, size: "e0e5859330a31dbc4e68b866e0944f32", avatarDecoration: "it.messages.e0e5859330a31dbc4e68b866e0944f32.compiled.messages", autoStatusCutout: "jsona" };
+    const obj2 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: null };
     if (StatusTypes.OFFLINE !== status) {
       class A {
         constructor() {
@@ -203,7 +203,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isVROnline: null, size: "e0e5859330a31dbc4e68b866e0944f32", avatarDecoration: "it.messages.e0e5859330a31dbc4e68b866e0944f32.compiled.messages", autoStatusCutout: "jsona" };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: null };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -296,12 +296,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
     tmp14 = tmp16;
   }
   const tmpResult = channel(504);
-  const tmp13 = closure_10(channel(12862).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32 });
+  const tmp13 = closure_10(channel(12880).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32 });
   cResult[3] = channel;
   cResult[4] = stateFromStores;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32 };
 }) : (function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
@@ -316,7 +316,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(12862).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5220).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(12880).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5220).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 });

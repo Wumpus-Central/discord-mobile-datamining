@@ -1,23 +1,23 @@
-// === Module 18261: SuspendedUserPage ===
+// === Module 18283: SuspendedUserPage ===
 
-// Module 18261 (SuspendedUserPage)
+// Module 18283 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinkingDefault from "Linking" /* 5646 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6654 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
-import IconButton from "IconButton" /* 7943 */;
-import _modDef8099 from "module_8099" /* 8099 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 15951 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6653 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
+import IconButton from "IconButton" /* 7944 */;
+import _modDef8100 from "module_8100" /* 8100 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 15969 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7906 */;
+import SafetyHubStore from "SafetyHubStore" /* 7907 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7882);
+const SafetyHubConstants = fn(7883);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     const intl = util.intl;
     obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj4.onPress = tmp9;
-    obj4.icon = _modDef8099;
+    obj4.icon = _modDef8100;
     const items2 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = { style: tmp4.text, onPress: tmp10, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
     const intl2 = util.intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef8099;
+    obj4.icon = _modDef8100;
     const items1 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = {
       style: tmp.text,

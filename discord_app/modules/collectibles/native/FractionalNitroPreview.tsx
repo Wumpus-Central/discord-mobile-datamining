@@ -1,13 +1,13 @@
-// === Module 14390: FractionalNitroPreview ===
+// === Module 14404: FractionalNitroPreview ===
 
-// Module 14390 (FractionalNitroPreview)
+// Module 14404 (FractionalNitroPreview)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7216 */;
-import _modDef14391 from "module_14391" /* 14391 */;
-import NitroIconDefault from "NitroIcon" /* 14392 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7215 */;
+import _modDef14405 from "module_14405" /* 14405 */;
+import NitroIconDefault from "NitroIcon" /* 14406 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -44,7 +44,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     obj2.legacyCopy = intl3.string(tmp(1128).t.xT1Vfn);
     const intl4 = tmp(1128).intl;
     const obj3 = { maxFileSize: null };
-    const tmpResult = tmp(8131);
+    const tmpResult = tmp(8132);
     obj3.maxFileSize = tmp(2053).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
     obj2.rolloutCopy = intl4.formatToPlainString(tmp(1128).t.IDAfOy, obj3);
     items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
@@ -77,7 +77,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { uri: _modDef14391 };
+    const obj5 = { uri: _modDef14405 };
     cResult[4] = obj5;
     let tmp12 = obj5;
   } else {
@@ -181,7 +181,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef14391;
+  obj8.uri = _modDef14405;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

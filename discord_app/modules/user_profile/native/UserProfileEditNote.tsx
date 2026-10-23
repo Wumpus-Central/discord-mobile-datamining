@@ -1,8 +1,8 @@
-// === Module 14275: UserProfileEditNote ===
+// === Module 14289: UserProfileEditNote ===
 
-// Module 14275 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import NoteActionCreatorsDefault from "NoteActionCreators" /* 14276 */;
+// Module 14289 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import NoteActionCreatorsDefault from "NoteActionCreators" /* 14290 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -62,18 +62,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
             obj = { headerLeft: null, headerRight: null };
             obj2 = closure_0(closure_2[11]);
             obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(() => { ... }));
-            obj.headerRight = function headerRight(arg0) {
-              const obj = {};
-              const merged = Object.assign(arg0);
+            obj.headerRight = function headerRight() {
+              const obj = { text: null, disabled: null, onPress: null };
               const intl = userId(onClose[14]).intl;
-              obj.label = intl.string(userId(onClose[14]).t["R3BPH+"]);
+              obj.text = intl.string(userId(onClose[14]).t["R3BPH+"]);
               let str = note;
               if (note == null) {
                 str = "";
               }
               obj.disabled = str === first;
               obj.onPress = function onPress() { ... };
-              return closure_7(userId(onClose[13]).HeaderTextButton, obj);
+              return closure_7(userId(onClose[13]).HeaderActionButton, obj);
             };
             setOptionsResult = closure_4.setOptions(obj);
             return;
@@ -118,18 +117,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           obj = { headerLeft: null, headerRight: null };
           obj2 = closure_0(closure_2[11]);
           obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(() => { ... }));
-          obj.headerRight = function headerRight(arg0) {
-            const obj = {};
-            const merged = Object.assign(arg0);
+          obj.headerRight = function headerRight() {
+            const obj = { text: null, disabled: null, onPress: null };
             const intl = userId(onClose[14]).intl;
-            obj.label = intl.string(userId(onClose[14]).t["R3BPH+"]);
+            obj.text = intl.string(userId(onClose[14]).t["R3BPH+"]);
             let str = note;
             if (note == null) {
               str = "";
             }
             obj.disabled = str === first;
             obj.onPress = function onPress() { ... };
-            return closure_7(userId(onClose[13]).HeaderTextButton, obj);
+            return closure_7(userId(onClose[13]).HeaderActionButton, obj);
           };
           setOptionsResult = closure_4.setOptions(obj);
           return;
@@ -207,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(11035)({
+        closure_1_1(11044)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {
@@ -226,11 +224,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           onSave
         });
       })),
-      headerRight(arg0) {
-        const obj = {};
-        const merged = Object.assign(arg0);
+      headerRight() {
+        const obj = { text: null, disabled: null, onPress: null };
         const intl = userId(onClose[14]).intl;
-        obj.label = intl.string(userId(onClose[14]).t["R3BPH+"]);
+        obj.text = intl.string(userId(onClose[14]).t["R3BPH+"]);
         let str = note;
         if (note == null) {
           str = "";
@@ -242,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
             closure_1_2();
           }
         };
-        return closure_7(userId(onClose[13]).HeaderTextButton, obj);
+        return closure_7(userId(onClose[13]).HeaderActionButton, obj);
       }
     };
     navigation.setOptions(obj);

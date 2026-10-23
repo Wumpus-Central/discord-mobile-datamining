@@ -1,10 +1,10 @@
-// === Module 18831: PushNotificationCacheManager ===
+// === Module 18854: PushNotificationCacheManager ===
 
-// Module 18831 (PushNotificationCacheManager)
-import PushNotificationDefault from "PushNotification" /* 10723 */;
-import MultiAccountStore from "MultiAccountStore" /* 13233 */;
+// Module 18854 (PushNotificationCacheManager)
+import PushNotificationDefault from "PushNotification" /* 10730 */;
+import MultiAccountStore from "MultiAccountStore" /* 13249 */;
 import UserStore from "UserStore" /* 1392 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
 
 const prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,11 +26,11 @@ const prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(10723).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(10723);
+      applyArgumentsResult(10730).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(10730);
     } else {
-      applyArgumentsResult(10723).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(10723);
+      applyArgumentsResult(10730).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(10730);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
@@ -49,8 +49,8 @@ const prototype = function PushNotificationCacheManager() {
     } else {
       obj3 = {};
     }
-    obj4(10723).setMultiAccountUsers(obj3);
-    const obj = obj4(10723);
+    obj4(10730).setMultiAccountUsers(obj3);
+    const obj = obj4(10730);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
     const result = PushNotificationDefault.clearPushNotificationLogs();

@@ -1,16 +1,16 @@
-// === Module 14416: UnlockWithNitroButton ===
+// === Module 14430: UnlockWithNitroButton ===
 
-// Module 14416 (UnlockWithNitroButton)
+// Module 14430 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import BaseTextButton from "BaseTextButton" /* 5231 */;
-import ProductIds from "ProductIds" /* 7503 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14402 */;
+import ProductIds from "ProductIds" /* 7504 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14416 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7508 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7649 */;
+import IAPStore from "IAPStore" /* 7509 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7650 */;
 
 require = fn;
 const ShopCtaEnum = fn(1089).ShopCtaEnum;
@@ -65,7 +65,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp20 = jsx(onTrackPress(9394).NitroWheelIcon, { size: "sm", color: "white" });
+      const tmp20 = jsx(onTrackPress(9401).NitroWheelIcon, { size: "sm", color: "white" });
       cResult[7] = tmp20;
       let tmp18 = tmp20;
     } else {

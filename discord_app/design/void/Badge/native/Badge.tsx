@@ -1,13 +1,13 @@
-// === Module 15366: void/Badge/Badge ===
+// === Module 15379: Badge/Badge ===
 
-// Module 15366 (void/Badge/Badge)
+// Module 15379 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
 import shared from "shared" /* 4976 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8935 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8942 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 

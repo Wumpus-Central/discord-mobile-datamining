@@ -1,18 +1,19 @@
-// === Module 12946: TraitOptionItem ===
+// === Module 12965: TraitOptionItem ===
 
-// Module 12946 (TraitOptionItem)
+// Module 12965 (TraitOptionItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6003 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6348 */;
-import _modDef6952 from "module_6952" /* 6952 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6002 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6025 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6347 */;
+import _modDef6951 from "module_6951" /* 6951 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6002 */;
+import CheckpointConstants from "CheckpointConstants" /* 6001 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -70,7 +71,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
         return tmp23;
       }
       const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-      const tmp26 = closure_1_11(_modDef6952, obj3);
+      const tmp26 = closure_1_11(_modDef6951, obj3);
       cResult[6] = tmp11;
       cResult[7] = tmp16;
       cResult[8] = tmp26;
@@ -126,7 +127,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
     obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = closure_1_11(LinearGradientDefault, obj3);
-    let tmp4Result = closure_1_11(_modDef6952, obj2);
+    let tmp4Result = closure_1_11(_modDef6951, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);
@@ -175,20 +176,20 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TraitO
       }
       if (cResult[6] === tmp6) {
         if (cResult[7] === tmp4.assetImageLocked) {
-          if (cResult[8] === traitOption.locked) {
+          if (cResult[8] === traitOption.status) {
             let tmp10 = cResult[9];
           }
           return tmp10;
         }
       }
       let tmp11 = tmp6;
-      if (true === traitOption.locked) {
+      if (traitOption.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED) {
         const obj5 = { style: tmp4.assetImageLocked, children: tmp6 };
         tmp11 = closure_1_11(React4, obj5);
       }
       cResult[6] = tmp6;
       cResult[7] = tmp4.assetImageLocked;
-      cResult[8] = traitOption.locked;
+      cResult[8] = traitOption.status;
       cResult[9] = tmp11;
       tmp10 = tmp11;
     }
@@ -215,7 +216,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TraitO
     obj3.style = tmp.assetImage;
     const tmp4Result = closure_1_11(FastImageDefault, obj3);
     let tmp4Result2 = tmp4Result;
-    if (true === traitOption.locked) {
+    if (traitOption.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED) {
       const obj5 = { style: tmp.assetImageLocked, children: tmp4Result };
       tmp4Result2 = closure_1_11(React4, obj5);
     }
@@ -345,6 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
     }
     const radioA11yNative = useA11yRolesNative.useRadioA11yNative(tmp8);
     ({ accessibilityRole, accessibilityState } = radioA11yNative);
+    const tmp10 = (traitOption.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED || tmp6) && tmp7.assetItemLocked;
     if (cResult[3] === tmp7.assetItem) {
       if (cResult[4] === tmp10) {
         let tmp11 = cResult[5];
@@ -431,9 +433,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
       cResult[10] = tmp17;
       tmp14 = tmp17;
     }
-    const items1 = [tmp7.assetItem, (traitOption.locked || tmp6) && tmp7.assetItemLocked];
+    const items1 = [tmp7.assetItem, tmp10];
     cResult[3] = tmp7.assetItem;
-    cResult[4] = (traitOption.locked || tmp6) && tmp7.assetItemLocked;
+    cResult[4] = tmp10;
     cResult[5] = items1;
     tmp11 = items1;
     const tmpResult = useA11yRolesNative;
@@ -461,32 +463,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: isSelected, disabled: flag });
   const obj2 = { onPress, disabled: flag, style: null, accessibilityRole: null, accessibilityLabel: null, accessibilityState: null, children: null };
   const items = [tmp.assetItem, ];
-  let assetItemLocked = traitOption.locked;
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  if (!assetItemLocked) {
-    assetItemLocked = flag;
-  }
-  if (assetItemLocked) {
-    assetItemLocked = tmp.assetItemLocked;
-  }
-  items[1] = assetItemLocked;
+  items[1] = (traitOption.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED || flag) && tmp.assetItemLocked;
   obj2.style = items;
   obj2.accessibilityRole = accessibilityRole;
   obj2.accessibilityLabel = accessibilityLabel;
   obj2.accessibilityState = accessibilityState;
   const obj3 = { isNoneOption: null, isSelected: null };
+  const tmp7 = (traitOption.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED || flag) && tmp.assetItemLocked;
   obj3.isNoneOption = CheckpointCustomizationUtils.isNoneOption(traitOption);
   obj3.isSelected = showSelectedBorder;
   const items1 = [closure_1_11(closure_21, obj3), , ];
-  let tmp7Result = !hideCornerFlag;
+  let tmp8Result = !hideCornerFlag;
   if (!hideCornerFlag) {
-    tmp7Result = null != traitOption.rarity;
+    tmp8Result = null != traitOption.rarity;
   }
-  if (tmp7Result) {
+  if (tmp8Result) {
     const obj4 = { rarity: traitOption.rarity };
-    tmp7Result = closure_1_11(closure_19, obj4);
+    tmp8Result = closure_1_11(closure_19, obj4);
   }
-  items1[1] = tmp7Result;
+  items1[1] = tmp8Result;
   items1[2] = closure_1_11(closure_20, { traitOption });
   obj2.children = items1;
   return __initData(React3, obj2);

@@ -1,6 +1,6 @@
-// === Module 17704: NonCollapsableGestureDetector ===
+// === Module 17726: NonCollapsableGestureDetector ===
 
-// Module 17704 (NonCollapsableGestureDetector)
+// Module 17726 (NonCollapsableGestureDetector)
 import c from "c" /* 576 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

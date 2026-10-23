@@ -1,10 +1,10 @@
-// === Module 17058: UserSettingsDesignSystemCoachmark ===
+// === Module 17080: UserSettingsDesignSystemCoachmark ===
 
-// Module 17058 (UserSettingsDesignSystemCoachmark)
+// Module 17080 (UserSettingsDesignSystemCoachmark)
 import c from "c" /* 576 */;
 import LayerScope from "LayerScope" /* 5583 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
-import _modDef17059 from "module_17059" /* 17059 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
+import _modDef17081 from "module_17081" /* 17081 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,9 +25,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   [tmp9, r10029] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const obj3 = visible(17056);
-  [r10035, r10036] = visible(17056).useCanRotate();
-  const tmp10 = _slicedToArray(visible(17056).useCanRotate(), 2);
+  const obj3 = visible(17078);
+  [r10035, r10036] = visible(17078).useCanRotate();
+  const tmp10 = _slicedToArray(visible(17078).useCanRotate(), 2);
   const tmp11 = _slicedToArray(noop.useState(false), 2);
   const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
   const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
         return closure_1(false);
       }
     }
-    tmp21[0] = _modDef17059;
+    tmp21[0] = _modDef17081;
     cResult[2] = tmp21;
   } else {
     class Y {
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef17059 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef17081 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

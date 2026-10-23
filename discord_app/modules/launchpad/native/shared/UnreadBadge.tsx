@@ -1,18 +1,18 @@
-// === Module 18585: UnreadBadge ===
+// === Module 18607: UnreadBadge ===
 
-// Module 18585 (UnreadBadge)
+// Module 18607 (UnreadBadge)
 import c from "c" /* 576 */;
 import useFontScale from "useFontScale" /* 5239 */;
-import Badge from "Badge" /* 9674 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18000 */;
+import shared_components_Badge from "shared_components/Badge" /* 9681 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
 import noop from "module_19" /* 19 */;
 
-const BadgeDefault = Badge;
+const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(12003).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6691).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(12014).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
@@ -53,7 +53,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj2.style = items;
     const obj3 = { classic: true, size: null, badgeStyle: null };
     const _Math = Math;
-    obj3.size = Badge.CHANNEL_BADGE_SIZE * Math.max(fontScale, 1);
+    obj3.size = shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(fontScale, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num3 = MUTED_OPACITY_CONTENT;
     } else {
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const obj4 = { opacity: num3 };
     obj3.badgeStyle = obj4;
-    obj2.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
+    obj2.children = jsx(shared_components_BadgeDefault, { classic: true, size: null, badgeStyle: null });
     tmp11Result = <View style={null}>{null}</View>;
   }
   cResult[1] = fontScale;
@@ -85,7 +85,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj.style = items;
     const obj2 = { classic: true, size: null, badgeStyle: null };
     const _Math = Math;
-    obj2.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    obj2.size = shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
@@ -93,9 +93,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const obj3 = { opacity: num2 };
     obj2.badgeStyle = obj3;
-    obj.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
+    obj.children = jsx(shared_components_BadgeDefault, { classic: true, size: null, badgeStyle: null });
     tmp9Result = <View style={null}>{null}</View>;
-    const tmp2Result = BadgeDefault;
+    const tmp2Result = shared_components_BadgeDefault;
   }
   return tmp9Result;
 }));

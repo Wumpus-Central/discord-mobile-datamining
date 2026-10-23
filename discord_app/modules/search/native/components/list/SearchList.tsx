@@ -1,32 +1,32 @@
-// === Module 17988: SearchList ===
+// === Module 18010: SearchList ===
 
-// Module 17988 (SearchList)
+// Module 18010 (SearchList)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _mod7206 from "module_7206" /* 7206 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 17974 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17976 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 17985 */;
-import DMRowDefault from "DMRow" /* 17989 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 17990 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 17991 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 17992 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 18005 */;
-import MediaGridItemDefault from "MediaGridItem" /* 18006 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 18008 */;
-import MediaGridDefault from "MediaGrid" /* 18010 */;
-import MessageRowDefault from "MessageRow" /* 18011 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18015 */;
-import LinkGridItemDefault from "LinkGridItem" /* 18016 */;
-import FileGridItemDefault from "FileGridItem" /* 18019 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 18020 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 18021 */;
-import GenericTextRowDefault from "GenericTextRow" /* 18022 */;
-import SearchListSectionDefault from "SearchListSection" /* 18023 */;
-import SmartSearchRowDefault from "SmartSearchRow" /* 18024 */;
-import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 18041 */;
-import smartSearchViewabilityConfig from "smartSearchViewabilityConfig" /* 18042 */;
+import _mod7205 from "module_7205" /* 7205 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 17996 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17998 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 18007 */;
+import DMRowDefault from "DMRow" /* 18011 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 18012 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 18013 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 18014 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 18027 */;
+import MediaGridItemDefault from "MediaGridItem" /* 18028 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 18030 */;
+import MediaGridDefault from "MediaGrid" /* 18032 */;
+import MessageRowDefault from "MessageRow" /* 18033 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18037 */;
+import LinkGridItemDefault from "LinkGridItem" /* 18038 */;
+import FileGridItemDefault from "FileGridItem" /* 18041 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 18042 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 18043 */;
+import GenericTextRowDefault from "GenericTextRow" /* 18044 */;
+import SearchListSectionDefault from "SearchListSection" /* 18045 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 18046 */;
+import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 18063 */;
+import smartSearchViewabilityConfig from "smartSearchViewabilityConfig" /* 18064 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -204,7 +204,7 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9684);
+const SearchConstants = fn(9691);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -215,82 +215,112 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchList(arg0) {
-  const cResult = c.c(21);
-  ({ contentContainerStyle, data, onEndReached, ItemSeparatorComponent, ListHeaderComponent, ListFooterComponent, numColumns } = arg0);
-  const tmp5 = closure_10();
-  let num = 0.5;
+  const cResult = c.c(25);
+  ({ contentContainerStyle, data, onEndReached, ItemSeparatorComponent, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
+  noop.useRef(null);
+  const ref = noop.useRef(scrollToTopKey);
+  if (cResult[0] !== scrollToTopKey) {
+    const fn = function c() {
+      if (ref.current !== scrollToTopKey) {
+        ref.current = scrollToTopKey;
+        const current = ref.current;
+        if (current != null) {
+          current.scrollToOffset({ offset: 0, animated: false });
+        }
+      }
+    };
+    const items = [scrollToTopKey];
+    cResult[0] = scrollToTopKey;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp6 = items;
+    let tmp5 = fn;
+  } else {
+    tmp5 = cResult[1];
+    tmp6 = cResult[2];
+  }
+  const effect = noop.useEffect(tmp5, tmp6);
+  const tmp8 = closure_10();
+  let num4 = 0.5;
   if (null != numColumns) {
-    num = 0.5;
+    num4 = 0.5;
     if (1 !== numColumns) {
-      num = 0.8;
+      num4 = 0.8;
       if (2 !== numColumns) {
         if (numColumns >= 3) {
-          num = 0.99;
+          num4 = 0.99;
         }
       }
     }
   }
-  if (cResult[0] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
-    let tmp9 = tmp7;
-    if (tmp7) {
-      const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
-      const obj3 = { text: null };
+  if (cResult[3] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
+    let tmp12 = tmp10;
+    if (tmp10) {
+      const obj3 = { style: hasOwnProperty.absoluteFill, children: null };
+      const obj4 = { text: null };
       const intl = util.intl;
-      obj3.text = intl.string(util.t.V6nAfF);
-      obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-      tmp9 = closure_1_8(React4, obj2);
-      const tmp6Result = pages_ErrorScreenDefault;
+      obj4.text = intl.string(util.t.V6nAfF);
+      obj3.children = closure_1_8(pages_ErrorScreenDefault, obj4);
+      tmp12 = closure_1_8(React4, obj3);
+      const tmp9Result = pages_ErrorScreenDefault;
     }
-    cResult[0] = tmp7;
-    cResult[1] = tmp9;
-    let tmp8 = tmp9;
+    cResult[3] = tmp10;
+    cResult[4] = tmp12;
+    let tmp11 = tmp12;
   } else {
-    tmp8 = cResult[1];
+    tmp11 = cResult[4];
   }
-  if (cResult[2] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
-    let obj4;
-    if (tmp7) {
-      obj4 = { importantForAccessibility: "no", scrollEnabled: false };
+  if (cResult[5] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
+    let obj5;
+    if (tmp10) {
+      obj5 = { importantForAccessibility: "no", scrollEnabled: false };
     }
-    cResult[2] = tmp7;
-    cResult[3] = obj4;
-    let tmp14 = obj4;
+    cResult[5] = tmp10;
+    cResult[6] = obj5;
+    let tmp17 = obj5;
   } else {
-    tmp14 = cResult[3];
+    tmp17 = cResult[6];
+  }
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj6 = { disabled: true };
+    cResult[7] = obj6;
+    let tmp18 = obj6;
+  } else {
+    tmp18 = cResult[7];
   }
   const sum = 16 + useSafeAreaInsetsDefault().bottom;
-  if (cResult[4] === contentContainerStyle) {
-    if (cResult[5] === sum) {
-      let tmp16 = cResult[6];
+  if (cResult[8] === contentContainerStyle) {
+    if (cResult[9] === sum) {
+      let tmp20 = cResult[10];
     }
-    if (cResult[7] === ItemSeparatorComponent) {
-      if (cResult[8] === ListFooterComponent) {
-        if (cResult[9] === ListHeaderComponent) {
-          if (cResult[10] === data) {
-            if (cResult[11] === numColumns) {
-              if (cResult[12] === onEndReached) {
-                if (cResult[13] === tmp14) {
-                  if (cResult[14] === tmp16) {
-                    if (cResult[15] === num) {
-                      let tmp18 = cResult[16];
+    if (cResult[11] === ItemSeparatorComponent) {
+      if (cResult[12] === ListFooterComponent) {
+        if (cResult[13] === ListHeaderComponent) {
+          if (cResult[14] === data) {
+            if (cResult[15] === numColumns) {
+              if (cResult[16] === onEndReached) {
+                if (cResult[17] === tmp17) {
+                  if (cResult[18] === tmp20) {
+                    if (cResult[19] === num4) {
+                      let tmp22 = cResult[20];
                     }
-                    if (cResult[17] === tmp5.container) {
-                      if (cResult[18] === tmp8) {
-                        if (cResult[19] === tmp18) {
-                          let tmp24 = cResult[20];
+                    if (cResult[21] === tmp8.container) {
+                      if (cResult[22] === tmp11) {
+                        if (cResult[23] === tmp22) {
+                          let tmp28 = cResult[24];
                         }
-                        return tmp24;
+                        return tmp28;
                       }
                     }
-                    const obj5 = { style: tmp5.container, children: null };
-                    const items = [tmp8, tmp18];
-                    obj5.children = items;
-                    const tmp27 = React6(React4, obj5);
-                    cResult[17] = tmp5.container;
-                    cResult[18] = tmp8;
-                    cResult[19] = tmp18;
-                    cResult[20] = tmp27;
-                    tmp24 = tmp27;
+                    const obj7 = { style: tmp8.container, children: null };
+                    const items1 = [tmp11, tmp22];
+                    obj7.children = items1;
+                    const tmp31 = React6(React4, obj7);
+                    cResult[21] = tmp8.container;
+                    cResult[22] = tmp11;
+                    cResult[23] = tmp22;
+                    cResult[24] = tmp31;
+                    tmp28 = tmp31;
                   }
                 }
               }
@@ -299,31 +329,41 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const obj6 = { ref, overrideProps: tmp14, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data, renderItem, onEndReachedThreshold: num, onEndReached, scrollsToTop: true, contentContainerStyle: tmp16, keyExtractor, getItemType, ListHeaderComponent, ListFooterComponent, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig };
-    const tmp23 = closure_1_8(_mod7206.AnimatedFlashList, obj6);
-    cResult[7] = ItemSeparatorComponent;
-    cResult[8] = ListFooterComponent;
-    cResult[9] = ListHeaderComponent;
-    cResult[10] = data;
-    cResult[11] = numColumns;
-    cResult[12] = onEndReached;
-    cResult[13] = tmp14;
-    cResult[14] = tmp16;
-    cResult[15] = num;
-    cResult[16] = tmp23;
-    tmp18 = tmp23;
+    const obj8 = { ref, overrideProps: tmp17, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data, renderItem, onEndReachedThreshold: num4, onEndReached, scrollsToTop: true, maintainVisibleContentPosition: tmp18, contentContainerStyle: tmp20, keyExtractor, getItemType, ListHeaderComponent, ListFooterComponent, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig };
+    const tmp27 = closure_1_8(_mod7205.AnimatedFlashList, obj8);
+    cResult[11] = ItemSeparatorComponent;
+    cResult[12] = ListFooterComponent;
+    cResult[13] = ListHeaderComponent;
+    cResult[14] = data;
+    cResult[15] = numColumns;
+    cResult[16] = onEndReached;
+    cResult[17] = tmp17;
+    cResult[18] = tmp20;
+    cResult[19] = num4;
+    cResult[20] = tmp27;
+    tmp22 = tmp27;
   }
-  const obj7 = { paddingBottom: sum };
+  const obj9 = { paddingBottom: sum };
   const merged = Object.assign(contentContainerStyle);
-  cResult[4] = contentContainerStyle;
-  cResult[5] = sum;
-  cResult[6] = obj7;
-  tmp16 = obj7;
-  ref = noop.useRef(null);
+  cResult[8] = contentContainerStyle;
+  cResult[9] = sum;
+  cResult[10] = obj9;
+  tmp20 = obj9;
 }) : (function SearchList(arg0) {
-  ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns } = arg0);
+  ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
   ({ onEndReached, ItemSeparatorComponent } = arg0);
-  const ref = noop.useRef(null);
+  noop.useRef(null);
+  const ref = noop.useRef(scrollToTopKey);
+  const items = [scrollToTopKey];
+  const effect = noop.useEffect(() => {
+    if (ref.current !== scrollToTopKey) {
+      ref.current = scrollToTopKey;
+      const current = ref.current;
+      if (current != null) {
+        current.scrollToOffset({ offset: 0, animated: false });
+      }
+    }
+  }, items);
   let num = 0.5;
   if (null != numColumns) {
     num = 0.5;
@@ -337,18 +377,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const obj = { style: closure_10().container, children: null };
-  let tmp8 = tmp5;
+  let tmp9 = tmp6;
   if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
     const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
     const obj3 = { text: null };
     const intl = util.intl;
     obj3.text = intl.string(util.t.V6nAfF);
     obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-    tmp8 = closure_1_8(React4, obj2);
-    const tmp3Result = pages_ErrorScreenDefault;
+    tmp9 = closure_1_8(React4, obj2);
+    const tmp4Result = pages_ErrorScreenDefault;
   }
-  const items = [tmp8, ];
-  const obj4 = { ref, overrideProps: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data: null, renderItem: null, onEndReachedThreshold: null, onEndReached: null, scrollsToTop: true, contentContainerStyle: null, keyExtractor: null, getItemType: null, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, numColumns: null, viewabilityConfigCallbackPairs: null };
+  const items1 = [tmp9, ];
+  const obj4 = { ref, overrideProps: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data: null, renderItem: null, onEndReachedThreshold: null, onEndReached: null, scrollsToTop: true, maintainVisibleContentPosition: null, contentContainerStyle: null, keyExtractor: null, getItemType: null, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, numColumns: null, viewabilityConfigCallbackPairs: null };
   let obj5;
   if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
     obj5 = { importantForAccessibility: "no", scrollEnabled: false };
@@ -358,7 +398,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.renderItem = renderItem;
   obj4.onEndReachedThreshold = num;
   obj4.onEndReached = onEndReached;
-  const tmp2 = closure_10();
+  obj4.maintainVisibleContentPosition = { disabled: true };
+  const tmp3 = closure_10();
   const merged = Object.assign(contentContainerStyle);
   obj4.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
   obj4.keyExtractor = keyExtractor;
@@ -368,7 +409,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
   obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-  items[1] = closure_1_8(_mod7206.AnimatedFlashList, obj4);
-  obj.children = items;
+  items1[1] = closure_1_8(_mod7205.AnimatedFlashList, obj4);
+  obj.children = items1;
   return React6(React4, obj);
 }));

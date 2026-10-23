@@ -1,6 +1,6 @@
-// === Module 7484: GiftCardMobileConsumptionActionSheet ===
+// === Module 7485: GiftCardMobileConsumptionActionSheet ===
 
-// Module 7484 (GiftCardMobileConsumptionActionSheet)
+// Module 7485 (GiftCardMobileConsumptionActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2242 from "module_2242" /* 2242 */;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
           return closure_3(ContentDismissActionType.USER_DISMISS);
         }
       }
-      const tmp19 = closure_6(tmp(7485).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
+      const tmp19 = closure_6(tmp(7486).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
       cResult[14] = tmp19;
       const tmp18 = tmp19;
     } else {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
     const obj8 = { spacing: tmp5(587).space.PX_16, children: null };
     const items2 = [tmp20, tmp25, tmp29];
     obj8.children = items2;
-    const tmp33 = closure_7(tmp(5964).Stack, obj8);
+    const tmp33 = closure_7(tmp(5963).Stack, obj8);
     cResult[23] = tmp20;
     cResult[24] = tmp25;
     cResult[25] = tmp29;
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
   const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items2;
   const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7485).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7486).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1128).intl;
   obj5.children = intl.string(_modDef2242.V3DI1E);
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
   };
   items3[2] = closure_6(markAsDismissed(5230).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(5964).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(5963).Stack, obj3);
   obj.children = closure_6(View, obj2);
   return closure_6(markAsDismissed(5251).BottomSheet, obj);
 });

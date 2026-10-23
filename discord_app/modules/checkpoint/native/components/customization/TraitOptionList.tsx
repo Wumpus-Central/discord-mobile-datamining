@@ -1,12 +1,12 @@
-// === Module 12945: TraitOptionList ===
+// === Module 12964: TraitOptionList ===
 
-// Module 12945 (TraitOptionList)
+// Module 12964 (TraitOptionList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6348 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6347 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
@@ -15,7 +15,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 ({ CHECKPOINT_PRIMARY: metroRequire, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 const jsxProd = fn(21);

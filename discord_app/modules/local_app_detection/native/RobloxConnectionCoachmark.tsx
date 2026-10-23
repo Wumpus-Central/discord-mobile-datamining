@@ -1,6 +1,6 @@
-// === Module 18289: RobloxConnectionCoachmark ===
+// === Module 18311: RobloxConnectionCoachmark ===
 
-// Module 18289 (RobloxConnectionCoachmark)
+// Module 18311 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,16 +11,16 @@ import dismissible_content from "dismissible_content" /* 4805 */;
 import themes from "themes" /* 4991 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import PlatformsDefault from "Platforms" /* 6488 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7258 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9578 */;
+import PlatformsDefault from "Platforms" /* 6487 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7259 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9585 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6486 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6485 */;
 import UserStore from "UserStore" /* 1392 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14960 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14974 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -219,7 +219,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
     tmp9 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
+    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
     const tmp15 = map1(native.Avatar, obj3);
     cResult[4] = stateFromStores;
     cResult[5] = tmp15;
@@ -252,7 +252,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [map1(View, { style: tmp.avatarInnerBorder }), ];
   const obj3 = { style: tmp.avatarInnerBorder };
-  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
+  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
   obj2.children = items1;
   return closure_1_14(View, obj2);
 });
@@ -297,8 +297,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   if (cResult[4] !== tmp7) {
     let obj3 = { title: null, leading: null };
     let obj4 = { onPress: tmp7 };
-    obj3.leading = closure_13(tmp(7277).ActionSheetCloseButton, obj4);
-    const tmp10 = closure_13(tmp(7232).BottomSheetTitleHeader, obj3);
+    obj3.leading = closure_13(tmp(7278).ActionSheetCloseButton, obj4);
+    const tmp10 = closure_13(tmp(7233).BottomSheetTitleHeader, obj3);
     cResult[4] = tmp7;
     cResult[5] = tmp10;
     let tmp8 = tmp10;
@@ -393,7 +393,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
         const intl3 = tmp(1128).intl;
         const stringResult2 = intl3.string(tmp(1128).t.ItuabN);
         const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-        const tmp43 = closure_13(tmp(13970).WindowLaunchIcon, obj10);
+        const tmp43 = closure_13(tmp(13984).WindowLaunchIcon, obj10);
         cResult[26] = stringResult2;
         cResult[27] = tmp43;
         let tmp40 = tmp43;
@@ -463,7 +463,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
         const obj14 = { spacing: 24, style: tmp12, children: null };
         const items = [tmp24, tmp36, tmp52];
         obj14.children = items;
-        const tmp57 = closure_14(tmp(5964).Stack, obj14);
+        const tmp57 = closure_14(tmp(5963).Stack, obj14);
         cResult[36] = tmp24;
         cResult[37] = tmp36;
         cResult[38] = tmp52;
@@ -474,7 +474,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
       const obj15 = { children: null };
       const items1 = [tmp44, tmp49];
       obj15.children = items1;
-      const tmp54 = closure_14(tmp(5964).Stack, obj15);
+      const tmp54 = closure_14(tmp(5963).Stack, obj15);
       cResult[33] = tmp44;
       cResult[34] = tmp49;
       cResult[35] = tmp54;
@@ -483,7 +483,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
     const obj16 = { justify: "center", children: null };
     const items2 = [tmp28, tmp33];
     obj16.children = items2;
-    const tmp38 = closure_14(tmp(5964).Stack, obj16);
+    const tmp38 = closure_14(tmp(5963).Stack, obj16);
     cResult[23] = tmp28;
     cResult[24] = tmp33;
     cResult[25] = tmp38;
@@ -492,7 +492,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const obj17 = { justify: "center", align: "center", direction: "horizontal", children: null };
   const items3 = [tmp13, tmp14, tmp20];
   obj17.children = items3;
-  const tmp25 = closure_14(markAsDismissed(5964).Stack, obj17);
+  const tmp25 = closure_14(markAsDismissed(5963).Stack, obj17);
   cResult[14] = tmp13;
   cResult[15] = tmp14;
   cResult[16] = tmp25;
@@ -510,7 +510,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const theme = markAsDismissed(5023).useThemeContext().theme;
   let obj2 = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
   let obj = markAsDismissed(5023);
-  obj2.header = closure_13(markAsDismissed(7232).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(7277).ActionSheetCloseButton, { onPress: handleCancel }) });
+  obj2.header = closure_13(markAsDismissed(7233).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(7278).ActionSheetCloseButton, { onPress: handleCancel }) });
   obj2.onDismiss = function onDismiss() {
     return markAsDismissed(ContentDismissActionType.DISMISS);
   };
@@ -518,7 +518,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const obj5 = { justify: "center", align: "center", direction: "horizontal", children: null };
   const items = [closure_13(closure_16, { theme }), closure_13(closure_17, { theme }), closure_13(closure_18, {})];
   obj5.children = items;
-  const items1 = [closure_14(markAsDismissed(5964).Stack, obj5), , ];
+  const items1 = [closure_14(markAsDismissed(5963).Stack, obj5), , ];
   const obj6 = { justify: "center", children: null };
   const obj7 = { variant: "heading-xl/bold", style: tmp.text, children: null };
   const intl = markAsDismissed(1128).intl;
@@ -529,13 +529,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   obj8.children = intl2.string(markAsDismissed(1128).t.no96NU);
   items2[1] = closure_13(markAsDismissed(5220).Text, obj8);
   obj6.children = items2;
-  items1[1] = closure_14(markAsDismissed(5964).Stack, obj6);
+  items1[1] = closure_14(markAsDismissed(5963).Stack, obj6);
   const obj9 = { children: null };
   const obj10 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1128).intl;
   obj10.text = intl3.string(markAsDismissed(1128).t.ItuabN);
-  let obj3 = { title: null, leading: closure_13(markAsDismissed(7277).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(13970).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  let obj3 = { title: null, leading: closure_13(markAsDismissed(7278).ActionSheetCloseButton, { onPress: handleCancel }) };
+  obj10.icon = closure_13(markAsDismissed(13984).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -553,9 +553,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   obj12.onPress = handleCancel;
   items3[1] = closure_13(markAsDismissed(5230).Button, obj12);
   obj9.children = items3;
-  items1[2] = closure_14(markAsDismissed(5964).Stack, obj9);
+  items1[2] = closure_14(markAsDismissed(5963).Stack, obj9);
   obj4.children = items1;
-  obj2.children = closure_14(markAsDismissed(5964).Stack, obj4);
+  obj2.children = closure_14(markAsDismissed(5963).Stack, obj4);
   return closure_13(markAsDismissed(5251).BottomSheet, obj2);
 });
 size = fn(2);
@@ -568,7 +568,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocalAppDetectionStore];
     const fn = function s() {
-      return appInstalled.isAppInstalled(stateFromStores(14961).DetectableAppNames.ROBLOX);
+      return appInstalled.isAppInstalled(stateFromStores(14975).DetectableAppNames.ROBLOX);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -675,7 +675,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   const tmpResult2 = stateFromStores(504);
 }) : (function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(14961).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(14975).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

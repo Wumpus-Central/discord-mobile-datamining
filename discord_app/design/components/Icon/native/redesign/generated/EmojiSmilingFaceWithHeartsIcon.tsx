@@ -1,10 +1,10 @@
-// === Module 16658: EmojiSmilingFaceWithHeartsIcon ===
+// === Module 16680: EmojiSmilingFaceWithHeartsIcon ===
 
-// Module 16658 (EmojiSmilingFaceWithHeartsIcon)
+// Module 16680 (EmojiSmilingFaceWithHeartsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod16659 from "module_16659" /* 16659 */;
+import _mod16681 from "module_16681" /* 16681 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiSmilingFaceWithHeartsIcon = ReactCompilerGating.isReactCompile
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16659;
+    const tmpResult = _mod16681;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiSmilingFaceWithHeartsIcon = ReactCompilerGating.isReactCompile
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16659, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16681, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

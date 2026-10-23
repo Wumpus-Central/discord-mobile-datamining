@@ -1,6 +1,6 @@
-// === Module 11788: ConjureLinkedAppsTab ===
+// === Module 11800: ConjureLinkedAppsTab ===
 
-// Module 11788 (ConjureLinkedAppsTab)
+// Module 11800 (ConjureLinkedAppsTab)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import noop from "module_19" /* 19 */;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureL
       const project_id = build.project_id;
       const name = tmp;
       let obj2 = {
-        content: closure_1_3(closure_1_1(11789), {
+        content: closure_1_3(closure_1_1(11801), {
           sheetKey,
           title: build[project_id],
           value: build.build,
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureL
             obj2.onConfirm = function onConfirm() {
               return dependencyMap(closure_0);
             };
-            project_id(5901).showConfirmModal(obj2);
+            project_id(5900).showConfirmModal(obj2);
           }
         }),
         key: sheetKey,

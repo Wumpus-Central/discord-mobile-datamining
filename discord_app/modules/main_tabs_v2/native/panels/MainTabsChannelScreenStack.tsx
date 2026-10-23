@@ -1,6 +1,6 @@
-// === Module 17872: MainTabsChannelScreenStack ===
+// === Module 17894: MainTabsChannelScreenStack ===
 
-// Module 17872 (MainTabsChannelScreenStack)
+// Module 17894 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Link from "Link" /* 1506 */;
@@ -13,15 +13,15 @@ import ChatInputUtils from "ChatInputUtils" /* 5145 */;
 import useThemeDefault from "useTheme" /* 5191 */;
 import useMountEffect from "useMountEffect" /* 5249 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
-import Suspender from "Suspender" /* 5926 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11189 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11824 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17323 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17324 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17873 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17875 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17876 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17877 */;
+import Suspender from "Suspender" /* 5925 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11198 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11838 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17345 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17346 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17895 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17897 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17898 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17899 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9670).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9677).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1098).ThemeTypes;

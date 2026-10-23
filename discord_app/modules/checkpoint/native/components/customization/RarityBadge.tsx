@@ -1,14 +1,14 @@
-// === Module 12950: RarityBadge ===
+// === Module 12969: RarityBadge ===
 
-// Module 12950 (RarityBadge)
+// Module 12969 (RarityBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6003 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6348 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6002 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6347 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 ({ CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7, CHECKPOINT_RARITY_COLORS: closure_8, CHECKPOINT_RARITY_LABEL_MESSAGES: closure_9 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

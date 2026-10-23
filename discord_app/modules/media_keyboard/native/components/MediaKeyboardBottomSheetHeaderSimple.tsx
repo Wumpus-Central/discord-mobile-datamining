@@ -1,9 +1,9 @@
-// === Module 10395: MediaKeyboardBottomSheetHeaderSimple ===
+// === Module 10402: MediaKeyboardBottomSheetHeaderSimple ===
 
-// Module 10395 (MediaKeyboardBottomSheetHeaderSimple)
+// Module 10402 (MediaKeyboardBottomSheetHeaderSimple)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10396 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10403 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,20 +1,20 @@
-// === Module 19042: GuildSettingsModalVanityURL ===
+// === Module 19065: GuildSettingsModalVanityURL ===
 
-// Module 19042 (GuildSettingsModalVanityURL)
+// Module 19065 (GuildSettingsModalVanityURL)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import TextInput from "TextInput" /* 6994 */;
-import HeaderActionButton from "HeaderActionButton" /* 7469 */;
-import getInviteURLDefault from "getInviteURL" /* 9030 */;
-import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 18883 */;
-import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 19044 */;
-import _modDef19045 from "module_19045" /* 19045 */;
+import TextInput from "TextInput" /* 6993 */;
+import HeaderActionButton from "HeaderActionButton" /* 7470 */;
+import getInviteURLDefault from "getInviteURL" /* 9037 */;
+import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 18906 */;
+import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 19067 */;
+import _modDef19068 from "module_19068" /* 19068 */;
 import noop from "module_19" /* 19 */;
-import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 19043 */;
+import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 19066 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8975 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8982 */;
 
 require = fn;
 const View = fn(17).View;
@@ -92,8 +92,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      fn = self(6910).getHeaderConditionalBackButton(this.handleCancel);
-      let obj = self(6910);
+      fn = self(6909).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(6909);
     }
     let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
@@ -183,7 +183,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [React6(View, obj5), ];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef19045, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef19068, style: styles.image, resizeMode: "contain" };
     obj12.children = closure_1_8(FastImageDefault, obj13);
     items3[1] = closure_1_8(View, obj12);
     obj4.children = items3;

@@ -1,10 +1,10 @@
-// === Module 15232: Slider ===
+// === Module 15245: Slider ===
 
-// Module 15232 (Slider)
+// Module 15245 (Slider)
 import nativeDefault from "native" /* 587 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
-import _modDef8742 from "module_8742" /* 8742 */;
+import _modDef8749 from "module_8749" /* 8749 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,7 +124,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
         obj4.minimumTrackTintColor = tmp12.minimumTrackTintColor.backgroundColor;
         obj4.maximumTrackTintColor = tmp12.maximumTrackTintColor.backgroundColor;
         obj4.tapToSeek = true;
-        const tmp26 = closure_7(_modDef8742, obj4);
+        const tmp26 = closure_7(_modDef8749, obj4);
         cResult[16] = tmp13;
         cResult[17] = tmp5;
         cResult[18] = tmp7;
@@ -193,7 +193,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
   obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj3.tapToSeek = true;
-  items1[1] = closure_7(step(8742), obj3);
+  items1[1] = closure_7(step(8749), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj4 = { style: tmp2.endIcon, children: endIcon };

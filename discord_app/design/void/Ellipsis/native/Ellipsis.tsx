@@ -1,6 +1,6 @@
-// === Module 15333: Ellipsis ===
+// === Module 15346: Ellipsis ===
 
-// Module 15333 (Ellipsis)
+// Module 15346 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

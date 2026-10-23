@@ -1,6 +1,6 @@
-// === Module 14396: InlinePriceTag ===
+// === Module 14410: InlinePriceTag ===
 
-// Module 14396 (InlinePriceTag)
+// Module 14410 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,22 +14,22 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196
 import Text_Text from "Text/Text" /* 5220 */;
 import useToken from "useToken" /* 5238 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7289 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7645 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7646 */;
-import useCurrentUser from "useCurrentUser" /* 8640 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
-import OrbsIcon from "OrbsIcon" /* 9398 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9417 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9431 */;
-import TagIcon from "TagIcon" /* 9432 */;
-import useProductDisableState from "useProductDisableState" /* 9440 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14402 */;
-import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 14403 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 14404 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7290 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7646 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7647 */;
+import useCurrentUser from "useCurrentUser" /* 8647 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import OrbsIcon from "OrbsIcon" /* 9405 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9424 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9438 */;
+import TagIcon from "TagIcon" /* 9439 */;
+import useProductDisableState from "useProductDisableState" /* 9447 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14416 */;
+import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 14417 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 14418 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7508 */;
+import IAPStore from "IAPStore" /* 7509 */;
 
 require = fn;
 function ExpressiveNitroUpsell(arg0) {
@@ -50,7 +50,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(14397, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(14411, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -571,7 +571,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
     const items1 = [, ];
     ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
     obj5.style = items1;
-    const tmp9 = closure_9(tmp(9394).NitroWheelIcon, obj5);
+    const tmp9 = closure_9(tmp(9401).NitroWheelIcon, obj5);
     cResult[3] = tmp4.nitroIcon;
     cResult[4] = tmp4.nitroIconSubscribeNow;
     cResult[5] = tmp9;

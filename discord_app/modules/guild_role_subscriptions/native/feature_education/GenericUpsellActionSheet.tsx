@@ -1,6 +1,6 @@
-// === Module 17573: GenericUpsellActionSheet ===
+// === Module 17595: GenericUpsellActionSheet ===
 
-// Module 17573 (GenericUpsellActionSheet)
+// Module 17595 (GenericUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5655 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GenericU
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp4 = closure_7();
   const obj = markAsDismissed(576);
-  const bottomSheetRef1 = markAsDismissed(8632).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8639).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   if (cResult[0] !== markAsDismissed) {
     const fn = function h() {
@@ -147,12 +147,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GenericU
   cResult[4] = tmp8;
   tmp7 = tmp8;
   const obj10 = { source: imageSource, style: tmp4.image };
-  const obj2 = markAsDismissed(8632);
+  const obj2 = markAsDismissed(8639);
 }) : (function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = closure_7();
-  const bottomSheetRef1 = markAsDismissed(8632).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8639).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = {
     ref: bottomSheetRef,

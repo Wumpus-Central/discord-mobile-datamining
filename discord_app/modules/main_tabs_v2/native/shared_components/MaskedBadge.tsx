@@ -1,10 +1,10 @@
-// === Module 9673: MaskedBadge ===
+// === Module 9680: MaskedBadge ===
 
-// Module 9673 (MaskedBadge)
+// Module 9680 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import BadgeDefault from "Badge" /* 9674 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9681 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MaskedBa
       }
     }
     const obj4 = { size, maskColor: backgroundColor, style: tmp4.unreadBadge };
-    const tmp9 = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp4.unreadBadge });
+    const tmp9 = jsx(shared_components_BadgeDefault, { size, maskColor: backgroundColor, style: tmp4.unreadBadge });
     cResult[15] = backgroundColor;
     cResult[16] = size;
     size = tmp4.unreadBadge;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MaskedBa
     tmp7Result = null;
     if (unread) {
       const obj = { size, maskColor: backgroundColor, style: tmp.unreadBadge };
-      tmp7Result = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp.unreadBadge });
+      tmp7Result = jsx(shared_components_BadgeDefault, { size, maskColor: backgroundColor, style: tmp.unreadBadge });
     }
   }
   return tmp7Result;

@@ -1,11 +1,11 @@
-// === Module 18265: LeaveActivityButton ===
+// === Module 18287: LeaveActivityButton ===
 
-// Module 18265 (LeaveActivityButton)
+// Module 18287 (LeaveActivityButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10740 */;
-import _modDef11484 from "module_11484" /* 11484 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10747 */;
+import _modDef11495 from "module_11495" /* 11495 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseLeaveA
     [tmp4, tmp5] = cResult;
   }
   if (cResult[2] !== onPress) {
-    const obj2 = { onPress, icon: _modDef11484, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
-    const tmp11 = jsx(components_Button_Button.Button, { onPress, icon: _modDef11484, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
+    const obj2 = { onPress, icon: _modDef11495, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
+    const tmp11 = jsx(components_Button_Button.Button, { onPress, icon: _modDef11495, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
     cResult[2] = onPress;
     cResult[3] = tmp11;
     let tmp8 = tmp11;
@@ -38,12 +38,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseLeaveA
   }
   return tmp8;
 }) : (function BaseLeaveActivityButton(onPress) {
-  const obj = { onPress: onPress.onPress, icon: _modDef11484, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
+  const obj = { onPress: onPress.onPress, icon: _modDef11495, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
   const intl = util.intl;
   obj.text = intl.string(util.t["Hi1/aQ"]);
   const intl2 = util.intl;
   obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
-  return jsx(components_Button_Button.Button, { onPress: onPress.onPress, icon: _modDef11484, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
+  return jsx(components_Button_Button.Button, { onPress: onPress.onPress, icon: _modDef11495, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
 });
 let closure_5 = tmp2;
 ReactCompilerGating = fn(558);

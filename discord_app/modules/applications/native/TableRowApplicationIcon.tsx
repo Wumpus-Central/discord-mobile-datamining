@@ -1,6 +1,6 @@
-// === Module 8949: TableRowApplicationIcon ===
+// === Module 8956: TableRowApplicationIcon ===
 
-// Module 8949 (TableRowApplicationIcon)
+// Module 8956 (TableRowApplicationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;

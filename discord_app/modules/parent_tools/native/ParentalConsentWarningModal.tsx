@@ -1,6 +1,6 @@
-// === Module 18817: ParentalConsentWarningModal ===
+// === Module 18840: ParentalConsentWarningModal ===
 
-// Module 18817 (ParentalConsentWarningModal)
+// Module 18840 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -8,18 +8,18 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4806 */;
 import RootNavigationRef from "RootNavigationRef" /* 5137 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6661 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7631 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6660 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7632 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7629 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7630 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7630);
+const FamilyCenterConstants = fn(7631);
 ({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18818, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18841, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

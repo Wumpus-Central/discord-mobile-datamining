@@ -1,13 +1,13 @@
-// === Module 10160: StickerPickerListEmptyState ===
+// === Module 10167: StickerPickerListEmptyState ===
 
-// Module 10160 (StickerPickerListEmptyState)
+// Module 10167 (StickerPickerListEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9894 */;
-import _modDef10161 from "module_10161" /* 10161 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9901 */;
+import _modDef10168 from "module_10168" /* 10168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -83,7 +83,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const obj4 = { body: tmp10, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null };
     ({ emptyStateBody: obj5.bodyStyle, emptyStateContainer: obj5.containerStyle, emptyStateImage: obj5.imageStyle } = tmp4);
-    obj4.source = _modDef10161;
+    obj4.source = _modDef10168;
     obj4.titleStyle = tmp12;
     const tmp16 = jsx(native.RefreshEmptyState, { body: tmp10, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
     cResult[5] = tmp4.emptyStateBody;
@@ -104,7 +104,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }), items);
   const tmp = closure_7();
-  const modalDismissGuardRefreshControl = insetTop(9894).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = insetTop(9901).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
     let BottomSheetScrollView = insetTop(5255).BottomSheetScrollView;
   } else {
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const intl = insetTop(1128).intl;
   obj5.body = intl.string(insetTop(1128).t.jyiGfc);
   ({ emptyStateBody: obj3.bodyStyle, emptyStateContainer: obj3.containerStyle, emptyStateImage: obj3.imageStyle } = tmp);
-  obj5.source = insetBottom(10161);
+  obj5.source = insetBottom(10168);
   obj5.titleStyle = { marginBottom: 0 };
   obj2.children = jsx(insetTop(1202).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>{null}</BottomSheetScrollView>;

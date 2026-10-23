@@ -1,10 +1,10 @@
-// === Module 7131: SearchField ===
+// === Module 7130: Search/SearchBar ===
 
-// Module 7131 (SearchField)
+// Module 7130 (Search/SearchBar)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import TextField from "TextField" /* 7001 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7132 */;
+import TextField from "TextField" /* 7000 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7131 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,7 @@ require = fn;
 let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
-
-export const SearchField = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchField(ref) {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBar(ref) {
   const cResult = c.c(7);
   if (cResult[0] !== ref) {
     const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
@@ -54,7 +51,7 @@ export const SearchField = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[5] = tmp5;
   cResult[6] = tmp13;
   tmp11 = tmp13;
-}) : (function SearchField(ref) {
+}) : (function SearchBar(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const obj = { placeholder: null, returnKeyType: "search", ref: null };
   const intl = util.intl;
@@ -68,3 +65,8 @@ export const SearchField = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj.clearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
+
+export const SearchBar = tmp3;
+export const SearchField = tmp3;

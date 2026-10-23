@@ -1,6 +1,6 @@
-// === Module 13196: DoubleTapToReactActionSheet ===
+// === Module 13212: DoubleTapToReactActionSheet ===
 
-// Module 13196 (DoubleTapToReactActionSheet)
+// Module 13212 (DoubleTapToReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -9,12 +9,12 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import spring from "spring" /* 5233 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8311 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
 
 const require = globalThis.__r;
 
@@ -1029,7 +1029,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7262).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7263).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);

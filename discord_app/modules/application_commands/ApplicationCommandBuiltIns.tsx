@@ -1,12 +1,12 @@
-// === Module 9627: ApplicationCommandBuiltIns ===
+// === Module 9634: ApplicationCommandBuiltIns ===
 
-// Module 9627 (ApplicationCommandBuiltIns)
+// Module 9634 (ApplicationCommandBuiltIns)
 import UserSettings from "UserSettings" /* 4797 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7332 */;
-import ThreadHooks from "ThreadHooks" /* 7353 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7550 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9630 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7333 */;
+import ThreadHooks from "ThreadHooks" /* 7354 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9637 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -24,10 +24,10 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(5970).BuiltInSectionId;
+const BuiltInSectionId = fn(5969).BuiltInSectionId;
 const Constants = fn(1087);
 ({ Permissions: closure_7, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: closure_9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = Constants);
-const DiceRollConstants = fn(9628);
+const DiceRollConstants = fn(9635);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(4883).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(4974).MessageSendLocation;
@@ -50,7 +50,7 @@ Object.defineProperty(obj3, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(9629).default];
+let items = [...fn(9636).default];
 let obj4 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(2000).ApplicationCommandType.CHAT, inputType: fn(5620).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj4, "untranslatedDescription", {
   get: () => {
@@ -1238,15 +1238,15 @@ obj32.execute = function execute(arr, channel) {
             return obj4;
           } else {
             const obj5 = { recipientIds };
-            const obj2 = v1(7395);
+            const obj2 = v1(7396);
             v1 = 1;
             c0 = 1;
             const obj6 = {
-              value: v1(7395).openPrivateChannel(obj5).then((result) => {
+              value: v1(7396).openPrivateChannel(obj5).then((result) => {
                         channel = channel.getChannel(result);
                         c1(38)(null != channel, "Newly created PrivateChannel is null");
-                        const obj = c1(7550);
-                        obj.sendMessage(channel.id, c1(7739).parse(channel, dependencyMap), true, { location: constants.PRIVATE_MESSAGE_COMMAND });
+                        const obj = c1(7551);
+                        obj.sendMessage(channel.id, c1(7740).parse(channel, dependencyMap), true, { location: constants.PRIVATE_MESSAGE_COMMAND });
                       }),
               done: false
             };
@@ -1397,7 +1397,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9629).default;
+export const PLATFORM_COMMANDS = fn(9636).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

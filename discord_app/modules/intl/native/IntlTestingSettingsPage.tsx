@@ -1,16 +1,16 @@
-// === Module 16882: IntlTestingSettingsPage ===
+// === Module 16904: IntlTestingSettingsPage ===
 
-// Module 16882 (IntlTestingSettingsPage)
+// Module 16904 (IntlTestingSettingsPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _mod1167 from "module_1167" /* 1167 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import TableRow from "TableRow" /* 6889 */;
-import TableRowGroup from "TableRowGroup" /* 6973 */;
-import _modDef16883 from "module_16883" /* 16883 */;
-import _modDef16915 from "module_16915" /* 16915 */;
+import TableRow from "TableRow" /* 6888 */;
+import TableRowGroup from "TableRowGroup" /* 6972 */;
+import _modDef16905 from "module_16905" /* 16905 */;
+import _modDef16937 from "module_16937" /* 16937 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -91,9 +91,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function TestLo
       }
       return applyArgumentsResult;
     };
-    const items = [closure_10(tmp(6970).TableRadioRow, { label: "English", value: "en-US" }), closure_10(tmp(6970).TableRadioRow, { label: "French", value: "fr" })];
+    const items = [closure_10(tmp(6969).TableRadioRow, { label: "English", value: "en-US" }), closure_10(tmp(6969).TableRadioRow, { label: "French", value: "fr" })];
     obj2.children = items;
-    const tmp8 = closure_11(tmp(6971).TableRadioGroup, obj2);
+    const tmp8 = closure_11(tmp(6970).TableRadioGroup, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
   } else {
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     }
     const obj4 = { variant: "text-md/normal", children: null };
     const intl = tmp(1128).intl;
-    obj4.children = intl.format(_modDef16883.HMvEC5, {});
+    obj4.children = intl.format(_modDef16905.HMvEC5, {});
     const tmp21 = closure_10(tmp(5220).Text, obj4);
     cResult[7] = tmp21;
     const tmp19 = tmp21;
@@ -474,7 +474,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     }
     const obj5 = { variant: "text-md/normal", children: null };
     const intl2 = tmp(1128).intl;
-    obj5.children = intl2.format(_modDef16915.swfLzV, {});
+    obj5.children = intl2.format(_modDef16937.swfLzV, {});
     const tmp24 = closure_10(tmp(5220).Text, obj5);
     cResult[8] = tmp24;
     const tmp22 = tmp24;
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     }
     const obj6 = { variant: "text-md/normal", children: null };
     const intl3 = tmp(1128).intl;
-    obj6.children = intl3.format(_modDef16883.rmps8y, {});
+    obj6.children = intl3.format(_modDef16905.rmps8y, {});
     const tmp27 = closure_10(tmp(5220).Text, obj6);
     cResult[9] = tmp27;
     const tmp25 = tmp27;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
 
         }
     };
-    obj7.children = intl4.format(_modDef16883.uczI4g, obj8);
+    obj7.children = intl4.format(_modDef16905.uczI4g, obj8);
     const tmp30 = closure_10(tmp(5220).Text, obj7);
     cResult[10] = tmp30;
     const tmp28 = tmp30;
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     }
     const obj9 = { variant: "text-md/normal", children: null };
     const intl5 = tmp(1128).intl;
-    obj9.children = intl5.format(_modDef16883.rdfRyh, {});
+    obj9.children = intl5.format(_modDef16905.rdfRyh, {});
     const tmp33 = closure_10(tmp(5220).Text, obj9);
     cResult[11] = tmp33;
     const tmp31 = tmp33;
@@ -602,7 +602,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
           return closure_1_10(closure_1_6, obj);
         }
     };
-    obj10.children = intl6.format(_modDef16883.XOdbAy, obj11);
+    obj10.children = intl6.format(_modDef16905.XOdbAy, obj11);
     const tmp36 = closure_10(tmp(5220).Text, obj10);
     cResult[12] = tmp36;
     const tmp34 = tmp36;
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     const obj12 = { spacing: 24, style: tmp4.container, children: null };
     const items = [tmp13, tmp14, tmp19, tmp22, tmp25, tmp28, tmp31, tmp34];
     obj12.children = items;
-    const tmp38 = closure_11(tmp(5964).Stack, obj12);
+    const tmp38 = closure_11(tmp(5963).Stack, obj12);
     cResult[13] = tmp4.container;
     cResult[14] = tmp38;
   } else {
@@ -681,19 +681,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   const items = [closure_10(closure_14, {}), closure_10(closure_13, {}), , , , , , ];
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef16883.HMvEC5, {});
+  obj3.children = intl.format(_modDef16905.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef16915.swfLzV, {});
+  obj4.children = intl2.format(_modDef16937.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef16883.rmps8y, {});
+  obj5.children = intl3.format(_modDef16905.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef16883.uczI4g, {
+  obj6.children = intl4.format(_modDef16905.uczI4g, {
     linkTarget() {
 
     }
@@ -701,11 +701,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "text-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef16883.rdfRyh, {});
+  obj8.children = intl5.format(_modDef16905.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "text-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef16883.XOdbAy, {
+  obj9.children = intl6.format(_modDef16905.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5220).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };

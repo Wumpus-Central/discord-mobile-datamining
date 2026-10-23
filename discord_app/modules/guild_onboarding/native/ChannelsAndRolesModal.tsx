@@ -1,18 +1,18 @@
-// === Module 11206: ChannelsAndRolesModal ===
+// === Module 11215: ChannelsAndRolesModal ===
 
-// Module 11206 (ChannelsAndRolesModal)
+// Module 11215 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7425 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10000 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7426 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10007 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7182).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7181).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
   }
   const obj = guildId(576);
   const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-  const tmp9 = defaultTab(7425)(stateFromStores);
+  const tmp9 = defaultTab(7426)(stateFromStores);
   if (cResult[3] !== tmp9) {
     const intl = tmp(1128).intl;
     const string = intl.string;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
         }
       }
       const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-      const tmp15 = closure_8(tmp8(10000), obj2);
+      const tmp15 = closure_8(tmp8(10007), obj2);
       cResult[8] = tmp10;
       cResult[9] = tmp13;
       cResult[10] = tmp15;

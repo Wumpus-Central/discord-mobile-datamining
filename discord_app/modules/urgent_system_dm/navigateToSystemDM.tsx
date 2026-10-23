@@ -1,10 +1,10 @@
-// === Module 18862: navigateToSystemDM ===
+// === Module 18885: navigateToSystemDM ===
 
-// Module 18862 (navigateToSystemDM)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
+// Module 18885 (navigateToSystemDM)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
-const SYSTEM_USER = fn(18861).SYSTEM_USER;
+const SYSTEM_USER = fn(18884).SYSTEM_USER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 

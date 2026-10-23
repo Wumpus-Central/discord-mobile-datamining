@@ -1,9 +1,9 @@
-// === Module 11176: ActivitiesActionCreators ===
+// === Module 11185: ActivitiesActionCreators ===
 
-// Module 11176 (ActivitiesActionCreators)
+// Module 11185 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 

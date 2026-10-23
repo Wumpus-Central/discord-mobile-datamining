@@ -1,17 +1,17 @@
-// === Module 11250: GuildChannelUserList ===
+// === Module 11259: GuildChannelUserList ===
 
-// Module 11250 (GuildChannelUserList)
+// Module 11259 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1128 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
-import GuildUtilsDefault from "GuildUtils" /* 6815 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import sortByMatchScore from "sortByMatchScore" /* 9036 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
+import GuildUtilsDefault from "GuildUtils" /* 6814 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import sortByMatchScore from "sortByMatchScore" /* 9043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7356 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7357 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -22,7 +22,7 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7356);
+let ChannelMemberStore = fn(7357);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1087);
@@ -1187,7 +1187,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj8 = { marginHorizontal: tmp(tmp2[27]).space.PX_16 };
     obj7.style = obj8;
     const obj9 = { size: "md", onChange: onChangeText, ref: searchBarRef };
-    obj7.children = ref2(tmp5(tmp2[28]).SearchField, obj9);
+    obj7.children = ref2(tmp5(tmp2[28]).SearchBar, obj9);
     const items12 = [ref2(isNameplatedList, obj7), searchBarEmptyState];
     obj6.children = items12;
     tmp23Result = tmp23(tmp24, obj6);

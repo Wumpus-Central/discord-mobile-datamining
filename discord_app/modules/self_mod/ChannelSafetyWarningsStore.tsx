@@ -1,6 +1,6 @@
-// === Module 10663: ChannelSafetyWarningsStore ===
+// === Module 10670: ChannelSafetyWarningsStore ===
 
-// Module 10663 (ChannelSafetyWarningsStore)
+// Module 10670 (ChannelSafetyWarningsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

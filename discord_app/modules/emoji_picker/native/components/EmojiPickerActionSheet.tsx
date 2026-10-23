@@ -1,22 +1,22 @@
-// === Module 9797: EmojiPickerActionSheet ===
+// === Module 9804: EmojiPickerActionSheet ===
 
-// Module 9797 (EmojiPickerActionSheet)
+// Module 9804 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import SearchField from "SearchField" /* 7131 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9795 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9799 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9806 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 9808 */;
+import Search_SearchBar from "Search/SearchBar" /* 7130 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9806 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9813 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 9815 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9798).EmojiPickerSource;
+const EmojiPickerSource = fn(9805).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
@@ -175,7 +175,7 @@ export default function EmojiPickerActionSheet(onClose) {
     const obj2 = { style: items1, children: null };
     items1[1] = headerSpacer;
     const obj3 = { ref, size: "md", round: true, onChange: handleTextChange, placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser) };
-    const items2 = [v65535(SearchField.SearchField, obj3), ];
+    const items2 = [v65535(Search_SearchBar.SearchBar, obj3), ];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;

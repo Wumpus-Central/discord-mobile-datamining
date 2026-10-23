@@ -1,6 +1,6 @@
-// === Module 9315: maybeCreateMessageRecordFromSnapshot ===
+// === Module 9322: maybeCreateMessageRecordFromSnapshot ===
 
-// Module 9315 (maybeCreateMessageRecordFromSnapshot)
+// Module 9322 (maybeCreateMessageRecordFromSnapshot)
 import isForwardMessageDefault from "isForwardMessage" /* 5588 */;
 import size from "module_2" /* 2 */;
 

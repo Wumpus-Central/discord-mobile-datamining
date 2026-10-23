@@ -1,16 +1,16 @@
-// === Module 18086: ChannelNameHeader ===
+// === Module 18108: ChannelNameHeader ===
 
-// Module 18086 (ChannelNameHeader)
+// Module 18108 (ChannelNameHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import _modDef3766 from "module_3766" /* 3766 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
-import ChannelUtils from "ChannelUtils" /* 5981 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
+import ChannelUtils from "ChannelUtils" /* 5980 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -271,7 +271,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Direct
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1202).AvatarSizes.NORMAL, status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isMobileOnline: null, isVROnline: "9353860856bfc05333c0c56840083d00", statusStyle: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages" };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1202).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -431,8 +431,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     const intl = Text(1128).intl;
     let stringResult = intl.string(_modDef3766["D+2/QP"]);
   } else {
-    stringResult = Text(5981).channelTypeString(channel);
-    const TextResult1 = Text(5981);
+    stringResult = Text(5980).channelTypeString(channel);
+    const TextResult1 = Text(5980);
   }
   const TextResult = Text(504);
 }) : (function ChannelSubtitle(channel) {
@@ -460,8 +460,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     const intl = tmp(1128).intl;
     let stringResult = intl.string(_modDef3766["D+2/QP"]);
   } else {
-    stringResult = tmp(5981).channelTypeString(channel);
-    const tmpResult = tmp(5981);
+    stringResult = tmp(5980).channelTypeString(channel);
+    const tmpResult = tmp(5980);
   }
   let obj = channel(504);
 });
@@ -748,7 +748,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
   channel = channel.channel;
   const containerStyle = channel.containerStyle;
   const tmp4 = closure_15();
-  analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7238)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === channel) {
       let tmp5 = cResult[2];
@@ -775,7 +775,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
         }
       }
       const obj3 = { style: tmp6, onPress: tmp5, children: tmp7 };
-      const tmp13 = closure_12(tmp(6894).PressableOpacity, obj3);
+      const tmp13 = closure_12(tmp(6893).PressableOpacity, obj3);
       cResult[8] = tmp5;
       cResult[9] = tmp6;
       cResult[10] = tmp7;
@@ -804,7 +804,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
 }) : (function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7238)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -816,7 +816,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
   let obj = { style: null, onPress: callback, children: closure_12(closure_19, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(6894).PressableOpacity, obj);
+  return closure_12(channel(6893).PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DefaultChannelNameHeader(arg0) {

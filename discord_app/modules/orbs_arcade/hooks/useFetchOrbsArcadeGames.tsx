@@ -1,7 +1,7 @@
-// === Module 16301: useFetchOrbsArcadeGames ===
+// === Module 16319: useFetchOrbsArcadeGames ===
 
-// Module 16301 (useFetchOrbsArcadeGames)
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16303 */;
+// Module 16319 (useFetchOrbsArcadeGames)
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
   } else {
     tmp4 = cResult[1];
   }
-  const OrbsArcadeExperiment = enabled(16302).OrbsArcadeExperiment;
+  const OrbsArcadeExperiment = enabled(16320).OrbsArcadeExperiment;
   enabled = OrbsArcadeExperiment.useConfig(tmp4).enabled;
   if (cResult[2] !== enabled) {
     const fn = function o() {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
   const effect = noop.useEffect(tmp5, tmp6);
   return enabled;
 }) : (function useFetchOrbsArcadeGames(location) {
-  const OrbsArcadeExperiment = enabled(16302).OrbsArcadeExperiment;
+  const OrbsArcadeExperiment = enabled(16320).OrbsArcadeExperiment;
   enabled = OrbsArcadeExperiment.useConfig({ location }).enabled;
   const items = [enabled];
   const effect = noop.useEffect(() => {

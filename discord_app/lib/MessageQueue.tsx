@@ -1,14 +1,14 @@
-// === Module 8124: MessageQueue ===
+// === Module 8125: MessageQueue ===
 
-// Module 8124 (MessageQueue)
+// Module 8125 (MessageQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 8126 */;
+import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 8127 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import DevSettingsStore from "DevSettingsStore" /* 5223 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkStore from "NetworkStore" /* 5877 */;
-import Queue from "Queue" /* 8125 */;
+import NetworkStore from "NetworkStore" /* 5876 */;
+import Queue from "Queue" /* 8126 */;
 
 let handleCommand1 = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
@@ -197,8 +197,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7553).getSignalStrength();
-  const obj2 = handleCommand1(7553);
+  const signalStrength = handleCommand1(7554).getSignalStrength();
+  const obj2 = handleCommand1(7554);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -241,8 +241,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7553).getSignalStrength();
-  const obj2 = handleCommand1(7553);
+  const signalStrength = handleCommand1(7554).getSignalStrength();
+  const obj2 = handleCommand1(7554);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {

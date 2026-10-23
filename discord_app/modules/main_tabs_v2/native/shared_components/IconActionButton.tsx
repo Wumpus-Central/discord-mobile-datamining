@@ -1,18 +1,18 @@
-// === Module 13940: IconActionButton ===
+// === Module 13954: IconActionButton ===
 
-// Module 13940 (IconActionButton)
+// Module 13954 (IconActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useFontScale from "useFontScale" /* 5239 */;
-import Pressables from "Pressables" /* 6894 */;
-import Badge from "Badge" /* 9674 */;
+import Pressables from "Pressables" /* 6893 */;
+import shared_components_Badge from "shared_components/Badge" /* 9681 */;
 import _readOnlyError from "_readOnlyError" /* 377 */;
 import noop from "module_19" /* 19 */;
 
-const BadgeDefault = Badge;
+const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const jsxProd = fn(21);
@@ -121,10 +121,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ButtonBadge(
     return tmp6;
   }
   const obj2 = { size: null, maskSize: 2, style: null, maskColor: null };
-  obj2.size = Badge.CHANNEL_BADGE_SIZE;
+  obj2.size = shared_components_Badge.CHANNEL_BADGE_SIZE;
   obj2.style = tmp5;
   obj2.maskColor = tmp4.unreadBadgeMask.color;
-  const tmp8 = React4(BadgeDefault, obj2);
+  const tmp8 = React4(shared_components_BadgeDefault, obj2);
   cResult[0] = tmp4.unreadBadgeMask.color;
   cResult[1] = tmp5;
   cResult[2] = tmp8;
@@ -135,8 +135,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ButtonBadge(
     str = "left";
   }
   const tmp = closure_6();
-  const obj = { size: Badge.CHANNEL_BADGE_SIZE, maskSize: 2, style: "left" === str ? tmp.unreadBadgeLeft : tmp.unreadBadgeRight, maskColor: tmp.unreadBadgeMask.color };
-  return React4(BadgeDefault, obj);
+  const obj = { size: shared_components_Badge.CHANNEL_BADGE_SIZE, maskSize: 2, style: "left" === str ? tmp.unreadBadgeLeft : tmp.unreadBadgeRight, maskColor: tmp.unreadBadgeMask.color };
+  return React4(shared_components_BadgeDefault, obj);
 });
 let closure_8 = tmp5;
 const size = fn(2);

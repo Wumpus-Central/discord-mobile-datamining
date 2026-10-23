@@ -1,22 +1,22 @@
-// === Module 17804: ICYMICustomScoresGuildScreen ===
+// === Module 17826: ICYMICustomScoresGuildScreen ===
 
-// Module 17804 (ICYMICustomScoresGuildScreen)
+// Module 17826 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ChannelListState from "ChannelListState" /* 7621 */;
-import ICYMIUtils from "ICYMIUtils" /* 8808 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11043 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17806 */;
+import ChannelListState from "ChannelListState" /* 7622 */;
+import ICYMIUtils from "ICYMIUtils" /* 8815 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11052 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelListStore from "ChannelListStore" /* 7619 */;
+import ChannelListStore from "ChannelListStore" /* 7620 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
-import ICYMIStore from "ICYMIStore" /* 8791 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
+import ICYMIStore from "ICYMIStore" /* 8798 */;
 
 require = fn;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -196,10 +196,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
             return closure_10.getCustomGuildScore(guildId);
           }
         }
-        const numberToCustomScoreResult = tmp2(8808).numberToCustomScore(stateFromStores1);
+        const numberToCustomScoreResult = tmp2(8815).numberToCustomScore(stateFromStores1);
         cResult[12] = stateFromStores1;
         cResult[13] = numberToCustomScoreResult;
-        const tmp2Result5 = tmp2(8808);
+        const tmp2Result5 = tmp2(8815);
       } else {
         class N {
           constructor() {
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
             }
           }
           let tmp50 = navigation;
-          if (first1 !== navigation(7621).SECTION_INDEX_GUILD_ACTIONS) {
+          if (first1 !== navigation(7622).SECTION_INDEX_GUILD_ACTIONS) {
             class R {
               constructor() {
                 return closure_6.getGuild(guildId);
@@ -586,9 +586,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(8808).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(8815).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(8808);
+  const tmp2Result3 = navigation(8815);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () => ChannelListStore.getGuild(guildId)).guildChannels;
   const items4 = [numberToCustomScoreResult, guildChannels];
@@ -700,6 +700,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(7206).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(7205).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 });

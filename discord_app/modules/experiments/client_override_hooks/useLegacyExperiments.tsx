@@ -1,6 +1,6 @@
-// === Module 11182: useLegacyExperiments ===
+// === Module 11191: useLegacyExperiments ===
 
-// Module 11182 (useLegacyExperiments)
+// Module 11191 (useLegacyExperiments)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ExperimentManager from "ExperimentManager" /* 5181 */;
@@ -23,17 +23,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8471).getExperimentBucketName(item);
-        const obj3 = closure_1(8471);
+        experimentBucketName = closure_1(8472).getExperimentBucketName(item);
+        const obj3 = closure_1(8472);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8471).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8472).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8473).Variation_Type.CONTROL;
+        let TREATMENT = obj(8474).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8473).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8474).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8473).Variation_Type.TREATMENT;
+        TREATMENT = obj(8474).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;

@@ -1,10 +1,10 @@
-// === Module 9015: DeleteEventAlert ===
+// === Module 9022: DeleteEventAlert ===
 
-// Module 9015 (DeleteEventAlert)
+// Module 9022 (DeleteEventAlert)
 import util from "util" /* 1128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6770 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6769 */;
 
 const require = globalThis.__r;
 
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8856);
+            const obj8 = v1(8863);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;

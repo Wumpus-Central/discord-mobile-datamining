@@ -1,6 +1,6 @@
-// === Module 18041: SuggestedSearchSkeleton ===
+// === Module 18063: SuggestedSearchSkeleton ===
 
-// Module 18041 (SuggestedSearchSkeleton)
+// Module 18063 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
@@ -13,17 +13,17 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
-let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9684).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
+let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9691).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13144).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13160).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function SuggestedSearchSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function SuggestedSearchSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9684).SEARCH_ROW_TAP_STATE_PADDING };
+let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9691).SEARCH_ROW_TAP_STATE_PADDING };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx");
 

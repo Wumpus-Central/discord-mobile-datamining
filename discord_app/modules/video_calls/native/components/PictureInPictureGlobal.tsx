@@ -1,32 +1,32 @@
-// === Module 18267: PictureInPictureGlobal ===
+// === Module 18289: PictureInPictureGlobal ===
 
-// Module 18267 (PictureInPictureGlobal)
+// Module 18289 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import NavigatorConstants from "NavigatorConstants" /* 5254 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6766 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7851 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11311 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11320 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11322 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18268 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6765 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7852 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11320 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11329 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11331 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18290 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11324);
+const usePipDimensionsDefault = tmp5(11333);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9752).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9759).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
 const ParticipantTypes = fn(5618).ParticipantTypes;
 const jsxProd = fn(21);
@@ -360,8 +360,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(11321).useShouldForcePipOrientation(tmp31);
-    tmp(8664);
+    const shouldForcePipOrientation = tmp(11330).useShouldForcePipOrientation(tmp31);
+    tmp(8671);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(11321);
+    const tmpResult9 = tmp(11330);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {

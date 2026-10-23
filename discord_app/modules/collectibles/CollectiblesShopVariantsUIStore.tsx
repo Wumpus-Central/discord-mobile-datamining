@@ -1,8 +1,8 @@
-// === Module 9390: CollectiblesShopVariantsUIStore ===
+// === Module 9397: CollectiblesShopVariantsUIStore ===
 
-// Module 9390 (CollectiblesShopVariantsUIStore)
+// Module 9397 (CollectiblesShopVariantsUIStore)
 import _mod4884 from "module_4884" /* 4884 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7645 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7646 */;
 import identity from "module_1269" /* 1269 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

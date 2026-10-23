@@ -1,7 +1,7 @@
-// === Module 12467: useKeyboardStateSharedValue ===
+// === Module 12477: useKeyboardStateSharedValue ===
 
-// Module 12467 (useKeyboardStateSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10869 */;
+// Module 12477 (useKeyboardStateSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10877 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 
 const ReanimatedRexport = fn(5038);

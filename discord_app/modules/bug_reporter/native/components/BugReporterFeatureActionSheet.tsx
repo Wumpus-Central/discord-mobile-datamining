@@ -1,12 +1,12 @@
-// === Module 13735: BugReporterFeatureActionSheet ===
+// === Module 13749: BugReporterFeatureActionSheet ===
 
-// Module 13735 (BugReporterFeatureActionSheet)
+// Module 13749 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,29 +80,29 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ feature, setFeature } = item);
   ({ start, end } = item);
   if (cResult[0] !== item) {
-    const featureId = tmp(13726).getFeatureId(item);
+    const featureId = tmp(13740).getFeatureId(item);
     cResult[0] = item;
     cResult[1] = featureId;
     let tmp4 = featureId;
-    const tmpResult = tmp(13726);
+    const tmpResult = tmp(13740);
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== item) {
-    const featureId1 = tmp(13726).getFeatureId(item);
+    const featureId1 = tmp(13740).getFeatureId(item);
     cResult[2] = item;
     cResult[3] = featureId1;
     let tmp6 = featureId1;
-    const tmpResult3 = tmp(13726);
+    const tmpResult3 = tmp(13740);
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== feature) {
-    const featureId2 = tmp(13726).getFeatureId(feature);
+    const featureId2 = tmp(13740).getFeatureId(feature);
     cResult[4] = feature;
     cResult[5] = featureId2;
     let tmp8 = featureId2;
-    const tmpResult4 = tmp(13726);
+    const tmpResult4 = tmp(13740);
   } else {
     tmp8 = cResult[5];
   }
@@ -125,7 +125,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj2 = { start, end, value: tmp4, label: item.name, legacyCompat_selected: tmp6 === tmp8, legacyCompat_onPress: tmp10 };
-    const tmp14 = closure_6(tmp(6970).TableRadioRow, obj2);
+    const tmp14 = closure_6(tmp(6969).TableRadioRow, obj2);
     cResult[9] = end;
     cResult[10] = item.name;
     cResult[11] = start;
@@ -148,16 +148,16 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(13726).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(13726);
-  const featureId = item(13726).getFeatureId(item);
-  const obj3 = item(13726);
-  obj.legacyCompat_selected = featureId === item(13726).getFeatureId(feature);
+  const obj = { start, end, value: item(13740).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(13740);
+  const featureId = item(13740).getFeatureId(item);
+  const obj3 = item(13740);
+  obj.legacyCompat_selected = featureId === item(13740).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(6970).TableRadioRow, obj);
+  return closure_6(item(6969).TableRadioRow, obj);
 }));
 ReactCompilerGating = fn(558);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
@@ -612,9 +612,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
   obj2.title = intl.string(features(setFeature[18]).t["77VVd8"]);
   obj.header = closure_6(features(setFeature[17]).BottomSheetTitleHeader, obj2);
   const tmp5 = feature(setFeature[15])();
-  const items4 = [closure_6(height, { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }) }), ];
+  const items4 = [closure_6(height, { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchBar, { size: "md", onChange: tmp2[1] }) }), ];
   const obj4 = { style: tmp.list, inActionSheet: true, sections: memo.sections, itemSize: tmp5, estimatedListSize: "windowSize", renderItem: callback, renderSectionHeader: callback1, sectionHeaderSize: tmp6, insetEnd: null };
-  const obj3 = { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }) };
+  const obj3 = { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchBar, { size: "md", onChange: tmp2[1] }) };
   obj4.insetEnd = feature(setFeature[5]).space.PX_16 + feature(setFeature[12])().insets.bottom;
   items4[1] = closure_6(feature(setFeature[20]), obj4);
   obj.children = items4;

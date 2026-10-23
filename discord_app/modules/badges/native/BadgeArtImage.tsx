@@ -1,9 +1,9 @@
-// === Module 11081: BadgeArtImage ===
+// === Module 11090: BadgeArtImage ===
 
-// Module 11081 (BadgeArtImage)
+// Module 11090 (BadgeArtImage)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import APNGPlayer2 from "APNGPlayer" /* 9370 */;
+import APNGPlayer2 from "APNGPlayer" /* 9377 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeArt
         }
         const formatted = url.split(/[?#]/)[0].toLowerCase();
         if (formatted.endsWith(".svg")) {
-          SvgUri = SvgUri(7946).SvgUri;
+          SvgUri = SvgUri(7947).SvgUri;
           size = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
           let tmp4Result;
           if (null != fallbackUrl) {
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeArt
       } else {
         APNGPlayer(1384);
       }
-      APNGPlayer = APNGPlayer(9370).APNGPlayer;
+      APNGPlayer = APNGPlayer(9377).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

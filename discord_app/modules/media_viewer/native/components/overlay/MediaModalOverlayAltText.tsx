@@ -1,9 +1,9 @@
-// === Module 14157: MediaModalOverlayAltText ===
+// === Module 14171: MediaModalOverlayAltText ===
 
-// Module 14157 (MediaModalOverlayAltText)
+// Module 14171 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11195 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11204 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -65,7 +65,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (cResult[4] === container.container) {
       }
-      PressableOpacity = PressableOpacity(6894).PressableOpacity;
+      PressableOpacity = PressableOpacity(6893).PressableOpacity;
       const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
       tmp = <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>{tmp7}</PressableOpacity>;
       container = container.container;
@@ -100,7 +100,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const intl = tmp3(1128).intl;
       obj2.children = intl.string(tmp3(1128).t.Q5VqrN);
       obj.children = jsx(tmp3(5220).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(6894).PressableOpacity, {
+      tmp4 = jsx(tmp3(6893).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

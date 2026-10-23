@@ -1,6 +1,6 @@
-// === Module 13835: GiftBadgePostPurchase ===
+// === Module 13849: GiftBadgePostPurchase ===
 
-// Module 13835 (GiftBadgePostPurchase)
+// Module 13849 (GiftBadgePostPurchase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,19 +11,19 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 499
 import HapticUtils from "HapticUtils" /* 5198 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import BadgeId from "BadgeId" /* 8646 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10472 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10475 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13837 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13838 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import BadgeId from "BadgeId" /* 8653 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10479 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10482 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13851 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13852 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8654 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
 
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13836);
+const GiftingBadgeConstants = fn(13850);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -106,7 +106,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
       }
     }
     const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-    const tmp10 = closure_10(tmp(12806).GiftIcon, obj2);
+    const tmp10 = closure_10(tmp(12825).GiftIcon, obj2);
     const intl = tmp(1128).intl;
     const stringResult = intl.string(_modDef2632.g86YiI);
     cResult[3] = tmp10;
@@ -239,7 +239,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(12806).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(12825).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1128).intl;
   obj2.text = intl.string(_modDef2632.g86YiI);
   obj2.onPress = callback;

@@ -1,9 +1,9 @@
-// === Module 17440: ConnectedUserLimit ===
+// === Module 17462: ConnectedUserLimit ===
 
-// Module 17440 (ConnectedUserLimit)
+// Module 17462 (ConnectedUserLimit)
 import c from "c" /* 576 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9125 */;
-import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 17441 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9132 */;
+import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 17463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

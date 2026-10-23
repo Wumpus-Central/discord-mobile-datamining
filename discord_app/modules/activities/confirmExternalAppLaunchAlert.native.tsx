@@ -1,14 +1,14 @@
-// === Module 11356: confirmExternalAppLaunchAlert ===
+// === Module 11367: confirmExternalAppLaunchAlert ===
 
-// Module 11356 (confirmExternalAppLaunchAlert)
+// Module 11367 (confirmExternalAppLaunchAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import LinkingDefault from "Linking" /* 5646 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
-import _modDef11357 from "module_11357" /* 11357 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
+import _modDef11368 from "module_11368" /* 11368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
   application = application.application;
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.announcementBirb) {
-    const obj2 = { source: _modDef11357, style: tmp4.announcementBirb };
+    const obj2 = { source: _modDef11368, style: tmp4.announcementBirb };
     const tmp9 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp4.announcementBirb;
     cResult[1] = tmp9;
@@ -113,7 +113,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
 }) : (function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11357, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11368, style: tmp.announcementBirb };
   const items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;

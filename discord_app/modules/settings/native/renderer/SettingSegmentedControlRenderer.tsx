@@ -1,20 +1,20 @@
-// === Module 15913: SettingSegmentedControlRenderer ===
+// === Module 15931: SettingSegmentedControlRenderer ===
 
-// Module 15913 (SettingSegmentedControlRenderer)
+// Module 15931 (SettingSegmentedControlRenderer)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 15768 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15902 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 15903 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 15782 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15920 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 15921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15900 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15918 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NodeType = fn(11173).NodeType;
+const NodeType = fn(11182).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(15768).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(15782).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(15902).getSettingTitle(id);
+      obj.label = items(15920).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

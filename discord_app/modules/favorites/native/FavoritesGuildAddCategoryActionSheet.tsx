@@ -1,9 +1,9 @@
-// === Module 17479: FavoritesGuildAddCategoryActionSheet ===
+// === Module 17501: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 17479 (FavoritesGuildAddCategoryActionSheet)
+// Module 17501 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10809 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
       let obj2 = { title: null };
       const intl = tmp(1128).intl;
       obj2.title = intl.string(tmp(1128).t["ISN+NM"]);
-      const tmp13 = closure_6(tmp(7232).BottomSheetTitleHeader, obj2);
+      const tmp13 = closure_6(tmp(7233).BottomSheetTitleHeader, obj2);
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -111,7 +111,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
       tmp25 = tmp27;
     }
     const obj5 = { label: tmp14, placeholder: tmp15, value, onChange: tmp5[1], maxLength, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: tmp9 };
-    const tmp21 = closure_6(tmp(6994).TextInput, obj5);
+    const tmp21 = closure_6(tmp(6993).TextInput, obj5);
     cResult[8] = tmp9;
     cResult[9] = value;
     cResult[10] = tmp21;
@@ -144,7 +144,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   const obj3 = { title: null };
   const intl = value(1128).intl;
   obj3.title = intl.string(value(1128).t["ISN+NM"]);
-  obj2.header = closure_6(value(7232).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(7233).BottomSheetTitleHeader, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1128).intl;
   obj4.label = intl2.string(value(1128).t.OCAkGP);
@@ -153,7 +153,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6994).TextInput, obj4), ];
+  const items1 = [closure_6(value(6993).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1128).intl;
   obj5.text = intl4.string(value(1128).t.CumH4u);

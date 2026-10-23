@@ -1,6 +1,6 @@
-// === Module 16824: UserSettingsPushNotificationLogs ===
+// === Module 16846: UserSettingsPushNotificationLogs ===
 
-// Module 16824 (UserSettingsPushNotificationLogs)
+// Module 16846 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7010).InputHeights.MD, width: fn(7010).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7009).InputHeights.MD, width: fn(7009).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   let obj = first1(576);
   [r10046, asyncGeneratorStep] = noop.useState(tmp11);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
+    class B {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -132,11 +132,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
     let items2 = [];
-    cResult[3] = I;
+    cResult[3] = B;
     cResult[4] = items2;
     let tmp14 = items2;
   } else {
-    class I {
+    class B {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     tmp14 = cResult[4];
   }
-  const effect = noop.useEffect(I, tmp14);
+  const effect = noop.useEffect(B, tmp14);
   if (cResult[5] === first2) {
-    class I {
+    class B {
       constructor() {
         closure_0 = async function _load() {
           if (c3 === 2) {
@@ -274,13 +274,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         return;
       }
     }
-    const effect1 = noop.useEffect(C, items4);
+    const effect1 = noop.useEffect(T, items4);
     const tmp18 = closure_9();
     _slicedToArray = tmp18;
     const bottom = first2(1633)().bottom;
     ({ wrap, searchWrap } = tmp18);
     if (cResult[9] !== first1) {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -348,11 +348,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
       let obj3 = { size: "md", placeholder: "Filter (regex)", onChange: tmp6[1], defaultValue: first1 };
-      const tmp21 = closure_7(tmp(7131).SearchField, obj3);
+      const tmp21 = closure_7(tmp(7130).SearchBar, obj3);
       cResult[9] = first1;
       cResult[10] = tmp21;
     } else {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -422,7 +422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     const _Symbol = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = undefined;
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp5(13729)(), done: false };
+                const obj4 = { value: tmp5(13743)(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -530,8 +530,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               return obj5;
             } else {
               closure_128_0 = value;
-              const obj6 = { message: tmp5(13730)(closure_128_0, false) };
-              tmp2(8819).showShareActionSheet(obj6, "push-notification-logs");
+              const obj6 = { message: tmp5(13744)(closure_128_0, false) };
+              tmp2(8826).showShareActionSheet(obj6, "push-notification-logs");
               c3 = 3;
               return { value: "IconComponent", done: null };
             }
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
         return applyArgumentsResult;
       }
-      const tmp28 = closure_7(tmp(14145).ShareIcon, {});
+      const tmp28 = closure_7(tmp(14159).ShareIcon, {});
       cResult[11] = stringResult;
       cResult[12] = t12;
       cResult[13] = tmp28;
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       let tmp23 = t12;
       const tmp22 = stringResult;
     } else {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -630,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       tmp24 = cResult[13];
     }
     if (cResult[14] !== tmp18.shareButton) {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -698,11 +698,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
       let obj5 = { style: tmp18.shareButton, accessibilityLabel: tmp22, onPress: tmp23, children: tmp24 };
-      const tmp30 = closure_7(tmp(6894).PressableOpacity, obj5);
+      const tmp30 = closure_7(tmp(6893).PressableOpacity, obj5);
       cResult[14] = tmp18.shareButton;
       cResult[15] = tmp30;
     } else {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -771,7 +771,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
     if (cResult[16] === tmp18.searchWrap) {
-      class I {
+      class B {
         constructor() {
           closure_0 = async function _load() {
             if (c3 === 2) {
@@ -848,7 +848,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     cResult[18] = tmp20;
     cResult[19] = tmp34;
   }
-  class C {
+  class T {
     constructor() {
       if ("" !== closure_0) {
         tmp8 = globalThis;
@@ -881,7 +881,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   items4 = [first2, first1];
   cResult[5] = first2;
   cResult[6] = first1;
-  cResult[7] = C;
+  cResult[7] = T;
   cResult[8] = items4;
   const tmp5Result2 = _slicedToArray(noop.useState(tmp11), 2);
 }) : (function UserSettingsPushNotificationLogs() {
@@ -998,7 +998,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   _slicedToArray = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   let obj2 = { style: tmp9.searchWrap, children: null };
-  let items1 = [closure_7(defaultValue(7131).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
+  let items1 = [closure_7(defaultValue(7130).SearchBar, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
   let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = defaultValue(1128).intl;
   obj3.accessibilityLabel = intl.string(defaultValue(1128).t.leICvh);
@@ -1030,7 +1030,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(13729)(), done: false };
+            const obj4 = { value: tmp5(13743)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -1042,8 +1042,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(13730)(closure_128_0, false) };
-          tmp2(8819).showShareActionSheet(obj6, "push-notification-logs");
+          const obj6 = { message: tmp5(13744)(closure_128_0, false) };
+          tmp2(8826).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -1053,8 +1053,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
   });
-  obj3.children = closure_7(defaultValue(14145).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(6894).PressableOpacity, obj3);
+  obj3.children = closure_7(defaultValue(14159).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(6893).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];
   let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
@@ -1082,7 +1082,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj.children = items;
     return closure_2_8(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(7206).FlashList, obj4);
+  items2[1] = closure_7(defaultValue(7205).FlashList, obj4);
   obj.children = items2;
   return closure_8(View, obj);
 });

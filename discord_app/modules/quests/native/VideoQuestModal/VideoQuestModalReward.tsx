@@ -1,9 +1,9 @@
-// === Module 16387: VideoQuestModalReward ===
+// === Module 16409: VideoQuestModalReward ===
 
-// Module 16387 (VideoQuestModalReward)
+// Module 16409 (VideoQuestModalReward)
 import nativeDefault from "native" /* 587 */;
-import QuestUtils from "QuestUtils" /* 9536 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16369 */;
+import QuestUtils from "QuestUtils" /* 9543 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16392 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,9 +23,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   const obj = quest(576);
-  quest = quest(16364).useVideoQuestModalContext().quest;
-  const tmpResult = quest(16364);
-  const questTaskDetails = quest(9539).useQuestTaskDetails(quest);
+  quest = quest(16387).useVideoQuestModalContext().quest;
+  const tmpResult = quest(16387);
+  const questTaskDetails = quest(9546).useQuestTaskDetails(quest);
   if (cResult[0] !== quest.id) {
     const fn = function s() {
       const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   const obj3 = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style, children: null };
                   const items = [tmp9, tmp17];
                   obj3.children = items;
-                  const tmp24 = closure_5(tmp(5964).Stack, obj3);
+                  const tmp24 = closure_5(tmp(5963).Stack, obj3);
                   cResult[18] = style;
                   cResult[19] = tmp9;
                   cResult[20] = tmp17;
@@ -90,7 +90,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj4 = { align: "center", spacing: nativeDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
               const items1 = [tmp11, tmp14];
               obj4.children = items1;
-              const tmp20 = closure_5(tmp(5964).Stack, obj4);
+              const tmp20 = closure_5(tmp(5963).Stack, obj4);
               cResult[14] = onTextBlockLayout;
               cResult[15] = tmp11;
               cResult[16] = tmp14;
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp10;
   tmp9 = tmp10;
   const obj7 = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: tmp7, withAnimation: withRewardTileAnimation };
-  const tmpResult2 = quest(9539);
+  const tmpResult2 = quest(9546);
 }) : (function VideoQuestModalReward(style) {
   const withQuestName = style.withQuestName;
   let tmp = undefined === withQuestName;
@@ -139,14 +139,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(16364).useVideoQuestModalContext().quest;
-  const obj = quest(16364);
+  quest = quest(16387).useVideoQuestModalContext().quest;
+  const obj = quest(16387);
   const items = [quest.id];
-  const questTaskDetails = quest(9539).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(9546).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(9539);
+  const obj2 = quest(9546);
   const obj3 = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style: style.style, children: null };
   const items1 = [closure_4(QuestProgressIndicatorDefault, { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation }), ];
   const obj5 = { align: "center", spacing: nativeDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   items2[1] = tmp9Result;
   obj5.children = items2;
-  items1[1] = closure_5(quest(5964).Stack, obj5);
+  items1[1] = closure_5(quest(5963).Stack, obj5);
   obj3.children = items1;
-  return closure_5(quest(5964).Stack, obj3);
+  return closure_5(quest(5963).Stack, obj3);
 }));

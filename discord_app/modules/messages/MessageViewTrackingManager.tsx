@@ -1,13 +1,13 @@
-// === Module 9970: MessageViewTrackingManager ===
+// === Module 9977: MessageViewTrackingManager ===
 
-// Module 9970 (MessageViewTrackingManager)
+// Module 9977 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import privDefault from "priv" /* 1459 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
 import size from "module_2" /* 2 */;
 
 function getAnalyticsConfig(type) {

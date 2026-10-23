@@ -1,14 +1,14 @@
-// === Module 13802: useAppChannelRunningApp ===
+// === Module 13816: useAppChannelRunningApp ===
 
-// Module 13802 (useAppChannelRunningApp)
-import useFrameRunsInBackgroundDefault from "useFrameRunsInBackground" /* 13803 */;
-import FramesStore from "FramesStore" /* 6761 */;
+// Module 13816 (useAppChannelRunningApp)
+import useFrameRunsInBackgroundDefault from "useFrameRunsInBackground" /* 13817 */;
+import FramesStore from "FramesStore" /* 6760 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1087).ChannelTypes;
-const getFrameSurfaceForChannel = fn(6762).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6761).getFrameSurfaceForChannel;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");

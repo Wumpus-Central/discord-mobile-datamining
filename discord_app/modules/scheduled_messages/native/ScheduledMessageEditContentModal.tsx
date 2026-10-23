@@ -1,13 +1,13 @@
-// === Module 13979: ScheduledMessageEditContentModal ===
+// === Module 13993: ScheduledMessageEditContentModal ===
 
-// Module 13979 (ScheduledMessageEditContentModal)
+// Module 13993 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6894 */;
-import MessageParserDefault from "MessageParser" /* 7739 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9665 */;
-import HeaderShared from "HeaderShared" /* 9669 */;
+import Pressables from "Pressables" /* 6893 */;
+import MessageParserDefault from "MessageParser" /* 7740 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9672 */;
+import HeaderShared from "HeaderShared" /* 9676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -198,11 +198,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj5 = v1(7739);
+            const obj5 = v1(7740);
             const obj4 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(9664).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
+            const obj7 = { value: tmp4(9671).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -214,8 +214,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           return obj;
         } else {
           if (value) {
-            v1(6658).pop();
-            const arr = v1(6658);
+            v1(6657).pop();
+            const arr = v1(6657);
           }
           dependencyMap = 3;
           return { value: "IconComponent", done: null };

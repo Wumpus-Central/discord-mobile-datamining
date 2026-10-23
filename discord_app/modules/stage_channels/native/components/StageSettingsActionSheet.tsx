@@ -1,21 +1,21 @@
-// === Module 8091: StageSettingsActionSheet ===
+// === Module 8092: StageSettingsActionSheet ===
 
-// Module 8091 (StageSettingsActionSheet)
+// Module 8092 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4829 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7853 */;
-import ReportModals from "ReportModals" /* 8092 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10063 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7854 */;
+import ReportModals from "ReportModals" /* 8093 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10070 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import StageInstanceStore from "StageInstanceStore" /* 4826 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(6623).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(6622).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1087);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

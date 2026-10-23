@@ -1,7 +1,7 @@
-// === Module 12314: useConjureProjectEventLine ===
+// === Module 12325: useConjureProjectEventLine ===
 
-// Module 12314 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12297 */;
+// Module 12325 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12308 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   actor_user_id = actor_user_id.actor_user_id;
   if (cResult[0] !== actor_user_id) {
     const fn = function c() {
-      return conjureMessageAuthors.requestMessageAuthor(actor_user_id);
+      const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
     };
     const items = [actor_user_id];
     cResult[0] = actor_user_id;
@@ -223,7 +223,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   importDefault = arg2;
   actor_user_id = actor_user_id.actor_user_id;
   const items = [actor_user_id];
-  const effect = stateFromStores.useEffect(() => conjureMessageAuthors.requestMessageAuthor(actor_user_id), items);
+  const effect = stateFromStores.useEffect(() => {
+    const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
+  }, items);
   const items1 = [UserStore];
   const items2 = [actor_user_id];
   stateFromStores = require("initialize").useStateFromStores(items1, () => {

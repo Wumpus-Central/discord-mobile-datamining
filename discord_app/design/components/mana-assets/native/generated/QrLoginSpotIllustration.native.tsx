@@ -1,23 +1,23 @@
-// === Module 15042: QrLoginSpotIllustration ===
+// === Module 15055: QrLoginSpotIllustration ===
 
-// Module 15042 (QrLoginSpotIllustration)
+// Module 15055 (QrLoginSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef15043 from "module_15043" /* 15043 */;
-import _modDef15044 from "module_15044" /* 15044 */;
-import _modDef15045 from "module_15045" /* 15045 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef15056 from "module_15056" /* 15056 */;
+import _modDef15057 from "module_15057" /* 15057 */;
+import _modDef15058 from "module_15058" /* 15058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15043 }, 3: null };
-let obj2 = { uri: _modDef15043 };
-obj[2] = { uri: _modDef15044 };
-const obj3 = { uri: _modDef15044 };
-obj[3] = { uri: _modDef15045 };
+let obj = { 1: null, 2: { uri: _modDef15056 }, 3: null };
+let obj2 = { uri: _modDef15056 };
+obj[2] = { uri: _modDef15057 };
+const obj3 = { uri: _modDef15057 };
+obj[3] = { uri: _modDef15058 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef15045 };
+const obj4 = { uri: _modDef15058 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx");
 

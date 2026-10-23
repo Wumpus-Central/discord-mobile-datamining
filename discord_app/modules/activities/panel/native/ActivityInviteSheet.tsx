@@ -1,22 +1,22 @@
-// === Module 18365: ActivityInviteSheet ===
+// === Module 18387: ActivityInviteSheet ===
 
-// Module 18365 (ActivityInviteSheet)
+// Module 18387 (ActivityInviteSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9029 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9051 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9036 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9034 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9041 */;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9100);
+const InstantInviteSendStateStore = fn(9107);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1087).ActivityActionTypes;
-const Constants = fn(7793);
+const Constants = fn(7794);
 ({ InviteSendStates: c10, InviteTargetTypes: closure_11 } = Constants);
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const jsxProd = fn(21);
@@ -103,8 +103,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   activity = activity.activity;
   const tmp4 = closure_16();
   let obj = activity(576);
-  analyticsLocations = analyticsLocations(7237)(analyticsLocations(7262).ACTIVITY_INVITE_SHEET).analyticsLocations;
-  const tmp5 = analyticsLocations(7237);
+  analyticsLocations = analyticsLocations(7238)(analyticsLocations(7263).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  const tmp5 = analyticsLocations(7238);
   let tmp6 = dependencyMap2;
   [tmp8, dependencyMap] = dependencyMap2(noop.useState(null), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -450,138 +450,495 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     [tmp16, noop] = tmp6(noop.useState(false), 2);
     const _Symbol2 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
       const items1 = [];
-      cResult[10] = F;
+      cResult[10] = tmp19;
       cResult[11] = items1;
       let tmp18 = items1;
     } else {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
       tmp18 = cResult[11];
     }
-    const effect = noop.useEffect(F, tmp18);
+    const effect = noop.useEffect(tmp19, tmp18);
     const _Symbol3 = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
       let obj3 = { title: null };
       const intl = tmp(1128).intl;
       obj3.title = intl.string(tmp(1128).t["OzOM/q"]);
-      const tmp24 = closure_13(tmp(7232).BottomSheetTitleHeader, obj3);
-      cResult[12] = tmp24;
+      const tmp25 = closure_13(tmp(7233).BottomSheetTitleHeader, obj3);
+      cResult[12] = tmp25;
     } else {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
     }
     if (cResult[13] === tmp8) {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
     }
     if (null != tmp8) {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
-      let obj4 = { style: tmp4.emptyState, Illustration: tmp(9054).AppCrash, title: tmp8 };
-      const tmp25 = closure_13(tmp(1202).EmptyState, obj4);
+      let obj4 = { style: tmp4.emptyState, Illustration: tmp(9061).AppCrash, title: tmp8 };
+      const tmp26 = closure_13(tmp(1202).EmptyState, obj4);
     } else {
-      class F {
-        constructor() {
-          tmp = closure_4(true);
-          obj = closure_0(closure_2[21]);
-          obj1 = { omitUserIds: null, inviteTargetType: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
-          catchPromise = inviteSuggestions.catch(NOOP_NULL);
-          cleanupPromise = catchPromise.finally(() => {
-            closure_1_4(false);
-          });
+      class V {
+        constructor(arg0) {
+          closure_0 = activity;
+          tmp2 = closure_0;
+          if (null != closure_0) {
+            party = tmp2.party;
+            id = undefined;
+            if (party != null) {
+              id = party.id;
+            }
+            if (null != id) {
+              markInviteSent = function markInviteSent() {
+                if (null != id) {
+                  timestampProducer(tmp, item.item.id, constants.SENT);
+                }
+              };
+              tmp20 = closure_1_6;
+              tmp21 = closure_1_10;
+              tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+              tmp23 = activity;
+              tmp24 = closure_2;
+              if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+                try {
+                  tmp13 = analyticsLocations;
+                  obj3 = analyticsLocations(tmp24[19]);
+                  obj1 = { channelId: null, type: null, activity: null, location: null };
+                  obj1.channelId = tmp12;
+                  tmp14 = closure_1_9;
+                  obj1.type = closure_1_9.JOIN;
+                  obj1.activity = tmp2;
+                  obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                  nextPromise = sendActivityInviteResult.then(markInviteSent);
+                  catchPromise = nextPromise.catch((error) => {
+                    dependencyMap(String(error));
+                  });
+                } catch (tmp16) {
+                  tmp17 = closure_2;
+                  tmp18 = globalThis;
+                  _String2 = String;
+                  tmp19 = closure_2(String(tmp16));
+                }
+              } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+                try {
+                  tmp5 = analyticsLocations;
+                  obj = analyticsLocations(tmp24[19]);
+                  obj5 = { userId: null, type: null, activity: null, location: null };
+                  obj5.userId = tmp4;
+                  tmp6 = closure_1_9;
+                  obj5.type = closure_1_9.JOIN;
+                  obj5.activity = tmp2;
+                  obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                  result = obj.sendActivityInviteUser(obj5);
+                  nextPromise1 = result.then(markInviteSent);
+                  catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+                } catch (tmp8) {
+                  tmp9 = closure_2;
+                  tmp10 = globalThis;
+                  _String = String;
+                  tmp11 = closure_2(String(tmp8));
+                }
+              }
+            }
+          }
           return;
         }
       }
@@ -613,24 +970,75 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       }
     }
     cResult[20] = tmp4;
-    cResult[21] = tmp25;
-    const tmp20 = 0 === stateFromStores.length && tmp16;
+    cResult[21] = tmp26;
+    const tmp21 = 0 === stateFromStores.length && tmp16;
     const tmp6Result = tmp6(noop.useState(false), 2);
   }
   if (activity.party != null) {
-    class F {
-      constructor() {
-        tmp = closure_4(true);
-        obj = closure_0(closure_2[21]);
-        obj1 = { omitUserIds: null, inviteTargetType: null };
-        set = new Set();
-        obj1.omitUserIds = set;
-        obj1.inviteTargetType = InviteTargetTypes.EMBEDDED_APPLICATION;
-        inviteSuggestions = obj.loadInviteSuggestions(obj1);
-        catchPromise = inviteSuggestions.catch(NOOP_NULL);
-        cleanupPromise = catchPromise.finally(() => {
-          closure_1_4(false);
-        });
+    class V {
+      constructor(arg0) {
+        closure_0 = activity;
+        tmp2 = closure_0;
+        if (null != closure_0) {
+          party = tmp2.party;
+          id = undefined;
+          if (party != null) {
+            id = party.id;
+          }
+          if (null != id) {
+            markInviteSent = function markInviteSent() {
+              if (null != id) {
+                timestampProducer(tmp, item.item.id, constants.SENT);
+              }
+            };
+            tmp20 = closure_1_6;
+            tmp21 = closure_1_10;
+            tmp22 = closure_1_6(id, activity.item.id, closure_1_10.SENDING);
+            tmp23 = activity;
+            tmp24 = closure_2;
+            if (activity.type === activity(closure_2[18]).RowTypes.CHANNEL) {
+              try {
+                tmp13 = analyticsLocations;
+                obj3 = analyticsLocations(tmp24[19]);
+                obj1 = { channelId: null, type: null, activity: null, location: null };
+                obj1.channelId = tmp12;
+                tmp14 = closure_1_9;
+                obj1.type = closure_1_9.JOIN;
+                obj1.activity = tmp2;
+                obj1.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                sendActivityInviteResult = obj3.sendActivityInvite(obj1);
+                nextPromise = sendActivityInviteResult.then(markInviteSent);
+                catchPromise = nextPromise.catch((error) => {
+                  dependencyMap(String(error));
+                });
+              } catch (tmp16) {
+                tmp17 = closure_2;
+                tmp18 = globalThis;
+                _String2 = String;
+                tmp19 = closure_2(String(tmp16));
+              }
+            } else if (activity.type === tmp23(tmp24[18]).RowTypes.DM) {
+              try {
+                tmp5 = analyticsLocations;
+                obj = analyticsLocations(tmp24[19]);
+                obj5 = { userId: null, type: null, activity: null, location: null };
+                obj5.userId = tmp4;
+                tmp6 = closure_1_9;
+                obj5.type = closure_1_9.JOIN;
+                obj5.activity = tmp2;
+                obj5.location = analyticsLocations(tmp24[15]).ACTIVITY_INVITE_SHEET;
+                result = obj.sendActivityInviteUser(obj5);
+                nextPromise1 = result.then(markInviteSent);
+                catchPromise1 = nextPromise1.catch((error) => dependencyMap(String(error)));
+              } catch (tmp8) {
+                tmp9 = closure_2;
+                tmp10 = globalThis;
+                _String = String;
+                tmp11 = closure_2(String(tmp8));
+              }
+            }
+          }
+        }
         return;
       }
     }
@@ -666,9 +1074,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   dependencyMap2 = undefined;
   noop = undefined;
   const tmp = closure_16();
-  analyticsLocations = analyticsLocations(7237)(analyticsLocations(7262).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7238)(analyticsLocations(7263).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7237);
+  const tmp4 = analyticsLocations(7238);
   [tmp6, c2] = dependencyMap2(noop.useState(null), 2);
   const tmp7 = closure_7((arg0) => arg0);
   dependencyMap2 = tmp7;
@@ -766,19 +1174,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   let obj4 = { title: null };
   const intl = tmp11(1128).intl;
   obj4.title = intl.string(activity(1128).t["OzOM/q"]);
-  obj3.header = closure_13(activity(7232).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_13(activity(7233).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9054).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9061).AppCrash, title: tmp6 };
     let tmp19Result = closure_13(tmp11(1202).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_13(closure_17, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(9051).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(9058).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1128).intl;
     obj8.placeholder = intl2.string(tmp11(1128).t.iI1gMg);
-    obj7.children = closure_13(tmp11(7131).SearchField, obj8);
+    obj7.children = closure_13(tmp11(7130).SearchBar, obj8);
     obj6.children = closure_13(View, obj7);
     const items4 = [closure_13(View, obj6), ];
     if (tmp16) {
@@ -788,7 +1196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       let tmp17Result2 = closure_13(tmp11(1202).EmptyState, obj9);
     } else {
       const obj10 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result2 = closure_13(tmp2(18366), obj10);
+      tmp17Result2 = closure_13(tmp2(18388), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -797,5 +1205,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   }
   obj3.children = tmp19Result;
   obj2.children = closure_13(activity(5251).BottomSheet, obj3);
-  return closure_13(activity(7237).AnalyticsLocationProvider, obj2);
+  return closure_13(activity(7238).AnalyticsLocationProvider, obj2);
 });

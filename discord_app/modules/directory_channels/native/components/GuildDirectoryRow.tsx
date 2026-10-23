@@ -1,10 +1,10 @@
-// === Module 13139: GuildDirectoryRow ===
+// === Module 13155: GuildDirectoryRow ===
 
-// Module 13139 (GuildDirectoryRow)
+// Module 13155 (GuildDirectoryRow)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import GuildIconDefault from "GuildIcon" /* 6869 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13117 */;
+import GuildIconDefault from "GuildIcon" /* 6868 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -152,11 +152,11 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   dependencyMap = noop.useRef(0);
   let obj = entry(504);
   const items1 = [entry.guildId];
-  const tmp5 = _slicedToArray(entry(7206).useRecyclingState(false, items1, () => {
+  const tmp5 = _slicedToArray(entry(7205).useRecyclingState(false, items1, () => {
     ref.current = ref.current + 1;
   }), 2);
   closure_3 = tmp5[1];
-  let obj2 = entry(7206);
+  let obj2 = entry(7205);
   const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: entry.guildId, icon: entry.icon, size: 40 });
   const intl = tmp2(1128).intl;
   let stringResult = intl.string(tmp2(1128).t.VJlc0S);
@@ -252,5 +252,5 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   items8[3] = closure_10(entry(5230).Button, obj23);
   obj6.children = items8;
   obj5.children = closure_12(View, obj6);
-  return closure_10(entry(6891).Card, obj5);
+  return closure_10(entry(6890).Card, obj5);
 });

@@ -1,15 +1,15 @@
-// === Module 7781: QuestUtmStore ===
+// === Module 7782: QuestUtmStore ===
 
-// Module 7781 (QuestUtmStore)
+// Module 7782 (QuestUtmStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
-const obj = module_570.create((arg0) => {
+let obj = module_570.create((arg0) => {
   const state = arg0;
-  return {
+  obj = {
     utmSourceCurrent: "r",
-    utmMediumCurrent: "emoji",
-    utmCampaignCurrent: "section",
+    utmMediumCurrent: "__initData",
+    utmCampaignCurrent: "toCharArray$esjava$1",
     utmContentCurrent: "toCharArray$esjava$1",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
@@ -18,6 +18,7 @@ const obj = module_570.create((arg0) => {
       return state.getState();
     }
   };
+  return obj;
 });
 const result = size.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 

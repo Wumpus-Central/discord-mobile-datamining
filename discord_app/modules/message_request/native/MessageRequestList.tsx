@@ -1,10 +1,10 @@
-// === Module 18228: MessageRequestList ===
+// === Module 18250: MessageRequestList ===
 
-// Module 18228 (MessageRequestList)
+// Module 18250 (MessageRequestList)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -710,17 +710,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   let data;
   const tmp = closure_9();
   const bottom = data(1633)().bottom;
-  data = data(18234)();
-  dependencyMap = goToMessageRequestPreview(18236).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(18236);
+  data = data(18256)();
+  dependencyMap = goToMessageRequestPreview(18258).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(18258);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(13270).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(13284).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1128).intl;
     obj3.bodyText = intl2.string(tmp4(1128).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(18239), obj3);
-    const tmp2Result = tmp2(18239);
+    let tmp9Result = closure_7(tmp2(18261), obj3);
+    const tmp2Result = tmp2(18261);
   } else {
     const items = [tmp.list, ];
     let num = 0;
@@ -765,7 +765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
     obj8.children = intl.format(tmp4(1128).t.evH4Yb, obj9);
     obj7.children = closure_7(tmp4(5220).Text, obj8);
     obj4.ListHeaderComponent = closure_7(closure_5, obj7);
-    tmp9Result = closure_7(tmp4(7206).FlashList, obj4);
+    tmp9Result = closure_7(tmp4(7205).FlashList, obj4);
     tmp4Result = tmp4(1384);
   }
   return tmp9Result;

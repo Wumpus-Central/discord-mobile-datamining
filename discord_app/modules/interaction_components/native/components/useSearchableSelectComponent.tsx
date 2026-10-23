@@ -1,6 +1,6 @@
-// === Module 12690: useSearchableSelectComponent ===
+// === Module 12709: useSearchableSelectComponent ===
 
-// Module 12690 (useSearchableSelectComponent)
+// Module 12709 (useSearchableSelectComponent)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSearc
     }
   }
   const tmp5 = first1(noop.useState(""), 2);
-  const initialSnowflakeSelectOptions = tmp(8588).getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
+  const initialSnowflakeSelectOptions = tmp(8589).getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
   cResult[0] = containerId;
   cResult[1] = guildId;
   cResult[2] = selectActionComponent;

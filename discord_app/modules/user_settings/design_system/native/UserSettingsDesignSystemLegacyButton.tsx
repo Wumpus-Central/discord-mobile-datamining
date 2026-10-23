@@ -1,13 +1,13 @@
-// === Module 17030: UserSettingsDesignSystemLegacyButton ===
+// === Module 17052: UserSettingsDesignSystemLegacyButton ===
 
-// Module 17030 (UserSettingsDesignSystemLegacyButton)
+// Module 17052 (UserSettingsDesignSystemLegacyButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import Form from "Form" /* 8919 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import Form from "Form" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

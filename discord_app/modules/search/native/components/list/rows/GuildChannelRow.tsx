@@ -1,21 +1,21 @@
-// === Module 17996: GuildChannelRow ===
+// === Module 18018: GuildChannelRow ===
 
-// Module 17996 (GuildChannelRow)
+// Module 18018 (GuildChannelRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import SearchListRow from "SearchListRow" /* 17975 */;
-import ChannelContent from "ChannelContent" /* 17997 */;
-import renderChannelItem from "renderChannelItem" /* 17999 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import SearchListRow from "SearchListRow" /* 17997 */;
+import ChannelContent from "ChannelContent" /* 18019 */;
+import renderChannelItem from "renderChannelItem" /* 18021 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["channel", "subtitle", "trailing", "extras", "onPress", "voiceStates"];
 const View = fn(17).View;
-const layout = fn(9684).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9691).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };

@@ -1,27 +1,27 @@
-// === Module 11386: UserTile ===
+// === Module 11397: UserTile ===
 
-// Module 11386 (UserTile)
+// Module 11397 (UserTile)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import _modDef11391 from "module_11391" /* 11391 */;
-import _modDef11392 from "module_11392" /* 11392 */;
-import _modDef11393 from "module_11393" /* 11393 */;
-import _modDef11394 from "module_11394" /* 11394 */;
-import _modDef11395 from "module_11395" /* 11395 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11396 */;
+import _modDef11402 from "module_11402" /* 11402 */;
+import _modDef11403 from "module_11403" /* 11403 */;
+import _modDef11404 from "module_11404" /* 11404 */;
+import _modDef11405 from "module_11405" /* 11405 */;
+import _modDef11406 from "module_11406" /* 11406 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5993 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11387 */;
+import SoundboardStore from "SoundboardStore" /* 5992 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11398 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(11387).clearVoiceChannelEffectForUser;
+let closure_8 = fn(11398).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1087).VideoToggleState;
 const ParticipantTypes = fn(5618).ParticipantTypes;
 const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;
@@ -192,7 +192,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const items = [, ];
           ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
           obj2.style = items;
-          const obj3 = { source: _modDef11391, size: native.Icon.Sizes.SMALL, disableColor: true };
+          const obj3 = { source: _modDef11402, size: native.Icon.Sizes.SMALL, disableColor: true };
           const items1 = [value2(native.Icon, obj3), ];
           const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
           const intl = util.intl;
@@ -301,7 +301,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef11391, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11402, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [value2(native.Icon, obj3), ];
       const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -351,11 +351,11 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp9 = _slicedToArray(userId(504).useStateFromStoresArray(first, tmp7, tmp8), 3);
   let tmp10 = tmp9[1];
   if (tmp9[0]) {
-    let tmp11 = _modDef11392;
+    let tmp11 = _modDef11403;
   } else if (deafened) {
-    tmp11 = _modDef11393;
+    tmp11 = _modDef11404;
   } else if (muted) {
-    tmp11 = _modDef11394;
+    tmp11 = _modDef11405;
   }
   if (tmp10) {
     tmp10 = !tmp9[2];
@@ -398,7 +398,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         const obj4 = { style: null, children: null };
         items3[2] = obj3;
         obj4.style = items3;
-        const obj5 = { source: tmp11, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef11392 };
+        const obj5 = { source: tmp11, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef11403 };
         obj4.children = closure_15(tmp(1202).Icon, obj5);
         tmp24Result = closure_15(View, obj4);
       }
@@ -415,7 +415,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const obj6 = { style: null, children: null };
     const items4 = [tmp4.statusWrapper, style];
     obj6.style = items4;
-    const obj7 = { source: _modDef11395, size: tmp(1202).Icon.Sizes.SMALL, disableColor: true };
+    const obj7 = { source: _modDef11406, size: tmp(1202).Icon.Sizes.SMALL, disableColor: true };
     obj6.children = closure_15(tmp(1202).Icon, obj7);
     tmp17 = closure_15(View, obj6);
   }
@@ -438,11 +438,11 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef11392;
+    let tmp6 = _modDef11403;
   } else if (deafened) {
-    tmp6 = _modDef11393;
+    tmp6 = _modDef11404;
   } else if (muted) {
-    tmp6 = _modDef11394;
+    tmp6 = _modDef11405;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -453,7 +453,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef11395, size: tmp2(1202).Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11406, size: tmp2(1202).Icon.Sizes.SMALL, disableColor: true };
       obj2.children = closure_15(tmp2(1202).Icon, obj3);
       tmp14 = closure_15(View, obj2);
     }
@@ -468,7 +468,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11392 };
+      const obj6 = { source: tmp6, size: tmp2(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11403 };
       obj5.children = closure_15(tmp2(1202).Icon, obj6);
       tmp19Result = closure_15(View, obj5);
     }

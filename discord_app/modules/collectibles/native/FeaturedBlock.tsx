@@ -1,12 +1,12 @@
-// === Module 17126: FeaturedBlock ===
+// === Module 17148: FeaturedBlock ===
 
-// Module 17126 (FeaturedBlock)
+// Module 17148 (FeaturedBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7237 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9329 */;
-import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 17127 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7238 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9336 */;
+import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 17149 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;

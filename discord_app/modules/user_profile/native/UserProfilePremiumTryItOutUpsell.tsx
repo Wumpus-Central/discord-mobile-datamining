@@ -1,16 +1,16 @@
-// === Module 15876: UserProfilePremiumTryItOutUpsell ===
+// === Module 15894: UserProfilePremiumTryItOutUpsell ===
 
-// Module 15876 (UserProfilePremiumTryItOutUpsell)
+// Module 15894 (UserProfilePremiumTryItOutUpsell)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
 import spring from "spring" /* 5233 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15866 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15880 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7288).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7289).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c5 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };

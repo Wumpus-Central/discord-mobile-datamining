@@ -1,14 +1,14 @@
-// === Module 7918: AgeVerificationExpressiveV2Modal ===
+// === Module 7919: AgeVerificationExpressiveV2Modal ===
 
-// Module 7918 (AgeVerificationExpressiveV2Modal)
+// Module 7919 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6640 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6643 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7867 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7900 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7901 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6639 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6642 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7868 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7901 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7902 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -289,7 +289,7 @@ function MethodsScreen(onClose) {
                         tmpResult = tmp(onComplete[11]);
                       } else if (tmp(onComplete[7]).AgeAssuranceMethod.CREDIT_CARD === method) {
                         KeyIcon = tmp(onComplete[13]).CreditCardIcon;
-                      } else if (tmp(onComplete[7]).AgeAssuranceMethod.NEW_METHOD === method) {
+                      } else if (tmp(onComplete[7]).AgeAssuranceMethod.AGE_KEY === method) {
                         KeyIcon = tmp(onComplete[14]).KeyIcon;
                       }
                       if (null != KeyIcon) {
@@ -383,7 +383,7 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6642).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6641).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -474,7 +474,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
             }
           }
           const obj2 = { screens: tmp7, initialRouteName: constants.METHODS, headerBackTitle: tmp12 };
-          const tmp16 = closure_9(tmp(7081).Navigator, obj2);
+          const tmp16 = closure_9(tmp(7080).Navigator, obj2);
           cResult[10] = tmp7;
           cResult[11] = tmp16;
           const tmp14 = tmp16;
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     render: null
   };
   const obj = entryPoint(576);
-  obj4.headerLeft = entryPoint(6910).getHeaderCloseButton(closeModal);
+  obj4.headerLeft = entryPoint(6909).getHeaderCloseButton(closeModal);
   obj4.render = function render(arg0, navigation) {
     return closure_2_9(MethodsScreen, { entryPoint, navigation, onClose: closeModal, onComplete, modalSessionId });
   };
@@ -523,8 +523,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     headerLeft: null,
     render: null
   };
-  const tmpResult4 = entryPoint(6910);
-  obj5.headerLeft = entryPoint(6910).getHeaderBackButton();
+  const tmpResult4 = entryPoint(6909);
+  obj5.headerLeft = entryPoint(6909).getHeaderBackButton();
   obj5.render = function render() {
     return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, onComplete, modalSessionId });
   };
@@ -537,8 +537,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     headerLeft: null,
     render: null
   };
-  const tmpResult5 = entryPoint(6910);
-  obj6.headerLeft = entryPoint(6910).getHeaderBackButton();
+  const tmpResult5 = entryPoint(6909);
+  obj6.headerLeft = entryPoint(6909).getHeaderBackButton();
   obj6.render = function render() {
     return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, modalSessionId });
   };
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   cResult[4] = tmp4;
   cResult[5] = obj3;
   tmp7 = obj3;
-  const tmpResult6 = entryPoint(6910);
+  const tmpResult6 = entryPoint(6909);
 }) : (function AgeVerificationExpressiveV2Modal(entryPoint) {
   entryPoint = entryPoint.entryPoint;
   const onClose = entryPoint.onClose;

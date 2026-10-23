@@ -1,9 +1,10 @@
-// === Module 10993: GameOrganizationInviteStore ===
+// === Module 11001: GameOrganizationInviteStore ===
 
-// Module 10993 (GameOrganizationInviteStore)
+// Module 11001 (GameOrganizationInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 10994 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11002 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11003 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
@@ -43,8 +44,10 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function handleResolveSuccess(invite) {
     invite = invite.invite;
     map = new Map(map);
-    ({ game_organization, application, application_config } = invite);
-    const obj = { code: invite.code, state: constants.RESOLVED, organization: { id: game_organization.game_organization_id, name: game_organization.name, description: game_organization.description, iconUrl: game_organization.icon_url, applicationId: game_organization.application_id, memberCount: game_organization.member_count, maxMembers: game_organization.max_members }, application: { id: application.id, name: application.name, iconUrl: application.icon_url }, displayNoun: null };
+    const application_config = invite.application_config;
+    const obj = { code: invite.code, state: constants.RESOLVED, organization: fromServerGameOrganization.fromServerGameOrganization(game_organization), application: null, displayNoun: null };
+    ({ game_organization, application } = invite);
+    obj.application = fromServerGameOrganization.fromServerGameOrganizationApplication(application);
     let display_noun;
     if (application_config != null) {
       display_noun = application_config.display_noun;

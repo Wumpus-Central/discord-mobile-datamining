@@ -1,13 +1,13 @@
-// === Module 13031: ForumPostTimestamp ===
+// === Module 13047: ForumPostTimestamp ===
 
-// Module 13031 (ForumPostTimestamp)
+// Module 13047 (ForumPostTimestamp)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ForumHooks from "ForumHooks" /* 9695 */;
+import ForumHooks from "ForumHooks" /* 9702 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useForumChannelStore = fn(13017).useForumChannelStore;
+const useForumChannelStore = fn(13033).useForumChannelStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });

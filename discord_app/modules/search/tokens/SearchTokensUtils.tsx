@@ -1,6 +1,6 @@
-// === Module 13154: SearchTokensUtils ===
+// === Module 13170: SearchTokensUtils ===
 
-// Module 13154 (SearchTokensUtils)
+// Module 13170 (SearchTokensUtils)
 import RegexUtilsDefault from "RegexUtils" /* 5594 */;
 import size from "module_2" /* 2 */;
 

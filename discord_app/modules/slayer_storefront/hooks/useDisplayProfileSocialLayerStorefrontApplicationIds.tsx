@@ -1,11 +1,11 @@
-// === Module 9353: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 9360: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 9353 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 9360 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import _mod12 from "module_12" /* 12 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7689 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7692 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7690 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7693 */;
 import noop from "module_19" /* 19 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7316 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7317 */;
 
 const require = globalThis.__r;
 

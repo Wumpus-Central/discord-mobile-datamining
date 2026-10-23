@@ -1,9 +1,9 @@
-// === Module 17667: VoiceSubtitle ===
+// === Module 17689: VoiceSubtitle ===
 
-// Module 17667 (VoiceSubtitle)
+// Module 17689 (VoiceSubtitle)
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

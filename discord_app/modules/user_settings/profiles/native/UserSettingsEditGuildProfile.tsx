@@ -1,12 +1,12 @@
-// === Module 15878: UserSettingsEditGuildProfile ===
+// === Module 15896: UserSettingsEditGuildProfile ===
 
-// Module 15878 (UserSettingsEditGuildProfile)
+// Module 15896 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8649 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11035 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11153 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8656 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11044 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11162 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8622 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8629 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -26,10 +26,10 @@ export default function UserSettingsEditGuildProfile() {
     GuildIdentityActionCreators.setCurrentGuild(dependencyMap.id);
   }
   let tmp = closure_9();
-  const tmp4 = guild(7237);
+  const tmp4 = guild(7238);
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(15879)();
+  const tmp7 = guild(15897)();
   guild = tmp7.guild;
   ({ resetPending: dependencyMap, handleSubmit: noop } = tmp7);
   let obj = stateFromStores(504);
@@ -49,11 +49,11 @@ export default function UserSettingsEditGuildProfile() {
   }, items2);
   if (null != stateFromStores) {
     if (null != guild) {
-      let obj3 = { value: tmp4(guild(7262).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
+      let obj3 = { value: tmp4(guild(7263).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
       const obj4 = { style: tmp.guildSelector, children: null };
       const obj5 = { icon: null, label: null, arrow: true, onPress: null };
-      const obj6 = { guild, size: tmp5(6869).GuildIconSizes.XSMALL };
-      obj5.icon = closure_7(tmp2(6869), obj6);
+      const obj6 = { guild, size: tmp5(6868).GuildIconSizes.XSMALL };
+      obj5.icon = closure_7(tmp2(6868), obj6);
       obj5.label = guild.name;
       obj5.onPress = function onPress() {
         maybeShowUnsavedChangesAlertDefault({
@@ -74,15 +74,15 @@ export default function UserSettingsEditGuildProfile() {
           onSave
         });
       };
-      obj4.children = closure_7(tmp5(6889).TableRow, obj5);
+      obj4.children = closure_7(tmp5(6888).TableRow, obj5);
       const items3 = [closure_7(hasUnsavedChanges, obj4), ];
       const obj7 = { currentUser: stateFromStores };
       const _HermesInternal = HermesInternal;
-      const tmp2Result = tmp2(6869);
-      items3[1] = closure_7(tmp2(15884), obj7, "" + stateFromStores.id + "-" + guild.id);
+      const tmp2Result = tmp2(6868);
+      items3[1] = closure_7(tmp2(15902), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj3.children = items3;
-      return closure_8(tmp5(7237).AnalyticsLocationProvider, obj3);
+      return closure_8(tmp5(7238).AnalyticsLocationProvider, obj3);
     }
   }
-  return closure_7(guild(15881), {});
+  return closure_7(guild(15899), {});
 };

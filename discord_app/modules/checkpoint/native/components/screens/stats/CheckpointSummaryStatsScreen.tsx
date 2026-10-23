@@ -1,6 +1,6 @@
-// === Module 12936: CheckpointSummaryStatsScreen ===
+// === Module 12955: CheckpointSummaryStatsScreen ===
 
-// Module 12936 (CheckpointSummaryStatsScreen)
+// Module 12955 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,18 +10,18 @@ import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import GuildIcon from "GuildIcon" /* 6869 */;
-import EmojiDefault from "Emoji" /* 7213 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8058 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 8609 */;
-import CheckpointTextDefault from "CheckpointText" /* 12893 */;
-import CheckpointScreen from "CheckpointScreen" /* 12895 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12902 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12937 */;
+import GuildIcon from "GuildIcon" /* 6868 */;
+import EmojiDefault from "Emoji" /* 7212 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8059 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 8610 */;
+import CheckpointTextDefault from "CheckpointText" /* 12911 */;
+import CheckpointScreen from "CheckpointScreen" /* 12913 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12919 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import CheckpointStore from "CheckpointStore" /* 12875 */;
+import CheckpointStore from "CheckpointStore" /* 12893 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -32,7 +32,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6002).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const sum = fn(6001).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(4969);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };

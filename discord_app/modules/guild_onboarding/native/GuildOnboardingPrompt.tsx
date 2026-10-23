@@ -1,6 +1,6 @@
-// === Module 7205: GuildOnboardingPrompt ===
+// === Module 7204: GuildOnboardingPrompt ===
 
-// Module 7205 (GuildOnboardingPrompt)
+// Module 7204 (GuildOnboardingPrompt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,16 +8,16 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6835 */;
-import TermsFieldListDefault from "TermsFieldList" /* 6883 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7187 */;
-import EmojiDefault from "Emoji" /* 7213 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6834 */;
+import TermsFieldListDefault from "TermsFieldList" /* 6882 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7186 */;
+import EmojiDefault from "Emoji" /* 7212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6861 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6860 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7181 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7180 */;
 
 require = fn;
 function formattedNameHighlight(children, arg1) {
@@ -25,7 +25,7 @@ function formattedNameHighlight(children, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7178).GuildOnboardingModalStates;
+let closure_11 = fn(7177).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -238,8 +238,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Prompt
         }
         if (cResult[9] !== tmp20) {
           if (null != tmp20) {
-            let selectedRoleIds = tmp(7187).getSelectedRoleIds(tmp20);
-            const tmpResult4 = tmp(7187);
+            let selectedRoleIds = tmp(7186).getSelectedRoleIds(tmp20);
+            const tmpResult4 = tmp(7186);
           } else {
             const _Set = Set;
             selectedRoleIds = new Set();
@@ -248,8 +248,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Prompt
           cResult[10] = selectedRoleIds;
         } else if (cResult[11] !== tmp20) {
           if (null != tmp20) {
-            let selectedChannelIds = tmp(7187).getSelectedChannelIds(tmp20);
-            const tmpResult5 = tmp(7187);
+            let selectedChannelIds = tmp(7186).getSelectedChannelIds(tmp20);
+            const tmpResult5 = tmp(7186);
           } else {
             const _Set2 = Set;
             selectedChannelIds = new Set();
@@ -263,8 +263,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Prompt
                 if (cResult[16] === tmp23) {
                   let tmp33 = cResult[17];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(7208)(tmp33));
-                const tmp36 = selectedOptionIds(7208)(tmp33);
+                ({ helpText, helpTextAdditional } = selectedOptionIds(7207)(tmp33));
+                const tmp36 = selectedOptionIds(7207)(tmp33);
                 const token = tmp(5238).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
                 if (cResult[18] !== token) {
                   const obj7 = selectedOptionIds(683)(token);
@@ -1426,7 +1426,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[17])().bottom + c16 + c16, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7218, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7217, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, arg1) {

@@ -1,9 +1,9 @@
-// === Module 12902: CheckpointStatNumber ===
+// === Module 12919: CheckpointStatNumber ===
 
-// Module 12902 (CheckpointStatNumber)
+// Module 12919 (CheckpointStatNumber)
 import c from "c" /* 576 */;
 import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5103 */;
-import CheckpointTextDefault from "CheckpointText" /* 12893 */;
+import CheckpointTextDefault from "CheckpointText" /* 12911 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,11 +21,11 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6002).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6001).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 2.5675675675675675;
 let c8 = 28.7;
-let closure_9 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2 };
+let closure_9 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
 const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 const ReactCompilerGating = fn(558);
@@ -216,4 +216,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   obj.children = <c4 style={null}>{null}</c4>;
   return <c4 style={memo}>{null}</c4>;
 });
+export const isCheckpointStatNumberShrunk = function isCheckpointStatNumberShrunk(value) {
+  const tmp = getTextPixels(value);
+  let num = 1;
+  if (tmp > c8) {
+    num = c8 / tmp;
+  }
+  return num < 1;
+};
 export { getCheckpointStatNumberWidth };

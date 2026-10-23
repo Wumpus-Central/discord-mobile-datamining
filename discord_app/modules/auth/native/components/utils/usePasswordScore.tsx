@@ -1,6 +1,6 @@
-// === Module 17283: usePasswordScore ===
+// === Module 17305: usePasswordScore ===
 
-// Module 17283 (usePasswordScore)
+// Module 17305 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

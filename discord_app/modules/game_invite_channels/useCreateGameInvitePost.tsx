@@ -1,17 +1,17 @@
-// === Module 13641: useCreateGameInvitePost ===
+// === Module 13655: useCreateGameInvitePost ===
 
-// Module 13641 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7363 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11302 */;
+// Module 13655 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7364 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11158 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6484 */;
-import SlowmodeStore from "SlowmodeStore" /* 7744 */;
+import LocalActivityStore from "LocalActivityStore" /* 11167 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
+import SlowmodeStore from "SlowmodeStore" /* 7745 */;
 
 require = fn;
-const SlowmodeType = fn(7744).SlowmodeType;
+const SlowmodeType = fn(7745).SlowmodeType;
 const ActivityActionTypes = fn(1087).ActivityActionTypes;
 const ChannelFlags = fn(4828).ChannelFlags;
 const ReactCompilerGating = fn(558);

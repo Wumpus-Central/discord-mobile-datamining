@@ -1,15 +1,15 @@
-// === Module 12024: RecommendationsBanner ===
+// === Module 12035: RecommendationsBanner ===
 
-// Module 12024 (RecommendationsBanner)
+// Module 12035 (RecommendationsBanner)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8599 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8648 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8710 */;
-import AppLauncherContext from "AppLauncherContext" /* 11132 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11453 */;
-import HeroMedia from "HeroMedia" /* 12015 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8600 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8655 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8717 */;
+import AppLauncherContext from "AppLauncherContext" /* 11141 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11464 */;
+import HeroMedia from "HeroMedia" /* 12026 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 
@@ -120,8 +120,8 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmpResult = HeroMedia;
 }) : (function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11132);
-  heroMediaDimensions = heroMediaDimensions(12015).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(11141);
+  heroMediaDimensions = heroMediaDimensions(12026).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

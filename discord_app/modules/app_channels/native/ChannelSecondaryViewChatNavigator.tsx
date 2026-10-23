@@ -1,15 +1,15 @@
-// === Module 18216: ChannelSecondaryViewChatNavigator ===
+// === Module 18238: ChannelSecondaryViewChatNavigator ===
 
-// Module 18216 (ChannelSecondaryViewChatNavigator)
+// Module 18238 (ChannelSecondaryViewChatNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import HeaderShared from "HeaderShared" /* 9669 */;
-import ChannelActionsDefault from "ChannelActions" /* 9681 */;
-import ChatViewDefault from "ChatView" /* 10856 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 11951 */;
-import ChannelContainer from "ChannelContainer" /* 13664 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13953 */;
+import HeaderShared from "HeaderShared" /* 9676 */;
+import ChannelActionsDefault from "ChannelActions" /* 9688 */;
+import ChatViewDefault from "ChatView" /* 10864 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 11965 */;
+import ChannelContainer from "ChannelContainer" /* 13678 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function renderChannelSecondaryViewChatHeader(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9713);
+const NativeStackNavigator = fn(9720);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4969);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
   const tmp = closure_7();
   dependencyMap = tmp;
   const tmp2 = params(5132)();
-  const accessibilityNativeStackOptions = navigation(7081).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = navigation(7080).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {

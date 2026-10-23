@@ -1,9 +1,9 @@
-// === Module 17147: useSecureFramesVerifiedUsers ===
+// === Module 17169: useSecureFramesVerifiedUsers ===
 
-// Module 17147 (useSecureFramesVerifiedUsers)
+// Module 17169 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9149 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9156 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

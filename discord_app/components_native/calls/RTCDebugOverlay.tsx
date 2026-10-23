@@ -1,6 +1,6 @@
-// === Module 11639: RTCDebugOverlay ===
+// === Module 11650: RTCDebugOverlay ===
 
-// Module 11639 (RTCDebugOverlay)
+// Module 11650 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,8 +8,8 @@ import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5724 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11640 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7206 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11651 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import RTCDebugStore from "RTCDebugStore" /* 5723 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7798 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

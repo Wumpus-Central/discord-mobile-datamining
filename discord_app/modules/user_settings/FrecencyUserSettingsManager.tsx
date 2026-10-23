@@ -1,19 +1,19 @@
-// === Module 18709: FrecencyUserSettingsManager ===
+// === Module 18731: FrecencyUserSettingsManager ===
 
-// Module 18709 (FrecencyUserSettingsManager)
+// Module 18731 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1104 */;
 import frecency_user_settings from "frecency_user_settings" /* 1247 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9621 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9620 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
-import SoundboardStore from "SoundboardStore" /* 5993 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6751 */;
-import FrecencyStore from "FrecencyStore" /* 6809 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9628 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9627 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
+import SoundboardStore from "SoundboardStore" /* 5992 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6750 */;
+import FrecencyStore from "FrecencyStore" /* 6808 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -141,7 +141,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6809).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6808).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1375).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

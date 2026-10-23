@@ -1,13 +1,13 @@
-// === Module 13526: ContactSyncInviteFriends ===
+// === Module 13540: ContactSyncInviteFriends ===
 
-// Module 13526 (ContactSyncInviteFriends)
+// Module 13540 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import showShareActionSheet from "showShareActionSheet" /* 8819 */;
-import _modDef13527 from "module_13527" /* 13527 */;
+import showShareActionSheet from "showShareActionSheet" /* 8826 */;
+import _modDef13541 from "module_13541" /* 13541 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp4.art) {
-    let obj2 = { style: tmp4.art, source: _modDef13527 };
+    let obj2 = { style: tmp4.art, source: _modDef13541 };
     const tmp14 = closure_7(FastImageDefault, obj2);
     cResult[4] = tmp4.art;
     cResult[5] = tmp14;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef13527;
+  obj4.source = _modDef13541;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

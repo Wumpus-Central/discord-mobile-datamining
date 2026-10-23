@@ -1,11 +1,11 @@
-// === Module 18528: VoicePanelScreenshareButton ===
+// === Module 18550: VoicePanelScreenshareButton ===
 
-// Module 18528 (VoicePanelScreenshareButton)
+// Module 18550 (VoicePanelScreenshareButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useAlertStore from "useAlertStore" /* 5897 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13952 */;
+import useAlertStore from "useAlertStore" /* 5896 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13966 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const MetaQuestUtils = fn(1630);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13375).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13389).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18529).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18551).MobilePhoneShareIcon;
 }
 const createStyles = fn(4969);
 let obj3 = { circle: null, iconContainer: null };

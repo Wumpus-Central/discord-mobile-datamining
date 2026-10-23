@@ -1,10 +1,10 @@
-// === Module 11653: StageSectionHeader ===
+// === Module 11664: StageSectionHeader ===
 
-// Module 11653 (StageSectionHeader)
+// Module 11664 (StageSectionHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
-import _modDef7233 from "module_7233" /* 7233 */;
+import _modDef7234 from "module_7234" /* 7234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
         let tmp8 = cResult[5];
       }
       if (cResult[6] !== tmp4.collapseIcon) {
-        const obj4 = { source: _modDef7233, style: tmp4.collapseIcon };
+        const obj4 = { source: _modDef7234, style: tmp4.collapseIcon };
         const tmp16 = closure_6(collapsed(1202).Icon, obj4);
         cResult[6] = tmp4.collapseIcon;
         cResult[7] = tmp16;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
   let obj2 = { withTiming: collapsed(5192).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7233, style: tmp.collapseIcon });
+  obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7234, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

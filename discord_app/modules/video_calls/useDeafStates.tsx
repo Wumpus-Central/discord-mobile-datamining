@@ -1,6 +1,6 @@
-// === Module 11622: useDeafStates ===
+// === Module 11633: useDeafStates ===
 
-// Module 11622 (useDeafStates)
+// Module 11633 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import VoiceStateStore from "VoiceStateStore" /* 5616 */;

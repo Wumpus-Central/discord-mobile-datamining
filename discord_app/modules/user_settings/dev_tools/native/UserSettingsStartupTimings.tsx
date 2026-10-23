@@ -1,15 +1,15 @@
-// === Module 16823: UserSettingsStartupTimings ===
+// === Module 16845: UserSettingsStartupTimings ===
 
-// Module 16823 (UserSettingsStartupTimings)
+// Module 16845 (UserSettingsStartupTimings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6886 */;
-import TableRow from "TableRow" /* 6889 */;
-import TableRowGroup from "TableRowGroup" /* 6973 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 13731 */;
-import ShareIcon from "ShareIcon" /* 14145 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6885 */;
+import TableRow from "TableRow" /* 6888 */;
+import TableRowGroup from "TableRowGroup" /* 6972 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 13745 */;
+import ShareIcon from "ShareIcon" /* 14159 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -97,14 +97,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       closure_10 = Math.ceil(tmp5(9).renderLatestMessages.importTime);
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const lastTrackedAppUiViewed2Properties = tmp(7568).getLastTrackedAppUiViewed2Properties();
+        const lastTrackedAppUiViewed2Properties = tmp(7569).getLastTrackedAppUiViewed2Properties();
         class G {
           constructor() {
             return closure_7.alertStartupMetrics;
           }
         }
         let tmp20 = lastTrackedAppUiViewed2Properties;
-        const tmpResult2 = tmp(7568);
+        const tmpResult2 = tmp(7569);
       } else {
         tmp20 = cResult[6];
       }
@@ -159,9 +159,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13731)(closure_128_0);
+                closure_128_1 = tmp5(13745)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
-                tmp2(8819).showShareActionSheet(obj7, "Startup Timing");
+                tmp2(8826).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               let obj4 = { contentContainerStyle: tmp28, ListHeaderComponent: tmp29, data: tmp11, renderItem: tmp31 };
-              const tmp34 = closure_8(tmp(7206).FlashList, obj4);
+              const tmp34 = closure_8(tmp(7205).FlashList, obj4);
               cResult[19] = tmp11;
               cResult[20] = tmp28;
               cResult[21] = tmp29;
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13731)(useResult, !checked, first1).split("\n");
+  const parts = checked(13745)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -506,9 +506,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13731)(closure_128_0);
+          closure_128_1 = tmp5(13745)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8819).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8826).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -658,6 +658,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7206).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7205).FlashList, obj5);
   return closure_8(checked, obj4);
 });

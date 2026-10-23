@@ -1,9 +1,9 @@
-// === Module 14565: CallStateHooks ===
+// === Module 14579: CallStateHooks ===
 
-// Module 14565 (CallStateHooks)
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+// Module 14579 (CallStateHooks)
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6483 */;
+import CallStore from "CallStore" /* 6482 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 
 const require = globalThis.__r;
@@ -60,7 +60,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(11516)();
+  const tmp3 = id(11527)();
   dependencyMap = tmp3;
   obj2 = require("initialize");
   const items2 = [RTCConnectionStore];

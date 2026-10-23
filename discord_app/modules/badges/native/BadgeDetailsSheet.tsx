@@ -1,20 +1,20 @@
-// === Module 11093: BadgeDetailsSheet ===
+// === Module 11102: BadgeDetailsSheet ===
 
-// Module 11093 (BadgeDetailsSheet)
+// Module 11102 (BadgeDetailsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8659 */;
-import BadgeUtils from "BadgeUtils" /* 11089 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11092 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11108 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8666 */;
+import BadgeUtils from "BadgeUtils" /* 11098 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11101 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8654 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8661 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

@@ -1,23 +1,23 @@
-// === Module 13553: BookIllocon ===
+// === Module 13567: BookIllocon ===
 
-// Module 13553 (BookIllocon)
+// Module 13567 (BookIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef13554 from "module_13554" /* 13554 */;
-import _modDef13555 from "module_13555" /* 13555 */;
-import _modDef13556 from "module_13556" /* 13556 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef13568 from "module_13568" /* 13568 */;
+import _modDef13569 from "module_13569" /* 13569 */;
+import _modDef13570 from "module_13570" /* 13570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13554 }, 3: null };
-const obj2 = { uri: _modDef13554 };
-obj[2] = { uri: _modDef13555 };
-const obj3 = { uri: _modDef13555 };
-obj[3] = { uri: _modDef13556 };
+let obj = { 1: null, 2: { uri: _modDef13568 }, 3: null };
+const obj2 = { uri: _modDef13568 };
+obj[2] = { uri: _modDef13569 };
+const obj3 = { uri: _modDef13569 };
+obj[3] = { uri: _modDef13570 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13556 };
+const obj4 = { uri: _modDef13570 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const BookIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6981).getAssetSource(obj);
+  obj.source = num(6980).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

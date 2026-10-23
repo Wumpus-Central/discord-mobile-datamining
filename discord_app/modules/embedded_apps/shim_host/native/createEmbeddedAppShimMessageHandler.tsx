@@ -1,7 +1,7 @@
-// === Module 11412: createEmbeddedAppShimMessageHandler ===
+// === Module 11423: createEmbeddedAppShimMessageHandler ===
 
-// Module 11412 (createEmbeddedAppShimMessageHandler)
-import bridgeProtocol from "bridgeProtocol" /* 11414 */;
+// Module 11423 (createEmbeddedAppShimMessageHandler)
+import bridgeProtocol from "bridgeProtocol" /* 11425 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/native/createEmbeddedAppShimMessageHandler.tsx");

@@ -1,25 +1,25 @@
-// === Module 18998: GuildSettingsModalIntegrationPlatform ===
+// === Module 19021: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18998 (GuildSettingsModalIntegrationPlatform)
+// Module 19021 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import shared from "shared" /* 4976 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
-import common_AlertDefault from "common/Alert" /* 5965 */;
-import PlatformsDefault from "Platforms" /* 6488 */;
-import TableRow from "TableRow" /* 6889 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import TableRowGroup from "TableRowGroup" /* 6973 */;
-import TableSwitchRow from "TableSwitchRow" /* 7279 */;
-import HeaderActionButton from "HeaderActionButton" /* 7469 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
-import IntegrationTypes from "IntegrationTypes" /* 18929 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18959 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import common_AlertDefault from "common/Alert" /* 5964 */;
+import PlatformsDefault from "Platforms" /* 6487 */;
+import TableRow from "TableRow" /* 6888 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import TableRowGroup from "TableRowGroup" /* 6972 */;
+import TableSwitchRow from "TableSwitchRow" /* 7280 */;
+import HeaderActionButton from "HeaderActionButton" /* 7470 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
+import IntegrationTypes from "IntegrationTypes" /* 18952 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18982 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8975 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8982 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       }
     }
     const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-    value = tmp4(6488).get(platformType);
+    value = tmp4(6487).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -408,10 +408,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       tmp28 = tmp49;
       tmp29 = forResult;
       tmp30 = tmp43;
-      Form = tmp(8919).Form;
-      Stack = tmp(5964).Stack;
+      Form = tmp(8926).Form;
+      Stack = tmp(5963).Stack;
     }
-    const tmp4Result = tmp4(6488);
+    const tmp4Result = tmp4(6487);
   }
   cResult[4] = stateFromStores;
   cResult[5] = closeGuildSettings;
@@ -469,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(6488).get(platformType);
+    value = tmp3(6487).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -531,8 +531,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
     items2[1] = closure_10(tmp(5220).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_11(tmp(5964).Stack, obj9);
-    const items3 = [closure_10(tmp(8919).Form, obj8), closure_10(tmp(5578).NavScrim, {})];
+    obj8.children = closure_11(tmp(5963).Stack, obj9);
+    const items3 = [closure_10(tmp(8926).Form, obj8), closure_10(tmp(5578).NavScrim, {})];
     obj11.children = items3;
     return closure_11(closure_12, obj11);
   }

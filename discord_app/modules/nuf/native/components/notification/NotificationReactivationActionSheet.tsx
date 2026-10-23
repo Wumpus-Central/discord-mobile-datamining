@@ -1,17 +1,17 @@
-// === Module 18812: NotificationReactivationActionSheet ===
+// === Module 18835: NotificationReactivationActionSheet ===
 
-// Module 18812 (NotificationReactivationActionSheet)
+// Module 18835 (NotificationReactivationActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13231 */;
-import _modDef18813 from "module_18813" /* 18813 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13247 */;
+import _modDef18836 from "module_18836" /* 18836 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(13230).EventActionType;
+const EventActionType = fn(13246).EventActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -48,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }
   if (cResult[2] !== _location) {
     const fn2 = function v() {
-      AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" });
-      const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+      AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" });
+      const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
     cResult[2] = _location;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     tmp6 = cResult[3];
   }
   if (cResult[4] !== tmp4.image) {
-    let obj2 = { style: tmp4.image, source: _modDef18813, resizeMode: "contain" };
+    let obj2 = { style: tmp4.image, source: _modDef18836, resizeMode: "contain" };
     const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[4] = tmp4.image;
     cResult[5] = tmp11;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const obj9 = { style: tmp4.buttons, children: null };
   const items1 = [tmp24, tmp29];
   obj9.children = items1;
-  const tmp33 = closure_8(_location(6682).ButtonGroup, obj9);
+  const tmp33 = closure_8(_location(6681).ButtonGroup, obj9);
   cResult[18] = tmp4.buttons;
   cResult[19] = tmp24;
   cResult[20] = tmp29;
@@ -188,13 +188,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     });
   }, items);
   const callback1 = noop.useCallback(() => {
-    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" });
-    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" });
+    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef18813, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef18836, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1128).intl;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   obj8.onPress = callback1;
   items3[1] = closure_7(_location(5230).Button, obj8);
   obj6.children = items3;
-  items2[3] = closure_8(_location(6682).ButtonGroup, obj6);
+  items2[3] = closure_8(_location(6681).ButtonGroup, obj6);
   obj2.children = items2;
   obj.children = closure_8(View, obj2);
   return closure_7(_location(5251).BottomSheet, obj);

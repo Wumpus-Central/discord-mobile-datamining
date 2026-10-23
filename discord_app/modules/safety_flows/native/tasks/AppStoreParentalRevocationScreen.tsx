@@ -1,19 +1,19 @@
-// === Module 19311: AppStoreParentalRevocationScreen ===
+// === Module 19334: AppStoreParentalRevocationScreen ===
 
-// Module 19311 (AppStoreParentalRevocationScreen)
+// Module 19334 (AppStoreParentalRevocationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2832 from "module_2832" /* 2832 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinkingDefault from "Linking" /* 5646 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import ModalScreen from "ModalScreen" /* 7884 */;
-import ModalContent from "ModalContent" /* 7885 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8076 */;
-import ModalFooter from "ModalFooter" /* 12809 */;
-import ModalActionButton from "ModalActionButton" /* 12859 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19295 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import ModalScreen from "ModalScreen" /* 7885 */;
+import ModalContent from "ModalContent" /* 7886 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8077 */;
+import ModalFooter from "ModalFooter" /* 12667 */;
+import ModalActionButton from "ModalActionButton" /* 12877 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19318 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15683: activityShareLink ===
+// === Module 15696: activityShareLink ===
 
-// Module 15683 (activityShareLink)
+// Module 15696 (activityShareLink)
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import findCodedLinks from "findCodedLinks" /* 5685 */;
 import size from "module_2" /* 2 */;

@@ -1,14 +1,14 @@
-// === Module 18451: VoicePanelHeaderChatButton ===
+// === Module 18473: VoicePanelHeaderChatButton ===
 
-// Module 18451 (VoicePanelHeaderChatButton)
+// Module 18473 (VoicePanelHeaderChatButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
-import NativeViewDefault from "NativeView" /* 6872 */;
-import ChatIcon from "ChatIcon" /* 8527 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18373 */;
-import useChatBadgeDefault from "useChatBadge" /* 18452 */;
+import NativeViewDefault from "NativeView" /* 6871 */;
+import ChatIcon from "ChatIcon" /* 8528 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18395 */;
+import useChatBadgeDefault from "useChatBadge" /* 18474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

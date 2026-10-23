@@ -1,10 +1,10 @@
-// === Module 17789: ForYouEmptyState ===
+// === Module 17811: ForYouEmptyState ===
 
-// Module 17789 (ForYouEmptyState)
+// Module 17811 (ForYouEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 17790 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 17812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

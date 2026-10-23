@@ -1,16 +1,16 @@
-// === Module 9310: GameProfileGuildCard ===
+// === Module 9317: GameProfileGuildCard ===
 
-// Module 9310 (GameProfileGuildCard)
+// Module 9317 (GameProfileGuildCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import GuildIcon from "GuildIcon" /* 6869 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7024 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 9205 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9304 */;
+import GuildIcon from "GuildIcon" /* 6868 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7023 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 9212 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9311 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

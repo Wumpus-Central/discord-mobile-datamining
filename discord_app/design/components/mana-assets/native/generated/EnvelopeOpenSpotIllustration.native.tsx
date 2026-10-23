@@ -1,23 +1,23 @@
-// === Module 6984: EnvelopeOpenSpotIllustration ===
+// === Module 6983: EnvelopeOpenSpotIllustration ===
 
-// Module 6984 (EnvelopeOpenSpotIllustration)
+// Module 6983 (EnvelopeOpenSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef6984 from "module_6984" /* 6984 */;
 import _modDef6985 from "module_6985" /* 6985 */;
 import _modDef6986 from "module_6986" /* 6986 */;
-import _modDef6987 from "module_6987" /* 6987 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef6985 }, 3: null };
-let obj2 = { uri: _modDef6985 };
-obj[2] = { uri: _modDef6986 };
-const obj3 = { uri: _modDef6986 };
-obj[3] = { uri: _modDef6987 };
+let obj = { 1: null, 2: { uri: _modDef6984 }, 3: null };
+let obj2 = { uri: _modDef6984 };
+obj[2] = { uri: _modDef6985 };
+const obj3 = { uri: _modDef6985 };
+obj[3] = { uri: _modDef6986 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef6987 };
+const obj4 = { uri: _modDef6986 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeOpenSpotIllustration.native.tsx");
 

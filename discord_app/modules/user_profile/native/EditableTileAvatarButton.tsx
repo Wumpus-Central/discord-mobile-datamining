@@ -1,19 +1,19 @@
-// === Module 15875: EditableTileAvatarButton ===
+// === Module 15891: EditableTileAvatarButton ===
 
-// Module 15875 (EditableTileAvatarButton)
+// Module 15891 (EditableTileAvatarButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8631 */;
-import SpinAnimationDefault from "SpinAnimation" /* 15799 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15871 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15874 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8638 */;
+import SpinAnimationDefault from "SpinAnimation" /* 15882 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15887 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15890 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8622 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8629 */;
 
 require = fn;
 const jsx = fn(21).jsx;

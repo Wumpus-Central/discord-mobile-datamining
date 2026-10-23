@@ -1,10 +1,10 @@
-// === Module 18264: OrbsArcadeFrameHeaderInfo ===
+// === Module 18286: OrbsArcadeFrameHeaderInfo ===
 
-// Module 18264 (OrbsArcadeFrameHeaderInfo)
+// Module 18286 (OrbsArcadeFrameHeaderInfo)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16298 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16316 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   const obj = applicationId(576);
   const stateFromStores = applicationId(504).useStateFromStores(first, tmp8, tmp9);
   const tmpResult = applicationId(504);
-  const balance = applicationId(9420).useFetchVirtualCurrencyBalance().balance;
+  const balance = applicationId(9427).useFetchVirtualCurrencyBalance().balance;
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === tmp4.namePill) {
       if (cResult[6] === tmp4.nameText) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       }
       if (cResult[8] !== balance) {
         const obj2 = { balance };
-        const tmp17 = closure_5(tmp(13888).BalanceWidgetPill, obj2);
+        const tmp17 = closure_5(tmp(13902).BalanceWidgetPill, obj2);
         cResult[8] = balance;
         cResult[9] = tmp17;
         let tmp15 = tmp17;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   cResult[6] = tmp4.nameText;
   cResult[7] = tmp12;
   tmp11 = tmp12;
-  const tmpResult2 = applicationId(9420);
+  const tmpResult2 = applicationId(9427);
 }) : (function OrbsArcadeFrameHeaderInfo(applicationId) {
   applicationId = applicationId.applicationId;
   const tmp = closure_7();
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp7 = closure_5(View, obj4);
     }
   }
-  const items2 = [tmp7, closure_5(applicationId(13888).BalanceWidgetPill, { balance: applicationId(9420).useFetchVirtualCurrencyBalance().balance })];
+  const items2 = [tmp7, closure_5(applicationId(13902).BalanceWidgetPill, { balance: applicationId(9427).useFetchVirtualCurrencyBalance().balance })];
   obj3.children = items2;
   return closure_6(View, obj3);
 });

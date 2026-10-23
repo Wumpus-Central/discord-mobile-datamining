@@ -1,6 +1,6 @@
-// === Module 7617: IntegrationPermissionUtils ===
+// === Module 7618: IntegrationPermissionUtils ===
 
-// Module 7617 (IntegrationPermissionUtils)
+// Module 7618 (IntegrationPermissionUtils)
 import Server from "Server" /* 2000 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
 import _slicedToArray from "module_32" /* 32 */;

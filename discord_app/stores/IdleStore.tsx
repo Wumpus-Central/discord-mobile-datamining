@@ -1,6 +1,6 @@
-// === Module 6619: IdleStore ===
+// === Module 6618: IdleStore ===
 
-// Module 6619 (IdleStore)
+// Module 6618 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,7 +8,7 @@ import DurationsDefault from "Durations" /* 1104 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import DiscordNativeDefault from "DiscordNative" /* 4783 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

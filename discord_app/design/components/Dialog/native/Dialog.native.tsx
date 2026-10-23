@@ -1,8 +1,8 @@
-// === Module 5954: Dialog ===
+// === Module 5953: Dialog ===
 
-// Module 5954 (Dialog)
+// Module 5953 (Dialog)
 import c from "c" /* 576 */;
-import AccessibilityView from "AccessibilityView" /* 5955 */;
+import AccessibilityView from "AccessibilityView" /* 5954 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

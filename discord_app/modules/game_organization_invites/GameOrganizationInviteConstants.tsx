@@ -1,6 +1,6 @@
-// === Module 10994: GameOrganizationInviteConstants ===
+// === Module 11002: GameOrganizationInviteConstants ===
 
-// Module 10994 (GameOrganizationInviteConstants)
+// Module 11002 (GameOrganizationInviteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteConstants.tsx");

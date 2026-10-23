@@ -1,6 +1,6 @@
-// === Module 7121: KeyboardAwareView ===
+// === Module 7120: KeyboardAwareView ===
 
-// Module 7121 (KeyboardAwareView)
+// Module 7120 (KeyboardAwareView)
 import useKeyboardDuration from "useKeyboardDuration" /* 5580 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import _slicedToArray from "module_32" /* 32 */;

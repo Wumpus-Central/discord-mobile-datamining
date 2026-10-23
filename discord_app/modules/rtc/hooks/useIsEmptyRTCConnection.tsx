@@ -1,11 +1,11 @@
-// === Module 9189: useIsEmptyRTCConnection ===
+// === Module 9196: useIsEmptyRTCConnection ===
 
-// Module 9189 (useIsEmptyRTCConnection)
+// Module 9196 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7798 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
 
 require = fn;
 fn(558);

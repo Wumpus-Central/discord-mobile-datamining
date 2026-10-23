@@ -1,6 +1,6 @@
-// === Module 12342: ? ===
+// === Module 12353: ? ===
 
-// Module 12342
+// Module 12353
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FrogIllocon-2x.png.js");

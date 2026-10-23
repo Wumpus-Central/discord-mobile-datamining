@@ -1,6 +1,6 @@
-// === Module 15799: SpinAnimation ===
+// === Module 15882: SpinAnimation ===
 
-// Module 15799 (SpinAnimation)
+// Module 15882 (SpinAnimation)
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import noop from "module_19" /* 19 */;

@@ -1,11 +1,11 @@
-// === Module 15639: notifications/NotificationSettingsUtils ===
+// === Module 15652: notifications/NotificationSettingsUtils ===
 
-// Module 15639 (notifications/NotificationSettingsUtils)
+// Module 15652 (notifications/NotificationSettingsUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
-import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 15640 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15641 */;
+import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 15653 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ function getExperimentAndConfigBySettingId(arg0) {
   }
   return {};
 }
-const NotificationSettingsConstants = fn(15634);
+const NotificationSettingsConstants = fn(15647);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

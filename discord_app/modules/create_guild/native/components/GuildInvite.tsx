@@ -1,33 +1,33 @@
-// === Module 13574: GuildInvite ===
+// === Module 13588: GuildInvite ===
 
-// Module 13574 (GuildInvite)
+// Module 13588 (GuildInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5958 */;
-import TableRow from "TableRow" /* 6889 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import _mod7206 from "module_7206" /* 7206 */;
-import GroupIcon from "GroupIcon" /* 8545 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9019 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9051 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9099 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13534 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5957 */;
+import TableRow from "TableRow" /* 6888 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import _mod7205 from "module_7205" /* 7205 */;
+import GroupIcon from "GroupIcon" /* 8546 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9026 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9058 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9106 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9020 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9027 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9034 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9041 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(9100).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7059).CreateGuildModalStates;
+let closure_6 = fn(9107).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7058).CreateGuildModalStates;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, Permissions: closure_15, SearchTypes: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -180,7 +180,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
         }
       }
       const obj3 = { data: tmp5, renderItem: tmp7, contentContainerStyle: tmp4.suggestionRowsContainer, ListFooterComponent: tmp8, ItemSeparatorComponent: tmp12, keyExtractor: tmp14, getItemType: tmp15 };
-      const tmp18 = closure_17(tmp(7206).FlashList, obj3);
+      const tmp18 = closure_17(tmp(7205).FlashList, obj3);
       cResult[11] = tmp5;
       cResult[12] = tmp7;
       cResult[13] = tmp4.suggestionRowsContainer;
@@ -236,7 +236,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
     obj3.getItemType = function getItemType(type) {
       return type.type;
     };
-    obj2.children = closure_17(_mod7206.FlashList, obj3);
+    obj2.children = closure_17(_mod7205.FlashList, obj3);
     tmp6Result2 = closure_17(closure_5, obj2);
   }
   return tmp6Result2;

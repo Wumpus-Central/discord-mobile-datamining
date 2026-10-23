@@ -1,12 +1,12 @@
-// === Module 18599: ParentalConsentWarningBanner ===
+// === Module 18621: ParentalConsentWarningBanner ===
 
-// Module 18599 (ParentalConsentWarningBanner)
+// Module 18621 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7631 */;
-import tinycolorDefault from "tinycolor" /* 7644 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7632 */;
+import tinycolorDefault from "tinycolor" /* 7645 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7630).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7631).FamilyCenterSubPages;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
@@ -60,12 +60,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Parental
   const obj7 = require("useGlobalStatusIndicatorState");
   const token = require("useToken").useToken(daysRemaining(587).colors.BACKGROUND_FEEDBACK_WARNING);
   if (cResult[0] !== token) {
-    const obj9 = Gfqlpa(7644)(token);
-    const toRgbStringResult = Gfqlpa(7644)(token).setAlpha(0).toRgbString();
+    const obj9 = Gfqlpa(7645)(token);
+    const toRgbStringResult = Gfqlpa(7645)(token).setAlpha(0).toRgbString();
     cResult[0] = token;
     cResult[1] = toRgbStringResult;
     let tmp8 = toRgbStringResult;
-    const setAlphaResult = Gfqlpa(7644)(token).setAlpha(0);
+    const setAlphaResult = Gfqlpa(7645)(token).setAlpha(0);
   } else {
     tmp8 = cResult[1];
   }

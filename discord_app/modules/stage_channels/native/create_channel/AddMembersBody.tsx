@@ -1,14 +1,14 @@
-// === Module 8971: AddMembersBody ===
+// === Module 8978: AddMembersBody ===
 
-// Module 8971 (AddMembersBody)
+// Module 8978 (AddMembersBody)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import RegexUtilsDefault from "RegexUtils" /* 5594 */;
-import GuildUtilsDefault from "GuildUtils" /* 6815 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8941 */;
+import GuildUtilsDefault from "GuildUtils" /* 6814 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8948 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7859);
+const ChannelPermissionsConstants = fn(7860);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1098).Permissions;
 const jsxProd = fn(21);
@@ -189,7 +189,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8962), obj10);
+  obj9.children = closure_16(pendingAdditions(8969), obj10);
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -204,7 +204,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1128).intl;
     obj14.message = intl4.string(guild(1128).t["5f3HIC"]);
-    obj13.children = closure_16(guild(7937).InlineNotice, obj14);
+    obj13.children = closure_16(guild(7938).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -212,7 +212,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8967).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8974).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1128).intl;
         const obj17 = { query: str };
@@ -227,7 +227,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(8962);
+  const tmp4Result = pendingAdditions(8969);
   obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(587).space.PX_16, paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(5579)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;

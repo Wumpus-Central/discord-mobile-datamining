@@ -1,17 +1,17 @@
-// === Module 10380: AppliedForumTag ===
+// === Module 10387: AppliedForumTag ===
 
-// Module 10380 (AppliedForumTag)
+// Module 10387 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import EmojiDefault from "Emoji" /* 7213 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10381 */;
+import EmojiDefault from "Emoji" /* 7212 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10388 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
 
 require = fn;
 let closure_3 = ["ref"];

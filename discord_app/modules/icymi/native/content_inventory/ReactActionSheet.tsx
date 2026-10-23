@@ -1,14 +1,14 @@
-// === Module 17850: ReactActionSheet ===
+// === Module 17872: ReactActionSheet ===
 
-// Module 17850 (ReactActionSheet)
+// Module 17872 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5211 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8809 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9795 */;
-import ICYMIContext from "ICYMIContext" /* 17798 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13055 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8816 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9802 */;
+import ICYMIContext from "ICYMIContext" /* 17820 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -751,10 +751,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
               return obj3;
             } else {
               closure_5(true);
-              v1(8809).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8809);
+              v1(8816).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8816);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8809).feedItemActioned(obj4);
+              v1(8816).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };

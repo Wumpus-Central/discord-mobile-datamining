@@ -1,9 +1,9 @@
-// === Module 19296: EnterEmailScreen ===
+// === Module 19319: EnterEmailScreen ===
 
-// Module 19296 (EnterEmailScreen)
+// Module 19319 (EnterEmailScreen)
 import _modDef2832 from "module_2832" /* 2832 */;
-import types from "types" /* 19288 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 19297 */;
+import types from "types" /* 19311 */;
+import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 19320 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,8 +46,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   if (cResult[4] !== first) {
     const obj3 = { children: null };
     const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-    obj3.children = jsx(tmp(6994).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-    const tmp15 = jsx(tmp(5964).Stack, { children: null });
+    obj3.children = jsx(tmp(6993).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+    const tmp15 = jsx(tmp(5963).Stack, { children: null });
     cResult[4] = first;
     cResult[5] = tmp15;
     let tmp13 = tmp15;

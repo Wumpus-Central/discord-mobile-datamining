@@ -1,10 +1,10 @@
-// === Module 8114: InAppReportsTextLineElement ===
+// === Module 8115: InAppReportsTextLineElement ===
 
-// Module 8114 (InAppReportsTextLineElement)
+// Module 8115 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
-import CustomMarkupAll from "CustomMarkup" /* 5966 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
+import CustomMarkupAll from "CustomMarkup" /* 5965 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

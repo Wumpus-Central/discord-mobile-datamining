@@ -1,7 +1,7 @@
-// === Module 15797: useUploadAvatar ===
+// === Module 15874: useUploadAvatar ===
 
-// Module 15797 (useUploadAvatar)
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9641 */;
+// Module 15874 (useUploadAvatar)
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             const obj6 = { size };
             c2 = 1;
             c3 = 1;
-            const obj8 = { value: analyticsLocations(8139).openImagePicker(obj6), done: false };
+            const obj8 = { value: analyticsLocations(8140).openImagePicker(obj6), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -135,21 +135,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = guildId(15777);
-          obj10.description = guildId(8631).generateAvatarDescription();
+          const obj2 = guildId(15791);
+          obj10.description = guildId(8638).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
           if (c2) {
-            tmp30(8629).setTryItOutAvatar(closure_128_4);
-            const tmp30Result = tmp30(8629);
+            tmp30(8636).setTryItOutAvatar(closure_128_4);
+            const tmp30Result = tmp30(8636);
           } else {
             const obj11 = { guildId, avatar: closure_128_4 };
-            tmp30(8626).setPendingChanges(obj11);
-            const tmp30Result2 = tmp30(8626);
-            const result = guildId(8628).announcePendingAvatarChange("set");
-            const obj7 = guildId(8628);
+            tmp30(8633).setPendingChanges(obj11);
+            const tmp30Result2 = tmp30(8633);
+            const result = guildId(8635).announcePendingAvatarChange("set");
+            const obj7 = guildId(8635);
           }
-          const obj4 = guildId(8631);
+          const obj4 = guildId(8638);
         }
       } catch (tmp40) {
         c3 = tmp;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             const obj6 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj8 = { value: tmp2(8139).openImagePicker(obj6), done: false };
+            const obj8 = { value: tmp2(8140).openImagePicker(obj6), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -257,21 +257,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = v0(15777);
-          obj10.description = v0(8631).generateAvatarDescription();
+          const obj2 = v0(15791);
+          obj10.description = v0(8638).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
           if (closure_129_1) {
-            tmp30(8629).setTryItOutAvatar(closure_128_4);
-            const tmp30Result = tmp30(8629);
+            tmp30(8636).setTryItOutAvatar(closure_128_4);
+            const tmp30Result = tmp30(8636);
           } else {
             const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-            tmp30(8626).setPendingChanges(obj11);
-            const tmp30Result2 = tmp30(8626);
-            const result = v0(8628).announcePendingAvatarChange("set");
-            const obj7 = v0(8628);
+            tmp30(8633).setPendingChanges(obj11);
+            const tmp30Result2 = tmp30(8633);
+            const result = v0(8635).announcePendingAvatarChange("set");
+            const obj7 = v0(8635);
           }
-          const obj4 = v0(8631);
+          const obj4 = v0(8638);
         }
       } catch (tmp40) {
         c3 = tmp;

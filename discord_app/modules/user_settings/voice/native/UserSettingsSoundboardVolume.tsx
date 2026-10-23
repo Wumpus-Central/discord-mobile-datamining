@@ -1,10 +1,10 @@
-// === Module 11571: UserSettingsSoundboardVolume ===
+// === Module 11582: UserSettingsSoundboardVolume ===
 
-// Module 11571 (UserSettingsSoundboardVolume)
+// Module 11582 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7428 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11568 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7429 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11579 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,10 +22,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   const cResult = analyticsLocations(576).c(17);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const amplitudinalSoundboardVolume = tmp(7436).getAmplitudinalSoundboardVolume();
+    const amplitudinalSoundboardVolume = tmp(7437).getAmplitudinalSoundboardVolume();
     cResult[0] = amplitudinalSoundboardVolume;
     let first = amplitudinalSoundboardVolume;
-    const tmpResult = tmp(7436);
+    const tmpResult = tmp(7437);
   } else {
     first = cResult[0];
   }
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     const items = [tmp18, tmp23];
     obj7.children = items;
     obj6.subLabel = closure_7(closure_6, obj7);
-    obj5.children = closure_5(tmp(6889).TableRow, obj6);
-    const tmp30 = closure_5(tmp(11559).UserSettingsTableRowGroup, obj5);
+    obj5.children = closure_5(tmp(6888).TableRow, obj6);
+    const tmp30 = closure_5(tmp(11570).UserSettingsTableRowGroup, obj5);
     cResult[14] = tmp23;
     cResult[15] = tmp18;
     cResult[16] = tmp30;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   const obj = analyticsLocations(576);
 }) : (function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(7436).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(7437).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1128).intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     },
     accessibilityLabel: null
   };
-  const obj = analyticsLocations(7436);
+  const obj = analyticsLocations(7437);
   const intl3 = analyticsLocations(1128).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1128).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -155,6 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   items[1] = closure_5(analyticsLocations(5220).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(6889).TableRow, obj3);
-  return closure_5(analyticsLocations(11559).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(6888).TableRow, obj3);
+  return closure_5(analyticsLocations(11570).UserSettingsTableRowGroup, obj2);
 });

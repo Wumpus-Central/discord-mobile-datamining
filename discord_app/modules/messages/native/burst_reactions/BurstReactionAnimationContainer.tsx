@@ -1,6 +1,6 @@
-// === Module 18270: BurstReactionAnimationContainer ===
+// === Module 18292: BurstReactionAnimationContainer ===
 
-// Module 18270 (BurstReactionAnimationContainer)
+// Module 18292 (BurstReactionAnimationContainer)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
@@ -197,7 +197,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           return animatedStyle(fill(1202).OverlayView, obj);
         }
     };
-    tmp2 = animatedStyle(animationData(10378), obj4);
+    tmp2 = animatedStyle(animationData(10385), obj4);
     cResult[4] = animatedStyle;
     cResult[5] = animationData;
     cResult[6] = dismissTextContainer;
@@ -323,8 +323,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       obj.children = closure_1_8(first(5038).View, obj2);
       return closure_1_8(closure_0(1202).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10378), obj3);
-    let tmp11 = animationData(10378);
+    tmp8 = closure_8(animationData(10385), obj3);
+    let tmp11 = animationData(10385);
   }
   return tmp8;
 });

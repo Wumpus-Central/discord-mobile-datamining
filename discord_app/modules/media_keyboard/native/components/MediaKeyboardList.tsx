@@ -1,15 +1,15 @@
-// === Module 10398: MediaKeyboardList ===
+// === Module 10405: MediaKeyboardList ===
 
-// Module 10398 (MediaKeyboardList)
+// Module 10405 (MediaKeyboardList)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7875 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9946 */;
-import DeviceMediaDefault from "DeviceMedia" /* 10399 */;
-import MediaKeyboardItem from "MediaKeyboardItem" /* 10403 */;
-import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10410 */;
-import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10412 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7876 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9953 */;
+import DeviceMediaDefault from "DeviceMedia" /* 10406 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 10410 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10417 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1500 */;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let closure_6 = fn(1629).InAppCameraUsedCameraPreviewTypes;
 let closure_7 = fn(5252).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(7852).NativePermissionStatus;
+const NativePermissionStatus = fn(7853).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
 const photoLibraryChanged = "photoLibraryChanged";

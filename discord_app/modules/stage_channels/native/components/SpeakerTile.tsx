@@ -1,11 +1,11 @@
-// === Module 11646: SpeakerTile ===
+// === Module 11657: SpeakerTile ===
 
-// Module 11646 (SpeakerTile)
+// Module 11657 (SpeakerTile)
 import nativeDefault from "native" /* 587 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7862 */;
-import StageTileTypes from "StageTileTypes" /* 11647 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7863 */;
+import StageTileTypes from "StageTileTypes" /* 11658 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
 
 require = fn;
 const View = fn(17).View;

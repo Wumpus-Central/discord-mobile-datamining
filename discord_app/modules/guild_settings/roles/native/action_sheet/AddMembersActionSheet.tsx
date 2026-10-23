@@ -1,6 +1,6 @@
-// === Module 19013: action_sheet/AddMembersActionSheet ===
+// === Module 19036: action_sheet/AddMembersActionSheet ===
 
-// Module 19013 (action_sheet/AddMembersActionSheet)
+// Module 19036 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,17 +10,17 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import RegexUtilsDefault from "RegexUtils" /* 5594 */;
-import GuildUtilsDefault from "GuildUtils" /* 6815 */;
-import FormCheckbox from "FormCheckbox" /* 6887 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10797 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19012 */;
+import GuildUtilsDefault from "GuildUtils" /* 6814 */;
+import FormCheckbox from "FormCheckbox" /* 6886 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10805 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19035 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19007).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19030).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -590,7 +590,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMembers
       AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.ZGVL3g, obj), "polite");
     }
   }, items1);
-  const tmp9 = require("module_7206");
+  const tmp9 = require("module_7205");
   if (inActionSheet) {
     let FlashList = tmp9.BottomSheetFlashList;
     let ErpIY3 = require;

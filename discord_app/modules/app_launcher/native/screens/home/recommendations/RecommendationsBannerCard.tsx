@@ -1,12 +1,12 @@
-// === Module 12023: RecommendationsBannerCard ===
+// === Module 12034: RecommendationsBannerCard ===
 
-// Module 12023 (RecommendationsBannerCard)
+// Module 12034 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8649 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11974 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12017 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 12024 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8656 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11988 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12028 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 12035 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -44,11 +44,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
       let tmp4 = cResult[2];
     }
     if (cResult[3] !== application) {
-      const shelfBadgeTypeIfActive = BaseAppRow(9618).getShelfBadgeTypeIfActive(application);
+      const shelfBadgeTypeIfActive = BaseAppRow(9625).getShelfBadgeTypeIfActive(application);
       cResult[3] = application;
       cResult[4] = shelfBadgeTypeIfActive;
       let tmp6 = shelfBadgeTypeIfActive;
-      const BaseAppRowResult = BaseAppRow(9618);
+      const BaseAppRowResult = BaseAppRow(9625);
     } else {
       tmp6 = cResult[4];
     }
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
           }
         }
         if (isLandscape) {
-          BaseAppRow = BaseAppRow(12000).BaseAppRow;
+          BaseAppRow = BaseAppRow(12011).BaseAppRow;
           obj = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
           class T {
             constructor() {
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
           const obj7 = { style: tmp3.banner, children: null };
           const obj8 = { applicationBot: application.bot, isActivity: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
           const tmp23 = RecommendationsBannerDefault;
-          obj8.isActivity = BaseAppRow(9618).isActivityApp(application);
+          obj8.isActivity = BaseAppRow(9625).isActivityApp(application);
           ({ id: obj10.applicationId, icon } = application);
           obj8.applicationIcon = icon;
           obj8.overrideImageUrl = overrideImageUrl;
@@ -279,12 +279,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
           items6[1] = closure_6(BaseAppRow(5220).Text, obj18);
           obj16.children = items6;
           items5[1] = closure_7(View, obj16);
-          items5[2] = closure_6(BaseAppRow(6898).TableRowArrow, {});
+          items5[2] = closure_6(BaseAppRow(6897).TableRowArrow, {});
           obj14.children = items5;
           items4[1] = closure_7(View, obj14);
           obj4.children = items4;
-          tmp19Result2 = closure_7(BaseAppRow(6894).PressableOpacity, obj4);
-          const BaseAppRowResult1 = BaseAppRow(9618);
+          tmp19Result2 = closure_7(BaseAppRow(6893).PressableOpacity, obj4);
+          const BaseAppRowResult1 = BaseAppRow(9625);
         }
         class T {
           constructor() {
@@ -326,8 +326,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
   }
   let result = tmp2;
   if (!(undefined !== showsPromoted && showsPromoted)) {
-    result = BaseAppRow(9618).isPromotedApplication(application);
-    const BaseAppRowResult2 = BaseAppRow(9618);
+    result = BaseAppRow(9625).isPromotedApplication(application);
+    const BaseAppRowResult2 = BaseAppRow(9625);
   }
   cResult[0] = application;
   cResult[1] = undefined !== showsPromoted && showsPromoted;
@@ -343,10 +343,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    showsPromoted = application(9618).isPromotedApplication(application);
-    const obj = application(9618);
+    showsPromoted = application(9625).isPromotedApplication(application);
+    const obj = application(9625);
   }
-  const shelfBadgeTypeIfActive = application(9618).getShelfBadgeTypeIfActive(application);
+  const shelfBadgeTypeIfActive = application(9625).getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
   if (bot != null) {
@@ -364,11 +364,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
     }
     maybeFetchUserProfileDefault(id);
   }, items);
-  const obj2 = application(9618);
+  const obj2 = application(9625);
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(12000).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(12011).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -389,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
     const obj9 = { style: tmp.banner, children: null };
     const obj10 = { applicationBot: application.bot, isActivity: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     const tmp10Result = RecommendationsBannerDefault;
-    obj10.isActivity = tmp4(9618).isActivityApp(application);
+    obj10.isActivity = tmp4(9625).isActivityApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
     obj10.overrideImageUrl = application.overrideImageUrl;
@@ -429,12 +429,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
     items6[1] = closure_6(tmp4(5220).Text, obj19);
     obj17.children = items6;
     items5[1] = closure_7(View, obj17);
-    items5[2] = closure_6(tmp4(6898).TableRowArrow, {});
+    items5[2] = closure_6(tmp4(6897).TableRowArrow, {});
     obj15.children = items5;
     items4[1] = closure_7(View, obj15);
     obj7.children = items4;
-    tmp12Result2 = closure_7(tmp4(6894).PressableOpacity, obj7);
-    const tmp4Result = tmp4(9618);
+    tmp12Result2 = closure_7(tmp4(6893).PressableOpacity, obj7);
+    const tmp4Result = tmp4(9625);
   }
   return tmp12Result2;
 });

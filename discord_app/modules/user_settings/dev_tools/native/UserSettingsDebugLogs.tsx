@@ -1,12 +1,12 @@
-// === Module 16820: UserSettingsDebugLogs ===
+// === Module 16842: UserSettingsDebugLogs ===
 
-// Module 16820 (UserSettingsDebugLogs)
+// Module 16842 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 16821 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 16843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, 
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7010).InputHeights.MD, width: fn(7010).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7009).InputHeights.MD, width: fn(7009).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   closure_6 = tmp14;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class A {
+    class L {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -99,9 +99,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         return str;
       }
     }
-    cResult[5] = A;
+    cResult[5] = L;
   } else {
-    class A {
+    class L {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -112,12 +112,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
   }
-  const tmp5Result3 = first1(noop.useState(A), 2);
+  const tmp5Result3 = first1(noop.useState(L), 2);
   const first2 = tmp5Result3[0];
   const tmp6 = first1(noop.useState(0), 2);
   [r10082, closure_8] = first1(noop.useState(tmp14), 2);
   if (cResult[6] === tmp14) {
-    class A {
+    class L {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     const effect = obj2.useEffect(O, items1);
     if (cResult[10] === tmp4.code) {
-      class A {
+      class L {
         constructor() {
           Storage = closure_0(closure_2[12]).Storage;
           str = Storage.get("debug-log-query", "");
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
+        class L {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         cResult[13] = stringResult;
         const tmp23 = stringResult;
       } else {
-        class A {
+        class L {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
       if (cResult[14] !== first1) {
-        class A {
+        class L {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         cResult[14] = first1;
         cResult[15] = tmp26;
       } else {
-        class A {
+        class L {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
       if (cResult[16] === first2) {
-        class A {
+        class L {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           }
         }
         if (cResult[19] === tmp4.searchField) {
-          class A {
+          class L {
             constructor() {
               Storage = closure_0(closure_2[12]).Storage;
               str = Storage.get("debug-log-query", "");
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             }
           }
           if (cResult[23] !== tmp4.shareButton) {
-            class A {
+            class L {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             cResult[23] = tmp4.shareButton;
             cResult[24] = tmp37;
           } else {
-            class A {
+            class L {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -423,7 +423,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             }
           }
           if (cResult[25] === tmp4.searchWrap) {
-            class A {
+            class L {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         cResult[21] = tmp32;
       }
       const obj7 = { size: "md", placeholder: "Filter (regex)", onChange: tmp5Result3[1], defaultValue: first2, trailingIcon: tmp(tmp2[19]).FiltersHorizontalIcon, trailingPressableProps: tmp26 };
-      const tmp29 = closure_8(tmp(tmp2[18]).SearchField, obj7);
+      const tmp29 = closure_8(tmp(tmp2[18]).SearchBar, obj7);
       cResult[16] = first2;
       cResult[17] = tmp26;
       cResult[18] = tmp29;
@@ -670,7 +670,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     });
   };
   obj5.trailingPressableProps = obj6;
-  obj4.children = closure_8(require("SearchField").SearchField, obj5);
+  obj4.children = closure_8(require("Search/SearchBar").SearchBar, obj5);
   const items3 = [closure_8(memo, obj4), ];
   const tmp5 = sortOrder(noop.useState(0), 2);
   items3[1] = closure_8(memo, { style: tmp.shareButton, children: closure_8(require("ShareLogsButton"), {}) });
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj8.data = tmp4Result4[0];
   obj8.renderItem = callback1;
   obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_7206").FlashList, obj8);
+  items4[1] = closure_8(require("module_7205").FlashList, obj8);
   obj2.children = items4;
   return first1(memo, obj2);
 });

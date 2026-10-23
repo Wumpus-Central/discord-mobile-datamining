@@ -1,10 +1,10 @@
-// === Module 8708: UserProfileOverscrollBanner ===
+// === Module 8715: UserProfileOverscrollBanner ===
 
-// Module 8708 (UserProfileOverscrollBanner)
+// Module 8715 (UserProfileOverscrollBanner)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8709 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8710 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8716 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8717 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;

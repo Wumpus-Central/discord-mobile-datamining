@@ -1,9 +1,9 @@
-// === Module 13810: UsersLegendList ===
+// === Module 13824: UsersLegendList ===
 
-// Module 13810 (UsersLegendList)
+// Module 13824 (UsersLegendList)
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7145 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

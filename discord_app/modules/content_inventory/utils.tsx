@@ -1,13 +1,13 @@
-// === Module 8602: utils ===
+// === Module 8603: utils ===
 
-// Module 8602 (utils)
+// Module 8603 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import _mod4398 from "module_4398" /* 4398 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8598 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8603 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8599 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8604 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {

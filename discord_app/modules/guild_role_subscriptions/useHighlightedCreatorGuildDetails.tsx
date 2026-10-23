@@ -1,9 +1,9 @@
-// === Module 19134: useHighlightedCreatorGuildDetails ===
+// === Module 19157: useHighlightedCreatorGuildDetails ===
 
-// Module 19134 (useHighlightedCreatorGuildDetails)
+// Module 19157 (useHighlightedCreatorGuildDetails)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 19135 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 19158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

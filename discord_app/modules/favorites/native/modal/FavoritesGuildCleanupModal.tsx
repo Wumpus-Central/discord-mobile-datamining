@@ -1,16 +1,16 @@
-// === Module 17465: FavoritesGuildCleanupModal ===
+// === Module 17487: FavoritesGuildCleanupModal ===
 
-// Module 17465 (FavoritesGuildCleanupModal)
+// Module 17487 (FavoritesGuildCleanupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6886 */;
-import TableRadioRow from "TableRadioRow" /* 6970 */;
-import Modal from "Modal" /* 11113 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17468 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6885 */;
+import TableRadioRow from "TableRadioRow" /* 6969 */;
+import Modal from "Modal" /* 11122 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17490 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

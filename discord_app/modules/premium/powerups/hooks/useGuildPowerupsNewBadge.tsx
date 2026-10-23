@@ -1,8 +1,8 @@
-// === Module 13353: useGuildPowerupsNewBadge ===
+// === Module 13367: useGuildPowerupsNewBadge ===
 
-// Module 13353 (useGuildPowerupsNewBadge)
+// Module 13367 (useGuildPowerupsNewBadge)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4806 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13348 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5167 */;

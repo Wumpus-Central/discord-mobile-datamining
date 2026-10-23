@@ -1,8 +1,8 @@
-// === Module 12679: ReferralMessageUtils ===
+// === Module 12698: ReferralMessageUtils ===
 
-// Module 12679 (ReferralMessageUtils)
+// Module 12698 (ReferralMessageUtils)
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import UserOfferStore from "UserOfferStore" /* 7544 */;
+import UserOfferStore from "UserOfferStore" /* 7545 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");

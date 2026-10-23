@@ -1,6 +1,6 @@
-// === Module 13216: ApplicationSectionHeader ===
+// === Module 13232: ApplicationSectionHeader ===
 
-// Module 13216 (ApplicationSectionHeader)
+// Module 13232 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
@@ -104,12 +104,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       tmp15 = tmp16;
     }
     const tmpResult = tmp(504);
-    const applicationCommandsIconSource = tmp(13047).getApplicationCommandsIconSource(section, stateFromStores);
+    const applicationCommandsIconSource = tmp(13063).getApplicationCommandsIconSource(section, stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = section;
     cResult[6] = applicationCommandsIconSource;
     tmp9 = applicationCommandsIconSource;
-    const tmpResult2 = tmp(13047);
+    const tmpResult2 = tmp(13063);
   }
   const fn = function u() {
     if (null != guildId) {
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(13047).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(13063).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

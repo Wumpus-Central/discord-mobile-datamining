@@ -1,6 +1,6 @@
-// === Module 13524: ContactSyncSuggestions ===
+// === Module 13538: ContactSyncSuggestions ===
 
-// Module 13524 (ContactSyncSuggestions)
+// Module 13538 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,15 +10,15 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserUtils from "UserUtils" /* 5018 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useFontScale from "useFontScale" /* 5239 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6886 */;
-import Form from "Form" /* 8919 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6885 */;
+import Form from "Form" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const SuggestedFriendSource = fn(13525).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13539).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   obj6.contentContainerStyle = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
   obj6.data = memo;
   obj6.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(7206).FlashList, obj6), , ];
+  const items5 = [closure_8(friendSuggestions(7205).FlashList, obj6), , ];
   let obj8 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   let obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
   obj8.start = friendSuggestions(1107).VerticalGradient.START;

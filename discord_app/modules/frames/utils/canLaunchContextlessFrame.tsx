@@ -1,10 +1,10 @@
-// === Module 11309: canLaunchContextlessFrame ===
+// === Module 11318: canLaunchContextlessFrame ===
 
-// Module 11309 (canLaunchContextlessFrame)
+// Module 11318 (canLaunchContextlessFrame)
 import Constants from "Constants" /* 1087 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9618 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9625 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

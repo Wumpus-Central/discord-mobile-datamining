@@ -1,11 +1,11 @@
-// === Module 15022: MarkupReactGameMentionRule ===
+// === Module 15035: MarkupReactGameMentionRule ===
 
-// Module 15022 (MarkupReactGameMentionRule)
+// Module 15035 (MarkupReactGameMentionRule)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useGame from "useGame" /* 7390 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9214 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9220 */;
+import useGame from "useGame" /* 7391 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9221 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMe
   const tmp4 = closure_5();
   const gameId = state.node.gameId;
   let obj = state(576);
-  const gameMentionData = state(8563).useGameMentionData(gameId);
+  const gameMentionData = state(8564).useGameMentionData(gameId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t["11pdXZ"]);
@@ -73,7 +73,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMe
       if (cResult[7] === gameId) {
         if (cResult[10] !== tmp4.icon) {
           const obj4 = { size: "sm", style: tmp4.icon };
-          const tmp15 = closure_4(tmp(8058).UnknownGameIcon, obj4);
+          const tmp15 = closure_4(tmp(8059).UnknownGameIcon, obj4);
           cResult[10] = tmp4.icon;
           cResult[11] = tmp15;
           let tmp13 = tmp15;
@@ -164,12 +164,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMe
   cResult[2] = gameIcon;
   cResult[3] = tmp11;
   tmp10 = tmp11;
-  const obj2 = state(8563);
+  const obj2 = state(8564);
 }) : (function MarkupGameMention(state) {
   state = state.state;
   const tmp = closure_5();
   const gameId = state.node.gameId;
-  const gameMentionData = state(8563).useGameMentionData(gameId);
+  const gameMentionData = state(8564).useGameMentionData(gameId);
   const intl = state(1128).intl;
   const stringResult = intl.string(state(1128).t["11pdXZ"]);
   let gameName;
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMe
     gameName = stringResult;
   }
   let gameIcon;
-  let obj = state(8563);
+  let obj = state(8564);
   const tmp7 = gameId;
   if (gameMentionData != null) {
     gameIcon = gameMentionData.gameIcon;
@@ -201,7 +201,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMe
     if (tmp11) {
       tmp11 = "" !== tmp8Result;
     }
-    let tmp17Result = closure_4(tmp2(8058).UnknownGameIcon, obj3);
+    let tmp17Result = closure_4(tmp2(8059).UnknownGameIcon, obj3);
     if (tmp11) {
       const obj4 = { style: tmp.icon, source: null };
       const obj5 = { uri: tmp8Result };

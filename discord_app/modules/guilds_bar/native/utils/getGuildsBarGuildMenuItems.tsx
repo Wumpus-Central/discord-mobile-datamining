@@ -1,16 +1,16 @@
-// === Module 17632: getGuildsBarGuildMenuItems ===
+// === Module 17654: getGuildsBarGuildMenuItems ===
 
-// Module 17632 (getGuildsBarGuildMenuItems)
+// Module 17654 (getGuildsBarGuildMenuItems)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7196 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7201 */;
-import _modDef13191 from "module_13191" /* 13191 */;
-import _modDef13192 from "module_13192" /* 13192 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15090 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7195 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7200 */;
+import _modDef13207 from "module_13207" /* 13207 */;
+import _modDef13208 from "module_13208" /* 13208 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15103 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
 
 const require = globalThis.__r;
 
@@ -100,7 +100,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj5 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj5.iconSource = _modDef13192;
+      obj5.iconSource = _modDef13208;
       const intl5 = tmp(1128).intl;
       obj5.label = intl5.string(tmp(1128).t.De0BTC);
       obj5.action = function action() {
@@ -110,12 +110,12 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj5);
     } else {
-      obj5.iconSource = _modDef13191;
+      obj5.iconSource = _modDef13207;
       const intl4 = tmp(1128).intl;
       obj5.label = intl4.string(tmp(1128).t.vRzp7P);
       obj5.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(10972, dependencyMap.paths), "muteSettings" + guildId, { guildId });
+        obj.openLazy(asyncRequireImpl(10980, dependencyMap.paths), "muteSettings" + guildId, { guildId });
       };
       splice(1, 0, obj5);
     }

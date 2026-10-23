@@ -1,8 +1,8 @@
-// === Module 12003: RedesignChannelListConstants ===
+// === Module 12014: RedesignChannelListConstants ===
 
-// Module 12003 (RedesignChannelListConstants)
+// Module 12014 (RedesignChannelListConstants)
 import _mod17 from "module_17" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11023 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11032 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1385 */;
 import size from "module_2" /* 2 */;
 

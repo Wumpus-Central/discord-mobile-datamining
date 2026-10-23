@@ -1,16 +1,16 @@
-// === Module 10795: InstantInviteCode ===
+// === Module 10803: InstantInviteCode ===
 
-// Module 10795 (InstantInviteCode)
+// Module 10803 (InstantInviteCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useChannelName from "useChannelName" /* 5590 */;
 import ClockIcon from "ClockIcon" /* 5677 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import TextIcon2 from "TextIcon" /* 8536 */;
-import CountDownDefault from "CountDown" /* 10006 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import TextIcon2 from "TextIcon" /* 8537 */;
+import CountDownDefault from "CountDown" /* 10013 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const tmp = closure_10();
   items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5964).Stack, obj2);
+  obj.children = closure_9(invite(5963).Stack, obj2);
   return closure_8(View, obj);
 });
 export const InstantInviteDetails = tmp3;

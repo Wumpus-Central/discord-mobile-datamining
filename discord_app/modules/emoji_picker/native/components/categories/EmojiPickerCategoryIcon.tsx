@@ -1,24 +1,24 @@
-// === Module 9930: EmojiPickerCategoryIcon ===
+// === Module 9937: EmojiPickerCategoryIcon ===
 
-// Module 9930 (EmojiPickerCategoryIcon)
+// Module 9937 (EmojiPickerCategoryIcon)
 import c from "c" /* 576 */;
 import ClockIcon from "ClockIcon" /* 5677 */;
-import TrophyIcon from "TrophyIcon" /* 9277 */;
-import ReactionIcon from "ReactionIcon" /* 9319 */;
-import HeartIcon from "HeartIcon" /* 9336 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
-import GameControllerIcon from "GameControllerIcon" /* 9585 */;
-import StarIcon from "StarIcon" /* 9919 */;
-import LightbulbIcon from "LightbulbIcon" /* 9931 */;
-import NatureIcon from "NatureIcon" /* 9933 */;
-import FoodIcon from "FoodIcon" /* 9935 */;
-import BicycleIcon from "BicycleIcon" /* 9937 */;
-import ObjectIcon from "ObjectIcon" /* 9939 */;
-import FlagIcon from "FlagIcon" /* 9941 */;
+import TrophyIcon from "TrophyIcon" /* 9284 */;
+import ReactionIcon from "ReactionIcon" /* 9326 */;
+import HeartIcon from "HeartIcon" /* 9343 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import GameControllerIcon from "GameControllerIcon" /* 9592 */;
+import StarIcon from "StarIcon" /* 9926 */;
+import LightbulbIcon from "LightbulbIcon" /* 9938 */;
+import NatureIcon from "NatureIcon" /* 9940 */;
+import FoodIcon from "FoodIcon" /* 9942 */;
+import BicycleIcon from "BicycleIcon" /* 9944 */;
+import ObjectIcon from "ObjectIcon" /* 9946 */;
+import FlagIcon from "FlagIcon" /* 9948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategories = fn(6714).EmojiCategories;
+const EmojiCategories = fn(6713).EmojiCategories;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

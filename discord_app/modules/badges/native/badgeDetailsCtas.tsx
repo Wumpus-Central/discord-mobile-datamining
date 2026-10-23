@@ -1,18 +1,18 @@
-// === Module 11107: badgeDetailsCtas ===
+// === Module 11116: badgeDetailsCtas ===
 
-// Module 11107 (badgeDetailsCtas)
+// Module 11116 (badgeDetailsCtas)
 import Constants from "Constants" /* 1087 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
 import util from "util" /* 1128 */;
 import openURLDefault from "openURL" /* 5642 */;
-import QuestContent from "QuestContent" /* 6701 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7633 */;
-import BadgeId from "BadgeId" /* 8646 */;
-import QuestsEligibility from "QuestsEligibility" /* 9534 */;
-import QuestUtils from "QuestUtils" /* 9536 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10416 */;
+import QuestContent from "QuestContent" /* 6700 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7634 */;
+import BadgeId from "BadgeId" /* 8653 */;
+import QuestsEligibility from "QuestsEligibility" /* 9541 */;
+import QuestUtils from "QuestUtils" /* 9543 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10423 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

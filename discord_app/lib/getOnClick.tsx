@@ -1,6 +1,6 @@
-// === Module 8833: getOnClick ===
+// === Module 8840: getOnClick ===
 
-// Module 8833 (getOnClick)
+// Module 8840 (getOnClick)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
@@ -8,27 +8,28 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import openURLDefault from "openURL" /* 5642 */;
 import CodedLink from "CodedLink" /* 5689 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import QuestContent from "QuestContent" /* 6701 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7331 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7748 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8834 */;
-import QuestUtils from "QuestUtils" /* 9536 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10525 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11193 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11246 */;
+import QuestContent from "QuestContent" /* 6700 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7332 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7749 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8841 */;
+import QuestUtils from "QuestUtils" /* 9543 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10532 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11202 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11255 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11315 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6770 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7316 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6769 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7317 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import InviteStore from "InviteStore" /* 5686 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import MessageStore from "MessageStore" /* 5996 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SortedGuildStore from "SortedGuildStore" /* 6687 */;
+import SortedGuildStore from "SortedGuildStore" /* 6686 */;
 
 const require = globalThis.__r;
 
@@ -259,7 +260,7 @@ const Constants = fn(1087);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1089);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7317).isGameShopPath;
+const isGameShopPath = fn(7318).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -304,7 +305,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "r", skuId: "emoji" };
+            result = { applicationId: "Array", skuId: "Reflect" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -317,7 +318,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "r" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -326,160 +327,65 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const code = currentChannelId.code;
-        url = code;
+        const code = canLaunchInChannel.code;
         const application = obj2.getApplication(code);
-        const uRL = new URL(currentChannelId.url);
-        let searchParams = uRL.searchParams;
+        const uRL = new URL(canLaunchInChannel.url);
+        const searchParams = uRL.searchParams;
         value = searchParams.get("referrer_id");
-        closure_2 = value;
+        closure_1 = value;
         const playInContext = url(paths[29]).getPlayInContext(code);
-        currentChannelId = playInContext.currentChannelId;
-        ({ instanceId: pathname, isCurrentlyInInstance } = playInContext);
-        if (playInContext.canLaunchInChannel) {
-          let flag2 = !isCurrentlyInInstance;
-          if (!isCurrentlyInInstance) {
-            flag2 = null != currentChannelId;
-          }
-          if (flag2) {
-            let searchParams2 = uRL.searchParams;
-            const searchParams3 = uRL.searchParams;
-            value2 = searchParams2.get("link_id");
-            const customActivityLinkParams = tmp5(paths[30]).getCustomActivityLinkParams(code, value2, searchParams3.get("custom_id"));
-            url = pathname(function*(applicationId) {
-              yield applicationId(paths[31]).runPrimaryAppCommandOrJoinEmbeddedActivity({ channelId, applicationId, isStart: null == c4, customId, referrerId, analyticsLocations: uRL });
-              yield "IconComponent";
-              closure_1 = tmp2;
-              customId = applicationId.customId;
-              return "Reflect";
-            });
-            const tmp5Result = tmp5(paths[30]);
-            customActivityLinkParams.then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }).catch(() => {
-
-            });
-            flag2 = true;
-            const nextPromise = customActivityLinkParams.then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            });
-          }
-          return flag2;
-        } else {
-          let id;
-          if (application != null) {
-            const bot = application.bot;
-            if (bot != null) {
-              id = bot.id;
+        ({ currentChannelId: closure_2, isCurrentlyInInstance, canLaunchInChannel } = playInContext);
+        if (!isCurrentlyInInstance) {
+          let tmp8 = !canLaunchInChannel;
+          if (!canLaunchInChannel) {
+            let bot;
+            if (application != null) {
+              bot = application.bot;
             }
+            tmp8 = null == bot;
           }
-          let flag = null != id;
-          if (flag) {
-            obj2 = analyticsLocations(paths[32]);
-            let obj3 = { recipientIds: id };
-            url = pathname((targetApplicationId) => {
-              c3 = 0;
-              c4 = 0;
-              return (function*(arg0) {
-                if (c4 === 2) {
-                  c4 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp4 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c4 = 2;
-                    if (0 === c3) {
-                      if (arg0 === 1) {
-                        c4 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c4 = 3;
-                        const obj3 = { value, done: true };
-                        return obj3;
-                      } else {
-                        referrerId = tmp5;
-                        closure_129_0 = targetApplicationId;
-                        let customId;
-                        const searchParams = tmp2.searchParams;
-                        const searchParams2 = tmp2.searchParams;
-                        value = searchParams.get("link_id");
-                        c3 = 1;
-                        c4 = 1;
-                        const obj4 = { value: targetApplicationId(paths[30]).getCustomActivityLinkParams(targetApplicationId, value, searchParams2.get("custom_id")), done: false };
-                        return obj4;
-                      }
-                    } else if (arg0 === 1) {
-                      c4 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c4 = 3;
-                      obj = { value, done: true };
-                      return obj;
-                    } else {
-                      customId = value.customId;
-                      const obj5 = { targetApplicationId, channelId: closure_129_0, analyticsLocations: uRL, customId, referrerId };
-                      analyticsLocations(paths[33])(obj5);
-                      c4 = 3;
-                      return { value: "IconComponent", done: null };
-                    }
-                  } catch (tmp6) {
-                    c4 = tmp;
-                    throw tmp6;
-                  }
-                }
-              })();
-            });
-            const openPrivateChannelResult = obj2.openPrivateChannel(obj3);
-            obj2.openPrivateChannel(obj3).then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }).catch(() => {
-
-            });
-            flag = true;
-            const nextPromise1 = obj2.openPrivateChannel(obj3).then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            });
+          if (tmp8) {
+            tmp8 = !url(paths[30]).canLaunchContextlessFrame(application);
+            const tmp5Result = url(paths[30]);
           }
-          return flag;
+          isCurrentlyInInstance = tmp8;
         }
-        obj = url(paths[29]);
-        tmp5 = url;
+        let flag = !isCurrentlyInInstance;
+        if (!isCurrentlyInInstance) {
+          const searchParams2 = uRL.searchParams;
+          const searchParams3 = uRL.searchParams;
+          value2 = searchParams2.get("link_id");
+          const customActivityLinkParams = url(paths[31]).getCustomActivityLinkParams(code, value2, searchParams3.get("custom_id"));
+          const tmp5Result2 = url(paths[31]);
+          customActivityLinkParams.then((customId) => {
+            obj2 = { applicationId: code, channelId: null, fromLink: true, customId: null, referrerId: null, analyticsLocations: null };
+            let tmp = null;
+            if (canLaunchInChannel) {
+              tmp = paths;
+            }
+            obj2.channelId = tmp;
+            obj2.customId = customId.customId;
+            obj2.referrerId = value;
+            obj2.analyticsLocations = analyticsLocations;
+            return GamesActionCreatorsDefault.launch(obj2);
+          }).catch(() => {
+
+          });
+          flag = true;
+          const nextPromise = customActivityLinkParams.then((customId) => {
+            obj2 = { applicationId: code, channelId: null, fromLink: true, customId: null, referrerId: null, analyticsLocations: null };
+            let tmp = null;
+            if (canLaunchInChannel) {
+              tmp = paths;
+            }
+            obj2.channelId = tmp;
+            obj2.customId = customId.customId;
+            obj2.referrerId = value;
+            obj2.analyticsLocations = analyticsLocations;
+            return GamesActionCreatorsDefault.launch(obj2);
+          });
+        }
+        return flag;
       };
     }
   }
@@ -491,7 +397,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14135, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14149, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -578,7 +484,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(9534);
+      tmp2Result = tmp2(9541);
     }
   }
   if (null != findCodedLinkResult) {
@@ -587,9 +493,9 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const enabled = url(paths[41]).isVirtualCurrencyEnabled().enabled;
-        obj = url(paths[41]);
-        url(paths[20])(paths[42], paths.paths).then((openCollectiblesShopMobile) => {
+        const enabled = url(paths[40]).isVirtualCurrencyEnabled().enabled;
+        obj = url(paths[40]);
+        url(paths[20])(paths[41], paths.paths).then((openCollectiblesShopMobile) => {
           const tmp3 = _slicedToArray(code.code.split("-"), 2)[1];
           if (enabled) {
             if (tmp2 === constants.ORBS) {
@@ -638,7 +544,7 @@ export default function getOnClick(url) {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          const result = url(paths[36]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
+          const result = url(paths[35]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
           return true;
         };
       }
@@ -690,7 +596,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8595);
+    tmp2Result4 = tmp2(8596);
   }
   const tmp2Result3 = require("LinkUtils");
 };

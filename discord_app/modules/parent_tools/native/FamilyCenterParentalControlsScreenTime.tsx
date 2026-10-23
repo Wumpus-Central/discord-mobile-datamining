@@ -1,6 +1,6 @@
-// === Module 16146: FamilyCenterParentalControlsScreenTime ===
+// === Module 16164: FamilyCenterParentalControlsScreenTime ===
 
-// Module 16146 (FamilyCenterParentalControlsScreenTime)
+// Module 16164 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1087 */;
@@ -119,10 +119,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedul
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(13669).getScheduleRuleDateRange(rule);
-  let obj = rule(13669);
-  const obj2 = rule(13669);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(13669).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(13683).getScheduleRuleDateRange(rule);
+  let obj = rule(13683);
+  const obj2 = rule(13683);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(13683).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1128).intl;
   const string = intl.string;
   const tmp4 = _modDef2536;
@@ -143,7 +143,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedul
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(6889).TableRow, obj3);
+  return closure_5(rule(6888).TableRow, obj3);
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };

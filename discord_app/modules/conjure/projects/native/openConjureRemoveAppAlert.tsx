@@ -1,7 +1,7 @@
-// === Module 11737: openConjureRemoveAppAlert ===
+// === Module 11748: openConjureRemoveAppAlert ===
 
-// Module 11737 (openConjureRemoveAppAlert)
-import useAlertStore from "useAlertStore" /* 5897 */;
+// Module 11748 (openConjureRemoveAppAlert)
+import useAlertStore from "useAlertStore" /* 5896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -379,13 +379,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             let tmp37 = tmp3;
             let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              tmp37 = tmp37(10690);
+              tmp37 = tmp37(10697);
               deleteProject = tmp37.deleteProject;
               let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = tmp37(10755).unpublishProject(user.id, obj5);
-              const tmp37Result = tmp37(10755);
+              deleteProjectResult = tmp37(10762).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(10762);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -421,9 +421,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
               const obj = tmp2(5649);
-              obj7.text = tmp3(11738).conjureRemoveAppSuccess(closure_129_1);
+              obj7.text = tmp3(11749).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(11738);
+              const obj3 = tmp3(11749);
             }
             c3 = 3;
             return { value: "IconComponent", done: null };

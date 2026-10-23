@@ -1,6 +1,6 @@
-// === Module 7900: AgeVerificationCustomTab ===
+// === Module 7901: AgeVerificationCustomTab ===
 
-// Module 7900 (AgeVerificationCustomTab)
+// Module 7901 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;

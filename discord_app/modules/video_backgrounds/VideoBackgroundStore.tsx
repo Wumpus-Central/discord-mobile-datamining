@@ -1,6 +1,6 @@
-// === Module 5849: VideoBackgroundStore ===
+// === Module 5848: VideoBackgroundStore ===
 
-// Module 5849 (VideoBackgroundStore)
+// Module 5848 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;

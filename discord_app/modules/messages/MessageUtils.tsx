@@ -1,7 +1,7 @@
-// === Module 13670: MessageUtils ===
+// === Module 13684: MessageUtils ===
 
-// Module 13670 (MessageUtils)
-import AgeGateUtils from "AgeGateUtils" /* 6648 */;
+// Module 13684 (MessageUtils)
+import AgeGateUtils from "AgeGateUtils" /* 6647 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
 

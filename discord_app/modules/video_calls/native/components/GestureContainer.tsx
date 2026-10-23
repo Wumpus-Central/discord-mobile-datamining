@@ -1,17 +1,17 @@
-// === Module 11625: GestureContainer ===
+// === Module 11636: GestureContainer ===
 
-// Module 11625 (GestureContainer)
+// Module 11636 (GestureContainer)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10847).useChannelCallStore;
-const Constants = fn(11313);
+const useChannelCallStore = fn(10855).useChannelCallStore;
+const Constants = fn(11322);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
@@ -91,10 +91,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GestureC
     }
   }
   const onUpdateResult = Gesture.Pan().enabled(tmp6).onUpdate(L);
-  O.__closure = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6658), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
+  O.__closure = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6657), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
   O.__workletHash = 4811943867759;
   O.__initData = __initData;
-  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6658), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
+  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6657), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
   let items = [-closure_5, closure_5];
   const onEndResult = onUpdateResult.onEnd(O);
   let items1 = [-closure_6, closure_6];
@@ -196,10 +196,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GestureC
     }
   }
   const onUpdateResult = Gesture.Pan().enabled(tmp2).onUpdate(fn);
-  T.__closure = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6658), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
+  T.__closure = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6657), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
   T.__workletHash = 6850090802761;
   T.__initData = __initData4;
-  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6658), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
+  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(5038).runOnJS, ModalActionCreators: sharedValue(6657), withTiming: height(5192).withTiming, DECELERATED_EASING: height(1202).DECELERATED_EASING };
   let items = [-closure_5, closure_5];
   const onEndResult = onUpdateResult.onEnd(T);
   let items1 = [-closure_6, closure_6];

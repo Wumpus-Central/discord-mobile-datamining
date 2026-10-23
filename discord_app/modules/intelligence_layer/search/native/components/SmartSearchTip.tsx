@@ -1,6 +1,6 @@
-// === Module 18029: SmartSearchTip ===
+// === Module 18051: SmartSearchTip ===
 
-// Module 18029 (SmartSearchTip)
+// Module 18051 (SmartSearchTip)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import _modDef4085 from "module_4085" /* 4085 */;
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
         return hasOwnProperty(native.Avatar, obj, user.id);
       });
-      tmp20 = closure_5(guildId(14246).AvatarPile, obj7);
+      tmp20 = closure_5(guildId(14260).AvatarPile, obj7);
     }
     cResult[9] = arr;
     cResult[10] = guildId;
@@ -180,7 +180,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(14246).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(14260).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;

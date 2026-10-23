@@ -1,10 +1,10 @@
-// === Module 11181: useCodedLinksExperimentEmbeds ===
+// === Module 11190: useCodedLinksExperimentEmbeds ===
 
-// Module 11181 (useCodedLinksExperimentEmbeds)
+// Module 11190 (useCodedLinksExperimentEmbeds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11182 */;
-import useApexExperiments from "useApexExperiments" /* 11183 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11191 */;
+import useApexExperiments from "useApexExperiments" /* 11192 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -363,15 +363,15 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
         return clientOverrides;
       }
     }
-    tmp23[0] = obj(11182).parseRegisteredExperiments(stateFromStoresObject);
-    const objResult12 = obj(11182);
-    tmp23[1] = obj(11182).getLegacyOverridesInfo(stateFromStoresObject1);
-    const objResult13 = obj(11182);
-    tmp23[2] = obj(11183).mergeApexExperiments(stateFromStores, stateFromStores1);
-    obj = obj(11183);
+    tmp23[0] = obj(11191).parseRegisteredExperiments(stateFromStoresObject);
+    const objResult12 = obj(11191);
+    tmp23[1] = obj(11191).getLegacyOverridesInfo(stateFromStoresObject1);
+    const objResult13 = obj(11191);
+    tmp23[2] = obj(11192).mergeApexExperiments(stateFromStores, stateFromStores1);
+    obj = obj(11192);
     apexExperimentOverridesInfo = obj.getApexExperimentOverridesInfo(stateFromStores2);
     tmp23[3] = apexExperimentOverridesInfo;
-    const objResult14 = obj(11183);
+    const objResult14 = obj(11192);
   } else {
     class L {
       constructor() {

@@ -1,26 +1,26 @@
-// === Module 17054: UserSettingsDesignSystemTextInput ===
+// === Module 17076: UserSettingsDesignSystemTextInput ===
 
-// Module 17054 (UserSettingsDesignSystemTextInput)
+// Module 17076 (UserSettingsDesignSystemTextInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import Card from "Card" /* 6891 */;
-import TextInput from "TextInput" /* 6994 */;
-import Input from "Input" /* 6995 */;
-import TextField from "TextField" /* 7001 */;
-import SplitTextInput from "SplitTextInput" /* 7045 */;
-import SearchField from "SearchField" /* 7131 */;
-import TextArea from "TextArea" /* 7166 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
-import SettingsIcon from "SettingsIcon" /* 7472 */;
-import IconButton from "IconButton" /* 7943 */;
-import TextIcon from "TextIcon" /* 8536 */;
-import AtIcon from "AtIcon" /* 8546 */;
-import GhostInput from "GhostInput" /* 15225 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import Card from "Card" /* 6890 */;
+import TextInput from "TextInput" /* 6993 */;
+import Input from "Input" /* 6994 */;
+import TextField from "TextField" /* 7000 */;
+import SplitTextInput from "SplitTextInput" /* 7044 */;
+import Search_SearchBar from "Search/SearchBar" /* 7130 */;
+import TextArea from "TextArea" /* 7165 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
+import SettingsIcon from "SettingsIcon" /* 7473 */;
+import IconButton from "IconButton" /* 7944 */;
+import TextIcon from "TextIcon" /* 8537 */;
+import AtIcon from "AtIcon" /* 8547 */;
+import GhostInput from "GhostInput" /* 15238 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     tmp37 = cResult[13];
   }
   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp47 = timestampProducer(SearchField.SearchField, { size: "md", round: true });
+    const tmp47 = timestampProducer(Search_SearchBar.SearchBar, { size: "md", round: true });
     cResult[14] = tmp47;
     let tmp45 = tmp47;
   } else {
@@ -717,7 +717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   items1[13] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea can use the round prop to fully round out the sides. Round variants should only be used when adjacent to another round element, like an IconButton." });
   const obj10 = { children: null };
   const obj11 = { children: null };
-  const items4 = [timestampProducer(SearchField.SearchField, { size: "md", round: true }), ];
+  const items4 = [timestampProducer(Search_SearchBar.SearchBar, { size: "md", round: true }), ];
   const obj9 = { children: timestampProducer(closure_14, {}) };
   items4[1] = timestampProducer(IconButton.IconButton, {
     icon: timestampProducer(SettingsIcon.SettingsIcon, { size: "sm" }),

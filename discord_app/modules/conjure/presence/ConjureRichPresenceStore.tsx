@@ -1,18 +1,18 @@
-// === Module 11161: ConjureRichPresenceStore ===
+// === Module 11170: ConjureRichPresenceStore ===
 
-// Module 11161 (ConjureRichPresenceStore)
+// Module 11170 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6794 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10616 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6793 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10623 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6619 */;
+import IdleStore from "IdleStore" /* 6618 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -204,7 +204,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F108907 */ function() { ... });
+                        let found = prop.filter(/* F109007 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];

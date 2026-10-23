@@ -1,22 +1,22 @@
-// === Module 10059: ForumComposerModal ===
+// === Module 10066: ForumComposerModal ===
 
-// Module 10059 (ForumComposerModal)
+// Module 10066 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8289 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9634 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10058 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8290 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9641 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10065 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10060 */;
+import NativeMenuStore from "NativeMenuStore" /* 10067 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import DraftStore from "DraftStore" /* 7615 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8278 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7368 */;
+import DraftStore from "DraftStore" /* 7616 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8279 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7369 */;
 
 require = fn;
 function showForumComposerCloseAlert(arg0) {
@@ -36,7 +36,7 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7615).DraftType;
+const DraftType = fn(7616).DraftType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };

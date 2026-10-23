@@ -1,6 +1,6 @@
-// === Module 5893: BandwidthEstimationExperiment ===
+// === Module 5892: BandwidthEstimationExperiment ===
 
-// Module 5893 (BandwidthEstimationExperiment)
+// Module 5892 (BandwidthEstimationExperiment)
 import createExperiment from "module_5174" /* 5174 */;
 import size from "module_2" /* 2 */;
 

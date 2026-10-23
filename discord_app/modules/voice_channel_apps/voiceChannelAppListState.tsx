@@ -1,6 +1,6 @@
-// === Module 18167: voiceChannelAppListState ===
+// === Module 18189: voiceChannelAppListState ===
 
-// Module 18167 (voiceChannelAppListState)
+// Module 18189 (voiceChannelAppListState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_channel_apps/voiceChannelAppListState.tsx");

@@ -1,7 +1,7 @@
-// === Module 9471: GameProfileGameClaimCta ===
+// === Module 9478: GameProfileGameClaimCta ===
 
-// Module 9471 (GameProfileGameClaimCta)
-import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7413 */;
+// Module 9478 (GameProfileGameClaimCta)
+import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7414 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,10 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              v3(v3(9214).GameProfileTrackActionActions.ClaimGame);
+              v3(v3(9221).GameProfileTrackActionActions.ClaimGame);
               c1 = 1;
               v3 = 1;
-              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7417).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7418).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -141,10 +141,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            trackAction(v3(9214).GameProfileTrackActionActions.ClaimGame);
+            trackAction(v3(9221).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: v1(7413).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7417).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(7414).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7418).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {

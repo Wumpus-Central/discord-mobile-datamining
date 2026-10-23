@@ -1,16 +1,16 @@
-// === Module 19034: GuildSettingsRoleMembers ===
+// === Module 19057: GuildSettingsRoleMembers ===
 
-// Module 19034 (GuildSettingsRoleMembers)
+// Module 19057 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7211 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7210 */;
 
 require = fn;
 function onMembersLoadFail() {
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19013, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(19036, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;
@@ -133,7 +133,7 @@ export default function GuildSettingsRoleMembers(guild) {
     }
     return num;
   }, items1) > guildRoleMembers.length;
-  const items5 = [closure_8(callback, { style: tmp.containerSearchBar, children: closure_8(guild(locked[23]).SearchField, { onChange: tmp3 }) }), ];
+  const items5 = [closure_8(callback, { style: tmp.containerSearchBar, children: closure_8(guild(locked[23]).SearchBar, { onChange: tmp3 }) }), ];
   const obj8 = { style: guild.contentContainerStyle, children: null };
   let tmp12Result = null;
   if (tmp9) {

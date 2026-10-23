@@ -1,19 +1,19 @@
-// === Module 17997: ChannelContent ===
+// === Module 18019: ChannelContent ===
 
-// Module 17997 (ChannelContent)
+// Module 18019 (ChannelContent)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7188 */;
-import WarningIcon from "WarningIcon" /* 7941 */;
-import LockIcon from "LockIcon" /* 8551 */;
-import ChannelListLayout from "ChannelListLayout" /* 12004 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17454 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 17998 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7187 */;
+import WarningIcon from "WarningIcon" /* 7942 */;
+import LockIcon from "LockIcon" /* 8552 */;
+import ChannelListLayout from "ChannelListLayout" /* 12015 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17476 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 18020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
@@ -23,7 +23,7 @@ if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-let obj4 = { opacity: fn(12003).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(12014).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1384);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

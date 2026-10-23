@@ -1,8 +1,8 @@
-// === Module 12310: ConjureAttachmentPills ===
+// === Module 12321: ConjureAttachmentPills ===
 
-// Module 12310 (ConjureAttachmentPills)
+// Module 12321 (ConjureAttachmentPills)
 import nativeDefault from "native" /* 587 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11713 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
       obj.accessibilityLabel = intl.formatToPlainString(closure_1(3830).GtNukg, obj2);
       const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
       obj.children = jsx(projectId(5220).Text, { variant: "text-xs/medium", color: "text-default", children: id.name });
-      let tmp12 = jsx(projectId(6891).Card, {
+      let tmp12 = jsx(projectId(6890).Card, {
         style: closure_1.attachmentPill,
         onPress() {
             return closure_2(id.id);

@@ -1,17 +1,17 @@
-// === Module 17939: ThreadParentMessage ===
+// === Module 17961: ThreadParentMessage ===
 
-// Module 17939 (ThreadParentMessage)
+// Module 17961 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1114 */;
-import Pressables from "Pressables" /* 6894 */;
-import RowGeneratorDefault from "RowGenerator" /* 8117 */;
-import ChatItemDefault from "ChatItem" /* 9742 */;
+import Pressables from "Pressables" /* 6893 */;
+import RowGeneratorDefault from "RowGenerator" /* 8118 */;
+import ChatItemDefault from "ChatItem" /* 9749 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7680 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7681 */;
+import MessageStore from "MessageStore" /* 5996 */;
 
 require = fn;
-const ReferencedMessageState = fn(7680).ReferencedMessageState;
+const ReferencedMessageState = fn(7681).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
@@ -160,7 +160,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
       }
       if (cResult[5] !== stateFromStores) {
         const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
-        tmp2 = jsx(channelId(9742), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
+        tmp2 = jsx(channelId(9749), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
         cResult[5] = stateFromStores;
         cResult[6] = tmp2;
       }

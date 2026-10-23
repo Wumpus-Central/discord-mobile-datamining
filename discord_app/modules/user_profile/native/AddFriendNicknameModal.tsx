@@ -1,12 +1,12 @@
-// === Module 14200: AddFriendNicknameModal ===
+// === Module 14214: AddFriendNicknameModal ===
 
-// Module 14200 (AddFriendNicknameModal)
+// Module 14214 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import TextField from "TextField" /* 7001 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import TextField from "TextField" /* 7000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -127,7 +127,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(10003)();
+  _slicedToArray = showUserProfile(10010)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -159,7 +159,7 @@ export default function AddFriendNicknameModal(arg0) {
   const obj4 = { children: null };
   const tmp5Result = initialize;
   let obj5 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(7121);
+  const tmp3Result = showUserProfile(7120);
   const intl3 = util.intl;
   obj5.confirmText = intl3.string(util.t["R3BPH+"]);
   obj5.onConfirm = function handleSubmit() {
@@ -184,7 +184,7 @@ export default function AddFriendNicknameModal(arg0) {
   const intl6 = util.intl;
   obj8.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp3Result3 = showUserProfile(5965);
+  const tmp3Result3 = showUserProfile(5964);
   obj8.placeholder = showUserProfile(5018).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);

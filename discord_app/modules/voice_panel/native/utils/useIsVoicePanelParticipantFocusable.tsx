@@ -1,11 +1,11 @@
-// === Module 18482: useIsVoicePanelParticipantFocusable ===
+// === Module 18504: useIsVoicePanelParticipantFocusable ===
 
-// Module 18482 (useIsVoicePanelParticipantFocusable)
+// Module 18504 (useIsVoicePanelParticipantFocusable)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import participantHasVideo from "participantHasVideo" /* 10870 */;
+import participantHasVideo from "participantHasVideo" /* 10878 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;

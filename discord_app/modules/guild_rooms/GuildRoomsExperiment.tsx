@@ -1,6 +1,6 @@
-// === Module 7849: GuildRoomsExperiment ===
+// === Module 7850: GuildRoomsExperiment ===
 
-// Module 7849 (GuildRoomsExperiment)
+// Module 7850 (GuildRoomsExperiment)
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 
 const require = globalThis.__r;

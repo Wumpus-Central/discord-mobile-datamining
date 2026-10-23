@@ -1,6 +1,6 @@
-// === Module 16544: SettingsAppearanceMessagesHeaderItem ===
+// === Module 16566: SettingsAppearanceMessagesHeaderItem ===
 
-// Module 16544 (SettingsAppearanceMessagesHeaderItem)
+// Module 16566 (SettingsAppearanceMessagesHeaderItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

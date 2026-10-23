@@ -1,23 +1,23 @@
-// === Module 18118: CompassSpotIllustration ===
+// === Module 18140: CompassSpotIllustration ===
 
-// Module 18118 (CompassSpotIllustration)
+// Module 18140 (CompassSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef18119 from "module_18119" /* 18119 */;
-import _modDef18120 from "module_18120" /* 18120 */;
-import _modDef18121 from "module_18121" /* 18121 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef18141 from "module_18141" /* 18141 */;
+import _modDef18142 from "module_18142" /* 18142 */;
+import _modDef18143 from "module_18143" /* 18143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18119 }, 3: null };
-let obj2 = { uri: _modDef18119 };
-obj[2] = { uri: _modDef18120 };
-const obj3 = { uri: _modDef18120 };
-obj[3] = { uri: _modDef18121 };
+let obj = { 1: null, 2: { uri: _modDef18141 }, 3: null };
+let obj2 = { uri: _modDef18141 };
+obj[2] = { uri: _modDef18142 };
+const obj3 = { uri: _modDef18142 };
+obj[3] = { uri: _modDef18143 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18121 };
+const obj4 = { uri: _modDef18143 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx");
 

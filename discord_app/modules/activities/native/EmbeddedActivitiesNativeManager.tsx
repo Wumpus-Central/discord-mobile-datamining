@@ -1,6 +1,6 @@
-// === Module 15733: EmbeddedActivitiesNativeManager ===
+// === Module 15747: EmbeddedActivitiesNativeManager ===
 
-// Module 15733 (EmbeddedActivitiesNativeManager)
+// Module 15747 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
@@ -8,15 +8,15 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ChatInputUtils from "ChatInputUtils" /* 5145 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5891 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11340 */;
-import activityWebViewController from "activityWebViewController" /* 11409 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15734 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5890 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11349 */;
+import activityWebViewController from "activityWebViewController" /* 11420 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15748 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15735 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15749 */;
 
 require = fn;
 const Constants = fn(1087);

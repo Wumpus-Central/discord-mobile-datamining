@@ -1,25 +1,25 @@
-// === Module 7687: UserProfileStore ===
+// === Module 7688: UserProfileStore ===
 
-// Module 7687 (UserProfileStore)
+// Module 7688 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import Timers from "Timers" /* 4816 */;
-import WidgetType from "WidgetType" /* 7688 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7689 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7692 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7693 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7695 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7696 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7697 */;
+import WidgetType from "WidgetType" /* 7689 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7690 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7693 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7694 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7696 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7697 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7698 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
 import PresenceStore from "PresenceStore" /* 5698 */;
-import SortedGuildStore from "SortedGuildStore" /* 6687 */;
+import SortedGuildStore from "SortedGuildStore" /* 6686 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {

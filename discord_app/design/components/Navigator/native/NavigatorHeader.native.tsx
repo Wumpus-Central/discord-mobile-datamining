@@ -1,16 +1,16 @@
-// === Module 6910: NavigatorHeader ===
+// === Module 6909: NavigatorHeader ===
 
-// Module 6910 (NavigatorHeader)
+// Module 6909 (NavigatorHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import NavigatorConstants from "NavigatorConstants" /* 5254 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6911 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6914 */;
-import XSmallIcon from "XSmallIcon" /* 6917 */;
-import _mod6919 from "module_6919" /* 6919 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6910 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6913 */;
+import XSmallIcon from "XSmallIcon" /* 6916 */;
+import _mod6918 from "module_6918" /* 6918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -101,7 +101,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
         }
       }
     }
-    tmp(6916).useNavigatorBackPressHandler(B);
+    tmp(6915).useNavigatorBackPressHandler(B);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -152,12 +152,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
     obj2.displayMode = "minimal";
     obj2.backImage = tmp19;
     obj2.accessibilityLabel = tmp16;
-    const tmp25 = closure_10(tmp(6919).HeaderBackButton, obj2);
+    const tmp25 = closure_10(tmp(6918).HeaderBackButton, obj2);
     cResult[11] = tmp11;
     cResult[12] = tmp5;
     cResult[13] = tmp19;
     cResult[14] = tmp25;
-    const tmpResult2 = tmp(6916);
+    const tmpResult2 = tmp(6915);
   }
   if (tmp4 == null) {
     class B {
@@ -202,7 +202,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
     return v65535(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_10(require("module_6919").HeaderBackButton, obj2);
+  return closure_10(require("module_6918").HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomHeaderBackButton(onPress) {
@@ -254,7 +254,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   obj2.onPress = tmp4;
   obj2.displayMode = "minimal";
   obj2.backImage = tmp11;
-  const tmp14 = closure_10(require("module_6919").HeaderBackButton, obj2);
+  const tmp14 = closure_10(require("module_6918").HeaderBackButton, obj2);
   cResult[6] = tmp4;
   cResult[7] = tmp5;
   cResult[8] = tmp14;
@@ -263,7 +263,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
 }) : (function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(6916).useNavigatorBackPressHandler(() => {
+  onPress(6915).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -276,7 +276,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   obj2.backImage = function backImage() {
     return closure_1_10(closure_1_13, {});
   };
-  return closure_10(onPress(6919).HeaderBackButton, obj2);
+  return closure_10(onPress(6918).HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextButton(arg0) {
@@ -342,7 +342,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     obj3.labelStyle = tmp14;
     obj3.backImage = tmp16;
     obj3.accessibilityLabel = tmp17;
-    const tmp23 = v65535(_mod6919.HeaderBackButton, obj3);
+    const tmp23 = v65535(_mod6918.HeaderBackButton, obj3);
     cResult[10] = tmp14;
     cResult[11] = tmp4;
     cResult[12] = tmp17;
@@ -376,7 +376,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return v65535(_mod6919.HeaderBackButton, obj2);
+  return v65535(_mod6918.HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function NavigatorHeader(arg0) {

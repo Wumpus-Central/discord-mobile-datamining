@@ -1,6 +1,6 @@
-// === Module 7943: IconButton ===
+// === Module 7944: IconButton ===
 
-// Module 7943 (IconButton)
+// Module 7944 (IconButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 const Text_Text = BaseButton(5220);
 const Button_BaseButton = BaseButton(5240);
-const BaseIconButton = BaseButton(7944);
+const BaseIconButton = BaseButton(7945);
 require = fn;
 let closure_3 = ["label", "grow", "accessibilityLabel", "maxFontSizeMultiplier", "accessibilityHint", "ref"];
 const jsxProd = fn(21);

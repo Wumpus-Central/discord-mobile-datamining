@@ -1,11 +1,11 @@
-// === Module 8703: useUserProfileGradientColors ===
+// === Module 8710: useUserProfileGradientColors ===
 
-// Module 8703 (useUserProfileGradientColors)
+// Module 8710 (useUserProfileGradientColors)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import native from "native" /* 5023 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7264 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8693 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7265 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8700 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 

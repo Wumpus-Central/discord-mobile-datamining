@@ -1,13 +1,13 @@
-// === Module 18897: AssetChooser ===
+// === Module 18920: AssetChooser ===
 
-// Module 18897 (AssetChooser)
+// Module 18920 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6894 */;
-import _modDef18898 from "module_18898" /* 18898 */;
-import _modDef18899 from "module_18899" /* 18899 */;
+import Pressables from "Pressables" /* 6893 */;
+import _modDef18921 from "module_18921" /* 18921 */;
+import _modDef18922 from "module_18922" /* 18922 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef18898;
+    tmp9Result = _modDef18921;
   }
   const items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef18899 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef18922 };
     obj4.children = React5(FastImageDefault, obj5);
     tmp5Result = React5(React4, obj4);
     const tmp9Result2 = FastImageDefault;

@@ -1,6 +1,6 @@
-// === Module 6366: AppliedGuildBoostError ===
+// === Module 6365: AppliedGuildBoostError ===
 
-// Module 6366 (AppliedGuildBoostError)
+// Module 6365 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import DateUtils from "DateUtils" /* 4794 */;

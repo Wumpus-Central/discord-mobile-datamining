@@ -1,21 +1,21 @@
-// === Module 17346: useHomeDrawerGesture ===
+// === Module 17368: useHomeDrawerGesture ===
 
-// Module 17346 (useHomeDrawerGesture)
+// Module 17368 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
 import timing from "timing" /* 5192 */;
 import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5194 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17342 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17341 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17347 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17363 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17369 */;
 
 require = fn;
-const computeMaxX = fn(17341).computeMaxX;
+const computeMaxX = fn(17363).computeMaxX;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const LaunchPadTypes = fn(11168).LaunchPadTypes;
+const LaunchPadTypes = fn(11177).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -70,14 +70,14 @@ let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, 
 let Gesture = fn(5283).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7155);
+let ReanimatedHelperTypes = fn(7154);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7155);
+ReanimatedHelperTypes = fn(7154);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7155);
+ReanimatedHelperTypes = fn(7154);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7155);
+ReanimatedHelperTypes = fn(7154);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);

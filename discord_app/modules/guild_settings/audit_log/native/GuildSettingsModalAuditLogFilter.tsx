@@ -1,20 +1,20 @@
-// === Module 18944: GuildSettingsModalAuditLogFilter ===
+// === Module 18967: GuildSettingsModalAuditLogFilter ===
 
-// Module 18944 (GuildSettingsModalAuditLogFilter)
+// Module 18967 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
-import FormRadio from "FormRadio" /* 6974 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10797 */;
-import AuditLogUtils from "AuditLogUtils" /* 18942 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 18945 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
+import FormRadio from "FormRadio" /* 6973 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10805 */;
+import AuditLogUtils from "AuditLogUtils" /* 18965 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 18968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18940 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18963 */;
 
 const require = globalThis.__r;
 
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                           stringResult = intl.string(filterType(1128).t["5h0QOP"]);
                         }
                         cResult[23] = filterType;
-                        class O {
+                        class B {
                           constructor(arg0, arg1) {
                             if (!guildId) {
                               return;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                       } else {
                         if (cResult[25] !== cResult[24]) {
                           const obj5 = { size: "md", placeholder: tmp20, onChange: null };
-                          class O {
+                          class B {
                             constructor(arg0, arg1) {
                               if (!guildId) {
                                 return;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(7131).SearchField, obj5);
+                          const tmp26 = closure_9(filterType(7130).SearchBar, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               if (cResult[32] === tmp18) {
                                 if (cResult[33] === bottom) {
                                   const _Symbol2 = Symbol;
-                                  class O {
+                                  class B {
                                     constructor(arg0, arg1) {
                                       if (!guildId) {
                                         return;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               }
                             }
                           }
-                          class O {
+                          class B {
                             constructor(arg0, arg1) {
                               if (!guildId) {
                                 return;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                           }
                           cResult[34] = tmp31;
                         }
-                        class O {
+                        class B {
                           constructor(arg0, arg1) {
                             if (!guildId) {
                               return;
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                 }
               }
             }
-            class O {
+            class B {
               constructor(arg0, arg1) {
                 if (!guildId) {
                   return;
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             tmp18 = tmp19;
           }
         }
-        class O {
+        class B {
           constructor(arg0, arg1) {
             if (!guildId) {
               return;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         cResult[12] = filterType;
         cResult[13] = guildId;
         cResult[14] = navigation;
-        cResult[15] = O;
+        cResult[15] = B;
         class N {
           constructor() {
             tmp = closure_3;
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       return fuzzysearchDefault(formatted, label.label.toLowerCase());
     };
     cResult[3] = first;
-    class O {
+    class B {
       constructor(arg0, arg1) {
         if (!guildId) {
           return;
@@ -739,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     let intl = tmp4(tmp3[9]).intl;
     stringResult = intl.string(tmp4(tmp3[9]).t["5h0QOP"]);
   }
-  obj2.children = closure_9(data(guildId[25]).SearchField, { size: "md", placeholder: stringResult, onChange: tmp6[1] });
+  obj2.children = closure_9(data(guildId[25]).SearchBar, { size: "md", placeholder: stringResult, onChange: tmp6[1] });
   const items4 = [closure_9(first, obj2), , ];
   if (0 === data1.length) {
     let obj3 = { body: null, title: null, Illustration: null };

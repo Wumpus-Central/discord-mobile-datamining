@@ -1,6 +1,6 @@
-// === Module 18713: NewMemberActionsCompletedModal ===
+// === Module 18735: NewMemberActionsCompletedModal ===
 
-// Module 18713 (NewMemberActionsCompletedModal)
+// Module 18735 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   } else {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   if (cResult[5] !== numActions) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   } else {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -105,28 +105,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   if (cResult[7] === tmp4.text) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
     if (cResult[10] === animatedStyle) {
       class E {
         constructor() {
-          timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+          timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
           return;
         }
       }
       if (cResult[13] === tmp4.progressBackground) {
         class E {
           constructor() {
-            timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+            timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
             return;
           }
         }
         if (cResult[16] === tmp4.screen) {
           class E {
             constructor() {
-              timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+              timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
               return;
             }
           }
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => closure_1_1(6658).popWithKey(sharedValue(13089).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => closure_1_1(6657).popWithKey(sharedValue(13105).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

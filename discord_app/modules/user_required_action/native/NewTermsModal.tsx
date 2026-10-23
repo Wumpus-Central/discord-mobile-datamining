@@ -1,14 +1,14 @@
-// === Module 18878: NewTermsModal ===
+// === Module 18901: NewTermsModal ===
 
-// Module 18878 (NewTermsModal)
+// Module 18901 (NewTermsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6654 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7274 */;
-import _modDef9001 from "module_9001" /* 9001 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9010 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9330 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6653 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7275 */;
+import _modDef9008 from "module_9008" /* 9008 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9017 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
                     cResult[47] = tmp78;
                     tmp75 = tmp78;
                   }
-                  const obj20 = { style: tmp67, source: _modDef9001, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
+                  const obj20 = { style: tmp67, source: _modDef9008, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
                   const tmp74 = closure_12(TouchableHitBoxDefault, obj20);
                   cResult[40] = tmp4.navbarRight.tintColor;
                   cResult[41] = tmp67;
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(6916).useNavigatorBackPressHandler(memo(5959).BackPressHandler.minimize);
+  memo(6915).useNavigatorBackPressHandler(memo(5958).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     }
   }), []);
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(6916);
+  let obj = memo(6915);
   obj2.type = memo(1275).ImpressionTypes.VIEW;
   obj2.name = memo(1275).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
@@ -528,15 +528,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(9001);
+    obj21.source = tmp2(9008);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1128).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1128).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(9010), obj21);
+    items2[2] = closure_12(tmp2(9017), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(9010);
+    const tmp2Result = tmp2(9017);
   }
   return tmp10;
 });

@@ -1,21 +1,21 @@
-// === Module 19184: GuildRoleSubscriptionBenefitPreview ===
+// === Module 19207: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 19184 (GuildRoleSubscriptionBenefitPreview)
+// Module 19207 (GuildRoleSubscriptionBenefitPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import _modDef11509 from "module_11509" /* 11509 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16484 */;
-import EmojiIconDefault from "EmojiIcon" /* 16491 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import _modDef11520 from "module_11520" /* 11520 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16506 */;
+import EmojiIconDefault from "EmojiIcon" /* 16513 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16456).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16478).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -44,7 +44,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBen
           if (cResult[12] !== tmp4) {
             let tmp18 = true === tmp4;
             if (tmp18) {
-              const obj2 = { source: _modDef11509 };
+              const obj2 = { source: _modDef11520 };
               tmp18 = hasOwnProperty(native.Icon, obj2);
             }
             cResult[12] = tmp4;
@@ -114,7 +114,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBen
   items[1] = hasOwnProperty(View, obj3);
   let tmp4Result = true === flag;
   if (tmp4Result) {
-    const obj4 = { source: _modDef11509 };
+    const obj4 = { source: _modDef11520 };
     tmp4Result = hasOwnProperty(native.Icon, obj4);
   }
   items[2] = tmp4Result;

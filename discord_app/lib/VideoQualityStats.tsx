@@ -1,9 +1,9 @@
-// === Module 5887: VideoQualityStats ===
+// === Module 5886: VideoQualityStats ===
 
-// Module 5887 (VideoQualityStats)
+// Module 5886 (VideoQualityStats)
 import TimeUtils from "TimeUtils" /* 5708 */;
-import Histogram from "Histogram" /* 5870 */;
-import SystemResourcesDefault from "SystemResources" /* 5878 */;
+import Histogram from "Histogram" /* 5869 */;
+import SystemResourcesDefault from "SystemResources" /* 5877 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -42,7 +42,7 @@ function parseDecoder(decoderImplementationName) {
 const React4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000];
 const hasOwnProperty = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
 const timestampProducer = [720, 480, 360];
-const dependencyMap = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
+const dependencyMap = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "framesCodecErrorNoOutput", "framesCodecErrorTimeout", "framesCodecErrorGeneric", "framesCodecErrorFallback", "framesCodecErrorParameter", "framesCodecErrorOther", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
 let set = new Set(["passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount"]);
 let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
 const CodecTypes = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
@@ -54,18 +54,48 @@ const obj6 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSide
 let RawVideoStats;
 class RawVideoStats {
   constructor() {
-    return Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+    return Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesCodecErrorNoOutput: null, framesCodecErrorTimeout: null, framesCodecErrorGeneric: null, framesCodecErrorFallback: null, framesCodecErrorParameter: null, framesCodecErrorOther: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
   }
 }
 RawVideoStats["parseInboundStats"] = function parseInboundStats(found, timestamp) {
   if (typeof RawVideoStats === "function") {
-    const merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+    const merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesCodecErrorNoOutput: null, framesCodecErrorTimeout: null, framesCodecErrorGeneric: null, framesCodecErrorFallback: null, framesCodecErrorParameter: null, framesCodecErrorOther: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
     if (null != found) {
       ({ bytesReceived: tmp3.bytes, framesDecoded: tmp3.framesCodec, framesDecodeErrors } = found);
       if (framesDecodeErrors == null) {
         framesDecodeErrors = null;
       }
       merged.framesCodecError = framesDecodeErrors;
+      let prop = found.framesDecodeErrorsNoOutput;
+      if (prop == null) {
+        prop = null;
+      }
+      merged.framesCodecErrorNoOutput = prop;
+      let prop1 = found.framesDecodeErrorsTimeout;
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      merged.framesCodecErrorTimeout = prop1;
+      let prop2 = found.framesDecodeErrorsGeneric;
+      if (prop2 == null) {
+        prop2 = null;
+      }
+      merged.framesCodecErrorGeneric = prop2;
+      let prop3 = found.framesDecodeErrorsFallback;
+      if (prop3 == null) {
+        prop3 = null;
+      }
+      merged.framesCodecErrorFallback = prop3;
+      let prop4 = found.framesDecodeErrorsParameter;
+      if (prop4 == null) {
+        prop4 = null;
+      }
+      merged.framesCodecErrorParameter = prop4;
+      let prop5 = found.framesDecodeErrorsOther;
+      if (prop5 == null) {
+        prop5 = null;
+      }
+      merged.framesCodecErrorOther = prop5;
       ({ framesReceived: tmp3.framesNetwork, packetsReceived: tmp3.packets, packetsLost: tmp3.packetsLost, framesDropped } = found);
       if (framesDropped == null) {
         framesDropped = 0;
@@ -177,9 +207,9 @@ RawVideoStats["parseInboundStats"] = function parseInboundStats(found, timestamp
 };
 RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, timestamp) {
   if (typeof RawVideoStats === "function") {
-    let merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+    let merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesCodecErrorNoOutput: null, framesCodecErrorTimeout: null, framesCodecErrorGeneric: null, framesCodecErrorFallback: null, framesCodecErrorParameter: null, framesCodecErrorOther: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
     if (null != resolution) {
-      const obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
+      const obj = { bytes: null, framesCodec: null, framesCodecError: null, framesCodecErrorNoOutput: null, framesCodecErrorTimeout: null, framesCodecErrorGeneric: null, framesCodecErrorFallback: null, framesCodecErrorParameter: null, framesCodecErrorOther: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
       ({ bytesSent: obj.bytes, framesEncoded: obj.framesCodec, framesSent } = resolution);
       if (framesSent == null) {
         framesSent = 0;
@@ -371,7 +401,7 @@ class InboundStats {
     obj.statsWindow = [];
     if (typeof RawVideoStats === "function") {
       tmp3 = global;
-      obj.previousAggregationStats = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+      obj.previousAggregationStats = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesCodecErrorNoOutput: null, framesCodecErrorTimeout: null, framesCodecErrorGeneric: null, framesCodecErrorFallback: null, framesCodecErrorParameter: null, framesCodecErrorOther: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
       tmp4 = closure_0;
       tmp5 = closure_2;
       tmp6 = new.target;
@@ -407,7 +437,7 @@ class InboundStats {
       obj.systemResources = tmp29;
       tmp31 = closure_10;
       obj.decoderCodec = closure_10.UNKNOWN;
-      obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
+      obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, framesCodecErrorNoOutput: 0, framesCodecErrorTimeout: 0, framesCodecErrorGeneric: 0, framesCodecErrorFallback: 0, framesCodecErrorParameter: 0, framesCodecErrorOther: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
       num = 0;
       obj.aggregationDuration = 0;
       obj.bitrateBuckets = {};

@@ -1,21 +1,21 @@
-// === Module 18439: VoicePanelHeaderSpeaker ===
+// === Module 18461: VoicePanelHeaderSpeaker ===
 
-// Module 18439 (VoicePanelHeaderSpeaker)
+// Module 18461 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
-import NativeViewDefault from "NativeView" /* 6872 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9129 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 14119 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14120 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18373 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18442 */;
+import NativeViewDefault from "NativeView" /* 6871 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9136 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 14133 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14134 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18395 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18464 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5701 */;
 import AudioRouteStore from "AudioRouteStore" /* 5720 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18441 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18463 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import SessionsStore from "SessionsStore" /* 5702 */;
 
@@ -23,7 +23,7 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(18440).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(18462).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -522,7 +522,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "r" };
+        const obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

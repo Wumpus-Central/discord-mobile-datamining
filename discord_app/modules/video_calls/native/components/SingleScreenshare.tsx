@@ -1,14 +1,14 @@
-// === Module 11627: SingleScreenshare ===
+// === Module 11638: SingleScreenshare ===
 
-// Module 11627 (SingleScreenshare)
+// Module 11638 (SingleScreenshare)
 import nativeDefault from "native" /* 587 */;
 import useMountEffectDefault from "useMountEffect" /* 5249 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11628 */;
+import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11639 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(10847);
+const ChannelCallStore = fn(10855);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);

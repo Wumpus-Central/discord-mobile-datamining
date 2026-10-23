@@ -1,20 +1,20 @@
-// === Module 13051: ChatInputActions ===
+// === Module 13067: ChatInputActions ===
 
-// Module 13051 (ChatInputActions)
+// Module 13067 (ChatInputActions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import mergeProps from "mergeProps" /* 5127 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 8141 */;
-import ImageIcon from "ImageIcon" /* 8543 */;
-import AppsIcon from "AppsIcon" /* 8562 */;
-import PollsIcon from "PollsIcon" /* 10391 */;
-import AttachmentIcon from "AttachmentIcon" /* 10393 */;
-import CameraIcon from "CameraIcon" /* 10408 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12181 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12458 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 13052 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13054 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 8142 */;
+import ImageIcon from "ImageIcon" /* 8544 */;
+import AppsIcon from "AppsIcon" /* 8563 */;
+import PollsIcon from "PollsIcon" /* 10398 */;
+import AttachmentIcon from "AttachmentIcon" /* 10400 */;
+import CameraIcon from "CameraIcon" /* 10415 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12192 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12468 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 13068 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13070 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -314,7 +314,7 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12462);
+const ChatInputConstants = fn(12472);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);

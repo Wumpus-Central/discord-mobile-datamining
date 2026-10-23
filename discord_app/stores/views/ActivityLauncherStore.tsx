@@ -1,10 +1,10 @@
-// === Module 11157: ActivityLauncherStore ===
+// === Module 11166: ActivityLauncherStore ===
 
-// Module 11157 (ActivityLauncherStore)
+// Module 11166 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LocalActivityStore from "LocalActivityStore" /* 11158 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6484 */;
+import LocalActivityStore from "LocalActivityStore" /* 11167 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
 
 const require = fn;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {

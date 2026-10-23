@@ -1,17 +1,17 @@
-// === Module 5838: AudioActionCreators ===
+// === Module 5837: AudioActionCreators ===
 
-// Module 5838 (AudioActionCreators)
+// Module 5837 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5817 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5844 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 5848 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5865 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5843 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5847 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5839 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5842 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5838 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5841 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
@@ -56,7 +56,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1087);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5843).SoundOutputChannel;
+const SoundOutputChannel = fn(5842).SoundOutputChannel;
 const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);

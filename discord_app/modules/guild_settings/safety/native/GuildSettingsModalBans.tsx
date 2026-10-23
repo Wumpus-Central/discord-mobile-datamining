@@ -1,17 +1,17 @@
-// === Module 19053: GuildSettingsModalBans ===
+// === Module 19076: GuildSettingsModalBans ===
 
-// Module 19053 (GuildSettingsModalBans)
+// Module 19076 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7274 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8975 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8982 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -215,7 +215,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
     tmp19 = closure_12;
     const obj6 = { style: tmp.searchField, children: null };
     const obj7 = { size: "md", onChange: tmp15 };
-    obj6.children = closure_12(tmp2(tmp3[26]).SearchField, obj7);
+    obj6.children = closure_12(tmp2(tmp3[26]).SearchBar, obj7);
     const items7 = [closure_12(setting, obj6), ];
     if ("" !== searchQuery) {
       if (0 === users.length) {

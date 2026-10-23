@@ -1,7 +1,7 @@
-// === Module 7266: useRoleIconProps ===
+// === Module 7267: useRoleIconProps ===
 
-// Module 7266 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7267 */;
+// Module 7267 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7268 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -225,14 +225,14 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
     if (cResult[5] !== stateFromStores) {
       let tmp12;
       if (null != stateFromStores) {
-        const roleIconData = tmp(7267).getRoleIconData(stateFromStores, undefined);
+        const roleIconData = tmp(7268).getRoleIconData(stateFromStores, undefined);
         if (null != roleIconData) {
           const obj2 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
           ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
           obj2.unicodeEmoji = roleIconData.unicodeEmoji;
           tmp12 = obj2;
         }
-        const tmpResult2 = tmp(7267);
+        const tmpResult2 = tmp(7268);
       }
       cResult[5] = stateFromStores;
       cResult[6] = tmp12;

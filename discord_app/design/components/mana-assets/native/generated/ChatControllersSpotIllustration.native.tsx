@@ -1,23 +1,23 @@
-// === Module 17601: ChatControllersSpotIllustration ===
+// === Module 17623: ChatControllersSpotIllustration ===
 
-// Module 17601 (ChatControllersSpotIllustration)
+// Module 17623 (ChatControllersSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef17602 from "module_17602" /* 17602 */;
-import _modDef17603 from "module_17603" /* 17603 */;
-import _modDef17604 from "module_17604" /* 17604 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef17624 from "module_17624" /* 17624 */;
+import _modDef17625 from "module_17625" /* 17625 */;
+import _modDef17626 from "module_17626" /* 17626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17602 }, 3: null };
-let obj2 = { uri: _modDef17602 };
-obj[2] = { uri: _modDef17603 };
-const obj3 = { uri: _modDef17603 };
-obj[3] = { uri: _modDef17604 };
+let obj = { 1: null, 2: { uri: _modDef17624 }, 3: null };
+let obj2 = { uri: _modDef17624 };
+obj[2] = { uri: _modDef17625 };
+const obj3 = { uri: _modDef17625 };
+obj[3] = { uri: _modDef17626 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17604 };
+const obj4 = { uri: _modDef17626 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChatControllersSpotIllustration.native.tsx");
 

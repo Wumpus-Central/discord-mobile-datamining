@@ -1,6 +1,6 @@
-// === Module 18009: SearchListCard ===
+// === Module 18031: SearchListCard ===
 
-// Module 18009 (SearchListCard)
+// Module 18031 (SearchListCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,10 +8,10 @@ import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
-import Card from "Card" /* 6891 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import ForumIcon from "ForumIcon" /* 8544 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
+import Card from "Card" /* 6890 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import ForumIcon from "ForumIcon" /* 8545 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

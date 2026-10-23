@@ -1,12 +1,12 @@
-// === Module 15765: DevToolsNavigator ===
+// === Module 15779: DevToolsNavigator ===
 
-// Module 15765 (DevToolsNavigator)
+// Module 15779 (DevToolsNavigator)
 import Types from "Types" /* 5144 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import HeaderShared from "HeaderShared" /* 9669 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 15766 */;
-import DevToolsContentDefault from "DevToolsContent" /* 17016 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import HeaderShared from "HeaderShared" /* 9676 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 15780 */;
+import DevToolsContentDefault from "DevToolsContent" /* 17038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -16,14 +16,14 @@ let closure_3 = ["children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const NativeStackNavigator = fn(9713);
+const NativeStackNavigator = fn(9720);
 let closure_10 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsNavigator(screenKey) {
   const cResult = accessibilityNativeStackOptions(576).c(9);
   let str = screenKey.screenKey;
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7081).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7080).useAccessibilityNativeStackOptions();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp8 = closure_7(SettingHookHarnessDefault, {});
     cResult[0] = tmp8;
@@ -61,7 +61,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           return {
             headerTitle() {
               const obj = { style: { flexDirection: "row" }, children: null };
-              const items = [closure_1_7(accessibilityNativeStackOptions(11722).HammerIcon, { size: "sm" }), ];
+              const items = [closure_1_7(accessibilityNativeStackOptions(11733).HammerIcon, { size: "sm" }), ];
               const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
               items[1] = closure_1_7(accessibilityNativeStackOptions(5220).Text, obj2);
               obj.children = items;
@@ -74,8 +74,8 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const tmp16 = closure_7(closure_10.Screen, obj3);
     const _Object = Object;
     const obj4 = {};
-    let merged = Object.assign(tmp(16838).DevToolsScreens);
-    const merged1 = Object.assign(tmp(16838).PerformanceTestingScreens);
+    let merged = Object.assign(tmp(16860).DevToolsScreens);
+    const merged1 = Object.assign(tmp(16860).PerformanceTestingScreens);
     const entries = Object.entries(obj4);
     const mapped = entries.map((item) => {
       [tmp2, tmp3] = item;
@@ -88,7 +88,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }, tmp2);
     });
-    const designSystemScreens = tmp(15902).getDesignSystemScreens();
+    const designSystemScreens = tmp(15920).getDesignSystemScreens();
     const mapped1 = designSystemScreens.map((item) => {
       [accessibilityNativeStackOptions, tmp2] = closure_4(item, 2);
       return closure_7(closure_10.Screen, {
@@ -112,7 +112,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     let tmp12 = mapped1;
     let tmp11 = mapped;
     let tmp10 = tmp16;
-    const tmpResult = tmp(15902);
+    const tmpResult = tmp(15920);
   } else {
     tmp10 = cResult[3];
     tmp11 = cResult[4];
@@ -136,7 +136,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[7] = tmp9;
   cResult[8] = tmp24;
   tmp23 = tmp24;
-  let obj2 = accessibilityNativeStackOptions(7081);
+  let obj2 = accessibilityNativeStackOptions(7080);
 }) : (function DevToolsNavigator(screenKey) {
   let str = screenKey.screenKey;
   _require = undefined;
@@ -172,7 +172,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_7(closure_1_0(11722).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_7(closure_1_0(11733).HammerIcon, { size: "sm" }), ];
             const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
             items[1] = closure_1_7(closure_1_0(5220).Text, obj2);
             obj.children = items;
@@ -185,8 +185,8 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ,
 
   ];
-  let merged = Object.assign(tmp(16838).DevToolsScreens);
-  let merged1 = Object.assign(tmp(16838).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(16860).DevToolsScreens);
+  let merged1 = Object.assign(tmp(16860).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
@@ -205,7 +205,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_7(closure_1_0(11722).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_7(closure_1_0(11733).HammerIcon, { size: "sm" }), ];
           const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
           items[1] = closure_1_7(closure_1_0(5220).Text, obj2);
           obj.children = items;

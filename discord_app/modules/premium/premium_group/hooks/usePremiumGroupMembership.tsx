@@ -1,9 +1,9 @@
-// === Module 14732: usePremiumGroupMembership ===
+// === Module 14746: usePremiumGroupMembership ===
 
-// Module 14732 (usePremiumGroupMembership)
+// Module 14746 (usePremiumGroupMembership)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 14733 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 14747 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

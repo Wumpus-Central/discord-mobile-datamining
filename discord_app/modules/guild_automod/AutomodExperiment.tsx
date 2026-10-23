@@ -1,6 +1,6 @@
-// === Module 18908: AutomodExperiment ===
+// === Module 18931: AutomodExperiment ===
 
-// Module 18908 (AutomodExperiment)
+// Module 18931 (AutomodExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

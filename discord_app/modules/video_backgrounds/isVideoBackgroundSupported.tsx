@@ -1,6 +1,6 @@
-// === Module 5863: isVideoBackgroundSupported ===
+// === Module 5862: isVideoBackgroundSupported ===
 
-// Module 5863 (isVideoBackgroundSupported)
+// Module 5862 (isVideoBackgroundSupported)
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const Features = fn(5704).Features;

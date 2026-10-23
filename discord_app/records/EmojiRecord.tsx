@@ -1,6 +1,6 @@
-// === Module 18962: EmojiRecord ===
+// === Module 18985: EmojiRecord ===
 
-// Module 18962 (EmojiRecord)
+// Module 18985 (EmojiRecord)
 import Record from "Record" /* 1407 */;
 import UserRecord from "UserRecord" /* 1406 */;
 

@@ -1,9 +1,9 @@
-// === Module 11544: canUseStreamSetting ===
+// === Module 11555: canUseStreamSetting ===
 
-// Module 11544 (canUseStreamSetting)
+// Module 11555 (canUseStreamSetting)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8351 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8352 */;
 import size from "module_2" /* 2 */;
 
 const StreamQualities = PremiumConstants.StreamQualities;

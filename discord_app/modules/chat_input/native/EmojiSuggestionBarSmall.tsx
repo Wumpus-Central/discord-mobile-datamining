@@ -1,11 +1,11 @@
-// === Module 13256: EmojiSuggestionBarSmall ===
+// === Module 13270: EmojiSuggestionBarSmall ===
 
-// Module 13256 (EmojiSuggestionBarSmall)
+// Module 13270 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 9881 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9906 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13246 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9888 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9913 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13262 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 let closure_3 = ["anchorTop", "onOccupiedHeightChange", "ref"];
 const jsx = fn(21).jsx;
-const sum = fn(9798).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9805).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles((arg0) => {
@@ -110,8 +110,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiS
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: closure_3, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_9(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(13246).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(13246);
+  const suggestionBarHeight = displayEmojis(13262).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(13262);
   const fn = function j() {
     const obj = { opacity: null };
     const items = [0, closure_8];
@@ -186,7 +186,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
     tmp7 = cResult[4];
   }
   let obj = require("c");
-  const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(tmp6, tmp(13246).MAX_SUGGESTIONS_LARGE, 1, tmp7);
+  const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(tmp6, tmp(13262).MAX_SUGGESTIONS_LARGE, 1, tmp7);
   ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable } = emojiSuggestionBarState);
   if (0 === unlockedEmojis.length) {
     if (0 === lockedEmojis.length) {

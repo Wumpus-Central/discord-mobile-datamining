@@ -1,10 +1,10 @@
-// === Module 12443: ConjureNativeTurnTimer ===
+// === Module 12453: ConjureNativeTurnTimer ===
 
-// Module 12443 (ConjureNativeTurnTimer)
+// Module 12453 (ConjureNativeTurnTimer)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ConjureDuration from "ConjureDuration" /* 12377 */;
-import useConjureElapsedMs from "useConjureElapsedMs" /* 12444 */;
+import ConjureDuration from "ConjureDuration" /* 11833 */;
+import useConjureElapsedMs from "useConjureElapsedMs" /* 12454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

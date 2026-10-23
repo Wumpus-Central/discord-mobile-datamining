@@ -1,12 +1,12 @@
-// === Module 10858: NsfwGateChat ===
+// === Module 10866: NsfwGateChat ===
 
-// Module 10858 (NsfwGateChat)
+// Module 10866 (NsfwGateChat)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef10859 from "module_10859" /* 10859 */;
+import _modDef10867 from "module_10867" /* 10867 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef10859 };
+    const obj3 = { source: _modDef10867 };
     const tmp13 = React4(FastImageDefault, obj3);
     cResult[2] = tmp13;
     let tmp9 = tmp13;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
   const obj = { children: null };
   const items = [React4(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const obj4 = { source: _modDef10859 };
+  const obj4 = { source: _modDef10867 };
   const items1 = [React4(FastImageDefault, obj4), ];
   const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;

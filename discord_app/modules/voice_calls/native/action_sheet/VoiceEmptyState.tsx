@@ -1,15 +1,15 @@
-// === Module 14550: VoiceEmptyState ===
+// === Module 14564: VoiceEmptyState ===
 
-// Module 14550 (VoiceEmptyState)
+// Module 14564 (VoiceEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _modDef14551 from "module_14551" /* 14551 */;
-import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14552 */;
+import _modDef14565 from "module_14565" /* 14565 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14566 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6637 */;
+import TextStyles_mod from "TextStyles" /* 6636 */;
 
 require = fn;
 const View = fn(17).View;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceEmp
       cResult[13] = tmp19;
       tmp17 = tmp19;
     }
-    const obj11 = { title: tmp9, body: tmp10, lightSource: _modDef14551, darkSource: _modDef14551, titleStyle: null, bodyStyle: null, imageStyle: null };
+    const obj11 = { title: tmp9, body: tmp10, lightSource: _modDef14565, darkSource: _modDef14565, titleStyle: null, bodyStyle: null, imageStyle: null };
     ({ emptyTitle: obj4.titleStyle, emptyBody: obj4.bodyStyle } = tmp4);
     obj11.imageStyle = tmp13;
     const tmp16 = React4(native.ThemedEmptyState, obj11);
@@ -131,8 +131,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceEmp
   obj4.title = intl.string(util.t["/HABZo"]);
   const intl2 = util.intl;
   obj4.body = intl2.string(util.t["5Jy2FY"]);
-  obj4.lightSource = _modDef14551;
-  obj4.darkSource = _modDef14551;
+  obj4.lightSource = _modDef14565;
+  obj4.darkSource = _modDef14565;
   ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
   obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [React4(native.ThemedEmptyState, obj4), React4(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button })];

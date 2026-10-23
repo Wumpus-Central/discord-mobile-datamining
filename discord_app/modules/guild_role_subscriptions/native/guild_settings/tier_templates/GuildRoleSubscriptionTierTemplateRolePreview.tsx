@@ -1,6 +1,6 @@
-// === Module 19210: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 19233: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 19210 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 19233 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,8 +9,8 @@ import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
-import RoleIconDefault from "RoleIcon" /* 7285 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
+import RoleIconDefault from "RoleIcon" /* 7286 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

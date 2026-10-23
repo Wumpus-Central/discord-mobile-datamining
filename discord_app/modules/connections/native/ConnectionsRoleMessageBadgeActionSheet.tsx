@@ -1,6 +1,6 @@
-// === Module 12686: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12705: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12686 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12705 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,14 +13,14 @@ import useThemeDefault from "useTheme" /* 5191 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import PlatformsDefault from "Platforms" /* 6488 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6905 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7259 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import BotTagDefault from "BotTag" /* 9103 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11223 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11227 */;
+import PlatformsDefault from "Platforms" /* 6487 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6904 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7260 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import BotTagDefault from "BotTag" /* 9110 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11232 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -28,12 +28,12 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12687 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12706 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(7260).OperatorTypes;
+const OperatorTypes = fn(7261).OperatorTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);

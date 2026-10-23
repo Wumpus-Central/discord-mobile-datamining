@@ -1,6 +1,6 @@
-// === Module 18593: shared/DMChannel ===
+// === Module 18615: shared/DMChannel ===
 
-// Module 18593 (shared/DMChannel)
+// Module 18615 (shared/DMChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,19 +8,19 @@ import useFontScale from "useFontScale" /* 5239 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5629 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
-import Pressables from "Pressables" /* 6894 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10661 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13689 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 16570 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17686 */;
-import renderChannelItemDefault from "renderChannelItem" /* 17999 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18000 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 18585 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 18587 */;
+import Pressables from "Pressables" /* 6893 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10668 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13703 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 16592 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17708 */;
+import renderChannelItemDefault from "renderChannelItem" /* 18021 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 18607 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 18609 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrivateChannelPressEvents(id, navigationReplace) {

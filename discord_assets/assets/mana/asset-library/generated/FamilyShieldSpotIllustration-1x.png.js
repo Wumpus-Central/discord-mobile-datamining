@@ -1,6 +1,6 @@
-// === Module 12815: ? ===
+// === Module 12833: ? ===
 
-// Module 12815
+// Module 12833
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FamilyShieldSpotIllustration-1x.png.js");

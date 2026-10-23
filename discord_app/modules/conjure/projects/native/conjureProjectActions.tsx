@@ -1,20 +1,20 @@
-// === Module 11728: conjureProjectActions ===
+// === Module 11739: conjureProjectActions ===
 
-// Module 11728 (conjureProjectActions)
+// Module 11739 (conjureProjectActions)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
 import CopyIcon from "CopyIcon" /* 5668 */;
-import AlertModal from "AlertModal" /* 5901 */;
-import ChannelUtils from "ChannelUtils" /* 5981 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
-import conjureProjectMute from "conjureProjectMute" /* 10693 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 11699 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11737 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11742 */;
+import AlertModal from "AlertModal" /* 5900 */;
+import ChannelUtils from "ChannelUtils" /* 5980 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
+import conjureProjectMute from "conjureProjectMute" /* 10700 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 11710 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11748 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10684 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10691 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11699).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
+          await tmp3(11710).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;
@@ -122,9 +122,9 @@ let closure_11 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10668);
+const ConjureConnectionStore = fn(10675);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(6759);
+const ConjureProjectStore = fn(6758);
 ({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
 const StaticChannelRoute = fn(4828).StaticChannelRoute;
 const size = fn(2);

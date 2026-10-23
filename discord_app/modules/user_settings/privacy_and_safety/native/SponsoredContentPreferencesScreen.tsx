@@ -1,11 +1,11 @@
-// === Module 17160: SponsoredContentPreferencesScreen ===
+// === Module 17182: SponsoredContentPreferencesScreen ===
 
-// Module 17160 (SponsoredContentPreferencesScreen)
+// Module 17182 (SponsoredContentPreferencesScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import SettingBuilders from "SettingBuilders" /* 11172 */;
-import SettingLayoutDefault from "SettingLayout" /* 15898 */;
+import SettingBuilders from "SettingBuilders" /* 11181 */;
+import SettingLayoutDefault from "SettingLayout" /* 15916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function useSponsoredContentSettings() {
   items1[2] = obj7;
   return items1;
 }
-const MobileUserSettings = fn(8317).MobileUserSettings;
+const MobileUserSettings = fn(8318).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

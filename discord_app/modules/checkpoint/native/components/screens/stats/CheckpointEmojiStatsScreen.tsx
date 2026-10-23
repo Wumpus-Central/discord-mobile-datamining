@@ -1,17 +1,17 @@
-// === Module 12913: CheckpointEmojiStatsScreen ===
+// === Module 12932: CheckpointEmojiStatsScreen ===
 
-// Module 12913 (CheckpointEmojiStatsScreen)
+// Module 12932 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import CheckpointStore from "CheckpointStore" /* 12875 */;
+import CheckpointStore from "CheckpointStore" /* 12893 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   [emoji, _slicedToArray] = noop.useState(tmp9 ? closure_11 : emojis[0]);
   let obj4 = require("initialize");
-  noop = require("useCheckpointSound")(require("module_12883"));
+  noop = require("useCheckpointSound")(require("module_12901"));
   let intl = tmp2(tmp3[16]).intl;
   const string = intl.string;
   if (tmp9) {

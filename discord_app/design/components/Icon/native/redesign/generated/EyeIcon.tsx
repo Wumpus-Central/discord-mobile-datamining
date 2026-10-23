@@ -1,10 +1,10 @@
-// === Module 7049: EyeIcon ===
+// === Module 7048: EyeIcon ===
 
-// Module 7049 (EyeIcon)
+// Module 7048 (EyeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5654 */;
-import _mod7050 from "module_7050" /* 7050 */;
+import _mod7049 from "module_7049" /* 7049 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EyeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7050;
+    const tmpResult = _mod7049;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EyeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7050, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7049, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

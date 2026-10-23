@@ -1,6 +1,6 @@
-// === Module 15758: DiscordGestureHandlerRootViewNativeComponent ===
+// === Module 15772: DiscordGestureHandlerRootViewNativeComponent ===
 
-// Module 15758 (DiscordGestureHandlerRootViewNativeComponent)
+// Module 15772 (DiscordGestureHandlerRootViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

@@ -1,41 +1,41 @@
-// === Module 11822: ConjureNativePreview ===
+// === Module 11836: ConjureNativePreview ===
 
-// Module 11822 (ConjureNativePreview)
+// Module 11836 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Card from "Card" /* 6891 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7192 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10698 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10712 */;
-import leaveFrame from "leaveFrame" /* 10735 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11823 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11826 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11844 */;
+import Card from "Card" /* 6890 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7191 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10705 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10719 */;
+import leaveFrame from "leaveFrame" /* 10742 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10743 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11837 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11840 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6761 */;
+import FramesStore from "FramesStore" /* 6760 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7692);
+const UserProfileApplicationWidgetTypes = intl(7693);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11801);
+const conjureDesignFeedbackStore = fn(11813);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(4969);
@@ -1034,10 +1034,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(10856), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(10864), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(11951).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(11965).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;

@@ -1,6 +1,6 @@
-// === Module 11676: ThemeContextProvider/RootThemeContextProvider ===
+// === Module 11687: ThemeContextProvider/RootThemeContextProvider ===
 
-// Module 11676 (ThemeContextProvider/RootThemeContextProvider)
+// Module 11687 (ThemeContextProvider/RootThemeContextProvider)
 import c from "c" /* 576 */;
 import native from "native" /* 5023 */;
 import noop from "module_19" /* 19 */;

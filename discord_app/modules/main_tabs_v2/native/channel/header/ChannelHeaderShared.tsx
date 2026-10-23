@@ -1,6 +1,6 @@
-// === Module 13960: ChannelHeaderShared ===
+// === Module 13974: ChannelHeaderShared ===
 
-// Module 13960 (ChannelHeaderShared)
+// Module 13974 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,14 +11,14 @@ import Text_Text from "Text/Text" /* 5220 */;
 import useToken from "useToken" /* 5238 */;
 import useChannelName from "useChannelName" /* 5590 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6894 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7061 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
-import BotTagDefault from "BotTag" /* 9103 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10631 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
-import _modDef13961 from "module_13961" /* 13961 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13962 */;
+import Pressables from "Pressables" /* 6893 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7060 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8488 */;
+import BotTagDefault from "BotTag" /* 9110 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10638 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
+import _modDef13975 from "module_13975" /* 13975 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef13975, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -273,7 +273,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13975, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -327,7 +327,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
       }
     }
   }
-  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: "jsona" };
+  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: false };
   const tmp7 = closure_1_8(native.Avatar, obj2);
   cResult[0] = isMobileOnline;
   cResult[1] = isVROnline;
@@ -339,7 +339,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
 }) : (function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isMobileOnline: null, isVROnline: "9353860856bfc05333c0c56840083d00", style: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages", autoStatusCutout: "jsona" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;

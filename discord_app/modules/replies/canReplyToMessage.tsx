@@ -1,9 +1,9 @@
-// === Module 8318: canReplyToMessage ===
+// === Module 8319: canReplyToMessage ===
 
-// Module 8318 (canReplyToMessage)
+// Module 8319 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1103 */;
-import ThreadHooks from "ThreadHooks" /* 7353 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8319 */;
+import ThreadHooks from "ThreadHooks" /* 7354 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8320 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;

@@ -1,10 +1,10 @@
-// === Module 15052: BuildOverrideModal ===
+// === Module 15065: BuildOverrideModal ===
 
-// Module 15052 (BuildOverrideModal)
+// Module 15065 (BuildOverrideModal)
 import nativeDefault from "native" /* 587 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12644 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12656 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10992 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11000 */;
 
 require = fn;
 const View = fn(17).View;
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
   const obj = str(576);
   const tmp5 = stateFromStores(5191)();
   if (tmpResult.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(15053);
+    let tmp4Result = tmp4(15066);
   } else {
-    tmp4Result = tmp4(15054);
+    tmp4Result = tmp4(15067);
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [BuildOverrideStore];
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp11 = targetBuildOverride[tmp(undefined, 12644).DEVICE_FIELD];
+      const tmp11 = targetBuildOverride[tmp(undefined, 12656).DEVICE_FIELD];
       if (tmp11 != null) {
         let actionButton = tmp11.id;
       }
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
                               const intl6 = tmp(1128).intl;
                               obj7.text = intl6.string(tmp(1128).t.b5KKph);
                               onPress = function onPress() {
-                                return stateFromStores(6658).pop();
+                                return stateFromStores(6657).pop();
                               };
                               obj7.onPress = onPress;
                               items3[1] = closure_5(tmp(5230).Button, obj7);
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
                               const intl4 = tmp(1128).intl;
                               obj8.text = intl4.string(tmp(1128).t.WRkdCQ);
                               obj8.onPress = function onPress() {
-                                return stateFromStores(6658).pop();
+                                return stateFromStores(6657).pop();
                               };
                               tmp44 = closure_5(tmp(5230).Button, obj8);
                             }
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
   }
   const obj5 = stateFromStores(2049)();
   const durationResult = tmp4Result2.duration(stateFromStores(2049)().diff(expiresAt1));
-  const SafeAreaPaddingView = tmp(7207).SafeAreaPaddingView;
+  const SafeAreaPaddingView = tmp(7206).SafeAreaPaddingView;
   const container = tmp3.container;
   const content = tmp3.content;
   if (cResult[23] !== tmp4Result) {
@@ -321,9 +321,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
   const tmp = closure_8();
   const tmp4 = stateFromStores(5191)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(15053);
+    let tmp2Result = tmp2(15066);
   } else {
-    tmp2Result = tmp2(15054);
+    tmp2Result = tmp2(15067);
   }
   obj = str(4976);
   const items = [BuildOverrideStore];
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 12644).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 12656).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
     const intl6 = tmp5(1128).intl;
     obj15.text = intl6.string(tmp5(1128).t.b5KKph);
     obj15.onPress = function onPress() {
-      return stateFromStores(6658).pop();
+      return stateFromStores(6657).pop();
     };
     items5[1] = closure_5(tmp5(5230).Button, obj15);
     obj12.children = items5;
@@ -406,12 +406,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BuildOve
     const intl4 = tmp5(1128).intl;
     obj16.text = intl4.string(tmp5(1128).t.WRkdCQ);
     obj16.onPress = function onPress() {
-      return stateFromStores(6658).pop();
+      return stateFromStores(6657).pop();
     };
     tmp12Result2 = closure_5(tmp5(5230).Button, obj16);
   }
   obj11.children = tmp12Result2;
   items4[1] = closure_5(View, obj11);
   rect.children = items4;
-  return closure_7(str(7207).SafeAreaPaddingView, rect);
+  return closure_7(str(7206).SafeAreaPaddingView, rect);
 });

@@ -1,15 +1,15 @@
-// === Module 11774: useConjureSettingPickerOptions ===
+// === Module 11786: useConjureSettingPickerOptions ===
 
-// Module 11774 (useConjureSettingPickerOptions)
-import NicknameUtils from "NicknameUtils" /* 5976 */;
-import ConjureUtils from "ConjureUtils" /* 7329 */;
-import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11775 */;
+// Module 11786 (useConjureSettingPickerOptions)
+import NicknameUtils from "NicknameUtils" /* 5975 */;
+import ConjureUtils from "ConjureUtils" /* 7330 */;
+import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11787 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import StreamerModeStore from "StreamerModeStore" /* 5019 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 const require = globalThis.__r;
 
@@ -93,13 +93,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if ("role" === channel_filter.type) {
       tmp8 = arg0;
     }
-    const conjureGuildRoles = result(11775).useConjureGuildRoles(tmp8);
-    const resultResult1 = result(11775);
+    const conjureGuildRoles = result(11787).useConjureGuildRoles(tmp8);
+    const resultResult1 = result(11787);
     let tmp9 = null;
     if ("user" === channel_filter.type) {
       tmp9 = arg0;
     }
-    const conjureGuildMemberUsers = result(11775).useConjureGuildMemberUsers(tmp9);
+    const conjureGuildMemberUsers = result(11787).useConjureGuildMemberUsers(tmp9);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items1 = [StreamerModeStore];
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       tmp11 = cResult[5];
       tmp12 = cResult[6];
     }
-    const resultResult2 = result(11775);
+    const resultResult2 = result(11787);
     const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
     const type = channel_filter.type;
     if ("channel" === type) {
@@ -122,13 +122,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       }
       mapped = null;
       if (!tmp20) {
-        result = result(7329).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
+        result = result(7330).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
         map = result.map;
         mapped = map((id) => {
           const obj = { id: id.id, label: closure_0(type[11]).computeChannelName(id, UserStore, RelationshipStore) };
           return obj;
         });
-        const resultResult4 = result(7329);
+        const resultResult4 = result(7330);
       }
       cResult[7] = stateFromStores;
       channel_filter = channel_filter.channel_filter;
@@ -248,10 +248,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(11775).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(11787).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(11775);
-        obj2.label = closure_0(5976).getName(closure_1_0, null, id);
+        const obj = closure_0(11787);
+        obj2.label = closure_0(5975).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {
@@ -267,9 +267,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
 });
 export const MAX_CONJURE_SETTING_PICKS = 25;
 export { conjureSettingPickedIds };
-export const withSavedPicks = function withSavedPicks(arr, value, arg2) {
+export const withSavedPicks = function withSavedPicks(arr, value, cResult) {
   closure_0 = arr;
-  closure_1 = arg2;
   if (Array.isArray(value)) {
     if (0 === value.length) {
       const items = [];
@@ -281,7 +280,7 @@ export const withSavedPicks = function withSavedPicks(arr, value, arg2) {
         closure_0 = item;
         let found = closure_0.find((id) => id.id === closure_0);
         if (found == null) {
-          found = closure_1(item);
+          found = cResult(item);
         }
         return found;
       }), 0));
@@ -289,7 +288,7 @@ export const withSavedPicks = function withSavedPicks(arr, value, arg2) {
         closure_0 = item;
         let found = closure_0.find((id) => id.id === closure_0);
         if (found == null) {
-          found = closure_1(item);
+          found = cResult(item);
         }
         return found;
       }), 0);

@@ -1,6 +1,6 @@
-// === Module 19036: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 19059: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 19036 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 19059 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,13 +9,13 @@ import AvatarUtils from "AvatarUtils" /* 1417 */;
 import shared from "shared" /* 4976 */;
 import useThemeDefault from "useTheme" /* 5191 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import PlatformsDefault from "Platforms" /* 6488 */;
-import TableRow from "TableRow" /* 6889 */;
-import Pressables from "Pressables" /* 6894 */;
-import XSmallIcon from "XSmallIcon" /* 6917 */;
-import TableRowGroup from "TableRowGroup" /* 6973 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11220 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19037 */;
+import PlatformsDefault from "Platforms" /* 6487 */;
+import TableRow from "TableRow" /* 6888 */;
+import Pressables from "Pressables" /* 6893 */;
+import XSmallIcon from "XSmallIcon" /* 6916 */;
+import TableRowGroup from "TableRowGroup" /* 6972 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11229 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19060 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,7 +96,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1087).PlatformTypes;
-const Constants = fn(7260);
+const Constants = fn(7261);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
@@ -144,7 +144,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
     }
     if (cResult[0] !== bot) {
-      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
       const tmp26 = onChangeText(native.Avatar, obj3);
       cResult[0] = bot;
       cResult[1] = tmp26;
@@ -165,7 +165,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
             name1 = getOrFetchApplicationBatched.name;
           }
         } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
           const tmp20 = onChangeText(native.Avatar, obj4);
           cResult[2] = getOrFetchApplicationBatched.bot;
           cResult[3] = tmp20;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         tmp11 = onChangeText(native.Avatar, obj3);
       }
       let name1;
@@ -472,7 +472,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Boolea
     }
     _slicedToArray(tmp, num);
   };
-  return onChangeText(metadataField(7279).TableSwitchRow, obj, metadataField);
+  return onChangeText(metadataField(7280).TableSwitchRow, obj, metadataField);
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NumericalConfigRule(existingPendingConfiguration) {
@@ -1282,7 +1282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19037).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19060).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1290,9 +1290,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(19037);
-  const tmpResult = metadataField(19037);
-  str1 = metadataField(19037).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19060);
+  const tmpResult = metadataField(19060);
+  str1 = metadataField(19060).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1404,9 +1404,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(7279).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7280).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19037).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19060).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {

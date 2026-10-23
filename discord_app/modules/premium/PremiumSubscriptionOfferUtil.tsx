@@ -1,16 +1,16 @@
-// === Module 8414: PremiumSubscriptionOfferUtil ===
+// === Module 8415: PremiumSubscriptionOfferUtil ===
 
-// Module 8414 (PremiumSubscriptionOfferUtil)
+// Module 8415 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import Server from "Server" /* 2000 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7541 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8415 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8416 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8417 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8418 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8421 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7542 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8416 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8417 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8418 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8419 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;

@@ -1,6 +1,6 @@
-// === Module 15171: openActivityDMLauncher ===
+// === Module 15184: openActivityDMLauncher ===
 
-// Module 15171 (openActivityDMLauncher)
+// Module 15184 (openActivityDMLauncher)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -26,8 +26,8 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_6 = tmp2;
           closure_5 = tmp5;
@@ -41,10 +41,9 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
             flag = false;
           }
           closure_133_4 = flag;
-          closure_133_5 = undefined;
+          let customId;
           closure_133_6 = undefined;
           closure_133_7 = undefined;
-          let customId;
           c7 = 1;
           c8 = 1;
           return { value: "Reflect", done: true };
@@ -60,95 +59,92 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
         } else {
           c7 = 2;
           c8 = 1;
-          const obj6 = { value: closure_134_1(closure_134_2[2]).fetchApplication(closure_133_0), done: false };
+          const obj6 = { value: closure_134_0(closure_134_2[2]).getCustomActivityLinkParams(closure_133_0, closure_133_3, closure_133_2), done: false };
           return obj6;
         }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          customId = value.customId;
+          if (closure_133_4) {
+            c7 = 3;
+            c8 = 1;
+            const obj8 = { value: closure_134_1(closure_134_2[6]).fetchApplication(closure_133_0), done: false };
+            return obj8;
+          } else {
+            const obj9 = { applicationId: closure_133_0, fromLink: true, customId, referrerId: closure_133_1, analyticsLocations: null, commandOrigin: null };
+            const items = [closure_134_1(closure_134_2[4]).ACTIVITY_BOOKMARK];
+            obj9.analyticsLocations = items;
+            obj9.commandOrigin = closure_134_0(closure_134_2[5]).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
+            c7 = 4;
+            c8 = 1;
+            const obj10 = { value: closure_134_1(closure_134_2[3]).launch(obj9), done: false };
+            return obj10;
+          }
+        }
       } else {
-        if (2 === tmp5) {
+        if (3 === tmp5) {
           if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
-            closure_133_5 = value;
-            const bot = closure_133_5.bot;
+            closure_133_6 = value;
+            const bot = closure_133_6.bot;
             let id;
             if (bot != null) {
               id = bot.id;
             }
-            closure_133_6 = id;
-            if (null != closure_133_5) {
-              if (null != closure_133_6) {
-                const obj9 = { recipientIds: closure_133_6 };
-                c7 = 3;
-                c8 = 1;
-                const obj11 = { value: closure_134_1(closure_134_2[3]).openPrivateChannel(obj9), done: false };
-                return obj11;
-              }
+            closure_133_7 = id;
+            if (null != closure_133_7) {
+              const obj12 = { recipientIds: closure_133_7 };
+              c7 = 5;
+              c8 = 1;
+              const obj14 = { value: closure_134_1(closure_134_2[7]).openPrivateChannel(obj12), done: false };
+              return obj14;
             }
-            c8 = 3;
           }
-        } else if (3 === tmp5) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj12 = { value, done: true };
-            return obj12;
-          } else {
-            closure_133_7 = value;
-            c7 = 4;
-            c8 = 1;
-            const obj13 = { value: closure_134_0(closure_134_2[4]).getCustomActivityLinkParams(closure_133_0, closure_133_3, closure_133_2), done: false };
-            return obj13;
-          }
-        } else if (4 === tmp5) {
-          if (arg0 === 1) {
+        } else {
+          if (4 === tmp5) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              const obj15 = { value, done: true };
+              return obj15;
+            }
+          } else if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            customId = value.customId;
-            if (closure_133_4) {
-              const bestActiveInput = closure_134_0(closure_134_2[8]).getBestActiveInput();
-              if (bestActiveInput != null) {
-                const obj15 = { type: closure_134_0(closure_134_2[9]).KeyboardTypes.APP_LAUNCHER, context: null };
-                const obj16 = { application: closure_133_5, initialRouteName: closure_134_4.APPLICATION_VIEW, customId, referrerId: closure_133_1 };
-                obj15.context = obj16;
-                bestActiveInput.openCustomKeyboard(obj15);
-              }
-              const obj4 = closure_134_0(closure_134_2[8]);
-            } else {
-              const obj17 = { targetApplicationId: closure_133_0, locationObject: {}, channelId: closure_133_7, analyticsLocations: null, commandOrigin: null, referrerId: null, customId: null };
-              const items = [closure_134_1(closure_134_2[6]).ACTIVITY_BOOKMARK];
-              obj17.analyticsLocations = items;
-              obj17.commandOrigin = closure_134_0(closure_134_2[7]).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
-              obj17.referrerId = closure_133_1;
-              obj17.customId = customId;
-              c7 = 5;
-              c8 = 1;
-              const obj18 = { value: closure_134_1(closure_134_2[5])(obj17), done: false };
-              return obj18;
+            const bestActiveInput = closure_134_0(closure_134_2[8]).getBestActiveInput();
+            if (bestActiveInput != null) {
+              const obj16 = { type: closure_134_0(closure_134_2[9]).KeyboardTypes.APP_LAUNCHER, context: null };
+              const obj17 = { application: closure_133_6, initialRouteName: closure_134_4.APPLICATION_VIEW, customId, referrerId: closure_133_1 };
+              obj16.context = obj17;
+              bestActiveInput.openCustomKeyboard(obj16);
             }
+            const obj18 = closure_134_0(closure_134_2[8]);
           }
-        } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
           c8 = 3;
           const obj = { value, done: true };
           return obj;
         }
         c8 = 3;
-        const obj19 = { value, done: true };
-        return obj19;
       }
-    } catch (tmp49) {
+    } catch (tmp33) {
       c8 = tmp;
-      throw tmp49;
+      throw tmp33;
     }
   }
 };

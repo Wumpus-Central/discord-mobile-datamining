@@ -1,13 +1,13 @@
-// === Module 12939: CheckpointHeaderButton ===
+// === Module 12957: CheckpointHeaderButton ===
 
-// Module 12939 (CheckpointHeaderButton)
+// Module 12957 (CheckpointHeaderButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const CHECKPOINT_PRIMARY = fn(6002).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6001).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ button: { width: 32, height: 32, alignItems: "center", justifyContent: "center", borderWidth: 1 } });

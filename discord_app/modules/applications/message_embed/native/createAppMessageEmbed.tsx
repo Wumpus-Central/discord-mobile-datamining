@@ -1,6 +1,6 @@
-// === Module 12955: createAppMessageEmbed ===
+// === Module 12974: createAppMessageEmbed ===
 
-// Module 12955 (createAppMessageEmbed)
+// Module 12974 (createAppMessageEmbed)
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -9,34 +9,32 @@ import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ChatInputUtils from "ChatInputUtils" /* 5145 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6795 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8260 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8605 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9618 */;
-import ApplicationUtils from "ApplicationUtils" /* 10714 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11309 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12956 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12957 */;
-import getPlayInContext from "getPlayInContext" /* 12958 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12959 */;
-import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12960 */;
-import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12961 */;
-import playFrameFromEmbedDefault from "playFrameFromEmbed" /* 12962 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6794 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8261 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8606 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9625 */;
+import ApplicationUtils from "ApplicationUtils" /* 10721 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11315 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11318 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12975 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12976 */;
+import getPlayInContext from "getPlayInContext" /* 12977 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8606 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8607 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;
-const FetchState = fn(8606).FetchState;
+const FetchState = fn(8607).FetchState;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(9974).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(9981).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
+const result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
 
 export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   ({ appId, message } = arg0);
@@ -230,54 +228,42 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
   }
   const actionId = appId.actionId;
   if ("play_in_channel" === actionId) {
-    const obj8 = { appId: appId.appId, channelId: appId.message.channel_id, analyticsLocations: null, referrerId: null, customId: null };
+    const obj8 = { applicationId: appId.appId, channelId: appId.message.channel_id, fromLink: true, customId: value2, referrerId: id, analyticsLocations: null, commandOrigin: null };
     const items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
     obj8.analyticsLocations = items;
-    obj8.referrerId = id;
-    obj8.customId = value2;
-    const result = joinOrStartActivityInChannel.joinOrStartActivityInChannel(obj8);
-  } else if ("play_in_dm" === actionId) {
-    let bot;
-    if (application != null) {
-      bot = application.bot;
-    }
-    if (null != bot) {
-      const obj9 = { appId: appId.appId, botId: application.bot.id, analyticsLocations: null, commandOrigin: null, referrerId: null, customId: null };
-      const items1 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
-      obj9.analyticsLocations = items1;
-      obj9.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
-      obj9.referrerId = id;
-      obj9.customId = value2;
-      const result1 = AppLauncherPlayUtils.launchActivityInBotDM(obj9);
-    }
-  } else if ("play_frame" === actionId) {
-    if (null != application) {
-      const obj10 = { application, analyticsContext: null };
-      const obj12 = { isStart: true, analyticsLocations: null };
-      const items2 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
-      obj12.analyticsLocations = items2;
-      obj10.analyticsContext = obj12;
-      playFrameFromEmbedDefault(obj10);
-      const tmp2Result = playFrameFromEmbedDefault;
-    }
-  } else if ("view_in_app_launcher" === actionId) {
-    const bestActiveInput = ChatInputUtils.getBestActiveInput();
-    if (bestActiveInput != null) {
-      const obj13 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
-      const obj14 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, applicationId: appId.appId, referrerId: id, customId: value2 };
-      obj13.context = obj14;
-      bestActiveInput.openCustomKeyboard(obj13);
-    }
-  } else if ("add_app" === actionId) {
-    if (null != application) {
-      ({ id: obj6.applicationId, customInstallUrl: obj6.customInstallUrl, installParams: obj6.installParams, integrationTypesConfig: obj6.integrationTypesConfig } = application);
-      ApplicationUtils.installApplication({ applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" });
-      const obj16 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
-    }
-  } else if ("link_copied" === actionId) {
-    ClipboardUtils.copy(appId.embedUrl);
-    ToastUtils.presentLinkCopied();
+    obj8.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
+    GamesActionCreatorsDefault.launch(obj8);
+    const tmp2Result = GamesActionCreatorsDefault;
   } else {
-    GlobalUtils.assertNever(appId.actionId);
+    if ("play_in_dm" !== actionId) {
+      if ("play_frame" !== actionId) {
+        if ("view_in_app_launcher" === actionId) {
+          const bestActiveInput = ChatInputUtils.getBestActiveInput();
+          if (bestActiveInput != null) {
+            const obj9 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+            const obj10 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, applicationId: appId.appId, referrerId: id, customId: value2 };
+            obj9.context = obj10;
+            bestActiveInput.openCustomKeyboard(obj9);
+          }
+        } else if ("add_app" === actionId) {
+          if (null != application) {
+            ({ id: obj6.applicationId, customInstallUrl: obj6.customInstallUrl, installParams: obj6.installParams, integrationTypesConfig: obj6.integrationTypesConfig } = application);
+            ApplicationUtils.installApplication({ applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" });
+            const obj11 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
+          }
+        } else if ("link_copied" === actionId) {
+          ClipboardUtils.copy(appId.embedUrl);
+          ToastUtils.presentLinkCopied();
+        } else {
+          GlobalUtils.assertNever(appId.actionId);
+        }
+      }
+    }
+    const obj12 = { applicationId: appId.appId, channelId: null, fromLink: true, customId: value2, referrerId: id, analyticsLocations: null, commandOrigin: null };
+    const items1 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
+    obj12.analyticsLocations = items1;
+    obj12.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
+    GamesActionCreatorsDefault.launch(obj12);
+    const tmp2Result2 = GamesActionCreatorsDefault;
   }
 };

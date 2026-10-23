@@ -1,12 +1,12 @@
-// === Module 7279: TableSwitchRow ===
+// === Module 7280: TableSwitchRow ===
 
-// Module 7279 (TableSwitchRow)
+// Module 7280 (TableSwitchRow)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import native from "native" /* 5125 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import TableRow from "TableRow" /* 6889 */;
-import FormSwitch from "FormSwitch" /* 7280 */;
+import TableRow from "TableRow" /* 6888 */;
+import FormSwitch from "FormSwitch" /* 7281 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

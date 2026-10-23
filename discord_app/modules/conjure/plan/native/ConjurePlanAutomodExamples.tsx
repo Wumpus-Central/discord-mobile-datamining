@@ -1,12 +1,12 @@
-// === Module 12395: ConjurePlanAutomodExamples ===
+// === Module 12405: ConjurePlanAutomodExamples ===
 
-// Module 12395 (ConjurePlanAutomodExamples)
+// Module 12405 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12396 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12406 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

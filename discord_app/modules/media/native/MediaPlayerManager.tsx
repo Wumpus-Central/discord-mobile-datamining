@@ -1,6 +1,6 @@
-// === Module 15739: MediaPlayerManager ===
+// === Module 15753: MediaPlayerManager ===
 
-// Module 15739 (MediaPlayerManager)
+// Module 15753 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -10,15 +10,15 @@ import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import RootNavigationRef from "RootNavigationRef" /* 5137 */;
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5595 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7550 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import VoicePanelStore from "VoicePanelStore" /* 6790 */;
+import VoicePanelStore from "VoicePanelStore" /* 6789 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import MessageStore from "MessageStore" /* 5996 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15740 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15754 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 import size from "module_2" /* 2 */;
@@ -46,7 +46,7 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 150
+    currentlyDisplayedChannelId: 24
   };
   return obj;
 });

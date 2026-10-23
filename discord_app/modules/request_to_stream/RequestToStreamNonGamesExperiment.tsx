@@ -1,6 +1,6 @@
-// === Module 11295: RequestToStreamNonGamesExperiment ===
+// === Module 11304: RequestToStreamNonGamesExperiment ===
 
-// Module 11295 (RequestToStreamNonGamesExperiment)
+// Module 11304 (RequestToStreamNonGamesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

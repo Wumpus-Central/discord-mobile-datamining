@@ -1,11 +1,11 @@
-// === Module 8313: canReactToMessage ===
+// === Module 8314: canReactToMessage ===
 
-// Module 8313 (canReactToMessage)
+// Module 8314 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4888 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8314 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8315 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6622 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6621 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
 

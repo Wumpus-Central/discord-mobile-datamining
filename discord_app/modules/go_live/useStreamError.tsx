@@ -1,10 +1,10 @@
-// === Module 11374: useStreamError ===
+// === Module 11385: useStreamError ===
 
-// Module 11374 (useStreamError)
-import AVErrorStore from "AVErrorStore" /* 11368 */;
+// Module 11385 (useStreamError)
+import AVErrorStore from "AVErrorStore" /* 11379 */;
 
 const require = fn;
-let closure_3 = { [fn(5884).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(5884).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(5884).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(5884).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(5884).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(5884).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
+let closure_3 = { [fn(5883).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(5883).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(5883).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(5883).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(5883).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(5883).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useStreamError.tsx");

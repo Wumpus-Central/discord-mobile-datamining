@@ -1,22 +1,22 @@
-// === Module 8274: Tracking ===
+// === Module 8275: Tracking ===
 
-// Module 8274 (Tracking)
+// Module 8275 (Tracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import TrackingUtils from "TrackingUtils" /* 8276 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8282 */;
-import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8283 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8287 */;
+import TrackingUtils from "TrackingUtils" /* 8277 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8283 */;
+import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8284 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8288 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import DraftStore from "DraftStore" /* 7615 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7368 */;
-import ForumSearchStore from "ForumSearchStore" /* 8275 */;
+import DraftStore from "DraftStore" /* 7616 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7369 */;
+import ForumSearchStore from "ForumSearchStore" /* 8276 */;
 
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7615).DraftType;
+const DraftType = fn(7616).DraftType;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);

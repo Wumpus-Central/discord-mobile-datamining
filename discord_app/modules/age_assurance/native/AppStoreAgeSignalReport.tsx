@@ -1,9 +1,9 @@
-// === Module 8070: AppStoreAgeSignalReport ===
+// === Module 8071: AppStoreAgeSignalReport ===
 
-// Module 8070 (AppStoreAgeSignalReport)
+// Module 8071 (AppStoreAgeSignalReport)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5630 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7915 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7916 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;

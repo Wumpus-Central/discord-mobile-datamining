@@ -1,6 +1,6 @@
-// === Module 13091: MemberActionChatInputBanner ===
+// === Module 13107: MemberActionChatInputBanner ===
 
-// Module 13091 (MemberActionChatInputBanner)
+// Module 13107 (MemberActionChatInputBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,16 +12,16 @@ import timing from "timing" /* 5192 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import Pressables from "Pressables" /* 6894 */;
-import _modDef12670 from "module_12670" /* 12670 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13089 */;
-import _modDef13090 from "module_13090" /* 13090 */;
-import MemberActionUtils from "MemberActionUtils" /* 13092 */;
-import _modDef13093 from "module_13093" /* 13093 */;
+import Pressables from "Pressables" /* 6893 */;
+import _modDef12689 from "module_12689" /* 12689 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13105 */;
+import _modDef13106 from "module_13106" /* 13106 */;
+import MemberActionUtils from "MemberActionUtils" /* 13108 */;
+import _modDef13109 from "module_13109" /* 13109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 
@@ -129,7 +129,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   emoji = emoji.emoji;
   const tmp3 = closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12670 };
+    const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12689 };
     const tmp7 = closure_12(Text(1202).Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -238,7 +238,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   emoji = emoji.emoji;
   let id;
   const tmp = closure_15();
-  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12670 }) };
+  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12689 }) };
   const tmp6 = closure_12(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -247,7 +247,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12670 };
+  const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12689 };
   const items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(573).useStateFromStores(items, () => {
@@ -540,7 +540,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
                     items[1] = map1(View, obj3);
                     let tmp6Result = completed;
                     if (completed) {
-                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13093 };
+                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13109 };
                       tmp6Result = __initData(native.Icon, obj6);
                     }
                     items[2] = tmp6Result;
@@ -791,7 +791,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         items[1] = map1(View, obj3);
         let tmp6Result = completed;
         if (completed) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13093 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13109 };
           tmp6Result = __initData(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -838,7 +838,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
             obj3.children = items1;
             items[1] = map1(View, obj3);
             const obj7 = { style: closure_1.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13090 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13106 };
             obj7.children = __initData(native.Icon, obj8);
             items[2] = __initData(View, obj7);
             obj.children = items;
@@ -870,7 +870,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const cResult = channel(576).c(5);
   channel = channel.channel;
   const obj = channel(576);
-  const canSeeOnboardingHome = channel(7308).useCanSeeOnboardingHome(channel.guild_id);
+  const canSeeOnboardingHome = channel(7309).useCanSeeOnboardingHome(channel.guild_id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberStore];
     cResult[0] = items;
@@ -893,7 +893,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   } else {
     tmp7 = cResult[2];
   }
-  const obj2 = channel(7308);
+  const obj2 = channel(7309);
   const stateFromStores = channel(573).useStateFromStores(first, tmp7);
   const tmpResult = channel(573);
   let tmp9 = null;
@@ -914,8 +914,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   return tmp9;
 }) : (function MemberActionChatInputBannerGuarded(channel) {
   channel = channel.channel;
-  const canSeeOnboardingHome = channel(7308).useCanSeeOnboardingHome(channel.guild_id);
-  const obj = channel(7308);
+  const canSeeOnboardingHome = channel(7309).useCanSeeOnboardingHome(channel.guild_id);
+  const obj = channel(7309);
   const items = [GuildMemberStore];
   const stateFromStores = channel(573).useStateFromStores(items, () => {
     const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);

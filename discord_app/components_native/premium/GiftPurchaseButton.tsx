@@ -1,10 +1,10 @@
-// === Module 14815: GiftPurchaseButton ===
+// === Module 14829: GiftPurchaseButton ===
 
-// Module 14815 (GiftPurchaseButton)
+// Module 14829 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import IAPStore from "IAPStore" /* 7508 */;
+import IAPStore from "IAPStore" /* 7509 */;
 
 const require = globalThis.__r;
 
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   const tmpResult = require("ButtonHooks");
   const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
   if (cResult[4] !== planId) {
-    const productIdForGift = tmp(7503).getProductIdForGift(planId);
+    const productIdForGift = tmp(7504).getProductIdForGift(planId);
     cResult[4] = planId;
     cResult[5] = productIdForGift;
     let tmp12 = productIdForGift;
-    const tmpResult8 = tmp(7503);
+    const tmpResult8 = tmp(7504);
   } else {
     tmp12 = cResult[5];
   }
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   if (tmp23) {
     tmp23 = stateFromStores.planId === planId;
   }
-  const analyticsLocations = recipientUserId(7237)().analyticsLocations;
+  const analyticsLocations = recipientUserId(7238)().analyticsLocations;
   const tmpResult11 = require("initialize");
   const createOrReuseGiftOrder = require("createOrReuseGiftOrder").useCreateOrReuseGiftOrder("GiftPurchaseButton");
   if (cResult[12] === tmp4) {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
             }
             const BaseTextButton = tmp(5231).BaseTextButton;
             const obj4 = { style: obj3, basePlanId: planId, isCurrentPlan: tmp23, isGift: true, product: stateFromStores2 };
-            const tmp28 = recipientUserId(14816)(obj4);
+            const tmp28 = recipientUserId(14830)(obj4);
             if (cResult[19] === BaseTextButton) {
               if (cResult[20] === tmp26) {
                 if (cResult[21] === stateFromStores1) {
@@ -250,14 +250,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
     const premiumTypeFromPlanId = planId(2053).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10416).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10423).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "IconComponent";
     const obj7 = { title: null, body: null };
     const intl = planId(1128).intl;
     obj7.title = intl.string(planId(1128).t.R0RpRX);
     const intl2 = planId(1128).intl;
     obj7.body = intl2.string(planId(1128).t.CKsXk3);
-    tmp3(5896).show(obj7);
+    tmp3(5895).show(obj7);
   }), items3);
   const tmpResult = planId(recipientUserId[14]);
   obj3.children = jsx(planId(recipientUserId[19]).BaseTextButton, { textElement: analyticsLocation(recipientUserId[20])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });

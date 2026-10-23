@@ -1,24 +1,24 @@
-// === Module 18343: VoicePanelPIPUtils ===
+// === Module 18365: VoicePanelPIPUtils ===
 
-// Module 18343 (VoicePanelPIPUtils)
+// Module 18365 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 587 */;
 import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5613 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6631 */;
-import participantHasVideo from "participantHasVideo" /* 10870 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6630 */;
+import participantHasVideo from "participantHasVideo" /* 10878 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(10865);
+const VoicePanelConstants = fn(10873);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(18344);
+const VoicePanelPIPConstants = fn(18366);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
 const ParticipantTypes = fn(5618).ParticipantTypes;
-const MorphablePanelConstants = fn(10866);
+const MorphablePanelConstants = fn(10874);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 let set = new Set();

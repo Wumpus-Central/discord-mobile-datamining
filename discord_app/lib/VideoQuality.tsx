@@ -1,15 +1,15 @@
-// === Module 5886: VideoQuality ===
+// === Module 5885: VideoQuality ===
 
-// Module 5886 (VideoQuality)
+// Module 5885 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import TimeUtils from "TimeUtils" /* 5708 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;
-import Histogram from "Histogram" /* 5870 */;
-import NetworkQualityDefault from "NetworkQuality" /* 5876 */;
-import VideoQualityStats from "VideoQualityStats" /* 5887 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5849 */;
+import Histogram from "Histogram" /* 5869 */;
+import NetworkQualityDefault from "NetworkQuality" /* 5875 */;
+import VideoQualityStats from "VideoQualityStats" /* 5886 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5848 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5728 */;
 
 require = fn;
@@ -1262,7 +1262,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const aggregatedProperties = aggregationDuration.aggregatedProperties;
     ({ bytes, framesDropped, networkFramesDropped, framesCodec, freezeCount, totalFreezesDuration, totalFramesDuration, cryptorFailureCount } = aggregatedProperties);
     let num66 = cryptorFailureCount;
-    ({ framesCodecError, framesNetwork, packets, packetsLost, nackCount, pliCount, qpSum, pauseCount, totalPausesDuration, totalDecodeTime, keyframes, passthroughCount, cryptorSuccessCount, cryptorDuration, cryptorAttempts, cryptorMissingKeyCount, cryptorInvalidNonceCount, qualityDecodeErrors, qualityDecoderReboots, qualityScoreErrors, qualityFrameDrops, qualitySizeMismatches } = aggregatedProperties);
+    ({ framesCodecError, framesCodecErrorNoOutput, framesCodecErrorTimeout, framesCodecErrorGeneric, framesCodecErrorFallback, framesCodecErrorParameter, framesCodecErrorOther, framesNetwork, packets, packetsLost, nackCount, pliCount, qpSum, pauseCount, totalPausesDuration, totalDecodeTime, keyframes, passthroughCount, cryptorSuccessCount, cryptorDuration, cryptorAttempts, cryptorMissingKeyCount, cryptorInvalidNonceCount, qualityDecodeErrors, qualityDecoderReboots, qualityScoreErrors, qualityFrameDrops, qualitySizeMismatches } = aggregatedProperties);
     if (cryptorFailureCount == null) {
       num66 = 0;
     }
@@ -1313,6 +1313,12 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     obj2.num_packets = packets;
     obj2.num_frames = framesNetwork;
     obj2.num_frames_codec_error = framesCodecError;
+    obj2.num_frames_codec_error_no_output = framesCodecErrorNoOutput;
+    obj2.num_frames_codec_error_timeout = framesCodecErrorTimeout;
+    obj2.num_frames_codec_error_generic = framesCodecErrorGeneric;
+    obj2.num_frames_codec_error_fallback = framesCodecErrorFallback;
+    obj2.num_frames_codec_error_parameter = framesCodecErrorParameter;
+    obj2.num_frames_codec_error_other = framesCodecErrorOther;
     obj2.time_to_first_frame_ms = aggregationDuration.timeToFirstFrame;
     obj2.num_frames_dropped = framesDropped + networkFramesDropped;
     obj2.num_nacks = nackCount;

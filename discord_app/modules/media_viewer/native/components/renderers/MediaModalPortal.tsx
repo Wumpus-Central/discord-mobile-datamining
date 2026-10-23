@@ -1,7 +1,7 @@
-// === Module 8733: MediaModalPortal ===
+// === Module 8740: MediaModalPortal ===
 
-// Module 8733 (MediaModalPortal)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8734 */;
+// Module 8740 (MediaModalPortal)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8741 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -369,7 +369,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const muted = paused.muted;
   ({ onLoad: dependencyMap, portal } = paused);
   ({ style, pointerEvents } = paused);
-  const tmp2 = muted(7044)(() => {
+  const tmp2 = muted(7043)(() => {
     let tmp;
     if (dependencyMap != null) {
       tmp = dependencyMap();
@@ -398,7 +398,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8735).unregisterView(portal);
+        muted(8742).unregisterView(portal);
         set.add(portal);
       };
     }

@@ -1,9 +1,9 @@
-// === Module 13404: useGameServerGetExpiringEntitlements ===
+// === Module 13418: useGameServerGetExpiringEntitlements ===
 
-// Module 13404 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 13338 */;
+// Module 13418 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 13352 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8357 */;
+import GameServerStore from "GameServerStore" /* 8358 */;
 
 const require = globalThis.__r;
 
@@ -48,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
     }
     const values = Object.values(entitlements1);
     if (0 !== values.length) {
-      let expiringGuildEntitlements = tmp(13338).getExpiringGuildEntitlements(values);
-      const tmpResult2 = tmp(13338);
+      let expiringGuildEntitlements = tmp(13352).getExpiringGuildEntitlements(values);
+      const tmpResult2 = tmp(13352);
     } else {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,19 +1,19 @@
-// === Module 17730: YouBarAvatarDefault ===
+// === Module 17752: YouBarAvatarDefault ===
 
-// Module 17730 (YouBarAvatarDefault)
+// Module 17752 (YouBarAvatarDefault)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import useToken from "useToken" /* 5238 */;
-import ReactionIcon from "ReactionIcon" /* 9319 */;
-import ClipView from "ClipView" /* 9375 */;
+import ReactionIcon from "ReactionIcon" /* 9326 */;
+import ClipView from "ClipView" /* 9382 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16334);
+const YouBarConstants = fn(16357);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: metroRequire, YOU_BAR_HEIGHT: closure_7, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: c10 } = YouBarConstants);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);

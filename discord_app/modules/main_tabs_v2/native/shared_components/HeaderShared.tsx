@@ -1,6 +1,6 @@
-// === Module 9669: HeaderShared ===
+// === Module 9676: HeaderShared ===
 
-// Module 9669 (HeaderShared)
+// Module 9676 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,13 +8,13 @@ import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useToken from "useToken" /* 5238 */;
-import Pressables from "Pressables" /* 6894 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6911 */;
-import _mod6919 from "module_6919" /* 6919 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9671 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9676 */;
-import ChannelActionsDefault from "ChannelActions" /* 9681 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13953 */;
+import Pressables from "Pressables" /* 6893 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6910 */;
+import _mod6918 from "module_6918" /* 6918 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9678 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9683 */;
+import ChannelActionsDefault from "ChannelActions" /* 9688 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13967 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ let closure_3 = ["title", "subtitle", "color", "subtitleColor", "icon", "maxFont
 let closure_4 = ["labelStyle"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9670).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9677).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);
@@ -230,7 +230,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GenericHeade
   }
   const tmp5 = closure_11();
   closure_5 = tmp5;
-  const tmp6 = color(6911)("os-drawn");
+  const tmp6 = color(6910)("os-drawn");
   if (null == subtitle) {
     if (null == tmp6) {
       let renderTitleContainerResult = renderTitleContainer("header");
@@ -288,7 +288,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
     const obj3 = { labelStyle: tmp10, displayMode: "default", backImage: tmp12, truncatedLabel: null, accessibilityLabel: null };
     ({ label: obj2.truncatedLabel, label: obj2.accessibilityLabel } = tmp5);
     const merged = Object.assign(tmp5);
-    const tmp18 = React6(_mod6919.HeaderBackButton, obj3);
+    const tmp18 = React6(_mod6918.HeaderBackButton, obj3);
     cResult[7] = tmp5;
     cResult[8] = tmp10;
     cResult[9] = tmp18;
@@ -313,7 +313,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
   const items = [closure_11().backButtonLabel, labelStyle.labelStyle];
   obj.labelStyle = items;
   const merged1 = Object.assign(merged);
-  return React6(_mod6919.HeaderBackButton, obj);
+  return React6(_mod6918.HeaderBackButton, obj);
 });
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);
@@ -342,7 +342,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const obj = navigation(576);
   const text = navigation(1506).useTheme().colors.text;
   const tmpResult = navigation(1506);
-  const gradientTop = navigation(9678).useGradientTop();
+  const gradientTop = navigation(9685).useGradientTop();
   const sum = num + MIN_HEADER_HEIGHT;
   if (cResult[0] === num) {
     if (cResult[1] === sum) {
@@ -454,7 +454,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[1] = sum;
   cResult[2] = obj6;
   tmp9 = obj6;
-  const tmpResult2 = navigation(9678);
+  const tmpResult2 = navigation(9685);
 }) : (function HeaderInner(style) {
   ({ navigation, options, back, shouldHandleSafeArea } = style);
   if (shouldHandleSafeArea === undefined) {

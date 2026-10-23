@@ -1,14 +1,14 @@
-// === Module 18004: ChannelTitle ===
+// === Module 18026: ChannelTitle ===
 
-// Module 18004 (ChannelTitle)
+// Module 18026 (ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18000 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_6 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });

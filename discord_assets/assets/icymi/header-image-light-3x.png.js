@@ -1,6 +1,6 @@
-// === Module 17819: ? ===
+// === Module 17841: ? ===
 
-// Module 17819
+// Module 17841
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/icymi/header-image-light-3x.png.js");

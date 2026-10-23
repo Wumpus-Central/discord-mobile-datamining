@@ -1,8 +1,8 @@
-// === Module 16596: DisplayNameStylesSheetHeader ===
+// === Module 16618: DisplayNameStylesSheetHeader ===
 
-// Module 16596 (DisplayNameStylesSheetHeader)
+// Module 16618 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 587 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7233 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       const merged = Object.assign(tmp5);
       obj3.leading = tmp13;
       obj3.trailing = tmp15;
-      const tmp22 = jsx(tmp(7232).BottomSheetTitleHeader, {});
+      const tmp22 = jsx(tmp(7233).BottomSheetTitleHeader, {});
       cResult[12] = tmp5;
       cResult[13] = tmp13;
       cResult[14] = tmp15;

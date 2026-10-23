@@ -1,6 +1,6 @@
-// === Module 13251: useEmojiSuggestionNuxCoachmark ===
+// === Module 13267: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13251 (useEmojiSuggestionNuxCoachmark)
+// Module 13267 (useEmojiSuggestionNuxCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,7 +11,7 @@ import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1647 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 5147 */;
 import useToken from "useToken" /* 5238 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5582 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12981 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12997 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,11 +92,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
     cResult[0] = tmp7;
     cResult[1] = items1;
   } else {
-    const tmp5Result = _slicedToArray(tmp2(7480).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp5Result = _slicedToArray(tmp2(7481).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp12;
     const tmp13 = tmp5Result[0] === tmp2(4805).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
     closure_1 = tmp13;
-    const tmp2Result = tmp2(7480);
+    const tmp2Result = tmp2(7481);
     if (cResult[2] !== tmp13) {
       const fn = function f() {
         if (closure_1) {

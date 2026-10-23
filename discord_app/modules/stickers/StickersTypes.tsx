@@ -1,6 +1,6 @@
-// === Module 6475: StickersTypes ===
+// === Module 6474: StickersTypes ===
 
-// Module 6475 (StickersTypes)
+// Module 6474 (StickersTypes)
 import js_shim_PlainRecord from "js_shim/PlainRecord" /* 4837 */;
 import shared from "shared" /* 4976 */;
 import size from "module_2" /* 2 */;

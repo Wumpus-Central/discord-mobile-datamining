@@ -1,6 +1,6 @@
-// === Module 18354: ActivityPanelStateContext ===
+// === Module 18376: ActivityPanelStateContext ===
 
-// Module 18354 (ActivityPanelStateContext)
+// Module 18376 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {
@@ -15,11 +15,11 @@ const obj = {
   wrapperOffset: null,
   useActivityWebViewLock: null
 };
-let ReanimatedHelperTypes = fn(7155);
+let ReanimatedHelperTypes = fn(7154);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(7155);
+ReanimatedHelperTypes = fn(7154);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-ReanimatedHelperTypes = fn(7155);
+ReanimatedHelperTypes = fn(7154);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 obj.useActivityWebViewLock = function useActivityWebViewLock() {
   return true;

@@ -1,6 +1,6 @@
-// === Module 13656: GuildDirectoryNicknameUpsellModal ===
+// === Module 13670: GuildDirectoryNicknameUpsellModal ===
 
-// Module 13656 (GuildDirectoryNicknameUpsellModal)
+// Module 13670 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,11 +9,11 @@ import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
 import useInitialValueDefault from "useInitialValue" /* 5585 */;
-import GuildIcon from "GuildIcon" /* 6869 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6993 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13648 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13655 */;
+import GuildIcon from "GuildIcon" /* 6868 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6992 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13662 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(13647).GuildPrompts;
+const GuildPrompts = fn(13661).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4969);
@@ -219,13 +219,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
                   obj5.error = tmp43;
                   obj5.onFocus = J;
                   obj5.onBlur = Q;
-                  const tmp50 = closure_10(tmp9(6993), obj5);
+                  const tmp50 = closure_10(tmp9(6992), obj5);
                   cResult[34] = first1;
                   cResult[35] = tmp4.input;
                   cResult[36] = tmp4.redesignTextInput;
                   cResult[37] = tmp43;
                   cResult[38] = tmp50;
-                  const tmp9Result = tmp9(6993);
+                  const tmp9Result = tmp9(6992);
                 }
               }
               const obj6 = { style: header, children: null };
@@ -244,12 +244,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
             cResult[20] = tmp29;
             tmp27 = tmp29;
           }
-          const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6869).GuildIconSizes.XLARGE };
-          const tmp21 = closure_10(tmp9(6869), obj8);
+          const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6868).GuildIconSizes.XLARGE };
+          const tmp21 = closure_10(tmp9(6868), obj8);
           cResult[13] = stateFromStores;
           cResult[14] = tmp4.guildIcon;
           cResult[15] = tmp21;
-          const tmp9Result2 = tmp9(6869);
+          const tmp9Result2 = tmp9(6868);
         }
         const items2 = [tmp4.container, tmp16];
         cResult[10] = tmp4.container;
@@ -266,11 +266,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
   _require = first1(function*() {
     tmp30(null);
     let nick = 1;
-    yield closure_0(7202).updateGuildSelfMember(closure_0, { nick });
+    yield closure_0(7201).updateGuildSelfMember(closure_0, { nick });
     if (1 === tmp7) {
       nick = 0;
       closure_128_0 = tmp30;
-      const aPIError = new closure_0(6360).APIError(closure_128_0);
+      const aPIError = new closure_0(6359).APIError(closure_128_0);
       tmp30(aPIError);
       c5 = 3;
     } else if (arg0 === 1) {

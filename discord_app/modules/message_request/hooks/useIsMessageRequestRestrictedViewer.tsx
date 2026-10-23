@@ -1,8 +1,8 @@
-// === Module 13270: useIsMessageRequestRestrictedViewer ===
+// === Module 13284: useIsMessageRequestRestrictedViewer ===
 
-// Module 13270 (useIsMessageRequestRestrictedViewer)
+// Module 13284 (useIsMessageRequestRestrictedViewer)
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5637 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6640 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6639 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

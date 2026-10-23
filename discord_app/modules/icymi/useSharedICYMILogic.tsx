@@ -1,19 +1,19 @@
-// === Module 17830: useSharedICYMILogic ===
+// === Module 17852: useSharedICYMILogic ===
 
-// Module 17830 (useSharedICYMILogic)
-import ICYMITypes from "ICYMITypes" /* 8804 */;
-import ICYMIUtils from "ICYMIUtils" /* 8808 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8809 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15590 */;
-import ICYMIStoreUtils from "ICYMIStoreUtils" /* 17800 */;
+// Module 17852 (useSharedICYMILogic)
+import ICYMITypes from "ICYMITypes" /* 8811 */;
+import ICYMIUtils from "ICYMIUtils" /* 8815 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8816 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15603 */;
+import ICYMIStoreUtils from "ICYMIStoreUtils" /* 17822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 8791 */;
+import ICYMIStore from "ICYMIStore" /* 8798 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let SCROLL_EVENT_THROTTLE_MS = fn(17796).SCROLL_EVENT_THROTTLE_MS;
+let SCROLL_EVENT_THROTTLE_MS = fn(17818).SCROLL_EVENT_THROTTLE_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
@@ -544,16 +544,16 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled() 
       const viewableFeedItemsArray = ICYMIStoreUtils.getViewableFeedItemsArray(viewableItems);
       const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
       const result = ICYMIAnalytics.trackItemLongImpression(viewableItems, viewableFeedItemsArray.map((id) => {
-        const obj = { id: id.id, type: notificationItem(8804).typeToString(id) };
+        const obj = { id: id.id, type: notificationItem(8811).typeToString(id) };
         return obj;
       }), stateFromStores);
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(17801).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(17823).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(found.map((item) => {
         item = item.item;
-        const obj = { itemId: item.id, itemType: notificationItem(8808).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+        const obj = { itemId: item.id, itemType: notificationItem(8815).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
         let score = item.score;
         if (score == null) {
           score = null;
@@ -571,12 +571,12 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled() 
   const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(17801).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(17823).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     closure_1(unreadItems[11]).startItemsDwell(found.map((item) => {
       item = item.item;
-      const obj = { itemId: item.id, itemType: notificationItem(8808).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+      const obj = { itemId: item.id, itemType: notificationItem(8815).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
       let score = item.score;
       if (score == null) {
         score = null;

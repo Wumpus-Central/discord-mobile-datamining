@@ -1,15 +1,34 @@
-// === Module 12297: conjureMessageAuthors ===
+// === Module 12308: conjureMessageAuthors ===
 
-// Module 12297 (conjureMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8643 */;
+// Module 12308 (conjureMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8650 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const set = new Set();
+let closure_8 = async function _settle() {
+  c2 = 0;
+  c1 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    await value;
+    if (1 === tmp6) {
+      c3 = 0;
+      c1 = 3;
+    } else if (arg0 === 1) {
+      c1 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      c3 = 0;
+    }
+    return value;
+  })();
+};
 const map = new Map();
+const map1 = new Map();
 const ReactCompilerGating = fn(558);
 function resolveMessageAuthor(arg0, arg1, arg2) {
   if (null == arg0) {
@@ -29,24 +48,37 @@ function resolveMessageAuthor(arg0, arg1, arg2) {
 function requestMessageAuthor(actor_user_id) {
   closure_0 = actor_user_id;
   if (null != actor_user_id) {
-    if (!set.has(actor_user_id)) {
-      if (null == UserStore.getUser(actor_user_id)) {
-        let num = map.get(actor_user_id);
+    if (null == UserStore.getUser(actor_user_id)) {
+      value = map.get(actor_user_id);
+      if (null != value) {
+        return value;
+      } else {
+        let num = map1.get(actor_user_id);
         if (num == null) {
           num = 0;
         }
-        if (num < 3) {
-          const result = map.set(actor_user_id, num + 1);
-          set.add(actor_user_id);
+        if (num >= 3) {
+          return Promise.resolve();
+        } else {
+          const result = map1.set(actor_user_id, num + 1);
           const user = UserActionCreatorsAll.getUser(actor_user_id);
-          user.finally(() => set.delete(closure_0)).catch(() => {
-
-          });
-          const cleanupPromise = user.finally(() => set.delete(closure_0));
+          const tmp4 = (function settle() {
+            const self = this;
+            const apply = closure_1_8.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(user.finally(() => set.delete(closure_0)));
+          const result1 = map.set(actor_user_id, tmp4);
+          return tmp4;
         }
       }
     }
   }
+  return Promise.resolve();
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureMessageAuthors.tsx");
@@ -57,26 +89,34 @@ export const useMessageAuthorUser = ReactCompilerGating.isReactCompilerEnabled()
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] !== arg0) {
-    const fn = function o() {
+    const fn = function n() {
       if (null != closure_0) {
-        if (!set.has(closure_0)) {
-          if (null == UserStore.getUser(closure_0)) {
-            let num = map.get(closure_0);
+        if (null == UserStore.getUser(closure_0)) {
+          if (null == map.get(closure_0)) {
+            let num = map1.get(closure_0);
             if (num == null) {
               num = 0;
             }
-            if (num < 3) {
-              const result = map.set(closure_0, num + 1);
-              set.add(closure_0);
+            if (num >= 3) {
+              const resolved = Promise.resolve();
+            } else {
+              const result = map1.set(closure_0, num + 1);
               const user = UserActionCreatorsAll.getUser(closure_0);
-              user.finally(() => set.delete(closure_0)).catch(() => {
-
-              });
-              const cleanupPromise = user.finally(() => set.delete(closure_0));
+              const result1 = map.set(closure_0, (function settle() {
+                const self = this;
+                const apply = closure_1_8.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(user.finally(() => set.delete(closure_0))));
             }
           }
         }
       }
+      const resolved1 = Promise.resolve();
     };
     const items = [arg0];
     cResult[0] = arg0;
@@ -130,24 +170,32 @@ export const useMessageAuthorUser = ReactCompilerGating.isReactCompilerEnabled()
   const items = [arg0];
   const effect = noop.useEffect(() => {
     if (null != closure_0) {
-      if (!set.has(closure_0)) {
-        if (null == UserStore.getUser(closure_0)) {
-          let num = map.get(closure_0);
+      if (null == UserStore.getUser(closure_0)) {
+        if (null == map.get(closure_0)) {
+          let num = map1.get(closure_0);
           if (num == null) {
             num = 0;
           }
-          if (num < 3) {
-            const result = map.set(closure_0, num + 1);
-            set.add(closure_0);
+          if (num >= 3) {
+            const resolved = Promise.resolve();
+          } else {
+            const result = map1.set(closure_0, num + 1);
             const user = UserActionCreatorsAll.getUser(closure_0);
-            user.finally(() => set.delete(closure_0)).catch(() => {
-
-            });
-            const cleanupPromise = user.finally(() => set.delete(closure_0));
+            const result1 = map.set(closure_0, (function settle() {
+              const self = this;
+              const apply = closure_1_8.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })(user.finally(() => set.delete(closure_0))));
           }
         }
       }
     }
+    const resolved1 = Promise.resolve();
   }, items);
   const items1 = [UserStore];
   const items2 = [arg0];

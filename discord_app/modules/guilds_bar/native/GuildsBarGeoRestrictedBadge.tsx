@@ -1,10 +1,10 @@
-// === Module 17690: GuildsBarGeoRestrictedBadge ===
+// === Module 17712: GuildsBarGeoRestrictedBadge ===
 
-// Module 17690 (GuildsBarGeoRestrictedBadge)
+// Module 17712 (GuildsBarGeoRestrictedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef16164 from "module_16164" /* 16164 */;
+import _modDef16182 from "module_16182" /* 16182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const createStyles = fn(4969);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6693).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(6692).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp4 = cResult[2];
     }
     if (cResult[3] !== tmp3.badgeImage) {
-      const obj2 = { source: _modDef16164, style: tmp3.badgeImage };
-      const tmp9 = jsx(FastImageDefault, { source: _modDef16164, style: tmp3.badgeImage });
+      const obj2 = { source: _modDef16182, style: tmp3.badgeImage };
+      const tmp9 = jsx(FastImageDefault, { source: _modDef16182, style: tmp3.badgeImage });
       cResult[3] = tmp3.badgeImage;
       cResult[4] = tmp9;
       let tmp5 = tmp9;
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef16164, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16164, style: tmp.badgeImage });
+  const obj2 = { source: _modDef16182, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16182, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 }));

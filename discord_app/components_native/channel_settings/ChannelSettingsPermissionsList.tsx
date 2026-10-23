@@ -1,11 +1,11 @@
-// === Module 18180: ChannelSettingsPermissionsList ===
+// === Module 18202: ChannelSettingsPermissionsList ===
 
-// Module 18180 (ChannelSettingsPermissionsList)
+// Module 18202 (ChannelSettingsPermissionsList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 2000 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -311,7 +311,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    class B {
+    class G {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -328,11 +328,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const items2 = [stateFromStores];
     cResult[4] = stateFromStores;
-    cResult[5] = B;
+    cResult[5] = G;
     cResult[6] = items2;
     let tmp15 = items2;
   } else {
-    class B {
+    class G {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -350,10 +350,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp15 = cResult[6];
   }
   const tmpResult = channelId(stateFromStores[13]);
-  const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, B, tmp15);
+  const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, G, tmp15);
   guildId = stateFromStoresObject.guildId;
   if (stateFromStores != null) {
-    class B {
+    class G {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -370,7 +370,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   if (cResult[7] === guildId) {
-    class B {
+    class G {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -490,7 +490,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const intl = tmp2(tmp3[25]).intl;
   obj9.placeholder = intl.string(channelId(stateFromStores[25]).t["5h0QOP"]);
   obj9.onChange = tmp5[1];
-  obj8.children = closure_13(channelId(stateFromStores[24]).SearchField, obj9);
+  obj8.children = closure_13(channelId(stateFromStores[24]).SearchBar, obj9);
   const items5 = [closure_13(rows1, obj8), ];
   if (0 !== (type === constants.ROLE ? rows1.length : rows.length)) {
     if (type === constants.ROLE) {

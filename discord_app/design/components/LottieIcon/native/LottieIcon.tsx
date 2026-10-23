@@ -1,12 +1,12 @@
-// === Module 11537: LottieIcon ===
+// === Module 11548: LottieIcon ===
 
-// Module 11537 (LottieIcon)
+// Module 11548 (LottieIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4983 */;
 import _modDef5215 from "module_5215" /* 5215 */;
 import useToken from "useToken" /* 5238 */;
-import IconSize from "IconSize" /* 7008 */;
+import IconSize from "IconSize" /* 7007 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

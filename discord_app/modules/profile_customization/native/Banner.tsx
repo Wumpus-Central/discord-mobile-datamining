@@ -1,6 +1,6 @@
-// === Module 8718: Banner ===
+// === Module 8725: Banner ===
 
-// Module 8718 (Banner)
+// Module 8725 (Banner)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import FastImageDefault from "FastImage" /* 5655 */;

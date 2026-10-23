@@ -1,11 +1,11 @@
-// === Module 17061: UserSettingsDesignSystemStack ===
+// === Module 17083: UserSettingsDesignSystemStack ===
 
-// Module 17061 (UserSettingsDesignSystemStack)
+// Module 17083 (UserSettingsDesignSystemStack)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import Card from "Card" /* 6891 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import Card from "Card" /* 6890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

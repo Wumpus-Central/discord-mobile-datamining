@@ -1,22 +1,22 @@
-// === Module 17430: RedesignCategory ===
+// === Module 17452: RedesignCategory ===
 
-// Module 17430 (RedesignCategory)
+// Module 17452 (RedesignCategory)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useChannelNameDefault from "useChannelName" /* 5590 */;
-import CircleXIcon from "CircleXIcon" /* 7004 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7195 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7275 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10661 */;
-import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11215 */;
-import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13790 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 17431 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 17432 */;
+import CircleXIcon from "CircleXIcon" /* 7003 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7194 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7276 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10668 */;
+import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11224 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 13804 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 17453 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 17454 */;
 import noop from "module_19" /* 19 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7624 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7199 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7625 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7198 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
 
 require = fn;
 function renderCategoryItem(muted) {
@@ -60,7 +60,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(11115).PlusMediumIcon;
+    Icon = trailingAction(11124).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , , ];
@@ -107,7 +107,7 @@ function renderCategoryItem(muted) {
         obj7.onLongPress = onLongPress;
         obj7.style = items;
         obj7.children = tmp18Result;
-        let tmp28Result = closure_12(trailingAction(6894).PressableHighlight, obj7);
+        let tmp28Result = closure_12(trailingAction(6893).PressableHighlight, obj7);
       } else {
         const obj8 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_12(View, obj8);
@@ -135,14 +135,14 @@ function renderCategoryItem(muted) {
     const obj11 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_12(Icon, obj11);
     obj10.children = colors;
-    obj10 = closure_12(trailingAction(6894).PressableOpacity, obj10);
+    obj10 = closure_12(trailingAction(6893).PressableOpacity, obj10);
     obj9.children = obj10;
     closure_12(View, obj9);
   }
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12003);
+const RedesignChannelListConstants = fn(12014);
 ({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: closure_9, CATEGORY_NAME_LINE_HEIGHT: c10, CATEGORY_VERTICAL_PADDING: closure_11 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -316,7 +316,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CategoryChan
   const colors = nativeDefault.colors;
   const obj6 = {};
   merged = Object.assign(merged);
-  ChevronSmallDownIcon = ChevronSmallDownIcon(11043).ChevronSmallDownIcon;
+  ChevronSmallDownIcon = ChevronSmallDownIcon(11052).ChevronSmallDownIcon;
   obj6.icon = closure_12(ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
   obj = { expanded: !collapsed2 };
   obj6.accessibilityState = obj;
@@ -372,7 +372,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CategoryChan
   const colors = nativeDefault.colors;
   const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj7.icon = closure_12(channel(11043).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
+  obj7.icon = closure_12(channel(11052).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? obj3 : obj4 });
   obj7.accessibilityState = { expanded: !collapsed2 };
   return renderCategoryItem(obj7);
 });
@@ -428,7 +428,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RecentlyActi
     const colors = stateFromStores(587).colors;
     const obj5 = {};
     merged = Object.assign(merged);
-    ChevronSmallDownIcon = ChevronSmallDownIcon(11043).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = ChevronSmallDownIcon(11052).ChevronSmallDownIcon;
     const obj6 = { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : {} };
     obj5.icon = closure_12(ChevronSmallDownIcon, obj6);
     obj = { expanded: !collapsed };
@@ -471,7 +471,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RecentlyActi
   const colors = stateFromStores(587).colors;
   obj3 = {};
   const merged1 = Object.assign(merged);
-  obj3.icon = closure_12(tmp2(11043).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
+  obj3.icon = closure_12(tmp2(11052).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? obj3 : obj4 });
   obj3.accessibilityState = { expanded: !collapsed };
   return renderCategoryItem(obj3);
 });

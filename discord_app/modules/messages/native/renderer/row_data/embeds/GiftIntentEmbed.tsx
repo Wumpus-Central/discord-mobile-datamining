@@ -1,15 +1,15 @@
-// === Module 8432: GiftIntentEmbed ===
+// === Module 8433: GiftIntentEmbed ===
 
-// Module 8432 (GiftIntentEmbed)
+// Module 8433 (GiftIntentEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import _modDef5653 from "module_5653" /* 5653 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8262 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8436 */;
-import _modDef8437 from "module_8437" /* 8437 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8263 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8437 */;
 import _modDef8438 from "module_8438" /* 8438 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8433 */;
+import _modDef8439 from "module_8439" /* 8439 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8434 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -68,8 +68,8 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5653);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8437);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8438);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8438);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8439);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

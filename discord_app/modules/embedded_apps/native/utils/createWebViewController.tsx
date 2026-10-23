@@ -1,9 +1,9 @@
-// === Module 11411: createWebViewController ===
+// === Module 11422: createWebViewController ===
 
-// Module 11411 (createWebViewController)
+// Module 11422 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11415 */;
-import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11431 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11426 */;
+import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const ComponentActions = fn(1087).ComponentActions;
 let closure_5 = fn(2026).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(6364).TransportTypes;
+const TransportTypes = fn(6363).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 
@@ -30,7 +30,7 @@ export default function createWebViewController(id, contextSource) {
   }
   closure_5 = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10728)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10735)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;

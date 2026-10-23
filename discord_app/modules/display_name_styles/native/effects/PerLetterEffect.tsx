@@ -1,6 +1,6 @@
-// === Module 10636: PerLetterEffect ===
+// === Module 10643: PerLetterEffect ===
 
-// Module 10636 (PerLetterEffect)
+// Module 10643 (PerLetterEffect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -21,10 +21,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10637)();
+    const regex = colors(10644)();
     closure_1 = 0;
-    let obj = name(10638);
-    return name(10638).splitGraphemes(regex).map((children, index) => {
+    let obj = name(10645);
+    return name(10645).splitGraphemes(regex).map((children, index) => {
       regex.lastIndex = 0;
       const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
@@ -54,7 +54,7 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj2.accessibilityLabel = accessibilityLabel;
-  const items2 = [textStyle, { lineHeight: "Array" }];
+  const items2 = [textStyle, { lineHeight: "r" }];
   obj2.style = items2;
   obj2.children = memo;
   obj.children = jsx(name(5220).Text, {});

@@ -1,8 +1,8 @@
-// === Module 9023: DefaultInviteExpirationExperiments ===
+// === Module 9030: DefaultInviteExpirationExperiments ===
 
-// Module 9023 (DefaultInviteExpirationExperiments)
+// Module 9030 (DefaultInviteExpirationExperiments)
 import c from "c" /* 576 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9021 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9028 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;

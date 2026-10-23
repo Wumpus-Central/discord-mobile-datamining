@@ -1,17 +1,17 @@
-// === Module 19356: AppShare ===
+// === Module 19379: AppShare ===
 
-// Module 19356 (AppShare)
+// Module 19379 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useMountEffectDefault from "useMountEffect" /* 5249 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6654 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7568 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7875 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8820 */;
-import ShareScreenDefault from "ShareScreen" /* 15082 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 15625 */;
-import _modDef15756 from "module_15756" /* 15756 */;
-import AppToastContainerDefault from "AppToastContainer" /* 18323 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6653 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7569 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7876 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8827 */;
+import ShareScreenDefault from "ShareScreen" /* 15095 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 15638 */;
+import _modDef15770 from "module_15770" /* 15770 */;
+import AppToastContainerDefault from "AppToastContainer" /* 18345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -20,10 +20,10 @@ const require = globalThis.__r;
 
 require = fn;
 fn(17).BackHandler;
-const AnalyticsTrackingStore = fn(7554);
-const ShareStore = fn(15585);
+const AnalyticsTrackingStore = fn(7555);
+const ShareStore = fn(15598);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_8 = fn(13234).MultiAccountSwitchLocation;
+let closure_8 = fn(13250).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -272,9 +272,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { appEntryKey: share };
-          const tmp27 = closure_9(tmp(18266).ActionSheetContainer, obj2);
+          const tmp27 = closure_9(tmp(18288).ActionSheetContainer, obj2);
           const tmp28 = closure_9(AppToastContainerDefault, { appChrome: false });
-          const tmp29 = closure_9(tmp(5901).AlertModalContainer, {});
+          const tmp29 = closure_9(tmp(5900).AlertModalContainer, {});
           cResult[9] = tmp27;
           cResult[10] = tmp28;
           cResult[11] = tmp29;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
           const obj3 = { appEntryKey: share, children: null };
           const items = [tmp13, tmp22, tmp23, tmp24];
           obj3.children = items;
-          const tmp33 = closure_10(_modDef15756, obj3);
+          const tmp33 = closure_10(_modDef15770, obj3);
           cResult[12] = tmp13;
           cResult[13] = tmp33;
           let tmp30 = tmp33;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
       }
     }
     if (!tmp4) {
-      const tmp14Result = closure_9(tmp(7120).SceneLoadingIndicator, {});
+      const tmp14Result = closure_9(tmp(7119).SceneLoadingIndicator, {});
       cResult[6] = tmp4;
       cResult[7] = attachments;
       cResult[8] = tmp14Result;

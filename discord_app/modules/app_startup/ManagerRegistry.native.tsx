@@ -1,7 +1,7 @@
-// === Module 18629: ManagerRegistry ===
+// === Module 18651: ManagerRegistry ===
 
-// Module 18629 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19321 */;
+// Module 18651 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19344 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

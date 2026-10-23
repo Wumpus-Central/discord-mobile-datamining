@@ -1,15 +1,15 @@
-// === Module 9363: ProfileEffect ===
+// === Module 9370: ProfileEffect ===
 
-// Module 9363 (ProfileEffect)
+// Module 9370 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8690 */;
-import utils from "utils" /* 9364 */;
-import constants from "constants" /* 9365 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9366 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9369 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8697 */;
+import utils from "utils" /* 9371 */;
+import constants from "constants" /* 9372 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9373 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;

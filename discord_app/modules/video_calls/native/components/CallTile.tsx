@@ -1,6 +1,6 @@
-// === Module 11656: CallTile ===
+// === Module 11667: CallTile ===
 
-// Module 11656 (CallTile)
+// Module 11667 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -8,22 +8,22 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11657 */;
-import _modDef11662 from "module_11662" /* 11662 */;
-import _modDef11663 from "module_11663" /* 11663 */;
-import _modDef11664 from "module_11664" /* 11664 */;
-import _modDef11665 from "module_11665" /* 11665 */;
-import _modDef11666 from "module_11666" /* 11666 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11667 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11668 */;
+import _modDef11673 from "module_11673" /* 11673 */;
+import _modDef11674 from "module_11674" /* 11674 */;
+import _modDef11675 from "module_11675" /* 11675 */;
+import _modDef11676 from "module_11676" /* 11676 */;
+import _modDef11677 from "module_11677" /* 11677 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11678 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10847);
+const ChannelCallStore = fn(10855);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(5618);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
@@ -127,17 +127,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef11662;
+    let tmp4 = _modDef11673;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef11663;
+      tmp4 = _modDef11674;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef11664;
+      tmp4 = _modDef11675;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp4 = _modDef11665;
+      tmp4 = _modDef11676;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp4 = _modDef11666;
+      tmp4 = _modDef11677;
     }
   }
   if (null == tmp4) {
@@ -157,17 +157,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
 }) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11662;
+    let tmp3 = _modDef11673;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11663;
+      tmp3 = _modDef11674;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef11664;
+      tmp3 = _modDef11675;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef11665;
+      tmp3 = _modDef11676;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef11666;
+      tmp3 = _modDef11677;
     }
   }
   let tmp14 = null;
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11314).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11323).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -332,7 +332,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11314).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11323).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {

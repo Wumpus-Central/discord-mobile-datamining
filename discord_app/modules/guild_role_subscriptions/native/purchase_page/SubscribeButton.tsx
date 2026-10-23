@@ -1,13 +1,13 @@
-// === Module 17897: SubscribeButton ===
+// === Module 17919: SubscribeButton ===
 
-// Module 17897 (SubscribeButton)
+// Module 17919 (SubscribeButton)
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9767 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16478 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9774 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -110,7 +110,7 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(16478);
+  let obj = changeToListingId(16500);
   const obj3 = { children: null };
   const obj2 = activeListingId(2049)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -123,9 +123,9 @@ function SwitchTiersButton(activeSubscription) {
   obj6.text = intl2.string(activeSubscription(1128).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17898, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(17920, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(17891).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(17913).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }

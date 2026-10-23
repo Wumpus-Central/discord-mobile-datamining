@@ -1,6 +1,6 @@
-// === Module 8862: guildEventFetchGuard ===
+// === Module 8869: guildEventFetchGuard ===
 
-// Module 8862 (guildEventFetchGuard)
+// Module 8869 (guildEventFetchGuard)
 import DurationsDefault from "Durations" /* 1104 */;
 
 let map4 = fn;

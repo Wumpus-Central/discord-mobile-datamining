@@ -1,23 +1,23 @@
-// === Module 17315: BellSpotIllustration ===
+// === Module 17337: BellSpotIllustration ===
 
-// Module 17315 (BellSpotIllustration)
+// Module 17337 (BellSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef17316 from "module_17316" /* 17316 */;
-import _modDef17317 from "module_17317" /* 17317 */;
-import _modDef17318 from "module_17318" /* 17318 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef17338 from "module_17338" /* 17338 */;
+import _modDef17339 from "module_17339" /* 17339 */;
+import _modDef17340 from "module_17340" /* 17340 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17316 }, 3: null };
-let obj2 = { uri: _modDef17316 };
-obj[2] = { uri: _modDef17317 };
-const obj3 = { uri: _modDef17317 };
-obj[3] = { uri: _modDef17318 };
+let obj = { 1: null, 2: { uri: _modDef17338 }, 3: null };
+let obj2 = { uri: _modDef17338 };
+obj[2] = { uri: _modDef17339 };
+const obj3 = { uri: _modDef17339 };
+obj[3] = { uri: _modDef17340 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17318 };
+const obj4 = { uri: _modDef17340 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BellSpotIllustration.native.tsx");
 

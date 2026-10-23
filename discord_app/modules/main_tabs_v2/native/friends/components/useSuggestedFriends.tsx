@@ -1,16 +1,16 @@
-// === Module 17369: useSuggestedFriends ===
+// === Module 17391: useSuggestedFriends ===
 
-// Module 17369 (useSuggestedFriends)
+// Module 17391 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7719 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7720 */;
 
 require = fn;
-const SuggestedFriendSource = fn(13525).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13539).SuggestedFriendSource;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");

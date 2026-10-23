@@ -1,11 +1,11 @@
-// === Module 8485: transformNativeMarkupMention ===
+// === Module 8486: transformNativeMarkupMention ===
 
-// Module 8485 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5967 */;
-import MarkupRules from "MarkupRules" /* 5969 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5979 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 8486 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 8567 */;
+// Module 8486 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5966 */;
+import MarkupRules from "MarkupRules" /* 5968 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5978 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 8487 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 8568 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -21,15 +21,15 @@ export const transformNativeMention = function transformNativeMention(value, all
   const type = value.type;
   if ("user" === type) {
     const str1 = value.value.toString();
-    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "r" };
+    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "Array" };
     const _HermesInternal2 = HermesInternal;
     obj5.fullMatch = "<@" + str1 + ">";
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "application", everyoneOrHere: 4259842 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "application", everyoneOrHere: false }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "application", everyoneOrHere: null }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "application", everyoneOrHere: false }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

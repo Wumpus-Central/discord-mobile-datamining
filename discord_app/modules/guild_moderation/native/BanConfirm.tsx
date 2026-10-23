@@ -1,10 +1,10 @@
-// === Module 12720: BanConfirm ===
+// === Module 12739: BanConfirm ===
 
-// Module 12720 (BanConfirm)
+// Module 12739 (BanConfirm)
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -318,7 +318,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_12721"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_12740"), resizeMode: "contain" };
       const items4 = [closure_9(require("FastImage"), obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

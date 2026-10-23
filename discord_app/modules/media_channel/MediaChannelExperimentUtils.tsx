@@ -1,6 +1,6 @@
-// === Module 8937: MediaChannelExperimentUtils ===
+// === Module 8944: MediaChannelExperimentUtils ===
 
-// Module 8937 (MediaChannelExperimentUtils)
+// Module 8944 (MediaChannelExperimentUtils)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

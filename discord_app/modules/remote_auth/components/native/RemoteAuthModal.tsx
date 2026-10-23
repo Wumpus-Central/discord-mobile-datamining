@@ -1,6 +1,6 @@
-// === Module 15040: RemoteAuthModal ===
+// === Module 15053: RemoteAuthModal ===
 
-// Module 15040 (RemoteAuthModal)
+// Module 15053 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,13 +12,13 @@ import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import ButtonGroup from "ButtonGroup" /* 6682 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6866 */;
-import _modDef15039 from "module_15039" /* 15039 */;
-import _modDef15041 from "module_15041" /* 15041 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15042 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15046 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import ButtonGroup from "ButtonGroup" /* 6681 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6865 */;
+import _modDef15052 from "module_15052" /* 15052 */;
+import _modDef15054 from "module_15054" /* 15054 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15055 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { scale };
-      const tmp18 = closure_7(tmp(15042).QrLoginSpotIllustration, obj4);
+      const tmp18 = closure_7(tmp(15055).QrLoginSpotIllustration, obj4);
       cResult[7] = tmp18;
       let tmp15 = tmp18;
     } else {
@@ -342,7 +342,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
         const obj10 = { style: tmp4.buttonGroup, children: null };
         const items2 = [tmp34, tmp39];
         obj10.children = items2;
-        const tmp44 = closure_8(tmp(6682).ButtonGroup, obj10);
+        const tmp44 = closure_8(tmp(6681).ButtonGroup, obj10);
         cResult[22] = tmp4.buttonGroup;
         cResult[23] = tmp34;
         cResult[24] = tmp39;
@@ -665,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const tmp3 = closure_10();
   const top = useSafeAreaInsetsDefault().top;
   if (cResult[0] !== tmp3.imageStyle) {
-    const obj2 = { source: _modDef15041, style: tmp3.imageStyle };
+    const obj2 = { source: _modDef15054, style: tmp3.imageStyle };
     const tmp8 = React5(FastImageDefault, obj2);
     cResult[0] = tmp3.imageStyle;
     cResult[1] = tmp8;
@@ -742,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const obj8 = { style: null, source: null };
   const items1 = [tmp3.logo, tmp9];
   obj8.style = items1;
-  obj8.source = _modDef15039;
+  obj8.source = _modDef15052;
   const tmp12 = React5(FastImageDefault, obj8);
   cResult[4] = tmp3.logo;
   cResult[5] = tmp9;
@@ -752,12 +752,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
 }) : (function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15041, style: tmp.imageStyle };
+  const obj2 = { source: _modDef15054, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef15039;
+  obj3.source = _modDef15052;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

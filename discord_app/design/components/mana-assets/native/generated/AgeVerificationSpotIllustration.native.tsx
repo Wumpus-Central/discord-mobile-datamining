@@ -1,23 +1,23 @@
-// === Module 7933: AgeVerificationSpotIllustration ===
+// === Module 7934: AgeVerificationSpotIllustration ===
 
-// Module 7933 (AgeVerificationSpotIllustration)
+// Module 7934 (AgeVerificationSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef7934 from "module_7934" /* 7934 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
 import _modDef7935 from "module_7935" /* 7935 */;
 import _modDef7936 from "module_7936" /* 7936 */;
+import _modDef7937 from "module_7937" /* 7937 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7934 }, 3: null };
-let obj2 = { uri: _modDef7934 };
-obj[2] = { uri: _modDef7935 };
-const obj3 = { uri: _modDef7935 };
-obj[3] = { uri: _modDef7936 };
+let obj = { 1: null, 2: { uri: _modDef7935 }, 3: null };
+let obj2 = { uri: _modDef7935 };
+obj[2] = { uri: _modDef7936 };
+const obj3 = { uri: _modDef7936 };
+obj[3] = { uri: _modDef7937 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef7936 };
+const obj4 = { uri: _modDef7937 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");
 

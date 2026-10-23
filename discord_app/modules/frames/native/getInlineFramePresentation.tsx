@@ -1,7 +1,7 @@
-// === Module 11826: getInlineFramePresentation ===
+// === Module 11840: getInlineFramePresentation ===
 
-// Module 11826 (getInlineFramePresentation)
-import FramesConstants from "FramesConstants" /* 6762 */;
+// Module 11840 (getInlineFramePresentation)
+import FramesConstants from "FramesConstants" /* 6761 */;
 import size from "module_2" /* 2 */;
 
 const FrameLayoutModes = FramesConstants.FrameLayoutModes;

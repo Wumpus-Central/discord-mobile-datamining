@@ -1,18 +1,18 @@
-// === Module 17424: MessagesFastestList ===
+// === Module 17446: MessagesFastestList ===
 
-// Module 17424 (MessagesFastestList)
+// Module 17446 (MessagesFastestList)
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7143 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7145 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 17354 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17364 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17365 */;
-import useMessagesData from "useMessagesData" /* 17368 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17381 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17418 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 17419 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17420 */;
-import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17421 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7142 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7144 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 17376 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17386 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17387 */;
+import useMessagesData from "useMessagesData" /* 17390 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17403 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17440 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 17441 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17442 */;
+import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17443 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;

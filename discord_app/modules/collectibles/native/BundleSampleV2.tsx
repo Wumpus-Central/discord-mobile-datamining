@@ -1,6 +1,6 @@
-// === Module 9359: BundleSampleV2 ===
+// === Module 9366: BundleSampleV2 ===
 
-// Module 9359 (BundleSampleV2)
+// Module 9366 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,15 +8,15 @@ import native from "native" /* 1202 */;
 import utils from "utils" /* 1992 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9361 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9372 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9379 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9368 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9379 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9386 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9360).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9367).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 18942: AuditLogUtils ===
+// === Module 18965: AuditLogUtils ===
 
-// Module 18942 (AuditLogUtils)
+// Module 18965 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
@@ -12,19 +12,19 @@ import DateUtils from "DateUtils" /* 4794 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import useChannelName from "useChannelName" /* 5590 */;
 import TimeUtils from "TimeUtils" /* 5708 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9021 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 18905 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 18943 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7181 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7309 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9028 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 18928 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 18966 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7180 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7310 */;
 import StageInstanceStore from "StageInstanceStore" /* 4826 */;
-import StickersStore from "StickersStore" /* 6752 */;
+import StickersStore from "StickersStore" /* 6751 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18940 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18963 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -241,15 +241,15 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(18941).AuditLogChange;
+const AuditLogChange = fn(18964).AuditLogChange;
 const Constants = fn(1087);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = Constants);
 const ChannelFlags = fn(4828).ChannelFlags;
-const AutomodTriggerType = fn(12731).AutomodTriggerType;
-const GuildOnboardingMode = fn(7182).GuildOnboardingMode;
+const AutomodTriggerType = fn(12750).AutomodTriggerType;
+const GuildOnboardingMode = fn(7181).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(4827);
 ({ GuildScheduledEventEntityTypes: items, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
@@ -805,7 +805,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1128).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj23 = {};
-          obj23[__3TkD(8848).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1128).t.XYZMbL;
+          obj23[__3TkD(8855).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1128).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1128).t.gb1Owj;

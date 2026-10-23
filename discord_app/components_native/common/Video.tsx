@@ -1,11 +1,11 @@
-// === Module 8763: common/Video ===
+// === Module 8770: common/Video ===
 
-// Module 8763 (common/Video)
+// Module 8770 (common/Video)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7119 */;
-import openMediaModal from "openMediaModal" /* 8724 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7118 */;
+import openMediaModal from "openMediaModal" /* 8731 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
   }
   _require = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(8764);
+    const tmpResult = tmp(8771);
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
     props = controls.props;
   }
   const merged = Object.assign(props);
-  return jsx(pauseWhileAppInactive(8764).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
+  return jsx(pauseWhileAppInactive(8771).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
 });
 let closure_10 = tmp4;
 const PureComponent = noop.PureComponent;

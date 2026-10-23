@@ -1,9 +1,9 @@
-// === Module 8720: HeaderAvatar ===
+// === Module 8727: HeaderAvatar ===
 
-// Module 8720 (HeaderAvatar)
+// Module 8727 (HeaderAvatar)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8711 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8718 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -183,13 +183,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
     }
     const tmpResult5 = tmp(504);
     let obj2 = { pendingValue: tmp8, userValue: undefined, guildValue: undefined, guildId: tmp6 };
-    const profilePreviewValue = tmp(8628).getProfilePreviewValue(obj2);
+    const profilePreviewValue = tmp(8635).getProfilePreviewValue(obj2);
     cResult[23] = tmp6;
     cResult[24] = tmp8;
     cResult[25] = undefined;
     cResult[26] = undefined;
     cResult[27] = profilePreviewValue;
-    const tmpResult6 = tmp(8628);
+    const tmpResult6 = tmp(8635);
   }
   fn = function w() {
     let member = null;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(8721);
+  const tmp10 = id(8728);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -251,25 +251,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
   obj6.guildId = guildId;
   let obj7 = { isMobileOnline, isVROnline, size, status: null, statusStyle: null, streaming: null, animate: null, avatarDecoration: null };
   let tmp14 = null;
-  const obj5 = guildId(8628);
+  const obj5 = guildId(8635);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(8722)(activities);
+  obj7.streaming = tmp9(8729)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(8628).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(8635).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(8711);
+      obj = obj(8718);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -279,13 +279,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
       const merged2 = Object.assign(obj7);
     }
     obj8.children = jsx(obj(1202).Avatar, obj10);
-    jsx(obj(6894).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
+    jsx(obj(6893).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
   } else {
     const obj11 = { ref, style, accessibilityRole: "image", accessible: true };
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(8711);
+      const objResult = obj(8718);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -296,5 +296,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
     obj11.children = jsx(obj(1202).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(8628).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(8635).getProfilePreviewValue(obj6));
 });

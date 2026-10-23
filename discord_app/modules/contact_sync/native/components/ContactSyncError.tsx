@@ -1,6 +1,6 @@
-// === Module 13520: ContactSyncError ===
+// === Module 13534: ContactSyncError ===
 
-// Module 13520 (ContactSyncError)
+// Module 13534 (ContactSyncError)
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import noop from "module_19" /* 19 */;

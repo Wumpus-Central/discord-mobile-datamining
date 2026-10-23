@@ -1,16 +1,16 @@
-// === Module 8269: PollsUtils ===
+// === Module 8270: PollsUtils ===
 
-// Module 8269 (PollsUtils)
+// Module 8270 (PollsUtils)
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import v1 from "v1" /* 1281 */;
 import utils_StringUtils from "utils/StringUtils" /* 2034 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
-import useMessageAuthor from "useMessageAuthor" /* 6352 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7307 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
+import useMessageAuthor from "useMessageAuthor" /* 6351 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7308 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8270 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8271 */;
+import MessageStore from "MessageStore" /* 5996 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8295);
+const PollsConstants = fn(8296);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1087);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -121,7 +121,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "toCharArray$esjava$1", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "Reflect", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export { generateLocalCreationAnswerId };

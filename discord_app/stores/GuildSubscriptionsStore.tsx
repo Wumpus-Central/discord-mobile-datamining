@@ -1,18 +1,18 @@
-// === Module 7355: GuildSubscriptionsStore ===
+// === Module 7356: GuildSubscriptionsStore ===
 
-// Module 7355 (GuildSubscriptionsStore)
+// Module 7356 (GuildSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FavoritesUtils from "FavoritesUtils" /* 4846 */;
-import GuildSubscriptionsDefault from "GuildSubscriptions" /* 7357 */;
+import GuildSubscriptionsDefault from "GuildSubscriptions" /* 7358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5176 */;
 import LurkingStore from "LurkingStore" /* 4902 */;
-import SpotifyStore from "SpotifyStore" /* 6485 */;
+import SpotifyStore from "SpotifyStore" /* 6484 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6777 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6776 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6689 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6688 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
@@ -186,7 +186,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(7356).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7357).EVERYONE_CHANNEL_ID;
 const Constants = fn(1087);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {

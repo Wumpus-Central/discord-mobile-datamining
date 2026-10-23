@@ -1,6 +1,6 @@
-// === Module 18222: ContextMenuCommandItem ===
+// === Module 18244: ContextMenuCommandItem ===
 
-// Module 18222 (ContextMenuCommandItem)
+// Module 18244 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,8 +8,8 @@ import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import FastImageDefault from "FastImage" /* 5655 */;
 import SendMessageIcon from "SendMessageIcon" /* 5666 */;
-import TableRow from "TableRow" /* 6889 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13047 */;
+import TableRow from "TableRow" /* 6888 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(13047).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(13063).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
   obj2.trailing = jsx(tmp5(5666).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
-  return jsx(item(6889).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(6888).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 });
 export const ContextMenuCommandLoadingItem = tmp2;
 export const ContextMenuCommandEmptyItem = tmp3;

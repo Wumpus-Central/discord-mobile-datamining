@@ -1,6 +1,6 @@
-// === Module 7493: GuildBoostingMarketingPersistentCta ===
+// === Module 7494: GuildBoostingMarketingPersistentCta ===
 
-// Module 7493 (GuildBoostingMarketingPersistentCta)
+// Module 7494 (GuildBoostingMarketingPersistentCta)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5233 */;
 import noop from "module_19" /* 19 */;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
                 }
               }
               const obj8 = { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp4.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole };
-              const tmp30 = closure_6(stateFromStores(7494), obj8);
+              const tmp30 = closure_6(stateFromStores(7495), obj8);
               cResult[19] = fractionalPremiumState;
               cResult[20] = guild;
               cResult[21] = premiumGroupRole;
@@ -231,14 +231,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     const obj10 = { style: null, textStyle: null, guild: null, size: null };
     ({ guildIcon: obj5.style, guildIconText: obj5.textStyle } = tmp4);
     obj10.guild = guild;
-    obj10.size = isVisible(6869).GuildIconSizes.LARGE;
-    const tmp19 = closure_6(stateFromStores(6869), obj10);
+    obj10.size = isVisible(6868).GuildIconSizes.LARGE;
+    const tmp19 = closure_6(stateFromStores(6868), obj10);
     cResult[8] = guild;
     cResult[9] = tmp4.guildIcon;
     cResult[10] = tmp4.guildIconText;
     cResult[11] = tmp19;
     tmp15 = tmp19;
-    const tmp18 = stateFromStores(6869);
+    const tmp18 = stateFromStores(6868);
   }
   const items3 = [tmp4.wrapper, animatedStyle];
   cResult[2] = animatedStyle;
@@ -290,11 +290,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   const obj7 = { style: tmp.guildInfoContainer, children: null };
   const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const tmp4 = stateFromStores(5244);
-  obj8.size = isVisible(6869).GuildIconSizes.LARGE;
-  const items3 = [closure_6(stateFromStores(6869), obj8), closure_6(isVisible(5220).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
+  obj8.size = isVisible(6868).GuildIconSizes.LARGE;
+  const items3 = [closure_6(stateFromStores(6868), obj8), closure_6(isVisible(5220).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
   obj7.children = items3;
   const items4 = [closure_7(View, obj7), ];
-  const obj10 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(7494), { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole }) };
+  const obj10 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(7495), { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole }) };
   items4[1] = closure_6(View, obj10);
   obj6.children = items4;
   obj5.children = closure_7(View, obj6);

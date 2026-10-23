@@ -1,6 +1,6 @@
-// === Module 16270: BountiesModalContent ===
+// === Module 16288: BountiesModalContent ===
 
-// Module 16270 (BountiesModalContent)
+// Module 16288 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -10,20 +10,20 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import timing from "timing" /* 5192 */;
 import timingPresets from "timingPresets" /* 5195 */;
 import Patterns from "Patterns" /* 5200 */;
-import QuestContent from "QuestContent" /* 6701 */;
-import AdCreativeType from "AdCreativeType" /* 6703 */;
-import QuestDataUtils from "QuestDataUtils" /* 7756 */;
-import AnalyticsActions from "AnalyticsActions" /* 7776 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7785 */;
-import AnimationUtils from "AnimationUtils" /* 13897 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14043 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14065 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14080 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16214 */;
+import QuestContent from "QuestContent" /* 6700 */;
+import AdCreativeType from "AdCreativeType" /* 6702 */;
+import QuestDataUtils from "QuestDataUtils" /* 7757 */;
+import AnalyticsActions from "AnalyticsActions" /* 7777 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
+import AnimationUtils from "AnimationUtils" /* 13911 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14057 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14079 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14094 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7759 */;
+import BountyStore from "BountyStore" /* 7760 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,9 +54,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6696);
+const QuestConstants = fn(6695);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16218);
+const BountiesModalConstants = fn(16236);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9419).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9419);
+                          const balance = tmp(9426).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9426);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {

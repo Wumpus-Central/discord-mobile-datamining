@@ -1,6 +1,6 @@
-// === Module 18346: ActivityPanelUtils ===
+// === Module 18368: ActivityPanelUtils ===
 
-// Module 18346 (ActivityPanelUtils)
+// Module 18368 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1108 */;

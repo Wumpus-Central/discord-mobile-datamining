@@ -1,23 +1,23 @@
-// === Module 14204: BumpingFistsSpotIllustration ===
+// === Module 14218: BumpingFistsSpotIllustration ===
 
-// Module 14204 (BumpingFistsSpotIllustration)
+// Module 14218 (BumpingFistsSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef14205 from "module_14205" /* 14205 */;
-import _modDef14206 from "module_14206" /* 14206 */;
-import _modDef14207 from "module_14207" /* 14207 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef14219 from "module_14219" /* 14219 */;
+import _modDef14220 from "module_14220" /* 14220 */;
+import _modDef14221 from "module_14221" /* 14221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14205 }, 3: null };
-let obj2 = { uri: _modDef14205 };
-obj[2] = { uri: _modDef14206 };
-const obj3 = { uri: _modDef14206 };
-obj[3] = { uri: _modDef14207 };
+let obj = { 1: null, 2: { uri: _modDef14219 }, 3: null };
+let obj2 = { uri: _modDef14219 };
+obj[2] = { uri: _modDef14220 };
+const obj3 = { uri: _modDef14220 };
+obj[3] = { uri: _modDef14221 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14207 };
+const obj4 = { uri: _modDef14221 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");
 

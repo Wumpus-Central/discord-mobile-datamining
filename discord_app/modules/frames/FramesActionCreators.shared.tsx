@@ -1,14 +1,14 @@
-// === Module 10738: _launchFrame ===
+// === Module 10745: _launchFrame ===
 
-// Module 10738 (_launchFrame)
+// Module 10745 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6764 */;
-import createProxyTicket from "createProxyTicket" /* 10700 */;
-import leaveFrame from "leaveFrame" /* 10735 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10739 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6763 */;
+import createProxyTicket from "createProxyTicket" /* 10707 */;
+import leaveFrame from "leaveFrame" /* 10742 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 6761 */;
+import FramesStore from "FramesStore" /* 6760 */;
 
 require = fn;
 let closure_12 = async function _launchFrame(arg0) {
@@ -210,7 +210,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10735);
+    obj2 = obj2(10742);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -341,7 +341,7 @@ let closure_17 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ FrameIntent: metroRequire, FrameLayoutModes: closure_7, getFrameIntentForSurface: closure_8, makeFrameId: closure_9 } = FramesConstants);
 const ActivityPanelModes = fn(5595).ActivityPanelModes;
 let c11 = 0;
@@ -364,6 +364,9 @@ export { promoteFrame };
 export { updateFrameLayoutMode };
 export const setFrameRunsInBackground = function setFrameRunsInBackground(id, enabled) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: id, enabled });
+};
+export const setFrameUserMuted = function setFrameUserMuted(frameId, muted) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_USER_MUTED", frameId, muted });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });

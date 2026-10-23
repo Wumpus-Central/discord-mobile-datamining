@@ -1,6 +1,6 @@
-// === Module 18183: useGuildEligibleForStageChannels ===
+// === Module 18205: useGuildEligibleForStageChannels ===
 
-// Module 18183 (useGuildEligibleForStageChannels)
+// Module 18205 (useGuildEligibleForStageChannels)
 import GuildStore from "GuildStore" /* 4843 */;
 
 const require = globalThis.__r;

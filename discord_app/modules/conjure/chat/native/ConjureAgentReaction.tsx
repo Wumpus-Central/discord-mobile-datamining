@@ -1,12 +1,12 @@
-// === Module 12311: ConjureAgentReaction ===
+// === Module 12322: ConjureAgentReaction ===
 
-// Module 12311 (ConjureAgentReaction)
+// Module 12322 (ConjureAgentReaction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import EmojiDefault from "Emoji" /* 7213 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10673 */;
+import EmojiDefault from "Emoji" /* 7212 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10680 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

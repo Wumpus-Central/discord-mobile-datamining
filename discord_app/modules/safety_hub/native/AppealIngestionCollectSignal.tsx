@@ -1,19 +1,19 @@
-// === Module 12781: AppealIngestionCollectSignal ===
+// === Module 12800: AppealIngestionCollectSignal ===
 
-// Module 12781 (AppealIngestionCollectSignal)
+// Module 12800 (AppealIngestionCollectSignal)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7881 */;
-import Form from "Form" /* 8919 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7882 */;
+import Form from "Form" /* 8926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7882);
+const SafetyHubConstants = fn(7883);
 ({ AppealIngestionSignal: closure_4, AppealIngestionSignalOrder: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -149,24 +149,24 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
             return formRow(5196).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12782, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12801, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     let obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal };
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(12754).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(12773).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1128).intl;
-  let obj = isDsaEligible(12754);
+  let obj = isDsaEligible(12773);
   const intl2 = isDsaEligible(1128).intl;
   const stringResult = intl.string(isDsaEligible(1128).t["C5q+pW"]);
   let obj2 = { children: null };
-  const items = [closure_6(isDsaEligible(12760).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1128).t.VEcRhw) }), ];
+  const items = [closure_6(isDsaEligible(12779).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1128).t.VEcRhw) }), ];
   let obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1128).t.VEcRhw);
-  const items1 = [closure_6(isDsaEligible(8919).FormSection, { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: closure_5.map((signal, index) => timestampProducer(closure_9, { signal, selected: signal === closure_2, rowStyle: formRow.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + index)) }), ];
+  const items1 = [closure_6(isDsaEligible(8926).FormSection, { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: closure_5.map((signal, index) => timestampProducer(closure_9, { signal, selected: signal === closure_2, rowStyle: formRow.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + index)) }), ];
   const obj6 = { style: tmp.disclaimer, children: null };
   const obj7 = { variant: "text-sm/normal", children: null };
   const intl3 = isDsaEligible(1128).intl;
@@ -174,8 +174,8 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj6.children = closure_6(isDsaEligible(5220).Text, obj7);
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
   obj4.children = items1;
-  obj3.children = closure_7(isDsaEligible(8919).Form, obj4);
+  obj3.children = closure_7(isDsaEligible(8926).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(12760).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(12779).AppealIngestionModalScreen, obj2);
 };

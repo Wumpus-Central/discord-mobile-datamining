@@ -1,12 +1,12 @@
-// === Module 17866: useNotificationPermissionPrompt ===
+// === Module 17888: useNotificationPermissionPrompt ===
 
-// Module 17866 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 13238 */;
+// Module 17888 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 13254 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4814 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6482 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6481 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4815 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13229 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13245 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -52,14 +52,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotif
       let tmp14 = cResult[7];
     }
     const effect = noop.useEffect(tmp13, tmp14);
-    const guildOpenNudge = tmp(17867).useGuildOpenNudge();
+    const guildOpenNudge = tmp(17889).useGuildOpenNudge();
     class S {
       constructor() {
         return closure_1(closure_1_2[8])(closure_1_4, closure_1_6);
       }
     }
     const postCallDisconnectNudge = obj5.usePostCallDisconnectNudge();
-    const tmpResult4 = tmp(17867);
+    const tmpResult4 = tmp(17889);
   }
   class P {
     constructor() {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotif
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(17867).useGuildOpenNudge();
-  const obj3 = stateFromStores(17867);
-  const postCallDisconnectNudge = stateFromStores(17869).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(17889).useGuildOpenNudge();
+  const obj3 = stateFromStores(17889);
+  const postCallDisconnectNudge = stateFromStores(17891).usePostCallDisconnectNudge();
 });

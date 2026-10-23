@@ -1,20 +1,20 @@
-// === Module 19276: AVErrorAnalytics ===
+// === Module 19299: AVErrorAnalytics ===
 
-// Module 19276 (AVErrorAnalytics)
+// Module 19299 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1378 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4975 */;
 import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5809 */;
-import VideoQualityStats from "VideoQualityStats" /* 5887 */;
+import VideoQualityStats from "VideoQualityStats" /* 5886 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5717 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5866 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5865 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import RTCRegionStore from "RTCRegionStore" /* 5799 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7798 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7799 */;
 
 const require = globalThis.__r;
 

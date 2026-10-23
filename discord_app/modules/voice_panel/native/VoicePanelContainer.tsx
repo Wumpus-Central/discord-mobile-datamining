@@ -1,14 +1,14 @@
-// === Module 18385: VoicePanelContainer ===
+// === Module 18407: VoicePanelContainer ===
 
-// Module 18385 (VoicePanelContainer)
+// Module 18407 (VoicePanelContainer)
 import c from "c" /* 576 */;
 import _mod4884 from "module_4884" /* 4884 */;
 import native from "native" /* 5023 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 18386 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 18550 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 18408 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 18572 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import VoicePanelStore from "VoicePanelStore" /* 6790 */;
+import VoicePanelStore from "VoicePanelStore" /* 6789 */;
 
 require = fn;
 function getChannelKey(arg0) {

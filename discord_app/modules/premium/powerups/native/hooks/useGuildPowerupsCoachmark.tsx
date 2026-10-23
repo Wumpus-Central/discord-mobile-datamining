@@ -1,20 +1,20 @@
-// === Module 17497: useGuildPowerupsCoachmark ===
+// === Module 17519: useGuildPowerupsCoachmark ===
 
-// Module 17497 (useGuildPowerupsCoachmark)
+// Module 17519 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import useThemeDefault from "useTheme" /* 5191 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13324 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13356 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 13363 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13364 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13366 */;
-import _modDef13396 from "module_13396" /* 13396 */;
-import _modDef17495 from "module_17495" /* 17495 */;
-import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 17498 */;
-import _modDef17499 from "module_17499" /* 17499 */;
-import _modDef17500 from "module_17500" /* 17500 */;
-import _modDef17501 from "module_17501" /* 17501 */;
-import _modDef17502 from "module_17502" /* 17502 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13338 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13370 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 13377 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13378 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13380 */;
+import _modDef13410 from "module_13410" /* 13410 */;
+import _modDef17517 from "module_17517" /* 17517 */;
+import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 17520 */;
+import _modDef17521 from "module_17521" /* 17521 */;
+import _modDef17522 from "module_17522" /* 17522 */;
+import _modDef17523 from "module_17523" /* 17523 */;
+import _modDef17524 from "module_17524" /* 17524 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   let num7 = 0;
   if (null != powerup) {
-    num7 = powerup.cost - tmp9(8356)(guildId).available;
+    num7 = powerup.cost - tmp9(8357)(guildId).available;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { page: constants2.GUILD_CHANNEL, section: null };
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             if (cResult[12] === type) {
               if (cResult[13] === tmp10) {
                 if (cResult[14] === stateFromStores1) {
-                  tmp(9810);
+                  tmp(9817);
                   class S {
                     constructor() {
                       return closure_4.useReducedMotion;
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef17499;
+              let str = _modDef17521;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef17495;
+              guildPowerupBannerImage = _modDef17517;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

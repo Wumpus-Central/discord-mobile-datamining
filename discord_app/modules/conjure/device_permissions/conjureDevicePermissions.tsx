@@ -1,6 +1,6 @@
-// === Module 10768: conjureDevicePermissions ===
+// === Module 10775: conjureDevicePermissions ===
 
-// Module 10768 (conjureDevicePermissions)
+// Module 10775 (conjureDevicePermissions)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -12,6 +12,15 @@ const obj = {
     getLabel() {
       const intl = util.intl;
       return intl.string(_modDef3830["2KIefJ"]);
+    }
+  },
+  connect_user_to_voice: {
+    isSupported() {
+      return true;
+    },
+    getLabel() {
+      const intl = util.intl;
+      return intl.string(_modDef3830["5Hp3Nx"]);
     }
   }
 };

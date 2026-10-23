@@ -1,7 +1,7 @@
-// === Module 9763: PremiumFeaturesCards ===
+// === Module 9770: PremiumFeaturesCards ===
 
-// Module 9763 (PremiumFeaturesCards)
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9764 */;
+// Module 9770 (PremiumFeaturesCards)
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9771 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

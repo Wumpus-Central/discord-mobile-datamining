@@ -1,53 +1,52 @@
-// === Module 18141: YouScreenUserProfileContent ===
+// === Module 18163: YouScreenUserProfileContent ===
 
-// Module 18141 (YouScreenUserProfileContent)
+// Module 18163 (YouScreenUserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7480 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8705 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8719 */;
-import FormDividerDefault from "FormDivider" /* 8923 */;
-import tracking_Tracking from "tracking/Tracking" /* 9535 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11028 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11042 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11082 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11123 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12985 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 14213 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 14270 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14283 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14286 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14287 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14308 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14309 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14312 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14333 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14347 */;
-import UserProfileConnections from "UserProfileConnections" /* 14350 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14355 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14359 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15802 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16966 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17713 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18148 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18150 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18152 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7481 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8712 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8726 */;
+import tracking_Tracking from "tracking/Tracking" /* 9542 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11037 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11051 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11091 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11132 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13001 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 14227 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 14284 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14297 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14300 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14301 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14322 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14323 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14326 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14347 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14361 */;
+import UserProfileConnections from "UserProfileConnections" /* 14364 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14369 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14373 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15814 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16988 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17735 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18170 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18172 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18174 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6484 */;
-import UserProfileStore from "UserProfileStore" /* 7687 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6483 */;
+import UserProfileStore from "UserProfileStore" /* 7688 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
 require = fn;
 const View = fn(17).View;
 const useIsContentShown = fn(4813).useIsContentShown;
-const UserProfileSections = fn(8645).UserProfileSections;
-let UserProfileThemeTypes = fn(7288).UserProfileThemeTypes;
+const UserProfileSections = fn(8652).UserProfileSections;
+let UserProfileThemeTypes = fn(7289).UserProfileThemeTypes;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
-const constants = fn(15773).UserProfileEditAutoFocusElement;
+const constants = fn(15787).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -1035,7 +1034,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
     const items1 = [, ];
     ({ cards: arr2[0], profileContent: arr2[1] } = closure_5);
     obj2.style = items1;
-    const items2 = [map1(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , , ];
+    const items2 = [map1(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , ];
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
@@ -1049,11 +1048,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
     items2[2] = tmp3Result2;
     items2[3] = map1(UserProfileActivityDefault, { user, currentUser: user, style: items });
     items2[4] = map1(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
-    items2[5] = map1(FormDividerDefault, {});
-    items2[6] = map1(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
-    items2[7] = map1(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-    items2[8] = map1(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
-    items2[9] = map1(UserProfileNoteDefault, { userId: user.id });
+    items2[5] = map1(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
+    items2[6] = map1(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
+    items2[7] = map1(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
+    items2[8] = map1(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
     return closure_2_14(View, obj2);
   }, items7);
@@ -1116,10 +1114,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
     return items;
   }, items9);
   const tmp4Result10 = user(navigateToPremium[55]);
-  const measuredTabItems = user(navigateToPremium[68]).useMeasuredTabItems(memo);
+  const measuredTabItems = user(navigateToPremium[67]).useMeasuredTabItems(memo);
   ({ items, pageHeights } = measuredTabItems);
-  const tmp4Result11 = user(navigateToPremium[68]);
-  const tmp4Result12 = user(navigateToPremium[69]);
+  const tmp4Result11 = user(navigateToPremium[67]);
+  const tmp4Result12 = user(navigateToPremium[68]);
   segmentedControlState = tmp4Result12.useSegmentedControlState({ pageWidth, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[23]).space.PX_24, items, onPageChange: handleTabChange });
   const items10 = [segmentedControlState, restoreActiveIndex];
   const layoutEffect = obj6.useLayoutEffect(() => {
@@ -1165,7 +1163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
   const items14 = [, ];
   ({ customStatusBubble: arr15[0], customStatusBubbleInset: arr15[1] } = tmp3);
   obj18.style = items14;
-  items13[1] = enabled(navigateToFriends(navigateToPremium[70]), obj18);
+  items13[1] = enabled(navigateToFriends(navigateToPremium[69]), obj18);
   let isLoaded;
   if (tmp6 != null) {
     isLoaded = tmp6.isLoaded;
@@ -1185,8 +1183,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
   const obj17 = { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag };
   const tmp43 = closure_21;
   const tmp4Result13 = user(navigateToPremium[43]);
-  obj21.status = user(navigateToPremium[71]).getStatusLabel(stateFromStores);
-  const tmp4Result14 = user(navigateToPremium[71]);
+  obj21.status = user(navigateToPremium[70]).getStatusLabel(stateFromStores);
+  const tmp4Result14 = user(navigateToPremium[70]);
   let intl2 = tmp4(tmp2[28]).intl;
   obj20.displayNameAccessibilityHint = "" + intl.formatToPlainString(user(navigateToPremium[28]).t["er+FRD"], obj21) + ", " + intl2.string(user(navigateToPremium[28]).t.C6COaT);
   obj20.themeType = UserProfileThemeTypes.YOU_SCREEN;
@@ -1201,12 +1199,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
   }
   const obj25 = { zIndex: 1, children: null };
   obj24.variant = str;
-  obj23.children = enabled(user(navigateToPremium[72]).Tabs, obj24);
-  const items15 = [enabled(closure_5, obj23), enabled(navigateToFriends(navigateToPremium[68]), { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  obj23.children = enabled(user(navigateToPremium[71]).Tabs, obj24);
+  const items15 = [enabled(closure_5, obj23), enabled(navigateToFriends(navigateToPremium[67]), { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj22.children = items15;
   items13[3] = c14(closure_5, obj22);
   obj16.children = items13;
   obj25.children = c14(closure_5, obj16);
-  obj15.children = enabled(user(navigateToPremium[73]).LayerScope, obj25);
-  return enabled(navigateToFriends(navigateToPremium[74]).View, obj15);
+  obj15.children = enabled(user(navigateToPremium[72]).LayerScope, obj25);
+  return enabled(navigateToFriends(navigateToPremium[73]).View, obj15);
 });

@@ -1,6 +1,6 @@
-// === Module 6341: ? ===
+// === Module 6340: ? ===
 
-// Module 6341
+// Module 6340
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/elemental.png.js");

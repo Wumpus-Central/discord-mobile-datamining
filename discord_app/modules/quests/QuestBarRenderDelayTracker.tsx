@@ -1,18 +1,19 @@
-// === Module 9567: QuestBarRenderDelayTracker ===
+// === Module 9574: QuestBarRenderDelayTracker ===
 
-// Module 9567 (QuestBarRenderDelayTracker)
+// Module 9574 (QuestBarRenderDelayTracker)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6454 */;
-import MetricEvents from "MetricEvents" /* 6459 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6787 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6453 */;
+import MetricEvents from "MetricEvents" /* 6458 */;
+import AdCreativeType from "AdCreativeType" /* 6702 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6786 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 let c4 = 30000;
 class QuestBarRenderDelayTracker {
   constructor() {
-    return Object.assign({ startTime: null, questId: null, timeoutTimer: null });
+    return Object.assign({ startTime: null, adCreativeId: null, adCreativeType: null, timeoutTimer: null });
   }
 }
 const prototype = QuestBarRenderDelayTracker.prototype;
@@ -24,25 +25,28 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
     self.timeoutTimer = null;
   }
 };
-prototype["sendMetric"] = function sendMetric(quest_id, timeout, duration) {
+prototype["sendMetric"] = function sendMetric(ad_creative_id, ad_creative_type, timeout, duration) {
   if (Math.random() <= 0.1) {
     const obj2 = { name: MetricEvents.MetricEvents.QUEST_BAR_RENDER_DELAY, tags: null };
     const _HermesInternal = HermesInternal;
-    const items = ["quest_id:" + quest_id, ];
+    const items = ["ad_creative_id:" + ad_creative_id, , ];
     const _HermesInternal2 = HermesInternal;
-    items[1] = "timeout:" + timeout;
+    items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[ad_creative_type];
+    const _HermesInternal3 = HermesInternal;
+    items[2] = "timeout:" + timeout;
     obj2.tags = items;
     MonitoringAgentDefault.distribution(obj2, duration);
-    const obj4 = { quest_id, timeout, duration };
+    const obj4 = { ad_creative_id, ad_creative_type, timeout, duration };
     AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj4);
   }
 };
-prototype["startTracking"] = function startTracking(questId) {
+prototype["startTracking"] = function startTracking(adCreativeId, adCreativeType) {
   const self = this;
-  closure_0 = questId;
+  closure_0 = adCreativeId;
   this.clearTracking();
   this.startTime = performance.now();
-  this.questId = questId;
+  this.adCreativeId = adCreativeId;
+  this.adCreativeType = adCreativeType;
   this.timeoutTimer = setTimeout(() => {
     self.stopTracking(closure_0, true);
   }, c4);
@@ -54,29 +58,32 @@ prototype["stopTracking"] = function stopTracking(arg0) {
   }
   const self = this;
   if (null !== this.startTime) {
-    if (self.questId === arg0) {
-      if ("active" !== obj.getState()) {
-        self.clearTracking();
-      } else {
-        if (flag) {
-          let rounded = c4;
+    if (self.adCreativeId === arg0) {
+      if (null !== self.adCreativeType) {
+        if ("active" !== obj.getState()) {
+          self.clearTracking();
         } else {
-          const _Math = Math;
-          const _performance = performance;
-          rounded = Math.round(performance.now() - self.startTime);
+          if (flag) {
+            let rounded = c4;
+          } else {
+            const _Math = Math;
+            const _performance = performance;
+            rounded = Math.round(performance.now() - self.startTime);
+          }
+          const _Math2 = Math;
+          self.sendMetric(arg0, self.adCreativeType, flag, Math.min(rounded, c4));
         }
-        const _Math2 = Math;
-        self.sendMetric(arg0, flag, Math.min(rounded, c4));
+        obj = DiscordAppStateDefault;
       }
-      obj = DiscordAppStateDefault;
     }
   }
 };
 prototype["clearTracking"] = function clearTracking() {
   this.clearTimeoutTimer();
   this.startTime = null;
-  this.questId = null;
+  this.adCreativeId = null;
+  this.adCreativeType = null;
 };
 const result = size.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
 
-export default Object.assign({ startTime: null, questId: null, timeoutTimer: null });
+export default Object.assign({ startTime: null, adCreativeId: null, adCreativeType: null, timeoutTimer: null });

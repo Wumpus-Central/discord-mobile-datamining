@@ -1,8 +1,8 @@
-// === Module 16304: OrbsArcadeRewardUtils ===
+// === Module 16322: OrbsArcadeRewardUtils ===
 
-// Module 16304 (OrbsArcadeRewardUtils)
+// Module 16322 (OrbsArcadeRewardUtils)
 import util from "util" /* 1128 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16299 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16317 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");
@@ -59,6 +59,17 @@ export const getOrbsArcadeClaimableRewards = function getOrbsArcadeClaimableRewa
     return null != pendingAt && null == tmp2.claimedAt;
   });
   return found.sort((scoreTarget, scoreTarget2) => scoreTarget.scoreTarget - scoreTarget2.scoreTarget);
+};
+export const hasOrbsArcadeUnlockedRewards = function hasOrbsArcadeUnlockedRewards(stateFromStores1) {
+  let rewardGrants;
+  if (stateFromStores1 != null) {
+    rewardGrants = stateFromStores1.rewardGrants;
+  }
+  if (rewardGrants == null) {
+    rewardGrants = {};
+  }
+  const values = Object.values(rewardGrants);
+  return values.some((pendingAt) => null != pendingAt.pendingAt);
 };
 export const hasOrbsArcadeUnclaimedRewards = function hasOrbsArcadeUnclaimedRewards(gameState) {
   const values = Object.values(gameState.rewardGrants);

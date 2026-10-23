@@ -1,6 +1,6 @@
-// === Module 9393: PremiumFeaturesBackground ===
+// === Module 9400: PremiumFeaturesBackground ===
 
-// Module 9393 (PremiumFeaturesBackground)
+// Module 9400 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(7528).Gradients;
+const Gradients = fn(7529).Gradients;
 const PremiumTypes = fn(1394).PremiumTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);

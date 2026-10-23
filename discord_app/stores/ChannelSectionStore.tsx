@@ -1,17 +1,17 @@
-// === Module 6777: ChannelSectionStore ===
+// === Module 6776: ChannelSectionStore ===
 
-// Module 6777 (ChannelSectionStore)
+// Module 6776 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6779 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6780 */;
-import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6781 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6778 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6779 */;
+import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6780 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ExperimentStore from "ExperimentStore" /* 5176 */;
-import SearchMessageStore from "SearchMessageStore" /* 6778 */;
+import SearchMessageStore from "SearchMessageStore" /* 6777 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;

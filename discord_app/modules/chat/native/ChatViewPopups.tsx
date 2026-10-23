@@ -1,9 +1,9 @@
-// === Module 13644: ChatViewPopups ===
+// === Module 13658: ChatViewPopups ===
 
-// Module 13644 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 13645 */;
-import WelcomeScreenUtils from "WelcomeScreenUtils" /* 13649 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13655 */;
+// Module 13658 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 13659 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 13663 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatViewPopu
   dependencyMap = tmp2;
   let obj = guildId(576);
   let obj2 = showWelcomeModal;
-  showWelcomeModal = guildId(13649).useShowWelcomeModal(guildId, guildId.channelId);
+  showWelcomeModal = guildId(13663).useShowWelcomeModal(guildId, guildId.channelId);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp2) {
       if (cResult[2] === showWelcomeModal) {
@@ -66,7 +66,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatViewPopu
   importDefault = showWelcomeModal.useRef(false);
   const tmp = useIsHubRealNamePromptShowingDefault(guildId);
   dependencyMap = tmp;
-  showWelcomeModal = guildId(13649).useShowWelcomeModal(guildId, guildId.channelId);
+  showWelcomeModal = guildId(13663).useShowWelcomeModal(guildId, guildId.channelId);
   const items = [guildId, showWelcomeModal, tmp];
   const effect = showWelcomeModal.useEffect(() => {
     if (!ref.current) {

@@ -1,9 +1,9 @@
-// === Module 11367: useVideoStreamError ===
+// === Module 11378: useVideoStreamError ===
 
-// Module 11367 (useVideoStreamError)
-import AVError from "AVError" /* 5884 */;
+// Module 11378 (useVideoStreamError)
+import AVError from "AVError" /* 5883 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11368 */;
+import AVErrorStore from "AVErrorStore" /* 11379 */;
 
 require = fn;
 const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;

@@ -1,6 +1,6 @@
-// === Module 11123: UserProfileAboutMeCard ===
+// === Module 11132: UserProfileAboutMeCard ===
 
-// Module 11123 (UserProfileAboutMeCard)
+// Module 11132 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,13 +10,13 @@ import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ChatInputUtils from "ChatInputUtils" /* 5145 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useToken from "useToken" /* 5238 */;
-import GuildIconDefault from "GuildIcon" /* 6869 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7287 */;
-import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8652 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8828 */;
-import BioTextDefault from "BioText" /* 11124 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11126 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11128 */;
+import GuildIconDefault from "GuildIcon" /* 6868 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7288 */;
+import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8659 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8835 */;
+import BioTextDefault from "BioText" /* 11133 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11135 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11137 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
@@ -24,7 +24,7 @@ import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7288);
+const Constants = fn(7289);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1087).Routes;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
@@ -448,7 +448,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
       }
     }
     const tmpResult6 = tmp(504);
-    const tmpResult7 = tmp(7259);
+    const tmpResult7 = tmp(7260);
     const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
     const obj6 = guildId(11);
     if (stateFromStores2 != null) {
@@ -463,7 +463,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         }
       }
     }
-    const createdAtDate1 = tmp(7259).getCreatedAtDate(tmp22, stateFromStores);
+    const createdAtDate1 = tmp(7260).getCreatedAtDate(tmp22, stateFromStores);
     const _Symbol = Symbol;
     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
       class R {
@@ -602,7 +602,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     cResult[30] = tmp4.memberJoinDates;
     cResult[31] = tmp31;
     cResult[32] = items3;
-    const tmpResult8 = tmp(7259);
+    const tmpResult8 = tmp(7260);
   }
   class U {
     constructor() {
@@ -652,13 +652,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(7259);
+  const obj4 = userId(7260);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(7259).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(7260).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1128).intl;
   obj7.children = intl.string(userId(1128).t.a6XYD9);
@@ -666,7 +666,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
-  const obj9 = { themeType, icon: closure_11(userId(10541).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const obj9 = { themeType, icon: closure_11(userId(10548).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1128).intl;
   obj9.accessibilityLabel = intl2.formatToPlainString(userId(1128).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;
@@ -677,7 +677,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     const obj11 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
     const items6 = [closure_11(tmp4(5220).Text, obj11), ];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(6869).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(6868).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1128).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };

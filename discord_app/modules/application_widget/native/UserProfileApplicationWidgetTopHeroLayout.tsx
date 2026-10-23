@@ -1,15 +1,15 @@
-// === Module 11846: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 11860: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 11846 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 11860 (UserProfileApplicationWidgetTopHeroLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import _modDef6952 from "module_6952" /* 6952 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8705 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11847 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11933 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11934 */;
+import _modDef6951 from "module_6951" /* 6951 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8712 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11861 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11947 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1087).HorizontalGradient;
-const CARD_PADDING = fn(7288).CARD_PADDING;
+const CARD_PADDING = fn(7289).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                           obj13.source = obj14;
                                           obj13.style = { width: "100%", height: "100%" };
                                           obj9.children = React5(FastImageDefault, obj13);
-                                          tmp48Result = React5(_modDef6952, obj9);
+                                          tmp48Result = React5(_modDef6951, obj9);
                                         }
                                         obj7.children = tmp48Result;
                                         tmp48Result2 = React5(View, obj7);
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
       obj12.children = React5(FastImageDefault, obj17);
-      tmp15Result3 = React5(_modDef6952, obj12);
+      tmp15Result3 = React5(_modDef6951, obj12);
     }
     obj10.children = tmp15Result3;
     tmp15Result4 = React5(View, obj10);

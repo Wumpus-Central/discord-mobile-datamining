@@ -1,14 +1,14 @@
-// === Module 11999: AppLauncherNavigator ===
+// === Module 12010: AppLauncherNavigator ===
 
-// Module 11999 (AppLauncherNavigator)
+// Module 12010 (AppLauncherNavigator)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12000 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12061 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12087 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12148 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12011 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12071 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12098 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12159 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9713);
+const NativeStackNavigator = fn(9720);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4969);
 let obj = { navigator: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 } };
@@ -37,14 +37,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations;
   const navigationContainerRef = entrypoint(1506).useNavigationContainerRef();
   const obj2 = entrypoint(1506);
-  const trackNavigationBackPress = entrypoint(5962).useTrackNavigationBackPress(navigationContainerRef);
+  const trackNavigationBackPress = entrypoint(5961).useTrackNavigationBackPress(navigationContainerRef);
   const tmp8 = closure_12();
-  const obj3 = entrypoint(5962);
+  const obj3 = entrypoint(5961);
   if (overrideParams == null) {
     overrideParams = obj4.useKeyboardContextForType(entrypoint(1631).KeyboardTypes.APP_LAUNCHER);
   }
   obj4 = entrypoint(5147);
-  const accessibilityNativeStackOptions = entrypoint(7081).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = entrypoint(7080).useAccessibilityNativeStackOptions();
   if (cResult[0] !== overrideParams) {
     const initialRouteName = overrideParams.initialRouteName;
     const tmp14 = _objectWithoutProperties(overrideParams, closure_3);
@@ -177,7 +177,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                             return tmp71;
                                                           }
                                                           const obj5 = { value: tmp70, children: tmp61 };
-                                                          const tmp73 = closure_9(entrypoint(11132).AppLauncherContext.Provider, obj5);
+                                                          const tmp73 = closure_9(entrypoint(11141).AppLauncherContext.Provider, obj5);
                                                           cResult[66] = tmp70;
                                                           cResult[67] = tmp61;
                                                           cResult[68] = tmp73;
@@ -225,7 +225,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     tmp61 = tmp63;
                                   }
                                   const obj10 = { value: analyticsLocations, children: tmp54 };
-                                  const tmp60 = closure_9(entrypoint(7237).AnalyticsLocationProvider, obj10);
+                                  const tmp60 = closure_9(entrypoint(7238).AnalyticsLocationProvider, obj10);
                                   cResult[42] = analyticsLocations;
                                   cResult[43] = tmp54;
                                   cResult[44] = tmp60;
@@ -332,7 +332,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp8.navigator;
   cResult[8] = items2;
   tmp18 = items2;
-  const tmpResult = entrypoint(7081);
+  const tmpResult = entrypoint(7080);
 }) : (function AppLauncherNavigator(bottomSheetExpandReasonRef) {
   bottomSheetExpandReasonRef = bottomSheetExpandReasonRef.bottomSheetExpandReasonRef;
   const bottomSheetIndex = bottomSheetExpandReasonRef.bottomSheetIndex;

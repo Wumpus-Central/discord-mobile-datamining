@@ -1,28 +1,28 @@
-// === Module 9451: GameProfileDetails ===
+// === Module 9458: GameProfileDetails ===
 
-// Module 9451 (GameProfileDetails)
+// Module 9458 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import DateUtilsAll from "DateUtils" /* 4794 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinkingDefault from "Linking" /* 5646 */;
-import SKUUtils from "SKUUtils" /* 9272 */;
-import useGameProfilePlatformsDefault from "useGameProfilePlatforms" /* 9459 */;
+import SKUUtils from "SKUUtils" /* 9279 */;
+import useGameProfilePlatformsDefault from "useGameProfilePlatforms" /* 9466 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8807).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8814).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8798).PlatformType.DESKTOP] = fn(9452).ScreenIcon;
-obj.mobile = fn(7039).MobilePhoneIcon;
-obj[fn(8798).PlatformType.XBOX] = fn(9261).XboxNeutralIcon;
-obj[fn(8798).PlatformType.PLAYSTATION] = fn(9454).PlaystationNeutralIcon;
-obj[fn(8798).PlatformType.NINTENDO] = fn(9456).NintendoSwitchNeutralIcon;
+obj[fn(8805).PlatformType.DESKTOP] = fn(9459).ScreenIcon;
+obj.mobile = fn(7038).MobilePhoneIcon;
+obj[fn(8805).PlatformType.XBOX] = fn(9268).XboxNeutralIcon;
+obj[fn(8805).PlatformType.PLAYSTATION] = fn(9461).PlaystationNeutralIcon;
+obj[fn(8805).PlatformType.NINTENDO] = fn(9463).NintendoSwitchNeutralIcon;
 const createStyles = fn(4969);
 let obj3 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   const tmp4 = closure_11();
   importDefault = tmp4;
   obj = trackAction(576);
-  const gameProfileLinks = trackAction(9458).useGameProfileLinks(game);
+  const gameProfileLinks = trackAction(9465).useGameProfileLinks(game);
   const arr2 = useGameProfilePlatformsDefault(game);
   if (null != game) {
     if (cResult[1] === game) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       let joined;
       if (game != null) {
         const genres1 = game.genres;
-        const mapped = genres1.map(trackAction(9272).getGenreText);
+        const mapped = genres1.map(trackAction(9279).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       cResult[67] = mapped4;
     }
   }
-  const obj2 = trackAction(9458);
+  const obj2 = trackAction(9465);
 }) : (function GameProfileDetails(game) {
   game = game.game;
   const trackAction = game.trackAction;
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               items.push(obj2);
             }
             if (length.length <= 0) {
-              const mapped3 = gameProfileLinks.map((item) => trackAction(9460)(item, trackAction(587).colors.ICON_SUBTLE));
+              const mapped3 = gameProfileLinks.map((item) => trackAction(9467)(item, trackAction(587).colors.ICON_SUBTLE));
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
                 const obj3 = { label: null, value: null };
@@ -669,7 +669,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               const obj8 = {
                 style: closure_2.platformsContainer,
                 children: length.map((item) => {
-                            obj = { size: "md", color: trackAction(587).colors.ICON_SUBTLE, accessibilityLabel: game(9459).getGameProfilePlatformText(item) };
+                            obj = { size: "md", color: trackAction(587).colors.ICON_SUBTLE, accessibilityLabel: game(9466).getGameProfilePlatformText(item) };
                             return closure_1_8(closure_1_10[item], obj, item);
                           })
               };

@@ -1,11 +1,11 @@
-// === Module 14393: OrbBadgePreview ===
+// === Module 14407: OrbBadgePreview ===
 
-// Module 14393 (OrbBadgePreview)
+// Module 14407 (OrbBadgePreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useCurrentUser from "useCurrentUser" /* 8640 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9417 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11020 */;
+import useCurrentUser from "useCurrentUser" /* 8647 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9424 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11029 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,8 +1,8 @@
-// === Module 18864: UserSettingsManager ===
+// === Module 18887: UserSettingsManager ===
 
-// Module 18864 (UserSettingsManager)
+// Module 18887 (UserSettingsManager)
 import UserSettings from "UserSettings" /* 4797 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7199 */;
 
 require = fn;
 let c2 = false;

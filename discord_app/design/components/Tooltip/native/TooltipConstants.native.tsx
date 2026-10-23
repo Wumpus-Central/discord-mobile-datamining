@@ -1,6 +1,6 @@
-// === Module 9815: TooltipConstants ===
+// === Module 9822: TooltipConstants ===
 
-// Module 9815 (TooltipConstants)
+// Module 9822 (TooltipConstants)
 import spring from "spring" /* 5233 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
-// === Module 15676: links ===
+// === Module 15689: links ===
 
-// Module 15676 (links)
+// Module 15689 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4975 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import RPCErrorDefault from "RPCError" /* 9233 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11421 */;
-import RPCHelpers from "RPCHelpers" /* 11424 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15650 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15677 */;
-import internalDeepLinks from "internalDeepLinks" /* 15678 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15679 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15681 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import RPCErrorDefault from "RPCError" /* 9240 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11432 */;
+import RPCHelpers from "RPCHelpers" /* 11435 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15663 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15690 */;
+import internalDeepLinks from "internalDeepLinks" /* 15691 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15692 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15694 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -225,7 +225,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6364);
+let Constants = fn(6363);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -235,7 +235,7 @@ const items = [, ];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15665);
+let CONTEXT_MENU_ICON_NAMES = fn(15678);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -367,7 +367,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15665);
+CONTEXT_MENU_ICON_NAMES = fn(15678);
 let obj6 = {
   scope: null,
   handler(arg0) {

@@ -1,30 +1,30 @@
-// === Module 8663: UserProfileActionSheet ===
+// === Module 8670: UserProfileActionSheet ===
 
-// Module 8663 (UserProfileActionSheet)
+// Module 8670 (UserProfileActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import isChangelogUserDefault from "isChangelogUser" /* 4870 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import BottomSheetModal from "BottomSheetModal" /* 5255 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import UserActionCreators from "UserActionCreators" /* 8643 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8649 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8671 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8684 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8688 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8695 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import UserActionCreators from "UserActionCreators" /* 8650 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8656 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8678 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8691 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8695 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8622 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8629 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7288).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7289).UserProfileThemeTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
 const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;

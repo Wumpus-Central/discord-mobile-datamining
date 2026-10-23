@@ -1,17 +1,17 @@
-// === Module 18221: ContextMenuCommandRootScreen ===
+// === Module 18243: ContextMenuCommandRootScreen ===
 
-// Module 18221 (ContextMenuCommandRootScreen)
+// Module 18243 (ContextMenuCommandRootScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import executeCommandDefault from "executeCommand" /* 10168 */;
+import executeCommandDefault from "executeCommand" /* 10175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5970);
+const ApplicationCommandConstants = fn(5969);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -744,7 +744,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
     const obj9 = { size: "md", onChange: tmp4[1], placeholder: null };
     let intl = tmp(tmp2[17]).intl;
     obj9.placeholder = intl.string(tmp(tmp2[17]).t.m1UwbP);
-    obj7.children = sectionDescriptors(tmp(tmp2[20]).SearchField, obj9);
+    obj7.children = sectionDescriptors(tmp(tmp2[20]).SearchBar, obj9);
     tmp27Result = tmp27(closure_6, obj7);
   }
   const obj10 = { children: null };

@@ -1,13 +1,13 @@
-// === Module 18922: MentionSpamTriggerFields ===
+// === Module 18945: MentionSpamTriggerFields ===
 
-// Module 18922 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 18905 */;
+// Module 18945 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 18928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12731);
+const Constants = fn(12750);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -194,10 +194,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(18185).useHasMentionRaidLimitAccess(rule.guildId);
+  let hasMentionRaidLimitAccess = rule(18207).useHasMentionRaidLimitAccess(rule.guildId);
   const intl = rule(1128).intl;
   const stringResult = intl.string(rule(1128).t["s/26oQ"]);
-  let obj = rule(18185);
+  let obj = rule(18207);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
   const intl2 = rule(1128).intl;
@@ -248,9 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
     status: "error",
     accessibilityLabel: stringResult
   };
-  obj6.children = closure_7(rule(7001).TextField, obj7);
+  obj6.children = closure_7(rule(7000).TextField, obj7);
   obj5.trailing = closure_7(View, obj6);
-  const items = [closure_7(rule(6889).TableRow, obj5), ];
+  const items = [closure_7(rule(6888).TableRow, obj5), ];
   if (hasMentionRaidLimitAccess) {
     const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
     const intl5 = tmp2(1128).intl;
@@ -267,9 +267,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
       obj.triggerMetadata = obj2;
       return dependencyMap(obj);
     };
-    hasMentionRaidLimitAccess = closure_7(tmp2(6886).TableCheckboxRow, obj8);
+    hasMentionRaidLimitAccess = closure_7(tmp2(6885).TableCheckboxRow, obj8);
   }
   items[1] = hasMentionRaidLimitAccess;
   obj2.children = items;
-  return closure_8(rule(6973).TableRowGroup, obj2);
+  return closure_8(rule(6972).TableRowGroup, obj2);
 });

@@ -1,23 +1,23 @@
-// === Module 15770: ProfileCustomizationSettingScreen ===
+// === Module 15784: ProfileCustomizationSettingScreen ===
 
-// Module 15770 (ProfileCustomizationSettingScreen)
+// Module 15784 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7064 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11035 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11153 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15771 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15791 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15878 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15879 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15887 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7063 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11044 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11162 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15785 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15806 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15896 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15897 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11088 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8622 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11097 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8629 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj2 = obj5(5238);
   const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
   let obj3 = obj5(1505);
-  const params = obj5(7076).useSettingNavigationRoute().params;
+  const params = obj5(7075).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -119,7 +119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  let obj4 = obj5(7076);
+  let obj4 = obj5(7075);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class H {
@@ -140,7 +140,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { location: "ProfileCustomizationSettingScreen", hasUnsavedChanges: stateFromStores, onReset: UserSettingsAccountActionCreators.resetAllPending, onContinue, onSave };
     return maybeShowUnsavedChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(8869).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8876).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -264,7 +264,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(8869);
+  const tmpResult = obj5(8876);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {
@@ -384,11 +384,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let obj = {
       contentStyle: { backgroundColor },
       headerShadowVisible: false,
-      headerRight: closure_11 ? (() => closure_1_17(backgroundColor(first[29]).HeaderSubmittingIndicator, {})) : ((arg0) => {
-        let obj = {};
-        const merged = Object.assign(arg0);
+      headerRight: closure_11 ? (() => closure_1_17(backgroundColor(first[29]).HeaderSubmittingIndicator, {})) : (() => {
+        let obj = { text: null, disabled: null, onPress: null };
         const intl = closure_0(first[11]).intl;
-        obj.label = intl.string(closure_0(first[11]).t["R3BPH+"]);
+        obj.text = intl.string(closure_0(first[11]).t["R3BPH+"]);
         obj.disabled = !stateFromStores;
         obj.onPress = handleSubmit(function*() {
           if (c2 === 2) {
@@ -441,7 +440,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
         });
-        return closure_2_17(closure_0(first[30]).HeaderTextButton, obj);
+        return closure_2_17(closure_0(first[30]).HeaderActionButton, obj);
       })
     };
     nativeStackNavigation.setOptions(obj);

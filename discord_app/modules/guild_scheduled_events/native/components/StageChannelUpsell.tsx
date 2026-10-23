@@ -1,6 +1,6 @@
-// === Module 8915: StageChannelUpsell ===
+// === Module 8922: StageChannelUpsell ===
 
-// Module 8915 (StageChannelUpsell)
+// Module 8922 (StageChannelUpsell)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -9,18 +9,18 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import Pressables from "Pressables" /* 6894 */;
-import _modDef8099 from "module_8099" /* 8099 */;
-import _modDef8917 from "module_8917" /* 8917 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import Pressables from "Pressables" /* 6893 */;
+import _modDef8100 from "module_8100" /* 8100 */;
+import _modDef8924 from "module_8924" /* 8924 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const createChannelRecord = fn(4825).createChannelRecord;
-let closure_6 = fn(8916).useStageChannelUpsellCardStore;
-let closure_7 = fn(8852).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_6 = fn(8923).useStageChannelUpsellCardStore;
+let closure_7 = fn(8859).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -40,10 +40,10 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef8099 };
+    let obj3 = { source: _modDef8100 };
     obj2.children = closure_9(native.Icon, obj3);
     const items = [closure_9(Pressables.PressableOpacity, obj2), , , , , ];
-    const obj4 = { source: _modDef8917, style: tmp.image };
+    const obj4 = { source: _modDef8924, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
     const obj5 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -68,7 +68,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.text = intl4.string(util.t["X/3SyA"]);
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8918, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8925, dependencyMap.paths), {
         guildId,
         channelType: ChannelTypes.GUILD_STAGE_VOICE,
         onChannelCreated(id) {

@@ -1,15 +1,15 @@
-// === Module 18631: AcceptInviteModal ===
+// === Module 18653: AcceptInviteModal ===
 
-// Module 18631 (AcceptInviteModal)
+// Module 18653 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 5687 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13580 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13594 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CreateGuildModalStates = fn(7059).CreateGuildModalStates;
+const CreateGuildModalStates = fn(7058).CreateGuildModalStates;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptIn
     obj3.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(9311).clearDisplayedInvite;
+      obj.onPressClose = closure_0(9318).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj2[CreateGuildModalStates.ACCEPT_INVITE] = obj3;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptIn
   }
   if (cResult[4] !== tmp7) {
     const obj5 = { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE };
-    const tmp12 = jsx(tmp(7081).Navigator, { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });
+    const tmp12 = jsx(tmp(7080).Navigator, { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });
     cResult[4] = tmp7;
     cResult[5] = tmp12;
     let tmp9 = tmp12;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptIn
     obj2.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(9311).clearDisplayedInvite;
+      obj.onPressClose = closure_0(9318).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj2;

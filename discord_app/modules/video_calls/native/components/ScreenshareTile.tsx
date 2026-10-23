@@ -1,6 +1,6 @@
-// === Module 11363: ScreenshareTile ===
+// === Module 11374: ScreenshareTile ===
 
-// Module 11363 (ScreenshareTile)
+// Module 11374 (ScreenshareTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 11364 */;
-import _modDef11365 from "module_11365" /* 11365 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 11375 */;
+import _modDef11376 from "module_11376" /* 11376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenSh
       tmp12 = cResult[5];
     }
     if (cResult[6] !== tmp4.image) {
-      const obj3 = { source: _modDef11365, style: tmp4.image, resizeMode: "contain" };
+      const obj3 = { source: _modDef11376, style: tmp4.image, resizeMode: "contain" };
       const tmp19 = hasOwnProperty(FastImageDefault, obj3);
       cResult[6] = tmp4.image;
       cResult[7] = tmp19;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenSh
   const items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), , ];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef11365;
+  obj4.source = _modDef11376;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

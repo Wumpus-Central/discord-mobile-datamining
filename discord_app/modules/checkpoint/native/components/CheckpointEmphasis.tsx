@@ -1,12 +1,12 @@
-// === Module 12904: CheckpointEmphasis ===
+// === Module 12922: CheckpointEmphasis ===
 
-// Module 12904 (CheckpointEmphasis)
+// Module 12922 (CheckpointEmphasis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useFontScale from "useFontScale" /* 5239 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11023 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11032 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,11 +14,11 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6002).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6001).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PlatformUtils = fn(1385);
-const CheckpointCustomizationUtils = fn(6348);
+const CheckpointCustomizationUtils = fn(6347);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(4969);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };

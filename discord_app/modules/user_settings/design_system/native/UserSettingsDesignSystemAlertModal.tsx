@@ -1,10 +1,10 @@
-// === Module 17040: UserSettingsDesignSystemAlertModal ===
+// === Module 17062: UserSettingsDesignSystemAlertModal ===
 
-// Module 17040 (UserSettingsDesignSystemAlertModal)
+// Module 17062 (UserSettingsDesignSystemAlertModal)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import useAlertStore from "useAlertStore" /* 5897 */;
-import AlertModal from "AlertModal" /* 5901 */;
+import useAlertStore from "useAlertStore" /* 5896 */;
+import AlertModal from "AlertModal" /* 5900 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

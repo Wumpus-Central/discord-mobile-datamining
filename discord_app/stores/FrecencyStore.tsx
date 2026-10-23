@@ -1,6 +1,6 @@
-// === Module 6809: FrecencyStore ===
+// === Module 6808: FrecencyStore ===
 
-// Module 6809 (FrecencyStore)
+// Module 6808 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

@@ -1,6 +1,6 @@
-// === Module 6834: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 6833: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 6834 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 6833 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

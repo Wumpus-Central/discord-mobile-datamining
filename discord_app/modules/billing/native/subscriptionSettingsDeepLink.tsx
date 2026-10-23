@@ -1,8 +1,8 @@
-// === Module 15172: subscriptionSettingsDeepLink ===
+// === Module 15185: subscriptionSettingsDeepLink ===
 
-// Module 15172 (subscriptionSettingsDeepLink)
+// Module 15185 (subscriptionSettingsDeepLink)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import openUserSettings from "openUserSettings" /* 7474 */;
+import openUserSettings from "openUserSettings" /* 7475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
 
@@ -111,7 +111,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15173).showSimpleActionSheet(obj);
+            const result = closure_0(15186).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

@@ -7,7 +7,7 @@ import BackoffDefault from "Backoff" /* 569 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import TimeUtils from "TimeUtils" /* 5708 */;
-import DaveMessageValidator from "DaveMessageValidator" /* 5894 */;
+import DaveMessageValidator from "DaveMessageValidator" /* 5893 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5728 */;
@@ -76,7 +76,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.handleClose(false, 0, "The connection timed out after " + TimeUtils.now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   let obj = self(5708);
-  obj2 = self(15321);
+  obj2 = self(15334);
   const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion({ location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) }));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";

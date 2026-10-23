@@ -1,9 +1,9 @@
-// === Module 12432: ConjureThinkingOverlay ===
+// === Module 12442: ConjureThinkingOverlay ===
 
-// Module 12432 (ConjureThinkingOverlay)
+// Module 12442 (ConjureThinkingOverlay)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10669 */;
+import ConjureChatStore from "ConjureChatStore" /* 10676 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -74,10 +74,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   if (str2 == null) {
     str2 = "";
   }
-  const text = projectId(12223).useConjureRevealedText(str2, tmp12).text;
+  const text = projectId(12234).useConjureRevealedText(str2, tmp12).text;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
-    const tmp16 = closure_7(tmp(9931).LightbulbIcon, obj3);
+    const tmp16 = closure_7(tmp(9938).LightbulbIcon, obj3);
     cResult[6] = tmp16;
     let tmp13 = tmp16;
   } else {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       const items3 = [tmp21, cResult[12]];
       obj9.children = items3;
       obj8.children = closure_8(closure_5, obj9);
-      const tmp36 = closure_7(tmp(6891).Card, obj8);
+      const tmp36 = closure_7(tmp(6890).Card, obj8);
       cResult[13] = tmp4.body;
       cResult[14] = tmp21;
       cResult[15] = cResult[12];
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
         },
       children: null
     };
-    ref = ref(12221);
+    ref = ref(12232);
     const obj11 = { source: text };
     obj10.children = closure_7(ref, obj11);
     let tmp28 = closure_7(closure_4, obj10);
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   cResult[10] = tmp4.panel;
   cResult[11] = text;
   cResult[12] = tmp28;
-  const tmpResult2 = projectId(12223);
+  const tmpResult2 = projectId(12234);
 }) : (function ConjureThinkingOverlay(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_9();
@@ -197,13 +197,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   if (tmp6) {
     tmp6 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(12223).useConjureRevealedText(str, { streaming: tmp6 }).text;
+  const text = projectId(12234).useConjureRevealedText(str, { streaming: tmp6 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(12223);
-  const items2 = [closure_7(projectId(9931).LightbulbIcon, { size: "xs", color: ref(587).colors.TEXT_BRAND }), ];
+  const obj2 = projectId(12234);
+  const items2 = [closure_7(projectId(9938).LightbulbIcon, { size: "xs", color: ref(587).colors.TEXT_BRAND }), ];
   const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
   const intl = tmp3(1128).intl;
   obj8.children = intl.string(ref(3830).XXYIeI);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       children: null
     };
     const obj10 = { source: text };
-    obj9.children = closure_7(tmp10(12221), obj10);
+    obj9.children = closure_7(tmp10(12232), obj10);
     let tmp7Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   const obj7 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
   items3[1] = tmp7Result;
   obj5.children = items3;
-  obj4.children = closure_7(projectId(6891).Card, { variant: "primary", shadow: "high", children: closure_8(closure_5, obj5) });
+  obj4.children = closure_7(projectId(6890).Card, { variant: "primary", shadow: "high", children: closure_8(closure_5, obj5) });
   obj3.children = closure_7(closure_5, obj4);
   return closure_7(closure_5, obj3);
 });

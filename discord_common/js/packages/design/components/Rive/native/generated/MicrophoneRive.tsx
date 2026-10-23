@@ -8,8 +8,8 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+let closure_2 = ["ref", "fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let closure_3 = ["ref", "fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
-let closure_4 = ["ref", "fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 const jsx = fn(21).jsx;
 const artboardProperties = { "Icon Microphone": { reducedMotion: "boolean", fill: "color", on: "boolean" }, "Animation Main": { reducedMotion: "boolean", fill: "color", on: "boolean" } };
 const artboardViewModelInstances = { "Icon Microphone": ["Off", "On"], "Animation Main": ["Off", "On"] };
@@ -109,17 +109,17 @@ obj2["Animation Main"] = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   return null;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MicrophoneRiveInner(arg0) {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MicrophoneRiveInner(arg0) {
   const cResult = require("c").c(19);
   if (cResult[0] !== arg0) {
     ({ ref, fallback, artboard, stateMachine, defaultViewModelInstance, dataBinding, onDataBindingChange } = arg0);
-    const tmp13 = _objectWithoutProperties(arg0, closure_3);
+    const tmp13 = _objectWithoutProperties(arg0, str);
     _require = dataBinding;
-    importDefault = onDataBindingChange;
+    dependencyMap = onDataBindingChange;
     cResult[0] = arg0;
     class V {
       constructor(arg0) {
-        tmp = closure_10[closure_2];
+        tmp = closure_9[closure_2];
         tmp2 = null;
         if (null != tmp) {
           tmp3 = arg0;
@@ -150,7 +150,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
     let tmp6 = ref;
   } else {
     _require = cResult[1];
-    importDefault = cResult[2];
+    dependencyMap = cResult[2];
     tmp6 = cResult[3];
     tmp7 = cResult[4];
     tmp8 = cResult[5];
@@ -184,10 +184,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
           }
         }
       }
-      obj2 = { ref: tmp6, src: require("module_5110"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null };
+      obj2 = { ref: tmp6, src: tmp(5110), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null };
       class V {
         constructor(arg0) {
-          tmp = closure_10[closure_2];
+          tmp = closure_9[closure_2];
           tmp2 = null;
           if (null != tmp) {
             tmp3 = arg0;
@@ -204,22 +204,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
           return tmp2;
         }
       }
-      obj2.renderDataBinding = tmp14;
       let merged = Object.assign(tmp7);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5110"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null });
+      const tmp22 = jsx(tmp(5032).BaseRive, { ref: tmp6, src: tmp(5110), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;
       cResult[15] = tmp14;
       cResult[16] = tmp7;
       cResult[17] = tmp8;
-      cResult[18] = tmp23;
-      tmp15 = tmp23;
+      cResult[18] = tmp22;
+      tmp15 = tmp22;
     }
   }
   class V {
     constructor(arg0) {
-      tmp = closure_10[closure_2];
+      tmp = closure_9[closure_2];
       tmp2 = null;
       if (null != tmp) {
         tmp3 = arg0;
@@ -242,7 +241,6 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
   cResult[11] = V;
   tmp14 = V;
   let obj = require("c");
-  tmp = _require;
 }) : (function MicrophoneRiveInner(defaultViewModelInstance) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Icon Microphone";
@@ -268,9 +266,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
     }
     return tmp2;
   }, items);
-  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[4]).BaseRive, { ref: defaultViewModelInstance.ref, src: dataBinding(onDataBindingChange[6]), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(dataBinding[4]).BaseRive, { ref: defaultViewModelInstance.ref, src: str(dataBinding[6]), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -281,7 +279,7 @@ export const MicrophoneRive = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   if (cResult[0] !== fallback) {
     obj2 = {};
     const merged = Object.assign(fallback);
-    const tmp10 = <closure_11 />;
+    const tmp10 = <closure_10 />;
     cResult[0] = fallback;
     cResult[1] = tmp10;
     let tmp4 = tmp10;
@@ -303,6 +301,6 @@ export const MicrophoneRive = ReactCompilerGating.isReactCompilerEnabled() ? (fu
 }) : (function MicrophoneRiveWithBoundary(fallback) {
   const obj = { fallback: fallback.fallback, children: null };
   const merged = Object.assign(fallback);
-  obj.children = <closure_11 />;
+  obj.children = <closure_10 />;
   return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
 });

@@ -1,22 +1,22 @@
-// === Module 14077: QuestCopyHooks ===
+// === Module 14091: QuestCopyHooks ===
 
-// Module 14077 (QuestCopyHooks)
+// Module 14091 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import QuestTypes from "QuestTypes" /* 6699 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7782 */;
-import QuestType from "QuestType" /* 7784 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9214 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9215 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9539 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9558 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9563 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11402 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14066 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14079 */;
+import QuestTypes from "QuestTypes" /* 6698 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7783 */;
+import QuestType from "QuestType" /* 7785 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9221 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9222 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9546 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9565 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9570 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11413 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14080 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +26,8 @@ import UserStore from "UserStore" /* 1392 */;
 const require = globalThis.__r;
 
 const util = v1votF6(1128);
-const utils_QuestUtils = v1votF6(7780);
-const SponsoredQuestUtils = v1votF6(14078);
+const utils_QuestUtils = v1votF6(7781);
+const SponsoredQuestUtils = v1votF6(14092);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -425,7 +425,7 @@ function getSimplifiedQuestTaskType(quest) {
   PLAY = constants3.PLAY;
   obj = QuestTaskUtils;
 }
-const QuestConstants = fn(6696);
+const QuestConstants = fn(6695);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const PremiumTypes = fn(1394).PremiumTypes;
@@ -1898,14 +1898,14 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj = { value, done: true };
           return obj;
         } else {
-          const obj6 = { content: closure_128_1, ctaContent: tmp4(7785).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj6 = { content: closure_128_1, ctaContent: tmp4(7786).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj6.impressionId = tmp5;
           obj6.sourceQuestContent = closure_128_4;
-          tmp4(9576).openGameLinkDirectly(closure_128_0, obj6);
+          tmp4(9583).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -1949,7 +1949,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(9563).getExternalCtaLabel(quest);
+  obj.ctaText = quest(9570).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

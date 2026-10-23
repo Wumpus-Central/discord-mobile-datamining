@@ -1,12 +1,12 @@
-// === Module 11375: VideoSpinnerTimer ===
+// === Module 11386: VideoSpinnerTimer ===
 
-// Module 11375 (VideoSpinnerTimer)
+// Module 11386 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import TimeUtils from "TimeUtils" /* 5708 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import NetworkStore from "NetworkStore" /* 5877 */;
+import NetworkStore from "NetworkStore" /* 5876 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import VoiceStateStore from "VoiceStateStore" /* 5616 */;
 

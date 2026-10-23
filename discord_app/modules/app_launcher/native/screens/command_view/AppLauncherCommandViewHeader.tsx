@@ -1,13 +1,13 @@
-// === Module 12088: AppLauncherCommandViewHeader ===
+// === Module 12099: AppLauncherCommandViewHeader ===
 
-// Module 12088 (AppLauncherCommandViewHeader)
+// Module 12099 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8599 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11969 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12065 */;
-import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 12089 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8600 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11983 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12075 */;
+import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 12100 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -18,11 +18,11 @@ const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12065).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12075).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(4969);
 let obj2 = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, overflowMenuContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
-let size = { width: fn(12065).BACK_BUTTON_SIZE, height: fn(12065).BACK_BUTTON_SIZE };
+let size = { width: fn(12075).BACK_BUTTON_SIZE, height: fn(12075).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: AppLauncherNativeConstants.SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -62,11 +62,11 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
     application = section.application;
   }
   if (cResult[0] !== application) {
-    const appLauncherIconSource = scrollOffsetY(11969).getAppLauncherIconSource(application);
+    const appLauncherIconSource = scrollOffsetY(11983).getAppLauncherIconSource(application);
     cResult[0] = application;
     cResult[1] = appLauncherIconSource;
     loadingIcon = appLauncherIconSource;
-    const tmpResult = scrollOffsetY(11969);
+    const tmpResult = scrollOffsetY(11983);
   } else {
     loadingIcon = cResult[1];
   }
@@ -430,7 +430,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(8599);
+  const tmp9 = section(8600);
   if (null != memo) {
     const obj8 = { style: tmp.appIcon, source: memo };
     let tmp15 = closure_6(tmp8(5655), obj8);
@@ -454,7 +454,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
   const obj11 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj11.style = items3;
-  const items4 = [tmp16(section(5038).View, obj11), tmp16(section(12065), { onPress: onPress.onPressBack }), , , ];
+  const items4 = [tmp16(section(5038).View, obj11), tmp16(section(12075), { onPress: onPress.onPressBack }), , , ];
   const obj12 = { lineClamp: 1, animated: true, style: null, variant: "heading-lg/bold", color: "text-overlay-light", children: null };
   const items5 = [tmp.appSmallName, animatedStyle];
   obj12.style = items5;
@@ -466,14 +466,14 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
   items4[2] = tmp16(scrollOffsetY(5220).Text, obj12);
   const obj13 = { style: tmp.overflowMenuContainer, children: null };
   let id;
-  tmp9Result = section(8599)(tmp10, str);
+  tmp9Result = section(8600)(tmp10, str);
   if (command != null) {
     const rootCommand = command.rootCommand;
     if (rootCommand != null) {
       id = rootCommand.id;
     }
   }
-  obj13.children = tmp16(section(12089), { commandId: id });
+  obj13.children = tmp16(section(12100), { commandId: id });
   items4[3] = tmp16(View, obj13);
   const obj14 = { style: null, children: tmp15 };
   const items6 = [tmp.appIconMask, animatedStyle1];

@@ -1,39 +1,39 @@
-// === Module 18454: VoicePanelCard ===
+// === Module 18476: VoicePanelCard ===
 
-// Module 18454 (VoicePanelCard)
+// Module 18476 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 5023 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import spring from "spring" /* 5233 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6631 */;
-import StreamActionCreators from "StreamActionCreators" /* 7813 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9946 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12014 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18343 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18457 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18458 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6630 */;
+import StreamActionCreators from "StreamActionCreators" /* 7814 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8648 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9953 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12025 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18365 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18479 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5993 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import SoundboardStore from "SoundboardStore" /* 5992 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
-import SpeakingStore from "SpeakingStore" /* 6671 */;
+import SpeakingStore from "SpeakingStore" /* 6670 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(10865);
+const VoicePanelConstants = fn(10873);
 ({ VoicePanelCTACard: c10, VoicePanelModes: closure_11, MODE_CHANGE_PHYSICS: closure_12, SPEAKING_PHYSICS: map1, VoicePanelCardItemType: closure_14 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18344).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(10868).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18366).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10876).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const ParticipantTypes = fn(5618).ParticipantTypes;
-const SCALE_PHYSICS = fn(10866).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(10874).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -2176,7 +2176,7 @@ let closure_60 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSha
   });
   return { sharedTransitionState, cardGestureEnabled: cardGestureEnabled[0] };
 });
-let closure_61 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
+let closure_61 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
   if (flag === undefined) {
     flag = false;
@@ -3554,7 +3554,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp41 = tmp56;
         }
       }
-      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "toCharArray$esjava$1", layout: layoutTransition2, layoutPhysics: physics };
+      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition2, layoutPhysics: physics };
       const tmp59 = closure_21(closure_43, obj10);
       cResult[54] = tmp13;
       cResult[55] = layoutTransition2;
@@ -3836,7 +3836,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp29 = closure_21;
     }
   }
-  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "toCharArray$esjava$1", layout: layoutTransition, layoutPhysics: physics };
+  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition, layoutPhysics: physics };
   tmp31Result = closure_21(closure_43, obj13);
   tmp29 = closure_21;
   const tmp5Result16 = scrollPosition(id2[15]);

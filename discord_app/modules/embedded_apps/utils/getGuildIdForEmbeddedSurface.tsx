@@ -1,6 +1,6 @@
-// === Module 9237: getGuildIdForEmbeddedSurface ===
+// === Module 9244: getGuildIdForEmbeddedSurface ===
 
-// Module 9237 (getGuildIdForEmbeddedSurface)
+// Module 9244 (getGuildIdForEmbeddedSurface)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
 import size from "module_2" /* 2 */;
 

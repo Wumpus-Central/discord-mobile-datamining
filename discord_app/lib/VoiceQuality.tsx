@@ -1,12 +1,12 @@
-// === Module 5869: VoiceQuality ===
+// === Module 5868: VoiceQuality ===
 
-// Module 5869 (VoiceQuality)
+// Module 5868 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5725 */;
-import Histogram from "Histogram" /* 5870 */;
-import NetworkQualityDefault from "NetworkQuality" /* 5876 */;
-import SystemResourcesDefault from "SystemResources" /* 5878 */;
+import Histogram from "Histogram" /* 5869 */;
+import NetworkQualityDefault from "NetworkQuality" /* 5875 */;
+import SystemResourcesDefault from "SystemResources" /* 5877 */;
 import _slicedToArray from "module_32" /* 32 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5728 */;
 
@@ -321,7 +321,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp35.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(5870).Histogram();
+                prop = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
@@ -330,7 +330,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp35.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(5870).Histogram();
+                prop1 = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
@@ -339,7 +339,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp35.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(5870).Histogram();
+                prop2 = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } = type);

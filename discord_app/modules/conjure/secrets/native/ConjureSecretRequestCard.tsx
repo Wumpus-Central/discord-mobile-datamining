@@ -1,11 +1,11 @@
-// === Module 12420: ConjureSecretRequestCard ===
+// === Module 12430: ConjureSecretRequestCard ===
 
-// Module 12420 (ConjureSecretRequestCard)
+// Module 12430 (ConjureSecretRequestCard)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
-import ConjureSecretsSheet from "ConjureSecretsSheet" /* 12421 */;
+import ConjureSecretsSheet from "ConjureSecretsSheet" /* 12431 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       if ("" !== request.note) {
         let note = request.note;
       }
-      const obj24 = { variant: "text-sm/normal", color: "text-default", children: note };
+      const obj24 = { text: note, variant: "text-sm/normal", color: "text-default" };
       items8[2] = closure_6(tmp17, obj24);
       const obj25 = { label: null, size: "xs", items: null };
       const intl3 = tmp4(tmp5[17]).intl;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       const obj26 = { variant: "primary", size: "sm", onPress: callback, text: null };
       const intl4 = tmp4(tmp5[17]).intl;
       obj26.text = intl4.string(request(tmp5[18]).EK8tKY);
-      items8[4] = closure_6(tmp4(tmp5[24]).Button, obj26);
+      items8[4] = closure_6(tmp4(tmp5[25]).Button, obj26);
       obj22.children = items8;
       tmp30Result = closure_7(tmp10Result8, obj22);
     }

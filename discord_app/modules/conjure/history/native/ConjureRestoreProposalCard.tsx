@@ -1,14 +1,14 @@
-// === Module 12429: ConjureRestoreProposalCard ===
+// === Module 12439: ConjureRestoreProposalCard ===
 
-// Module 12429 (ConjureRestoreProposalCard)
+// Module 12439 (ConjureRestoreProposalCard)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11759 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11819 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11770 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

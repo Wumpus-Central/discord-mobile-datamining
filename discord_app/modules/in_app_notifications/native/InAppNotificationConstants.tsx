@@ -1,6 +1,6 @@
-// === Module 13679: InAppNotificationConstants ===
+// === Module 13693: InAppNotificationConstants ===
 
-// Module 13679 (InAppNotificationConstants)
+// Module 13693 (InAppNotificationConstants)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import size from "module_2" /* 2 */;

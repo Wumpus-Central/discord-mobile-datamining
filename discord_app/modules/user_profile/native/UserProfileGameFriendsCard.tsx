@@ -1,11 +1,11 @@
-// === Module 14349: UserProfileGameFriendsCard ===
+// === Module 14363: UserProfileGameFriendsCard ===
 
-// Module 14349 (UserProfileGameFriendsCard)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7241 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13474 */;
+// Module 14363 (UserProfileGameFriendsCard)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7242 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13488 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileCardDefault = tmp5(7287);
+const UserProfileCardDefault = tmp5(7288);
 const require = fn;
 let jsx = fn(21).jsx;
 const createStyles = fn(4969);

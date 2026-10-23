@@ -1,6 +1,6 @@
-// === Module 7395: ChannelActionCreators ===
+// === Module 7396: ChannelActionCreators ===
 
-// Module 7395 (ChannelActionCreators)
+// Module 7396 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -9,13 +9,13 @@ import shared from "shared" /* 4976 */;
 import RootNavigationRef from "RootNavigationRef" /* 5137 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
 import preloadChannelDefault from "preloadChannel" /* 5695 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6807 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7396 */;
+import ChangelogStore from "ChangelogStore" /* 7397 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
 
 const require = globalThis.__r;
 
@@ -421,14 +421,14 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
     if (flag) {
       flag3(1114).transitionTo(constants2.FRIENDS);
       const obj6 = flag3(1114);
     }
     const HTTP = flag3(1297).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1297).rejectWithMigratedError();
     const obj8 = flag3(1297);
@@ -544,8 +544,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7408).checkGuildTemplateDirty(closure_128_2);
-        name(7408);
+        const result = name(7409).checkGuildTemplateDirty(closure_128_2);
+        name(7409);
       }
       return closure_128_1;
     })();

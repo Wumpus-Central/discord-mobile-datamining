@@ -1,10 +1,10 @@
-// === Module 8334: GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 8335: GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 8334 (GuildRoleSubscriptionSystemMessageUtils)
+// Module 8335 (GuildRoleSubscriptionSystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7335 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7336 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -57,7 +57,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8335);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8336);
 ({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: metroRequire, STICKERS: closure_7 } = GuildRoleSubscriptionSystemMessageConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);

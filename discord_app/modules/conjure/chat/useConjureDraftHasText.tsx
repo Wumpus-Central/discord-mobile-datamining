@@ -1,9 +1,9 @@
-// === Module 12257: useConjureDraftHasText ===
+// === Module 12268: useConjureDraftHasText ===
 
-// Module 12257 (useConjureDraftHasText)
+// Module 12268 (useConjureDraftHasText)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12258 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12269 */;
 
 const require = globalThis.__r;
 

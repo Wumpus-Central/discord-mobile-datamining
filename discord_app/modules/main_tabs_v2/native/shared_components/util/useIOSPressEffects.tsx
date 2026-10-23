@@ -1,6 +1,6 @@
-// === Module 6896: useIOSPressEffects ===
+// === Module 6895: useIOSPressEffects ===
 
-// Module 6896 (useIOSPressEffects)
+// Module 6895 (useIOSPressEffects)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import spring from "spring" /* 5233 */;

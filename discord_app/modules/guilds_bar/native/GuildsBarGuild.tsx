@@ -1,27 +1,27 @@
-// === Module 17660: GuildsBarGuild ===
+// === Module 17682: GuildsBarGuild ===
 
-// Module 17660 (GuildsBarGuild)
+// Module 17682 (GuildsBarGuild)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import spring from "spring" /* 5233 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
-import GuildIcon from "GuildIcon" /* 6869 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17632 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17655 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17680 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
+import GuildIcon from "GuildIcon" /* 6868 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17654 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17677 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17702 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6689 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6800 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6688 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6799 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SortedGuildStore from "SortedGuildStore" /* 6687 */;
+import SortedGuildStore from "SortedGuildStore" /* 6686 */;
 
 require = fn;
 const GuildRecord = fn(4839);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(17631).useItemDragState;
-const TRANSITION_PHYSICS = fn(17628).TRANSITION_PHYSICS;
+const useItemDragState = fn(17653).useItemDragState;
+const TRANSITION_PHYSICS = fn(17650).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);

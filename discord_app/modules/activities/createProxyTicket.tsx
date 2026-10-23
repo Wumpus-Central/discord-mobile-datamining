@@ -1,6 +1,6 @@
-// === Module 10700: createProxyTicket ===
+// === Module 10707: createProxyTicket ===
 
-// Module 10700 (createProxyTicket)
+// Module 10707 (createProxyTicket)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

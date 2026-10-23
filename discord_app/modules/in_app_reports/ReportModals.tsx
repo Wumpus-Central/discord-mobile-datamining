@@ -1,11 +1,11 @@
-// === Module 8092: ReportModals ===
+// === Module 8093: ReportModals ===
 
-// Module 8092 (ReportModals)
+// Module 8093 (ReportModals)
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import MenuTypes from "MenuTypes" /* 8093 */;
-import showReportModal from "showReportModal" /* 8094 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8096 */;
+import MenuTypes from "MenuTypes" /* 8094 */;
+import showReportModal from "showReportModal" /* 8095 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import StageInstanceStore from "StageInstanceStore" /* 4826 */;
 import MessageRecord from "MessageRecord" /* 4912 */;
@@ -208,7 +208,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "r", channel_id: "emoji" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "Reflect" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

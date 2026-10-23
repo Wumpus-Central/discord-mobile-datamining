@@ -1,9 +1,9 @@
-// === Module 10603: AcceptRequestConfirmationModal ===
+// === Module 10610: AcceptRequestConfirmationModal ===
 
-// Module 10603 (AcceptRequestConfirmationModal)
+// Module 10610 (AcceptRequestConfirmationModal)
 import nativeDefault from "native" /* 587 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
-import common_AlertDefault from "common/Alert" /* 5965 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
+import common_AlertDefault from "common/Alert" /* 5964 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

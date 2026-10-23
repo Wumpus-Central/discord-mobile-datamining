@@ -1,6 +1,6 @@
-// === Module 18089: ChannelDetailsTopicGradient ===
+// === Module 18111: ChannelDetailsTopicGradient ===
 
-// Module 18089 (ChannelDetailsTopicGradient)
+// Module 18111 (ChannelDetailsTopicGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;

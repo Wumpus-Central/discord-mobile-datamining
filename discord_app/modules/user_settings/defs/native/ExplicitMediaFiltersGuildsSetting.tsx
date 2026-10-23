@@ -1,18 +1,18 @@
-// === Module 16042: ExplicitMediaFiltersGuildsSetting ===
+// === Module 16060: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 16042 (ExplicitMediaFiltersGuildsSetting)
+// Module 16060 (ExplicitMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7380 */;
-import useUserIsTeen from "useUserIsTeen" /* 8108 */;
-import SettingsConstants from "SettingsConstants" /* 8317 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8571 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16037 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16038 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7381 */;
+import useUserIsTeen from "useUserIsTeen" /* 8109 */;
+import SettingsConstants from "SettingsConstants" /* 8318 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8572 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16055 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16056 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11172 */;
+import SettingBuilders from "SettingBuilders" /* 11181 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

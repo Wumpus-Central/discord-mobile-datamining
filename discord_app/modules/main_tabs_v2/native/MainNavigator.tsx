@@ -1,22 +1,22 @@
-// === Module 17253: MainNavigator ===
+// === Module 17275: MainNavigator ===
 
-// Module 17253 (MainNavigator)
+// Module 17275 (MainNavigator)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import DeviceUtils from "DeviceUtils" /* 4926 */;
 import ChatInputUtils from "ChatInputUtils" /* 5145 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10001 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11519 */;
-import StartupProfiler from "StartupProfiler" /* 12976 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15228 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17255 */;
-import AutoAnalytics from "AutoAnalytics" /* 18092 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18139 */;
-import AppComponents from "AppComponents" /* 18327 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 18568 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18599 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10008 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11530 */;
+import StartupProfiler from "StartupProfiler" /* 12992 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15241 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17277 */;
+import AutoAnalytics from "AutoAnalytics" /* 18114 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18161 */;
+import AppComponents from "AppComponents" /* 18349 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 18590 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -79,7 +79,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17254).StackNavigationAnimationSettings;
+let closure_7 = fn(17276).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -154,9 +154,9 @@ function getChannelScreen() {
       }
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9669).renderHeader };
+      const obj = { headerShown: true, header: styles(9676).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -704,9 +704,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9669).renderHeader };
+          const obj = { headerShown: true, header: styles(9676).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -790,9 +790,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9669).renderHeader };
+          const obj = { headerShown: true, header: styles(9676).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -857,7 +857,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(9676).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -906,9 +906,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(9669).renderHeader };
+              const obj = { headerShown: true, header: styles(9676).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -926,7 +926,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(10001)();
+          return stateFromStores(10008)();
         }
       }),
     ,
@@ -945,7 +945,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "channel-secondary-view-chat",
       getComponent: getChannelSecondaryViewChatComponent,
       options() {
-        return stateFromStores(10001)();
+        return stateFromStores(10008)();
       },
       listeners: { beforeRemove: resetChatKeyboard }
     };
@@ -1001,7 +1001,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(10001)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(10008)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -1059,7 +1059,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(9676).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -1108,9 +1108,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(9669).renderHeader };
+            const obj = { headerShown: true, header: styles(9676).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -1128,7 +1128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(10001)();
+        return stateFromStores(10008)();
       }
     };
     const obj9 = { beforeRemove: resetChatKeyboard };
@@ -1149,7 +1149,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     items1[9] = v65535(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(10001);
+        const tmp = stateFromStores(10008);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1166,13 +1166,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10001)({ lockOrientation: false });
+        return stateFromStores(10008)({ lockOrientation: false });
       }
     });
     const obj19 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(10001);
+        const tmp = stateFromStores(10008);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1189,7 +1189,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10001)({ lockOrientation: false });
+        return stateFromStores(10008)({ lockOrientation: false });
       }
     };
     tmp5Result = PlatformUtils2;
@@ -1217,7 +1217,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(10001)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(10008)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent

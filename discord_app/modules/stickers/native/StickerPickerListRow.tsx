@@ -1,15 +1,15 @@
-// === Module 10139: StickerPickerListRow ===
+// === Module 10146: StickerPickerListRow ===
 
-// Module 10139 (StickerPickerListRow)
+// Module 10146 (StickerPickerListRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import UserSettings from "UserSettings" /* 4797 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
-import StickersUtils from "StickersUtils" /* 6474 */;
-import StickerSendability from "StickerSendability" /* 7427 */;
-import LockIcon from "LockIcon" /* 8551 */;
+import StickersUtils from "StickersUtils" /* 6473 */;
+import StickerSendability from "StickerSendability" /* 7428 */;
+import LockIcon from "LockIcon" /* 8552 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const StickerAnimationSettings = fn(4800).StickerAnimationSettings;
-const StickerPickerConstants = fn(10094);
+const StickerPickerConstants = fn(10101);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
@@ -490,7 +490,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
   rowContentPaddingVertical = tmp6;
   let AnimateStickers = stickers(4797).AnimateStickers;
   closure_8 = AnimateStickers.useSetting();
-  closure_9 = stickers(9902).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPickerListRow");
+  closure_9 = stickers(9909).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPickerListRow");
   let items = [];
   if (nativeRow) {
     let num4 = 0;
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           let obj3 = { stickerId: null, stickerName: null, stickerType: null, stickerUrl: null, stickerAnimated: null, stickerDisabled: null, stickerOpaque: null, stickerLocked: null };
           ({ id: obj5.stickerId, name: obj5.stickerName, format_type: obj5.stickerType } = tmp12);
           ({ isOpaque, isDisabled, isLocked } = rowTraitsResult);
-          let obj6 = stickers(10140);
+          let obj6 = stickers(10147);
           obj3.stickerUrl = obj6.getStickerAssetUrl(tmp12, STICKER_SIZE, isAnimated);
           obj3.stickerAnimated = isAnimated;
           obj3.stickerDisabled = isDisabled;
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           let arr2 = items.push(obj3);
         } else {
           let obj4 = { stickerId: "", stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false, stickerLocked: false };
-          obj4.stickerType = stickers(6475).StickerFormat.PNG;
+          obj4.stickerType = stickers(6474).StickerFormat.PNG;
           let arr3 = items.push(obj4);
         }
         num4 = num4 + 1;
@@ -539,7 +539,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           handleOnLongPressSticker(found);
         }
       };
-      return closure_8(isSectionNitroLocked(10143), obj7);
+      return closure_8(isSectionNitroLocked(10150), obj7);
     } catch (tmp26) {
       const obj10 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       const obj11 = { itemLength: arr.length, items: null };
@@ -566,13 +566,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
               id = currentUser.id;
             }
             let isSendableStickerResult = isSectionNitroLocked;
-            const obj5 = stickers(6474);
+            const obj5 = stickers(6473);
             if (!isSectionNitroLocked) {
               isSendableStickerResult = null == closure_6;
             }
             if (!isSendableStickerResult) {
-              isSendableStickerResult = tmp26(7427).isSendableSticker(tmp2, currentUser.getCurrentUser(), closure_6);
-              const tmp26Result = tmp26(7427);
+              isSendableStickerResult = tmp26(7428).isSendableSticker(tmp2, currentUser.getCurrentUser(), closure_6);
+              const tmp26Result = tmp26(7428);
             }
             let tmp11 = closure_9;
             if (closure_9) {
@@ -597,16 +597,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
             obj2.onLongPress = function onLongPress() {
               return handleOnLongPressSticker(closure_0);
             };
-            const obj3 = { sticker: tmp2, size, animated: stickers(6474).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
-            const items1 = [closure_8(isSectionNitroLocked(10140), obj3, c12), ];
+            const obj3 = { sticker: tmp2, size, animated: stickers(6473).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
+            const items1 = [closure_8(isSectionNitroLocked(10147), obj3, c12), ];
             let tmp17 = null;
             if (tmp11) {
               tmp17 = closure_8(items, {});
             }
             items1[1] = tmp17;
             obj2.children = items1;
-            items.push(closure_9(stickers(6894).PressableOpacity, obj2, tmp2.id));
-            const shouldAnimateStickerResult = stickers(6474).shouldAnimateSticker(closure_8, tmp2.id === id);
+            items.push(closure_9(stickers(6893).PressableOpacity, obj2, tmp2.id));
+            const shouldAnimateStickerResult = stickers(6473).shouldAnimateSticker(closure_8, tmp2.id === id);
             const tmp10 = null == dependencyMap;
           }
         })();
@@ -618,5 +618,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
     const obj18 = { style: tmp6.row, children: items };
     return closure_8(closure_3, obj18);
   }
-  let obj2 = stickers(9902);
+  let obj2 = stickers(9909);
 });

@@ -1,19 +1,19 @@
-// === Module 14212: AddOrOpenAppButton ===
+// === Module 14226: AddOrOpenAppButton ===
 
-// Module 14212 (AddOrOpenAppButton)
+// Module 14226 (AddOrOpenAppButton)
 import c from "c" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
-import ApplicationUtils from "ApplicationUtils" /* 10714 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12066 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12079 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
+import ApplicationUtils from "ApplicationUtils" /* 10721 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12076 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const getSection = fn(9619).getSection;
+const getSection = fn(9626).getSection;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
 const jsx = fn(21).jsx;
@@ -45,7 +45,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddApp
           const customInstallUrl = application.customInstallUrl;
           if (null != customInstallUrl) {
             if (!obj2.isDiscordUrl(customInstallUrl)) {
-              let PlusSmallIcon = tmp(8076).LinkExternalSmallIcon;
+              let PlusSmallIcon = tmp(8077).LinkExternalSmallIcon;
             }
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -193,7 +193,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddApp
             cResult[18] = tmp18;
             obj2 = guildId(1386);
           }
-          PlusSmallIcon = tmp(9438).PlusSmallIcon;
+          PlusSmallIcon = tmp(9445).PlusSmallIcon;
         }
       }
     }
@@ -226,7 +226,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddApp
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8076).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8077).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -255,7 +255,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddApp
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
     return jsx(tmp6(5230).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
-  PlusSmallIcon = application(9438).PlusSmallIcon;
+  PlusSmallIcon = application(9445).PlusSmallIcon;
   tmp6 = application;
 });
 ReactCompilerGating = fn(558);
@@ -479,7 +479,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenAp
             if (application1 == null) {
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: tmp2(6795).fetchApplication(profileApplication.id), done: false };
+              const obj7 = { value: tmp2(6794).fetchApplication(profileApplication.id), done: false };
               return obj7;
             } else {
               closure_129_1 = closure_0;
@@ -490,7 +490,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenAp
                 const obj8 = { recipientIds: closure_130_1 };
                 c3 = 2;
                 c4 = 1;
-                const obj10 = { value: tmp2(7395).openPrivateChannel(obj8), done: false };
+                const obj10 = { value: tmp2(7396).openPrivateChannel(obj8), done: false };
                 return obj10;
               } else {
                 c4 = 3;

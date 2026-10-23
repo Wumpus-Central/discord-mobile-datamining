@@ -1,6 +1,6 @@
-// === Module 6028: ? ===
+// === Module 6027: ? ===
 
-// Module 6028
+// Module 6027
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/icy.png.js");

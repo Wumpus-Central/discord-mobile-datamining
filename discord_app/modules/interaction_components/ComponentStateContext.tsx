@@ -1,22 +1,22 @@
-// === Module 8580: ComponentStateContext ===
+// === Module 8581: ComponentStateContext ===
 
-// Module 8580 (ComponentStateContext)
+// Module 8581 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 2000 */;
 import useMountEffectDefault from "useMountEffect" /* 5249 */;
-import InteractionTypes from "InteractionTypes" /* 6006 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6007 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6009 */;
-import InteractionUtils from "InteractionUtils" /* 8584 */;
+import InteractionTypes from "InteractionTypes" /* 6005 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6006 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6008 */;
+import InteractionUtils from "InteractionUtils" /* 8585 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8255 */;
+import InteractionStore from "InteractionStore" /* 8256 */;
 import LurkingStore from "LurkingStore" /* 4902 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6622 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6621 */;
 import UserStore from "UserStore" /* 1392 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8581 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8582 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -585,11 +585,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldD
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8319);
-  const isThreadModerator = channel(7353).useIsThreadModerator(channel);
-  const tmpResult = channel(7353);
+  const obj5 = channel(8320);
+  const isThreadModerator = channel(7354).useIsThreadModerator(channel);
+  const tmpResult = channel(7354);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7353).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7354).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -995,7 +995,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCom
                 return tmp17;
               }
             }
-            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(6009).ActionComponentState.NORMAL, error };
+            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(6008).ActionComponentState.NORMAL, error };
             class S {
               constructor(arg0) {
                 tmp = null == customId;

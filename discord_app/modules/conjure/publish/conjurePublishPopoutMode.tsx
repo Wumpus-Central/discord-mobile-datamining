@@ -1,6 +1,7 @@
-// === Module 12238: conjurePublishPopoutMode ===
+// === Module 12249: conjurePublishPopoutMode ===
 
-// Module 12238 (conjurePublishPopoutMode)
+// Module 12249 (conjurePublishPopoutMode)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10781 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishPopoutMode.tsx");
@@ -9,13 +10,14 @@ export const conjurePublishPopoutMode = function conjurePublishPopoutMode(status
   let str = "initial";
   if (null != status) {
     str = "initial";
-    if ("unpublished" !== status.state) {
-      let str3 = "notPublished";
-      if ("up_to_date" === status.state) {
-        str3 = "published";
+    if (obj.isConjureLive(status.publishState)) {
+      let str2 = "published";
+      if ("live_outdated" === status.publishState) {
+        str2 = "notPublished";
       }
-      str = str3;
+      str = str2;
     }
+    obj = ConjurePublishTypes;
   }
   return str;
 };

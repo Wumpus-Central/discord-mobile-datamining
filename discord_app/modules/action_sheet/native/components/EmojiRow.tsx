@@ -1,17 +1,17 @@
-// === Module 13927: EmojiRow ===
+// === Module 13941: EmojiRow ===
 
-// Module 13927 (EmojiRow)
+// Module 13941 (EmojiRow)
 import ReactionUtils from "ReactionUtils" /* 4913 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import useToken from "useToken" /* 5238 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7550 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8271 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9753 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9806 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13928 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13929 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13930 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8272 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9760 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9813 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13942 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13943 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13944 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiRow
       return reactions_ReactionUtils.handleAddNewReactions(channel, _require.id, ReactionActionCreators.ReactionLocations.MESSAGE);
     }
   };
-  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7262).MESSAGE_LONG_PRESS_MENU });
+  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7263).MESSAGE_LONG_PRESS_MENU });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);
 });

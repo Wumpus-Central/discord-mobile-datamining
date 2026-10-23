@@ -1,6 +1,6 @@
-// === Module 7748: storefrontMessageEmbedCodedLink ===
+// === Module 7749: storefrontMessageEmbedCodedLink ===
 
-// Module 7748 (storefrontMessageEmbedCodedLink)
+// Module 7749 (storefrontMessageEmbedCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

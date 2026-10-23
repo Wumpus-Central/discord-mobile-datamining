@@ -1,6 +1,6 @@
-// === Module 15328: ShinyButton/ShinyButton ===
+// === Module 15341: ShinyButton/ShinyButton ===
 
-// Module 15328 (ShinyButton/ShinyButton)
+// Module 15341 (ShinyButton/ShinyButton)
 import Button_ButtonDefault from "Button/Button" /* 1205 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;

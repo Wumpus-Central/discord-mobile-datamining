@@ -1,12 +1,12 @@
-// === Module 18073: SearchTabsTransitionGroup ===
+// === Module 18095: SearchTabsTransitionGroup ===
 
-// Module 18073 (SearchTabsTransitionGroup)
+// Module 18095 (SearchTabsTransitionGroup)
 import c from "c" /* 576 */;
 import native from "native" /* 5023 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11792 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11804 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 12318: ConjureSettingsRequestCard ===
+// === Module 12329: ConjureSettingsRequestCard ===
 
-// Module 12318 (ConjureSettingsRequestCard)
+// Module 12329 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11743 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11754 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -71,38 +71,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
               const obj4 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: null };
               const intl5 = tmp(tmp2[10]).intl;
               obj4.children = intl5.string(note(tmp2[11]).AxBLLy);
-              const tmp44 = closure_4(tmp(tmp2[9]).Text, obj4);
-              cResult[9] = tmp44;
-              let tmp41 = tmp44;
+              const tmp45 = closure_4(tmp(tmp2[9]).Text, obj4);
+              cResult[9] = tmp45;
+              let tmp42 = tmp45;
             } else {
-              tmp41 = cResult[9];
+              tmp42 = cResult[9];
             }
             if (cResult[10] !== summary) {
-              let tmp46 = null;
+              let tmp47 = null;
               if (summary.length > 0) {
                 const obj5 = { variant: "text-sm/normal", color: "text-default", children: summary.join(" \u00B7 ") };
-                tmp46 = closure_4(tmp(tmp2[9]).Text, obj5);
+                tmp47 = closure_4(tmp(tmp2[9]).Text, obj5);
               }
               cResult[10] = summary;
-              cResult[11] = tmp46;
-              let tmp45 = tmp46;
+              cResult[11] = tmp47;
+              let tmp46 = tmp47;
             } else {
-              tmp45 = cResult[11];
+              tmp46 = cResult[11];
             }
             if (cResult[12] === tmp5.card) {
-              if (cResult[13] === tmp45) {
-                let tmp48 = cResult[14];
+              if (cResult[13] === tmp46) {
+                let tmp49 = cResult[14];
               }
-              return tmp48;
+              return tmp49;
             }
             const obj6 = { style: tmp5.card, children: null };
-            const items = [tmp41, tmp45];
+            const items = [tmp42, tmp46];
             obj6.children = items;
-            const tmp51 = closure_5(note(tmp2[12]), obj6);
+            const tmp52 = closure_5(note(tmp2[12]), obj6);
             cResult[12] = tmp5.card;
-            cResult[13] = tmp45;
-            cResult[14] = tmp51;
-            tmp48 = tmp51;
+            cResult[13] = tmp46;
+            cResult[14] = tmp52;
+            tmp49 = tmp52;
           } else {
             const _Symbol2 = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
@@ -126,11 +126,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
               note2 = note.note;
             } else {
               if (cResult[18] !== cResult[17]) {
-                const obj8 = { variant: "text-sm/normal", color: "text-default", children: tmp23 };
-                const tmp29 = closure_4(tmp(tmp2[9]).Text, obj8);
+                const obj8 = { text: tmp23, variant: "text-sm/normal", color: "text-default" };
+                const tmp30 = closure_4(note(tmp2[13]), obj8);
                 cResult[18] = tmp23;
-                cResult[19] = tmp29;
-                let tmp27 = tmp29;
+                cResult[19] = tmp30;
+                let tmp27 = tmp30;
               } else {
                 tmp27 = cResult[19];
               }
@@ -139,36 +139,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                 const intl4 = tmp(tmp2[10]).intl;
                 const stringResult = intl4.string(note(tmp2[11]).d49riY);
                 cResult[20] = stringResult;
-                let tmp30 = stringResult;
+                let tmp31 = stringResult;
               } else {
-                tmp30 = cResult[20];
+                tmp31 = cResult[20];
               }
               if (cResult[21] !== tmp8) {
-                const obj9 = { variant: "secondary", size: "sm", onPress: tmp8, text: tmp30 };
-                const tmp35 = closure_4(tmp(tmp2[13]).Button, obj9);
+                const obj9 = { variant: "secondary", size: "sm", onPress: tmp8, text: tmp31 };
+                const tmp36 = closure_4(tmp(tmp2[14]).Button, obj9);
                 cResult[21] = tmp8;
-                cResult[22] = tmp35;
-                let tmp33 = tmp35;
+                cResult[22] = tmp36;
+                let tmp34 = tmp36;
               } else {
-                tmp33 = cResult[22];
+                tmp34 = cResult[22];
               }
               if (cResult[23] === tmp5.card) {
                 if (cResult[24] === tmp27) {
-                  if (cResult[25] === tmp33) {
-                    let tmp36 = cResult[26];
+                  if (cResult[25] === tmp34) {
+                    let tmp37 = cResult[26];
                   }
-                  return tmp36;
+                  return tmp37;
                 }
               }
               const obj10 = { style: tmp5.card, children: null };
-              const items1 = [tmp19, tmp27, tmp33];
+              const items1 = [tmp19, tmp27, tmp34];
               obj10.children = items1;
-              const tmp39 = closure_5(note(tmp2[12]), obj10);
+              const tmp40 = closure_5(note(tmp2[12]), obj10);
               cResult[23] = tmp5.card;
               cResult[24] = tmp27;
-              cResult[25] = tmp33;
-              cResult[26] = tmp39;
-              tmp36 = tmp39;
+              cResult[25] = tmp34;
+              cResult[26] = tmp40;
+              tmp37 = tmp40;
             }
           }
         }
@@ -241,12 +241,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       if ("" !== request.note) {
         let note = request.note;
       }
-      const obj8 = { variant: "text-sm/normal", color: "text-default", children: note };
+      const obj8 = { text: note, variant: "text-sm/normal", color: "text-default" };
       items2[1] = closure_4(tmp12, obj8);
       const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
       const intl4 = Text(obj[10]).intl;
       obj9.text = intl4.string(tmp8(obj[11]).d49riY);
-      items2[2] = closure_4(Text(obj[13]).Button, obj9);
+      items2[2] = closure_4(Text(obj[14]).Button, obj9);
       obj5.children = items2;
       tmp14 = obj5;
     }

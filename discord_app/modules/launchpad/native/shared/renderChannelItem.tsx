@@ -1,16 +1,16 @@
-// === Module 17999: renderChannelItem ===
+// === Module 18021: renderChannelItem ===
 
-// Module 17999 (renderChannelItem)
+// Module 18021 (renderChannelItem)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useChannelName from "useChannelName" /* 5590 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6775 */;
-import GuildIconDefault from "GuildIcon" /* 6869 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8987 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18000 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 18001 */;
-import renderChannelContentDefault from "renderChannelContent" /* 18003 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6774 */;
+import GuildIconDefault from "GuildIcon" /* 6868 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8994 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10665 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18022 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 18023 */;
+import renderChannelContentDefault from "renderChannelContent" /* 18025 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -66,7 +66,7 @@ function LaunchpadChannelIcon(channel) {
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp36 = closure_8(tmp13(12144).ChannelIcon, obj3);
+        const tmp36 = closure_8(tmp13(12155).ChannelIcon, obj3);
         cResult[9] = channel2;
         cResult[10] = tmp36;
         let tmp34 = tmp36;
@@ -102,13 +102,13 @@ function LaunchpadChannelIcon(channel) {
     obj8.children = closure_8(GuildIconDefault, obj9);
     const items3 = [closure_8(View, obj8), ];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
-    items3[1] = closure_8(channel(12144).ChannelIcon, obj10);
+    items3[1] = closure_8(channel(12155).ChannelIcon, obj10);
     obj7.children = items3;
     return closure_10(closure_9, obj7);
   }
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);

@@ -1,24 +1,24 @@
-// === Module 12470: ConjureDebugScene ===
+// === Module 12481: ConjureDebugScene ===
 
-// Module 12470 (ConjureDebugScene)
+// Module 12481 (ConjureDebugScene)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
 import CopyIcon from "CopyIcon" /* 5668 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
-import conjureDebugConnection from "conjureDebugConnection" /* 10703 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 11813 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12471 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12480 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
+import conjureDebugConnection from "conjureDebugConnection" /* 10710 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 11825 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12482 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10674 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10681 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10668).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10675).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);

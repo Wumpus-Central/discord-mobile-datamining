@@ -1,6 +1,6 @@
-// === Module 14639: PremiumAccountCredit ===
+// === Module 14653: PremiumAccountCredit ===
 
-// Module 14639 (PremiumAccountCredit)
+// Module 14653 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,10 +8,10 @@ import util from "util" /* 1128 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
 import _modDef3250 from "module_3250" /* 3250 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import GameIcon from "GameIcon" /* 7245 */;
-import BoostGemIcon from "BoostGemIcon" /* 9778 */;
+import GameIcon from "GameIcon" /* 7246 */;
+import BoostGemIcon from "BoostGemIcon" /* 9785 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7490 */;
+import EntitlementStore from "EntitlementStore" /* 7491 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(7245).GameIconImageSize[fn(undefined, 7245).GameIconSizes.SMALL], height: fn(7245).GameIconImageSize[fn(undefined, 7245).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(7246).GameIconImageSize[fn(undefined, 7246).GameIconSizes.SMALL], height: fn(7246).GameIconImageSize[fn(undefined, 7246).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };
@@ -288,8 +288,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Account
           let tmp46Result = timestampProducer(View, obj12);
         } else {
           const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-          tmp46Result = timestampProducer(intl(7245), obj14);
-          const intlResult = intl(7245);
+          tmp46Result = timestampProducer(intl(7246), obj14);
+          const intlResult = intl(7246);
         }
         cResult[37] = tmp7;
         cResult[38] = str;

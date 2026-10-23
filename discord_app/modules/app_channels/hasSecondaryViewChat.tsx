@@ -1,9 +1,9 @@
-// === Module 6792: hasSecondaryViewChat ===
+// === Module 6791: hasSecondaryViewChat ===
 
-// Module 6792 (hasSecondaryViewChat)
+// Module 6791 (hasSecondaryViewChat)
 import Constants from "Constants" /* 1087 */;
 import ChannelRecord from "ChannelRecord" /* 4825 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 6793 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 6792 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import size from "module_2" /* 2 */;
 

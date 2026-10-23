@@ -1,25 +1,25 @@
-// === Module 10690: ConjureActionCreators ===
+// === Module 10697: ConjureActionCreators ===
 
-// Module 10690 (ConjureActionCreators)
+// Module 10697 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6760 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6795 */;
-import UserActionCreators from "UserActionCreators" /* 8643 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10689 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10695 */;
-import conjurePreviewTicket from "conjurePreviewTicket" /* 10697 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10698 */;
-import createProxyTicket from "createProxyTicket" /* 10700 */;
-import conjureAppInServer from "conjureAppInServer" /* 10701 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6759 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6794 */;
+import UserActionCreators from "UserActionCreators" /* 8650 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10696 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10702 */;
+import conjurePreviewTicket from "conjurePreviewTicket" /* 10704 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10705 */;
+import createProxyTicket from "createProxyTicket" /* 10707 */;
+import conjureAppInServer from "conjureAppInServer" /* 10708 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10691 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10698 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 require = fn;
 function updateIntegrationStatus(projectId, integrationStatus) {
@@ -978,7 +978,7 @@ let closure_48 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1087).Endpoints;
-const ReadStateTypes = fn(6691).ReadStateTypes;
+const ReadStateTypes = fn(6690).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1173,7 +1173,7 @@ export const applyRemixPreview = function applyRemixPreview(id, remix_preview) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: id, integrationStatus: obj4 });
   const obj5 = { type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: id, integrationStatus: obj4 };
   const tmpResult = DispatcherDefault;
-  const obj6 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: id, published: false, hasUnpublishedChanges: true, surface: null, previewAppChannels: null };
+  const obj6 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: id, publishState: "not_live", surface: null, previewAppChannels: null };
   let str = null;
   if (remix_preview.has_activity) {
     str = "activity";

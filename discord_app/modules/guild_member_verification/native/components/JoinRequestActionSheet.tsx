@@ -1,9 +1,9 @@
-// === Module 17930: JoinRequestActionSheet ===
+// === Module 17952: JoinRequestActionSheet ===
 
-// Module 17930 (JoinRequestActionSheet)
+// Module 17952 (JoinRequestActionSheet)
 import isChangelogUserDefault from "isChangelogUser" /* 4870 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6831 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8649 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6830 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8656 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import UserRecord from "UserRecord" /* 1406 */;

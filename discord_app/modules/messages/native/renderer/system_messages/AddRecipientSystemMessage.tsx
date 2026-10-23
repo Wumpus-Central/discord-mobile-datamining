@@ -1,11 +1,11 @@
-// === Module 8302: AddRecipientSystemMessage ===
+// === Module 8303: AddRecipientSystemMessage ===
 
-// Module 8302 (AddRecipientSystemMessage)
+// Module 8303 (AddRecipientSystemMessage)
 import util from "util" /* 1128 */;
 import ChannelRecord from "ChannelRecord" /* 4825 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8303 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8305 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8307 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8304 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8306 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
 import size from "module_2" /* 2 */;

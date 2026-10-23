@@ -1,16 +1,16 @@
-// === Module 18393: VoicePanelAccessibilityView ===
+// === Module 18415: VoicePanelAccessibilityView ===
 
-// Module 18393 (VoicePanelAccessibilityView)
+// Module 18415 (VoicePanelAccessibilityView)
 import c from "c" /* 576 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18389 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18411 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["style", "pointerEvents", "nativeID", "accessibilityViewIsModal", "onAccessibilityEscape"];
-const VoicePanelPIPModes = fn(18344).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(18366).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_6 = noop.memo(fn(5955).AccessibilityViewAnimated);
+let closure_6 = noop.memo(fn(5954).AccessibilityViewAnimated);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");

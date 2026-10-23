@@ -1,8 +1,8 @@
-// === Module 12406: ConjureClarificationCard ===
+// === Module 12416: ConjureClarificationCard ===
 
-// Module 12406 (ConjureClarificationCard)
+// Module 12416 (ConjureClarificationCard)
 import nativeDefault from "native" /* 587 */;
-import ConjureClarification from "ConjureClarification" /* 12409 */;
+import ConjureClarification from "ConjureClarification" /* 12419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

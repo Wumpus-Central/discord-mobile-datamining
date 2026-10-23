@@ -1,12 +1,12 @@
-// === Module 13954: GuildRoleSubscriptionsChannelHeader ===
+// === Module 13968: GuildRoleSubscriptionsChannelHeader ===
 
-// Module 13954 (GuildRoleSubscriptionsChannelHeader)
+// Module 13968 (GuildRoleSubscriptionsChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import _modDef13662 from "module_13662" /* 13662 */;
+import _modDef13676 from "module_13676" /* 13676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = c.c(4);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef13662, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+    const obj2 = { source: _modDef13676, size: native.Icon.Sizes.MEDIUM, disableColor: true };
     const tmp8 = React4(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -56,7 +56,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   return tmp12;
 }) : (function GuildRoleSubscriptionsChannelHeader() {
   const obj = { style: closure_6().header, children: null };
-  const items = [React4(native.Icon, { source: _modDef13662, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
+  const items = [React4(native.Icon, { source: _modDef13676, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
   const obj3 = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["KzCF/6"]);

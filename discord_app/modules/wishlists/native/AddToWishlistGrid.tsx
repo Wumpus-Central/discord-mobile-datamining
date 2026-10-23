@@ -1,17 +1,17 @@
-// === Module 14362: AddToWishlistGrid ===
+// === Module 14376: AddToWishlistGrid ===
 
-// Module 14362 (AddToWishlistGrid)
-import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 14363 */;
-import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 14364 */;
+// Module 14376 (AddToWishlistGrid)
+import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 14377 */;
+import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 14378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
-let closure_5 = createStyles.createStyles({ itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7288).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } });
+let closure_5 = createStyles.createStyles({ itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7289).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } });
 const ReactCompilerGating = fn(558);
-let obj2 = { itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7288).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } };
+let obj2 = { itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7289).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 11441: getAndroidWebViewShellConfig ===
+// === Module 11452: getAndroidWebViewShellConfig ===
 
-// Module 11441 (getAndroidWebViewShellConfig)
+// Module 11452 (getAndroidWebViewShellConfig)
 import size from "module_2" /* 2 */;
 
 let c0 = "https://discord.com";

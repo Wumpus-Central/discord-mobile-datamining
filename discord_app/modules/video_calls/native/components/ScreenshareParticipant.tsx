@@ -1,9 +1,9 @@
-// === Module 11628: ScreenshareParticipant ===
+// === Module 11639: ScreenshareParticipant ===
 
-// Module 11628 (ScreenshareParticipant)
+// Module 11639 (ScreenshareParticipant)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6627 */;
 
 const require = fn;
 const View = fn(17).View;

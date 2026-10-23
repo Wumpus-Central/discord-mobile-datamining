@@ -1,13 +1,13 @@
-// === Module 10796: InstantInviteCreator ===
+// === Module 10804: InstantInviteCreator ===
 
-// Module 10796 (InstantInviteCreator)
+// Module 10804 (InstantInviteCreator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 const native = Stack(1202);
-const Stack_Stack = Stack(5964);
-const DetailedGuildIdentityUserRow = Stack(10797);
+const Stack_Stack = Stack(5963);
+const DetailedGuildIdentityUserRow = Stack(10805);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

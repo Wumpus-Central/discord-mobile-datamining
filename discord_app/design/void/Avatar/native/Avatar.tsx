@@ -1,18 +1,18 @@
-// === Module 15356: Avatar ===
+// === Module 15369: Avatar ===
 
-// Module 15356 (Avatar)
+// Module 15369 (Avatar)
 import nativeDefault from "native" /* 587 */;
 import IconDefault from "Icon" /* 5232 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8619 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9374 */;
-import ClipView from "ClipView" /* 9375 */;
-import _modDef11393 from "module_11393" /* 11393 */;
-import _modDef11394 from "module_11394" /* 11394 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14247 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15345 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15346 */;
-import Status from "Status" /* 15347 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 15357 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8626 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9381 */;
+import ClipView from "ClipView" /* 9382 */;
+import _modDef11404 from "module_11404" /* 11404 */;
+import _modDef11405 from "module_11405" /* 11405 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14261 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15358 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15359 */;
+import Status from "Status" /* 15360 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 15370 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
@@ -390,7 +390,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items = [, ];
                                                                   ({ status: arr2[0], voiceStatus: arr2[1] } = closure_22);
                                                                   obj2.style = items;
-                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11393, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11404, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj2.children = closure_2_8(IconDefault, obj3);
                                                                   let tmp2 = closure_2_8(View, obj2);
                                                                 } else if (mute) {
@@ -398,7 +398,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items1 = [, ];
                                                                   ({ status: arr[0], voiceStatus: arr[1] } = closure_22);
                                                                   obj.style = items1;
-                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11394, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11405, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj.children = closure_2_8(IconDefault, obj4);
                                                                   tmp2 = closure_2_8(View, obj);
                                                                 }
@@ -762,5 +762,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp10(cutout, obj16);
   }
 }));
-export const AvatarSizes = fn(14247).AvatarSizes;
+export const AvatarSizes = fn(14261).AvatarSizes;
 export { getStatusSize };

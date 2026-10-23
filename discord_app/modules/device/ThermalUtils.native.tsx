@@ -1,8 +1,8 @@
-// === Module 5891: ThermalUtils ===
+// === Module 5890: ThermalUtils ===
 
-// Module 5891 (ThermalUtils)
+// Module 5890 (ThermalUtils)
 import _mod17 from "module_17" /* 17 */;
-import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 5892 */;
+import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 5891 */;
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 18190: ChannelSettingsIntegrationsOverview ===
+// === Module 18212: ChannelSettingsIntegrationsOverview ===
 
-// Module 18190 (ChannelSettingsIntegrationsOverview)
+// Module 18212 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import TableRow2 from "TableRow" /* 6889 */;
-import TableRowGroup from "TableRowGroup" /* 6973 */;
-import Form2 from "Form" /* 8919 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8949 */;
-import WebhookIcon from "WebhookIcon" /* 18082 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18191 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import TableRow2 from "TableRow" /* 6888 */;
+import TableRowGroup from "TableRowGroup" /* 6972 */;
+import Form2 from "Form" /* 8926 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8956 */;
+import WebhookIcon from "WebhookIcon" /* 18104 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18213 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
@@ -34,7 +34,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  let name = channel(7241).useGetOrFetchApplication(application_id);
+  let name = channel(7242).useGetOrFetchApplication(application_id);
   if (null == name) {
     return null;
   } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
     }
     if (cResult[1] !== name) {
       const obj4 = { application: name };
-      const tmp10 = closure_6(navigation(8949), obj4);
+      const tmp10 = closure_6(navigation(8956), obj4);
       cResult[1] = name;
       cResult[2] = tmp10;
       let tmp7 = tmp10;
@@ -65,7 +65,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
         }
       }
       const obj5 = { title: name2, hasIcons: true, children: null };
-      TableRow = TableRow(6889).TableRow;
+      TableRow = TableRow(6888).TableRow;
       const obj6 = { label: null, icon: null, arrow: true, onPress: null };
       name2 = name.name;
       obj6.label = name2;
@@ -73,7 +73,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
       obj6.onPress = tmp11;
       tmp = closure_6(TableRow, obj6);
       obj5.children = tmp;
-      const tmp14 = closure_6(TableRow(6973).TableRowGroup, obj5);
+      const tmp14 = closure_6(TableRow(6972).TableRowGroup, obj5);
       name = name.name;
       cResult[6] = name;
       cResult[7] = tmp7;
@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
     cResult[5] = fn;
     tmp11 = fn;
   }
-  const obj3 = channel(7241);
+  const obj3 = channel(7242);
 }) : (function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
   importDefault = channel(1505).useNavigation();
@@ -98,7 +98,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7241).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7242).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -110,8 +110,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6889).TableRow, obj4);
-    tmp5 = closure_6(tmp(6973).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6888).TableRow, obj4);
+    tmp5 = closure_6(tmp(6972).TableRowGroup, obj3);
   }
   return tmp5;
 });
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
             }
             if (cResult[14] === screenContainer.screenContainer) {
             }
-            Form = Form(8919).Form;
+            Form = Form(8926).Form;
             const obj4 = { style: screenContainer.screenContainer, children: tmp20 };
             tmp = closure_6(Form, obj4);
             screenContainer = screenContainer.screenContainer;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
           const obj5 = { style: tmp8, spacing: navigation(587).space.PX_24, children: null };
           const items1 = [tmp10, tmp16];
           obj5.children = items1;
-          const tmp23 = closure_7(Form(5964).Stack, obj5);
+          const tmp23 = closure_7(Form(5963).Stack, obj5);
           cResult[11] = tmp10;
           cResult[12] = tmp16;
           cResult[13] = tmp23;
@@ -215,11 +215,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
       obj7.label = intl.string(Form(1128).t.jp25Id);
       const intl2 = Form(1128).intl;
       obj7.subLabel = intl2.string(Form(1128).t.mKIOkI);
-      obj7.icon = closure_6(Form(18082).WebhookIcon, {});
+      obj7.icon = closure_6(Form(18104).WebhookIcon, {});
       obj7.onPress = function onPress() {
         return navigation.push(ChannelSettingsSections.WEBHOOKS);
       };
-      const items2 = [closure_6(Form(6889).TableRow, obj7), ];
+      const items2 = [closure_6(Form(6888).TableRow, obj7), ];
       let hasItem = set.has(stateFromStores.type);
       if (hasItem) {
         const obj8 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
@@ -227,16 +227,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
         obj8.label = intl3.string(Form(1128).t.OrV60r);
         const intl4 = Form(1128).intl;
         obj8.subLabel = intl4.string(Form(1128).t.rQREJl);
-        obj8.icon = closure_6(Form(18191).ChannelsFollowedIcon, {});
+        obj8.icon = closure_6(Form(18213).ChannelsFollowedIcon, {});
         obj8.onPress = function onPress() {
           return navigation.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };
-        hasItem = closure_6(Form(6889).TableRow, obj8);
+        hasItem = closure_6(Form(6888).TableRow, obj8);
       }
       const obj9 = { hasIcons: true, children: null };
       items2[1] = hasItem;
       obj9.children = items2;
-      tmp12Result = closure_7(Form(6973).TableRowGroup, obj9);
+      tmp12Result = closure_7(Form(6972).TableRowGroup, obj9);
     }
     cResult[4] = canManageWebhooks;
     cResult[5] = stateFromStores;

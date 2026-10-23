@@ -1,17 +1,17 @@
-// === Module 18536: VoicePanelControlsDimOverlay ===
+// === Module 18558: VoicePanelControlsDimOverlay ===
 
-// Module 18536 (VoicePanelControlsDimOverlay)
+// Module 18558 (VoicePanelControlsDimOverlay)
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import spring from "spring" /* 5233 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15627 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 18500 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15640 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 18522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(15174).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(10865);
+let closure_4 = fn(15187).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(10873);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const __initData = { code: "function VoicePanelControlsDimOverlayTsx1(){const{windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY}=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],\"clamp\");}" };
 const __initData2 = { code: "function VoicePanelControlsDimOverlayTsx2(){const{overlayOpacity}=this.__closure;return overlayOpacity.get()>=0.35;}" };

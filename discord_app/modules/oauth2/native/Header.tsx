@@ -1,6 +1,6 @@
-// === Module 14006: oauth2/Header ===
+// === Module 14020: oauth2/Header ===
 
-// Module 14006 (oauth2/Header)
+// Module 14020 (oauth2/Header)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1202 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import BotTagDefault from "BotTag" /* 9103 */;
+import BotTagDefault from "BotTag" /* 9110 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

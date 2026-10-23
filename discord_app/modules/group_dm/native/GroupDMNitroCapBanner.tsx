@@ -1,12 +1,12 @@
-// === Module 18050: GroupDMNitroCapBanner ===
+// === Module 18072: GroupDMNitroCapBanner ===
 
-// Module 18050 (GroupDMNitroCapBanner)
+// Module 18072 (GroupDMNitroCapBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 5238 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 14664 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9401 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 14678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

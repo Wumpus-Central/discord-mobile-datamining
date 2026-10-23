@@ -1,14 +1,14 @@
-// === Module 12423: ConjurePublishCtaCard ===
+// === Module 12433: ConjurePublishCtaCard ===
 
-// Module 12423 (ConjurePublishCtaCard)
+// Module 12433 (ConjurePublishCtaCard)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11816 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12230 */;
-import conjurePublishCard from "conjurePublishCard" /* 12248 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12424 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12425 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11828 */;
+import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12241 */;
+import conjurePublishCard from "conjurePublishCard" /* 12259 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12434 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12435 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePublishActionDefault = useConjurePublishAction;
@@ -21,30 +21,28 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   const cResult = projectId(576).c(7);
   projectId = projectId.projectId;
   const publish = projectId.publish;
-  const context = noop.useContext(projectId(11816).ConjurePublishActionContext);
+  const context = noop.useContext(projectId(11828).ConjurePublishActionContext);
   if (cResult[0] === context) {
     if (cResult[1] === projectId) {
-      let tmp5 = cResult[2];
+      let tmp6 = cResult[2];
     }
     if (cResult[3] === publish.label) {
-      if (cResult[4] === publish.publishing) {
-        if (cResult[5] === tmp5) {
-          let tmp6 = cResult[6];
+      if (cResult[4] === tmp5) {
+        if (cResult[5] === tmp6) {
+          let tmp7 = cResult[6];
         }
-        return tmp6;
+        return tmp7;
       }
     }
     const obj2 = { direction: "horizontal", children: null };
-    const obj5 = { text: null, variant: "primary", size: "sm", loading: null, onPress: null };
-    ({ label: obj3.text, publishing: obj3.loading } = publish);
-    obj5.onPress = tmp5;
-    obj2.children = closure_4(tmp(5230).Button, obj5);
-    const tmp8 = closure_4(tmp(5964).Stack, obj2);
+    const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: tmp5, onPress: tmp6 };
+    obj2.children = closure_4(tmp(5230).Button, obj3);
+    const tmp9 = closure_4(tmp(5963).Stack, obj2);
     cResult[3] = publish.label;
-    cResult[4] = publish.publishing;
-    cResult[5] = tmp5;
-    cResult[6] = tmp8;
-    tmp6 = tmp8;
+    cResult[4] = tmp5;
+    cResult[5] = tmp6;
+    cResult[6] = tmp9;
+    tmp7 = tmp9;
   }
   const fn = function u() {
     if (null != context) {
@@ -54,26 +52,23 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   cResult[0] = context;
   cResult[1] = projectId;
   cResult[2] = fn;
-  tmp5 = fn;
+  tmp6 = fn;
   const obj = projectId(576);
 }) : (function PublishCta(arg0) {
   ({ projectId: require, publish } = arg0);
   closure_1 = noop.useContext(useConjurePublishAction.ConjurePublishActionContext);
-  const obj = {
-    direction: "horizontal",
-    children: closure_4(components_Button_Button.Button, {
-      text: publish.label,
-      variant: "primary",
-      size: "sm",
-      loading: publish.publishing,
-      onPress() {
-        if (null != closure_1) {
-          ConjurePublishSheetDefault(require, tmp.guildId, "card");
-        }
-      }
-    })
+  const obj = { text: publish.label, variant: "primary", size: "sm", loading: null, onPress: null };
+  let publishing = publish.publishing;
+  if (publishing) {
+    publishing = !publish.showsProgress;
+  }
+  obj.loading = publishing;
+  obj.onPress = function onPress() {
+    if (null != closure_1) {
+      ConjurePublishSheetDefault(require, tmp.guildId, "card");
+    }
   };
-  return closure_4(Stack_Stack.Stack, obj);
+  return closure_4(Stack_Stack.Stack, { direction: "horizontal", children: closure_4(components_Button_Button.Button, obj) });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

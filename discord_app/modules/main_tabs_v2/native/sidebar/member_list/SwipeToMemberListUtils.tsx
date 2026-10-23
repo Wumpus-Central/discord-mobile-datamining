@@ -1,9 +1,9 @@
-// === Module 11170: SwipeToMemberListUtils ===
+// === Module 11179: SwipeToMemberListUtils ===
 
-// Module 11170 (SwipeToMemberListUtils)
+// Module 11179 (SwipeToMemberListUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6792 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 11171 */;
+import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6791 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11180 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

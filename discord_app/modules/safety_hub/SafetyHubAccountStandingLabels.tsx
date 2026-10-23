@@ -1,8 +1,8 @@
-// === Module 15949: SafetyHubAccountStandingLabels ===
+// === Module 15967: SafetyHubAccountStandingLabels ===
 
-// Module 15949 (SafetyHubAccountStandingLabels)
+// Module 15967 (SafetyHubAccountStandingLabels)
 import util from "util" /* 1128 */;
-import SafetyHubModels from "SafetyHubModels" /* 7883 */;
+import SafetyHubModels from "SafetyHubModels" /* 7884 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

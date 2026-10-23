@@ -1,18 +1,18 @@
-// === Module 18799: NewUserUtils ===
+// === Module 18822: NewUserUtils ===
 
-// Module 18799 (NewUserUtils)
+// Module 18822 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Link from "Link" /* 1506 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7875 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13508 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13615 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 18798 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7876 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13522 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13629 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 18821 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17271 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6486 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17293 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6485 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -224,8 +224,8 @@ let closure_17 = async function _getNextOnboardingStep() {
 };
 const Constants = fn(1087);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(13503).ContactPermissions;
-let closure_10 = fn(7852).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13517).ContactPermissions;
+let closure_10 = fn(7853).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -389,7 +389,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9019).hasDeferredInvite,
+    shouldShowStep: fn(9026).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

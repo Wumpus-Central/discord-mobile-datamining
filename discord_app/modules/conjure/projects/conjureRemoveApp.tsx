@@ -1,22 +1,23 @@
-// === Module 11738: conjureRemoveApp ===
+// === Module 11749: conjureRemoveApp ===
 
-// Module 11738 (conjureRemoveApp)
+// Module 11749 (conjureRemoveApp)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import useChannelName from "useChannelName" /* 5590 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
-import conjureAppInServer from "conjureAppInServer" /* 10701 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6815 */;
+import conjureAppInServer from "conjureAppInServer" /* 10708 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10781 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import UserProfileStore from "UserProfileStore" /* 7687 */;
+import UserProfileStore from "UserProfileStore" /* 7688 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10684 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10691 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +29,7 @@ function readConjureRemoveTarget(project) {
   }
   if (null != guild) {
     if ("in_server" === obj5.readConjureAppServerPresence(project)) {
-      const result = tmp10(10701).findConjureAppChannels(guild.id, project.application_id);
+      const result = tmp10(10708).findConjureAppChannels(guild.id, project.application_id);
       const found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj = { projectName: project.name, appName: null, previewAppName: null, guildName: null, channelNames: null, keptChannelNames: null, canRemoveBot: null, canRemovePreviewBot: null };
       const application = ApplicationStore.getApplication(project.application_id);
@@ -58,19 +59,19 @@ function readConjureRemoveTarget(project) {
       obj.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj.keptChannelNames = found1.map(channelName);
-      const tmp10Result = tmp10(10701);
-      const tmp10Result5 = tmp10(10701);
-      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(10701).conjureProductionBotUserId(project));
+      const tmp10Result = tmp10(10708);
+      const tmp10Result5 = tmp10(10708);
+      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(10708).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp10Result7 = tmp10(10701);
-        canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(guild, tmp10(10701).conjurePreviewBotUserId(project));
-        const tmp10Result8 = tmp10(10701);
+        const tmp10Result7 = tmp10(10708);
+        canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(guild, tmp10(10708).conjurePreviewBotUserId(project));
+        const tmp10Result8 = tmp10(10708);
       }
       obj.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj;
     }
-    obj5 = found(10701);
+    obj5 = found(10708);
   }
   return null;
 }
@@ -278,14 +279,14 @@ function conjurePreviewAppItem(target) {
   return tmp;
 }
 function isPublishedConjureUserApp(project, publishStatus) {
-  let tmp = "user" === project.install_scope;
-  if (tmp) {
-    tmp = null != publishStatus;
+  let isConjureLiveResult = "user" === project.install_scope;
+  if (isConjureLiveResult) {
+    isConjureLiveResult = null != publishStatus;
   }
-  if (tmp) {
-    tmp = "unpublished" !== publishStatus.state;
+  if (isConjureLiveResult) {
+    isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
   }
-  return tmp;
+  return isConjureLiveResult;
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/conjureRemoveApp.tsx");
@@ -358,11 +359,11 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
       let tmp4 = null != project;
       if (tmp4) {
         const publishStatus = ConjurePublishStatusStore.getPublishStatus(project.id);
-        let tmp7 = "user" === project.install_scope && null != publishStatus;
-        if (tmp7) {
-          tmp7 = "unpublished" !== publishStatus.state;
+        let isConjureLiveResult = "user" === project.install_scope && null != publishStatus;
+        if (isConjureLiveResult) {
+          isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
         }
-        tmp4 = tmp7;
+        tmp4 = isConjureLiveResult;
       }
       return tmp4;
     };
@@ -376,7 +377,7 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const obj = require("c");
+  let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
 }) : (function useIsPublishedConjureUserApp(arg0) {
   _require = arg0;
@@ -390,11 +391,11 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
     let tmp4 = null != project;
     if (tmp4) {
       const publishStatus = ConjurePublishStatusStore.getPublishStatus(project.id);
-      let tmp7 = "user" === project.install_scope && null != publishStatus;
-      if (tmp7) {
-        tmp7 = "unpublished" !== publishStatus.state;
+      let isConjureLiveResult = "user" === project.install_scope && null != publishStatus;
+      if (isConjureLiveResult) {
+        isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
       }
-      tmp4 = tmp7;
+      tmp4 = isConjureLiveResult;
     }
     return tmp4;
   }, items1);

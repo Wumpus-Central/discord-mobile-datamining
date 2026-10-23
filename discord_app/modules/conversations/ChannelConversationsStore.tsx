@@ -1,18 +1,18 @@
-// === Module 7681: ChannelConversationsStore ===
+// === Module 7682: ChannelConversationsStore ===
 
-// Module 7681 (ChannelConversationsStore)
+// Module 7682 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import privDefault from "priv" /* 1459 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5999 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7683 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5998 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7684 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7682 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7683 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -517,7 +517,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7684).mapConversation);
+      const mapped = rawConversations.map(set(7685).mapConversation);
       const found = mapped.filter(set(1388).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

@@ -1,12 +1,12 @@
-// === Module 15086: ShareAttachments ===
+// === Module 15099: ShareAttachments ===
 
-// Module 15086 (ShareAttachments)
+// Module 15099 (ShareAttachments)
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
 import timing from "timing" /* 5192 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8139 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 12112 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8140 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 12123 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 

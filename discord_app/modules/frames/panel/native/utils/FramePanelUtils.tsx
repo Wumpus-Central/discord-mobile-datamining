@@ -1,12 +1,12 @@
-// === Module 18751: FramePanelUtils ===
+// === Module 18773: FramePanelUtils ===
 
-// Module 18751 (FramePanelUtils)
+// Module 18773 (FramePanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FramesStore from "FramesStore" /* 6761 */;
+import FramesStore from "FramesStore" /* 6760 */;
 
 require = fn;
-const asLaunched = fn(6762).asLaunched;
+const asLaunched = fn(6761).asLaunched;
 const ActivityPanelModes = fn(5595).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 7254: ProviderConnectionCard ===
+// === Module 7255: ProviderConnectionCard ===
 
-// Module 7254 (ProviderConnectionCard)
+// Module 7255 (ProviderConnectionCard)
 import native from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import shared from "shared" /* 4976 */;
 import LinkIcon2 from "LinkIcon" /* 5664 */;
-import PlatformsDefault from "Platforms" /* 6488 */;
+import PlatformsDefault from "Platforms" /* 6487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

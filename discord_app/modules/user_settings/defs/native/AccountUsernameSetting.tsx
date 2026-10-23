@@ -1,11 +1,11 @@
-// === Module 15914: AccountUsernameSetting ===
+// === Module 15932: AccountUsernameSetting ===
 
-// Module 15914 (AccountUsernameSetting)
+// Module 15932 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12740 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12759 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
 });
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
   let Text = require;
   let tmp = dependencyMap;
@@ -76,7 +76,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8317).MobileUserSettings.ACCOUNT,
+  parent: fn(8318).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
     let Text = require;

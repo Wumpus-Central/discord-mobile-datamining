@@ -1,6 +1,6 @@
-// === Module 5881: constants/DeviceState ===
+// === Module 5880: constants/DeviceState ===
 
-// Module 5881 (constants/DeviceState)
+// Module 5880 (constants/DeviceState)
 import size from "module_2" /* 2 */;
 
 const obj = { NOMINAL: "NOMINAL", FAIR: "FAIR", SERIOUS: "SERIOUS", CRITICAL: "CRITICAL", UNKNOWN: "UNKNOWN" };

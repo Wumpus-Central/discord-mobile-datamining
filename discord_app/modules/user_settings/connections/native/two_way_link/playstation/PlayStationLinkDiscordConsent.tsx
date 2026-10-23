@@ -1,12 +1,12 @@
-// === Module 14024: PlayStationLinkDiscordConsent ===
+// === Module 14038: PlayStationLinkDiscordConsent ===
 
-// Module 14024 (PlayStationLinkDiscordConsent)
+// Module 14038 (PlayStationLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const constants = fn(14019).PlayStationLinkModalScenes;
+const constants = fn(14033).PlayStationLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
-const PLAYSTATION_CLIENT_SCOPES = fn(9595).PLAYSTATION_CLIENT_SCOPES;
+const PLAYSTATION_CLIENT_SCOPES = fn(9602).PLAYSTATION_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -99,8 +99,8 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
   cResult[8] = tmp5;
   cResult[9] = platformType;
   cResult[10] = tmp9;
-  cResult[11] = jsx(tmp(9596).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: tmp8, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: tmp5, onError: N, redirectUri: tmp9 });
-  const tmp10 = jsx(tmp(9596).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: tmp8, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: tmp5, onError: N, redirectUri: tmp9 });
+  cResult[11] = jsx(tmp(9603).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: tmp8, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: tmp5, onError: N, redirectUri: tmp9 });
+  const tmp10 = jsx(tmp(9603).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: tmp8, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: tmp5, onError: N, redirectUri: tmp9 });
 }) : (function PlayStationLinkDiscordConsent(platformType) {
   platformType = platformType.platformType;
   let navigation;
@@ -115,14 +115,14 @@ export const PlayStationLinkDiscordConsent = ReactCompilerGating.isReactCompiler
     navigation.push(constants.ERROR, { errorCode });
   }, items1);
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-    let PLAYSTATION_APPLICATION_ID = tmp(13446).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+    let PLAYSTATION_APPLICATION_ID = tmp(13460).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
   } else {
-    PLAYSTATION_APPLICATION_ID = tmp(13446).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
+    PLAYSTATION_APPLICATION_ID = tmp(13460).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
   }
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-    let PLAYSTATION = tmp(14025).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
+    let PLAYSTATION = tmp(14039).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
   } else {
-    PLAYSTATION = tmp(14025).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
+    PLAYSTATION = tmp(14039).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
   }
-  return jsx(navigation(9596).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION });
+  return jsx(navigation(9603).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION });
 });

@@ -1,6 +1,6 @@
-// === Module 13687: MessagePreviewText ===
+// === Module 13701: MessagePreviewText ===
 
-// Module 13687 (MessagePreviewText)
+// Module 13701 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
@@ -10,19 +10,19 @@ import Text_Text from "Text/Text" /* 5220 */;
 import isForwardMessageDefault from "isForwardMessage" /* 5588 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5629 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import useMessageAuthor from "useMessageAuthor" /* 6352 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13678 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13688 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13689 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13690 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 13693 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13694 */;
+import useMessageAuthor from "useMessageAuthor" /* 6351 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13692 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13702 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13703 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13704 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 13707 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13708 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13679);
+const InAppNotificationConstants = fn(13693);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);

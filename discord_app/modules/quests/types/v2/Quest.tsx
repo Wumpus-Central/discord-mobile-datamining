@@ -1,9 +1,9 @@
-// === Module 7769: Quest ===
+// === Module 7770: Quest ===
 
-// Module 7769 (Quest)
-import Task from "Task" /* 7770 */;
-import Reward from "Reward" /* 7774 */;
-import CTA from "CTA" /* 7775 */;
+// Module 7770 (Quest)
+import Task from "Task" /* 7771 */;
+import Reward from "Reward" /* 7775 */;
+import CTA from "CTA" /* 7776 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");

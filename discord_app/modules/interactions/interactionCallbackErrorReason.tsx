@@ -1,8 +1,8 @@
-// === Module 6004: interactionCallbackErrorReason ===
+// === Module 6003: interactionCallbackErrorReason ===
 
-// Module 6004 (interactionCallbackErrorReason)
+// Module 6003 (interactionCallbackErrorReason)
 import util from "util" /* 1128 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6005 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6004 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;

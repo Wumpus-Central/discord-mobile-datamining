@@ -1,19 +1,19 @@
-// === Module 19188: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 19211: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 19188 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 19211 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import FormHeaderDefault from "FormHeader" /* 9013 */;
-import FormStylesDefault from "FormStyles" /* 15080 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19157 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19173 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19189 */;
+import FormHeaderDefault from "FormHeader" /* 9020 */;
+import FormStylesDefault from "FormStyles" /* 15093 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19180 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19196 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19155 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19178 */;
 
 require = fn;
 const View = fn(17).View;

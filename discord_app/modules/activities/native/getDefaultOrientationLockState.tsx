@@ -1,6 +1,6 @@
-// === Module 11403: getDefaultOrientationLockState ===
+// === Module 11414: getDefaultOrientationLockState ===
 
-// Module 11403 (getDefaultOrientationLockState)
+// Module 11414 (getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import useWindowDimensions from "useWindowDimensions" /* 1499 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5140 */;

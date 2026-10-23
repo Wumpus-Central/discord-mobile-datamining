@@ -1,6 +1,6 @@
-// === Module 8100: NodeView ===
+// === Module 8101: NodeView ===
 
-// Module 8100 (NodeView)
+// Module 8101 (NodeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 5220 */;
 import useInitialValueDefault from "useInitialValue" /* 5585 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import CustomMarkupAll from "CustomMarkup" /* 5966 */;
-import MenuTypes from "MenuTypes" /* 8093 */;
-import ArrowDefault from "Arrow" /* 8102 */;
+import CustomMarkupAll from "CustomMarkup" /* 5965 */;
+import MenuTypes from "MenuTypes" /* 8094 */;
+import ArrowDefault from "Arrow" /* 8103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -25,8 +25,8 @@ function NullComponent() {
 let closure_4 = ["child", "nodeMap"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8101).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8098).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8102).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8099).IN_APP_REPORTS_NODE;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, ChannelTypes: closure_16 } = Constants);
 const Permissions = fn(1098).Permissions;
@@ -382,7 +382,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChildI
                 tmp42[0] = tmp10.childButton;
                 tmp42[2] = first1;
                 tmp42[3] = tmp36;
-                const tmp43 = closure_18(tmp(6894).PressableHighlight, tmp42);
+                const tmp43 = closure_18(tmp(6893).PressableHighlight, tmp42);
                 cResult[24] = first1;
                 cResult[25] = tmp10.childButton;
                 cResult[26] = tmp36;
@@ -479,7 +479,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChildI
   const items2 = [closure_19(closure_8, obj4), closure_18(ArrowDefault, {})];
   obj3.children = items2;
   obj2.children = closure_19(closure_8, obj3);
-  return closure_18(child(6894).PressableHighlight, obj2);
+  return closure_18(child(6893).PressableHighlight, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChildrenView(onSelectChild) {

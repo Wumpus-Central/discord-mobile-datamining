@@ -1,23 +1,23 @@
-// === Module 17689: GuildsBarGeoRestrictedGuild ===
+// === Module 17711: GuildsBarGeoRestrictedGuild ===
 
-// Module 17689 (GuildsBarGeoRestrictedGuild)
+// Module 17711 (GuildsBarGeoRestrictedGuild)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
-import GuildIcon from "GuildIcon" /* 6869 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17640 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17644 */;
-import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 17661 */;
-import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 17690 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5894 */;
+import GuildIcon from "GuildIcon" /* 6868 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8981 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17662 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17666 */;
+import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 17683 */;
+import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 17712 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(17628).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17650).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -42,7 +42,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     first = cResult[0];
   }
   let obj = restrictedGuild(576);
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(17640).useGuildsBarAnimatedWrapperStyles(first);
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(17662).useGuildsBarAnimatedWrapperStyles(first);
   if (cResult[1] === restrictedGuild.icon) {
     if (cResult[2] === restrictedGuild.id) {
       let tmp6 = cResult[3];
@@ -103,8 +103,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj7 = { source: tmp6, style: name.guildIcon, fadeDuration: 0 };
         let tmp23 = jsx(FastImageDefault, { source: tmp6, style: name.guildIcon, fadeDuration: 0 });
       } else {
-        const obj8 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6869).GuildIconSizes.LARGE };
-        tmp23 = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6869).GuildIconSizes.LARGE });
+        const obj8 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6868).GuildIconSizes.LARGE };
+        tmp23 = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6868).GuildIconSizes.LARGE });
       }
       cResult[11] = tmp6;
       cResult[12] = name.guildIcon;
@@ -143,12 +143,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[2] = restrictedGuild.id;
   cResult[3] = animatableSourceWithFallback;
   tmp6 = animatableSourceWithFallback;
-  const tmpResult = restrictedGuild(17640);
+  const tmpResult = restrictedGuild(17662);
 }) : (function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(17640);
+  let obj = restrictedGuild(17662);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -173,18 +173,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       AlertActionCreatorsDefault.show(obj2);
     }
   }), items);
-  const obj3 = { selected: false, unread: false, circle: false, styles: restrictedGuild(17640).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 360, expandedChildren: 30, children: true };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(17640).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  const obj3 = { selected: false, unread: false, circle: false, styles: restrictedGuild(17662).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 138, expandedChildren: 140, children: 143 };
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(17662).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
   obj3.externalChildren = jsx(GuildsBarGeoRestrictedBadgeDefault, { style: tmp.geoRestrictedBadge });
   obj3.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj6 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
     let tmp8Result = jsx(FastImageDefault, { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 });
   } else {
-    const obj7 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6869).GuildIconSizes.LARGE };
-    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6869).GuildIconSizes.LARGE });
+    const obj7 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6868).GuildIconSizes.LARGE };
+    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6868).GuildIconSizes.LARGE });
     const tmp9Result = GuildIconDefault;
   }
   obj3.children = tmp8Result;
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: false, unread: false, circle: false, styles: restrictedGuild(17640).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 360, expandedChildren: 30, children: true });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: false, unread: false, circle: false, styles: restrictedGuild(17662).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 138, expandedChildren: 140, children: 143 });
 }));

@@ -1,6 +1,6 @@
-// === Module 12982: TypingIndicator ===
+// === Module 12998: TypingIndicator ===
 
-// Module 12982 (TypingIndicator)
+// Module 12998 (TypingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,15 +8,15 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import native from "native" /* 5023 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 12984 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12987 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 12988 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 12989 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13000 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13003 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13004 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13005 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5223 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6712 */;
-import TypingStore from "TypingStore" /* 12983 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6711 */;
+import TypingStore from "TypingStore" /* 12999 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -28,8 +28,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return __initData(closure_23, obj, arg0);
 }
 const View = fn(17).View;
-let style_owner_user_id = fn(9752).useChatShowingAutoComplete;
-const SlowmodeType = fn(7744).SlowmodeType;
+let style_owner_user_id = fn(9759).useChatShowingAutoComplete;
+const SlowmodeType = fn(7745).SlowmodeType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

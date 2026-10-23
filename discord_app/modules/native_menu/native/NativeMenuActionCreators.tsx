@@ -1,6 +1,6 @@
-// === Module 10405: NativeMenuActionCreators ===
+// === Module 10412: NativeMenuActionCreators ===
 
-// Module 10405 (NativeMenuActionCreators)
+// Module 10412 (NativeMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;

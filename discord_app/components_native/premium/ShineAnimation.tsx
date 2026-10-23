@@ -1,6 +1,6 @@
-// === Module 10458: ShineAnimation ===
+// === Module 10465: ShineAnimation ===
 
-// Module 10458 (ShineAnimation)
+// Module 10465 (ShineAnimation)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;

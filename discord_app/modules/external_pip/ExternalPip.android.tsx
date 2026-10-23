@@ -75,6 +75,9 @@ prototype["setMirrored"] = function setMirrored() {
 prototype["refreshPipUi"] = function refreshPipUi() {
   NativeExternalPipModule.refreshPipUi();
 };
+prototype["setPipContentReady"] = function setPipContentReady() {
+  NativeExternalPipModule.setPipContentReady();
+};
 prototype["updateSourceTrackingView"] = function updateSourceTrackingView() {
 
 };

@@ -1,6 +1,6 @@
-// === Module 10834: MarkChannelUnreadExperiment ===
+// === Module 10842: MarkChannelUnreadExperiment ===
 
-// Module 10834 (MarkChannelUnreadExperiment)
+// Module 10842 (MarkChannelUnreadExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

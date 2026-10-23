@@ -1,6 +1,6 @@
-// === Module 11110: BadgeTierGrid ===
+// === Module 11119: BadgeTierGrid ===
 
-// Module 11110 (BadgeTierGrid)
+// Module 11119 (BadgeTierGrid)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -254,8 +254,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(9925);
-  obj4.children = isViewingOtherUser(9925)(tiers, 3).map((arr) => React4(View, {
+  const tmp9 = isViewingOtherUser(9932);
+  obj4.children = isViewingOtherUser(9932)(tiers, 3).map((arr) => React4(View, {
     style: row.row,
     collapsable: false,
     children: arr.map((owned) => {
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(11089).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(11098).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1128).intl;
       const t = badge(1128).t;
       const items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -289,8 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(11081), obj4);
-        const tmp11 = isViewingOtherUser(11081);
+        tmp9Result = closure_2_4(isViewingOtherUser(11090), obj4);
+        const tmp11 = isViewingOtherUser(11090);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
         let tmp15 = !owned;
         if (!owned) {
           const obj7 = { size: "xxs", color: isViewingOtherUser(587).colors.ICON_MUTED };
-          tmp15 = closure_2_4(badge(8551).LockIcon, obj7);
+          tmp15 = closure_2_4(badge(8552).LockIcon, obj7);
         }
         const items3 = [tmp15, ];
         let str2 = "text-muted";

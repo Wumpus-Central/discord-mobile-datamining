@@ -1,10 +1,10 @@
-// === Module 13916: PublishModal ===
+// === Module 13930: PublishModal ===
 
-// Module 13916 (PublishModal)
+// Module 13930 (PublishModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 13917 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 13931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
-let obj2 = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6693).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
+let obj2 = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6693).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 

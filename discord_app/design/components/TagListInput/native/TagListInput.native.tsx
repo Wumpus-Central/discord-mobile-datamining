@@ -1,6 +1,6 @@
-// === Module 8962: TagListInput ===
+// === Module 8969: TagListInput ===
 
-// Module 8962 (TagListInput)
+// Module 8969 (TagListInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5220 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import _modDef6952 from "module_6952" /* 6952 */;
-import useInputClearButton from "useInputClearButton" /* 7003 */;
+import _modDef6951 from "module_6951" /* 6951 */;
+import useInputClearButton from "useInputClearButton" /* 7002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -302,7 +302,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLea
       obj2.children = items2;
       obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = closure_2_8(_modDef6952, obj);
+      tmp = closure_2_8(_modDef6951, obj);
     }
     return tmp;
   }, items1);
@@ -612,7 +612,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   c17 = undefined;
   const tmp = c10();
   const bound = Math.min(2, tags(5239).useFontScale());
-  const result = tags(7010).InputHeights.MD * bound;
+  const result = tags(7009).InputHeights.MD * bound;
   let tmp6 = closure_18(accessibilityHint.ref, onChangeText);
   const inputRef = tmp6.inputRef;
   const inputValueRef = tmp6.inputValueRef;
@@ -620,15 +620,15 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const clearButton = tmp6.clearButton;
   inputRef.useRef({ start: 0, end: 0 });
   let obj = tags(5239);
-  const keyboardBlurring = tags(7012).useKeyboardBlurring(inputRef);
-  const obj3 = tags(7012);
+  const keyboardBlurring = tags(7011).useKeyboardBlurring(inputRef);
+  const obj3 = tags(7011);
   const focus = tags(5128).useFocus();
   ({ focusProps: c8, isFocused } = focus);
   const obj4 = tags(5128);
   const tmp9 = focusOnAdd;
-  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(7014)({ onFocus, onBlur }));
+  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(7013)({ onFocus, onBlur }));
   const ref = inputRef.useRef(null);
-  const tmp10 = focusOnAdd(7014)({ onFocus, onBlur });
+  const tmp10 = focusOnAdd(7013)({ onFocus, onBlur });
   let tmp12 = autoClearInputOnTagAdd;
   [c12, c13] = autoClearInputOnTagAdd(inputRef.useState(null), 2);
   const tmp13 = autoClearInputOnTagAdd(inputRef.useState(null), 2);
@@ -694,9 +694,9 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     BottomSheetScrollView = inputUpdate;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8963).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8970).BottomSheetTextInput;
   } else {
-    BottomSheetTextInput = tmp9(8964);
+    BottomSheetTextInput = tmp9(8971);
   }
   const result1 = 33 * bound;
   const tmp14 = autoClearInputOnTagAdd(inputRef.useState(false), 2);
@@ -744,7 +744,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     tags.map((tag, index) => {
       tags = tag;
       closure_1 = index;
-      return _undefined(tags(8965).TagListInputTagComponent, {
+      return _undefined(tags(8972).TagListInputTagComponent, {
         tag,
         selected: tag.id === c12,
         onPress(arg0) {
@@ -889,7 +889,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj12 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj13 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp25(tmp2(7132).MagnifyingGlassIcon, obj13);
+    icon = tmp25(tmp2(7131).MagnifyingGlassIcon, obj13);
   }
   const items8 = [icon, obj5.wrap(c8(BottomSheetScrollView, obj6)), ];
   if (null == footer) {
@@ -902,6 +902,6 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }
   items8[2] = footer;
   obj12.children = items8;
-  obj11.children = c9(tags(7009).InputFieldContainer, obj12);
+  obj11.children = c9(tags(7008).InputFieldContainer, obj12);
   return c8(inputValueRef, obj11);
 });

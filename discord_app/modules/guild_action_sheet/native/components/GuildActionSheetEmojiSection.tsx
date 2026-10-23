@@ -1,16 +1,16 @@
-// === Module 15167: GuildActionSheetEmojiSection ===
+// === Module 15180: GuildActionSheetEmojiSection ===
 
-// Module 15167 (GuildActionSheetEmojiSection)
+// Module 15180 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9641 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -80,15 +80,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
       }
     }
     const items2 = [UserStore];
-    const fn = function f() {
-      return currentUser.getCurrentUser();
-    };
+    class U {
+      constructor() {
+        return closure_1_8.getCurrentUser();
+      }
+    }
     const items3 = [];
     cResult[4] = items2;
-    cResult[5] = fn;
+    cResult[5] = U;
     cResult[6] = items3;
     let tmp15 = items3;
-    let tmp14 = fn;
+    let tmp14 = U;
     const tmp13 = items2;
   } else {
     class E {
@@ -156,13 +158,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
     }
     diff1 = tmp22 - 1;
     const _Math = Math;
+    class U {
+      constructor() {
+        return closure_1_8.getCurrentUser();
+      }
+    }
     bound = Math.min(num8 + 1, 99);
   }
   const substr = stateFromStoresArray.slice(0, diff1);
   const tmp11Result = require("PremiumUtils");
   analyticsLocations = require("useAnalyticsLocations")(tmp11(tmp2[17]).EMOJI_PICKER).analyticsLocations;
   if (cResult[7] !== analyticsLocations) {
-    class K {
+    class J {
       constructor(arg0, arg1) {
         result = null == arg1;
         if (!result) {
@@ -198,9 +205,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
       }
     }
     cResult[7] = analyticsLocations;
-    cResult[8] = K;
+    class U {
+      constructor() {
+        return closure_1_8.getCurrentUser();
+      }
+    }
+    cResult[8] = J;
   } else {
-    class K {
+    class J {
       constructor(arg0, arg1) {
         result = null == arg1;
         if (!result) {
@@ -236,14 +248,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
       }
     }
   }
-  ThemeStore = K;
+  ThemeStore = J;
   const tmp11Result2 = require("useAnalyticsLocations");
   const tmpResult6 = guildId(first[20]);
   const unsafe_rawColors = tmp11(tmp2[9]).unsafe_rawColors;
   const tmp28 = guildId(first[20]).isThemeDark(ThemeStore.theme) ? unsafe_rawColors.PREMIUM_TIER_2_PURPLE : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS;
   let tmp30Result4 = null;
   if (substr.length > 0) {
-    class K {
+    class J {
       constructor(arg0, arg1) {
         result = null == arg1;
         if (!result) {
@@ -279,11 +291,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
       }
     }
     let obj2 = { title: null, trailing: null, children: null };
-    const intl = tmp(tmp2[22]).intl;
-    obj2.title = intl.string(tmp(tmp2[22]).t.Q60n1E);
+    class U {
+      constructor() {
+        return closure_1_8.getCurrentUser();
+      }
+    }
+    obj2.title = obj9.string(tmp(tmp2[22]).t.Q60n1E);
     let tmp30Result = null;
     if (tmp18) {
-      class K {
+      class J {
         constructor(arg0, arg1) {
           result = null == arg1;
           if (!result) {
@@ -319,8 +335,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
         }
       }
       tmp32[1] = function onPress() {
-        return K(guildId, stateFromStores);
+        return J(guildId, stateFromStores);
       };
+      class U {
+        constructor() {
+          return closure_1_8.getCurrentUser();
+        }
+      }
       let obj3 = { style: tmp4.header, children: null };
       let obj4 = { style: tmp4.dotSeparator };
       const items4 = [tmp30(num7, obj4), , ];
@@ -331,15 +352,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
       const obj8 = { color: tmp28 };
       items5[1] = obj8;
       obj7.style = items5;
-      const intl2 = tmp(tmp2[22]).intl;
-      obj7.children = intl2.string(tmp(tmp2[22]).t.p1j56s);
+      const intl = tmp(tmp2[22]).intl;
+      obj7.children = intl.string(tmp(tmp2[22]).t.p1j56s);
       items4[2] = tmp30(tmp(tmp2[24]).LegacyText, obj7);
       obj3.children = items4;
       tmp32[2] = closure_12(num7, obj3);
       tmp30Result = tmp30(tmp(tmp2[23]).PressableOpacity, tmp32);
     }
     obj2.trailing = tmp30Result;
-    const obj9 = { style: tmp4.emojiContainer, children: null };
+    const obj10 = { style: tmp4.emojiContainer, children: null };
     const items6 = [
       substr.map((accessibilityLabel) => {
           closure_0 = accessibilityLabel;
@@ -360,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
           obj2.style = items;
           const obj3 = { margin: num7 };
           const tmp4 = closure_1(first[29]);
-          if (obj4.isThemeDark(K.theme)) {
+          if (obj4.isThemeDark(J.theme)) {
             let tmp3Result = closure_1(first[30]);
           } else {
             tmp3Result = closure_1(first[31]);
@@ -377,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
     ];
     let tmp30Result3 = null;
     if (bound > 0) {
-      class K {
+      class J {
         constructor(arg0, arg1) {
           result = null == arg1;
           if (!result) {
@@ -412,26 +433,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
           return;
         }
       }
-      const intl3 = tmp(tmp2[22]).intl;
-      tmp38[1] = intl3.string(tmp(tmp2[22]).t["UKOtz+"]);
-      tmp38[2] = function onPress() {
+      class U {
+        constructor() {
+          return closure_1_8.getCurrentUser();
+        }
+      }
+      const obj11 = { count: bound };
+      tmp37[1] = tmp38(tmp(tmp2[22]).t["3Ng/um"], obj11);
+      tmp37[2] = function onPress() {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         closure_3(true);
       };
-      const obj10 = { style: null, children: null };
+      const obj12 = { style: null, children: null };
       const items7 = [, , ];
       ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp4);
-      const obj11 = { margin: num7 };
-      items7[2] = obj11;
-      obj10.style = items7;
+      const obj13 = { margin: num7 };
+      items7[2] = obj13;
+      obj12.style = items7;
       let _HermesInternal = HermesInternal;
-      obj10.children = "+" + bound;
-      tmp38[3] = tmp30(tmp(tmp2[24]).LegacyText, obj10);
-      tmp30Result3 = tmp30(tmp(tmp2[23]).PressableOpacity, tmp38, -1);
+      obj12.children = "+" + bound;
+      tmp37[3] = tmp30(tmp(tmp2[24]).LegacyText, obj12);
+      tmp30Result3 = tmp30(tmp(tmp2[23]).PressableOpacity, tmp37, -1);
     }
     items6[1] = tmp30Result3;
-    obj9.children = items6;
-    obj2.children = closure_12(num7, obj9);
+    obj10.children = items6;
+    obj2.children = closure_12(num7, obj10);
     tmp30Result4 = tmp30(tmp(tmp2[21]).RowGroup, obj2);
   }
   return tmp30Result4;
@@ -581,20 +607,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
     if (bound > 0) {
       const obj14 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       const intl3 = tmp4(tmp5[22]).intl;
-      obj14.accessibilityLabel = intl3.string(tmp4(tmp5[22]).t["UKOtz+"]);
+      const obj15 = { count: bound };
+      obj14.accessibilityLabel = intl3.formatToPlainString(tmp4(tmp5[22]).t["3Ng/um"], obj15);
       obj14.onPress = function onPress() {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         closure_3(true);
       };
-      const obj15 = { style: null, children: null };
+      const obj16 = { style: null, children: null };
       const items7 = [, , ];
       ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp);
-      const obj16 = { margin: num };
-      items7[2] = obj16;
-      obj15.style = items7;
+      const obj17 = { margin: num };
+      items7[2] = obj17;
+      obj16.style = items7;
       let _HermesInternal = HermesInternal;
-      obj15.children = "+" + bound;
-      obj14.children = closure_11(tmp4(tmp5[24]).LegacyText, obj15);
+      obj16.children = "+" + bound;
+      obj14.children = closure_11(tmp4(tmp5[24]).LegacyText, obj16);
       tmp20Result3 = closure_11(tmp4(tmp5[23]).PressableOpacity, obj14, -1);
     }
     items6[1] = tmp20Result3;

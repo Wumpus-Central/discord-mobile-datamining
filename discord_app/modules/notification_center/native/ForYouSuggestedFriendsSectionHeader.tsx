@@ -1,6 +1,6 @@
-// === Module 17779: ForYouSuggestedFriendsSectionHeader ===
+// === Module 17801: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 17779 (ForYouSuggestedFriendsSectionHeader)
+// Module 17801 (ForYouSuggestedFriendsSectionHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

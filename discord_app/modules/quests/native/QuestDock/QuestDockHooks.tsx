@@ -1,6 +1,6 @@
-// === Module 16328: QuestDockHooks ===
+// === Module 16351: QuestDockHooks ===
 
-// Module 16328 (QuestDockHooks)
+// Module 16351 (QuestDockHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,28 +9,25 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import useToken from "useToken" /* 5238 */;
-import QuestTypes from "QuestTypes" /* 6699 */;
-import AdCreativeType from "AdCreativeType" /* 6703 */;
-import AnalyticsActions from "AnalyticsActions" /* 7776 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7785 */;
-import captureAdUserAction from "captureAdUserAction" /* 9542 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9545 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9577 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9678 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9946 */;
-import QuestDockUtils from "QuestDockUtils" /* 16330 */;
-import AdCreativeUtils from "AdCreativeUtils" /* 16338 */;
+import QuestTypes from "QuestTypes" /* 6698 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
+import captureAdUserAction from "captureAdUserAction" /* 9549 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9552 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9685 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9953 */;
+import QuestDockUtils from "QuestDockUtils" /* 16353 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 16361 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16329 */;
+import QuestDockStore from "QuestDockStore" /* 16352 */;
 
 const require = globalThis.__r;
 
-const AssetUtils = getScaledImageUrl(9553);
+const AssetUtils = getScaledImageUrl(9560);
 require = fn;
-const QuestConstants = fn(6696);
+const QuestConstants = fn(6695);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
-const QuestDockConstants = fn(16331);
+const QuestDockConstants = fn(16354);
 ({ QUEST_DOCK_CLOSED_HEIGHT: closure_8, QUEST_DOCK_COLLAPSED_HEIGHT: closure_9, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: c10, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: closure_11, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: closure_12, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: map1 } = QuestDockConstants);
 fn(558);
 const __initData = { code: "function QuestDockHooksTsx1(){const{restingQuestDockMode,minExpandedContentHeight,windowDimensions,safeArea}=this.__closure;return{restingQuestDockMode:restingQuestDockMode.get(),minExpandedContentHeight:minExpandedContentHeight.get(),windowWidth:windowDimensions.get().width,windowHeight:windowDimensions.get().height,safeArea:safeArea.get()};}" };
@@ -321,8 +318,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDockDismissalReset() {
   const cResult = setRestingQuestDockMode(576).c(4);
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16335).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16332).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16358).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
   if (cResult[0] === activeQuestDockMode) {
     if (cResult[1] === setRestingQuestDockMode) {
       let tmp2 = cResult[2];
@@ -333,8 +330,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
   const fn = function t() {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16330).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16330);
+      isSoftDismissedResult = setRestingQuestDockMode(16353).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16353);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -342,8 +339,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16330).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16330);
+        isSoftDismissedResult = setRestingQuestDockMode(16353).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16353);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -363,14 +360,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
   tmp2 = fn;
   let obj = setRestingQuestDockMode(576);
 }) : (function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16335).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16332).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16358).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16330).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16330);
+      isSoftDismissedResult = setRestingQuestDockMode(16353).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16353);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -378,8 +375,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16330).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16330);
+        isSoftDismissedResult = setRestingQuestDockMode(16353).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16353);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -495,35 +492,15 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
   const questImpressionId = require("ContentImpressionTrackerHooks").useQuestImpressionId();
   const items = [questCreative, questImpressionId];
   return noop.useCallback(() => {
-    const creativeAnalyticsParams = AdCreativeUtils.getCreativeAnalyticsParams(creative);
-    if (obj2.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_dock_action_sheet")) {
-      const obj3 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL };
-      const merged = Object.assign(creativeAnalyticsParams);
-      obj3.questContentCTA = AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU;
-      obj3.surfaceId = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
-      obj3.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
-      obj3.impressionId = questImpressionId;
-      captureAdUserAction.captureAdUserAction(obj3);
-      let tmp7 = questImpressionId;
-      const tmpResult = captureAdUserAction;
-    } else if (creativeAnalyticsParams.adCreativeType === AdCreativeType.AdCreativeType.QUEST) {
-      const obj4 = { questId: creativeAnalyticsParams.adCreativeId, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, questContentCTA: AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, impressionId: questImpressionId };
-      const result = AnalyticsActions.trackQuestContentClicked(obj4);
-      tmp7 = questImpressionId;
-      const tmpResult3 = AnalyticsActions;
-    } else {
-      const obj5 = { adContentId: null, adCreativeType: null, questContent: null, questContentCTA: null, sourceQuestContent: null, impressionId: null };
-      ({ adCreativeId: obj9.adContentId, adCreativeType: obj9.adCreativeType } = creativeAnalyticsParams);
-      obj5.questContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
-      obj5.questContentCTA = AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU;
-      obj5.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
-      tmp7 = questImpressionId;
-      obj5.impressionId = questImpressionId;
-      const result1 = AnalyticsActions.trackAdContentClicked(obj5);
-      const tmpResult4 = AnalyticsActions;
-    }
-    obj2 = AdAnalyticsInterfaceExperiment;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16339, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: tmp7 });
+    const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL };
+    const obj = captureAdUserAction;
+    const merged = Object.assign(AdCreativeUtils.getCreativeAnalyticsParams(creative));
+    obj2.questContentCTA = AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU;
+    obj2.surfaceId = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
+    obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
+    obj2.impressionId = questImpressionId;
+    obj.captureAdUserAction(obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16362, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
   }, items);
 };
 export const useQuestDockExpandHandler = tmp8;

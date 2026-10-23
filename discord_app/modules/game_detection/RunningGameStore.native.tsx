@@ -3,8 +3,8 @@
 // Module 2021 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11164 */;
-import OverlayTypes from "OverlayTypes" /* 15238 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11173 */;
+import OverlayTypes from "OverlayTypes" /* 15251 */;
 import GameStore from "GameStore" /* 2022 */;
 import DetectableGameStore from "DetectableGameStore" /* 2039 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2043 */;

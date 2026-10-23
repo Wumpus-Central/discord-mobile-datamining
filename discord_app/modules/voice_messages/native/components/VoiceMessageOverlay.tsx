@@ -1,6 +1,6 @@
-// === Module 13492: VoiceMessageOverlay ===
+// === Module 13506: VoiceMessageOverlay ===
 
-// Module 13492 (VoiceMessageOverlay)
+// Module 13506 (VoiceMessageOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -8,10 +8,10 @@ import util from "util" /* 1128 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5253 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5958 */;
-import LegacyTokens from "LegacyTokens" /* 6693 */;
-import useRefValueDefault from "useRefValue" /* 6871 */;
-import inlineStyles from "inlineStyles" /* 7946 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5957 */;
+import LegacyTokens from "LegacyTokens" /* 6692 */;
+import useRefValueDefault from "useRefValue" /* 6870 */;
+import inlineStyles from "inlineStyles" /* 7947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -23,10 +23,10 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12979).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12980).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12995).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12996).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1087).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12462).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12472).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VoiceMessageOverlay = "VoiceMessageOverlay";

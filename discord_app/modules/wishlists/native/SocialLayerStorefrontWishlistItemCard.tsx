@@ -1,14 +1,14 @@
-// === Module 13843: SocialLayerStorefrontWishlistItemCard ===
+// === Module 13857: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 13843 (SocialLayerStorefrontWishlistItemCard)
+// Module 13857 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9335 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9387 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9342 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9394 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import SentGiftsStore from "SentGiftsStore" /* 13841 */;
+import SentGiftsStore from "SentGiftsStore" /* 13855 */;
 
 const require = globalThis.__r;
 
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
               cResult[30] = tmp36;
               tmp29 = tmp36;
             }
-            OWNED = tmp(9335).WishlistItemCardOverlay.OWNED;
+            OWNED = tmp(9342).WishlistItemCardOverlay.OWNED;
           }
         }
       }

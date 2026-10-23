@@ -1,23 +1,23 @@
-// === Module 9408: NitroCoinSpotIllustration ===
+// === Module 9415: NitroCoinSpotIllustration ===
 
-// Module 9408 (NitroCoinSpotIllustration)
+// Module 9415 (NitroCoinSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import assetHelpers from "assetHelpers" /* 6981 */;
-import _modDef9409 from "module_9409" /* 9409 */;
-import _modDef9410 from "module_9410" /* 9410 */;
-import _modDef9411 from "module_9411" /* 9411 */;
+import assetHelpers from "assetHelpers" /* 6980 */;
+import _modDef9416 from "module_9416" /* 9416 */;
+import _modDef9417 from "module_9417" /* 9417 */;
+import _modDef9418 from "module_9418" /* 9418 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9409 }, 3: null };
-let obj2 = { uri: _modDef9409 };
-obj[2] = { uri: _modDef9410 };
-const obj3 = { uri: _modDef9410 };
-obj[3] = { uri: _modDef9411 };
+let obj = { 1: null, 2: { uri: _modDef9416 }, 3: null };
+let obj2 = { uri: _modDef9416 };
+obj[2] = { uri: _modDef9417 };
+const obj3 = { uri: _modDef9417 };
+obj[3] = { uri: _modDef9418 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef9411 };
+const obj4 = { uri: _modDef9418 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 17945: conjureBackgroundFrameRules ===
+// === Module 17967: conjureBackgroundFrameRules ===
 
-// Module 17945 (conjureBackgroundFrameRules)
+// Module 17967 (conjureBackgroundFrameRules)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10698 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13804 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15649 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10705 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13818 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15662 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import FramesStore from "FramesStore" /* 6761 */;
+import FramesStore from "FramesStore" /* 6760 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 17946 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15651 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 17968 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15664 */;
 
 require = fn;
-const FrameIntent = fn(6762).FrameIntent;
+const FrameIntent = fn(6761).FrameIntent;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrameRules.tsx");
 
@@ -44,12 +44,12 @@ export const shouldRunInBackgroundOnRelease = function shouldRunInBackgroundOnRe
   }
   return tmp9;
 };
-export const isBuilderPreviewFrame = function isBuilderPreviewFrame(surface) {
-  let result = conjurePreviewSurface.isConjurePreviewSurface(surface.surface);
+export const isBuilderPreviewFrame = function isBuilderPreviewFrame(frame) {
+  let result = conjurePreviewSurface.isConjurePreviewSurface(frame.surface);
   if (!result) {
-    let tmp3 = surface.intent === FrameIntent.MAIN;
+    let tmp3 = frame.intent === FrameIntent.MAIN;
     if (tmp3) {
-      tmp3 = surface.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
+      tmp3 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
     }
     result = tmp3;
   }

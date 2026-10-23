@@ -1,6 +1,6 @@
-// === Module 7699: ProfileReadStateConstants ===
+// === Module 7700: ProfileReadStateConstants ===
 
-// Module 7699 (ProfileReadStateConstants)
+// Module 7700 (ProfileReadStateConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateConstants.tsx");

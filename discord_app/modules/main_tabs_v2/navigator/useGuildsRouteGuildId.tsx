@@ -1,6 +1,6 @@
-// === Module 17343: useGuildsRouteGuildId ===
+// === Module 17365: useGuildsRouteGuildId ===
 
-// Module 17343 (useGuildsRouteGuildId)
+// Module 17365 (useGuildsRouteGuildId)
 import c from "c" /* 576 */;
 import Link from "Link" /* 1506 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

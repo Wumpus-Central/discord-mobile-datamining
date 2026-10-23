@@ -1,9 +1,9 @@
-// === Module 14552: JoinVoiceChannelButton ===
+// === Module 14566: JoinVoiceChannelButton ===
 
-// Module 14552 (JoinVoiceChannelButton)
+// Module 14566 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11507 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11518 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 

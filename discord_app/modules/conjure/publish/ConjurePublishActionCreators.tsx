@@ -1,16 +1,16 @@
-// === Module 10755: ConjurePublishActionCreators ===
+// === Module 10762: ConjurePublishActionCreators ===
 
-// Module 10755 (ConjurePublishActionCreators)
+// Module 10762 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10688 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10690 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10710 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10756 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10759 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10695 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10697 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10717 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10763 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10684 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6758 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10691 */;
 
 require = fn;
 function unpublishProject() {
@@ -122,7 +122,7 @@ let closure_10 = async function _unpublishUserApp() {
   }
   const publishStatus = closure_130_6.getPublishStatus(closure_129_0);
   if (null != publishStatus) {
-    closure_130_1(closure_130_2[8]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: closure_129_0, published: false, hasUnpublishedChanges: false, surface: publishStatus.surface, previewAppChannels: publishStatus.previewAppChannels, previewDevicePermissions: publishStatus.previewDevicePermissions });
+    closure_130_1(closure_130_2[8]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: closure_129_0, publishState: "not_live", surface: publishStatus.surface, previewAppChannels: publishStatus.previewAppChannels, previewDevicePermissions: publishStatus.previewDevicePermissions });
     closure_130_1(closure_130_2[8]);
   }
   const currentUser = closure_130_4.getCurrentUser();

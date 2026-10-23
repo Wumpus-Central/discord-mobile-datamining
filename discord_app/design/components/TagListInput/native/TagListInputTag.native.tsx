@@ -1,12 +1,12 @@
-// === Module 8965: TagListInputTag ===
+// === Module 8972: TagListInputTag ===
 
-// Module 8965 (TagListInputTag)
+// Module 8972 (TagListInputTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6894 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 8966 */;
+import Pressables from "Pressables" /* 6893 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 8973 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

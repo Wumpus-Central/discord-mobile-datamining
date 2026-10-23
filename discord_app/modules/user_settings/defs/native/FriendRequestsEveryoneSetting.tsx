@@ -1,11 +1,11 @@
-// === Module 16190: FriendRequestsEveryoneSetting ===
+// === Module 16208: FriendRequestsEveryoneSetting ===
 
-// Module 16190 (FriendRequestsEveryoneSetting)
+// Module 16208 (FriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16029 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7076 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1087);
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8317).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8318).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
     const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;

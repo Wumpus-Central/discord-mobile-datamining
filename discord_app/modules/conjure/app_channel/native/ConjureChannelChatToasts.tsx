@@ -1,14 +1,14 @@
-// === Module 17948: ConjureChannelChatToasts ===
+// === Module 17970: ConjureChannelChatToasts ===
 
-// Module 17948 (ConjureChannelChatToasts)
+// Module 17970 (ConjureChannelChatToasts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import UserUtils from "UserUtils" /* 5018 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Card from "Card" /* 6891 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 17949 */;
+import Card from "Card" /* 6890 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 17971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatToa
       let tmp10 = cResult[4];
     }
     if (cResult[5] !== message.author) {
-      const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+      const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
       const tmp13 = hasOwnProperty(native.Avatar, obj3);
       cResult[5] = message.author;
       cResult[6] = tmp13;
@@ -145,7 +145,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatToa
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };

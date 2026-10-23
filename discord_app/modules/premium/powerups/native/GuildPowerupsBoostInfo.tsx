@@ -1,14 +1,14 @@
-// === Module 13398: GuildPowerupsBoostInfo ===
+// === Module 13412: GuildPowerupsBoostInfo ===
 
-// Module 13398 (GuildPowerupsBoostInfo)
+// Module 13412 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5168 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7061 */;
-import BoostGemIcon from "BoostGemIcon" /* 9778 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 13399 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7060 */;
+import BoostGemIcon from "BoostGemIcon" /* 9785 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 13413 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

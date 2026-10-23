@@ -1,19 +1,19 @@
-// === Module 16305: OrbsArcadeGameTile ===
+// === Module 16323: OrbsArcadeGameTile ===
 
-// Module 16305 (OrbsArcadeGameTile)
+// Module 16323 (OrbsArcadeGameTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4966 */;
 import native from "native" /* 5023 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import OrbsArcadeRewardShelfDefault from "OrbsArcadeRewardShelf" /* 16306 */;
-import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 16314 */;
-import _modDef16317 from "module_16317" /* 16317 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16318 */;
-import OrbsArcadeGameContextMenuDefault from "OrbsArcadeGameContextMenu" /* 16323 */;
+import OrbsArcadeRewardShelfDefault from "OrbsArcadeRewardShelf" /* 16324 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16332 */;
+import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 16336 */;
+import _modDef16345 from "module_16345" /* 16345 */;
+import OrbsArcadeGameContextMenuDefault from "OrbsArcadeGameContextMenu" /* 16346 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16298 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16316 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -35,7 +35,7 @@ const result1 = createStyles.experimental_createToken((theme) => {
 createStyles = fn(4969);
 let closure_8 = createStyles.createStyleProperties({ gradientStart: result, gradientEnd: result1 });
 createStyles = fn(4969);
-let obj5 = { card: { padding: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { position: "absolute", top: 0, left: 0, right: 0, height: "79.567%", resizeMode: "cover" }, heroGradient: StyleSheet.absoluteFillObject, hero: { minHeight: fn(16300).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, justifyContent: "flex-end" }, overflowButton: null, content: null, copy: null, buttonGroup: null };
+let obj5 = { card: { padding: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { position: "absolute", top: 0, left: 0, right: 0, height: "79.567%", resizeMode: "cover" }, heroGradient: StyleSheet.absoluteFillObject, hero: { minHeight: fn(16318).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, justifyContent: "flex-end" }, overflowButton: null, content: null, copy: null, buttonGroup: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
 obj5.overflowButton = rect;
 let obj6 = { padding: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -208,7 +208,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsAr
                                       const obj7 = { style: tmp4.card, radius: 12, border: "subtle", children: null };
                                       const items3 = [tmp55, tmp63];
                                       obj7.children = items3;
-                                      const tmp69 = closure_7(tmp(6891).Card, obj7);
+                                      const tmp69 = closure_7(tmp(6890).Card, obj7);
                                       cResult[52] = tmp4.card;
                                       cResult[53] = tmp55;
                                       cResult[54] = tmp63;
@@ -253,7 +253,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsAr
                   const obj11 = { direction: str2, size: "md", style: tmp4.buttonGroup, children: null };
                   const items6 = [tmp38, cResult[31]];
                   obj11.children = items6;
-                  const tmp50 = closure_7(tmp(6682).ButtonGroup, obj11);
+                  const tmp50 = closure_7(tmp(6681).ButtonGroup, obj11);
                   cResult[32] = tmp4.buttonGroup;
                   cResult[33] = str2;
                   cResult[34] = tmp38;
@@ -279,13 +279,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsAr
               cResult[30] = stateFromStores;
               cResult[31] = tmp43;
             }
-            const obj13 = { variant: "secondary", size: "md", icon: _modDef16317, accessibilityLabel: null, onPress: null };
+            const obj13 = { variant: "secondary", size: "md", icon: _modDef16345, accessibilityLabel: null, onPress: null };
             const intl2 = tmp(1128).intl;
             obj13.accessibilityLabel = intl2.string(tmp(1128).t["uz4M/z"]);
             obj13.onPress = function onPress() {
               return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
             };
-            tmp43 = closure_6(tmp(7943).IconButton, obj13);
+            tmp43 = closure_6(tmp(7944).IconButton, obj13);
           }
         }
         const obj14 = { style: tmp4.copy, children: null };
@@ -381,17 +381,17 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsAr
   const items6 = [closure_6(OrbsArcadePlayButtonDefault, { game, size: "md" }), ];
   if (null != tmp3) {
     if (stateFromStores) {
-      const obj11 = { variant: "secondary", size: "md", icon: _modDef16317, accessibilityLabel: null, onPress: null };
+      const obj11 = { variant: "secondary", size: "md", icon: _modDef16345, accessibilityLabel: null, onPress: null };
       const intl2 = tmp4(1128).intl;
       obj11.accessibilityLabel = intl2.string(tmp4(1128).t["uz4M/z"]);
       obj11.onPress = function onPress() {
         return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
       };
-      let tmp12Result2 = closure_6(tmp4(7943).IconButton, obj11);
+      let tmp12Result2 = closure_6(tmp4(7944).IconButton, obj11);
     }
     items6[1] = tmp12Result2;
     obj10.children = items6;
-    items5[2] = closure_7(tmp4(6682).ButtonGroup, obj10);
+    items5[2] = closure_7(tmp4(6681).ButtonGroup, obj10);
     obj7.children = items5;
     items2[2] = closure_7(closure_3, obj7);
     obj3.children = items2;
@@ -401,7 +401,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsAr
     obj12.children = closure_6(OrbsArcadeGameContextMenuDefault, obj13);
     items7[1] = closure_6(closure_3, obj12);
     obj2.children = items7;
-    return closure_7(game(6891).Card, obj2);
+    return closure_7(game(6890).Card, obj2);
   }
   tmp12Result2 = null;
   if (null != tmp3) {

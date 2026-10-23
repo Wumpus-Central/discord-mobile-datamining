@@ -1,14 +1,14 @@
-// === Module 6761: FramesStore ===
+// === Module 6760: FramesStore ===
 
-// Module 6761 (FramesStore)
+// Module 6760 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1098 */;
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5595 */;
 import getURLForApplicationDefault from "getURLForApplication" /* 5609 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6763 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6764 */;
-import FramesConstants from "FramesConstants" /* 6762 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6762 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6763 */;
+import FramesConstants from "FramesConstants" /* 6761 */;
 import size from "module_2" /* 2 */;
 
 function findFrameByIframeId(iframeId) {
@@ -123,7 +123,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         } else {
           const obj3 = { id: null, applicationId: null, intent: null, surface: null, launchRequestId: null, state: "launched", data: null };
           ({ id: obj2.id, applicationId: obj2.applicationId, intent: obj2.intent, surface: obj2.surface, launchRequestId: obj2.launchRequestId } = value);
-          const obj5 = { url: tmp5, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, runsInBackground: false, poolVisibility: "unpooled", muted: false };
+          const obj5 = { url: tmp5, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, runsInBackground: false, poolVisibility: "unpooled", muted: false, userMuted: false };
           const _Date = Date;
           obj5.connectedSince = Date.now();
           obj5.layoutMode = constants2.FOCUSED;
@@ -341,10 +341,11 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         if (flag2) {
           const obj2 = {};
           const merged = Object.assign(value);
+          const data = value.data;
           const obj3 = {};
-          const merged1 = Object.assign(value.data);
+          const merged1 = Object.assign(data);
           obj3.poolVisibility = poolVisibility;
-          obj3.muted = "hidden" === poolVisibility;
+          obj3.muted = "hidden" === poolVisibility || data.userMuted;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -352,6 +353,32 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         tmp4 = flag2;
       }
       flag = tmp4;
+    }
+    return flag;
+  },
+  FRAME_SET_USER_MUTED: function handleSetUserMuted(arg0) {
+    ({ frameId, muted } = arg0);
+    let flag = false;
+    if (null != frameId) {
+      value = map.get(frameId);
+      let tmp3 = React5(value);
+      if (tmp3) {
+        let flag2 = value.data.userMuted !== muted;
+        if (flag2) {
+          const obj2 = {};
+          const merged = Object.assign(value);
+          const data = value.data;
+          const obj3 = {};
+          const merged1 = Object.assign(data);
+          obj3.userMuted = muted;
+          obj3.muted = "hidden" === data.poolVisibility || muted;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
+          flag2 = true;
+        }
+        tmp3 = flag2;
+      }
+      flag = tmp3;
     }
     return flag;
   },

@@ -1,14 +1,14 @@
-// === Module 7468: SearchBarNav ===
+// === Module 7469: SearchBarNav ===
 
-// Module 7468 (SearchBarNav)
+// Module 7469 (SearchBarNav)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Pressables from "Pressables" /* 6894 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6914 */;
-import SearchField from "SearchField" /* 7131 */;
+import Pressables from "Pressables" /* 6893 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6913 */;
+import Search_SearchBar from "Search/SearchBar" /* 7130 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBa
         const obj4 = { children: null };
         const obj5 = { size: "md", round: true, ref: tmp6 };
         const merged = Object.assign(tmp5);
-        obj4.children = hasOwnProperty(SearchField.SearchField, obj5);
+        obj4.children = hasOwnProperty(Search_SearchBar.SearchBar, obj5);
         const tmp28 = hasOwnProperty(React4, obj4);
         cResult[14] = tmp5;
         cResult[15] = tmp6;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBa
   const obj6 = { style: tmp2.flex, children: null };
   const obj7 = { children: null };
   const merged1 = Object.assign(merged);
-  obj7.children = hasOwnProperty(SearchField.SearchField, { size: "md", round: true, ref });
+  obj7.children = hasOwnProperty(Search_SearchBar.SearchBar, { size: "md", round: true, ref });
   obj6.children = hasOwnProperty(React4, obj7);
   items[1] = hasOwnProperty(React4, obj6);
   const obj8 = { size: "md", round: true, ref };

@@ -1,19 +1,19 @@
-// === Module 10087: ForumGuidelinesActionSheet ===
+// === Module 10094: ForumGuidelinesActionSheet ===
 
-// Module 10087 (ForumGuidelinesActionSheet)
+// Module 10094 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import LinkUtils from "LinkUtils" /* 5592 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10063 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10089 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10070 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7364).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(7365).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4969);
@@ -323,5 +323,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10087, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(10094, dependencyMap.paths), closure_6, obj2);
 };

@@ -1,6 +1,6 @@
-// === Module 12030: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 12041: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 12030 (useBottomSheetFlashListBottomViewabilityInset)
+// Module 12041 (useBottomSheetFlashListBottomViewabilityInset)
 import _modDef12 from "module_12" /* 12 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import noop from "module_19" /* 19 */;
@@ -12,13 +12,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx");
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11132).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11141).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1499)().height - flashListRef(10884)().maximum;
+  const diff = flashListRef(1499)().height - flashListRef(10892)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => _modDef12.debounce(function _handleBottomViewabilityInset(current) {

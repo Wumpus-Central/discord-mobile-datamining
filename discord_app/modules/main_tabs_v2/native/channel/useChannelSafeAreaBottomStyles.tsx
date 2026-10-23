@@ -1,14 +1,14 @@
-// === Module 10885: useChannelSafeAreaBottomStyles ===
+// === Module 10893: useChannelSafeAreaBottomStyles ===
 
-// Module 10885 (useChannelSafeAreaBottomStyles)
+// Module 10893 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useToken from "useToken" /* 5238 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9678 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9685 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6482 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6481 */;
 import LurkingStore from "LurkingStore" /* 4902 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
 }) : (function useChannelSafeAreaBottomStyles(arg0) {
   const token = gradientBottom(5238).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
   let obj = gradientBottom(5238);
-  gradientBottom = gradientBottom(9678).useGradientBottom();
+  gradientBottom = gradientBottom(9685).useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {
     backgroundColor1 = gradientBottom.backgroundColor;

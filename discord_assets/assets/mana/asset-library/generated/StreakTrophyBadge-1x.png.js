@@ -1,6 +1,6 @@
-// === Module 10649: ? ===
+// === Module 10656: ? ===
 
-// Module 10649
+// Module 10656
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreakTrophyBadge-1x.png.js");

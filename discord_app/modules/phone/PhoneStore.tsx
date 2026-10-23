@@ -1,6 +1,6 @@
-// === Module 7021: PhoneStore ===
+// === Module 7020: PhoneStore ===
 
-// Module 7021 (PhoneStore)
+// Module 7020 (PhoneStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CountryCodeUtils from "CountryCodeUtils" /* 5632 */;

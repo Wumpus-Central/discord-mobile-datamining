@@ -1,24 +1,24 @@
-// === Module 17566: DMChannel ===
+// === Module 17588: DMChannel ===
 
-// Module 17566 (DMChannel)
+// Module 17588 (DMChannel)
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8987 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10661 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 17356 */;
-import ChannelItemDefault from "ChannelItem" /* 17452 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8994 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10668 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 17378 */;
+import ChannelItemDefault from "ChannelItem" /* 17474 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6689 */;
 
 require = fn;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
-let obj = { container: { marginVertical: fn(12003).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj = { container: { marginVertical: fn(12014).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(12003).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(12014).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 

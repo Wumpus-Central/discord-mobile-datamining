@@ -1,6 +1,6 @@
-// === Module 14741: PremiumManagePlan ===
+// === Module 14755: PremiumManagePlan ===
 
-// Module 14741 (PremiumManagePlan)
+// Module 14755 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,21 +14,21 @@ import Text_Text from "Text/Text" /* 5220 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import useMountEffectDefault from "useMountEffect" /* 5249 */;
 import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5571 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6449 */;
-import Card from "Card" /* 6891 */;
-import Pressables from "Pressables" /* 6894 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6914 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7073 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7489 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7497 */;
-import _modDef8407 from "module_8407" /* 8407 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9764 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 14596 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 14639 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 14667 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 14707 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 14720 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6448 */;
+import Card from "Card" /* 6890 */;
+import Pressables from "Pressables" /* 6893 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6913 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7072 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7076 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7490 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7498 */;
+import _modDef8408 from "module_8408" /* 8408 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9771 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 14610 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 14653 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 14681 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 14721 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 14734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,9 +36,9 @@ import UserStore from "UserStore" /* 1392 */;
 import BillingInfoStore from "BillingInfoStore" /* 2054 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2057 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import EntitlementStore from "EntitlementStore" /* 7490 */;
+import EntitlementStore from "EntitlementStore" /* 7491 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import IAPStore from "IAPStore" /* 7508 */;
+import IAPStore from "IAPStore" /* 7509 */;
 
 require = fn;
 function SubscriptionAndBillingInfo(subscription) {
@@ -427,7 +427,7 @@ function SubscriptionAndBillingInfo(subscription) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7, ScrollView: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
-const TABLE_DIVIDER_WIDTH = fn(6885).TABLE_DIVIDER_WIDTH;
+const TABLE_DIVIDER_WIDTH = fn(6884).TABLE_DIVIDER_WIDTH;
 const isNoneSubscription = fn(2051).isNoneSubscription;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_19, HelpdeskArticles: closure_20, SubscriptionStatusTypes: closure_21, UserSettingsSections: closure_22 } = Constants);
@@ -657,7 +657,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj8 = { style: tmp19, start: tmp20, end: tmp21, colors: tmp18, children: null };
     const obj9 = { children: null };
-    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8407, size: native.IconSizes.LARGE };
+    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8408, size: native.IconSizes.LARGE };
     obj9.children = closure_1_28(native.Icon, obj10);
     obj8.children = closure_1_28(React5, obj9);
     const tmp28 = closure_1_28(LinearGradientDefault, obj8);
@@ -937,7 +937,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   obj10.colors = items2;
   const obj12 = { children: null };
   const tmp11 = LinearGradientDefault;
-  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8407, size: native.IconSizes.LARGE });
+  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8408, size: native.IconSizes.LARGE });
   obj10.children = closure_1_28(React5, obj12);
   obj9.children = closure_1_28(tmp11, obj10);
   const items3 = [closure_1_28(React5, obj9), ];
@@ -1015,7 +1015,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = closure_1_28(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8407, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8408, size: native.IconSizes.LARGE };
 });
 ReactCompilerGating = fn(558);
 let obj5 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -1028,8 +1028,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   let obj = navigation(576);
   ({ top, bottom } = useSafeAreaInsetsDefault());
   const tmp6 = useSafeAreaInsetsDefault();
-  const youBarSettingsOutsideSafeAreaTop = navigation(14705).useYouBarSettingsOutsideSafeAreaTop();
-  let obj2 = navigation(14705);
+  const youBarSettingsOutsideSafeAreaTop = navigation(14719).useYouBarSettingsOutsideSafeAreaTop();
+  let obj2 = navigation(14719);
   navigation = navigation(1505).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
@@ -1170,9 +1170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   }
   useMountEffectDefault(tmp27);
   const tmpResult7 = navigation(504);
-  const isInReverseTrial = navigation(8421).useIsInReverseTrial();
-  const tmpResult8 = navigation(8421);
-  useFPDurationLeftDefault(tmp26.endsAt, navigation(14707).CountDownMessageTypes.SHORT_TIME);
+  const isInReverseTrial = navigation(8422).useIsInReverseTrial();
+  const tmpResult8 = navigation(8422);
+  useFPDurationLeftDefault(tmp26.endsAt, navigation(14721).CountDownMessageTypes.SHORT_TIME);
   if (cResult[11] !== tmp26) {
     class X {
       constructor() {
@@ -1586,8 +1586,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(14705).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(14705);
+  const youBarSettingsOutsideSafeAreaTop = navigation(14719).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(14719);
   navigation = navigation(1505).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -1616,19 +1616,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
       isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      const subscriptions = navigation(6449).fetchSubscriptions();
-      const obj = navigation(6449);
+      const subscriptions = navigation(6448).fetchSubscriptions();
+      const obj = navigation(6448);
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(7341).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(7341);
+      const premiumSubscriptionPlans = navigation(7342).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(7342);
     }
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(8421).useIsInReverseTrial();
-  const obj8 = navigation(8421);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(14707).CountDownMessageTypes.SHORT_TIME);
+  let isInReverseTrial = navigation(8422).useIsInReverseTrial();
+  const obj8 = navigation(8422);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(14721).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(2053).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -1704,7 +1704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_26.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_28(tmp2(9764), obj13);
+    isInReverseTrial = closure_28(tmp2(9771), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -1713,7 +1713,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   }
   if (tmp29Result3) {
     const obj14 = { premiumType: closure_26.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result3 = closure_28(tmp2(9764), obj14);
+    tmp29Result3 = closure_28(tmp2(9771), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -1739,9 +1739,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(14596), obj17), ];
+    const items10 = [closure_28(tmp2(14610), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(14637), obj18);
+    items10[1] = closure_28(tmp2(14651), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

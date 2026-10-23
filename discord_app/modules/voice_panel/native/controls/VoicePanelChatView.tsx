@@ -1,22 +1,22 @@
-// === Module 13082: VoicePanelChatView ===
+// === Module 13098: VoicePanelChatView ===
 
-// Module 13082 (VoicePanelChatView)
+// Module 13098 (VoicePanelChatView)
 import c from "c" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7154 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10595 */;
-import _modDef10628 from "module_10628" /* 10628 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10864 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13080 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7153 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7396 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10602 */;
+import _modDef10635 from "module_10635" /* 10635 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10872 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(10863).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(10871).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1087);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
@@ -101,7 +101,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const obj2 = { accessibilityLabel: null, icon: null, onPress: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["5MstTl"]);
-    obj2.icon = _modDef10628;
+    obj2.icon = _modDef10635;
     obj2.onPress = first;
     const tmp9 = timestampProducer(ChatFloatingNavButtonDefault, obj2);
     cResult[1] = tmp9;
@@ -118,7 +118,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10628;
+  obj.icon = _modDef10635;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 }));

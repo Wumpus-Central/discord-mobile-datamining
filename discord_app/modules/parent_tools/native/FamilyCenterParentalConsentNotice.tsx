@@ -1,9 +1,9 @@
-// === Module 16085: FamilyCenterParentalConsentNotice ===
+// === Module 16103: FamilyCenterParentalConsentNotice ===
 
-// Module 16085 (FamilyCenterParentalConsentNotice)
+// Module 16103 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 16086 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 16104 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
               return tmp14;
             }
             const obj4 = { style: tmp3.container, text: cResult[5] };
-            const tmp17 = jsx(onPress(16086), { style: tmp3.container, text: cResult[5] });
+            const tmp17 = jsx(onPress(16104), { style: tmp3.container, text: cResult[5] });
             cResult[6] = tmp3.container;
             cResult[7] = cResult[5];
             cResult[8] = tmp17;

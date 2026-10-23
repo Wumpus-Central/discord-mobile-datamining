@@ -1,8 +1,8 @@
-// === Module 18463: VoicePanelCTACardCallerDisconnected ===
+// === Module 18485: VoicePanelCTACardCallerDisconnected ===
 
-// Module 18463 (VoicePanelCTACardCallerDisconnected)
+// Module 18485 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 587 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/card/Voice
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelCTACardCallerDisconnected() {
   const cResult = channelId(576).c(35);
-  channelId = noop.useContext(first(10864)).channelId;
+  channelId = noop.useContext(first(10872)).channelId;
   const tmp5 = closure_10();
   if (cResult[0] !== channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -125,7 +125,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         const obj3 = { style: tmp23, children: null };
                         const items1 = [tmp38, tmp50];
                         obj3.children = items1;
-                        const tmp55 = closure_9(tmp4(6872), obj3);
+                        const tmp55 = closure_9(tmp4(6871), obj3);
                         cResult[31] = tmp5.container;
                         cResult[32] = tmp50;
                         cResult[33] = tmp38;
@@ -136,7 +136,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const obj4 = { style: textContainer, children: null };
                     const items2 = [tmp43, tmp46];
                     obj4.children = items2;
-                    const tmp52 = closure_9(tmp4(6872), obj4);
+                    const tmp52 = closure_9(tmp4(6871), obj4);
                     cResult[27] = tmp5.textContainer;
                     cResult[28] = tmp43;
                     cResult[29] = tmp46;
@@ -160,7 +160,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj7 = { style: tmp5.avatarContainer, children: null };
               const items3 = [tmp24, tmp31];
               obj7.children = items3;
-              const tmp40 = closure_9(tmp4(6872), obj7);
+              const tmp40 = closure_9(tmp4(6871), obj7);
               cResult[17] = tmp5.avatarContainer;
               cResult[18] = tmp24;
               cResult[19] = tmp31;
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (tmp34Result) {
           const obj8 = { style: tmp5.avatarWrapper, children: null };
           let tmp37 = tmp21;
-          const tmp4Result = tmp4(6872);
+          const tmp4Result = tmp4(6871);
           if (typeof tmp21 !== "number") {
             const obj9 = { uri: tmp21 };
             tmp37 = obj9;
@@ -198,7 +198,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (tmp27Result) {
       const obj11 = { style: tmp5.avatarWrapper, children: null };
       let tmp30 = tmp20;
-      const tmp4Result5 = tmp4(6872);
+      const tmp4Result5 = tmp4(6871);
       if (typeof tmp20 !== "number") {
         const obj12 = { uri: tmp20 };
         tmp30 = obj12;

@@ -1,6 +1,6 @@
-// === Module 17457: RedesignGuildHeader ===
+// === Module 17479: RedesignGuildHeader ===
 
-// Module 17457 (RedesignGuildHeader)
+// Module 17479 (RedesignGuildHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -14,14 +14,14 @@ import springPresets from "springPresets" /* 5234 */;
 import ButtonConstants from "ButtonConstants" /* 5236 */;
 import useToken from "useToken" /* 5238 */;
 import useFontScale from "useFontScale" /* 5239 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9679 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10595 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11023 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12014 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15090 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17428 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17458 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17459 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9686 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10602 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11032 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12025 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15103 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17450 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17480 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17481 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import ActionSheetStore from "ActionSheetStore" /* 5197 */;
@@ -29,7 +29,7 @@ import ActionSheetStore from "ActionSheetStore" /* 5197 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(12003);
+const RedesignChannelListConstants = fn(12014);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);

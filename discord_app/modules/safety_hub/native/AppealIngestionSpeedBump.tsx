@@ -1,17 +1,17 @@
-// === Module 12761: AppealIngestionSpeedBump ===
+// === Module 12780: AppealIngestionSpeedBump ===
 
-// Module 12761 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12763 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12779 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12780 */;
+// Module 12780 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12782 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12798 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12799 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7906 */;
+import SafetyHubStore from "SafetyHubStore" /* 7907 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7882);
+const SafetyHubConstants = fn(7883);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -44,9 +44,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const safetyHubClassification = emitAppealIngestionEvent(12754).useSafetyHubClassification(stateFromStores);
-  const tmpResult3 = emitAppealIngestionEvent(12754);
-  emitAppealIngestionEvent = emitAppealIngestionEvent(12762).useEmitAppealIngestionEvent();
+  const safetyHubClassification = emitAppealIngestionEvent(12773).useSafetyHubClassification(stateFromStores);
+  const tmpResult3 = emitAppealIngestionEvent(12773);
+  emitAppealIngestionEvent = emitAppealIngestionEvent(12781).useEmitAppealIngestionEvent();
   ({ isDsaEligible, classification } = safetyHubClassification);
   let str;
   if (classification != null) {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { headerText: tmp13, subHeaderText: tmp15 };
-    const tmp19 = closure_8(tmp(12760).AppealIngestionModalHeader, obj2);
+    const tmp19 = closure_8(tmp(12779).AppealIngestionModalHeader, obj2);
     cResult[6] = tmp19;
     let tmp17 = tmp19;
   } else {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
               obj7.children = items2;
               items1[1] = closure_9(View, obj7);
               obj6.children = items1;
-              const tmp57 = closure_9(tmp(12760).AppealIngestionModalScreen, obj6);
+              const tmp57 = closure_9(tmp(12779).AppealIngestionModalScreen, obj6);
               cResult[27] = tmp4.container;
               cResult[28] = tmp34;
               cResult[29] = tmp40;
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   cResult[12] = isCoppa;
   cResult[13] = tmp29;
   tmp28 = tmp29;
-  const tmpResult4 = emitAppealIngestionEvent(12762);
+  const tmpResult4 = emitAppealIngestionEvent(12781);
 }) : (function AppealIngestionSpeedBump(arg0) {
   ({ isCoppa, isSpam, isDeveloperClassification } = arg0);
   _require = undefined;

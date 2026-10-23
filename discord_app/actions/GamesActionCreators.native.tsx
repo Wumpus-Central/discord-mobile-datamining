@@ -1,9 +1,9 @@
-// === Module 11306: GamesActionCreators ===
+// === Module 11315: GamesActionCreators ===
 
-// Module 11306 (GamesActionCreators)
+// Module 11315 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LinkingDefault from "Linking" /* 5646 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11307 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -128,8 +128,15 @@ export default {
   deleteEntry() {
 
   },
-  launch() {
-    return Promise.resolve();
+  launch(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      await value(c2[9]).tryStartAsEmbeddedApp(closure_0);
+      if (value == null) {
+        value = false;
+      }
+      return value;
+    })();
   },
   join(arg0) {
     closure_0 = arg0;

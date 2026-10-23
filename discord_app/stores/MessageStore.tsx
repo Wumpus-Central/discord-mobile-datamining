@@ -1,6 +1,6 @@
-// === Module 5997: MessageStore ===
+// === Module 5996: MessageStore ===
 
-// Module 5997 (MessageStore)
+// Module 5996 (MessageStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -10,23 +10,23 @@ import FlagUtils from "FlagUtils" /* 1405 */;
 import Server from "Server" /* 2000 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
 import ReactionUtils from "ReactionUtils" /* 4913 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5999 */;
-import InteractionTypes from "InteractionTypes" /* 6006 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6477 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6480 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6482 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7686 */;
-import MessageQueue from "MessageQueue" /* 8124 */;
-import canEditMessageDefault from "canEditMessage" /* 11286 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15009 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5998 */;
+import InteractionTypes from "InteractionTypes" /* 6005 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6476 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6479 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6481 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7687 */;
+import MessageQueue from "MessageQueue" /* 8125 */;
+import canEditMessageDefault from "canEditMessage" /* 11295 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 4874 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 5998 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 5997 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import DimensionStore from "DimensionStore" /* 6476 */;
+import DimensionStore from "DimensionStore" /* 6475 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -956,7 +956,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6477).getOrCreate(ids.channelId);
+    const orCreate = mutation(6476).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1005,14 +1005,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6477).commit(tmp3);
+        tmp(6476).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6477);
+        const tmpResult2 = tmp(6476);
       }
     }
-    let obj = mutation(6477);
+    let obj = mutation(6476);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

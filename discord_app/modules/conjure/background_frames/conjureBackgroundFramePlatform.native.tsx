@@ -1,12 +1,12 @@
-// === Module 17947: conjureBackgroundFramePlatform ===
+// === Module 17969: conjureBackgroundFramePlatform ===
 
-// Module 17947 (conjureBackgroundFramePlatform)
+// Module 17969 (conjureBackgroundFramePlatform)
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5595 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
 import transitionToChannel from "transitionToChannel" /* 5693 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11830 */;
-import FramesConstants from "FramesConstants" /* 6762 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10743 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11844 */;
+import FramesConstants from "FramesConstants" /* 6761 */;
 import size from "module_2" /* 2 */;
 
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
@@ -18,6 +18,9 @@ export default {
     return false;
   },
   isActivityPopoutOpen() {
+    return false;
+  },
+  hasOwnPictureInPicture() {
     return false;
   },
   isPictureInPicture(surface) {

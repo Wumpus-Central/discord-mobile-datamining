@@ -1,20 +1,20 @@
-// === Module 7776: AnalyticsActions ===
+// === Module 7777: AnalyticsActions ===
 
-// Module 7776 (AnalyticsActions)
+// Module 7777 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
-import QuestTypes from "QuestTypes" /* 6699 */;
-import AdCreativeType from "AdCreativeType" /* 6703 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7555 */;
-import QuestDataUtils from "QuestDataUtils" /* 7756 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7779 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7780 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7782 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7785 */;
+import QuestTypes from "QuestTypes" /* 6698 */;
+import AdCreativeType from "AdCreativeType" /* 6702 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7556 */;
+import QuestDataUtils from "QuestDataUtils" /* 7757 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7780 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7781 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7783 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7786 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7777 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7778 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
-import QuestStore from "QuestStore" /* 7760 */;
+import QuestStore from "QuestStore" /* 7761 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -712,6 +712,16 @@ export const trackAdContentQuestBarOrDockModeChange = function trackAdContentQue
   ({ adContentId, adCreativeType, questContent, sourceQuestContent, mode, prevMode } = arg0);
   const contentProperties = AnalyticsTypes.getContentProperties(questContent);
   trackAdContentEvent({ adContentId, adCreativeType, event: AnalyticEvents.QUEST_BAR_MODE_CHANGED, properties: { content_id: contentProperties.content_id, content_name: contentProperties.content_name, mode, previous_mode: prevMode }, sourceQuestContent });
+};
+export const trackQuestContentRenderingFailure = function trackQuestContentRenderingFailure(arg0) {
+  ({ questId, questContent, sourceQuestContent, reason, impressionId } = arg0);
+  const contentProperties = AnalyticsTypes.getContentProperties(questContent);
+  trackQuestEvent({ questId, event: AnalyticEvents.QUEST_CONTENT_RENDERING_FAILURE, properties: { content_id: contentProperties.content_id, content_name: contentProperties.content_name, reason, impression_id: impressionId }, sourceQuestContent });
+};
+export const trackAdContentRenderingFailure = function trackAdContentRenderingFailure(arg0) {
+  ({ adContentId, adCreativeType, questContent, sourceQuestContent, reason, impressionId } = arg0);
+  const contentProperties = AnalyticsTypes.getContentProperties(questContent);
+  trackAdContentEvent({ adContentId, adCreativeType, event: AnalyticEvents.QUEST_CONTENT_RENDERING_FAILURE, properties: { content_id: contentProperties.content_id, content_name: contentProperties.content_name, reason, impression_id: impressionId }, sourceQuestContent });
 };
 export const trackQuestEmbedFallbackViewed = function trackQuestEmbedFallbackViewed(questId, EXCLUDED_QUEST) {
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: questId, reason: EXCLUDED_QUEST });

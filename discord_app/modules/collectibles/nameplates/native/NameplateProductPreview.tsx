@@ -1,6 +1,6 @@
-// === Module 14389: NameplateProductPreview ===
+// === Module 14403: NameplateProductPreview ===
 
-// Module 14389 (NameplateProductPreview)
+// Module 14403 (NameplateProductPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,13 +9,13 @@ import native from "native" /* 1202 */;
 import utils from "utils" /* 1992 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import TableRow from "TableRow" /* 6889 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8628 */;
-import useShopProductItems from "useShopProductItems" /* 8633 */;
-import useCurrentUser from "useCurrentUser" /* 8640 */;
-import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8721 */;
-import types from "types" /* 10632 */;
-import UserNameplateRow from "UserNameplateRow" /* 10656 */;
+import TableRow from "TableRow" /* 6888 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8635 */;
+import useShopProductItems from "useShopProductItems" /* 8640 */;
+import useCurrentUser from "useCurrentUser" /* 8647 */;
+import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8728 */;
+import types from "types" /* 10639 */;
+import UserNameplateRow from "UserNameplateRow" /* 10663 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       tmp16 = cResult[8];
     }
-    if (null == tmp8(6353)(tmp16)) {
+    if (null == tmp8(6352)(tmp16)) {
       if (cResult[12] === tmp9) {
         if (cResult[13] === tmp22) {
           if (cResult[14] === currentUser) {
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       if (cResult[9] === id) {
       }
-      tmp8 = tmp8(10631);
+      tmp8 = tmp8(10638);
       const obj6 = { userId: currentUser.id, userName: id, effectDisplayType: types.EffectDisplayType.STATIC, lineClamp: 1, variant: "text-md/semibold" };
       const tmp20 = timestampProducer(tmp8, obj6);
       cResult[9] = id;

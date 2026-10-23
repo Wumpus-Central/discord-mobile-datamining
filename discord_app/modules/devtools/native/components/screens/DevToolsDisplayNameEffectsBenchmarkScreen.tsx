@@ -1,16 +1,16 @@
-// === Module 17002: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 17024: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 17002 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 17024 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2928 from "module_2928" /* 2928 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10631 */;
-import types from "types" /* 10632 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10634 */;
-import _mod10638 from "module_10638" /* 10638 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10638 */;
+import types from "types" /* 10639 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10641 */;
+import _mod10645 from "module_10645" /* 10645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -73,14 +73,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Option
           const obj3 = { spacing: 8, children: null };
           items = [tmp5, tmp13];
           obj3.children = items;
-          const tmp18 = closure_9(tmp(5964).Stack, obj3);
+          const tmp18 = closure_9(tmp(5963).Stack, obj3);
           cResult[12] = tmp5;
           cResult[13] = tmp13;
           cResult[14] = tmp18;
           tmp16 = tmp18;
         }
         const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: cResult[5] };
-        const tmp15 = closure_8(tmp(5964).Stack, obj4);
+        const tmp15 = closure_8(tmp(5963).Stack, obj4);
         cResult[9] = tmp4.optionButtons;
         cResult[10] = cResult[5];
         cResult[11] = tmp15;
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10638.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10645.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10638.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10645.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

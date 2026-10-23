@@ -1,6 +1,6 @@
-// === Module 9313: GameProfileSkeletonCardRow ===
+// === Module 9320: GameProfileSkeletonCardRow ===
 
-// Module 9313 (GameProfileSkeletonCardRow)
+// Module 9320 (GameProfileSkeletonCardRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;

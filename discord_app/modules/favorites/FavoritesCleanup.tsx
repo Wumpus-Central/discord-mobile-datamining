@@ -1,14 +1,14 @@
-// === Module 10822: FavoritesCleanup ===
+// === Module 10830: FavoritesCleanup ===
 
-// Module 10822 (FavoritesCleanup)
+// Module 10830 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1104 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6808 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7394 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6807 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7395 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
 import FavoriteStore from "FavoriteStore" /* 4824 */;
 
 require = fn;

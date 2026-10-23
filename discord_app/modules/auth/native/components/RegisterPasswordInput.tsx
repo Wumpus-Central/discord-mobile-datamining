@@ -1,17 +1,17 @@
-// === Module 17286: RegisterPasswordInput ===
+// === Module 17308: RegisterPasswordInput ===
 
-// Module 17286 (RegisterPasswordInput)
+// Module 17308 (RegisterPasswordInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import getErrorDefault from "getError" /* 7036 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15229 */;
-import usePasswordScore from "usePasswordScore" /* 17283 */;
+import getErrorDefault from "getError" /* 7035 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15242 */;
+import usePasswordScore from "usePasswordScore" /* 17305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7021 */;
+import PhoneStore from "PhoneStore" /* 7020 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ require = fn;
 let user = ["ref"];
 let closure_4 = ["password"];
 let closure_5 = ["password"];
-const RegistrationUIStore = fn(17259);
+const RegistrationUIStore = fn(17281);
 ({ setRegistrationErrors: c10, useRegistrationUIStore: closure_11 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_12, jsx: map1, Fragment: closure_14 } = jsxProd);
@@ -528,7 +528,7 @@ export const RegisterPasswordInput = ReactCompilerGating.isReactCompilerEnabled(
           }
         }
         const obj4 = { ref: tmp34, textContentType: "newPassword", autoComplete: "new-password", onChange: W, value: password, label: tmp36, accessibilityHint: tmp37, secureTextEntry: tmp40, returnKeyType, autoCapitalize: "none", onSubmitEditing, onFocus: tmp28, onBlur: tmp30, trailingIcon: tmp41, trailingPressableProps: tmp48, errorMessage: tmp20, status: undefined };
-        const tmp52 = closure_13(onPasswordChange(6994).TextInput, obj4);
+        const tmp52 = closure_13(onPasswordChange(6993).TextInput, obj4);
         cResult[27] = W;
         cResult[28] = onSubmitEditing;
         cResult[29] = password;

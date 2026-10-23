@@ -1,6 +1,6 @@
-// === Module 10377: HorizontalAutocomplete ===
+// === Module 10384: HorizontalAutocomplete ===
 
-// Module 10377 (HorizontalAutocomplete)
+// Module 10384 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,16 +11,16 @@ import timing from "timing" /* 5192 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import useMountEffectDefault from "useMountEffect" /* 5249 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import RoleIconUtils from "RoleIconUtils" /* 7267 */;
-import RoleIconDefault from "RoleIcon" /* 7285 */;
-import _modDef8592 from "module_8592" /* 8592 */;
+import RoleIconUtils from "RoleIconUtils" /* 7268 */;
+import RoleIconDefault from "RoleIcon" /* 7286 */;
+import _modDef8593 from "module_8593" /* 8593 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import TextStyles from "TextStyles" /* 6637 */;
+import TextStyles from "TextStyles" /* 6636 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -298,8 +298,8 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled() ? (function Role(colorS
     if (cResult[4] !== stateFromStores) {
       let roleIconData = null;
       if (null != stateFromStores) {
-        roleIconData = guildId(7267).getRoleIconData(stateFromStores, 30);
-        const tmpResult2 = guildId(7267);
+        roleIconData = guildId(7268).getRoleIconData(stateFromStores, 30);
+        const tmpResult2 = guildId(7268);
       }
       cResult[4] = stateFromStores;
       cResult[5] = roleIconData;
@@ -371,7 +371,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled() ? (function Role(colorS
       const obj6 = { style: tmp4.roleIcon, children: null };
       const obj7 = { name, src: null, unicodeEmoji: null, size: 24 };
       ({ customIconSrc: obj5.src, unicodeEmoji: obj5.unicodeEmoji } = tmp9);
-      obj6.children = closure_11(id(7285), obj7);
+      obj6.children = closure_11(id(7286), obj7);
       tmp12 = closure_11(closure_4, obj6);
     }
     cResult[6] = tmp9;
@@ -500,10 +500,10 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(
     }
   }
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8592;
+    let channelIconWithGuild = _modDef8593;
   } else {
-    channelIconWithGuild = tmp(8487).getChannelIconWithGuild(channel, stateFromStores);
-    const tmpResult4 = tmp(8487);
+    channelIconWithGuild = tmp(8488).getChannelIconWithGuild(channel, stateFromStores);
+    const tmpResult4 = tmp(8488);
   }
   cResult[4] = channel;
   cResult[5] = stateFromStores;
@@ -514,10 +514,10 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(
   channel(504);
   [][0] = channel;
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8592;
+    let channelIconWithGuild = _modDef8593;
   } else {
-    channelIconWithGuild = tmp2(8487).getChannelIconWithGuild(channel, tmp5);
-    const tmp2Result = tmp2(8487);
+    channelIconWithGuild = tmp2(8488).getChannelIconWithGuild(channel, tmp5);
+    const tmp2Result = tmp2(8488);
   }
   const tmp = closure_13();
   const tmp8 = closure_11(channel(1202).Icon, { source: channelIconWithGuild });

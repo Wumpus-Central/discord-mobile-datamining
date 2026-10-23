@@ -1,10 +1,10 @@
-// === Module 10532: NativeCheckoutStoreProvider ===
+// === Module 10539: NativeCheckoutStoreProvider ===
 
-// Module 10532 (NativeCheckoutStoreProvider)
+// Module 10539 (NativeCheckoutStoreProvider)
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v12 from "v1" /* 1281 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10533 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10540 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7520);
+const NativeCheckoutStore = fn(7521);
 ({ createNativeStore: closure_7, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: closure_9 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let ItemPurchaseType = fn(5684).ItemPurchaseType;
@@ -470,8 +470,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Native
       const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
       obj2.order = { id: null, status: null };
-      checkoutInitParameters(10535).discardDraftOrder(obj2);
-      const obj = checkoutInitParameters(10535);
+      checkoutInitParameters(10542).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10542);
       const obj5 = { id: null, status: null };
     }
   }, items1);

@@ -1,13 +1,13 @@
-// === Module 12284: ConjureTipHint ===
+// === Module 12295: ConjureTipHint ===
 
-// Module 12284 (ConjureTipHint)
+// Module 12295 (ConjureTipHint)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import XSmallIcon from "XSmallIcon" /* 6917 */;
-import IconButton from "IconButton" /* 7943 */;
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12285 */;
+import XSmallIcon from "XSmallIcon" /* 6916 */;
+import IconButton from "IconButton" /* 7944 */;
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

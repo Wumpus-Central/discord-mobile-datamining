@@ -1,6 +1,6 @@
-// === Module 7612: GuildMemberSafetySearch ===
+// === Module 7613: GuildMemberSafetySearch ===
 
-// Module 7612 (GuildMemberSafetySearch)
+// Module 7613 (GuildMemberSafetySearch)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4888 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4907 */;

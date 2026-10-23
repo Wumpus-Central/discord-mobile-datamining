@@ -1,8 +1,8 @@
-// === Module 10670: conjureChatTurns ===
+// === Module 10677: conjureChatTurns ===
 
-// Module 10670 (conjureChatTurns)
-import conjureStepTimeline from "conjureStepTimeline" /* 10671 */;
-import conjureChatHistory from "conjureChatHistory" /* 10672 */;
+// Module 10677 (conjureChatTurns)
+import conjureStepTimeline from "conjureStepTimeline" /* 10678 */;
+import conjureChatHistory from "conjureChatHistory" /* 10679 */;
 import size from "module_2" /* 2 */;
 
 function findOpenTurn(map) {

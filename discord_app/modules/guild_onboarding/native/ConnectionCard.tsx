@@ -1,13 +1,13 @@
-// === Module 7235: ConnectionCard ===
+// === Module 7236: ConnectionCard ===
 
-// Module 7235 (ConnectionCard)
+// Module 7236 (ConnectionCard)
 import c from "c" /* 576 */;
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7236 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7254 */;
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7237 */;
+import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const OnboardingConnectionType = fn(7182).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7181).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

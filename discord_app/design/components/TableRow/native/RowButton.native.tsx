@@ -1,13 +1,13 @@
-// === Module 8921: RowButton ===
+// === Module 8928: RowButton ===
 
-// Module 8921 (RowButton)
+// Module 8928 (RowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
-import TableRow from "TableRow" /* 6889 */;
-import Card from "Card" /* 6891 */;
-import TableRowIcon from "TableRowIcon" /* 6897 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8890 */;
+import TableRow from "TableRow" /* 6888 */;
+import Card from "Card" /* 6890 */;
+import TableRowIcon from "TableRowIcon" /* 6896 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8897 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -359,9 +359,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RowButt
   }
   return jsx(Card.InternalCard, obj4);
 });
-tmp2.Icon = fn(6897).TableRowIcon;
+tmp2.Icon = fn(6896).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6897).TableRowIconProps;
+export const RowButtonIconProps = fn(6896).TableRowIconProps;
 export const RowButton = tmp2;

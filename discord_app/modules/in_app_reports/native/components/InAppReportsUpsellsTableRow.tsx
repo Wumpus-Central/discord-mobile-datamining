@@ -1,8 +1,8 @@
-// === Module 14520: InAppReportsUpsellsTableRow ===
+// === Module 14534: InAppReportsUpsellsTableRow ===
 
-// Module 14520 (InAppReportsUpsellsTableRow)
+// Module 14534 (InAppReportsUpsellsTableRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6889 */;
+import TableRow from "TableRow" /* 6888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

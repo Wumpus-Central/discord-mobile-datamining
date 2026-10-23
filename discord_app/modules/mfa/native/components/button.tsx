@@ -1,6 +1,6 @@
-// === Module 16933: button ===
+// === Module 16955: button ===
 
-// Module 16933 (button)
+// Module 16955 (button)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import noop from "module_19" /* 19 */;

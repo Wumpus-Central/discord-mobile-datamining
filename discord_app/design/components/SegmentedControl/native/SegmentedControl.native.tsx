@@ -1,6 +1,6 @@
-// === Module 9115: SegmentedControl ===
+// === Module 9122: SegmentedControl ===
 
-// Module 9115 (SegmentedControl)
+// Module 9122 (SegmentedControl)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import spring from "spring" /* 5233 */;

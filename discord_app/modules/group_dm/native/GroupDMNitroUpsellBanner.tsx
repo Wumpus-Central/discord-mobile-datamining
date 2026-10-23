@@ -1,6 +1,6 @@
-// === Module 18049: GroupDMNitroUpsellBanner ===
+// === Module 18071: GroupDMNitroUpsellBanner ===
 
-// Module 18049 (GroupDMNitroUpsellBanner)
+// Module 18071 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,11 +9,11 @@ import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import spring from "spring" /* 5233 */;
-import _modDef8407 from "module_8407" /* 8407 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11253 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11256 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11260 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18050 */;
+import _modDef8408 from "module_8408" /* 8408 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11262 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11265 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11269 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
@@ -21,7 +21,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11255).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11264).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8407, onPress: tmp14 };
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8408, onPress: tmp14 };
             const tmp26 = React6(components_Button_Button.Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
@@ -904,7 +904,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8407;
+  obj7.icon = _modDef8408;
   obj7.onPress = tmp7Result;
   obj6.trailing = React6(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

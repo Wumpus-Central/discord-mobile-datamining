@@ -1,12 +1,12 @@
-// === Module 9036: sortByMatchScore ===
+// === Module 9043: sortByMatchScore ===
 
-// Module 9036 (sortByMatchScore)
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6814 */;
-import AutocompleterDefault from "Autocompleter" /* 9037 */;
-import AutocompleterConstants2 from "AutocompleterConstants" /* 9046 */;
-import _modDef9047 from "module_9047" /* 9047 */;
+// Module 9043 (sortByMatchScore)
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6813 */;
+import AutocompleterDefault from "Autocompleter" /* 9044 */;
+import AutocompleterConstants2 from "AutocompleterConstants" /* 9053 */;
+import _modDef9054 from "module_9054" /* 9054 */;
 import size from "module_2" /* 2 */;
-import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6811 */;
+import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6810 */;
 
 const result = size.fileFinishedImporting("modules/autocompleter/index.tsx");
 for (const key10022 in _module1) {
@@ -16,5 +16,5 @@ for (const key10022 in _module1) {
 
 export default AutocompleterDefault;
 export const createHeaderResult = AutocompleterConstants2.createHeaderResult;
-export const findNextSelectedResult = _modDef9047;
+export const findNextSelectedResult = _modDef9054;
 export const sortByMatchScore = autocompleter_sortByMatchScoreDefault;

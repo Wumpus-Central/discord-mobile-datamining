@@ -1,10 +1,10 @@
-// === Module 16794: UploadDebugLogsSetting ===
+// === Module 16816: UploadDebugLogsSetting ===
 
-// Module 16794 (UploadDebugLogsSetting)
+// Module 16816 (UploadDebugLogsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DebugUploadManager from "DebugUploadManager" /* 13727 */;
+import DebugUploadManager from "DebugUploadManager" /* 13741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -123,7 +123,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadDebugLogsDisabled() {
   return closure_7().isDisabled;
 }
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadDebugLogsTrailing() {
   const cResult = c.c(2);
   if (typeof useIsUploadingDebugLogs === "function") {

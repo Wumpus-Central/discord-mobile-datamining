@@ -1,6 +1,6 @@
-// === Module 9656: ? ===
+// === Module 9663: ? ===
 
-// Module 9656
+// Module 9663
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ReactionsSpotIllustration-2x.png.js");

@@ -1,15 +1,15 @@
-// === Module 10797: DetailedGuildIdentityUserRow ===
+// === Module 10805: DetailedGuildIdentityUserRow ===
 
-// Module 10797 (DetailedGuildIdentityUserRow)
+// Module 10805 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
-import TableRow from "TableRow" /* 6889 */;
-import Form from "Form" /* 8919 */;
-import DiscordTagDefault from "DiscordTag" /* 9102 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5975 */;
+import TableRow from "TableRow" /* 6888 */;
+import Form from "Form" /* 8926 */;
+import DiscordTagDefault from "DiscordTag" /* 9109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -215,7 +215,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
               const obj2 = { accessibilityLabel, arrow, disabled, end, icon: tmp7, label: tmp10, onPress, start, subLabel, trailing, accessibilityRole, accessibilityState };
-              const tmp16 = closure_5(FormRow(6889).TableRow, obj2);
+              const tmp16 = closure_5(FormRow(6888).TableRow, obj2);
               cResult[29] = accessibilityLabel;
               cResult[30] = accessibilityRole;
               cResult[31] = accessibilityState;
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             }
-            FormRow = FormRow(8919).FormRow;
+            FormRow = FormRow(8926).FormRow;
             const obj5 = { accessibilityLabel, disabled, leading: tmp17, label: tmp20, onPress, subLabel, trailing, accessibilityRole, accessibilityState };
             tmp = closure_5(FormRow, obj5);
             cResult[11] = accessibilityLabel;

@@ -1,10 +1,10 @@
-// === Module 5839: SpatialAudioStore ===
+// === Module 5838: SpatialAudioStore ===
 
-// Module 5839 (SpatialAudioStore)
+// Module 5838 (SpatialAudioStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5841 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5840 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
@@ -72,7 +72,7 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5840).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5839).DEFAULT_SPATIAL_AUDIO_OPTIONS;
 const Constants = fn(5704);
 ({ Features: closure_7, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};

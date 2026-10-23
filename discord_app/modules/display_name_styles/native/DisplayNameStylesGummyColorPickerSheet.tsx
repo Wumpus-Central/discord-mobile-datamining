@@ -1,13 +1,13 @@
-// === Module 16598: DisplayNameStylesGummyColorPickerSheet ===
+// === Module 16620: DisplayNameStylesGummyColorPickerSheet ===
 
-// Module 16598 (DisplayNameStylesGummyColorPickerSheet)
+// Module 16620 (DisplayNameStylesGummyColorPickerSheet)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import DisplayNameStylesUtils2 from "DisplayNameStylesUtils" /* 1409 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import HapticUtils from "HapticUtils" /* 5198 */;
-import showGummyCustomColorSheetDefault from "showGummyCustomColorSheet" /* 16600 */;
+import showGummyCustomColorSheetDefault from "showGummyCustomColorSheet" /* 16622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const tmp4 = closure_12();
   dependencyMap = tmp4;
   let obj = selectedColors(576);
-  const displayNameStylesEffectConfig = selectedColors(10634).useDisplayNameStylesEffectConfig(selectedColors(1411).DisplayNameEffect.GUMMY);
+  const displayNameStylesEffectConfig = selectedColors(10641).useDisplayNameStylesEffectConfig(selectedColors(1411).DisplayNameEffect.GUMMY);
   if (cResult[0] !== selectedColors) {
     let tmp7 = selectedColors.length > 0;
     if (tmp7) {
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       }
     }
     [customSwatchEmpty, dependencyMap] = initialColor.useState(M);
-    const tmp16 = onSelectColors(16599);
+    const tmp16 = onSelectColors(16621);
     if (cResult[7] !== customSwatchEmpty) {
       class L {
         constructor(arg0) {
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         }
       }
     }
-    const tmp16Result = onSelectColors(16599)(tmp(1411).DisplayNameEffect.GUMMY);
-    AnalyticEvents = onSelectColors(16599)(tmp(1411).DisplayNameEffect.GUMMY).findIndex(L);
+    const tmp16Result = onSelectColors(16621)(tmp(1411).DisplayNameEffect.GUMMY);
+    AnalyticEvents = onSelectColors(16621)(tmp(1411).DisplayNameEffect.GUMMY).findIndex(L);
     class I {
       constructor() {
         if (closure_3) {
@@ -394,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 }
               }
               tmp42[0] = customSwatchEmpty;
-              tmp41Result = tmp41(tmp15(15805), tmp42);
+              tmp41Result = tmp41(tmp15(15817), tmp42);
             }
             cResult[31] = customSwatchEmpty;
             cResult[32] = tmp19;
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         cResult[24] = items1;
       }
       const obj7 = { title: displayNameStylesEffectConfig.name, trailing: tmp28 };
-      const tmp32 = tmp23(tmp15(16596), obj7);
+      const tmp32 = tmp23(tmp15(16618), obj7);
       cResult[19] = displayNameStylesEffectConfig.name;
       cResult[20] = tmp28;
       cResult[21] = tmp32;
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     cResult[13] = customSwatchEmpty;
     cResult[14] = onSelectColors;
     cResult[15] = X;
-    const findIndexResult = onSelectColors(16599)(tmp(1411).DisplayNameEffect.GUMMY).findIndex(L);
+    const findIndexResult = onSelectColors(16621)(tmp(1411).DisplayNameEffect.GUMMY).findIndex(L);
   }
   class I {
     constructor() {
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   cResult[3] = selectedColors;
   cResult[4] = I;
   tmp9 = I;
-  let obj2 = selectedColors(10634);
+  let obj2 = selectedColors(10641);
 }) : (function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   selectedColors = selectedColors.selectedColors;
   const onSelectColors = selectedColors.onSelectColors;
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const tmp = closure_12();
   dependencyMap = tmp;
   let tmp5 = selectedColors.length > 0;
-  const displayNameStylesEffectConfig = selectedColors(10634).useDisplayNameStylesEffectConfig(selectedColors(1411).DisplayNameEffect.GUMMY);
+  const displayNameStylesEffectConfig = selectedColors(10641).useDisplayNameStylesEffectConfig(selectedColors(1411).DisplayNameEffect.GUMMY);
   if (tmp5) {
     tmp5 = !dependencyMap.some((item) => discord_common_shallowEqual.areArraysShallowEqual(item, selectedColors));
   }
@@ -488,9 +488,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     }
     return gummyColors;
   });
-  let obj = selectedColors(10634);
+  let obj = selectedColors(10641);
   const tmp11 = onSelectColors;
-  const tmp12Result = onSelectColors(16599)(selectedColors(1411).DisplayNameEffect.GUMMY);
+  const tmp12Result = onSelectColors(16621)(selectedColors(1411).DisplayNameEffect.GUMMY);
   const findIndexResult = tmp12Result.findIndex((colors) => discord_common_shallowEqual.areArraysShallowEqual(colors.colors, first1));
   c8 = findIndexResult;
   let items = [initialColor];
@@ -523,13 +523,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   }, items1);
   let obj2 = { header: null, children: null };
   let obj3 = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const tmp12 = onSelectColors(16599);
+  const tmp12 = onSelectColors(16621);
   const obj4 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = tmp2(1128).intl;
   obj4.text = intl.string(selectedColors(1128).t.XqMe3N);
   obj4.onPress = callback2;
   obj3.trailing = closure_9(selectedColors(5230).Button, obj4);
-  obj2.header = closure_9(onSelectColors(16596), obj3);
+  obj2.header = closure_9(onSelectColors(16618), obj3);
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: null, children: null };
   const items2 = [, ];
@@ -550,13 +550,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     let tmp18Result = tmp18(tmp21, obj9);
   } else {
     const obj10 = { colors: first1 };
-    tmp18Result = tmp18(tmp11(15805), obj10);
+    tmp18Result = tmp18(tmp11(15817), obj10);
   }
   const items4 = [tmp18Result, ];
   const obj11 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
-  const tmp19 = onSelectColors(16596);
+  const tmp19 = onSelectColors(16618);
   const tmp22 = first1;
-  obj11.children = closure_9(closure_5, { style: tmp.customIconScrim, children: closure_9(selectedColors(10090).PencilIcon, { color: "white", size: "sm" }) });
+  obj11.children = closure_9(closure_5, { style: tmp.customIconScrim, children: closure_9(selectedColors(10097).PencilIcon, { color: "white", size: "sm" }) });
   items4[1] = closure_9(closure_5, obj11);
   obj8.children = items4;
   obj7.children = closure_10(tmp22, obj8);

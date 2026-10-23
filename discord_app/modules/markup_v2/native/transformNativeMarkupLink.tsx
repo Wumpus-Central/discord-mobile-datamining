@@ -1,12 +1,12 @@
-// === Module 8568: transformNativeMarkupLink ===
+// === Module 8569: transformNativeMarkupLink ===
 
-// Module 8568 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5967 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5973 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5979 */;
-import MarkupAttachmentLinkRule from "MarkupAttachmentLinkRule" /* 5990 */;
-import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8485 */;
-import ChannelLinkUrls from "ChannelLinkUrls" /* 8569 */;
+// Module 8569 (transformNativeMarkupLink)
+import MarkupTypes from "MarkupTypes" /* 5966 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5972 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5978 */;
+import MarkupAttachmentLinkRule from "MarkupAttachmentLinkRule" /* 5989 */;
+import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8486 */;
+import ChannelLinkUrls from "ChannelLinkUrls" /* 8570 */;
 import size from "module_2" /* 2 */;
 
 function stripCredentialsForDisplay(url) {

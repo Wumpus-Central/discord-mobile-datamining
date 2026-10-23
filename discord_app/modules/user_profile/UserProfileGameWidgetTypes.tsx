@@ -1,9 +1,9 @@
-// === Module 7689: UserProfileGameWidgetTypes ===
+// === Module 7690: UserProfileGameWidgetTypes ===
 
-// Module 7689 (UserProfileGameWidgetTypes)
-import WidgetType from "WidgetType" /* 7688 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7691 */;
-import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7690 */;
+// Module 7690 (UserProfileGameWidgetTypes)
+import WidgetType from "WidgetType" /* 7689 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7692 */;
+import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7691 */;
 import size from "module_2" /* 2 */;
 
 ({ widgetSupportsComment: c2, widgetSupportsTags: c3 } = UserProfileWidgetConstants);

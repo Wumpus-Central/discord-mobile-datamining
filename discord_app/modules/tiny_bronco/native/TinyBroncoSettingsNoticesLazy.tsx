@@ -1,7 +1,7 @@
-// === Module 16027: TinyBroncoSettingsNoticesLazy ===
+// === Module 16045: TinyBroncoSettingsNoticesLazy ===
 
-// Module 16027 (TinyBroncoSettingsNoticesLazy)
-import TinyBroncoSettingsNotices from "TinyBroncoSettingsNotices" /* 16028 */;
+// Module 16045 (TinyBroncoSettingsNoticesLazy)
+import TinyBroncoSettingsNotices from "TinyBroncoSettingsNotices" /* 16046 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsNoticesLazy.tsx");

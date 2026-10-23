@@ -1,9 +1,9 @@
-// === Module 12407: ConjureImageOptions ===
+// === Module 12417: ConjureImageOptions ===
 
-// Module 12407 (ConjureImageOptions)
+// Module 12417 (ConjureImageOptions)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8831 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8838 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

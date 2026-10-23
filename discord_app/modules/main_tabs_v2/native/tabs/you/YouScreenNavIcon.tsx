@@ -1,25 +1,25 @@
-// === Module 14092: YouScreenNavIcon ===
+// === Module 14106: YouScreenNavIcon ===
 
-// Module 14092 (YouScreenNavIcon)
+// Module 14106 (YouScreenNavIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import mergeProps from "mergeProps" /* 5127 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import native from "native" /* 8881 */;
-import ClipViewDefault from "ClipView" /* 9375 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14094 */;
+import native from "native" /* 8888 */;
+import ClipViewDefault from "ClipView" /* 9382 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(14093).ICON_SIZE.md;
+const md = fn(14107).ICON_SIZE.md;
 const padding = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 let c8 = "text-default";
-const point = { shape: fn(9375).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(9382).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
 const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((width) => {

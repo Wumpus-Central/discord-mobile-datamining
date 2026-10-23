@@ -1,6 +1,6 @@
-// === Module 18273: Alerts ===
+// === Module 18295: Alerts ===
 
-// Module 18273 (Alerts)
+// Module 18295 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 5023 */;
@@ -8,15 +8,15 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import timing from "timing" /* 5192 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
-import OverlayViewDefault from "OverlayView" /* 5902 */;
-import ModalRegistryDefault from "ModalRegistry" /* 18274 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5895 */;
+import OverlayViewDefault from "OverlayView" /* 5901 */;
+import ModalRegistryDefault from "ModalRegistry" /* 18296 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 14997 */;
-import PermissionVADStore from "PermissionVADStore" /* 15586 */;
-import SurveyStore from "SurveyStore" /* 7841 */;
-import AlertStore from "AlertStore" /* 9992 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15010 */;
+import PermissionVADStore from "PermissionVADStore" /* 15599 */;
+import SurveyStore from "SurveyStore" /* 7842 */;
+import AlertStore from "AlertStore" /* 9999 */;
 
 const require = globalThis.__r;
 
@@ -730,7 +730,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function AlertW
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "guild", renderKey: "ix", props: "Reflect" });
+let closure_26 = Object.freeze({ renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -766,7 +766,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return <openModal.component />;
           };
         } else {
-          return { renderAlert: "guild", renderKey: "ix", props: "Reflect" };
+          return { renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" };
         }
       }
     };
@@ -876,7 +876,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "guild", renderKey: "ix", props: "Reflect" };
+        return { renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" };
       }
     }
   });

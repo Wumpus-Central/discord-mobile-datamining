@@ -1,6 +1,6 @@
-// === Module 9335: WishlistItemCardBase ===
+// === Module 9342: WishlistItemCardBase ===
 
-// Module 9335 (WishlistItemCardBase)
+// Module 9342 (WishlistItemCardBase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,10 +8,10 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import native from "native" /* 5023 */;
 import useToken from "useToken" /* 5238 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import LockIcon from "LockIcon" /* 8551 */;
-import useUserProfileColors from "useUserProfileColors" /* 8702 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9185 */;
-import useWishlistHooks from "useWishlistHooks" /* 9338 */;
+import LockIcon from "LockIcon" /* 8552 */;
+import useUserProfileColors from "useUserProfileColors" /* 8709 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9192 */;
+import useWishlistHooks from "useWishlistHooks" /* 9345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -65,7 +65,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-    const tmp9 = closure_5(tmp(9336).HeartIcon, obj2);
+    const tmp9 = closure_5(tmp(9343).HeartIcon, obj2);
     cResult[2] = tmp9;
     let tmp6 = tmp9;
   } else {
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9336).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9343).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 });

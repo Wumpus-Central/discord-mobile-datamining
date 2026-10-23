@@ -1,20 +1,20 @@
-// === Module 16798: ChangeLogModal ===
+// === Module 16820: ChangeLogModal ===
 
-// Module 16798 (ChangeLogModal)
+// Module 16820 (ChangeLogModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import FastImageDefault from "FastImage" /* 5655 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
-import Navigator from "Navigator" /* 7081 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8450 */;
-import openMediaModal from "openMediaModal" /* 8724 */;
-import common_VideoDefault from "common/Video" /* 8763 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9010 */;
-import _modDef10136 from "module_10136" /* 10136 */;
-import _modDef16799 from "module_16799" /* 16799 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6657 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
+import Navigator from "Navigator" /* 7080 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8451 */;
+import openMediaModal from "openMediaModal" /* 8731 */;
+import common_VideoDefault from "common/Video" /* 8770 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9017 */;
+import _modDef10143 from "module_10143" /* 10143 */;
+import _modDef16821 from "module_16821" /* 16821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -164,7 +164,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef16799, obj4), ];
+      const items = [closure_7(_modDef16821, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -195,9 +195,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10136, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1202).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10143, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1202).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(6894).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(6893).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;

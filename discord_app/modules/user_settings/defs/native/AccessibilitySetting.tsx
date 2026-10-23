@@ -1,10 +1,10 @@
-// === Module 16579: AccessibilitySetting ===
+// === Module 16601: AccessibilitySetting ===
 
-// Module 16579 (AccessibilitySetting)
+// Module 16601 (AccessibilitySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7480 */;
+import Badge from "Badge" /* 7218 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,10 +35,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrailing(
   if (cResult[2] !== tmp5) {
     let tmp10 = null;
     if (tmp5) {
-      const obj4 = { text: null };
-      const intl = util.intl;
-      obj4.text = intl.string(util.t.y2b7CA);
-      tmp10 = jsx(native.TextBadge, { text: null });
+      tmp10 = jsx(Badge.Badge, { type: "new", variant: "notification" });
     }
     cResult[2] = tmp5;
     cResult[3] = tmp10;
@@ -57,19 +54,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrailing(
     }
     tmp5 = null;
     if (hasItem) {
-      const obj3 = { text: null };
-      const intl = util.intl;
-      obj3.text = intl.string(util.t.y2b7CA);
-      tmp5 = jsx(native.TextBadge, { text: null });
+      tmp5 = jsx(Badge.Badge, { type: "new", variant: "notification" });
     }
   }
   return tmp5;
 });
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
   const cResult = first(576).c(3);
   const obj = first(576);
-  let tmp2 = _slicedToArray(first(7480).useSelectedDismissibleContent(items), 2);
+  let tmp2 = _slicedToArray(first(7481).useSelectedDismissibleContent(items), 2);
   first = tmp2[0];
   dependencyMap = tmp4;
   if (cResult[0] === tmp2[1]) {
@@ -78,7 +72,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavi
     }
     return tmp5;
   }
-  const fn = function n() {
+  const fn = function t() {
     let tmp2 = null != first;
     if (tmp2) {
       let hasItem;
@@ -97,7 +91,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavi
   cResult[2] = fn;
   tmp5 = fn;
 }) : (function usePreNavigationAction() {
-  const tmp = _slicedToArray(first(7480).useSelectedDismissibleContent(items), 2);
+  const tmp = _slicedToArray(first(7481).useSelectedDismissibleContent(items), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   items = [tmp[1], first];
@@ -122,12 +116,12 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16580).AccessibilityIcon,
+  IconComponent: fn(16602).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
     const cResult = first(576).c(3);
     const obj = first(576);
-    let tmp2 = _slicedToArray(first(7480).useSelectedDismissibleContent(items), 2);
+    let tmp2 = _slicedToArray(first(7481).useSelectedDismissibleContent(items), 2);
     first = tmp2[0];
     dependencyMap = tmp4;
     if (cResult[0] === tmp2[1]) {
@@ -136,7 +130,7 @@ const route = SettingBuilders.createRoute({
       }
       return tmp5;
     }
-    const fn = function n() {
+    const fn = function t() {
       let tmp2 = null != first;
       if (tmp2) {
         let hasItem;
@@ -155,7 +149,7 @@ const route = SettingBuilders.createRoute({
     cResult[2] = fn;
     tmp5 = fn;
   }) : (function usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7480).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7481).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

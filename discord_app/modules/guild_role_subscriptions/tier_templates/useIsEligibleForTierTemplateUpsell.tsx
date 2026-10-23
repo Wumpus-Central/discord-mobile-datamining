@@ -1,6 +1,6 @@
-// === Module 17580: useIsEligibleForTierTemplateUpsell ===
+// === Module 17602: useIsEligibleForTierTemplateUpsell ===
 
-// Module 17580 (useIsEligibleForTierTemplateUpsell)
+// Module 17602 (useIsEligibleForTierTemplateUpsell)
 import GuildStore from "GuildStore" /* 4843 */;
 
 const require = globalThis.__r;
@@ -65,11 +65,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEli
     tmp10 = cResult[4];
   }
   if (cResult[5] !== stateFromStores) {
-    const result = tmp(7344).canManageGuildRoleSubscriptions(stateFromStores);
+    const result = tmp(7345).canManageGuildRoleSubscriptions(stateFromStores);
     cResult[5] = stateFromStores;
     cResult[6] = result;
     let tmp17 = result;
-    const tmpResult4 = tmp(7344);
+    const tmpResult4 = tmp(7345);
   } else {
     tmp17 = cResult[6];
   }

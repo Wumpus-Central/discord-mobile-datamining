@@ -1,18 +1,18 @@
-// === Module 17736: YouBarButton ===
+// === Module 17758: YouBarButton ===
 
-// Module 17736 (YouBarButton)
+// Module 17758 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import IconButton from "IconButton" /* 7943 */;
-import ClipView from "ClipView" /* 9375 */;
-import BadgeDefault from "Badge" /* 9674 */;
+import IconButton from "IconButton" /* 7944 */;
+import ClipView from "ClipView" /* 9382 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9681 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16334);
+const YouBarConstants = fn(16357);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "ix", bottom: "useEffect", padding: "a", minWidth: "application" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "application", bottom: "w", padding: "T", minWidth: "r" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "ix", bottom: "useEffect", padding: "a", minWidth: "application" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "application", bottom: "w", padding: "T", minWidth: "r" };
     return rect;
   }, items);
 });
@@ -189,7 +189,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarButton
         let tmp17 = hasBadge;
         if (hasBadge) {
           const obj5 = { style: tmp8, size: 8, badgeStyle };
-          tmp17 = React5(BadgeDefault, obj5);
+          tmp17 = React5(shared_components_BadgeDefault, obj5);
         }
         cResult[9] = badgeStyle;
         cResult[10] = hasBadge;
@@ -233,7 +233,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarButton
   let items1 = [React5(ClipViewDefault, { cutouts: memo, children: icon }), ];
   if (hasBadge) {
     const obj4 = { style: tmp2, size: 8, badgeStyle };
-    hasBadge = React5(BadgeDefault, obj4);
+    hasBadge = React5(shared_components_BadgeDefault, obj4);
   }
   items1[1] = hasBadge;
   obj3.children = items1;

@@ -1,9 +1,9 @@
-// === Module 9921: EmojiOptionsActionSheet ===
+// === Module 9928: EmojiOptionsActionSheet ===
 
-// Module 9921 (EmojiOptionsActionSheet)
+// Module 9928 (EmojiOptionsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import ToastUtils from "ToastUtils" /* 5648 */;
-import ClipboardUtils from "ClipboardUtils" /* 7269 */;
+import ClipboardUtils from "ClipboardUtils" /* 7270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,9 +43,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOpt
     let obj2 = { children: null };
     const obj3 = { hasIcons: true, children: null };
     const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-    obj3.children = jsx(tmp(6889).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-    obj2.children = jsx(tmp(6973).TableRowGroup, { hasIcons: true, children: null });
-    const tmp12 = jsx(tmp(7282).ActionSheet, { children: null });
+    obj3.children = jsx(tmp(6888).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+    obj2.children = jsx(tmp(6972).TableRowGroup, { hasIcons: true, children: null });
+    const tmp12 = jsx(tmp(7283).ActionSheet, { children: null });
     cResult[4] = tmp4;
     cResult[5] = tmp12;
     let tmp10 = tmp12;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOpt
   const intl = emojiSrc(1128).intl;
   obj3.label = intl.string(emojiSrc(1128).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(6889).TableRow, { icon: jsx(emojiSrc(5664).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(6973).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(7282).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(6888).TableRow, { icon: jsx(emojiSrc(5664).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(6972).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(7283).ActionSheet, { children: null });
 });

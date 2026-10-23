@@ -1,6 +1,6 @@
-// === Module 15929: openTinyBroncoPromoSheet ===
+// === Module 15947: openTinyBroncoPromoSheet ===
 
-// Module 15929 (openTinyBroncoPromoSheet)
+// Module 15947 (openTinyBroncoPromoSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import size from "module_2" /* 2 */;
@@ -9,6 +9,6 @@ const TINY_BRONCO_PROMO_SHEET_KEY = "TINY_BRONCO_PROMO_SHEET_KEY";
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/openTinyBroncoPromoSheet.tsx");
 
 export default function openTinyBroncoPromoSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15930, dependencyMap.paths), TINY_BRONCO_PROMO_SHEET_KEY, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15948, dependencyMap.paths), TINY_BRONCO_PROMO_SHEET_KEY, arg0);
 };
 export const TINY_BRONCO_PROMO_SHEET_KEY = "TINY_BRONCO_PROMO_SHEET_KEY";

@@ -1,6 +1,6 @@
-// === Module 11435: WebViewContext ===
+// === Module 11446: WebViewContext ===
 
-// Module 11435 (WebViewContext)
+// Module 11446 (WebViewContext)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,9 +25,9 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
   const tmp2 = closure_8();
   [tmp4, require] = noop.useState(0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function u(__nativeTag) {
-      if (__nativeTag) {
-        require(__nativeTag.__nativeTag);
+    const fn = function u(_nativeTag) {
+      if (_nativeTag) {
+        require(_nativeTag._nativeTag);
       }
     };
     cResult[0] = fn;
@@ -71,9 +71,9 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
   const items1 = [
     hasOwnProperty(View, {
       style: closure_8().placeholderWebView,
-      ref: noop.useCallback((__nativeTag) => {
-        if (__nativeTag) {
-          closure_0(__nativeTag.__nativeTag);
+      ref: noop.useCallback((_nativeTag) => {
+        if (_nativeTag) {
+          closure_0(_nativeTag._nativeTag);
         }
       }, items),
       pointerEvents: "none"

@@ -1,6 +1,6 @@
-// === Module 5976: NicknameUtils ===
+// === Module 5975: NicknameUtils ===
 
-// Module 5976 (NicknameUtils)
+// Module 5975 (NicknameUtils)
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5018 */;
 import ChannelStore from "ChannelStore" /* 4821 */;

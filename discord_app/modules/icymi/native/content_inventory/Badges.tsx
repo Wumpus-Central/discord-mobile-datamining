@@ -1,22 +1,22 @@
-// === Module 14227: Badges ===
+// === Module 14241: Badges ===
 
-// Module 14227 (Badges)
+// Module 14241 (Badges)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import utils from "utils" /* 8602 */;
-import TrophyIcon from "TrophyIcon" /* 9277 */;
-import GameControllerIcon from "GameControllerIcon" /* 9585 */;
-import TimerIcon2 from "TimerIcon" /* 11267 */;
-import RetryIcon2 from "RetryIcon" /* 11731 */;
-import FireIcon2 from "FireIcon" /* 14102 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 14225 */;
-import NewUserIcon from "NewUserIcon" /* 14228 */;
-import FlashIcon2 from "FlashIcon" /* 14230 */;
-import TrendingType from "TrendingType" /* 14232 */;
+import utils from "utils" /* 8603 */;
+import TrophyIcon from "TrophyIcon" /* 9284 */;
+import GameControllerIcon from "GameControllerIcon" /* 9592 */;
+import TimerIcon2 from "TimerIcon" /* 11276 */;
+import RetryIcon2 from "RetryIcon" /* 11742 */;
+import FireIcon2 from "FireIcon" /* 14116 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 14239 */;
+import NewUserIcon from "NewUserIcon" /* 14242 */;
+import FlashIcon2 from "FlashIcon" /* 14244 */;
+import TrendingType from "TrendingType" /* 14246 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 
@@ -82,7 +82,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveTimest
   const tmpResult = utils;
 }) : (function ActiveTimestamp(style) {
   const entry = style.entry;
-  const now = entry(14225).useTimestampTickedNow().now;
+  const now = entry(14239).useTimestampTickedNow().now;
   const items = [entry, now];
   const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
   return closure_6(entry(5220).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });

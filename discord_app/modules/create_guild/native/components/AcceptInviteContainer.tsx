@@ -1,8 +1,8 @@
-// === Module 13580: AcceptInviteContainer ===
+// === Module 13594: AcceptInviteContainer ===
 
-// Module 13580 (AcceptInviteContainer)
+// Module 13594 (AcceptInviteContainer)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import NavigatorHeader from "NavigatorHeader" /* 6909 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;

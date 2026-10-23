@@ -1,19 +1,19 @@
-// === Module 13249: ChatInputRightActions ===
+// === Module 13265: ChatInputRightActions ===
 
-// Module 13249 (ChatInputRightActions)
+// Module 13265 (ChatInputRightActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 5023 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5038 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12461 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12463 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13060 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12471 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12473 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const enterDelayMs = fn(12462).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12472).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4969);
@@ -107,11 +107,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
             if (null != suggestedExpressions) {
               const obj7 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
               merged = Object.assign(suggestedExpressions);
-              let tmp23 = closure_7(tmp(13250).EmojiSuggestionChatButton, obj7);
+              let tmp23 = closure_7(tmp(13266).EmojiSuggestionChatButton, obj7);
             } else {
               const obj8 = { active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-              tmp23 = closure_7(onPressAction(12109), obj8);
-              const tmp4Result = onPressAction(12109);
+              tmp23 = closure_7(onPressAction(12120), obj8);
+              const tmp4Result = onPressAction(12120);
             }
             cResult[12] = channel;
             cResult[13] = keyboardType;
@@ -190,11 +190,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
   if (null != suggestedExpressions) {
     const obj5 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
     const merged = Object.assign(suggestedExpressions);
-    let tmp19 = closure_7(tmp(13250).EmojiSuggestionChatButton, obj5);
+    let tmp19 = closure_7(tmp(13266).EmojiSuggestionChatButton, obj5);
   } else {
     const obj6 = { active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-    tmp19 = closure_7(onPressAction(12109), obj6);
-    const tmp3Result = onPressAction(12109);
+    tmp19 = closure_7(onPressAction(12120), obj6);
+    const tmp3Result = onPressAction(12120);
   }
   items1[1] = tmp19;
   obj3.children = items1;

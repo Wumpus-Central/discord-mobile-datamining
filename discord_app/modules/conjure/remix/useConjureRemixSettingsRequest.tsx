@@ -1,8 +1,8 @@
-// === Module 12316: useConjureRemixSettingsRequest ===
+// === Module 12327: useConjureRemixSettingsRequest ===
 
-// Module 12316 (useConjureRemixSettingsRequest)
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12317 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10686 */;
+// Module 12327 (useConjureRemixSettingsRequest)
+import conjureSettingsRequest from "conjureSettingsRequest" /* 12328 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10693 */;
 
 const require = globalThis.__r;
 

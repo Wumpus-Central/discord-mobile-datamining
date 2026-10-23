@@ -1,11 +1,11 @@
-// === Module 8712: VideoBackground ===
+// === Module 8719: VideoBackground ===
 
-// Module 8712 (VideoBackground)
+// Module 8719 (VideoBackground)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import LinearGradientDefault from "LinearGradient" /* 5244 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8714 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8715 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8721 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8722 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,11 +20,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8713)();
+  const tmp5 = first(8720)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8714).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8721).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
@@ -55,13 +55,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = result[0];
             closure_1_3(obj);
-            first(8714).cachedDominantColors[closure_1_0] = obj;
+            first(8721).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = _slicedToArray(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8714).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8721).cachedDominantColors[tmp4]);
       }
     }
   }, items);

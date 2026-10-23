@@ -1,8 +1,8 @@
-// === Module 14244: usePersonalizedVoiceChannelUsers ===
+// === Module 14258: usePersonalizedVoiceChannelUsers ===
 
-// Module 14244 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7716 */;
-import ConsentStore from "ConsentStore" /* 6656 */;
+// Module 14258 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7717 */;
+import ConsentStore from "ConsentStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5703 */;
 

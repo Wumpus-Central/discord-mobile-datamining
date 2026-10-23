@@ -1,8 +1,8 @@
-// === Module 13006: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 13022: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 13006 (ScheduledMessageDraftCoachmarkHooks)
+// Module 13022 (ScheduledMessageDraftCoachmarkHooks)
 import c from "c" /* 576 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7480 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7481 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

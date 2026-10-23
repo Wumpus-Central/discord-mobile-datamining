@@ -1,16 +1,16 @@
-// === Module 18288: GiftingPromotionCoachmark ===
+// === Module 18310: GiftingPromotionCoachmark ===
 
-// Module 18288 (GiftingPromotionCoachmark)
+// Module 18310 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
-import usePreviousDefault from "usePrevious" /* 6646 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10416 */;
+import usePreviousDefault from "usePrevious" /* 6645 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10423 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PromotionsStore from "PromotionsStore" /* 9489 */;
+import PromotionsStore from "PromotionsStore" /* 9496 */;
 
-const AnalyticsLocationDefault = tmp19(7262);
+const AnalyticsLocationDefault = tmp19(7263);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10479).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10486).useThemeAndReducedMotionAwareAssetUrl(asset);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { location: "GiftingPromotionCoachmarkActionSheet" };
     cResult[2] = obj2;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
   } else {
     tmp11 = cResult[2];
   }
-  const GiftPromotionReminderExperiment = markAsDismissed(10464).GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = markAsDismissed(10471).GiftPromotionReminderExperiment;
   const enabled = GiftPromotionReminderExperiment.useConfig(tmp11).enabled;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PromotionsStore];
@@ -82,14 +82,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
     tmp12 = cResult[3];
     tmp13 = cResult[4];
   }
-  const tmpResult4 = markAsDismissed(10479);
+  const tmpResult4 = markAsDismissed(10486);
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(tmp12, tmp13);
   const tmpResult5 = markAsDismissed(504);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(10480).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(10487).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp18;
   const tmp20 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp20;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
   cResult[11] = items2;
   tmp24 = items2;
   tmp23 = E;
-  const tmpResult6 = markAsDismissed(10480);
+  const tmpResult6 = markAsDismissed(10487);
 }) : (function GiftingPromotionCoachmarkActionSheet(arg0) {
   ({ coachmarkComponent, markAsDismissed } = arg0);
   importDefault = undefined;
@@ -224,10 +224,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10479).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(10464).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10486).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(10471).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(10479);
+  let obj2 = markAsDismissed(10486);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(10480).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(10487).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp10;
   const tmp12 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp12;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result3 = markAsDismissed(10480);
+  const tmp2Result3 = markAsDismissed(10487);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
   let tmp19Result = null;
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
       }
       if (enabled) {
         const obj5 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
-        enabled = closure_11(tmp11(10481), obj5);
+        enabled = closure_11(tmp11(10488), obj5);
       }
       items4[1] = enabled;
       const obj6 = { style: tmp.textContainer, children: null };
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
       items4[2] = closure_12(tmp22, obj6);
       const obj9 = { grow: true, icon: null, text: null, onPress: null };
       const obj10 = { size: "sm", color: tmp11(587).colors.WHITE };
-      obj9.icon = closure_11(markAsDismissed(12806).GiftIcon, obj10);
+      obj9.icon = closure_11(markAsDismissed(12825).GiftIcon, obj10);
       const intl = markAsDismissed(1128).intl;
       obj9.text = intl.string(markAsDismissed(1128).t.Ve9Ge6);
       obj9.onPress = tmp17;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
           obj11.style = items6;
           const obj12 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
-          obj11.children = closure_11(markAsDismissed(9370).APNGPlayer, obj12);
+          obj11.children = closure_11(markAsDismissed(9377).APNGPlayer, obj12);
           let tmp19Result2 = closure_11(tmp22, obj11);
         }
       }

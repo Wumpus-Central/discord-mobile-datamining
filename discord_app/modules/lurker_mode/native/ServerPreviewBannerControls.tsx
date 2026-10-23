@@ -1,13 +1,13 @@
-// === Module 17503: ServerPreviewBannerControls ===
+// === Module 17525: ServerPreviewBannerControls ===
 
-// Module 17503 (ServerPreviewBannerControls)
+// Module 17525 (ServerPreviewBannerControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef6915 from "module_6915" /* 6915 */;
-import transitionToGuild from "transitionToGuild" /* 7433 */;
-import IconButton from "IconButton" /* 7943 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 17504 */;
+import _modDef6914 from "module_6914" /* 6914 */;
+import transitionToGuild from "transitionToGuild" /* 7434 */;
+import IconButton from "IconButton" /* 7944 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 17526 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPr
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6915, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6914, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     const tmp10 = timestampProducer(IconButton.IconButton, obj2);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPr
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6915, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6914, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];

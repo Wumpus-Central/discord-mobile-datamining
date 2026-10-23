@@ -1,14 +1,14 @@
-// === Module 18743: InteractionIframeModal ===
+// === Module 18765: InteractionIframeModal ===
 
-// Module 18743 (InteractionIframeModal)
+// Module 18765 (InteractionIframeModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5959 */;
-import BotTagDefault from "BotTag" /* 9103 */;
-import makeIframeIdDefault from "makeIframeId" /* 11410 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18744 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5958 */;
+import BotTagDefault from "BotTag" /* 9110 */;
+import makeIframeIdDefault from "makeIframeId" /* 11421 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18766 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18731).useIframeModalState(arg0);
+  const iframeModalState = id2(18753).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18731);
+  let obj2 = id2(18753);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             return true;
           }
         }
-        const tmp24 = closure_7(tmp(10627).XLargeIcon, {});
+        const tmp24 = closure_7(tmp(10634).XLargeIcon, {});
         cResult[17] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
         cResult[25] = tmp35;
       }
       const obj9 = { accessibilityRole: "button", accessibilityLabel: tmp21, onPress: A, style: tmp4.closeButton, children: tmp23 };
-      const tmp27 = closure_7(tmp(6894).PressableOpacity, obj9);
+      const tmp27 = closure_7(tmp(6893).PressableOpacity, obj9);
       cResult[18] = A;
       cResult[19] = tmp4.closeButton;
       cResult[20] = tmp27;

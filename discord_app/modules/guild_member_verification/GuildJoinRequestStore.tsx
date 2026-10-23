@@ -1,6 +1,6 @@
-// === Module 6830: GuildJoinRequestStore ===
+// === Module 6829: GuildJoinRequestStore ===
 
-// Module 6830 (GuildJoinRequestStore)
+// Module 6829 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

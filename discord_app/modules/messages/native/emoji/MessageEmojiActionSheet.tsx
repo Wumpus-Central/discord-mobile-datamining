@@ -1,10 +1,10 @@
-// === Module 9907: MessageEmojiActionSheet ===
+// === Module 9914: MessageEmojiActionSheet ===
 
-// Module 9907 (MessageEmojiActionSheet)
+// Module 9914 (MessageEmojiActionSheet)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 9908 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 9915 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 9915 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 9922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

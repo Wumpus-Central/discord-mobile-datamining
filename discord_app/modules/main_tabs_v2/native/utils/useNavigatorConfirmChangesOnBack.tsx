@@ -1,7 +1,7 @@
-// === Module 9997: useNavigatorConfirmChangesOnBack ===
+// === Module 10004: useNavigatorConfirmChangesOnBack ===
 
-// Module 9997 (useNavigatorConfirmChangesOnBack)
-import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 9999 */;
+// Module 10004 (useNavigatorConfirmChangesOnBack)
+import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 10006 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

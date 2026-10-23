@@ -1,14 +1,14 @@
-// === Module 17134: ShelfBlock ===
+// === Module 17156: ShelfBlock ===
 
-// Module 17134 (ShelfBlock)
+// Module 17156 (ShelfBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7633 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9326 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9329 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7634 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9333 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9336 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7634 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7635 */;
 
 require = fn;
 const View = fn(17).View;

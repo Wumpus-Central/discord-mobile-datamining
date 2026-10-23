@@ -1,6 +1,6 @@
-// === Module 13076: DMMessageStickerGreeting ===
+// === Module 13092: DMMessageStickerGreeting ===
 
-// Module 13076 (DMMessageStickerGreeting)
+// Module 13092 (DMMessageStickerGreeting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -9,12 +9,12 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5130 */;
 import timing from "timing" /* 5192 */;
 import useToken from "useToken" /* 5238 */;
-import StickersActionCreators from "StickersActionCreators" /* 10125 */;
+import StickersActionCreators from "StickersActionCreators" /* 10132 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6752 */;
-import MessageStore from "MessageStore" /* 5997 */;
+import StickersStore from "StickersStore" /* 6751 */;
+import MessageStore from "MessageStore" /* 5996 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const intl2 = tmp(1128).intl;
   intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
   let obj5 = hasInputText(5018);
-  const showConvoStarterInDM = channel(13078).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = channel(13094).useShowConvoStarterInDM(channel);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [StickersStore];
     cResult[6] = items2;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     }
     tmp20 = cResult[9];
   }
-  const tmpResult7 = channel(13078);
+  const tmpResult7 = channel(13094);
   const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
   if (cResult[10] !== showConvoStarterInDM) {
     class U {
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const animatedStyle = tmpResult9.useAnimatedStyle(fn3);
   const tmp28 = closure_19();
   let obj3 = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(5038).withDelay, withTiming: channel(5192).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
-  const shouldAnimateSticker = channel(10124).useShouldAnimateSticker(false);
+  const shouldAnimateSticker = channel(10131).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     class U {
       constructor() {
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     cResult[14] = tmp4.gradient;
     cResult[15] = tmp32;
   }
-  const tmpResult10 = channel(10124);
+  const tmpResult10 = channel(10131);
 }) : (function DMMessageStickerGreeting(channel) {
   channel = channel.channel;
   const hasInputText = channel.hasInputText;

@@ -1,6 +1,6 @@
-// === Module 17294: ExternalLink ===
+// === Module 17316: ExternalLink ===
 
-// Module 17294 (ExternalLink)
+// Module 17316 (ExternalLink)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/auth/native/components/Extern
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalLink(externalURL) {
   const cResult = externalURL(576).c(22);
   externalURL = externalURL.externalURL;
-  const tmp5 = closure_9(navigation(7023)());
+  const tmp5 = closure_9(navigation(7022)());
   const obj = externalURL(576);
   const tmp4 = navigation;
   navigation = externalURL(1505).useNavigation();
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
     const obj3 = { children: null };
     const intl = tmp(1128).intl;
     obj3.children = intl.string(tmp(1128).t["0Niu/F"]);
-    const tmp14 = closure_7(tmp4(7053), obj3);
+    const tmp14 = closure_7(tmp4(7052), obj3);
     cResult[5] = tmp14;
     let tmp11 = tmp14;
-    const tmp4Result = tmp4(7053);
+    const tmp4Result = tmp4(7052);
   } else {
     tmp11 = cResult[5];
   }
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   const obj9 = { children: null };
   const items3 = [tmp24, tmp29];
   obj9.children = items3;
-  const tmp33 = closure_8(externalURL(6682).ButtonGroup, obj9);
+  const tmp33 = closure_8(externalURL(6681).ButtonGroup, obj9);
   cResult[15] = tmp24;
   cResult[16] = tmp29;
   cResult[17] = tmp33;

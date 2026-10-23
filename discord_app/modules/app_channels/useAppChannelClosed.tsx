@@ -1,13 +1,13 @@
-// === Module 17952: useAppChannelClosed ===
+// === Module 17974: useAppChannelClosed ===
 
-// Module 17952 (useAppChannelClosed)
+// Module 17974 (useAppChannelClosed)
 import c from "c" /* 576 */;
-import useFrameBySurfaceDefault from "useFrameBySurface" /* 11825 */;
+import useFrameBySurfaceDefault from "useFrameBySurface" /* 11839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ isLaunched: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

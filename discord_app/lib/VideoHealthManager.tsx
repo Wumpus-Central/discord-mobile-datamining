@@ -1,12 +1,12 @@
-// === Module 5888: VideoHealthManager ===
+// === Module 5887: VideoHealthManager ===
 
-// Module 5888 (VideoHealthManager)
+// Module 5887 (VideoHealthManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import TimeUtils from "TimeUtils" /* 5708 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5889 */;
-import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 5890 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5888 */;
+import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 5889 */;
 import size from "module_2" /* 2 */;
 
 const VideoToggleState = Constants.VideoToggleState;

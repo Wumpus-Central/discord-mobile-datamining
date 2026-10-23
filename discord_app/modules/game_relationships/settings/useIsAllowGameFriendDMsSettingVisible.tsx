@@ -1,9 +1,9 @@
-// === Module 17188: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 17210: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 17188 (useIsAllowGameFriendDMsSettingVisible)
+// Module 17210 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7715 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7716 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,11 +1,11 @@
-// === Module 13380: useGuildPowerupOnActivate ===
+// === Module 13394: useGuildPowerupOnActivate ===
 
-// Module 13380 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 6683 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8351 */;
+// Module 13394 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 6682 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8352 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7495 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7496 */;
 
 const require = globalThis.__r;
 
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(6658).popWithKey(diff(7506).PREMIUM_KEY);
+                        return PERK(6657).popWithKey(diff(7507).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(6658).popWithKey(diff(7506).PREMIUM_KEY);
+                        return PERK(6657).popWithKey(diff(7507).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

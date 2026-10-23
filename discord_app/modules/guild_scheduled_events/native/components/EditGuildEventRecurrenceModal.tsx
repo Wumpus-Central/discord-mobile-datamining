@@ -1,17 +1,17 @@
-// === Module 8875: EditGuildEventRecurrenceModal ===
+// === Module 8882: EditGuildEventRecurrenceModal ===
 
-// Module 8875 (EditGuildEventRecurrenceModal)
+// Module 8882 (EditGuildEventRecurrenceModal)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8857 */;
-import useEventExceptionDefault from "useEventException" /* 8865 */;
-import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8868 */;
-import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8876 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8877 */;
-import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8878 */;
-import GuildEventScheduleDefault from "GuildEventSchedule" /* 8879 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8864 */;
+import useEventExceptionDefault from "useEventException" /* 8872 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8875 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8883 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8884 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8885 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 8886 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   let obj = require("c");
   const tmp5 = onCloseModal;
   ({ left, right } = onCloseModal(1633)());
-  const tmp7 = onCloseModal(8865)(recurrenceId, guildEvent.id);
+  const tmp7 = onCloseModal(8872)(recurrenceId, guildEvent.id);
   dependencyMap = tmp7;
   if (cResult[0] === tmp7) {
     if (cResult[1] === guildEvent) {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
             if (cResult[7] === schedule) {
               let tmp18 = cResult[8];
             }
-            const tmp11Result = tmp11(tmp5(8868)(tmp18), 2);
+            const tmp11Result = tmp11(tmp5(8875)(tmp18), 2);
             const first2 = tmp11Result[0];
             error = tmp11Result[1].error;
             if (cResult[9] === tmp8) {
@@ -463,10 +463,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(8858).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(8858);
-  const scheduleForRecurrenceWithException = guildEvent(8858).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
-  let obj2 = guildEvent(8858);
+  const baseScheduleForRecurrence = guildEvent(8865).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8865);
+  const scheduleForRecurrenceWithException = guildEvent(8865).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(8865);
   [c5, c6] = schedule(noop.useState(scheduleForRecurrenceWithException), 2);
   const tmp7 = schedule(noop.useState(null), 2);
   const first = tmp7[0];
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   action = closure_8(guildEvent(5230).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7081).Navigator, {
+    children: closure_8(guildEvent(7080).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

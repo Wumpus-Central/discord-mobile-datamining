@@ -1,9 +1,9 @@
-// === Module 10734: restartFrames ===
+// === Module 10741: restartFrames ===
 
-// Module 10734 (restartFrames)
-import leaveFrame from "leaveFrame" /* 10735 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
-import FramesStore from "FramesStore" /* 6761 */;
+// Module 10741 (restartFrames)
+import leaveFrame from "leaveFrame" /* 10742 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10743 */;
+import FramesStore from "FramesStore" /* 6760 */;
 
 require = fn;
 function restartFrame(item10016) {
@@ -27,7 +27,7 @@ function restartFrame(item10016) {
   }
   const launchFrameResult = FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch });
 }
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

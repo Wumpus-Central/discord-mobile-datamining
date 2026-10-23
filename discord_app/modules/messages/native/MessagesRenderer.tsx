@@ -1,6 +1,6 @@
-// === Module 11194: MessagesRenderer ===
+// === Module 11203: MessagesRenderer ===
 
-// Module 11194 (MessagesRenderer)
+// Module 11203 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
@@ -9,27 +9,27 @@ import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import Client from "Client" /* 5187 */;
 import CodedLink from "CodedLink" /* 5689 */;
-import QuestTypes from "QuestTypes" /* 6699 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7550 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7792 */;
-import QuestActionCreators from "QuestActionCreators" /* 9540 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9751 */;
-import computeScrollData from "computeScrollData" /* 9964 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9965 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9967 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9969 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10043 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11195 */;
-import MessagesHandlers from "MessagesHandlers" /* 11201 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12771 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12973 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12974 */;
+import QuestTypes from "QuestTypes" /* 6698 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7551 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7793 */;
+import QuestActionCreators from "QuestActionCreators" /* 9547 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9758 */;
+import computeScrollData from "computeScrollData" /* 9971 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9972 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9974 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9976 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10050 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11204 */;
+import MessagesHandlers from "MessagesHandlers" /* 11210 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12790 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12989 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12990 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
-import SKUStore from "SKUStore" /* 6810 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
+import SKUStore from "SKUStore" /* 6809 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9752).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9759).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(4881).getUserCommunicationDisabledVersion;
-const Changeset = fn(8118).Changeset;
+const Changeset = fn(8119).Changeset;
 const Constants = fn(1087);
 ({ ActivityActionTypes: closure_12, MAX_MESSAGES_PER_CHANNEL: map1, MessageFlags: closure_14, MessageTypes: closure_15, Permissions: closure_16 } = Constants);
 const jsxProd = fn(21);

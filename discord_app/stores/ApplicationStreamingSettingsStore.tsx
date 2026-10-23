@@ -1,6 +1,6 @@
-// === Module 5866: ApplicationStreamingSettingsStore ===
+// === Module 5865: ApplicationStreamingSettingsStore ===
 
-// Module 5866 (ApplicationStreamingSettingsStore)
+// Module 5865 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 5704 */;

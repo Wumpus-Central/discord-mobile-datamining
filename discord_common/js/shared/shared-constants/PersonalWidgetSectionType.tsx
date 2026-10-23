@@ -1,6 +1,6 @@
-// === Module 7694: PersonalWidgetSectionType ===
+// === Module 7695: PersonalWidgetSectionType ===
 
-// Module 7694 (PersonalWidgetSectionType)
+// Module 7695 (PersonalWidgetSectionType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx");

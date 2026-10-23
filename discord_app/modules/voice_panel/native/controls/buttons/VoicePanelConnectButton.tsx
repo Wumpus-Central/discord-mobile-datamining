@@ -1,15 +1,15 @@
-// === Module 18514: VoicePanelConnectButton ===
+// === Module 18536: VoicePanelConnectButton ===
 
-// Module 18514 (VoicePanelConnectButton)
+// Module 18536 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5220 */;
-import useAlertStore from "useAlertStore" /* 5897 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7862 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14124 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 18515 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 18518 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 18519 */;
+import useAlertStore from "useAlertStore" /* 5896 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6619 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7863 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14138 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 18537 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 18540 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 18541 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 

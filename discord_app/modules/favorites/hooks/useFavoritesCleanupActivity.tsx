@@ -1,12 +1,12 @@
-// === Module 17468: useFavoritesCleanupActivity ===
+// === Module 17490: useFavoritesCleanupActivity ===
 
-// Module 17468 (useFavoritesCleanupActivity)
+// Module 17490 (useFavoritesCleanupActivity)
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6808 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6807 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6757 */;
+import ReadStateStore from "ReadStateStore" /* 6756 */;
 
 const require = globalThis.__r;
 

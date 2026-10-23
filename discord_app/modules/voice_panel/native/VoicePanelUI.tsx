@@ -1,6 +1,6 @@
-// === Module 18386: VoicePanelUI ===
+// === Module 18408: VoicePanelUI ===
 
-// Module 18386 (VoicePanelUI)
+// Module 18408 (VoicePanelUI)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,22 +9,22 @@ import HapticUtils from "HapticUtils" /* 5198 */;
 import spring from "spring" /* 5233 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
 import ExternalPipDefault from "ExternalPip" /* 5810 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7154 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9946 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10864 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10869 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10871 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12014 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18343 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18388 */;
-import PanelSizeUtils from "PanelSizeUtils" /* 18390 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7153 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7238 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7263 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9953 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10872 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10877 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10879 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12025 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18365 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18410 */;
+import PanelSizeUtils from "PanelSizeUtils" /* 18412 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
-import AppFreezeStore from "AppFreezeStore" /* 8754 */;
-import VoicePanelStore from "VoicePanelStore" /* 6790 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6757 */;
+import AppFreezeStore from "AppFreezeStore" /* 8761 */;
+import VoicePanelStore from "VoicePanelStore" /* 6789 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -41,7 +41,7 @@ function useWrapperStyles(wrapperOffset) {
   const height = require("useGlobalStatusIndicatorState").useGlobalStatusIndicatorState().height;
   let tmp3 = closure_34();
   dependencyMap = tmp3;
-  const context = connected.useContext(height(10864));
+  const context = connected.useContext(height(10872));
   const wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   const controlsSpecs = context.controlsSpecs;
@@ -109,7 +109,7 @@ function useWrapperStyles(wrapperOffset) {
             tmp32(wrapperDimensions, obj7);
             tmp16 = importDefault;
           }
-          tmp16(10869)(closure_0, { gestureActive: false, x: 0, y: 0 });
+          tmp16(10877)(closure_0, { gestureActive: false, x: 0, y: 0 });
         }
       }
     }
@@ -117,11 +117,11 @@ function useWrapperStyles(wrapperOffset) {
     tmp3 = windowHeight;
   };
   let obj5 = require("ReanimatedRexport");
-  fn3.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10869), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12014), windowDimensions };
+  fn3.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10877), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12025), windowDimensions };
   fn3.__workletHash = 7580692586417;
   fn3.__initData = __initData32;
   const animatedReaction = obj5.useAnimatedReaction(fn2, fn3);
-  let obj6 = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10869), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12014), windowDimensions };
+  let obj6 = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10877), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12025), windowDimensions };
   class A {
     constructor() {
       value = useReducedMotion.get();
@@ -304,16 +304,16 @@ function useWrapperStyles(wrapperOffset) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: metroRequire, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10865);
+const VoicePanelConstants = fn(10873);
 ({ BORDER_RADIUS_PHYSICS: c10, DEFAULT_BORDER_RADIUS } = VoicePanelConstants);
 const DEFAULT_BORDER_RADIUS_PIP = VoicePanelConstants.DEFAULT_BORDER_RADIUS_PIP;
 ({ DRAWER_SPRING_PHYSICS, IS_IOS: map1, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const LAYOUT_PHYSICS = VoicePanelConstants.LAYOUT_PHYSICS;
 const DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE = VoicePanelConstants.DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE;
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
 const isActivityParticipant = fn(5618).isActivityParticipant;
-const POP_RESISTANCE = fn(10866).POP_RESISTANCE;
+const POP_RESISTANCE = fn(10874).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let c24 = 10;
@@ -1992,7 +1992,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (tmp6[0]) {
     obj2 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
     const obj3 = { children: null };
-    const items3 = [closure_21(tmp2(18392), {}), , ];
+    const items3 = [closure_21(tmp2(18414), {}), , ];
     obj4 = { opacity, onPress: dismissPanel };
     items3[1] = closure_21(closure_99, obj4);
     const obj5 = { gesture: tmp11, children: null };
@@ -2000,38 +2000,38 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let _HermesInternal = HermesInternal;
     obj6.nativeID = "voice-panel-ui-" + channelId;
     obj6.layout = layoutTransition;
-    obj6.onAccessibilityEscape = tmp2(10737);
-    const items4 = [closure_21(tmp2(18394), {}), , , ];
+    obj6.onAccessibilityEscape = tmp2(10744);
+    const items4 = [closure_21(tmp2(18416), {}), , , ];
     const obj7 = { wrapperOffset, children: null };
     const obj8 = { zIndex: 2, children: null };
     const obj9 = { wrapperOffset, gestureState, layout: layoutTransition };
-    obj8.children = closure_21(tmp2(18396), obj9);
+    obj8.children = closure_21(tmp2(18418), obj9);
     const items5 = [closure_21(channelId(5583).LayerScope, obj8), , ];
     const obj10 = { gesture, children: null };
     const obj11 = { style: StyleSheet.absoluteFill, layout: layoutTransition, collapsable: false, children: null };
-    const tmp2Result = tmp2(18393);
+    const tmp2Result = tmp2(18415);
     const obj12 = { gesture: scrollNativeGesture, children: null };
     const obj13 = { layout: scrollViewLayoutTransition, ref: scrollerRef, onScroll: handleScroll, onMomentumScrollEnd: NOOP, animatedProps: scrollViewProps, style: tmp.scrollView, onContentSizeChange, contentContainerStyle: tmp.scrollViewContent, scrollEventThrottle: 8.333333333333334, children: null };
     const obj14 = { viewableChunks };
-    const items6 = [closure_21(tmp2(18453), obj14), closure_21(tmp2(18484), {})];
+    const items6 = [closure_21(tmp2(18475), obj14), closure_21(tmp2(18506), {})];
     obj13.children = items6;
     obj12.children = closure_22(closure_35, obj13);
     obj11.children = closure_21(channelId(5283).GestureDetector, obj12);
-    obj10.children = closure_21(tmp2(7154), obj11);
+    obj10.children = closure_21(tmp2(7153), obj11);
     items5[1] = closure_21(channelId(5283).GestureDetector, obj10);
-    items5[2] = closure_21(tmp2(18488), {});
+    items5[2] = closure_21(tmp2(18510), {});
     obj7.children = items5;
     items4[1] = closure_22(closure_95, obj7);
-    items4[2] = closure_21(tmp2(18491), {});
+    items4[2] = closure_21(tmp2(18513), {});
     const obj15 = { gestureState };
-    items4[3] = closure_21(tmp2(18497), obj15);
+    items4[3] = closure_21(tmp2(18519), obj15);
     obj6.children = items4;
     obj5.children = closure_22(tmp2Result, obj6);
     items3[2] = closure_21(channelId(5283).GestureDetector, obj5);
     obj3.children = items3;
     obj2.children = closure_22(channelId(5583).LayerScope, obj3);
-    tmp13 = closure_21(channelId(7237).AnalyticsLocationProvider, obj2);
-    const tmp2Result2 = tmp2(7154);
+    tmp13 = closure_21(channelId(7238).AnalyticsLocationProvider, obj2);
+    const tmp2Result2 = tmp2(7153);
   }
   return tmp13;
 }));

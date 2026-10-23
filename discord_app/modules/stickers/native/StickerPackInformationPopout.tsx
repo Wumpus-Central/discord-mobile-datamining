@@ -1,6 +1,6 @@
-// === Module 10134: StickerPackInformationPopout ===
+// === Module 10141: StickerPackInformationPopout ===
 
-// Module 10134 (StickerPackInformationPopout)
+// Module 10141 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5220 */;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           }
           if (cResult[24] !== onClose) {
             const obj5 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: tmp12, children: tmp14 };
-            const tmp19 = closure_3(tmp(6894).PressableOpacity, obj5);
+            const tmp19 = closure_3(tmp(6893).PressableOpacity, obj5);
             cResult[24] = onClose;
             cResult[25] = tmp19;
             let tmp17 = tmp19;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
   cResult[12] = informationHeader.informationContentDescription;
   cResult[13] = renderItem;
   tmp5 = renderItem;
-  tmpResult = informationHeader(6474);
+  tmpResult = informationHeader(6473);
 }) : (function StickerPackInformationPopout(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   ({ onClose, style } = stickerPack);

@@ -1,12 +1,12 @@
-// === Module 11124: BioText ===
+// === Module 11133: BioText ===
 
-// Module 11124 (BioText)
+// Module 11133 (BioText)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import isChangelogUserDefault from "isChangelogUser" /* 4870 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import LinkingDefault from "Linking" /* 5646 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11125 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
   }
   const obj = lineClamp(576);
   const obj7 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-  const tmpResult = lineClamp(11125);
+  const tmpResult = lineClamp(11134);
   let num;
   if (tmpResult2.isAndroid()) {
     num = 3;

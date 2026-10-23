@@ -1,10 +1,10 @@
-// === Module 15082: ShareScreen ===
+// === Module 15095: ShareScreen ===
 
-// Module 15082 (ShareScreen)
+// Module 15095 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 15086 */;
-import ShareEmbedDefault from "ShareEmbed" /* 15087 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 15099 */;
+import ShareEmbedDefault from "ShareEmbed" /* 15100 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,8 +31,8 @@ const ChannelRecord = fn(4825);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12825).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10586).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12843).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10593).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4969);

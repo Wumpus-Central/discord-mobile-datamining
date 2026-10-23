@@ -1,13 +1,13 @@
-// === Module 17063: UserSettingsDesignSystemBackdrop ===
+// === Module 17085: UserSettingsDesignSystemBackdrop ===
 
-// Module 17063 (UserSettingsDesignSystemBackdrop)
+// Module 17085 (UserSettingsDesignSystemBackdrop)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5220 */;
 import components_Button_Button from "components/Button/Button" /* 5230 */;
 import spring from "spring" /* 5233 */;
 import springPresets from "springPresets" /* 5234 */;
-import Stack_Stack from "Stack/Stack" /* 5964 */;
-import Card from "Card" /* 6891 */;
+import Stack_Stack from "Stack/Stack" /* 5963 */;
+import Card from "Card" /* 6890 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj7 = { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp7, setBlurAmount: tmp10 };
     items[2] = closure_6(closure_9, obj7);
     obj4.children = items;
-    const tmp17 = closure_7(tmp(5964).Stack, obj4);
+    const tmp17 = closure_7(tmp(5963).Stack, obj4);
     cResult[1] = tmp17;
     let tmp13 = tmp17;
   } else {
@@ -199,10 +199,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const items3 = ["blur style: ", tmp9];
     obj13.children = items3;
     obj12.children = closure_7(tmp(5220).Text, obj13);
-    obj11.children = closure_6(tmp(6891).Card, obj12);
+    obj11.children = closure_6(tmp(6890).Card, obj12);
     items2[1] = closure_6(closure_5, obj11);
     obj9.children = items2;
-    tmp19 = closure_7(tmp(5954).Dialog, obj9);
+    tmp19 = closure_7(tmp(5953).Dialog, obj9);
   }
   cResult[2] = animatedStyle;
   cResult[3] = tmp9;
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const obj4 = { spacing: 24, children: null };
   const items = [closure_6(closure_9, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   obj4.children = items;
-  const items1 = [closure_7(showBackdrop(5964).Stack, obj4), ];
+  const items1 = [closure_7(showBackdrop(5963).Stack, obj4), ];
   if (showBackdrop) {
     function handleClose() {
       closure_1(false);
@@ -248,10 +248,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
     obj8.children = closure_7(tmp8(5220).Text, obj9);
-    obj7.children = closure_6(tmp8(6891).Card, obj8);
+    obj7.children = closure_6(tmp8(6890).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
-    showBackdrop = closure_7(tmp8(5954).Dialog, obj5);
+    showBackdrop = closure_7(tmp8(5953).Dialog, obj5);
   }
   items1[1] = showBackdrop;
   obj3.children = items1;

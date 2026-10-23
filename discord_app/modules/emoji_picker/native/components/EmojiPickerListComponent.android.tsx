@@ -1,20 +1,20 @@
-// === Module 9896: EmojiPickerListComponent ===
+// === Module 9903: EmojiPickerListComponent ===
 
-// Module 9896 (EmojiPickerListComponent)
+// Module 9903 (EmojiPickerListComponent)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
-import PortalToNativeViewDefault from "PortalToNativeView" /* 7151 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 9885 */;
-import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 9897 */;
+import PortalToNativeViewDefault from "PortalToNativeView" /* 7150 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 9892 */;
+import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 9904 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6711 */;
+import EmojiStore from "EmojiStore" /* 6710 */;
 
 const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const EmojiCategoryTypes = fn(6714).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9798).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6713).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9805).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

@@ -1,47 +1,47 @@
-// === Module 11853: schemas ===
+// === Module 11867: schemas ===
 
-// Module 11853 (schemas)
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 11812 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 11851 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 11852 */;
-import _mod11854 from "module_11854" /* 11854 */;
+// Module 11867 (schemas)
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 11824 */;
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 11865 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 11866 */;
+import _mod11868 from "module_11868" /* 11868 */;
 import size from "module_2" /* 2 */;
 
-const z = _mod11854.z;
+const z = _mod11868.z;
 const obj = { value_type: null, presentation_type: null, value: null };
-const z2 = _mod11854.z;
+const z2 = _mod11868.z;
 obj.value_type = z2.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
-const z3 = _mod11854.z;
+const z3 = _mod11868.z;
 obj.presentation_type = z3.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
-const z4 = _mod11854.z;
+const z4 = _mod11868.z;
 obj.value = z4.string();
 const objectResult = z.object(obj);
-const z5 = _mod11854.z;
+const z5 = _mod11868.z;
 const obj2 = { value_type: null, presentation_type: null, value: null, fallback: null };
-const z6 = _mod11854.z;
+const z6 = _mod11868.z;
 obj2.value_type = z6.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
-const z7 = _mod11854.z;
+const z7 = _mod11868.z;
 obj2.presentation_type = z7.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
-const z8 = _mod11854.z;
+const z8 = _mod11868.z;
 obj2.value = z8.string();
 obj2.fallback = objectResult.nullish();
 const objectResult4 = z5.object(obj2);
-const z9 = _mod11854.z;
+const z9 = _mod11868.z;
 const obj3 = { fields: null };
-const z10 = _mod11854.z;
-const z11 = _mod11854.z;
+const z10 = _mod11868.z;
+const z11 = _mod11868.z;
 obj3.fields = z10.partialRecord(z11.string(), objectResult4);
 const objectResult5 = z9.object(obj3);
-const z12 = _mod11854.z;
+const z12 = _mod11868.z;
 const obj4 = { layout: null, components: null };
-const z13 = _mod11854.z;
+const z13 = _mod11868.z;
 obj4.layout = z13.string();
-const z14 = _mod11854.z;
-const z15 = _mod11854.z;
+const z14 = _mod11868.z;
+const z15 = _mod11868.z;
 obj4.components = z14.partialRecord(z15.string(), objectResult5);
 const objectResult6 = z12.object(obj4);
-const z16 = _mod11854.z;
-const z17 = _mod11854.z;
+const z16 = _mod11868.z;
+const z17 = _mod11868.z;
 const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
 
 export const applicationWidgetStaticFieldConfigSchema = objectResult;

@@ -1,6 +1,6 @@
-// === Module 6807: isChangelogChannel ===
+// === Module 6806: isChangelogChannel ===
 
-// Module 6807 (isChangelogChannel)
+// Module 6806 (isChangelogChannel)
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 const SYSTEM_UPDATES_USER_ID = fn(4871).SYSTEM_UPDATES_USER_ID;

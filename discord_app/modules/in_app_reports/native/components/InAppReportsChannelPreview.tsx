@@ -1,8 +1,8 @@
-// === Module 14513: InAppReportsChannelPreview ===
+// === Module 14527: InAppReportsChannelPreview ===
 
-// Module 14513 (InAppReportsChannelPreview)
+// Module 14527 (InAppReportsChannelPreview)
 import nativeDefault from "native" /* 587 */;
-import GuildIconDefault from "GuildIcon" /* 6869 */;
+import GuildIconDefault from "GuildIcon" /* 6868 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelP
           let tmp17 = cResult[12];
         }
         if (cResult[13] !== stateFromStores) {
-          const obj4 = { guild: stateFromStores, size: tmp(6869).GuildIconSizes.XXSMALL, selected: false };
+          const obj4 = { guild: stateFromStores, size: tmp(6868).GuildIconSizes.XXSMALL, selected: false };
           const tmp22 = closure_5(GuildIconDefault, obj4);
           cResult[13] = stateFromStores;
           cResult[14] = tmp22;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelP
       const obj6 = { style: tmp.guildInfo, children: null };
       const obj7 = { guild: stateFromStores, size: null, selected: false };
       const hexWithOpacityResult = tmp2(4966).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj7.size = tmp2(6869).GuildIconSizes.XXSMALL;
+      obj7.size = tmp2(6868).GuildIconSizes.XXSMALL;
       const items3 = [closure_5(GuildIconDefault, obj7), ];
       const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
       items3[1] = closure_5(tmp2(5220).Text, obj8);
