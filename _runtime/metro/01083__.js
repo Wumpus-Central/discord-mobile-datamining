@@ -234,7 +234,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "guild", attachment: "ix", attachmentUri: "Reflect" });
+                  debug.setState({ filename: "toCharArray$esjava$1", attachment: "test", attachmentUri: "ix" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;

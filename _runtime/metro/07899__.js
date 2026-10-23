@@ -1,33 +1,11 @@
 // === Module 7899: ? ===
 
 // Module 7899
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _modDef7900 from "module_7900" /* 7900 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
-class WebViewProxy {
-  constructor(arg0) {
-    this.webViewKey = global;
-    return;
-  }
-  injectJavaScript(arg0) {
-    RNCWebView = NativeModules.RNCWebView;
-    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
-  }
-  addOnMessageListener(arg0) {
-    closure_0 = global;
-    self = this;
-    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
-      if (webViewKey.webViewKey === self.webViewKey) {
-        closure_0(webViewKey);
-      }
-    });
-  }
-  releaseWebView() {
-    RNCWebView = NativeModules.RNCWebView;
-    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
-    return;
-  }
-}
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default WebViewProxy;
+export default function getWebViewProxy(iframeId) {
+  return new _modDef7900(iframeId);
+};

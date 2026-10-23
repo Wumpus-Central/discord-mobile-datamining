@@ -1,8 +1,7 @@
 // === Module 8772: ? ===
 
 // Module 8772
-import emptyFunction from "module_5003" /* 5003 */;
+import _modDef8773 from "module_8773" /* 8773 */;
 
-const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
 
-export default emptyFunction.shape(rect);
+export default _modDef8773({ contain: null, cover: null, stretch: null });

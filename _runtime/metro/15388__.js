@@ -1,22 +1,7 @@
 // === Module 15388: ? ===
 
 // Module 15388
-const weakMap = new WeakMap();
+import registerAsset from "module_1134" /* 1134 */;
 
-export default function getInternalSlots(arg0, arg1) {
-  let items = arg1;
-  if (undefined === arg1) {
-    items = [];
-  }
-  value = weakMap.get(arg0);
-  if (!value) {
-    const _Object = Object;
-    const obj2 = Object.create(null, items.reduce((acc, item) => {
-      acc[item] = { enumerable: false, writable: true, configurable: true };
-      return acc;
-    }, {}));
-    const result = weakMap.set(arg0, obj2);
-    value = obj2;
-  }
-  return value;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "8166358642d340fb441edbb7b6ca7704", name: "untranslated.compiled.messages", type: "jsona" });

@@ -1,173 +1,71 @@
 // === Module 12605: ? ===
 
 // Module 12605
-import errorCallback from "errorCallback" /* 12505 */;
-import _mod12509 from "module_12509" /* 12509 */;
-import _mod12510 from "module_12510" /* 12510 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12514 */;
-import _mod12523 from "module_12523" /* 12523 */;
-import _mod12536 from "module_12536" /* 12536 */;
-import _mod12537 from "module_12537" /* 12537 */;
-import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 12606 */;
-import __SENTRY_DEBUG__ from "module_12508" /* 12508 */;
+import _mod12547 from "module_12547" /* 12547 */;
+import _mod12607 from "module_12607" /* 12607 */;
+import setupIntegration from "module_12576" /* 12576 */;
 
-const require = globalThis.__r;
 
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
-  let client = obj.client;
-  if (!client) {
-    client = _mod12536.getClient();
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
   }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-      const tmp3Result = spanTimeInputToSeconds;
-    }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
-      const tmp3Result3 = spanTimeInputToSeconds;
-    }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod12537.DEBUG_BUILD) {
-      const logger = _mod12509.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod12510.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
-    const tmp3Result4 = _mod12510;
-  }
-}
-errorCallback;
-
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("module_12523").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      let obj = require("module_12523");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("module_12543").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
-
-        }, () => {
-          const timestampInSecondsResult = _mod12523.timestampInSeconds();
-          const diff = timestampInSecondsResult - c4;
-          const obj2 = {};
-          const merged = Object.assign(closure_3);
-          obj2.unit = "second";
-          let parsed = diff;
-          if (typeof diff === "string") {
-            const _parseInt = parseInt;
-            parsed = parseInt(diff);
+  handled = obj.handled;
+  return {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod12547.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
           }
-          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-          closure_0.end(timestampInSecondsResult);
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod12607.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod12607;
+            _mod12547.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(12568).captureException(found, obj2);
+                  const tmp14Result = args(12568);
+                } else {
+                  const tmp14Result2 = args(12529);
+                  const safeJoinResult = args(12529).safeJoin(args, " ");
+                  args(12568).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(12568);
+                }
+              } else if (!args[0]) {
+                const obj = args(12529);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(12529).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(12568);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(12529).safeJoin(args.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = _mod12547;
+          }
         });
-      });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
     }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod12510.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
-    }
-  }
-};
+  };
+});

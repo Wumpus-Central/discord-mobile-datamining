@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon", width: 60, height: 60, scales: [2, 3], hash: "27dc2bbcf6aa3b0cbef53a5212edf486", name: "GamingIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon", width: 60, height: 60, scales: [2, 3], hash: "02ec404298afd1c009d52e4ac428845a", name: "PirateIcon", type: "png" });

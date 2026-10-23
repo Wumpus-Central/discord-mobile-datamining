@@ -1,7 +1,8 @@
 // === Module 10807: ? ===
 
 // Module 10807
-import registerAsset from "module_1134" /* 1134 */;
+import baseRest from "baseRest" /* 8848 */;
+import baseDelay from "baseDelay" /* 10808 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "925ba669dce4508a3d121b3e5d7504b9", name: "PlusLargeIcon", type: "png" });
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

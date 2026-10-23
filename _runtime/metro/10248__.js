@@ -1,123 +1,161 @@
 // === Module 10248: ? ===
 
 // Module 10248
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
+import now from "now" /* 10216 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const FRSpecificTimeExpressionParser = require;
-const regExp = new RegExp("(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-class FRSpecificTimeExpressionParser {
-  constructor() {
-    tmp = c2(this, FRSpecificTimeExpressionParser);
-    return;
+let self = this;
+const FRCasualDateParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const entry = {
-  key: "pattern",
-  value: function pattern(arg0) {
-    return regExp;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-};
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(createParsingResult, index) {
-      const sum = index.index + index[1].length;
-      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
-      if (str2.match(/^\d{4}$/)) {
-        index.index = index.index + index[0].length;
-        return null;
-      } else {
-        const start = parsingResult.start;
-        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
-        if (parsingResult.start) {
-          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
-          if (match) {
-            const start2 = parsingResult.start;
-            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
-            if (parsingResult.end) {
-              parsingResult.text = parsingResult.text + match[0];
-            }
-          }
-          return parsingResult;
-        } else {
-          index.index = index.index + index[0].length;
-          return null;
-        }
-      }
-      str2 = parsingResult.text;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-  }
-];
-const entry1 = {
-  key: "extractTimeComponent",
-  value: function extractTimeComponent(assign, arg1) {
-    const parsed = parseInt(arg1[2]);
-    let num = 0;
-    if (null != arg1[3]) {
-      const _parseInt = parseInt;
-      num = parseInt(arg1[3]);
+    if (!fn) {
+      fn = function c(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
     }
-    if (num < 60) {
-      if (parsed <= 24) {
-        let PM1 = null;
-        if (parsed >= 12) {
-          PM1 = FRSpecificTimeExpressionParser(10190).Meridiem.PM;
-        }
-        let PM = PM1;
-        let tmp5 = parsed;
-        if (null != arg1[5]) {
-          if (parsed > 12) {
-            return null;
-          } else {
-            const formatted = arg1[5][0].toLowerCase();
-            let tmp8 = parsed;
-            if ("a" == formatted) {
-              let num2 = parsed;
-              if (12 == parsed) {
-                num2 = 0;
-              }
-              tmp8 = num2;
-              PM1 = FRSpecificTimeExpressionParser(10190).Meridiem.AM;
-            }
-            PM = PM1;
-            tmp5 = tmp8;
-            if ("p" == formatted) {
-              let sum = tmp8;
-              if (12 != tmp8) {
-                sum = tmp8 + 12;
-              }
-              tmp5 = sum;
-              PM = FRSpecificTimeExpressionParser(10190).Meridiem.PM;
-            }
-          }
-        }
-        assign.assign("hour", tmp5);
-        assign.assign("minute", num);
-        if (null !== PM) {
-          assign.assign("meridiem", PM);
-        } else if (tmp5 < 12) {
-          assign.imply("meridiem", FRSpecificTimeExpressionParser(10190).Meridiem.AM);
+    const _Object3 = Object;
+    let closure_9 = fn(now);
+    class FRCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = c2(this, FRCasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(FRCasualDateParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
         } else {
-          assign.imply("meridiem", FRSpecificTimeExpressionParser(10190).Meridiem.PM);
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
         }
-        if (null != arg1[4]) {
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(arg1[4]);
-          if (parsed1 >= 60) {
-            return null;
-          } else {
-            assign.assign("second", parsed1);
-          }
-        }
-        return assign;
+        return tmp3(self, constructResult);
       }
     }
-    return null;
+    _inherits(FRCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return /(maintenant|aujourd'hui|demain|hier|cette\s*nuit|la\s*veille)(?=\W|$)/i;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(refDate, arg1) {
+            refDate = refDate.refDate;
+            const str2 = arg1[0].toLowerCase();
+            const parsingComponents = refDate.createParsingComponents();
+            if ("maintenant" === str2) {
+              return closure_9.now(refDate.reference);
+            } else if ("aujourd'hui" === str2) {
+              return closure_9.today(refDate.reference);
+            } else if ("hier" === str2) {
+              return closure_9.yesterday(refDate.reference);
+            } else if ("demain" === str2) {
+              return closure_9.tomorrow(refDate.reference);
+            } else {
+              if (str2.match(/cette\s*nuit/)) {
+                FRCasualDateParser(10198).assignSimilarDate(parsingComponents, refDate);
+                parsingComponents.imply("hour", 22);
+                parsingComponents.imply("meridiem", FRCasualDateParser(10197).Meridiem.PM);
+              } else if (str2.match(/la\s*veille/)) {
+                const _Date = Date;
+                const date = new Date(refDate.getTime());
+                date.setDate(date.getDate() - 1);
+                FRCasualDateParser(10198).assignSimilarDate(parsingComponents, date);
+                parsingComponents.imply("hour", 0);
+              }
+              return parsingComponents;
+            }
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(FRCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-};
-const items1 = [entry1];
-
-export default _createClass(FRSpecificTimeExpressionParser, items, items1);
+} else {
+  let _Object = Object;
+}

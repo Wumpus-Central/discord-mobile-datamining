@@ -1,13 +1,7 @@
 // === Module 6419: ? ===
 
 // Module 6419
-let setPrototypeOf = typeof Reflect !== "undefined";
-if (typeof Reflect !== "undefined") {
-  const _Reflect = Reflect;
-  setPrototypeOf = Reflect.setPrototypeOf;
-}
-if (!setPrototypeOf) {
-  setPrototypeOf = null;
-}
+import _mod1316 from "module_1316" /* 1316 */;
 
-export default setPrototypeOf;
+
+export default _mod1316.setPrototypeOf || null;

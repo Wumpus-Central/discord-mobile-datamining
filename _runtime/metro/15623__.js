@@ -1,24 +1,42 @@
 // === Module 15623: ? ===
 
 // Module 15623
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-
-export default function getReactNativePlatformConstants() {
-  const obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
-  } else {
-    return obj;
-  }
+export default () => (startTimer) => {
+  closure_0 = startTimer;
+  startTimer = startTimer.startTimer;
+  return {
+    features: {
+      benchmark(title) {
+        const items = [];
+        closure_2 = items();
+        function step(title) {
+          let num = 0;
+          if (0 !== items.length) {
+            num = items[items.length - 1].time;
+          }
+          const tmp = closure_2();
+          items.push({ title, time: tmp, delta: tmp - num });
+          const obj = { title, time: tmp, delta: tmp - num };
+        }
+        items.push({ title, time: 0, delta: 0 });
+        function stop(title) {
+          if (typeof step === "function") {
+            let num = 0;
+            if (0 !== items.length) {
+              num = items[items.length - 1].time;
+            }
+            const tmp3 = closure_2();
+            const obj = { title, time: tmp3, delta: tmp3 - num };
+            items.push(obj);
+            const obj2 = { title, steps: items };
+            title.send("benchmark.report", obj2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        return { step, stop, last: stop };
+      }
+    }
+  };
 };

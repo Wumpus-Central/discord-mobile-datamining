@@ -1,0 +1,14 @@
+// === Module 6389: ToPrimitive ===
+
+// Module 6389 (ToPrimitive)
+import _mod6390 from "module_6390" /* 6390 */;
+
+
+export default function ToPrimitive(arg0) {
+  if (arguments.length > 1) {
+    let tmp3 = _mod6390(arg0, arguments[1]);
+  } else {
+    tmp3 = _mod6390(arg0);
+  }
+  return tmp3;
+};

@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 163.5, height: 20, scales: [2, 3], hash: "cd3f012d84fd9fd0e06d08e5556058d7", name: "img_logo_nitro_tier_0_horizontal_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a55e771de04b13c26603a57cb2527fa8", name: "BoostGemIcon", type: "png" });

@@ -1,146 +1,32 @@
 // === Module 8789: ? ===
 
 // Module 8789
-import _mod17 from "module_17" /* 17 */;
+import colorPropType from "colorPropType" /* 8777 */;
+import _mod8785 from "module_8785" /* 8785 */;
+import merged12 from "merged1" /* 8786 */;
+import merged22 from "merged2" /* 8787 */;
+import emptyFunction_mod from "module_5003" /* 5003 */;
 
-const Orientation = _mod17.NativeModules.Orientation;
-const Platform = _mod17.Platform;
-const DeviceEventEmitter = _mod17.DeviceEventEmitter;
-const dependencyMap = {};
-let c3 = 0;
-const __listener_id = "__listener_id";
+const obj = {};
+const size = Object.assign(_mod8785);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
 
-export default {
-  getOrientation(arg0) {
-    closure_0 = arg0;
-    const orientation = Orientation.getOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  getSpecificOrientation(arg0) {
-    closure_0 = arg0;
-    const specificOrientation = Orientation.getSpecificOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  ignoreAutoRotate(flag) {
-    Orientation.ignoreAutoRotate(flag);
-  },
-  lockToPortrait() {
-    Orientation.lockToPortrait();
-  },
-  lockToLandscape() {
-    Orientation.lockToLandscape();
-  },
-  lockToLandscapeRight() {
-    Orientation.lockToLandscapeRight();
-  },
-  lockToLandscapeLeft() {
-    Orientation.lockToLandscapeLeft();
-  },
-  unlockAllOrientations() {
-    const result = Orientation.unlockAllOrientations();
-  },
-  addOrientationListener(handleOrientationChange) {
-    if (handleOrientationChange.hasOwnProperty(__listener_id)) {
-      let str = handleOrientationChange[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(handleOrientationChange)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(handleOrientationChange, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDidChange", (orientation) => {
-      handleOrientationChange(orientation.orientation);
-    });
-  },
-  addOrientationDegreesChangeListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDegreesDidChange", (orientationDegrees) => {
-      closure_0(orientationDegrees.orientationDegrees);
-    });
-  },
-  removeOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  addSpecificOrientationListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("specificOrientationDidChange", (specificOrientation) => {
-      closure_0(specificOrientation.specificOrientation);
-    });
-  },
-  removeSpecificOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  getInitialOrientation() {
-    return Orientation.initialOrientation;
-  }
-};
+export default obj;

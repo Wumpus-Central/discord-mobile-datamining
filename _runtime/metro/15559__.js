@@ -1,9 +1,30 @@
 // === Module 15559: ? ===
 
 // Module 15559
-import _mod15560 from "module_15560" /* 15560 */;
-import _mod15567 from "module_15567" /* 15567 */;
+import _mod15522 from "module_15522" /* 15522 */;
+import getOwnPropertyDescriptor_mod from "module_15502" /* 15502 */;
 
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod15522(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {
 
-export const URL = _mod15560;
-export const URLSearchParams = _mod15567;
+  }.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

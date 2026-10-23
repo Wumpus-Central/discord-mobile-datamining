@@ -2,55 +2,49 @@
 
 // Module 10502
 import cancelAnimation from "cancelAnimation" /* 1658 */;
-import SINGLE_ITEM from "SINGLE_ITEM" /* 10488 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useOnProgressChangeTs1(){const{offsetX}=this.__closure;return offsetX.value;}" };
-let closure_3 = { code: "function pnpm_useOnProgressChangeTs2(_value){const{computedOffsetXValueWithAutoFillData,rawDataLength,size,autoFillData,loop,onProgressChange,isFunc,runOnJS}=this.__closure;let value=computedOffsetXValueWithAutoFillData({value:_value,rawDataLength:rawDataLength,size:size,autoFillData:autoFillData,loop:loop});if(!loop){value=Math.max(-((rawDataLength-1)*size),Math.min(value,0));}let absoluteProgress=Math.abs(value/size);if(value>0)absoluteProgress=rawDataLength-absoluteProgress;if(onProgressChange){if(isFunc)runOnJS(onProgressChange)(value,absoluteProgress);else onProgressChange.value=absoluteProgress;}}" };
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext({});
+const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
+const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
 
-export const useOnProgressChange = function useOnProgressChange(autoFillData) {
-  autoFillData = autoFillData.autoFillData;
-  const loop = autoFillData.loop;
-  const offsetX = autoFillData.offsetX;
-  const size = autoFillData.size;
-  const rawDataLength = autoFillData.rawDataLength;
-  const onProgressChange = autoFillData.onProgressChange;
-  closure_6 = tmp;
-  const fn = function n() {
-    return offsetX.value;
+export const GlobalStateContext = context;
+export const GlobalStateProvider = (arg0) => {
+  ({ children, value } = arg0);
+  const sharedValue = cancelAnimation.useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = cancelAnimation.useSharedValue({});
+  const fn = function c(arg0, arg1) {
+    const obj = {};
+    const merged = Object.assign(sharedValue1.value);
+    obj[arg0] = arg1;
+    sharedValue1.value = obj;
   };
-  fn.__closure = { offsetX };
-  fn.__workletHash = 355184931449;
-  fn.__initData = offsetX;
-  const fn2 = function u(value) {
-    const result = SINGLE_ITEM.computedOffsetXValueWithAutoFillData({ value, rawDataLength, size, autoFillData, loop });
-    let bound = result;
-    if (!loop) {
-      const _Math = Math;
-      const _Math2 = Math;
-      const result1 = -rawDataLength - 1 * size;
-      bound = Math.max(result1, Math.min(result, 0));
-    }
-    const absolute = Math.abs(bound / size);
-    let diff = absolute;
-    if (bound > 0) {
-      diff = rawDataLength - absolute;
-    }
-    if (onProgressChange) {
-      if (closure_6) {
-        cancelAnimation.runOnJS(onProgressChange)(bound, diff);
-        const tmpResult = cancelAnimation;
-      } else {
-        onProgressChange.value = diff;
-      }
-    }
-    const obj2 = { value, rawDataLength, size, autoFillData, loop };
+  fn.__closure = { itemDimensions: sharedValue1 };
+  fn.__workletHash = 9846581158902;
+  fn.__initData = __initData;
+  const fn2 = function _(value) {
+    sharedValue.value = value;
   };
-  let obj = autoFillData(loop[0]);
-  fn2.__closure = { computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, isFunc: typeof onProgressChange === "function", runOnJS: autoFillData(loop[0]).runOnJS };
-  fn2.__workletHash = 12473781608319;
-  fn2.__initData = size;
-  const items = [loop, autoFillData, rawDataLength, onProgressChange, size];
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2, items);
+  fn2.__closure = { containerSize: sharedValue };
+  fn2.__workletHash = 5978604737778;
+  fn2.__initData = __initData2;
+  const obj3 = { value: null, children: null };
+  const obj4 = {};
+  let merged = Object.assign(value);
+  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };
+  obj3.value = obj4;
+  obj3.children = children;
+  return <context.Provider value={null}>{null}</context.Provider>;
+};
+export const useGlobalState = () => {
+  context = noop.useContext(context);
+  if (context) {
+    return context;
+  } else {
+    const _Error = Error;
+    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
+    throw error;
+  }
 };

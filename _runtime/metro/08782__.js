@@ -1,32 +1,90 @@
 // === Module 8782: ? ===
 
 // Module 8782
-import colorPropType from "colorPropType" /* 8770 */;
-import _mod8778 from "module_8778" /* 8778 */;
-import merged12 from "merged1" /* 8779 */;
-import merged22 from "merged2" /* 8780 */;
-import emptyFunction_mod from "module_5003" /* 5003 */;
+const require = globalThis.__r;
 
-const obj = {};
-const size = Object.assign(_mod8778);
-const merged1 = Object.assign(merged12);
-const merged2 = Object.assign(merged22);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
-let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderWidth = emptyFunction.number;
-obj.borderRadius = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
-obj.tintColor = colorPropType;
-obj.opacity = emptyFunction.number;
-obj.overlayColor = emptyFunction.string;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
+function flattenStyle(obj) {
+  if (null !== obj) {
+    if (typeof obj === "object") {
+      const _Array = Array;
+      if (Array.isArray(obj)) {
+        obj = {};
+        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
+          let tmp3 = flattenStyle(obj[num3]);
+          if (tmp3) {
+            for (const key10019 in tmp3) {
+              obj[key10019] = tmp3[key10019];
+              continue;
+            }
+          }
+        }
+        return obj;
+      } else {
+        return obj;
+      }
+    }
+  }
+}
 
-export default obj;
+export default function DeprecatedStyleSheetPropType(arg0) {
+  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
+  return (arg0, arg1, arg2, arg3) => {
+    const substr = [...arguments].slice();
+    if (arg0[arg1]) {
+      let tmp4;
+      if (null !== arg0[arg1]) {
+        if (typeof arr === "object") {
+          const _Array = Array;
+          tmp4 = arr;
+          if (Array.isArray(arr)) {
+            const obj = {};
+            let num3 = 0;
+            tmp4 = obj;
+            if (0 < arr.length) {
+              do {
+                let arr2 = arr[num3];
+                let tmp6;
+                if (null !== arr2) {
+                  if (typeof arr2 === "object") {
+                    let _Array2 = Array;
+                    tmp6 = arr2;
+                    if (Array.isArray(arr2)) {
+                      let obj2 = {};
+                      let length2 = arr2.length;
+                      let num4 = 0;
+                      tmp6 = obj2;
+                      if (0 < length2) {
+                        do {
+                          let tmp8 = flattenStyle(arr2[num4]);
+                          if (tmp8) {
+                            for (const key10029 in tmp8) {
+                              obj2[key10029] = tmp8[key10029];
+                              continue;
+                            }
+                          }
+                          num4 = num4 + 1;
+                          tmp6 = obj2;
+                        } while (num4 < length2);
+                      }
+                    }
+                  }
+                }
+                if (tmp6) {
+                  for (const key10032 in tmp6) {
+                    obj[key10032] = tmp6[key10032];
+                    continue;
+                  }
+                }
+                num3 = num3 + 1;
+                tmp4 = obj;
+              } while (num3 < length);
+            }
+          }
+        }
+      }
+      const obj3 = {};
+      obj3[arg1] = tmp4;
+    }
+    return closure_0(arg1, arg2, arg3, ...substr);
+  };
+};

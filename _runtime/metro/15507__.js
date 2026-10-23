@@ -1,13 +1,17 @@
 // === Module 15507: ? ===
 
 // Module 15507
-import _mod15486 from "module_15486" /* 15486 */;
+import _mod15503 from "module_15503" /* 15503 */;
 
-const tmp = _mod15486.navigator && _mod15486.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
 
-export default str;
+export default !_mod15503(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

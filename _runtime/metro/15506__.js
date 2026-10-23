@@ -1,48 +1,27 @@
 // === Module 15506: ? ===
 
 // Module 15506
-import _mod15486 from "module_15486" /* 15486 */;
-import _mod15507 from "module_15507" /* 15507 */;
+import module_15507_mod from "module_15507" /* 15507 */;
 
-let tmp = _mod15486.process && _mod15486.process.versions;
-if (!tmp) {
-  tmp = _mod15486.Deno && _mod15486.Deno.version;
-  const tmp2 = _mod15486.Deno && _mod15486.Deno.version;
+const call = prototype.call;
+let module_15507 = module_15507_mod;
+if (module_15507) {
+  const bind = prototype.bind;
+  module_15507 = bind.bind(call, call);
 }
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod15507;
-}
-if (_module) {
-  const match = _mod15507.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod15507.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
+if (!module_15507) {
+  module_15507 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
 }
 
-export default tmp3;
+export default module_15507;

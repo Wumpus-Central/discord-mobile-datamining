@@ -1,27 +1,7 @@
 // === Module 6951: ? ===
 
 // Module 6951
-import noop from "module_19" /* 19 */;
+import _modDef6952 from "module_6952" /* 6952 */;
 
-const UIManager = fn(17).UIManager;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(6952).default;
-  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-  exports.MaskedView = function MaskedView(children) {
-    children = children.children;
-    const merged = Object.assign(children, Object.assign({ children: 0 }));
-    let tmp2 = children;
-    if (closure_2) {
-      tmp2 = children;
-      if (closure_0) {
-        const obj = {};
-        const merged1 = Object.assign(merged);
-        obj.children = children;
-        tmp2 = <tmp3 />;
-      }
-    }
-    return tmp2;
-  };
-} catch (err) {
-}
+
+export default _modDef6952;

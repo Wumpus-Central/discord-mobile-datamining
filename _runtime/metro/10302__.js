@@ -1,15 +1,15 @@
 // === Module 10302: ? ===
 
 // Module 10302
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10192 */;
-import _mod10300 from "module_10300" /* 10300 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10199 */;
+import NUMBER from "NUMBER" /* 10300 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHantRelationWeekdayParser = require;
+const ZHHansRelationWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const keys = Object.keys(_mod10300.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?<prefix>\u4E0A|\u4ECA|\u4E0B|\u9019|\u5462)(?:\u500B)?(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
-class ZHHantRelationWeekdayParser {
+const keys = Object.keys(NUMBER.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?<prefix>\u4E0A|\u4E0B|\u8FD9)(?:\u4E2A)?(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" + keys.join("|") + ")");
+class ZHHansRelationWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantRelationWeekdayParser);
+    tmp = c2(this, ZHHansRelationWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantRelationWeekdayParser);
+    obj = closure_4(ZHHansRelationWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class ZHHantRelationWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantRelationWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHansRelationWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -64,7 +64,7 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantRelationWeekdayParser(10300).WEEKDAY_OFFSET[index.groups.weekday];
+      const tmp2 = ZHHansRelationWeekdayParser(10300).WEEKDAY_OFFSET[index.groups.weekday];
       if (undefined === tmp2) {
         return null;
       } else {
@@ -73,15 +73,8 @@ const items = [
         if ("\u4E0A" != prefix) {
           str2 = "next";
           if ("\u4E0B" != prefix) {
-            let tmp3 = "\u4ECA" != prefix;
-            if (tmp3) {
-              tmp3 = "\u9019" != prefix;
-            }
-            if (tmp3) {
-              tmp3 = "\u5462" != prefix;
-            }
             str2 = null;
-            if (!tmp3) {
+            if ("\u8FD9" == prefix) {
               str2 = "this";
             }
           }
@@ -143,4 +136,4 @@ const items = [
   }
 ];
 
-export default _createClass(ZHHantRelationWeekdayParser, items);
+export default _createClass(ZHHansRelationWeekdayParser, items);

@@ -1,7 +1,12 @@
 // === Module 10438: ? ===
 
 // Module 10438
-import registerAsset from "module_1134" /* 1134 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "68fc474265691715b1946d199d680a26", name: "img_classic_subheader_mobile", type: "png" });
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
+};

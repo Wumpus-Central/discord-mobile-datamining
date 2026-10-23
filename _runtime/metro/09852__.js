@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon", width: 60, height: 60, scales: [2, 3], hash: "0958a3140b1354fdc2a2c5ce3e4f3233", name: "CherryBlossomIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon", width: 60, height: 60, scales: [2, 3], hash: "766fd7e004517bb3fbea8bf5121a6049", name: "MatteLightIcon", type: "png" });

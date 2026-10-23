@@ -1,7 +1,15 @@
 // === Module 10441: ? ===
 
 // Module 10441
-import registerAsset from "module_1134" /* 1134 */;
+import _mod19 from "module_19" /* 19 */;
 
+const useRef = _mod19.useRef;
+let closure_1 = {};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1d763efda0bb805b92a463188135a32f", name: "img_boost_subheader_mobile", type: "png" });
+export default function useLazyValue(fn) {
+  const tmp = useRef(closure_1);
+  if (tmp.current === closure_1) {
+    tmp.current = fn();
+  }
+  return tmp.current;
+};

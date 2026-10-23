@@ -1,7 +1,31 @@
 // === Module 19118: ? ===
 
 // Module 19118
-import registerAsset from "module_1134" /* 1134 */;
+import _mod637 from "module_637" /* 637 */;
+import _mod19119 from "module_19119" /* 19119 */;
+import stringToArray from "stringToArray" /* 19120 */;
+import castSlice from "castSlice" /* 19123 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "26d0550d85f689dbef34ccad40bbdeb4", name: "ic_radio_circle_checked", type: "png" });
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod637(arg0);
+    let tmp3;
+    if (_mod19119(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+};

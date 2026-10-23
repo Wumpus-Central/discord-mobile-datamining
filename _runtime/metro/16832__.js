@@ -1,7 +1,9 @@
 // === Module 16832: ? ===
 
 // Module 16832
-import registerAsset from "module_1134" /* 1134 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1c2e533ca379db7ea82903ea36d239f5", name: "FileWarningIcon", type: "png" });
+export const WebView = require("WebView").WebView;

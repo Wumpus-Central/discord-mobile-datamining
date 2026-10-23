@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 261.5, height: 152, scales: [2, 3], hash: "5691c33dd2c3544121435e1c3a569b50", name: "img_nitro_longer_message_upsell_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/ControllerIcon", width: 60, height: 60, scales: [2, 3], hash: "6f32787e0c52eb22e7f564f5312dfb32", name: "ControllerIcon", type: "png" });

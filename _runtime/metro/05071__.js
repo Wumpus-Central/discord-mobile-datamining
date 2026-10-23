@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 let deps = Symbol("UNINITIALIZED");
 
 export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, current2) {
-  const obj = { value: "r", deps, pendingDisposal: null };
+  const obj = { value: "r", deps, pendingDisposal: false };
   const tmp2 = React(obj);
   closure_0 = tmp2;
   const obj2 = React(_temp);
