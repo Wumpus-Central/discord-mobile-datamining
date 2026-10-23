@@ -1,136 +1,84 @@
 // _runtime/metro/10273__.js
-import _mod10214 from "10214__.js";
-import includeCommonConfiguration from "../10221_includeCommonConfiguration.js";
-import _mod10274 from "10274__.js";
-import _mod10275 from "10275__.js";
-import _mod10276 from "10276__.js";
-import _mod10277 from "10277__.js";
-import _mod10278 from "10278__.js";
-import _mod10280 from "10280__.js";
-import _mod10281 from "10281__.js";
-import _mod10282 from "10282__.js";
-import _mod10283 from "10283__.js";
-import _mod10284 from "10284__.js";
-import _mod10285 from "10285__.js";
-import _mod10286 from "10286__.js";
-import _mod10287 from "10287__.js";
-import _mod10288 from "10288__.js";
-import _mod10289 from "10289__.js";
-import _mod10290 from "10290__.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(flag2), , , , , , , , ,];
-  const _default = new regExp.default(flag2);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default();
-  const _default5 = new _isNativeReflectConstruct.default();
-  items[6] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items[7] = new _isNativeReflectConstruct.default(flag);
-  const _default7 = new _isNativeReflectConstruct.default(flag);
-  items[8] = new _isNativeReflectConstruct.default(flag);
-  const _default8 = new _isNativeReflectConstruct.default(flag);
-  items[9] = new _isNativeReflectConstruct.default(flag);
-  obj.parsers = items;
-  const _default9 = new _isNativeReflectConstruct.default(flag);
-  const items1 = [new _isNativeReflectConstruct.default()];
-  const _default10 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+export const parseYear = function parseYear(match) {
+  if (match.match(/^[0-9]{1,4}$/)) {
+    const _parseInt3 = parseInt;
+    const parsed = parseInt(match);
+    let sum = parsed;
+    if (parsed < 100) {
+      let num3 = 2000;
+      if (parsed > 50) {
+        num3 = 1900;
+      }
+      sum = parsed + num3;
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
+    return sum;
+  } else if (match.match(/a\.?\s*c\.?/i)) {
+    const _parseInt2 = parseInt;
+    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(match);
   }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
-  const parsers5 = tmp.parsers;
-  const _default4 = new _isNativeReflectConstruct.default();
-  parsers5.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-fn(_mod10274);
-fn(_mod10275);
-fn(_mod10276);
-fn(_mod10277);
-const regExp = fn(_mod10214);
-fn(_mod10278);
-fn(_mod10280);
-fn(_mod10281);
-fn(_mod10282);
-fn(_mod10283);
-fn(_mod10284);
-fn(_mod10285);
-fn(_mod10286);
-fn(_mod10287);
-fn(_mod10288);
-fn(_mod10289);
-const _isNativeReflectConstruct = fn(_mod10290);
-const chrono = new require("10181__.js").Chrono(createCasualConfiguration());
-const chrono1 = new require("10181__.js").Chrono(createConfiguration(true));
-
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
 };
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
+export const WEEKDAY_DICTIONARY = {
+  domingo: 0,
+  dom: 0,
+  segunda: 1,
+  "segunda-feira": 1,
+  seg: 1,
+  terça: 2,
+  "terça-feira": 2,
+  ter: 2,
+  quarta: 3,
+  "quarta-feira": 3,
+  qua: 3,
+  quinta: 4,
+  "quinta-feira": 4,
+  qui: 4,
+  sexta: 5,
+  "sexta-feira": 5,
+  sex: 5,
+  sábado: 6,
+  sabado: 6,
+  sab: 6,
 };
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("10181__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export const MONTH_DICTIONARY = {
+  janeiro: 1,
+  jan: 1,
+  "jan.": 1,
+  fevereiro: 2,
+  fev: 2,
+  "fev.": 2,
+  março: 3,
+  mar: 3,
+  "mar.": 3,
+  abril: 4,
+  abr: 4,
+  "abr.": 4,
+  maio: 5,
+  mai: 5,
+  "mai.": 5,
+  junho: 6,
+  jun: 6,
+  "jun.": 6,
+  julho: 7,
+  jul: 7,
+  "jul.": 7,
+  agosto: 8,
+  ago: 8,
+  "ago.": 8,
+  setembro: 9,
+  set: 9,
+  "set.": 9,
+  outubro: 10,
+  out: 10,
+  "out.": 10,
+  novembro: 11,
+  nov: 11,
+  "nov.": 11,
+  dezembro: 12,
+  dez: 12,
+  "dez.": 12,
+};
+export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";

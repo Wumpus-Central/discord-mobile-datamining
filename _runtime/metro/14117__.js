@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "000feaebcabc55e90b1dcd63e76aa1dd",
-  name: "ShieldLockIcon",
+  hash: "aa1ab8f7d6e2b1c9438f72fdbfc69c0c",
+  name: "FireIcon",
   type: "png",
 });

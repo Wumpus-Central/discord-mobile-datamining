@@ -1,66 +1,43 @@
 // _runtime/metro/12627__.js
-import stackParserFromStackParserOptions from "../12512_stackParserFromStackParserOptions.js";
-import _mod12515 from "12515__.js";
-import _mod12625 from "12625__.js";
+import _mod12526 from "12526__.js";
+import _mod12547 from "12547__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
+export const captureFeedback = function captureFeedback(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod12547.getCurrentScope();
   }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod12515;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod12625.filenameIsInApp(replaced);
-    const tmp4Result = _mod12625;
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
-};
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
-    }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
-      }
-    }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    },
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = {
+    feedback: _mod12526.dropUndefinedKeys({
+      contact_email: email,
+      name,
+      message,
+      url,
+      source,
+      associated_event_id: associatedEventId,
+    }),
   };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod12547.getClient();
+    const tmp3Result = _mod12547;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 };

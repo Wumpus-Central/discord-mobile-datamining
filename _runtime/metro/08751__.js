@@ -1,13 +1,4 @@
 // _runtime/metro/08751__.js
-import registerAsset from "01134__.js";
+import _mod8752 from "08752__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_viewer/native/images",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "4d6296c901620eb3ce6d9e0093bbc96e",
-  name: "scrubber",
-  type: "png",
-});
+export default _mod8752.default;

@@ -1,3 +1,13 @@
 // _runtime/metro/09074__.js
+import registerAsset from "01134__.js";
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons/settings",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4a465b7b889dd2efb6716569375c3825",
+  name: "ic_qr_code_24px",
+  type: "png",
+});

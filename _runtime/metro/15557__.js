@@ -1,30 +1,105 @@
 // _runtime/metro/15557__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../15558_replaceByteInByteSequence.js";
+import _mod15502 from "15502__.js";
+import _mod15503 from "15503__.js";
+import _mod15506 from "15506__.js";
+import _mod15522 from "15522__.js";
+import _mod15525 from "15525__.js";
+import _mod15559 from "15559__.js";
+import state from "../15560_state.js";
+import prop from "15558__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+let closure_5 = _mod15506("".slice);
+let closure_6 = _mod15506("".replace);
+let closure_7 = _mod15506([].join);
+let closure_8 = _mod15502 && !_mod15503(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = _mod15502 && !_mod15503(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
   }
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
+  }
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod15522(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod15559.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod15559.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod15502) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
+    } else {
+      toString.name = text2;
+    }
+  }
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod15522(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod15522(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod15502) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
+        }
+        const enforceResult = state.enforce(toString);
+        if (!_mod15522(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
+        }
+        return toString;
+      }
+    }
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {}
 };
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+function toString() {
+  const self = this;
+  let source = _mod15525(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
+}
+fn(toString, "toString");
+Function.prototype.toString = toString;
 
-export const URL = replaceByteInByteSequence.URL;
+export default fn;

@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
+  width: 300.5,
   height: 175,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "c407143bbf75b6a7311c87db68c9cbca",
+  name: "custom_profile",
   type: "png",
 });

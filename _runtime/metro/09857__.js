@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "def0b6d35103453cf4894471df6b84ad",
-  name: "BlushIcon",
+  hash: "2bb189919203a7299ceda12e2b9f8582",
+  name: "GalaxyIcon",
   type: "png",
 });

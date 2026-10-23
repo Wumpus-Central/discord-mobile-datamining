@@ -1,13 +1,13 @@
 // _runtime/metro/10303__.js
-import AbstractParserWithWordBoundaryChecking from "../10192_AbstractParserWithWordBoundaryChecking.js";
-import _mod10300 from "10300__.js";
+import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
+import NUMBER from "../10300_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHantTimeExpressionParser = require;
+const ZHHansTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,11 +26,11 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const keys = Object.keys(_mod10300.NUMBER);
-const text = `(?:由|從|自)?(?:(今|明|前|大前|後|大後|聽|昨|尋|琴)(早|朝|晚)|(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|後|大後|聽|昨|尋|琴)(?:日|天)(?:[\\s,，]*)(?:(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`;
-const keys1 = Object.keys(_mod10300.NUMBER);
-const text1 = `${`(?:由|從|自)?(?:(今|明|前|大前|後|大後|聽|昨|尋|琴)(早|朝|晚)|(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|後|大後|聽|昨|尋|琴)(?:日|天)(?:[\\s,，]*)(?:(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`}]+)(?:\\s*)(?:點|時|:|：)(?:\\s*)(\\d+|半|正|整|[${obj2.join("")}`;
-const keys2 = Object.keys(_mod10300.NUMBER);
+const keys = Object.keys(NUMBER.NUMBER);
+const text = `(?:从|自)?(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`;
+const keys1 = Object.keys(NUMBER.NUMBER);
+const text1 = `${`(?:从|自)?(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj.join("")}`}]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[${obj2.join("")}`;
+const keys2 = Object.keys(NUMBER.NUMBER);
 const regExp = new RegExp(
   text1 +
     "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" +
@@ -38,11 +38,11 @@ const regExp = new RegExp(
     "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
   "i",
 );
-const keys3 = Object.keys(_mod10300.NUMBER);
-const text2 = `(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|後|大後|聽|昨|尋|琴)(早|朝|晚)|(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|後|大後|聽|昨|尋|琴)(?:日|天)(?:[\\s,，]*)(?:(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`;
-const keys4 = Object.keys(_mod10300.NUMBER);
-const text3 = `${`(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|後|大後|聽|昨|尋|琴)(早|朝|晚)|(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|後|大後|聽|昨|尋|琴)(?:日|天)(?:[\\s,，]*)(?:(上(?:午|晝)|朝(?:早)|早(?:上)|下(?:午|晝)|晏(?:晝)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`}]+)(?:\\s*)(?:點|時|:|：)(?:\\s*)(\\d+|半|正|整|[${obj5.join("")}`;
-const keys5 = Object.keys(_mod10300.NUMBER);
+const keys3 = Object.keys(NUMBER.NUMBER);
+const text2 = `(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`;
+const keys4 = Object.keys(NUMBER.NUMBER);
+const text3 = `${`(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[${obj4.join("")}`}]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[${obj5.join("")}`;
+const keys5 = Object.keys(NUMBER.NUMBER);
 const regExp1 = new RegExp(
   text3 +
     "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" +
@@ -50,12 +50,12 @@ const regExp1 = new RegExp(
     "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
   "i",
 );
-class ZHHantTimeExpressionParser {
+class ZHHansTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantTimeExpressionParser);
+    tmp = c2(this, ZHHansTimeExpressionParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantTimeExpressionParser);
+    obj = closure_4(ZHHansTimeExpressionParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -70,7 +70,7 @@ class ZHHantTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHansTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -92,68 +92,52 @@ const items = [
       const refDate = createParsingResult.refDate;
       const date = new Date(refDate.getTime());
       if (index[1]) {
-        if ("\u660E" != index[1]) {
-          if ("\u807D" != tmp14) {
-            if ("\u6628" != tmp14) {
-              if ("\u5C0B" != tmp14) {
-                if ("\u7434" != tmp14) {
-                  if ("\u524D" == tmp14) {
-                    date.setDate(date.getDate() - 2);
-                  } else {
-                    if ("\u5927\u524D" == tmp14) {
-                      date.setDate(date.getDate() - 3);
-                    } else if ("\u5F8C" != tmp14) {
-                      if ("\u5927\u5F8C" == tmp14) {
-                        date.setDate(date.getDate() + 3);
-                      }
-                    }
-                    date.setDate(date.getDate() + 2);
-                  }
-                }
-              }
-            }
-            date.setDate(date.getDate() - 1);
+        if ("\u660E" == index[1]) {
+          const refDate2 = createParsingResult.refDate;
+          if (refDate2.getHours() > 1) {
+            date.setDate(date.getDate() + 1);
           }
-          const start7 = parsingResult.start;
-          start7.assign("day", date.getDate());
-          const start8 = parsingResult.start;
-          start8.assign("month", date.getMonth() + 1);
-          const start9 = parsingResult.start;
-          start9.assign("year", date.getFullYear());
+        } else if ("\u6628" == tmp14) {
+          date.setDate(date.getDate() - 1);
+        } else if ("\u524D" == tmp14) {
+          date.setDate(date.getDate() - 2);
+        } else {
+          if ("\u5927\u524D" == tmp14) {
+            date.setDate(date.getDate() - 3);
+          } else if ("\u540E" != tmp14) {
+            if ("\u5927\u540E" == tmp14) {
+              date.setDate(date.getDate() + 3);
+            }
+          }
+          date.setDate(date.getDate() + 2);
         }
-        const refDate2 = createParsingResult.refDate;
-        if (refDate2.getHours() > 1) {
-          date.setDate(date.getDate() + 1);
-        }
+        const start7 = parsingResult.start;
+        start7.assign("day", date.getDate());
+        const start8 = parsingResult.start;
+        start8.assign("month", date.getMonth() + 1);
+        const start9 = parsingResult.start;
+        start9.assign("year", date.getFullYear());
       } else {
         if (index[4]) {
-          if ("\u660E" != index[4]) {
-            if ("\u807D" != tmp5) {
-              if ("\u6628" != tmp5) {
-                if ("\u5C0B" != tmp5) {
-                  if ("\u7434" != tmp5) {
-                    if ("\u524D" == tmp5) {
-                      date.setDate(date.getDate() - 2);
-                    } else if ("\u5927\u524D" == tmp5) {
-                      date.setDate(date.getDate() - 3);
-                    } else if ("\u5F8C" == tmp5) {
-                      date.setDate(date.getDate() + 2);
-                    } else if ("\u5927\u5F8C" == tmp5) {
-                      date.setDate(date.getDate() + 3);
-                    }
-                  }
-                }
-              }
-              date.setDate(date.getDate() - 1);
-            }
-            const start4 = parsingResult.start;
-            start4.assign("day", date.getDate());
-            const start5 = parsingResult.start;
-            start5.assign("month", date.getMonth() + 1);
-            const start6 = parsingResult.start;
-            start6.assign("year", date.getFullYear());
+          if ("\u660E" == index[4]) {
+            date.setDate(date.getDate() + 1);
+          } else if ("\u6628" == tmp5) {
+            date.setDate(date.getDate() - 1);
+          } else if ("\u524D" == tmp5) {
+            date.setDate(date.getDate() - 2);
+          } else if ("\u5927\u524D" == tmp5) {
+            date.setDate(date.getDate() - 3);
+          } else if ("\u540E" == tmp5) {
+            date.setDate(date.getDate() + 2);
+          } else if ("\u5927\u540E" == tmp5) {
+            date.setDate(date.getDate() + 3);
           }
-          date.setDate(date.getDate() + 1);
+          const start4 = parsingResult.start;
+          start4.assign("day", date.getDate());
+          const start5 = parsingResult.start;
+          start5.assign("month", date.getMonth() + 1);
+          const start6 = parsingResult.start;
+          start6.assign("year", date.getFullYear());
         } else {
           const start = parsingResult.start;
           start.imply("day", date.getDate());
@@ -168,7 +152,7 @@ const items = [
           const _isNaN = isNaN;
           let zhStringToNumberResult = parsed;
           if (isNaN(parsed)) {
-            zhStringToNumberResult = ZHHantTimeExpressionParser(10300).zhStringToNumber(index[8]);
+            zhStringToNumberResult = ZHHansTimeExpressionParser(10300).zhStringToNumber(index[8]);
           }
           if (zhStringToNumberResult >= 60) {
             return null;
@@ -181,7 +165,7 @@ const items = [
         let parsed1 = parseInt(index[6]);
         const _isNaN2 = isNaN;
         if (isNaN(parsed1)) {
-          parsed1 = ZHHantTimeExpressionParser(10300).zhStringToNumber(index[6]);
+          parsed1 = ZHHansTimeExpressionParser(10300).zhStringToNumber(index[6]);
         }
         if (index[7]) {
           let num17 = 30;
@@ -199,7 +183,7 @@ const items = [
                 num17 = parsed2;
                 rounded = parsed1;
                 if (isNaN(parsed2)) {
-                  num17 = ZHHantTimeExpressionParser(10300).zhStringToNumber(index[7]);
+                  num17 = ZHHansTimeExpressionParser(10300).zhStringToNumber(index[7]);
                   rounded = parsed1;
                 }
               }
@@ -251,49 +235,43 @@ const items = [
             }
           } else if (index[2]) {
             const first = index[2][0];
-            if ("\u671D" != first) {
-              if ("\u65E9" != first) {
-                num20 = num19;
-                num21 = rounded;
-                if ("\u665A" == first) {
-                  let sum1 = rounded;
-                  if (12 != rounded) {
-                    sum1 = rounded + 12;
-                  }
-                  num20 = 1;
-                  num21 = sum1;
-                }
-              }
-            }
-            num20 = 0;
-            num21 = rounded;
-            if (12 == rounded) {
+            if ("\u65E9" == first) {
               num20 = 0;
-              num21 = 0;
+              num21 = rounded;
+              if (12 == rounded) {
+                num20 = 0;
+                num21 = 0;
+              }
+            } else {
+              num20 = num19;
+              num21 = rounded;
+              if ("\u665A" == first) {
+                let sum1 = rounded;
+                if (12 != rounded) {
+                  sum1 = rounded + 12;
+                }
+                num20 = 1;
+                num21 = sum1;
+              }
             }
           } else if (index[3]) {
             const first1 = index[3][0];
             if ("\u4E0A" != first1) {
-              if ("\u671D" != first1) {
-                if ("\u65E9" != first1) {
-                  if ("\u51CC" != first1) {
-                    let tmp38 = "\u4E0B" != first1;
-                    if (tmp38) {
-                      tmp38 = "\u664F" != first1;
+              if ("\u65E9" != first1) {
+                if ("\u51CC" != first1) {
+                  let tmp38 = "\u4E0B" != first1;
+                  if (tmp38) {
+                    tmp38 = "\u665A" != first1;
+                  }
+                  num20 = num19;
+                  num21 = rounded;
+                  if (!tmp38) {
+                    let sum2 = rounded;
+                    if (12 != rounded) {
+                      sum2 = rounded + 12;
                     }
-                    if (tmp38) {
-                      tmp38 = "\u665A" != first1;
-                    }
-                    num20 = num19;
-                    num21 = rounded;
-                    if (!tmp38) {
-                      let sum2 = rounded;
-                      if (12 != rounded) {
-                        sum2 = rounded + 12;
-                      }
-                      num20 = 1;
-                      num21 = sum2;
-                    }
+                    num20 = 1;
+                    num21 = sum2;
                   }
                 }
               }
@@ -310,26 +288,21 @@ const items = [
             if (index[5]) {
               const first2 = index[5][0];
               if ("\u4E0A" != first2) {
-                if ("\u671D" != first2) {
-                  if ("\u65E9" != first2) {
-                    if ("\u51CC" != first2) {
-                      let tmp35 = "\u4E0B" != first2;
-                      if (tmp35) {
-                        tmp35 = "\u664F" != first2;
+                if ("\u65E9" != first2) {
+                  if ("\u51CC" != first2) {
+                    let tmp35 = "\u4E0B" != first2;
+                    if (tmp35) {
+                      tmp35 = "\u665A" != first2;
+                    }
+                    num20 = num19;
+                    num21 = rounded;
+                    if (!tmp35) {
+                      let sum3 = rounded;
+                      if (12 != rounded) {
+                        sum3 = rounded + 12;
                       }
-                      if (tmp35) {
-                        tmp35 = "\u665A" != first2;
-                      }
-                      num20 = num19;
-                      num21 = rounded;
-                      if (!tmp35) {
-                        let sum3 = rounded;
-                        if (12 != rounded) {
-                          sum3 = rounded + 12;
-                        }
-                        num20 = 1;
-                        num21 = sum3;
-                      }
+                      num20 = 1;
+                      num21 = sum3;
                     }
                   }
                 }
@@ -364,69 +337,53 @@ const items = [
             let date1 = new Date(date.getTime());
             parsingResult.end = createParsingResult.createParsingComponents();
             if (match[1]) {
-              if ("\u660E" != match[1]) {
-                if ("\u807D" != tmp66) {
-                  if ("\u6628" != tmp66) {
-                    if ("\u5C0B" != tmp66) {
-                      if ("\u7434" != tmp66) {
-                        if ("\u524D" == tmp66) {
-                          date1.setDate(date1.getDate() - 2);
-                        } else {
-                          if ("\u5927\u524D" == tmp66) {
-                            date1.setDate(date1.getDate() - 3);
-                          } else if ("\u5F8C" != tmp66) {
-                            if ("\u5927\u5F8C" == tmp66) {
-                              date1.setDate(date1.getDate() + 3);
-                            }
-                          }
-                          date1.setDate(date1.getDate() + 2);
-                        }
-                      }
-                    }
-                  }
-                  date1.setDate(date1.getDate() - 1);
+              if ("\u660E" == match[1]) {
+                const refDate3 = createParsingResult.refDate;
+                if (refDate3.getHours() > 1) {
+                  date1.setDate(date1.getDate() + 1);
                 }
-                const end7 = parsingResult.end;
-                end7.assign("day", date1.getDate());
-                const end8 = parsingResult.end;
-                end8.assign("month", date1.getMonth() + 1);
-                const end9 = parsingResult.end;
-                date1 = date1.getFullYear();
-                end9.assign("year", date1);
+              } else if ("\u6628" == tmp66) {
+                date1.setDate(date1.getDate() - 1);
+              } else if ("\u524D" == tmp66) {
+                date1.setDate(date1.getDate() - 2);
+              } else {
+                if ("\u5927\u524D" == tmp66) {
+                  date1.setDate(date1.getDate() - 3);
+                } else if ("\u540E" != tmp66) {
+                  if ("\u5927\u540E" == tmp66) {
+                    date1.setDate(date1.getDate() + 3);
+                  }
+                }
+                date1.setDate(date1.getDate() + 2);
               }
-              const refDate3 = createParsingResult.refDate;
-              if (refDate3.getHours() > 1) {
-                date1.setDate(date1.getDate() + 1);
-              }
+              const end7 = parsingResult.end;
+              end7.assign("day", date1.getDate());
+              const end8 = parsingResult.end;
+              end8.assign("month", date1.getMonth() + 1);
+              const end9 = parsingResult.end;
+              date1 = date1.getFullYear();
+              end9.assign("year", date1);
             } else {
               if (match[4]) {
-                if ("\u660E" != match[4]) {
-                  if ("\u807D" != tmp57) {
-                    if ("\u6628" != tmp57) {
-                      if ("\u5C0B" != tmp57) {
-                        if ("\u7434" != tmp57) {
-                          if ("\u524D" == tmp57) {
-                            date1.setDate(date1.getDate() - 2);
-                          } else if ("\u5927\u524D" == tmp57) {
-                            date1.setDate(date1.getDate() - 3);
-                          } else if ("\u5F8C" == tmp57) {
-                            date1.setDate(date1.getDate() + 2);
-                          } else if ("\u5927\u5F8C" == tmp57) {
-                            date1.setDate(date1.getDate() + 3);
-                          }
-                        }
-                      }
-                    }
-                    date1.setDate(date1.getDate() - 1);
-                  }
-                  const end4 = parsingResult.end;
-                  end4.assign("day", date1.getDate());
-                  const end5 = parsingResult.end;
-                  end5.assign("month", date1.getMonth() + 1);
-                  const end6 = parsingResult.end;
-                  end6.assign("year", date1.getFullYear());
+                if ("\u660E" == match[4]) {
+                  date1.setDate(date1.getDate() + 1);
+                } else if ("\u6628" == tmp57) {
+                  date1.setDate(date1.getDate() - 1);
+                } else if ("\u524D" == tmp57) {
+                  date1.setDate(date1.getDate() - 2);
+                } else if ("\u5927\u524D" == tmp57) {
+                  date1.setDate(date1.getDate() - 3);
+                } else if ("\u540E" == tmp57) {
+                  date1.setDate(date1.getDate() + 2);
+                } else if ("\u5927\u540E" == tmp57) {
+                  date1.setDate(date1.getDate() + 3);
                 }
-                date1.setDate(date1.getDate() + 1);
+                const end4 = parsingResult.end;
+                end4.assign("day", date1.getDate());
+                const end5 = parsingResult.end;
+                end5.assign("month", date1.getMonth() + 1);
+                const end6 = parsingResult.end;
+                end6.assign("year", date1.getFullYear());
               } else {
                 const end = parsingResult.end;
                 end.imply("day", date1.getDate());
@@ -441,7 +398,7 @@ const items = [
                 const _isNaN4 = isNaN;
                 let zhStringToNumberResult1 = parsed3;
                 if (isNaN(parsed3)) {
-                  zhStringToNumberResult1 = ZHHantTimeExpressionParser(10300).zhStringToNumber(match[8]);
+                  zhStringToNumberResult1 = ZHHansTimeExpressionParser(10300).zhStringToNumber(match[8]);
                 }
                 if (zhStringToNumberResult1 >= 60) {
                   return null;
@@ -454,7 +411,7 @@ const items = [
               let parsed4 = parseInt(match[6]);
               const _isNaN5 = isNaN;
               if (isNaN(parsed4)) {
-                parsed4 = ZHHantTimeExpressionParser(10300).zhStringToNumber(match[6]);
+                parsed4 = ZHHansTimeExpressionParser(10300).zhStringToNumber(match[6]);
               }
               if (match[7]) {
                 let num38 = 30;
@@ -472,7 +429,7 @@ const items = [
                       num38 = parsed5;
                       rounded1 = parsed4;
                       if (isNaN(parsed5)) {
-                        num38 = ZHHantTimeExpressionParser(10300).zhStringToNumber(match[7]);
+                        num38 = ZHHansTimeExpressionParser(10300).zhStringToNumber(match[7]);
                         rounded1 = parsed4;
                       }
                     }
@@ -551,49 +508,43 @@ const items = [
                   }
                 } else if (match[2]) {
                   const first3 = match[2][0];
-                  if ("\u671D" != first3) {
-                    if ("\u65E9" != first3) {
-                      num40 = num39;
-                      num41 = rounded1;
-                      if ("\u665A" == first3) {
-                        let sum5 = rounded1;
-                        if (12 != rounded1) {
-                          sum5 = rounded1 + 12;
-                        }
-                        num40 = 1;
-                        num41 = sum5;
-                      }
-                    }
-                  }
-                  num40 = 0;
-                  num41 = rounded1;
-                  if (12 == rounded1) {
+                  if ("\u65E9" == first3) {
                     num40 = 0;
-                    num41 = 0;
+                    num41 = rounded1;
+                    if (12 == rounded1) {
+                      num40 = 0;
+                      num41 = 0;
+                    }
+                  } else {
+                    num40 = num39;
+                    num41 = rounded1;
+                    if ("\u665A" == first3) {
+                      let sum5 = rounded1;
+                      if (12 != rounded1) {
+                        sum5 = rounded1 + 12;
+                      }
+                      num40 = 1;
+                      num41 = sum5;
+                    }
                   }
                 } else if (match[3]) {
                   const first4 = match[3][0];
                   if ("\u4E0A" != first4) {
-                    if ("\u671D" != first4) {
-                      if ("\u65E9" != first4) {
-                        if ("\u51CC" != first4) {
-                          let tmp90 = "\u4E0B" != first4;
-                          if (tmp90) {
-                            tmp90 = "\u664F" != first4;
+                    if ("\u65E9" != first4) {
+                      if ("\u51CC" != first4) {
+                        let tmp90 = "\u4E0B" != first4;
+                        if (tmp90) {
+                          tmp90 = "\u665A" != first4;
+                        }
+                        num40 = num39;
+                        num41 = rounded1;
+                        if (!tmp90) {
+                          let sum6 = rounded1;
+                          if (12 != rounded1) {
+                            sum6 = rounded1 + 12;
                           }
-                          if (tmp90) {
-                            tmp90 = "\u665A" != first4;
-                          }
-                          num40 = num39;
-                          num41 = rounded1;
-                          if (!tmp90) {
-                            let sum6 = rounded1;
-                            if (12 != rounded1) {
-                              sum6 = rounded1 + 12;
-                            }
-                            num40 = 1;
-                            num41 = sum6;
-                          }
+                          num40 = 1;
+                          num41 = sum6;
                         }
                       }
                     }
@@ -610,26 +561,21 @@ const items = [
                   if (match[5]) {
                     const first5 = match[5][0];
                     if ("\u4E0A" != first5) {
-                      if ("\u671D" != first5) {
-                        if ("\u65E9" != first5) {
-                          if ("\u51CC" != first5) {
-                            let tmp87 = "\u4E0B" != first5;
-                            if (tmp87) {
-                              tmp87 = "\u664F" != first5;
+                      if ("\u65E9" != first5) {
+                        if ("\u51CC" != first5) {
+                          let tmp87 = "\u4E0B" != first5;
+                          if (tmp87) {
+                            tmp87 = "\u665A" != first5;
+                          }
+                          num40 = num39;
+                          num41 = rounded1;
+                          if (!tmp87) {
+                            let sum7 = rounded1;
+                            if (12 != rounded1) {
+                              sum7 = rounded1 + 12;
                             }
-                            if (tmp87) {
-                              tmp87 = "\u665A" != first5;
-                            }
-                            num40 = num39;
-                            num41 = rounded1;
-                            if (!tmp87) {
-                              let sum7 = rounded1;
-                              if (12 != rounded1) {
-                                sum7 = rounded1 + 12;
-                              }
-                              num40 = 1;
-                              num41 = sum7;
-                            }
+                            num40 = 1;
+                            num41 = sum7;
                           }
                         }
                       }
@@ -680,7 +626,7 @@ const items = [
             }
           } else {
             let tmp51 = null;
-            if (!str44.match(/^\d+$/)) {
+            if (!str39.match(/^\d+$/)) {
               tmp51 = parsingResult;
             }
             return tmp51;
@@ -691,4 +637,4 @@ const items = [
   },
 ];
 
-export default _createClass(ZHHantTimeExpressionParser, items);
+export default _createClass(ZHHansTimeExpressionParser, items);

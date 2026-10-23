@@ -1,14 +1,17 @@
 // _runtime/metro/06443__.js
-import _mod6375 from "06375__.js";
+import _mod6426 from "06426__.js";
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod6375(arg0);
-    }
-    str = str2;
+export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
+  let tmp = _mod6426(arg1);
+  if (tmp) {
+    tmp = "[[Enumerable]]" in arg1;
   }
-  return str;
+  if (tmp) {
+    tmp = "[[Configurable]]" in arg1;
+  }
+  if (tmp) {
+    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+  }
+  return tmp;
 }

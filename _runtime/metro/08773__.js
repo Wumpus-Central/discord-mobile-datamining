@@ -1,40 +1,22 @@
 // _runtime/metro/08773__.js
-import _mod8774 from "08774__.js";
-import _mod8782 from "08782__.js";
-import flattenStyle from "08775__.js";
-import "module_5003";
-import emptyFunction_mod from "05003__.js";
 
-const obj = {};
-const module_8774 = Object.assign(_mod8774);
-obj.style = flattenStyle(_mod8782);
-let emptyFunction = emptyFunction_mod;
-const obj2 = { uri: emptyFunction.string, headers: null };
-let emptyFunction = emptyFunction_mod;
-obj2.headers = emptyFunction.objectOf(emptyFunction.string);
-const items = [emptyFunction.shape(obj2), emptyFunction.number];
-let emptyFunction = emptyFunction_mod;
-const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
-let emptyFunction = emptyFunction_mod;
-size.headers = emptyFunction.objectOf(emptyFunction.string);
-items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
-obj.source = emptyFunction.oneOfType(items);
-obj.blurRadius = emptyFunction.number;
-obj.defaultSource = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
-obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
-obj.progressiveRenderingEnabled = emptyFunction.bool;
-obj.fadeDuration = emptyFunction.number;
-obj.internal_analyticTag = emptyFunction.string;
-obj.onLoadStart = emptyFunction.func;
-obj.onError = emptyFunction.func;
-obj.onLoad = emptyFunction.func;
-obj.onLoadEnd = emptyFunction.func;
-obj.testID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
-
-export default obj;
+export default (obj) => {
+  if (obj instanceof Object) {
+    const _Array = Array;
+    if (!Array.isArray(obj)) {
+      obj = {};
+      for (const key10010 in arg0) {
+        if (!arg0.hasOwnProperty(key10010)) {
+          continue;
+        } else {
+          obj[key10010] = key10010;
+          continue;
+        }
+        continue;
+      }
+      return obj;
+    }
+  }
+  const error = new Error("keyMirror(...): Argument must be an object.");
+  throw error;
+};

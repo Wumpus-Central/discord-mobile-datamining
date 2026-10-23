@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "2735b94e62f2bc71613cf7e1aec9c3fe",
-  name: "img_account_sync_twitch_white",
-  type: "svg",
+  hash: "344ee148b183cbe058428a0b2e53672e",
+  name: "img_account_sync_youtube_light_and_dark",
+  type: "png",
 });

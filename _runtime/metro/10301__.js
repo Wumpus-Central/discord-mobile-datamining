@@ -1,13 +1,13 @@
 // _runtime/metro/10301__.js
-import AbstractParserWithWordBoundaryChecking from "../10192_AbstractParserWithWordBoundaryChecking.js";
-import _mod10300 from "10300__.js";
+import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
+import NUMBER from "../10300_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHantDeadlineFormatParser = require;
+const ZHHansDeadlineFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,19 +26,19 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const keys = Object.keys(_mod10300.NUMBER);
+const keys = Object.keys(NUMBER.NUMBER);
 const regExp = new RegExp(
   "(\\d+|[" +
     keys.join("") +
-    "]+|\u534A|\u5E7E)(?:\\s*)(?:\u500B)?(\u79D2(?:\u9418)?|\u5206\u9418|\u5C0F\u6642|\u9418|\u65E5|\u5929|\u661F\u671F|\u79AE\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u904E)?\u5F8C|(?:\u4E4B)?\u5167)",
+    "]+|\u534A|\u51E0)(?:\\s*)(?:\u4E2A)?(\u79D2(?:\u949F)?|\u5206\u949F|\u5C0F\u65F6|\u949F|\u65E5|\u5929|\u661F\u671F|\u793C\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u8FC7)?\u540E|(?:\u4E4B)?\u5185)",
   "i",
 );
-class ZHHantDeadlineFormatParser {
+class ZHHansDeadlineFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantDeadlineFormatParser);
+    tmp = c2(this, ZHHansDeadlineFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantDeadlineFormatParser);
+    obj = closure_4(ZHHansDeadlineFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,7 +53,7 @@ class ZHHantDeadlineFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHansDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -68,11 +68,11 @@ const items = [
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
       let num = parseInt(index[1]);
       if (isNaN(num)) {
-        num = ZHHantDeadlineFormatParser(10300).zhStringToNumber(index[1]);
+        num = ZHHansDeadlineFormatParser(10300).zhStringToNumber(index[1]);
       }
       if (isNaN(num)) {
         num = 3;
-        if ("\u5E7E" !== index[1]) {
+        if ("\u51E0" !== index[1]) {
           num = 0.5;
           if ("\u534A" !== tmp4) {
             return null;
@@ -80,11 +80,11 @@ const items = [
         }
       }
       const obj = {};
-      if (index[2][0].match(/[日天星禮月年]/)) {
+      if (index[2][0].match(/[日天星礼月年]/)) {
         if ("\u65E5" != str3) {
           if ("\u5929" != str3) {
             if ("\u661F" != str3) {
-              if ("\u79AE" != str3) {
+              if ("\u793C" != str3) {
                 if ("\u6708" == str3) {
                   obj.month = num;
                 } else if ("\u5E74" == str3) {
@@ -94,7 +94,7 @@ const items = [
             }
             obj.week = num;
           }
-          const addDurationResult = ZHHantDeadlineFormatParser(10187).addDuration(createParsingResult.refDate, obj);
+          const addDurationResult = ZHHansDeadlineFormatParser(10194).addDuration(createParsingResult.refDate, obj);
           const start7 = parsingResult.start;
           start7.assign("year", addDurationResult.getFullYear());
           const start8 = parsingResult.start;
@@ -112,13 +112,13 @@ const items = [
         } else {
           let tmp6 = "\u5C0F" != str3;
           if (tmp6) {
-            tmp6 = "\u9418" != str3;
+            tmp6 = "\u949F" != str3;
           }
           if (!tmp6) {
             obj.hour = num;
           }
         }
-        const addDurationResult1 = ZHHantDeadlineFormatParser(10187).addDuration(createParsingResult.refDate, obj);
+        const addDurationResult1 = ZHHansDeadlineFormatParser(10194).addDuration(createParsingResult.refDate, obj);
         const start = parsingResult.start;
         start.imply("year", addDurationResult1.getFullYear());
         const start2 = parsingResult.start;
@@ -137,4 +137,4 @@ const items = [
   },
 ];
 
-export default _createClass(ZHHantDeadlineFormatParser, items);
+export default _createClass(ZHHansDeadlineFormatParser, items);

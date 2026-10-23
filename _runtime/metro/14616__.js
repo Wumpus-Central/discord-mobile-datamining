@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 155,
-  height: 16,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 33,
   scales: [2, 3],
-  hash: "f1a4755bd0ec77fe9aa6ee1c38735df7",
-  name: "img_logo_nitro_classic_horizontal_light",
+  hash: "68d0a7491ea9de9245e6ac89adfb6384",
+  name: "img_tier_0_error_mobile",
   type: "png",
 });

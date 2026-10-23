@@ -1,61 +1,94 @@
 // _runtime/metro/10259__.js
+import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
-  "i",
-);
-class JPSlashDateFormatParser {
+const FRTimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FRTimeUnitAgoFormatParser {
   constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+    self = this;
+    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:les?|la|l'|du|des?)\\s*(" +
+        FRTimeUnitAgoFormatParser(10254).NUMBER_PATTERN +
+        ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" +
+        FRTimeUnitAgoFormatParser(10192).matchAnyPattern(FRTimeUnitAgoFormatParser(10254).TIME_UNIT_DICTIONARY) +
+        ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?",
+      "i",
+    );
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10255).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10255).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10255).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10186).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply(
-                  "year",
-                  JPSlashDateFormatParser(10186).findYearClosestToRef(
-                    createParsingComponents.reference.instant,
-                    parsed1,
-                    parsed,
-                  ),
-                );
-              }
-              return parsingComponents;
-            }
-          }
-          return null;
-        }
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[1]) {
+        num = FRTimeUnitAgoFormatParser(10254).parseNumberPattern(arg1[1]);
       }
-      return null;
+      const obj = {};
+      obj[FRTimeUnitAgoFormatParser(10254).TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
+      const formatted = arg1[2] || arg1[4] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /derni[eè]re?s?/.test(formatted);
+        if (!isMatch) {
+          isMatch = /pass[ée]e?s?/.test(formatted);
+          const obj3 = /pass[ée]e?s?/;
+        }
+        if (!isMatch) {
+          isMatch = /pr[ée]c[ée]dents?/.test(formatted);
+          const obj4 = /pr[ée]c[ée]dents?/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = FRTimeUnitAgoFormatParser(10194).reverseDuration(obj);
+        }
+        const ParsingComponents = FRTimeUnitAgoFormatParser(10195).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[2] || arg1[4] || "";
     },
   },
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(FRTimeUnitAgoFormatParser, items);

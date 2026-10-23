@@ -1,11 +1,42 @@
 // _runtime/metro/15538__.js
-import _mod15511 from "15511__.js";
+import _mod15503 from "15503__.js";
+import _mod15525 from "15525__.js";
 
-export default (arg0) => {
-  if (_mod15511(arg0)) {
-    return arg0;
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15525(arg1)) {
+          tmp11Result = _mod15503;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
+      }
+    }
+    return tmp7;
   } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+    throw new TypeError("Trying to call a non-function");
   }
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

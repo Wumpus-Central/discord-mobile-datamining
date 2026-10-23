@@ -92,8 +92,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "keyword",
-      reduceMotion: "to top left",
+      startTimestamp: "CONJURE_CHAT_SIDE_REPLY",
+      reduceMotion: null,
     };
     let num = obj.velocity;
     if (num == null) {

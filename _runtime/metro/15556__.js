@@ -1,37 +1,45 @@
 // _runtime/metro/15556__.js
+import _mod15500 from "15500__.js";
+import _mod15525 from "15525__.js";
+import _mod15553 from "15553__.js";
+import _mod15557 from "15557__.js";
 
-export default {
-  name: "react-native-url-polyfill",
-  version: "2.0.0",
-  description: "A lightweight and trustworthy URL polyfill for React Native",
-  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
-  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
-  homepage: "https://github.com/charpeni/react-native-url-polyfill",
-  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
-  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
-  main: "index.js",
-  types: "index.d.ts",
-  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
-  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
-  license: "MIT",
-  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
-  devDependencies: {
-    "@react-native-community/eslint-config": "3.2.0",
-    detox: "20.9.1",
-    eslint: "8.44.0",
-    "eslint-plugin-prettier": "4.2.1",
-    husky: "8.0.3",
-    jest: "29.5.0",
-    "lint-staged": "13.2.3",
-    "metro-react-native-babel-preset": "0.76.7",
-    nanoid: "3.3.6",
-    prettier: "2.8.8",
-    react: "18.2.0",
-    "react-native": "0.72.1",
-    "react-native-bundle-scale": "1.1.0",
-    typescript: "5.1.6",
-  },
-  peerDependencies: { "react-native": "*" },
-  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
-  "lint-staged": { "*.js": ["eslint --fix"] },
+export default (arg0, arg1, value, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
+    obj = {};
+  }
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (_mod15525(value)) {
+    _mod15557(value, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = value;
+    } else {
+      _mod15500(arg1, value);
+    }
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
+        }
+      } else {
+        delete tmp[tmp2];
+      }
+      if (flag) {
+        arg0[arg1] = value;
+      } else {
+        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
+        _mod15553.f(arg0, arg1, obj2);
+        const tmp3Result = _mod15553;
+      }
+    } catch (err) {}
+  }
+  return arg0;
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ccc400a106e8185c58835ca1201624f3",
-  name: "ExperimentalDirectSelectIcon",
+  hash: "04284dcfb33cab4ac93ceefb6696c6d5",
+  name: "ActivitiesIcon",
   type: "png",
 });

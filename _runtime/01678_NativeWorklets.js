@@ -11,7 +11,7 @@ class NativeWorklets {
   constructor() {
     tmp = closure_3(this, NativeWorklets);
     tmp2 = hasOwnProperty;
-    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
     tmp4 = closure_0;
     if (undefined === closure_0.__workletsModuleProxy) {
       tmp5 = closure_1;

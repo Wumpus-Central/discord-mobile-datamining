@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4a70f7aa7e8a3ecde1dcede1f7baaaa2",
-  name: "ic_send",
+  hash: "ca5ed05660659bd429f0c8e3c3fa0755",
+  name: "ic_trash_24px",
   type: "png",
 });

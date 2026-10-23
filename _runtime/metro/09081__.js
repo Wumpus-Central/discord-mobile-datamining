@@ -1,4 +1,3 @@
 // _runtime/metro/09081__.js
-import _mod9082 from "09082__.js";
 
-export default _mod9082();
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

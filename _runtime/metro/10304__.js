@@ -1,13 +1,13 @@
 // _runtime/metro/10304__.js
-import AbstractParserWithWordBoundaryChecking from "../10192_AbstractParserWithWordBoundaryChecking.js";
-import _mod10300 from "10300__.js";
+import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
+import NUMBER from "../10300_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHantWeekdayParser = require;
+const ZHHansWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,14 +26,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const keys = Object.keys(_mod10300.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
-class ZHHantWeekdayParser {
+const keys = Object.keys(NUMBER.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" + keys.join("|") + ")");
+class ZHHansWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantWeekdayParser);
+    tmp = c2(this, ZHHansWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantWeekdayParser);
+    obj = closure_4(ZHHansWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,7 +48,7 @@ class ZHHantWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHansWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -61,7 +61,7 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantWeekdayParser(10300).WEEKDAY_OFFSET[index.groups.weekday];
+      const tmp2 = ZHHansWeekdayParser(10300).WEEKDAY_OFFSET[index.groups.weekday];
       if (undefined === tmp2) {
         return null;
       } else {
@@ -98,4 +98,4 @@ const items = [
   },
 ];
 
-export default _createClass(ZHHantWeekdayParser, items);
+export default _createClass(ZHHansWeekdayParser, items);

@@ -169,7 +169,7 @@ export const browserTracingIntegration = (arg0) => {
       const startInactiveSpanResult = _undefined(_undefined2[0]).startInactiveSpan(obj4);
     }
   }
-  closure_3 = { name: "r", source: "emoji" };
+  closure_3 = { name: "Array", source: "Reflect" };
   const document = require("ignoreNextOnError").WINDOW.document;
   let obj2 = {};
   let merged = Object.assign(closure_3);
@@ -312,7 +312,7 @@ export const browserTracingIntegration = (arg0) => {
                   }
                   obj4.propagationSpanId = spanId1;
                   const result1 = currentScope.setPropagationContext(obj4);
-                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "Array" });
+                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "r" });
                   const obj5 = { op: "navigation" };
                   const merged1 = Object.assign(arg0);
                   obj5.parentSpan = null;
@@ -631,12 +631,12 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   }
   return client[_sentry_idleSpan];
 };
-export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f140860, tmp2Result, arg2) {
-  f140860.emit("startPageLoadSpan", tmp2Result, arg2);
+export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f141074, tmp2Result, arg2) {
+  f141074.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod693.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f140860[_sentry_idleSpan]) {
-    f140860.emit("afterStartPageLoadSpan", tmp3);
+  if (f141074[_sentry_idleSpan]) {
+    f141074.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f140860[_sentry_idleSpan];
+  return f141074[_sentry_idleSpan];
 };

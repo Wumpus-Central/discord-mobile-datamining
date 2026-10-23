@@ -1,5 +1,25 @@
 // _runtime/metro/15491__.js
-import _mod15492 from "15492__.js";
-import _mod15496 from "15496__.js";
+const require = globalThis.__r;
 
-export default (arg0) => _mod15492(_mod15496(arg0));
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("15492__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
+};

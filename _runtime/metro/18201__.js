@@ -1,13 +1,16 @@
 // _runtime/metro/18201__.js
-import registerAsset from "01134__.js";
+import _mod7909 from "07909__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 292,
-  height: 182,
-  scales: [2, 3],
-  hash: "4eb5c147e02fe50003e9c4d31a0b00b8",
-  name: "webhook_empty_light",
-  type: "png",
-});
+export default _mod7909(
+  (arg0, arg1, arg2) => {
+    let num = 1;
+    if (arg2) {
+      num = 0;
+    }
+    arg0[num].push(arg1);
+  },
+  () => {
+    const items = [[], []];
+    return items;
+  },
+);

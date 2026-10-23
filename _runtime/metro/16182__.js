@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/consoles",
-  width: 84,
-  height: 46,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "1dc3d638940bcdf9b267c8229f603041",
-  name: "xbox_upsell",
+  hash: "8eabe75983473aecbcb03200bb7a397b",
+  name: "ic_alert",
   type: "png",
 });

@@ -1,14 +1,13 @@
 // _runtime/metro/10368__.js
-import repeatedTimeunitPattern from "../10185_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10192_AbstractParserWithWordBoundaryChecking.js";
-import _mod10354 from "10354__.js";
+import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
+import _mod10361 from "10361__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ITRelativeDateFormatParser = require;
+const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,86 +26,47 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(questo|ultimo|scorso|prossimo|dopo\\s*questo|questa|ultima|scorsa|prossima\\s*questa)\\s*(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10354.TIME_UNIT_DICTIONARY) +
-    ")(?=\\s*)(?=\\W|$)",
-  "i",
-);
-class ITRelativeDateFormatParser {
-  constructor() {
+const regExp = new RegExp("(" + _mod10361.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod10361.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
+class ENTimeUnitAgoFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, ITRelativeDateFormatParser);
+    tmp = c2(this, ENTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ITRelativeDateFormatParser);
+    obj = closure_4(ENTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.strictMode ? regExp1 : regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp3 = ITRelativeDateFormatParser(10354).TIME_UNIT_DICTIONARY[str3];
-      if ("prossimo" != formatted) {
-        if (!formatted.startsWith("dopo")) {
-          if ("prima" != formatted) {
-            if ("precedente" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
-              const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/settimana/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/mese/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/anno/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
-            }
-          }
-          const obj4 = {};
-          obj4[tmp3] = -1;
-          const ParsingComponents = ITRelativeDateFormatParser(10188).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
-        }
-      }
-      const ParsingComponents2 = ITRelativeDateFormatParser(10188).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = ENTimeUnitAgoFormatParser(10361).parseDuration(arg1[1]);
+      const ParsingComponents = ENTimeUnitAgoFormatParser(10195).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        ENTimeUnitAgoFormatParser(10194).reverseDuration(ENTimeUnitAgoFormatParser(10361).parseDuration(arg1[1])),
+      );
     },
   },
 ];
 
-export default _createClass(ITRelativeDateFormatParser, items);
+export default _createClass(ENTimeUnitAgoFormatParser, items);

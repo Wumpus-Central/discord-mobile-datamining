@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 98,
+  height: 53,
   scales: [2, 3],
-  hash: "01ba5b6e261b3f78c312695fe4f7b0d7",
-  name: "BoostTier2Icon",
+  hash: "5ef9dbb61427b1140982c78eede17afd",
+  name: "mfa-server",
   type: "png",
 });

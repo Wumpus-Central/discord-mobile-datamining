@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 61,
-  height: 61,
+  width: 57,
+  height: 56.666666666666664,
   scales: [3],
-  hash: "a162bb51b9ed292f4f10e545ed35e2e3",
-  name: "asset_platinum_badge_small",
+  hash: "1df6ee7cceb670ae2dfd3feed8d2acfc",
+  name: "asset_bronze_badge_small",
   type: "png",
 });

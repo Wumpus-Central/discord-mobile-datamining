@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 185,
-  height: 32,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
   scales: [2, 3],
-  hash: "e0f9d218f8abae1fb9b3c6aeee68fd32",
-  name: "img_logo_bundle_horizontal",
+  hash: "f6149fc51c6f815b5a58a1e50a88555c",
+  name: "img_subheader_resub_mobile",
   type: "png",
 });

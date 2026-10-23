@@ -1,150 +1,41 @@
 // _runtime/metro/08784__.js
-import colorPropType from "../08770_colorPropType.js";
-import _mod8774 from "08774__.js";
+import colorPropType from "../08777_colorPropType.js";
 import _mod8785 from "08785__.js";
+import merged12 from "../08786_merged1.js";
+import merged22 from "../08787_merged2.js";
 import emptyFunction_mod from "05003__.js";
-import "module_5003";
 
-const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
 const obj = {};
-const module_8774 = Object.assign(_mod8774);
+const size = Object.assign(_mod8785);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
 let emptyFunction = emptyFunction_mod;
-obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderTopColor = colorPropType;
+obj.borderRightColor = colorPropType;
+obj.borderBottomColor = colorPropType;
+obj.borderLeftColor = colorPropType;
+obj.borderStartColor = colorPropType;
+obj.borderEndColor = colorPropType;
+obj.borderRadius = emptyFunction.number;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderTopStartRadius = emptyFunction.number;
+obj.borderTopEndRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+obj.borderBottomStartRadius = emptyFunction.number;
+obj.borderBottomEndRadius = emptyFunction.number;
 let emptyFunction = emptyFunction_mod;
-obj.autoCompleteType = emptyFunction.oneOf([
-  "cc-csc",
-  "cc-exp",
-  "cc-exp-month",
-  "cc-exp-year",
-  "cc-number",
-  "email",
-  "name",
-  "password",
-  "postal-code",
-  "street-address",
-  "tel",
-  "username",
-  "off",
-]);
-obj.autoCorrect = emptyFunction.bool;
-obj.spellCheck = emptyFunction.bool;
-obj.autoFocus = emptyFunction.bool;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.editable = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.keyboardType = emptyFunction.oneOf([
-  "default",
-  "email-address",
-  "numeric",
-  "phone-pad",
-  "number-pad",
-  "ascii-capable",
-  "numbers-and-punctuation",
-  "url",
-  "name-phone-pad",
-  "decimal-pad",
-  "twitter",
-  "web-search",
-  "ascii-capable-number-pad",
-  "visible-password",
-]);
-let emptyFunction = emptyFunction_mod;
-obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
-let emptyFunction = emptyFunction_mod;
-obj.returnKeyType = emptyFunction.oneOf([
-  "done",
-  "go",
-  "next",
-  "search",
-  "send",
-  "none",
-  "previous",
-  "default",
-  "emergency-call",
-  "google",
-  "join",
-  "route",
-  "yahoo",
-]);
-obj.returnKeyLabel = emptyFunction.string;
-obj.maxLength = emptyFunction.number;
-obj.numberOfLines = emptyFunction.number;
-obj.disableFullscreenUI = emptyFunction.bool;
-obj.enablesReturnKeyAutomatically = emptyFunction.bool;
-obj.multiline = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onBlur = emptyFunction.func;
-obj.onFocus = emptyFunction.func;
-obj.onChange = emptyFunction.func;
-obj.onChangeText = emptyFunction.func;
-obj.onContentSizeChange = emptyFunction.func;
-obj.onTextInput = emptyFunction.func;
-obj.onEndEditing = emptyFunction.func;
-obj.onSelectionChange = emptyFunction.func;
-obj.onSubmitEditing = emptyFunction.func;
-obj.onKeyPress = emptyFunction.func;
-obj.onLayout = emptyFunction.func;
-obj.onScroll = emptyFunction.func;
-obj.placeholder = emptyFunction.string;
-obj.placeholderTextColor = colorPropType;
-obj.scrollEnabled = emptyFunction.bool;
-obj.secureTextEntry = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
-obj.value = emptyFunction.string;
-obj.defaultValue = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
-obj.clearTextOnFocus = emptyFunction.bool;
-obj.selectTextOnFocus = emptyFunction.bool;
-obj.blurOnSubmit = emptyFunction.bool;
-obj.style = _mod8785.style;
-obj.underlineColorAndroid = colorPropType;
-obj.inlineImageLeft = emptyFunction.string;
-obj.inlineImagePadding = emptyFunction.number;
-obj.rejectResponderTermination = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.oneOf(items)];
-let emptyFunction = emptyFunction_mod;
-items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
-obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
-obj.caretHidden = emptyFunction.bool;
-obj.contextMenuHidden = emptyFunction.bool;
-obj.inputAccessoryViewID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.textContentType = emptyFunction.oneOf([
-  "none",
-  "URL",
-  "addressCity",
-  "addressCityAndState",
-  "addressState",
-  "countryName",
-  "creditCardNumber",
-  "emailAddress",
-  "familyName",
-  "fullStreetAddress",
-  "givenName",
-  "jobTitle",
-  "location",
-  "middleName",
-  "name",
-  "namePrefix",
-  "nameSuffix",
-  "nickname",
-  "organizationName",
-  "postalCode",
-  "streetAddressLine1",
-  "streetAddressLine2",
-  "sublocality",
-  "telephoneNumber",
-  "username",
-  "password",
-  "newPassword",
-  "oneTimeCode",
-]);
-obj.showSoftInputOnFocus = emptyFunction.bool;
+obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
+obj.borderWidth = emptyFunction.number;
+obj.borderTopWidth = emptyFunction.number;
+obj.borderRightWidth = emptyFunction.number;
+obj.borderBottomWidth = emptyFunction.number;
+obj.borderLeftWidth = emptyFunction.number;
+obj.opacity = emptyFunction.number;
+obj.elevation = emptyFunction.number;
 
 export default obj;

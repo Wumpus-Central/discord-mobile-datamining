@@ -1,12 +1,12 @@
 // _runtime/metro/10250__.js
-import AbstractParserWithWordBoundaryChecking from "../10192_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractTimeExpressionParser from "../10206_AbstractTimeExpressionParser.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const FRTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,47 +25,60 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FRTimeUnitAgoFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class FRTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, FRTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
+    tmp = closure_0(this, FRTimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(FRTimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = FRTimeExpressionParser;
+_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "il y a\\s*(" + FRTimeUnitAgoFormatParser(10247).TIME_UNITS_PATTERN + ")(?=(?:\\W|$))",
-      "i",
-    );
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:[\u00E0a])\\s*)?";
   },
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = FRTimeUnitAgoFormatParser(10247).parseDuration(arg1[1]);
-      const ParsingComponents = FRTimeUnitAgoFormatParser(10188).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        FRTimeUnitAgoFormatParser(10187).reverseDuration(FRTimeUnitAgoFormatParser(10247).parseDuration(arg1[1])),
-      );
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
     },
   },
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(FRTimeExpressionParser, items);

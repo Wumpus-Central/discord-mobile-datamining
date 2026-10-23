@@ -1,13 +1,19 @@
 // _runtime/metro/10439__.js
-import registerAsset from "01134__.js";
+import _mod19 from "00019__.js";
+import _modDef10440 from "10440__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "44a779cd60ac7d5dac850e6fc886896f",
-  name: "img_nitro_subheader_mobile",
-  type: "png",
-});
+const useRef = _mod19.useRef;
+let closure_3 = [];
+
+export default function useStableMemo(cResult, cResult2) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  } else if (!_modDef10440(cResult2, tmp2.current)) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  }
+  return tmp.current;
+}

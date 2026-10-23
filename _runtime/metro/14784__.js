@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  hash: "2e0d6978350694e35552111153599c69",
+  name: "BoostTier3Icon",
   type: "png",
 });
