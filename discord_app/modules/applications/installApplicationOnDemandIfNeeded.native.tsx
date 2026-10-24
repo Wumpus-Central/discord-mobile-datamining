@@ -116,9 +116,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5157).dismissKeyboard();
-          let obj = closure_1_0(5157);
-          closure_1_0(10743).openOAuth2Modal({
+          closure_1_0(5159).dismissKeyboard();
+          let obj = closure_1_0(5159);
+          closure_1_0(10744).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

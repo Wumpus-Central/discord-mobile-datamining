@@ -14,7 +14,7 @@ const View = fn(17).View;
 const constants = fn(1087).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -182,9 +182,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       sku = sku.sku;
       let getOrFetchApplication;
       const tmp = closure_8();
-      getOrFetchApplication = getOrFetchApplication(7255).useGetOrFetchApplication(sku.applicationId);
-      let obj = getOrFetchApplication(7255);
-      const userPrice = getOrFetchApplication(10559).useFormattedSKUPrice({
+      getOrFetchApplication = getOrFetchApplication(7257).useGetOrFetchApplication(sku.applicationId);
+      let obj = getOrFetchApplication(7257);
+      const userPrice = getOrFetchApplication(10560).useFormattedSKUPrice({
         sku,
         priceSetAssignmentPurchaseType: constants.GIFT,
       }).userPrice;
@@ -211,20 +211,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items2 = [tmp8Result];
         const obj8 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-        items2[1] = closure_6(tmp2(5232).Text, obj8);
+        items2[1] = closure_6(tmp2(5234).Text, obj8);
         obj6.children = items2;
         tmp6Result = closure_7(View, obj6);
       }
       const items3 = [
         tmp6Result,
-        closure_6(getOrFetchApplication(5232).Text, { variant: "text-md/semibold", children: sku.name }),
+        closure_6(getOrFetchApplication(5234).Text, { variant: "text-md/semibold", children: sku.name }),
       ];
       obj5.children = items3;
       items1[1] = closure_7(View, obj5);
       let tmp8Result2 = null != userPrice;
       if (tmp8Result2) {
         const obj10 = { variant: "text-md/semibold", children: userPrice };
-        tmp8Result2 = closure_6(tmp2(5232).Text, obj10);
+        tmp8Result2 = closure_6(tmp2(5234).Text, obj10);
       }
       items1[2] = tmp8Result2;
       obj4.children = items1;

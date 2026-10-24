@@ -155,6 +155,8 @@ import NitroGem18Lottie from "components/LottieIcon/native/generated/NitroGem18L
 import NitroGem24Lottie from "components/LottieIcon/native/generated/NitroGem24Lottie.tsx";
 import MessageRequestLottie from "components/LottieIcon/native/generated/MessageRequestLottie.tsx";
 import ToggleButton from "components/Button/native/ToggleButton.native.tsx";
+import TableSliderRow from "components/TableRow/native/TableSliderRow.native.tsx";
+import Slider from "components/Slider/native/Slider.native.tsx";
 import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.native.tsx";
 import ContextMenuContainer from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import useManaTextMigrationHighlightRestartNotice from "components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx";
@@ -167,7 +169,6 @@ import createAccessibleNativeStackNavigator from "components/Navigator/native/cr
 import useFocusRefOnNavigationDefault from "components/Navigator/native/useFocusRefOnNavigation.tsx";
 import ModalDisclaimer from "components/Modal/native/ModalDisclaimer.native.tsx";
 import AvatarDuoPile from "components/Pile/native/AvatarDuoPile.native.tsx";
-import Slider from "components/Slider/native/Slider.native.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const AnimatedEnterExitItemDefault = AnimatedEnterExitItem;
@@ -367,6 +368,7 @@ export const TableRadioGroup = TableRadioGroup.TableRadioGroup;
 export const TableRadioGroupProps = TableRadioGroup.TableRadioGroupProps;
 export const TableRadioGroupRef = TableRadioGroup.TableRadioGroupRef;
 export const TableCheckboxRow = TableCheckboxRow.TableCheckboxRow;
+export const TableSliderRow = TableSliderRow.TableSliderRow;
 export const TableRadioRow = TableRadioRow.TableRadioRow;
 export const TableRadioRowProps = TableRadioRow.TableRadioRowProps;
 export const RowButton = RowButton.RowButton;
@@ -427,8 +429,6 @@ export const InputSize = InputTypes.InputSize;
 export const InputContainerProps = InputTypes.InputFieldContainerProps;
 export const SearchBar = Search_SearchBar.SearchBar;
 export const SearchBarProps = Search_SearchBar.SearchBarProps;
-export const SearchField = Search_SearchBar.SearchField;
-export const SearchFieldProps = Search_SearchBar.SearchFieldProps;
 export const TextField = TextField.TextField;
 export const TextFieldProps = TextField.TextFieldProps;
 export const TextFieldRef = TextField.TextFieldRef;

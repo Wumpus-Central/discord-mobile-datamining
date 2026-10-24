@@ -8,7 +8,7 @@ import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx"
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCreateBugReportSettingToggleValue() {
       const cResult = c.c(2);
@@ -36,7 +36,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(16884).WrenchIcon,
+  IconComponent: fn(16916).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -71,7 +71,7 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(17078).useBugReporterExperimentSettingPredicate,
+  usePredicate: fn(17110).useBugReporterExperimentSettingPredicate,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

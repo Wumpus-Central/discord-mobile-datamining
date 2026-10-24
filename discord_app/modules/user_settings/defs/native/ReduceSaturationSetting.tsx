@@ -11,16 +11,16 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSaturationSettingProps() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
           value: AccessibilityStore.saturation,
-          onSlidingComplete: AccessibilityActionCreators.setSaturation,
-          minimumValue: 0,
-          maximumValue: 1,
+          onChangeEnd: AccessibilityActionCreators.setSaturation,
+          minValue: 0,
+          maxValue: 1,
           step: 0.05,
           startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
           endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
@@ -36,9 +36,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return noop.useMemo(
         () => ({
           value: saturation.saturation,
-          onSlidingComplete: AccessibilityActionCreators.setSaturation,
-          minimumValue: 0,
-          maximumValue: 1,
+          onChangeEnd: AccessibilityActionCreators.setSaturation,
+          minValue: 0,
+          maxValue: 1,
           step: 0.05,
           startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
           endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
@@ -51,7 +51,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(8330).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8332).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },
@@ -61,9 +61,9 @@ const slider = SettingBuilders.createSlider({
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
             value: AccessibilityStore.saturation,
-            onSlidingComplete: AccessibilityActionCreators.setSaturation,
-            minimumValue: 0,
-            maximumValue: 1,
+            onChangeEnd: AccessibilityActionCreators.setSaturation,
+            minValue: 0,
+            maxValue: 1,
             step: 0.05,
             startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
             endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
@@ -79,9 +79,9 @@ const slider = SettingBuilders.createSlider({
         return noop.useMemo(
           () => ({
             value: saturation.saturation,
-            onSlidingComplete: AccessibilityActionCreators.setSaturation,
-            minimumValue: 0,
-            maximumValue: 1,
+            onChangeEnd: AccessibilityActionCreators.setSaturation,
+            minValue: 0,
+            maxValue: 1,
             step: 0.05,
             startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
             endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),

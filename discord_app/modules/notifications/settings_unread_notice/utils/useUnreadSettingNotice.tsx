@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-fn(4825).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+fn(4827).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

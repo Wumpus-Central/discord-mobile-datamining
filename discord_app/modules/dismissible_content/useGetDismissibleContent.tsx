@@ -34,8 +34,8 @@ function useGetVisibleContent(cResult, stateFromStores, groupName, version, id) 
   closure_6 = tmp6;
   let result = null != cResult;
   if (result) {
-    result = tmp2(4806).isDismissibleContentBlockedByOverlay(cResult, first, tmp6);
-    const tmp2Result = tmp2(4806);
+    result = tmp2(4808).isDismissibleContentBlockedByOverlay(cResult, first, tmp6);
+    const tmp2Result = tmp2(4808);
   }
   let obj = require("OverlayTrackingUtils");
   const items = [ref];
@@ -162,7 +162,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(4813).removeCandidateContent;
+const removeCandidateContent = fn(4815).removeCandidateContent;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
 fn(558);
@@ -540,7 +540,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = version;
         cResult[5] = tmp9;
       } else {
-        result = result(5021).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp9 = null;
           if (null != lastDismissedVersion) {
@@ -555,7 +555,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = tmp13;
           }
         }
-        const resultResult1 = result(5021);
+        const resultResult1 = result(5023);
       }
       let tmp14 = null;
       if (!result) {
@@ -733,7 +733,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp10;
         tmp5 = tmp10;
-        tmp2Result = tmp2(5021);
+        tmp2Result = tmp2(5023);
       }
       const items1 = [useGetVisibleContent(tmp5, stateFromStores, groupName)];
       const items2 = [tmp5, groupName, stateFromStores];
@@ -819,7 +819,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = id;
         cResult[5] = tmp8;
       } else {
-        result = result(5021).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp8 = null;
           if (null != lastDismissedObjectId) {
@@ -835,7 +835,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp8 = tmp12;
           }
         }
-        const resultResult1 = result(5021);
+        const resultResult1 = result(5023);
       }
       let tmp14 = null;
       if (!result) {
@@ -1003,7 +1003,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = id;
         cResult[6] = tmp11;
       } else {
-        result = result(5021).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp11 = null;
           if (null != lastDismissedObjectId) {
@@ -1019,7 +1019,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             tmp11 = tmp15;
           }
         }
-        const resultResult1 = result(5021);
+        const resultResult1 = result(5023);
       }
       let tmp17 = null;
       if (!result) {
@@ -1185,12 +1185,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let result = null == THIRD_PARTY_OUTBOUND_PROMO_NAGBAR;
       if (!result) {
-        result = tmp(4806).isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
+        result = tmp(4808).isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
           THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
           id,
           cooldownDurationMs,
         );
-        const tmpResult2 = tmp(4806);
+        const tmpResult2 = tmp(4808);
       }
       let tmp10 = null;
       if (!result) {
@@ -1558,7 +1558,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp14 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmp15 = !tmp(5021).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        const tmp15 = !tmp(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         let lastDismissedAtMs1;
         if (tmp8 != null) {
           lastDismissedAtMs1 = tmp8.lastDismissedAtMs;
@@ -1569,7 +1569,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp22;
         tmp14 = tmp22;
-        const tmpResult2 = tmp(5021);
+        const tmpResult2 = tmp(5023);
       }
       cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
       let lastDismissedAtMs2;

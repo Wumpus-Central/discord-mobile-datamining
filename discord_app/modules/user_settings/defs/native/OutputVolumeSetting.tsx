@@ -8,7 +8,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOutputVolumeSettingValue() {
       const cResult = c.c(2);
@@ -35,7 +35,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(8330).MobileUserSettings.VOICE,
+  parent: fn(8332).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useOutputVolumeSettingValue() {

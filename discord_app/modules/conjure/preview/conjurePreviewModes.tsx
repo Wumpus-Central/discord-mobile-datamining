@@ -133,10 +133,21 @@ export const requiresPermissionReview = function requiresPermissionReview(arg0) 
   }
   return tmp3;
 };
-export function permissionReviewBlocksMode(activeMode, result) {
+export const permissionReviewBlocksMode = function permissionReviewBlocksMode(activeMode, result, arg2) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
   let tmp = result;
-  if (result) {
-    tmp = "bot" === activeMode;
+  if (tmp) {
+    let tmp3 = "bot" === activeMode;
+    if (!tmp3) {
+      if (flag) {
+        flag = "frame" === activeMode;
+      }
+      tmp3 = flag;
+    }
+    tmp = tmp3;
   }
   return tmp;
-}
+};

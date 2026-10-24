@@ -4,10 +4,10 @@ import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6708).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16404).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6710).QuestDockMode;
+let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16436).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { wrapper: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

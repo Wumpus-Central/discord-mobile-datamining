@@ -8,7 +8,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 const SystemTheme = fn(1210).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncedModePickerVisible() {
       const cResult = c.c(2);
@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8330).MobileUserSettings.APPEARANCE,
+  parent: fn(8332).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSyncedModePickerVisible() {
         const cResult = c.c(2);

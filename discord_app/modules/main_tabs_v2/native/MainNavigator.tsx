@@ -77,19 +77,19 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17320).StackNavigationAnimationSettings;
+let closure_7 = fn(17352).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const mainNavigator = "mainNavigator";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_14 = createStyles.createStyles({ flex: { flex: 1 } });
 let PlatformUtils = fn(1384);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  PlatformUtils = fn(4926).getSystemVersionMajor() <= 15;
-  let obj4 = fn(4926);
+  PlatformUtils = fn(4928).getSystemVersionMajor() <= 15;
+  let obj4 = fn(4928);
 }
 let closure_16 = createAccessibleNativeStackNavigatorDefault();
 const Screen = createChatPanelNativeStackNavigatorDefault();
@@ -143,20 +143,20 @@ function getChannelScreen() {
             type = action.type;
           }
         }
-        obj = animation(5157);
+        obj = animation(5159);
         if ("GO_BACK" === type) {
           let SWIPE = constants2.BACK_BUTTON;
         } else {
           SWIPE = constants2.SWIPE;
         }
-        closure_1_1(5709).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-        const obj4 = closure_1_1(5709);
+        closure_1_1(5711).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+        const obj4 = closure_1_1(5711);
       },
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9698).renderHeader };
+      const obj = { headerShown: true, header: styles(9699).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9698).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9699).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -729,20 +729,20 @@ export default noop.memo(
                       type = action.type;
                     }
                   }
-                  obj = animation(5157);
+                  obj = animation(5159);
                   if ("GO_BACK" === type) {
                     let SWIPE = constants2.BACK_BUTTON;
                   } else {
                     SWIPE = constants2.SWIPE;
                   }
-                  closure_1_1(5709).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                  const obj4 = closure_1_1(5709);
+                  closure_1_1(5711).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                  const obj4 = closure_1_1(5711);
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9698).renderHeader };
+                const obj = { headerShown: true, header: styles(9699).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9698).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9699).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -820,20 +820,20 @@ export default noop.memo(
                       type = action.type;
                     }
                   }
-                  obj = animation(5157);
+                  obj = animation(5159);
                   if ("GO_BACK" === type) {
                     let SWIPE = constants2.BACK_BUTTON;
                   } else {
                     SWIPE = constants2.SWIPE;
                   }
-                  closure_1_1(5709).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                  const obj4 = closure_1_1(5709);
+                  closure_1_1(5711).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                  const obj4 = closure_1_1(5711);
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9698).renderHeader };
+                const obj = { headerShown: true, header: styles(9699).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9698).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9699).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -914,7 +914,7 @@ export default noop.memo(
                     if (closure_1_15) {
                       str = "default";
                     }
-                    const merged = Object.assign(animation(9698).getDefaultStackHeaderProps(navigation.navigation));
+                    const merged = Object.assign(animation(9699).getDefaultStackHeaderProps(navigation.navigation));
                     const merged1 = Object.assign(animation2);
                     return { orientation: str, headerShown: false };
                   },
@@ -952,20 +952,20 @@ export default noop.memo(
                           type = action.type;
                         }
                       }
-                      obj = animation(5157);
+                      obj = animation(5159);
                       if ("GO_BACK" === type) {
                         let SWIPE = constants2.BACK_BUTTON;
                       } else {
                         SWIPE = constants2.SWIPE;
                       }
-                      closure_1_1(5709).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                      const obj4 = closure_1_1(5709);
+                      closure_1_1(5711).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                      const obj4 = closure_1_1(5711);
                     },
                   },
                   options(arg0) {
-                    const obj = { headerShown: true, header: styles(9698).renderHeader };
+                    const obj = { headerShown: true, header: styles(9699).renderHeader };
                     ({ navigation, route } = arg0);
-                    const merged = Object.assign(styles(9698).getDefaultChannelStackHeaderProps(navigation, route));
+                    const merged = Object.assign(styles(9699).getDefaultChannelStackHeaderProps(navigation, route));
                     const merged1 = Object.assign(animation2);
                     obj.animation = animation;
                     return obj;
@@ -986,7 +986,7 @@ export default noop.memo(
               name: "conversations",
               getComponent: getConversationsComponent,
               options() {
-                return stateFromStores(10030)();
+                return stateFromStores(10031)();
               },
             }),
             ,
@@ -1004,7 +1004,7 @@ export default noop.memo(
             name: "channel-secondary-view-chat",
             getComponent: getChannelSecondaryViewChatComponent,
             options() {
-              return stateFromStores(10030)();
+              return stateFromStores(10031)();
             },
             listeners: { beforeRemove: resetChatKeyboard },
           };
@@ -1069,7 +1069,7 @@ export default noop.memo(
                 str = "modal";
               }
               const obj = {};
-              const merged = Object.assign(stateFromStores(10030)({ presentation: str }));
+              const merged = Object.assign(stateFromStores(10031)({ presentation: str }));
               const params3 = route.params;
               let presentation;
               if (params3 != null) {
@@ -1136,7 +1136,7 @@ export default noop.memo(
                   if (closure_1_15) {
                     str = "default";
                   }
-                  const merged = Object.assign(animation(9698).getDefaultStackHeaderProps(navigation.navigation));
+                  const merged = Object.assign(animation(9699).getDefaultStackHeaderProps(navigation.navigation));
                   const merged1 = Object.assign(animation2);
                   return { orientation: str, headerShown: false };
                 },
@@ -1174,20 +1174,20 @@ export default noop.memo(
                         type = action.type;
                       }
                     }
-                    obj = animation(5157);
+                    obj = animation(5159);
                     if ("GO_BACK" === type) {
                       let SWIPE = constants2.BACK_BUTTON;
                     } else {
                       SWIPE = constants2.SWIPE;
                     }
-                    closure_1_1(5709).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                    const obj4 = closure_1_1(5709);
+                    closure_1_1(5711).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                    const obj4 = closure_1_1(5711);
                   },
                 },
                 options(arg0) {
-                  const obj = { headerShown: true, header: styles(9698).renderHeader };
+                  const obj = { headerShown: true, header: styles(9699).renderHeader };
                   ({ navigation, route } = arg0);
-                  const merged = Object.assign(styles(9698).getDefaultChannelStackHeaderProps(navigation, route));
+                  const merged = Object.assign(styles(9699).getDefaultChannelStackHeaderProps(navigation, route));
                   const merged1 = Object.assign(animation2);
                   obj.animation = animation;
                   return obj;
@@ -1208,7 +1208,7 @@ export default noop.memo(
             name: "conversations",
             getComponent: getConversationsComponent,
             options() {
-              return stateFromStores(10030)();
+              return stateFromStores(10031)();
             },
           };
           const obj9 = { beforeRemove: resetChatKeyboard };
@@ -1229,7 +1229,7 @@ export default noop.memo(
           items1[9] = v65535(closure_16.Screen, {
             name: "settings",
             options() {
-              const tmp = stateFromStores(10030);
+              const tmp = stateFromStores(10031);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1246,13 +1246,13 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(10030)({ lockOrientation: false });
+              return stateFromStores(10031)({ lockOrientation: false });
             },
           });
           const obj19 = {
             name: "settings",
             options() {
-              const tmp = stateFromStores(10030);
+              const tmp = stateFromStores(10031);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1269,7 +1269,7 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(10030)({ lockOrientation: false });
+              return stateFromStores(10031)({ lockOrientation: false });
             },
           };
           tmp5Result = PlatformUtils2;
@@ -1309,7 +1309,7 @@ export default noop.memo(
                 }
                 str2 = str3;
               }
-              const merged = Object.assign(stateFromStores(10030)({ presentation: str2 }));
+              const merged = Object.assign(stateFromStores(10031)({ presentation: str2 }));
               return obj;
             },
             getComponent: getModalComponent,

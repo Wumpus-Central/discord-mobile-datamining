@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8679).getSingleRequirementThreshold;
+let closure_7 = fn(8681).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [BadgeDirectoryStore];
         const fn = function x() {
-          return badgeById.getBadgeById(closure_0(8671).BadgeId.GIFTING);
+          return badgeById.getBadgeById(closure_0(8673).BadgeId.GIFTING);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityRole: "header",
             children: tmp20,
           };
-          const tmp23 = closure_9(tmp(5232).Text, obj2);
+          const tmp23 = closure_9(tmp(5234).Text, obj2);
           cResult[12] = tmp4.title;
           cResult[13] = tmp23;
         } else {
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: tmp24 };
-          const tmp27 = closure_9(tmp(5232).Text, obj3);
+          const tmp27 = closure_9(tmp(5234).Text, obj3);
           cResult[15] = tmp4.description;
           cResult[16] = tmp27;
         } else {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp;
       let items = [BadgeDirectoryStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        badgeById.getBadgeById(closure_0(8671).BadgeId.GIFTING),
+        badgeById.getBadgeById(closure_0(8673).BadgeId.GIFTING),
       );
       let obj = require("initialize");
       const items1 = [AccessibilityStore];

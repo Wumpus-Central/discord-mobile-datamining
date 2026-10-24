@@ -89,7 +89,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5208).default;
+            closure_0 = closure_0(5210).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1128).intl;
@@ -109,7 +109,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15211).showSimpleActionSheet(obj);
+            const result = closure_0(15230).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

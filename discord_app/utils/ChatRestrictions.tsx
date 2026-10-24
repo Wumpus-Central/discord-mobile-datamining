@@ -52,7 +52,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "channelId",
+    animation: "application",
   },
   {
     check(arg0) {

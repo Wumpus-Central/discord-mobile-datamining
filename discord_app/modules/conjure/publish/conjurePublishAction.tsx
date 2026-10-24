@@ -82,6 +82,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     const obj8 = {
       intent: str6,
       isUpdate: "live_outdated" === tmp.publishState && !tmp9,
+      upToDate: "live_current" === tmp.publishState && !tmp9,
       disabledReason: formatResult,
       confirmReason: null,
       missingSurface: null,

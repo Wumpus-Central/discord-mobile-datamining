@@ -8,11 +8,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_7 = fn(4834).MAX_FAVORITES_ADD_CHANNEL_COUNT;
-const UserRowModes = fn(10615).UserRowModes;
+let closure_7 = fn(4836).MAX_FAVORITES_ADD_CHANNEL_COUNT;
+const UserRowModes = fn(10616).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -28,8 +28,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       parentId = parentId.parentId;
       _require = parentId;
       let obj = require("c");
-      const tmp6 = first1(13830)();
-      first1(13831)(parentId.source);
+      const tmp6 = first1(13849)();
+      first1(13850)(parentId.source);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         cResult[0] = items;
@@ -133,10 +133,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj3 = { title: null, onClose: null };
           let intl = tmp(1128).intl;
           obj3.title = intl.string(tmp5(3412).Rp35U1);
-          obj3.onClose = tmp(13828).closeFavoritesGuildAddChannelModal;
-          const tmp19 = closure_9(tmp5(12873), obj3);
+          obj3.onClose = tmp(13847).closeFavoritesGuildAddChannelModal;
+          const tmp19 = closure_9(tmp5(12910), obj3);
           cResult[10] = tmp19;
-          const tmp5Result = tmp5(12873);
+          const tmp5Result = tmp5(12910);
         } else {
           class A {
             constructor(arg0) {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmp21 = closure_9(tmp5(10624), { absolute: true });
+          const tmp21 = closure_9(tmp5(10625), { absolute: true });
           cResult[11] = tmp21;
         } else {
           class A {
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           disableStickySections: true,
           disableSelection: tmp10,
         };
-        const tmp27 = closure_9(tmp5(12874), obj4);
+        const tmp27 = closure_9(tmp5(12911), obj4);
         cResult[13] = tmp6;
         cResult[14] = tmp10;
         cResult[15] = 0;
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 c3 = 1;
                 c4 = 1;
                 const obj6 = {
-                  value: Promise.all(tmp2.map(parentId(12863).getOrResolveChannelIdFromDestinationId)),
+                  value: Promise.all(tmp2.map(parentId(12900).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
                 return obj6;
@@ -263,14 +263,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   parentId = null;
                 }
                 obj8.parentId = parentId;
-                parentId(10840).addFavoriteChannels(obj8);
-                const obj2 = parentId(10840);
-                const result = parentId(13828).closeFavoritesGuildAddChannelModal();
-                const obj4 = parentId(13828);
+                parentId(10841).addFavoriteChannels(obj8);
+                const obj2 = parentId(10841);
+                const result = parentId(13847).closeFavoritesGuildAddChannelModal();
+                const obj4 = parentId(13847);
               } else {
                 const intl = parentId(1128).intl;
-                parentId(5660).presentError(intl.string(parentId(1128).t.R0RpRX));
-                const obj = parentId(5660);
+                parentId(5662).presentError(intl.string(parentId(1128).t.R0RpRX));
+                const obj = parentId(5662);
               }
               c4 = 3;
             }
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = undefined;
       let height;
       const tmp = closure_11();
-      first(13831)(parentId.source);
+      first(13850)(parentId.source);
       [first, dependencyMap] = noop.useState([]);
       const callback = noop.useCallback((arg0) => {
         closure_2(arg0);
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c3 = 1;
                   c4 = 1;
                   const obj6 = {
-                    value: Promise.all(first.map(parentId(12863).getOrResolveChannelIdFromDestinationId)),
+                    value: Promise.all(first.map(parentId(12900).getOrResolveChannelIdFromDestinationId)),
                     done: false,
                   };
                   return obj6;
@@ -360,14 +360,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     parentId = null;
                   }
                   obj8.parentId = parentId;
-                  parentId(10840).addFavoriteChannels(obj8);
-                  const obj2 = parentId(10840);
-                  const result = parentId(13828).closeFavoritesGuildAddChannelModal();
-                  const obj4 = parentId(13828);
+                  parentId(10841).addFavoriteChannels(obj8);
+                  const obj2 = parentId(10841);
+                  const result = parentId(13847).closeFavoritesGuildAddChannelModal();
+                  const obj4 = parentId(13847);
                 } else {
                   const intl = parentId(1128).intl;
-                  parentId(5660).presentError(intl.string(parentId(1128).t.R0RpRX));
-                  const obj = parentId(5660);
+                  parentId(5662).presentError(intl.string(parentId(1128).t.R0RpRX));
+                  const obj = parentId(5662);
                 }
                 c4 = 3;
               }
@@ -390,13 +390,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let obj2 = { title: null, onClose: null };
       const tmp2 = first;
-      const tmp4 = first(13830)();
+      const tmp4 = first(13849)();
       let intl = parentId(1128).intl;
       obj2.title = intl.string(first(3412).Rp35U1);
-      obj2.onClose = parentId(13828).closeFavoritesGuildAddChannelModal;
-      const items2 = [closure_9(first(12873), obj2)];
+      obj2.onClose = parentId(13847).closeFavoritesGuildAddChannelModal;
+      const items2 = [closure_9(first(12910), obj2)];
       let obj3 = { style: tmp.container, children: null };
-      const items3 = [closure_9(first(10624), { absolute: true }), ,];
+      const items3 = [closure_9(first(10625), { absolute: true }), ,];
       let obj4 = {
         rowMode: UserRowModes.TOGGLE,
         initialSelectedDestinations: [],
@@ -408,23 +408,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disableSelection: null,
       };
       let num = 0;
-      const tmp12 = first(12873);
+      const tmp12 = first(12910);
       if (first.length > 0) {
         num = tmp2(587).space.PX_80;
       }
       obj4.insetEnd = num;
       obj4.disableSelection = first.length >= closure_7;
-      items3[1] = closure_9(first(12874), obj4);
+      items3[1] = closure_9(first(12911), obj4);
       let obj5 = {
         isVisible: first.length > 0,
         floatingBackgroundColor: tmp.container.backgroundColor,
         text: null,
         onPress: null,
       };
-      const tmp14 = first(12874);
-      obj5.text = parentId(13832).getFavoritesAddButtonLabel(first.length);
+      const tmp14 = first(12911);
+      obj5.text = parentId(13851).getFavoritesAddButtonLabel(first.length);
       obj5.onPress = callback1;
-      items3[2] = closure_9(parentId(12895).ModalFloatingAction, obj5);
+      items3[2] = closure_9(parentId(12932).ModalFloatingAction, obj5);
       obj3.children = items3;
       items2[1] = closure_10(View, obj3);
       obj.children = items2;

@@ -13,12 +13,12 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
   ? (quest) => {
       const cResult = url(576).c(6);
       let obj = url(576);
-      const questAsset = url(9583).getQuestAsset(quest, url(9583).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+      const questAsset = url(9584).getQuestAsset(quest, url(9584).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
       url = undefined;
       if (questAsset != null) {
         url = questAsset.url;
       }
-      const obj2 = url(9583);
+      const obj2 = url(9584);
       [tmp5, dependencyMap] = noop.useState(constants.NONE);
       const tmp4 = _slicedToArray(noop.useState(constants.NONE), 2);
       [tmp7, _slicedToArray] = noop.useState(null);
@@ -31,9 +31,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
             value
               .then((text) => {
                 try {
-                  closure_1_2(url(16456).parseVtt(text.text).cues);
+                  closure_1_2(url(16488).parseVtt(text.text).cues);
                   dependencyMap(constants.SUCCESS);
-                  const obj = url(16456);
+                  const obj = url(16488);
                 } catch (err) {
                   dependencyMap(constants.ERROR);
                 }
@@ -43,9 +43,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
               });
             const nextPromise = value.then((text) => {
               try {
-                closure_1_2(url(16456).parseVtt(text.text).cues);
+                closure_1_2(url(16488).parseVtt(text.text).cues);
                 dependencyMap(constants.SUCCESS);
-                const obj = url(16456);
+                const obj = url(16488);
               } catch (err) {
                 dependencyMap(constants.ERROR);
               }
@@ -79,12 +79,12 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
       const tmp6 = _slicedToArray(noop.useState(null), 2);
     }
   : (quest) => {
-      const questAsset = url(9583).getQuestAsset(quest, url(9583).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+      const questAsset = url(9584).getQuestAsset(quest, url(9584).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
       url = undefined;
       if (questAsset != null) {
         url = questAsset.url;
       }
-      let obj = url(9583);
+      let obj = url(9584);
       [tmp4, dependencyMap] = noop.useState(constants.NONE);
       const captions = _slicedToArray(noop.useState(null), 2);
       _slicedToArray = captions[1];
@@ -97,9 +97,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
           value
             .then((text) => {
               try {
-                closure_1_2(url(16456).parseVtt(text.text).cues);
+                closure_1_2(url(16488).parseVtt(text.text).cues);
                 dependencyMap(constants.SUCCESS);
-                const obj = url(16456);
+                const obj = url(16488);
               } catch (err) {
                 dependencyMap(constants.ERROR);
               }
@@ -109,9 +109,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
             });
           const nextPromise = value.then((text) => {
             try {
-              closure_1_2(url(16456).parseVtt(text.text).cues);
+              closure_1_2(url(16488).parseVtt(text.text).cues);
               dependencyMap(constants.SUCCESS);
-              const obj = url(16456);
+              const obj = url(16488);
             } catch (err) {
               dependencyMap(constants.ERROR);
             }

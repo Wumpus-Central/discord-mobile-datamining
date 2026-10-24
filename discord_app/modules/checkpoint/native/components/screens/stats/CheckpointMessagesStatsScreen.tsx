@@ -233,15 +233,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const formatToPlainStringResult = intl2.formatToPlainString(tmp31(3088).TOMBAW, obj6);
         }
       }
-      const tmp31Result = tmp31(12932);
+      const tmp31Result = tmp31(12969);
       const container = tmp4.container;
       if (cResult[26] !== tmp4.image) {
-        const obj7 = { animatedUri: tmp31(12945), staticUri: tmp31(12946), style: tmp4.image };
-        const tmp38 = timestampProducer(tmp31(12935), obj7);
+        const obj7 = { animatedUri: tmp31(12982), staticUri: tmp31(12983), style: tmp4.image };
+        const tmp38 = timestampProducer(tmp31(12972), obj7);
         cResult[26] = tmp4.image;
         cResult[27] = tmp38;
         let tmp35 = tmp38;
-        const tmp31Result3 = tmp31(12935);
+        const tmp31Result3 = tmp31(12972);
       } else {
         tmp35 = cResult[27];
       }
@@ -270,17 +270,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (tmp27) {
               const obj9 = { value: stateFromStores1 };
-              let tmp52Result = timestampProducer(tmp31(12938), obj9);
+              let tmp52Result = timestampProducer(tmp31(12975), obj9);
             } else {
               const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
               const _HermesInternal = HermesInternal;
               obj10.accessibilityLabel = "" + rounded + " " + stringResult;
               obj10.style = tmp4.number;
               const obj11 = { end: rounded };
-              obj10.children = timestampProducer(tmp31(12940), obj11);
+              obj10.children = timestampProducer(tmp31(12977), obj11);
               tmp52Result = timestampProducer(View, obj10);
             }
-            const tmp31Result4 = tmp31(12930);
+            const tmp31Result4 = tmp31(12967);
             if (tmp27) {
               const intl5 = util.intl;
               const obj12 = { numWords: null };
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp49 = tmp51;
         }
         const obj16 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: toLocaleUpperCaseResult };
-        const tmp48 = timestampProducer(tmp31(12930), obj16);
+        const tmp48 = timestampProducer(tmp31(12967), obj16);
         cResult[32] = tmp4.titleText;
         cResult[33] = toLocaleUpperCaseResult;
         cResult[34] = tmp48;
@@ -436,37 +436,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.imageContainer, children: null };
       const tmp2Result = CheckpointStatsUtils;
       const obj6 = { animatedUri: null, staticUri: null, style: null };
-      const tmp11Result = tmp11(12932);
-      obj6.animatedUri = tmp11(12945);
-      obj6.staticUri = tmp11(12946);
+      const tmp11Result = tmp11(12969);
+      obj6.animatedUri = tmp11(12982);
+      obj6.staticUri = tmp11(12983);
       obj6.style = tmp.image;
-      obj5.children = timestampProducer(tmp11(12935), obj6);
+      obj5.children = timestampProducer(tmp11(12972), obj6);
       const items2 = [timestampProducer(View, obj5)];
       const obj7 = { style: tmp.copy, children: null };
       const obj8 = { style: tmp.title, children: null };
       const items3 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
       const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp11Result4 = tmp11(12935);
+      const tmp11Result4 = tmp11(12972);
       obj10.children = stringResult.toLocaleUpperCase();
-      items3[1] = timestampProducer(tmp11(12930), obj10);
+      items3[1] = timestampProducer(tmp11(12967), obj10);
       obj8.children = items3;
       const items4 = [React5(View, obj8), ,];
       if (rounded <= 0 && null != stateFromStores1) {
         const obj11 = { value: stateFromStores1 };
-        let tmp13Result = timestampProducer(tmp11(12938), obj11);
+        let tmp13Result = timestampProducer(tmp11(12975), obj11);
       } else {
         const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
         const _HermesInternal = HermesInternal;
         obj12.accessibilityLabel = "" + rounded + " " + stringResult;
         obj12.style = tmp.number;
         const obj13 = { end: rounded };
-        obj12.children = timestampProducer(tmp11(12940), obj13);
+        obj12.children = timestampProducer(tmp11(12977), obj13);
         tmp13Result = timestampProducer(View, obj12);
       }
       items4[1] = tmp13Result;
       const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-      const tmp11Result5 = tmp11(12930);
+      const tmp11Result5 = tmp11(12967);
       if (rounded <= 0 && null != stateFromStores1) {
         const intl5 = util.intl;
         const obj15 = { numWords: null };
@@ -494,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj18 = { children: null };
       obj14.children = formatToPlainStringResult1;
-      items4[2] = timestampProducer(tmp11(12930), obj14);
+      items4[2] = timestampProducer(tmp11(12967), obj14);
       obj7.children = items4;
       items2[1] = React5(View, obj7);
       obj4.children = items2;

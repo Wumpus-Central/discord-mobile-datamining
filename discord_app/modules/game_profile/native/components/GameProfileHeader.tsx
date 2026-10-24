@@ -3,26 +3,26 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArtDefault from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef9308 from "../../../../../_runtime/metro/09308__.js";
+import _modDef9309 from "../../../../../_runtime/metro/09309__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9299);
+const GameProfileConstants = fn(9300);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp12Result3 = game.id === hasOwnProperty;
       if (tmp12Result3) {
         const obj14 = {
-          source: _modDef9308,
+          source: _modDef9309,
           style: tmp.wavingWumpus,
           accessible: false,
           importantForAccessibility: "no",

@@ -78,10 +78,10 @@ export default function transformEmbeds(arg0) {
                   }
                 }
                 tmp3Result = utils;
-                if (tmp3Result16.isSocialLayerStorefrontArticleEmbed(type)) {
+                if (tmp3Result15.isSocialLayerStorefrontArticleEmbed(type)) {
                   return [];
                 } else {
-                  if (tmp3Result17.isUserProfileArticleEmbed(type)) {
+                  if (tmp3Result16.isUserProfileArticleEmbed(type)) {
                     return [];
                   } else {
                     let tmp8 = null;
@@ -93,7 +93,7 @@ export default function transformEmbeds(arg0) {
                         let obj2 = {};
                         let merged = Object.assign(thumbnail);
                         obj2.width = sanitizeMediaDimension.sanitizeMediaDimension(width);
-                        const tmp3Result18 = sanitizeMediaDimension;
+                        const tmp3Result17 = sanitizeMediaDimension;
                         obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
                         let imageSrc = proxyURL;
                         if (null != proxyURL) {
@@ -107,7 +107,7 @@ export default function transformEmbeds(arg0) {
                         }
                         obj2.url = obj8.getImageSrc(proxyURL, width, height, !closure_1_1);
                         tmp8 = obj2;
-                        const tmp3Result19 = sanitizeMediaDimension;
+                        const tmp3Result18 = sanitizeMediaDimension;
                       }
                     }
                     let tmp25 = null;
@@ -126,95 +126,86 @@ export default function transformEmbeds(arg0) {
                       if (null != tmp8) {
                         tmp31 = tmp8;
                         if (null != type.video) {
+                          let isWebviewVideoResult =
+                            type.type === MessageEmbedTypes.VIDEO ||
+                            type.type === MessageEmbedTypes.RICH ||
+                            type.type === MessageEmbedTypes.ARTICLE;
                           if (type.type !== MessageEmbedTypes.GIFV) {
-                            if (tmp32) {
-                              let tmp45 = tmp34;
-                              if (!tmp44) {
+                            if (isWebviewVideoResult) {
+                              let tmp43 = tmp34;
+                              if (!tmp42) {
                                 let obj3 = {};
                                 const merged1 = Object.assign(tmp34);
                                 ({ proxyURL: proxyURL3, url: url2 } = type.video);
-                                let tmp49 = url2;
+                                let tmp47 = url2;
                                 if (null != proxyURL3) {
-                                  tmp49 = url2;
+                                  tmp47 = url2;
                                   if ("" !== proxyURL3) {
-                                    tmp49 = proxyURL3;
+                                    tmp47 = proxyURL3;
                                   }
                                 }
-                                obj3.gifvUrlForPortal = tmp49;
-                                tmp45 = obj3;
+                                obj3.gifvUrlForPortal = tmp47;
+                                tmp43 = obj3;
                               }
                               ({ proxyURL: proxyURL4, url: url3 } = type.video);
-                              let tmp50 = url3;
+                              let tmp48 = url3;
                               if (null != proxyURL4) {
-                                tmp50 = url3;
+                                tmp48 = url3;
                                 if ("" !== proxyURL4) {
-                                  tmp50 = proxyURL4;
+                                  tmp48 = proxyURL4;
                                 }
                               }
-                              tmp31 = tmp45;
-                              if (tmp3Result20.isWebPlayerVideoUrl(tmp50)) {
+                              tmp31 = tmp43;
+                              if (tmp3Result19.isWebPlayerVideoUrl(tmp48)) {
                                 let obj4 = {};
-                                const merged2 = Object.assign(tmp45);
+                                const merged2 = Object.assign(tmp43);
                                 obj4.inlinePlaybackDisabled = true;
                                 tmp31 = obj4;
                               }
-                              tmp3Result20 = MediaFormatTesters;
-                              tmp44 = type.type !== MessageEmbedTypes.GIFV || closure_1_1;
+                              tmp3Result19 = MediaFormatTesters;
+                              tmp42 = type.type !== MessageEmbedTypes.GIFV || closure_1_1;
+                            }
+                            if (isWebviewVideoResult) {
+                              isWebviewVideoResult = renderer_EmbedUtils.isWebviewVideo(type);
+                              const tmp3Result20 = renderer_EmbedUtils;
                             }
                             tmp34 = tmp8;
-                            if (tmp32) {
-                              tmp34 = tmp8;
-                              if (null == type.video.proxyURL) {
-                                const provider2 = type.provider;
-                                let name;
-                                if (provider2 != null) {
-                                  name = provider2.name;
-                                }
-                                const effectiveVideoProvider = EmbedUtils.getEffectiveVideoProvider(
-                                  name,
-                                  type.video.url,
-                                );
-                                const tmp3Result21 = EmbedUtils;
-                                tmp34 = tmp8;
-                                if (tmp3Result22.shouldPlayVideoInline(effectiveVideoProvider)) {
-                                  const obj5 = {};
-                                  const merged3 = Object.assign(tmp8);
-                                  obj5.showPlayButton = true;
-                                  tmp34 = obj5;
-                                }
-                                tmp3Result22 = renderer_EmbedUtils;
-                              }
+                            if (isWebviewVideoResult) {
+                              const obj5 = {};
+                              const merged3 = Object.assign(tmp8);
+                              obj5.showPlayButton = true;
+                              tmp34 = obj5;
                             }
                           }
                           const obj6 = {};
                           const merged4 = Object.assign(tmp8);
                           obj6.gifv = type.type === MessageEmbedTypes.GIFV;
                           ({ proxyURL: proxyURL2, url } = type.video);
-                          let tmp43 = url;
+                          let tmp41 = url;
                           if (null != proxyURL2) {
-                            tmp43 = url;
+                            tmp41 = url;
                             if ("" !== proxyURL2) {
-                              tmp43 = proxyURL2;
+                              tmp41 = proxyURL2;
                             }
                           }
-                          obj6.videoUrl = tmp43;
+                          obj6.videoUrl = tmp41;
                           tmp34 = obj6;
                         }
                       }
-                      let tmp55 = tmp31;
-                      if (tmp54) {
+                      let tmp53 = tmp31;
+                      if (tmp52) {
                         const obj9 = {};
                         const merged5 = Object.assign(tmp31);
                         const intl = util.intl;
                         obj9.role = intl.string(util.t.OBp3V3);
                         const intl2 = util.intl;
                         obj9.hint = intl2.string(util.t.IPzNKE);
-                        tmp55 = obj9;
+                        tmp53 = obj9;
                       }
                       embedBorderLeftColor = embedBorderLeftColor.embedBorderLeftColor;
                       if (null != type.color) {
                         embedBorderLeftColor = processColor(utils_ColorUtils.int2hsl(type.color));
-                        const tmp3Result23 = utils_ColorUtils;
+                        const tmp3Result21 = utils_ColorUtils;
                       }
                       if (null != type.url) {
                         if ("" !== type.url) {
@@ -239,7 +230,7 @@ export default function transformEmbeds(arg0) {
                                       showMaskedLinks,
                                     };
                                     let rawDescription = MarkupParsers.parseEmbedDescriptionMarkup(obj10);
-                                    const tmp3Result24 = MarkupParsers;
+                                    const tmp3Result22 = MarkupParsers;
                                   }
                                 } else {
                                   rawDescription = type.rawDescription;
@@ -254,8 +245,8 @@ export default function transformEmbeds(arg0) {
                           const mapped1 = fields.map((rawName) => {
                             let result = null;
                             if (null != rawName.rawName) {
-                              result = channelId(8461).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                              const obj = channelId(8461);
+                              result = channelId(8463).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                              const obj = channelId(8463);
                             }
                             let result1 = null;
                             if (null != rawName.rawValue) {
@@ -268,8 +259,8 @@ export default function transformEmbeds(arg0) {
                                 showListsAndHeaders,
                                 showMaskedLinks,
                               };
-                              result1 = channelId(8461).parseEmbedDescriptionMarkup(obj3);
-                              const obj2 = channelId(8461);
+                              result1 = channelId(8463).parseEmbedDescriptionMarkup(obj3);
+                              const obj2 = channelId(8463);
                             }
                             const obj4 = {};
                             const merged = Object.assign(rawName);
@@ -280,7 +271,7 @@ export default function transformEmbeds(arg0) {
                           let calendarFormatResult = null;
                           if (null != type.timestamp) {
                             calendarFormatResult = DateUtils.calendarFormat(type.timestamp);
-                            const tmp3Result25 = DateUtils;
+                            const tmp3Result23 = DateUtils;
                           }
                           if (null != type.footer) {
                             const text = type.footer.text;
@@ -296,17 +287,17 @@ export default function transformEmbeds(arg0) {
                               if ("" !== type.footer.iconProxyURL) {
                                 let iconURL = type.footer.iconProxyURL;
                               }
-                              let tmp68 = obj11;
+                              let tmp66 = obj11;
                               if (null != iconURL) {
                                 const obj23 = RowGeneratorUtilsDefault;
                                 obj11.iconURL = obj23.getImageSrc(iconURL, 16, 16, !closure_1_1);
-                                tmp68 = obj11;
+                                tmp66 = obj11;
                               }
                             }
                             iconURL = type.footer.iconURL;
                           } else if (null != calendarFormatResult) {
                             const obj12 = { content: calendarFormatResult, text: "" };
-                            tmp68 = obj12;
+                            tmp66 = obj12;
                           }
                           if (null == type.author) {
                             if (type.type !== MessageEmbedTypes.COMPONENTS) {
@@ -323,17 +314,17 @@ export default function transformEmbeds(arg0) {
                                   media: type,
                                 };
                                 isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj14, closure_1_9);
-                                const tmp3Result27 = ObscuredMediaUtils;
+                                const tmp3Result25 = ObscuredMediaUtils;
                               }
-                              let isVerifiedTeenResult = tmp92;
+                              let isVerifiedTeenResult = tmp90;
                               if (mediaObscuredReasonFromBitmask.length > 0) {
                                 isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
-                                const tmp3Result28 = AgeVerificationUtils;
+                                const tmp3Result26 = AgeVerificationUtils;
                               }
-                              let tmp94 = type.type === MessageEmbedTypes.AUDIO;
-                              if (tmp94) {
-                                tmp94 = !NativeChatCapabilities.nativeChatSupportsAudioEmbeds();
-                                const tmp3Result29 = NativeChatCapabilities;
+                              let tmp92 = type.type === MessageEmbedTypes.AUDIO;
+                              if (tmp92) {
+                                tmp92 = !NativeChatCapabilities.nativeChatSupportsAudioEmbeds();
+                                const tmp3Result27 = NativeChatCapabilities;
                               }
                               let str9 = type.id;
                               if (str9 == null) {
@@ -370,7 +361,7 @@ export default function transformEmbeds(arg0) {
                                 referenceId: null,
                                 backgroundColor: null,
                               };
-                              if (tmp94) {
+                              if (tmp92) {
                                 const RICH = MessageEmbedTypes.RICH;
                               }
                               obj15.type = RICH;
@@ -393,11 +384,11 @@ export default function transformEmbeds(arg0) {
                                 str10 = intl5.string(util.t.MRdR7z);
                               }
                               obj15.obscureAwaitingScan = str10;
-                              let tmp97 = tmp92;
+                              let tmp95 = tmp90;
                               if (mediaObscuredReasonFromBitmask.length > 0) {
-                                tmp97 = closure_1_12;
+                                tmp95 = closure_1_12;
                               }
-                              obj15.verifyAge = tmp97;
+                              obj15.verifyAge = tmp95;
                               obj15.obscureHideControls = isVerifiedTeenResult;
                               obj15.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
                               const provider = type.provider;
@@ -409,16 +400,16 @@ export default function transformEmbeds(arg0) {
                               obj15.url = url4;
                               obj15.rawDescription = type.rawDescription;
                               obj15.description = rawDescription;
-                              obj15.thumbnail = tmp55;
+                              obj15.thumbnail = tmp53;
                               obj15.image = tmp25;
                               obj15.images = mapped;
                               obj15.fields = mapped1;
-                              obj15.components = tmp84;
-                              obj15.footer = tmp68;
+                              obj15.components = tmp82;
+                              obj15.footer = tmp66;
                               const video = type.video;
                               obj15.video = video;
                               let audio;
-                              if (!tmp94) {
+                              if (!tmp92) {
                                 audio = type.audio;
                               }
                               obj15.audio = audio;
@@ -427,7 +418,7 @@ export default function transformEmbeds(arg0) {
                                 embedProviderColor: obj32.providerColor,
                                 embedHeaderTextColor: obj32.headerTextColor,
                                 embedBodyTextColor: obj32.bodyTextColor,
-                              } = tmp59);
+                              } = tmp57);
                               const referenceId = type.referenceId;
                               obj15.referenceId = referenceId;
                               obj15.backgroundColor = backgroundColor;
@@ -467,13 +458,13 @@ export default function transformEmbeds(arg0) {
                         rawTitle = type.rawTitle;
                       }
                       parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkup;
-                      tmp54 = null != tmp31 && type.type === MessageEmbedTypes.GIFV;
-                      tmp59 = embedBorderLeftColor;
+                      tmp52 = null != tmp31 && type.type === MessageEmbedTypes.GIFV;
+                      tmp57 = embedBorderLeftColor;
                     }
                     let tmp27 = null == tmp25;
                     if (!tmp27) {
                       tmp27 = !PlatformUtils.isIOS();
-                      const tmp3Result30 = PlatformUtils;
+                      const tmp3Result28 = PlatformUtils;
                     }
                     let tmp28 = !tmp27;
                     if (!tmp27) {
@@ -488,9 +479,9 @@ export default function transformEmbeds(arg0) {
                       }
                     }
                   }
-                  tmp3Result17 = EmbedUtils;
+                  tmp3Result16 = EmbedUtils;
                 }
-                tmp3Result16 = EmbedUtils;
+                tmp3Result15 = EmbedUtils;
               }
               obj = EmbedUtils;
             }

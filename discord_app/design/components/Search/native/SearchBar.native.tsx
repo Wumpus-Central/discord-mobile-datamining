@@ -10,7 +10,10 @@ require = fn;
 let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
+
+export const SearchBar = ReactCompilerGating.isReactCompilerEnabled()
   ? function SearchBar(ref) {
       const cResult = c.c(7);
       if (cResult[0] !== ref) {
@@ -65,8 +68,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       obj.clearable = true;
       return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
-
-export const SearchBar = tmp3;
-export const SearchField = tmp3;

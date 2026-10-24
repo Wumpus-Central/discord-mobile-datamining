@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4884 from "../../../../_runtime/metro/04884__.js";
+import _mod4886 from "../../../../_runtime/metro/04886__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01269__.js";
 import "ReactCompilerGating";
@@ -71,7 +71,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "end", overSpecs: "toCharArray$esjava$1" }));
+      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -123,7 +123,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === arg1) {
           let tmp4 = cResult[2];
         }
-        return withEqualityFn(tmp4, _mod4884.shallow);
+        return withEqualityFn(tmp4, _mod4886.shallow);
       }
       const fn = function s(arg0) {
         ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
@@ -332,7 +332,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.itemSize = num;
         obj.dragDropInProgress = dragDropInProgress;
         return obj;
-      }, _mod4884.shallow);
+      }, _mod4886.shallow);
     };
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

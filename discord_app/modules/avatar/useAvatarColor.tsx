@@ -1,6 +1,6 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
 import c from "../../../_runtime/00576_c.js";
-import tinycolorDefault from "../../../_runtime/07658_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07660_tinycolor.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -407,11 +407,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (dependencyMap != null) {
           mapped = dependencyMap.map((item) => {
             [tmp, tmp2, tmp3] = item;
-            const obj = flag(7658)({ r: tmp, g: tmp2, b: tmp3 });
-            ({ h, s, l } = flag(7658)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+            const obj = flag(7660)({ r: tmp, g: tmp2, b: tmp3 });
+            ({ h, s, l } = flag(7660)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
             const obj2 = { h, s: s * stateFromStores, l };
-            const toHslResult = flag(7658)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-            return flag(7658)({ h, s: s * stateFromStores, l }).toHexString();
+            const toHslResult = flag(7660)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+            return flag(7660)({ h, s: s * stateFromStores, l }).toHexString();
           });
         }
         return mapped;

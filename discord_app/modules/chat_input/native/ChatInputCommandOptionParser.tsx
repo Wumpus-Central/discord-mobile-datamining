@@ -2,7 +2,7 @@
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import _modDef8073 from "../../../../_runtime/metro/08073__.js";
+import _modDef8075 from "../../../../_runtime/metro/08075__.js";
 import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser.tsx";
 import ChatInputParser from "ChatInputParser.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -69,7 +69,7 @@ function buildGameMentionResult(id) {
     iconSpacing: 4,
   };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef8073).uri;
+    uri = Image.resolveAssetSource(_modDef8075).uri;
   }
   obj.icon = uri;
   return obj;
@@ -113,7 +113,7 @@ function findAllTimestampPillMatches(size, text) {
 }
 const Image = fn(17).Image;
 const Permissions = fn(1087).Permissions;
-const ChannelAutocompleteConstants = fn(5982);
+const ChannelAutocompleteConstants = fn(5984);
 ({
   GAME_MENTION_INPUT_PREFIX: c10,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_11,

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 const PlatformUtils = fn(1385);
 let obj3 = null;
 if (PlatformUtils.isIOS()) {

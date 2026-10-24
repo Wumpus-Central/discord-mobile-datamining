@@ -52,11 +52,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
     isJoining,
   });
 }
-let closure_4 = fn(4825).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8286).PAGE_SIZE;
+let closure_4 = fn(4827).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8288).PAGE_SIZE;
 const Constants = fn(1087);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4828).ChannelFlags;
+const ChannelFlags = fn(4830).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -936,14 +936,14 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = tmp4(8306).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
+              const result = tmp4(8308).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
               if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
                 dependencyMap = 1;
                 const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
                 return obj5;
               }
-              const obj8 = tmp4(8306);
+              const obj8 = tmp4(8308);
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;

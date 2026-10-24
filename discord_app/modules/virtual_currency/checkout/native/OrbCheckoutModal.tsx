@@ -149,11 +149,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("OrbCheckoutModalContext");
       const virtualCurrencyBalance = require("useVirtualCurrencyBalance").useVirtualCurrencyBalance();
       if (cResult[0] !== skuId) {
-        let result = tmp(9576).get1PShopApplicationIdForSKU(skuId);
+        let result = tmp(9577).get1PShopApplicationIdForSKU(skuId);
         cResult[0] = skuId;
         cResult[1] = result;
         let tmp6 = result;
-        const tmpResult = tmp(9576);
+        const tmpResult = tmp(9577);
       } else {
         tmp6 = cResult[1];
       }

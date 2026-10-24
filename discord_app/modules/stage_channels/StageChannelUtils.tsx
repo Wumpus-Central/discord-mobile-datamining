@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(6635).RequestToSpeakPermissionStates;
+const constants = fn(6637).RequestToSpeakPermissionStates;
 const Permissions = fn(1087).Permissions;
-const RowType = fn(7873).RowType;
+const RowType = fn(7875).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 

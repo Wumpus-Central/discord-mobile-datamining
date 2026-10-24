@@ -14,12 +14,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(17666).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(17698).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
   header: null,
@@ -76,7 +76,7 @@ let items = [
     id: "hangout",
     title: fn(1128).t.ScXySs,
     description: fn(1128).t.DSCqxM,
-    Icon: fn(14242).BumpingFistsSpotIllustration,
+    Icon: fn(14266).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -84,32 +84,32 @@ const obj14 = {
   id: "hangout",
   title: fn(1128).t.ScXySs,
   description: fn(1128).t.DSCqxM,
-  Icon: fn(14242).BumpingFistsSpotIllustration,
+  Icon: fn(14266).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1128).t["F+MTAZ"],
   description: fn(1128).t.srNlJw,
-  Icon: fn(17667).ChatControllersSpotIllustration,
+  Icon: fn(17699).ChatControllersSpotIllustration,
 };
 const obj15 = {
   id: "gaming",
   title: fn(1128).t["F+MTAZ"],
   description: fn(1128).t.srNlJw,
-  Icon: fn(17667).ChatControllersSpotIllustration,
+  Icon: fn(17699).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1128).t["0Ka6B5"],
   description: fn(1128).t["5oGAp/"],
-  Icon: fn(17671).MiniaturesSpotIllustration,
+  Icon: fn(17703).MiniaturesSpotIllustration,
 };
 const ReactCompilerGating = fn(558);
 const obj16 = {
   id: "hobbies",
   title: fn(1128).t["0Ka6B5"],
   description: fn(1128).t["5oGAp/"],
-  Icon: fn(17671).MiniaturesSpotIllustration,
+  Icon: fn(17703).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
         let intl = tmp(1128).intl;
         obj2.children = intl.string(tmp(1128).t["abaDI+"]);
-        const tmp19 = closure_12(tmp(5232).Text, obj2);
+        const tmp19 = closure_12(tmp(5234).Text, obj2);
         cResult[9] = tmp19;
       } else {
         class A {
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj3 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
-        const tmp23 = closure_12(tmp(5232).Text, obj3);
+        const tmp23 = closure_12(tmp(5234).Text, obj3);
         cResult[11] = tmp4.createDescription;
         cResult[12] = tmp23;
       } else {

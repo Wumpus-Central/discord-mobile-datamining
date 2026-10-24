@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef14589 from "../../../../../_runtime/metro/14589__.js";
+import _modDef14612 from "../../../../../_runtime/metro/14612__.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const Fonts = fn(1087).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { justifyContent: "center" },
   button: { paddingHorizontal: 12, paddingTop: 16 },
@@ -114,8 +114,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = {
           title: tmp9,
           body: tmp10,
-          lightSource: _modDef14589,
-          darkSource: _modDef14589,
+          lightSource: _modDef14612,
+          darkSource: _modDef14612,
           titleStyle: null,
           bodyStyle: null,
           imageStyle: null,
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.title = intl.string(util.t["/HABZo"]);
       const intl2 = util.intl;
       obj4.body = intl2.string(util.t["5Jy2FY"]);
-      obj4.lightSource = _modDef14589;
-      obj4.darkSource = _modDef14589;
+      obj4.lightSource = _modDef14612;
+      obj4.darkSource = _modDef14612;
       ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
       obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
       const items1 = [

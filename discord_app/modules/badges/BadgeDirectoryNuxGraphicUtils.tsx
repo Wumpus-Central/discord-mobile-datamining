@@ -2,10 +2,10 @@
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 let items = [
-  fn(8671).BadgeId.STREAMING,
-  fn(8671).BadgeId.GAME_VARIETY,
-  fn(8671).BadgeId.GAME_TIME,
-  fn(8671).BadgeId.ACCOUNT_AGE,
+  fn(8673).BadgeId.STREAMING,
+  fn(8673).BadgeId.GAME_VARIETY,
+  fn(8673).BadgeId.GAME_TIME,
+  fn(8673).BadgeId.ACCOUNT_AGE,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryNuxGraphicUtils.tsx");

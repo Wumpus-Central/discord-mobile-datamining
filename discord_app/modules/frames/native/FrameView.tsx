@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ConjureProjectStore from "../../conjure/projects/ConjureProjectStore.tsx";
 
 require = fn;
-const FrameLayoutModes = fn(6774).FrameLayoutModes;
+const FrameLayoutModes = fn(6776).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
       let obj = frame(576);
       const tmp = frame;
-      const data = frame(6807).useApplication(frame.applicationId).data;
+      const data = frame(6809).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[2];
       }
-      const obj2 = frame(6807);
+      const obj2 = frame(6809);
       let stateFromStores = tmp(504).useStateFromStores(first, tmp6);
       if (!stateFromStores) {
         let conjureProjectId;
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const layoutMode = presentation.layoutMode;
       let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
       ({ iframeId, onActivityCrash } = frame);
-      const data = frame(6807).useApplication(frame.applicationId).data;
+      const data = frame(6809).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
-      let obj = frame(6807);
+      let obj = frame(6809);
       const items = [ConjureProjectStore];
       let stateFromStores = frame(504).useStateFromStores(items, () =>
         ConjureProjectStore.isConjureProjectApplication(frame.applicationId),
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = null == data;
       }
       const tmpResult = frame(504);
-      const baseActivityView = frame(11436).useBaseActivityView({
+      const baseActivityView = frame(11456).useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
         setShowLoadingStateForLockingOrientation: tmp5[1],
@@ -233,15 +233,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ignoreSilentHardwareSwitch: null,
       };
       const obj4 = { type: null, frameId: null };
-      const tmpResult3 = frame(11436);
-      obj4.type = frame(6775).EmbeddedContextSourceType.FRAME;
+      const tmpResult3 = frame(11456);
+      obj4.type = frame(6777).EmbeddedContextSourceType.FRAME;
       obj4.frameId = frame.id;
       obj3.contextSource = obj4;
-      const tmp12 = layoutMode(18400);
-      obj3.queryParams = layoutMode(18397)(frame, frame(11451).ActivityPlatform.MOBILE);
+      const tmp12 = layoutMode(18432);
+      obj3.queryParams = layoutMode(18429)(frame, frame(11471).ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp13 = layoutMode(18397);
-      obj3.allowPopups = frame(11482).allowPopups(data);
+      const tmp13 = layoutMode(18429);
+      obj3.allowPopups = frame(11502).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
         landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -276,5 +276,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ignoreSilentHardwareSwitch={null}
         />
       );
-      return jsx(frame(11436).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+      return jsx(frame(11456).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
     };

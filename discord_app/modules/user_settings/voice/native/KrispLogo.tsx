@@ -7,8 +7,8 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
-import _modDef11611 from "../../../../../_runtime/metro/11611__.js";
-import _modDef11612 from "../../../../../_runtime/metro/11612__.js";
+import _modDef11631 from "../../../../../_runtime/metro/11631__.js";
+import _modDef11632 from "../../../../../_runtime/metro/11632__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
@@ -67,10 +67,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       const tmpResult = initialize;
       if (tmpResult2.isThemeLight(stateFromStores)) {
-        let tmp8Result = _modDef11611;
+        let tmp8Result = _modDef11631;
         let tmp10 = importDefault;
       } else {
-        tmp8Result = _modDef11612;
+        tmp8Result = _modDef11632;
         tmp10 = importDefault;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp8Result) {
         const obj2 = { style: closure_12.logo, source: tmp8Result, accessibilityLabel: tmp11 };
-        const tmp16 = v65535(tmp10(5667), obj2);
+        const tmp16 = v65535(tmp10(5669), obj2);
         cResult[3] = tmp8Result;
         cResult[4] = tmp16;
         let tmp13 = tmp16;
@@ -132,10 +132,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [ThemeStore];
       const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
       if (obj2.isThemeLight(stateFromStores)) {
-        let tmp4Result = _modDef11611;
+        let tmp4Result = _modDef11631;
         let tmp6 = importDefault;
       } else {
-        tmp4Result = _modDef11612;
+        tmp4Result = _modDef11632;
         tmp6 = importDefault;
       }
       const obj3 = { style: closure_12.detailsView, children: null };
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2 = shared;
       const intl = util.intl;
       obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-      const items1 = [v65535(tmp6(5667), obj4)];
+      const items1 = [v65535(tmp6(5669), obj4)];
       const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
       const intl2 = util.intl;
       obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

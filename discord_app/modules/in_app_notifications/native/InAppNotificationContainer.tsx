@@ -20,7 +20,7 @@ import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(13716);
+const InAppNotificationConstants = fn(13753);
 ({
   DEFAULT_ANIMATION_TIMING: closure_7,
   extrapolateConfig: closure_8,
@@ -33,9 +33,9 @@ const Constants = fn(1087);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(5050).Easing;
-obj.easing = Easing.in(fn(5050).Easing.ease);
-const createStyles = fn(4969);
+const Easing = fn(5052).Easing;
+obj.easing = Easing.in(fn(5052).Easing.ease);
+const createStyles = fn(4971);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",

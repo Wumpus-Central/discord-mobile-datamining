@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef9701 from "../../../../../../_runtime/metro/09701__.js";
+import _modDef9702 from "../../../../../../_runtime/metro/09702__.js";
 import MaskedBadgeDefault from "../MaskedBadge.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -18,7 +18,7 @@ let closure_3 = ["navigation", "onPress", "badgeCutoutColor", "ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = {
@@ -122,7 +122,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       let backgroundColor = require("useToken").useToken(tmp4);
       const tmpResult3 = require("useToken");
       if (backgroundColor == null) {
-        backgroundColor = tmpResult4.useGradientValue(tmp(5142).GradientPercentage.START);
+        backgroundColor = tmpResult4.useGradientValue(tmp(5144).GradientPercentage.START);
       }
       if (backgroundColor == null) {
         backgroundColor = tmp12.maskStroke.backgroundColor;
@@ -144,7 +144,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
           cResult[14] = formatToPlainStringResult;
         } else {
           if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-            const obj5 = { source: _modDef9701, style: null };
+            const obj5 = { source: _modDef9702, style: null };
             const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
             obj5.style = obj6;
             const tmp31 = closure_10(FastImageDefault, obj5);
@@ -186,7 +186,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
                   obj8.onPress = tmp23;
                   obj8.style = tmp12.actionButtonPressable;
                   obj8.children = tmp37;
-                  obj7.children = closure_10(tmp(6906).PressableOpacity, obj8);
+                  obj7.children = closure_10(tmp(6908).PressableOpacity, obj8);
                   const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
                   cResult[25] = tmp23;
                   cResult[26] = tmp7;

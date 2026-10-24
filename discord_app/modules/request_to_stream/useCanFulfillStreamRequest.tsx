@@ -43,15 +43,15 @@ function canFulfillStreamRequest(channel_id) {
     const tmp19 = flag;
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(11565).getVideoPermission(channel);
+    const videoPermission = flag(11585).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    const obj8 = flag(11565);
+    const obj8 = flag(11585);
     dependencyMap = tmp19(1384).isAndroid() ? constants.ANDROID : constants.IOS;
     const tmp19Result = tmp19(1384);
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11327).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11345).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

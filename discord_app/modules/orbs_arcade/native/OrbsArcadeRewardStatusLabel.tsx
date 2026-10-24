@@ -28,7 +28,7 @@ function getStatusLabel(type, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { statusLabel: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

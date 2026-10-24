@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { fileThumbnail: null };
 let size = {
   width: nativeDefault.space.PX_24,
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             return closure_1_3(projectId(fileThumbnail[9]).TableRow, obj, user.user.id);
           });
-          const tmp15 = closure_3(tmp(6985).TableRowGroup, obj3);
+          const tmp15 = closure_3(tmp(6987).TableRowGroup, obj3);
         }
         let tmp16 = null;
         if (found1.length > 0) {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             return closure_1_3(projectId(fileThumbnail[9]).TableRow, obj, file.file.id);
           });
-          tmp16 = closure_3(tmp(6985).TableRowGroup, obj4);
+          tmp16 = closure_3(tmp(6987).TableRowGroup, obj4);
         }
         tmp12 = tmp16;
         tmp11 = forResult;

@@ -35,7 +35,6 @@ const obj = {
   FINALIZE_CHARACTER: "finalize_character",
   SUMMARY: "summary",
   SHARE: "share",
-  PROFILE_WIDGET: "profile_widget",
 };
 const items = [, , , , , ,];
 ({
@@ -61,7 +60,6 @@ const obj2 = {
   ASSEMBLED: "assembled",
   FINALIZE: "finalize",
   SUMMARY: "summary",
-  PROFILE_WIDGET: "profile_widget",
 };
 const obj3 = {
   VOICE_INTRO: "voice_intro",
@@ -115,7 +113,6 @@ let closure_1 = {
   [obj.FINALIZE_CHARACTER]: { characterStage: obj2.FINALIZE },
   [obj.SUMMARY]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SUMMARY },
   [obj.SHARE]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SHARE },
-  [obj.PROFILE_WIDGET]: { characterStage: obj2.PROFILE_WIDGET },
 };
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigation.tsx");
 

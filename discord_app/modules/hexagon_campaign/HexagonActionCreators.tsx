@@ -254,7 +254,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(4994).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(4996).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 5 * DurationsDefault.Millis.SECOND;
 let closure_10 = null;

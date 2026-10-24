@@ -15,6 +15,35 @@ import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx"
 import QuestStore from "../../QuestStore.tsx";
 
 require = fn;
+function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
+  let uuid = SessionAdGenerator.getOrRefreshAdSession(shouldExtendSession).uuid;
+  const obj2 = { client_ad_session_id: uuid, billing_session_id: null };
+  if (!obj3.isBillableQuestContent(sourceQuestContent, QUEST)) {
+    const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
+    let uuid1;
+    if (activeSessionUnsafe != null) {
+      uuid1 = activeSessionUnsafe.uuid;
+    }
+    if (uuid1 == null) {
+      uuid1 = null;
+    }
+    uuid = uuid1;
+    const tmpResult = SessionHeartbeatScheduler;
+  }
+  obj2.billing_session_id = uuid;
+  obj3 = QuestDataUtils;
+  const adDecisionData = QuestDataUtils.getAdDecisionData(adContentId, sourceQuestContent);
+  const obj4 = {};
+  const merged = Object.assign(obj2);
+  obj4.ad_content_id = adContentId;
+  const merged1 = Object.assign(adDecisionData);
+  let creative_type = adDecisionData.creative_type;
+  if (creative_type == null) {
+    creative_type = QUEST;
+  }
+  obj4.creative_type = creative_type;
+  return obj4;
+}
 function trackQuestEvent(sourceQuestContent) {
   ({ event, properties, trackGuildAndChannelMetadata, shouldExtendSession } = sourceQuestContent);
   if (shouldExtendSession === undefined) {
@@ -24,7 +53,7 @@ function trackQuestEvent(sourceQuestContent) {
   const quests = QuestStore.quests;
   value = quests.get(sourceQuestContent.questId);
   if (null != value) {
-    const obj = {
+    const obj2 = {
       quest_id: value.id,
       quest_type: utils_QuestUtils.getQuestType(value.config),
       application_ids: null,
@@ -34,40 +63,15 @@ function trackQuestEvent(sourceQuestContent) {
     if (allApplicationIds == null) {
       allApplicationIds = [];
     }
-    obj.application_ids = allApplicationIds;
-    obj.quest_status = AnalyticsTypes.getQuestStatus(value);
+    const obj = {};
+    obj2.application_ids = allApplicationIds;
+    obj2.quest_status = AnalyticsTypes.getQuestStatus(value);
     const id = value.id;
-    const QUEST = AdCreativeType.AdCreativeType.QUEST;
-    const tmp24Result = AnalyticsTypes;
-    let uuid = SessionAdGenerator.getOrRefreshAdSession(shouldExtendSession).uuid;
-    const tmp24Result5 = SessionAdGenerator;
-    const adDecisionData = QuestDataUtils.getAdDecisionData(id, sourceQuestContent);
-    const obj2 = { client_ad_session_id: uuid, billing_session_id: null, ad_content_id: null };
-    const tmp24Result6 = QuestDataUtils;
-    if (!tmp24Result7.isBillableQuestContent(sourceQuestContent, QUEST)) {
-      const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
-      let uuid1;
-      if (activeSessionUnsafe != null) {
-        uuid1 = activeSessionUnsafe.uuid;
-      }
-      if (uuid1 == null) {
-        uuid1 = null;
-      }
-      uuid = uuid1;
-      const tmp24Result8 = SessionHeartbeatScheduler;
-    }
-    obj2.billing_session_id = uuid;
-    obj2.ad_content_id = id;
-    const merged = Object.assign(adDecisionData);
-    let creative_type = adDecisionData.creative_type;
-    if (creative_type == null) {
-      creative_type = QUEST;
-    }
-    const obj3 = {};
-    obj2.creative_type = creative_type;
+    const merged = Object.assign(
+      getCommonProperties(id, sourceQuestContent, AdCreativeType.AdCreativeType.QUEST, shouldExtendSession),
+    );
     const merged1 = Object.assign(obj2);
-    const merged2 = Object.assign(obj);
-    const merged3 = Object.assign(properties);
+    const merged2 = Object.assign(properties);
     if (trackGuildAndChannelMetadata === undefined) {
       trackGuildAndChannelMetadata = false;
     }
@@ -76,16 +80,16 @@ function trackQuestEvent(sourceQuestContent) {
       if (!value.preview) {
         const hasItem = set.has(event);
         if (trackGuildAndChannelMetadata) {
-          AppAnalyticsUtilsDefault.trackWithMetadata(event, obj3, hasItem);
-          const tmp21Result = AppAnalyticsUtilsDefault;
+          AppAnalyticsUtilsDefault.trackWithMetadata(event, obj, hasItem);
+          const tmp18Result = AppAnalyticsUtilsDefault;
         } else {
-          const obj4 = { flush: hasItem };
-          AnalyticsUtilsDefault.track(event, obj3, obj4);
-          const tmp21Result2 = AnalyticsUtilsDefault;
+          const obj3 = { flush: hasItem };
+          AnalyticsUtilsDefault.track(event, obj, obj3);
+          const tmp18Result2 = AnalyticsUtilsDefault;
         }
       }
     }
-    tmp24Result7 = QuestDataUtils;
+    const tmp21Result = AnalyticsTypes;
   }
 }
 function trackAdContentEvent(sourceQuestContent) {
@@ -107,76 +111,53 @@ function trackAdContentEvent(sourceQuestContent) {
   if (null != relatedQuestId) {
     quest = QuestStore.getQuest(relatedQuestId);
   }
-  let uuid = SessionAdGenerator.getOrRefreshAdSession(shouldExtendSession).uuid;
-  const adDecisionData = QuestDataUtils.getAdDecisionData(adContentId, sourceQuestContent);
-  const obj3 = { client_ad_session_id: uuid, billing_session_id: null, ad_content_id: null };
-  if (!obj4.isBillableQuestContent(sourceQuestContent, adCreativeType)) {
-    const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
-    let uuid1;
-    if (activeSessionUnsafe != null) {
-      uuid1 = activeSessionUnsafe.uuid;
-    }
-    if (uuid1 == null) {
-      uuid1 = null;
-    }
-    uuid = uuid1;
-    const tmp3Result = SessionHeartbeatScheduler;
-  }
-  obj3.billing_session_id = uuid;
-  obj3.ad_content_id = adContentId;
-  const merged = Object.assign(adDecisionData);
-  let creative_type = adDecisionData.creative_type;
-  if (creative_type == null) {
-    creative_type = adCreativeType;
-  }
-  const obj5 = {};
-  obj3.creative_type = creative_type;
-  const merged1 = Object.assign(obj3);
-  obj4 = QuestDataUtils;
+  const obj = {};
+  const merged = Object.assign(
+    getCommonProperties(adContentId, sourceQuestContent, adCreativeType, shouldExtendSession),
+  );
   let adMetadataSealed = QuestDataUtils.getAdMetadataSealed(sourceQuestContent, adContentId);
   if (adMetadataSealed == null) {
     adMetadataSealed = null;
   }
-  obj5.metadata_sealed = adMetadataSealed;
-  const tmp3Result4 = QuestDataUtils;
+  obj.metadata_sealed = adMetadataSealed;
   let adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(sourceQuestContent, undefined, adContentId);
   if (adTrafficMetadataSealed == null) {
     adTrafficMetadataSealed = null;
   }
-  obj5.traffic_metadata_sealed = adTrafficMetadataSealed;
+  obj.traffic_metadata_sealed = adTrafficMetadataSealed;
   if (null != noFillDecision) {
-    const obj6 = { decision_id: null, is_targeted: false, metadata_sealed: null, traffic_metadata_sealed: null };
-    ({ decisionId: obj10.decision_id, metadataSealed } = noFillDecision);
+    const obj3 = { decision_id: null, is_targeted: false, metadata_sealed: null, traffic_metadata_sealed: null };
+    ({ decisionId: obj5.decision_id, metadataSealed } = noFillDecision);
     if (metadataSealed == null) {
       metadataSealed = null;
     }
-    obj6.metadata_sealed = metadataSealed;
+    obj3.metadata_sealed = metadataSealed;
     let prop = noFillDecision.trafficMetadataSealed;
     if (prop == null) {
       prop = null;
     }
-    obj6.traffic_metadata_sealed = prop;
+    obj3.traffic_metadata_sealed = prop;
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const merged1 = Object.assign(obj4);
+  if (null != relatedQuestId) {
+    const obj6 = { quest_id: relatedQuestId, quest_status: null };
+    let questStatus = null;
+    if (null != quest) {
+      questStatus = AnalyticsTypes.getQuestStatus(quest);
+      const tmp4Result2 = AnalyticsTypes;
+    }
+    obj6.quest_status = questStatus;
     let obj7 = obj6;
   } else {
     obj7 = {};
   }
+  const obj8 = {};
   const merged2 = Object.assign(obj7);
-  if (null != relatedQuestId) {
-    const obj8 = { quest_id: relatedQuestId, quest_status: null };
-    let questStatus = null;
-    if (null != quest) {
-      questStatus = AnalyticsTypes.getQuestStatus(quest);
-      const tmp3Result6 = AnalyticsTypes;
-    }
-    obj8.quest_status = questStatus;
-    let obj9 = obj8;
-  } else {
-    obj9 = {};
-  }
-  const obj11 = {};
-  const merged3 = Object.assign(obj9);
-  const merged4 = Object.assign(obj5);
-  const merged5 = Object.assign(properties);
+  const merged3 = Object.assign(obj);
+  const merged4 = Object.assign(properties);
   if (trackGuildAndChannelMetadata === undefined) {
     trackGuildAndChannelMetadata = false;
   }
@@ -184,19 +165,19 @@ function trackAdContentEvent(sourceQuestContent) {
     const isLoggingAnalyticsEvents = DeveloperOptionsStore.isLoggingAnalyticsEvents;
     const hasItem = set.has(event);
     if (trackGuildAndChannelMetadata) {
-      AppAnalyticsUtilsDefault.trackWithMetadata(event, obj11, hasItem);
-      const tmp22Result = AppAnalyticsUtilsDefault;
+      AppAnalyticsUtilsDefault.trackWithMetadata(event, obj8, hasItem);
+      const tmp18Result = AppAnalyticsUtilsDefault;
     } else {
-      const obj12 = { flush: hasItem };
-      AnalyticsUtilsDefault.track(event, obj11, obj12);
-      const tmp22Result2 = AnalyticsUtilsDefault;
+      const obj9 = { flush: hasItem };
+      AnalyticsUtilsDefault.track(event, obj8, obj9);
+      const tmp18Result2 = AnalyticsUtilsDefault;
     }
   }
-  const tmp3Result5 = QuestDataUtils;
+  const tmp4Result = QuestDataUtils;
 }
 function getCommonClickEventProperties() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -204,7 +185,7 @@ function getCommonClickEventProperties() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _getCommonClickEventProperties(arg0) {
+let closure_13 = async function _getCommonClickEventProperties(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -318,15 +299,15 @@ let closure_12 = async function _getCommonClickEventProperties(arg0) {
     }
   }
 };
-let closure_13 = async function _trackQuestContentClicked() {
+let closure_14 = async function _trackQuestContentClicked() {
   const adTrafficMetadataSealed = closure_134_0(closure_134_2[7]).getAdTrafficMetadataSealed(
     closure_135_8,
     closure_135_0,
   );
-  set = closure_134_9;
+  set = closure_134_10;
   const obj6 = { questId: closure_135_0, event: closure_134_7.QUEST_CONTENT_CLICKED };
   const properties = {};
-  await closure_134_11({
+  await closure_134_12({
     questContent: closure_135_1,
     questContentPosition: closure_135_3,
     questContentRowIndex: closure_135_4,
@@ -377,15 +358,15 @@ let closure_13 = async function _trackQuestContentClicked() {
   } = closure_0);
   return "Reflect";
 };
-let closure_14 = async function _trackAdContentClicked() {
-  dependencyMap = closure_131_10;
+let closure_15 = async function _trackAdContentClicked() {
+  dependencyMap = closure_131_11;
   const obj5 = {
     adContentId: closure_132_0,
     relatedQuestId: closure_132_1,
     adCreativeType: closure_132_2,
     event: closure_131_7.QUEST_CONTENT_CLICKED,
   };
-  await closure_131_11({
+  await closure_131_12({
     questContent: closure_132_3,
     questContentPosition: closure_132_5,
     questContentRowIndex: closure_132_6,
@@ -424,6 +405,28 @@ let set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsActions.tsx");
 
+export const getAdSessionProperties = function getAdSessionProperties(
+  sourceQuestContent,
+  QUEST_HOME_HERO,
+  shouldExtendSession,
+) {
+  let uuid = SessionAdGenerator.getOrRefreshAdSession(shouldExtendSession).uuid;
+  const obj2 = { client_ad_session_id: uuid, billing_session_id: null };
+  if (!obj3.isBillableQuestContent(sourceQuestContent, QUEST_HOME_HERO)) {
+    const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
+    let uuid1;
+    if (activeSessionUnsafe != null) {
+      uuid1 = activeSessionUnsafe.uuid;
+    }
+    if (uuid1 == null) {
+      uuid1 = null;
+    }
+    uuid = uuid1;
+    const tmpResult = SessionHeartbeatScheduler;
+  }
+  obj2.billing_session_id = uuid;
+  return obj2;
+};
 export { trackQuestEvent };
 export const AppStoreOverlayVariant = { NATIVE: "native", CUSTOM: "custom" };
 export const AppStoreOverlaySurfaces = { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat", SEE_MORE: "see_more" };
@@ -660,7 +663,7 @@ export { trackAdContentEvent };
 export { getCommonClickEventProperties };
 export const trackQuestContentClicked = function trackQuestContentClicked() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -670,7 +673,7 @@ export const trackQuestContentClicked = function trackQuestContentClicked() {
 };
 export const trackAdContentClicked = function trackAdContentClicked() {
   const self = this;
-  const apply = closure_14.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

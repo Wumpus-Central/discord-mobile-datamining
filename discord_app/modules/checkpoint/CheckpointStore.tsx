@@ -12,6 +12,7 @@ let c5 = null;
 let c6 = null;
 let INIT = obj.INIT;
 let c8 = null;
+let c9 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class CheckpointStore extends PersistedStore {}
 const prototype = CheckpointStore.prototype;
@@ -55,6 +56,12 @@ Object.defineProperty(prototype, "fetchState", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "isSaving", {
+  get: function isSaving() {
+    return c9;
+  },
+  set: undefined,
+});
 Object.defineProperty(prototype, "selectedCharacterTraits", {
   get: function selectedCharacterTraits() {
     let tmp = c8;
@@ -84,9 +91,16 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   CHECKPOINT_FETCH_FAILED: function handleFetchFailed() {
     INIT = obj.ERROR;
   },
+  CHECKPOINT_COMPLETE_START: function handleCompleteStart() {
+    c9 = true;
+  },
   CHECKPOINT_COMPLETE_SUCCESS: function handleCompleteSuccess(character) {
     character = character.character;
     c8 = null;
+    c9 = false;
+  },
+  CHECKPOINT_COMPLETE_FAILED: function handleCompleteFailed() {
+    c9 = false;
   },
   CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
     c6 = null;
@@ -116,6 +130,7 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     c6 = null;
     INIT = obj.INIT;
     c8 = null;
+    c9 = false;
   },
 });
 const size = fn(2);

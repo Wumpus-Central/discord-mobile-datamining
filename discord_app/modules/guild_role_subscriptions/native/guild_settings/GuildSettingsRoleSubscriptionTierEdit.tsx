@@ -8,6 +8,7 @@ import dismissible_content from "../../../../../discord_common/js/packages/proto
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import CreatorMonetizationRestrictionsHooks from "../../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
@@ -20,7 +21,6 @@ import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubsc
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef19266 from "../../../../../_runtime/metro/19266__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,13 +30,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4894).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(16525).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4896).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(16557).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 }, tabsContainerWithDraft: { paddingBottom: 0 }, actionButton: { alignSelf: "stretch", margin: 16, marginTop: 0 }, tabContent: null, actionHeader: null, actionDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -70,8 +70,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19266 };
-        const tmp17 = closure_1_14(native.Icon, obj5);
+        const obj5 = { size: "xs", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT };
+        const tmp17 = closure_1_14(TrashIcon.TrashIcon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -154,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef19266 });
+  obj7.icon = closure_1_14(TrashIcon.TrashIcon, { size: "xs", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -463,8 +463,8 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
   navigation = guildId(editStateId[13]).useNavigation();
   let obj2 = guildId(editStateId[13]);
   const tmp2 = _slicedToArray;
-  const subscriptionListing = guildId(editStateId[26]).useSubscriptionListing(editStateId);
-  const obj3 = guildId(editStateId[26]);
+  const subscriptionListing = guildId(editStateId[25]).useSubscriptionListing(editStateId);
+  const obj3 = guildId(editStateId[25]);
   const first1 = _slicedToArray(onBeforeDispatchNewListing(editStateId[31]).useName(editStateId), 1)[0];
   let flag;
   if (subscriptionListing != null) {
@@ -618,7 +618,7 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
     items7[2] = c14(closure_21, obj13);
     obj8.children = items7;
     obj7.children = closure_16(first1, obj8);
-    obj6.children = c14(tmp5(tmp6[27]).RoleSubscriptionSettingsDisabledContextProvider, obj7);
+    obj6.children = c14(tmp5(tmp6[26]).RoleSubscriptionSettingsDisabledContextProvider, obj7);
     return c14(tmp5(tmp6[14]).EditStateContextProvider, obj6);
   }
   const obj5 = {

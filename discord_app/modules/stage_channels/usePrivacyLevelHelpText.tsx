@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
-const constants = fn(4827).GuildScheduledEventPrivacyLevel;
+const constants = fn(4829).GuildScheduledEventPrivacyLevel;
 const Permissions = fn(1098).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

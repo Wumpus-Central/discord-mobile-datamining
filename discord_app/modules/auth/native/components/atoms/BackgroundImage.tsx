@@ -2,8 +2,8 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../design/shared.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef7067 from "../../../../../../_runtime/metro/07067__.js";
-import _modDef7068 from "../../../../../../_runtime/metro/07068__.js";
+import _modDef7069 from "../../../../../../_runtime/metro/07069__.js";
+import _modDef7070 from "../../../../../../_runtime/metro/07070__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj4;
       } else {
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result2 = _modDef7067;
+          let tmp5Result2 = _modDef7069;
         } else {
-          tmp5Result2 = _modDef7068;
+          tmp5Result2 = _modDef7070;
         }
         tmpResult = shared;
       }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      const tmp = flag(5203)();
+      const tmp = flag(5205)();
       dependencyMap = tmp;
       let items = [backgroundImageSource, flag, tmp];
       let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -76,15 +76,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           let tmp2 = dependencyMap;
           if (obj2.isThemeDark(closure_2)) {
-            tmp2 = 7067;
+            tmp2 = 7069;
             let tmp4Result = importDefault(tmp2);
           } else {
-            tmp4Result = _modDef7068;
+            tmp4Result = _modDef7070;
           }
           obj2 = shared;
         }
       }, items);
       const merged = Object.assign(memo);
-      obj.children = jsx(flag(5667), {});
+      obj.children = jsx(flag(5669), {});
       return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
     };

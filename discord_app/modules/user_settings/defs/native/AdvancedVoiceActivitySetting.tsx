@@ -31,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported(),
       );
     };
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAdvancedVoiceActivitySettingValue() {
       const cResult = c.c(2);
@@ -58,7 +58,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8330).MobileUserSettings.VOICE,
+  parent: fn(8332).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAdvancedVoiceActivitySettingValue() {
         const cResult = c.c(2);

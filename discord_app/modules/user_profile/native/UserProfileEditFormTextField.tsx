@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const TextInput = TextArea(7006);
-const TextArea2 = TextArea(7178);
+const TextInput = TextArea(7008);
+const TextArea2 = TextArea(7180);
 require = fn;
 let closure_2 = ["label", "description", "errorMessage", "containerStyle", "numberOfLines", "inputRef"];
 const jsx = fn(21).jsx;

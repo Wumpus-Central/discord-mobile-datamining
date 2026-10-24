@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandDetailsOverflowMenu.tsx
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
-import _modDef9138 from "../../../../../../_runtime/metro/09138__.js";
+import _modDef9139 from "../../../../../../_runtime/metro/09139__.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function CommandDetailsOverflowMenu(commandId) {
       const cResult = commandId(576).c(6);
       commandId = commandId.commandId;
-      const DeveloperMode = commandId(4797).DeveloperMode;
+      const DeveloperMode = commandId(4799).DeveloperMode;
       if (null != commandId) {
         if (DeveloperMode.useSetting()) {
           const _Symbol = Symbol;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 ClipboardUtils.copy(commandId);
                 ToastUtils.presentIdCopied();
               },
-              IconComponent: tmp(10411).IdIcon,
+              IconComponent: tmp(10412).IdIcon,
             };
             const items = [obj2];
             cResult[1] = commandId;
@@ -49,16 +49,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function p(ref) {
-              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9138 };
+              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9139 };
               const merged = Object.assign(_objectWithoutProperties(ref, closure_1_3));
               const intl = commandId(1128).intl;
               obj.accessibilityLabel = intl.string(commandId(1128).t.PdRCRg);
               obj.maxFontSizeMultiplier = 1.5;
-              return jsx(commandId(7957).IconButton, {
+              return jsx(commandId(7959).IconButton, {
                 ref: ref.ref,
                 size: "sm",
                 variant: "secondary-overlay",
-                icon: _modDef9138,
+                icon: _modDef9139,
               });
             };
             cResult[3] = fn;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[4] !== tmp7) {
             const obj3 = { items: tmp7, children: tmp8 };
-            const tmp11 = jsx(tmp(9760).ContextMenu, { items: tmp7, children: tmp8 });
+            const tmp11 = jsx(tmp(9761).ContextMenu, { items: tmp7, children: tmp8 });
             cResult[4] = tmp7;
             cResult[5] = tmp11;
             let tmp9 = tmp11;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CommandDetailsOverflowMenu(commandId) {
       commandId = commandId.commandId;
-      const DeveloperMode = commandId(4797).DeveloperMode;
+      const DeveloperMode = commandId(4799).DeveloperMode;
       if (null != commandId) {
         if (DeveloperMode.useSetting()) {
           let obj = { label: null, action: null, IconComponent: null };
@@ -92,39 +92,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             ClipboardUtils.copy(commandId);
             ToastUtils.presentIdCopied();
           };
-          obj.IconComponent = tmp(10411).IdIcon;
+          obj.IconComponent = tmp(10412).IdIcon;
           const items = [obj];
           const obj2 = {
             items,
             children(ref) {
               const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9138 };
+              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9139 };
               const merged1 = Object.assign(merged);
               const intl = commandId(1128).intl;
               obj.accessibilityLabel = intl.string(commandId(1128).t.PdRCRg);
               obj.maxFontSizeMultiplier = 1.5;
-              return jsx(commandId(7957).IconButton, {
+              return jsx(commandId(7959).IconButton, {
                 ref: ref.ref,
                 size: "sm",
                 variant: "secondary-overlay",
-                icon: _modDef9138,
+                icon: _modDef9139,
               });
             },
           };
-          return jsx(tmp(9760).ContextMenu, {
+          return jsx(tmp(9761).ContextMenu, {
             items,
             children(ref) {
               const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9138 };
+              const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9139 };
               const merged1 = Object.assign(merged);
               const intl = commandId(1128).intl;
               obj.accessibilityLabel = intl.string(commandId(1128).t.PdRCRg);
               obj.maxFontSizeMultiplier = 1.5;
-              return jsx(commandId(7957).IconButton, {
+              return jsx(commandId(7959).IconButton, {
                 ref: ref.ref,
                 size: "sm",
                 variant: "secondary-overlay",
-                icon: _modDef9138,
+                icon: _modDef9139,
               });
             },
           });

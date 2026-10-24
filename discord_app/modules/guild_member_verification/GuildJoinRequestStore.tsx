@@ -80,22 +80,22 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(5001).joinRequestFromServer;
+const joinRequestFromServer = fn(5003).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};
 let c9 = false;
 function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID(arg0) {}
 function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS(arg0, arg1) {}
-const secondaryIndexMap = new fn(4896).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4898).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (joinRequestId) => "" + joinRequestId.joinRequestId,
 );
-const secondaryIndexMap1 = new fn(4896).SecondaryIndexMap(
+const secondaryIndexMap1 = new fn(4898).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (joinRequestId) => "" + joinRequestId.joinRequestId,
 );
-const secondaryIndexMap2 = new fn(4896).SecondaryIndexMap(
+const secondaryIndexMap2 = new fn(4898).SecondaryIndexMap(
   guildJoinRequestsIndex,
   (actionedAt) => "" + actionedAt.actionedAt,
 );

@@ -5,13 +5,13 @@ import spring from "../../../animation/reanimated/spring/spring.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef15382 from "../../../../../_runtime/metro/15382__.js";
-import _modDef15383 from "../../../../../_runtime/metro/15383__.js";
-import _modDef15384 from "../../../../../_runtime/metro/15384__.js";
-import _modDef15385 from "../../../../../_runtime/metro/15385__.js";
-import _modDef15386 from "../../../../../_runtime/metro/15386__.js";
-import _modDef15387 from "../../../../../_runtime/metro/15387__.js";
-import _modDef15388 from "../../../../../_runtime/metro/15388__.js";
+import _modDef15402 from "../../../../../_runtime/metro/15402__.js";
+import _modDef15403 from "../../../../../_runtime/metro/15403__.js";
+import _modDef15404 from "../../../../../_runtime/metro/15404__.js";
+import _modDef15405 from "../../../../../_runtime/metro/15405__.js";
+import _modDef15406 from "../../../../../_runtime/metro/15406__.js";
+import _modDef15407 from "../../../../../_runtime/metro/15407__.js";
+import _modDef15408 from "../../../../../_runtime/metro/15408__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1203).STATUS_PADDING;
 const StatusTypes = fn(1087).StatusTypes;
-const ChannelAnimationConstants = fn(14286);
+const ChannelAnimationConstants = fn(14310);
 ({
   TYPING_ENTERING: closure_7,
   TYPING_EXITING: closure_8,
@@ -29,9 +29,9 @@ const ChannelAnimationConstants = fn(14286);
 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 let closure_12 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(4969);
+createStyles = fn(4971);
 let closure_13 = createStyles.createStyles((statusSizeOverride, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(statusSizeOverride);
   ({ height, dotSize } = statusTypingDimensions);
@@ -132,23 +132,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (tmp5) {
-              let tmp14 = _modDef15382;
+              let tmp14 = _modDef15402;
             } else if (tmp4) {
-              tmp14 = _modDef15383;
+              tmp14 = _modDef15403;
             } else if (tmp3) {
-              tmp14 = _modDef15384;
+              tmp14 = _modDef15404;
             } else if (StatusTypes.IDLE === status) {
-              tmp14 = _modDef15385;
+              tmp14 = _modDef15405;
             } else {
               if (StatusTypes.DND === status) {
-                tmp14 = _modDef15386;
+                tmp14 = _modDef15406;
               } else if (StatusTypes.OFFLINE !== status) {
                 if (StatusTypes.INVISIBLE !== status) {
                   const ONLINE = StatusTypes.ONLINE;
-                  tmp14 = _modDef15388;
+                  tmp14 = _modDef15408;
                 }
               }
-              tmp14 = _modDef15387;
+              tmp14 = _modDef15407;
             }
             cResult[7] = tmp3;
             cResult[8] = tmp4;
@@ -193,23 +193,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
       const tmp = closure_12();
       if (streaming) {
-        let tmp4Result = _modDef15382;
+        let tmp4Result = _modDef15402;
       } else if (flag2) {
-        tmp4Result = _modDef15383;
+        tmp4Result = _modDef15403;
       } else if (flag) {
-        tmp4Result = _modDef15384;
+        tmp4Result = _modDef15404;
       } else if (StatusTypes.IDLE === status) {
-        tmp4Result = _modDef15385;
+        tmp4Result = _modDef15405;
       } else if (StatusTypes.DND === status) {
-        tmp4Result = _modDef15386;
+        tmp4Result = _modDef15406;
       } else {
         if (StatusTypes.OFFLINE !== status) {
           if (StatusTypes.INVISIBLE !== status) {
             const ONLINE = StatusTypes.ONLINE;
-            tmp4Result = _modDef15388;
+            tmp4Result = _modDef15408;
           }
         }
-        tmp4Result = _modDef15387;
+        tmp4Result = _modDef15407;
       }
       obj2.source = tmp4Result;
       obj.children = v65535(FastImageDefault, obj2);

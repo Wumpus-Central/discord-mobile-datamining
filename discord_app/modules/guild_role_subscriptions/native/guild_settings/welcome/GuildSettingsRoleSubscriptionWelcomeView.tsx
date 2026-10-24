@@ -37,7 +37,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(19179, dependencyMap.paths),
+      asyncRequireImpl(19206, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -103,18 +103,12 @@ function StartEarningButton(isTermsAccepted) {
     let tmp11Result2 = closure_12(closure_13, obj8);
   } else {
     obj4.style = tmp.startEarningButton;
-    const obj9 = { loading, text: null, icon: null, pillStyle: null, onPress: null };
+    const obj9 = { loading, text: null, icon: null, onPress: null };
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
-    const obj10 = {
-      source: require("../../../../../../_runtime/metro/11422__.js"),
-      color: require("native").unsafe_rawColors.WHITE,
-      size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20,
-    };
-    obj9.icon = closure_11(tmp5(tmp3[23]).Icon, obj10);
-    obj9.pillStyle = { backgroundColor: "#EB5D30" };
+    obj9.icon = closure_11(tmp5(tmp3[24]).CircleErrorIcon, { size: "sm", color: "control-primary-text-default" });
     obj9.onPress = callback1;
-    obj4.children = closure_11(tmp5(tmp3[24]).BaseTextButton, obj9);
+    obj4.children = closure_11(tmp5(tmp3[22]).Button, obj9);
     tmp11Result2 = closure_11(closure_6, obj4);
   }
   items2[1] = tmp11Result2;
@@ -123,16 +117,16 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(16525).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(16557).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const constants = fn(19175).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(19202).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },
-  heroImage: { resizeMode: "cover", width: "100%" },
+  heroImage: { alignItems: "center", paddingTop: 24 },
   subtitle: { marginTop: 8 },
   tos: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -501,7 +495,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[12] !== tmp13) {
-          const fn = function x(type) {
+          const fn = function v(type) {
             type = type.type;
             if (constants.HOW_IT_WORKS === type) {
               return closure_0;
@@ -594,7 +588,7 @@ const result = size.fileFinishedImporting(
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildSettingsRoleSubscriptionWelcomeView(guild) {
-      const cResult = refreshEligibility(ref[10]).c(58);
+      const cResult = refreshEligibility(ref[10]).c(59);
       guild = guild.guild;
       closure_14();
       const obj = refreshEligibility(ref[10]);
@@ -604,11 +598,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ eligibleForMonetization, acceptTermsCheckboxText, wasRejectedInV1, eligibilityLoading, eligibilityError } =
         tmp7);
       const obj2 = refreshEligibility(ref[16]);
-      const creatorMonetizationIneligibleReasons = refreshEligibility(ref[30]).useCreatorMonetizationIneligibleReasons(
+      const creatorMonetizationIneligibleReasons = refreshEligibility(ref[29]).useCreatorMonetizationIneligibleReasons(
         eligibility,
       );
       require("useCreatorMonetizationOnboardingMarketing")(guild.id);
-      const obj3 = refreshEligibility(ref[30]);
+      const obj3 = refreshEligibility(ref[29]);
       [r10045, r10046] = first(noop.useState(false), 2);
       importDefault = noop.useRef(true);
       if (cResult[0] !== refreshEligibility) {
@@ -624,7 +618,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[1];
       }
       const tmp11 = first(noop.useState(false), 2);
-      const focusEffect = refreshEligibility(ref[32]).useFocusEffect(tmp12);
+      const focusEffect = refreshEligibility(ref[31]).useFocusEffect(tmp12);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function u() {
           if (ref.current) {
@@ -655,7 +649,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp20 = cResult[10];
             }
-            tmp6(tmp2[34])(tmp17, tmp20);
+            tmp6(tmp2[33])(tmp17, tmp20);
             [r10109, importAll] = tmp10(obj4.useState(false), 2);
             ref = obj4.useRef(null);
             const tmp10Result2 = tmp10(obj4.useState(), 2);
@@ -765,7 +759,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp30 = closure_11(tmp6(tmp2[36]), {});
+              const tmp30 = closure_11(tmp6(tmp2[35]), {});
               cResult[14] = tmp30;
               const tmp29 = tmp30;
             } else {
@@ -790,8 +784,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj6 = {
-        type: refreshEligibility(ref[33]).ImpressionTypes.PANE,
-        name: refreshEligibility(ref[33]).ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
+        type: refreshEligibility(ref[32]).ImpressionTypes.PANE,
+        name: refreshEligibility(ref[32]).ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
         properties: {
           guild_id: guild.id,
           is_owner: isGuildOwner,
@@ -805,7 +799,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = isGuildOwner;
       cResult[8] = obj6;
       tmp17 = obj6;
-      const tmpResult = refreshEligibility(ref[32]);
+      const tmpResult = refreshEligibility(ref[31]);
     }
   : function GuildSettingsRoleSubscriptionWelcomeView(guild) {
       guild = guild.guild;
@@ -816,7 +810,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       const tmp = closure_14();
       const navigation = refreshEligibility(ref1[16]).useNavigation();
-      const tmp5 = ref(ref1[29])(guild);
+      const tmp5 = ref(ref1[28])(guild);
       ({ eligibility, refreshEligibility } = tmp5);
       ({
         eligibleForMonetization,
@@ -827,17 +821,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         eligibilityError,
       } = tmp5);
       const obj = refreshEligibility(ref1[16]);
-      const creatorMonetizationIneligibleReasons = refreshEligibility(ref1[30]).useCreatorMonetizationIneligibleReasons(
+      const tmp4 = ref;
+      const creatorMonetizationIneligibleReasons = refreshEligibility(ref1[29]).useCreatorMonetizationIneligibleReasons(
         eligibility,
       );
-      const obj2 = refreshEligibility(ref1[30]);
-      ({ isLoading, creatorMonetizationOnboardingMarketing } = ref(ref1[31])(guild.id));
-      const tmp7 = ref(ref1[31])(guild.id);
+      const obj2 = refreshEligibility(ref1[29]);
+      ({ isLoading, creatorMonetizationOnboardingMarketing } = ref(ref1[30])(guild.id));
+      const tmp7 = ref(ref1[30])(guild.id);
       [tmp10, tmp11] = first(noop.useState(false), 2);
       ref = noop.useRef(true);
       const tmp9 = first(noop.useState(false), 2);
       const items = [ref, refreshEligibility];
-      const focusEffect = refreshEligibility(ref1[32]).useFocusEffect(
+      const focusEffect = refreshEligibility(ref1[31]).useFocusEffect(
         noop.useCallback(() => {
           if (!ref.current) {
             refreshEligibility();
@@ -850,17 +845,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, []);
       const obj5 = { type: null, name: null, properties: null };
-      const obj4 = refreshEligibility(ref1[32]);
-      obj5.type = refreshEligibility(ref1[33]).ImpressionTypes.PANE;
-      obj5.name = refreshEligibility(ref1[33]).ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING;
+      const obj4 = refreshEligibility(ref1[31]);
+      obj5.type = refreshEligibility(ref1[32]).ImpressionTypes.PANE;
+      obj5.name = refreshEligibility(ref1[32]).ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING;
       obj5.properties = {
         guild_id: guild.id,
         is_owner: isGuildOwner,
         is_eligible: eligibleForMonetization,
         ineligible_reasons: creatorMonetizationIneligibleReasons,
       };
-      ref(ref1[34])(obj5, { disableTrack: null == guild.id || null == eligibility });
-      const tmp15 = ref(ref1[34]);
+      ref(ref1[33])(obj5, { disableTrack: null == guild.id || null == eligibility });
+      const tmp15 = ref(ref1[33]);
       const tmp16 = null == guild.id || null == eligibility;
       [tmp19, tmp20] = first(noop.useState(false), 2);
       importAll = tmp20;
@@ -894,23 +889,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { bottom: true, style: tmp.container, children: null };
             const obj8 = { onScroll: tmp26, scrollEventThrottle: 36, children: null };
             const obj9 = { style: tmp.container, children: null };
-            const obj10 = { source: tmp4(tmp3[39]), resizeMethod: "scale", style: tmp.heroImage };
-            const items3 = [closure_11(tmp4(tmp3[38]), obj10)];
-            const obj11 = { ref: ref1, style: tmp.contentContainer, collapsable: false, children: null };
-            const obj12 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+            const obj10 = { style: tmp.heroImage, children: null };
+            const obj11 = { width: 240, accessible: true, accessibilityLabel: null };
             const intl2 = tmp2(tmp3[12]).intl;
-            obj12.children = intl2.string(tmp2(tmp3[12]).t.QYqDQ0);
-            const items4 = [closure_11(tmp2(tmp3[14]).Text, obj12), , ,];
-            const obj13 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
+            obj11.accessibilityLabel = intl2.string(tmp2(tmp3[12]).t.Af4klP);
+            obj10.children = closure_11(tmp2(tmp3[37]).MarketStallSpotIllustration, obj11);
+            const items3 = [closure_11(closure_6, obj10)];
+            const obj12 = { ref: ref1, style: tmp.contentContainer, collapsable: false, children: null };
+            const obj13 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
             const intl3 = tmp2(tmp3[12]).intl;
-            obj13.children = intl3.string(tmp2(tmp3[12]).t["41wkMc"]);
-            items4[1] = closure_11(tmp2(tmp3[14]).Text, obj13);
+            obj13.children = intl3.string(tmp2(tmp3[12]).t.QYqDQ0);
+            const items4 = [closure_11(tmp2(tmp3[14]).Text, obj13), , ,];
+            const obj14 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
+            const intl4 = tmp2(tmp3[12]).intl;
+            obj14.children = intl4.string(tmp2(tmp3[12]).t["41wkMc"]);
+            items4[1] = closure_11(tmp2(tmp3[14]).Text, obj14);
             if (wasRejectedInV1) {
-              const obj14 = { style: tmp.statusNoticeContainer };
+              const obj15 = { style: tmp.statusNoticeContainer };
               const merged = Object.assign(tmp5);
-              let tmp31Result = closure_11(closure_15, obj14);
+              let tmp31Result = closure_11(closure_15, obj15);
             } else {
-              const obj15 = {
+              const obj16 = {
                 style: tmp.startEarningButtonContainer,
                 guildId: guild.id,
                 isTermsAccepted: tmp10,
@@ -919,16 +918,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 eligibility,
                 acceptTermsCheckboxText,
               };
-              tmp31Result = closure_11(StartEarningButton, obj15);
+              tmp31Result = closure_11(StartEarningButton, obj16);
             }
             items4[2] = tmp31Result;
-            const obj16 = {
+            const obj17 = {
               onboardingMarketing: creatorMonetizationOnboardingMarketing,
               onHowItWorksLayoutChange: callback,
             };
-            items4[3] = closure_11(closure_18, obj16);
-            obj11.children = items4;
-            items3[1] = closure_12(closure_6, obj11);
+            items4[3] = closure_11(closure_18, obj17);
+            obj12.children = items4;
+            items3[1] = closure_12(closure_6, obj12);
             obj9.children = items3;
             obj8.children = closure_12(closure_6, obj9);
             const items5 = [closure_11(closure_7, obj8)];
@@ -939,7 +938,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp31Result2 = !wasRejectedInV1;
             }
             if (tmp31Result2) {
-              const obj17 = {
+              const obj18 = {
                 style: tmp.startEarningFabContainer,
                 guildId: guild.id,
                 isTermsAccepted: tmp10,
@@ -949,17 +948,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 acceptTermsCheckboxText,
                 isFab: true,
               };
-              tmp31Result2 = closure_11(StartEarningButton, obj17);
+              tmp31Result2 = closure_11(StartEarningButton, obj18);
             }
             items5[1] = tmp31Result2;
             obj7.children = items5;
-            let tmp30Result = closure_12(tmp2(tmp3[40]).SafeAreaPaddingView, obj7);
-            const tmp4Result = tmp4(tmp3[38]);
+            let tmp30Result = closure_12(tmp2(tmp3[38]).SafeAreaPaddingView, obj7);
           }
           return tmp30Result;
         }
       }
-      tmp30Result = closure_11(tmp4(tmp3[36]), {});
+      tmp30Result = closure_11(tmp4(tmp3[35]), {});
       const tmp8Result = first(noop.useState(false), 2);
     };
 export const SectionContainer = tmp4;

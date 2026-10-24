@@ -8,7 +8,7 @@ import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx"
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(13716).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(13753).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,

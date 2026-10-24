@@ -5,7 +5,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
-export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1) {
+export const getSecondsSliderLabel = function getSecondsSliderLabel(length, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -15,7 +15,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = util.intl;
     stringResult = intl.string(util.t.Yl1D84);
   }
-  const time = _modDef2049.duration(rateLimitPerUser, "seconds");
+  const time = _modDef2049.duration(length, "seconds");
   if (time.days() > 0) {
     const intl6 = util.intl;
     const t = { days: time.days() };
@@ -31,7 +31,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     const t2 = { minutes: time.minutes() };
     intl4.formatToPlainString(flag ? t2["XIGt+W"] : t2.iXLF9W, t2);
     const tmp10 = flag ? t2["XIGt+W"] : t2.iXLF9W;
-  } else if (rateLimitPerUser > 0) {
+  } else if (length > 0) {
     const intl3 = util.intl;
     const t3 = { seconds: time.seconds() };
     intl3.formatToPlainString(flag ? t3.pyvjRp : t3.geSp4K, t3);

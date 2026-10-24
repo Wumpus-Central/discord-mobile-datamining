@@ -121,7 +121,7 @@ const Constants = fn(1087);
 } = Constants);
 const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17706), {
+        const tmp22 = jsx(tmp17(17738), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,9 +265,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 5,
-          expandedChildren: "favorite_emojis",
-          children: "message",
+          label: "m",
+          expandedChildren: "guilds-bar-drag-preview",
+          children: null,
         };
         const intl = util.intl;
         obj4.label = intl.string(util.t.l5WIbf);
@@ -284,9 +284,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 5,
-          expandedChildren: "favorite_emojis",
-          children: "message",
+          label: "m",
+          expandedChildren: "guilds-bar-drag-preview",
+          children: null,
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

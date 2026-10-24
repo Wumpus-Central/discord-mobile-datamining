@@ -7,11 +7,11 @@ import useParentalConsentWarning from "../../../parent_tools/useParentalConsentW
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = intl(1128);
-const WarningIcon = intl(7955);
+const WarningIcon = intl(7957);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFamilyCenterTrailing() {
       let intl = require;
@@ -100,7 +100,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(_modDef2536.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8558).GroupIcon,
+  IconComponent: fn(8560).GroupIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFamilyCenterTrailing() {
         let intl = require;

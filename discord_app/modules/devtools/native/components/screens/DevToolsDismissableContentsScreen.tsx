@@ -7,7 +7,7 @@ import dismissible_content from "../../../../../../discord_common/js/packages/pr
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06825_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06827_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -820,8 +820,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
       const tmp2 = useSafeAreaInsetsDefault();
-      let obj = ref(11531);
-      [dependencyMap, tmp5] = ref(11531).useLocalStorageState("devtools-dc-search", "");
+      let obj = ref(11551);
+      [dependencyMap, tmp5] = ref(11551).useLocalStorageState("devtools-dc-search", "");
       _slicedToArray = tmp5;
       initialSearchQuery = _slicedToArray(
         initialSearchQuery.useState(() => {
@@ -862,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
         return items;
       });
-      let tmp4 = _slicedToArray(ref(11531).useLocalStorageState("devtools-dc-search", ""), 2);
+      let tmp4 = _slicedToArray(ref(11551).useLocalStorageState("devtools-dc-search", ""), 2);
       let items = [closure_6];
       const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
         dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -953,6 +953,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.renderItem = callback3;
       obj4.onScroll = callback2;
-      obj3.children = dailyCapOverridden(ref(7218).FlashList, obj4);
+      obj3.children = dailyCapOverridden(ref(7220).FlashList, obj4);
       return dailyCapOverridden(first1, obj3);
     };

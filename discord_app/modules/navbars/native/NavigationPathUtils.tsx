@@ -1,7 +1,7 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
 import Constants from "../../../Constants.tsx";
-import _mod5011 from "../../../../_runtime/metro/05011__.js";
+import _mod5013 from "../../../../_runtime/metro/05013__.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -20,7 +20,7 @@ export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompi
   ? function useSelectedSpecialNavigationPath() {
       const obj = c;
       const cResult = obj.c(2);
-      const _location = _mod5011.useLocation();
+      const _location = _mod5013.useLocation();
       if (cResult[0] !== _location) {
         let FRIENDS;
         if (_location.pathname === Routes.FRIENDS) {
@@ -35,7 +35,7 @@ export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompi
       return tmp3;
     }
   : function useSelectedSpecialNavigationPath() {
-      const obj = _mod5011;
+      const obj = _mod5013;
       let FRIENDS;
       if (obj.useLocation().pathname === Routes.FRIENDS) {
         FRIENDS = obj.FRIENDS;

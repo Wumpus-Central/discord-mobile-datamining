@@ -5,16 +5,16 @@ import FramesActionCreatorsDefault from "FramesActionCreators.native.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6774);
+const FramesConstants = fn(6776);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1087).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/openFrame.tsx");
 
 export default function openFrame(arg0) {
-  ({ applicationId, channel, analyticsContext } = arg0);
+  ({ applicationId, channel, analyticsContext, launch } = arg0);
   if (null == channel) {
-    const obj2 = { applicationId, surface, analyticsContext };
+    const obj2 = { applicationId, surface, analyticsContext, launch };
     const obj3 = { frameId: null, launched: null };
     obj3.frameId = hasOwnProperty(applicationId, surface);
     obj3.launched = FramesActionCreatorsDefault.launchFrame(obj2);
@@ -22,7 +22,7 @@ export default function openFrame(arg0) {
   } else {
     const obj4 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL };
     const merged = Object.assign(channel);
-    const obj6 = { applicationId, surface: obj4, analyticsContext, showErrorModal: false };
+    const obj6 = { applicationId, surface: obj4, analyticsContext, launch, showErrorModal: false };
     const launchFrameResult1 = FramesActionCreatorsDefault.launchFrame(obj6);
     const catchPromise = FramesActionCreatorsDefault.launchFrame(obj6).catch(() => {});
     router_utils.transitionTo(Routes.CHANNEL(channel.guildId, channel.channelId));

@@ -246,7 +246,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(6037).CheckpointTrait.OUTFIT === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.OUTFIT === arg0) {
       const messages = c4.messages;
       let prop1;
       if (messages != null) {
@@ -256,7 +256,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(6037).CheckpointTrait.HAT === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.HAT === arg0) {
       const guilds = c4.guilds;
       let prop2;
       if (guilds != null) {
@@ -269,7 +269,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(6037).CheckpointTrait.SHOES === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.SHOES === arg0) {
       const emojis = c4.emojis;
       let prop3;
       if (emojis != null) {
@@ -279,7 +279,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(6037).CheckpointTrait.WEARABLE === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.WEARABLE === arg0) {
       const games2 = c4.games;
       let prop4;
       if (games2 != null) {
@@ -289,7 +289,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(6037).CheckpointTrait.AURA === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.AURA === arg0) {
       const games = c4.games;
       let prop5;
       if (games != null) {
@@ -299,7 +299,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(6037).CheckpointTrait.BASE === arg0) {
+    } else if (tmp3(6039).CheckpointTrait.BASE === arg0) {
       tmp = null;
     }
   }
@@ -343,4 +343,42 @@ export const getOutfitColorOptionIds = function getOutfitColorOptionIds(NONE) {
     items = [];
   }
   return items;
+};
+export const getCharacterFromTraits = function getCharacterFromTraits(arg0) {
+  let ICY = arg0[CheckpointTrait.CheckpointTrait.BASE];
+  if (ICY == null) {
+    ICY = CheckpointCharacterBase.CheckpointCharacterBase.ICY;
+  }
+  const obj = { base: ICY, shoes: null, outfit: null, face: null, hat: null, wearable: null, aura: null };
+  let NONE = arg0[CheckpointTrait.CheckpointTrait.SHOES];
+  if (NONE == null) {
+    NONE = CheckpointCharacterShoes.CheckpointCharacterShoes.NONE;
+  }
+  obj.shoes = NONE;
+  let NONE2 = arg0[CheckpointTrait.CheckpointTrait.OUTFIT];
+  if (NONE2 == null) {
+    NONE2 = CheckpointCharacterOutfit.CheckpointCharacterOutfit.NONE;
+  }
+  obj.outfit = NONE2;
+  let CHILL = arg0[CheckpointTrait.CheckpointTrait.FACE];
+  if (CHILL == null) {
+    CHILL = CheckpointCharacterFace.CheckpointCharacterFace.CHILL;
+  }
+  obj.face = CHILL;
+  let NONE3 = arg0[CheckpointTrait.CheckpointTrait.HAT];
+  if (NONE3 == null) {
+    NONE3 = CheckpointCharacterHat.CheckpointCharacterHat.NONE;
+  }
+  obj.hat = NONE3;
+  let NONE4 = arg0[CheckpointTrait.CheckpointTrait.WEARABLE];
+  if (NONE4 == null) {
+    NONE4 = CheckpointCharacterWearable.CheckpointCharacterWearable.NONE;
+  }
+  obj.wearable = NONE4;
+  let NONE5 = arg0[CheckpointTrait.CheckpointTrait.AURA];
+  if (NONE5 == null) {
+    NONE5 = CheckpointCharacterAura.CheckpointCharacterAura.NONE;
+  }
+  obj.aura = NONE5;
+  return obj;
 };

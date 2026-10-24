@@ -8,11 +8,11 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef11693 from "../../../../../_runtime/metro/11693__.js";
-import _modDef11694 from "../../../../../_runtime/metro/11694__.js";
-import _modDef11695 from "../../../../../_runtime/metro/11695__.js";
-import _modDef11696 from "../../../../../_runtime/metro/11696__.js";
-import _modDef11697 from "../../../../../_runtime/metro/11697__.js";
+import _modDef11713 from "../../../../../_runtime/metro/11713__.js";
+import _modDef11714 from "../../../../../_runtime/metro/11714__.js";
+import _modDef11715 from "../../../../../_runtime/metro/11715__.js";
+import _modDef11716 from "../../../../../_runtime/metro/11716__.js";
+import _modDef11717 from "../../../../../_runtime/metro/11717__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -21,13 +21,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10878);
+const ChannelCallStore = fn(10879);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5630);
+const CallConstants = fn(5632);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   liveContainer: { position: "absolute", top: 8, right: 8 },
   titleIcon: { marginRight: 6 },
@@ -46,7 +46,7 @@ let obj3 = {
   paddingHorizontal: 8,
   paddingVertical: 4,
 };
-const ColorUtils = fn(4966);
+const ColorUtils = fn(4968);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -171,17 +171,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       participant = participant.participant;
       let titleIcon2 = closure_16();
       if (participant.type === constants.STREAM) {
-        let tmp4 = _modDef11693;
+        let tmp4 = _modDef11713;
       } else if (participant.type === tmp3.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp4 = _modDef11694;
+          tmp4 = _modDef11714;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp4 = _modDef11695;
+          tmp4 = _modDef11715;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp4 = _modDef11696;
+          tmp4 = _modDef11716;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp4 = _modDef11697;
+          tmp4 = _modDef11717;
         }
       }
       if (null == tmp4) {
@@ -207,17 +207,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   : function ParticipantIcon(participant) {
       participant = participant.participant;
       if (participant.type === constants.STREAM) {
-        let tmp3 = _modDef11693;
+        let tmp3 = _modDef11713;
       } else if (participant.type === tmp2.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp3 = _modDef11694;
+          tmp3 = _modDef11714;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp3 = _modDef11695;
+          tmp3 = _modDef11715;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp3 = _modDef11696;
+          tmp3 = _modDef11716;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp3 = _modDef11697;
+          tmp3 = _modDef11717;
         }
       }
       let tmp14 = null;
@@ -248,7 +248,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = reveal(576);
       const tmp = reveal;
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11346).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11364).RevealContext).reveal;
       const tmp6 = useSafeAreaInsetsDefault();
       const fn = function l() {
         let num = 0;
@@ -260,8 +260,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.opacity = obj.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 });
         return obj2;
       };
-      let obj2 = reveal(5050);
-      fn.__closure = { withTiming: reveal(5204).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+      let obj2 = reveal(5052);
+      fn.__closure = { withTiming: reveal(5206).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
       fn.__workletHash = 15640123774063;
       fn.__initData = __initData;
       const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -385,7 +385,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = num4;
       cResult[4] = rect;
       tmp8 = rect;
-      const obj3 = { withTiming: reveal(5204).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+      const obj3 = { withTiming: reveal(5206).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
     }
   : function TileOverlay(arg0) {
       ({ participant, isActiveStream } = arg0);
@@ -393,7 +393,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
       const tmp = closure_16();
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11346).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11364).RevealContext).reveal;
       const tmp4 = useSafeAreaInsetsDefault();
       const tmp5 = reveal;
       class A {
@@ -411,8 +411,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      let obj = reveal(5050);
-      A.__closure = { withTiming: reveal(5204).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+      let obj = reveal(5052);
+      A.__closure = { withTiming: reveal(5206).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
       A.__workletHash = 1463196379948;
       A.__initData = __initData2;
       let num = 0;

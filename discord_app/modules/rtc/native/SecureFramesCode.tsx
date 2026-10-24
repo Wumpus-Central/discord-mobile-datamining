@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   codeText: { fontFamily: fn(1098).Fonts.CODE_NORMAL },
   row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 },

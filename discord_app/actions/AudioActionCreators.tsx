@@ -64,8 +64,8 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1087);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5854).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5716).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5856).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5718).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -112,7 +112,7 @@ export default {
       if (typeof isNotSupported === "function") {
         if (typeof trackToggleSelfMute === "function") {
           if (flag2) {
-            flag2 = !MediaEngineStore.hasActiveCallKitCall();
+            flag2 = !MediaEngineStore.hasActiveSystemTelecomCall();
           }
           const currentUser = UserStore.getCurrentUser();
           let isStaffResult;
@@ -145,7 +145,7 @@ export default {
     }
     if (typeof isNotSupported === "function") {
       if (flag) {
-        flag = !MediaEngineStore.hasActiveCallKitCall();
+        flag = !MediaEngineStore.hasActiveSystemTelecomCall();
       }
       const currentUser = UserStore.getCurrentUser();
       let isStaffResult;
@@ -689,7 +689,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5829)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
+                value: v1(5831)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
               return obj4;
@@ -781,7 +781,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5829)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
+                value: v1(5831)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
               return obj4;

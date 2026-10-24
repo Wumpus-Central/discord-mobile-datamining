@@ -1,38 +1,36 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
+import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
-import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
+import getFrameSurfaces from "../../frames/utils/getFrameSurfaces.tsx";
 import openFrameInAppChannelDefault from "../../frames/openFrameInAppChannel.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(6774).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6776).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
-export const tryLaunchAsFrame = function tryLaunchAsFrame(arg0) {
-  ({ applicationId, application } = arg0);
+export const tryLaunchAsFrame = function tryLaunchAsFrame(channelId) {
+  ({ applicationId, application } = channelId);
   if (application === undefined) {
     application = ApplicationStore.getApplication(applicationId);
   }
-  ({ analyticsContext, preferAppChannel, launch } = arg0);
+  ({ launch, analyticsContext, preferAppChannel } = channelId);
   if (preferAppChannel === undefined) {
     preferAppChannel = false;
   }
-  let tmp2 = null == application;
-  if (!tmp2) {
-    tmp2 = !canLaunchContextlessFrame.canLaunchContextlessFrame(application);
-  }
-  let flag = !tmp2;
-  if (!tmp2) {
-    if (preferAppChannel) {
-      if (null != application.conjureProjectId) {
-        const obj3 = { applicationId, analyticsContext };
-        openFrameInAppChannelDefault(obj3);
-        flag = true;
-      }
+  const frameSurfaces = getFrameSurfaces.getFrameSurfaces(application);
+  const hasItem = frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
+  if (!frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL)) {
+    let flag = hasItem;
+    if (flag) {
+      const obj2 = { applicationId, surface: MAIN_SURFACE, launch, analyticsContext };
+      FramesActionCreatorsDefault.launchFrame(obj2);
+      flag = true;
     }
-    const obj4 = { applicationId, surface: MAIN_SURFACE, launch, analyticsContext };
-    FramesActionCreatorsDefault.launchFrame(obj4);
+  } else {
+    const obj4 = { applicationId, channelId: channelId.channelId, launch, analyticsContext };
+    openFrameInAppChannelDefault(obj4);
     flag = true;
   }
   return flag;

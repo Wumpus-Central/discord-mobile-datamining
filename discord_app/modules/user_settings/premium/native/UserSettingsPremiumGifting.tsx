@@ -17,7 +17,7 @@ import BillingActionCreatorsDefault from "../../../../actions/native/BillingActi
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import _modDef14841 from "../../../../../_runtime/metro/14841__.js";
+import _modDef14864 from "../../../../../_runtime/metro/14864__.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -41,7 +41,7 @@ const PremiumConstants = fn(1394);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },
@@ -195,9 +195,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         noop = tmp15;
-        const isPaymentsBlocked = tmp(7527).useIsPaymentsBlocked();
-        const tmpResult7 = tmp(7527);
-        const outboundPromotions = tmp(9518).useOutboundPromotions();
+        const isPaymentsBlocked = tmp(7529).useIsPaymentsBlocked();
+        const tmpResult7 = tmp(7529);
+        const outboundPromotions = tmp(9519).useOutboundPromotions();
         const promotionsLoaded = outboundPromotions.promotionsLoaded;
         const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
         BadgeDirectoryStore = outboundPromotions.claimedEndedOutboundPromotions;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const GiftingBadgeExperiment = tmp(10495).GiftingBadgeExperiment;
+        const GiftingBadgeExperiment = tmp(10496).GiftingBadgeExperiment;
         const enabled = GiftingBadgeExperiment.useConfig(tmp22).enabled;
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -264,13 +264,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp24 = cResult[9];
         }
-        const tmpResult8 = tmp(9518);
+        const tmpResult8 = tmp(9519);
         const stateFromStores = tmp(504).useStateFromStores(tmp23, tmp24);
         const tmp27 = navigation(noop.useState(false), 2);
         constants2 = tmp27[0];
         closure_11 = tmp27[1];
         const tmpResult9 = tmp(504);
-        const subscriptionPlansLoaded = tmp(14683).useSubscriptionPlansLoaded();
+        const subscriptionPlansLoaded = tmp(14706).useSubscriptionPlansLoaded();
         const _Symbol4 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function renderEmptyState() {
           const obj = { style: closure_2.emptyGiftLinks, children: null };
-          const obj2 = { style: closure_2.emptyImage, source: _modDef14841 };
+          const obj2 = { style: closure_2.emptyImage, source: _modDef14864 };
           const items = [map1(FastImageDefault, obj2)];
           const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
           const obj4 = {
@@ -456,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = tmp7.emptyGiftLinks;
         cResult[23] = tmp7.emptyImage;
         cResult[24] = renderEmptyState;
-        const tmpResult10 = tmp(14683);
+        const tmpResult10 = tmp(14706);
       }
       const tmpResult6 = recipientUserId(504);
     }

@@ -9,10 +9,10 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7629).DraftType;
+const DraftType = fn(7631).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,
@@ -141,9 +141,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = {};
                   const merged = Object.assign(dependencyMap);
                   obj2.description = ref.current;
-                  id(9664).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                  const obj = id(9664);
-                  id(13946).close();
+                  id(9665).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(9665);
+                  id(13965).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -232,9 +232,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = {};
                 const merged = Object.assign(dependencyMap);
                 obj2.description = ref.current;
-                id(9664).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                const obj = id(9664);
-                id(13946).close();
+                id(9665).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(9665);
+                id(13965).close();
               },
             );
             let merged = Object.assign(arg0);

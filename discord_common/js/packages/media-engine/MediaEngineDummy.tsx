@@ -45,6 +45,9 @@ prototype["enable"] = function enable() {
   return Promise.resolve();
 };
 prototype["setAudioMixerOptions"] = function setAudioMixerOptions() {};
+prototype["getSpatialAudioHrtfFiles"] = function getSpatialAudioHrtfFiles() {
+  return { directory: null, files: [] };
+};
 prototype["setInputVolume"] = function setInputVolume() {};
 prototype["setOutputVolume"] = function setOutputVolume() {};
 prototype["getAudioInputDevices"] = function getAudioInputDevices() {

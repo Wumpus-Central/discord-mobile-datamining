@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   applicationHeaderWrapper: {
     flexDirection: "row",
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[12] !== name) {
               const obj3 = { variant: "eyebrow", color: "interactive-text-default", children: name };
-              const tmp21 = closure_5(tmp(5232).Text, obj3);
+              const tmp21 = closure_5(tmp(5234).Text, obj3);
               cResult[12] = name;
               cResult[13] = tmp21;
               let tmp19 = tmp21;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = null != tmp9;
           if (tmp16) {
             const obj5 = { style: tmp4.applicationIcon, source: tmp9 };
-            tmp16 = closure_5(guildId(5667), obj5);
+            tmp16 = closure_5(guildId(5669), obj5);
           }
           cResult[9] = tmp9;
           cResult[10] = tmp4.applicationIcon;
@@ -118,12 +118,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = tmp16;
         }
         const tmpResult = tmp(504);
-        const applicationCommandsIconSource = tmp(13086).getApplicationCommandsIconSource(section, stateFromStores);
+        const applicationCommandsIconSource = tmp(13123).getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;
         cResult[6] = applicationCommandsIconSource;
         tmp9 = applicationCommandsIconSource;
-        const tmpResult2 = tmp(13086);
+        const tmpResult2 = tmp(13123);
       }
       const fn = function u() {
         if (null != guildId) {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       const obj = section(504);
-      const applicationCommandsIconSource = section(13086).getApplicationCommandsIconSource(section, stateFromStores);
+      const applicationCommandsIconSource = section(13123).getApplicationCommandsIconSource(section, stateFromStores);
       let nick;
       if (stateFromStores != null) {
         nick = stateFromStores.nick;
@@ -175,11 +175,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp9 = null != applicationCommandsIconSource;
       if (tmp9) {
         const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-        tmp9 = closure_5(guildId(5667), obj4);
+        tmp9 = closure_5(guildId(5669), obj4);
       }
       const items1 = [
         tmp9,
-        closure_5(section(5232).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+        closure_5(section(5234).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
       ];
       obj3.children = items1;
       return closure_6(View, obj3);

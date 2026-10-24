@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -267,27 +267,9 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13743, dependencyMap.paths),
+        asyncRequireImpl(19337, dependencyMap.paths),
         "MessageNotificationGuildActionSheet",
         { guildId: style.guildId },
-      );
-    },
-  };
-  return closure_4(closure_7, obj);
-};
-export const NotificationSettingsChannelMessageNotification = function NotificationSettingsChannelMessageNotification(
-  style,
-) {
-  _require = style;
-  const obj = {
-    context: "channel",
-    style: style.style,
-    setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
-    onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13745, dependencyMap.paths),
-        "MessageNotificationChannelActionSheet",
-        { channel: style.channel },
       );
     },
   };

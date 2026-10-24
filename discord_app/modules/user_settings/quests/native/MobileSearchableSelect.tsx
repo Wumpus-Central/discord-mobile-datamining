@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -38,8 +38,9 @@ let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MobileSearchableSelect(options) {
-      const cResult = options(576).c(45);
+      const cResult = require("c").c(46);
       options = options.options;
+      _require = options;
       value = options.value;
       dependencyMap = value;
       const onChange = options.onChange;
@@ -57,311 +58,276 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       noop = tmp7;
-      let obj = options(576);
-      const tmp6 = undefined !== allowCustomValue && allowCustomValue;
-      const dropdownItem = closure_9();
+      const tmp8 = closure_9();
+      const dropdownItem = tmp8;
+      noop.useRef(null);
+      const ref = noop.useRef(false);
       let str = value;
       if (value == null) {
         str = "";
       }
-      const tmp9 = onChange(noop.useState(str), 2);
-      closure_6 = tmp9[1];
-      const tmp8 = closure_9();
-      [r10046, closure_7] = onChange(noop.useState(false), 2);
-      const tmp11 = onChange(noop.useState(false), 2);
-      const first = tmp11[0];
-      closure_9 = tmp11[1];
-      if (cResult[2] === first) {
-        if (cResult[3] === str2) {
-          if (cResult[4] === value) {
-            let tmp13 = cResult[5];
-            let tmp14 = cResult[6];
+      const first = onChange(noop.useState(str), 1)[0];
+      let str2 = value;
+      if (value == null) {
+        str2 = "";
+      }
+      const tmp10Result = onChange(noop.useState(str2), 2);
+      const str3 = tmp10Result[0];
+      closure_8 = tmp10Result[1];
+      let obj = require("c");
+      const tmp6 = undefined !== allowCustomValue && allowCustomValue;
+      [tmp14, closure_9] = onChange(noop.useState(false), 2);
+      const tmp10Result4 = onChange(noop.useState(false), 2);
+      const first1 = tmp10Result4[0];
+      closure_11 = tmp10Result4[1];
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function _(arg0) {
+          closure_6.current = true;
+          const current = ref.current;
+          if (current != null) {
+            current.setText(arg0);
           }
-          const effect = obj2.useEffect(tmp13, tmp14);
-          if (cResult[7] === options) {
-            if (cResult[8] === str2) {
-              let arr3 = cResult[9];
+          closure_6.current = false;
+          closure_8(arg0);
+        };
+        cResult[2] = fn;
+        let tmp17 = fn;
+      } else {
+        tmp17 = cResult[2];
+      }
+      closure_12 = tmp17;
+      if (cResult[3] === first1) {
+        if (cResult[4] === str3) {
+          if (cResult[5] === value) {
+            let tmp18 = cResult[6];
+            let tmp19 = cResult[7];
+          }
+          const effect = obj2.useEffect(tmp18, tmp19);
+          if (cResult[8] === options) {
+            if (cResult[9] === str3) {
+              let arr3 = cResult[10];
             }
-            let tmp17 = arr3;
+            let arr4 = arr3;
             if (tmp6) {
-              tmp17 = arr3;
+              arr4 = arr3;
               if (0 === arr3.length) {
-                tmp17 = arr3;
-                if ("" !== str2.trim()) {
-                  if (cResult[10] !== str2) {
-                    const trimmed = str2.trim();
-                    cResult[10] = str2;
-                    cResult[11] = trimmed;
-                    let tmp18 = trimmed;
+                arr4 = arr3;
+                if ("" !== str3.trim()) {
+                  if (cResult[11] !== str3) {
+                    const trimmed = str3.trim();
+                    cResult[11] = str3;
+                    cResult[12] = trimmed;
+                    let tmp22 = trimmed;
                   } else {
-                    tmp18 = cResult[11];
+                    tmp22 = cResult[12];
                   }
-                  if (cResult[12] !== str2) {
-                    const trimmed1 = str2.trim();
-                    cResult[12] = str2;
-                    cResult[13] = trimmed1;
-                    let tmp20 = trimmed1;
+                  if (cResult[13] !== str3) {
+                    const trimmed1 = str3.trim();
+                    cResult[13] = str3;
+                    cResult[14] = trimmed1;
+                    let tmp24 = trimmed1;
                   } else {
-                    tmp20 = cResult[13];
+                    tmp24 = cResult[14];
                   }
-                  if (cResult[14] === tmp20) {
+                  if (cResult[15] === tmp22) {
                   }
-                  const obj3 = { label: tmp18, value: tmp20 };
-                  class J {
-                    constructor() {
-                      tmp = closure_5;
-                      if ("" !== closure_5.trim()) {
-                        tmp2 = onChange;
-                        tmp3 = onChange(tmp);
-                        tmp4 = closure_9;
-                        flag = false;
-                        tmp5 = closure_9(false);
-                        tmp6 = closure_7;
-                        tmp7 = closure_7(false);
-                      }
-                      return;
-                    }
-                  }
-                  tmp23[0] = obj3;
-                  cResult[14] = tmp20;
-                  cResult[15] = tmp18;
-                  cResult[16] = tmp23;
+                  const obj3 = { label: tmp22, value: tmp24 };
+                  let items = [obj3];
+                  cResult[15] = tmp22;
+                  cResult[16] = tmp24;
+                  cResult[17] = items;
                 }
               }
             }
-            arr3 = tmp17;
-            if (cResult[17] !== options.length) {
-              class A {
-                constructor(arg0) {
-                  tmp = closure_9(true);
-                  tmp2 = closure_6(options);
-                  tmp4 = options.length > 0;
-                  tmp3 = closure_7;
-                  if (!tmp4) {
-                    tmp5 = closure_0;
-                    tmp4 = closure_0.length > 0;
+            if (cResult[18] !== options.length) {
+              function ee(arg0) {
+                if (!ref.current) {
+                  closure_11(true);
+                  closure_8(arg0);
+                  let tmp7 = arg0.length > 0;
+                  if (!tmp7) {
+                    tmp7 = closure_0.length > 0;
                   }
-                  tmp3Result = tmp3(tmp4);
-                  return;
+                  closure_1_9(tmp7);
                 }
               }
-              cResult[17] = options.length;
-              cResult[18] = A;
+              cResult[18] = options.length;
+              cResult[19] = ee;
+              let tmp28 = ee;
             } else {
-              class A {
-                constructor(arg0) {
-                  tmp = closure_9(true);
-                  tmp2 = closure_6(options);
-                  tmp4 = options.length > 0;
-                  tmp3 = closure_7;
-                  if (!tmp4) {
-                    tmp5 = closure_0;
-                    tmp4 = closure_0.length > 0;
-                  }
-                  tmp3Result = tmp3(tmp4);
-                  return;
-                }
-              }
+              tmp28 = cResult[19];
             }
-            if (cResult[19] === onChange) {
-              class A {
-                constructor(arg0) {
-                  tmp = closure_9(true);
-                  tmp2 = closure_6(options);
-                  tmp4 = options.length > 0;
-                  tmp3 = closure_7;
-                  if (!tmp4) {
-                    tmp5 = closure_0;
-                    tmp4 = closure_0.length > 0;
-                  }
-                  tmp3Result = tmp3(tmp4);
-                  return;
-                }
+            if (cResult[20] === onChange) {
+              if (cResult[21] === str3) {
+                let tmp29 = cResult[22];
               }
-              if (cResult[22] !== onChange) {
-                class Y {
-                  constructor(arg0) {
-                    tmp = closure_6(options);
-                    tmp2 = onChange(options);
-                    tmp3 = closure_9(false);
-                    tmp4 = closure_7(false);
-                    return;
-                  }
+              if (cResult[23] !== onChange) {
+                function ae(arg0) {
+                  closure_12(arg0);
+                  onChange(arg0);
+                  closure_11(false);
+                  closure_1_9(false);
                 }
-                cResult[22] = onChange;
-                cResult[23] = Y;
+                cResult[23] = onChange;
+                cResult[24] = ae;
+                let tmp30 = ae;
               } else {
-                class Y {
-                  constructor(arg0) {
-                    tmp = closure_6(options);
-                    tmp2 = onChange(options);
-                    tmp3 = closure_9(false);
-                    tmp4 = closure_7(false);
-                    return;
-                  }
-                }
+                tmp30 = cResult[24];
               }
-              closure_11 = Y;
-              if (cResult[24] === options.length) {
-                class Y {
-                  constructor(arg0) {
-                    tmp = closure_6(options);
-                    tmp2 = onChange(options);
-                    tmp3 = closure_9(false);
-                    tmp4 = closure_7(false);
-                    return;
-                  }
+              closure_14 = tmp30;
+              if (cResult[25] === options.length) {
+                if (cResult[26] === str3.length) {
+                  let tmp31 = cResult[27];
                 }
                 const _Symbol = Symbol;
-                if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                  class Y {
-                    constructor(arg0) {
-                      tmp = closure_6(options);
-                      tmp2 = onChange(options);
-                      tmp3 = closure_9(false);
-                      tmp4 = closure_7(false);
-                      return;
-                    }
-                  }
-                  cResult[27] = tmp31;
-                } else {
-                  class Y {
-                    constructor(arg0) {
-                      tmp = closure_6(options);
-                      tmp2 = onChange(options);
-                      tmp3 = closure_9(false);
-                      tmp4 = closure_7(false);
-                      return;
-                    }
-                  }
-                }
-                class J {
-                  constructor() {
-                    tmp = closure_5;
-                    if ("" !== closure_5.trim()) {
-                      tmp2 = onChange;
-                      tmp3 = onChange(tmp);
-                      tmp4 = closure_9;
-                      flag = false;
-                      tmp5 = closure_9(false);
-                      tmp6 = closure_7;
-                      tmp7 = closure_7(false);
-                    }
-                    return;
-                  }
-                }
                 if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                  class Y {
-                    constructor(arg0) {
-                      tmp = closure_6(options);
-                      tmp2 = onChange(options);
-                      tmp3 = closure_9(false);
-                      tmp4 = closure_7(false);
-                      return;
-                    }
+                  function de() {
+                    closure_1_9(false);
+                    closure_11(false);
                   }
-                  cResult[28] = tmp33;
+                  cResult[28] = de;
+                  let tmp32 = de;
                 } else {
-                  class Y {
-                    constructor(arg0) {
-                      tmp = closure_6(options);
-                      tmp2 = onChange(options);
-                      tmp3 = closure_9(false);
-                      tmp4 = closure_7(false);
-                      return;
+                  tmp32 = cResult[28];
+                }
+                const _Symbol2 = Symbol;
+                if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
+                  const obj4 = { position: "relative", zIndex: 100, overflow: "visible" };
+                  cResult[29] = obj4;
+                  let tmp33 = obj4;
+                } else {
+                  tmp33 = cResult[29];
+                }
+                if (cResult[30] === tmp28) {
+                  if (cResult[31] === tmp31) {
+                    if (cResult[32] === tmp29) {
+                      if (cResult[33] === first) {
+                        if (cResult[34] === tmp7) {
+                          if (cResult[35] === tmp4) {
+                            let tmp34 = cResult[36];
+                          }
+                          if (cResult[37] === arr4) {
+                            if (cResult[38] === tmp30) {
+                              if (cResult[39] === tmp7) {
+                                if (cResult[40] === tmp14) {
+                                  if (cResult[41] === tmp8) {
+                                    let tmp37 = cResult[42];
+                                  }
+                                  if (cResult[43] === tmp34) {
+                                    if (cResult[44] === tmp37) {
+                                      let tmp42 = cResult[45];
+                                    }
+                                    return tmp42;
+                                  }
+                                  const obj5 = { style: tmp33, children: null };
+                                  const items1 = [tmp34, tmp37];
+                                  obj5.children = items1;
+                                  const tmp45 = closure_8(dropdownItem, obj5);
+                                  cResult[43] = tmp34;
+                                  cResult[44] = tmp37;
+                                  cResult[45] = tmp45;
+                                  tmp42 = tmp45;
+                                }
+                              }
+                            }
+                          }
+                          let tmp38 = tmp14;
+                          if (tmp14) {
+                            tmp38 = arr4.length > 0;
+                          }
+                          if (tmp38) {
+                            const obj6 = { style: tmp8.dropdownContainer, children: null };
+                            const obj7 = {
+                              nestedScrollEnabled: true,
+                              showsVerticalScrollIndicator: false,
+                              keyboardShouldPersistTaps: "handled",
+                              children: arr4.map((children, index) => {
+                                value = children;
+                                const items = [dropdownItem.dropdownItem];
+                                let dropdownItemLast = index === arr4.length - 1;
+                                if (dropdownItemLast) {
+                                  dropdownItemLast = dropdownItem.dropdownItemLast;
+                                }
+                                const obj = {
+                                  style: items,
+                                  activeOpacity: 0.7,
+                                  onPress() {
+                                    closure_14(value.value);
+                                  },
+                                  disabled,
+                                  children: str3(value(value[10]).Text, {
+                                    variant: "text-sm/medium",
+                                    color: "text-default",
+                                    style: dropdownItem.dropdownItemText,
+                                    children: children.label,
+                                  }),
+                                };
+                                items[1] = dropdownItemLast;
+                                return str3(closure_6, obj, "option-" + children.value + "-" + index);
+                              }),
+                            };
+                            obj6.children = str3(ref, obj7);
+                            tmp38 = str3(dropdownItem, obj6);
+                          }
+                          cResult[37] = arr4;
+                          cResult[38] = tmp30;
+                          cResult[39] = tmp7;
+                          cResult[40] = tmp14;
+                          cResult[41] = tmp8;
+                          cResult[42] = tmp38;
+                          tmp37 = tmp38;
+                        }
+                      }
                     }
                   }
                 }
-                if (cResult[29] === A) {
-                  class Y {
-                    constructor(arg0) {
-                      tmp = closure_6(options);
-                      tmp2 = onChange(options);
-                      tmp3 = closure_9(false);
-                      tmp4 = closure_7(false);
-                      return;
-                    }
-                  }
-                }
-                const obj4 = {
+                const obj8 = {
+                  ref,
                   placeholder: tmp4,
-                  value: str2,
-                  onChange: A,
-                  onSubmitEditing: J,
-                  onFocus: tmp28,
-                  onBlur: tmp31,
-                  leadingIcon: tmp(7144).MagnifyingGlassIcon,
-                  clearable: true,
-                  returnKeyType: "search",
-                  accessibilityRole: "search",
-                  autoCorrect: false,
-                  autoCapitalize: "none",
+                  defaultValue: first,
+                  onChange: tmp28,
+                  onSubmitEditing: tmp29,
+                  onFocus: tmp31,
+                  onBlur: tmp32,
                   disabled: tmp7,
                 };
-                const tmp36 = closure_7(tmp(7013).TextField, obj4);
-                cResult[29] = A;
+                const tmp36 = str3(tmp(7145).SearchBar, obj8);
                 cResult[30] = tmp28;
-                cResult[31] = J;
-                cResult[32] = tmp7;
-                cResult[33] = tmp4;
-                cResult[34] = str2;
-                cResult[35] = tmp36;
+                cResult[31] = tmp31;
+                cResult[32] = tmp29;
+                cResult[33] = first;
+                cResult[34] = tmp7;
+                cResult[35] = tmp4;
+                cResult[36] = tmp36;
+                tmp34 = tmp36;
               }
-              function ee() {
-                let tmp2 = str2.length > 0;
+              function ne() {
+                let tmp2 = str3.length > 0;
                 if (!tmp2) {
-                  tmp2 = options.length > 0;
+                  tmp2 = closure_0.length > 0;
                 }
-                closure_1_7(tmp2);
+                closure_1_9(tmp2);
               }
-              class J {
-                constructor() {
-                  tmp = closure_5;
-                  if ("" !== closure_5.trim()) {
-                    tmp2 = onChange;
-                    tmp3 = onChange(tmp);
-                    tmp4 = closure_9;
-                    flag = false;
-                    tmp5 = closure_9(false);
-                    tmp6 = closure_7;
-                    tmp7 = closure_7(false);
-                  }
-                  return;
-                }
-              }
-              cResult[25] = str2.length;
-              cResult[26] = ee;
+              cResult[25] = options.length;
+              cResult[26] = str3.length;
+              cResult[27] = ne;
+              tmp31 = ne;
             }
-            class J {
-              constructor() {
-                tmp = closure_5;
-                if ("" !== closure_5.trim()) {
-                  tmp2 = onChange;
-                  tmp3 = onChange(tmp);
-                  tmp4 = closure_9;
-                  flag = false;
-                  tmp5 = closure_9(false);
-                  tmp6 = closure_7;
-                  tmp7 = closure_7(false);
-                }
-                return;
+            function le() {
+              if ("" !== str3.trim()) {
+                onChange(str3);
+                closure_11(false);
+                closure_1_9(false);
               }
             }
-            cResult[19] = onChange;
-            cResult[20] = str2;
-            cResult[21] = J;
+            cResult[20] = onChange;
+            cResult[21] = str3;
+            cResult[22] = le;
+            tmp29 = le;
           }
           let found = options;
-          if ("" !== str2.trim()) {
-            class Y {
-              constructor(arg0) {
-                tmp = closure_6(options);
-                tmp2 = onChange(options);
-                tmp3 = closure_9(false);
-                tmp4 = closure_7(false);
-                return;
-              }
-            }
+          if ("" !== str3.trim()) {
+            _require = str3.toLowerCase();
             found = options.filter((label) => {
               const formatted = label.label.toLowerCase();
               let hasItem = formatted.includes(closure_0);
@@ -372,33 +338,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return hasItem;
             });
           }
-          cResult[7] = options;
-          cResult[8] = str2;
-          cResult[9] = found;
+          cResult[8] = options;
+          cResult[9] = str3;
+          cResult[10] = found;
           arr3 = found;
         }
       }
-      const fn = function x() {
-        let tmp2 = null == value;
-        if (!tmp2) {
-          tmp2 = value === str2;
+      class U {
+        constructor() {
+          tmp = value;
+          tmp2 = null == value;
+          if (!tmp2) {
+            tmp3 = closure_7;
+            tmp2 = tmp === closure_7;
+          }
+          if (!tmp2) {
+            tmp2 = closure_10;
+          }
+          if (!tmp2) {
+            tmp4 = closure_12;
+            tmp5 = closure_12(tmp);
+          }
+          return;
         }
-        if (!tmp2) {
-          tmp2 = first;
-        }
-        if (!tmp2) {
-          closure_6(value);
-        }
-      };
-      let items = [value, tmp9[0], first];
-      cResult[2] = first;
-      cResult[3] = tmp9[0];
-      cResult[4] = value;
-      cResult[5] = fn;
-      cResult[6] = items;
-      tmp14 = items;
-      tmp13 = fn;
-      const tmp10 = onChange(noop.useState(false), 2);
+      }
+      const items2 = [value, str3, first1, tmp17];
+      cResult[3] = first1;
+      cResult[4] = str3;
+      cResult[5] = value;
+      cResult[6] = U;
+      cResult[7] = items2;
+      tmp19 = items2;
+      tmp18 = U;
     }
   : function MobileSearchableSelect(options) {
       options = options.options;
@@ -418,27 +389,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag2 === undefined) {
         flag2 = false;
       }
-      value = undefined;
-      closure_7 = undefined;
-      c8 = undefined;
+      let first;
+      closure_9 = undefined;
+      c10 = undefined;
       let first1;
-      closure_10 = undefined;
-      let memo;
       closure_12 = undefined;
-      const tmp3 = first1();
+      let callback;
+      let memo;
+      closure_15 = undefined;
+      const tmp3 = closure_9();
       const dropdownItem = tmp3;
+      flag.useRef(null);
+      const ref = flag.useRef(false);
       let str = value;
       if (value == null) {
         str = "";
       }
-      let tmp4 = onChange(flag.useState(str), 2);
-      value = tmp4[0];
-      closure_7 = tmp4[1];
-      [tmp6, c8] = onChange(flag.useState(false), 2);
-      const tmp7 = onChange(flag.useState(false), 2);
-      first1 = tmp7[0];
-      closure_10 = tmp7[1];
-      let items = [value, value, first1];
+      let str2 = value;
+      if (value == null) {
+        str2 = "";
+      }
+      const tmp5Result = onChange(flag.useState(str2), 2);
+      first = tmp5Result[0];
+      closure_9 = tmp5Result[1];
+      [tmp8, c10] = onChange(flag.useState(false), 2);
+      const tmp5Result4 = onChange(flag.useState(false), 2);
+      first1 = tmp5Result4[0];
+      closure_12 = tmp5Result4[1];
+      callback = obj.useCallback((arg0) => {
+        closure_7.current = true;
+        const current = ref.current;
+        if (current != null) {
+          current.setText(arg0);
+        }
+        closure_7.current = false;
+        closure_9(arg0);
+      }, []);
+      let items = [value, first, first1, callback];
       const effect = obj.useEffect(() => {
         let tmp2 = null == value;
         if (!tmp2) {
@@ -448,10 +435,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp2 = first1;
         }
         if (!tmp2) {
-          closure_7(value);
+          callback(value);
         }
       }, items);
-      const items1 = [options, value, flag];
+      const items1 = [options, first, flag];
       memo = obj.useMemo(() => {
         let found = options;
         if ("" !== first.trim()) {
@@ -481,32 +468,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp;
       }, items1);
       const items2 = [options.length];
-      const items3 = [value, onChange];
-      const callback = obj.useCallback((arg0) => {
-        closure_10(true);
-        closure_7(arg0);
-        let tmp4 = arg0.length > 0;
-        if (!tmp4) {
-          tmp4 = options.length > 0;
+      const items3 = [first, onChange];
+      const callback1 = obj.useCallback((arg0) => {
+        if (!ref.current) {
+          closure_12(true);
+          closure_9(arg0);
+          let tmp7 = arg0.length > 0;
+          if (!tmp7) {
+            tmp7 = options.length > 0;
+          }
+          _undefined(tmp7);
         }
-        _undefined(tmp4);
       }, items2);
-      const items4 = [onChange];
-      const callback1 = obj.useCallback(() => {
+      const items4 = [onChange, callback];
+      const callback2 = obj.useCallback(() => {
         if ("" !== first.trim()) {
           onChange(first);
-          closure_10(false);
+          closure_12(false);
           _undefined(false);
         }
       }, items3);
-      closure_12 = obj.useCallback((arg0) => {
-        closure_7(arg0);
+      closure_15 = obj.useCallback((arg0) => {
+        callback(arg0);
         onChange(arg0);
-        closure_10(false);
+        closure_12(false);
         _undefined(false);
       }, items4);
-      const items5 = [value.length, options.length];
-      const callback2 = obj.useCallback(() => {
+      const items5 = [first.length, options.length];
+      const callback3 = obj.useCallback(() => {
         let tmp2 = first.length > 0;
         if (!tmp2) {
           tmp2 = options.length > 0;
@@ -514,35 +503,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         _undefined(tmp2);
       }, items5);
       const obj2 = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
-      const callback3 = obj.useCallback(() => {
+      const callback4 = obj.useCallback(() => {
         _undefined(false);
-        closure_10(false);
+        closure_12(false);
       }, []);
-      const tmp14 = c8;
-      const tmp5 = onChange(flag.useState(false), 2);
       const items6 = [
-        closure_7(options(7013).TextField, {
+        ref(options(7145).SearchBar, {
+          ref,
           placeholder,
-          value,
-          onChange: callback,
-          onSubmitEditing: callback1,
-          onFocus: callback2,
-          onBlur: callback3,
-          leadingIcon: options(7144).MagnifyingGlassIcon,
-          clearable: true,
-          returnKeyType: "search",
-          accessibilityRole: "search",
-          autoCorrect: false,
-          autoCapitalize: "none",
+          defaultValue: onChange(flag.useState(str), 1)[0],
+          onChange: callback1,
+          onSubmitEditing: callback2,
+          onFocus: callback3,
+          onBlur: callback4,
           disabled: flag2,
         }),
       ];
-      if (tmp16Result) {
-        tmp16Result = memo.length > 0;
+      if (tmp19Result) {
+        tmp19Result = memo.length > 0;
       }
-      if (tmp16Result) {
-        const obj4 = { style: tmp3.dropdownContainer, children: null };
-        const obj5 = {
+      if (tmp19Result) {
+        const obj3 = { style: tmp3.dropdownContainer, children: null };
+        const obj4 = {
           nestedScrollEnabled: true,
           showsVerticalScrollIndicator: false,
           keyboardShouldPersistTaps: "handled",
@@ -557,10 +539,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               style: items,
               activeOpacity: 0.7,
               onPress() {
-                closure_12(value.value);
+                closure_15(value.value);
               },
               disabled: flag2,
-              children: closure_7(options(value[11]).Text, {
+              children: closure_7(options(value[10]).Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 style: dropdownItem.dropdownItemText,
@@ -568,15 +550,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }),
             };
             items[1] = dropdownItemLast;
-            return closure_7(first, obj, "option-" + children.value + "-" + index);
+            return closure_7(ref, obj, "option-" + children.value + "-" + index);
           }),
         };
-        obj4.children = tmp16(dropdownItem, obj5);
-        tmp16Result = tmp16(tmp15, obj4);
+        obj3.children = tmp19(dropdownItem, obj4);
+        tmp19Result = tmp19(tmp18, obj3);
       }
-      items6[1] = tmp16Result;
+      items6[1] = tmp19Result;
       obj2.children = items6;
-      return tmp14(flag2, obj2);
+      return first(flag2, obj2);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");

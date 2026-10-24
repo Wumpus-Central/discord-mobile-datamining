@@ -8,9 +8,9 @@ import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7136).PHONE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(7138).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountPhoneSettingTrailing() {
       const cResult = c.c(2);
@@ -49,7 +49,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(8330).MobileUserSettings.ACCOUNT,
+  parent: fn(8332).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountPhoneSettingTrailing() {
         const cResult = c.c(2);
@@ -87,7 +87,7 @@ const pressable = SettingBuilders.createPressable({
     const obj2 = { allowDeletePhone: true, reason: null };
     const obj = ModalActionCreatorsDefault;
     obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(7135, dependencyMap.paths), obj2, closure_4);
+    obj.pushLazy(asyncRequireImpl(7137, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true,
 });

@@ -10,8 +10,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9356).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4971);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9357).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
@@ -98,7 +98,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", gap: fn(9356).COLLECTIBLES_SHOP_CARD_GAP };
+let obj3 = { flexDirection: "row", gap: fn(9357).COLLECTIBLES_SHOP_CARD_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
       ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
       const rowContainer = closure_8();
-      const cardLayout = products(17189).useCardLayout();
+      const cardLayout = products(17221).useCardLayout();
       const columns = cardLayout.columns;
       const cardWidth = cardLayout.cardWidth;
       const items = [products, columns];
@@ -303,9 +303,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: null,
         children: null,
       };
-      let obj = products(17189);
+      let obj = products(17221);
       obj2.contentContainerStyle = {
-        gap: products(9356).COLLECTIBLES_SHOP_CARD_GAP,
+        gap: products(9357).COLLECTIBLES_SHOP_CARD_GAP,
         paddingTop,
         paddingBottom,
         width: cardLayout.rowWidth,

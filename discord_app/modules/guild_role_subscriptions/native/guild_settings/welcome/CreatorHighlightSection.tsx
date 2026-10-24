@@ -5,8 +5,8 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
-import _mod7218 from "../../../../../../discord_common/js/packages/flash-list/index.js";
-import _modDef9862 from "../../../../../../_runtime/metro/09862__.js";
+import _mod7220 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _modDef9863 from "../../../../../../_runtime/metro/09863__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   horizontalContainer: { flexDirection: "row" },
   serverSubscriberCount: { marginTop: 8 },
@@ -69,6 +69,8 @@ obj2.ownerQuote = { marginTop: 24 };
 obj2.ownerUsername = { marginTop: 8 };
 obj2.premiumEmojisTitle = { marginTop: 32, textTransform: "uppercase" };
 obj2.viewServerButtonContainer = { flex: 1, justifyContent: "flex-end" };
+obj2.viewServerButton = { marginTop: 16 };
+obj2.emojiSectionContainer = { flex: 1, justifyContent: "flex-start", alignItems: "flex-start" };
 let obj5 = {
   width: 276,
   marginEnd: 12,
@@ -78,9 +80,6 @@ let obj5 = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
 };
-obj2.viewServerButton = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
-obj2.emojiSectionContainer = { flex: 1, justifyContent: "flex-start", alignItems: "flex-start" };
-let obj6 = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
 obj2.emojiContainer = {
   width: "100%",
   marginTop: 8,
@@ -114,7 +113,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 size: native.Icon.Sizes.SMALL,
                 color: nativeDefault.unsafe_rawColors.WHITE,
                 style: tmp4.subscriberCountIcon,
-                source: _modDef9862,
+                source: _modDef9863,
               };
               const tmp12 = hasOwnProperty(native.Icon, obj2);
               cResult[7] = tmp4.subscriberCountIcon;
@@ -193,7 +192,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.WHITE,
           style: tmp.subscriberCountIcon,
-          source: _modDef9862,
+          source: _modDef9863,
         }),
       ];
       const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -206,7 +205,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function CreatorGuildCard(highlightedCreatorGuild) {
-      const cResult = require("c").c(58);
+      const cResult = require("c").c(60);
       highlightedCreatorGuild = highlightedCreatorGuild.highlightedCreatorGuild;
       const tmp4 = closure_7();
       _require = tmp4;
@@ -217,7 +216,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const guild_id = highlightedCreatorGuild.guild_id;
       ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-      const tmp7 = guild_id(19201)(guild_id, 3, 60);
+      const tmp7 = guild_id(19251)(guild_id, 3, 60);
       dependencyMap = tmp7;
       const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
       if (cResult[0] === tmp7.details) {
@@ -227,22 +226,22 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp8) {
           const _Symbol2 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp67 = closure_5(tmp6(19173), {});
-            cResult[3] = tmp67;
-            let tmp65 = tmp67;
+            const tmp71 = closure_5(tmp6(19200), {});
+            cResult[3] = tmp71;
+            let tmp69 = tmp71;
           } else {
-            tmp65 = cResult[3];
+            tmp69 = cResult[3];
           }
           if (cResult[4] !== tmp4.cardContainer) {
-            const obj3 = { style: tmp4.cardContainer, children: tmp65 };
-            const tmp71 = closure_5(View, obj3);
+            const obj3 = { style: tmp4.cardContainer, children: tmp69 };
+            const tmp75 = closure_5(View, obj3);
             cResult[4] = tmp4.cardContainer;
-            cResult[5] = tmp71;
-            let tmp68 = tmp71;
+            cResult[5] = tmp75;
+            let tmp72 = tmp75;
           } else {
-            tmp68 = cResult[5];
+            tmp72 = cResult[5];
           }
-          return tmp68;
+          return tmp72;
         } else if (hasAllImperativeDetails) {
           ({ guildName, guildAvatarUrl, subscriberCount, emojisToShow, notShownEmojiCount } = tmp7.details);
           if (cResult[6] !== guildAvatarUrl) {
@@ -265,7 +264,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 lineBreakMode: "tail",
                 children: guildName,
               };
-              const tmp17 = closure_5(tmp(5232).Text, obj5);
+              const tmp17 = closure_5(tmp(5234).Text, obj5);
               cResult[11] = guildName;
               cResult[12] = tmp17;
               let tmp15 = tmp17;
@@ -320,59 +319,68 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                                               } else {
                                                 tmp51 = cResult[44];
                                               }
-                                              if (cResult[45] === tmp9) {
-                                                if (cResult[46] === tmp4.viewServerButton) {
-                                                  let tmp53 = cResult[47];
+                                              if (cResult[45] !== tmp9) {
+                                                const obj6 = {
+                                                  variant: "secondary",
+                                                  text: tmp51,
+                                                  onPress: tmp9,
+                                                  grow: true,
+                                                };
+                                                const tmp55 = closure_5(tmp(5244).Button, obj6);
+                                                cResult[45] = tmp9;
+                                                cResult[46] = tmp55;
+                                                let tmp53 = tmp55;
+                                              } else {
+                                                tmp53 = cResult[46];
+                                              }
+                                              if (cResult[47] === tmp4.viewServerButton) {
+                                                if (cResult[48] === tmp53) {
+                                                  let tmp56 = cResult[49];
                                                 }
-                                                if (cResult[48] === tmp4.viewServerButtonContainer) {
-                                                  if (cResult[49] === tmp53) {
-                                                    let tmp56 = cResult[50];
+                                                if (cResult[50] === tmp4.viewServerButtonContainer) {
+                                                  if (cResult[51] === tmp56) {
+                                                    let tmp60 = cResult[52];
                                                   }
-                                                  if (cResult[51] === tmp4.cardContainer) {
-                                                    if (cResult[52] === tmp39) {
-                                                      if (cResult[53] === tmp42) {
-                                                        if (cResult[54] === tmp56) {
-                                                          if (cResult[55] === tmp27) {
-                                                            if (cResult[56] === tmp31) {
-                                                              let tmp60 = cResult[57];
+                                                  if (cResult[53] === tmp4.cardContainer) {
+                                                    if (cResult[54] === tmp39) {
+                                                      if (cResult[55] === tmp42) {
+                                                        if (cResult[56] === tmp60) {
+                                                          if (cResult[57] === tmp27) {
+                                                            if (cResult[58] === tmp31) {
+                                                              let tmp64 = cResult[59];
                                                             }
-                                                            return tmp60;
+                                                            return tmp64;
                                                           }
                                                         }
                                                       }
                                                     }
                                                   }
-                                                  const obj6 = { style: tmp4.cardContainer, children: null };
-                                                  let items = [tmp27, tmp31, tmp39, tmp42, tmp56];
-                                                  obj6.children = items;
-                                                  const tmp63 = closure_6(View, obj6);
-                                                  cResult[51] = tmp4.cardContainer;
-                                                  cResult[52] = tmp39;
-                                                  cResult[53] = tmp42;
-                                                  cResult[54] = tmp56;
-                                                  cResult[55] = tmp27;
-                                                  cResult[56] = tmp31;
-                                                  cResult[57] = tmp63;
-                                                  tmp60 = tmp63;
+                                                  const obj7 = { style: tmp4.cardContainer, children: null };
+                                                  let items = [tmp27, tmp31, tmp39, tmp42, tmp60];
+                                                  obj7.children = items;
+                                                  const tmp67 = closure_6(View, obj7);
+                                                  cResult[53] = tmp4.cardContainer;
+                                                  cResult[54] = tmp39;
+                                                  cResult[55] = tmp42;
+                                                  cResult[56] = tmp60;
+                                                  cResult[57] = tmp27;
+                                                  cResult[58] = tmp31;
+                                                  cResult[59] = tmp67;
+                                                  tmp64 = tmp67;
                                                 }
-                                                const obj7 = { style: viewServerButtonContainer, children: tmp53 };
-                                                const tmp59 = closure_5(View, obj7);
-                                                cResult[48] = tmp4.viewServerButtonContainer;
-                                                cResult[49] = tmp53;
-                                                cResult[50] = tmp59;
-                                                tmp56 = tmp59;
+                                                const obj8 = { style: viewServerButtonContainer, children: tmp56 };
+                                                const tmp63 = closure_5(View, obj8);
+                                                cResult[50] = tmp4.viewServerButtonContainer;
+                                                cResult[51] = tmp56;
+                                                cResult[52] = tmp63;
+                                                tmp60 = tmp63;
                                               }
-                                              const obj8 = {
-                                                pillStyle: viewServerButton,
-                                                text: tmp51,
-                                                onPress: tmp9,
-                                                shrink: true,
-                                              };
-                                              const tmp55 = closure_5(tmp(5243).BaseTextButton, obj8);
-                                              cResult[45] = tmp9;
-                                              cResult[46] = tmp4.viewServerButton;
-                                              cResult[47] = tmp55;
-                                              tmp53 = tmp55;
+                                              const obj9 = { style: viewServerButton, children: tmp53 };
+                                              const tmp59 = closure_5(View, obj9);
+                                              cResult[47] = tmp4.viewServerButton;
+                                              cResult[48] = tmp53;
+                                              cResult[49] = tmp59;
+                                              tmp56 = tmp59;
                                             }
                                           }
                                         }
@@ -387,18 +395,18 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                               tmp45Result = emojisToShow.length > 0;
                             }
                             if (tmp45Result) {
-                              const obj9 = { style: tmp4.emojiSectionContainer, children: null };
-                              const obj10 = { style: null, variant: null, color: "text-default", children: null };
+                              const obj10 = { style: tmp4.emojiSectionContainer, children: null };
+                              const obj11 = { style: null, variant: null, color: "text-default", children: null };
                               const items1 = [tmp4.premiumEmojisTitle, typeConsolidationEyebrow.style];
-                              obj10.style = items1;
-                              obj10.variant = typeConsolidationEyebrow.variant;
+                              obj11.style = items1;
+                              obj11.variant = typeConsolidationEyebrow.variant;
                               const intl3 = tmp(1128).intl;
-                              obj10.children = intl3.string(tmp(1128).t.wg53L8);
-                              const items2 = [closure_5(tmp(5232).Text, obj10)];
-                              const obj11 = { style: null, children: null };
+                              obj11.children = intl3.string(tmp(1128).t.wg53L8);
+                              const items2 = [closure_5(tmp(5234).Text, obj11)];
+                              const obj12 = { style: null, children: null };
                               const items3 = [,];
                               ({ horizontalContainer: arr5[0], emojiContainer: arr5[1] } = tmp4);
-                              obj11.style = items3;
+                              obj12.style = items3;
                               const items4 = [
                                 emojisToShow.map((id) => {
                                   const obj = { style: null, size: 24, id: id.id, guildId: guild_id };
@@ -410,21 +418,21 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                               ];
                               let tmp47Result = null != notShownEmojiCount;
                               if (tmp47Result) {
-                                const obj12 = {
+                                const obj13 = {
                                   style: tmp4.emojiListItem,
                                   variant: "text-sm/semibold",
                                   color: "text-default",
                                   children: null,
                                 };
                                 const _HermesInternal = HermesInternal;
-                                obj12.children = "+" + notShownEmojiCount;
-                                tmp47Result = closure_5(tmp(5232).Text, obj12);
+                                obj13.children = "+" + notShownEmojiCount;
+                                tmp47Result = closure_5(tmp(5234).Text, obj13);
                               }
                               items4[1] = tmp47Result;
-                              obj11.children = items4;
-                              items2[1] = closure_6(View, obj11);
-                              obj9.children = items2;
-                              tmp45Result = closure_6(View, obj9);
+                              obj12.children = items4;
+                              items2[1] = closure_6(View, obj12);
+                              obj10.children = items2;
+                              tmp45Result = closure_6(View, obj10);
                             }
                             cResult[33] = emojisToShow;
                             cResult[34] = typeConsolidationEyebrow;
@@ -439,7 +447,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                             cResult[43] = tmp45Result;
                             tmp42 = tmp45Result;
                           }
-                          const obj13 = {
+                          const obj14 = {
                             style: tmp34,
                             variant: "text-sm/normal",
                             color: "text-default",
@@ -447,43 +455,43 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                             lineBreakMode: "tail",
                             children: tmp35,
                           };
-                          const tmp41 = closure_5(tmp(5232).Text, obj13);
+                          const tmp41 = closure_5(tmp(5234).Text, obj14);
                           cResult[30] = tmp4.ownerUsername;
                           cResult[31] = tmp35;
                           cResult[32] = tmp41;
                           tmp39 = tmp41;
                         }
                         const intl = tmp(1128).intl;
-                        const obj14 = { attributionName: quote_attribution, attributionTitle: null };
+                        const obj15 = { attributionName: quote_attribution, attributionTitle: null };
                         let stringResult1 = quote_attribution_title;
                         if (quote_attribution_title == null) {
                           const intl2 = tmp(1128).intl;
                           stringResult1 = intl2.string(tmp(1128).t.pclUFJ);
                         }
-                        obj14.attributionTitle = stringResult1;
-                        const formatResult = intl.format(tmp(1128).t.m0b6Kj, obj14);
+                        obj15.attributionTitle = stringResult1;
+                        const formatResult = intl.format(tmp(1128).t.m0b6Kj, obj15);
                         cResult[27] = quote_attribution;
                         cResult[28] = quote_attribution_title;
                         cResult[29] = formatResult;
                         tmp35 = formatResult;
                       }
-                      const obj15 = {
+                      const obj16 = {
                         style: tmp4.ownerQuote,
                         variant: "text-md/normal",
                         color: "text-default",
                         children: quote,
                       };
-                      const tmp33 = closure_5(tmp(5232).Text, obj15);
+                      const tmp33 = closure_5(tmp(5234).Text, obj16);
                       cResult[24] = quote;
                       cResult[25] = tmp4.ownerQuote;
                       cResult[26] = tmp33;
                       tmp31 = tmp33;
                     }
                   }
-                  const obj16 = { style: tmp4.horizontalContainer, children: null };
+                  const obj17 = { style: tmp4.horizontalContainer, children: null };
                   const items5 = [tmp12, tmp23];
-                  obj16.children = items5;
-                  const tmp30 = closure_6(View, obj16);
+                  obj17.children = items5;
+                  const tmp30 = closure_6(View, obj17);
                   cResult[20] = tmp4.horizontalContainer;
                   cResult[21] = tmp12;
                   cResult[22] = tmp23;
@@ -491,10 +499,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp27 = tmp30;
                 }
               }
-              const obj17 = { style: tmp4.cardHeaderContainer, children: null };
+              const obj18 = { style: tmp4.cardHeaderContainer, children: null };
               const items6 = [tmp15, tmp18];
-              obj17.children = items6;
-              const tmp26 = closure_6(View, obj17);
+              obj18.children = items6;
+              const tmp26 = closure_6(View, obj18);
               cResult[16] = tmp4.cardHeaderContainer;
               cResult[17] = tmp15;
               cResult[18] = tmp18;
@@ -503,16 +511,16 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp20 = null != subscriberCount;
             if (tmp20) {
-              const obj18 = { subscriberCount, style: tmp4.serverSubscriberCount };
-              tmp20 = closure_5(closure_8, obj18);
+              const obj19 = { subscriberCount, style: tmp4.serverSubscriberCount };
+              tmp20 = closure_5(closure_8, obj19);
             }
             cResult[13] = tmp4.serverSubscriberCount;
             cResult[14] = subscriberCount;
             cResult[15] = tmp20;
             tmp18 = tmp20;
           }
-          const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-          const tmp14 = closure_5(tmp6(5667), obj19);
+          const obj20 = { style: tmp4.guildIcon, source: tmp11 };
+          const tmp14 = closure_5(tmp6(5669), obj20);
           cResult[8] = tmp4.guildIcon;
           cResult[9] = tmp11;
           cResult[10] = tmp14;
@@ -546,12 +554,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = highlightedCreatorGuild.guild_id;
       let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
       ({ quote, quote_attribution } = highlightedCreatorGuild);
-      const tmp6 = guild_id(19201)(guild_id, 3, 60);
+      const tmp6 = guild_id(19251)(guild_id, 3, 60);
       dependencyMap = tmp6;
       const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
       let items = [hasAllImperativeDetails, tmp6];
       if (tmp6.isLoading) {
-        const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19173), {}) };
+        const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19200), {}) };
         return closure_5(View, obj2);
       } else if (hasAllImperativeDetails) {
         const details = tmp6.details;
@@ -562,7 +570,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp.guildIcon, source: null };
         const obj6 = { uri: guildAvatarUrl };
         obj5.source = obj6;
-        const items1 = [closure_5(tmp5(5667), obj5)];
+        const items1 = [closure_5(tmp5(5669), obj5)];
         const obj7 = { style: tmp.cardHeaderContainer, children: null };
         const obj8 = {
           variant: "heading-md/extrabold",
@@ -571,7 +579,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           lineBreakMode: "tail",
           children: guildName,
         };
-        const items2 = [closure_5(tmp2(5232).Text, obj8)];
+        const items2 = [closure_5(tmp2(5234).Text, obj8)];
         let tmp11Result = null != subscriberCount;
         if (tmp11Result) {
           const obj9 = { subscriberCount, style: tmp.serverSubscriberCount };
@@ -583,7 +591,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.children = items1;
         const items3 = [closure_6(View, obj4), , , ,];
         const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-        items3[1] = closure_5(tmp2(5232).Text, obj10);
+        items3[1] = closure_5(tmp2(5234).Text, obj10);
         const obj11 = {
           style: tmp.ownerUsername,
           variant: "text-sm/normal",
@@ -600,7 +608,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj12.attributionTitle = quote_attribution_title;
         obj11.children = intl.format(tmp2(1128).t.m0b6Kj, obj12);
-        items3[2] = closure_5(tmp2(5232).Text, obj11);
+        items3[2] = closure_5(tmp2(5234).Text, obj11);
         let tmp9Result = null != emojisToShow;
         if (tmp9Result) {
           tmp9Result = emojisToShow.length > 0;
@@ -613,7 +621,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           obj14.variant = typeConsolidationEyebrow.variant;
           const intl3 = tmp2(1128).intl;
           obj14.children = intl3.string(tmp2(1128).t.wg53L8);
-          const items5 = [closure_5(tmp2(5232).Text, obj14)];
+          const items5 = [closure_5(tmp2(5234).Text, obj14)];
           const obj15 = { style: null, children: null };
           const items6 = [,];
           ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
@@ -637,7 +645,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const _HermesInternal = HermesInternal;
             obj16.children = "+" + notShownEmojiCount;
-            tmp11Result2 = closure_5(tmp2(5232).Text, obj16);
+            tmp11Result2 = closure_5(tmp2(5234).Text, obj16);
           }
           items7[1] = tmp11Result2;
           obj15.children = items7;
@@ -647,11 +655,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         items3[3] = tmp9Result;
         const obj17 = { style: tmp.viewServerButtonContainer, children: null };
-        const obj18 = { pillStyle: tmp.viewServerButton, text: null, onPress: null, shrink: true };
+        const obj18 = { style: tmp.viewServerButton, children: null };
+        const obj19 = { variant: "secondary", text: null, onPress: null, grow: true };
         const intl4 = tmp2(1128).intl;
-        obj18.text = intl4.string(tmp2(1128).t.mQ2IGa);
-        obj18.onPress = tmp7;
-        obj17.children = closure_5(tmp2(5243).BaseTextButton, obj18);
+        obj19.text = intl4.string(tmp2(1128).t.mQ2IGa);
+        obj19.onPress = tmp7;
+        obj18.children = closure_5(tmp2(5244).Button, obj19);
+        obj17.children = closure_5(View, obj18);
         items3[4] = closure_5(View, obj17);
         obj3.children = items3;
         return closure_6(View, obj3);
@@ -665,7 +675,7 @@ function renderItem(item) {
   return hasOwnProperty(closure_9, { highlightedCreatorGuild }, highlightedCreatorGuild.guild_id);
 }
 ReactCompilerGating = fn(558);
-let obj7 = {
+let obj6 = {
   width: "100%",
   marginTop: 8,
   paddingHorizontal: 8,
@@ -695,7 +705,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== highlightedCreators) {
         const obj2 = { data: highlightedCreators, horizontal: true, keyExtractor: first, renderItem };
-        const tmp8 = hasOwnProperty(_mod7218.FlashList, obj2);
+        const tmp8 = hasOwnProperty(_mod7220.FlashList, obj2);
         cResult[1] = highlightedCreators;
         cResult[2] = tmp8;
         let tmp5 = tmp8;
@@ -705,7 +715,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return tmp5;
     }
   : function CreatorHighlightSection(data) {
-      return hasOwnProperty(_mod7218.FlashList, {
+      return hasOwnProperty(_mod7220.FlashList, {
         data: data.highlightedCreators,
         horizontal: true,
         keyExtractor(guild_id) {

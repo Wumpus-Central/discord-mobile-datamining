@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1087).ChannelTypes;
-const getFrameSurfaceForChannel = fn(6774).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6776).getFrameSurfaceForChannel;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");

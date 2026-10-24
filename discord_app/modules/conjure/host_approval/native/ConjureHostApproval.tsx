@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { cards: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, card: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.card = {
@@ -33,7 +33,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const id = approval.id;
       ({ host, reason } = approval);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(tmp(11789).ConjureAwaitingPulseRing, {});
+        const tmp7 = closure_4(tmp(11815).ConjureAwaitingPulseRing, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -43,7 +43,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "text-xs/semibold", color: "text-brand", children: null };
         const intl = tmp(1128).intl;
         obj2.children = intl.string(id(3830).W4DsVo);
-        const tmp11 = closure_4(tmp(5232).Text, obj2);
+        const tmp11 = closure_4(tmp(5234).Text, obj2);
         cResult[1] = tmp11;
         let tmp8 = tmp11;
       } else {
@@ -61,7 +61,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp12) {
         const obj4 = { variant: "text-sm/normal", color: "text-default", children: tmp12 };
-        const tmp17 = closure_4(tmp(5232).Text, obj4);
+        const tmp17 = closure_4(tmp(5234).Text, obj4);
         cResult[4] = tmp12;
         cResult[5] = tmp17;
         let tmp15 = tmp17;
@@ -75,7 +75,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = tmp(1128).intl;
           const obj6 = { reason };
           obj5.children = intl3.format(id(3830)["5poqiN"], obj6);
-          tmp19 = closure_4(tmp(5232).Text, obj5);
+          tmp19 = closure_4(tmp(5234).Text, obj5);
         }
         cResult[6] = reason;
         cResult[7] = tmp19;
@@ -98,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== tmp22) {
           const obj7 = { variant: "primary", size: "sm", onPress: tmp22, text: tmp23 };
-          const tmp28 = closure_4(tmp(5242).Button, obj7);
+          const tmp28 = closure_4(tmp(5244).Button, obj7);
           cResult[12] = tmp22;
           cResult[13] = tmp28;
           let tmp26 = tmp28;
@@ -125,7 +125,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[18] !== tmp29) {
             const obj8 = { variant: "secondary", size: "sm", onPress: tmp29, text: tmp31 };
-            const tmp36 = closure_4(tmp(5242).Button, obj8);
+            const tmp36 = closure_4(tmp(5244).Button, obj8);
             class C {
               constructor() {
                 obj = closure_0(closure_2[11]);
@@ -157,7 +157,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[24] !== tmp37) {
               const obj9 = { variant: "secondary", size: "sm", onPress: tmp37, text: tmp38 };
-              const tmp43 = closure_4(tmp(5242).Button, obj9);
+              const tmp43 = closure_4(tmp(5244).Button, obj9);
               class C {
                 constructor() {
                   obj = closure_0(closure_2[11]);
@@ -197,7 +197,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp50[3] = tmp18;
                 tmp50[4] = tmp44;
                 obj10.children = tmp50;
-                const tmp51 = closure_5(id(11790), obj10);
+                const tmp51 = closure_5(id(11816), obj10);
                 cResult[30] = tmp4.card;
                 cResult[31] = tmp44;
                 cResult[32] = tmp15;
@@ -215,7 +215,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = { direction: "horizontal", spacing: id(587).space.PX_8, children: null };
             const items = [tmp26, tmp34, tmp41];
             obj11.children = items;
-            const tmp46 = closure_5(tmp(5975).Stack, obj11);
+            const tmp46 = closure_5(tmp(5977).Stack, obj11);
             cResult[26] = tmp34;
             cResult[27] = tmp41;
             cResult[28] = tmp26;
@@ -323,7 +323,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       projectId = projectId.projectId;
       const tmp2 = closure_6();
       const obj = projectId(576);
-      const conjureHostApprovals = projectId(10734).useConjureHostApprovals(projectId);
+      const conjureHostApprovals = projectId(10735).useConjureHostApprovals(projectId);
       let num = 0;
       if (0 === conjureHostApprovals.length) {
         return null;
@@ -360,12 +360,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         num = 2;
         cResult[2] = mapped;
       }
-      const obj2 = projectId(10734);
+      const obj2 = projectId(10735);
     }
   : function ConjureHostApprovalCards(projectId) {
       projectId = projectId.projectId;
       const tmp = closure_6();
-      const conjureHostApprovals = projectId(10734).useConjureHostApprovals(projectId);
+      const conjureHostApprovals = projectId(10735).useConjureHostApprovals(projectId);
       let tmp2 = null;
       if (0 !== conjureHostApprovals.length) {
         const obj2 = {
@@ -387,7 +387,7 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
       const cResult = projectId(576).c(7);
       projectId = projectId.projectId;
       let obj = projectId(576);
-      const conjureAllowedHosts = projectId(10734).useConjureAllowedHosts(projectId);
+      const conjureAllowedHosts = projectId(10735).useConjureAllowedHosts(projectId);
       if (null == conjureAllowedHosts) {
         return null;
       } else {
@@ -407,7 +407,7 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
         if (cResult[2] === conjureAllowedHosts) {
           if (cResult[3] === projectId) {
             if (cResult[5] !== cResult[4]) {
-              TableRowGroup = TableRowGroup(6985).TableRowGroup;
+              TableRowGroup = TableRowGroup(6987).TableRowGroup;
               const obj3 = { title: tmp4, description: tmp5, hasIcons: false, children: tmp9 };
               tmp = closure_4(TableRowGroup, obj3);
               cResult[5] = tmp9;
@@ -419,7 +419,7 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
           const obj4 = { label: null };
           const intl3 = TableRowGroup(1128).intl;
           obj4.label = intl3.string(_modDef3830.AweHIi);
-          let mapped = closure_4(TableRowGroup(6901).TableRow, obj4);
+          let mapped = closure_4(TableRowGroup(6903).TableRow, obj4);
         } else {
           mapped = conjureAllowedHosts.map((label) => {
             closure_0 = label;
@@ -432,21 +432,21 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
             obj2.onPress = function onPress() {
               return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
             };
-            obj.trailing = closure_1_4(projectId(5242).Button, obj2);
-            return closure_1_4(projectId(6901).TableRow, obj, label);
+            obj.trailing = closure_1_4(projectId(5244).Button, obj2);
+            return closure_1_4(projectId(6903).TableRow, obj, label);
           });
         }
         cResult[2] = conjureAllowedHosts;
         cResult[3] = projectId;
         cResult[4] = mapped;
       }
-      let obj2 = projectId(10734);
+      let obj2 = projectId(10735);
     }
   : function ConjureAllowedHostsSetting(projectId) {
       projectId = projectId.projectId;
       let intl = projectId;
       let stringResult = dependencyMap;
-      const conjureAllowedHosts = projectId(10734).useConjureAllowedHosts(projectId);
+      const conjureAllowedHosts = projectId(10735).useConjureAllowedHosts(projectId);
       if (null == conjureAllowedHosts) {
         return null;
       } else {
@@ -460,7 +460,7 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
           intl = intl(1128).intl;
           stringResult = intl.string(_modDef3830.AweHIi);
           obj3.label = stringResult;
-          let mapped = closure_4(intl(6901).TableRow, obj3);
+          let mapped = closure_4(intl(6903).TableRow, obj3);
         } else {
           mapped = conjureAllowedHosts.map((label) => {
             closure_0 = label;
@@ -473,12 +473,12 @@ export const ConjureAllowedHostsSetting = ReactCompilerGating.isReactCompilerEna
             obj2.onPress = function onPress() {
               return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
             };
-            obj.trailing = closure_1_4(projectId(5242).Button, obj2);
-            return closure_1_4(projectId(6901).TableRow, obj, label);
+            obj.trailing = closure_1_4(projectId(5244).Button, obj2);
+            return closure_1_4(projectId(6903).TableRow, obj, label);
           });
         }
         obj2.children = mapped;
-        closure_4(intl(6985).TableRowGroup, obj2);
+        closure_4(intl(6987).TableRowGroup, obj2);
       }
-      let obj = projectId(10734);
+      let obj = projectId(10735);
     };

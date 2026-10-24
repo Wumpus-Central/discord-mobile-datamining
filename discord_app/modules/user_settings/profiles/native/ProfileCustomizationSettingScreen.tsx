@@ -30,7 +30,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -69,15 +69,15 @@ export default noop.memo(
         useMaybeFetchCollectiblesRecommendationsDefault();
         closure_19();
         let obj = obj5(576);
-        const token = obj5(5250).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+        const token = obj5(5252).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
         obj5 = token;
         const tmp8 = _slicedToArray(noop.useState(0), 2);
         importDefault = tmp8[1];
         [dependencyMap, closure_3] = noop.useState(false);
-        let obj2 = obj5(5250);
+        let obj2 = obj5(5252);
         const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
         let obj3 = obj5(1505);
-        const params = obj5(7088).useSettingNavigationRoute().params;
+        const params = obj5(7090).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -121,7 +121,7 @@ export default noop.memo(
             }
           }
         }
-        let obj4 = obj5(7088);
+        let obj4 = obj5(7090);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -154,7 +154,7 @@ export default noop.memo(
           };
           return maybeShowUnsavedChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8899).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8901).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
@@ -279,7 +279,7 @@ export default noop.memo(
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8899);
+        const tmpResult = obj5(8901);
         const stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
         ProfileCustomizationNavigationStore = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {

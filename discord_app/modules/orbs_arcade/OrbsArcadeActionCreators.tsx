@@ -194,9 +194,84 @@ let closure_14 = async function _resetOrbsArcadeGame(arg0) {
     }
   }
 };
+let closure_15 = async function _ensureOrbsArcadeEnrollment(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = _require;
+          let body;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const request = {
+            url: Endpoints.ORBS_ARCADE_GAME_ENROLLMENT(_require.id),
+            body: null,
+            rejectWithError: false,
+          };
+          const obj4 = { game_version_id: _require.versionId };
+          request.body = obj4;
+          c5 = 2;
+          c6 = 1;
+          const obj5 = { value: HTTP.put(request), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_2 = closure_3;
+        const tmp25 = new closure_130_1(closure_130_2[9])(closure_129_2);
+        throw tmp25;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        body = value.body;
+        c4 = 0;
+        const obj7 = { type: "ORBS_ARCADE_GAME_STATE_UPDATE", game_id: closure_129_0.id, game_state: body };
+        closure_130_1(closure_130_2[6]).dispatch(obj7);
+        c6 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp27) {
+      closure_3 = tmp27;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp27;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
 function postOrbsArcadeClaimRewards() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -204,7 +279,7 @@ function postOrbsArcadeClaimRewards() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _postOrbsArcadeClaimRewards() {
+let closure_17 = async function _postOrbsArcadeClaimRewards() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
@@ -212,7 +287,7 @@ let closure_16 = async function _postOrbsArcadeClaimRewards() {
   closure_129_0 = value;
   return closure_130_0(closure_130_2[8]).orbsArcadeClaimedRewardFromServer(closure_129_0.body);
 };
-let closure_17 = async function _postOrbsArcadeClaimRewardsWithRetry(arg0) {
+let closure_18 = async function _postOrbsArcadeClaimRewardsWithRetry(arg0) {
   closure_4 = tmp3;
   closure_131_0 = closure_0;
   const id2 = id.getId();
@@ -253,7 +328,7 @@ let closure_17 = async function _postOrbsArcadeClaimRewardsWithRetry(arg0) {
       c6 = 2;
       c7 = 5;
       c8 = 1;
-      return { value: closure_132_15(closure_131_0), done: false };
+      return { value: closure_132_16(closure_131_0), done: false };
     }
   } else if (3 === tmp8) {
     if (arg0 === 1) {
@@ -308,7 +383,7 @@ let closure_17 = async function _postOrbsArcadeClaimRewardsWithRetry(arg0) {
   }
   return value;
 };
-let closure_18 = async function _claimOrbsArcadeRewards() {
+let closure_19 = async function _claimOrbsArcadeRewards() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -356,7 +431,7 @@ let closure_18 = async function _claimOrbsArcadeRewards() {
               const obj7 = {
                 value: (function postOrbsArcadeClaimRewardsWithRetry() {
                   const self = this;
-                  const apply = closure_1_17.apply;
+                  const apply = closure_1_18.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
@@ -478,9 +553,19 @@ export const resetOrbsArcadeGame = function resetOrbsArcadeGame() {
   }
   return applyArgumentsResult;
 };
+export const ensureOrbsArcadeEnrollment = function ensureOrbsArcadeEnrollment() {
+  const self = this;
+  const apply = closure_15.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 export const claimOrbsArcadeRewards = function claimOrbsArcadeRewards() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -7,17 +7,17 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11267 from "../../../../_runtime/metro/11267__.js";
 import _modDef11268 from "../../../../_runtime/metro/11268__.js";
+import _modDef11269 from "../../../../_runtime/metro/11269__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7274);
+const Constants = fn(7276);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
   connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" },
@@ -456,6 +456,28 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
   }
   return items;
 };
+export const generateLetterboxdMetadataItems = function generateLetterboxdMetadataItems(metadata) {
+  let num = metadata[constants.LETTERBOXD_WATCHES];
+  if (num == null) {
+    num = -1;
+  }
+  const NumberResult = Number(num);
+  let num2 = metadata[constants.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR];
+  if (num2 == null) {
+    num2 = -1;
+  }
+  const items = [];
+  const NumberResult1 = Number(num2);
+  if (NumberResult > -1) {
+    const obj = { style: tmp, count: NumberResult, label: util.t.wvFh8m };
+    items.push(timestampProducer(closure_10, obj, constants.LETTERBOXD_WATCHES));
+  }
+  if (NumberResult1 > -1) {
+    const obj2 = { style: tmp, count: NumberResult1, label: util.t.heUoTj };
+    items.push(timestampProducer(closure_10, obj2, constants.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR));
+  }
+  return items;
+};
 export const generateSteamMetadataItems = function generateSteamMetadataItems(metadata) {
   let num = metadata[constants.STEAM_GAME_COUNT];
   if (num == null) {
@@ -482,7 +504,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11267;
+    obj2.imageSrc = _modDef11268;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -492,7 +514,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11268;
+    obj4.imageSrc = _modDef11269;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

@@ -30,7 +30,6 @@ const items = [
   CheckpointNavigation.CheckpointRoute.FINALIZE_CHARACTER,
   CheckpointNavigation.CheckpointRoute.SUMMARY,
   CheckpointNavigation.CheckpointRoute.SHARE,
-  CheckpointNavigation.CheckpointRoute.PROFILE_WIDGET,
 ];
 const result = size.fileFinishedImporting("modules/checkpoint/flows/CheckpointSharedDataFlow.tsx");
 

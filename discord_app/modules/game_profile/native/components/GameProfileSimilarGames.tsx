@@ -14,12 +14,12 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9299).MOBILE_GAME_PROFILE_MAX_WIDTH;
+let closure_6 = fn(9300).MOBILE_GAME_PROFILE_MAX_WIDTH;
 const jsx = fn(21).jsx;
 let c9 = 1.34;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 },
   header: null,
@@ -674,7 +674,7 @@ let closure_17 = noop.memo(
             skeletonTitleWidth: 124,
             children: tmp8,
           };
-          const tmp12 = jsx(tmp(9336).GameProfileSectionSkeleton, {
+          const tmp12 = jsx(tmp(9337).GameProfileSectionSkeleton, {
             style: container,
             headerStyle: header,
             showViewAllSkeleton: false,
@@ -725,7 +725,7 @@ let closure_17 = noop.memo(
             />
           )),
         });
-        return jsx(cardWidth(9336).GameProfileSectionSkeleton, {
+        return jsx(cardWidth(9337).GameProfileSectionSkeleton, {
           style: tmp.container,
           headerStyle: tmp.header,
           showViewAllSkeleton: false,
@@ -791,7 +791,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { style: container, headerStyle: header, title: tmp9, children: tmp13 };
-              const tmp20 = jsx(tmp5(9336), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
+              const tmp20 = jsx(tmp5(9337), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
               cResult[10] = tmp4.container;
               cResult[11] = tmp4.header;
               cResult[12] = tmp13;
@@ -801,7 +801,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             horizontal: true,
-            renderScrollComponent: tmp5(9314),
+            renderScrollComponent: tmp5(9315),
             data: similarGames,
             renderItem: tmp11,
             showsHorizontalScrollIndicator: false,
@@ -811,9 +811,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: sum,
           };
-          const tmp17 = jsx(tmp(7218).FlashList, {
+          const tmp17 = jsx(tmp(7220).FlashList, {
             horizontal: true,
-            renderScrollComponent: tmp5(9314),
+            renderScrollComponent: tmp5(9315),
             data: similarGames,
             renderItem: tmp11,
             showsHorizontalScrollIndicator: false,
@@ -857,7 +857,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj3.title = intl.string(trackAction(1128).t["6rLyQB"]);
           const obj5 = {
             horizontal: true,
-            renderScrollComponent: tmp2(9314),
+            renderScrollComponent: tmp2(9315),
             data: similarGames,
             renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -869,9 +869,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: result + tmp5,
           };
-          obj3.children = jsx(trackAction(7218).FlashList, {
+          obj3.children = jsx(trackAction(7220).FlashList, {
             horizontal: true,
-            renderScrollComponent: tmp2(9314),
+            renderScrollComponent: tmp2(9315),
             data: similarGames,
             renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -883,8 +883,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: result + tmp5,
           });
-          tmp7 = jsx(tmp2(9336), { style: null, headerStyle: null, title: null, children: null });
-          const tmp2Result = tmp2(9336);
+          tmp7 = jsx(tmp2(9337), { style: null, headerStyle: null, title: null, children: null });
+          const tmp2Result = tmp2(9337);
         }
       }
       return tmp7;

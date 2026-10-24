@@ -25,7 +25,7 @@ const ClientThemesConstants = fn(1255);
   HEXAGON_GRADIENT_PRESET: closure_8,
   REFRESH_STANDARD_BACKGROUND_THEMES: closure_9,
 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -341,10 +341,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp16 = items2;
           }
-          tmpResult6 = tmp(4997);
+          tmpResult6 = tmp(4999);
         }
         tmp16 = closure_7;
-        tmpResult5 = tmp(4996);
+        tmpResult5 = tmp(4998);
       }
       if (null != tmp4) {
         const items3 = [];
@@ -386,10 +386,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp12 = items2;
           }
-          tmp2Result2 = tmp2(4997);
+          tmp2Result2 = tmp2(4999);
         }
         tmp12 = closure_7;
-        tmp2Result = tmp2(4996);
+        tmp2Result = tmp2(4998);
       }
       if (null != tmp) {
         const items3 = [];

@@ -180,7 +180,6 @@ export const FormSwitchRow = Form.FormSwitchRow;
 export const FormRadioRow = Form.FormRadioRow;
 export const FormCheckboxRow = Form.FormCheckboxRow;
 export const FormRadioGroup = Form.FormRadioGroup;
-export const FormSliderRow = Form.FormSliderRow;
 export const FormCardSection = Form.FormCardSection;
 export const PressableOpacity = Pressables.PressableOpacity;
 export const PressableHighlight = Pressables.PressableHighlight;

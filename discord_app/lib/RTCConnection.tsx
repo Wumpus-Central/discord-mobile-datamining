@@ -105,7 +105,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5731).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5733).getSystemAnalyticsInfo;
 let Constants = fn(1087);
 ({
   AnalyticEvents: closure_17,
@@ -114,10 +114,10 @@ let Constants = fn(1087);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5812);
+const StreamSettingsConstants = fn(5814);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5813).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5716);
+let closure_24 = fn(5815).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5718);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -1277,6 +1277,11 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
           items.push("web_streaming_maintain_framerate");
         } else if ("balanced" === degradationPreference) {
           items.push("web_streaming_balanced");
+        } else if ("maintain-resolution" === degradationPreference) {
+          items.push("web_streaming_maintain_resolution");
+          if (tmp16) {
+            items.push("web_streaming_cpu_fallback");
+          }
         }
         if (config1.motionContentHint) {
           items.push("web_streaming_motion_content_hint");
@@ -1306,12 +1311,12 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   const tmpResult11 = PlatformUtils;
   if (tmpResult13.isLinux()) {
     const mode2 = LinuxGpuDecodeExperiment.getLinuxGpuDecodeExperimentConfig("_chooseExperiments").mode;
-    let tmp23 = "disable_all" === mode2;
-    if (!tmp23) {
-      tmp23 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
-      const tmp24 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+    let tmp26 = "disable_all" === mode2;
+    if (!tmp26) {
+      tmp26 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+      const tmp27 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
     }
-    if (tmp23) {
+    if (tmp26) {
       items.push("disable_electron_decode");
     }
     const tmpResult14 = LinuxGpuDecodeExperiment;
@@ -3776,7 +3781,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5720).now();
+  const commitReceivedTime = _connection(5722).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3816,7 +3821,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5720).now();
+  const welcomeReceivedTime = _connection(5722).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

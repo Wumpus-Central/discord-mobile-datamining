@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
-import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
 import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
+import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
 
@@ -127,10 +127,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10697).sendUserMessage;
+const sendUserMessage = fn(10698).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5161).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5163).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;

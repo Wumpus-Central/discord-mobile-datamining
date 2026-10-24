@@ -11,6 +11,7 @@ import MediaModalWebVideoFile from "renderers/MediaModalWebVideoFile.tsx";
 import common_Video from "../../../../components_native/common/Video.tsx";
 import MediaModalOverlayDefault from "overlay/MediaModalOverlay.tsx";
 import MediaModalYoutubeDefault from "renderers/MediaModalYoutube.tsx";
+import MediaModalWebEmbedDefault from "renderers/MediaModalWebEmbed.tsx";
 import MediaModalVideoDefault from "renderers/MediaModalVideo.tsx";
 import MediaModalImageDefault from "renderers/MediaModalImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +22,7 @@ const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8752);
+const useVideoControls = obj(8754);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -197,7 +198,7 @@ export default function MediaModal(originLayout) {
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(8820, dependencyMap.paths),
+          asyncRequireImpl(8822, dependencyMap.paths),
           "MediaShareActionSheet",
           obj2,
         );
@@ -287,13 +288,39 @@ export default function MediaModal(originLayout) {
             { onError, onLoad, onLoadStart, onToggleOverlay, visible, style, source: null },
             key,
           );
-        } else {
-          return null;
+        } else if (null == source.videoURI) {
+          const obj8 = {
+            provider: source.embedProviderName,
+            onError,
+            onLoad,
+            onLoadStart,
+            onToggleOverlay,
+            visible,
+            style,
+            source: null,
+          };
+          const size3 = { uri: null, width: null, height: null };
+          ({ embedURI: obj13.uri, width: obj13.width, height: obj13.height } = source);
+          obj8.source = size3;
+          return jsx(
+            MediaModalWebEmbedDefault,
+            {
+              provider: source.embedProviderName,
+              onError,
+              onLoad,
+              onLoadStart,
+              onToggleOverlay,
+              visible,
+              style,
+              source: null,
+            },
+            key,
+          );
         }
       }
     }
     if (null != source.videoURI) {
-      const obj8 = {
+      const obj9 = {
         controls: callback1(index, source),
         index,
         muted: tmp,
@@ -321,7 +348,7 @@ export default function MediaModal(originLayout) {
         "" + key + ":" + source.videoURI,
       );
     } else {
-      const obj9 = {
+      const obj10 = {
         fadeDuration: hasSpoiler.fadeDuration,
         index,
         onError,
@@ -349,7 +376,7 @@ export default function MediaModal(originLayout) {
     }
     return tmp18;
   }, items7);
-  let tmp18 = mediaViewerSyncer(initialIndexVideoStartTime(onCloseCallback[28]), {
+  let tmp18 = mediaViewerSyncer(initialIndexVideoStartTime(onCloseCallback[29]), {
     originLayout: originLayout.originLayout,
     swipeVelocityThreshold: num2,
     onClose: callback,

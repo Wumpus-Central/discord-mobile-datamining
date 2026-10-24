@@ -15,7 +15,7 @@ const Constants = fn(1087);
   AnalyticEvents: closure_7,
   LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = fn(4974).MessageSendLocation;
+const MessageSendLocation = fn(4976).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -151,11 +151,11 @@ export default {
       self.sendActivityInvite({ channelId, type, activity, content, location: _location }),
     );
   },
-  getJoinSecret(arg0, arg1, arg2, channelId, arg4) {
+  getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    asyncGeneratorStep = channelId;
+    asyncGeneratorStep = arg3;
     closure_4 = arg4;
     return (async () => {
       const obj4 = {};

@@ -11,11 +11,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(12033).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6703).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(12059).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6705).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let PlatformUtils = fn(1384);
 let num = -1;
 if (PlatformUtils.isIOS()) {

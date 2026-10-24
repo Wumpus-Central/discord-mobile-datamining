@@ -635,7 +635,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMeasuredTabItems(arr) {
       const cResult = sharedValue(576).c(11);
       let obj = sharedValue(576);
-      sharedValue = sharedValue(5050).useSharedValue([]);
+      sharedValue = sharedValue(5052).useSharedValue([]);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
         cResult[0] = items;
@@ -720,7 +720,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4;
       cResult[4] = arr;
       cResult[5] = mapped;
-      const obj2 = sharedValue(5050);
+      const obj2 = sharedValue(5052);
     }
   : function useMeasuredTabItems(arg0) {
       _require = arg0;

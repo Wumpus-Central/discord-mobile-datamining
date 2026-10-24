@@ -144,7 +144,7 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
       importDefault = result;
       const items1 = [result];
       const effect = noop.useEffect(() => {
-        const interval = new closure_0(4816).Interval();
+        const interval = new closure_0(4818).Interval();
         interval.start(c1, () => {
           const timestamp = Date.now();
           const rounded = Math.floor(timestamp / c1(1104).Millis.SECOND);

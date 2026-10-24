@@ -123,7 +123,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp7 = importDefault;
         if (image) {
-          tmp7 = tmp7(8789);
+          tmp7 = tmp7(8791);
           obj = {
             volume: 0,
             resizeMode: "cover",
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items;
           const obj6 = { uri: url };
           obj5.source = obj6;
-          tmp6Result = timestampProducer(tmp7(5667), obj5);
+          tmp6Result = timestampProducer(tmp7(5669), obj5);
         }
         cResult[5] = image;
         image = media.image;
@@ -192,7 +192,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = tmp3Result;
       return timestampProducer(React4, obj2);
     };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj5 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },

@@ -12,6 +12,9 @@ export const handleDCShownToUser = function handleDCShownToUser(dismissibleConte
 export const handleDCDismissed = function handleDCDismissed(dismissibleContent, guildId) {
   DispatcherDefault.dispatch({ type: "DCF_HANDLE_DC_DISMISSED", dismissibleContent, guildId });
 };
+export const handleDCActioned = function handleDCActioned(dismissibleContent) {
+  DispatcherDefault.dispatch({ type: "DCF_HANDLE_DC_ACTIONED", dismissibleContent });
+};
 export const resetDismissibleContentFrameworkStore = function resetDismissibleContentFrameworkStore() {
   DispatcherDefault.dispatch({ type: "DCF_RESET" });
 };

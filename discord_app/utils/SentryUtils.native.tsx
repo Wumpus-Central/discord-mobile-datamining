@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==",
+                  tags: null,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

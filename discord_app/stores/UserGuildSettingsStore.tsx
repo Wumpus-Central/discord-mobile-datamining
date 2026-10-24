@@ -210,12 +210,12 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4825);
+const ChannelRecord = fn(4827);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
 const Constants = fn(1087);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4914).AccountNotificationFlags;
-const UnreadSetting = fn(6703).UnreadSetting;
+const AccountNotificationFlags = fn(4916).AccountNotificationFlags;
+const UnreadSetting = fn(6705).UnreadSetting;
 const UserSettingsConstants = fn(1097);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
@@ -397,15 +397,15 @@ prototype["getMessageNotifications"] = function getMessageNotifications(guildId)
     }
   }
 };
-prototype["getChannelOverrides"] = function getChannelOverrides(guild_id) {
-  if (userGuildSettings[guild_id] != null) {
+prototype["getChannelOverrides"] = function getChannelOverrides(guildId) {
+  if (userGuildSettings[guildId] != null) {
     let channel_overrides = tmp.channel_overrides;
     if (channel_overrides == null) {
       channel_overrides = {};
     }
     return channel_overrides;
   } else {
-    guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -447,8 +447,8 @@ prototype["getChannelMessageNotifications"] = function getChannelMessageNotifica
   }
   NULL = UserNotificationSettings.NULL;
 };
-prototype["getChannelMuteConfig"] = function getChannelMuteConfig(guild_id, id) {
-  const tmp = this.getChannelOverrides(guild_id)[id];
+prototype["getChannelMuteConfig"] = function getChannelMuteConfig(guildId, channelId) {
+  const tmp = this.getChannelOverrides(guildId)[channelId];
   let mute_config = null;
   if (null != tmp) {
     mute_config = tmp.mute_config;
@@ -574,8 +574,8 @@ prototype["isGuildCollapsed"] = function isGuildCollapsed(id) {
 prototype["getAllSettings"] = function getAllSettings() {
   return { userGuildSettings, mutedChannels, optedInChannelsByGuild };
 };
-prototype["getChannelIdFlags"] = function getChannelIdFlags(guild_id, id) {
-  const tmp = this.getChannelOverrides(guild_id)[id];
+prototype["getChannelIdFlags"] = function getChannelIdFlags(guildId, id) {
+  const tmp = this.getChannelOverrides(guildId)[id];
   let num;
   if (tmp != null) {
     num = tmp.flags;
@@ -588,9 +588,9 @@ prototype["getChannelIdFlags"] = function getChannelIdFlags(guild_id, id) {
 prototype["getChannelFlags"] = function getChannelFlags(guild_id) {
   return this.getChannelIdFlags(guild_id.guild_id, guild_id.id);
 };
-prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(channel) {
+prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(stateFromStores) {
   const self = this;
-  const tmp = this.getChannelOverrides(channel.guild_id)[channel.id];
+  const tmp = this.getChannelOverrides(stateFromStores.guild_id)[stateFromStores.id];
   if (null != tmp) {
     if (null != tmp.flags) {
       if (obj.hasFlag(tmp.flags, constants.NEW_FORUM_THREADS_ON)) {
@@ -604,7 +604,7 @@ prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(chan
       obj = FlagUtilsAll;
     }
   }
-  return self.resolvedMessageNotifications(channel) === UserNotificationSettings.ALL_MESSAGES;
+  return self.resolvedMessageNotifications(stateFromStores) === UserNotificationSettings.ALL_MESSAGES;
 };
 prototype["isOptInEnabled"] = function isOptInEnabled(id) {
   if (null == id) {
@@ -746,10 +746,10 @@ Object.defineProperty(prototype, "useNewNotifications", {
   },
   set: undefined,
 });
-prototype["getGuildUnreadSetting"] = function getGuildUnreadSetting(guild_id) {
+prototype["getGuildUnreadSetting"] = function getGuildUnreadSetting(guildId) {
   if (closure_18) {
     const self = this;
-    const guildFlags = this.getGuildFlags(guild_id);
+    const guildFlags = this.getGuildFlags(guildId);
     if (obj.hasFlag(guildFlags, constants2.UNREADS_ALL_MESSAGES)) {
       let ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     } else {

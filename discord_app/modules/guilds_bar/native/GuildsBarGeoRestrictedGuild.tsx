@@ -15,9 +15,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(17694).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17726).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -51,7 +51,7 @@ export default noop.memo(
           first = cResult[0];
         }
         let obj = restrictedGuild(576);
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles(first);
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles(first);
         if (cResult[1] === restrictedGuild.icon) {
           if (cResult[2] === restrictedGuild.id) {
             let tmp6 = cResult[3];
@@ -142,13 +142,13 @@ export default noop.memo(
                 value: restrictedGuild.name,
                 selected: false,
                 animate: false,
-                size: tmp(6881).GuildIconSizes.LARGE,
+                size: tmp(6883).GuildIconSizes.LARGE,
               };
               tmp23 = jsx(GuildIconDefault, {
                 value: restrictedGuild.name,
                 selected: false,
                 animate: false,
-                size: tmp(6881).GuildIconSizes.LARGE,
+                size: tmp(6883).GuildIconSizes.LARGE,
               });
             }
             cResult[11] = tmp6;
@@ -193,13 +193,13 @@ export default noop.memo(
         cResult[2] = restrictedGuild.id;
         cResult[3] = animatableSourceWithFallback;
         tmp6 = animatableSourceWithFallback;
-        const tmpResult = restrictedGuild(17706);
+        const tmpResult = restrictedGuild(17738);
       }
     : function GuildsBarGeoRestrictedGuild(restrictedGuild) {
         restrictedGuild = restrictedGuild.restrictedGuild;
         const tmp = closure_5();
         let animatableSourceWithFallback = null;
-        let obj = restrictedGuild(17706);
+        let obj = restrictedGuild(17738);
         const tmp2 = restrictedGuild;
         if (null != restrictedGuild.icon) {
           animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -236,7 +236,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -245,11 +245,14 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: "audio",
-          expandedChildren: null,
-          children: null,
+          externalChildren:
+            "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+          expandedChildren:
+            "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+          children:
+            "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
         };
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: true,
         });
@@ -267,13 +270,13 @@ export default noop.memo(
             value: restrictedGuild.name,
             selected: false,
             animate: false,
-            size: tmp2(6881).GuildIconSizes.LARGE,
+            size: tmp2(6883).GuildIconSizes.LARGE,
           };
           tmp8Result = jsx(GuildIconDefault, {
             value: restrictedGuild.name,
             selected: false,
             animate: false,
-            size: tmp2(6881).GuildIconSizes.LARGE,
+            size: tmp2(6883).GuildIconSizes.LARGE,
           });
           const tmp9Result = GuildIconDefault;
         }
@@ -282,7 +285,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -291,9 +294,12 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: "audio",
-          expandedChildren: null,
-          children: null,
+          externalChildren:
+            "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+          expandedChildren:
+            "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+          children:
+            "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
         });
       },
 );

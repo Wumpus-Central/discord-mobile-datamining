@@ -1898,6 +1898,9 @@ const frozen2 = Object.freeze({
   ORBS_ARCADE_RESET_GAME(arg0) {
     return "/orbs-arcade/games/" + arg0 + "/reset";
   },
+  ORBS_ARCADE_GAME_ENROLLMENT(id) {
+    return "/orbs-arcade/games/" + id + "/enrollment";
+  },
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -2067,6 +2070,9 @@ const frozen2 = Object.freeze({
   },
   GAME_ORGANIZATION_INVITE(arg0) {
     return "/game-organization-invites/" + arg0;
+  },
+  GAME_ORGANIZATION_INVITE_JOIN(arg0) {
+    return "/game-organization-invites/" + arg0 + "/join";
   },
   GAME_ORGANIZATIONS_INVITABLE: "/game-organizations/invitable/@me",
   GUILD_ROOM(arg0, arg1) {
@@ -3968,6 +3974,9 @@ const obj2 = {
   ORBS_ARCADE_RESET_GAME(arg0) {
     return "/orbs-arcade/games/" + arg0 + "/reset";
   },
+  ORBS_ARCADE_GAME_ENROLLMENT(id) {
+    return "/orbs-arcade/games/" + id + "/enrollment";
+  },
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -4137,6 +4146,9 @@ const obj2 = {
   },
   GAME_ORGANIZATION_INVITE(arg0) {
     return "/game-organization-invites/" + arg0;
+  },
+  GAME_ORGANIZATION_INVITE_JOIN(arg0) {
+    return "/game-organization-invites/" + arg0 + "/join";
   },
   GAME_ORGANIZATIONS_INVITABLE: "/game-organizations/invitable/@me",
   GUILD_ROOM(arg0, arg1) {
@@ -5709,11 +5721,11 @@ const frozen16 = Object.freeze({
     }
     return combined;
   },
-  INVITABLE_GAME_ORGANIZATIONS(join) {
+  INVITABLE_GAME_ORGANIZATIONS(guildIds) {
     let combined = null;
-    if (join.length > 0) {
+    if (guildIds.length > 0) {
       const _HermesInternal = HermesInternal;
-      combined = "invitable-game-organizations/" + join.join(",");
+      combined = "invitable-game-organizations/" + guildIds.join(",");
     }
     return combined;
   },
@@ -6934,6 +6946,10 @@ export const AbortCodes = {
   [240000]: "HARMFUL_LINK_MESSAGE_BLOCKED",
   HARMFUL_URL_BLOCKED: 240001,
   [240001]: "HARMFUL_URL_BLOCKED",
+  ORBS_ARCADE_GAME_CLOSED: 261005,
+  [261005]: "ORBS_ARCADE_GAME_CLOSED",
+  ORBS_ARCADE_GAME_VERSION_OUTDATED: 261010,
+  [261010]: "ORBS_ARCADE_GAME_VERSION_OUTDATED",
   USER_LIMITED_ACCESS_DEFAULT: 340000,
   [340000]: "USER_LIMITED_ACCESS_DEFAULT",
   USER_GUILD_UPLOAD_ATTACHMENT_LIMITED_ACCESS: 340004,
@@ -7990,6 +8006,7 @@ export const AnalyticEvents = {
   QUEST_CONTENT_VIEWED: "quest_content_viewed",
   QUEST_CONTENT_ENGAGED_VIEWED: "quest_content_engaged_viewed",
   QUEST_CONTENT_VIEW_TIME: "quest_content_view_time",
+  QUEST_PROMOTIONAL_EVENT_USER_ACTION: "quest_promotional_event_user_action",
   IOS_ATTRIBUTION_VIEW_RESOLVED: "ios_attribution_view_resolved",
   IOS_ATTRIBUTION_CLICK_RESOLVED: "ios_attribution_click_resolved",
   QUEST_DECISION_ROUNDTRIP: "quest_decision_roundtrip",

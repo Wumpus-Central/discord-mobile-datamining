@@ -16,6 +16,7 @@ const obj3 = {
   UNDERAGE: "underage",
   MANUAL_REVIEW_SUBMITTED: "manual_review_submitted",
   TNS_SET_UNCONFIRMED: "tns_set_unconfirmed",
+  TNS_SET_UNCONFIRMED_FRAUD: "tns_set_unconfirmed_fraud",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSystemNotificationUtils.tsx");
@@ -91,7 +92,15 @@ export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificat
             if (found != null) {
               rawValue = found.rawValue;
             }
-            return rawValue === obj3.TNS_SET_UNCONFIRMED;
+            let tmp5 = rawValue === obj3.TNS_SET_UNCONFIRMED;
+            if (!tmp5) {
+              let rawValue1;
+              if (found != null) {
+                rawValue1 = found.rawValue;
+              }
+              tmp5 = rawValue1 === tmp4.TNS_SET_UNCONFIRMED_FRAUD;
+            }
+            return tmp5;
           }
         }
       }

@@ -27,6 +27,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   const renderSectionFooter = listViewportHeight.renderSectionFooter;
   const renderSectionHeader = listViewportHeight.renderSectionHeader;
   const scrollIndicatorInsetBottom = listViewportHeight.scrollIndicatorInsetBottom;
+  const drawDistanceMode = listViewportHeight.drawDistanceMode;
   c13 = undefined;
   c14 = undefined;
   contentSize = undefined;
@@ -298,7 +299,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   const items1 = [memo1];
   const imperativeHandle = listViewportHeight.useImperativeHandle(ref, () => memo1, items1);
   let obj = require("ReanimatedRexport");
-  class G {
+  class Q {
     constructor(arg0) {
       result = closure_16.set(listViewportHeight.contentOffset.y);
       tmp2 = onScrollWorklet(
@@ -316,14 +317,14 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     }
   }
   let obj2 = require("ReanimatedRexport");
-  G.__closure = {
+  Q.__closure = {
     scrollPosValue: sharedValue,
     onScrollWorklet,
     onScroll,
     runOnJS: require("ReanimatedRexport").runOnJS,
   };
-  G.__workletHash = 11450141164730;
-  G.__initData = scrollIndicatorInsetBottom;
+  Q.__workletHash = 11450141164730;
+  Q.__initData = scrollIndicatorInsetBottom;
   const items2 = [renderItem, renderSectionFooter, renderSectionHeader];
   const obj3 = {
     scrollPosValue: sharedValue,
@@ -355,30 +356,48 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   if (listViewportHeight > 0) {
     num = endReachedThreshold / listViewportHeight;
   }
-  const obj4 = { children: null };
-  const animatedScrollHandler = obj2.useAnimatedScrollHandler(G);
+  const obj4 = {
+    ref: ref1,
+    contentContainerStyle: memo3,
+    data: tmp3.listData,
+    drawDistance: null,
+    estimatedHeaderSize: null,
+    getFixedItemSize: null,
+    getItemType: null,
+    initialScrollOffset: null,
+    keyExtractor: null,
+    ListHeaderComponent: null,
+    ListHeaderComponentStyle: null,
+    onEndReached: null,
+    onEndReachedThreshold: null,
+    onScroll: null,
+    recycleItems: true,
+    renderItem: null,
+    scrollIndicatorInsets: null,
+  };
+  if ("viewport" === drawDistanceMode) {
+    let num2 = listViewportHeight;
+  } else if ("small" === drawDistanceMode) {
+    num2 = 100;
+  }
+  const obj5 = { children: null };
+  obj4.drawDistance = num2;
+  obj4.estimatedHeaderSize = headerSize;
+  obj4.getFixedItemSize = callback3;
+  obj4.getItemType = callback1;
+  obj4.initialScrollOffset = memo;
+  obj4.keyExtractor = callback2;
+  obj4.ListHeaderComponent = memo2;
+  obj4.ListHeaderComponentStyle = renderSectionHeader;
+  obj4.onEndReached = onEndReached;
+  obj4.onEndReachedThreshold = num;
+  obj4.onScroll = obj2.useAnimatedScrollHandler(Q);
+  obj4.renderItem = callback;
+  obj4.scrollIndicatorInsets = memo4;
   const items6 = [
-    onScrollWorklet(require("../../../../_runtime/metro/13848__.js").AnimatedLegendList, {
-      ref: ref1,
-      contentContainerStyle: memo3,
-      data: tmp3.listData,
-      drawDistance: listViewportHeight,
-      estimatedHeaderSize: headerSize,
-      getFixedItemSize: callback3,
-      getItemType: callback1,
-      initialScrollOffset: memo,
-      keyExtractor: callback2,
-      ListHeaderComponent: memo2,
-      ListHeaderComponentStyle: renderSectionHeader,
-      onEndReached,
-      onEndReachedThreshold: num,
-      onScroll: obj2.useAnimatedScrollHandler(G),
-      recycleItems: true,
-      renderItem: callback,
-      scrollIndicatorInsets: memo4,
-    }),
+    onScrollWorklet(require("../../../../_runtime/metro/13867__.js").AnimatedLegendList, obj4),
     renderAccessory(memo1),
   ];
-  obj4.children = items6;
-  return renderHeader(onScroll, obj4);
+  obj5.children = items6;
+  return renderHeader(onScroll, obj5);
 });

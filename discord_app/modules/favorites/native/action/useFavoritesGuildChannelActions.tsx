@@ -15,11 +15,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = channelId;
       const cResult = require("c").c(13);
       if (cResult[0] !== channelId) {
-        const isFavoritableChannelResult = tmp(4846).isFavoritableChannel(channelId);
+        const isFavoritableChannelResult = tmp(4848).isFavoritableChannel(channelId);
         cResult[0] = channelId;
         cResult[1] = isFavoritableChannelResult;
         let stateFromStores1 = isFavoritableChannelResult;
-        const tmpResult = tmp(4846);
+        const tmpResult = tmp(4848);
       } else {
         stateFromStores1 = cResult[1];
       }

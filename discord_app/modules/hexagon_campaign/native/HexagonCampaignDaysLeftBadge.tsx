@@ -3,6 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
+import _modDef4247 from "../HexagonCampaign.messages.js";
 import shared from "../../../design/shared.tsx";
 import HexagonCampaignUtils from "../HexagonCampaignUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
@@ -18,8 +19,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(4994).HexagonCampaignPerk);
-const createStyles = fn(4969);
+let closure_9 = Object.values(fn(4996).HexagonCampaignPerk);
+const createStyles = fn(4971);
 let obj2 = {
   badge: {
     flexDirection: "row",
@@ -84,7 +85,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (null != item) {
-        obj = obj(4996);
+        obj = obj(4998);
         let hexagonCampaignPerkCutoffMs = obj.getHexagonCampaignPerkCutoffMs(item, stateFromStores);
       } else {
         const _Math = Math;
@@ -128,7 +129,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return hexagonCampaignPerkCutoffMs;
       }, items1);
-      const tmp3 = stateFromStores(7552)(memo, closure_8);
+      const tmp3 = stateFromStores(7554)(memo, closure_8);
       let num = 0;
       if (tmp3.hours > 0) {
         num = 1;
@@ -280,10 +281,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return React5(View, obj7);
       }
     };
-fn(558);
-let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignDaysLeftBadge.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? function HexagonCampaignDaysLeftBadge(variant) {
       const cResult = c.c(6);
       variant = variant.variant;
@@ -300,7 +303,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== tmp4) {
         const intl = util.intl;
         const obj2 = { days: tmp4 };
-        const formatToPlainStringResult = intl.formatToPlainString(util.t["noGK/D"], obj2);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef4247["noGK/D"], obj2);
         cResult[1] = tmp4;
         cResult[2] = formatToPlainStringResult;
         let tmp6 = formatToPlainStringResult;
@@ -309,15 +312,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === tmp6) {
         if (cResult[4] === variant) {
-          let tmp8 = cResult[5];
+          let tmp9 = cResult[5];
         }
-        return tmp8;
+        return tmp9;
       }
-      const tmp9 = timestampProducer(closure_12, { variant, renderIcon: first, text: tmp6 });
+      const tmp10 = timestampProducer(closure_12, { variant, renderIcon: first, text: tmp6 });
       cResult[3] = tmp6;
       cResult[4] = variant;
-      cResult[5] = tmp9;
-      tmp8 = tmp9;
+      cResult[5] = tmp10;
+      tmp9 = tmp10;
     }
   : function HexagonCampaignDaysLeftBadge(variant) {
       const obj = {
@@ -328,51 +331,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         text: null,
       };
       const intl = util.intl;
-      obj.text = intl.formatToPlainString(util.t["noGK/D"], { days: closure_11(variant.perk) });
+      obj.text = intl.formatToPlainString(_modDef4247["noGK/D"], { days: closure_11(variant.perk) });
       return timestampProducer(closure_12, obj);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignDaysLeftBadge.tsx");
-
-export default tmp4;
 export const useHexagonCampaignDaysLeft = tmp3;
-export const HexagonCampaignExtendPerkBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? function HexagonCampaignExtendPerkBadge(variant) {
-      const cResult = c.c(4);
-      variant = variant.variant;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(color) {
-          return closure_1_6(require("NitroWheelIcon").NitroWheelIcon, { size: "xxs", color });
-        };
-        const intl = util.intl;
-        const stringResult = intl.string(util.t["5Z2qmz"]);
-        cResult[0] = fn;
-        cResult[1] = stringResult;
-        tmp4 = fn;
-        tmp5 = stringResult;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      if (cResult[2] !== variant) {
-        const obj2 = { variant, renderIcon: tmp4, text: tmp5 };
-        const tmp10 = timestampProducer(closure_12, obj2);
-        cResult[2] = variant;
-        cResult[3] = tmp10;
-        let tmp7 = tmp10;
-      } else {
-        tmp7 = cResult[3];
-      }
-      return tmp7;
-    }
-  : function HexagonCampaignExtendPerkBadge(variant) {
-      const obj = {
-        variant: variant.variant,
-        renderIcon(color) {
-          return closure_1_6(require("NitroWheelIcon").NitroWheelIcon, { size: "xxs", color });
-        },
-        text: null,
-      };
-      const intl = util.intl;
-      obj.text = intl.string(util.t["5Z2qmz"]);
-      return timestampProducer(closure_12, obj);
-    };

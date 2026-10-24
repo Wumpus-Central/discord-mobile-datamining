@@ -19,7 +19,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -131,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp10;
       if (cResult[5] !== navigation) {
-        const headerCloseButton = tmp(6922).getHeaderCloseButton(() => navigation.goBack());
+        const headerCloseButton = tmp(6924).getHeaderCloseButton(() => navigation.goBack());
         cResult[5] = navigation;
         cResult[6] = headerCloseButton;
         let tmp11 = headerCloseButton;
-        const tmpResult = tmp(6922);
+        const tmpResult = tmp(6924);
       } else {
         tmp11 = cResult[6];
       }
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { title: null };
           const intl = guildId(1128).intl;
           obj.title = intl.string(guildId(1128).t["9Oq93m"]);
-          return closure_1_6(guildId(6922).NavigatorHeader, obj);
+          return closure_1_6(guildId(6924).NavigatorHeader, obj);
         };
         cResult[7] = fn2;
         let tmp13 = fn2;

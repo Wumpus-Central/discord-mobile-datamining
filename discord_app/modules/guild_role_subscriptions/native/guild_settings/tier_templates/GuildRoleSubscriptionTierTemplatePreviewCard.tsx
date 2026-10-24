@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
-import _modDef7247 from "../../../../../../_runtime/metro/07247__.js";
+import ChevronSmallUpIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: {
     padding: 16,
@@ -386,33 +386,27 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { children: null };
-        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7247, style: null };
-        const obj7 = { transform: null };
-        const items1 = [{ rotate: "180deg" }];
-        obj7.transform = items1;
-        obj6.style = obj7;
-        obj5.children = React6(native.Icon, obj6);
-        const tmp19 = React6(newPricesToPick, obj5);
-        cResult[4] = tmp19;
-        let tmp15 = tmp19;
+        const obj5 = { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) };
+        const tmp18 = React6(newPricesToPick, obj5);
+        cResult[4] = tmp18;
+        let tmp15 = tmp18;
       } else {
         tmp15 = cResult[4];
       }
       if (cResult[5] === tmp4.viewEntireTemplateFooter) {
         if (cResult[6] === tmp10) {
-          let tmp20 = cResult[7];
+          let tmp19 = cResult[7];
         }
-        return tmp20;
+        return tmp19;
       }
-      const obj8 = { style: tmp4.viewEntireTemplateFooter, children: null };
-      const items2 = [tmp10, tmp15];
-      obj8.children = items2;
-      const tmp21 = v65535(newPricesToPick, obj8);
+      const obj6 = { style: tmp4.viewEntireTemplateFooter, children: null };
+      const items1 = [tmp10, tmp15];
+      obj6.children = items1;
+      const tmp20 = v65535(newPricesToPick, obj6);
       cResult[5] = tmp4.viewEntireTemplateFooter;
       cResult[6] = tmp10;
-      cResult[7] = tmp21;
-      tmp20 = tmp21;
+      cResult[7] = tmp20;
+      tmp19 = tmp20;
     }
   : function ViewEntireTemplateFooter() {
       const tmp = closure_11();
@@ -432,15 +426,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         React6(newPricesToPick, { style: tmp.viewEntireTemplateFooterUnderline }),
       ];
       obj2.children = items;
-      const items1 = [v65535(newPricesToPick, obj2)];
-      const obj5 = { children: null };
-      const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7247, style: null };
-      const obj7 = { transform: null };
-      const items2 = [{ rotate: "180deg" }];
-      obj7.transform = items2;
-      obj6.style = obj7;
-      obj5.children = React6(native.Icon, obj6);
-      items1[1] = React6(newPricesToPick, obj5);
+      const items1 = [
+        v65535(newPricesToPick, obj2),
+        React6(newPricesToPick, { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) }),
+      ];
       obj.children = items1;
       return v65535(newPricesToPick, obj);
     };
@@ -623,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   function handleViewEntireTemplate() {
                                     ActionSheetActionCreatorsDefault.openLazy(
-                                      asyncRequireImpl(19275, dependencyMap.paths),
+                                      asyncRequireImpl(19323, dependencyMap.paths),
                                       "TierTemplateCard",
                                       { template, guildId, handleSelectTemplateInPreview },
                                     );
@@ -645,7 +634,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       const items = [tmp15, tmp67];
                                       obj9.children = items;
                                       const tmp74 = closure_10(suggestedUnusedPrices, obj9);
-                                      class N {
+                                      class H {
                                         constructor(arg0, arg1) {
                                           tmp = closure_5;
                                           if (closure_7) {
@@ -687,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     children: null,
                                   };
                                   const items1 = [,];
-                                  class N {
+                                  class H {
                                     constructor(arg0, arg1) {
                                       tmp = closure_5;
                                       if (closure_7) {
@@ -731,7 +720,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 obj11.children = items2;
                                 const tmp62 = closure_10(tmp(tmp2[25]).GappedList, obj11);
                                 cResult[42] = tmp35;
-                                class N {
+                                class H {
                                   constructor(arg0, arg1) {
                                     tmp = closure_5;
                                     if (closure_7) {
@@ -767,7 +756,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const obj12 = { children: null };
                               const items3 = [tmp42, tmp46, tmp49];
-                              class N {
+                              class H {
                                 constructor(arg0, arg1) {
                                   tmp = closure_5;
                                   if (closure_7) {
@@ -806,7 +795,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                             ({ name: obj14.title, description: obj14.description } = first2);
                             const tmp52 = closure_9(closure_14, { title: null, description: null });
-                            class N {
+                            class H {
                               constructor(arg0, arg1) {
                                 tmp = closure_5;
                                 if (closure_7) {
@@ -844,7 +833,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj15 = { title: tmp40, count: length2 };
                           const tmp45 = closure_9(closure_12, obj15);
                           cResult[31] = length2;
-                          class N {
+                          class H {
                             constructor(arg0, arg1) {
                               tmp = closure_5;
                               if (closure_7) {
@@ -878,7 +867,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp42 = tmp45;
                         }
                         const obj16 = { children: null };
-                        class N {
+                        class H {
                           constructor(arg0, arg1) {
                             tmp = closure_5;
                             if (closure_7) {
@@ -916,7 +905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp35 = tmp39;
                       }
                       const obj17 = { title: tmp19, count: length };
-                      class N {
+                      class H {
                         constructor(arg0, arg1) {
                           tmp = closure_5;
                           if (closure_7) {
@@ -957,7 +946,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closeActionSheet: false,
                   descriptionTextProps: null,
                 };
-                class N {
+                class H {
                   constructor(arg0, arg1) {
                     tmp = closure_5;
                     if (closure_7) {
@@ -993,7 +982,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp15 = tmp17;
               }
             }
-            class N {
+            class H {
               constructor(arg0, arg1) {
                 tmp = closure_5;
                 if (closure_7) {
@@ -1022,8 +1011,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[6] = tmp10;
             cResult[7] = tmp12;
             cResult[8] = suggestedUnusedPrices;
-            cResult[9] = N;
-            tmp13 = N;
+            cResult[9] = H;
+            tmp13 = H;
             let tmpResult = tmp(tmp2[23]);
           }
         }
@@ -1106,7 +1095,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7) {
           const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(19279, dependencyMap.paths),
+            asyncRequireImpl(19327, dependencyMap.paths),
             "TierTemplatePriceReselectionCard",
             obj2,
           );
@@ -1128,7 +1117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.contentContainer,
         onPress: function handleViewEntireTemplate() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19275, dependencyMap.paths), "TierTemplateCard", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19323, dependencyMap.paths), "TierTemplateCard", {
             template,
             guildId,
             handleSelectTemplateInPreview: callback1,

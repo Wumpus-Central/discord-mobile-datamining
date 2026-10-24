@@ -11,7 +11,7 @@ let View = fn(17).View;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 const obj2 = {
   container: {
     width: "100%",
@@ -353,17 +353,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj = onChangeText(11164);
-      const animationDelayedAutoFocus = onChangeText(12133).useAnimationDelayedAutoFocus(autoFocus, () => {
+      let obj = onChangeText(11165);
+      const animationDelayedAutoFocus = onChangeText(12159).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (obj.useAppLauncherContext().entrypoint === onChangeText(11165).AppLauncherEntrypoint.VOICE) {
+      if (obj.useAppLauncherContext().entrypoint === onChangeText(11166).AppLauncherEntrypoint.VOICE) {
         let TextInput = tmp4(1202).TextInput;
       } else {
-        TextInput = guildId(12138);
+        TextInput = guildId(12164);
       }
       const items3 = [tmp.container, ,];
       if (hasError) {
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(12139), obj5);
+        tmp14Result = tmp14(guildId(12165), obj5);
       }
       items4[1] = tmp14Result;
       obj3.children = items4;

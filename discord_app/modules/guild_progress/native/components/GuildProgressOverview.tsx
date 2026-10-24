@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef11540 from "../../../../../_runtime/metro/11540__.js";
+import _modDef11560 from "../../../../../_runtime/metro/11560__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -63,7 +63,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { source: _modDef11540 };
+                const obj2 = { source: _modDef11560 };
                 const tmp20 = hasOwnProperty(native.Icon, obj2);
                 cResult[12] = tmp20;
                 let tmp17 = tmp20;
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj3.children = items1;
-      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11540 })];
+      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11560 })];
       obj2.children = items2;
       const items3 = [
         timestampProducer(View, obj2),

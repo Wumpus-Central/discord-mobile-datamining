@@ -4,15 +4,15 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5690 from "../../../../../_runtime/metro/05690__.js";
+import _modDef5692 from "../../../../../_runtime/metro/05692__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7187 from "../../../../../_runtime/metro/07187__.js";
-import _modDef8322 from "../../../../../_runtime/metro/08322__.js";
-import _modDef11253 from "../../../../../_runtime/metro/11253__.js";
-import _modDef11258 from "../../../../../_runtime/metro/11258__.js";
-import _modDef13680 from "../../../../../_runtime/metro/13680__.js";
-import _modDef17115 from "../../../../../_runtime/metro/17115__.js";
-import _modDef17116 from "../../../../../_runtime/metro/17116__.js";
+import _modDef7189 from "../../../../../_runtime/metro/07189__.js";
+import _modDef8324 from "../../../../../_runtime/metro/08324__.js";
+import _modDef11254 from "../../../../../_runtime/metro/11254__.js";
+import _modDef11259 from "../../../../../_runtime/metro/11259__.js";
+import _modDef13717 from "../../../../../_runtime/metro/13717__.js";
+import _modDef17147 from "../../../../../_runtime/metro/17147__.js";
+import _modDef17148 from "../../../../../_runtime/metro/17148__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef13680,
-  _modDef7187,
-  _modDef8322,
-  _modDef11258,
-  _modDef5690,
-  _modDef17115,
-  _modDef17116,
-  _modDef11253,
+  _modDef13717,
+  _modDef7189,
+  _modDef8324,
+  _modDef11259,
+  _modDef5692,
+  _modDef17147,
+  _modDef17148,
+  _modDef11254,
 ];
 let closure_10 = [
   "Launch Probe!",
@@ -45,7 +45,7 @@ let closure_10 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },
@@ -95,8 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: false,
-              action: false,
+              variant: "<string:1358955132>",
+              action: "<string:4282450153>",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -124,8 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: false,
-              action: false,
+              variant: "<string:1358955132>",
+              action: "<string:4282450153>",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-        const tmp19 = closure_7(tmp(9760).ContextMenu, obj5);
+        const tmp19 = closure_7(tmp(9761).ContextMenu, obj5);
         cResult[11] = align;
         cResult[12] = tmp5;
         cResult[13] = C;
@@ -229,8 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant: false,
-                action: false,
+                variant: "<string:1358955132>",
+                action: "<string:4282450153>",
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -253,8 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: false,
-              action: false,
+              variant: "<string:1358955132>",
+              action: "<string:4282450153>",
             };
             let str = "default";
             if (index === closure_0 - 1) {

@@ -58,7 +58,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8941);
+const PermissionsConstants = fn(8943);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
@@ -126,7 +126,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = isGuildStageVoice;
         cResult[1] = items2;
-        tmpResult = tmp(4835);
+        tmpResult = tmp(4837);
       } else {
         const tmp12 = first1(cResult[1], 2);
         first = tmp12[0];

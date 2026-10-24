@@ -5,7 +5,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_5 = fn(7136).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7138).PHONE_VERIFICATION_MODAL_KEY;
 const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
@@ -138,7 +138,7 @@ export default {
         event: phone(1275).NetworkActionNames.USER_VERIFY_PHONE;
       }
       request.rejectWithError = phone(1297).rejectWithMigratedError();
-      yield code(6674).post(request);
+      yield code(6676).post(request);
       closure_128_0 = value;
       if (closure_129_2) {
         code(584).dispatch({ type: "MODAL_POP", key });

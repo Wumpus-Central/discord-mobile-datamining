@@ -9,6 +9,7 @@ import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils
 import QuestContent from "../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import safeTransitionToDefault from "../modules/links/safeTransitionTo.native.tsx";
 import storefrontMessageEmbedCodedLink from "../modules/application_storefront/storefrontMessageEmbedCodedLink.tsx";
+import activityBookmarkUtils from "../modules/applications/message_embed/utils/activityBookmarkUtils.tsx";
 import InstantInviteActionCreatorsDefault from "../actions/InstantInviteActionCreators.tsx";
 import QuestUtils from "../modules/quests/native/QuestUtils.native.tsx";
 import SocialLayerStorefrontNativeActionCreators from "../modules/slayer_storefront/native/SocialLayerStorefrontNativeActionCreators.tsx";
@@ -267,7 +268,7 @@ const Constants = fn(1087);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1089);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7331).isGameShopPath;
+const isGameShopPath = fn(7333).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -312,7 +313,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "cix", skuId: "unicodeVersion" };
+            result = { applicationId: "Array", skuId: "Reflect" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -330,23 +331,23 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "r" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const code = canLaunchInChannel.code;
+        const code = _undefined.code;
         const application = obj2.getApplication(code);
-        const uRL = new URL(canLaunchInChannel.url);
+        const uRL = new URL(_undefined.url);
         const searchParams = uRL.searchParams;
         value = searchParams.get("referrer_id");
-        closure_1 = value;
+        closure_2 = value;
         const playInContext = url(paths[29]).getPlayInContext(code);
-        ({ currentChannelId: closure_2, isCurrentlyInInstance, canLaunchInChannel } = playInContext);
+        ({ currentChannelId: c3, isCurrentlyInInstance, canLaunchInChannel } = playInContext);
         if (!isCurrentlyInInstance) {
           let tmp8 = !canLaunchInChannel;
           if (!canLaunchInChannel) {
@@ -357,7 +358,7 @@ export default function getOnClick(url) {
             tmp8 = null == bot;
           }
           if (tmp8) {
-            tmp8 = !url(paths[30]).canLaunchContextlessFrame(application);
+            tmp8 = !url(paths[30]).canOpenFrame(application);
             const tmp5Result = url(paths[30]);
           }
           isCurrentlyInInstance = tmp8;
@@ -379,19 +380,22 @@ export default function getOnClick(url) {
                 applicationId: code,
                 channelId: null,
                 fromLink: true,
+                linkChannelId: null,
                 customId: null,
                 referrerId: null,
                 analyticsLocations: null,
               };
-              let tmp = null;
+              let tmp2 = null;
               if (canLaunchInChannel) {
-                tmp = paths;
+                tmp2 = _undefined;
               }
-              obj2.channelId = tmp;
+              obj2.channelId = tmp2;
+              obj = GamesActionCreatorsDefault;
+              obj2.linkChannelId = activityBookmarkUtils.getLinkChannelId(uRL);
               obj2.customId = customId.customId;
               obj2.referrerId = value;
               obj2.analyticsLocations = analyticsLocations;
-              return GamesActionCreatorsDefault.launch(obj2);
+              return obj.launch(obj2);
             })
             .catch(() => {});
           flag = true;
@@ -400,19 +404,22 @@ export default function getOnClick(url) {
               applicationId: code,
               channelId: null,
               fromLink: true,
+              linkChannelId: null,
               customId: null,
               referrerId: null,
               analyticsLocations: null,
             };
-            let tmp = null;
+            let tmp2 = null;
             if (canLaunchInChannel) {
-              tmp = paths;
+              tmp2 = _undefined;
             }
-            obj2.channelId = tmp;
+            obj2.channelId = tmp2;
+            obj = GamesActionCreatorsDefault;
+            obj2.linkChannelId = activityBookmarkUtils.getLinkChannelId(uRL);
             obj2.customId = customId.customId;
             obj2.referrerId = value;
             obj2.analyticsLocations = analyticsLocations;
-            return GamesActionCreatorsDefault.launch(obj2);
+            return obj.launch(obj2);
           });
         }
         return flag;
@@ -420,14 +427,14 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14173, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14192, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -435,7 +442,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -458,7 +465,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -481,7 +488,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.QUESTS_EMBED) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.QUESTS_EMBED) {
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -516,18 +523,18 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(9564);
+      tmp2Result = tmp2(9565);
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const enabled = url(paths[40]).isVirtualCurrencyEnabled().enabled;
-        obj = url(paths[40]);
-        url(paths[20])(paths[41], paths.paths).then((openCollectiblesShopMobile) => {
+        const enabled = url(paths[41]).isVirtualCurrencyEnabled().enabled;
+        obj = url(paths[41]);
+        url(paths[20])(paths[42], paths.paths).then((openCollectiblesShopMobile) => {
           const tmp3 = _slicedToArray(code.code.split("-"), 2)[1];
           if (enabled) {
             if (tmp2 === constants.ORBS) {
@@ -581,7 +588,7 @@ export default function getOnClick(url) {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          const result = url(paths[35]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
+          const result = url(paths[36]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
           return true;
         };
       }
@@ -609,7 +616,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5701).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -635,7 +642,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8608);
+    tmp2Result4 = tmp2(8610);
   }
   const tmp2Result3 = require("LinkUtils");
 }

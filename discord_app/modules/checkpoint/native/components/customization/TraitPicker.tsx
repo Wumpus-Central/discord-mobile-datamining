@@ -14,17 +14,17 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let View = fn(17).View;
-const rarityOrder = fn(6013).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6015).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 600;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4969);
-let obj2 = { container: { gap: fn(12987).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(12987).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12987).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12987).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(12987).CONTENT_INSET };
+const createStyles = fn(4971);
+let obj2 = { container: { gap: fn(13024).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(13024).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13024).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13024).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13024).CONTENT_INSET };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -165,7 +165,7 @@ const __initData2 = {
   code: "function TraitPickerTsx2(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}",
 };
 ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: fn(12987).CONTENT_INSET };
+let obj5 = { paddingHorizontal: fn(13024).CONTENT_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
@@ -661,14 +661,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       earnedCount = undefined;
       let useReducedMotion;
       const tmp = closure_12();
-      const tmp4 = !customizationOption(6360).getIsTraitRarityVisible(customizationOption);
-      let obj = customizationOption(6360);
+      const tmp4 = !customizationOption(6362).getIsTraitRarityVisible(customizationOption);
+      let obj = customizationOption(6362);
       let items = [useReducedMotion];
       dependencyMap = customizationOption(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       let obj2 = customizationOption(504);
-      _slicedToArray = customizationOption(5265).useIsScreenReaderEnabled();
-      let obj3 = customizationOption(5265);
-      const traitPickerOptions = customizationOption(12989).useTraitPickerOptions({
+      _slicedToArray = customizationOption(5267).useIsScreenReaderEnabled();
+      let obj3 = customizationOption(5267);
+      const traitPickerOptions = customizationOption(13026).useTraitPickerOptions({
         customizationOption,
         optionIds,
         savedOptionId,
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       ({ availableTraitOptions, earnedCount } = traitPickerOptions);
       closure_5 = tmp6;
-      const tmp8 = selectedOptionId(5597)(() => {
+      const tmp8 = selectedOptionId(5599)(() => {
         let num = 0;
         if (!closure_5) {
           num = 0;
@@ -698,7 +698,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = 0 === tmp8;
       }
       useReducedMotion = tmp9;
-      const obj4 = customizationOption(12989);
+      const obj4 = customizationOption(13026);
       const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
       const fn = function f() {
         const obj = { duration, easing: null };
@@ -718,11 +718,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.transform = items;
         return obj3;
       };
-      const tmp2Result = customizationOption(5050);
+      const tmp2Result = customizationOption(5052);
       fn.__closure = {
         INTRO_DETAILS_DURATION_MS,
-        Easing: customizationOption(5050).Easing,
-        withTiming: customizationOption(5204).withTiming,
+        Easing: customizationOption(5052).Easing,
+        withTiming: customizationOption(5206).withTiming,
         isDetailsVisible: tmp9,
         INTRO_DETAILS_OFFSET_Y: PX_12,
       };
@@ -731,8 +731,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = tmp2Result.useAnimatedStyle(fn);
       const obj6 = {
         INTRO_DETAILS_DURATION_MS,
-        Easing: customizationOption(5050).Easing,
-        withTiming: customizationOption(5204).withTiming,
+        Easing: customizationOption(5052).Easing,
+        withTiming: customizationOption(5206).withTiming,
         isDetailsVisible: tmp9,
         INTRO_DETAILS_OFFSET_Y: PX_12,
       };
@@ -748,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp15;
       }
       obj7.paused = tmp14;
-      const autoSelectTraitOption = customizationOption(12990).useAutoSelectTraitOption(obj7);
+      const autoSelectTraitOption = customizationOption(13027).useAutoSelectTraitOption(obj7);
       let diff = earnedCount;
       if (null == selectedOptionId) {
         diff = earnedCount - tmp12;
@@ -766,7 +766,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [
         showEarnedCount,
-        closure_8(selectedOptionId(12987), {
+        closure_8(selectedOptionId(13024), {
           customizationOption,
           options: availableTraitOptions,
           selectedOptionId,
@@ -783,8 +783,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items3 = [tmp.details, animatedStyle];
         obj10.style = items3;
         const obj11 = { asset: found, hideDescriptionAndRarity: tmp4 };
-        obj10.children = closure_8(tmp7(12991), obj11);
-        tmp23Result = closure_8(tmp7(5050).View, obj10);
+        obj10.children = closure_8(tmp7(13028), obj11);
+        tmp23Result = closure_8(tmp7(5052).View, obj10);
       }
       items2[2] = tmp23Result;
       obj8.children = items2;

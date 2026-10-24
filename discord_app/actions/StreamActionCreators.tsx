@@ -208,7 +208,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1087);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6641).StreamTypes;
+const StreamTypes = fn(6643).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -365,15 +365,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7864)(closure_1_1);
+          closure_1(7866)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5992).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5992);
+          closure_0(5994).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5994);
         }
       }
     };

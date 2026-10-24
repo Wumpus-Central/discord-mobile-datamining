@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = cResult[1];
       }
-      str(5261)(tmp3);
+      str(5263)(tmp3);
       if (cResult[2] !== str) {
         const fn2 = function o() {
           AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: str });
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         analyticsType = "Guild Join Captcha";
       }
       dependencyMap = noop.useRef(true);
-      analyticsType(5261)(() => () => {
+      analyticsType(5263)(() => () => {
         if (ref.current) {
           if (closure_1_0 != null) {
             tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);

@@ -277,10 +277,10 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(onSubmit, arg1) {
-    let tmp = null != onSubmit.clarification;
+  clarification(onKept, arg1) {
+    let tmp = null != onKept.clarification;
     if (tmp) {
-      const questions = onSubmit.clarification.questions;
+      const questions = onKept.clarification.questions;
       let num;
       if (questions != null) {
         num = questions.length;
@@ -291,13 +291,8 @@ let obj2 = {
       tmp = num > 0;
     }
     if (tmp) {
-      const obj2 = {
-        type: "CONJURE_CHAT_TURN_PATCH",
-        projectId: arg1.projectId,
-        turnId: onSubmit.turn_id,
-        patch: null,
-      };
-      obj3 = { clarification: onSubmit.clarification };
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: onKept.turn_id, patch: null };
+      obj3 = { clarification: onKept.clarification };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

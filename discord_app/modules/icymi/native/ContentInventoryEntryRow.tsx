@@ -37,9 +37,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         const content_type = content.content_type;
-        if (tmp(8611).ContentInventoryEntryType.TOP_GAME !== content_type) {
-          if (tmp(8611).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-            if (tmp(8611).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+        if (tmp(8613).ContentInventoryEntryType.TOP_GAME !== content_type) {
+          if (tmp(8613).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+            if (tmp(8613).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
               if (visible == null) {
                 visible = false;
               }
@@ -90,9 +90,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         const content_type = content.content_type;
-        if (tmp(8611).ContentInventoryEntryType.TOP_GAME !== content_type) {
-          if (tmp(8611).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-            if (tmp(8611).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+        if (tmp(8613).ContentInventoryEntryType.TOP_GAME !== content_type) {
+          if (tmp(8613).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+            if (tmp(8613).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
               const obj2 = { content, renderForScreenshot: flag, visible: null };
               if (flag2 == null) {
                 flag2 = false;

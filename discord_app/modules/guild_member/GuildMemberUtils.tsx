@@ -101,7 +101,7 @@ function canBanMember(user, guild) {
   }
   return tmp4;
 }
-const GuildMemberFlags = fn(4887).GuildMemberFlags;
+const GuildMemberFlags = fn(4889).GuildMemberFlags;
 const Permissions = fn(1087).Permissions;
 let c9 = 86400000;
 let ReactCompilerGating = fn(558);

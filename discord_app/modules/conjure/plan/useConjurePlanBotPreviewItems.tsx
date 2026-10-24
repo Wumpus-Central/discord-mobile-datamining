@@ -135,7 +135,7 @@ const Constants = fn(1087);
 let c10 = "31337";
 let c11 = "31338";
 let c12 = "31339";
-const guildTextChannelRecord = new fn(4825).GuildTextChannelRecord({
+const guildTextChannelRecord = new fn(4827).GuildTextChannelRecord({
   id: "1337",
   guild_id: "1337",
   type: Constants.ChannelTypes.GUILD_TEXT,

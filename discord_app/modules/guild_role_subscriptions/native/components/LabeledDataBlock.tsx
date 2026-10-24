@@ -5,13 +5,12 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
@@ -21,14 +20,8 @@ let obj2 = {
     padding: 16,
   },
   title: { marginRight: 4 },
-  data: null,
-  titleSection: null,
+  titleSection: { flexDirection: "row", alignItems: "center", marginBottom: 16 },
 };
-const merged = Object.assign(
-  TextStyles(fn(1087).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
-);
-obj2.data = {};
-obj2.titleSection = { flexDirection: "row", alignItems: "center", marginBottom: 16 };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
@@ -38,13 +31,12 @@ let obj3 = {
   flexGrow: 1,
   padding: 16,
 };
-let obj4 = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function LabeledDataBlock(arg0) {
-      const cResult = c.c(20);
+      const cResult = c.c(19);
       ({ children, title, style, icon, onPressIcon } = arg0);
       const tmp4 = closure_5();
       if (cResult[0] === style) {
@@ -64,37 +56,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[11] === tmp9) {
                   let tmp13 = cResult[12];
                 }
-                if (cResult[13] === children) {
-                  if (cResult[14] === tmp4.data) {
-                    let tmp17 = cResult[15];
+                if (cResult[13] !== children) {
+                  let tmp18 = children;
+                  if (typeof children === "string") {
+                    const obj2 = { variant: "heading-xl/medium", color: "mobile-text-heading-primary", children };
+                    tmp18 = React3(Text_Text.Text, obj2);
                   }
-                  if (cResult[16] === tmp5) {
-                    if (cResult[17] === tmp13) {
-                      if (cResult[18] === tmp17) {
-                        let tmp19 = cResult[19];
-                      }
-                      return tmp19;
+                  cResult[13] = children;
+                  cResult[14] = tmp18;
+                  let tmp17 = tmp18;
+                } else {
+                  tmp17 = cResult[14];
+                }
+                if (cResult[15] === tmp5) {
+                  if (cResult[16] === tmp13) {
+                    if (cResult[17] === tmp17) {
+                      let tmp19 = cResult[18];
                     }
+                    return tmp19;
                   }
-                  const obj2 = { style: tmp5, children: null };
-                  const items = [tmp13, tmp17];
-                  obj2.children = items;
-                  const tmp22 = React4(View, obj2);
-                  cResult[16] = tmp5;
-                  cResult[17] = tmp13;
-                  cResult[18] = tmp17;
-                  cResult[19] = tmp22;
-                  tmp19 = tmp22;
                 }
-                let tmp18 = children;
-                if (typeof children === "string") {
-                  const obj3 = { style: tmp4.data, children };
-                  tmp18 = React3(native.LegacyText, obj3);
-                }
-                cResult[13] = children;
-                cResult[14] = tmp4.data;
-                cResult[15] = tmp18;
-                tmp17 = tmp18;
+                const obj3 = { style: tmp5, children: null };
+                const items = [tmp13, tmp17];
+                obj3.children = items;
+                const tmp22 = React4(View, obj3);
+                cResult[15] = tmp5;
+                cResult[16] = tmp13;
+                cResult[17] = tmp17;
+                cResult[18] = tmp22;
+                tmp19 = tmp22;
               }
             }
             const obj4 = { style: tmp4.titleSection, children: null };
@@ -167,8 +157,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [React4(View, obj2)];
       let tmp4Result2 = children;
       if (typeof children === "string") {
-        const obj6 = { style: tmp.data, children };
-        tmp4Result2 = React3(native.LegacyText, obj6);
+        const obj6 = { variant: "heading-xl/medium", color: "mobile-text-heading-primary", children };
+        tmp4Result2 = React3(Text_Text.Text, obj6);
       }
       items2[1] = tmp4Result2;
       obj.children = items2;

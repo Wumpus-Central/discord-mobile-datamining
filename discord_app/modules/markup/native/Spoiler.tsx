@@ -30,7 +30,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1087).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 const PlatformUtils = fn(1384);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
@@ -41,7 +41,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(12033).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(12059).MUTED_OPACITY_CONTENT };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 fn(558);
@@ -273,7 +273,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5035).ThemeContext;
+Spoiler.contextType = fn(5037).ThemeContext;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SpoilerRevealProvider(children) {
   const cResult = c.c(3);

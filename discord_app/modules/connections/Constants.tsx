@@ -15,6 +15,8 @@ export const OperatorTypes = {
 };
 export const MetadataFields = {
   CREATED_AT: "created_at",
+  LETTERBOXD_WATCHES: "watches",
+  LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR: "films_in_diary_this_year",
   REDDIT_TOTAL_KARMA: "total_karma",
   REDDIT_GOLD: "gold",
   REDDIT_MOD: "mod",

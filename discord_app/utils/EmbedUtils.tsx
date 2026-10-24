@@ -8,13 +8,13 @@ import EmbedConstants from "../modules/messages/EmbedConstants.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-function getEffectiveVideoProvider(name, url) {
+function getEffectiveVideoProvider(name, url1) {
   if ("YouTube" !== name) {
     if ("TikTok" !== name) {
-      if (null != url) {
+      if (null != url1) {
         try {
           const _URL = URL;
-          const uRL = new URL(url);
+          const uRL = new URL(url1);
           const hostname = uRL.hostname;
           if ("www.youtube.com" === hostname) {
             return "YouTube";

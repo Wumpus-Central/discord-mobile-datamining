@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6376).TransportTypes;
+const TransportTypes = fn(6378).TransportTypes;
 const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -74,7 +74,12 @@ prototype["handleConnect"] = function handleConnect(v) {
     if (null == currentUser) {
       v.close(constants2.CLOSE_NORMAL, "User logged out");
     } else {
-      obj.user = transformUserDefault(currentUser);
+      const tmp10 = transformUserDefault(currentUser);
+      if (tmp11) {
+        delete tmp[tmp2];
+      }
+      obj.user = tmp10;
+      tmp11 = v.transport === TransportTypes.POST_MESSAGE && null == tmp10.avatar;
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);

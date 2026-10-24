@@ -10,23 +10,23 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6482).match(showHint.usernameStatus);
-  let obj = { type: showHint(15967).NameValidationState.ERROR, message: null };
-  const P = showHint(6482).P;
+  const match = showHint(6484).match(showHint.usernameStatus);
+  let obj = { type: showHint(15991).NameValidationState.ERROR, message: null };
+  const P = showHint(6484).P;
   obj.message = P.select();
-  const str = showHint(6482);
-  const obj2 = { type: showHint(15967).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6482).P;
+  const str = showHint(6484);
+  const obj2 = { type: showHint(15991).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(6484).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) =>
-    closure_1_11(showHint(5232).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+    closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
   );
   return match
     .with(obj, (children) =>
-      closure_1_11(showHint(5232).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+      closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
     )
     .with(obj2, (children) =>
-      closure_1_11(showHint(5232).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
+      closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
     )
     .otherwise(() => {
       let tmp = null;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16 },
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const tmp34 = first1;
             }
             user.discriminator = tmp34;
-            yield closure_2_2(7076).saveAccountChanges(user, { close: false });
+            yield closure_2_2(7078).saveAccountChanges(user, { close: false });
             closure_129_0 = value;
             if (!closure_129_0.ok) {
               const v6OrEarlierAPIError = new closure_0(1297).V6OrEarlierAPIError(closure_129_0);

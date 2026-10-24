@@ -12,7 +12,6 @@ import NotificationSettingsModalActionCreatorsDefault from "../../actions/Notifi
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import MutedUntilText from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
-import NotificationSettingsChannelDefault from "../../modules/notifications/settings/native/NotificationSettingsChannel.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
@@ -20,11 +19,10 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const require = globalThis.__r;
 const MutedUntilTextDefault = MutedUntilText;
 
 require = fn;
-const ChannelRecord = fn(4825);
+const ChannelRecord = fn(4827);
 ({ isGuildTextChannelType: closure_4, CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING: hasOwnProperty } = ChannelRecord);
 const Constants = fn(1087);
 ({
@@ -34,9 +32,12 @@ const Constants = fn(1087);
   SettingsPaneTypes: closure_14,
   MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15,
 } = Constants);
+const UnreadSetting = fn(6705).UnreadSetting;
+let closure_17 = fn(1097).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
-({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4969);
+({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
+const hybrid = "hybrid";
+const createStyles = fn(4971);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -51,7 +52,7 @@ let obj3 = {
   paddingTop: nativeDefault.space.PX_16,
 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let closure_19 = createStyles.createLegacyClassComponentStyles(obj2);
+let closure_22 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class ChannelSettingsNotifications extends PureComponent {
   constructor(arg0) {
@@ -59,8 +60,8 @@ class ChannelSettingsNotifications extends PureComponent {
     closure_0 = tmp2;
     tmp2.radioGroupRef = closure_3.createRef();
     tmp2.updateSetting = function updateSetting(arg0, label) {
-      ({ muted, messageNotifications, mute_config } = arg0);
-      const channel = state.props.channel;
+      ({ muted, messageNotifications, flags, mute_config } = arg0);
+      const channel = props.props.channel;
       const obj = {};
       let flag = false;
       if (undefined !== muted) {
@@ -74,6 +75,9 @@ class ChannelSettingsNotifications extends PureComponent {
       if (undefined !== messageNotifications) {
         obj.message_notifications = messageNotifications;
         flag = true;
+      }
+      if (undefined !== flags) {
+        obj.flags = flags;
       }
       if (flag) {
         const obj3 = { guildId: channel.getGuildId(), channelId: channel.id, settings: obj, label };
@@ -97,23 +101,48 @@ class ChannelSettingsNotifications extends PureComponent {
         obj4.guildId = channel.getGuildId();
         obj4.channelId = channel.id;
         obj4.onOptionPress = function onOptionPress(muted) {
-          const NotificationLabel = muted(paths[18]).NotificationLabel;
+          const NotificationLabel = muted(paths[21]).NotificationLabel;
           return muted.updateSetting(muted, NotificationLabel.muted(muted.muted));
         };
-        obj2.openLazy(state(paths[17])(paths[16], paths.paths), combined, obj4);
-        const tmp4 = state(paths[17])(paths[16], paths.paths);
+        obj2.openLazy(muted(paths[20])(paths[19], paths.paths), combined, obj4);
+        const tmp4 = muted(paths[20])(paths[19], paths.paths);
       }
       obj = muted;
     };
-    tmp2.handleTypeChange = function handleTypeChange(messageNotifications) {
-      state = messageNotifications;
-      state.setState({ messageNotifications }, () => {
-        const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-        return messageNotifications.updateSetting(
-          { messageNotifications },
-          NotificationLabel.notifications(messageNotifications),
-        );
-      });
+    tmp2.handleTypeChange = function handleTypeChange(arg0) {
+      props = ONLY_MENTIONS.props;
+      const channel = props.channel;
+      ONLY_MENTIONS = arg0;
+      if (arg0 === hybrid) {
+        ONLY_MENTIONS = constants.ONLY_MENTIONS;
+      }
+      if (!props.useNewNotifications) {
+        c1 = undefined;
+        const obj3 = { messageNotifications: ONLY_MENTIONS };
+        obj.setState(obj3, () => {
+          const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+          return ONLY_MENTIONS.updateSetting(
+            { messageNotifications: ONLY_MENTIONS, flags },
+            NotificationLabel.notifications(ONLY_MENTIONS),
+          );
+        });
+      } else {
+        channelIdFlags = channelIdFlags.getChannelIdFlags(channel.getGuildId(), channel.id);
+        if (ONLY_MENTIONS === constants.NULL) {
+          let result = ONLY_MENTIONS(paths[12]).resetChannelUnreadFlags(channelIdFlags);
+          const obj2 = ONLY_MENTIONS(paths[12]);
+        } else {
+          ONLY_MENTIONS(paths[12]);
+          if (arg0 !== hybrid) {
+            if (ONLY_MENTIONS !== tmp5.ALL_MESSAGES) {
+              let UNREADS_ALL_MESSAGES = constants2.UNREADS_ONLY_MENTIONS;
+            }
+            result = tmp9(channelIdFlags, UNREADS_ALL_MESSAGES);
+          }
+          UNREADS_ALL_MESSAGES = constants2.UNREADS_ALL_MESSAGES;
+        }
+      }
+      obj = ONLY_MENTIONS;
     };
     tmp2.state = { messageNotifications: global.messageNotifications, muted: global.muted };
     return tmp2;
@@ -156,17 +185,17 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj4 = { name: channelName };
     formatResult = format(t.byjuJm, obj4);
   }
-  obj2.children = value3(TableRow.TableRow, {
+  obj2.children = collapsedCategories(TableRow.TableRow, {
     label: formatResult,
     onPress: this.handleToggleMuteChannel,
     arrow: !muted,
   });
-  const items = [value3(TableRowGroup.TableRowGroup, obj2)];
+  const items = [collapsedCategories(TableRowGroup.TableRowGroup, obj2)];
   if (!muted) {
     const obj6 = { children: null };
     items[1] = null;
     obj6.children = items;
-    return collapsedCategories(constants, obj6);
+    return closure_1_20(closure_1_19, obj6);
   } else {
     const obj7 = { muteConfig: props.muteConfig, type: null };
     if (channel.type === constants3.GUILD_CATEGORY) {
@@ -176,7 +205,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
       CHANNEL = MutedUntilText.MuteSettingType.CHANNEL;
     }
     obj7.type = CHANNEL;
-    value3(MutedUntilTextDefault, obj7);
+    collapsedCategories(MutedUntilTextDefault, obj7);
   }
   const obj5 = { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted };
 };
@@ -194,17 +223,18 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   obj.disabled = guildMuted;
   obj.onValueChange = function onValueChange() {
     const result = NotificationSettingsModalActionCreatorsDefault.setForumThreadsCreated(
-      _require,
+      require,
       !newForumThreadsCreated,
     );
   };
-  return closure_16(TableSwitchRow.TableSwitchRow, obj);
+  return closure_18(TableSwitchRow.TableSwitchRow, obj);
 };
 prototype["renderNotificationSettings"] = function renderNotificationSettings() {
   const self = this;
-  ({ channel, guildMuted, guildMemberCount, defaultSetting } = this.props);
-  const state = this.state;
-  let muted = state.muted;
+  const props = this.props;
+  ({ channel, guildMuted, guildMemberCount, defaultSetting, useNewNotifications } = props);
+  ({ muted, messageNotifications } = this.state);
+  ({ unreadSetting, defaultUnreadSetting } = props);
   if (null != channel.parent_id) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.wlrV1c);
@@ -216,121 +246,144 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp5 = require;
     tmp7 = require;
   }
-  const TableRadioGroup = tmp7(6983).TableRadioGroup;
-  const obj = {
-    value: state.messageNotifications,
-    onChange: self.handleTypeChange,
-    groupRef: self.radioGroupRef,
-    title: null,
-    hasIcons: false,
-    children: null,
-  };
-  const intl3 = tmp7(1128).intl;
-  obj.title = intl3.string(tmp7(1128).t.h850Ss);
-  const TableRadioRow = tmp7(6982).TableRadioRow;
-  if (isGuildStageVoiceResult) {
-    let tmp22 = muted;
-    if (!muted) {
-      tmp22 = guildMuted;
-    }
-    const obj2 = { disabled: tmp22, label: stringResult, subLabel: null, value: null };
-    if (constants2.ALL_MESSAGES === defaultSetting) {
-      const intl11 = tmp5(1128).intl;
-      let stringResult1 = intl11.string(tmp5(1128).t["n/bTaY"]);
-    } else if (constants2.ONLY_MENTIONS === defaultSetting) {
-      const intl10 = tmp5(1128).intl;
-      stringResult1 = intl10.format(tmp5(1128).t.L2hmYy, {});
-    } else if (constants2.NO_MESSAGES === defaultSetting) {
-      const intl15 = tmp5(1128).intl;
-      stringResult1 = intl15.string(tmp5(1128).t.CtVGyQ);
-    }
-    obj2.subLabel = stringResult1;
-    obj2.value = constants2.NULL;
-    const items = [value3(TableRadioRow, obj2), ,];
-    let tmp25 = muted;
-    if (!muted) {
-      tmp25 = guildMuted;
-    }
-    const obj3 = { disabled: tmp25, value: constants2.ONLY_MENTIONS, label: null };
+  let tmp10 = useNewNotifications;
+  if (useNewNotifications) {
+    tmp10 = defaultSetting === constants2.ONLY_MENTIONS;
+  }
+  if (tmp10) {
+    tmp10 = defaultUnreadSetting === UnreadSetting.ALL_MESSAGES;
+  }
+  if (tmp10) {
+    const intl5 = tmp5(1128).intl;
+    let stringResult1 = intl5.string(tmp5(1128).t.JzbSEY);
+  } else if (constants2.ALL_MESSAGES === defaultSetting) {
+    const intl4 = tmp5(1128).intl;
+    stringResult1 = intl4.string(tmp5(1128).t["n/bTaY"]);
+  } else if (constants2.ONLY_MENTIONS === defaultSetting) {
+    const intl3 = tmp5(1128).intl;
+    stringResult1 = intl3.format(tmp5(1128).t.L2hmYy, {});
+  } else if (constants2.NO_MESSAGES === defaultSetting) {
+    const intl15 = tmp5(1128).intl;
+    stringResult1 = intl15.string(tmp5(1128).t.CtVGyQ);
+  }
+  if (channel.isGuildStageVoice()) {
+    const obj2 = {
+      value: messageNotifications,
+      onChange: null,
+      groupRef: null,
+      title: null,
+      hasIcons: false,
+      children: null,
+    };
+    ({ handleTypeChange: obj7.onChange, radioGroupRef: obj7.groupRef } = self);
     const intl12 = tmp7(1128).intl;
-    obj3.label = intl12.string(tmp7(1128).t["BENn/6"]);
-    items[1] = value3(tmp7(6982).TableRadioRow, obj3);
+    obj2.title = intl12.string(tmp7(1128).t.h850Ss);
+    let tmp32 = muted;
+    if (!muted) {
+      tmp32 = guildMuted;
+    }
+    const obj3 = { disabled: tmp32, label: stringResult, subLabel: stringResult1, value: constants2.NULL };
+    const items = [collapsedCategories(tmp7(6984).TableRadioRow, obj3), ,];
+    let tmp34 = muted;
+    if (!muted) {
+      tmp34 = guildMuted;
+    }
+    const obj4 = { disabled: tmp34, value: constants2.ONLY_MENTIONS, label: null };
+    const intl13 = tmp7(1128).intl;
+    obj4.label = intl13.string(tmp7(1128).t["BENn/6"]);
+    items[1] = collapsedCategories(tmp7(6984).TableRadioRow, obj4);
     if (!muted) {
       muted = guildMuted;
     }
-    const obj4 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
-    const intl13 = tmp7(1128).intl;
-    obj4.label = intl13.string(tmp7(1128).t.CtVGyQ);
-    items[2] = value3(tmp7(6982).TableRadioRow, obj4);
-    obj.children = items;
-    let tmp11Result = collapsedCategories(TableRadioGroup, obj);
+    const obj5 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
+    const intl14 = tmp7(1128).intl;
+    obj5.label = intl14.string(tmp7(1128).t.CtVGyQ);
+    items[2] = collapsedCategories(tmp7(6984).TableRadioRow, obj5);
+    obj2.children = items;
+    return closure_1_20(tmp7(6985).TableRadioGroup, obj2);
   } else {
-    const obj5 = { label: stringResult, subLabel: null, disabled: null, value: null };
-    if (constants2.ALL_MESSAGES === defaultSetting) {
-      const intl5 = tmp5(1128).intl;
-      let stringResult2 = intl5.string(tmp5(1128).t["n/bTaY"]);
-    } else if (constants2.ONLY_MENTIONS === defaultSetting) {
-      const intl4 = tmp5(1128).intl;
-      stringResult2 = intl4.format(tmp5(1128).t.L2hmYy, {});
-    } else if (constants2.NO_MESSAGES === defaultSetting) {
-      const intl14 = tmp5(1128).intl;
-      stringResult2 = intl14.string(tmp5(1128).t.CtVGyQ);
-    }
-    obj5.subLabel = stringResult2;
-    let tmp15 = muted;
-    if (!muted) {
-      tmp15 = guildMuted;
-    }
-    obj5.disabled = tmp15;
-    obj5.value = constants2.NULL;
-    const items1 = [value3(TableRadioRow, obj5), , ,];
-    const obj6 = { label: null, disabled: null, subLabel: null, value: null };
-    const intl6 = tmp7(1128).intl;
-    obj6.label = intl6.string(tmp7(1128).t["n/bTaY"]);
-    let tmp16 = muted;
-    if (!muted) {
-      tmp16 = guildMuted;
-    }
-    obj6.disabled = tmp16;
-    let stringResult3 = null;
-    if (null != guildMemberCount) {
-      stringResult3 = null;
-      if (guildMemberCount >= value2) {
-        const intl7 = tmp7(1128).intl;
-        stringResult3 = intl7.string(tmp7(1128).t.Dh5p5j);
+    let tmp15 = messageNotifications;
+    if (useNewNotifications) {
+      tmp15 = messageNotifications;
+      if (messageNotifications === constants2.ONLY_MENTIONS) {
+        tmp15 = messageNotifications;
+        if (unreadSetting === UnreadSetting.ALL_MESSAGES) {
+          tmp15 = hybrid;
+        }
       }
     }
-    obj6.subLabel = stringResult3;
-    obj6.value = constants2.ALL_MESSAGES;
-    items1[1] = value3(tmp7(6982).TableRadioRow, obj6);
-    const obj7 = { label: null, disabled: null, value: null };
-    const intl8 = tmp7(1128).intl;
-    obj7.label = intl8.format(tmp7(1128).t.L2hmYy, {});
-    let tmp19 = muted;
-    if (!muted) {
-      tmp19 = guildMuted;
-    }
-    obj7.disabled = tmp19;
-    obj7.value = constants2.ONLY_MENTIONS;
-    items1[2] = value3(tmp7(6982).TableRadioRow, obj7);
-    const obj8 = { label: null, disabled: null, value: null };
-    const intl9 = tmp7(1128).intl;
-    obj8.label = intl9.string(tmp7(1128).t.CtVGyQ);
+    const obj = { value: tmp15, onChange: null, groupRef: null, title: null, hasIcons: false, children: null };
+    ({ handleTypeChange: obj.onChange, radioGroupRef: obj.groupRef } = self);
+    const intl6 = tmp7(1128).intl;
+    obj.title = intl6.string(tmp7(1128).t.h850Ss);
+    const obj6 = { label: stringResult, subLabel: stringResult1, disabled: null, value: null };
     let tmp20 = muted;
     if (!muted) {
       tmp20 = guildMuted;
     }
-    obj8.disabled = tmp20;
-    obj8.value = constants2.NO_MESSAGES;
-    items1[3] = value3(tmp7(6982).TableRadioRow, obj8);
+    obj6.disabled = tmp20;
+    obj6.value = constants2.NULL;
+    const items1 = [collapsedCategories(tmp7(6984).TableRadioRow, obj6), , , ,];
+    const obj8 = { label: null, disabled: null, subLabel: null, value: null };
+    const intl7 = tmp7(1128).intl;
+    obj8.label = intl7.string(tmp7(1128).t["n/bTaY"]);
+    let tmp22 = muted;
+    if (!muted) {
+      tmp22 = guildMuted;
+    }
+    obj8.disabled = tmp22;
+    let stringResult2 = null;
+    if (null != guildMemberCount) {
+      stringResult2 = null;
+      if (guildMemberCount >= value2) {
+        const intl8 = tmp7(1128).intl;
+        stringResult2 = intl8.string(tmp7(1128).t.Dh5p5j);
+      }
+    }
+    obj8.subLabel = stringResult2;
+    obj8.value = constants2.ALL_MESSAGES;
+    items1[1] = collapsedCategories(tmp7(6984).TableRadioRow, obj8);
+    let tmp19Result = null;
+    if (useNewNotifications) {
+      const obj9 = { label: null, disabled: null, value: null };
+      const intl9 = tmp7(1128).intl;
+      obj9.label = intl9.string(tmp7(1128).t.JzbSEY);
+      let tmp26 = muted;
+      if (!muted) {
+        tmp26 = guildMuted;
+      }
+      obj9.disabled = tmp26;
+      obj9.value = hybrid;
+      tmp19Result = collapsedCategories(tmp7(6984).TableRadioRow, obj9);
+    }
+    items1[2] = tmp19Result;
+    const obj10 = { label: null, disabled: null, value: null };
+    const intl10 = tmp7(1128).intl;
+    obj10.label = intl10.format(tmp7(1128).t.L2hmYy, {});
+    let tmp28 = muted;
+    if (!muted) {
+      tmp28 = guildMuted;
+    }
+    obj10.disabled = tmp28;
+    obj10.value = constants2.ONLY_MENTIONS;
+    items1[3] = collapsedCategories(tmp7(6984).TableRadioRow, obj10);
+    const obj19 = { label: null, disabled: null, value: null };
+    const intl11 = tmp7(1128).intl;
+    obj19.label = intl11.string(tmp7(1128).t.CtVGyQ);
+    let tmp29 = muted;
+    if (!muted) {
+      tmp29 = guildMuted;
+    }
+    obj19.disabled = tmp29;
+    obj19.value = constants2.NO_MESSAGES;
+    items1[4] = collapsedCategories(tmp7(6984).TableRadioRow, obj19);
     obj.children = items1;
-    tmp11Result = collapsedCategories(TableRadioGroup, obj);
+    return closure_1_20(tmp7(6985).TableRadioGroup, obj);
   }
-  return tmp11Result;
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = closure_19(this.context);
+  const tmp = closure_22(this.context);
   const props = this.props;
   const channel = props.channel;
   ({ guildMuted, guildMessageNotifications } = props);
@@ -341,29 +394,29 @@ prototype["render"] = function render() {
       const intl = util.intl;
       const obj2 = {
         mutedHook(children, arg1) {
-          return closure_1_16(
-            require("Text/Text").Text,
+          return closure_1_18(
+            Text_Text.Text,
             { variant: "text-sm/medium", color: "text-feedback-critical", children },
             arg1,
           );
         },
       };
       obj.children = intl.format(util.t.O34r15, obj2);
-      let tmp5 = value3(Text_Text.Text, obj);
+      let tmp5 = collapsedCategories(Text_Text.Text, obj);
     } else if (guildMessageNotifications === constants2.NO_MESSAGES) {
       const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl3 = util.intl;
       const obj4 = {
         notificationHook(children, arg1) {
-          return closure_1_16(
-            require("Text/Text").Text,
+          return closure_1_18(
+            Text_Text.Text,
             { variant: "text-sm/medium", color: "text-feedback-warning", children },
             arg1,
           );
         },
       };
       obj3.children = intl3.format(util.t.nRwUIL, obj4);
-      tmp5 = value3(Text_Text.Text, obj3);
+      tmp5 = collapsedCategories(Text_Text.Text, obj3);
     }
     const obj5 = { style: tmp.screenContainer, children: null };
     const obj6 = { spacing: nativeDefault.space.PX_24, style: tmp.stackPadding, children: null };
@@ -378,21 +431,25 @@ prototype["render"] = function render() {
       const intl2 = util.intl;
       obj7.title = intl2.string(util.t.bK11jO);
       obj7.children = self.renderForumSettings();
-      tmp9Result = value3(TableRowGroup.TableRowGroup, obj7);
+      tmp9Result = collapsedCategories(TableRowGroup.TableRowGroup, obj7);
     }
     items[2] = tmp9Result;
     items[3] = tmp5;
     obj6.children = items;
-    obj5.children = collapsedCategories(Stack_Stack.Stack, obj6);
-    tmp9Result2 = value3(Form.Form, obj5);
+    obj5.children = closure_1_20(Stack_Stack.Stack, obj6);
+    tmp9Result2 = collapsedCategories(Form.Form, obj5);
   }
   return tmp9Result2;
 };
-ChannelSettingsNotifications.contextType = fn(5035).ThemeContext;
-let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
+ChannelSettingsNotifications.contextType = fn(5037).ThemeContext;
+const ReactCompilerGating = fn(558);
+let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ChannelSettingsNotificationsGuard(onClose) {
-      const cResult = onClose(stateFromStores[30]).c(22);
+      const cResult = onClose(stateFromStores[33]).c(23);
       onClose = onClose.onClose;
       const channelId = onClose.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -403,7 +460,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function o() {
+        const fn = function c() {
           return ChannelStore.getChannel(channelId);
         };
         cResult[1] = channelId;
@@ -412,8 +469,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[2];
       }
-      let obj = onClose(stateFromStores[30]);
-      stateFromStores = onClose(stateFromStores[31]).useStateFromStores(first, tmp6);
+      let obj = onClose(stateFromStores[33]);
+      stateFromStores = onClose(stateFromStores[34]).useStateFromStores(first, tmp6);
       if (cResult[3] !== stateFromStores) {
         let guildId;
         if (stateFromStores != null) {
@@ -426,61 +483,70 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[4];
       }
       noop = tmp7;
+      const tmpResult = onClose(stateFromStores[34]);
+      let shouldUseNewNotificationSystem = onClose(stateFromStores[35]).useShouldUseNewNotificationSystem(
+        "ChannelSettingsNotificationsNative",
+      );
+      if (shouldUseNewNotificationSystem) {
+        shouldUseNewNotificationSystem = null != stateFromStores;
+      }
+      if (shouldUseNewNotificationSystem) {
+        shouldUseNewNotificationSystem = set.has(stateFromStores.type);
+      }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserGuildSettingsStore];
         cResult[5] = items1;
-        let tmp10 = items1;
+        let tmp13 = items1;
       } else {
-        tmp10 = cResult[5];
+        tmp13 = cResult[5];
       }
       if (cResult[6] === stateFromStores) {
         if (cResult[7] === channelId) {
           if (cResult[8] === tmp7) {
-            let tmp12 = cResult[9];
+            let tmp15 = cResult[9];
           }
-          const stateFromStoresObject = tmp(tmp2[31]).useStateFromStoresObject(tmp10, tmp12);
+          const stateFromStoresObject = tmp(tmp2[34]).useStateFromStoresObject(tmp13, tmp15);
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             const items2 = [GuildMemberCountStore];
             cResult[10] = items2;
-            let tmp14 = items2;
+            let tmp17 = items2;
           } else {
-            tmp14 = cResult[10];
+            tmp17 = cResult[10];
           }
           if (cResult[11] !== tmp7) {
-            class E {
+            class R {
               constructor() {
                 return closure_7.getMemberCount(closure_3);
               }
             }
             cResult[11] = tmp7;
-            cResult[12] = E;
+            cResult[12] = R;
           } else {
-            class E {
+            class R {
               constructor() {
                 return closure_7.getMemberCount(closure_3);
               }
             }
           }
-          const tmpResult3 = tmp(tmp2[31]);
-          const stateFromStores1 = tmp(tmp2[31]).useStateFromStores(tmp14, E);
+          const tmpResult5 = tmp(tmp2[34]);
+          const stateFromStores1 = tmp(tmp2[34]).useStateFromStores(tmp17, R);
           if (cResult[13] === stateFromStores) {
-            class E {
+            class R {
               constructor() {
                 return closure_7.getMemberCount(closure_3);
               }
             }
-            const effect = noop.useEffect(R, tmp19);
+            const effect = noop.useEffect(U, tmp22);
             if (cResult[17] === stateFromStores) {
-              class E {
+              class R {
                 constructor() {
                   return closure_7.getMemberCount(closure_3);
                 }
               }
             }
-            let tmp23 = null;
             if (null != stateFromStores) {
-              class E {
+              class R {
                 constructor() {
                   return closure_7.getMemberCount(closure_3);
                 }
@@ -488,11 +554,21 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { onClose, channel: stateFromStores };
               const merged = Object.assign(stateFromStoresObject);
               obj2.guildMemberCount = stateFromStores1;
-              tmp23 = closure_16(ChannelSettingsNotifications, obj2);
+              obj2.useNewNotifications = shouldUseNewNotificationSystem;
+              class U {
+                constructor() {
+                  if (null == closure_2) {
+                    if (onClose != null) {
+                      tmpResult = tmp();
+                    }
+                  }
+                  return;
+                }
+              }
             }
             cResult[17] = stateFromStores;
             cResult[18] = stateFromStores1;
-            class R {
+            class U {
               constructor() {
                 if (null == closure_2) {
                   if (onClose != null) {
@@ -504,9 +580,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[19] = onClose;
             cResult[20] = stateFromStoresObject;
-            cResult[21] = tmp23;
+            cResult[21] = shouldUseNewNotificationSystem;
+            cResult[22] = null;
           }
-          class R {
+          class U {
             constructor() {
               if (null == closure_2) {
                 if (onClose != null) {
@@ -519,74 +596,99 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           const items3 = [stateFromStores, onClose];
           cResult[13] = stateFromStores;
           cResult[14] = onClose;
-          cResult[15] = R;
+          cResult[15] = U;
           cResult[16] = items3;
-          tmp19 = items3;
-          const tmpResult4 = tmp(tmp2[31]);
+          tmp22 = items3;
+          const tmpResult6 = tmp(tmp2[34]);
         }
       }
-      class T {
-        constructor() {
-          tmp = closure_2;
-          parent_id = undefined;
-          if (closure_2 != null) {
-            parent_id = tmp.parent_id;
-          }
-          if (null != parent_id) {
-            tmp4 = closure_9;
-            tmp5 = closure_3;
-            NULL = closure_9.getChannelMessageNotifications(closure_3, tmp.parent_id);
-          } else {
-            tmp3 = UserNotificationSettings;
-            NULL = UserNotificationSettings.NULL;
-          }
-          tmp6 = closure_3;
-          messageNotifications = closure_9.getMessageNotifications(closure_3);
-          tmp8 = messageNotifications;
-          if (NULL !== UserNotificationSettings.NULL) {
-            tmp8 = NULL;
-          }
-          obj = {
-            messageNotifications: closure_9.getChannelMessageNotifications(tmp6, channelId),
-            muted: closure_9.isChannelMuted(tmp6, channelId),
-            muteConfig: closure_9.getChannelMuteConfig(tmp6, channelId),
-            guildMuted: closure_9.isMuted(tmp6),
-            guildMessageNotifications: messageNotifications,
-            newForumThreadsCreated: null,
-            defaultSetting: null,
-          };
-          newForumThreadsCreated = null != tmp;
-          if (newForumThreadsCreated) {
-            tmp10 = closure_9;
-            newForumThreadsCreated = closure_9.getNewForumThreadsCreated(tmp);
-          }
-          obj.newForumThreadsCreated = newForumThreadsCreated;
-          obj.defaultSetting = tmp8;
-          return obj;
+      const fn2 = function _() {
+        let parent_id;
+        if (stateFromStores != null) {
+          parent_id = stateFromStores.parent_id;
         }
-      }
+        if (null != parent_id) {
+          let NULL = UserGuildSettingsStore.getChannelMessageNotifications(closure_3, stateFromStores.parent_id);
+        } else {
+          NULL = constants2.NULL;
+        }
+        const messageNotifications = UserGuildSettingsStore.getMessageNotifications(closure_3);
+        let tmp8 = messageNotifications;
+        if (NULL !== constants2.NULL) {
+          tmp8 = NULL;
+        }
+        let parent_id1;
+        if (stateFromStores != null) {
+          parent_id1 = stateFromStores.parent_id;
+        }
+        if (null != parent_id1) {
+          let UNSET = UserGuildSettingsStore.getChannelUnreadSetting(closure_3, stateFromStores.parent_id);
+        } else {
+          UNSET = UnreadSetting.UNSET;
+        }
+        if (null != closure_3) {
+          let UNSET2 = UserGuildSettingsStore.getGuildUnreadSetting(closure_3);
+        } else {
+          UNSET2 = UnreadSetting.UNSET;
+        }
+        const obj = {
+          messageNotifications: UserGuildSettingsStore.getChannelMessageNotifications(closure_3, channelId),
+          muted: UserGuildSettingsStore.isChannelMuted(closure_3, channelId),
+          muteConfig: UserGuildSettingsStore.getChannelMuteConfig(closure_3, channelId),
+          guildMuted: UserGuildSettingsStore.isMuted(closure_3),
+          guildMessageNotifications: messageNotifications,
+          newForumThreadsCreated: null,
+          defaultSetting: null,
+          unreadSetting: null,
+          defaultUnreadSetting: null,
+        };
+        let newForumThreadsCreated = null != stateFromStores;
+        if (newForumThreadsCreated) {
+          newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(stateFromStores);
+        }
+        obj.newForumThreadsCreated = newForumThreadsCreated;
+        obj.defaultSetting = tmp8;
+        if (null != stateFromStores) {
+          let UNSET3 = UserGuildSettingsStore.resolveUnreadSetting(stateFromStores);
+        } else {
+          UNSET3 = UnreadSetting.UNSET;
+        }
+        obj.unreadSetting = UNSET3;
+        if (UNSET !== UnreadSetting.UNSET) {
+          UNSET2 = UNSET;
+        }
+        obj.defaultUnreadSetting = UNSET2;
+        return obj;
+      };
       cResult[6] = stateFromStores;
       cResult[7] = channelId;
       cResult[8] = tmp7;
-      cResult[9] = T;
-      tmp12 = T;
-      const tmpResult = onClose(stateFromStores[31]);
+      cResult[9] = fn2;
+      tmp15 = fn2;
+      const tmpResult4 = onClose(stateFromStores[35]);
     }
   : function ChannelSettingsNotificationsGuard(onClose) {
       onClose = onClose.onClose;
       const channelId = onClose.channelId;
       let stateFromStores;
       const items = [ChannelStore];
-      stateFromStores = onClose(stateFromStores[31]).useStateFromStores(items, () =>
+      stateFromStores = onClose(stateFromStores[34]).useStateFromStores(items, () =>
         ChannelStore.getChannel(channelId),
       );
       let guildId;
       if (stateFromStores != null) {
         guildId = stateFromStores.getGuildId();
       }
-      let obj = onClose(stateFromStores[31]);
+      let obj = onClose(stateFromStores[34]);
+      let hasItem =
+        onClose(stateFromStores[35]).useShouldUseNewNotificationSystem("ChannelSettingsNotificationsNative") &&
+        null != stateFromStores;
+      if (hasItem) {
+        hasItem = set.has(stateFromStores.type);
+      }
+      const tmpResult = onClose(stateFromStores[35]);
       const items1 = [UserGuildSettingsStore];
-      const stateFromStoresObject = onClose(stateFromStores[31]).useStateFromStoresObject(items1, () => {
+      const stateFromStoresObject = onClose(stateFromStores[34]).useStateFromStoresObject(items1, () => {
         let parent_id;
         if (stateFromStores != null) {
           parent_id = stateFromStores.parent_id;
@@ -601,6 +703,20 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         if (NULL !== constants2.NULL) {
           tmp8 = NULL;
         }
+        let parent_id1;
+        if (stateFromStores != null) {
+          parent_id1 = stateFromStores.parent_id;
+        }
+        if (null != parent_id1) {
+          let UNSET = UserGuildSettingsStore.getChannelUnreadSetting(guildId, stateFromStores.parent_id);
+        } else {
+          UNSET = UnreadSetting.UNSET;
+        }
+        if (null != guildId) {
+          let UNSET2 = UserGuildSettingsStore.getGuildUnreadSetting(guildId);
+        } else {
+          UNSET2 = UnreadSetting.UNSET;
+        }
         const obj = {
           messageNotifications: UserGuildSettingsStore.getChannelMessageNotifications(guildId, channelId),
           muted: UserGuildSettingsStore.isChannelMuted(guildId, channelId),
@@ -609,6 +725,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           guildMessageNotifications: messageNotifications,
           newForumThreadsCreated: null,
           defaultSetting: null,
+          unreadSetting: null,
+          defaultUnreadSetting: null,
         };
         let newForumThreadsCreated = null != stateFromStores;
         if (newForumThreadsCreated) {
@@ -616,12 +734,22 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj.newForumThreadsCreated = newForumThreadsCreated;
         obj.defaultSetting = tmp8;
+        if (null != stateFromStores) {
+          let UNSET3 = UserGuildSettingsStore.resolveUnreadSetting(stateFromStores);
+        } else {
+          UNSET3 = UnreadSetting.UNSET;
+        }
+        obj.unreadSetting = UNSET3;
+        if (UNSET !== UnreadSetting.UNSET) {
+          UNSET2 = UNSET;
+        }
+        obj.defaultUnreadSetting = UNSET2;
         return obj;
       });
-      const tmpResult = onClose(stateFromStores[31]);
+      const tmpResult3 = onClose(stateFromStores[34]);
       const items2 = [GuildMemberCountStore];
       const items3 = [stateFromStores, onClose];
-      const stateFromStores1 = onClose(stateFromStores[31]).useStateFromStores(items2, () =>
+      const stateFromStores1 = onClose(stateFromStores[34]).useStateFromStores(items2, () =>
         GuildMemberCountStore.getMemberCount(guildId),
       );
       const effect = guildId.useEffect(() => {
@@ -631,88 +759,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items3);
-      let tmp7 = null;
+      let tmp9 = null;
       if (null != stateFromStores) {
         const obj2 = { onClose, channel: stateFromStores };
         const merged = Object.assign(stateFromStoresObject);
         obj2.guildMemberCount = stateFromStores1;
-        tmp7 = closure_16(ChannelSettingsNotifications, obj2);
+        obj2.useNewNotifications = hasItem;
+        tmp9 = closure_18(ChannelSettingsNotifications, obj2);
       }
-      return tmp7;
-    };
-ReactCompilerGating = fn(558);
-let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-const size = fn(2);
-let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ChannelSettingsNotificationsSplit(channelId) {
-      _require = channelId;
-      let tmp2 = dependencyMap;
-      const cResult = require("c").c(8);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== channelId.channelId) {
-        const fn = function s() {
-          return ChannelStore.getChannel(channelId.channelId);
-        };
-        cResult[1] = channelId.channelId;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-      }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
-      require("notifications/NotificationUtils");
-      if (null == stateFromStores) {
-        return null;
-      } else {
-        if (!tmp9) {
-          if (cResult[6] !== channelId) {
-            const obj2 = {};
-            const merged = Object.assign(channelId);
-            const tmp17 = closure_16(closure_21, obj2);
-            cResult[6] = channelId;
-            cResult[7] = tmp17;
-          }
-        }
-        if (cResult[3] === stateFromStores) {
-        }
-        const obj3 = { channel: stateFromStores };
-        const merged1 = Object.assign(channelId);
-        tmp2 = closure_16(NotificationSettingsChannelDefault, obj3);
-        cResult[3] = stateFromStores;
-        cResult[4] = channelId;
-        cResult[5] = tmp2;
-      }
-      const tmpResult = require("initialize");
-    }
-  : function ChannelSettingsNotificationsSplit(arg0) {
-      let merged1 = arg0;
-      _require = arg0;
-      let obj = dependencyMap;
-      const items = [ChannelStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        ChannelStore.getChannel(channelId.channelId),
-      );
-      require("notifications/NotificationUtils");
-      if (null == stateFromStores) {
-        return null;
-      } else {
-        if (!tmp4) {
-          const obj3 = {};
-          const merged = Object.assign(merged1);
-          let tmp11 = closure_16(closure_21, obj3);
-        }
-        obj = { channel: stateFromStores };
-        merged1 = Object.assign(merged1);
-        tmp11 = closure_16(NotificationSettingsChannelDefault, obj);
-      }
-      const obj2 = require("initialize");
+      return tmp9;
     };

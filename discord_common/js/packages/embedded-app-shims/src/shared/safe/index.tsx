@@ -69,7 +69,7 @@ obj.NavigationDestination = passThrough.protectPrototype("NavigationDestination"
 let passThrough = passThrough_mod;
 obj.URL = passThrough.protectPrototype("URL", ["href", "origin", "pathname", "search"]);
 let passThrough = passThrough_mod;
-obj.EventTarget = passThrough.protectPrototype("EventTarget", ["addEventListener"]);
+obj.EventTarget = passThrough.protectPrototype("EventTarget", ["addEventListener", "dispatchEvent"]);
 let passThrough = passThrough_mod;
 obj.MessageEvent = passThrough.protectPrototype("MessageEvent", ["data", "origin", "ports", "source"]);
 let passThrough = passThrough_mod;
@@ -186,6 +186,7 @@ obj.Constructor = passThrough.protectConstructors([
   "Float32Array",
   "Map",
   "MessageChannel",
+  "MessageEvent",
   "Set",
   "Uint32Array",
   "URL",

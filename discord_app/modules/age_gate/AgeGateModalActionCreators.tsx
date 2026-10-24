@@ -28,7 +28,8 @@ export const closeAgeGateModal = function closeAgeGateModal(source) {
   }
 };
 export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
-  DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
+  DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source });
+  const obj2 = { type: "AGE_GATE_SUCCESS_MODAL_OPEN", source };
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
 };
 export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {

@@ -10,8 +10,8 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4914).NotificationSettingsUpdateType;
-const UnreadSetting = fn(6703).UnreadSetting;
+const constants2 = fn(4916).NotificationSettingsUpdateType;
+const UnreadSetting = fn(6705).UnreadSetting;
 const UserSettingsConstants = fn(1097);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {
@@ -97,12 +97,12 @@ export const NotificationLabel = {
     }
     return UnreadsDefault;
   },
-  notifications(message_notifications) {
-    if (message_notifications === UserNotificationSettings.ALL_MESSAGES) {
+  notifications(ONLY_MENTIONS) {
+    if (ONLY_MENTIONS === UserNotificationSettings.ALL_MESSAGES) {
       let NotificationsDefault = obj.NotificationsAll;
-    } else if (message_notifications === UserNotificationSettings.ONLY_MENTIONS) {
+    } else if (ONLY_MENTIONS === UserNotificationSettings.ONLY_MENTIONS) {
       NotificationsDefault = obj.NotificationsMentions;
-    } else if (message_notifications === UserNotificationSettings.NO_MESSAGES) {
+    } else if (ONLY_MENTIONS === UserNotificationSettings.NO_MESSAGES) {
       NotificationsDefault = obj.NotificationsNothing;
     } else {
       NotificationsDefault = obj.NotificationsDefault;

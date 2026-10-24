@@ -7,7 +7,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-let closure_5 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_5 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1087).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6772);
+              obj2 = application_id(6774);
             }
             str2 = tmp7;
           }

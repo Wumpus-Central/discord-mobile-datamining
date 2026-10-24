@@ -18,32 +18,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "defineProperty",
     borderTopRightRadius: "ix",
-    borderBottomLeftRadius: "gap",
-    borderBottomRightRadius: "guildId",
+    borderBottomLeftRadius: "title",
+    borderBottomRightRadius: "status",
     divider: "ix",
-    dividerColor: "Reflect",
-    dividerPaddingLeft: "intl",
+    dividerColor: "max",
+    dividerPaddingLeft: "guildId",
     dividerPaddingRight: "ix",
-    placeholderShape: "push",
-    placeholderShapeColor: "raw",
+    placeholderShape: "Object",
+    placeholderShapeColor: "limit",
     placeholderShapeCount: "ix",
-    placeholderShapeGap: "forEach",
-    placeholderShapePaddingHorizontal: "guildId",
+    placeholderShapeGap: "Button",
+    placeholderShapePaddingHorizontal: "registerAsset",
     placeholderShapePaddingVertical: "ix",
-    placeholderFeedBackgroundColor: "has",
+    placeholderFeedBackgroundColor: "location",
     placeholderFeedColor: "guildId",
     placeholderFeedLabelPadding: "ix",
-    placeholderFeedLabelPaddingInnerRatio: "Reflect",
-    placeholderFeedLabelSize: "__initData",
-    placeholderFeedLabelSecondarySize: "toCharArray$esjava$1",
-    placeholderFeedPadding: "toCharArray$esjava$1",
-    placeholderFeedShape: "toCharArray$esjava$1",
-    placeholderFeedShapeSize: "toCharArray$esjava$1",
+    placeholderFeedLabelPaddingInnerRatio: "name",
+    placeholderFeedLabelSize: "guildId",
+    placeholderFeedLabelSecondarySize: "ix",
+    placeholderFeedPadding: "scales",
+    placeholderFeedShape: "diversity",
+    placeholderFeedShapeSize: "ix",
     placeholderType: NONE,
-    width: 12544,
-    height: 0,
-    verticalAlignment: 17924080,
-    horizontalAlignment: 35722112,
+    width: false,
+    height: false,
+    verticalAlignment: false,
+    horizontalAlignment: false,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(7155).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(7157).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(7155).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(7157).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

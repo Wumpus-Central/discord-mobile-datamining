@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -108,8 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp12 = cResult[13];
                   }
                   if (cResult[14] !== icon) {
-                    const obj2 = { source: icon };
-                    const tmp15 = React4(native.Icon, obj2);
+                    const tmp15 = React4(icon, { size: "md" });
                     cResult[14] = icon;
                     cResult[15] = tmp15;
                     let tmp13 = tmp15;
@@ -125,12 +124,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         let tmp20 = cResult[21];
                       }
                       if (cResult[22] !== description) {
-                        const obj3 = {
+                        const obj2 = {
                           variant: "text-sm/medium",
                           color: "interactive-text-default",
                           children: description,
                         };
-                        const tmp25 = React4(Text_Text.Text, obj3);
+                        const tmp25 = React4(Text_Text.Text, obj2);
                         cResult[22] = description;
                         cResult[23] = tmp25;
                         let tmp23 = tmp25;
@@ -155,10 +154,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                       }
-                      const obj4 = { style: tmp8, accessibilityRole, accessibilityState, onPress, children: null };
+                      const obj3 = { style: tmp8, accessibilityRole, accessibilityState, onPress, children: null };
                       const items = [tmp9, tmp16, tmp20, tmp23];
-                      obj4.children = items;
-                      const tmp29 = hasOwnProperty(TouchableHitBoxDefault, obj4);
+                      obj3.children = items;
+                      const tmp29 = hasOwnProperty(TouchableHitBoxDefault, obj3);
                       cResult[24] = accessibilityRole;
                       cResult[25] = accessibilityState;
                       cResult[26] = tmp16;
@@ -170,21 +169,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[32] = tmp29;
                       tmp26 = tmp29;
                     }
-                    const obj5 = {
+                    const obj4 = {
                       style: tmp5.title,
                       accessibilityRole: "header",
                       variant: "text-md/semibold",
                       color: "interactive-text-default",
                       children: title,
                     };
-                    const tmp22 = React4(Text_Text.Text, obj5);
+                    const tmp22 = React4(Text_Text.Text, obj4);
                     cResult[19] = tmp5.title;
                     cResult[20] = title;
                     cResult[21] = tmp22;
                     tmp20 = tmp22;
                   }
-                  const obj6 = { style: tmp12, children: tmp13 };
-                  const tmp19 = React4(View, obj6);
+                  const obj5 = { style: tmp12, children: tmp13 };
+                  const tmp19 = React4(View, obj5);
                   cResult[16] = tmp13;
                   cResult[17] = tmp12;
                   cResult[18] = tmp19;
@@ -196,8 +195,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = items1;
                 tmp12 = items1;
               }
-              const obj7 = { style: tmp5.indicator, active: selected };
-              const tmp11 = React4(native.RadioIndicator, obj7);
+              const obj6 = { style: tmp5.indicator, active: selected };
+              const tmp11 = React4(native.RadioIndicator, obj6);
               cResult[8] = selected;
               cResult[9] = tmp5.indicator;
               cResult[10] = tmp11;
@@ -214,11 +213,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = items2;
         const tmpResult = useA11yRolesNative;
       }
-      const obj8 = { selected, disabled: tmp4 };
+      const obj7 = { selected, disabled: tmp4 };
       cResult[0] = tmp4;
       cResult[1] = selected;
-      cResult[2] = obj8;
-      tmp6 = obj8;
+      cResult[2] = obj7;
+      tmp6 = obj7;
     }
   : function FormBigRadioBox(arg0) {
       ({ selected, disabled } = arg0);
@@ -255,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.indicator, active: selected };
       const tmp6 = TouchableHitBoxDefault;
       items2[1] = selected;
-      items1[1] = React4(View, { style: items2, children: React4(native.Icon, { source: icon }) });
+      items1[1] = React4(View, { style: items2, children: React4(icon, { size: "md" }) });
       items1[2] = React4(Text_Text.Text, {
         style: tmp.title,
         accessibilityRole: "header",

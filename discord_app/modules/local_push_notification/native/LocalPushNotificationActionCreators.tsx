@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting(
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7582).trackAppOpened("notification");
+    data(7584).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -37,16 +37,16 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2002)(12669, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(2002)(12669, dependencyMap.paths);
+        data(2002)(12703, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(2002)(12703, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(2002)(5705, dependencyMap.paths).then((transitionToMessage) => {
+        data(2002)(5707, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);
           return transitionToMessage.transitionToMessage(channelId, messageId, {
-            jumpType: data(5199).JumpType.INSTANT,
+            jumpType: data(5201).JumpType.INSTANT,
           });
         });
-        const promise = data(2002)(5705, dependencyMap.paths);
+        const promise = data(2002)(5707, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         if (null != data.guildId) {
           ({ guildId: data, projectId: closure_1 } = data);
@@ -57,7 +57,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7582);
+    let obj2 = data(7584);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

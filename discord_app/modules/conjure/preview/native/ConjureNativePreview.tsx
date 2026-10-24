@@ -25,11 +25,11 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7706);
+const UserProfileApplicationWidgetTypes = intl(7708);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11832);
+const conjureDesignFeedbackStore = fn(11858);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({
@@ -39,10 +39,10 @@ const Constants = fn(1087);
   AppStates: closure_19,
   ME: closure_20,
 } = Constants);
-const isLaunched = fn(6774).isLaunched;
+const isLaunched = fn(6776).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   frame: { flex: 1 },
   centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 },
@@ -1082,7 +1082,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = tmp7(1128).intl;
         obj4.text = intl3.string(tmp7(1128).t["5911Lb"]);
         obj4.onPress = callback;
-        obj3.children = closure_22(tmp7(5242).Button, obj4);
+        obj3.children = closure_22(tmp7(5244).Button, obj4);
         let tmp28Result = closure_22(closure_25, obj3);
       } else if (null == stateFromStores) {
         const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -1097,10 +1097,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           alwaysRespectKeyboard: true,
           disableGradient: true,
         };
-        const items8 = [closure_22(previewApplicationId(10887), obj7, stateFromStores.id)];
+        const items8 = [closure_22(previewApplicationId(10888), obj7, stateFromStores.id)];
         let tmp30Result = null;
         if (tmp7Result4.isAndroid()) {
-          tmp30Result = closure_22(tmp7(11984).PortalKeyboardRenderer, { portal: true });
+          tmp30Result = closure_22(tmp7(12010).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp30Result;
         obj6.children = items8;

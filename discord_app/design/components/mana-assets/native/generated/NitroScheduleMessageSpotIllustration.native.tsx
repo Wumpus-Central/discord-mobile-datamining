@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14020 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-1x.png.js";
-import _modDef14021 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-2x.png.js";
-import _modDef14022 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-3x.png.js";
+import _modDef14039 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-1x.png.js";
+import _modDef14040 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-2x.png.js";
+import _modDef14041 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14020 }, 3: null };
-let obj2 = { uri: _modDef14020 };
-obj[2] = { uri: _modDef14021 };
-const obj3 = { uri: _modDef14021 };
-obj[3] = { uri: _modDef14022 };
+let obj = { 1: null, 2: { uri: _modDef14039 }, 3: null };
+let obj2 = { uri: _modDef14039 };
+obj[2] = { uri: _modDef14040 };
+const obj3 = { uri: _modDef14040 };
+obj[3] = { uri: _modDef14041 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14022 };
+const obj4 = { uri: _modDef14041 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx",

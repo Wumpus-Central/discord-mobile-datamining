@@ -5,17 +5,18 @@ import useShopProductItems from "useShopProductItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const isAvatarDecorationRecord = fn(7653).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7654).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7655).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7655).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7656).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7657).isProfileFrameRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 
 export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCollectibleProfileOverrides(items, first1) {
+  ? function useCollectibleProfileOverrides(product, first1) {
+      let items = product;
       const cResult = c.c(9);
-      if (cResult[0] !== items) {
+      if (cResult[0] !== product) {
         const productItems = useShopProductItems.getProductItems(items);
         cResult[0] = items;
         cResult[1] = productItems;

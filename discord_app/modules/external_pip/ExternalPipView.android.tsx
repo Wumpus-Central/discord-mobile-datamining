@@ -170,14 +170,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ExternalPipView() {
       const cResult = externalPipEnabled(576).c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { disabled: !setExternalPipActive(5822).isSupported() };
+        let obj2 = { disabled: !setExternalPipActive(5824).isSupported() };
         cResult[0] = obj2;
         let first = obj2;
-        let obj3 = setExternalPipActive(5822);
+        let obj3 = setExternalPipActive(5824);
       } else {
         first = cResult[0];
       }
-      externalPipEnabled = setExternalPipActive(18402)(first).externalPipEnabled;
+      externalPipEnabled = setExternalPipActive(18434)(first).externalPipEnabled;
       let obj = externalPipEnabled(576);
       ({ externalPipActive, setExternalPipActive } = closure_7());
       if (cResult[1] !== externalPipEnabled) {
@@ -337,8 +337,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ExternalPipView() {
       let obj = { disabled: null };
-      const tmp = setExternalPipActive(18402);
-      obj.disabled = !setExternalPipActive(5822).isSupported();
+      const tmp = setExternalPipActive(18434);
+      obj.disabled = !setExternalPipActive(5824).isSupported();
       const externalPipEnabled = tmp(obj).externalPipEnabled;
       const tmp2 = closure_7();
       setExternalPipActive = tmp2.setExternalPipActive;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const items1 = [setExternalPipActive];
       const effect1 = noop.useEffect(() => {
-        closure_0 = setExternalPipActive(5822).addOnPipModeChangedListener((arg0) => {
+        closure_0 = setExternalPipActive(5824).addOnPipModeChangedListener((arg0) => {
           setExternalPipActive(arg0);
         });
         return () => {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const items2 = [setExternalPipActive];
       const effect2 = noop.useEffect(() => {
-        closure_0 = setExternalPipActive(5822).addOnPipModeWillChangeListener(() => {
+        closure_0 = setExternalPipActive(5824).addOnPipModeWillChangeListener(() => {
           setExternalPipActive(true);
         });
         return () => {

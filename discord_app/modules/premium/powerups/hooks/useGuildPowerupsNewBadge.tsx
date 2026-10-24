@@ -8,9 +8,9 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5180).GuildPowerupNewPerkMarketingVersion;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
-let closure_8 = fn(4805).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
+const constants = fn(5182).GuildPowerupNewPerkMarketingVersion;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
+let closure_8 = fn(4807).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useBadgeableMarketingVersion(arg0) {

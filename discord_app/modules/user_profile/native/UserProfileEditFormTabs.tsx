@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7302).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   container: { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: { paddingHorizontal: PROFILE_SIDE_PADDING },

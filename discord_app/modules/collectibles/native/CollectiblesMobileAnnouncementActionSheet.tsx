@@ -5,12 +5,12 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import BottomSheetModal from "../../../../_runtime/05267_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05269_BottomSheetModal.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef18370 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef18371 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef18402 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef18403 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -19,12 +19,12 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = fn(1089).CollectiblesMobileShopScreen;
-const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 32;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   mascotContainer: null,
   mascotLayer: null,
@@ -113,7 +113,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol = Symbol;
                 if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj4 = { uri: _modDef18370 };
+                  const obj4 = { uri: _modDef18402 };
                   cResult[13] = obj4;
                   let tmp15 = obj4;
                 } else {
@@ -212,7 +212,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         importantForAccessibility: "no-hide-descendants",
       };
       const obj6 = { uri: null };
-      obj6.uri = _modDef18370;
+      obj6.uri = _modDef18402;
       obj5.source = obj6;
       obj5.style = tmp.mascotImage;
       obj4.children = closure_1_8(FastImageDefault, obj5);
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[9];
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { uri: _modDef18371 };
+        const obj3 = { uri: _modDef18403 };
         cResult[10] = obj3;
         let tmp17 = obj3;
       } else {
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.headerText,
           children: tmp23,
         };
-        const tmp27 = closure_8(tmp(5232).Text, obj5);
+        const tmp27 = closure_8(tmp(5234).Text, obj5);
         cResult[14] = tmp4.headerText;
         cResult[15] = tmp27;
         let tmp25 = tmp27;
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
         const obj6 = { icon: null, text: null };
         const obj7 = { size };
-        obj6.icon = closure_8(tmp(13594).PaintIllocon, obj7);
+        obj6.icon = closure_8(tmp(13631).PaintIllocon, obj7);
         const intl2 = tmp(1128).intl;
         obj6.text = intl2.string(tmp(1128).t["6ZWB0C"]);
         const tmp32 = closure_8(closure_15, obj6);
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         const obj8 = { icon: null, text: null };
         const obj9 = { size };
-        obj8.icon = closure_8(tmp(13582).HeartIllocon, obj9);
+        obj8.icon = closure_8(tmp(13619).HeartIllocon, obj9);
         const intl3 = tmp(1128).intl;
         obj8.text = intl3.string(tmp(1128).t.MkVbBY);
         const tmp37 = closure_8(closure_15, obj8);
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
         const obj10 = { icon: null, text: null };
         const obj11 = { size };
-        obj10.icon = closure_8(tmp(18372).ShopIllocon, obj11);
+        obj10.icon = closure_8(tmp(18404).ShopIllocon, obj11);
         const intl4 = tmp(1128).intl;
         obj10.text = intl4.string(tmp(1128).t["/4bQuG"]);
         const tmp42 = closure_8(closure_15, obj10);
@@ -456,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[22] !== tmp11) {
         const obj13 = { size: "lg", text: tmp47, onPress: tmp11 };
-        const tmp51 = closure_8(tmp(5242).Button, obj13);
+        const tmp51 = closure_8(tmp(5244).Button, obj13);
         cResult[22] = tmp11;
         cResult[23] = tmp51;
         let tmp49 = tmp51;
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return tmp54;
               }
               const obj14 = { onDismiss: tmp12, backdropChildren: tmp13, children: tmp52 };
-              const tmp56 = closure_8(tmp(5263).BottomSheet, obj14);
+              const tmp56 = closure_8(tmp(5265).BottomSheet, obj14);
               cResult[30] = tmp12;
               cResult[31] = tmp52;
               cResult[32] = tmp56;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
       };
-      const obj4 = { uri: _modDef18371 };
+      const obj4 = { uri: _modDef18403 };
       obj3.source = obj4;
       obj3.style = tmp.framePreviewImage;
       const items3 = [closure_8(FastImageDefault, obj3), , ,];
@@ -554,17 +554,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = markAsDismissed(1128).intl;
       obj5.children = intl.string(markAsDismissed(1128).t.vRCvqo);
-      items3[1] = closure_8(markAsDismissed(5232).Text, obj5);
+      items3[1] = closure_8(markAsDismissed(5234).Text, obj5);
       const obj6 = { style: tmp.featureRows, children: null };
-      const obj7 = { icon: closure_8(markAsDismissed(13594).PaintIllocon, { size }), text: null };
+      const obj7 = { icon: closure_8(markAsDismissed(13631).PaintIllocon, { size }), text: null };
       const intl2 = markAsDismissed(1128).intl;
       obj7.text = intl2.string(markAsDismissed(1128).t["6ZWB0C"]);
       const items4 = [closure_8(closure_15, obj7), ,];
-      const obj9 = { icon: closure_8(markAsDismissed(13582).HeartIllocon, { size }), text: null };
+      const obj9 = { icon: closure_8(markAsDismissed(13619).HeartIllocon, { size }), text: null };
       const intl3 = markAsDismissed(1128).intl;
       obj9.text = intl3.string(markAsDismissed(1128).t.MkVbBY);
       items4[1] = closure_8(closure_15, obj9);
-      const obj11 = { icon: closure_8(markAsDismissed(18372).ShopIllocon, { size }), text: null };
+      const obj11 = { icon: closure_8(markAsDismissed(18404).ShopIllocon, { size }), text: null };
       const intl4 = markAsDismissed(1128).intl;
       obj11.text = intl4.string(markAsDismissed(1128).t["/4bQuG"]);
       items4[2] = closure_8(closure_15, obj11);
@@ -574,8 +574,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl5 = markAsDismissed(1128).intl;
       obj13.text = intl5.string(markAsDismissed(1128).t.S9hXPI);
       obj13.onPress = callback;
-      items3[3] = closure_8(markAsDismissed(5242).Button, obj13);
+      items3[3] = closure_8(markAsDismissed(5244).Button, obj13);
       obj2.children = items3;
       obj.children = closure_9(closure_4, obj2);
-      return closure_8(markAsDismissed(5263).BottomSheet, obj);
+      return closure_8(markAsDismissed(5265).BottomSheet, obj);
     };

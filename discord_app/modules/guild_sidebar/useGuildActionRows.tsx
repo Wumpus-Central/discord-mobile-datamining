@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7641).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7643).ChannelListGuildActionRow;
 const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -190,14 +190,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (premiumProgressBarEnabled) {
               items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
             }
-            tmpResult18 = tmp(7494);
+            tmpResult18 = tmp(7496);
           }
         }
       }
       if (gameServerEnabled) {
         if (isGameServerTabAlwaysOnEnabled) {
           if (!tmp29) {
-            let items3 = [tmp(4805).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+            let items3 = [tmp(4807).DismissibleContent.EMPTY_GAME_SERVER_TAB];
           }
           cResult[6] = gameServerEnabled;
           cResult[7] = tmp29;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (gameServerEnabled) {
         if (isGameServerTabAlwaysOnEnabled) {
           if (!hasItem3) {
-            let items2 = [tmp4(4805).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+            let items2 = [tmp4(4807).DismissibleContent.EMPTY_GAME_SERVER_TAB];
           }
           const items3 = [];
           if (hasItem) {

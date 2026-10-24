@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
 };
@@ -40,7 +40,7 @@ export default noop.memo(
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const _Object = Object;
-          const entries = Object.entries(tmp(16904).PerformanceTestingScreens);
+          const entries = Object.entries(tmp(16936).PerformanceTestingScreens);
           cResult[2] = entries;
           let arr = entries;
         } else {
@@ -52,10 +52,10 @@ export default noop.memo(
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6901).TableRow,
+                navigation(6903).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6901).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6903).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -70,15 +70,15 @@ export default noop.memo(
               );
             }),
           };
-          const tmp11 = jsx(tmp(6985).TableRowGroup, {
+          const tmp11 = jsx(tmp(6987).TableRowGroup, {
             hasIcons: true,
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6901).TableRow,
+                navigation(6903).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6901).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6903).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -130,10 +130,10 @@ export default noop.memo(
         obj4.children = entries.map((item) => {
           [tmp] = item;
           return jsx(
-            screenKey(6901).TableRow,
+            screenKey(6903).TableRow,
             {
               label: tmp2,
-              icon: jsx(screenKey(6901).TableRow.Icon, { IconComponent: tmp3 }),
+              icon: jsx(screenKey(6903).TableRow.Icon, { IconComponent: tmp3 }),
               arrow: true,
               onPress() {
                 if (null != screenKey.push) {

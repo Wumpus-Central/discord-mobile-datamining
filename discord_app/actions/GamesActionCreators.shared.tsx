@@ -1,7 +1,7 @@
 // discord_app/actions/GamesActionCreators.shared.tsx
 import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
+import getFrameSurfaces from "../modules/frames/utils/getFrameSurfaces.tsx";
 import getOrFetchApplicationDefault from "../modules/applications/getOrFetchApplication.tsx";
-import canLaunchContextlessFrame2 from "../modules/frames/utils/canLaunchContextlessFrame.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import EmbeddedActivitiesStore from "../modules/activities/EmbeddedActivitiesStore.tsx";
 import ChannelRTCStore from "../modules/calls/ChannelRTCStore.tsx";
@@ -60,9 +60,9 @@ let closure_10 = async function _tryJoinAsFrame(arg0) {
             }
             closure_135_7 = applicationActivity2;
             const embedded = userId.embedded;
-            const tmp48 = canLaunchContextlessFrame2;
+            const tmp48 = getFrameSurfaces;
             closure_5 = tmp48;
-            canLaunchContextlessFrame = tmp48.canLaunchContextlessFrame;
+            isFrameApp = tmp48.isFrameApp;
             c9 = num6;
             const obj5 = { value: getOrFetchApplicationDefault(applicationId), done: false };
             return obj5;
@@ -75,7 +75,7 @@ let closure_10 = async function _tryJoinAsFrame(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          num6 = canLaunchContextlessFrame(value);
+          num6 = isFrameApp(value);
           if (num6) {
             embeddedActivityForUserId = closure_134_4.getEmbeddedActivityForUserId(closure_135_1, closure_135_3, true);
             if (null != embeddedActivityForUserId) {
@@ -181,49 +181,53 @@ let closure_11 = async function _tryStartAsEmbeddedApp(arg0) {
           return obj6;
         } else {
           closure_129_1 = value;
-          if (null == closure_129_1) {
-            if (null != closure_129_1) {
-              if (
-                obj2.supportsEmbeddedSurface(closure_129_1, closure_130_0(closure_130_2[14]).EmbeddedSurfaceType.MAIN)
-              ) {
-                (function startActivity() {
-                  const self = this;
-                  const apply = closure_1_13.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(closure_129_0, closure_129_1);
+          if (obj7.canOpenFrame(closure_129_1)) {
+            (function startFrame() {
+              const self = this;
+              const apply = closure_1_12.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
               }
-              obj2 = closure_130_0(closure_130_2[13]);
-            }
-            c4 = 3;
+              return applyArgumentsResult;
+            })(closure_129_0, closure_129_1);
           } else {
-            closure_130_0(closure_130_2[8]);
-          }
-          (function startFrame() {
-            const self = this;
-            const apply = closure_1_12.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
+            const isFrameAppResult = closure_130_0(closure_130_2[8]).isFrameApp(closure_129_1);
+            if (!isFrameAppResult) {
+              if (null != closure_129_1) {
+                if (
+                  obj2.supportsEmbeddedSurface(closure_129_1, closure_130_0(closure_130_2[14]).EmbeddedSurfaceType.MAIN)
+                ) {
+                  const tmp16 = (function startActivity() {
+                    const self = this;
+                    const apply = closure_1_13.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })(closure_129_0, closure_129_1);
+                }
+                obj2 = closure_130_0(closure_130_2[13]);
+              }
             }
-            return applyArgumentsResult;
-          })(closure_129_0);
+            const obj = closure_130_0(closure_130_2[8]);
+          }
+          c4 = 3;
+          obj7 = closure_130_0(closure_130_2[8]);
         }
-      } catch (tmp33) {
+      } catch (tmp34) {
         c4 = tmp;
-        throw tmp33;
+        throw tmp34;
       }
     }
   })();
 };
 let closure_12 = async function _startFrame(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
+  if (c6 === 2) {
+    c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -236,144 +240,152 @@ let closure_12 = async function _startFrame(arg0) {
     }
   } else {
     try {
-      c5 = 2;
-      if (0 === c4) {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          c5 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
+          c6 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          ({ applicationId: closure_129_0, channelId: closure_129_1, fromLink } = closure_0);
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          closure_130_8 = undefined;
+          closure_130_9 = undefined;
+          ({ applicationId: closure_130_0, channelId: closure_130_1, fromLink } = closure_0);
           if (fromLink === undefined) {
             fromLink = false;
           }
-          closure_129_2 = fromLink;
+          closure_130_2 = fromLink;
           ({
-            customId: closure_129_3,
-            referrerId: closure_129_4,
-            source: closure_129_5,
-            inviterUserId: closure_129_6,
+            linkChannelId: closure_130_3,
+            customId: closure_130_4,
+            referrerId: closure_130_5,
+            source: closure_130_6,
+            inviterUserId: closure_130_7,
             analyticsLocations,
           } = closure_0);
           if (analyticsLocations === undefined) {
             analyticsLocations = [];
           }
-          closure_129_7 = analyticsLocations;
+          closure_130_8 = analyticsLocations;
+          closure_130_9 = closure_1;
           let channel;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          closure_129_11 = undefined;
-          closure_129_12 = undefined;
+          closure_130_11 = undefined;
+          closure_130_12 = undefined;
+          closure_130_13 = undefined;
+          closure_130_14 = undefined;
           let frameParticipantId;
-          c4 = 1;
           c5 = 1;
+          c6 = 1;
           return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
-          c5 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          channel = closure_130_6.getChannel(closure_129_1);
+          channel = closure_131_6.getChannel(closure_130_1);
           let guildId;
           if (channel != null) {
-            guildId = obj14.getGuildId();
+            guildId = channel.getGuildId();
           }
-          closure_129_9 = guildId;
-          const obj5 = {
+          closure_130_11 = guildId;
+          const obj6 = {
             isStart: true,
-            analyticsLocations: closure_129_7,
-            source: closure_129_5,
-            inviterUserId: closure_129_6,
-            channelId: closure_129_1,
-            guildId: closure_129_9,
+            analyticsLocations: closure_130_8,
+            source: closure_130_6,
+            inviterUserId: closure_130_7,
+            channelId: closure_130_1,
+            guildId: closure_130_11,
           };
-          closure_129_10 = obj5;
-          const obj7 = { customId: closure_129_3, referrerId: closure_129_4 };
-          closure_129_11 = obj7;
-          if (closure_129_2) {
-            const obj8 = {
-              applicationId: closure_129_0,
-              analyticsContext: closure_129_10,
-              launch: closure_129_11,
-              preferAppChannel: true,
-            };
-            c5 = 3;
-            const obj9 = { value: closure_130_0(closure_130_2[15]).tryLaunchAsFrame(obj8), done: true };
-            return obj9;
-          } else {
-            closure_130_1(closure_130_2[16])(closure_129_1);
-            c3 = 1;
-            let launchFrame = closure_130_1(closure_130_2[17]).launchFrame;
-            const obj10 = { applicationId: closure_129_0, surface: null, analyticsContext: null, launch: null };
-            if (null == channel) {
-              let tmp40 = closure_130_9;
-              obj10.surface = tmp40;
-              obj10.analyticsContext = closure_129_10;
-              obj10.launch = closure_129_11;
-              launchFrame = launchFrame(obj10);
-              c4 = 3;
-              c5 = 1;
+          closure_130_12 = obj6;
+          const obj7 = { customId: closure_130_4, referrerId: closure_130_5 };
+          closure_130_13 = obj7;
+          if (!closure_130_2) {
+            const frameSurfaces = closure_131_0(closure_131_2[8]).getFrameSurfaces(closure_130_9);
+            if (frameSurfaces.has(closure_131_0(closure_131_2[14]).EmbeddedSurfaceType.MAIN)) {
+              closure_131_1(closure_131_2[16])(closure_130_1);
+              c4 = 1;
+              let launchFrame = closure_131_1(closure_131_2[17]).launchFrame;
+              const obj9 = { applicationId: closure_130_0, surface: null, analyticsContext: null, launch: null };
+              if (null == channel) {
+                let tmp47 = closure_131_9;
+                obj9.surface = tmp47;
+                obj9.analyticsContext = closure_130_12;
+                obj9.launch = closure_130_13;
+                launchFrame = launchFrame(obj9);
+                c5 = 3;
+                c6 = 1;
+              }
+              const obj10 = {
+                type: closure_131_0(closure_131_2[14]).EmbeddedSurfaceType.MAIN,
+                channelId: channel.id,
+                guildId: closure_130_11,
+              };
+              tmp47 = obj10;
+              const tmp41 = closure_131_1(closure_131_2[17]);
             }
-            const obj11 = {
-              type: closure_130_0(closure_130_2[14]).EmbeddedSurfaceType.MAIN,
-              channelId: channel.id,
-              guildId: closure_129_9,
-            };
-            tmp40 = obj11;
-            const tmp34 = closure_130_1(closure_130_2[17]);
+            const obj4 = closure_131_0(closure_131_2[8]);
           }
-          obj14 = channel;
+          const obj11 = {
+            applicationId: closure_130_0,
+            application: closure_130_9,
+            analyticsContext: closure_130_12,
+            launch: closure_130_13,
+            preferAppChannel: closure_130_2,
+            channelId: closure_130_3,
+          };
+          c6 = 3;
+          const obj12 = { value: closure_131_0(closure_131_2[15]).tryLaunchAsFrame(obj11), done: true };
+          return obj12;
         }
       } else if (2 === tmp7) {
-        c3 = 0;
-        c5 = 3;
+        c4 = 0;
+        c6 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
-        c5 = 3;
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
+        c4 = 0;
+        c6 = 3;
         const obj = { value, done: true };
         return obj;
       } else {
-        closure_129_12 = value;
+        closure_130_14 = value;
         if (null != channel) {
-          const obj13 = { applicationId: closure_129_0, id: closure_129_12 };
-          frameParticipantId = closure_130_0(closure_130_2[18]).getFrameParticipantId(obj13);
-          if (null != closure_130_5.getParticipant(channel.id, frameParticipantId)) {
-            closure_130_1(closure_130_2[19])(channel.id, frameParticipantId);
+          const obj13 = { applicationId: closure_130_0, id: closure_130_14 };
+          frameParticipantId = closure_131_0(closure_131_2[18]).getFrameParticipantId(obj13);
+          if (null != closure_131_5.getParticipant(channel.id, frameParticipantId)) {
+            closure_131_1(closure_131_2[19])(channel.id, frameParticipantId);
           }
-          const obj12 = closure_130_0(closure_130_2[18]);
+          const obj14 = closure_131_0(closure_131_2[18]);
         }
-        c3 = 0;
-        c5 = 3;
+        c4 = 0;
+        c6 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp55) {
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp55;
+    } catch (tmp68) {
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp68;
       } else {
-        c4 = tmp;
+        c5 = tmp;
       }
     }
   }
@@ -527,7 +539,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1087).ActivityFlags;
-const MAIN_SURFACE = fn(6774).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6776).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

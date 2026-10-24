@@ -7,7 +7,7 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FrameLayoutModes = fn(6774).FrameLayoutModes;
+const FrameLayoutModes = fn(6776).FrameLayoutModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");

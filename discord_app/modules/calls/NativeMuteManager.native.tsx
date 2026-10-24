@@ -40,7 +40,7 @@ class NativeMuteManager {
 }
 const prototype = NativeMuteManager.prototype;
 prototype["nativeMuteChanged"] = function nativeMuteChanged() {
-  if (!MediaEngineStore.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveSystemTelecomCall()) {
     const self = this;
     if (this.ignoreForNativeUnmute) {
       self.ignoreForNativeUnmute = false;
@@ -52,7 +52,7 @@ prototype["nativeMuteChanged"] = function nativeMuteChanged() {
   }
 };
 prototype["updateNativeMute"] = function updateNativeMute() {
-  if (!MediaEngineStore.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveSystemTelecomCall()) {
     const self = this;
     if (this.needToUnmuteNative) {
       self.needToUnmuteNative = false;
@@ -81,7 +81,7 @@ let closure_129_0 = obj;
 obj.ignoreForNativeUnmute = false;
 obj.needToUnmuteNative = false;
 obj.ignoreForAudioRouteChange = false;
-let timeout = new fn(4816).Timeout();
+let timeout = new fn(4818).Timeout();
 obj.audioRouteChangeIgnoreTimer = timeout;
 obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {

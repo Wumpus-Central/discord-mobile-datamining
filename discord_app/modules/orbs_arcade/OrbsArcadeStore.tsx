@@ -57,8 +57,8 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
   }
   return value;
 };
-prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
-  return set.has(gameId);
+prototype["isClaimingRewards"] = function isClaimingRewards(id) {
+  return set.has(id);
 };
 prototype["isLaunchingGame"] = function isLaunchingGame(id) {
   return set.has(id);

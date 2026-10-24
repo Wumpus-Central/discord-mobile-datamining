@@ -10,7 +10,7 @@ import FileSystemStore from "../../stores/FileSystemStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-let SaveableChannelsStore = fn(7585);
+let SaveableChannelsStore = fn(7587);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } =
   SaveableChannelsStore);
 let SaveableChannelsStore = SaveableChannelsStore_mod;
@@ -63,12 +63,12 @@ class KvBackgroundManager extends tmp4 {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  prefix = v1(4847).channels(prefix);
-                  const obj5 = v1(4847);
+                  prefix = v1(4849).channels(prefix);
+                  const obj5 = v1(4849);
                   const obj6 = prefix;
-                  closure_1 = v1(4847).messages(prefix);
-                  const obj7 = v1(4847);
-                  closure_2 = v1(4847).channelsTemp(prefix);
+                  closure_1 = v1(4849).messages(prefix);
+                  const obj7 = v1(4849);
+                  closure_2 = v1(4849).channelsTemp(prefix);
                   if (closure_1_8.canEvictOrphans()) {
                     v1 = 1;
                     c0 = 1;
@@ -92,7 +92,7 @@ class KvBackgroundManager extends tmp4 {
                     };
                     return obj4;
                   }
-                  const obj8 = v1(4847);
+                  const obj8 = v1(4849);
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
@@ -149,12 +149,12 @@ class KvBackgroundManager extends tmp4 {
                         let tmp10 = new.target;
                         let tmp11 = new.target;
                         let flag = true;
-                        let table = new c0(4848).Table(items, tmp5, closure_1_0, true);
+                        let table = new c0(4850).Table(items, tmp5, closure_1_0, true);
                         let upgradeTransactionResult = table.upgradeTransaction(arg0);
                         let deleteResult = upgradeTransactionResult.delete();
                         continue;
                       }
-                      tmp = c0(4847).DEPRECATED_KEYSPACES[Symbol.iterator]();
+                      tmp = c0(4849).DEPRECATED_KEYSPACES[Symbol.iterator]();
                     }, "deleteDeprecatedKeyspaces"),
                     done: false,
                   };

@@ -9,10 +9,10 @@ const result = size.fileFinishedImporting("modules/activities/openActivityShareL
 
 export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export const openActivityShareLinkModal = function openActivityShareLinkModal(arg0) {
-  ({ applicationId, customId, linkId, message, onShare } = arg0);
+  ({ applicationId, customId, linkId, channelId, message, onShare } = arg0);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(15716, dependencyMap.paths),
-    { applicationId, customId, linkId, message, onShare },
+    asyncRequireImpl(15737, dependencyMap.paths),
+    { applicationId, customId, linkId, channelId, message, onShare },
     ACTIVITY_SHARE_LINK_MODAL,
   );
 };

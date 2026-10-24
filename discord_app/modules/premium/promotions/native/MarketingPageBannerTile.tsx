@@ -13,7 +13,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   container: { width: "100%" },
   card: {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp10 = cResult[9];
                   }
                   useTrackImpressionDefault(tmp10);
-                  const formatStringWithCommonPremiumParams = tmp(14710).useFormatStringWithCommonPremiumParams(
+                  const formatStringWithCommonPremiumParams = tmp(14733).useFormatStringWithCommonPremiumParams(
                     bannerFields.body,
                   );
                   if (cResult[10] === bannerFields.helpArticle) {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               variant: "text-lg/bold",
                               children: bannerFields.header,
                             };
-                            const tmp22 = closure_4(tmp(5232).Text, obj2);
+                            const tmp22 = closure_4(tmp(5234).Text, obj2);
                             cResult[22] = bannerFields.header;
                             cResult[23] = tmp22;
                             let tmp20 = tmp22;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 },
                                 children: tmp13.linkText,
                               };
-                              tmp24 = closure_4(tmp(5232).Text, obj3);
+                              tmp24 = closure_4(tmp(5234).Text, obj3);
                             }
                             cResult[24] = tmp13;
                             cResult[25] = tmp24;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const items1 = [formatStringWithCommonPremiumParams, " ", tmp23];
                           obj8.children = items1;
-                          const tmp28 = closure_5(tmp(5232).Text, obj8);
+                          const tmp28 = closure_5(tmp(5234).Text, obj8);
                           cResult[26] = formatStringWithCommonPremiumParams;
                           cResult[27] = tmp4.bodyText;
                           cResult[28] = tmp23;
@@ -244,8 +244,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[15] = items3;
                     tmp15 = items3;
                   }
-                  const tmpResult = tmp(14710);
-                  const helpArticleLinkProps = tmp(14710).getHelpArticleLinkProps(
+                  const tmpResult = tmp(14733);
+                  const helpArticleLinkProps = tmp(14733).getHelpArticleLinkProps(
                     bannerFields.helpArticle,
                     bannerFields.helpArticleId,
                   );
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[11] = bannerFields.helpArticleId;
                   cResult[12] = helpArticleLinkProps;
                   tmp13 = helpArticleLinkProps;
-                  const tmpResult3 = tmp(14710);
+                  const tmpResult3 = tmp(14733);
                 }
                 const obj11 = {
                   type: tmp(1275).ImpressionTypes.VIEW,
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   properties: null,
                 };
                 const obj12 = {
-                  component_type: tmp(10494).MarketingComponentType.MARKETING_PAGE_BANNER,
+                  component_type: tmp(10495).MarketingComponentType.MARKETING_PAGE_BANNER,
                   component_id: componentId,
                   promotion_id: promotionId,
                 };
@@ -325,28 +325,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.analyticsPage = analyticsPage;
       obj2.onPaymentSuccess = onPaymentSuccess;
       obj2.onPaymentDismiss = onPaymentDismiss;
-      const obj = helpArticleLinkProps(14707);
+      const obj = helpArticleLinkProps(14730);
       const obj3 = { type: null, name: null, properties: null };
-      const buttonActionHandler = helpArticleLinkProps(14707).getButtonActionHandler(obj2);
+      const buttonActionHandler = helpArticleLinkProps(14730).getButtonActionHandler(obj2);
       obj3.type = helpArticleLinkProps(1275).ImpressionTypes.VIEW;
       obj3.name = helpArticleLinkProps(1275).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
       const tmp2Result = useTrackImpressionDefault;
       obj3.properties = {
-        component_type: helpArticleLinkProps(10494).MarketingComponentType.MARKETING_PAGE_BANNER,
+        component_type: helpArticleLinkProps(10495).MarketingComponentType.MARKETING_PAGE_BANNER,
         component_id: componentId,
         promotion_id: promotionId,
       };
       tmp2Result(obj3);
       const obj4 = {
-        component_type: helpArticleLinkProps(10494).MarketingComponentType.MARKETING_PAGE_BANNER,
+        component_type: helpArticleLinkProps(10495).MarketingComponentType.MARKETING_PAGE_BANNER,
         component_id: componentId,
         promotion_id: promotionId,
       };
-      const formatStringWithCommonPremiumParams = helpArticleLinkProps(14710).useFormatStringWithCommonPremiumParams(
+      const formatStringWithCommonPremiumParams = helpArticleLinkProps(14733).useFormatStringWithCommonPremiumParams(
         bannerFields.body,
       );
-      const tmp4Result = helpArticleLinkProps(14710);
-      helpArticleLinkProps = helpArticleLinkProps(14710).getHelpArticleLinkProps(
+      const tmp4Result = helpArticleLinkProps(14733);
+      helpArticleLinkProps = helpArticleLinkProps(14733).getHelpArticleLinkProps(
         bannerFields.helpArticle,
         bannerFields.helpArticleId,
       );
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [
         tmp12Result,
-        closure_4(helpArticleLinkProps(5232).Text, {
+        closure_4(helpArticleLinkProps(5234).Text, {
           color: "mobile-text-heading-primary",
           variant: "text-lg/bold",
           children: bannerFields.header,
@@ -391,11 +391,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           children: helpArticleLinkProps.linkText,
         };
-        tmp12Result3 = closure_4(tmp4(5232).Text, obj11);
+        tmp12Result3 = closure_4(tmp4(5234).Text, obj11);
       }
       items3[2] = tmp12Result3;
       obj10.children = items3;
-      items2[2] = closure_5(helpArticleLinkProps(5232).Text, obj10);
+      items2[2] = closure_5(helpArticleLinkProps(5234).Text, obj10);
       let tmp12Result4 = null != bannerFields.button;
       if (tmp12Result4) {
         const obj12 = { style: tmp.ctaButton, children: null };

@@ -7,7 +7,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 const DisplayNameStylesConstants = fn(1410);
 ({ FLYWHEEL_FONTS, HEXAGON_CAMPAIGN_FONTS: c3 } = DisplayNameStylesConstants);
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HexagonCampaignPerk: closure_4, HexagonCampaignPerkAvailability: hasOwnProperty } = HexagonCampaignConstants);
 let items = [
   fn(1412).DisplayNameFont.DEFAULT,

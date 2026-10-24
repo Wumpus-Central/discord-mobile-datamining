@@ -88,7 +88,7 @@ function getOverviewSettings(isPremiumUser) {
   items1[9] = obj10;
   return items1;
 }
-const MobileUserSettings = fn(8330).MobileUserSettings;
+const MobileUserSettings = fn(8332).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

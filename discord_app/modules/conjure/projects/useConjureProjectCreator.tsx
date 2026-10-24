@@ -10,7 +10,7 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 
 const require = globalThis.__r;
 
-const UserUtils = intl(5023);
+const UserUtils = intl(5025);
 require = fn;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -422,9 +422,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let formatToPlainStringResult = intl.formatToPlainString(_modDef3830.t5RWBS, obj2);
           } else {
             const intl2 = intl(1128).intl;
-            const obj4 = { creator: name, collaborators: intl(12482).getListSummaryLabel(mapped) };
+            const obj4 = { creator: name, collaborators: intl(12516).getListSummaryLabel(mapped) };
             formatToPlainStringResult = intl2.formatToPlainString(_modDef3830["b5uCe/"], obj4);
-            const intlResult = intl(12482);
+            const intlResult = intl(12516);
           }
           obj.label = formatToPlainStringResult;
         }

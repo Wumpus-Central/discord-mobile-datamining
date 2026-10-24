@@ -18,8 +18,8 @@ export const computeActivityFlags = function computeActivityFlags(secrets) {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = result1;
-  if (result1 === undefined) {
+  let flag3 = isFrameAppResult;
+  if (isFrameAppResult === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;

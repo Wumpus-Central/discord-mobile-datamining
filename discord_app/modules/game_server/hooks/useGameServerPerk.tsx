@@ -2,15 +2,15 @@
 import util from "../../../intl/index.native.tsx";
 import _modDef2992 from "../GameServer.messages.js";
 import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames.tsx";
-import _modDef13460 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
+import _modDef13497 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-const skuId = fn(5181).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5180).GuildPowerupType;
+const skuId = fn(5183).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5182).GuildPowerupType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
@@ -77,10 +77,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cost: stateFromStores,
               dependencies: tmp16,
               type: GuildPowerupType.PERK,
-              animatedImageUrl: _modDef13460,
+              animatedImageUrl: _modDef13497,
               staticImageUrl: null,
             };
-            tmp9Result = _modDef13460;
+            tmp9Result = _modDef13497;
             obj3.staticImageUrl = tmp9Result;
             cResult[8] = stateFromStores;
             cResult[9] = tmp14;
@@ -132,8 +132,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.cost = tmp2;
             obj.dependencies = [];
             obj.type = GuildPowerupType.PERK;
-            obj.animatedImageUrl = _modDef13460;
-            obj.staticImageUrl = _modDef13460;
+            obj.animatedImageUrl = _modDef13497;
+            obj.staticImageUrl = _modDef13497;
             tmp = obj;
           }
         }

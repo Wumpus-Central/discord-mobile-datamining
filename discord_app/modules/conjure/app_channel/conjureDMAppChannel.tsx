@@ -83,7 +83,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
           if (tmpResult6.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
             id = data.id;
           }
-          tmpResult6 = tmp(6809);
+          tmpResult6 = tmp(6811);
         }
         cResult[6] = data;
         cResult[7] = id;
@@ -140,7 +140,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
         if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
           id = data.id;
         }
-        tmpResult = tmp(6809);
+        tmpResult = tmp(6811);
       }
       return id;
     };

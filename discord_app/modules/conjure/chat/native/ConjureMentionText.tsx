@@ -80,13 +80,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = variant(576).c(9);
       ({ text, variant } = arg0);
       let obj = variant(576);
-      const requestConjureMentionedUsers = variant(12328).useRequestConjureMentionedUsers(text);
+      const requestConjureMentionedUsers = variant(12354).useRequestConjureMentionedUsers(text);
       if (cResult[0] !== text) {
-        const splitConjureMentionsResult = variant(12328).splitConjureMentions(text);
+        const splitConjureMentionsResult = variant(12354).splitConjureMentions(text);
         cResult[0] = text;
         cResult[1] = splitConjureMentionsResult;
         let arr = splitConjureMentionsResult;
-        const tmpResult = variant(12328);
+        const tmpResult = variant(12354);
       } else {
         arr = cResult[1];
       }
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = arr;
       cResult[3] = variant;
       cResult[4] = mapped;
-      let obj2 = variant(12328);
+      let obj2 = variant(12354);
     }
   : function ConjureMentionText(text) {
       text = text.text;

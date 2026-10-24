@@ -40,15 +40,15 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6782).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(4827);
+let closure_8 = fn(6784).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(4829);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
 const Constants = fn(1087);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_16 = createStyles.createStyles({
   channelSelection: { marginTop: 16 },
   error: { paddingVertical: 8 },
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function handleChangeEventEntityType(entityType) {
           _slicedToArray(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "a" };
           if (entityType === constants.EXTERNAL) {
             let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           entityType: guildEvent.entityType,
           onChange: function handleChangeEventEntityType(entityType) {
             _undefined(null);
-            const obj = { entityType, scheduledEndTime: "r" };
+            const obj = { entityType, scheduledEndTime: "a" };
             if (entityType === constants.EXTERNAL) {
               let obj2 = _modDef2049(guildEvent.scheduledStartTime);
               if (obj2 == null) {
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         entityType: guildEvent.entityType,
         onChange: function handleChangeEventEntityType(entityType) {
           _undefined(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "a" };
           if (entityType === constants.EXTERNAL) {
             let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {

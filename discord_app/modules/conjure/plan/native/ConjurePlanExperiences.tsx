@@ -9,7 +9,7 @@ import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx"
 import conjurePlanExperienceSections from "../conjurePlanExperienceSections.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjurePlanCommandText2 = ConjurePlanCommandText(12430);
+const ConjurePlanCommandText2 = ConjurePlanCommandText(12460);
 require = fn;
 function frameBlocks(proposal, experience, infoRows) {
   const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
@@ -47,14 +47,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  frame: fn(9615).GameControllerIcon,
-  overlay_widget: fn(12432).WindowTopIcon,
-  user_widget: fn(10814).UserCircleIcon,
-  bot: fn(11771).RobotIcon,
-  commands: fn(11771).RobotIcon,
-  automod: fn(10949).ShieldIcon,
+  frame: fn(9616).GameControllerIcon,
+  overlay_widget: fn(12462).WindowTopIcon,
+  user_widget: fn(10815).UserCircleIcon,
+  bot: fn(11796).RobotIcon,
+  commands: fn(11796).RobotIcon,
+  automod: fn(10950).ShieldIcon,
 };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj3 = {
   intro: { gap: nativeDefault.space.PX_8 },
   divider: null,

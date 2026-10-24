@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef14887 from "../../../../../_runtime/metro/14887__.js";
-import _mod14888 from "../../../../../_runtime/metro/14888__.js";
-import _modDef14889 from "../../../../../_runtime/metro/14889__.js";
+import _modDef14910 from "../../../../../_runtime/metro/14910__.js";
+import _mod14911 from "../../../../../_runtime/metro/14911__.js";
+import _modDef14912 from "../../../../../_runtime/metro/14912__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14887 };
+      const obj = { style, source: _modDef14910 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod14888, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14911, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14889 };
+      const obj = { style, source: _modDef14912 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -118,7 +118,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef14887 };
+    const obj = { style, source: _modDef14910 };
     return hasOwnProperty(FastImageDefault, obj);
   },
 };
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = closure_5(tmp(5232).Heading, obj2);
+        const tmp9 = closure_5(tmp(5234).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp9;
         let tmp7 = tmp9;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 contentContainerStyle: tmp10,
                 children: tmp11,
               };
-              const tmp16 = closure_5(tmp(13450).MarketingCardsScroller, obj4);
+              const tmp16 = closure_5(tmp(13487).MarketingCardsScroller, obj4);
               cResult[9] = tmp4.scrollerContent;
               cResult[10] = tmp11;
               cResult[11] = tmp16;

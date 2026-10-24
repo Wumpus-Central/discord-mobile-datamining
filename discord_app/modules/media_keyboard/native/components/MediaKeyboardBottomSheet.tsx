@@ -21,7 +21,7 @@ const MetaQuestUtils = fn(1630);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1384);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

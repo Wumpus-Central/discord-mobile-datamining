@@ -18,7 +18,7 @@ const PX_16 = nativeDefault.space.PX_16;
 let closure_8 = 2 * PX_16 + 1;
 let start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   chain: {
     overflow: "hidden",
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_11();
       importDefault = tmp4;
       let obj = gameState(576);
-      const theme = gameState(4976).useThemeContext().theme;
+      const theme = gameState(4978).useThemeContext().theme;
       if (cResult[0] !== game.rewards) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[21] === id) {
                           let tmp31 = cResult[22];
                         }
-                        const orbsArcadeRewardChainTimeline = gameState(16391).useOrbsArcadeRewardChainTimeline(tmp31);
+                        const orbsArcadeRewardChainTimeline = gameState(16418).useOrbsArcadeRewardChainTimeline(tmp31);
                         const timeline = orbsArcadeRewardChainTimeline.timeline;
                         const getGrantAtMs = orbsArcadeRewardChainTimeline.getGrantAtMs;
                         const getFocusRingAtMs = orbsArcadeRewardChainTimeline.getFocusRingAtMs;
@@ -314,17 +314,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           cResult[50] = fn2;
                           tmp46 = fn2;
                         }
-                        const tmpResult = gameState(16391);
+                        const tmpResult = gameState(16418);
                         let tmp38 = null;
                         if (!tmpResult2.isThemeLight(theme)) {
                           let obj4 = { style: timeline.absoluteFill, start, end, colors: tmp35 };
-                          tmp38 = getFocusRingAtMs(tmp20(5256), obj4);
+                          tmp38 = getFocusRingAtMs(tmp20(5258), obj4);
                         }
                         cResult[27] = tmp35;
                         cResult[28] = theme;
                         cResult[29] = tmp38;
                         tmp37 = tmp38;
-                        tmpResult2 = gameState(4976);
+                        tmpResult2 = gameState(4978);
                       }
                     }
                     let obj5 = { grantedRewardIds: cResult[15], focusedRewardId: id, grantAnimatedOnOpenRewardIds };
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = cResult[1];
         cResult[5] = mapped2;
       }
-      let obj2 = gameState(4976);
+      let obj2 = gameState(4978);
     }
   : function OrbsArcadeRewardChain(game) {
       game = game.game;
@@ -442,15 +442,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       c5 = findLastResult;
       let first = findLastResult;
-      let obj = game(4976);
+      let obj = game(4978);
       let obj2 = memo;
       const tmp5 = gameState;
       if (findLastResult == null) {
         first = memo[0];
       }
-      const tmp6Result = gameState(16381)(first);
+      const tmp6Result = gameState(16405)(first);
       closure_6 = tmp6Result;
-      let tmp6 = gameState(16381);
+      let tmp6 = gameState(16405);
       let obj3 = { grantedRewardIds: null, focusedRewardId: null, grantAnimatedOnOpenRewardIds: null };
       const found = memo.filter(
         (item, index) => dependencyMap[index] !== OrbsArcadeTypes.OrbsArcadeRewardStatus.LOCKED,
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.focusedRewardId = id;
       obj3.grantAnimatedOnOpenRewardIds = game.grantAnimatedOnOpenRewardIds;
-      const orbsArcadeRewardChainTimeline = game(16391).useOrbsArcadeRewardChainTimeline(obj3);
+      const orbsArcadeRewardChainTimeline = game(16418).useOrbsArcadeRewardChainTimeline(obj3);
       ({ timeline: c7, getGrantAtMs: c8, getFocusRingAtMs: c9 } = orbsArcadeRewardChainTimeline);
       let items2 = [tmp6Result];
       let obj4 = { style: tmp.chain, children: null };
@@ -478,11 +478,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const tmp12 = c7;
       const tmp13 = c5;
-      const tmp2Result = game(16391);
+      const tmp2Result = game(16418);
       let tmp14 = null;
       if (!tmp2Result2.isThemeLight(obj.useThemeContext().theme)) {
         let obj5 = { style: absoluteFill.absoluteFill, start, end, colors: memo1 };
-        tmp14 = closure_6(tmp5(5256), obj5);
+        tmp14 = closure_6(tmp5(5258), obj5);
       }
       let items3 = [
         tmp14,

@@ -8,17 +8,17 @@ import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import _objectDestructuringEmpty from "../../../../_runtime/13094__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/13131__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(9864).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -42,7 +42,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         onLongPress = cResult[0];
       }
-      const TableRowGroup = tmp(6985).TableRowGroup;
+      const TableRowGroup = tmp(6987).TableRowGroup;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -135,7 +135,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           obj.onLongPress = onLongPress;
           return createElement(AppIconRowDefault, {});
         });
-        obj.children = closure_10(merged(6985).TableRowGroup, obj2);
+        obj.children = closure_10(merged(6987).TableRowGroup, obj2);
         return closure_10(View, obj);
       }
     };

@@ -37,9 +37,9 @@ function handleShimPipeOpen(iframeId) {
     obj3.onDisconnect = function onDisconnect() {
       return EmbeddedAppShimActionCreators.disconnectShim(iframeId);
     };
-    const embeddedAppShimHost = iframeId(18747).createEmbeddedAppShimHost(tmp, obj3);
+    const embeddedAppShimHost = iframeId(18779).createEmbeddedAppShimHost(tmp, obj3);
     const result = map.set(iframeId, embeddedAppShimHost);
-    const obj5 = iframeId(18747);
+    const obj5 = iframeId(18779);
   }
 }
 function handleIFrameUnmount(id) {

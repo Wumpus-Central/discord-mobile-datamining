@@ -4,7 +4,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -24,18 +24,18 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(10896);
+const VoicePanelConstants = fn(10897);
 ({ VoicePanelCTACard: c10, VoicePanelModes: closure_11, MODE_CHANGE_PHYSICS: closure_12, SPEAKING_PHYSICS: map1, VoicePanelCardItemType: closure_14 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18410).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(10899).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10895).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18442).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10900).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
-const ParticipantTypes = fn(5630).ParticipantTypes;
-const SCALE_PHYSICS = fn(10897).SCALE_PHYSICS;
+const ParticipantTypes = fn(5632).ParticipantTypes;
+const SCALE_PHYSICS = fn(10898).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let scale = ReanimatedRexport.createAnimatedComponent(fn(5232).Text);
+let scale = ReanimatedRexport.createAnimatedComponent(fn(5234).Text);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 let tmp4 = fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.XXLARGE];
@@ -45,7 +45,7 @@ obj.stiffness = 150;
 let closure_27 = { duration: 200 };
 let closure_28 = { duration: 0 };
 let c29 = 0.75;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { positionWrapper: null, userRoundedCard: null, userRoundedCardContent: null, nonUserRoundedCard: null, blackBackground: null, selfStreamFocusedSubtitle: null, avatarImageMaskStyles: null, avatarPlaceholder: null, image: null, speakingIndicatorWrapper: null, speakingIndicatorClip: null, speakingIndicatorUnderlay: null, speakingIndicatorBar: null };
 const rect = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK };
 obj2.positionWrapper = rect;
@@ -2073,7 +2073,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
 }
 let obj6 = { position: "relative", borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 let obj7 = {};
-layoutTransitionFunction.__closure = { withSpring: fn(5245).withSpring };
+layoutTransitionFunction.__closure = { withSpring: fn(5247).withSpring };
 layoutTransitionFunction.__workletHash = 14607823135698;
 layoutTransitionFunction.__initData = { code: "function layoutTransitionFunction_VoicePanelCardTsx25(values,physics,scale,lastScale,disableAnimation=false){const{withSpring}=this.__closure;const scaleAdjustment=scale.get()/lastScale.get();const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment},callback:function(){lastScale.set(scale.get());}};}" };
 const __initData24 = { code: "function VoicePanelCardTsx26(){const{id,pipState,mode,VoicePanelModes}=this.__closure;if(id===pipState.id&&mode.get()===VoicePanelModes.PIP){return true;}return false;}" };
@@ -3023,7 +3023,7 @@ const __initData36 = { code: "function layoutTransition_VoicePanelCardTsx41(valu
 const __initData37 = { code: "function VoicePanelCardTsx42(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}" };
 let closure_81 = { code: "function layoutTransition_VoicePanelCardTsx43(values,disableAnimation=false){const{layoutTransitionFunction,physics,pipState,lastPipScale}=this.__closure;return layoutTransitionFunction(values,physics,pipState.scale,lastPipScale,disableAnimation);}" };
 ReactCompilerGating = fn(558);
-let obj11 = { withSpring: fn(5245).withSpring };
+let obj11 = { withSpring: fn(5247).withSpring };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 

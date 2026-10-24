@@ -193,7 +193,7 @@ let closure_17 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(9864);
+const AppIconConstants = fn(9865);
 ({
   getDefaultIcon: metroRequire,
   getIconById: closure_7,
@@ -290,7 +290,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      first(5261)(tmp6);
+      first(5263)(tmp6);
       return tmp3[0];
     }
   : function useCurrentAppIcon() {

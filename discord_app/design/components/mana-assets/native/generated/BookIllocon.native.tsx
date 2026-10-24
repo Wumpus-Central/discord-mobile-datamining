@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13591 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-1x.png.js";
-import _modDef13592 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-2x.png.js";
-import _modDef13593 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-3x.png.js";
+import _modDef13628 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-1x.png.js";
+import _modDef13629 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-2x.png.js";
+import _modDef13630 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13591 }, 3: null };
-const obj2 = { uri: _modDef13591 };
-obj[2] = { uri: _modDef13592 };
-const obj3 = { uri: _modDef13592 };
-obj[3] = { uri: _modDef13593 };
+let obj = { 1: null, 2: { uri: _modDef13628 }, 3: null };
+const obj2 = { uri: _modDef13628 };
+obj[2] = { uri: _modDef13629 };
+const obj3 = { uri: _modDef13629 };
+obj[3] = { uri: _modDef13630 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13593 };
+const obj4 = { uri: _modDef13630 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 
@@ -90,7 +90,7 @@ export const BookIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      obj.source = num(6993).getAssetSource(obj);
+      obj.source = num(6995).getAssetSource(obj);
       obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;

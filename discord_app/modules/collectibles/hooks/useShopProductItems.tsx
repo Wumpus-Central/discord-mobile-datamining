@@ -58,7 +58,7 @@ prototype["sortByTypes"] = function sortByTypes(arr) {
   }, new Map());
 };
 const ReactCompilerGating = fn(558);
-function getProductItems(items) {
+function getProductItems(product) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);

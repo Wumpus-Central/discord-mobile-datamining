@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (":" === arr[0]) {
             substr = arr.slice(1);
           }
-          const FrecencyUserSettingsActionCreators = channel(4802).FrecencyUserSettingsActionCreators;
+          const FrecencyUserSettingsActionCreators = channel(4804).FrecencyUserSettingsActionCreators;
           const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
           const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
           dependencyMap = ref.searchWithoutFetchingLatest(obj2);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (":" === arr[0]) {
             substr = arr.slice(1);
           }
-          const FrecencyUserSettingsActionCreators = channel(4802).FrecencyUserSettingsActionCreators;
+          const FrecencyUserSettingsActionCreators = channel(4804).FrecencyUserSettingsActionCreators;
           const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
           const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
           dependencyMap = ref.searchWithoutFetchingLatest(obj2);

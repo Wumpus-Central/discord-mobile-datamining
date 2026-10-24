@@ -52,10 +52,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(17235);
+const UserSettingsSafetySelectedGuildStore = fn(17267);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11205).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11206).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return shouldDisableMessageRequestSettings;
     };
 let closure_8 = tmp4;
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useValue() {
       const cResult = c.c(3);
@@ -200,7 +200,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(8330).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8332).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useValue() {
         const cResult = c.c(3);

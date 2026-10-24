@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   card: {
     padding: 16,
@@ -144,10 +144,10 @@ export const NotificationSettingsMuteBanner = ReactCompilerGating.isReactCompile
       obj.children = items2;
       return React4(View, obj);
     };
-export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(config) {
+export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(muteConfig) {
   let end_time;
-  if (config != null) {
-    end_time = config.end_time;
+  if (muteConfig != null) {
+    end_time = muteConfig.end_time;
   }
   if (null == end_time) {
     const intl = util.intl;
@@ -156,7 +156,7 @@ export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFro
     const intl2 = util.intl;
     const obj = { endTime: null };
     const _Date = Date;
-    const date = new Date(config.end_time);
+    const date = new Date(muteConfig.end_time);
     obj.endTime = date.toLocaleString(util.intl.currentLocale, {
       month: "numeric",
       day: "numeric",

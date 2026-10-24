@@ -3,8 +3,8 @@ import _modDef1951 from "../../../../../_runtime/metro/01951__.js";
 import MarkupASTUtils from "../MarkupASTUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function saferParse(fn, arg1, inline, arg3, arg4) {
-  let text = arg1;
+function saferParse(fn, value, inline, arg3, arg4) {
+  let text = value;
   let tmp6 = arg3;
   if (arg3 === undefined) {
     tmp6 = null;
@@ -36,9 +36,9 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 export default {
   astParserFor(importDefaultResultResult) {
     closure_0 = _modDef1951.parserFor(importDefaultResultResult);
-    return (arg0) => {
-      let str = arg0;
-      if (arg0 === undefined) {
+    return () => {
+      let str = value;
+      if (value === undefined) {
         str = "";
       }
       let obj = arg2;
@@ -67,8 +67,8 @@ export default {
     let obj2 = _modDef1951;
     importDefault = obj2.reactFor(_modDef1951.ruleOutput(rules, "react"));
     return () => {
-      let str = arg0;
-      if (arg0 === undefined) {
+      let str = value;
+      if (value === undefined) {
         str = "";
       }
       let flag = arg1;

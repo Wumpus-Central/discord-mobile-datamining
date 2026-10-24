@@ -14,7 +14,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       const tmp9 =
-        markAsDismissed.visibleContent === markAsDismissed(4805).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+        markAsDismissed.visibleContent === markAsDismissed(4807).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
       if (cResult[4] === tmp9) {
         if (cResult[5] === tmp8) {
           let tmp10 = cResult[6];

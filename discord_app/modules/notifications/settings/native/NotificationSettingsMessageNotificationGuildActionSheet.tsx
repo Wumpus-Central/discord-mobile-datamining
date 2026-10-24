@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UnreadSetting = fn(6703).UnreadSetting;
+const UnreadSetting = fn(6705).UnreadSetting;
 let closure_6 = fn(1097).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-          const tmp12 = jsx(unread(13744), {
+          const tmp12 = jsx(unread(19338), {
             context: "guild",
             value: notification,
             allMessagesSubLabel: tmp5,
@@ -126,5 +126,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           NotificationLabel.notifications(message_notifications),
         );
       };
-      return jsx(unread(13744), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+      return jsx(unread(19338), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
     };

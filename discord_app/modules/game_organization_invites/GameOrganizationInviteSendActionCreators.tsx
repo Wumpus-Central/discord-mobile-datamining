@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
 const Endpoints = fn(1087).Endpoints;
-const MessageSendLocation = fn(4974).MessageSendLocation;
+const MessageSendLocation = fn(4976).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/GameOrganizationInviteSendActionCreators.tsx",
@@ -114,7 +114,7 @@ export default {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: closure_1(7409).getOrEnsurePrivateChannel(closure_0), done: false };
+              const obj5 = { value: closure_1(7411).getOrEnsurePrivateChannel(closure_0), done: false };
               return obj5;
             }
           } else if (1 === tmp5) {
@@ -127,9 +127,9 @@ export default {
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj8 = closure_1(7564);
+              const obj8 = closure_1(7566);
               const obj7 = {
-                content: closure_1(15187)(closure_129_1),
+                content: closure_1(11322)(closure_129_1),
                 tts: false,
                 invalidEmojis: [],
                 validNonShortcutEmojis: [],

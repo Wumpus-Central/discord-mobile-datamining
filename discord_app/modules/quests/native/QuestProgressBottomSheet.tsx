@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import QuestTypes from "../QuestTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
-import _modDef9138 from "../../../../_runtime/metro/09138__.js";
+import _modDef9139 from "../../../../_runtime/metro/09139__.js";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
@@ -18,7 +18,7 @@ require = fn;
 function contextMenuButton(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.icon = _modDef9138;
+  obj.icon = _modDef9139;
   obj.variant = "secondary-overlay";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["UKOtz+"]);
@@ -27,11 +27,11 @@ function contextMenuButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6708).QuestsExperimentLocations;
-const ActivityPanelModes = fn(5607).ActivityPanelModes;
+const QuestsExperimentLocations = fn(6710).QuestsExperimentLocations;
+const ActivityPanelModes = fn(5609).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     contentContainer: {
@@ -108,7 +108,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj.buttonsContainer = { paddingTop: PX_161 };
   return obj;
 });
-createStyles = fn(4969);
+createStyles = fn(4971);
 let closure_14 = createStyles.createStyleProperties(() => ({
   gradientEnd: nativeDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT,
 }));
@@ -124,11 +124,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_13(isScreenLandscape);
       const gradientEnd = closure_14().gradientEnd;
       if (cResult[0] !== quest) {
-        const activityApplicationId = tmp(7796).getActivityApplicationId(quest);
+        const activityApplicationId = tmp(7798).getActivityApplicationId(quest);
         cResult[0] = quest;
         cResult[1] = activityApplicationId;
         let tmp6 = activityApplicationId;
-        let tmpResult = tmp(7796);
+        let tmpResult = tmp(7798);
       } else {
         tmp6 = cResult[1];
       }
@@ -153,7 +153,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[4];
       }
-      const url = claim(11484)(tmp11).url;
+      const url = claim(11504)(tmp11).url;
       const tmpResult6 = require("useGetOrFetchApplications");
       const questTaskDetails = require("hooks/QuestHooks").useQuestTaskDetails(quest);
       if (cResult[5] !== quest.config.messages.questName) {
@@ -167,7 +167,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === questTaskDetails) {
           let tmp16 = cResult[9];
         }
-        const questsInstructionsToWinReward = tmp(14115).useQuestsInstructionsToWinReward(tmp16);
+        const questsInstructionsToWinReward = tmp(14134).useQuestsInstructionsToWinReward(tmp16);
         const userStatus = quest.userStatus;
         let completedAt;
         if (userStatus != null) {
@@ -182,13 +182,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp19 = null == claimedAt;
         }
-        const tmpResult8 = tmp(14115);
-        const isQuestAccessSuspended = tmp(9569).useIsQuestAccessSuspended();
+        const tmpResult8 = tmp(14134);
+        const isQuestAccessSuspended = tmp(9570).useIsQuestAccessSuspended();
         if (cResult[10] !== quest) {
           let obj5 = {
             quest,
-            questContent: tmp(6711).QuestContent.RUNNING_ACTIVITY,
-            sourceQuestContent: tmp(6711).QuestContent.RUNNING_ACTIVITY,
+            questContent: tmp(6713).QuestContent.RUNNING_ACTIVITY,
+            sourceQuestContent: tmp(6713).QuestContent.RUNNING_ACTIVITY,
           };
           cResult[10] = quest;
           cResult[11] = obj5;
@@ -196,8 +196,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp22 = cResult[11];
         }
-        const tmpResult9 = tmp(9569);
-        const questRewardClaimHandler = tmp(16433).useQuestRewardClaimHandler(tmp22);
+        const tmpResult9 = tmp(9570);
+        const questRewardClaimHandler = tmp(16465).useQuestRewardClaimHandler(tmp22);
         ({ isClaiming, claim } = questRewardClaimHandler);
         const isLoading = questRewardClaimHandler.isLoading;
         if (cResult[12] !== claim) {
@@ -244,8 +244,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   if (value) {
                     mainFrame2 = mainFrame.getMainFrame();
                     if (null != mainFrame2) {
-                      claim(10765).updateFramePanelMode(mainFrame2.id, constants.PIP);
-                      const obj = claim(10765);
+                      claim(10766).updateFramePanelMode(mainFrame2.id, constants.PIP);
+                      const obj = claim(10766);
                     }
                   }
                   c3 = 3;
@@ -447,7 +447,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const size = { quest, height: 80, width: 80 };
-            const tmp40 = closure_11(claim(14111), size);
+            const tmp40 = closure_11(claim(14130), size);
             cResult[27] = quest;
             cResult[28] = 80;
             cResult[29] = 80;
@@ -459,11 +459,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             end: tmp(1107).VerticalGradient.END,
             colors: tmp33,
           };
-          const tmp37 = closure_11(claim(5256), obj6);
+          const tmp37 = closure_11(claim(5258), obj6);
           cResult[24] = tmp5.heroGradient;
           cResult[25] = tmp33;
           cResult[26] = tmp37;
-          const tmp12Result = claim(5256);
+          const tmp12Result = claim(5258);
         }
         let tmp31 = null != url;
         if (tmp31) {
@@ -478,12 +478,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { uri: url };
           obj7.source = obj8;
           obj7.style = tmp5.heroImg;
-          tmp31 = closure_11(claim(5667), obj7);
+          tmp31 = closure_11(claim(5669), obj7);
         }
         cResult[19] = url;
         cResult[20] = tmp5.heroImg;
         cResult[21] = tmp31;
-        const tmpResult10 = tmp(16433);
+        const tmpResult10 = tmp(16465);
       }
       const obj9 = {
         quest,
@@ -500,33 +500,33 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   : function QuestProgressBottomSheet(quest) {
       quest = quest.quest;
       claim = undefined;
-      const isScreenLandscape = quest(8689).useIsScreenLandscape();
+      const isScreenLandscape = quest(8691).useIsScreenLandscape();
       const tmp4 = closure_13(isScreenLandscape);
-      let obj = quest(8689);
-      let obj2 = quest(7255);
-      const getOrFetchApplication = obj2.useGetOrFetchApplication(quest(7796).getActivityApplicationId(quest));
+      let obj = quest(8691);
+      let obj2 = quest(7257);
+      const getOrFetchApplication = obj2.useGetOrFetchApplication(quest(7798).getActivityApplicationId(quest));
       let id;
-      let obj3 = quest(7796);
+      let obj3 = quest(7798);
       if (getOrFetchApplication != null) {
         id = getOrFetchApplication.id;
       }
-      const url = claim(11484)({ applicationId: id, size: 600, names: ["embedded_cover"] }).url;
-      const tmp7 = claim(11484);
-      const questTaskDetails = quest(9569).useQuestTaskDetails(quest);
+      const url = claim(11504)({ applicationId: id, size: 600, names: ["embedded_cover"] }).url;
+      const tmp7 = claim(11504);
+      const questTaskDetails = quest(9570).useQuestTaskDetails(quest);
       const intl = tmp(1128).intl;
       let obj4 = { questName: quest.config.messages.questName };
-      let tmpResult = quest(9569);
+      let tmpResult = quest(9570);
       const formatToPlainStringResult = intl.formatToPlainString(quest(1128).t.EAYZAr, {
         questName: quest.config.messages.questName,
       });
-      const tmpResult4 = quest(14115);
+      const tmpResult4 = quest(14134);
       const userStatus = quest.userStatus;
       let completedAt;
       const questsInstructionsToWinReward = tmpResult4.useQuestsInstructionsToWinReward({
         quest,
         taskDetails: questTaskDetails,
         location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET,
-        sourceQuestContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
+        sourceQuestContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
       });
       if (userStatus != null) {
         completedAt = userStatus.completedAt;
@@ -544,15 +544,15 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         quest,
         taskDetails: questTaskDetails,
         location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET,
-        sourceQuestContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
+        sourceQuestContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
       };
-      const isQuestAccessSuspended = quest(9569).useIsQuestAccessSuspended();
-      const tmpResult5 = quest(9569);
-      const tmpResult6 = quest(16433);
+      const isQuestAccessSuspended = quest(9570).useIsQuestAccessSuspended();
+      const tmpResult5 = quest(9570);
+      const tmpResult6 = quest(16465);
       const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({
         quest,
-        questContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
-        sourceQuestContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
+        questContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
+        sourceQuestContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
       });
       ({ isClaiming, claim } = questRewardClaimHandler);
       const items = [claim];
@@ -645,25 +645,25 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { uri: url };
         obj8.source = obj9;
         obj8.style = tmp4.heroImg;
-        tmp24 = closure_11(tmp6(5667), obj8);
+        tmp24 = closure_11(tmp6(5669), obj8);
       }
       const items3 = [tmp24, , ,];
       const obj10 = { style: tmp4.heroGradient, start: null, end: null, colors: null };
       const obj6 = {
         quest,
-        questContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
-        sourceQuestContent: quest(6711).QuestContent.RUNNING_ACTIVITY,
+        questContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
+        sourceQuestContent: quest(6713).QuestContent.RUNNING_ACTIVITY,
       };
       obj10.start = quest(1107).VerticalGradient.START;
       obj10.end = quest(1107).VerticalGradient.END;
       const items4 = ["rgba(0, 0, 0, 0)", closure_14().gradientEnd];
       obj10.colors = items4;
-      items3[1] = closure_11(claim(5256), obj10);
+      items3[1] = closure_11(claim(5258), obj10);
       const obj11 = { style: tmp4.gameTileContainer, children: null };
       const size = { quest, height: null, width: null };
       let num = 80;
       let num2 = 80;
-      const tmp6Result = claim(5256);
+      const tmp6Result = claim(5258);
       if (isScreenLandscape) {
         num2 = 56;
       }
@@ -672,11 +672,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         num = 56;
       }
       size.width = num;
-      obj11.children = closure_11(claim(14111), size);
+      obj11.children = closure_11(claim(14130), size);
       items3[2] = closure_11(closure_5, obj11);
       const obj12 = { style: tmp4.contextMenuContainer, children: null };
       const obj13 = {
-        icon: claim(9095),
+        icon: claim(9096),
         onPress: callback2,
         variant: "secondary-overlay",
         size: "sm",
@@ -684,7 +684,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = tmp(1128).intl;
       obj13.accessibilityLabel = intl2.string(quest(1128).t.RDE0Sc);
-      const items5 = [closure_11(quest(7957).IconButton, obj13)];
+      const items5 = [closure_11(quest(7959).IconButton, obj13)];
       const obj14 = {
         quest,
         showShareLink: true,
@@ -692,10 +692,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         sourceQuestContent: null,
         children: null,
       };
-      const tmp6Result4 = claim(14111);
-      obj14.sourceQuestContent = quest(6711).QuestContent.RUNNING_ACTIVITY;
+      const tmp6Result4 = claim(14130);
+      obj14.sourceQuestContent = quest(6713).QuestContent.RUNNING_ACTIVITY;
       obj14.children = contextMenuButton;
-      items5[1] = closure_11(claim(16461), obj14);
+      items5[1] = closure_11(claim(16493), obj14);
       obj12.children = items5;
       items3[3] = closure_12(closure_5, obj12);
       obj7.children = items3;
@@ -712,7 +712,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         str = "heading-md/bold";
       }
       const items7 = [
-        closure_11(quest(5232).Text, {
+        closure_11(quest(5234).Text, {
           variant: str,
           color: "mobile-text-heading-primary",
           children: formatToPlainStringResult,
@@ -725,9 +725,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj17.variant = str2;
       obj17.children = questsInstructionsToWinReward;
-      items7[1] = closure_11(quest(5232).Text, obj17);
+      items7[1] = closure_11(quest(5234).Text, obj17);
       obj16.children = items7;
-      const items8 = [closure_12(quest(5975).Stack, obj16)];
+      const items8 = [closure_12(quest(5977).Stack, obj16)];
       const obj18 = {
         direction: "vertical",
         spacing: claim(587).space.PX_12,
@@ -761,23 +761,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6Result6;
       if (isQuestAccessSuspended) {
         if (tmp14) {
-          tmp6Result6 = tmp6(16428);
+          tmp6Result6 = tmp6(16460);
         }
       }
       const obj20 = { handleDisabled: true, startExpanded: true, children: null };
       obj19.onPressDisabled = tmp6Result6;
-      const items9 = [closure_11(quest(5242).Button, obj19)];
+      const items9 = [closure_11(quest(5244).Button, obj19)];
       const obj21 = { size: "lg", text: null, onPress: null, variant: "secondary", grow: true };
       const intl4 = tmp(1128).intl;
       obj21.text = intl4.string(quest(1128).t.cpT0Cq);
       obj21.onPress = callback3;
-      items9[1] = closure_11(quest(5242).Button, obj21);
+      items9[1] = closure_11(quest(5244).Button, obj21);
       obj18.children = items9;
-      items8[1] = closure_12(quest(5975).Stack, obj18);
+      items8[1] = closure_12(quest(5977).Stack, obj18);
       obj15.children = items8;
       items6[1] = closure_12(closure_5, obj15);
       obj20.children = items6;
-      return closure_12(quest(5263).BottomSheet, obj20);
+      return closure_12(quest(5265).BottomSheet, obj20);
     };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
@@ -824,14 +824,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           overrideVisibility: true,
           questOrQuests: stateFromStores,
-          questContent: tmp(6711).QuestContent.RUNNING_ACTIVITY,
+          questContent: tmp(6713).QuestContent.RUNNING_ACTIVITY,
           sourceQuestContent: null,
           children: null,
         };
-        RUNNING_ACTIVITY = tmp(6711).QuestContent.RUNNING_ACTIVITY;
+        RUNNING_ACTIVITY = tmp(6713).QuestContent.RUNNING_ACTIVITY;
         obj2.sourceQuestContent = RUNNING_ACTIVITY;
         obj2.children = tmp7;
-        const tmp10 = closure_11(tmp(14118).QuestContentImpressionTrackerNative, obj2);
+        const tmp10 = closure_11(tmp(14137).QuestContentImpressionTrackerNative, obj2);
         cResult[5] = stateFromStores;
         cResult[6] = tmp7;
         cResult[7] = tmp10;
@@ -847,13 +847,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           overrideVisibility: true,
           questOrQuests: stateFromStores,
-          questContent: tmp(6711).QuestContent.RUNNING_ACTIVITY,
-          sourceQuestContent: tmp(6711).QuestContent.RUNNING_ACTIVITY,
+          questContent: tmp(6713).QuestContent.RUNNING_ACTIVITY,
+          sourceQuestContent: tmp(6713).QuestContent.RUNNING_ACTIVITY,
           children() {
             return closure_2_11(closure_16, { quest: stateFromStores });
           },
         };
-        tmp4 = closure_11(tmp(14118).QuestContentImpressionTrackerNative, obj2);
+        tmp4 = closure_11(tmp(14137).QuestContentImpressionTrackerNative, obj2);
       }
       return tmp4;
     };

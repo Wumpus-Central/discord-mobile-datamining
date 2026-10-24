@@ -108,6 +108,7 @@ const items = [
   dismissible_content.DismissibleContent.TINY_BRONCO_NOTICE,
   dismissible_content.DismissibleContent.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
   dismissible_content.DismissibleContent.PINOT_MEMBER_SETTING_NEW_BADGE,
+  dismissible_content.DismissibleContent.PINOT_MEMBER_COACHMARK,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

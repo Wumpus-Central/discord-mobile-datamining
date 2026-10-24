@@ -65,6 +65,7 @@ export const VerticalScrollingDirection = { UP: "UP", DOWN: "DOWN" };
 export const QuestHomeScrollingType = { ARROW: "ARROW", AUTO: "AUTO", MANUAL: "MANUAL" };
 export const QuestContentCTA = {
   LEARN_MORE: "LEARN_MORE",
+  OPEN_AD_PERK_MODAL: "OPEN_AD_PERK_MODAL",
   SHOW_REWARD: "SHOW_REWARD",
   CLAIM_REWARD: "CLAIM_REWARD",
   GET_REWARD_CODE: "GET_REWARD_CODE",

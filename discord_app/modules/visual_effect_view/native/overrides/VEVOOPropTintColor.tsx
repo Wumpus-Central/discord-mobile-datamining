@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-const VEVOOStore = fn(5585);
+const VEVOOStore = fn(5587);
 ({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: closure_7 } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { tintColor: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, borderRadius: nativeDefault.radii.sm };
 obj.tintColor = size;
@@ -653,8 +653,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[27] = tmp33;
             cResult[28] = tmp45;
           }
-          const obj5 = { disabled: !tmp8, initialValue: ref, onValueChange: Y };
-          const tmp42 = closure_8(first1(17303), obj5);
+          const obj5 = { disabled: !tmp8, initialValue: ref, onValueChange: Y, accessibilityLabel: "Blur Tint Opacity" };
+          const tmp42 = closure_8(first1(17335), obj5);
           cResult[21] = !tmp8;
           cResult[22] = Y;
           cResult[23] = tmp42;
@@ -790,12 +790,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(17303), {
+  obj7.subLabel = closure_8(backgroundColor(17335), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {
       closure_5(first, arg0);
-    }
+    },
+    accessibilityLabel: "Blur Tint Opacity"
   });
   items1[1] = closure_8(Form.FormRow, obj7);
   obj8.children = items1;

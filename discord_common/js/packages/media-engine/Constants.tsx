@@ -208,6 +208,8 @@ export const ExperimentFlags = {
   INTEL_GPU_DISABLE: "intel_gpu_disable",
   WEB_STREAMING_MAINTAIN_FRAMERATE: "web_streaming_maintain_framerate",
   WEB_STREAMING_BALANCED: "web_streaming_balanced",
+  WEB_STREAMING_MAINTAIN_RESOLUTION: "web_streaming_maintain_resolution",
+  WEB_STREAMING_CPU_FALLBACK: "web_streaming_cpu_fallback",
   WEB_STREAMING_MOTION_CONTENT_HINT: "web_streaming_motion_content_hint",
   WEB_SCREEN_SHARE_AUDIO: "web_screen_share_audio",
 };

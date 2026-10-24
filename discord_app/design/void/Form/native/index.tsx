@@ -21,7 +21,6 @@ import FormText from "FormText.tsx";
 import FormSwitchRowDefault from "FormSwitchRow.tsx";
 import FormRadioRowDefault from "FormRadioRow.tsx";
 import FormRadioGroupDefault from "FormRadioGroup.tsx";
-import FormSliderRowDefault from "FormSliderRow.tsx";
 import CardSectionDefault from "../../CardSection/native/CardSection.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -52,5 +51,4 @@ export const FormSwitchRow = FormSwitchRowDefault;
 export const FormRadioRow = FormRadioRowDefault;
 export const FormCheckboxRow = FormCheckboxRowDefault;
 export const FormRadioGroup = FormRadioGroupDefault;
-export const FormSliderRow = FormSliderRowDefault;
 export const FormCardSection = CardSectionDefault;

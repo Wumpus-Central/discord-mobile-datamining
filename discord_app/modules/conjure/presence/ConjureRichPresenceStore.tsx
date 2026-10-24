@@ -202,7 +202,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F109203 */ function() { ... });
+                        let found = prop.filter(/* F109432 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -313,7 +313,7 @@ let closure_18 = async function _resumeRunningProjects() {
 };
 const Constants = fn(1087);
 ({ ActivityTypes: closure_8, Endpoints: closure_9 } = Constants);
-const StaticChannelRoute = fn(4828).StaticChannelRoute;
+const StaticChannelRoute = fn(4830).StaticChannelRoute;
 let c11 = 300000;
 let c12 = null;
 let c13 = null;

@@ -1,6 +1,6 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppHeaderButtons.tsx
 import _modDef3928 from "../VoiceChannelApps.messages.js";
-import _modDef11515 from "../../../../_runtime/metro/11515__.js";
+import _modDef11535 from "../../../../_runtime/metro/11535__.js";
 import VoiceChannelAppActionCreators from "../VoiceChannelAppActionCreators.tsx";
 import VoicePanelIconButtonDefault from "../../voice_panel/native/shared/VoicePanelIconButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,14 +17,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = id(576).c(14);
       ({ channel, inCall } = arg0);
       const obj = id(576);
-      const voiceChannelAppAvailable = id(18515).useVoiceChannelAppAvailable(channel, inCall);
-      const obj2 = id(18515);
-      const voiceChannelAppOpen = id(18515).useVoiceChannelAppOpen(channel, inCall);
-      const obj3 = id(18515);
-      const voiceChannelAppVisible = id(18515).useVoiceChannelAppVisible(channel);
+      const voiceChannelAppAvailable = id(18547).useVoiceChannelAppAvailable(channel, inCall);
+      const obj2 = id(18547);
+      const voiceChannelAppOpen = id(18547).useVoiceChannelAppOpen(channel, inCall);
+      const obj3 = id(18547);
+      const voiceChannelAppVisible = id(18547).useVoiceChannelAppVisible(channel);
       id = channel.id;
       if (voiceChannelAppAvailable) {
-        const tmp8Result = importDefault(voiceChannelAppVisible ? 17115 : 8505);
+        const tmp8Result = importDefault(voiceChannelAppVisible ? 17147 : 8507);
         if (cResult[0] !== voiceChannelAppVisible) {
           const intl = tmp(1128).intl;
           if (voiceChannelAppVisible) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               let tmp18 = null;
               if (voiceChannelAppOpen) {
-                const obj6 = { icon: _modDef11515, accessibilityLabel: null, onPress: null };
+                const obj6 = { icon: _modDef11535, accessibilityLabel: null, onPress: null };
                 const intl2 = tmp(1128).intl;
                 obj6.accessibilityLabel = intl2.string(_modDef3928["D+wwh8"]);
                 obj6.onPress = function onPress() {
@@ -98,21 +98,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const obj4 = id(18515);
+      const obj4 = id(18547);
     }
   : function VoiceChannelAppHeaderButtons(arg0) {
       ({ channel, inCall } = arg0);
       let id;
-      const voiceChannelAppAvailable = id(18515).useVoiceChannelAppAvailable(channel, inCall);
-      const obj = id(18515);
-      const voiceChannelAppOpen = id(18515).useVoiceChannelAppOpen(channel, inCall);
-      const obj2 = id(18515);
-      const voiceChannelAppVisible = id(18515).useVoiceChannelAppVisible(channel);
+      const voiceChannelAppAvailable = id(18547).useVoiceChannelAppAvailable(channel, inCall);
+      const obj = id(18547);
+      const voiceChannelAppOpen = id(18547).useVoiceChannelAppOpen(channel, inCall);
+      const obj2 = id(18547);
+      const voiceChannelAppVisible = id(18547).useVoiceChannelAppVisible(channel);
       id = channel.id;
       let tmp7Result = null;
       if (voiceChannelAppAvailable) {
         const obj4 = {
-          icon: importDefault(voiceChannelAppVisible ? 17115 : 8505),
+          icon: importDefault(voiceChannelAppVisible ? 17147 : 8507),
           accessibilityLabel: null,
           onPress: null,
         };
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [closure_3(VoicePanelIconButtonDefault, obj4)];
         let tmp9Result = null;
         if (voiceChannelAppOpen) {
-          const obj5 = { icon: _modDef11515, accessibilityLabel: null, onPress: null };
+          const obj5 = { icon: _modDef11535, accessibilityLabel: null, onPress: null };
           const intl2 = tmp(1128).intl;
           obj5.accessibilityLabel = intl2.string(_modDef3928["D+wwh8"]);
           obj5.onPress = function onPress() {

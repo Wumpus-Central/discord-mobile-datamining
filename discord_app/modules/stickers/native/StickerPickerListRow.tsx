@@ -14,13 +14,13 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const StickerAnimationSettings = fn(4800).StickerAnimationSettings;
-const StickerPickerConstants = fn(10123);
+const StickerAnimationSettings = fn(4802).StickerAnimationSettings;
+const StickerPickerConstants = fn(10124);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   row: {
     height: StickerPickerConstants.ROW_HEIGHT,
@@ -568,9 +568,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = handleOnLongPressSticker();
       rowContentPaddingVertical = tmp6;
-      let AnimateStickers = stickers(4797).AnimateStickers;
+      let AnimateStickers = stickers(4799).AnimateStickers;
       closure_8 = AnimateStickers.useSetting();
-      closure_9 = stickers(9931).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPickerListRow");
+      closure_9 = stickers(9932).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPickerListRow");
       let items = [];
       if (nativeRow) {
         let num4 = 0;
@@ -592,7 +592,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               ({ id: obj5.stickerId, name: obj5.stickerName, format_type: obj5.stickerType } = tmp12);
               ({ isOpaque, isDisabled, isLocked } = rowTraitsResult);
-              let obj6 = stickers(10169);
+              let obj6 = stickers(10170);
               obj3.stickerUrl = obj6.getStickerAssetUrl(tmp12, STICKER_SIZE, isAnimated);
               obj3.stickerAnimated = isAnimated;
               obj3.stickerDisabled = isDisabled;
@@ -610,7 +610,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 stickerOpaque: false,
                 stickerLocked: false,
               };
-              obj4.stickerType = stickers(6487).StickerFormat.PNG;
+              obj4.stickerType = stickers(6489).StickerFormat.PNG;
               let arr3 = items.push(obj4);
             }
             num4 = num4 + 1;
@@ -637,7 +637,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               handleOnLongPressSticker(found);
             }
           };
-          return closure_8(isSectionNitroLocked(10172), obj7);
+          return closure_8(isSectionNitroLocked(10173), obj7);
         } catch (tmp26) {
           const obj10 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
           const obj11 = { itemLength: arr.length, items: null };
@@ -670,17 +670,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   id = currentUser.id;
                 }
                 let isSendableStickerResult = isSectionNitroLocked;
-                const obj5 = stickers(6486);
+                const obj5 = stickers(6488);
                 if (!isSectionNitroLocked) {
                   isSendableStickerResult = null == closure_6;
                 }
                 if (!isSendableStickerResult) {
-                  isSendableStickerResult = tmp26(7441).isSendableSticker(
+                  isSendableStickerResult = tmp26(7443).isSendableSticker(
                     tmp2,
                     currentUser.getCurrentUser(),
                     closure_6,
                   );
-                  const tmp26Result = tmp26(7441);
+                  const tmp26Result = tmp26(7443);
                 }
                 let tmp11 = closure_9;
                 if (closure_9) {
@@ -704,11 +704,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj2.style = items;
                 obj2.disabled = null == dependencyMap;
                 obj2.onPress = function onPress() {
-                  const result = closure_0(5210).triggerHapticFeedback(isSectionNitroLocked(5211).IMPACT_LIGHT);
+                  const result = closure_0(5212).triggerHapticFeedback(isSectionNitroLocked(5213).IMPACT_LIGHT);
                   if (dependencyMap != null) {
                     dependencyMap(closure_0);
                   }
-                  const obj = closure_0(5210);
+                  const obj = closure_0(5212);
                 };
                 obj2.onLongPress = function onLongPress() {
                   return handleOnLongPressSticker(closure_0);
@@ -716,18 +716,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = {
                   sticker: tmp2,
                   size,
-                  animated: stickers(6486).shouldAnimateSticker(closure_8, tmp2.id === id),
+                  animated: stickers(6488).shouldAnimateSticker(closure_8, tmp2.id === id),
                   opaque: isSendableStickerResult,
                 };
-                const items1 = [closure_8(isSectionNitroLocked(10169), obj3, c12)];
+                const items1 = [closure_8(isSectionNitroLocked(10170), obj3, c12)];
                 let tmp17 = null;
                 if (tmp11) {
                   tmp17 = closure_8(items, {});
                 }
                 items1[1] = tmp17;
                 obj2.children = items1;
-                items.push(closure_9(stickers(6906).PressableOpacity, obj2, tmp2.id));
-                const shouldAnimateStickerResult = stickers(6486).shouldAnimateSticker(closure_8, tmp2.id === id);
+                items.push(closure_9(stickers(6908).PressableOpacity, obj2, tmp2.id));
+                const shouldAnimateStickerResult = stickers(6488).shouldAnimateSticker(closure_8, tmp2.id === id);
                 const tmp10 = null == dependencyMap;
               }
             })();
@@ -739,5 +739,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj18 = { style: tmp6.row, children: items };
         return closure_8(closure_3, obj18);
       }
-      let obj2 = stickers(9931);
+      let obj2 = stickers(9932);
     };

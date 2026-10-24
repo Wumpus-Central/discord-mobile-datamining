@@ -505,11 +505,11 @@ class ChatInput {
           if (!obj.getIsChatInputHeightWorkletEnabled()) {
             const textFieldHeight = closure_1_16.state.current.textFieldHeight;
             const result = textFieldHeight.set(
-              channel(12495).getChatInputHeightAnimationTiming(height, sharedValue.get()),
+              channel(12529).getChatInputHeightAnimationTiming(height, sharedValue.get()),
             );
-            const tmp2Result = channel(12495);
+            const tmp2Result = channel(12529);
           }
-          obj = channel(13085);
+          obj = channel(13122);
         },
         handleLayoutOfInputContainer(arg0) {
           const current = closure_1_16.chatInputAutocomplete.current;
@@ -533,12 +533,12 @@ class ChatInput {
             if (0 !== textFieldContentSize) {
               const textFieldHeight = closure_1_16.state.current.textFieldHeight;
               const result = textFieldHeight.set(
-                channel(12495).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()),
+                channel(12529).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()),
               );
-              const tmpResult = channel(12495);
+              const tmpResult = channel(12529);
             }
           }
-          obj = channel(13085);
+          obj = channel(13122);
         },
         handleChangeAutoCompleteVisibility(arg0) {
           unregisterViewTag(closure_1_16.props.current.screenIndex, arg0);
@@ -624,7 +624,7 @@ class ChatInput {
                       c3 = 2;
                       c4 = 1;
                       const obj6 = {
-                        value: closure_0(8152).getImageDimensionsIfMissing(closure_129_0, closure_129_1, closure_129_2),
+                        value: closure_0(8154).getImageDimensionsIfMissing(closure_129_0, closure_129_1, closure_129_2),
                         done: false,
                       };
                       return obj6;
@@ -644,10 +644,10 @@ class ChatInput {
                   width: closure_129_4.width,
                   height: closure_129_4.height,
                   mimeType: closure_129_3,
-                  platform: closure_0(8143).UploadPlatform.REACT_NATIVE,
+                  platform: closure_0(8145).UploadPlatform.REACT_NATIVE,
                   id: null,
                 };
-                const obj7 = screenIndex(9664);
+                const obj7 = screenIndex(9665);
                 size.id = closure_0(1281).v4();
                 obj8.file = size;
                 obj8.draftType = ChannelMessage.ChannelMessage;
@@ -676,8 +676,8 @@ class ChatInput {
       };
       obj.handlePressAction = function handlePressAction(arg0, arg1, current2) {
         if (constants.PHOTOS === arg1) {
-          const result = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-          const obj21 = channel(5210);
+          const result = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+          const obj21 = channel(5212);
           const obj4 = {
             type: constants3.ADD_BUTTON,
             channel_id: closure_1_16.props.current.channel.id,
@@ -685,12 +685,12 @@ class ChatInput {
           };
           screenIndex(1267).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj4);
           const obj22 = screenIndex(1267);
-          const keyboardType = channel(5159).getKeyboardType();
+          const keyboardType = channel(5161).getKeyboardType();
           if (keyboardType === channel(1631).KeyboardTypes.APP_LAUNCHER) {
             const obj5 = { type: channel(1631).KeyboardTypes.APP_LAUNCHER };
             memo1.handleToggleKeyboard(obj5);
           } else {
-            const keyboardType1 = channel(5159).getKeyboardType();
+            const keyboardType1 = channel(5161).getKeyboardType();
             if (keyboardType1 === channel(1631).KeyboardTypes.MEDIA) {
               const current = closure_1_16.chatInputActions.current;
               if (current != null) {
@@ -701,16 +701,16 @@ class ChatInput {
             const obj11 = { target: constants7.CHAT };
             obj8.context = obj11;
             memo1.handleToggleKeyboard(obj8);
-            const tmp42Result = channel(5159);
+            const tmp42Result = channel(5161);
           }
-          const obj24 = channel(5159);
+          const obj24 = channel(5161);
         } else {
           let tmp35 = current2;
           if (constants.APPS === arg1) {
-            const result1 = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj12 = channel(5210);
-            channel(5709).trackWithMetadata(constants2.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED);
-            const obj13 = channel(5709);
+            const result1 = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj12 = channel(5212);
+            channel(5711).trackWithMetadata(constants2.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED);
+            const obj13 = channel(5711);
             const obj15 = {
               type: constants3.APPS_BUTTON,
               channel_id: closure_1_16.props.current.channel.id,
@@ -718,16 +718,16 @@ class ChatInput {
             };
             screenIndex(1267).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj15);
             const obj14 = screenIndex(1267);
-            const result2 = mobileEmojiSuggestionsConfig(11372).dismissNewActivityIndicator();
-            const obj16 = mobileEmojiSuggestionsConfig(11372);
+            const result2 = mobileEmojiSuggestionsConfig(11390).dismissNewActivityIndicator();
+            const obj16 = mobileEmojiSuggestionsConfig(11390);
             if (tmp35 == null) {
               tmp35 = null;
             }
-            const result3 = channel(11986).setAppLauncherA11yFocusReturnRef(tmp35);
+            const result3 = channel(12012).setAppLauncherA11yFocusReturnRef(tmp35);
             const obj18 = { type: channel(1631).KeyboardTypes.APP_LAUNCHER, context: null };
             const obj19 = { initialRouteName: constants5.HOME, initialSearchQuery: null };
-            const obj17 = channel(11986);
-            const appDMApplication = channel(12184).getAppDMApplication(closure_1_16.props.current.channel);
+            const obj17 = channel(12012);
+            const appDMApplication = channel(12210).getAppDMApplication(closure_1_16.props.current.channel);
             let name;
             if (appDMApplication != null) {
               name = appDMApplication.name;
@@ -735,79 +735,79 @@ class ChatInput {
             obj19.initialSearchQuery = name;
             obj18.context = obj19;
             memo1.handleToggleKeyboard(obj18);
-            const tmp23Result = channel(12184);
+            const tmp23Result = channel(12210);
           } else if (constants.ALL_PHOTOS === arg1) {
-            const result4 = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj9 = channel(5210);
+            const result4 = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj9 = channel(5212);
             const obj20 = {
               channel: closure_1_16.props.current.channel,
               uploadLimit,
               onDismissKeyboard() {
-                return closure_1_0(5157).dismissKeyboard();
+                return closure_1_0(5159).dismissKeyboard();
               },
               onRestoreKeyboard() {
                 return closure_1_17.handleToggleKeyboard({ type: closure_0(1631).KeyboardTypes.SYSTEM });
               },
               onSelectFiles(items) {
-                closure_0(10417).addImagesFromPicker(
+                closure_0(10418).addImagesFromPicker(
                   closure_1_16.props.current.channel.id,
                   items,
-                  closure_0(8142).UploadOrigin.IMAGE_PICKER,
+                  closure_0(8144).UploadOrigin.IMAGE_PICKER,
                 );
               },
               draftType: dismissCoachmark.ChannelMessage,
             };
-            channel(10417).handleViewAllDialog(obj20);
-            const obj10 = channel(10417);
+            channel(10418).handleViewAllDialog(obj20);
+            const obj10 = channel(10418);
           } else if (constants.CAMERA === arg1) {
-            const result5 = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj6 = channel(5210);
+            const result5 = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj6 = channel(5212);
             const obj23 = {
               channel: closure_1_16.props.current.channel,
               previewType: constants6.CAMERA_BUTTON,
               onDismissKeyboard() {
-                return closure_1_0(5157).dismissKeyboard();
+                return closure_1_0(5159).dismissKeyboard();
               },
               onRestoreKeyboard() {
                 return closure_1_17.handleToggleKeyboard({ type: closure_0(1631).KeyboardTypes.SYSTEM });
               },
               onSelectFiles(items) {
-                closure_0(10417).addImagesFromPicker(
+                closure_0(10418).addImagesFromPicker(
                   closure_1_16.props.current.channel.id,
                   items,
-                  closure_0(8142).UploadOrigin.IMAGE_PICKER,
+                  closure_0(8144).UploadOrigin.IMAGE_PICKER,
                 );
               },
             };
-            channel(10417).handleCameraDialog(obj23);
-            const obj7 = channel(10417);
+            channel(10418).handleCameraDialog(obj23);
+            const obj7 = channel(10418);
           } else if (constants.NITRO_GIFT === arg1) {
             const result6 = screenIndex(1895).markPotentialBadState();
             const obj = screenIndex(1895);
-            const result7 = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj2 = channel(5210);
+            const result7 = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj2 = channel(5212);
             if (obj3.isAndroid()) {
-              channel(5157).dismissKeyboard();
-              const tmp5Result = channel(5157);
+              channel(5159).dismissKeyboard();
+              const tmp5Result = channel(5159);
             }
             obj3 = channel(1384);
-            channel(10417).handleSelectGift(
+            channel(10418).handleSelectGift(
               closure_1_16.props.current.analyticsLocations,
               closure_1_16.chatInput,
               tmp35,
             );
-            const tmp5Result2 = channel(10417);
+            const tmp5Result2 = channel(10418);
           } else if (constants.THREAD === arg1) {
-            const result8 = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj28 = channel(5210);
-            channel(10417).handleSelectThread(closure_1_16.props.current.channel, closure_1_16.chatInput);
-            const obj29 = channel(10417);
+            const result8 = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj28 = channel(5212);
+            channel(10418).handleSelectThread(closure_1_16.props.current.channel, closure_1_16.chatInput);
+            const obj29 = channel(10418);
           }
         }
       };
       obj.handlePollsPress = function handlePollsPress() {
-        const result = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = channel(5210);
+        const result = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = channel(5212);
         screenIndex(1267).track(constants2.CHAT_INPUT_COMPONENT_VIEWED, {
           type: constants3.POLLS,
           channel_id: closure_1_16.props.current.channel.id,
@@ -819,9 +819,9 @@ class ChatInput {
           channel_id: closure_1_16.props.current.channel.id,
           guild_id: closure_1_16.props.current.channel.guild_id,
         };
-        channel(5157).dismissKeyboard();
-        const obj4 = channel(5157);
-        channel(12187).openCreatePollModal({
+        channel(5159).dismissKeyboard();
+        const obj4 = channel(5159);
+        channel(12213).openCreatePollModal({
           channel: closure_1_16.props.current.channel,
           onCancel() {
             return closure_1_17.handleToggleKeyboard({ type: closure_0(1631).KeyboardTypes.SYSTEM });
@@ -829,9 +829,9 @@ class ChatInput {
         });
       };
       obj.handleAttachPress = function handleAttachPress() {
-        const result = channel(5210).triggerHapticFeedback(channel(5210).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = channel(5210);
-        channel(10417).handleAttachFile({
+        const result = channel(5212).triggerHapticFeedback(channel(5212).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = channel(5212);
+        channel(10418).handleAttachFile({
           channel: closure_1_16.props.current.channel,
           uploadLimit,
           onDismissKeyboard() {
@@ -841,16 +841,16 @@ class ChatInput {
             return closure_1_17.handleToggleKeyboard({ type: closure_0(1631).KeyboardTypes.SYSTEM });
           },
           onSelectFiles(items) {
-            closure_0(10417).addImagesFromPicker(
+            closure_0(10418).addImagesFromPicker(
               props.props.current.channel.id,
               items,
-              closure_0(8142).UploadOrigin.FILE_ATTACHMENT,
+              closure_0(8144).UploadOrigin.FILE_ATTACHMENT,
             );
           },
         });
       };
       obj.handlePressExpression = function handlePressExpression(arg0, unlocked) {
-        const result = channel(9825).initiateEmojiInteraction(EmojiInteractionPoint.ChatInputExpressionPressed);
+        const result = channel(9826).initiateEmojiInteraction(EmojiInteractionPoint.ChatInputExpressionPressed);
         let tmp4 = null != unlocked;
         if (tmp4) {
           tmp4 = unlocked.unlocked.length > 0 || unlocked.locked.length > 0;
@@ -858,8 +858,8 @@ class ChatInput {
         }
         let type = arg0;
         if (arg0 == null) {
-          type = channel(5159).getKeyboardContextForType(channel(1631).KeyboardTypes.EXPRESSION).type;
-          const tmpResult = channel(5159);
+          type = channel(5161).getKeyboardContextForType(channel(1631).KeyboardTypes.EXPRESSION).type;
+          const tmpResult = channel(5161);
         }
         const obj2 = { type: channel(1631).KeyboardTypes.EXPRESSION, context: null };
         const obj3 = { type, suggestedEmojis: null };
@@ -870,7 +870,7 @@ class ChatInput {
         obj3.suggestedEmojis = tmp7;
         obj2.context = obj3;
         memo1.handleToggleKeyboard(obj2);
-        const obj = channel(9825);
+        const obj = channel(9826);
       };
       obj.handlePressSend = function handlePressSend() {
         const current = closure_1_16.chatInput.current;
@@ -908,8 +908,8 @@ class ChatInput {
           if (current6 != null) {
             const result2 = current6.onMessageLengthChanged(text.length);
           }
-          channel(9761).hideContextMenu();
-          const obj3 = channel(9761);
+          channel(9762).hideContextMenu();
+          const obj3 = channel(9762);
         }
       };
       obj.handleTapAction = function handleTapAction(nativeEvent) {
@@ -917,7 +917,7 @@ class ChatInput {
         if ("tapAttachment" === tapAction.action) {
           let current = closure_1_16.chatInput.current;
           current.blur();
-          const obj = channel(13086);
+          const obj = channel(13123);
           const current2 = closure_1_16.chatInput.current;
           const applicationCommandManager = current2.getApplicationCommandManager();
           ({ channelId, optionName } = tapAction);
@@ -939,26 +939,26 @@ class ChatInput {
           focused = text.length > 0;
         }
         if (focused) {
-          const result = channel(13020).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
-          const obj = channel(13020);
+          const result = channel(13057).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
+          const obj = channel(13057);
         }
       };
       obj.handleTextOrFocusChange = function handleTextOrFocusChange(text, focused) {
         if (text.length > 0) {
           if (!focused) {
-            const maxMessageLength = channel(9661).getMaxMessageLength();
+            const maxMessageLength = channel(9662).getMaxMessageLength();
             if (tmp16) {
               screenIndex(1267).track(constants2.MESSAGE_LENGTH_LIMIT_REACHED, {});
               const obj3 = screenIndex(1267);
             }
             closure_1_16.state.current.textPrev = closure_1_16.state.current.text;
             closure_1_16.state.current.text = text;
-            const obj2 = channel(9661);
+            const obj2 = channel(9662);
             tmp16 = closure_1_16.state.current.textPrev.length <= maxMessageLength && text.length > maxMessageLength;
           }
           if (token.isOpen()) {
-            screenIndex(10434).hideNativeMenu();
-            const obj = screenIndex(10434);
+            screenIndex(10435).hideNativeMenu();
+            const obj = screenIndex(10435);
           }
           const current2 = closure_1_16.chatInputActions.current;
           if (current2 != null) {
@@ -990,15 +990,15 @@ class ChatInput {
       };
       obj.handleToggleKeyboard = function handleToggleKeyboard(type) {
         if (token.isOpen()) {
-          screenIndex(10434).hideNativeMenu();
-          const obj = screenIndex(10434);
+          screenIndex(10435).hideNativeMenu();
+          const obj = screenIndex(10435);
         }
         if (type.type !== channel(1631).KeyboardTypes.SYSTEM) {
           if (type.type !== tmp4Result.getKeyboardType()) {
             const current = closure_1_16.chatInput.current;
             current.openCustomKeyboard(type);
           }
-          tmp4Result = channel(5159);
+          tmp4Result = channel(5161);
         }
         const current2 = closure_1_16.chatInput.current;
         current2.openSystemKeyboard();
@@ -1512,16 +1512,16 @@ class ChatInput {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, findNodeHandle: closure_8 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13018).useVoiceMessagesUIStore;
-const DraftType = fn(7629).DraftType;
-const useChatBottomManagerUIStore = fn(9781);
+const useVoiceMessagesUIStore = fn(13055).useVoiceMessagesUIStore;
+const DraftType = fn(7631).DraftType;
+const useChatBottomManagerUIStore = fn(9782);
 ({
   updateShowingAutoComplete: closure_19,
   updateSmallSuggestionBarHeight: closure_20,
   useChatIsAtBottom: closure_21,
   useChatShowingAutoComplete: closure_22,
 } = useChatBottomManagerUIStore);
-const ChatInputConstants = fn(12491);
+const ChatInputConstants = fn(12525);
 ({
   CHAT_INPUT_HORIZONTAL_PADDING: closure_23,
   CHAT_INPUT_HORIZONTAL_PADDING_PARENT: closure_24,
@@ -1537,13 +1537,13 @@ const Constants = fn(1087);
   Permissions: closure_31,
 } = Constants);
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const EmojiInteractionPoint = fn(1395).EmojiInteractionPoint;
 const MediaKeyboardConstants = fn(1629);
 ({ InAppCameraUsedCameraPreviewTypes: closure_35, MediaKeyboardTarget: closure_36 } = MediaKeyboardConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_37, jsxs: closure_38, Fragment: closure_39 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 const BottomSheet = createStyles.createStyles((arg0, arg1) => {
   let BACKGROUND_BASE_LOW = arg0;
   const obj = {

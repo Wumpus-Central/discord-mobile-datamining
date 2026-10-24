@@ -3,7 +3,7 @@ import LoggerDefault from "../../../debug/Logger.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4884 from "../../../../../_runtime/metro/04884__.js";
+import _mod4886 from "../../../../../_runtime/metro/04886__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -22,14 +22,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4884.shallow);
+      return closure_4(first, _mod4886.shallow);
     }
   : function useConversationSuggestionsEnabled() {
-      return closure_4((isEnabled) => isEnabled.isEnabled, _mod4884.shallow);
+      return closure_4((isEnabled) => isEnabled.isEnabled, _mod4886.shallow);
     };
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIOSConversationSuggestionsSettingValue() {
       const cResult = c.c(2);
@@ -67,7 +67,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8330).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8332).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIOSConversationSuggestionsSettingValue() {
         const cResult = c.c(2);

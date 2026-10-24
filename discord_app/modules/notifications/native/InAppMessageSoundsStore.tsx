@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import c from "../../../../_runtime/00576_c.js";
-import _mod4884 from "../../../../_runtime/metro/04884__.js";
+import _mod4886 from "../../../../_runtime/metro/04886__.js";
 import identity from "../../../../_runtime/metro/01269__.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -37,8 +37,8 @@ export const useInAppMessageSoundsEnabled = ReactCompilerGating.isReactCompilerE
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4884.shallow);
+      return closure_3(first, _mod4886.shallow);
     }
   : function useInAppMessageSoundsEnabled() {
-      return closure_3((isEnabled) => isEnabled.isEnabled, _mod4884.shallow);
+      return closure_3((isEnabled) => isEnabled.isEnabled, _mod4886.shallow);
     };

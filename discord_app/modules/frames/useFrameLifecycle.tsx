@@ -43,7 +43,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "r" };
+        const obj8 = { state: obj.Loading, frame: "a" };
         obj10 = obj8;
       } else {
         if (null != data) {
@@ -65,7 +65,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(6774);
+const FramesConstants = fn(6776);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = {
   Loading: "loading",

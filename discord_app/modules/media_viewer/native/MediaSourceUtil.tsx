@@ -303,13 +303,9 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
       }
       let url3 = EmbedUtils.getEffectiveVideoProvider(name, url1);
       const tmp16Result3 = EmbedUtils;
-      const result1 = renderer_EmbedUtils.shouldPlayVideoInline(url3);
-      let tmp26 = result1;
-      if (result1) {
-        tmp26 = null != image.video;
-      }
+      let isWebviewVideoResult = renderer_EmbedUtils.isWebviewVideo(image);
       if (null != undefined) {
-        if (!result1) {
+        if (!isWebviewVideoResult) {
           const size = {
             uri: mobileOptimizedSrc,
             messageId: id.id,
@@ -354,12 +350,12 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
           }
           size.contentType = contentType;
           size.obscure = result;
-          let tmp30;
+          let tmp29;
           if (null != image.thumbnail) {
             const size1 = { width: image.thumbnail.width, height: image.thumbnail.height, uri: image.thumbnail.url };
-            tmp30 = size1;
+            tmp29 = size1;
           }
-          size.thumbnail = tmp30;
+          size.thumbnail = tmp29;
           size.shareURI = image.url;
           return size;
         }
@@ -379,10 +375,10 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
       }
       const items = [];
       if (null == image.thumbnail) {
-        if (tmp26) {
-          tmp26 = null != image.video;
+        if (isWebviewVideoResult) {
+          isWebviewVideoResult = null != image.video;
         }
-        if (!tmp26) {
+        if (!isWebviewVideoResult) {
           if (0 !== items.length) {
             if (1 === items.length) {
               let first = items[0];
@@ -443,7 +439,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
               str30 = formatted2.endsWith(".avif");
               const formatted3 = uRL.pathname.toLowerCase();
               str7 = formatted3.endsWith(".webp");
-              if (!tmp35) {
+              if (!tmp34) {
                 str57 = proxyURL3;
                 if (str30) {
                   const searchParams10 = url4.searchParams;
@@ -484,7 +480,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             const formatted4 = str48.pathname.toLowerCase();
             const endsWithResult1 = formatted4.endsWith(".avif");
             const formatted5 = str48.pathname.toLowerCase();
-            if (tmp52) {
+            if (tmp51) {
               if (formatted5.endsWith(".webp")) {
                 const searchParams8 = str48.searchParams;
                 searchParams8.append("animated", "true");

@@ -1,6 +1,6 @@
 // discord_app/modules/app_database/app/reportMalformedStorageValues.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
-import _mod4848 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod4850 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c3 = false;
@@ -8,9 +8,9 @@ const result = size.fileFinishedImporting("modules/app_database/app/reportMalfor
 
 export default function reportMalformedStorageValues(source) {
   if (!c3) {
-    const Stats = _mod4848.Stats;
+    const Stats = _mod4850.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
-    const Stats2 = _mod4848.Stats;
+    const Stats2 = _mod4850.Stats;
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;

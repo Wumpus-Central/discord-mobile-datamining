@@ -13,9 +13,9 @@ import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7392);
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7394);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7390);
+const ExplicitMediaRedactionConstants = fn(7392);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
   EXPLICIT_MEDIA_MIN_WIDTH: closure_7,

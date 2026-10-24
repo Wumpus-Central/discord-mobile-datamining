@@ -10,8 +10,8 @@ import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBase
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
-import Suspender from "../../../../../_runtime/05937_Suspender.js";
+import LegacyBaseButton from "../../../../../_runtime/05297_LegacyBaseButton.js";
+import Suspender from "../../../../../_runtime/05939_Suspender.js";
 import ChatViewWidthContextDefault from "../../../chat/native/ChatViewWidthContext.tsx";
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -32,13 +32,13 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9699).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9700).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_14 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible){return;}runOnJS(setIsVisible)(visible);}" };

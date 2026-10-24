@@ -28,6 +28,7 @@ export const AGE_GATE_REGISTER_TIMEOUT_MS = result;
 export const NEW_USER_AGE_GATE_MODAL_KEY = "new-user-age-gate-modal";
 export const EXISTING_USER_AGE_GATE_MODAL_KEY = "existing-user-age-gate-modal";
 export const AgeGateSource = obj;
+export const AgeGateType = { AGE_ASSURANCE: "AGE_ASSURANCE", DATE_OF_BIRTH: "DATE_OF_BIRTH" };
 export const REACTIVE_CHECK_AGE_GATE_SOURCES = new Set(items);
 export const AgeGateAnalyticAction = {
   AGE_GATE_OPEN: "AGE_GATE_OPEN",

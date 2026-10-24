@@ -2,27 +2,27 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef18955 from "../../../../../_runtime/metro/18955__.js";
-import _modDef18956 from "../../../../../_runtime/metro/18956__.js";
-import _modDef18957 from "../../../../../_runtime/metro/18957__.js";
-import _modDef18958 from "../../../../../_runtime/metro/18958__.js";
+import TagsIcon from "../../../../design/components/Icon/native/redesign/generated/TagsIcon.tsx";
+import EmojiMoneyMouthFaceIcon from "../../../../design/components/Icon/native/redesign/generated/EmojiMoneyMouthFaceIcon.tsx";
+import WalletIcon from "../../../../design/components/Icon/native/redesign/generated/WalletIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildOwner = fn(4839).isGuildOwner;
+const isGuildOwner = fn(4841).isGuildOwner;
 const Constants = fn(1087);
-({ GuildFeatures: hasOwnProperty, GuildSettingsSections: metroRequire } = Constants);
+({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function HasCreatedListingsSection(guild) {
-      const cResult = guild(576).c(25);
+      const cResult = guild(pushScreen[6]).c(25);
       guild = guild.guild;
-      const pushScreen = guild.pushScreen;
+      pushScreen = guild.pushScreen;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
@@ -40,29 +40,29 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[2];
       }
-      const obj = guild(576);
-      const stateFromStores = guild(504).useStateFromStores(first, tmp6);
+      const obj = guild(pushScreen[6]);
+      const stateFromStores = guild(pushScreen[7]).useStateFromStores(first, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["KzCF/6"]);
+        const intl = tmp(tmp2[8]).intl;
+        const stringResult = intl.string(tmp(tmp2[8]).t["KzCF/6"]);
         cResult[3] = stringResult;
         let tmp8 = stringResult;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t["/CfKoD"]);
+        const intl2 = tmp(tmp2[8]).intl;
+        const stringResult1 = intl2.string(tmp(tmp2[8]).t["/CfKoD"]);
         cResult[4] = stringResult1;
         let tmp10 = stringResult1;
       } else {
         tmp10 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: pushScreen(18955) };
-        const tmp15 = closure_7(tmp(6901).TableRow.Icon, obj2);
-        cResult[5] = tmp15;
-        let tmp12 = tmp15;
+        const obj2 = { IconComponent: tmp(tmp2[10]).CircleInformationIcon };
+        const tmp14 = closure_6(tmp(tmp2[9]).TableRow.Icon, obj2);
+        cResult[5] = tmp14;
+        let tmp12 = tmp14;
       } else {
         tmp12 = cResult[5];
       }
@@ -75,127 +75,127 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             return pushScreen(constants2.ROLE_SUBSCRIPTIONS_BASIC);
           },
         };
-        const tmp18 = closure_7(tmp(6901).TableRow, obj3, "guild-role-subscriptions-basic");
+        const tmp17 = closure_6(tmp(tmp2[9]).TableRow, obj3, "guild-role-subscriptions-basic");
         cResult[6] = pushScreen;
-        cResult[7] = tmp18;
-        let tmp16 = tmp18;
+        cResult[7] = tmp17;
+        let tmp15 = tmp17;
       } else {
-        tmp16 = cResult[7];
+        tmp15 = cResult[7];
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1128).intl;
-        const stringResult2 = intl3.string(tmp(1128).t.pXbGYc);
+        const intl3 = tmp(tmp2[8]).intl;
+        const stringResult2 = intl3.string(tmp(tmp2[8]).t.pXbGYc);
         cResult[8] = stringResult2;
-        let tmp19 = stringResult2;
+        let tmp18 = stringResult2;
       } else {
-        tmp19 = cResult[8];
+        tmp18 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { source: pushScreen(18956) };
-        const tmp24 = closure_7(tmp(6901).TableRow.Icon, obj4);
-        cResult[9] = tmp24;
-        let tmp21 = tmp24;
+        const obj4 = { IconComponent: tmp(tmp2[11]).TagsIcon };
+        const tmp22 = closure_6(tmp(tmp2[9]).TableRow.Icon, obj4);
+        cResult[9] = tmp22;
+        let tmp20 = tmp22;
       } else {
-        tmp21 = cResult[9];
+        tmp20 = cResult[9];
       }
       if (cResult[10] !== pushScreen) {
         const obj5 = {
-          label: tmp19,
+          label: tmp18,
           arrow: true,
-          icon: tmp21,
+          icon: tmp20,
           onPress() {
             return pushScreen(constants2.ROLE_SUBSCRIPTIONS_TIERS);
           },
         };
-        const tmp27 = closure_7(tmp(6901).TableRow, obj5, "guild-role-subscriptions-tiers");
+        const tmp25 = closure_6(tmp(tmp2[9]).TableRow, obj5, "guild-role-subscriptions-tiers");
         cResult[10] = pushScreen;
-        cResult[11] = tmp27;
-        let tmp25 = tmp27;
+        cResult[11] = tmp25;
+        let tmp23 = tmp25;
       } else {
-        tmp25 = cResult[11];
+        tmp23 = cResult[11];
       }
       if (cResult[12] === guild) {
         if (cResult[13] === pushScreen) {
           if (cResult[14] === stateFromStores) {
-            let tmp28 = cResult[15];
+            let tmp26 = cResult[15];
           }
           const _Symbol = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl5 = tmp(1128).intl;
-            const stringResult3 = intl5.string(tmp(1128).t.C5Dbwn);
+            const intl5 = tmp(tmp2[8]).intl;
+            const stringResult3 = intl5.string(tmp(tmp2[8]).t.C5Dbwn);
             cResult[16] = stringResult3;
-            let tmp32 = stringResult3;
+            let tmp29 = stringResult3;
           } else {
-            tmp32 = cResult[16];
+            tmp29 = cResult[16];
           }
           const _Symbol2 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj6 = { source: pushScreen(18958) };
-            const tmp37 = closure_7(tmp(6901).TableRow.Icon, obj6);
-            cResult[17] = tmp37;
-            let tmp34 = tmp37;
+            const obj6 = { IconComponent: tmp(tmp2[13]).EmojiMoneyMouthFaceIcon };
+            const tmp33 = closure_6(tmp(tmp2[9]).TableRow.Icon, obj6);
+            cResult[17] = tmp33;
+            let tmp31 = tmp33;
           } else {
-            tmp34 = cResult[17];
+            tmp31 = cResult[17];
           }
           if (cResult[18] !== pushScreen) {
             const obj7 = {
-              label: tmp32,
+              label: tmp29,
               arrow: true,
-              icon: tmp34,
+              icon: tmp31,
               onPress() {
                 return pushScreen(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
               },
             };
-            const tmp40 = closure_7(tmp(6901).TableRow, obj7, "guild-role-subscriptions-emojis");
+            const tmp36 = closure_6(tmp(tmp2[9]).TableRow, obj7, "guild-role-subscriptions-emojis");
             cResult[18] = pushScreen;
-            cResult[19] = tmp40;
-            let tmp38 = tmp40;
+            cResult[19] = tmp36;
+            let tmp34 = tmp36;
           } else {
-            tmp38 = cResult[19];
+            tmp34 = cResult[19];
           }
-          if (cResult[20] === tmp28) {
-            if (cResult[21] === tmp38) {
-              if (cResult[22] === tmp16) {
-                if (cResult[23] === tmp25) {
-                  let tmp41 = cResult[24];
+          if (cResult[20] === tmp26) {
+            if (cResult[21] === tmp34) {
+              if (cResult[22] === tmp15) {
+                if (cResult[23] === tmp23) {
+                  let tmp37 = cResult[24];
                 }
-                return tmp41;
+                return tmp37;
               }
             }
           }
           const obj8 = { title: tmp8, hasIcons: true, children: null };
-          const items1 = [tmp16, tmp25, tmp28, tmp38];
+          const items1 = [tmp15, tmp23, tmp26, tmp34];
           obj8.children = items1;
-          const tmp43 = closure_8(tmp(6985).TableRowGroup, obj8);
-          cResult[20] = tmp28;
-          cResult[21] = tmp38;
-          cResult[22] = tmp16;
-          cResult[23] = tmp25;
-          cResult[24] = tmp43;
-          tmp41 = tmp43;
+          const tmp39 = closure_7(tmp(tmp2[14]).TableRowGroup, obj8);
+          cResult[20] = tmp26;
+          cResult[21] = tmp34;
+          cResult[22] = tmp15;
+          cResult[23] = tmp23;
+          cResult[24] = tmp39;
+          tmp37 = tmp39;
         }
       }
-      let tmp29 = stateFromStores;
+      let tmp27 = stateFromStores;
       if (stateFromStores) {
         const obj9 = { label: null, arrow: true, icon: null, onPress: null };
-        const intl4 = tmp(1128).intl;
-        obj9.label = intl4.string(tmp(1128).t.p2Rsdl);
-        const obj10 = { source: pushScreen(18957) };
-        obj9.icon = closure_7(tmp(6901).TableRow.Icon, obj10);
+        const intl4 = tmp(tmp2[8]).intl;
+        obj9.label = intl4.string(tmp(tmp2[8]).t.p2Rsdl);
+        const obj10 = { IconComponent: tmp(tmp2[12]).WalletIcon };
+        obj9.icon = closure_6(tmp(tmp2[9]).TableRow.Icon, obj10);
         obj9.onPress = function onPress() {
           return pushScreen(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: guild.id });
         };
-        tmp29 = closure_7(tmp(6901).TableRow, obj9, "guild-role-subscriptions-payments");
+        tmp27 = closure_6(tmp(tmp2[9]).TableRow, obj9, "guild-role-subscriptions-payments");
       }
       cResult[12] = guild;
       cResult[13] = pushScreen;
       cResult[14] = stateFromStores;
-      cResult[15] = tmp29;
-      tmp28 = tmp29;
-      const tmpResult = guild(504);
+      cResult[15] = tmp27;
+      tmp26 = tmp27;
+      const tmpResult = guild(pushScreen[7]);
     }
   : function HasCreatedListingsSection(arg0) {
-      ({ guild: require, pushScreen: importDefault } = arg0);
+      ({ guild: require, pushScreen: dependencyMap } = arg0);
       const items = [UserStore];
       let stateFromStores = initialize.useStateFromStores(items, () => isGuildOwner(id, UserStore.getCurrentUser()));
       const obj2 = { title: null, hasIcons: true, children: null };
@@ -204,43 +204,43 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { label: null, arrow: true, icon: null, onPress: null };
       const intl2 = util.intl;
       obj3.label = intl2.string(util.t["/CfKoD"]);
-      obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18955 });
+      obj3.icon = closure_6(TableRow.TableRow.Icon, { IconComponent: CircleInformationIcon.CircleInformationIcon });
       obj3.onPress = function onPress() {
-        return importDefault(constants2.ROLE_SUBSCRIPTIONS_BASIC);
+        return dependencyMap(constants2.ROLE_SUBSCRIPTIONS_BASIC);
       };
-      const items1 = [closure_7(TableRow.TableRow, obj3, "guild-role-subscriptions-basic"), , ,];
+      const items1 = [closure_6(TableRow.TableRow, obj3, "guild-role-subscriptions-basic"), , ,];
       const obj5 = { label: null, arrow: true, icon: null, onPress: null };
       const intl3 = util.intl;
       obj5.label = intl3.string(util.t.pXbGYc);
-      const obj4 = { source: _modDef18955 };
-      obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18956 });
+      const obj4 = { IconComponent: CircleInformationIcon.CircleInformationIcon };
+      obj5.icon = closure_6(TableRow.TableRow.Icon, { IconComponent: TagsIcon.TagsIcon });
       obj5.onPress = function onPress() {
-        return importDefault(constants2.ROLE_SUBSCRIPTIONS_TIERS);
+        return dependencyMap(constants2.ROLE_SUBSCRIPTIONS_TIERS);
       };
-      items1[1] = closure_7(TableRow.TableRow, obj5, "guild-role-subscriptions-tiers");
+      items1[1] = closure_6(TableRow.TableRow, obj5, "guild-role-subscriptions-tiers");
       if (stateFromStores) {
         const obj7 = { label: null, arrow: true, icon: null, onPress: null };
         const intl4 = util.intl;
         obj7.label = intl4.string(util.t.p2Rsdl);
-        const obj8 = { source: _modDef18957 };
-        obj7.icon = closure_7(TableRow.TableRow.Icon, obj8);
+        const obj8 = { IconComponent: WalletIcon.WalletIcon };
+        obj7.icon = closure_6(TableRow.TableRow.Icon, obj8);
         obj7.onPress = function onPress() {
-          return importDefault(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
+          return dependencyMap(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
         };
-        stateFromStores = closure_7(TableRow.TableRow, obj7, "guild-role-subscriptions-payments");
+        stateFromStores = closure_6(TableRow.TableRow, obj7, "guild-role-subscriptions-payments");
       }
       items1[2] = stateFromStores;
       const obj9 = { label: null, arrow: true, icon: null, onPress: null };
       const intl5 = util.intl;
       obj9.label = intl5.string(util.t.C5Dbwn);
-      const obj6 = { source: _modDef18956 };
-      obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18958 });
+      const obj6 = { IconComponent: TagsIcon.TagsIcon };
+      obj9.icon = closure_6(TableRow.TableRow.Icon, { IconComponent: EmojiMoneyMouthFaceIcon.EmojiMoneyMouthFaceIcon });
       obj9.onPress = function onPress() {
-        return importDefault(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
+        return dependencyMap(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
       };
-      items1[3] = closure_7(TableRow.TableRow, obj9, "guild-role-subscriptions-emojis");
+      items1[3] = closure_6(TableRow.TableRow, obj9, "guild-role-subscriptions-emojis");
       obj2.children = items1;
-      return closure_8(TableRowGroup.TableRowGroup, obj2);
+      return closure_7(TableRowGroup.TableRowGroup, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[0] === guild) {
           }
           const obj3 = { pushScreen, guild };
-          const tmp7 = React5(closure_9, obj3);
+          const tmp7 = timestampProducer(closure_8, obj3);
           cResult[0] = guild;
           cResult[1] = pushScreen;
           cResult[2] = tmp7;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp = null;
         if (features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED)) {
           const obj2 = { pushScreen: guild.pushScreen, guild };
-          tmp = React5(closure_9, obj2);
+          tmp = timestampProducer(closure_8, obj2);
         }
       }
       return tmp;

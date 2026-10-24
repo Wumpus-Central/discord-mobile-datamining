@@ -28,7 +28,7 @@ const Constants = fn(1087);
 ({ ME: c10, MOBILE_GUILD_UPSELL_LIST: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = {
   scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm },
   header: null,
@@ -79,7 +79,7 @@ let obj8 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5232).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(5234).TextStyleSheet["heading-md/bold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -363,16 +363,16 @@ export default noop.memo(
         } else {
           tmp11 = cResult[2];
         }
-        selectedGuildId(9360)(tmp11);
+        selectedGuildId(9361)(tmp11);
         if (cResult[3] === selectedGuildId) {
           if (cResult[4] === navigation) {
             let tmp13 = cResult[5];
             let tmp14 = cResult[6];
           }
           const effect = noop.useEffect(tmp13, tmp14);
-          const isScreenLandscape = tmp(8689).useIsScreenLandscape();
-          const tmpResult3 = tmp(8689);
-          const youBarTotalHeight = tmp(16409).useYouBarTotalHeight();
+          const isScreenLandscape = tmp(8691).useIsScreenLandscape();
+          const tmpResult3 = tmp(8691);
+          const youBarTotalHeight = tmp(16441).useYouBarTotalHeight();
           if (!stateFromStores) {
             return null;
           } else {
@@ -391,7 +391,7 @@ export default noop.memo(
                 };
                 const intl = tmp(1128).intl;
                 obj4.children = intl.string(tmp(1128).t["7hB4kg"]);
-                const tmp23 = closure_12(tmp(5232).Text, obj4);
+                const tmp23 = closure_12(tmp(5234).Text, obj4);
                 cResult[10] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -459,7 +459,7 @@ export default noop.memo(
             cResult[9] = items2;
             tmp20 = items2;
           }
-          const tmpResult4 = tmp(16409);
+          const tmpResult4 = tmp(16441);
         }
         const fn2 = function w() {
           if (null != selectedGuildId) {
@@ -523,7 +523,7 @@ export default noop.memo(
         const obj2 = navigation(573);
         obj3.type = navigation(1275).ImpressionTypes.VIEW;
         obj3.name = navigation(1275).ImpressionNames.GUILDS_EMPTY_NUX;
-        selectedGuildId(9360)(obj3);
+        selectedGuildId(9361)(obj3);
         const items1 = [tmp6, navigation];
         const effect = noop.useEffect(() => {
           if (null != selectedGuildId) {
@@ -560,9 +560,9 @@ export default noop.memo(
             }
           }
         }, items1);
-        const tmp7 = selectedGuildId(9360);
-        const isScreenLandscape = navigation(8689).useIsScreenLandscape();
-        navigation(16409);
+        const tmp7 = selectedGuildId(9361);
+        const isScreenLandscape = navigation(8691).useIsScreenLandscape();
+        navigation(16441);
         let tmp14Result = null;
         if (stateFromStores) {
           const obj4 = { style: null, children: null };
@@ -579,7 +579,7 @@ export default noop.memo(
           };
           const intl = tmp2(1128).intl;
           obj7.children = intl.string(tmp2(1128).t["7hB4kg"]);
-          obj6.children = closure_12(tmp2(5232).Text, obj7);
+          obj6.children = closure_12(tmp2(5234).Text, obj7);
           obj5.children = closure_12(closure_5, obj6);
           const items3 = [closure_12(closure_5, obj5)];
           let tmp18;

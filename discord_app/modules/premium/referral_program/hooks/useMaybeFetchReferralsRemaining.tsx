@@ -85,10 +85,10 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       const items = [UserStore];
       const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = flag(504);
-      const hasDiscountApplied = flag(8427).useHasDiscountApplied();
-      const obj3 = flag(8427);
+      const hasDiscountApplied = flag(8429).useHasDiscountApplied();
+      const obj3 = flag(8429);
       let verified;
-      const hasActiveTrial = flag(8428).useHasActiveTrial();
+      const hasActiveTrial = flag(8430).useHasActiveTrial();
       if (stateFromStores != null) {
         verified = stateFromStores.verified;
       }

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import native from "../../../../design/void/native.tsx";
-import Form from "../../../../design/void/Form/native/index.tsx";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
 import FormStylesDefault from "FormStyles.tsx";
 import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
@@ -18,7 +18,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(16525);
+const GuildRoleSubscriptionsConstants = fn(16557);
 ({
   GuildRoleSubscriptionsTierScenes: hasOwnProperty,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
@@ -30,7 +30,7 @@ const jsxProd = fn(21);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function Content() {
-      const cResult = c.c(47);
+      const cResult = c.c(49);
       const tmp5 = FormStylesDefault();
       const editStateContext = EditStateContextProvider.useEditStateContext();
       ({ guildId, editStateId } = editStateContext);
@@ -85,22 +85,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp22 = cResult[5];
       }
       if (cResult[6] !== tmp10) {
-        class B {
+        class U {
           constructor(arg0) {
             return closure_0(arg0.uri);
           }
         }
         cResult[6] = tmp10;
-        cResult[7] = B;
+        cResult[7] = U;
       } else {
-        class B {
+        class U {
           constructor(arg0) {
             return closure_0(arg0.uri);
           }
         }
       }
       if (cResult[8] === tmp13) {
-        class B {
+        class U {
           constructor(arg0) {
             return closure_0(arg0.uri);
           }
@@ -116,12 +116,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult2 = RoleSubscriptionSettingsDisabledContext;
       obj9.previewShape = FormImagePicker.PreviewShape.CIRCLE;
-      obj9.setImage = B;
+      obj9.setImage = U;
       obj9.disabled = roleSubscriptionSettingsDisabled;
       const tmp4Result = FormImagePickerDefault;
       cResult[8] = tmp13;
       cResult[9] = roleSubscriptionSettingsDisabled;
-      cResult[10] = B;
+      cResult[10] = U;
       cResult[11] = React6(FormImagePickerDefault, obj9);
       const tmp26 = React6(FormImagePickerDefault, obj9);
     }
@@ -181,48 +181,52 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj9.children = intl3.string(util.t.rJ6Oad);
       items[2] = React6(FormHeaderDefault, obj9);
       const obj10 = {
-        style: tmp3.textInput,
-        showTopContainer: false,
-        multiline: false,
-        maxLength: maxLength2,
-        value: tmp7,
+        containerStyle: tmp3.inputContainer,
+        accessibilityLabel: null,
+        maxLength: null,
+        value: null,
         placeholder: null,
         onChange: null,
-        autoFocus: true,
-        clearButtonVisibility: null,
+        returnKeyType: "done",
+        clearable: true,
         disabled: null,
       };
       const intl4 = util.intl;
-      obj10.placeholder = intl4.string(util.t["i4/g+E"]);
+      obj10.accessibilityLabel = intl4.string(util.t.rJ6Oad);
+      obj10.maxLength = maxLength2;
+      obj10.value = tmp7;
+      const intl5 = util.intl;
+      obj10.placeholder = intl5.string(util.t["i4/g+E"]);
       obj10.onChange = tmp8;
-      obj10.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
       obj10.disabled = roleSubscriptionSettingsDisabled;
-      items[3] = React6(Form.FormInput, obj10);
+      items[3] = React6(TextInput.TextInput, obj10);
       const obj11 = { style: tmp3.header, children: null };
       const tmpResult7 = FormHeaderDefault;
-      const intl5 = util.intl;
-      obj11.children = intl5.string(util.t["74JctW"]);
+      const intl6 = util.intl;
+      obj11.children = intl6.string(util.t["74JctW"]);
       items[4] = React6(FormHeaderDefault, obj11);
       const obj12 = {
-        style: tmp3.textInput,
-        showTopContainer: false,
-        multiline: true,
-        maxLength,
-        numberOfLines: 3,
-        value: tmp15,
+        containerStyle: tmp3.inputContainer,
+        accessibilityLabel: null,
+        maxLength: null,
+        value: null,
         placeholder: null,
         onChange: null,
         disabled: null,
       };
-      const intl6 = util.intl;
-      obj12.placeholder = intl6.string(util.t["3YHwoG"]);
+      const intl7 = util.intl;
+      obj12.accessibilityLabel = intl7.string(util.t["74JctW"]);
+      obj12.maxLength = maxLength;
+      obj12.value = tmp15;
+      const intl8 = util.intl;
+      obj12.placeholder = intl8.string(util.t["3YHwoG"]);
       obj12.onChange = tmp16;
       obj12.disabled = roleSubscriptionSettingsDisabled;
-      items[5] = React6(Form.FormInput, obj12);
+      items[5] = React6(TextArea.TextArea, obj12);
       const obj13 = { style: tmp3.header, children: null };
       const tmpResult8 = FormHeaderDefault;
-      const intl7 = util.intl;
-      obj13.children = intl7.string(util.t.CrRVAx);
+      const intl9 = util.intl;
+      obj13.children = intl9.string(util.t.CrRVAx);
       items[6] = React6(FormHeaderDefault, obj13);
       const tmpResult9 = FormHeaderDefault;
       if (!tmp20) {

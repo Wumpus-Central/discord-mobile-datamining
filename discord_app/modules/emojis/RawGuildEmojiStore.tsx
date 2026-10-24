@@ -54,8 +54,8 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(4837).TypeTag;
-const LibdiscoreStore = fn(4844).LibdiscoreStore;
+const TypeTag = fn(4839).TypeTag;
+const LibdiscoreStore = fn(4846).LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

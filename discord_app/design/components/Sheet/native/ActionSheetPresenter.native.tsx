@@ -166,7 +166,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { dialogKey: sheetKey, onDismiss: T, zIndex, children: content };
-          const tmp20 = jsx(tmp(5965).Dialog, { dialogKey: sheetKey, onDismiss: T, zIndex, children: content });
+          const tmp20 = jsx(tmp(5967).Dialog, { dialogKey: sheetKey, onDismiss: T, zIndex, children: content });
           cResult[14] = T;
           cResult[15] = content;
           cResult[16] = sheetKey;
@@ -206,7 +206,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         name: impressionName,
         properties: impressionProperties,
       };
-      transitionState(9360)(obj);
+      transitionState(9361)(obj);
       const imperativeHandle = registerDismissHandler.useImperativeHandle(
         ref,
         () => ({
@@ -242,11 +242,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         callback2();
         return true;
       }, items2);
-      transitionState(5970)(callback3);
-      const tmp5 = transitionState(9360);
-      return jsx(transitionState(5578).Provider, {
+      transitionState(5972)(callback3);
+      const tmp5 = transitionState(9361);
+      return jsx(transitionState(5580).Provider, {
         value: memo,
-        children: jsx(sheetKey(5965).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
+        children: jsx(sheetKey(5967).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
       });
     };
 ReactCompilerGating = fn(558);
@@ -298,12 +298,12 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] !== cResult[8]) {
             const obj2 = {
               style: StyleSheet.absoluteFill,
-              component: tmp(5913).TransitionGroupOverlayView,
+              component: tmp(5915).TransitionGroupOverlayView,
               children: tmp11,
             };
-            const tmp17 = jsx(tmp(13282).TransitionGroup, {
+            const tmp17 = jsx(tmp(13319).TransitionGroup, {
               style: StyleSheet.absoluteFill,
-              component: tmp(5913).TransitionGroupOverlayView,
+              component: tmp(5915).TransitionGroupOverlayView,
               children: tmp11,
             });
             cResult[10] = tmp11;
@@ -375,9 +375,9 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
         />
       ));
       const obj = appEntryKey(504);
-      return jsx(appEntryKey(13282).TransitionGroup, {
+      return jsx(appEntryKey(13319).TransitionGroup, {
         style: StyleSheet.absoluteFill,
-        component: appEntryKey(5913).TransitionGroupOverlayView,
+        component: appEntryKey(5915).TransitionGroupOverlayView,
         children: mapped,
       });
     };

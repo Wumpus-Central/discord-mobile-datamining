@@ -1,19 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import CircleXIcon from "../../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import FormSeparatorDefault from "FormSeparator.tsx";
-import _modDef19185 from "../../../../../_runtime/metro/19185__.js";
-import _modDef19186 from "../../../../../_runtime/metro/19186__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = Spacer(1202);
-const Text_Text = Spacer(5232);
-const components_Button_Button = Spacer(5242);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_7 = createStyles.createStyles({
   row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" },
   eligibleRow: { opacity: 0.8 },
@@ -22,207 +21,233 @@ let closure_7 = createStyles.createStyles({
   rowLabel: { marginBottom: 4 },
   actionButtonWrapper: { marginTop: 12 },
   divider: { marginHorizontal: 24 },
+  lastRowSpacer: { height: 16 },
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function EligibilityChecklistRow(arg0) {
-      let Spacer = require;
-      let obj = dependencyMap;
-      const cResult = c.c(30);
+      const cResult = c.c(31);
       ({ isLast, item } = arg0);
-      let divider = closure_7();
-      if (cResult[0] === divider.row) {
-        if (cResult[1] === tmp2) {
-          let tmp3 = cResult[2];
-        }
-        if (item.checked) {
-          let tmp4Result = _modDef19185;
-          let tmp6 = importDefault;
-        } else {
-          tmp4Result = _modDef19186;
-          tmp6 = importDefault;
-        }
-        if (cResult[3] === divider.rowStatusIcon) {
-          if (cResult[4] === tmp4Result) {
-            let tmp7 = cResult[5];
-          }
-          const tmp10 = item.checked ? item.checkedLabel : item.uncheckedLabel;
-          if (cResult[6] === divider.rowLabel) {
-            if (cResult[7] === tmp10) {
-              let tmp11 = cResult[8];
+      let lastRowSpacer = closure_7();
+      if (cResult[0] === item.checked) {
+        if (cResult[1] === lastRowSpacer.rowStatusIcon) {
+          if (cResult[3] === lastRowSpacer.rowTextColumn) {
+            if (cResult[4] === tmp9) {
+              let tmp10 = cResult[5];
             }
-            if (cResult[9] !== item.description) {
-              const obj3 = { variant: "text-sm/normal", color: "interactive-text-default", children: item.description };
-              const tmp16 = React4(Text_Text.Text, obj3);
-              cResult[9] = item.description;
-              cResult[10] = tmp16;
-              let tmp14 = tmp16;
-            } else {
-              tmp14 = cResult[10];
-            }
-            if (cResult[11] === item.actionHandler) {
-              if (cResult[12] === item.actionLabel) {
-                if (cResult[13] === divider.actionButtonWrapper) {
-                  let tmp17 = cResult[14];
-                }
-                if (cResult[15] === divider.rowTextColumn) {
-                  if (cResult[16] === tmp11) {
-                    if (cResult[17] === tmp14) {
-                      if (cResult[18] === tmp17) {
-                        let tmp22 = cResult[19];
-                      }
-                      if (cResult[20] === tmp3) {
-                        if (cResult[21] === tmp7) {
-                          if (cResult[22] === tmp22) {
-                            let tmp26 = cResult[23];
-                          }
-                          if (cResult[24] === isLast) {
-                            if (cResult[25] === divider.divider) {
-                              if (cResult[27] === tmp26) {
-                                if (cResult[28] === tmp30) {
-                                  let tmp34 = cResult[29];
-                                }
-                                return tmp34;
-                              }
-                              const obj4 = { children: null };
-                              const items = [tmp26, cResult[26]];
-                              obj4.children = items;
-                              const tmp37 = hasOwnProperty(timestampProducer, obj4);
-                              cResult[27] = tmp26;
-                              cResult[28] = cResult[26];
-                              cResult[29] = tmp37;
-                              tmp34 = tmp37;
-                            }
-                          }
-                          if (isLast) {
-                            Spacer = native.Spacer;
-                            obj = { size: 16 };
-                            let tmp31Result = React4(Spacer, obj);
-                          } else {
-                            const obj5 = { style: divider.divider };
-                            tmp31Result = React4(tmp6(16537), obj5);
-                          }
-                          cResult[24] = isLast;
-                          divider = divider.divider;
-                          cResult[25] = divider;
-                          cResult[26] = tmp31Result;
+            const tmp11 = item.checked ? item.checkedLabel : item.uncheckedLabel;
+            if (cResult[6] === lastRowSpacer.rowLabel) {
+              if (cResult[7] === tmp11) {
+                let tmp12 = cResult[8];
+              }
+              if (cResult[9] !== item.description) {
+                const obj2 = {
+                  variant: "text-sm/normal",
+                  color: "interactive-text-default",
+                  children: item.description,
+                };
+                const tmp17 = React4(Text_Text.Text, obj2);
+                cResult[9] = item.description;
+                cResult[10] = tmp17;
+                let tmp15 = tmp17;
+              } else {
+                tmp15 = cResult[10];
+              }
+              if (cResult[11] === item.actionHandler) {
+                if (cResult[12] === item.actionLabel) {
+                  if (cResult[13] === lastRowSpacer.actionButtonWrapper) {
+                    let tmp18 = cResult[14];
+                  }
+                  if (cResult[15] === tmp10) {
+                    if (cResult[16] === tmp12) {
+                      if (cResult[17] === tmp15) {
+                        if (cResult[18] === tmp18) {
+                          let tmp23 = cResult[19];
                         }
+                        if (cResult[20] === lastRowSpacer.row) {
+                          if (cResult[21] === tmp4) {
+                            if (cResult[22] === tmp23) {
+                              let tmp27 = cResult[23];
+                            }
+                            if (cResult[24] === isLast) {
+                              if (cResult[25] === lastRowSpacer.divider) {
+                                if (cResult[26] === lastRowSpacer.lastRowSpacer) {
+                                  if (cResult[28] === cResult[27]) {
+                                    if (cResult[29] === tmp27) {
+                                      let tmp37 = cResult[30];
+                                    }
+                                    return tmp37;
+                                  }
+                                  const obj3 = { children: null };
+                                  const items = [tmp27, cResult[27]];
+                                  obj3.children = items;
+                                  const tmp40 = hasOwnProperty(timestampProducer, obj3);
+                                  cResult[28] = cResult[27];
+                                  cResult[29] = tmp27;
+                                  cResult[30] = tmp40;
+                                  tmp37 = tmp40;
+                                }
+                              }
+                            }
+                            if (isLast) {
+                              const obj4 = { style: lastRowSpacer.lastRowSpacer };
+                              let tmp32Result = React4(View, obj4);
+                            } else {
+                              const obj5 = { style: lastRowSpacer.divider };
+                              tmp32Result = React4(FormSeparatorDefault, obj5);
+                            }
+                            cResult[24] = isLast;
+                            isLast = lastRowSpacer.divider;
+                            cResult[25] = isLast;
+                            lastRowSpacer = lastRowSpacer.lastRowSpacer;
+                            cResult[26] = lastRowSpacer;
+                            cResult[27] = tmp32Result;
+                          }
+                        }
+                        const obj6 = { style: lastRowSpacer.row, children: null };
+                        const items1 = [tmp4, tmp23];
+                        obj6.children = items1;
+                        const tmp30 = hasOwnProperty(View, obj6);
+                        cResult[20] = lastRowSpacer.row;
+                        cResult[21] = tmp4;
+                        cResult[22] = tmp23;
+                        cResult[23] = tmp30;
+                        tmp27 = tmp30;
                       }
-                      const obj6 = { style: tmp3, children: null };
-                      const items1 = [tmp7, tmp22];
-                      obj6.children = items1;
-                      const tmp29 = hasOwnProperty(View, obj6);
-                      cResult[20] = tmp3;
-                      cResult[21] = tmp7;
-                      cResult[22] = tmp22;
-                      cResult[23] = tmp29;
-                      tmp26 = tmp29;
                     }
                   }
+                  const obj8 = { style: tmp10, children: null };
+                  const items2 = [tmp12, tmp15, tmp18];
+                  obj8.children = items2;
+                  const tmp26 = hasOwnProperty(View, obj8);
+                  cResult[15] = tmp10;
+                  cResult[16] = tmp12;
+                  cResult[17] = tmp15;
+                  cResult[18] = tmp18;
+                  cResult[19] = tmp26;
+                  tmp23 = tmp26;
                 }
-                const obj8 = { style: divider.rowTextColumn, children: null };
-                const items2 = [tmp11, tmp14, tmp17];
-                obj8.children = items2;
-                const tmp25 = hasOwnProperty(View, obj8);
-                cResult[15] = divider.rowTextColumn;
-                cResult[16] = tmp11;
-                cResult[17] = tmp14;
-                cResult[18] = tmp17;
-                cResult[19] = tmp25;
-                tmp22 = tmp25;
               }
+              let tmp20 = null != item.actionHandler && null != item.actionLabel;
+              if (tmp20) {
+                const obj9 = { style: lastRowSpacer.actionButtonWrapper, children: null };
+                ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
+                obj9.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
+                tmp20 = React4(View, obj9);
+                const obj10 = { text: null, onPress: null, grow: true };
+              }
+              cResult[11] = item.actionHandler;
+              cResult[12] = item.actionLabel;
+              cResult[13] = lastRowSpacer.actionButtonWrapper;
+              cResult[14] = tmp20;
+              tmp18 = tmp20;
             }
-            let tmp19 = null != item.actionHandler && null != item.actionLabel;
-            if (tmp19) {
-              const obj9 = { style: divider.actionButtonWrapper, children: null };
-              ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
-              obj9.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
-              tmp19 = React4(View, obj9);
-              const obj10 = { text: null, onPress: null, grow: true };
-            }
-            cResult[11] = item.actionHandler;
-            cResult[12] = item.actionLabel;
-            cResult[13] = divider.actionButtonWrapper;
-            cResult[14] = tmp19;
-            tmp17 = tmp19;
+            const obj11 = {
+              style: lastRowSpacer.rowLabel,
+              variant: "text-md/semibold",
+              color: "mobile-text-heading-primary",
+              children: tmp11,
+            };
+            const tmp14 = React4(Text_Text.Text, obj11);
+            cResult[6] = lastRowSpacer.rowLabel;
+            cResult[7] = tmp11;
+            cResult[8] = tmp14;
+            tmp12 = tmp14;
           }
-          const obj11 = {
-            style: divider.rowLabel,
-            variant: "text-md/semibold",
-            color: "mobile-text-heading-primary",
-            children: tmp10,
-          };
-          const tmp13 = React4(Text_Text.Text, obj11);
-          cResult[6] = divider.rowLabel;
-          cResult[7] = tmp10;
-          cResult[8] = tmp13;
-          tmp11 = tmp13;
+          const items3 = [lastRowSpacer.rowTextColumn, item.checked && lastRowSpacer.eligibleRow];
+          cResult[3] = lastRowSpacer.rowTextColumn;
+          cResult[4] = item.checked && lastRowSpacer.eligibleRow;
+          cResult[5] = items3;
+          tmp10 = items3;
         }
-        const obj20 = { style: divider.rowStatusIcon, source: tmp4Result };
-        const tmp9 = React4(tmp6(5667), obj20);
-        cResult[3] = divider.rowStatusIcon;
-        cResult[4] = tmp4Result;
-        cResult[5] = tmp9;
-        tmp7 = tmp9;
       }
-      const items3 = [divider.row, item.checked && divider.eligibleRow];
-      cResult[0] = divider.row;
-      cResult[1] = item.checked && divider.eligibleRow;
-      cResult[2] = items3;
-      tmp3 = items3;
+      if (item.checked) {
+        const obj12 = {
+          style: lastRowSpacer.rowStatusIcon,
+          size: "custom",
+          color: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
+          secondaryColor: nativeDefault.colors.WHITE,
+        };
+        let tmp5Result = React4(CircleCheckIcon.CircleCheckIcon, obj12);
+      } else {
+        const obj23 = {
+          style: lastRowSpacer.rowStatusIcon,
+          size: "custom",
+          color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
+          secondaryColor: nativeDefault.colors.WHITE,
+        };
+        tmp5Result = React4(CircleXIcon.CircleXIcon, obj23);
+      }
+      cResult[0] = item.checked;
+      cResult[1] = lastRowSpacer.rowStatusIcon;
+      cResult[2] = tmp5Result;
     }
   : function EligibilityChecklistRow(item) {
       item = item.item;
       const tmp = closure_7();
-      const items = [tmp.row];
-      let eligibleRow = item.checked;
-      if (eligibleRow) {
-        eligibleRow = tmp.eligibleRow;
-      }
-      const obj = { style: items, children: null };
-      items[1] = eligibleRow;
-      const obj2 = { style: tmp.rowStatusIcon, source: null };
+      const obj = { style: tmp.row, children: null };
       if (item.checked) {
-        let tmp6Result = _modDef19185;
+        const obj2 = {
+          style: tmp.rowStatusIcon,
+          size: "custom",
+          color: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
+          secondaryColor: nativeDefault.colors.WHITE,
+        };
+        let tmp5Result = React4(CircleCheckIcon.CircleCheckIcon, obj2);
+        let tmp10 = require;
+        let tmp12 = importDefault;
+        let tmp13 = React4;
       } else {
-        tmp6Result = _modDef19186;
+        const obj3 = {
+          style: tmp.rowStatusIcon,
+          size: "custom",
+          color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
+          secondaryColor: nativeDefault.colors.WHITE,
+        };
+        tmp5Result = React4(CircleXIcon.CircleXIcon, obj3);
+        tmp10 = require;
+        tmp12 = importDefault;
+        tmp13 = React4;
       }
-      obj2.source = tmp6Result;
-      const items1 = [React4(FastImageDefault, obj2)];
-      const obj3 = { style: tmp.rowTextColumn, children: null };
+      const items = [tmp5Result];
+      const items1 = [tmp.rowTextColumn];
+      const obj4 = { style: items1, children: null };
+      items1[1] = item.checked && tmp.eligibleRow;
       const items2 = [
-        React4(Text_Text.Text, {
+        tmp13(tmp10(5234).Text, {
           style: tmp.rowLabel,
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           children: item.checked ? item.checkedLabel : item.uncheckedLabel,
         }),
-        React4(Text_Text.Text, {
+        tmp13(tmp10(5234).Text, {
           variant: "text-sm/normal",
           color: "interactive-text-default",
           children: item.description,
         }),
       ];
-      let tmp5Result = null != item.actionHandler && null != item.actionLabel;
-      if (tmp5Result) {
-        const obj6 = { style: tmp.actionButtonWrapper, children: null };
-        ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
-        obj6.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
-        tmp5Result = React4(View, obj6);
-        const obj8 = { text: null, onPress: null, grow: true };
+      let tmp13Result = null != item.actionHandler && null != item.actionLabel;
+      if (tmp13Result) {
+        const obj7 = { style: tmp.actionButtonWrapper, children: null };
+        ({ actionLabel: obj8.text, actionHandler: obj8.onPress } = item);
+        obj7.children = tmp13(tmp10(5244).Button, { text: null, onPress: null, grow: true });
+        tmp13Result = tmp13(View, obj7);
+        const obj9 = { text: null, onPress: null, grow: true };
       }
-      items2[2] = tmp5Result;
-      obj3.children = items2;
-      items1[1] = hasOwnProperty(View, obj3);
-      obj.children = items1;
+      items2[2] = tmp13Result;
+      obj4.children = items2;
+      items[1] = hasOwnProperty(View, obj4);
+      obj.children = items;
       const children = [hasOwnProperty(View, obj)];
+      const obj17 = { style: null };
       if (item.isLast) {
-        let tmp5Result2 = React4(native.Spacer, { size: 16 });
+        obj17.style = tmp.lastRowSpacer;
+        let tmp13Result2 = tmp13(View, obj17);
       } else {
-        const obj15 = { style: tmp.divider };
-        tmp5Result2 = React4(FormSeparatorDefault, obj15);
+        obj17.style = tmp.divider;
+        tmp13Result2 = tmp13(tmp12(16569), obj17);
       }
-      children[1] = tmp5Result2;
+      children[1] = tmp13Result2;
       return hasOwnProperty(timestampProducer, { children });
     };
 ReactCompilerGating = fn(558);
@@ -241,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else if (cResult[0] !== items) {
         if (cResult[2] !== items.length) {
-          const fn = function o(item, arg1) {
+          const fn = function c(item, arg1) {
             return React4(closure_8, { item, isLast: arg1 === items.length - 1 }, item.checkedLabel);
           };
           cResult[2] = items.length;

@@ -8,7 +8,7 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef15809 from "../../../../_runtime/metro/15809__.js";
+import _modDef15832 from "../../../../_runtime/metro/15832__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
@@ -23,19 +23,19 @@ require = fn;
 let closure_3 = ["isTryItOut"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7302).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7304).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1087);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_11, PRONOUNS_MAX_LENGTH: closure_12 } = Constants);
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HexagonCampaignPerk: map1, HexagonCampaignPerkAvailability: closure_14 } = HexagonCampaignConstants);
 let closure_15 = fn(1097).ProfileCustomizationScrollPositions;
-const constants3 = fn(15808).UserProfileEditAutoFocusElement;
+const constants3 = fn(15831).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 let obj = {
-  assetOrigin: fn(7084).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef15809,
-  staticImageUri: _modDef15809,
+  assetOrigin: fn(7086).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef15832,
+  staticImageUri: _modDef15832,
   description: "",
   originalAsset: "unicodeVersion",
 };

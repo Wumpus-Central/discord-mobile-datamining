@@ -983,7 +983,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(8143).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8145).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -995,17 +995,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(8172);
+                            obj16 = v0(8174);
                           }
                           tmp151 = str;
-                          obj15 = v0(8172);
+                          obj15 = v0(8174);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(8143).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(8145).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp195 = null != closure_133_0.mimeType;
                         if (tmp195) {
@@ -1027,11 +1027,11 @@ prototype["upload"] = function upload() {
                           return obj7;
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(8172).heicMimeType(closure_133_0.item.file);
-                            const obj20 = v0(8172);
+                            let heicMimeTypeResult = v0(8174).heicMimeType(closure_133_0.item.file);
+                            const obj20 = v0(8174);
                           } else {
-                            heicMimeTypeResult = v0(8172).jxrMimeType(closure_133_0.item.file);
-                            const obj19 = v0(8172);
+                            heicMimeTypeResult = v0(8174).jxrMimeType(closure_133_0.item.file);
+                            const obj19 = v0(8174);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1042,7 +1042,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(8143).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(8145).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1053,7 +1053,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(8173).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(8175).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1109,10 +1109,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(7078);
+                    const obj10 = status(7080);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(7078).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(7080).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_3.convertedFile;
@@ -1168,7 +1168,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_5 = value;
-              uploadTarget = v0(8174).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(8176).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_5.filename) {
                 if ("" !== closure_132_5.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1391,7 +1391,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(8174);
+            obj16 = size(8176);
           }
         } else {
           if (1 === tmp5) {
@@ -1468,7 +1468,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(8144).getFileData(uri), done: false };
+                          const obj9 = { value: size(8146).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1907,7 +1907,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(8174).getUploadTarget(self.item.target);
+            const uploadTarget = v3(8176).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1297).HTTP;

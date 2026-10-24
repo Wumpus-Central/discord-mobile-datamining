@@ -38,7 +38,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   relativeContainer: { position: "relative" },
   welcomeContainer: {

@@ -15,7 +15,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsMutualGuildsSettingValue() {
       const cResult = c.c(2);
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp5.mutualGuilds;
     }
   : function useFriendRequestsMutualGuildsSettingValue() {
-      const FriendSourceFlagsSetting = setting(4797).FriendSourceFlagsSetting;
+      const FriendSourceFlagsSetting = setting(4799).FriendSourceFlagsSetting;
       setting = FriendSourceFlagsSetting.useSetting();
       const items = [setting];
       return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualGuilds;
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(8330).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8332).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFriendRequestsMutualGuildsSettingValue() {
         const cResult = c.c(2);
@@ -61,7 +61,7 @@ const toggle = SettingBuilders.createToggle({
         return tmp5.mutualGuilds;
       }
     : function useFriendRequestsMutualGuildsSettingValue() {
-        const FriendSourceFlagsSetting = setting(4797).FriendSourceFlagsSetting;
+        const FriendSourceFlagsSetting = setting(4799).FriendSourceFlagsSetting;
         setting = FriendSourceFlagsSetting.useSetting();
         const items = [setting];
         return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualGuilds;

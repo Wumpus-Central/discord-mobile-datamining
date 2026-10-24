@@ -8,7 +8,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(4876).isEveryoneRole;
+const isEveryoneRole = fn(4878).isEveryoneRole;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

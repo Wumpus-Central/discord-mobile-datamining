@@ -8,10 +8,10 @@ const require = globalThis.__r;
 const require = fn;
 let set = new Set();
 let obj = {
-  layoutType: fn(4831).ForumLayout.LIST,
-  sortOrder: fn(4830).ThreadSortOrder.CREATION_DATE,
+  layoutType: fn(4833).ForumLayout.LIST,
+  sortOrder: fn(4832).ThreadSortOrder.CREATION_DATE,
   tagFilter: set,
-  tagSetting: fn(4832).ThreadSearchTagSetting.MATCH_SOME,
+  tagSetting: fn(4834).ThreadSearchTagSetting.MATCH_SOME,
 };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);

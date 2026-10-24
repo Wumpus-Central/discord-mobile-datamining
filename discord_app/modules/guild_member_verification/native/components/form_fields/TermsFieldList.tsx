@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = {
   termsContainer: {
     padding: 16,
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = rules(1128).intl;
       obj2.children = intl.string(rules(1128).t.prJqwT);
       let items = [
-        closure_5(rules(5232).Text, obj2),
+        closure_5(rules(5234).Text, obj2),
         closure_5(View, {
           accessibilityRole: "list",
           children: rules.map((rule, index) => {

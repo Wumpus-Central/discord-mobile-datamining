@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting("modules/spatial_audio/SpatialAudioCon
 const obj = {
   isSpatial: false,
   limiterEnabled: true,
-  binaural: { spatialBlend: 1, bilinearInterpolation: false, hrtfVolume: 1, hrtfNormalization: false },
+  binaural: { spatialBlend: 1, bilinearInterpolation: false, hrtfVolume: 1, hrtfNormalization: false, hrtfFile: "" },
   distanceAttenuation: { enabled: false, minDistance: 1 },
   airAbsorption: { enabled: false, coefficients: { low: 0.0002, mid: 0.0017, high: 0.0182 } },
   reflections: null,

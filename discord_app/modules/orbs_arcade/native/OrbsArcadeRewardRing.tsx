@@ -8,7 +8,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(7960).Path);
+let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(7962).Path);
 const __initData = {
   code: "function OrbsArcadeRewardRingTsx1(){const{arcLength,progress}=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};}",
 };
