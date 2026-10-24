@@ -1,15 +1,15 @@
-// === Module 13110: useVoiceMessageTooltip ===
+// === Module 13147: useVoiceMessageTooltip ===
 
-// Module 13110 (useVoiceMessageTooltip)
+// Module 13147 (useVoiceMessageTooltip)
 import util from "util" /* 1128 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7025 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7027 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(13018);
+const VoiceMessagesUIStore = fn(13055);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: metroRequire } = VoiceMessagesUIStore);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

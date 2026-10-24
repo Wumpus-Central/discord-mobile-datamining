@@ -1,14 +1,14 @@
-// === Module 5666: BaseIconImage ===
+// === Module 5668: BaseIconImage ===
 
-// Module 5666 (BaseIconImage)
+// Module 5668 (BaseIconImage)
 import c from "c" /* 576 */;
-import useToken from "useToken" /* 5250 */;
-import FastImageDefault from "FastImage" /* 5667 */;
+import useToken from "useToken" /* 5252 */;
+import FastImageDefault from "FastImage" /* 5669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const dependencyMap = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "cix", height: "unicodeVersion" }, refresh_sm: { width: 18, height: 18 } };
+const dependencyMap = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "Reflect" }, refresh_sm: { width: 18, height: 18 } };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");

@@ -1,6 +1,6 @@
-// === Module 7405: GameActionCreators ===
+// === Module 7407: GameActionCreators ===
 
-// Module 7405 (GameActionCreators)
+// Module 7407 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2022 */;
@@ -137,7 +137,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4816).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4818).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

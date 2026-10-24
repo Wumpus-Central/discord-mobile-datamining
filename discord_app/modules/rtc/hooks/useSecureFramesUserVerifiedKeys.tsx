@@ -1,9 +1,9 @@
-// === Module 17215: useSecureFramesUserVerifiedKeys ===
+// === Module 17247: useSecureFramesUserVerifiedKeys ===
 
-// Module 17215 (useSecureFramesUserVerifiedKeys)
+// Module 17247 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9179 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9180 */;
 
 const require = globalThis.__r;
 

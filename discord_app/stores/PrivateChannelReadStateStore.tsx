@@ -1,14 +1,14 @@
-// === Module 15036: PrivateChannelReadStateStore ===
+// === Module 15059: PrivateChannelReadStateStore ===
 
-// Module 15036 (PrivateChannelReadStateStore)
+// Module 15059 (PrivateChannelReadStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FunctionUtils from "FunctionUtils" /* 2041 */;
-import ChannelRecord from "ChannelRecord" /* 4825 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7320 */;
+import ChannelRecord from "ChannelRecord" /* 4827 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7322 */;
 import size from "module_2" /* 2 */;
 
 function rebuildUnreads() {

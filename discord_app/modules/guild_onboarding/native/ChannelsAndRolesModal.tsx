@@ -1,21 +1,21 @@
-// === Module 11238: ChannelsAndRolesModal ===
+// === Module 11239: ChannelsAndRolesModal ===
 
-// Module 11238 (ChannelsAndRolesModal)
+// Module 11239 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7439 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10029 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7441 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7194).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7196).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
   }
   const obj = guildId(576);
   const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-  const tmp9 = defaultTab(7439)(stateFromStores);
+  const tmp9 = defaultTab(7441)(stateFromStores);
   if (cResult[3] !== tmp9) {
     const intl = tmp(1128).intl;
     const string = intl.string;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
         }
       }
       const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-      const tmp15 = closure_8(tmp8(10029), obj2);
+      const tmp15 = closure_8(tmp8(10030), obj2);
       cResult[8] = tmp10;
       cResult[9] = tmp13;
       cResult[10] = tmp15;

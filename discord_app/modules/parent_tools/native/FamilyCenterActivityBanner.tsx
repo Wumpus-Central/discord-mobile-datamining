@@ -1,23 +1,23 @@
-// === Module 16138: FamilyCenterActivityBanner ===
+// === Module 16162: FamilyCenterActivityBanner ===
 
-// Module 16138 (FamilyCenterActivityBanner)
+// Module 16162 (FamilyCenterActivityBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import useUserLinks from "useUserLinks" /* 8123 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8124 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12841 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 16139 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import useUserLinks from "useUserLinks" /* 8125 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8126 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12878 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 16163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterActivityBannerButton() {
@@ -64,7 +64,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   }
   return tmp6;
 });
-createStyles = fn(4969);
+createStyles = fn(4971);
 let obj4 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 obj4.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   const tmpResult = useAgeSpecificText;
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-  const tmp4Result = importDefault(tmp5 ? 16146 : 16147);
+  const tmp4Result = importDefault(tmp5 ? 16170 : 16171);
   if (cResult[4] === tmp6.art) {
     if (cResult[5] === tmp4Result) {
       let tmp19 = cResult[6];
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2536.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2536.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
   const formatResult = intl3.format(_modDef2536.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 16146 : 16147);
+  obj5.source = importDefault(tmp3 ? 16170 : 16171);
   obj5.style = tmp4.art;
   const items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

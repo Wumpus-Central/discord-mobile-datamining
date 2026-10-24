@@ -1,15 +1,15 @@
-// === Module 6360: CheckpointCustomizationUtils ===
+// === Module 6362: CheckpointCustomizationUtils ===
 
-// Module 6360 (CheckpointCustomizationUtils)
+// Module 6362 (CheckpointCustomizationUtils)
 import util from "util" /* 1128 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6014 */;
-import CheckpointTrait from "CheckpointTrait" /* 6037 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6038 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6358 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6361 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6362 */;
-import CheckpointConstants from "CheckpointConstants" /* 6013 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6016 */;
+import CheckpointTrait from "CheckpointTrait" /* 6039 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6040 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6360 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6364 */;
+import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import size from "module_2" /* 2 */;
 
 function getAssetDescription(asset) {

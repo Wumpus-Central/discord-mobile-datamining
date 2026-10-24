@@ -1,19 +1,19 @@
-// === Module 13262: ApplicationCommandBar ===
+// === Module 13299: ApplicationCommandBar ===
 
-// Module 13262 (ApplicationCommandBar)
+// Module 13299 (ApplicationCommandBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import usePreviousDefault from "usePrevious" /* 6658 */;
-import Pressables from "Pressables" /* 6906 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13086 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13263 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import usePreviousDefault from "usePrevious" /* 6660 */;
+import Pressables from "Pressables" /* 6908 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13123 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 
 require = fn;
 let closure_3 = ["option", "optionState"];
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { applicationCommandBar: { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" }, applicationIcon: null, applicationTopWrapperScrollView: null, applicationName: null, applicationOptionalOptionsDivider: null, applicationOptionalOptionsDividerWithNoRequired: null, applicationOptionalOptionsIndicator: null, applicationDescriptionContainer: null, applicationDescriptionDivider: null, applicationCommandOption: null, applicationCommandOptionText: null, activeCommandOption: null, activeCommandOptionText: null, completeCommandOptionText: null, errorCommandOptionText: null, optionDescriptionContainer: null, descriptionEllipsis: null, descriptionEllipsisDots: null, completeCommandOption: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md, marginRight: 16 };
 obj2.applicationIcon = size;
@@ -35,8 +35,8 @@ obj2.applicationDescriptionContainer = { flexShrink: 1 };
 let obj3 = { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
 obj2.applicationDescriptionDivider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6705).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
-let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6705).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6707).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6707).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -51,7 +51,7 @@ obj2.descriptionEllipsis = { marginLeft: 10, backgroundColor: nativeDefault.colo
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6705).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6707).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationCommandOptionItem(arg0) {
@@ -274,7 +274,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Applic
   return v65535(Pressables.PressableOpacity, obj);
 });
 fn(558);
-const obj12 = { backgroundColor: fn(6705).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+const obj12 = { backgroundColor: fn(6707).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) => {
   const cResult = c.c(34);
@@ -1107,9 +1107,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = c10(section(5667), obj4);
+    tmp22 = c10(section(5669), obj4);
   }
-  const items5 = [tmp22, c10(command(5232).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, c10(command(5234).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -1151,7 +1151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
     const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "eyebrow", color: "text-muted", children: null };
     const intl = tmp12(1128).intl;
     obj7.children = intl.string(tmp12(1128).t.U19GM3);
-    items7[1] = tmp25(tmp12(5232).Text, obj7);
+    items7[1] = tmp25(tmp12(5234).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   }
   items5[3] = tmp19Result;
   obj3.children = items5;
-  const items8 = [closure_12(ref, obj3), c10(command(8949).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8949).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [closure_12(ref, obj3), c10(command(8951).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8951).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj2.children = items8;
   return closure_12(ref, obj2);
 });

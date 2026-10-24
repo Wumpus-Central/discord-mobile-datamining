@@ -1,52 +1,39 @@
-// === Module 19272: SelectEmojiRolesActionSheet ===
+// === Module 19320: SelectEmojiRolesActionSheet ===
 
-// Module 19272 (SelectEmojiRolesActionSheet)
+// Module 19320 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Pressables from "Pressables" /* 6906 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
-import ActionSheet from "ActionSheet" /* 7296 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16532 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Pressables from "Pressables" /* 6908 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
+import ActionSheet from "ActionSheet" /* 7298 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16564 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6649 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1206).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4969);
-let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
-let TextStyles = TextStyles_mod;
-const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
-obj2.roleName = { flexShrink: 1 };
+const createStyles = fn(4971);
+let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: { flexShrink: 1 }, archivedBadge: null, archivedBadgeText: null, divider: null, saveButtonDisabled: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let obj4 = { flexShrink: 1 };
 obj2.archivedBadge = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-let TextStyles = TextStyles_mod;
-const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_BOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
-obj2.archivedBadgeText = {};
-let obj5 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-let obj6 = {};
+obj2.archivedBadgeText = { textTransform: "uppercase" };
+let obj4 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-let TextStyles = TextStyles_mod;
-const merged2 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
-obj2.saveButton = {};
 obj2.saveButtonDisabled = { opacity: 0.3 };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj7 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-const obj8 = {};
+let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/SelectEmojiRolesActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEmojiRolesActionSheet(onSave) {
-  const cResult = onSave(576).c(41);
+  const cResult = onSave(576).c(38);
   onSave = onSave.onSave;
   const emoji = onSave.emoji;
   const onCancel = onSave.onCancel;
@@ -88,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     tmp12 = cResult[2];
   }
   let obj = onSave(576);
-  const subscriptionListingsForGuild = onSave(16532).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
+  const subscriptionListingsForGuild = onSave(16564).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     function toggleRole(arg0) {
       closure_0 = arg0;
@@ -121,119 +108,109 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                 if (cResult[13] === subscriptionListingsForGuild) {
                   let tmp15 = cResult[14];
                 }
-                let saveButtonDisabled = tmp16;
                 if (!tmp11) {
-                  saveButtonDisabled = tmp4.saveButtonDisabled;
+                  const saveButtonDisabled = tmp4.saveButtonDisabled;
                 }
-                if (cResult[15] === tmp4.saveButton) {
-                  if (cResult[16] === saveButtonDisabled) {
-                    let tmp17 = cResult[17];
-                  }
-                  if (cResult[18] !== tmp5) {
-                    let intl = tmp(1128).intl;
-                    const string = intl.string;
-                    let t = tmp(1128).t;
-                    if (tmp5) {
-                      t = t["3UB9ad"];
-                      let stringResult = string(t);
-                    } else {
-                      stringResult = string(t["R3BPH+"]);
-                    }
-                    cResult[18] = tmp5;
-                    cResult[19] = stringResult;
+                if (cResult[15] !== tmp5) {
+                  let intl = tmp(1128).intl;
+                  const string = intl.string;
+                  let t = tmp(1128).t;
+                  if (tmp5) {
+                    t = t["3UB9ad"];
+                    let stringResult = string(t);
                   } else {
-                    if (cResult[20] === tmp17) {
-                      if (cResult[21] === tmp18) {
-                        let tmp22 = cResult[22];
-                      }
-                      if (cResult[23] === tmp14) {
-                        if (cResult[24] === tmp22) {
-                          if (cResult[25] === tmp16) {
-                            let tmp25 = cResult[26];
-                          }
-                          const _Symbol = Symbol;
-                          if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                            const intl2 = tmp(1128).intl;
-                            const stringResult1 = intl2.string(tmp(1128).t.JPU0EF);
-                            const intl3 = tmp(1128).intl;
-                            const stringResult2 = intl3.string(tmp(1128).t.MZusPv);
-                            cResult[27] = stringResult1;
-                            cResult[28] = stringResult2;
-                            let tmp29 = stringResult2;
-                            let tmp28 = stringResult1;
-                          } else {
-                            tmp28 = cResult[27];
-                            tmp29 = cResult[28];
-                          }
-                          if (cResult[29] !== tmp25) {
-                            let obj3 = { title: tmp28, subtitle: tmp29, trailing: tmp25 };
-                            const tmp34 = closure_6(tmp(7246).BottomSheetTitleHeader, obj3);
-                            cResult[29] = tmp25;
-                            cResult[30] = tmp34;
-                            let tmp32 = tmp34;
-                          } else {
-                            tmp32 = cResult[30];
-                          }
-                          if (cResult[31] !== subscriptionListingsForGuild.length) {
-                            let items = [subscriptionListingsForGuild.length];
-                            cResult[31] = subscriptionListingsForGuild.length;
-                            cResult[32] = items;
-                            let tmp35 = items;
-                          } else {
-                            tmp35 = cResult[32];
-                          }
-                          if (cResult[33] === tmp15) {
-                            if (cResult[34] === tmp4.list) {
-                              if (cResult[35] === tmp35) {
-                                let tmp36 = cResult[36];
-                              }
-                              if (cResult[37] === tmp32) {
-                                if (cResult[38] === onCancel) {
-                                  if (cResult[39] === tmp36) {
-                                    let tmp41 = cResult[40];
-                                  }
-                                  return tmp41;
-                                }
-                              }
-                              let obj4 = { scrollable: true, header: tmp32, startExpanded: true, onDismiss: onCancel, children: tmp36 };
-                              const tmp43 = closure_6(tmp(7296).ActionSheet, obj4);
-                              cResult[37] = tmp32;
-                              cResult[38] = onCancel;
-                              cResult[39] = tmp36;
-                              cResult[40] = tmp43;
-                              tmp41 = tmp43;
-                            }
-                          }
-                          let obj5 = { inActionSheet: true, style: tmp4.list, itemSize, sections: tmp35, renderItem: tmp15 };
-                          const tmp40 = closure_6(emoji(7165), obj5);
-                          cResult[33] = tmp15;
-                          cResult[34] = tmp4.list;
-                          cResult[35] = tmp35;
-                          cResult[36] = tmp40;
-                          tmp36 = tmp40;
-                        }
-                      }
-                      const obj6 = { onPress: tmp14, disabled: tmp16, accessibilityRole: "button", children: tmp22 };
-                      const tmp27 = closure_6(tmp(6906).PressableOpacity, obj6);
-                      cResult[23] = tmp14;
-                      cResult[24] = tmp22;
-                      cResult[25] = tmp16;
-                      cResult[26] = tmp27;
-                      tmp25 = tmp27;
-                    }
-                    let obj7 = { style: tmp17, children: cResult[19] };
-                    const tmp24 = closure_6(tmp(1202).LegacyText, obj7);
-                    cResult[20] = tmp17;
-                    cResult[21] = cResult[19];
-                    cResult[22] = tmp24;
-                    tmp22 = tmp24;
+                    stringResult = string(t["R3BPH+"]);
                   }
+                  cResult[15] = tmp5;
+                  cResult[16] = stringResult;
+                } else {
+                  if (cResult[17] !== cResult[16]) {
+                    let obj3 = { variant: "text-md/semibold", color: "text-brand", children: tmp16 };
+                    const tmp22 = closure_6(tmp(5234).Text, obj3);
+                    cResult[17] = tmp16;
+                    cResult[18] = tmp22;
+                    let tmp20 = tmp22;
+                  } else {
+                    tmp20 = cResult[18];
+                  }
+                  if (cResult[19] === tmp14) {
+                    if (cResult[20] === tmp23) {
+                      if (cResult[21] === saveButtonDisabled) {
+                        if (cResult[22] === tmp20) {
+                          let tmp24 = cResult[23];
+                        }
+                        const _Symbol = Symbol;
+                        if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+                          const intl2 = tmp(1128).intl;
+                          const stringResult1 = intl2.string(tmp(1128).t.JPU0EF);
+                          const intl3 = tmp(1128).intl;
+                          const stringResult2 = intl3.string(tmp(1128).t.MZusPv);
+                          cResult[24] = stringResult1;
+                          cResult[25] = stringResult2;
+                          let tmp28 = stringResult2;
+                          let tmp27 = stringResult1;
+                        } else {
+                          tmp27 = cResult[24];
+                          tmp28 = cResult[25];
+                        }
+                        if (cResult[26] !== tmp24) {
+                          let obj4 = { title: tmp27, subtitle: tmp28, trailing: tmp24 };
+                          const tmp33 = closure_6(tmp(7248).BottomSheetTitleHeader, obj4);
+                          cResult[26] = tmp24;
+                          cResult[27] = tmp33;
+                          let tmp31 = tmp33;
+                        } else {
+                          tmp31 = cResult[27];
+                        }
+                        if (cResult[28] !== subscriptionListingsForGuild.length) {
+                          let items = [subscriptionListingsForGuild.length];
+                          cResult[28] = subscriptionListingsForGuild.length;
+                          cResult[29] = items;
+                          let tmp34 = items;
+                        } else {
+                          tmp34 = cResult[29];
+                        }
+                        if (cResult[30] === tmp15) {
+                          if (cResult[31] === tmp4.list) {
+                            if (cResult[32] === tmp34) {
+                              let tmp35 = cResult[33];
+                            }
+                            if (cResult[34] === tmp31) {
+                              if (cResult[35] === onCancel) {
+                                if (cResult[36] === tmp35) {
+                                  let tmp40 = cResult[37];
+                                }
+                                return tmp40;
+                              }
+                            }
+                            let obj5 = { scrollable: true, header: tmp31, startExpanded: true, onDismiss: onCancel, children: tmp35 };
+                            const tmp42 = closure_6(tmp(7298).ActionSheet, obj5);
+                            cResult[34] = tmp31;
+                            cResult[35] = onCancel;
+                            cResult[36] = tmp35;
+                            cResult[37] = tmp42;
+                            tmp40 = tmp42;
+                          }
+                        }
+                        const obj6 = { inActionSheet: true, style: tmp4.list, itemSize, sections: tmp34, renderItem: tmp15 };
+                        const tmp39 = closure_6(emoji(7167), obj6);
+                        cResult[30] = tmp15;
+                        cResult[31] = tmp4.list;
+                        cResult[32] = tmp34;
+                        cResult[33] = tmp39;
+                        tmp35 = tmp39;
+                      }
+                    }
+                  }
+                  let obj7 = { onPress: tmp14, disabled: !tmp11, accessibilityRole: "button", style: saveButtonDisabled, children: tmp20 };
+                  const tmp26 = closure_6(tmp(6908).PressableOpacity, obj7);
+                  cResult[19] = tmp14;
+                  cResult[20] = !tmp11;
+                  cResult[21] = saveButtonDisabled;
+                  cResult[22] = tmp20;
+                  cResult[23] = tmp26;
+                  tmp24 = tmp26;
                 }
-                const items1 = [tmp4.saveButton, saveButtonDisabled];
-                cResult[15] = tmp4.saveButton;
-                cResult[16] = saveButtonDisabled;
-                cResult[17] = items1;
-                tmp17 = items1;
               }
             }
           }
@@ -244,14 +221,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
       const role_id = tmp;
       const diff = subscriptionListingsForGuild.length - 1;
       const obj = { style: closure_2.label, children: null };
-      const items = [closure_6(onSave(closure_2[13]).Text, { style: closure_2.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: subscriptionListingsForGuild[arg1].name }), ];
+      const items = [closure_6(onSave(closure_2[11]).Text, { style: closure_2.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: subscriptionListingsForGuild[arg1].name }), ];
       let archived = tmp.archived;
       if (archived) {
         const obj3 = { style: closure_2.archivedBadge, children: null };
         const obj4 = { style: closure_2.archivedBadgeText, variant: "text-xs/bold", color: "text-overlay-light", children: null };
-        const intl = onSave(closure_2[14]).intl;
-        obj4.children = intl.string(onSave(closure_2[14]).t.HRtfn9);
-        obj3.children = closure_6(onSave(closure_2[13]).Text, obj4);
+        const intl = onSave(closure_2[12]).intl;
+        obj4.children = intl.string(onSave(closure_2[12]).t.HRtfn9);
+        obj3.children = closure_6(onSave(closure_2[11]).Text, obj4);
         archived = closure_6(subscriptionListingsForGuild, obj3);
       }
       const obj5 = {
@@ -259,15 +236,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
         onPress() {
           return closure_6(role_id.role_id);
         },
-        trailing: closure_6(onSave(closure_2[12]).FormRow.Checkbox, { selected: first.has(subscriptionListingsForGuild[arg1].role_id) })
+        trailing: closure_6(onSave(closure_2[10]).FormRow.Checkbox, { selected: first.has(subscriptionListingsForGuild[arg1].role_id) })
       };
       items[1] = archived;
       obj.children = items;
-      const children = [closure_6(onSave(closure_2[12]).FormRow, obj5), ];
+      const children = [closure_6(onSave(closure_2[10]).FormRow, obj5), ];
       let tmp5Result = !tmp10;
       if (arg1 !== diff) {
         const obj7 = { style: closure_2.divider };
-        tmp5Result = closure_6(onSave(closure_2[12]).FormDivider, obj7);
+        tmp5Result = closure_6(onSave(closure_2[10]).FormDivider, obj7);
       }
       children[1] = tmp5Result;
       return closure_1_7(closure_1_8, { children });
@@ -289,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   cResult[5] = first;
   cResult[6] = handleSave;
   tmp14 = handleSave;
-  const tmpResult = onSave(16532);
+  const tmpResult = onSave(16564);
 }) : (function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
   let first;
@@ -314,18 +291,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     onPress: function handleSave() {
       require(Array.from(first));
     },
-    disabled: null,
+    disabled: first.size <= 0,
     accessibilityRole: "button",
+    style: null,
     children: null
   };
-  let saveButtonDisabled = !tmp4;
-  obj2.disabled = saveButtonDisabled;
-  let items = [tmp.saveButton, ];
+  let saveButtonDisabled;
   if (first.size <= 0) {
     saveButtonDisabled = tmp.saveButtonDisabled;
   }
-  let obj3 = { style: items, children: null };
-  items[1] = saveButtonDisabled;
+  obj2.style = saveButtonDisabled;
   if (null == emoji) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t["3UB9ad"]);
@@ -333,17 +308,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     let intl = util.intl;
     stringResult = intl.string(util.t["R3BPH+"]);
   }
-  obj3.children = stringResult;
-  obj2.children = closure_6(native.LegacyText, obj3);
-  let obj4 = { title: null, subtitle: null, trailing: null };
+  obj2.children = closure_6(Text_Text.Text, { variant: "text-md/semibold", color: "text-brand", children: stringResult });
+  let obj3 = { title: null, subtitle: null, trailing: null };
   const intl3 = util.intl;
-  obj4.title = intl3.string(util.t.JPU0EF);
+  obj3.title = intl3.string(util.t.JPU0EF);
   const intl4 = util.intl;
-  obj4.subtitle = intl4.string(util.t.MZusPv);
-  obj4.trailing = closure_6(Pressables.PressableOpacity, obj2);
+  obj3.subtitle = intl4.string(util.t.MZusPv);
+  obj3.trailing = closure_6(Pressables.PressableOpacity, obj2);
   const tmp7Result = closure_6(Pressables.PressableOpacity, obj2);
-  let obj5 = { scrollable: true, header: closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4), startExpanded: true, onDismiss: onCancel, children: null };
-  const obj6 = {
+  let obj4 = { scrollable: true, header: closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3), startExpanded: true, onDismiss: onCancel, children: null };
+  let obj5 = {
     inActionSheet: true,
     style: tmp.list,
     itemSize,
@@ -390,8 +364,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
       return closure_1_7(closure_1_8, { children });
     }
   };
-  const items1 = [subscriptionListingsForGuild.length];
-  obj6.sections = items1;
-  obj5.children = closure_6(emoji(7165), obj6);
-  return closure_6(ActionSheet.ActionSheet, obj5);
+  let items = [subscriptionListingsForGuild.length];
+  obj5.sections = items;
+  obj4.children = closure_6(emoji(7167), obj5);
+  return closure_6(ActionSheet.ActionSheet, obj4);
 });

@@ -1,18 +1,18 @@
-// === Module 11170: NameplatePreview ===
+// === Module 11171: NameplatePreview ===
 
-// Module 11170 (NameplatePreview)
+// Module 11171 (NameplatePreview)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8736 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8738 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -48,7 +48,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
     if (cResult[1] === nameplateData) {
       let tmp9 = cResult[2];
     }
-    const avatarDecoration = user(6780).useAvatarDecoration(user, guildId);
+    const avatarDecoration = user(6782).useAvatarDecoration(user, guildId);
     if (cResult[3] !== guildId) {
       const obj2 = { guildId };
       cResult[3] = guildId;
@@ -57,7 +57,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
     } else {
       tmp12 = cResult[4];
     }
-    const pendingAvatarDecoration = guildId(8646)(tmp12).pendingAvatarDecoration;
+    const pendingAvatarDecoration = guildId(8648)(tmp12).pendingAvatarDecoration;
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
@@ -72,7 +72,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
       tmp15 = cResult[5];
       tmp16 = cResult[6];
     }
-    const tmpResult = user(6780);
+    const tmpResult = user(6782);
     const stateFromStores = user(504).useStateFromStores(tmp15, tmp16);
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,7 +88,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       const stateFromStores1 = user(504).useStateFromStores(tmp19, tmp21);
       const tmpResult6 = user(504);
-      const name = guildId(5023).useName(user);
+      const name = guildId(5025).useName(user);
       if (pendingGlobalName == null) {
         let tmp25 = name;
         if (null != guildId) {
@@ -116,7 +116,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
           if (cResult[13] === user.id) {
             let tmp29 = cResult[14];
           }
-          const tmp30 = guildId(6365)(tmp29);
+          const tmp30 = guildId(6367)(tmp29);
           if (cResult[15] === tmp28) {
             if (cResult[16] === tmp6Result.avatar) {
               let tmp31 = cResult[17];
@@ -251,7 +251,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                                     let tmp65 = null == tmp30;
                                     if (tmp65) {
                                       const obj6 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
-                                      tmp65 = closure_7(user(5232).Text, obj6);
+                                      tmp65 = closure_7(user(5234).Text, obj6);
                                     }
                                     cResult[44] = tmp30;
                                     cResult[45] = pendingGlobalName;
@@ -263,9 +263,9 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                             }
                             let tmp61 = null != tmp30;
                             if (tmp61) {
-                              const obj7 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10661).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-                              tmp61 = closure_7(guildId(10660), obj7);
-                              const tmp13Result2 = guildId(10660);
+                              const obj7 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10662).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+                              tmp61 = closure_7(guildId(10661), obj7);
+                              const tmp13Result2 = guildId(10661);
                             }
                             cResult[38] = tmp30;
                             cResult[39] = guildId;
@@ -284,7 +284,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                         }
                       }
                       const obj9 = { nameplate: tmp9, style: tmp6Result.nameplate, fullOpacity: true, animate: tmp5 };
-                      const tmp55 = closure_7(guildId(9410), obj9);
+                      const tmp55 = closure_7(guildId(9411), obj9);
                       cResult[31] = tmp5;
                       cResult[32] = tmp9;
                       cResult[33] = tmp6Result.nameplate;
@@ -302,7 +302,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                   }
                 }
               }
-              const tmpResult7 = user(8736);
+              const tmpResult7 = user(8738);
               const avatarSource = tmpResult7.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
               cResult[18] = guildId;
               cResult[19] = pendingAvatarSrc;
@@ -349,7 +349,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
       cResult[13] = user.id;
       cResult[14] = obj12;
       tmp29 = obj12;
-      const tmp13Result = guildId(5023);
+      const tmp13Result = guildId(5025);
     }
     class E {
       constructor() {

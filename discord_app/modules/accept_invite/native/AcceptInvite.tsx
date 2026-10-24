@@ -1,17 +1,17 @@
-// === Module 13618: AcceptInvite ===
+// === Module 13655: AcceptInvite ===
 
-// Module 13618 (AcceptInvite)
+// Module 13655 (AcceptInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useToken from "useToken" /* 5250 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5593 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import Card from "Card" /* 6903 */;
-import _modDef13628 from "module_13628" /* 13628 */;
+import useToken from "useToken" /* 5252 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5595 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import Card from "Card" /* 6905 */;
+import _modDef13665 from "module_13665" /* 13665 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -69,7 +69,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1087).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -153,12 +153,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accept
       const obj3 = {};
       const merged = Object.assign(invite);
       obj3.invite = invite;
-      const tmp32 = closure_10(first(13619), obj3);
+      const tmp32 = closure_10(first(13656), obj3);
       cResult[7] = invite;
       cResult[8] = invite;
       cResult[9] = tmp32;
       tmp25 = tmp32;
-      const tmp28 = first(13619);
+      const tmp28 = first(13656);
     } else if (tmp38.ERROR === first) {
       if (cResult[10] === invite) {
         if (cResult[11] === invite) {
@@ -169,12 +169,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accept
       const obj4 = {};
       const merged1 = Object.assign(invite);
       obj4.invite = invite;
-      const tmp24 = closure_10(first(13623), obj4);
+      const tmp24 = closure_10(first(13660), obj4);
       cResult[10] = invite;
       cResult[11] = invite;
       cResult[12] = tmp24;
       tmp17 = tmp24;
-      const tmp20 = first(13623);
+      const tmp20 = first(13660);
     } else {
       const _Symbol = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
@@ -219,12 +219,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accept
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_10(first(13619), obj2);
+    return closure_10(first(13656), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_10(first(13623), obj);
+    return closure_10(first(13660), obj);
   } else {
     return closure_10(closure_15, {});
   }
@@ -395,7 +395,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptIn
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef13628;
+    let guildSplashSource = _modDef13665;
   } else {
     const obj10 = { id: null, splash: null, size: null };
     ({ id: obj4.id, splash: obj4.splash } = guild);
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptIn
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef13628;
+    let guildSplashSource = _modDef13665;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

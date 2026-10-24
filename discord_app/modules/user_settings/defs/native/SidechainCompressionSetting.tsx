@@ -1,16 +1,16 @@
-// === Module 16578: SidechainCompressionSetting ===
+// === Module 16610: SidechainCompressionSetting ===
 
-// Module 16578 (SidechainCompressionSetting)
+// Module 16610 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
-const Features = fn(5716).Features;
+const Features = fn(5718).Features;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSidechainCompressionSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(8330).MobileUserSettings.VOICE,
+  parent: fn(8332).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },

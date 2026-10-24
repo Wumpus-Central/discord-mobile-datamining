@@ -1,11 +1,11 @@
-// === Module 13443: useGuildPowerupsWarningConfig ===
+// === Module 13480: useGuildPowerupsWarningConfig ===
 
-// Module 13443 (useGuildPowerupsWarningConfig)
+// Module 13480 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1128 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8369 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8371 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13444 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13481 */;
 
 const require = globalThis.__r;
 

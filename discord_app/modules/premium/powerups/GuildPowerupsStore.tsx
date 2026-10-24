@@ -1,10 +1,10 @@
-// === Module 5179: GuildPowerupsStore ===
+// === Module 5181: GuildPowerupsStore ===
 
-// Module 5179 (GuildPowerupsStore)
+// Module 5181 (GuildPowerupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 function calculateAppliedBoosts(guildId) {
   guild = GuildStore.getGuild(guildId);
@@ -68,7 +68,7 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(5180);
+const GuildPowerupsConstants = fn(5182);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } = GuildPowerupsConstants);
 const Constants = fn(1087);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty, GuildFeatures: metroRequire } = Constants);

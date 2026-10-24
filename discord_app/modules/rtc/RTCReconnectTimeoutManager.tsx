@@ -1,9 +1,9 @@
-// === Module 18904: RTCReconnectTimeoutManager ===
+// === Module 18934: RTCReconnectTimeoutManager ===
 
-// Module 18904 (RTCReconnectTimeoutManager)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6632 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
+// Module 18934 (RTCReconnectTimeoutManager)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 class RTCReconnectTimeoutManager extends tmp2 {
   constructor() {

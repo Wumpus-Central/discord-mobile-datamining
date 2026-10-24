@@ -1,8 +1,8 @@
-// === Module 18532: useActivityShelfItemData ===
+// === Module 18564: useActivityShelfItemData ===
 
-// Module 18532 (useActivityShelfItemData)
+// Module 18564 (useActivityShelfItemData)
 import c from "c" /* 576 */;
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11990 */;
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

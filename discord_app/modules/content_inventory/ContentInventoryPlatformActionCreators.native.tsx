@@ -1,7 +1,7 @@
-// === Module 12908: ContentInventoryPlatformActionCreators ===
+// === Module 12945: ContentInventoryPlatformActionCreators ===
 
-// Module 12908 (ContentInventoryPlatformActionCreators)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
+// Module 12945 (ContentInventoryPlatformActionCreators)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryPlatformActionCreators.native.tsx");

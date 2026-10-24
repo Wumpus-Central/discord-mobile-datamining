@@ -1,14 +1,14 @@
-// === Module 18232: useVoiceChannelAppOptions ===
+// === Module 18264: useVoiceChannelAppOptions ===
 
-// Module 18232 (useVoiceChannelAppOptions)
+// Module 18264 (useVoiceChannelAppOptions)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7255 */;
-import ConjureUtils from "ConjureUtils" /* 7343 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10719 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7257 */;
+import ConjureUtils from "ConjureUtils" /* 7345 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
@@ -471,12 +471,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(18233).voiceChannelAppListState(obj3);
+            const result = tmp(18265).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(18233);
+            const tmpResult6 = tmp(18265);
           }
           closure_130_0 = tmp21;
           let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));

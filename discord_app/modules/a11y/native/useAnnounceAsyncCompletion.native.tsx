@@ -1,6 +1,6 @@
-// === Module 10032: useAnnounceAsyncCompletion ===
+// === Module 10033: useAnnounceAsyncCompletion ===
 
-// Module 10032 (useAnnounceAsyncCompletion)
+// Module 10033 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
       if (undefined !== polite) {
         str = polite;
       }
-      const AccessibilityAnnouncer = ref(4976).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = ref(4978).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(intl, str);
       if (obj.isIOS()) {
         if (tmpResult.getIsScreenReaderEnabled()) {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(4976).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(4978).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {

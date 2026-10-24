@@ -1,18 +1,18 @@
-// === Module 13407: GuildBoostingMarketingUtils ===
+// === Module 13444: GuildBoostingMarketingUtils ===
 
-// Module 13407 (GuildBoostingMarketingUtils)
+// Module 13444 (GuildBoostingMarketingUtils)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import StageIcon from "StageIcon" /* 8566 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8989 */;
-import ReactionIcon from "ReactionIcon" /* 9349 */;
-import UploadIcon from "UploadIcon" /* 9803 */;
-import StarIcon from "StarIcon" /* 9948 */;
-import GifIcon from "GifIcon" /* 10147 */;
-import ImagesIcon from "ImagesIcon" /* 12483 */;
-import SoundboardIcon from "SoundboardIcon" /* 13408 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13410 */;
-import ScreenArrowIcon from "ScreenArrowIcon" /* 13412 */;
-import StickerIcon from "StickerIcon" /* 13413 */;
+import StageIcon from "StageIcon" /* 8568 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8990 */;
+import ReactionIcon from "ReactionIcon" /* 9350 */;
+import UploadIcon from "UploadIcon" /* 9804 */;
+import StarIcon from "StarIcon" /* 9949 */;
+import GifIcon from "GifIcon" /* 10148 */;
+import ImagesIcon from "ImagesIcon" /* 12517 */;
+import SoundboardIcon from "SoundboardIcon" /* 13445 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13447 */;
+import ScreenArrowIcon from "ScreenArrowIcon" /* 13449 */;
+import StickerIcon from "StickerIcon" /* 13450 */;
 import size from "module_2" /* 2 */;
 
 const PerkIcons = PremiumConstants.PerkIcons;

@@ -1,12 +1,12 @@
-// === Module 17081: ExperimentOverrideActiveSetting ===
+// === Module 17113: ExperimentOverrideActiveSetting ===
 
-// Module 17081 (ExperimentOverrideActiveSetting)
+// Module 17113 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15800 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16105 */;
-import DevToolsContent from "DevToolsContent" /* 17082 */;
-import ExperimentStore from "ExperimentStore" /* 5188 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15823 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16129 */;
+import DevToolsContent from "DevToolsContent" /* 17114 */;
+import ExperimentStore from "ExperimentStore" /* 5190 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
 
 require = fn;
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperim
   const str = closure_5();
   return jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: closure_5().toString() });
 });
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return closure_5() > 0 && staffOrDeveloperSettingPredicate;
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(16909).BeakerIcon,
+  IconComponent: fn(16941).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();

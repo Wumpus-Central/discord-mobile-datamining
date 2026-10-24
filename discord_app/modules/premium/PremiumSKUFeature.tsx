@@ -1,6 +1,6 @@
-// === Module 5027: PremiumSKUFeature ===
+// === Module 5029: PremiumSKUFeature ===
 
-// Module 5027 (PremiumSKUFeature)
+// Module 5029 (PremiumSKUFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");

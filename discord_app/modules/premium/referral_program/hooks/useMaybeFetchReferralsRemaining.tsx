@@ -1,9 +1,9 @@
-// === Module 8426: useMaybeFetchReferralsRemaining ===
+// === Module 8428: useMaybeFetchReferralsRemaining ===
 
-// Module 8426 (useMaybeFetchReferralsRemaining)
+// Module 8428 (useMaybeFetchReferralsRemaining)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7560 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7562 */;
 
 const require = globalThis.__r;
 
@@ -84,10 +84,10 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   const items = [UserStore];
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
-  const hasDiscountApplied = flag(8427).useHasDiscountApplied();
-  const obj3 = flag(8427);
+  const hasDiscountApplied = flag(8429).useHasDiscountApplied();
+  const obj3 = flag(8429);
   let verified;
-  const hasActiveTrial = flag(8428).useHasActiveTrial();
+  const hasActiveTrial = flag(8430).useHasActiveTrial();
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }

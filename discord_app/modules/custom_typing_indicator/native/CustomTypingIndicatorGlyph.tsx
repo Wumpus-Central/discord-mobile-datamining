@@ -1,13 +1,13 @@
-// === Module 13039: CustomTypingIndicatorGlyph ===
+// === Module 13076: CustomTypingIndicatorGlyph ===
 
-// Module 13039 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 13040 */;
+// Module 13076 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 13077 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);

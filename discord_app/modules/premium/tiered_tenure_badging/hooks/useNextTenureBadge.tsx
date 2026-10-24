@@ -1,7 +1,7 @@
-// === Module 14713: useNextTenureBadge ===
+// === Module 14736: useNextTenureBadge ===
 
-// Module 14713 (useNextTenureBadge)
-import useTenureBadging from "useTenureBadging" /* 11106 */;
+// Module 14736 (useNextTenureBadge)
+import useTenureBadging from "useTenureBadging" /* 11107 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 13688: useWelcomeScreenEnabled ===
+// === Module 13725: useWelcomeScreenEnabled ===
 
-// Module 13688 (useWelcomeScreenEnabled)
+// Module 13725 (useWelcomeScreenEnabled)
 import Constants from "Constants" /* 1087 */;
-import ChannelRecord from "ChannelRecord" /* 4825 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import ChannelRecord from "ChannelRecord" /* 4827 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

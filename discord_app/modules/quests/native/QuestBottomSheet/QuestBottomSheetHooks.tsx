@@ -1,25 +1,25 @@
-// === Module 16434: QuestBottomSheetHooks ===
+// === Module 16466: QuestBottomSheetHooks ===
 
-// Module 16434 (QuestBottomSheetHooks)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import QuestTypes from "QuestTypes" /* 6711 */;
-import AdCreativeType from "AdCreativeType" /* 6715 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7799 */;
-import captureAdUserAction from "captureAdUserAction" /* 9572 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9575 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 16435 */;
+// Module 16466 (QuestBottomSheetHooks)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import QuestTypes from "QuestTypes" /* 6713 */;
+import AdCreativeType from "AdCreativeType" /* 6717 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
+import captureAdUserAction from "captureAdUserAction" /* 9573 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 16467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QuestDockMode = fn(6708).QuestDockMode;
+const QuestDockMode = fn(6710).QuestDockMode;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDismissSheetOrCollapseDock() {
   const cResult = setRestingQuestDockMode(576).c(3);
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16408).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(16430).QuestBottomSheetContext).isInQuestBottomSheet;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16440).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(16462).QuestBottomSheetContext).isInQuestBottomSheet;
   if (cResult[0] === isInQuestBottomSheet) {
     if (cResult[1] === setRestingQuestDockMode) {
       let tmp2 = cResult[2];
@@ -38,8 +38,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDism
   cResult[2] = fn;
   tmp2 = fn;
 }) : (function useDismissSheetOrCollapseDock() {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16408).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(16430).QuestBottomSheetContext).isInQuestBottomSheet;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16440).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(16462).QuestBottomSheetContext).isInQuestBottomSheet;
   const items = [isInQuestBottomSheet, setRestingQuestDockMode];
   return noop.useCallback(() => {
     if (isInQuestBottomSheet) {
@@ -58,7 +58,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWatchTask
   const tmp2 = closure_6();
   dependencyMap = tmp2;
   let obj = questId(576);
-  const questImpression = questId(9604).useQuestImpression();
+  const questImpression = questId(9605).useQuestImpression();
   if (cResult[0] === tmp2) {
     if (cResult[1] === questImpression) {
       if (cResult[2] === questId) {
@@ -103,7 +103,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWatchTask
   const sourceQuestContent = questId.sourceQuestContent;
   const tmp = closure_6();
   dependencyMap = tmp;
-  const questImpression = questId(9604).useQuestImpression();
+  const questImpression = questId(9605).useQuestImpression();
   const items = [questId, tmp, questImpression, sourceQuestContent];
   return noop.useCallback(() => {
     closure_2();
@@ -280,7 +280,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj7 = { type: tmp4(9575).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6715).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7799).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6711).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
+          const obj7 = { type: tmp4(9576).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6717).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7801).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6713).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
           let id;
           if (closure_128_4 != null) {
             id = closure_128_4.getId();
@@ -291,7 +291,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
             questContentPosition = closure_128_4.getQuestContentPosition();
           }
           obj7.questContentPosition = questContentPosition;
-          tmp4(9572).captureAdUserAction(obj7);
+          tmp4(9573).captureAdUserAction(obj7);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }

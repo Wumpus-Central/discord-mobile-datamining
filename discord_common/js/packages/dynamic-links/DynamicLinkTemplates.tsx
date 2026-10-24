@@ -1,6 +1,6 @@
-// === Module 14165: DynamicLinkTemplates ===
+// === Module 14184: DynamicLinkTemplates ===
 
-// Module 14165 (DynamicLinkTemplates)
+// Module 14184 (DynamicLinkTemplates)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");

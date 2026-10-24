@@ -1,23 +1,23 @@
-// === Module 13582: HeartIllocon ===
+// === Module 13619: HeartIllocon ===
 
-// Module 13582 (HeartIllocon)
+// Module 13619 (HeartIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import assetHelpers from "assetHelpers" /* 6993 */;
-import _modDef13583 from "module_13583" /* 13583 */;
-import _modDef13584 from "module_13584" /* 13584 */;
-import _modDef13585 from "module_13585" /* 13585 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef13620 from "module_13620" /* 13620 */;
+import _modDef13621 from "module_13621" /* 13621 */;
+import _modDef13622 from "module_13622" /* 13622 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13583 }, 3: null };
-const obj2 = { uri: _modDef13583 };
-obj[2] = { uri: _modDef13584 };
-const obj3 = { uri: _modDef13584 };
-obj[3] = { uri: _modDef13585 };
+let obj = { 1: null, 2: { uri: _modDef13620 }, 3: null };
+const obj2 = { uri: _modDef13620 };
+obj[2] = { uri: _modDef13621 };
+const obj3 = { uri: _modDef13621 };
+obj[3] = { uri: _modDef13622 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13585 };
+const obj4 = { uri: _modDef13622 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const HeartIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6993).getAssetSource(obj);
+  obj.source = num(6995).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

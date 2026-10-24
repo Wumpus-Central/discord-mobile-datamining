@@ -1,6 +1,6 @@
-// === Module 16861: UploadIntlDataSetting ===
+// === Module 16893: UploadIntlDataSetting ===
 
-// Module 16861 (UploadIntlDataSetting)
+// Module 16893 (UploadIntlDataSetting)
 import c from "c" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
 import _mod1166 from "module_1166" /* 1166 */;
@@ -265,7 +265,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
   const cResult = c.c(2);
   if (typeof useIsUploadingIntlData === "function") {
@@ -301,7 +301,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(11764).FileUpIcon,
+  IconComponent: fn(11789).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -312,7 +312,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16105).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16129).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
     const cResult = c.c(2);
     if (typeof useIsUploadingIntlData === "function") {

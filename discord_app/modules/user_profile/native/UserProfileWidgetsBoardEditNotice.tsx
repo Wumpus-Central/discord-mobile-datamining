@@ -1,25 +1,25 @@
-// === Module 14346: UserProfileWidgetsBoardEditNotice ===
+// === Module 14370: UserProfileWidgetsBoardEditNotice ===
 
-// Module 14346 (UserProfileWidgetsBoardEditNotice)
+// Module 14370 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import dismissible_content from "dismissible_content" /* 4805 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
-import Pressables from "Pressables" /* 6906 */;
-import XSmallIcon from "XSmallIcon" /* 6929 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8730 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10407 */;
+import dismissible_content from "dismissible_content" /* 4807 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
+import Pressables from "Pressables" /* 6908 */;
+import XSmallIcon from "XSmallIcon" /* 6931 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10408 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const tmp6 = UserProfileSharedStylesDefault();
   importDefault = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [tmp(4805).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+    let items = [tmp(4807).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
     cResult[0] = items;
     let first = items;
   } else {

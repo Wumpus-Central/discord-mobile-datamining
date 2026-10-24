@@ -1,21 +1,21 @@
-// === Module 11281: RoleMembersActionSheet ===
+// === Module 11282: RoleMembersActionSheet ===
 
-// Module 11281 (RoleMembersActionSheet)
+// Module 11282 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7224 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7226 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import GuildRoleStore from "GuildRoleStore" /* 4875 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import GuildRoleStore from "GuildRoleStore" /* 4877 */;
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7370).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7372).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, headerText: { flex: 1 }, roleDot: { paddingTop: 0 }, memberCount: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberCount = { color: nativeDefault.colors.TEXT_MUTED };
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
       }
       const tmpResult2 = tmp(504);
       const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-      const tmp22 = roleId(7222)(guildId);
+      const tmp22 = roleId(7224)(guildId);
       class I {
         constructor() {
           tmp = roleId;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
           let obj2 = { variant: "text-sm/semibold", style: tmp4.headerText, children: name };
           cResult[15] = tmp4.headerText;
           cResult[16] = name;
-          cResult[17] = closure_8(tmp(5232).Text, obj2);
+          cResult[17] = closure_8(tmp(5234).Text, obj2);
           class I {
             constructor() {
               tmp = roleId;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
               return;
             }
           }
-          const tmp30 = closure_8(tmp(5232).Text, obj2);
+          const tmp30 = closure_8(tmp(5234).Text, obj2);
         }
       }
       let tmp26 = null;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
   let obj2 = guildId(504);
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(7222)(guildId);
+  const tmp11 = roleId(7224)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -262,9 +262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11282), obj5);
-    tmp16Result = closure_8(tmp3(5263).BottomSheet, obj4);
-    let tmp9Result = tmp9(11282);
+    obj4.children = closure_8(tmp9(11283), obj5);
+    tmp16Result = closure_8(tmp3(5265).BottomSheet, obj4);
+    let tmp9Result = tmp9(11283);
   }
   return tmp16Result;
 });

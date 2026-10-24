@@ -1,6 +1,6 @@
-// === Module 9510: GameProfileCommunitiesLocaleFilterStore ===
+// === Module 9511: GameProfileCommunitiesLocaleFilterStore ===
 
-// Module 9510 (GameProfileCommunitiesLocaleFilterStore)
+// Module 9511 (GameProfileCommunitiesLocaleFilterStore)
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

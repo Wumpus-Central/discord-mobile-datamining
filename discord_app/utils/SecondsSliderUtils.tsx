@@ -1,13 +1,13 @@
-// === Module 18225: SecondsSliderUtils ===
+// === Module 18256: SecondsSliderUtils ===
 
-// Module 18225 (SecondsSliderUtils)
+// Module 18256 (SecondsSliderUtils)
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
-export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1) {
+export const getSecondsSliderLabel = function getSecondsSliderLabel(length, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -17,7 +17,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = util.intl;
     stringResult = intl.string(util.t.Yl1D84);
   }
-  const time = _modDef2049.duration(rateLimitPerUser, "seconds");
+  const time = _modDef2049.duration(length, "seconds");
   if (time.days() > 0) {
     const intl6 = util.intl;
     const t = { days: time.days() };
@@ -33,7 +33,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     const t2 = { minutes: time.minutes() };
     intl4.formatToPlainString(flag ? t2["XIGt+W"] : t2.iXLF9W, t2);
     const tmp10 = flag ? t2["XIGt+W"] : t2.iXLF9W;
-  } else if (rateLimitPerUser > 0) {
+  } else if (length > 0) {
     const intl3 = util.intl;
     const t3 = { seconds: time.seconds() };
     intl3.formatToPlainString(flag ? t3.pyvjRp : t3.geSp4K, t3);

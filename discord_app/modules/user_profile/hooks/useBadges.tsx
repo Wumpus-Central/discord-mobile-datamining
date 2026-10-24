@@ -1,10 +1,10 @@
-// === Module 8731: useBadges ===
+// === Module 8733: useBadges ===
 
-// Module 8731 (useBadges)
+// Module 8733 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import StreamerModeStore from "StreamerModeStore" /* 5024 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import StreamerModeStore from "StreamerModeStore" /* 5026 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;

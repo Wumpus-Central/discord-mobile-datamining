@@ -1,12 +1,12 @@
-// === Module 7522: IAPStore ===
+// === Module 7524: IAPStore ===
 
-// Module 7522 (IAPStore)
+// Module 7524 (IAPStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants2 from "Constants" /* 1098 */;
-import BillingUtils from "BillingUtils" /* 4785 */;
-import PriceUtils from "PriceUtils" /* 7337 */;
-import Constants from "Constants" /* 7523 */;
+import BillingUtils from "BillingUtils" /* 4787 */;
+import PriceUtils from "PriceUtils" /* 7339 */;
+import Constants from "Constants" /* 7525 */;
 import size from "module_2" /* 2 */;
 
 function updateProduct(currencyCode) {

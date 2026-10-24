@@ -1,14 +1,14 @@
-// === Module 19097: InRolePromptNotice ===
+// === Module 19125: InRolePromptNotice ===
 
-// Module 19097 (InRolePromptNotice)
+// Module 19125 (InRolePromptNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import _modDef11422 from "module_11422" /* 11422 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 19098 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import _modDef11442 from "module_11442" /* 11442 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 19126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1087).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { promptRow: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" }, promptText: null, icon: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
 obj2.promptText = { marginLeft: nativeDefault.space.PX_4 };
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InRolePr
     const promptRow = tmp4.promptRow;
     if (tmpResult.isRolePowerful(role)) {
       if (cResult[0] !== tmp4.icon) {
-        const obj3 = { style: tmp4.icon, source: _modDef11422, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+        const obj3 = { style: tmp4.icon, source: _modDef11442, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
         const tmp23 = hasOwnProperty(native.Icon, obj3);
         cResult[0] = tmp4.icon;
         cResult[1] = tmp23;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InRolePr
       tmp30 = tmp33;
     } else {
       if (cResult[9] !== tmp4.icon) {
-        const obj6 = { style: tmp4.icon, source: _modDef11422 };
+        const obj6 = { style: tmp4.icon, source: _modDef11442 };
         const tmp9 = hasOwnProperty(native.Icon, obj6);
         cResult[9] = tmp4.icon;
         cResult[10] = tmp9;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InRolePr
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      const obj3 = { style: string.icon, source: _modDef11422, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      const obj3 = { style: string.icon, source: _modDef11442, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       const items = [hasOwnProperty(Icon, obj3), ];
       const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl2 = util.intl;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InRolePr
       obj2.children = items;
       let tmp4Result = timestampProducer(View, obj2);
     } else {
-      const obj5 = { style: string.icon, source: _modDef11422 };
+      const obj5 = { style: string.icon, source: _modDef11442 };
       const items1 = [hasOwnProperty(Icon, obj5), ];
       const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl = util.intl;

@@ -1,15 +1,15 @@
-// === Module 19276: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 19324: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 19276 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 19324 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import BaseTextButton from "BaseTextButton" /* 5243 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import PriceUtils from "PriceUtils" /* 7337 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16551 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import PriceUtils from "PriceUtils" /* 7339 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,19 +18,17 @@ const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1098).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
-let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
+const createStyles = fn(4971);
+let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;
-obj2.templateCTAButton = { borderRadius: nativeDefault.radii.sm };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { borderRadius: nativeDefault.radii.sm };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
 
 export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
-  const cResult = c.c(40);
+  const cResult = c.c(37);
   template = template.template;
   const handleSelectTemplateInPreview = template.handleSelectTemplateInPreview;
   ({ subscriptionPlanTextStyle, descriptionTextStyle, closeActionSheet } = template);
@@ -62,6 +60,9 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { flexShrink: 1 };
       cResult[6] = obj3;
+      let tmp12 = obj3;
+    } else {
+      tmp12 = cResult[6];
     }
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -123,89 +124,66 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
                 const _Symbol5 = Symbol;
                 if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl2 = util.intl;
-                  cResult[27] = intl2.string(util.t["1W7mCt"]);
-                  class I {
-                    constructor() {
-                      return closure_1(template, closeActionSheet);
-                    }
-                  }
                   const stringResult = intl2.string(util.t["1W7mCt"]);
+                  cResult[27] = stringResult;
+                  let tmp41 = stringResult;
                 } else {
-                  const tmp40 = cResult[27];
+                  tmp41 = cResult[27];
                 }
                 if (cResult[28] === closeActionSheet) {
                   if (cResult[29] === handleSelectTemplateInPreview) {
                     if (cResult[30] === template) {
-                      let tmp42 = cResult[31];
+                      let tmp43 = cResult[31];
                     }
-                    if (cResult[32] === tmp4.templateCTAButton) {
-                      if (cResult[33] === tmp42) {
-                        let tmp43 = cResult[34];
-                      }
-                      if (cResult[35] === tmp4.container) {
-                        if (cResult[36] === tmp31) {
-                          if (cResult[37] === tmp35) {
-                            if (cResult[38] === tmp43) {
-                              let tmp46 = cResult[39];
-                            }
-                            return tmp46;
+                    if (cResult[32] === tmp4.container) {
+                      if (cResult[33] === tmp31) {
+                        if (cResult[34] === tmp35) {
+                          if (cResult[35] === tmp43) {
+                            let tmp46 = cResult[36];
                           }
+                          return tmp46;
                         }
                       }
-                      const obj8 = { style: null, children: null };
-                      class I {
-                        constructor() {
-                          return closure_1(template, closeActionSheet);
-                        }
-                      }
-                      const items = [tmp31, tmp35, tmp43];
-                      obj8.children = items;
-                      const tmp49 = React5(View, obj8);
-                      cResult[35] = tmp4.container;
-                      cResult[36] = tmp31;
-                      cResult[37] = tmp35;
-                      cResult[38] = tmp43;
-                      cResult[39] = tmp49;
-                      tmp46 = tmp49;
                     }
-                    const obj9 = { text: tmp40, pillStyle: null, onPress: null, grow: true };
-                    class I {
-                      constructor() {
-                        return closure_1(template, closeActionSheet);
-                      }
-                    }
-                    obj9.onPress = tmp42;
-                    const tmp45 = timestampProducer(BaseTextButton.BaseTextButton, obj9);
-                    cResult[32] = tmp4.templateCTAButton;
-                    cResult[33] = tmp42;
-                    cResult[34] = tmp45;
-                    tmp43 = tmp45;
+                    const obj8 = { style: container, children: null };
+                    const items = [tmp31, tmp35, tmp43];
+                    obj8.children = items;
+                    const tmp49 = React5(View, obj8);
+                    cResult[32] = tmp4.container;
+                    cResult[33] = tmp31;
+                    cResult[34] = tmp35;
+                    cResult[35] = tmp43;
+                    cResult[36] = tmp49;
+                    tmp46 = tmp49;
                   }
                 }
-                class I {
-                  constructor() {
-                    return closure_1(template, closeActionSheet);
-                  }
-                }
+                const obj9 = {
+                  text: tmp41,
+                  onPress() {
+                                  return handleSelectTemplateInPreview(template, closeActionSheet);
+                                },
+                  grow: true
+                };
+                const tmp45 = timestampProducer(components_Button_Button.Button, obj9);
                 cResult[28] = closeActionSheet;
                 cResult[29] = handleSelectTemplateInPreview;
                 cResult[30] = template;
-                cResult[31] = I;
-                tmp42 = I;
+                cResult[31] = tmp45;
+                tmp43 = tmp45;
               }
             }
             const obj10 = { variant: "text-sm/normal", style: descriptionTextStyle };
             const merged = Object.assign(descriptionTextProps);
             obj10.children = description;
-            const tmp39 = timestampProducer(Text_Text.Text, obj10);
+            const tmp40 = timestampProducer(Text_Text.Text, obj10);
             cResult[23] = description;
             cResult[24] = descriptionTextProps;
             cResult[25] = descriptionTextStyle;
-            cResult[26] = tmp39;
-            tmp35 = tmp39;
+            cResult[26] = tmp40;
+            tmp35 = tmp40;
           }
         }
-        const obj11 = { style: null, children: null };
+        const obj11 = { style: header, children: null };
         const items1 = [tmp6, tmp9, tmp27];
         obj11.children = items1;
         const tmp34 = React5(View, obj11);
@@ -215,7 +193,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
         cResult[22] = tmp34;
         tmp31 = tmp34;
       }
-      const obj12 = { style: null, children: null };
+      const obj12 = { style: tmp12, children: null };
       const items2 = [tmp14, tmp17, tmp24];
       obj12.children = items2;
       const tmp30 = React5(View, obj12);
@@ -263,14 +241,13 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = ReactCompilerGating.is
   const merged = Object.assign(descriptionTextProps);
   obj10.children = description;
   items2[1] = timestampProducer(Text_Text.Text, obj10);
-  const obj11 = { text: null, pillStyle: null, onPress: null, grow: true };
+  const obj11 = { text: null, onPress: null, grow: true };
   const intl2 = util.intl;
   obj11.text = intl2.string(util.t["1W7mCt"]);
-  obj11.pillStyle = tmp.templateCTAButton;
   obj11.onPress = function onPress() {
     return importDefault(template, dependencyMap);
   };
-  items2[2] = timestampProducer(BaseTextButton.BaseTextButton, obj11);
+  items2[2] = timestampProducer(components_Button_Button.Button, obj11);
   obj.children = items2;
   return React5(View, obj);
 });

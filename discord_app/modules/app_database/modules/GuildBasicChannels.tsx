@@ -1,19 +1,19 @@
-// === Module 7719: GuildBasicChannels ===
+// === Module 7721: GuildBasicChannels ===
 
-// Module 7719 (GuildBasicChannels)
+// Module 7721 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4910 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4849 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildRoleStore from "GuildRoleStore" /* 4875 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4822 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildRoleStore from "GuildRoleStore" /* 4877 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4824 */;
 
 const require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -31,8 +31,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(4825).createChannelRecordFromServer;
-const ChannelLoader = fn(4821).ChannelLoader;
+let closure_7 = fn(4827).createChannelRecordFromServer;
+const ChannelLoader = fn(4823).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -88,9 +88,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    let items = [tmp3(4847).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4847).basicChannels(closure_0);
-    items[1] = tmp3(4847).syncedBasicChannels(closure_0).getKvEntries();
+    let items = [tmp3(4849).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4849).basicChannels(closure_0);
+    items[1] = tmp3(4849).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);

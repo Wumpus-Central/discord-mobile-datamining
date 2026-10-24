@@ -1,11 +1,11 @@
-// === Module 18833: GameOrganizationInviteActionCreators ===
+// === Module 11317: GameOrganizationInviteActionCreators ===
 
-// Module 18833 (GameOrganizationInviteActionCreators)
+// Module 11317 (GameOrganizationInviteActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const Endpoints = fn(1087).Endpoints;
-const obj = {
+let obj = {
   resolveGameOrganizationInvite(arg0) {
     closure_0 = arg0;
     return (async () => {
@@ -159,6 +159,75 @@ const obj = {
         } catch (tmp13) {
           c3 = tmp;
           throw tmp13;
+        }
+      }
+    })();
+  },
+  acceptGameOrganizationInvite(code, arg1) {
+    closure_1 = arg1;
+    return (async () => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              const character_id = tmp3;
+              code = tmp7;
+              c3 = 1;
+              const HTTP = code(tmp19[3]).HTTP;
+              const request = { url: c4.GAME_ORGANIZATION_INVITE_JOIN(code), body: null, rejectWithError: true };
+              const obj4 = { character_id };
+              request.body = obj4;
+              c4 = 2;
+              c5 = 1;
+              const obj5 = { value: HTTP.post(request), done: false };
+              return obj5;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            closure_128_0 = tmp19;
+            const tmp17 = new character_id(tmp19[4])(closure_128_0);
+            throw tmp17;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            c3 = 0;
+            c5 = 3;
+            obj = { value: value.body, done: true };
+            return obj;
+          }
+        } catch (tmp19) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp19;
+          } else {
+            c4 = tmp;
+          }
         }
       }
     })();

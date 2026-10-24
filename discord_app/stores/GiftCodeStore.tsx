@@ -1,12 +1,12 @@
-// === Module 11031: GiftCodeStore ===
+// === Module 11032: GiftCodeStore ===
 
-// Module 11031 (GiftCodeStore)
+// Module 11032 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6370 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11032 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10450 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6372 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11033 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10451 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,7 +18,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4816).Timeout();
+      const timeout = new code(4818).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {

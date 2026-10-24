@@ -1,18 +1,18 @@
-// === Module 12755: conjureServerAppRemoval ===
+// === Module 12792: conjureServerAppRemoval ===
 
-// Module 12755 (conjureServerAppRemoval)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6807 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
-import ConjureUtils from "ConjureUtils" /* 7343 */;
-import conjureAppInServer from "conjureAppInServer" /* 10730 */;
+// Module 12792 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
+import ConjureUtils from "ConjureUtils" /* 7345 */;
+import conjureAppInServer from "conjureAppInServer" /* 10731 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import GuildChannelStore from "GuildChannelStore" /* 4899 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import GuildChannelStore from "GuildChannelStore" /* 4901 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -52,8 +52,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10730).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10730);
+          items = guild(10731).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10731);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -62,8 +62,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10730).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10730);
+          canRemoveConjureBotResult = guild(10731).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10731);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -71,8 +71,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10730).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10730);
+          canRemoveConjureBotResult = guild(10731).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10731);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -256,7 +256,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1087).Permissions;
 let c14 = " (Preview)";
 fn(558);

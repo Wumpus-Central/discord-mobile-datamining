@@ -1,13 +1,13 @@
-// === Module 12191: useCreatePollFormData ===
+// === Module 12217: useCreatePollFormData ===
 
-// Module 12191 (useCreatePollFormData)
+// Module 12217 (useCreatePollFormData)
 import util from "util" /* 1128 */;
-import PollsUtils from "PollsUtils" /* 8282 */;
-import useRequestDefault from "useRequest" /* 12192 */;
-import PollsActionCreatorsDefault from "PollsActionCreators" /* 12193 */;
-import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12206 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12207 */;
-import PollTypes from "PollTypes" /* 12208 */;
+import PollsUtils from "PollsUtils" /* 8284 */;
+import useRequestDefault from "useRequest" /* 12218 */;
+import PollsActionCreatorsDefault from "PollsActionCreators" /* 12219 */;
+import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12232 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12233 */;
+import PollTypes from "PollTypes" /* 12234 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "end", stickerId: "toCharArray$esjava$1" };
+  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
   return obj;
 }
-const PollsConstants = fn(8308);
+const PollsConstants = fn(8310);
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: closure_7, MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8, PollDurations: closure_9 } = PollsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -370,17 +370,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "end", stickerId: "toCharArray$esjava$1" };
+    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
     callback2(obj, arg1);
     const obj2 = { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     const result = PollUploadAttachmentActionCreatorsAll.handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
-    const obj4 = { mediaAttachmentState: null, emoji: "end", stickerId: "toCharArray$esjava$1" };
+    const obj4 = { mediaAttachmentState: null, emoji: "r", stickerId: "toCharArray$esjava$1" };
     obj4.mediaAttachmentState = { status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL };
     callback2(obj4, arg1);
   }, items2);
   const callback6 = obj.useCallback((emoji, arg1) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "end", mediaAttachmentState: "toCharArray$esjava$1" }, arg1);
+    callback2({ emoji, stickerId: "r", mediaAttachmentState: "toCharArray$esjava$1" }, arg1);
   }, items3);
   const items4 = [answers.length < first1];
   const callback7 = obj.useCallback((arg0) => {
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       let intl = util.intl;
       obj.question = intl.string(util.t.gPX3oI);
     }
-    if (first.filter((item) => c0(8282).isAnswerFilled(item)).length < closure_2_8) {
+    if (first.filter((item) => c0(8284).isAnswerFilled(item)).length < closure_2_8) {
       c0 = false;
       let _HermesInternal = HermesInternal;
       let combined = "answer-" + first[0].localCreationAnswerId;
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
     const item = first.forEach((localCreationAnswerId) => {
-      obj = closure_0(8282);
+      obj = closure_0(8284);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;

@@ -1,13 +1,13 @@
-// === Module 11273: UserProfileSection ===
+// === Module 11274: UserProfileSection ===
 
-// Module 11273 (UserProfileSection)
+// Module 11274 (UserProfileSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4966 */;
-import native from "native" /* 5035 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7278 */;
-import FormDivider from "FormDivider" /* 8953 */;
+import ColorUtils from "ColorUtils" /* 4968 */;
+import native from "native" /* 5037 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7280 */;
+import FormDivider from "FormDivider" /* 8955 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ let closure_2 = ["title", "headerIcon", "trailingIcon", "showContainer", "childr
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

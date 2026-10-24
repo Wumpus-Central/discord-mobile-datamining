@@ -1,14 +1,14 @@
-// === Module 15835: UserProfileDisplayNameStylesEditButton ===
+// === Module 15859: UserProfileDisplayNameStylesEditButton ===
 
-// Module 15835 (UserProfileDisplayNameStylesEditButton)
+// Module 15859 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10660 */;
-import _modDef14468 from "module_14468" /* 14468 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15840 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15841 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10661 */;
+import _modDef14492 from "module_14492" /* 14492 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15864 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15865 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,11 +17,11 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
-const HexagonCampaignConstants = fn(4994);
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const HexagonCampaignConstants = fn(4996);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           effectId = tmp(tmp2[18]).DisplayNameEffect.SOLID;
         }
         let str2 = tmp(tmp2[17]).useDisplayNameStylesEffectConfig(effectId);
-        const tmpResult6 = tmp(tmp2[17]);
+        const tmpResult7 = tmp(tmp2[17]);
         let tmp22 = tmp(tmp2[19]).useHexagonCampaignPerkAvailability(constants3.DISPLAY_NAME_STYLE, "UserProfileDisplayNameStylesEditButton") === constants4.SELECTABLE;
         if (tmp22) {
           tmp22 = true !== isTryItOut;
@@ -96,42 +96,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           }
           tmp22 = fontId !== closure_10;
         }
-        tmp(tmp2[20]);
+        const tmpResult8 = tmp(tmp2[19]);
+        const trackHexagonCampaignContentViewed = tmp(tmp2[20]).useTrackHexagonCampaignContentViewed(tmp(tmp2[21]).QuestContent.DISPLAY_NAME_STYLES_SETTINGS, tmp(tmp2[20]).HexagonCampaignContentSurface.PROFILE_ROW_PROMO, tmp22);
+        tmp(tmp2[22]);
         if (cResult[7] === guildId) {
           if (cResult[8] === isTryItOut) {
             if (cResult[9] === tmp13) {
               if (cResult[10] === nativeStackNavigation) {
-                let tmp26 = cResult[11];
+                let tmp27 = cResult[11];
               }
               if (null != tmp17) {
                 if (cResult[13] !== tmp17.fontId) {
-                  const intl2 = tmp(tmp2[22]).intl;
-                  const stringResult = intl2.string(tmp16(tmp2[23])(tmp17.fontId));
+                  const intl2 = tmp(tmp2[24]).intl;
+                  const stringResult = intl2.string(tmp16(tmp2[25])(tmp17.fontId));
                   cResult[13] = tmp17.fontId;
                   cResult[14] = stringResult;
-                  let tmp29 = stringResult;
+                  let tmp30 = stringResult;
                 } else {
-                  tmp29 = cResult[14];
+                  tmp30 = cResult[14];
                 }
                 const _HermesInternal = HermesInternal;
                 str2 = "";
-                const combined = "" + tmp29 + " + " + str2.name;
+                const combined = "" + tmp30 + " + " + str2.name;
               } else {
                 const _Symbol2 = Symbol;
                 if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl = tmp(tmp2[22]).intl;
-                  const stringResult1 = intl.string(tmp(tmp2[22]).t.PoWNfe);
+                  const intl = tmp(tmp2[24]).intl;
+                  const stringResult1 = intl.string(tmp(tmp2[24]).t.PoWNfe);
                   cResult[12] = stringResult1;
-                  let tmp27 = stringResult1;
+                  let tmp28 = stringResult1;
                 } else {
-                  tmp27 = cResult[12];
+                  tmp28 = cResult[12];
                 }
                 if (cResult[15] === tmp17) {
                   if (cResult[16] === guildId) {
                     if (cResult[17] === tmp4.ggContainer) {
                       if (cResult[18] === tmp4.noneIcon) {
                         if (cResult[19] === user.id) {
-                          let tmp32 = cResult[20];
+                          let tmp33 = cResult[20];
                         }
                         if (cResult[21] !== tmp17) {
                           class K {
@@ -143,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -174,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -205,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -224,9 +226,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                               return tmp3Result;
                             }
                           }
-                          const stringResult2 = obj10.string(tmp16(tmp2[28])["86GtGH"]);
+                          const stringResult2 = obj11.string(tmp16(tmp2[30])["86GtGH"]);
                           cResult[23] = stringResult2;
-                          const tmp34 = stringResult2;
+                          const tmp35 = stringResult2;
                         } else {
                           class K {
                             constructor() {
@@ -237,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -267,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -297,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -327,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -346,10 +348,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                               return tmp3Result;
                             }
                           }
-                          const obj5 = { showPremiumIcon: true, showNewBadge: tmp36 };
-                          const tmp38 = jsx(tmp(tmp2[29]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp36 });
-                          cResult[24] = tmp36;
-                          cResult[25] = tmp38;
+                          const obj5 = { showPremiumIcon: true, showNewBadge: tmp37 };
+                          const tmp39 = jsx(tmp(tmp2[31]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp37 });
+                          cResult[24] = tmp37;
+                          cResult[25] = tmp39;
                         } else {
                           class K {
                             constructor() {
@@ -360,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -380,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                             }
                           }
                         }
-                        if (cResult[26] !== tmp27) {
+                        if (cResult[26] !== tmp28) {
                           class K {
                             constructor() {
                               tmp = closure_6;
@@ -390,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -409,9 +411,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                               return tmp3Result;
                             }
                           }
-                          tmp40[0] = tmp27;
-                          cResult[26] = tmp27;
-                          cResult[27] = tmp40;
+                          tmp41[0] = tmp28;
+                          cResult[26] = tmp28;
+                          cResult[27] = tmp41;
                         } else {
                           class K {
                             constructor() {
@@ -422,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -442,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                             }
                           }
                         }
-                        if (cResult[28] !== tmp32) {
+                        if (cResult[28] !== tmp33) {
                           class K {
                             constructor() {
                               tmp = closure_6;
@@ -452,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -471,8 +473,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                               return tmp3Result;
                             }
                           }
-                          cResult[28] = tmp32;
-                          cResult[29] = tmp42;
+                          cResult[28] = tmp33;
+                          cResult[29] = tmp43;
                         } else {
                           class K {
                             constructor() {
@@ -483,7 +485,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -513,7 +515,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -533,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                             }
                           }
                           cResult[30] = K;
-                          cResult[31] = tmp44;
+                          cResult[31] = tmp45;
                         } else {
                           class K {
                             constructor() {
@@ -544,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -574,7 +576,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -603,7 +605,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                   tmp5 = closure_2;
                                   tmp3 = jsx;
                                   colors = undefined;
-                                  tmp6 = closure_1(closure_2[27]);
+                                  tmp6 = closure_1(closure_2[29]);
                                   if (tmp != null) {
                                     colors = tmp.colors;
                                   }
@@ -622,10 +624,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 return tmp3Result;
                               }
                             }
-                            const tmp46 = jsx(tmp16(tmp2[30]), {});
+                            const tmp47 = jsx(tmp16(tmp2[32]), {});
                           }
                           cResult[32] = tmp22;
-                          cResult[33] = tmp46;
+                          cResult[33] = tmp47;
+                          const tmp46 = tmp47;
                         } else {
                           class K {
                             constructor() {
@@ -636,7 +639,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -656,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                             }
                           }
                         }
-                        if (cResult[34] === tmp27) {
+                        if (cResult[34] === tmp28) {
                           class K {
                             constructor() {
                               tmp = closure_6;
@@ -666,7 +669,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                 tmp5 = closure_2;
                                 tmp3 = jsx;
                                 colors = undefined;
-                                tmp6 = closure_1(closure_2[27]);
+                                tmp6 = closure_1(closure_2[29]);
                                 if (tmp != null) {
                                   colors = tmp.colors;
                                 }
@@ -686,24 +689,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                             }
                           }
                         }
-                        const obj6 = { label: tmp34, labelTrailing: tmp37, buttonText: tmp27, accessibilityValue: tmp40, onPress: tmp26, leading: tmp42, trailing: tmp44, footer: tmp45 };
-                        const tmp49 = jsx(tmp(tmp2[29]).UserProfileEditFormButton, { label: tmp34, labelTrailing: tmp37, buttonText: tmp27, accessibilityValue: tmp40, onPress: tmp26, leading: tmp42, trailing: tmp44, footer: tmp45 });
-                        cResult[34] = tmp27;
-                        cResult[35] = tmp26;
-                        cResult[36] = tmp37;
-                        cResult[37] = tmp40;
-                        cResult[38] = tmp42;
-                        cResult[39] = tmp44;
-                        cResult[40] = tmp45;
-                        cResult[41] = tmp49;
+                        const obj6 = { label: tmp35, labelTrailing: tmp38, buttonText: tmp28, accessibilityValue: tmp41, onPress: tmp27, leading: tmp43, trailing: tmp45, footer: null };
+                        class U {
+                          constructor() {
+                            obj = closure_1(closure_2[23]);
+                            trackResult = obj.track(AnalyticEvents.DISPLAY_NAME_STYLES_FROM_SETTINGS);
+                            obj1 = { guildId, isTryItOut };
+                            navigateResult = closure_4.navigate(UserSettingsSections.DISPLAY_NAME_STYLES, obj1);
+                            tmp3 = closure_5(ContentDismissActionType.TAKE_ACTION);
+                            return;
+                          }
+                        }
+                        const tmp50 = jsx(tmp(tmp2[31]).UserProfileEditFormButton, { label: tmp35, labelTrailing: tmp38, buttonText: tmp28, accessibilityValue: tmp41, onPress: tmp27, leading: tmp43, trailing: tmp45, footer: null });
+                        cResult[34] = tmp28;
+                        cResult[35] = tmp27;
+                        cResult[36] = tmp38;
+                        cResult[37] = tmp41;
+                        cResult[38] = tmp43;
+                        cResult[39] = tmp45;
+                        cResult[40] = tmp46;
+                        cResult[41] = tmp50;
                       }
                     }
                   }
                 }
-                const fn2 = function $() {
+                const fn = function $() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef14468, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef14468, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef14492, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef14492, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -717,33 +730,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 cResult[17] = tmp4.ggContainer;
                 cResult[18] = tmp4.noneIcon;
                 cResult[19] = user.id;
-                cResult[20] = fn2;
-                tmp32 = fn2;
+                cResult[20] = fn;
+                tmp33 = fn;
               }
             }
           }
         }
-        const fn = function h() {
-          AnalyticsUtilsDefault.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
-          nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, { guildId, isTryItOut });
-          closure_5(ContentDismissActionType.TAKE_ACTION);
-        };
+        class U {
+          constructor() {
+            obj = closure_1(closure_2[23]);
+            trackResult = obj.track(AnalyticEvents.DISPLAY_NAME_STYLES_FROM_SETTINGS);
+            obj1 = { guildId, isTryItOut };
+            navigateResult = closure_4.navigate(UserSettingsSections.DISPLAY_NAME_STYLES, obj1);
+            tmp3 = closure_5(ContentDismissActionType.TAKE_ACTION);
+            return;
+          }
+        }
         cResult[7] = guildId;
         cResult[8] = isTryItOut;
         cResult[9] = tmp13;
         cResult[10] = nativeStackNavigation;
-        cResult[11] = fn;
-        tmp26 = fn;
-        const tmpResult7 = tmp(tmp2[19]);
+        cResult[11] = U;
+        tmp27 = U;
+        const tmpResult9 = tmp(tmp2[20]);
       }
     }
     const obj7 = { userId: user.id, guildId, pendingDisplayNameStyles: tryItOutDisplayNameStyles, ignoreDisabledStylesSetting: true };
-    cResult[3] = guildId;
     cResult[4] = tryItOutDisplayNameStyles;
     cResult[5] = user.id;
     cResult[6] = obj7;
     tmp15 = obj7;
-    const tmpResult5 = tmp(tmp2[15]);
+    const tmpResult6 = tmp(tmp2[15]);
   }
   let obj3 = user(isTryItOut[12]);
 }) : (function UserProfileDisplayNameStylesEditButton(user) {
@@ -787,7 +804,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     effectId = tmp2(tmp3[18]).DisplayNameEffect.SOLID;
   }
   displayNameStylesEffectConfig = user(isTryItOut[17]).useDisplayNameStylesEffectConfig(effectId);
-  const tmp2Result4 = user(isTryItOut[17]);
+  const tmp2Result5 = user(isTryItOut[17]);
   let tmp14 = user(isTryItOut[19]).useHexagonCampaignPerkAvailability(constants3.DISPLAY_NAME_STYLE, "UserProfileDisplayNameStylesEditButton") === constants4.SELECTABLE;
   if (tmp14) {
     tmp14 = true !== isTryItOut;
@@ -799,12 +816,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
     tmp14 = fontId !== closure_10;
   }
-  const tmp2Result5 = user(isTryItOut[19]);
+  const tmp2Result6 = user(isTryItOut[19]);
+  const trackHexagonCampaignContentViewed = user(isTryItOut[20]).useTrackHexagonCampaignContentViewed(tmp2(tmp3[21]).QuestContent.DISPLAY_NAME_STYLES_SETTINGS, tmp2(tmp3[20]).HexagonCampaignContentSurface.PROFILE_ROW_PROMO, tmp14);
+  const tmp2Result7 = user(isTryItOut[20]);
   const items2 = [guildId, isTryItOut, nativeStackNavigation, tmp6[1]];
-  const hexagonCampaignHasVisitedDisplayNameStyles = user(isTryItOut[20]).useHexagonCampaignHasVisitedDisplayNameStyles();
+  const hexagonCampaignHasVisitedDisplayNameStyles = user(isTryItOut[22]).useHexagonCampaignHasVisitedDisplayNameStyles();
   const items3 = [displayNameStylesEffectConfig, tmp10Result];
-  const tmp2Result6 = user(isTryItOut[20]);
-  const tmp19 = closure_5(() => {
+  const tmp2Result8 = user(isTryItOut[22]);
+  const tmp20 = closure_5(() => {
     if (null == closure_6) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t.PoWNfe);
@@ -817,15 +836,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items3);
   const items4 = [tmp10Result, guildId, user.id, tmp];
   const items5 = [tmp10Result];
-  const tmp18 = nativeStackNavigation(() => {
+  const tmp19 = nativeStackNavigation(() => {
     AnalyticsUtilsDefault.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
     nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, { guildId, isTryItOut });
     closure_5(ContentDismissActionType.TAKE_ACTION);
   }, items2);
-  const tmp20 = nativeStackNavigation(() => {
+  const tmp21 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef14468, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef14468, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14492, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14492, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -835,20 +854,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     return tmp10;
   }, items4);
   const obj5 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, footer: null };
-  let intl = tmp2(tmp3[22]).intl;
-  obj5.label = intl.string(guildId(isTryItOut[28])["86GtGH"]);
-  let tmp23 = tmp14;
+  let intl = tmp2(tmp3[24]).intl;
+  obj5.label = intl.string(guildId(isTryItOut[30])["86GtGH"]);
+  let tmp24 = tmp14;
   if (tmp14) {
-    tmp23 = !hexagonCampaignHasVisitedDisplayNameStyles;
+    tmp24 = !hexagonCampaignHasVisitedDisplayNameStyles;
   }
-  if (!tmp23) {
-    tmp23 = tmp6[0] === tmp2(tmp3[13]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE;
+  if (!tmp24) {
+    tmp24 = tmp6[0] === tmp2(tmp3[13]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE;
   }
-  obj5.labelTrailing = jsx(user(isTryItOut[29]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp23 });
-  obj5.buttonText = tmp19;
-  obj5.accessibilityValue = { text: tmp19 };
-  obj5.onPress = tmp18;
-  obj5.leading = tmp20();
+  obj5.labelTrailing = jsx(user(isTryItOut[31]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp24 });
+  obj5.buttonText = tmp20;
+  obj5.accessibilityValue = { text: tmp20 };
+  obj5.onPress = tmp19;
+  obj5.leading = tmp21();
   obj5.trailing = nativeStackNavigation(() => {
     let tmp3Result = null;
     if (null != closure_6) {
@@ -869,10 +888,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
     return tmp3Result;
   }, items5)();
-  let tmp22Result;
+  let tmp23Result;
   if (tmp14) {
-    tmp22Result = jsx(tmp9(tmp3[30]), {});
+    tmp23Result = jsx(tmp9(tmp3[32]), {});
   }
-  obj5.footer = tmp22Result;
-  return jsx(user(isTryItOut[29]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, footer: null });
+  obj5.footer = tmp23Result;
+  return jsx(user(isTryItOut[31]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, footer: null });
 });

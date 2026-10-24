@@ -1,14 +1,14 @@
-// === Module 15268: ModalDisclaimer ===
+// === Module 15289: ModalDisclaimer ===
 
-// Module 15268 (ModalDisclaimer)
+// Module 15289 (ModalDisclaimer)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
+import Text_Text from "Text/Text" /* 5234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_4 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, disclaimer: { marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

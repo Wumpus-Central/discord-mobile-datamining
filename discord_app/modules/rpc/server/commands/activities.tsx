@@ -1,32 +1,32 @@
-// === Module 15740: activities ===
+// === Module 15762: activities ===
 
-// Module 15740 (activities)
-import RPCHelpers from "RPCHelpers" /* 11455 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15689 */;
+// Module 15762 (activities)
+import RPCHelpers from "RPCHelpers" /* 11475 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15699);
+let CONTEXT_MENU_ICON_NAMES = fn(15720);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-  scope: fn(15689).activityInstanceConnectedParticipantsScope,
+  scope: fn(15710).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15699);
+CONTEXT_MENU_ICON_NAMES = fn(15720);
 let obj3 = {
-  scope: fn(15689).activityInstanceConnectedParticipantsScope,
+  scope: fn(15710).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, {
-  scope: fn(15689).activityInstanceConnectedParticipantsScope,
+  scope: fn(15710).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {

@@ -1,23 +1,23 @@
-// === Module 18069: renderChannelContent ===
+// === Module 18101: renderChannelContent ===
 
-// Module 18069 (renderChannelContent)
+// Module 18101 (renderChannelContent)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7200 */;
-import WarningIcon from "WarningIcon" /* 7955 */;
-import LockIcon from "LockIcon" /* 8564 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17520 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18066 */;
-import ChannelTitleDefault from "ChannelTitle" /* 18070 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
+import WarningIcon from "WarningIcon" /* 7957 */;
+import LockIcon from "LockIcon" /* 8566 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17552 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18098 */;
+import ChannelTitleDefault from "ChannelTitle" /* 18102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(12033).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6703).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(12059).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6705).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let PlatformUtils = fn(1384);
 let num = -1;
 if (PlatformUtils.isIOS()) {

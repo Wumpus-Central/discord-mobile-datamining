@@ -1,13 +1,13 @@
-// === Module 9061: HubProgressActionCreators ===
+// === Module 9062: HubProgressActionCreators ===
 
-// Module 9061 (HubProgressActionCreators)
+// Module 9062 (HubProgressActionCreators)
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9062).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9063).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
@@ -22,7 +22,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [INVITE_USER];
-      const result = items(4802).updateUserGuildSettings(guildId, (hubProgress) => {
+      const result = items(4804).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let obj = FlagUtils;
@@ -34,8 +34,8 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           continue;
         }
         return flag;
-      }, items(4802).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(4802);
+      }, items(4804).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(4804);
     }
   }
 };

@@ -1,17 +1,17 @@
-// === Module 18551: VoicePanelGamesSection ===
+// === Module 18583: VoicePanelGamesSection ===
 
-// Module 18551 (VoicePanelGamesSection)
+// Module 18583 (VoicePanelGamesSection)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 7404 */;
-import FormComponents from "FormComponents" /* 9163 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9245 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 14156 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 18552 */;
+import useGame from "useGame" /* 7406 */;
+import FormComponents from "FormComponents" /* 9164 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9246 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 14175 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 18584 */;
 import noop from "module_19" /* 19 */;
 
 const util = v9sZWVp(1128);
-const TableRow = v9sZWVp(6901);
-const GameProfileAnalyticUtils = v9sZWVp(9244);
+const TableRow = v9sZWVp(6903);
+const GameProfileAnalyticUtils = v9sZWVp(9245);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

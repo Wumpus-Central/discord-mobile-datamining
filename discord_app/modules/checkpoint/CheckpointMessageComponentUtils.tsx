@@ -1,17 +1,17 @@
-// === Module 6034: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 6036: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 6034 (checkpoint/CheckpointMessageComponentUtils)
+// Module 6036 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
-import CheckpointUtils from "CheckpointUtils" /* 6022 */;
-import CheckpointCardTypes from "CheckpointCardTypes" /* 6036 */;
-import CheckpointTrait from "CheckpointTrait" /* 6037 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6038 */;
-import CheckpointConstants from "CheckpointConstants" /* 6013 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4917 */;
+import CheckpointUtils from "CheckpointUtils" /* 6024 */;
+import CheckpointCardTypes from "CheckpointCardTypes" /* 6038 */;
+import CheckpointTrait from "CheckpointTrait" /* 6039 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6040 */;
+import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

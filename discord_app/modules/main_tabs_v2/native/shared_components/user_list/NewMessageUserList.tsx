@@ -1,16 +1,16 @@
-// === Module 13211: NewMessageUserList ===
+// === Module 13248: NewMessageUserList ===
 
-// Module 13211 (NewMessageUserList)
+// Module 13248 (NewMessageUserList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import UserUtilsDefault from "UserUtils" /* 5023 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useChannelName from "useChannelName" /* 5602 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6825 */;
+import UserUtilsDefault from "UserUtils" /* 5025 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -95,11 +95,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10615).UserRowModes;
+const UserRowModes = fn(10616).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

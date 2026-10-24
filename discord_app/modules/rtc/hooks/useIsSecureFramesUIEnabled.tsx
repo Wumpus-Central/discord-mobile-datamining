@@ -1,8 +1,8 @@
-// === Module 9214: useIsSecureFramesUIEnabled ===
+// === Module 9215: useIsSecureFramesUIEnabled ===
 
-// Module 9214 (useIsSecureFramesUIEnabled)
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+// Module 9215 (useIsSecureFramesUIEnabled)
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 
 const require = fn;
 function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {
@@ -30,7 +30,7 @@ function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {
     return false;
   }
 }
-let closure_4 = fn(9196).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9197).END_TO_END_ENCRYPTION_DISABLED;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");

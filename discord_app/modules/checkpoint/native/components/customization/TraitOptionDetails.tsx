@@ -1,18 +1,18 @@
-// === Module 12991: TraitOptionDetails ===
+// === Module 13028: TraitOptionDetails ===
 
-// Module 12991 (TraitOptionDetails)
+// Module 13028 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import RarityBadgeDefault from "RarityBadge" /* 12992 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import RarityBadgeDefault from "RarityBadge" /* 13029 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, subscribeLink: { textDecorationLine: "underline" } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
   _require = tmp4;
   let tmp5 = null;
   if (!asset.hidden) {
-    if (asset.status === tmp(6038).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+    if (asset.status === tmp(6040).CheckpointTraitOptionStatus.NITRO_LOCKED) {
       if (cResult[0] !== tmp4) {
         const intl = tmp(1128).intl;
         const obj2 = {
@@ -34,9 +34,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                     style: subscribeLink.subscribeLink,
                     onPress() {
                       const obj = { analyticsLocations: null };
-                      const items = [closure_1_1(7276).CHECKPOINT];
+                      const items = [closure_1_1(7278).CHECKPOINT];
                       obj.analyticsLocations = items;
-                      return closure_1_1(9791)(obj);
+                      return closure_1_1(9792)(obj);
                     },
                     accessibilityRole: "link",
                     children
@@ -49,11 +49,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
       }
     } else {
       if (cResult[2] !== asset) {
-        const assetDescription = tmp(6360).getAssetDescription(asset);
+        const assetDescription = tmp(6362).getAssetDescription(asset);
         cResult[2] = asset;
         cResult[3] = assetDescription;
         let tmp6 = assetDescription;
-        const tmpResult = tmp(6360);
+        const tmpResult = tmp(6362);
       } else {
         tmp6 = cResult[3];
       }
@@ -92,9 +92,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                 style: subscribeLink.subscribeLink,
                 onPress() {
                   const obj = { analyticsLocations: null };
-                  const items = [closure_1_1(7276).CHECKPOINT];
+                  const items = [closure_1_1(7278).CHECKPOINT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(9791)(obj);
+                  return closure_1_1(9792)(obj);
                 },
                 accessibilityRole: "link",
                 children
@@ -103,8 +103,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
       };
       let formatResult = format(_modDef3088["3Wq/bk"], obj);
     } else {
-      formatResult = format(6360).getAssetDescription(asset);
-      const formatResult1 = format(6360);
+      formatResult = format(6362).getAssetDescription(asset);
+      const formatResult1 = format(6362);
     }
   }
 });

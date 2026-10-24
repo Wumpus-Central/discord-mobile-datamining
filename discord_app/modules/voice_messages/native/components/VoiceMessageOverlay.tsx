@@ -1,21 +1,21 @@
-// === Module 13529: VoiceMessageOverlay ===
+// === Module 13566: VoiceMessageOverlay ===
 
-// Module 13529 (VoiceMessageOverlay)
+// Module 13566 (VoiceMessageOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5265 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5969 */;
-import LegacyTokens from "LegacyTokens" /* 6705 */;
-import useRefValueDefault from "useRefValue" /* 6883 */;
-import inlineStyles from "inlineStyles" /* 7960 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5971 */;
+import LegacyTokens from "LegacyTokens" /* 6707 */;
+import useRefValueDefault from "useRefValue" /* 6885 */;
+import inlineStyles from "inlineStyles" /* 7962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import apply from "module_12" /* 12 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
@@ -23,10 +23,10 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13018).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13019).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13055).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13056).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1087).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12491).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12525).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VoiceMessageOverlay = "VoiceMessageOverlay";
@@ -36,11 +36,11 @@ let c19 = 500;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_20 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5232).Text);
+let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5234).Text);
 let closure_22 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c23 = 68;
 let c24 = 56;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_25 = createStyles.createStyles(() => {
   const obj = { innerContainer: { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM }, contentContainer: { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" }, contentContainerFloating: { justifyContent: "flex-end", overflow: "visible" }, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   const size = { width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };

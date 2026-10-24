@@ -1,11 +1,11 @@
-// === Module 6665: AgeGateModalActionCreators ===
+// === Module 6667: AgeGateModalActionCreators ===
 
-// Module 6665 (AgeGateModalActionCreators)
+// Module 6667 (AgeGateModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AgeGateConstants from "AgeGateConstants" /* 1112 */;
 import router_utils from "router_utils" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6666 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6668 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,8 @@ export const closeAgeGateModal = function closeAgeGateModal(source) {
   }
 };
 export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
-  DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
+  DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source });
+  const obj2 = { type: "AGE_GATE_SUCCESS_MODAL_OPEN", source };
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
 };
 export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {

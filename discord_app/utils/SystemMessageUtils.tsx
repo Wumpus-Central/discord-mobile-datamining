@@ -1,28 +1,28 @@
-// === Module 8341: SystemMessageUtils ===
+// === Module 8343: SystemMessageUtils ===
 
-// Module 8341 (SystemMessageUtils)
+// Module 8343 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4889 */;
-import useChannelName from "useChannelName" /* 5602 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5987 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6010 */;
-import useMessageAuthor from "useMessageAuthor" /* 6364 */;
-import MarkupParser from "MarkupParser" /* 8342 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8346 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8347 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8349 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8350 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8351 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8352 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8353 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8354 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4891 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
+import useMessageAuthor from "useMessageAuthor" /* 6366 */;
+import MarkupParser from "MarkupParser" /* 8344 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8348 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8349 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8351 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8352 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8353 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8354 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8355 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8356 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4912 */;
+import MessageRecord from "MessageRecord" /* 4914 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;

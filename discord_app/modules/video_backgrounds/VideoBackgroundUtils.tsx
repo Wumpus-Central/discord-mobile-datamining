@@ -1,11 +1,11 @@
-// === Module 5865: VideoBackgroundUtils ===
+// === Module 5867: VideoBackgroundUtils ===
 
-// Module 5865 (VideoBackgroundUtils)
+// Module 5867 (VideoBackgroundUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -92,7 +92,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5861);
+const VideoBackgroundConstants = fn(5863);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);

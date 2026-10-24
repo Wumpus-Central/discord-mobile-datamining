@@ -1,13 +1,13 @@
-// === Module 18182: ContactSuggestionRow ===
+// === Module 18214: ContactSuggestionRow ===
 
-// Module 18182 (ContactSuggestionRow)
+// Module 18214 (ContactSuggestionRow)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserUtilsDefault from "UserUtils" /* 5023 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17433 */;
+import UserUtilsDefault from "UserUtils" /* 5025 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17465 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (cResult[5] === tmp7.friendSuggestionName) {
     if (cResult[6] === tmp7.user) {
-      sharedValue = tmp(5050).useSharedValue(false);
+      sharedValue = tmp(5052).useSharedValue(false);
       if (cResult[8] === tmp4) {
         if (cResult[9] === sharedValue) {
           let tmp15 = cResult[10];
@@ -122,12 +122,12 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const suggestedContactNameForSuggestion = tmp(17432).getSuggestedContactNameForSuggestion(tmp11, tmp7);
+              const suggestedContactNameForSuggestion = tmp(17464).getSuggestedContactNameForSuggestion(tmp11, tmp7);
               cResult[20] = tmp7;
               cResult[21] = tmp11;
               cResult[22] = suggestedContactNameForSuggestion;
               tmp30 = null != undefined;
-              const tmpResult2 = tmp(17432);
+              const tmpResult2 = tmp(17464);
             }
           }
           const fn = function h(nativeEvent) {
@@ -156,7 +156,7 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items2;
       tmp16 = items2;
       tmp15 = F;
-      const tmpResult = tmp(5050);
+      const tmpResult = tmp(5052);
     }
   }
   if (null == tmp7.friendSuggestionName) {

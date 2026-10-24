@@ -1,20 +1,20 @@
-// === Module 6771: ConjureProjectStore ===
+// === Module 6773: ConjureProjectStore ===
 
-// Module 6771 (ConjureProjectStore)
+// Module 6773 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6772 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-function isProjectOwner(item10010) {
+function isProjectOwner(stateFromStores) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  return item10010.owner_user_id === id;
+  return stateFromStores.owner_user_id === id;
 }
 function handleProjectUpsert(project) {
   project = project.project;

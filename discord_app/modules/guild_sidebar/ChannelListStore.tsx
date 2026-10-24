@@ -1,26 +1,26 @@
-// === Module 7633: ChannelListStore ===
+// === Module 7635: ChannelListStore ===
 
-// Module 7633 (ChannelListStore)
+// Module 7635 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
-import ChannelListStateDefault from "ChannelListState" /* 7635 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import GatedChannelStore from "GatedChannelStore" /* 4873 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6768 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
+import ChannelListStateDefault from "ChannelListState" /* 7637 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import GatedChannelStore from "GatedChannelStore" /* 4875 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6770 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7211 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7634 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7213 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7636 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 
 require = fn;
 function handleReset() {

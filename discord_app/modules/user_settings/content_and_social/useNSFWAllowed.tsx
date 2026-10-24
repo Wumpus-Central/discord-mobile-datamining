@@ -1,6 +1,6 @@
-// === Module 7315: useNSFWAllowed ===
+// === Module 7317: useNSFWAllowed ===
 
-// Module 7315 (useNSFWAllowed)
+// Module 7317 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1392 */;

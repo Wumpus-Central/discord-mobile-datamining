@@ -1,6 +1,6 @@
-// === Module 14288: getReactNativeSVGImageSource ===
+// === Module 14312: getReactNativeSVGImageSource ===
 
-// Module 14288 (getReactNativeSVGImageSource)
+// Module 14312 (getReactNativeSVGImageSource)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");

@@ -1,6 +1,6 @@
-// === Module 14148: ServerTagUpsellOnGuildProfileExperiment ===
+// === Module 14167: ServerTagUpsellOnGuildProfileExperiment ===
 
-// Module 14148 (ServerTagUpsellOnGuildProfileExperiment)
+// Module 14167 (ServerTagUpsellOnGuildProfileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

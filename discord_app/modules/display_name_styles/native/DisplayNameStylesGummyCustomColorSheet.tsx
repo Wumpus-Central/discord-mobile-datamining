@@ -1,10 +1,10 @@
-// === Module 16668: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 16700: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 16668 (DisplayNameStylesGummyCustomColorSheet)
+// Module 16700 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 587 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import HapticUtils from "HapticUtils" /* 5210 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import HapticUtils from "HapticUtils" /* 5212 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const DisplayNameStylesConstants = fn(1410);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } = DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" }, huePickerInset: null, previewWrapper: null, preview: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.huePickerInset = { paddingHorizontal: nativeDefault.space.PX_4 + 2, alignSelf: "stretch" };
@@ -31,12 +31,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   onSelect = onSelect.onSelect;
   const tmp4 = closure_9();
   let obj = onSelect(576);
-  let obj2 = onSelect(5050);
+  let obj2 = onSelect(5052);
   const obj3 = onSelect(1409);
   const sharedValue = obj2.useSharedValue(obj3.wrapHue(onSelect(1105).int2hslRaw(onSelect.initialColor).h));
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      const result = onSelect(5210).triggerHapticFeedback(onSelect(5210).HapticFeedbackTypes.IMPACT_LIGHT);
+      const result = onSelect(5212).triggerHapticFeedback(onSelect(5212).HapticFeedbackTypes.IMPACT_LIGHT);
     };
     cResult[0] = fn;
     let first = fn;
@@ -68,18 +68,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     if (cResult[6] !== tmp7) {
       const obj5 = { title: tmp8, trailing: null };
       const obj6 = { variant: "primary", size: "sm", text: tmp10, onPress: tmp7 };
-      obj5.trailing = closure_7(tmp(5242).Button, obj6);
-      const tmp16 = closure_7(sharedValue(16662), obj5);
+      obj5.trailing = closure_7(tmp(5244).Button, obj6);
+      const tmp16 = closure_7(sharedValue(16694), obj5);
       cResult[6] = tmp7;
       cResult[7] = tmp16;
       let tmp12 = tmp16;
-      const tmp15 = sharedValue(16662);
+      const tmp15 = sharedValue(16694);
     } else {
       tmp12 = cResult[7];
     }
     if (cResult[8] !== sharedValue) {
       const obj7 = { hue: sharedValue };
-      const tmp20 = closure_7(sharedValue(16669), obj7);
+      const tmp20 = closure_7(sharedValue(16701), obj7);
       cResult[8] = sharedValue;
       cResult[9] = tmp20;
       let tmp17 = tmp20;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         }
         if (cResult[16] !== sharedValue) {
           const obj8 = { hue: sharedValue, onPanFinalize: first, saturation, lightness, fullWidth: true };
-          const tmp34 = closure_7(sharedValue(15820), obj8);
+          const tmp34 = closure_7(sharedValue(15843), obj8);
           cResult[16] = sharedValue;
           cResult[17] = tmp34;
           let tmp29 = tmp34;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 return tmp43;
               }
               const obj9 = { header: tmp12, children: tmp39 };
-              const tmp45 = closure_7(tmp(5263).BottomSheet, obj9);
+              const tmp45 = closure_7(tmp(5265).BottomSheet, obj9);
               cResult[25] = tmp39;
               cResult[26] = tmp12;
               cResult[27] = tmp45;
@@ -176,12 +176,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
 }) : (function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(5050);
+  let obj = onSelect(5052);
   let obj2 = onSelect(1409);
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1105).int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(5210).triggerHapticFeedback(onSelect(5210).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(5212).triggerHapticFeedback(onSelect(5212).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -197,16 +197,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const intl2 = onSelect(1128).intl;
   obj6.text = intl2.string(onSelect(1128).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5242).Button, obj6);
-  obj4.header = closure_7(sharedValue(16662), obj5);
+  obj5.trailing = closure_7(onSelect(5244).Button, obj6);
+  obj4.header = closure_7(sharedValue(16694), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(16662);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(16669), { hue: sharedValue }) });
+  const tmp5 = sharedValue(16694);
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(16701), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(15820), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(15843), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(5263).BottomSheet, obj4);
+  return closure_7(onSelect(5265).BottomSheet, obj4);
 });

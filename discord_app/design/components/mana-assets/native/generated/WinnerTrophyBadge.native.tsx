@@ -1,23 +1,23 @@
-// === Module 10681: WinnerTrophyBadge ===
+// === Module 10682: WinnerTrophyBadge ===
 
-// Module 10681 (WinnerTrophyBadge)
+// Module 10682 (WinnerTrophyBadge)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import assetHelpers from "assetHelpers" /* 6993 */;
-import _modDef10682 from "module_10682" /* 10682 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import assetHelpers from "assetHelpers" /* 6995 */;
 import _modDef10683 from "module_10683" /* 10683 */;
 import _modDef10684 from "module_10684" /* 10684 */;
+import _modDef10685 from "module_10685" /* 10685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10682 }, 3: null };
-let obj2 = { uri: _modDef10682 };
-obj[2] = { uri: _modDef10683 };
-const obj3 = { uri: _modDef10683 };
-obj[3] = { uri: _modDef10684 };
+let obj = { 1: null, 2: { uri: _modDef10683 }, 3: null };
+let obj2 = { uri: _modDef10683 };
+obj[2] = { uri: _modDef10684 };
+const obj3 = { uri: _modDef10684 };
+obj[3] = { uri: _modDef10685 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10684 };
+const obj4 = { uri: _modDef10685 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WinnerTrophyBadge.native.tsx");
 

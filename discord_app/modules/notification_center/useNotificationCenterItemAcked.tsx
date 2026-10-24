@@ -1,7 +1,7 @@
-// === Module 17828: useNotificationCenterItemAcked ===
+// === Module 17860: useNotificationCenterItemAcked ===
 
-// Module 17828 (useNotificationCenterItemAcked)
-import NotificationCenterStore from "NotificationCenterStore" /* 17821 */;
+// Module 17860 (useNotificationCenterItemAcked)
+import NotificationCenterStore from "NotificationCenterStore" /* 17853 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export const useNotificationCenterItemAcked = ReactCompilerGating.isReactCompile
     }
     let isRemoteAckedResult = stateFromStores;
     if (!stateFromStores) {
-      tmp = tmp(6787);
+      tmp = tmp(6789);
       isRemoteAcked = tmp.isRemoteAcked;
       isRemoteAckedResult = isRemoteAcked(forceUnacked, setting);
     }

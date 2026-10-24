@@ -1,12 +1,12 @@
-// === Module 14403: UserProfileTabPages ===
+// === Module 14427: UserProfileTabPages ===
 
-// Module 14403 (UserProfileTabPages)
+// Module 14427 (UserProfileTabPages)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5265 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 11143 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -570,7 +570,7 @@ ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMeasuredTabItems(arr) {
   const cResult = sharedValue(576).c(11);
   let obj = sharedValue(576);
-  sharedValue = sharedValue(5050).useSharedValue([]);
+  sharedValue = sharedValue(5052).useSharedValue([]);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [];
     cResult[0] = items;
@@ -655,7 +655,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMeasuredT
   cResult[3] = tmp4;
   cResult[4] = arr;
   cResult[5] = mapped;
-  const obj2 = sharedValue(5050);
+  const obj2 = sharedValue(5052);
 }) : (function useMeasuredTabItems(arg0) {
   _require = arg0;
   const sharedValue = require("ReanimatedRexport").useSharedValue([]);

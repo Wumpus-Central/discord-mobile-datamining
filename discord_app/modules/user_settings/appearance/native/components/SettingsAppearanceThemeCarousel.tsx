@@ -1,27 +1,28 @@
-// === Module 16593: SettingsAppearanceThemeCarousel ===
+// === Module 16625: SettingsAppearanceThemeCarousel ===
 
-// Module 16593 (SettingsAppearanceThemeCarousel)
+// Module 16625 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5200 */;
-import timing from "timing" /* 5204 */;
-import timingPresets from "timingPresets" /* 5207 */;
-import HapticUtils from "HapticUtils" /* 5210 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5202 */;
+import timing from "timing" /* 5206 */;
+import timingPresets from "timingPresets" /* 5209 */;
+import HapticUtils from "HapticUtils" /* 5212 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16594 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16626 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-let ThemeTypes = fn(1087).ThemeTypes;
-const HexagonCampaignConstants = fn(4994);
-({ HexagonCampaignPerk: closure_8, HexagonCampaignPerkAvailability: closure_9 } = HexagonCampaignConstants);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const ThemeTypes = fn(1087).ThemeTypes;
+const HexagonCampaignConstants = fn(4996);
+({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: c10 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
-const createStyles = fn(4969);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
+const createStyles = fn(4971);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, hintContainer: { alignSelf: "stretch" }, hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, hidden: { opacity: 0 }, labelGroup: null, swatchesGroup: null, badgeSlot: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -46,32 +47,33 @@ let size = { position: "absolute", alignSelf: "center", width: SettingsAppearanc
 obj.selectionBorder = size;
 obj.a11yThemeList = { flexDirection: "row" };
 obj.a11yThemeListScroll = { flexGrow: 0 };
-let closure_14 = createStyles.createStyles(obj);
+let closure_15 = createStyles.createStyles(obj);
 let __initData = { code: "function SettingsAppearanceThemeCarouselTsx1(){const{badgeOpacity}=this.__closure;return{opacity:badgeOpacity.get()};}" };
-const __initData2 = { code: "function SettingsAppearanceThemeCarouselTsx2(){const{withTiming,isOnyxNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?\"auto\":\"none\"};}" };
-const __initData3 = { code: "function SettingsAppearanceThemeCarouselTsx3(){const{badgeOpacity}=this.__closure;return{opacity:badgeOpacity.get()};}" };
-const __initData4 = { code: "function SettingsAppearanceThemeCarouselTsx4(){const{withTiming,isOnyxNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?'auto':'none'};}" };
+let closure_17 = { code: "function SettingsAppearanceThemeCarouselTsx2(){const{withTiming,isOnyxNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?\"auto\":\"none\"};}" };
+let __initData2 = { code: "function SettingsAppearanceThemeCarouselTsx3(){const{badgeOpacity}=this.__closure;return{opacity:badgeOpacity.get()};}" };
+const __initData3 = { code: "function SettingsAppearanceThemeCarouselTsx4(){const{withTiming,isOnyxNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?'auto':'none'};}" };
 const ReactCompilerGating = fn(558);
 let obj8 = { position: "absolute", left: nativeDefault.space.PX_24 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAppearanceThemeCarousel(themes) {
-  const cResult = themes(isPreview[11]).c(123);
+  const cResult = themes(isPreview[12]).c(131);
   themes = themes.themes;
   const currentThemeIndex = themes.currentThemeIndex;
   isPreview = themes.isPreview;
-  ({ defaultIndex, deviceWidth } = themes);
+  const defaultIndex = themes.defaultIndex;
+  const deviceWidth = themes.deviceWidth;
   const isSynced = themes.isSynced;
   ({ animatedStyles, hasOnyxNux } = themes);
   const onThemeSelected = themes.onThemeSelected;
-  const tmp4 = closure_14();
-  let obj = themes(isPreview[11]);
-  const isScreenReaderEnabled = themes(isPreview[12]).useIsScreenReaderEnabled();
-  const ref = deviceWidth.useRef(null);
+  const tmp4 = rounded();
+  let obj = themes(isPreview[12]);
+  const isScreenReaderEnabled = themes(isPreview[13]).useIsScreenReaderEnabled();
+  let obj2 = themes(isPreview[13]);
   constants = deviceWidth.useRef(defaultIndex);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function y(theme) {
+    const fn = function p(theme) {
       return theme.theme === ref.ONYX;
     };
     cResult[0] = fn;
@@ -84,523 +86,524 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   if (findIndexResult >= 0) {
     num2 = findIndexResult;
   }
-  let obj2 = themes(isPreview[12]);
-  const sharedValue = themes(isPreview[6]).useSharedValue(false);
-  const tmpResult = themes(isPreview[6]);
-  const sharedValue1 = themes(isPreview[6]).useSharedValue(false);
+  const ref = deviceWidth.useRef(null);
+  const sharedValue = themes(isPreview[7]).useSharedValue(false);
+  const tmpResult = themes(isPreview[7]);
+  const sharedValue1 = themes(isPreview[7]).useSharedValue(false);
   if (cResult[1] !== themes[currentThemeIndex]) {
-    let result = tmp(tmp2[13]).isHexagonCampaignMobileTheme(tmp11);
+    let result = tmp(tmp2[14]).isHexagonCampaignMobileTheme(tmp11);
     cResult[1] = tmp11;
     cResult[2] = result;
     let tmp12 = result;
-    const tmpResult9 = tmp(tmp2[13]);
+    const tmpResult10 = tmp(tmp2[14]);
   } else {
     tmp12 = cResult[2];
   }
-  closure_12 = tmp12;
+  closure_13 = tmp12;
   if (cResult[3] !== themes) {
-    const someResult = themes.some(tmp(tmp2[13]).isHexagonCampaignMobileTheme);
+    const someResult = themes.some(tmp(tmp2[14]).isHexagonCampaignMobileTheme);
     cResult[3] = themes;
     cResult[4] = someResult;
     let tmp14 = someResult;
   } else {
     tmp14 = cResult[4];
   }
-  const tmpResult8 = themes(isPreview[6]);
-  const hexagonCampaignPerkAvailability = themes(isPreview[14]).useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
-  const tmp16 = constants;
-  const tmpResult10 = themes(isPreview[14]);
-  let num7 = 0;
-  if (tmp12) {
-    num7 = 1;
-  }
-  const sharedValue2 = themes(isPreview[6]).useSharedValue(num7);
-  if (cResult[5] === sharedValue2) {
-    if (cResult[6] === tmp12) {
+  const findIndexResult1 = themes.findIndex(themes(isPreview[14]).isHexagonCampaignMobileTheme);
+  rounded = Math.ceil(deviceWidth / (onThemeSelected.THEME_ITEM_WIDTH + onThemeSelected.THEME_ITEM_HORIZONTAL_MARGIN));
+  if (cResult[5] === rounded) {
+    if (cResult[6] === findIndexResult1) {
       let tmp19 = cResult[7];
-      let tmp20 = cResult[8];
     }
-    const effect = deviceWidth.useEffect(tmp19, tmp20);
-    const fn2 = function $() {
-      return { opacity: sharedValue2.get() };
-    };
-    const obj4 = { badgeOpacity: sharedValue2 };
-    fn2.__closure = obj4;
-    fn2.__workletHash = 11624303332519;
-    fn2.__initData = __initData;
-    const animatedStyle = tmp(tmp2[6]).useAnimatedStyle(fn2);
-    if (cResult[9] === sharedValue1) {
-      if (cResult[10] === sharedValue) {
-        let tmp24 = cResult[11];
-        let tmp25 = cResult[12];
+    __initData = tmp19;
+    if (cResult[8] === defaultIndex) {
+      class U {
+        constructor() {
+          return closure_16(defaultIndex);
+        }
       }
-      const effect1 = deviceWidth.useEffect(tmp24, tmp25);
-      if (cResult[13] !== onThemeSelected) {
-        const debounceResult = currentThemeIndex(tmp2[17]).debounce(onThemeSelected, 180);
-        cResult[13] = onThemeSelected;
-        cResult[14] = debounceResult;
-        let tmp27 = debounceResult;
-        const obj11 = currentThemeIndex(tmp2[17]);
-      } else {
-        tmp27 = cResult[14];
+      const first1 = tmp22[0];
+      closure_18 = tmp24;
+      let tmp19Result = !first1;
+      if (!first1) {
+        tmp19Result = tmp19(currentThemeIndex);
       }
-      closure_14 = tmp27;
-      if (cResult[15] === sharedValue2) {
-        if (cResult[16] === deviceWidth) {
-          if (cResult[17] === sharedValue1) {
-            if (cResult[18] === hasOnyxNux) {
-              if (cResult[19] === sharedValue) {
-                if (cResult[20] === tmp27) {
-                  if (cResult[21] === num2) {
-                    if (cResult[22] === themes) {
-                      let tmp30 = cResult[23];
-                    }
-                    if (cResult[24] === currentThemeIndex) {
-                      if (cResult[25] === isPreview) {
-                        if (cResult[26] === isSynced) {
-                          if (cResult[29] === currentThemeIndex) {
-                            if (cResult[30] === isPreview) {
-                              if (cResult[31] === onThemeSelected) {
-                                let tmp32 = cResult[32];
-                              }
-                              __initData = tmp32;
-                              if (cResult[33] === currentThemeIndex) {
-                                if (cResult[34] === isPreview) {
-                                  if (cResult[35] === onThemeSelected) {
-                                    selectionBorder = cResult[36];
+      if (tmp19Result) {
+        tmp24(true);
+      }
+      if (tmp14) {
+        let isThumbstickScrollDevice = first1;
+        if (!first1) {
+          isThumbstickScrollDevice = isScreenReaderEnabled;
+        }
+        if (!isThumbstickScrollDevice) {
+          isThumbstickScrollDevice = tmp(tmp2[17]).isThumbstickScrollDevice;
+        }
+        class U {
+          constructor() {
+            return closure_16(defaultIndex);
+          }
+        }
+      }
+      const trackHexagonCampaignContentViewed = tmp(tmp2[15]).useTrackHexagonCampaignContentViewed(tmp(tmp2[16]).QuestContent.CLIENT_THEME_SETTINGS, tmp(tmp2[15]).HexagonCampaignContentSurface.THEME_PICKER, tmp14);
+      const tmpResult11 = tmp(tmp2[15]);
+      const hexagonCampaignPerkAvailability = tmp(tmp2[18]).useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
+      const tmpResult12 = tmp(tmp2[18]);
+      let num11 = 0;
+      if (tmp12) {
+        num11 = 1;
+      }
+      const sharedValue2 = tmp(tmp2[7]).useSharedValue(num11);
+      if (cResult[11] === sharedValue2) {
+        if (cResult[12] === tmp12) {
+          let tmp32 = cResult[13];
+          let tmp33 = cResult[14];
+        }
+        const effect = obj3.useEffect(tmp32, tmp33);
+        class U {
+          constructor() {
+            return closure_16(defaultIndex);
+          }
+        }
+        const obj4 = { badgeOpacity: sharedValue2 };
+        tmp35.__closure = obj4;
+        tmp35.__workletHash = 11624303332519;
+        tmp35.__initData = __initData;
+        const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(tmp35);
+        if (cResult[15] === sharedValue1) {
+          if (cResult[16] === sharedValue) {
+            let tmp38 = cResult[17];
+            let tmp39 = cResult[18];
+          }
+          const effect1 = obj3.useEffect(tmp39, tmp38);
+          if (cResult[19] !== onThemeSelected) {
+            currentThemeIndex(tmp2[21]);
+            class U {
+              constructor() {
+                return closure_16(defaultIndex);
+              }
+            }
+            cResult[19] = onThemeSelected;
+            cResult[20] = tmp44;
+            let tmp41 = tmp44;
+          } else {
+            tmp41 = cResult[20];
+          }
+          class U {
+            constructor() {
+              return closure_16(defaultIndex);
+            }
+          }
+          if (cResult[21] === sharedValue2) {
+            if (cResult[22] === deviceWidth) {
+              if (cResult[23] === first1) {
+                if (cResult[24] === sharedValue1) {
+                  if (cResult[25] === hasOnyxNux) {
+                    if (cResult[26] === tmp19) {
+                      if (cResult[27] === sharedValue) {
+                        if (cResult[28] === tmp41) {
+                          if (cResult[29] === num2) {
+                            if (cResult[30] === themes) {
+                              let tmp45 = cResult[31];
+                            }
+                            if (cResult[32] === currentThemeIndex) {
+                              if (cResult[33] === isPreview) {
+                                if (cResult[34] === isSynced) {
+                                  if (cResult[35] === themes) {
+                                    let tmp46 = cResult[36];
                                   }
-                                  function ce() {
-                                    let num = 0;
-                                    if (sharedValue.get()) {
-                                      num = 1;
-                                    }
-                                    const obj3 = { opacity: timing.withTiming(num, timingPresets.timingStandard), pointerEvents: null };
-                                    let str = "none";
-                                    if (sharedValue.get()) {
-                                      str = "auto";
-                                    }
-                                    obj3.pointerEvents = str;
-                                    return obj3;
-                                  }
-                                  const obj5 = { withTiming: null, isOnyxNuxVisible: null, timingStandard: null };
-                                  const useAnimatedStyle = tmp(tmp2[6]).useAnimatedStyle;
-                                  obj5.withTiming = tmp(tmp2[15]).withTiming;
-                                  obj5.isOnyxNuxVisible = sharedValue;
-                                  obj5.timingStandard = tmp(tmp2[16]).timingStandard;
-                                  ce.__closure = obj5;
-                                  ce.__workletHash = 1532887600753;
-                                  ce.__initData = __initData2;
-                                  class J {
-                                    constructor() {
-                                      closure_0 = setTimeout(() => {
-                                        const result = sharedValue.set(false);
-                                        const result1 = sharedValue1.set(true);
-                                      }, 5500);
-                                      return () => clearTimeout(closure_0);
-                                    }
-                                  }
-                                  if (cResult[37] === animatedStyles.iconHeaderSecondary) {
-                                    if (cResult[38] === currentThemeIndex) {
-                                      if (cResult[39] === themes) {
-                                        let tmp37 = cResult[40];
+                                  if (cResult[37] === currentThemeIndex) {
+                                    if (cResult[38] === isPreview) {
+                                      if (cResult[39] === onThemeSelected) {
+                                        let tmp47 = cResult[40];
                                       }
-                                      if (cResult[41] !== themes[currentThemeIndex]) {
-                                        const name = obj15.getName();
-                                        cResult[41] = obj15;
-                                        cResult[42] = name;
-                                        let tmp42 = name;
-                                      } else {
-                                        tmp42 = cResult[42];
-                                      }
-                                      if (cResult[43] === animatedStyles.headerPrimary) {
-                                        if (cResult[44] === tmp42) {
-                                          let tmp44 = cResult[45];
-                                        }
-                                        if (cResult[46] === tmp4.titleContainer) {
-                                          if (cResult[47] === tmp37) {
-                                            if (cResult[48] === tmp44) {
-                                              let tmp47 = cResult[49];
+                                      closure_21 = tmp47;
+                                      if (cResult[41] === currentThemeIndex) {
+                                        if (cResult[42] === isPreview) {
+                                          if (cResult[43] === onThemeSelected) {
+                                            selectionBorder = cResult[44];
+                                          }
+                                          function xe() {
+                                            let num = 0;
+                                            if (sharedValue.get()) {
+                                              num = 1;
                                             }
-                                            if (cResult[50] === defaultIndex) {
-                                              if (cResult[51] === deviceWidth) {
-                                                if (cResult[52] === isScreenReaderEnabled) {
-                                                  if (cResult[53] === tmp30) {
-                                                    if (cResult[54] === onThemeSelected) {
-                                                      if (cResult[55] === tmp32) {
-                                                        if (cResult[56] === selectionBorder) {
-                                                          if (cResult[57] === tmp4.a11yThemeList) {
-                                                            if (cResult[58] === tmp4.a11yThemeListScroll) {
-                                                              if (cResult[59] === tmp4.selectionBorder) {
-                                                                if (cResult[60] === themes) {
-                                                                  if (cResult[62] === animatedStyles.headerSecondary) {
-                                                                    if (cResult[63] === tmp4.textCentered) {
-                                                                      let tmp62 = cResult[64];
-                                                                    }
-                                                                    if (cResult[65] !== tmp31) {
-                                                                      const tmp31Result = tmp31();
-                                                                      cResult[65] = tmp31;
-                                                                      cResult[66] = tmp31Result;
-                                                                      let tmp63 = tmp31Result;
-                                                                    } else {
-                                                                      tmp63 = cResult[66];
-                                                                    }
-                                                                    if (cResult[67] === tmp62) {
-                                                                      if (cResult[68] === tmp63) {
-                                                                        let tmp65 = cResult[69];
-                                                                      }
-                                                                      if (cResult[70] === animatedStyles) {
-                                                                        if (cResult[71] === tmp14) {
-                                                                          if (cResult[72] === tmp65) {
-                                                                            if (cResult[73] === tmp12) {
-                                                                              if (cResult[74] === tmp4.hidden) {
-                                                                                if (cResult[75] === tmp4.hintContainer) {
-                                                                                  if (cResult[76] === tmp4.hintOverlay) {
-                                                                                    let tmp68 = cResult[77];
-                                                                                  }
-                                                                                  if (cResult[78] === animatedStyle) {
-                                                                                    if (cResult[79] === tmp4.badgeSlot) {
-                                                                                      let tmp75 = cResult[80];
-                                                                                    }
-                                                                                    if (cResult[81] === hexagonCampaignPerkAvailability) {
-                                                                                      if (cResult[82] === tmp12) {
-                                                                                        let tmp76 = cResult[83];
-                                                                                      }
-                                                                                      if (cResult[84] === tmp75) {
-                                                                                        if (cResult[85] === tmp76) {
-                                                                                          let tmp85 = cResult[86];
-                                                                                        }
-                                                                                        if (cResult[87] === tmp4.swatchesGroup) {
-                                                                                          if (cResult[88] === tmp51) {
-                                                                                            if (cResult[89] === tmp85) {
-                                                                                              let tmp89 = cResult[90];
-                                                                                            }
-                                                                                            if (cResult[91] === tmp68) {
-                                                                                              if (cResult[92] === tmp4.labelGroup) {
-                                                                                                if (cResult[93] === tmp47) {
-                                                                                                  let tmp93 = cResult[94];
-                                                                                                }
-                                                                                                if (cResult[95] === tmp89) {
-                                                                                                  if (cResult[96] === tmp93) {
-                                                                                                    let tmp97 = cResult[97];
-                                                                                                  }
-                                                                                                  if (cResult[98] === tmp35) {
-                                                                                                    if (cResult[99] === animatedStyles.bgSurfaceOverlay) {
-                                                                                                      if (cResult[100] === animatedStyles.borderFaint) {
-                                                                                                        if (cResult[101] === tmp4.floatingNux) {
-                                                                                                          let tmp103 = cResult[102];
-                                                                                                        }
-                                                                                                        if (cResult[103] === animatedStyles.iconInteractive) {
-                                                                                                          if (cResult[104] === tmp4.arrowLeft) {
-                                                                                                            let tmp104 = cResult[105];
-                                                                                                          }
-                                                                                                          if (cResult[106] === animatedStyles.textNormal) {
-                                                                                                            if (cResult[107] === tmp4.uppercase) {
-                                                                                                              let tmp109 = cResult[108];
-                                                                                                            }
-                                                                                                            const _Symbol = Symbol;
-                                                                                                            if (cResult[109] === Symbol.for("react.memo_cache_sentinel")) {
-                                                                                                              let intl = tmp(tmp2[19]).intl;
-                                                                                                              let stringResult = intl.string(tmp(tmp2[19]).t.y2b7CA);
-                                                                                                              cResult[109] = stringResult;
-                                                                                                              let tmp110 = stringResult;
-                                                                                                            } else {
-                                                                                                              tmp110 = cResult[109];
-                                                                                                            }
-                                                                                                            if (cResult[110] !== tmp109) {
-                                                                                                              const obj6 = { animated: true, style: tmp109, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: tmp110 };
-                                                                                                              const tmp114 = sharedValue(tmp(tmp2[22]).Text, obj6);
-                                                                                                              cResult[110] = tmp109;
-                                                                                                              cResult[111] = tmp114;
-                                                                                                              let tmp112 = tmp114;
-                                                                                                            } else {
-                                                                                                              tmp112 = cResult[111];
-                                                                                                            }
-                                                                                                            if (cResult[112] === tmp103) {
-                                                                                                              if (cResult[113] === tmp104) {
-                                                                                                                if (cResult[114] === tmp112) {
-                                                                                                                  let tmp115 = cResult[115];
-                                                                                                                }
-                                                                                                                if (cResult[116] === tmp4.floatingNuxContainer) {
-                                                                                                                  if (cResult[117] === tmp115) {
-                                                                                                                    let tmp119 = cResult[118];
-                                                                                                                  }
-                                                                                                                  if (cResult[119] === tmp97) {
-                                                                                                                    if (cResult[120] === tmp4.container) {
-                                                                                                                      if (cResult[121] === tmp119) {
-                                                                                                                        let tmp123 = cResult[122];
-                                                                                                                      }
-                                                                                                                      return tmp123;
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                  const obj7 = { style: tmp101, children: null };
-                                                                                                                  const items = [tmp119, tmp97];
-                                                                                                                  obj7.children = items;
-                                                                                                                  const tmp126 = sharedValue1(isSynced, obj7);
-                                                                                                                  cResult[119] = tmp97;
-                                                                                                                  class J {
-                                                                                                                    constructor() {
-                                                                                                                      closure_0 = setTimeout(() => {
-                                                                                                                        const result = sharedValue.set(false);
-                                                                                                                        const result1 = sharedValue1.set(true);
-                                                                                                                      }, 5500);
-                                                                                                                      return () => clearTimeout(closure_0);
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                  cResult[120] = tmp4.container;
-                                                                                                                  cResult[121] = tmp119;
-                                                                                                                  cResult[122] = tmp126;
-                                                                                                                  tmp123 = tmp126;
-                                                                                                                }
-                                                                                                                const obj8 = { style: tmp102, children: tmp115 };
-                                                                                                                cResult[116] = tmp4.floatingNuxContainer;
-                                                                                                                cResult[117] = tmp115;
-                                                                                                                class J {
-                                                                                                                  constructor() {
-                                                                                                                    closure_0 = setTimeout(() => {
-                                                                                                                      const result = sharedValue.set(false);
-                                                                                                                      const result1 = sharedValue1.set(true);
-                                                                                                                    }, 5500);
-                                                                                                                    return () => clearTimeout(closure_0);
-                                                                                                                  }
-                                                                                                                }
-                                                                                                                tmp119 = sharedValue(isSynced, obj8);
-                                                                                                                const tmp122 = sharedValue(isSynced, obj8);
-                                                                                                              }
-                                                                                                            }
-                                                                                                            const obj9 = { style: tmp103, children: null };
-                                                                                                            const items1 = [tmp104, tmp112];
-                                                                                                            class J {
-                                                                                                              constructor() {
-                                                                                                                closure_0 = setTimeout(() => {
-                                                                                                                  const result = sharedValue.set(false);
-                                                                                                                  const result1 = sharedValue1.set(true);
-                                                                                                                }, 5500);
-                                                                                                                return () => clearTimeout(closure_0);
-                                                                                                              }
-                                                                                                            }
-                                                                                                            const tmp118 = sharedValue1(currentThemeIndex(tmp2[6]).View, obj9);
-                                                                                                            cResult[112] = tmp103;
-                                                                                                            cResult[113] = tmp104;
-                                                                                                            cResult[114] = tmp112;
-                                                                                                            cResult[115] = tmp118;
-                                                                                                            tmp115 = tmp118;
-                                                                                                          }
-                                                                                                          const items2 = [animatedStyles.textNormal, tmp4.uppercase];
-                                                                                                          cResult[106] = animatedStyles.textNormal;
-                                                                                                          cResult[107] = tmp4.uppercase;
-                                                                                                          cResult[108] = items2;
-                                                                                                          tmp109 = items2;
-                                                                                                        }
-                                                                                                        const obj10 = { style: null, source: null, size: null };
-                                                                                                        const items3 = [tmp4.arrowLeft, animatedStyles.iconInteractive];
-                                                                                                        obj10.style = items3;
-                                                                                                        obj10.source = currentThemeIndex(tmp2[28]);
-                                                                                                        obj10.size = tmp(tmp2[7]).IconSizes.REFRESH_SMALL_16;
-                                                                                                        const tmp108 = sharedValue(sharedValue2, obj10);
-                                                                                                        class J {
-                                                                                                          constructor() {
-                                                                                                            closure_0 = setTimeout(() => {
-                                                                                                              const result = sharedValue.set(false);
-                                                                                                              const result1 = sharedValue1.set(true);
-                                                                                                            }, 5500);
-                                                                                                            return () => clearTimeout(closure_0);
-                                                                                                          }
-                                                                                                        }
-                                                                                                        cResult[103] = animatedStyles.iconInteractive;
-                                                                                                        cResult[104] = tmp4.arrowLeft;
-                                                                                                        cResult[105] = tmp108;
-                                                                                                        tmp104 = tmp108;
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                  const items4 = [tmp4.floatingNux, tmp35, , ];
-                                                                                                  ({ bgSurfaceOverlay: arr12[2], borderFaint: arr12[3] } = animatedStyles);
-                                                                                                  cResult[98] = tmp35;
-                                                                                                  cResult[99] = animatedStyles.bgSurfaceOverlay;
-                                                                                                  cResult[100] = animatedStyles.borderFaint;
-                                                                                                  class J {
-                                                                                                    constructor() {
-                                                                                                      closure_0 = setTimeout(() => {
-                                                                                                        const result = sharedValue.set(false);
-                                                                                                        const result1 = sharedValue1.set(true);
-                                                                                                      }, 5500);
-                                                                                                      return () => clearTimeout(closure_0);
-                                                                                                    }
-                                                                                                  }
-                                                                                                  cResult[101] = tmp4.floatingNux;
-                                                                                                  cResult[102] = items4;
-                                                                                                  tmp103 = items4;
-                                                                                                }
-                                                                                                const obj12 = { children: null };
-                                                                                                const items5 = [tmp89, tmp93];
-                                                                                                obj12.children = items5;
-                                                                                                const tmp100 = sharedValue1(closure_12, obj12);
-                                                                                                cResult[95] = tmp89;
-                                                                                                class J {
-                                                                                                  constructor() {
-                                                                                                    closure_0 = setTimeout(() => {
-                                                                                                      const result = sharedValue.set(false);
-                                                                                                      const result1 = sharedValue1.set(true);
-                                                                                                    }, 5500);
-                                                                                                    return () => clearTimeout(closure_0);
-                                                                                                  }
-                                                                                                }
-                                                                                                cResult[97] = tmp100;
-                                                                                                tmp97 = tmp100;
-                                                                                              }
-                                                                                            }
-                                                                                            const obj13 = { style: tmp4.labelGroup, children: null };
-                                                                                            const items6 = [tmp47, tmp68];
-                                                                                            obj13.children = items6;
-                                                                                            const tmp96 = sharedValue1(isSynced, obj13);
-                                                                                            cResult[91] = tmp68;
-                                                                                            class J {
-                                                                                              constructor() {
-                                                                                                closure_0 = setTimeout(() => {
-                                                                                                  const result = sharedValue.set(false);
-                                                                                                  const result1 = sharedValue1.set(true);
-                                                                                                }, 5500);
-                                                                                                return () => clearTimeout(closure_0);
-                                                                                              }
-                                                                                            }
-                                                                                            cResult[92] = tmp4.labelGroup;
-                                                                                            cResult[93] = tmp47;
-                                                                                            cResult[94] = tmp96;
-                                                                                            tmp93 = tmp96;
-                                                                                          }
-                                                                                        }
-                                                                                        const obj14 = { style: tmp4.swatchesGroup, children: null };
-                                                                                        const items7 = [tmp85, tmp51];
-                                                                                        obj14.children = items7;
-                                                                                        const tmp92 = sharedValue1(isSynced, obj14);
-                                                                                        cResult[87] = tmp4.swatchesGroup;
-                                                                                        class J {
-                                                                                          constructor() {
-                                                                                            closure_0 = setTimeout(() => {
-                                                                                              const result = sharedValue.set(false);
-                                                                                              const result1 = sharedValue1.set(true);
-                                                                                            }, 5500);
-                                                                                            return () => clearTimeout(closure_0);
-                                                                                          }
-                                                                                        }
-                                                                                        cResult[88] = tmp51;
-                                                                                        cResult[89] = tmp85;
-                                                                                        cResult[90] = tmp92;
-                                                                                        tmp89 = tmp92;
-                                                                                      }
-                                                                                      const obj16 = { style: tmp75, children: tmp76 };
-                                                                                      cResult[84] = tmp75;
-                                                                                      cResult[85] = tmp76;
-                                                                                      class J {
-                                                                                        constructor() {
-                                                                                          closure_0 = setTimeout(() => {
-                                                                                            const result = sharedValue.set(false);
-                                                                                            const result1 = sharedValue1.set(true);
-                                                                                          }, 5500);
-                                                                                          return () => clearTimeout(closure_0);
-                                                                                        }
-                                                                                      }
-                                                                                      tmp85 = sharedValue(currentThemeIndex(tmp2[6]).View, obj16);
-                                                                                      const tmp88 = sharedValue(currentThemeIndex(tmp2[6]).View, obj16);
-                                                                                    }
-                                                                                    if (!tmp12) {
-                                                                                      cResult[81] = hexagonCampaignPerkAvailability;
-                                                                                      cResult[82] = tmp12;
-                                                                                      cResult[83] = tmp12;
-                                                                                      tmp76 = tmp12;
-                                                                                    } else if (hexagonCampaignPerkAvailability === num2.LOCKED) {
-                                                                                      const obj17 = { theme: ref.DARK, children: sharedValue(tmp(tmp2[27]).HexagonCampaignExtendPerkBadge, {}) };
-                                                                                      let tmp81 = sharedValue(tmp(tmp2[26]).ThemeContextProvider, obj17);
-                                                                                    } else {
-                                                                                      const obj18 = { variant: "overlay", perk: tmp16.CLIENT_THEME };
-                                                                                      tmp81 = sharedValue(currentThemeIndex(tmp2[27]), obj18);
-                                                                                    }
-                                                                                  }
-                                                                                  const items8 = [tmp4.badgeSlot, animatedStyle];
-                                                                                  cResult[78] = animatedStyle;
-                                                                                  cResult[79] = tmp4.badgeSlot;
-                                                                                  cResult[80] = items8;
-                                                                                  tmp75 = items8;
+                                            const obj3 = { opacity: timing.withTiming(num, timingPresets.timingStandard), pointerEvents: null };
+                                            let str = "none";
+                                            if (sharedValue.get()) {
+                                              str = "auto";
+                                            }
+                                            obj3.pointerEvents = str;
+                                            return obj3;
+                                          }
+                                          class U {
+                                            constructor() {
+                                              return closure_16(defaultIndex);
+                                            }
+                                          }
+                                          tmp49[0] = tmp(tmp2[19]).withTiming;
+                                          tmp49[1] = sharedValue;
+                                          tmp49[2] = tmp(tmp2[20]).timingStandard;
+                                          xe.__closure = tmp49;
+                                          xe.__workletHash = 1532887600753;
+                                          xe.__initData = first1;
+                                          const animatedStyle1 = tmp(tmp2[7]).useAnimatedStyle(xe);
+                                          if (cResult[45] === animatedStyles.iconHeaderSecondary) {
+                                            if (cResult[46] === currentThemeIndex) {
+                                              if (cResult[47] === themes) {
+                                                let tmp53 = cResult[48];
+                                              }
+                                              class U {
+                                                constructor() {
+                                                  return closure_16(defaultIndex);
+                                                }
+                                              }
+                                              if (cResult[51] === animatedStyles.headerPrimary) {
+                                                if (cResult[52] === tmp58) {
+                                                  let tmp59 = cResult[53];
+                                                }
+                                                if (cResult[54] === tmp4.titleContainer) {
+                                                  if (cResult[55] === tmp53) {
+                                                    if (cResult[56] === tmp59) {
+                                                      let tmp62 = cResult[57];
+                                                    }
+                                                    if (cResult[58] === defaultIndex) {
+                                                      if (cResult[59] === deviceWidth) {
+                                                        if (cResult[60] === isScreenReaderEnabled) {
+                                                          if (cResult[61] === tmp45) {
+                                                            if (cResult[62] === onThemeSelected) {
+                                                              if (cResult[63] === tmp47) {
+                                                                if (cResult[64] === selectionBorder) {
+                                                                  if (cResult[65] === tmp4.a11yThemeList) {
+                                                                    if (cResult[66] === tmp4.a11yThemeListScroll) {
+                                                                      if (cResult[67] === tmp4.selectionBorder) {
+                                                                        if (cResult[68] === themes) {
+                                                                          if (cResult[70] === animatedStyles.headerSecondary) {
+                                                                            if (cResult[71] === tmp4.textCentered) {
+                                                                              let tmp76 = cResult[72];
+                                                                            }
+                                                                            if (cResult[73] !== tmp46) {
+                                                                              const tmp46Result = tmp46();
+                                                                              cResult[73] = tmp46;
+                                                                              class U {
+                                                                                constructor() {
+                                                                                  return closure_16(defaultIndex);
                                                                                 }
                                                                               }
+                                                                              cResult[74] = tmp46Result;
+                                                                              let tmp77 = tmp46Result;
+                                                                            } else {
+                                                                              tmp77 = cResult[74];
+                                                                            }
+                                                                            if (cResult[75] === tmp76) {
+                                                                              if (cResult[76] === tmp77) {
+                                                                                let tmp79 = cResult[77];
+                                                                              }
+                                                                              if (cResult[78] === animatedStyles) {
+                                                                                if (cResult[79] === tmp14) {
+                                                                                  if (cResult[80] === tmp79) {
+                                                                                    if (cResult[81] === tmp12) {
+                                                                                      if (cResult[82] === tmp4.hidden) {
+                                                                                        if (cResult[83] === tmp4.hintContainer) {
+                                                                                          if (cResult[84] === tmp4.hintOverlay) {
+                                                                                            let tmp81 = cResult[85];
+                                                                                          }
+                                                                                          if (cResult[86] === animatedStyle) {
+                                                                                            if (cResult[87] === tmp4.badgeSlot) {
+                                                                                              let tmp83 = cResult[88];
+                                                                                            }
+                                                                                            if (cResult[89] === hexagonCampaignPerkAvailability) {
+                                                                                              if (cResult[90] === tmp12) {
+                                                                                                let tmp84 = cResult[91];
+                                                                                              }
+                                                                                              if (cResult[92] === tmp83) {
+                                                                                                if (cResult[93] === tmp84) {
+                                                                                                  let tmp88 = cResult[94];
+                                                                                                }
+                                                                                                if (cResult[95] === tmp4.swatchesGroup) {
+                                                                                                  if (cResult[96] === tmp65) {
+                                                                                                    if (cResult[97] === tmp88) {
+                                                                                                      let tmp91 = cResult[98];
+                                                                                                    }
+                                                                                                    if (cResult[99] === tmp81) {
+                                                                                                      if (cResult[100] === tmp4.labelGroup) {
+                                                                                                        if (cResult[101] === tmp62) {
+                                                                                                          let tmp94 = cResult[102];
+                                                                                                        }
+                                                                                                        if (cResult[103] === tmp91) {
+                                                                                                          if (cResult[104] === tmp94) {
+                                                                                                            let tmp97 = cResult[105];
+                                                                                                          }
+                                                                                                          if (cResult[106] === animatedStyle1) {
+                                                                                                            if (cResult[107] === animatedStyles.bgSurfaceOverlay) {
+                                                                                                              if (cResult[108] === animatedStyles.borderFaint) {
+                                                                                                                if (cResult[109] === tmp4.floatingNux) {
+                                                                                                                  let tmp102 = cResult[110];
+                                                                                                                }
+                                                                                                                if (cResult[111] === animatedStyles.iconInteractive) {
+                                                                                                                  if (cResult[112] === tmp4.arrowLeft) {
+                                                                                                                    let tmp103 = cResult[113];
+                                                                                                                  }
+                                                                                                                  if (cResult[114] === animatedStyles.textNormal) {
+                                                                                                                    if (cResult[115] === tmp4.uppercase) {
+                                                                                                                      let tmp107 = cResult[116];
+                                                                                                                    }
+                                                                                                                    const _Symbol = Symbol;
+                                                                                                                    class U {
+                                                                                                                      constructor() {
+                                                                                                                        return closure_16(defaultIndex);
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    if (cResult[118] !== tmp107) {
+                                                                                                                      const obj5 = { animated: true, style: tmp107, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
+                                                                                                                      class U {
+                                                                                                                        constructor() {
+                                                                                                                          return closure_16(defaultIndex);
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                      const tmp111 = sharedValue(tmp(tmp2[26]).Text, obj5);
+                                                                                                                      cResult[118] = tmp107;
+                                                                                                                      cResult[119] = tmp111;
+                                                                                                                      let tmp109 = tmp111;
+                                                                                                                    } else {
+                                                                                                                      tmp109 = cResult[119];
+                                                                                                                    }
+                                                                                                                    if (cResult[120] === tmp102) {
+                                                                                                                      if (cResult[121] === tmp103) {
+                                                                                                                        if (cResult[122] === tmp109) {
+                                                                                                                          let tmp112 = cResult[123];
+                                                                                                                        }
+                                                                                                                        if (cResult[124] === tmp4.floatingNuxContainer) {
+                                                                                                                          if (cResult[125] === tmp112) {
+                                                                                                                            let tmp116 = cResult[126];
+                                                                                                                          }
+                                                                                                                          if (cResult[127] === tmp97) {
+                                                                                                                            if (cResult[128] === tmp4.container) {
+                                                                                                                              if (cResult[129] === tmp116) {
+                                                                                                                                let tmp119 = cResult[130];
+                                                                                                                              }
+                                                                                                                              return tmp119;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          class U {
+                                                                                                                            constructor() {
+                                                                                                                              return closure_16(defaultIndex);
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          const obj6 = { style: tmp100, children: null };
+                                                                                                                          const items = [tmp116, tmp97];
+                                                                                                                          obj6.children = items;
+                                                                                                                          const tmp121 = sharedValue1(isSynced, obj6);
+                                                                                                                          cResult[127] = tmp97;
+                                                                                                                          cResult[128] = tmp4.container;
+                                                                                                                          cResult[129] = tmp116;
+                                                                                                                          cResult[130] = tmp121;
+                                                                                                                          tmp119 = tmp121;
+                                                                                                                        }
+                                                                                                                        class U {
+                                                                                                                          constructor() {
+                                                                                                                            return closure_16(defaultIndex);
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        const obj7 = { style: tmp101, children: tmp112 };
+                                                                                                                        const tmp118 = sharedValue(isSynced, obj7);
+                                                                                                                        cResult[124] = tmp4.floatingNuxContainer;
+                                                                                                                        cResult[125] = tmp112;
+                                                                                                                        cResult[126] = tmp118;
+                                                                                                                        tmp116 = tmp118;
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    const obj8 = { style: tmp102, children: null };
+                                                                                                                    const items1 = [tmp103, tmp109];
+                                                                                                                    obj8.children = items1;
+                                                                                                                    const tmp115 = sharedValue1(currentThemeIndex(tmp2[7]).View, obj8);
+                                                                                                                    cResult[120] = tmp102;
+                                                                                                                    cResult[121] = tmp103;
+                                                                                                                    cResult[122] = tmp109;
+                                                                                                                    cResult[123] = tmp115;
+                                                                                                                    tmp112 = tmp115;
+                                                                                                                  }
+                                                                                                                  const items2 = [, ];
+                                                                                                                  class U {
+                                                                                                                    constructor() {
+                                                                                                                      return closure_16(defaultIndex);
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  items2[1] = tmp4.uppercase;
+                                                                                                                  cResult[114] = animatedStyles.textNormal;
+                                                                                                                  cResult[115] = tmp4.uppercase;
+                                                                                                                  cResult[116] = items2;
+                                                                                                                  tmp107 = items2;
+                                                                                                                }
+                                                                                                                class U {
+                                                                                                                  constructor() {
+                                                                                                                    return closure_16(defaultIndex);
+                                                                                                                  }
+                                                                                                                }
+                                                                                                                const obj9 = { style: null, source: null, size: null };
+                                                                                                                const items3 = [tmp4.arrowLeft, animatedStyles.iconInteractive];
+                                                                                                                obj9.style = items3;
+                                                                                                                obj9.source = currentThemeIndex(tmp2[30]);
+                                                                                                                obj9.size = tmp(tmp2[8]).IconSizes.REFRESH_SMALL_16;
+                                                                                                                const tmp106 = sharedValue(findIndexResult1, obj9);
+                                                                                                                cResult[111] = animatedStyles.iconInteractive;
+                                                                                                                cResult[112] = tmp4.arrowLeft;
+                                                                                                                cResult[113] = tmp106;
+                                                                                                                tmp103 = tmp106;
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                          const items4 = [, , , ];
+                                                                                                          class U {
+                                                                                                            constructor() {
+                                                                                                              return closure_16(defaultIndex);
+                                                                                                            }
+                                                                                                          }
+                                                                                                          items4[1] = animatedStyle1;
+                                                                                                          ({ bgSurfaceOverlay: arr11[2], borderFaint: arr11[3] } = animatedStyles);
+                                                                                                          cResult[106] = animatedStyle1;
+                                                                                                          cResult[107] = animatedStyles.bgSurfaceOverlay;
+                                                                                                          cResult[108] = animatedStyles.borderFaint;
+                                                                                                          cResult[109] = tmp4.floatingNux;
+                                                                                                          cResult[110] = items4;
+                                                                                                          tmp102 = items4;
+                                                                                                        }
+                                                                                                        class U {
+                                                                                                          constructor() {
+                                                                                                            return closure_16(defaultIndex);
+                                                                                                          }
+                                                                                                        }
+                                                                                                        const obj10 = { children: null };
+                                                                                                        const items5 = [tmp91, tmp94];
+                                                                                                        obj10.children = items5;
+                                                                                                        const tmp99 = sharedValue1(closure_13, obj10);
+                                                                                                        cResult[103] = tmp91;
+                                                                                                        cResult[104] = tmp94;
+                                                                                                        cResult[105] = tmp99;
+                                                                                                        tmp97 = tmp99;
+                                                                                                      }
+                                                                                                    }
+                                                                                                    class U {
+                                                                                                      constructor() {
+                                                                                                        return closure_16(defaultIndex);
+                                                                                                      }
+                                                                                                    }
+                                                                                                    const obj11 = { style: tmp4.labelGroup, children: null };
+                                                                                                    const items6 = [tmp62, tmp81];
+                                                                                                    obj11.children = items6;
+                                                                                                    const tmp96 = sharedValue1(isSynced, obj11);
+                                                                                                    cResult[99] = tmp81;
+                                                                                                    cResult[100] = tmp4.labelGroup;
+                                                                                                    cResult[101] = tmp62;
+                                                                                                    cResult[102] = tmp96;
+                                                                                                    tmp94 = tmp96;
+                                                                                                  }
+                                                                                                }
+                                                                                                class U {
+                                                                                                  constructor() {
+                                                                                                    return closure_16(defaultIndex);
+                                                                                                  }
+                                                                                                }
+                                                                                                const obj12 = { style: tmp4.swatchesGroup, children: null };
+                                                                                                const items7 = [tmp88, tmp65];
+                                                                                                obj12.children = items7;
+                                                                                                const tmp93 = sharedValue1(isSynced, obj12);
+                                                                                                cResult[95] = tmp4.swatchesGroup;
+                                                                                                cResult[96] = tmp65;
+                                                                                                cResult[97] = tmp88;
+                                                                                                cResult[98] = tmp93;
+                                                                                                tmp91 = tmp93;
+                                                                                              }
+                                                                                              class U {
+                                                                                                constructor() {
+                                                                                                  return closure_16(defaultIndex);
+                                                                                                }
+                                                                                              }
+                                                                                              const obj13 = { style: tmp83, children: tmp84 };
+                                                                                              const tmp90 = sharedValue(currentThemeIndex(tmp2[7]).View, obj13);
+                                                                                              cResult[92] = tmp83;
+                                                                                              cResult[93] = tmp84;
+                                                                                              cResult[94] = tmp90;
+                                                                                              tmp88 = tmp90;
+                                                                                            }
+                                                                                            let tmp85 = tmp12;
+                                                                                            class U {
+                                                                                              constructor() {
+                                                                                                return closure_16(defaultIndex);
+                                                                                              }
+                                                                                            }
+                                                                                            if (tmp85) {
+                                                                                              class U {
+                                                                                                constructor() {
+                                                                                                  return closure_16(defaultIndex);
+                                                                                                }
+                                                                                              }
+                                                                                              tmp85 = sharedValue(currentThemeIndex(tmp2[29]), { variant: "overlay", perk: null });
+                                                                                              const obj14 = { variant: "overlay", perk: null };
+                                                                                            }
+                                                                                            cResult[89] = hexagonCampaignPerkAvailability;
+                                                                                            cResult[90] = tmp12;
+                                                                                            cResult[91] = tmp85;
+                                                                                            tmp84 = tmp85;
+                                                                                          }
+                                                                                          const items8 = [, ];
+                                                                                          class U {
+                                                                                            constructor() {
+                                                                                              return closure_16(defaultIndex);
+                                                                                            }
+                                                                                          }
+                                                                                          items8[1] = animatedStyle;
+                                                                                          cResult[86] = animatedStyle;
+                                                                                          cResult[87] = tmp4.badgeSlot;
+                                                                                          cResult[88] = items8;
+                                                                                          tmp83 = items8;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                              class U {
+                                                                                constructor() {
+                                                                                  return closure_16(defaultIndex);
+                                                                                }
+                                                                              }
+                                                                              cResult[78] = animatedStyles;
+                                                                              cResult[79] = tmp14;
+                                                                              cResult[80] = tmp79;
+                                                                              cResult[81] = tmp12;
+                                                                              cResult[82] = tmp4.hidden;
+                                                                              cResult[83] = tmp4.hintContainer;
+                                                                              cResult[84] = tmp4.hintOverlay;
+                                                                              cResult[85] = tmp79;
+                                                                              tmp81 = tmp82;
+                                                                            }
+                                                                            class U {
+                                                                              constructor() {
+                                                                                return closure_16(defaultIndex);
+                                                                              }
+                                                                            }
+                                                                            const obj15 = { animated: true, style: tmp76, variant: "text-sm/medium", children: tmp77 };
+                                                                            const tmp80 = sharedValue(tmp(tmp2[26]).Text, obj15);
+                                                                            cResult[75] = tmp76;
+                                                                            cResult[76] = tmp77;
+                                                                            cResult[77] = tmp80;
+                                                                            tmp79 = tmp80;
+                                                                          }
+                                                                          const items9 = [, ];
+                                                                          class U {
+                                                                            constructor() {
+                                                                              return closure_16(defaultIndex);
                                                                             }
                                                                           }
+                                                                          items9[1] = tmp4.textCentered;
+                                                                          cResult[70] = animatedStyles.headerSecondary;
+                                                                          cResult[71] = tmp4.textCentered;
+                                                                          cResult[72] = items9;
+                                                                          tmp76 = items9;
                                                                         }
-                                                                      }
-                                                                      let tmp70Result = tmp65;
-                                                                      if (tmp14) {
-                                                                        const obj19 = { style: tmp4.hintContainer, children: null };
-                                                                        let hidden = !tmp12;
-                                                                        if (!tmp12) {
-                                                                          hidden = tmp4.hidden;
-                                                                        }
-                                                                        const obj20 = { style: hidden, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-                                                                        let str = "none";
-                                                                        if (tmp12) {
-                                                                          str = "auto";
-                                                                        }
-                                                                        obj20.pointerEvents = str;
-                                                                        obj20.accessibilityElementsHidden = !tmp12;
-                                                                        class J {
-                                                                          constructor() {
-                                                                            closure_0 = setTimeout(() => {
-                                                                              const result = sharedValue.set(false);
-                                                                              const result1 = sharedValue1.set(true);
-                                                                            }, 5500);
-                                                                            return () => clearTimeout(closure_0);
-                                                                          }
-                                                                        }
-                                                                        obj20.importantForAccessibility = str2;
-                                                                        const obj21 = { animatedStyles };
-                                                                        obj20.children = sharedValue(currentThemeIndex(tmp2[25]), obj21);
-                                                                        const items9 = [sharedValue(isSynced, obj20), ];
-                                                                        let tmp72Result = !tmp12;
-                                                                        if (!tmp12) {
-                                                                          const obj23 = { style: tmp4.hintOverlay, children: tmp65 };
-                                                                          tmp72Result = tmp72(tmp71, obj23);
-                                                                        }
-                                                                        items9[1] = tmp72Result;
-                                                                        obj19.children = items9;
-                                                                        tmp70Result = sharedValue1(tmp71, obj19);
-                                                                      }
-                                                                      cResult[70] = animatedStyles;
-                                                                      cResult[71] = tmp14;
-                                                                      cResult[72] = tmp65;
-                                                                      cResult[73] = tmp12;
-                                                                      class J {
-                                                                        constructor() {
-                                                                          closure_0 = setTimeout(() => {
-                                                                            const result = sharedValue.set(false);
-                                                                            const result1 = sharedValue1.set(true);
-                                                                          }, 5500);
-                                                                          return () => clearTimeout(closure_0);
-                                                                        }
-                                                                      }
-                                                                      cResult[75] = tmp4.hintContainer;
-                                                                      cResult[76] = tmp4.hintOverlay;
-                                                                      cResult[77] = tmp70Result;
-                                                                      tmp68 = tmp70Result;
-                                                                    }
-                                                                    const obj24 = { animated: true, style: tmp62, variant: "text-sm/medium", children: tmp63 };
-                                                                    cResult[67] = tmp62;
-                                                                    cResult[68] = tmp63;
-                                                                    class J {
-                                                                      constructor() {
-                                                                        closure_0 = setTimeout(() => {
-                                                                          const result = sharedValue.set(false);
-                                                                          const result1 = sharedValue1.set(true);
-                                                                        }, 5500);
-                                                                        return () => clearTimeout(closure_0);
                                                                       }
                                                                     }
-                                                                    tmp65 = sharedValue(tmp(tmp2[22]).Text, obj24);
-                                                                    const tmp67 = sharedValue(tmp(tmp2[22]).Text, obj24);
                                                                   }
-                                                                  const items10 = [animatedStyles.headerSecondary, tmp4.textCentered];
-                                                                  cResult[62] = animatedStyles.headerSecondary;
-                                                                  cResult[63] = tmp4.textCentered;
-                                                                  cResult[64] = items10;
-                                                                  tmp62 = items10;
                                                                 }
                                                               }
                                                             }
@@ -608,207 +611,173 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
                                                         }
                                                       }
                                                     }
+                                                    class U {
+                                                      constructor() {
+                                                        return closure_16(defaultIndex);
+                                                      }
+                                                    }
+                                                    if (!isScreenReaderEnabled) {
+                                                      if (!tmp(tmp2[17]).isThumbstickScrollDevice) {
+                                                        const obj16 = { children: null };
+                                                        class U {
+                                                          constructor() {
+                                                            return closure_16(defaultIndex);
+                                                          }
+                                                        }
+                                                        tmp70[1] = tmp4.selectionBorder;
+                                                        const items10 = [tmp66(tmp67, tmp70), ];
+                                                        const size = { ref, data: themes, renderItem: selectionBorder, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
+                                                        const obj17 = { width: deviceWidth, justifyContent: "center", alignItems: "center", marginLeft: tmp17.THEME_ITEM_HORIZONTAL_MARGIN };
+                                                        size.style = obj17;
+                                                        size.width = tmp17.THEME_ITEM_WIDTH + tmp17.THEME_ITEM_HORIZONTAL_MARGIN;
+                                                        size.height = tmp17.THEME_ITEM_HEIGHT;
+                                                        size.defaultIndex = defaultIndex;
+                                                        size.onSnapToItem = onThemeSelected;
+                                                        size.onProgressChange = tmp45;
+                                                        items10[1] = tmp66(currentThemeIndex(tmp2[27]), size);
+                                                        obj16.children = items10;
+                                                        let tmp66Result = sharedValue1(closure_13, obj16);
+                                                      }
+                                                      { children: null }.children = tmp66Result;
+                                                      class U {
+                                                        constructor() {
+                                                          return closure_16(defaultIndex);
+                                                        }
+                                                      }
+                                                      cResult[58] = defaultIndex;
+                                                      cResult[59] = deviceWidth;
+                                                      cResult[60] = isScreenReaderEnabled;
+                                                      cResult[61] = tmp45;
+                                                      cResult[62] = onThemeSelected;
+                                                      cResult[63] = tmp47;
+                                                      cResult[64] = selectionBorder;
+                                                      cResult[65] = tmp4.a11yThemeList;
+                                                      ({ a11yThemeListScroll: tmp3[66], selectionBorder } = tmp4);
+                                                      cResult[67] = selectionBorder;
+                                                      cResult[68] = themes;
+                                                      cResult[69] = tmp74;
+                                                      const obj18 = { children: null };
+                                                    }
+                                                    const obj19 = { horizontal: true, style: null, contentContainerStyle: null, children: null };
+                                                    ({ a11yThemeListScroll: obj20.style, a11yThemeList: obj20.contentContainerStyle } = tmp4);
+                                                    obj19.children = themes.map((item, index) => {
+                                                      const obj = { children: closure_21({ item, index }) };
+                                                      return closure_2_11(hasOwnProperty, obj, "theme-" + index);
+                                                    });
+                                                    tmp66Result = tmp66(hasOnyxNux, obj19);
                                                   }
                                                 }
-                                              }
-                                            }
-                                            if (!isScreenReaderEnabled) {
-                                              if (!tmp(tmp2[23]).isThumbstickScrollDevice) {
-                                                const obj25 = { children: null };
-                                                const obj26 = { pointerEvents: "none", style: tmp4.selectionBorder };
-                                                const items11 = [tmp52(tmp53, obj26), ];
-                                                const size = { ref, data: themes, renderItem: selectionBorder, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
-                                                const obj27 = { width: null, justifyContent: "center", alignItems: "center", marginLeft: null };
-                                                class J {
+                                                class U {
                                                   constructor() {
-                                                    closure_0 = setTimeout(() => {
-                                                      const result = sharedValue.set(false);
-                                                      const result1 = sharedValue1.set(true);
-                                                    }, 5500);
-                                                    return () => clearTimeout(closure_0);
+                                                    return closure_16(defaultIndex);
                                                   }
                                                 }
-                                                obj27.marginLeft = onThemeSelected.THEME_ITEM_HORIZONTAL_MARGIN;
-                                                size.style = obj27;
-                                                size.width = onThemeSelected.THEME_ITEM_WIDTH + onThemeSelected.THEME_ITEM_HORIZONTAL_MARGIN;
-                                                size.height = onThemeSelected.THEME_ITEM_HEIGHT;
-                                                size.defaultIndex = defaultIndex;
-                                                size.onSnapToItem = onThemeSelected;
-                                                size.onProgressChange = tmp30;
-                                                items11[1] = tmp52(currentThemeIndex(tmp2[24]), size);
-                                                obj25.children = items11;
-                                                let tmp52Result2 = sharedValue1(closure_12, obj25);
+                                                const obj21 = { style: tmp52, children: null };
+                                                const items11 = [tmp53, tmp59];
+                                                obj21.children = items11;
+                                                const tmp64 = sharedValue1(isSynced, obj21);
+                                                cResult[54] = tmp4.titleContainer;
+                                                cResult[55] = tmp53;
+                                                cResult[56] = tmp59;
+                                                cResult[57] = tmp64;
+                                                tmp62 = tmp64;
                                               }
-                                              const obj28 = { children: tmp52Result2 };
-                                              const tmp52Result = tmp52(tmp53, obj28);
-                                              cResult[50] = defaultIndex;
-                                              cResult[51] = deviceWidth;
-                                              cResult[52] = isScreenReaderEnabled;
-                                              cResult[53] = tmp30;
-                                              class J {
-                                                constructor() {
-                                                  closure_0 = setTimeout(() => {
-                                                    const result = sharedValue.set(false);
-                                                    const result1 = sharedValue1.set(true);
-                                                  }, 5500);
-                                                  return () => clearTimeout(closure_0);
-                                                }
-                                              }
-                                              cResult[55] = tmp32;
-                                              cResult[56] = selectionBorder;
-                                              cResult[57] = tmp4.a11yThemeList;
-                                              ({ a11yThemeListScroll: tmp3[58], selectionBorder } = tmp4);
-                                              cResult[59] = selectionBorder;
-                                              cResult[60] = themes;
-                                              cResult[61] = tmp52Result;
+                                              const obj22 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: tmp58 };
+                                              const tmp61 = sharedValue(tmp(tmp2[26]).Text, obj22);
+                                              cResult[51] = animatedStyles.headerPrimary;
+                                              cResult[52] = tmp58;
+                                              cResult[53] = tmp61;
+                                              tmp59 = tmp61;
                                             }
-                                            const obj29 = { horizontal: true, style: null, contentContainerStyle: null, children: null };
-                                            ({ a11yThemeListScroll: obj22.style, a11yThemeList: obj22.contentContainerStyle } = tmp4);
-                                            obj29.children = themes.map((item, index) => {
-                                              const obj = { children: closure_15({ item, index }) };
-                                              return v65535(React4, obj, "theme-" + index);
-                                            });
-                                            tmp52Result2 = tmp52(hasOnyxNux, obj29);
                                           }
-                                        }
-                                        const obj30 = { style: tmp36, children: null };
-                                        const items12 = [tmp37, tmp44];
-                                        obj30.children = items12;
-                                        const tmp50 = sharedValue1(isSynced, obj30);
-                                        cResult[46] = tmp4.titleContainer;
-                                        class J {
-                                          constructor() {
-                                            closure_0 = setTimeout(() => {
-                                              const result = sharedValue.set(false);
-                                              const result1 = sharedValue1.set(true);
-                                            }, 5500);
-                                            return () => clearTimeout(closure_0);
+                                          const tmpResult15 = tmp(tmp2[7]);
+                                          let tmp54 = null;
+                                          if (tmpResult16.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
+                                            const obj23 = { source: null, style: null, size: null };
+                                            class U {
+                                              constructor() {
+                                                return closure_16(defaultIndex);
+                                              }
+                                            }
+                                            obj23.source = currentThemeIndex(tmp2[25]);
+                                            obj23.style = animatedStyles.iconHeaderSecondary;
+                                            obj23.size = tmp(tmp2[8]).IconSizes.SMALL_20;
+                                            tmp54 = sharedValue(findIndexResult1, obj23);
                                           }
+                                          cResult[45] = animatedStyles.iconHeaderSecondary;
+                                          cResult[46] = currentThemeIndex;
+                                          cResult[47] = themes;
+                                          cResult[48] = tmp54;
+                                          tmp53 = tmp54;
+                                          tmpResult16 = tmp(tmp2[14]);
                                         }
-                                        cResult[47] = tmp37;
-                                        cResult[48] = tmp44;
-                                        cResult[49] = tmp50;
-                                        tmp47 = tmp50;
                                       }
-                                      const obj31 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: tmp42 };
-                                      const tmp46 = sharedValue(tmp(tmp2[22]).Text, obj31);
-                                      cResult[43] = animatedStyles.headerPrimary;
-                                      class J {
+                                      class U {
                                         constructor() {
-                                          closure_0 = setTimeout(() => {
-                                            const result = sharedValue.set(false);
-                                            const result1 = sharedValue1.set(true);
-                                          }, 5500);
-                                          return () => clearTimeout(closure_0);
+                                          return closure_16(defaultIndex);
                                         }
                                       }
-                                      cResult[45] = tmp46;
-                                      tmp44 = tmp46;
+                                      cResult[41] = currentThemeIndex;
+                                      cResult[42] = isPreview;
+                                      cResult[43] = onThemeSelected;
+                                      cResult[44] = tmp48;
+                                      selectionBorder = tmp48;
                                     }
                                   }
-                                  const tmpResult13 = tmp(tmp2[6]);
-                                  let tmp38 = null;
-                                  if (tmpResult14.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-                                    const obj32 = { source: currentThemeIndex(tmp2[21]), style: animatedStyles.iconHeaderSecondary, size: tmp(tmp2[7]).IconSizes.SMALL_20 };
-                                    tmp38 = sharedValue(sharedValue2, obj32);
+                                  function renderA11yThemeItem(themePreset) {
+                                    const index = themePreset.index;
+                                    return sharedValue(currentThemeIndex(isPreview[24]), {
+                                      themePreset: themePreset.item,
+                                      isPreview,
+                                      isSelected: index === currentThemeIndex,
+                                      onPress() {
+                                        return onThemeSelected(index);
+                                      }
+                                    });
                                   }
-                                  cResult[37] = animatedStyles.iconHeaderSecondary;
-                                  cResult[38] = currentThemeIndex;
-                                  cResult[39] = themes;
-                                  cResult[40] = tmp38;
-                                  tmp37 = tmp38;
-                                  tmpResult14 = tmp(tmp2[13]);
+                                  class U {
+                                    constructor() {
+                                      return closure_16(defaultIndex);
+                                    }
+                                  }
+                                  cResult[37] = currentThemeIndex;
+                                  cResult[38] = isPreview;
+                                  cResult[39] = onThemeSelected;
+                                  cResult[40] = renderA11yThemeItem;
+                                  tmp47 = renderA11yThemeItem;
                                 }
                               }
-                              function le(themePreset) {
-                                const index = themePreset.index;
-                                return sharedValue(currentThemeIndex(isPreview[20]), {
-                                  themePreset: themePreset.item,
-                                  isPreview,
-                                  isSelected: index === currentThemeIndex,
-                                  onPress() {
-                                    if (null != ref.current) {
-                                      const current = ref.current;
-                                      const currentIndex = current.getCurrentIndex();
-                                      if (currentIndex === index) {
-                                        return onThemeSelected(index);
-                                      } else {
-                                        if (currentIndex !== index) {
-                                          if (0 === currentIndex) {
-                                            const obj2 = { count: index };
-                                            return ref.current.next(obj2);
-                                          } else {
-                                            const current2 = ref.current;
-                                            const obj = { index, animated: true };
-                                            current2.scrollTo(obj);
-                                          }
-                                        }
-                                        const current3 = ref.current;
-                                        if (current3 != null) {
-                                          const obj3 = { index, animated: true };
-                                          current3.scrollTo(obj3);
-                                        }
-                                      }
-                                    }
-                                  },
-                                  isNew: false
-                                });
-                              }
-                              cResult[33] = currentThemeIndex;
-                              cResult[34] = isPreview;
-                              cResult[35] = onThemeSelected;
-                              cResult[36] = le;
-                              selectionBorder = le;
                             }
-                          }
-                          function renderA11yThemeItem(themePreset) {
-                            const index = themePreset.index;
-                            return sharedValue(currentThemeIndex(isPreview[20]), {
-                              themePreset: themePreset.item,
-                              isPreview,
-                              isSelected: index === currentThemeIndex,
-                              onPress() {
-                                return onThemeSelected(index);
+                            function getHintText() {
+                              if (isPreview) {
+                                if (obj.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
+                                  const intl2 = util.intl;
+                                  let stringResult = intl2.string(util.t.VqGKm0);
+                                }
+                                return stringResult;
                               }
-                            });
+                              const intl = util.intl;
+                              const string = intl.string;
+                              const t = util.t;
+                              if (isSynced) {
+                                stringResult = string(t.lhV0Y2);
+                              } else {
+                                stringResult = string(t.d5Gu9A);
+                              }
+                            }
+                            class U {
+                              constructor() {
+                                return closure_16(defaultIndex);
+                              }
+                            }
+                            cResult[32] = currentThemeIndex;
+                            cResult[33] = isPreview;
+                            cResult[34] = isSynced;
+                            cResult[35] = themes;
+                            cResult[36] = getHintText;
+                            tmp46 = getHintText;
                           }
-                          cResult[29] = currentThemeIndex;
-                          cResult[30] = isPreview;
-                          cResult[31] = onThemeSelected;
-                          cResult[32] = renderA11yThemeItem;
-                          tmp32 = renderA11yThemeItem;
                         }
-                      }
-                    }
-                    function getHintText() {
-                      if (isPreview) {
-                        if (obj.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-                          const intl2 = util.intl;
-                          let stringResult = intl2.string(util.t.VqGKm0);
-                        }
-                        return stringResult;
-                      }
-                      const intl = util.intl;
-                      const string = intl.string;
-                      const t = util.t;
-                      if (isSynced) {
-                        stringResult = string(t.lhV0Y2);
-                      } else {
-                        stringResult = string(t.d5Gu9A);
-                      }
-                    }
-                    cResult[24] = currentThemeIndex;
-                    cResult[25] = isPreview;
-                    cResult[26] = isSynced;
-                    cResult[27] = themes;
-                    cResult[28] = getHintText;
-                    class J {
-                      constructor() {
-                        closure_0 = setTimeout(() => {
-                          const result = sharedValue.set(false);
-                          const result1 = sharedValue1.set(true);
-                        }, 5500);
-                        return () => clearTimeout(closure_0);
                       }
                     }
                   }
@@ -816,113 +785,128 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
               }
             }
           }
-        }
-      }
-      function onProgressChange(arg0, arg1) {
-        const rounded = Math.round(arg1);
-        if (Math.abs(arg1 - rounded) > 0.01) {
-          const result = sharedValue2.set(0);
-        } else {
-          let num = 0;
-          if (null != themes[rounded]) {
-            num = 0;
-            if (obj.isHexagonCampaignMobileTheme(tmp29)) {
-              num = 1;
+          function onProgressChange(arg0, arg1) {
+            let tmp = !first1;
+            if (!first1) {
+              tmp = closure_16(arg1);
             }
-            obj = MobileThemesUtils;
+            if (tmp) {
+              closure_18(true);
+            }
+            rounded = Math.round(arg1);
+            if (Math.abs(arg1 - rounded) > 0.01) {
+              const result = sharedValue2.set(0);
+            } else {
+              let num = 0;
+              if (null != themes[rounded]) {
+                num = 0;
+                if (obj.isHexagonCampaignMobileTheme(tmp33)) {
+                  num = 1;
+                }
+                obj = MobileThemesUtils;
+              }
+              const result1 = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
+            }
+            if (rounded !== ref.current) {
+              const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+              tmp13.current = rounded;
+              closure_1_20(rounded);
+            }
+            if (hasOnyxNux) {
+              const _Math = Math;
+              const tmp24 = arg1 < num2 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
+              if (tmp24) {
+                const result3 = sharedValue1.set(true);
+              }
+              value = sharedValue1.get();
+              let tmp30 = !value;
+              if (!value) {
+                tmp30 = !tmp24;
+              }
+              const result4 = sharedValue.set(tmp30);
+            }
           }
-          const result1 = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
+          cResult[21] = sharedValue2;
+          cResult[22] = deviceWidth;
+          cResult[23] = first1;
+          cResult[24] = sharedValue1;
+          cResult[25] = hasOnyxNux;
+          cResult[26] = tmp19;
+          cResult[27] = sharedValue;
+          cResult[28] = tmp41;
+          cResult[29] = num2;
+          cResult[30] = themes;
+          cResult[31] = onProgressChange;
+          tmp45 = onProgressChange;
         }
-        if (rounded !== ref.current) {
-          const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
-          tmp9.current = rounded;
-          closure_14(rounded);
-        }
-        if (hasOnyxNux) {
-          const _Math = Math;
-          const tmp20 = arg1 < num2 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
-          if (tmp20) {
-            const result3 = sharedValue1.set(true);
-          }
-          value = sharedValue1.get();
-          let tmp26 = !value;
-          if (!value) {
-            tmp26 = !tmp20;
-          }
-          const result4 = sharedValue.set(tmp26);
-        }
-      }
-      cResult[15] = sharedValue2;
-      cResult[16] = deviceWidth;
-      cResult[17] = sharedValue1;
-      class J {
-        constructor() {
-          closure_0 = setTimeout(() => {
+        function ce() {
+          const timeout = setTimeout(() => {
             const result = sharedValue.set(false);
             const result1 = sharedValue1.set(true);
           }, 5500);
           return () => clearTimeout(closure_0);
         }
+        const items12 = [sharedValue, sharedValue1];
+        cResult[15] = sharedValue1;
+        cResult[16] = sharedValue;
+        cResult[17] = items12;
+        cResult[18] = ce;
+        tmp39 = ce;
+        tmp38 = items12;
+        const tmpResult14 = tmp(tmp2[7]);
       }
-      cResult[19] = sharedValue;
-      cResult[20] = tmp27;
-      cResult[21] = num2;
-      cResult[22] = themes;
-      cResult[23] = onProgressChange;
-      tmp30 = onProgressChange;
+      function ie() {
+        let num = 0;
+        if (closure_13) {
+          num = 1;
+        }
+        const result = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
+      }
+      const items13 = [tmp12, sharedValue2];
+      cResult[11] = sharedValue2;
+      cResult[12] = tmp12;
+      cResult[13] = ie;
+      cResult[14] = items13;
+      tmp33 = items13;
+      tmp32 = ie;
+      const tmpResult13 = tmp(tmp2[7]);
     }
-    class J {
+    class U {
       constructor() {
-        closure_0 = setTimeout(() => {
-          const result = sharedValue.set(false);
-          const result1 = sharedValue1.set(true);
-        }, 5500);
-        return () => clearTimeout(closure_0);
+        return closure_16(defaultIndex);
       }
     }
-    const items13 = [sharedValue, sharedValue1];
-    cResult[9] = sharedValue1;
-    cResult[10] = sharedValue;
-    cResult[11] = J;
-    cResult[12] = items13;
-    tmp25 = items13;
-    tmp24 = J;
-    const tmpResult12 = tmp(tmp2[6]);
+    cResult[8] = defaultIndex;
+    cResult[9] = tmp19;
+    cResult[10] = U;
   }
-  class K {
-    constructor() {
-      tmp = closure_13;
-      tmp2 = closure_0;
-      tmp3 = closure_2;
-      obj = closure_0(closure_2[15]);
-      num = 0;
-      if (closure_12) {
-        num = 1;
-      }
-      result = closure_13.set(obj.withTiming(num, tmp2(tmp3[16]).timingStandard));
-      return;
+  function isHexagonOnScreenAt(arg0) {
+    let tmp2 = findIndexResult1 >= 0;
+    if (tmp2) {
+      const _Math = Math;
+      tmp2 = Math.abs(arg0 - tmp) < rounded / 2;
     }
+    return tmp2;
   }
-  const items14 = [tmp12, sharedValue2];
-  cResult[5] = sharedValue2;
-  cResult[6] = tmp12;
-  cResult[7] = K;
-  cResult[8] = items14;
-  tmp20 = items14;
-  tmp19 = K;
-  const tmpResult11 = themes(isPreview[6]);
+  cResult[5] = rounded;
+  cResult[6] = findIndexResult1;
+  cResult[7] = isHexagonOnScreenAt;
+  tmp19 = isHexagonOnScreenAt;
+  const tmpResult9 = themes(isPreview[7]);
 }) : (function SettingsAppearanceThemeCarousel(themes) {
   themes = themes.themes;
   const currentThemeIndex = themes.currentThemeIndex;
   const isPreview = themes.isPreview;
-  ({ defaultIndex, deviceWidth } = themes);
-  ({ animatedStyles, hasOnyxNux: closure_4, onThemeSelected } = themes);
+  const defaultIndex = themes.defaultIndex;
+  const deviceWidth = themes.deviceWidth;
+  ({ animatedStyles, hasOnyxNux: closure_5, onThemeSelected } = themes);
+  let isThumbstickScrollDevice;
   let sharedValue2;
-  closure_13 = undefined;
-  const tmp = closure_14();
-  const isScreenReaderEnabled = themes(isPreview[12]).useIsScreenReaderEnabled();
-  const ref = deviceWidth.useRef(null);
-  ThemeTypes = deviceWidth.useRef(defaultIndex);
+  __initData2 = undefined;
+  let tmp = isThumbstickScrollDevice();
+  const isScreenReaderEnabled = themes(isPreview[13]).useIsScreenReaderEnabled();
+  deviceWidth.useRef(null);
+  const ref = deviceWidth.useRef(defaultIndex);
   const items = [themes];
   constants = deviceWidth.useMemo(() => {
     const findIndexResult = themes.findIndex((theme) => theme.theme === constants.ONYX);
@@ -932,54 +916,94 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     }
     return num;
   }, items);
-  let obj = themes(isPreview[12]);
-  const sharedValue = themes(isPreview[6]).useSharedValue(false);
-  let obj3 = themes(isPreview[6]);
-  const sharedValue1 = themes(isPreview[6]).useSharedValue(false);
-  const obj4 = themes(isPreview[6]);
-  let result = themes(isPreview[13]).isHexagonCampaignMobileTheme(themes[currentThemeIndex]);
-  c11 = result;
+  let obj = themes(isPreview[13]);
+  const sharedValue = themes(isPreview[7]).useSharedValue(false);
+  let obj3 = themes(isPreview[7]);
+  const sharedValue1 = themes(isPreview[7]).useSharedValue(false);
+  const obj4 = themes(isPreview[7]);
+  let result = themes(isPreview[14]).isHexagonCampaignMobileTheme(themes[currentThemeIndex]);
+  c12 = result;
   const items1 = [themes];
   const memo = deviceWidth.useMemo(() => themes.some(MobileThemesUtils.isHexagonCampaignMobileTheme), items1);
-  const obj5 = themes(isPreview[13]);
-  const hexagonCampaignPerkAvailability = themes(isPreview[14]).useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
-  const obj6 = themes(isPreview[14]);
-  const tmp10 = constants;
-  let num = 0;
-  if (result) {
-    num = 1;
+  const items2 = [themes];
+  const memo1 = deviceWidth.useMemo(() => themes.findIndex(MobileThemesUtils.isHexagonCampaignMobileTheme), items2);
+  let rounded = Math.ceil(deviceWidth / (ref.THEME_ITEM_WIDTH + ref.THEME_ITEM_HORIZONTAL_MARGIN));
+  const tmp13 = defaultIndex(deviceWidth.useState(() => {
+    let tmp3 = memo1 >= 0;
+    if (tmp3) {
+      const _Math = Math;
+      tmp3 = Math.abs(tmp - tmp2) < rounded / 2;
+    }
+    return tmp3;
+  }), 2);
+  isThumbstickScrollDevice = tmp13[0];
+  closure_16 = tmp14;
+  let tmp15 = !isThumbstickScrollDevice;
+  if (!isThumbstickScrollDevice) {
+    let tmp16 = memo1 >= 0;
+    if (tmp16) {
+      let _Math = Math;
+      tmp16 = Math.abs(currentThemeIndex - memo1) < rounded / 2;
+    }
+    tmp15 = tmp16;
   }
-  sharedValue2 = themes(isPreview[6]).useSharedValue(num);
-  const items2 = [result, sharedValue2];
-  const effect = deviceWidth.useEffect(() => {
+  if (tmp15) {
+    tmp14(true);
+  }
+  const obj5 = themes(isPreview[14]);
+  let tmp18 = memo;
+  if (memo) {
+    if (!isThumbstickScrollDevice) {
+      isThumbstickScrollDevice = isScreenReaderEnabled;
+    }
+    if (!isThumbstickScrollDevice) {
+      isThumbstickScrollDevice = tmp2(tmp3[17]).isThumbstickScrollDevice;
+    }
+    tmp18 = isThumbstickScrollDevice;
+  }
+  const trackHexagonCampaignContentViewed = themes(isPreview[15]).useTrackHexagonCampaignContentViewed(tmp2(tmp3[16]).QuestContent.CLIENT_THEME_SETTINGS, tmp2(tmp3[15]).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const tmp2Result = themes(isPreview[15]);
+  const hexagonCampaignPerkAvailability = themes(isPreview[18]).useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
+  const tmp20 = constants;
+  const tmp2Result7 = themes(isPreview[18]);
+  let num2 = 0;
+  if (result) {
+    num2 = 1;
+  }
+  sharedValue2 = themes(isPreview[7]).useSharedValue(num2);
+  const items3 = [result, sharedValue2];
+  const effect = obj2.useEffect(() => {
     let num = 0;
-    if (c11) {
+    if (c12) {
       num = 1;
     }
     const result = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
-  }, items2);
-  const obj7 = themes(isPreview[6]);
-  const fn = function z() {
-    return { opacity: sharedValue2.get() };
-  };
-  fn.__closure = { badgeOpacity: sharedValue2 };
-  fn.__workletHash = 4931734771173;
-  fn.__initData = __initData3;
-  const items3 = [sharedValue, sharedValue1];
-  const animatedStyle = themes(isPreview[6]).useAnimatedStyle(fn);
-  const effect1 = deviceWidth.useEffect(() => {
+  }, items3);
+  const tmp2Result8 = themes(isPreview[7]);
+  class Y {
+    constructor() {
+      obj = { opacity: closure_17.get() };
+      return obj;
+    }
+  }
+  Y.__closure = { badgeOpacity: sharedValue2 };
+  Y.__workletHash = 4931734771173;
+  Y.__initData = __initData2;
+  const items4 = [sharedValue, sharedValue1];
+  const animatedStyle = themes(isPreview[7]).useAnimatedStyle(Y);
+  const effect1 = obj2.useEffect(() => {
     const timeout = setTimeout(() => {
       const result = sharedValue.set(false);
       const result1 = sharedValue1.set(true);
     }, 5500);
     return () => clearTimeout(closure_0);
-  }, items3);
-  const items4 = [onThemeSelected];
-  closure_13 = deviceWidth.useMemo(() => _modDef12.debounce(onThemeSelected, 180), items4);
-  const items5 = [isPreview, onThemeSelected, currentThemeIndex];
-  const callback = deviceWidth.useCallback((themePreset) => {
+  }, items4);
+  const items5 = [onThemeSelected];
+  __initData2 = obj2.useMemo(() => _modDef12.debounce(onThemeSelected, 180), items5);
+  const items6 = [isPreview, onThemeSelected, currentThemeIndex];
+  const callback = obj2.useCallback((themePreset) => {
     const index = themePreset.index;
-    return sharedValue1(currentThemeIndex(isPreview[20]), {
+    return sharedValue1(currentThemeIndex(isPreview[24]), {
       themePreset: themePreset.item,
       isPreview,
       isSelected: index === currentThemeIndex,
@@ -1010,19 +1034,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
       },
       isNew: false
     });
-  }, items5);
-  const tmp2Result = themes(isPreview[6]);
-  class X {
+  }, items6);
+  const tmp2Result9 = themes(isPreview[7]);
+  class U {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
-      obj = closure_0(closure_2[15]);
-      obj2 = closure_9;
+      obj = closure_0(closure_2[19]);
+      obj2 = closure_10;
       num = 0;
-      if (closure_9.get()) {
+      if (closure_10.get()) {
         num = 1;
       }
-      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[16]).timingStandard), pointerEvents: null };
+      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[20]).timingStandard), pointerEvents: null };
       str = "none";
       if (obj2.get()) {
         str = "auto";
@@ -1031,180 +1055,191 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
       return obj1;
     }
   }
-  const tmp2Result4 = themes(isPreview[6]);
-  X.__closure = { withTiming: themes(isPreview[15]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[16]).timingStandard };
-  X.__workletHash = 12494364562679;
-  X.__initData = __initData4;
-  const animatedStyle1 = tmp2Result4.useAnimatedStyle(X);
-  const obj8 = { withTiming: themes(isPreview[15]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[16]).timingStandard };
-  const obj9 = { style: tmp.titleContainer, children: null };
-  let tmp20 = null;
-  if (tmp2Result5.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-    const obj10 = { source: currentThemeIndex(tmp3[21]), style: animatedStyles.iconHeaderSecondary, size: tmp2(tmp3[7]).IconSizes.SMALL_20 };
-    tmp20 = sharedValue1(closure_13, obj10);
+  const tmp2Result10 = themes(isPreview[7]);
+  U.__closure = { withTiming: themes(isPreview[19]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[20]).timingStandard };
+  U.__workletHash = 12494364562679;
+  U.__initData = __initData3;
+  const animatedStyle1 = tmp2Result10.useAnimatedStyle(U);
+  const obj6 = { withTiming: themes(isPreview[19]).withTiming, isOnyxNuxVisible: sharedValue, timingStandard: themes(isPreview[20]).timingStandard };
+  const obj7 = { style: tmp.titleContainer, children: null };
+  let tmp30 = null;
+  if (tmp2Result11.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
+    const obj8 = { source: currentThemeIndex(tmp3[25]), style: animatedStyles.iconHeaderSecondary, size: tmp2(tmp3[8]).IconSizes.SMALL_20 };
+    tmp30 = sharedValue1(rounded, obj8);
   }
-  const items6 = [tmp20, ];
-  const obj11 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: themes[currentThemeIndex].getName() };
-  items6[1] = sharedValue1(themes(isPreview[22]).Text, obj11);
-  obj9.children = items6;
+  const items7 = [tmp30, ];
+  const obj9 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: themes[currentThemeIndex].getName() };
+  items7[1] = sharedValue1(themes(isPreview[26]).Text, obj9);
+  obj7.children = items7;
   if (!isScreenReaderEnabled) {
-    if (!tmp2(tmp3[23]).isThumbstickScrollDevice) {
-      const obj12 = { children: null };
-      const obj13 = { pointerEvents: "none", style: tmp.selectionBorder };
-      const items7 = [tmp24(closure_4, obj13), ];
+    if (!tmp2(tmp3[17]).isThumbstickScrollDevice) {
+      const obj10 = { children: null };
+      const obj11 = { pointerEvents: "none", style: tmp.selectionBorder };
+      const items8 = [tmp34(closure_5, obj11), ];
       const size = { ref, data: themes, renderItem: callback, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
-      const obj14 = { width: deviceWidth, justifyContent: "center", alignItems: "center", marginLeft: ref.THEME_ITEM_HORIZONTAL_MARGIN };
-      size.style = obj14;
-      size.width = ref.THEME_ITEM_WIDTH + ref.THEME_ITEM_HORIZONTAL_MARGIN;
-      size.height = ref.THEME_ITEM_HEIGHT;
+      const obj12 = { width: deviceWidth, justifyContent: "center", alignItems: "center", marginLeft: tmp11.THEME_ITEM_HORIZONTAL_MARGIN };
+      size.style = obj12;
+      size.width = tmp11.THEME_ITEM_WIDTH + tmp11.THEME_ITEM_HORIZONTAL_MARGIN;
+      size.height = tmp11.THEME_ITEM_HEIGHT;
       size.defaultIndex = defaultIndex;
       size.onSnapToItem = onThemeSelected;
       size.onProgressChange = function onProgressChange(arg0, arg1) {
-        const rounded = Math.round(arg1);
+        let tmp = !isThumbstickScrollDevice;
+        if (!isThumbstickScrollDevice) {
+          let tmp3 = memo1 >= 0;
+          if (tmp3) {
+            const _Math = Math;
+            tmp3 = Math.abs(arg1 - tmp2) < rounded / 2;
+          }
+          tmp = tmp3;
+        }
+        if (tmp) {
+          closure_16(true);
+        }
+        rounded = Math.round(arg1);
         if (Math.abs(arg1 - rounded) > 0.01) {
           const result = sharedValue2.set(0);
         } else {
-          let num = 0;
+          let num3 = 0;
           if (null != themes[rounded]) {
-            num = 0;
-            if (obj.isHexagonCampaignMobileTheme(tmp29)) {
-              num = 1;
+            num3 = 0;
+            if (obj.isHexagonCampaignMobileTheme(tmp36)) {
+              num3 = 1;
             }
             obj = MobileThemesUtils;
           }
-          const result1 = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
+          const result1 = sharedValue2.set(timing.withTiming(num3, timingPresets.timingStandard));
         }
         if (rounded !== ref.current) {
           const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
-          tmp9.current = rounded;
-          closure_13(rounded);
+          tmp16.current = rounded;
+          closure_18(rounded);
         }
-        if (closure_1_4) {
-          const _Math = Math;
-          const tmp20 = arg1 < closure_8 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
-          if (tmp20) {
+        if (closure_1_5) {
+          const _Math2 = Math;
+          const tmp27 = arg1 < closure_9 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
+          if (tmp27) {
             const result3 = sharedValue1.set(true);
           }
           value = sharedValue1.get();
-          let tmp26 = !value;
+          let tmp33 = !value;
           if (!value) {
-            tmp26 = !tmp20;
+            tmp33 = !tmp27;
           }
-          const result4 = sharedValue.set(tmp26);
+          const result4 = sharedValue.set(tmp33);
         }
       };
-      items7[1] = tmp24(currentThemeIndex(tmp3[24]), size);
-      obj12.children = items7;
-      let tmp24Result7 = tmp18(sharedValue2, obj12);
+      items8[1] = tmp34(currentThemeIndex(tmp3[27]), size);
+      obj10.children = items8;
+      let tmp34Result7 = tmp28(memo1, obj10);
     }
-    const obj16 = { children: tmp24Result7 };
-    const obj17 = { animated: true, style: null, variant: "text-sm/medium", children: null };
-    const items8 = [animatedStyles.headerSecondary, tmp.textCentered];
-    obj17.style = items8;
+    const obj13 = { children: tmp34Result7 };
+    const obj14 = { animated: true, style: null, variant: "text-sm/medium", children: null };
+    const items9 = [animatedStyles.headerSecondary, tmp.textCentered];
+    obj14.style = items9;
     if (isPreview) {
-      if (tmp2Result6.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-        const intl2 = tmp2(tmp3[19]).intl;
-        let stringResult = intl2.string(tmp2(tmp3[19]).t.VqGKm0);
+      if (tmp2Result12.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
+        const intl2 = tmp2(tmp3[23]).intl;
+        let stringResult = intl2.string(tmp2(tmp3[23]).t.VqGKm0);
       }
-      obj17.children = stringResult;
-      const tmp24Result4 = tmp24(tmp31, obj17);
-      let tmp18Result3 = tmp24Result4;
+      obj14.children = stringResult;
+      const tmp34Result4 = tmp34(tmp40, obj14);
+      let tmp28Result3 = tmp34Result4;
       if (memo) {
-        const obj18 = { style: tmp.hintContainer, children: null };
+        const obj15 = { style: tmp.hintContainer, children: null };
         let hidden = !result;
         if (!result) {
           hidden = tmp.hidden;
         }
-        const obj19 = { style: hidden, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+        const obj17 = { style: hidden, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
         let str = "none";
         if (result) {
           str = "auto";
         }
-        obj19.pointerEvents = str;
-        obj19.accessibilityElementsHidden = !result;
+        obj17.pointerEvents = str;
+        obj17.accessibilityElementsHidden = !result;
         let str2 = "no-hide-descendants";
         if (result) {
           str2 = "auto";
         }
-        obj19.importantForAccessibility = str2;
-        const obj20 = { animatedStyles };
-        obj19.children = tmp24(currentThemeIndex(tmp3[25]), obj20);
-        const items9 = [tmp24(closure_4, obj19), ];
-        let tmp24Result5 = !result;
+        obj17.importantForAccessibility = str2;
+        const obj18 = { animatedStyles };
+        obj17.children = tmp34(currentThemeIndex(tmp3[28]), obj18);
+        const items10 = [tmp34(closure_5, obj17), ];
+        let tmp34Result5 = !result;
         if (!result) {
-          const obj21 = { style: tmp.hintOverlay, children: tmp24Result4 };
-          tmp24Result5 = tmp24(closure_4, obj21);
+          const obj19 = { style: tmp.hintOverlay, children: tmp34Result4 };
+          tmp34Result5 = tmp34(closure_5, obj19);
         }
-        items9[1] = tmp24Result5;
-        obj18.children = items9;
-        tmp18Result3 = tmp18(closure_4, obj18);
+        items10[1] = tmp34Result5;
+        obj15.children = items10;
+        tmp28Result3 = tmp28(closure_5, obj15);
       }
-      const obj22 = { style: tmp.swatchesGroup, children: null };
-      const obj23 = { style: null, children: null };
-      const items10 = [tmp.badgeSlot, animatedStyle];
-      obj23.style = items10;
-      if (!result) {
-        const obj24 = { children: null };
-        obj23.children = result;
-        const items11 = [tmp24(tmp39, obj23), tmp24Result];
-        obj22.children = items11;
-        const items12 = [tmp18(closure_4, obj22), ];
-        const obj25 = { style: tmp.labelGroup, children: null };
-        const items13 = [tmp25, tmp18Result3];
-        obj25.children = items13;
-        items12[1] = tmp18(closure_4, obj25);
-        obj24.children = items12;
-        const obj26 = { style: tmp.container, children: null };
-        const obj27 = { style: tmp.floatingNuxContainer, children: null };
-        const obj28 = { style: null, children: null };
-        const items14 = [tmp.floatingNux, animatedStyle1, , ];
-        ({ bgSurfaceOverlay: arr16[2], borderFaint: arr16[3] } = animatedStyles);
-        obj28.style = items14;
-        const obj29 = { style: null, source: null, size: null };
-        const items15 = [tmp.arrowLeft, animatedStyles.iconInteractive];
-        obj29.style = items15;
-        obj29.source = tmp38(tmp3[28]);
-        obj29.size = tmp2(tmp3[7]).IconSizes.REFRESH_SMALL_16;
-        const items16 = [tmp24(closure_13, obj29), ];
-        const obj30 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
-        const items17 = [animatedStyles.textNormal, tmp.uppercase];
-        obj30.style = items17;
-        const intl3 = tmp2(tmp3[19]).intl;
-        obj30.children = intl3.string(tmp2(tmp3[19]).t.y2b7CA);
-        items16[1] = tmp24(tmp2(tmp3[22]).Text, obj30);
-        obj28.children = items16;
-        obj27.children = tmp18(tmp38(tmp3[6]).View, obj28);
-        const items18 = [tmp24(closure_4, obj27), tmp18(tmp37, obj24)];
-        obj26.children = items18;
-        return tmp18(closure_4, obj26);
-      } else if (hexagonCampaignPerkAvailability === sharedValue.LOCKED) {
-        const obj31 = { theme: ThemeTypes.DARK, children: tmp24(tmp2(tmp3[27]).HexagonCampaignExtendPerkBadge, {}) };
-        let tmp24Result6 = tmp24(tmp2(tmp3[26]).ThemeContextProvider, obj31);
-      } else {
-        const obj32 = { variant: "overlay", perk: tmp10.CLIENT_THEME };
-        tmp24Result6 = tmp24(tmp38(tmp3[27]), obj32);
+      const obj20 = { style: tmp.swatchesGroup, children: null };
+      const obj21 = { style: null, children: null };
+      const items11 = [tmp.badgeSlot, animatedStyle];
+      obj21.style = items11;
+      let tmp34Result6 = result;
+      if (result) {
+        tmp34Result6 = hexagonCampaignPerkAvailability !== sharedValue.LOCKED;
       }
-      tmp2Result6 = tmp2(tmp3[13]);
-      tmp37 = sharedValue2;
+      if (tmp34Result6) {
+        const obj22 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
+        tmp34Result6 = tmp34(tmp47(tmp3[29]), obj22);
+      }
+      const obj23 = { children: null };
+      obj21.children = tmp34Result6;
+      const items12 = [tmp34(currentThemeIndex(tmp3[7]).View, obj21), tmp34Result];
+      obj20.children = items12;
+      const items13 = [tmp28(closure_5, obj20), ];
+      const obj24 = { style: tmp.labelGroup, children: null };
+      const items14 = [tmp35, tmp28Result3];
+      obj24.children = items14;
+      items13[1] = tmp28(closure_5, obj24);
+      obj23.children = items13;
+      const obj25 = { style: tmp.container, children: null };
+      const obj26 = { style: tmp.floatingNuxContainer, children: null };
+      tmp2Result12 = tmp2(tmp3[14]);
+      const obj27 = { style: null, children: null };
+      const items15 = [tmp.floatingNux, animatedStyle1, , ];
+      ({ bgSurfaceOverlay: arr17[2], borderFaint: arr17[3] } = animatedStyles);
+      obj27.style = items15;
+      const obj28 = { style: null, source: null, size: null };
+      const items16 = [tmp.arrowLeft, animatedStyles.iconInteractive];
+      obj28.style = items16;
+      obj28.source = currentThemeIndex(tmp3[30]);
+      obj28.size = tmp2(tmp3[8]).IconSizes.REFRESH_SMALL_16;
+      const items17 = [tmp34(rounded, obj28), ];
+      const obj29 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
+      const items18 = [animatedStyles.textNormal, tmp.uppercase];
+      obj29.style = items18;
+      const intl3 = tmp2(tmp3[23]).intl;
+      obj29.children = intl3.string(tmp2(tmp3[23]).t.y2b7CA);
+      items17[1] = tmp34(tmp2(tmp3[26]).Text, obj29);
+      obj27.children = items17;
+      obj26.children = tmp28(currentThemeIndex(tmp3[7]).View, obj27);
+      const items19 = [tmp34(closure_5, obj26), tmp28(memo1, obj23)];
+      obj25.children = items19;
+      return tmp28(closure_5, obj25);
     }
-    const intl = tmp2(tmp3[19]).intl;
+    const intl = tmp2(tmp3[23]).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[19]).t;
+    const t = tmp2(tmp3[23]).t;
     if (themes.isSynced) {
       stringResult = string(t.lhV0Y2);
     } else {
       stringResult = string(t.d5Gu9A);
     }
-    tmp24Result = tmp24(closure_4, obj16);
+    tmp34Result = tmp34(closure_5, obj13);
   }
-  tmp2Result5 = themes(isPreview[13]);
-  tmp24Result7 = tmp24(onThemeSelected, {
+  tmp2Result11 = themes(isPreview[14]);
+  tmp34Result7 = tmp34(onThemeSelected, {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,
     children: themes.map((themePreset, index) => {
       const obj = {
-        children: sharedValue1(currentThemeIndex(isPreview[20]), {
+        children: sharedValue1(currentThemeIndex(isPreview[24]), {
           themePreset,
           isPreview,
           isSelected: index === currentThemeIndex,
@@ -1214,16 +1249,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
         })
       };
       closure_0 = index;
-      return sharedValue1(closure_1_4, obj, "theme-" + index);
+      return sharedValue1(closure_1_5, obj, "theme-" + index);
     })
   });
-  const obj33 = {
+  const obj30 = {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,
     children: themes.map((themePreset, index) => {
       const obj = {
-        children: sharedValue1(currentThemeIndex(isPreview[20]), {
+        children: sharedValue1(currentThemeIndex(isPreview[24]), {
           themePreset,
           isPreview,
           isSelected: index === currentThemeIndex,
@@ -1233,7 +1268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
         })
       };
       closure_0 = index;
-      return sharedValue1(closure_1_4, obj, "theme-" + index);
+      return sharedValue1(closure_1_5, obj, "theme-" + index);
     })
   };
 });

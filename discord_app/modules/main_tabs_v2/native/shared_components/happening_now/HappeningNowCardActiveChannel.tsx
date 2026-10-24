@@ -1,26 +1,26 @@
-// === Module 17478: HappeningNowCardActiveChannel ===
+// === Module 17510: HappeningNowCardActiveChannel ===
 
-// Module 17478 (HappeningNowCardActiveChannel)
+// Module 17510 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import noop from "module_19" /* 19 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 14993 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import TypingStore from "TypingStore" /* 13022 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 15016 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import TypingStore from "TypingStore" /* 13059 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(14993).MAX_STORED_MESSAGES;
-let closure_10 = fn(16616).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(15016).MAX_STORED_MESSAGES;
+let closure_10 = fn(16648).HappeningNowCardTrackingType;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_15 = createStyles.createStyles({ content: { flexShrink: 1, marginLeft: 4, gap: 2 }, avatarsWrapper: { marginBottom: 2 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

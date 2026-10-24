@@ -1,14 +1,14 @@
-// === Module 15732: subscriptionHelpers ===
+// === Module 15754: subscriptionHelpers ===
 
-// Module 15732 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8689 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9256 */;
-import useThermalState from "useThermalState" /* 15688 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15689 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15685 */;
-import QuestStore from "QuestStore" /* 7774 */;
+// Module 15754 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7798 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8691 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9257 */;
+import useThermalState from "useThermalState" /* 15709 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15710 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15706 */;
+import QuestStore from "QuestStore" /* 7776 */;
 
 require = fn;
 const RPCEvents = fn(1087).RPCEvents;

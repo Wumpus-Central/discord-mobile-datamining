@@ -1,12 +1,12 @@
-// === Module 14210: MediaViewer ===
+// === Module 14234: MediaViewer ===
 
-// Module 14210 (MediaViewer)
+// Module 14234 (MediaViewer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import useVideoControls from "useVideoControls" /* 8752 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8782 */;
-import MediaViewerItem from "MediaViewerItem" /* 14212 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import useVideoControls from "useVideoControls" /* 8754 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8784 */;
+import MediaViewerItem from "MediaViewerItem" /* 14236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,15 +19,15 @@ function MediaViewer(arg0) {
   let sharedValue1;
   __initData2 = undefined;
   ({ renderOverlay, swipeVelocityThreshold } = arg0);
-  value = [height(7276).MEDIA_VIEWER];
-  const tmp3 = height(7251);
+  value = [height(7278).MEDIA_VIEWER];
+  const tmp3 = height(7253);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14216)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14240)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -49,14 +49,14 @@ function MediaViewer(arg0) {
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const items1 = [dismiss, isClosing];
   const obj6 = require("useMediaViewerPanGesture");
-  height(5970)(sharedValue1.useCallback(() => {
+  height(5972)(sharedValue1.useCallback(() => {
     if (!isClosing.get()) {
       dismiss();
     }
     return true;
   }, items1));
   const absoluteFillObject = closure_6.absoluteFillObject;
-  const tmp17 = height(5970);
+  const tmp17 = height(5972);
   function te() {
     const obj = {};
     const merged = Object.assign(absoluteFillObject);
@@ -185,7 +185,7 @@ function MediaViewer(arg0) {
   const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
   let tmp29Result = dismiss(callback, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
   const obj17 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
-  const items6 = [dismiss(height(10885), { barStyle: "light-content", hidden: !tmp5 }), dismiss(height(5050).View, { style: animatedStyle }), , , ];
+  const items6 = [dismiss(height(10886), { barStyle: "light-content", hidden: !tmp5 }), dismiss(height(5052).View, { style: animatedStyle }), , , ];
   const obj19 = { ref: animatedRef, style: animatedStyle2, children: null };
   const obj16 = require("DeviceOrientation");
   const obj18 = { barStyle: "light-content", hidden: !tmp5 };
@@ -193,25 +193,25 @@ function MediaViewer(arg0) {
   const tmp32 = animatedRef;
   if (isMediaViewerImprovementsEnabled) {
     const obj20 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp29Result = tmp29(tmp(14218), obj20);
+    tmp29Result = tmp29(tmp(14242), obj20);
   }
   obj19.children = tmp29Result;
-  items6[2] = dismiss(height(5051), obj19);
+  items6[2] = dismiss(height(5053), obj19);
   const obj21 = { style: null, pointerEvents: null, children: null };
   const items7 = [sharedValue(sharedValue1.useState(obj9), 1)[0], animatedStyle1];
   obj21.style = items7;
   let str = "none";
-  const tmp33 = height(5051);
+  const tmp33 = height(5053);
   if (tmp5) {
     str = "box-none";
   }
   obj21.pointerEvents = str;
   obj21.children = renderOverlay(dismiss, overlayEnabled);
-  items6[3] = dismiss(height(5051), obj21);
-  items6[4] = dismiss(height(11348), {});
+  items6[3] = dismiss(height(5053), obj21);
+  items6[4] = dismiss(height(11366), {});
   obj17.children = items6;
   const children = tmp31(tmp32, obj17);
-  return dismiss(tmp7(7251).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return dismiss(tmp7(7253).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);

@@ -1,17 +1,17 @@
-// === Module 16783: VideoUploadQualitySetting ===
+// === Module 16815: VideoUploadQualitySetting ===
 
-// Module 16783 (VideoUploadQualitySetting)
+// Module 16815 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import UserSettingsText from "UserSettingsText" /* 16782 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import UserSettingsText from "UserSettingsText" /* 16814 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 
 require = fn;
 const VideoQualitySettings = fn(1209).VideoQualitySettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoUploadQualitySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8330).MobileUserSettings.CHAT,
+  parent: fn(8332).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoUploadQualitySettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

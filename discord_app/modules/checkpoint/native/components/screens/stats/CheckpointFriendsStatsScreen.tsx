@@ -1,6 +1,6 @@
-// === Module 12974: CheckpointFriendsStatsScreen ===
+// === Module 13011: CheckpointFriendsStatsScreen ===
 
-// Module 12974 (CheckpointFriendsStatsScreen)
+// Module 13011 (CheckpointFriendsStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,26 +9,26 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import UserUtils from "UserUtils" /* 5023 */;
-import CheckpointFriendsRive from "CheckpointFriendsRive" /* 5109 */;
-import FriendsIcon from "FriendsIcon" /* 5664 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6361 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7276 */;
-import ChatIcon from "ChatIcon" /* 8540 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10445 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11622 */;
-import CheckpointTextDefault from "CheckpointText" /* 12930 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12932 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12939 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12948 */;
-import useFriendsAnimationState from "useFriendsAnimationState" /* 12975 */;
-import useSidekickLeave from "useSidekickLeave" /* 12976 */;
+import UserUtils from "UserUtils" /* 5025 */;
+import CheckpointFriendsRive from "CheckpointFriendsRive" /* 5111 */;
+import FriendsIcon from "FriendsIcon" /* 5666 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
+import ChatIcon from "ChatIcon" /* 8542 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10446 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11642 */;
+import CheckpointTextDefault from "CheckpointText" /* 12967 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12969 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12976 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12985 */;
+import useFriendsAnimationState from "useFriendsAnimationState" /* 13012 */;
+import useSidekickLeave from "useSidekickLeave" /* 13013 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import UserStore from "UserStore" /* 1392 */;
-import CheckpointStore from "CheckpointStore" /* 12912 */;
+import CheckpointStore from "CheckpointStore" /* 12949 */;
 
 const require = globalThis.__r;
 
@@ -166,7 +166,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12844).GiftIcon, obj6);
+    obj5.children = closure_13(user(12881).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {
@@ -196,7 +196,7 @@ function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5678).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5680).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -207,7 +207,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6013);
+const CheckpointConstants = fn(6015);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -222,7 +222,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj5 = { container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 }, animation: null, transition: null, header: null, heading: null, title: null, titleText: null, sidekick: null, sidekickDetails: null, stats: null, stat: null, messageInputContainer: null, messageInput: null, messageInputActions: null, disabled: null };
 const rect = { position: "absolute", left: -nativeDefault.space.PX_24, right: -nativeDefault.space.PX_24 };
 obj5.animation = rect;

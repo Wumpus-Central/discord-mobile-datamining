@@ -1,9 +1,9 @@
-// === Module 17097: DesignSystemsButtonGroupSetting ===
+// === Module 17129: DesignSystemsButtonGroupSetting ===
 
-// Module 17097 (DesignSystemsButtonGroupSetting)
+// Module 17129 (DesignSystemsButtonGroupSetting)
 import Constants from "Constants" /* 1087 */;
-import SettingsConstants from "SettingsConstants" /* 8330 */;
-import SettingBuilders from "SettingBuilders" /* 11204 */;
+import SettingsConstants from "SettingsConstants" /* 8332 */;
+import SettingBuilders from "SettingBuilders" /* 11205 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

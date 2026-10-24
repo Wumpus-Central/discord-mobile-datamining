@@ -1,6 +1,6 @@
-// === Module 11874: AIGlyphFont ===
+// === Module 11900: AIGlyphFont ===
 
-// Module 11874 (AIGlyphFont)
+// Module 11900 (AIGlyphFont)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/visual-identities/ai/AIGlyphFont.tsx");

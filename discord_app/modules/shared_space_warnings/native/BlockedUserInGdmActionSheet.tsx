@@ -1,20 +1,20 @@
-// === Module 18914: BlockedUserInGdmActionSheet ===
+// === Module 18944: BlockedUserInGdmActionSheet ===
 
-// Module 18914 (BlockedUserInGdmActionSheet)
+// Module 18944 (BlockedUserInGdmActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5987 */;
-import TableRow from "TableRow" /* 6901 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7265 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18915 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
+import TableRow from "TableRow" /* 6903 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18945 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -136,12 +136,12 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15020);
+const SharedSpaceWarningConstants = fn(15043);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
@@ -207,7 +207,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj2.size = REFRESH_MEDIUM_32;
       let tmp17 = closure_10(tmp(1202).Avatar, obj2);
     } else {
-      tmp17 = closure_10(tmp(11811).UserIcon, {});
+      tmp17 = closure_10(tmp(11837).UserIcon, {});
     }
     cResult[8] = guildId;
     cResult[9] = tmp12;
@@ -216,7 +216,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   } else {
     if (cResult[12] !== tmp7) {
       const obj3 = { users: tmp7, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-      const tmp11 = closure_10(tmp(10687).FacepileGroupDMAvatar, obj3);
+      const tmp11 = closure_10(tmp(10688).FacepileGroupDMAvatar, obj3);
       cResult[12] = tmp7;
       cResult[13] = tmp11;
       let tmp9 = tmp11;
@@ -243,11 +243,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1202).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(11811).UserIcon, {});
+      tmp6 = closure_10(tmp(11837).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10687).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10688).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 });

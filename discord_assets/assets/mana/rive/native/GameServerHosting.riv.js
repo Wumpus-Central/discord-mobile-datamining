@@ -1,6 +1,6 @@
-// === Module 5120: ? ===
+// === Module 5122: ? ===
 
-// Module 5120
+// Module 5122
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/GameServerHosting.riv.js");

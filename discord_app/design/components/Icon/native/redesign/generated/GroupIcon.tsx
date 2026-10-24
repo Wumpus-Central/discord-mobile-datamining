@@ -1,10 +1,10 @@
-// === Module 8558: GroupIcon ===
+// === Module 8560: GroupIcon ===
 
-// Module 8558 (GroupIcon)
+// Module 8560 (GroupIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5666 */;
-import _mod8506 from "module_8506" /* 8506 */;
+import BaseIconImage from "BaseIconImage" /* 5668 */;
+import _mod8508 from "module_8508" /* 8508 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const GroupIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8506;
+    const tmpResult = _mod8508;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const GroupIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8506, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8508, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

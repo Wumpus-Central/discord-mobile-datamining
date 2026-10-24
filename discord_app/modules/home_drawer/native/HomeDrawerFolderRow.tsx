@@ -1,22 +1,22 @@
-// === Module 17717: HomeDrawerFolderRow ===
+// === Module 17749: HomeDrawerFolderRow ===
 
-// Module 17717 (HomeDrawerFolderRow)
+// Module 17749 (HomeDrawerFolderRow)
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10870 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10871 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6812 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import SortedGuildStore from "SortedGuildStore" /* 6699 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import SortedGuildStore from "SortedGuildStore" /* 6701 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 require = fn;
 const View = fn(17).View;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrapper(folder) {
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(5154).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(5156).MobileHomeDrawerExperiment;
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -858,7 +858,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5154).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5156).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

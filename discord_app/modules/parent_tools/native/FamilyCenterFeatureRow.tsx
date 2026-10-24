@@ -1,28 +1,28 @@
-// === Module 16148: FamilyCenterFeatureRow ===
+// === Module 16172: FamilyCenterFeatureRow ===
 
-// Module 16148 (FamilyCenterFeatureRow)
+// Module 16172 (FamilyCenterFeatureRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import TableRow from "TableRow" /* 6901 */;
-import TableRowGroup from "TableRowGroup" /* 6985 */;
-import EyeIcon from "EyeIcon" /* 7061 */;
-import _modDef9097 from "module_9097" /* 9097 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12841 */;
-import _modDef13229 from "module_13229" /* 13229 */;
-import QrCodeIcon from "QrCodeIcon" /* 16145 */;
-import _modDef16149 from "module_16149" /* 16149 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 16150 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import TableRow from "TableRow" /* 6903 */;
+import TableRowGroup from "TableRowGroup" /* 6987 */;
+import EyeIcon from "EyeIcon" /* 7063 */;
+import _modDef9098 from "module_9098" /* 9098 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12878 */;
+import _modDef13266 from "module_13266" /* 13266 */;
+import QrCodeIcon from "QrCodeIcon" /* 16169 */;
+import _modDef16173 from "module_16173" /* 16173 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 16174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     tmp23 = cResult[6];
   }
   if (cResult[7] !== ageSpecificText) {
-    const obj2 = { icon: _modDef16149, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
+    const obj2 = { icon: _modDef16173, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
     cResult[7] = ageSpecificText;
     cResult[8] = obj2;
     let tmp26 = obj2;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     tmp28 = cResult[9];
   }
   if (cResult[10] !== ageSpecificText1) {
-    const obj3 = { icon: _modDef13229, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
+    const obj3 = { icon: _modDef13266, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
     cResult[10] = ageSpecificText1;
     cResult[11] = obj3;
     let tmp31 = obj3;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     tmp33 = cResult[12];
   }
   if (cResult[13] !== ageSpecificText2) {
-    const obj4 = { icon: _modDef9097, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
+    const obj4 = { icon: _modDef9098, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
     cResult[13] = ageSpecificText2;
     cResult[14] = obj4;
     let tmp36 = obj4;
@@ -198,18 +198,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2536["+pi4Yt"]), intl6.string(_modDef2536["1xPTwE"]));
-  obj4.icon = _modDef16149;
+  obj4.icon = _modDef16173;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2536["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef13229, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef13266, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2536.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef9097, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef9098, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj6.header = intl9.string(_modDef2536.hhOuMe);
   obj6.description = ageSpecificText2;

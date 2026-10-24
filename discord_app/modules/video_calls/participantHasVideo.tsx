@@ -1,6 +1,6 @@
-// === Module 10901: participantHasVideo ===
+// === Module 10902: participantHasVideo ===
 
-// Module 10901 (participantHasVideo)
+// Module 10902 (participantHasVideo)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
@@ -53,9 +53,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(5630);
+const CallConstants = fn(5632);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(5716).Features;
+const Features = fn(5718).Features;
 const ReactCompilerGating = fn(558);
 function participantHasVideo(type) {
   let streamId = type;

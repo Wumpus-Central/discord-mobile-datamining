@@ -1,10 +1,10 @@
-// === Module 16827: FriendGamingActivityNotificationUtils ===
+// === Module 16859: FriendGamingActivityNotificationUtils ===
 
-// Module 16827 (FriendGamingActivityNotificationUtils)
+// Module 16859 (FriendGamingActivityNotificationUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import NotificationConstants from "NotificationConstants" /* 4914 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import NotificationConstants from "NotificationConstants" /* 4916 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

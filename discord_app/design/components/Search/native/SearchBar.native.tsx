@@ -1,10 +1,10 @@
-// === Module 7143: Search/SearchBar ===
+// === Module 7145: Search/SearchBar ===
 
-// Module 7143 (Search/SearchBar)
+// Module 7145 (Search/SearchBar)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import TextField from "TextField" /* 7013 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7144 */;
+import TextField from "TextField" /* 7015 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7146 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,10 @@ require = fn;
 let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBar(ref) {
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
+
+export const SearchBar = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBar(ref) {
   const cResult = c.c(7);
   if (cResult[0] !== ref) {
     const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
@@ -65,8 +68,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBar(
   obj.clearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
-
-export const SearchBar = tmp3;
-export const SearchField = tmp3;

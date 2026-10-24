@@ -1,26 +1,26 @@
-// === Module 17690: FavoritesGuildSidebarHeader ===
+// === Module 17722: FavoritesGuildSidebarHeader ===
 
-// Module 17690 (FavoritesGuildSidebarHeader)
+// Module 17722 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import ChatIcon from "ChatIcon" /* 8540 */;
-import TextIcon from "TextIcon" /* 8549 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8570 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13828 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import ChatIcon from "ChatIcon" /* 8542 */;
+import TextIcon from "TextIcon" /* 8551 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8572 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17594).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17626).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
 let c10 = "text-sm/medium";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

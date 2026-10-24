@@ -1,9 +1,9 @@
-// === Module 7154: useFastestListPropsPlaceholder ===
+// === Module 7156: useFastestListPropsPlaceholder ===
 
-// Module 7154 (useFastestListPropsPlaceholder)
+// Module 7156 (useFastestListPropsPlaceholder)
 import c from "c" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4966 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7155 */;
+import ColorUtils from "ColorUtils" /* 4968 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = { borderRadius: "Array", borderTopLeftRadius: "defineProperty", borderTopRightRadius: "ix", borderBottomLeftRadius: "gap", borderBottomRightRadius: "guildId", divider: "ix", dividerColor: "Reflect", dividerPaddingLeft: "intl", dividerPaddingRight: "ix", placeholderShape: "push", placeholderShapeColor: "raw", placeholderShapeCount: "ix", placeholderShapeGap: "forEach", placeholderShapePaddingHorizontal: "guildId", placeholderShapePaddingVertical: "ix", placeholderFeedBackgroundColor: "has", placeholderFeedColor: "guildId", placeholderFeedLabelPadding: "ix", placeholderFeedLabelPaddingInnerRatio: "Reflect", placeholderFeedLabelSize: "__initData", placeholderFeedLabelSecondarySize: "toCharArray$esjava$1", placeholderFeedPadding: "toCharArray$esjava$1", placeholderFeedShape: "toCharArray$esjava$1", placeholderFeedShapeSize: "toCharArray$esjava$1", placeholderType: NONE, width: 12544, height: 0, verticalAlignment: 17924080, horizontalAlignment: 35722112 };
+  const size = { borderRadius: "Array", borderTopLeftRadius: "defineProperty", borderTopRightRadius: "ix", borderBottomLeftRadius: "title", borderBottomRightRadius: "status", divider: "ix", dividerColor: "max", dividerPaddingLeft: "guildId", dividerPaddingRight: "ix", placeholderShape: "Object", placeholderShapeColor: "limit", placeholderShapeCount: "ix", placeholderShapeGap: "Button", placeholderShapePaddingHorizontal: "registerAsset", placeholderShapePaddingVertical: "ix", placeholderFeedBackgroundColor: "location", placeholderFeedColor: "guildId", placeholderFeedLabelPadding: "ix", placeholderFeedLabelPaddingInnerRatio: "name", placeholderFeedLabelSize: "guildId", placeholderFeedLabelSecondarySize: "ix", placeholderFeedPadding: "scales", placeholderFeedShape: "diversity", placeholderFeedShapeSize: "ix", placeholderType: NONE, width: false, height: false, verticalAlignment: false, horizontalAlignment: false };
   if (null == listFooter) {
     return size;
   } else {
@@ -134,9 +134,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(7155).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(7157).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(7155).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(7157).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

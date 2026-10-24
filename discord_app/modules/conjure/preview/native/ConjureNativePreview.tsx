@@ -1,44 +1,44 @@
-// === Module 11855: ConjureNativePreview ===
+// === Module 11881: ConjureNativePreview ===
 
-// Module 11855 (ConjureNativePreview)
+// Module 11881 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Card from "Card" /* 6903 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7204 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10727 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10741 */;
-import leaveFrame from "leaveFrame" /* 10764 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10765 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11856 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11859 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11877 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Card from "Card" /* 6905 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10728 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10742 */;
+import leaveFrame from "leaveFrame" /* 10765 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10766 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11882 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11885 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6773 */;
+import FramesStore from "FramesStore" /* 6775 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7706);
+const UserProfileApplicationWidgetTypes = intl(7708);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11832);
+const conjureDesignFeedbackStore = fn(11858);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
-const isLaunched = fn(6774).isLaunched;
+const isLaunched = fn(6776).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -1026,7 +1026,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
     const intl3 = tmp7(1128).intl;
     obj4.text = intl3.string(tmp7(1128).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5242).Button, obj4);
+    obj3.children = closure_22(tmp7(5244).Button, obj4);
     let tmp28Result = closure_22(closure_25, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -1034,10 +1034,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(10887), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(10888), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(11984).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(12010).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;

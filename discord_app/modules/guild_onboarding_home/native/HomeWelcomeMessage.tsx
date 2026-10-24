@@ -1,13 +1,13 @@
-// === Module 17976: HomeWelcomeMessage ===
+// === Module 18008: HomeWelcomeMessage ===
 
-// Module 17976 (HomeWelcomeMessage)
+// Module 18008 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8674 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7323 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7325 */;
 
 require = fn;
 function replaceUsernameVariable(message, str, username) {
@@ -34,7 +34,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { relativeContainer: { position: "relative" }, welcomeContainer: { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" }, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
 let obj3 = { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
 obj2.welcomeContent = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };

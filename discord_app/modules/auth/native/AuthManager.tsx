@@ -1,21 +1,21 @@
-// === Module 17378: AuthManager ===
+// === Module 17410: AuthManager ===
 
-// Module 17378 (AuthManager)
+// Module 17410 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import transitionToGuild from "transitionToGuild" /* 7447 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13271 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14612 */;
+import transitionToGuild from "transitionToGuild" /* 7449 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13308 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(13268).PermissionStateType;
+const PermissionStateType = fn(13305).PermissionStateType;
 const ME = fn(1087).ME;
-let closure_8 = fn(7866).NotificationAuthorizationStatus;
-const NewUserTypes = fn(13568).NewUserTypes;
+let closure_8 = fn(7868).NotificationAuthorizationStatus;
+const NewUserTypes = fn(13605).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -57,13 +57,13 @@ class AuthManager extends tmp3 {
               dependencyMap = 0;
               closure_129_0 = applyArgumentsResult;
               closure_1_5.dismiss();
-              if (tmp2(4817)()) {
+              if (tmp2(4819)()) {
                 applyArgumentsResult();
                 c4 = 3;
               } else {
                 c3 = 1;
                 c4 = 1;
-                const obj4 = { value: tmp2(7889).getNotificationAuthorizationStatus(), done: false };
+                const obj4 = { value: tmp2(7891).getNotificationAuthorizationStatus(), done: false };
                 return obj4;
               }
             }
@@ -78,8 +78,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17379).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17379);
+          const result = applyArgumentsResult(17411).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17411);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -106,17 +106,17 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13652).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13652);
+        applyArgumentsResult(13689).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13689);
       }
-      obj = applyArgumentsResult(9049);
-      applyArgumentsResult(13567).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(13567);
+      obj = applyArgumentsResult(9050);
+      applyArgumentsResult(13604).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13604);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7447).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7447);
+        closure_1_0(7449).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7449);
         closure_1_1(584).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

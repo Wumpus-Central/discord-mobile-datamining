@@ -1,23 +1,23 @@
-// === Module 16177: WizardHatAndBookSpotIllustration ===
+// === Module 16201: WizardHatAndBookSpotIllustration ===
 
-// Module 16177 (WizardHatAndBookSpotIllustration)
+// Module 16201 (WizardHatAndBookSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import assetHelpers from "assetHelpers" /* 6993 */;
-import _modDef16178 from "module_16178" /* 16178 */;
-import _modDef16179 from "module_16179" /* 16179 */;
-import _modDef16180 from "module_16180" /* 16180 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef16202 from "module_16202" /* 16202 */;
+import _modDef16203 from "module_16203" /* 16203 */;
+import _modDef16204 from "module_16204" /* 16204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16178 }, 3: null };
-let obj2 = { uri: _modDef16178 };
-obj[2] = { uri: _modDef16179 };
-const obj3 = { uri: _modDef16179 };
-obj[3] = { uri: _modDef16180 };
+let obj = { 1: null, 2: { uri: _modDef16202 }, 3: null };
+let obj2 = { uri: _modDef16202 };
+obj[2] = { uri: _modDef16203 };
+const obj3 = { uri: _modDef16203 };
+obj[3] = { uri: _modDef16204 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16180 };
+const obj4 = { uri: _modDef16204 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WizardHatAndBookSpotIllustration.native.tsx");
 

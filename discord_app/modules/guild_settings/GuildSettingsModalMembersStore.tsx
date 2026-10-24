@@ -1,9 +1,9 @@
-// === Module 12741: GuildSettingsModalMembersStore ===
+// === Module 12778: GuildSettingsModalMembersStore ===
 
-// Module 12741 (GuildSettingsModalMembersStore)
+// Module 12778 (GuildSettingsModalMembersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 
 function handleStopEditingRoles() {
   SUBMITTING = null;

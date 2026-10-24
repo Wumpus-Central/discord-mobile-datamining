@@ -1,17 +1,17 @@
-// === Module 7087: UserSettingsConfirmPassword ===
+// === Module 7089: UserSettingsConfirmPassword ===
 
-// Module 7087 (UserSettingsConfirmPassword)
+// Module 7089 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7005 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7031 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7088 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7089 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7091 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7007 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7033 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7090 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };

@@ -4,9 +4,9 @@
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2070 from "module_2070" /* 2070 */;
-import bg from "bg" /* 4247 */;
-import formatjs from "formatjs" /* 4722 */;
-import moment from "moment" /* 4753 */;
+import bg from "bg" /* 4249 */;
+import formatjs from "formatjs" /* 4724 */;
+import moment from "moment" /* 4755 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_1904 from "module_1904" /* 1904 */;
 
@@ -350,14 +350,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "applicationId",
+    error: "ix",
     localeData: _modDef2070,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "applicationId" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "ix" });
       }
     },
     setLoadingFailed(error, arg1) {

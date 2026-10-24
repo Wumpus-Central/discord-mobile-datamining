@@ -1,17 +1,17 @@
-// === Module 11721: ConjureStandaloneScreen ===
+// === Module 11741: ConjureStandaloneScreen ===
 
-// Module 11721 (ConjureStandaloneScreen)
-import ConjureActionCreators from "ConjureActionCreators" /* 10719 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11722 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 11723 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 11831 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12500 */;
+// Module 11741 (ConjureStandaloneScreen)
+import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11742 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 11743 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 11857 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12534 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7319 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7321 */;
 
 require = fn;
 const Permissions = fn(1087).Permissions;

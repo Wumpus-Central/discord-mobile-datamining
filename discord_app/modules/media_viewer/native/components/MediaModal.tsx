@@ -1,29 +1,30 @@
-// === Module 8778: MediaModal ===
+// === Module 8780: MediaModal ===
 
-// Module 8778 (MediaModal)
+// Module 8780 (MediaModal)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import HapticUtils from "HapticUtils" /* 5210 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5211 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8755 */;
-import MediaModalPortal from "MediaModalPortal" /* 8758 */;
-import MediaModalTiktok from "MediaModalTiktok" /* 8785 */;
-import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 8787 */;
-import common_Video from "common/Video" /* 8788 */;
-import MediaModalOverlayDefault from "MediaModalOverlay" /* 14184 */;
-import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14202 */;
-import MediaModalVideoDefault from "MediaModalVideo" /* 14204 */;
-import MediaModalImageDefault from "MediaModalImage" /* 14208 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import HapticUtils from "HapticUtils" /* 5212 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8757 */;
+import MediaModalPortal from "MediaModalPortal" /* 8760 */;
+import MediaModalTiktok from "MediaModalTiktok" /* 8787 */;
+import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 8789 */;
+import common_Video from "common/Video" /* 8790 */;
+import MediaModalOverlayDefault from "MediaModalOverlay" /* 14203 */;
+import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14221 */;
+import MediaModalWebEmbedDefault from "MediaModalWebEmbed" /* 14223 */;
+import MediaModalVideoDefault from "MediaModalVideo" /* 14228 */;
+import MediaModalImageDefault from "MediaModalImage" /* 14232 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8779 */;
+import AppFreezeStore from "AppFreezeStore" /* 8781 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 
 const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8752);
+const useVideoControls = obj(8754);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -180,7 +181,7 @@ export default function MediaModal(originLayout) {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8820, dependencyMap.paths), "MediaShareActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8822, dependencyMap.paths), "MediaShareActionSheet", obj2);
       }
     }
   }, items5);
@@ -235,23 +236,27 @@ export default function MediaModal(originLayout) {
           ({ embedURI: obj5.uri, width: obj5.width, height: obj5.height } = source);
           obj6.source = size2;
           return jsx(MediaModalYoutubeDefault, { onError, onLoad, onLoadStart, onToggleOverlay, visible, style, source: null }, key);
-        } else {
-          return null;
+        } else if (null == source.videoURI) {
+          const obj8 = { provider: source.embedProviderName, onError, onLoad, onLoadStart, onToggleOverlay, visible, style, source: null };
+          const size3 = { uri: null, width: null, height: null };
+          ({ embedURI: obj13.uri, width: obj13.width, height: obj13.height } = source);
+          obj8.source = size3;
+          return jsx(MediaModalWebEmbedDefault, { provider: source.embedProviderName, onError, onLoad, onLoadStart, onToggleOverlay, visible, style, source: null }, key);
         }
       }
     }
     if (null != source.videoURI) {
-      const obj8 = { controls: callback1(index, source), index, muted: tmp, onError, onLoad: callback2(index, source, onLoad), onLoadingVisible: onLoadStart, paused: hasSpoiler, source, style };
+      const obj9 = { controls: callback1(index, source), index, muted: tmp, onError, onLoad: callback2(index, source, onLoad), onLoadingVisible: onLoadStart, paused: hasSpoiler, source, style };
       const _HermesInternal2 = HermesInternal;
       let tmp18 = jsx(MediaModalVideoDefault, { controls: callback1(index, source), index, muted: tmp, onError, onLoad: callback2(index, source, onLoad), onLoadingVisible: onLoadStart, paused: hasSpoiler, source, style }, "" + key + ":" + source.videoURI);
     } else {
-      const obj9 = { fadeDuration: hasSpoiler.fadeDuration, index, onError, onLoad, onLoadingVisible: onLoadStart, pointerEvents, source, style };
+      const obj10 = { fadeDuration: hasSpoiler.fadeDuration, index, onError, onLoad, onLoadingVisible: onLoadStart, pointerEvents, source, style };
       const _HermesInternal = HermesInternal;
       tmp18 = jsx(MediaModalImageDefault, { fadeDuration: hasSpoiler.fadeDuration, index, onError, onLoad, onLoadingVisible: onLoadStart, pointerEvents, source, style }, "" + key + ":" + source.uri);
     }
     return tmp18;
   }, items7);
-  let tmp18 = mediaViewerSyncer(initialIndexVideoStartTime(onCloseCallback[28]), { originLayout: originLayout.originLayout, swipeVelocityThreshold: num2, onClose: callback, onLongPress: callback3, syncer: mediaViewerSyncer, renderMedia: callback5, renderOverlay: callback4 });
+  let tmp18 = mediaViewerSyncer(initialIndexVideoStartTime(onCloseCallback[29]), { originLayout: originLayout.originLayout, swipeVelocityThreshold: num2, onClose: callback, onLongPress: callback3, syncer: mediaViewerSyncer, renderMedia: callback5, renderOverlay: callback4 });
   let tmp17Result = tmp18;
   if (flag) {
     const obj5 = { transparent: true, animationType: "none", visible: true, onRequestClose: callback, statusBarTranslucent: true, children: null };

@@ -1,9 +1,9 @@
-// === Module 17572: registerSidebarVisibilityMethods ===
+// === Module 17604: registerSidebarVisibilityMethods ===
 
-// Module 17572 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 6699 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9571 */;
-import GuildStore from "GuildStore" /* 4843 */;
+// Module 17604 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 6701 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9572 */;
+import GuildStore from "GuildStore" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const SortedGuildStore = SortedGuildStore2;

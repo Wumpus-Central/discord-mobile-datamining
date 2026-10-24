@@ -1,21 +1,21 @@
-// === Module 17602: NewMemberActionsProgress ===
+// === Module 17634: NewMemberActionsProgress ===
 
-// Module 17602 (NewMemberActionsProgress)
+// Module 17634 (NewMemberActionsProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import LinearGradientDefault from "LinearGradient" /* 5258 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7323 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8299 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7325 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8301 */;
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(4828).StaticChannelRoute;
-const GuildMemberFlags = fn(4887).GuildMemberFlags;
+const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const GuildMemberFlags = fn(4889).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };

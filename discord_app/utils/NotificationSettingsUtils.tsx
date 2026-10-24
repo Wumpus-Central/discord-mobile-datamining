@@ -1,19 +1,19 @@
-// === Module 7208: NotificationSettingsUtils ===
+// === Module 7210: NotificationSettingsUtils ===
 
-// Module 7208 (NotificationSettingsUtils)
+// Module 7210 (NotificationSettingsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5709 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7209 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 6008 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7211 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import MessageStore from "MessageStore" /* 6010 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4914).NotificationSettingsUpdateType;
-const UnreadSetting = fn(6703).UnreadSetting;
+const constants2 = fn(4916).NotificationSettingsUpdateType;
+const UnreadSetting = fn(6705).UnreadSetting;
 const UserSettingsConstants = fn(1097);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = { ForumThreadsCreatedOn: "enabled forum thread created notifs", ForumThreadsCreatedOff: "disabled forum thread created notifs", SuppressEveryoneOn: "enabled suppress everyone", SuppressEveryoneOff: "disabled suppress everyone", SuppressRolesOn: "enabled suppress roles", SuppressRolesOff: "disabled suppress roles", HighlightsOn: "enabled highlights", HighlightsOff: "disabled highlights", MobilePushOn: "enabled mobile push notifications", MobilePushOff: "disabled mobile push notifications", UnreadsAll: "unreads set to all messages", UnreadsMentions: "unreads set to mentions", UnreadsDefault: "unreads set to the default", NotificationsAll: "notifications set to all messages", NotificationsMentions: "notifications set to mentions", NotificationsNothing: "notifications set to nothing", NotificationsDefault: "notifications set to the default", PresetAll: "notification preset set to all messages", PresetHybrid: "notification preset set to hybrid", PresetMentions: "notification preset set to mentions", PresetNothing: "notification preset set to nothing", PresetDefault: "notification preset set to the default", OptedIn: "opted in to entity", OptedOut: "opted out from entity", Favorited: "favorited", UnFavorited: "unfavorited", Muted: "muted", Unmuted: "unmuted", MutedScheduledEvents: "muted scheduled events", UnmutedScheduledEvents: "unmuted scheduled events", OverrideCreated: "channel override created", OverrideDeleted: "channel override deleted", AnnouncementAutoEnable: "announcement channels auto set to all messages" };
@@ -60,12 +60,12 @@ export const NotificationLabel = {
     }
     return UnreadsDefault;
   },
-  notifications(message_notifications) {
-    if (message_notifications === UserNotificationSettings.ALL_MESSAGES) {
+  notifications(ONLY_MENTIONS) {
+    if (ONLY_MENTIONS === UserNotificationSettings.ALL_MESSAGES) {
       let NotificationsDefault = obj.NotificationsAll;
-    } else if (message_notifications === UserNotificationSettings.ONLY_MENTIONS) {
+    } else if (ONLY_MENTIONS === UserNotificationSettings.ONLY_MENTIONS) {
       NotificationsDefault = obj.NotificationsMentions;
-    } else if (message_notifications === UserNotificationSettings.NO_MESSAGES) {
+    } else if (ONLY_MENTIONS === UserNotificationSettings.NO_MESSAGES) {
       NotificationsDefault = obj.NotificationsNothing;
     } else {
       NotificationsDefault = obj.NotificationsDefault;

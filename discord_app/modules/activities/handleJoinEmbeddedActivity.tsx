@@ -1,12 +1,12 @@
-// === Module 11342: handleJoinEmbeddedActivity ===
+// === Module 11360: handleJoinEmbeddedActivity ===
 
-// Module 11342 (handleJoinEmbeddedActivity)
+// Module 11360 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import UserStore from "UserStore" /* 1392 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 
 const require = globalThis.__r;
 

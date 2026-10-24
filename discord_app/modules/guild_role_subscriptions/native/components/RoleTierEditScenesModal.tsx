@@ -1,17 +1,17 @@
-// === Module 19232: RoleTierEditScenesModal ===
+// === Module 19284: RoleTierEditScenesModal ===
 
-// Module 19232 (RoleTierEditScenesModal)
+// Module 19284 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1128 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
-import HeaderActionButton from "HeaderActionButton" /* 7483 */;
-import _modDef8113 from "module_8113" /* 8113 */;
-import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 19221 */;
-import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 19233 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19234 */;
-import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 19255 */;
-import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 19258 */;
-import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 19260 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
+import XSmallIcon from "XSmallIcon" /* 6931 */;
+import HeaderActionButton from "HeaderActionButton" /* 7485 */;
+import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 19273 */;
+import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 19285 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19286 */;
+import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 19305 */;
+import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 19308 */;
+import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 19310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_129_1 = handleClose;
   obj4.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -119,7 +119,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_130_1 = handleClose;
   obj7.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -170,7 +170,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_131_1 = handleClose;
   obj9.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -219,7 +219,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_132_1 = handleClose;
   obj11.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -268,7 +268,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_133_1 = handleClose;
   obj13.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -319,7 +319,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_134_1 = handleClose;
   obj15.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -370,7 +370,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_135_1 = handleClose;
   obj17.headerRight = () => {
     obj = {
-      source: _modDef8113,
+      IconComponent: XSmallIcon.XSmallIcon,
       onPress() {
         return merged(obj);
       },
@@ -417,12 +417,12 @@ function buildScreenMap(arg0, handleClose) {
   obj6[constants.DETAILS] = obj17;
   return obj6;
 }
-const RoleTierEditStore = fn(19222);
+const RoleTierEditStore = fn(19274);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-const constants = fn(16525).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16557).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

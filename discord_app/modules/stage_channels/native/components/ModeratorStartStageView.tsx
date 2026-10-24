@@ -1,13 +1,13 @@
-// === Module 11494: ModeratorStartStageView ===
+// === Module 11514: ModeratorStartStageView ===
 
-// Module 11494 (ModeratorStartStageView)
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 11495 */;
+// Module 11514 (ModeratorStartStageView)
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 11515 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
-const useCanCreateAnEventDefault = tmp10(9020);
-const StageViewWithPromptsDefault = tmp10(11541);
+const useCanCreateAnEventDefault = tmp10(9021);
+const StageViewWithPromptsDefault = tmp10(11561);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -44,23 +44,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
   const obj = guild_id(576);
   const stateFromStores = guild_id(504).useStateFromStores(first, tmp6, tmp7);
   const tmpResult = guild_id(504);
-  const first1 = _slicedToArray(guild_id(9021).useGuildChannelScheduledEvents(channel.id), 1)[0];
+  const first1 = _slicedToArray(guild_id(9022).useGuildChannelScheduledEvents(channel.id), 1)[0];
   let tmp10 = importDefault;
   const moderator = useCurrentUserStageRolesDefault(channel.id, true).moderator;
-  const tmpResult5 = guild_id(9021);
-  const canManageGuildEvent = guild_id(8942).useManageResourcePermissions(channel).canManageGuildEvent;
+  const tmpResult5 = guild_id(9022);
+  const canManageGuildEvent = guild_id(8944).useManageResourcePermissions(channel).canManageGuildEvent;
   if (cResult[4] === canManageGuildEvent) {
     if (cResult[5] === first1) {
       let tmp11 = cResult[6];
     }
     const tmp13 = useCanCreateAnEventDefault(guild_id);
-    const isLive = tmp(11496).useStageChannelStartEvent(channel.id).isLive;
+    const isLive = tmp(11516).useStageChannelStartEvent(channel.id).isLive;
     if (cResult[7] !== first1) {
-      const nextRecurrenceIdInEvent = tmp(8888).getNextRecurrenceIdInEvent(first1);
+      const nextRecurrenceIdInEvent = tmp(8890).getNextRecurrenceIdInEvent(first1);
       cResult[7] = first1;
       cResult[8] = nextRecurrenceIdInEvent;
       let tmp14 = nextRecurrenceIdInEvent;
-      const tmpResult8 = tmp(8888);
+      const tmpResult8 = tmp(8890);
     } else {
       tmp14 = cResult[8];
     }
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
                           }
                           if (cResult[27] !== onSkip) {
                             const obj2 = { onContinue: onSkip };
-                            const tmp34 = closure_5(tmp(11498).ContinueToStagePrompt, obj2);
+                            const tmp34 = closure_5(tmp(11518).ContinueToStagePrompt, obj2);
                             cResult[27] = onSkip;
                             cResult[28] = tmp34;
                             let tmp32 = tmp34;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
                     let tmp30 = null;
                     if (tmp13) {
                       const obj5 = { channel, isLive, guild: stateFromStores };
-                      tmp30 = closure_5(tmp(11497).ScheduleEventPrompt, obj5);
+                      tmp30 = closure_5(tmp(11517).ScheduleEventPrompt, obj5);
                     }
                     cResult[22] = tmp13;
                     cResult[23] = channel;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
                 let tmp27 = null;
                 if (moderator) {
                   const obj6 = { channel, isLive };
-                  tmp27 = closure_5(tmp(11498).StartStagePrompt, obj6);
+                  tmp27 = closure_5(tmp(11518).StartStagePrompt, obj6);
                 }
                 cResult[18] = channel;
                 cResult[19] = isLive;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
         tmp24 = null;
         if (null != first1) {
           const obj7 = { channel, event: first1, isLive, guild: stateFromStores, recurrenceId: tmp14 };
-          tmp24 = closure_5(tmp(11497).StartEventPrompt, obj7);
+          tmp24 = closure_5(tmp(11517).StartEventPrompt, obj7);
         }
       }
       cResult[11] = tmp11;
@@ -177,14 +177,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
       cResult[17] = tmp24;
       tmp23 = tmp24;
     }
-    const tmpResult7 = tmp(11496);
+    const tmpResult7 = tmp(11516);
   }
   const canManageGuildEventResult = canManageGuildEvent(first1);
   cResult[4] = canManageGuildEvent;
   cResult[5] = first1;
   cResult[6] = canManageGuildEventResult;
   tmp11 = canManageGuildEventResult;
-  const tmpResult6 = guild_id(8942);
+  const tmpResult6 = guild_id(8944);
 }) : (function ModeratorStartStageView(channel) {
   channel = channel.channel;
   const guild_id = channel.guild_id;
@@ -192,14 +192,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
   const items1 = [guild_id];
   const stateFromStores = guild_id(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
   const obj = guild_id(504);
-  const first = _slicedToArray(guild_id(9021).useGuildChannelScheduledEvents(channel.id), 1)[0];
-  const obj2 = guild_id(9021);
-  const obj3 = guild_id(8942);
-  const canManageGuildEventResult = guild_id(8942).useManageResourcePermissions(channel).canManageGuildEvent(first);
+  const first = _slicedToArray(guild_id(9022).useGuildChannelScheduledEvents(channel.id), 1)[0];
+  const obj2 = guild_id(9022);
+  const obj3 = guild_id(8944);
+  const canManageGuildEventResult = guild_id(8944).useManageResourcePermissions(channel).canManageGuildEvent(first);
   const tmp7 = useCanCreateAnEventDefault(guild_id);
-  const isLive = guild_id(11496).useStageChannelStartEvent(channel.id).isLive;
-  const obj4 = guild_id(11496);
-  const nextRecurrenceIdInEvent = guild_id(8888).getNextRecurrenceIdInEvent(first);
+  const isLive = guild_id(11516).useStageChannelStartEvent(channel.id).isLive;
+  const obj4 = guild_id(11516);
+  const nextRecurrenceIdInEvent = guild_id(8890).getNextRecurrenceIdInEvent(first);
   let tmp10Result6 = null;
   if (null != stateFromStores) {
     const obj6 = { title: null, body: null, children: null };
@@ -212,25 +212,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Moderato
       tmp10Result = null;
       if (null != first) {
         const obj7 = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
-        tmp10Result = closure_5(tmp(11497).StartEventPrompt, obj7);
+        tmp10Result = closure_5(tmp(11517).StartEventPrompt, obj7);
       }
     }
     const items2 = [tmp10Result, , , ];
     let tmp10Result4 = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       const obj8 = { channel, isLive };
-      tmp10Result4 = closure_5(tmp(11498).StartStagePrompt, obj8);
+      tmp10Result4 = closure_5(tmp(11518).StartStagePrompt, obj8);
     }
     items2[1] = tmp10Result4;
     let tmp10Result5 = null;
     if (tmp7) {
       const obj9 = { channel, isLive, guild: stateFromStores };
-      tmp10Result5 = closure_5(tmp(11497).ScheduleEventPrompt, obj9);
+      tmp10Result5 = closure_5(tmp(11517).ScheduleEventPrompt, obj9);
     }
     const obj10 = { children: null };
     items2[2] = tmp10Result5;
     const obj11 = { onContinue: channel.onSkip };
-    items2[3] = closure_5(tmp(11498).ContinueToStagePrompt, obj11);
+    items2[3] = closure_5(tmp(11518).ContinueToStagePrompt, obj11);
     obj10.children = items2;
     obj6.children = closure_7(closure_6, obj10);
     tmp10Result6 = closure_5(StageViewWithPromptsDefault, obj6);

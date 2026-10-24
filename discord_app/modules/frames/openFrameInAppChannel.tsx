@@ -1,6 +1,6 @@
-// === Module 11375: openFrameInAppChannel ===
+// === Module 11394: openFrameInAppChannel ===
 
-// Module 11375 (openFrameInAppChannel)
+// Module 11394 (openFrameInAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -13,34 +13,29 @@ let closure_4 = async function _openFrameInAppChannel(arg0) {
       c4 = 3;
       return { value, done: true };
     } else {
-      if (obj9.shouldOpenAppChannel(closure_129_0)) {
+      let tmp6 = null;
+      if (obj8.shouldOpenAppChannel(closure_129_0)) {
         c3 = 2;
         c4 = 1;
-        return { value: closure_130_0(closure_130_2[2]).fetchApplicationChannels(closure_129_0), done: false };
+        return { value: closure_130_1(closure_130_2[2])(closure_129_0, { preferredChannelId: closure_129_1 }), done: false };
       }
-      obj9 = closure_130_0(closure_130_2[1]);
+      obj8 = closure_130_0(closure_130_2[1]);
     }
   } else if (arg0 === 1) {
     c4 = 3;
     throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
   } else {
-    const first = value[0];
+    tmp6 = value;
+    if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    }
   }
-  closure_129_2 = first;
-  const obj7 = { applicationId: closure_129_0, channel: null, analyticsContext: null };
-  let tmp14 = null;
-  if (null != closure_129_2) {
-    tmp14 = { guildId: closure_129_2.guild_id, channelId: closure_129_2.channel_id };
-  }
-  obj7.channel = tmp14;
-  obj7.analyticsContext = closure_129_1;
-  closure_130_1(closure_130_2[1])(obj7);
+  closure_129_4 = tmp6;
+  closure_130_1(closure_130_2[1])({ applicationId: closure_129_0, channel: closure_129_4, analyticsContext: closure_129_2, launch: closure_129_3 });
   await "IconComponent";
   closure_1 = tmp2;
-  ({ applicationId: closure_129_0, analyticsContext: closure_129_1 } = closure_0);
+  ({ applicationId: closure_129_0, channelId: closure_129_1, analyticsContext: closure_129_2, launch: closure_129_3 } = closure_0);
   return "Reflect";
 };
 const size = fn(2);

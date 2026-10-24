@@ -1,17 +1,17 @@
-// === Module 5200: MobileThemesUtils ===
+// === Module 5202: MobileThemesUtils ===
 
-// Module 5200 (MobileThemesUtils)
+// Module 5202 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
 import _modDef2768 from "module_2768" /* 2768 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4996 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4997 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5202 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4998 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4999 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5204 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5201 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5203 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ function getCustomThemesName() {
 }
 const ClientThemesConstants = fn(1255);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_7, HEXAGON_GRADIENT_PRESET: closure_8, REFRESH_STANDARD_BACKGROUND_THEMES: closure_9 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -295,10 +295,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp16 = items2;
       }
-      tmpResult6 = tmp(4997);
+      tmpResult6 = tmp(4999);
     }
     tmp16 = closure_7;
-    tmpResult5 = tmp(4996);
+    tmpResult5 = tmp(4998);
   }
   if (null != tmp4) {
     const items3 = [];
@@ -335,10 +335,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp12 = items2;
       }
-      tmp2Result2 = tmp2(4997);
+      tmp2Result2 = tmp2(4999);
     }
     tmp12 = closure_7;
-    tmp2Result = tmp2(4996);
+    tmp2Result = tmp2(4998);
   }
   if (null != tmp) {
     const items3 = [];

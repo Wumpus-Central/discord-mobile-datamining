@@ -1,18 +1,18 @@
-// === Module 14472: AvatarGrid ===
+// === Module 14496: AvatarGrid ===
 
-// Module 14472 (AvatarGrid)
+// Module 14496 (AvatarGrid)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PresenceStore from "PresenceStore" /* 5710 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import PresenceStore from "PresenceStore" /* 5712 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, gridContainer: { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -94,7 +94,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
               }
             }
           }
-          const tmpResult4 = tmp(8736);
+          const tmpResult4 = tmp(8738);
           class E {
             constructor() {
               return closure_1_3.useReducedMotion;
@@ -165,7 +165,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(8736);
+    const tmp2Result = tmp2(8738);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;

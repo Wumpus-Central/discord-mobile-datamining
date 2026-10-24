@@ -1,7 +1,7 @@
-// === Module 5226: LottieAnimationView ===
+// === Module 5228: LottieAnimationView ===
 
-// Module 5226 (LottieAnimationView)
-import _modDef5227 from "module_5227" /* 5227 */;
+// Module 5228 (LottieAnimationView)
+import _modDef5229 from "module_5229" /* 5229 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -68,7 +68,7 @@ prototype["render"] = function render() {
   obj3.style = items1;
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
-  obj2.children = jsx(_modDef5227, { ref: this.setRef, source, style: null });
+  obj2.children = jsx(_modDef5229, { ref: this.setRef, source, style: null });
   return <View style={null} collapsable={props.collapsable}>{null}</View>;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };

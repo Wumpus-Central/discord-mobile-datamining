@@ -1,24 +1,24 @@
-// === Module 11774: ConjureSettingsSheet ===
+// === Module 11799: ConjureSettingsSheet ===
 
-// Module 11774 (ConjureSettingsSheet)
+// Module 11799 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10697 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10711 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6771 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10698 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10712 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6773 */;
 
 const require = fn;
 const View = fn(17).View;
-let ConjureProjectStore = fn(6771);
+let ConjureProjectStore = fn(6773);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { project: _modDef3830.W0eQfN, app: _modDef3830.lFaJYF, secrets: _modDef3830.vDpCPU, model: _modDef3830.Rs3qc9, linked: _modDef3830.fBEHdq, experimental: _modDef3830["0Pe9uw"] };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_15 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -160,7 +160,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     return obj;
   }), items);
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(8899);
+  obj = tabs(8901);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -182,10 +182,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(11823).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(11849).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9145).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9146).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     first = cResult[0];
   }
-  closure_15(ref(5591)(first).insets.bottom);
+  closure_15(ref(5593)(first).insets.bottom);
   ref = noop.useRef(null);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ConjureProjectStore];
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }
-  const tmp5Result = tmp5(11775);
-  closure_3 = tmp5(11775)(projectId, undefined);
+  const tmp5Result = tmp5(11800);
+  closure_3 = tmp5(11800)(projectId, undefined);
   if (cResult[17] === isPreview) {
     class N {
       constructor() {
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   cResult[22] = scopeKeys;
   cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
   let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-  const tmp5ResultResult = tmp5(11775)(projectId, undefined);
+  const tmp5ResultResult = tmp5(11800)(projectId, undefined);
 }) : (function ConjureSettingsSheet(projectId) {
   projectId = projectId.projectId;
   let stateFromStores1;

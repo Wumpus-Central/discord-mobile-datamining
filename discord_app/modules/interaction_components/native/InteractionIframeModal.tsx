@@ -1,14 +1,14 @@
-// === Module 18809: InteractionIframeModal ===
+// === Module 18841: InteractionIframeModal ===
 
-// Module 18809 (InteractionIframeModal)
+// Module 18841 (InteractionIframeModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5970 */;
-import BotTagDefault from "BotTag" /* 9133 */;
-import makeIframeIdDefault from "makeIframeId" /* 11441 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18810 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5972 */;
+import BotTagDefault from "BotTag" /* 9134 */;
+import makeIframeIdDefault from "makeIframeId" /* 11461 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18842 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const BotTagTypes = fn(1375).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const interaction_iframe_modal = "interaction_iframe_modal";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18797).useIframeModalState(arg0);
+  const iframeModalState = id2(18829).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18797);
+  let obj2 = id2(18829);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             return true;
           }
         }
-        const tmp24 = closure_7(tmp(10656).XLargeIcon, {});
+        const tmp24 = closure_7(tmp(10657).XLargeIcon, {});
         cResult[17] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             }
           }
           const obj5 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name };
-          const tmp29 = closure_7(tmp(5232).Text, obj5);
+          const tmp29 = closure_7(tmp(5234).Text, obj5);
           cResult[21] = application.name;
           cResult[22] = tmp29;
         } else {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
         cResult[25] = tmp35;
       }
       const obj9 = { accessibilityRole: "button", accessibilityLabel: tmp21, onPress: A, style: tmp4.closeButton, children: tmp23 };
-      const tmp27 = closure_7(tmp(6906).PressableOpacity, obj9);
+      const tmp27 = closure_7(tmp(6908).PressableOpacity, obj9);
       cResult[18] = A;
       cResult[19] = tmp4.closeButton;
       cResult[20] = tmp27;

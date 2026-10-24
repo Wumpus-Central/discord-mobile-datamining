@@ -1,25 +1,25 @@
-// === Module 12003: FrecencySection ===
+// === Module 12029: FrecencySection ===
 
-// Module 12003 (FrecencySection)
+// Module 12029 (FrecencySection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7255 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9648 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11075 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11165 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12005 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12006 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7257 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11076 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11166 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12031 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12032 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12004 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12030 */;
 
 const require = globalThis.__r;
 
@@ -27,11 +27,11 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12004).FrecencySectionSelection;
+let FrecencySectionSelection = fn(12030).FrecencySectionSelection;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -123,7 +123,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFet
     });
     return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
-  onlyActivityApps(7255)(memo);
+  onlyActivityApps(7257)(memo);
 });
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeholder() {
@@ -421,7 +421,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
     return null;
   } else {
     if (cResult[0] !== app.section.application) {
-      const appLauncherIconSource = tmp(12002).getAppLauncherIconSource(app.section.application);
+      const appLauncherIconSource = tmp(12028).getAppLauncherIconSource(app.section.application);
       cResult[0] = app.section.application;
       cResult[1] = appLauncherIconSource;
       class A {
@@ -444,7 +444,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
           return;
         }
       }
-      const tmpResult = tmp(12002);
+      const tmpResult = tmp(12028);
     }
     const tmp8 = disabled ? tmp5.appContainerDisabled : tmp5.appContainer;
     const application = app.section.application;
@@ -503,7 +503,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
           obj2.onPress = tmp9;
           const items = [tmp10, tmp14];
           obj2.children = items;
-          const tmp19 = closure_14(tmp(6906).PressableOpacity, obj2, app.applicationId);
+          const tmp19 = closure_14(tmp(6908).PressableOpacity, obj2, app.applicationId);
           cResult[11] = app.applicationId;
           cResult[12] = disabled;
           cResult[13] = tmp8;
@@ -543,7 +543,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
       let tmp11 = null != tmp6;
       if (tmp11) {
         const obj4 = { style: tmp5.appIcon, source: tmp6 };
-        tmp11 = closure_13(onAppSelected(5667), obj4);
+        tmp11 = closure_13(onAppSelected(5669), obj4);
       }
       cResult[5] = tmp6;
       class A {
@@ -607,7 +607,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12002).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12028).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -628,13 +628,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Frecen
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_13(onAppSelected(5667), obj2);
+      tmp3 = closure_13(onAppSelected(5669), obj2);
     }
     const items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_13(app(12011).SubmittingOverlay, obj3);
+    items[1] = closure_13(app(12037).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_14(app(6906).PressableOpacity, obj, app.applicationId);
+    return closure_14(app(6908).PressableOpacity, obj, app.applicationId);
   }
 });
 size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 18645: useSimpleGuildDefaultColors ===
+// === Module 18677: useSimpleGuildDefaultColors ===
 
-// Module 18645 (useSimpleGuildDefaultColors)
+// Module 18677 (useSimpleGuildDefaultColors)
 import nativeDefault from "native" /* 587 */;
-import createStyles from "createStyles" /* 4969 */;
+import createStyles from "createStyles" /* 4971 */;
 import size from "module_2" /* 2 */;
 
 const obj = { iconBackground: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG }, iconBackgroundBrand: null, iconStroke: null };

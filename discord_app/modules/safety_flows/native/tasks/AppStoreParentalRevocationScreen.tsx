@@ -1,19 +1,19 @@
-// === Module 19378: AppStoreParentalRevocationScreen ===
+// === Module 19438: AppStoreParentalRevocationScreen ===
 
-// Module 19378 (AppStoreParentalRevocationScreen)
+// Module 19438 (AppStoreParentalRevocationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2832 from "module_2832" /* 2832 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import LinkingDefault from "Linking" /* 5658 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import ModalScreen from "ModalScreen" /* 7898 */;
-import ModalContent from "ModalContent" /* 7899 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8090 */;
-import ModalFooter from "ModalFooter" /* 12686 */;
-import ModalActionButton from "ModalActionButton" /* 12896 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19362 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import LinkingDefault from "Linking" /* 5660 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import ModalScreen from "ModalScreen" /* 7900 */;
+import ModalContent from "ModalContent" /* 7901 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8092 */;
+import ModalFooter from "ModalFooter" /* 12722 */;
+import ModalActionButton from "ModalActionButton" /* 12933 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

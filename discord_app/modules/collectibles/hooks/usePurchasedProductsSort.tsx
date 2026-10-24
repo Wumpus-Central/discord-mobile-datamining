@@ -1,10 +1,10 @@
-// === Module 16337: usePurchasedProductsSort ===
+// === Module 16361: usePurchasedProductsSort ===
 
-// Module 16337 (usePurchasedProductsSort)
+// Module 16361 (usePurchasedProductsSort)
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7659 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7661 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7663 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7665 */;
 
 const require = globalThis.__r;
 

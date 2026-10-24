@@ -1,17 +1,17 @@
-// === Module 9998: MessageImpressionAnalyticsHelpers ===
+// === Module 9999: MessageImpressionAnalyticsHelpers ===
 
-// Module 9998 (MessageImpressionAnalyticsHelpers)
+// Module 9999 (MessageImpressionAnalyticsHelpers)
 import c from "c" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5699 */;
-import CodedLink from "CodedLink" /* 5701 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7365 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7806 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9999 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10000 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10001 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5701 */;
+import CodedLink from "CodedLink" /* 5703 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7367 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7808 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10000 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10001 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10002 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5698 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5715 */;
+import InviteStore from "InviteStore" /* 5700 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
 
 const require = globalThis.__r;
 
@@ -58,8 +58,8 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7760).LinkType;
-const InviteTypes = fn(7807).InviteTypes;
+const LinkType = fn(7762).LinkType;
+const InviteTypes = fn(7809).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackAnnouncementMessageViews(arg0) {

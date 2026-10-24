@@ -1,21 +1,21 @@
-// === Module 19103: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 19131: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 19103 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 19131 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5203 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import PlatformsDefault from "Platforms" /* 6500 */;
-import TableRow from "TableRow" /* 6901 */;
-import Pressables from "Pressables" /* 6906 */;
-import XSmallIcon from "XSmallIcon" /* 6929 */;
-import TableRowGroup from "TableRowGroup" /* 6985 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11252 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19104 */;
+import shared from "shared" /* 4978 */;
+import useThemeDefault from "useTheme" /* 5205 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import PlatformsDefault from "Platforms" /* 6502 */;
+import TableRow from "TableRow" /* 6903 */;
+import Pressables from "Pressables" /* 6908 */;
+import XSmallIcon from "XSmallIcon" /* 6931 */;
+import TableRowGroup from "TableRowGroup" /* 6987 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11253 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,11 +96,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1087).PlatformTypes;
-const Constants = fn(7274);
+const Constants = fn(7276);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 let obj3 = { transform: null };
 let items = [{ translateY: 10 }];
@@ -472,7 +472,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Boolea
     }
     _slicedToArray(tmp, num);
   };
-  return onChangeText(metadataField(7293).TableSwitchRow, obj, metadataField);
+  return onChangeText(metadataField(7295).TableSwitchRow, obj, metadataField);
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NumericalConfigRule(existingPendingConfiguration) {
@@ -504,28 +504,28 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
     }
     closure_8 = tmp7;
     let mapped = onConfigurationChange;
-    const tmp14 = platform(onConfigurationChange.useState(tmp7), 2);
-    value = tmp14[0];
-    closure_10 = tmp16;
-    let tmp17 = null != tmp6;
-    if (tmp17) {
-      tmp17 = "" !== value;
+    const tmp16 = platform(onConfigurationChange.useState(tmp7), 2);
+    value = tmp16[0];
+    closure_10 = tmp18;
+    let tmp19 = null != tmp6;
+    if (tmp19) {
+      tmp19 = "" !== value;
     }
-    if (tmp17) {
-      tmp17 = value !== tmp7;
+    if (tmp19) {
+      tmp19 = value !== tmp7;
     }
-    if (tmp17) {
-      tmp16(tmp7);
+    if (tmp19) {
+      tmp18(tmp7);
     }
     let configuration;
     if (existingPendingConfiguration != null) {
       configuration = existingPendingConfiguration.configuration;
     }
-    let tmp21 = locked;
+    let tmp23 = locked;
     if (!locked) {
-      tmp21 = !tmp20;
+      tmp23 = !tmp22;
     }
-    closure_11 = tmp21;
+    closure_11 = tmp23;
     if (cResult[5] === applicationId) {
       if (cResult[6] === existingPendingConfiguration) {
         if (cResult[7] === num) {
@@ -542,10 +542,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                 if (undefined !== fieldTextHook) {
                   if (cResult[13] === numericalInputDisabled.numericalInputContainerAndroidInline) {
                     if (cResult[14] === numericalInputDisabled.numericalInputContainerIOSInline) {
-                      closure_13 = tmp38;
+                      closure_13 = tmp32;
                       if (cResult[16] === fieldTextHook) {
-                        if (cResult[17] === tmp38) {
-                          if (cResult[18] === tmp21) {
+                        if (cResult[17] === tmp32) {
+                          if (cResult[18] === tmp23) {
                             if (cResult[19] === value) {
                               if (cResult[20] === metadataField) {
                                 if (cResult[21] === numericalInputContainerBase) {
@@ -555,10 +555,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                                         if (cResult[25] === numericalInputDisabled.numericalInputContainerBase) {
                                           if (cResult[26] === numericalInputDisabled.numericalInputDisabled) {
                                             if (cResult[41] === cResult[27]) {
-                                              if (cResult[42] === tmp42) {
+                                              if (cResult[42] === tmp36) {
                                               }
                                             }
-                                            class Z {
+                                            class X {
                                               constructor() {
                                                 tmp = jsx;
                                                 obj = { style: null, children: null };
@@ -582,11 +582,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                                               }
                                             }
                                             let obj2 = { style: cResult[28], children: cResult[29] };
-                                            const tmp52 = numericalInputContainerBase(cResult[27], obj2);
+                                            const tmp46 = numericalInputContainerBase(cResult[27], obj2);
                                             cResult[41] = cResult[27];
                                             cResult[42] = cResult[28];
                                             cResult[43] = cResult[29];
-                                            cResult[44] = tmp52;
+                                            cResult[44] = tmp46;
                                           }
                                         }
                                       }
@@ -599,18 +599,18 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                         }
                       }
                       if (cResult[30] === cResult[15]) {
-                        if (cResult[31] === tmp21) {
+                        if (cResult[31] === tmp23) {
                           if (cResult[32] === value) {
                             if (cResult[33] === metadataField) {
                               if (cResult[34] === numericalInputContainerBase) {
                                 if (cResult[35] === numericalInputDisabled.numericalInput) {
                                   if (cResult[36] === numericalInputDisabled.numericalInputContainerBase) {
                                     if (cResult[37] === numericalInputDisabled.numericalInputDisabled) {
-                                      let tmp44 = cResult[38];
+                                      let tmp38 = cResult[38];
                                     }
                                     const intl = tmp(tmp2[15]).intl;
-                                    const obj3 = { metadataHook: tmp44 };
-                                    class Z {
+                                    const obj3 = { metadataHook: tmp38 };
+                                    class X {
                                       constructor() {
                                         tmp = jsx;
                                         obj = { style: null, children: null };
@@ -635,17 +635,28 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                                     }
                                     const metadataRow = numericalInputDisabled.metadataRow;
                                     if (cResult[39] !== numericalInputDisabled.metadataRowText) {
-                                      const fn = function z(children, arg1) {
-                                        let tmp = children;
-                                        if (typeof children === "string") {
-                                          const obj = { variant: "text-md/semibold", style: numericalInputDisabled.metadataRowText, children };
-                                          const _HermesInternal = HermesInternal;
-                                          tmp = onChangeText(Text_Text.Text, obj, "t-" + arg1);
-                                        }
-                                        return tmp;
-                                      };
-                                      cResult[39] = numericalInputDisabled.metadataRowText;
                                       class Z {
+                                        constructor(arg0, arg1) {
+                                          tmp = existingPendingConfiguration;
+                                          if (typeof existingPendingConfiguration === "string") {
+                                            tmp2 = arg1;
+                                            tmp3 = jsx;
+                                            tmp4 = closure_0;
+                                            tmp5 = closure_2;
+                                            obj = { variant: "text-md/semibold", style: null, children: null };
+                                            tmp6 = closure_6;
+                                            obj.style = closure_6.metadataRowText;
+                                            obj.children = existingPendingConfiguration;
+                                            tmp7 = globalThis;
+                                            _HermesInternal = HermesInternal;
+                                            str = "t-";
+                                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                                          }
+                                          return tmp;
+                                        }
+                                      }
+                                      cResult[39] = numericalInputDisabled.metadataRowText;
+                                      class X {
                                         constructor() {
                                           tmp = jsx;
                                           obj = { style: null, children: null };
@@ -668,15 +679,33 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                                           return tmp(tmp2, obj, "_numericalInputContainer");
                                         }
                                       }
-                                      let tmp47 = fn;
                                     } else {
-                                      tmp47 = cResult[40];
+                                      class Z {
+                                        constructor(arg0, arg1) {
+                                          tmp = existingPendingConfiguration;
+                                          if (typeof existingPendingConfiguration === "string") {
+                                            tmp2 = arg1;
+                                            tmp3 = jsx;
+                                            tmp4 = closure_0;
+                                            tmp5 = closure_2;
+                                            obj = { variant: "text-md/semibold", style: null, children: null };
+                                            tmp6 = closure_6;
+                                            obj.style = closure_6.metadataRowText;
+                                            obj.children = existingPendingConfiguration;
+                                            tmp7 = globalThis;
+                                            _HermesInternal = HermesInternal;
+                                            str = "t-";
+                                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                                          }
+                                          return tmp;
+                                        }
+                                      }
                                     }
                                     const Children = mapped.Children;
-                                    mapped = Children.map(intl.format(fieldTextHook, obj3), tmp47);
+                                    mapped = Children.map(intl.format(fieldTextHook, obj3), Z);
                                     cResult[16] = fieldTextHook;
-                                    cResult[17] = tmp38;
-                                    cResult[18] = tmp21;
+                                    cResult[17] = tmp32;
+                                    cResult[18] = tmp23;
                                     cResult[19] = value;
                                     cResult[20] = metadataField;
                                     cResult[21] = numericalInputContainerBase;
@@ -686,7 +715,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                                     cResult[25] = numericalInputContainerBase;
                                     numericalInputDisabled = numericalInputDisabled.numericalInputDisabled;
                                     cResult[26] = numericalInputDisabled;
-                                    cResult[27] = tmp46;
+                                    cResult[27] = tmp40;
                                     cResult[28] = metadataRow;
                                     cResult[29] = mapped;
                                     const formatResult = intl.format(fieldTextHook, obj3);
@@ -697,7 +726,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                           }
                         }
                       }
-                      class Z {
+                      class X {
                         constructor() {
                           tmp = jsx;
                           obj = { style: null, children: null };
@@ -721,155 +750,129 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                         }
                       }
                       cResult[30] = cResult[15];
-                      cResult[31] = tmp21;
+                      cResult[31] = tmp23;
                       cResult[32] = value;
                       cResult[33] = metadataField;
                       cResult[34] = numericalInputContainerBase;
                       cResult[35] = numericalInputDisabled.numericalInput;
                       cResult[36] = numericalInputDisabled.numericalInputContainerBase;
                       cResult[37] = numericalInputDisabled.numericalInputDisabled;
-                      cResult[38] = Z;
-                      tmp44 = Z;
+                      cResult[38] = X;
+                      tmp38 = X;
                     }
                   }
-                  const tmp39 = tmp(tmp2[21]).isIOS() ? numericalInputDisabled.numericalInputContainerIOSInline : numericalInputDisabled.numericalInputContainerAndroidInline;
+                  const tmp33 = tmp(tmp2[21]).isIOS() ? numericalInputDisabled.numericalInputContainerIOSInline : numericalInputDisabled.numericalInputContainerAndroidInline;
                   cResult[14] = numericalInputDisabled.numericalInputContainerIOSInline;
-                  cResult[15] = tmp39;
+                  cResult[15] = tmp33;
                   const tmpResult = tmp(tmp2[21]);
                 } else {
+                  class Z {
+                    constructor(arg0, arg1) {
+                      tmp = existingPendingConfiguration;
+                      if (typeof existingPendingConfiguration === "string") {
+                        tmp2 = arg1;
+                        tmp3 = jsx;
+                        tmp4 = closure_0;
+                        tmp5 = closure_2;
+                        obj = { variant: "text-md/semibold", style: null, children: null };
+                        tmp6 = closure_6;
+                        obj.style = closure_6.metadataRowText;
+                        obj.children = existingPendingConfiguration;
+                        tmp7 = globalThis;
+                        _HermesInternal = HermesInternal;
+                        str = "t-";
+                        tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                      }
+                      return tmp;
+                    }
+                  }
                   if (undefined !== fieldText) {
-                    let numericalInputDisabled2 = tmp21;
-                    if (tmp21) {
-                      numericalInputDisabled2 = numericalInputDisabled.numericalInputDisabled;
+                    class Z {
+                      constructor(arg0, arg1) {
+                        tmp = existingPendingConfiguration;
+                        if (typeof existingPendingConfiguration === "string") {
+                          tmp2 = arg1;
+                          tmp3 = jsx;
+                          tmp4 = closure_0;
+                          tmp5 = closure_2;
+                          obj = { variant: "text-md/semibold", style: null, children: null };
+                          tmp6 = closure_6;
+                          obj.style = closure_6.metadataRowText;
+                          obj.children = existingPendingConfiguration;
+                          tmp7 = globalThis;
+                          _HermesInternal = HermesInternal;
+                          str = "t-";
+                          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                        }
+                        return tmp;
+                      }
+                    }
+                    if (tmp23) {
+                      class Z {
+                        constructor(arg0, arg1) {
+                          tmp = existingPendingConfiguration;
+                          if (typeof existingPendingConfiguration === "string") {
+                            tmp2 = arg1;
+                            tmp3 = jsx;
+                            tmp4 = closure_0;
+                            tmp5 = closure_2;
+                            obj = { variant: "text-md/semibold", style: null, children: null };
+                            tmp6 = closure_6;
+                            obj.style = closure_6.metadataRowText;
+                            obj.children = existingPendingConfiguration;
+                            tmp7 = globalThis;
+                            _HermesInternal = HermesInternal;
+                            str = "t-";
+                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                          }
+                          return tmp;
+                        }
+                      }
                     }
                     if (cResult[45] === numericalInputDisabled.appNumericalInput) {
-                      if (cResult[46] === numericalInputDisabled2) {
-                        let tmp24 = cResult[47];
+                      class Z {
+                        constructor(arg0, arg1) {
+                          tmp = existingPendingConfiguration;
+                          if (typeof existingPendingConfiguration === "string") {
+                            tmp2 = arg1;
+                            tmp3 = jsx;
+                            tmp4 = closure_0;
+                            tmp5 = closure_2;
+                            obj = { variant: "text-md/semibold", style: null, children: null };
+                            tmp6 = closure_6;
+                            obj.style = closure_6.metadataRowText;
+                            obj.children = existingPendingConfiguration;
+                            tmp7 = globalThis;
+                            _HermesInternal = HermesInternal;
+                            str = "t-";
+                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                          }
+                          return tmp;
+                        }
                       }
                       if (cResult[48] === value) {
-                        if (cResult[49] === metadataField) {
-                          if (cResult[50] === numericalInputContainerBase) {
-                            if (cResult[51] === tmp24) {
-                              if (cResult[52] === tmp25) {
-                                let tmp26 = cResult[53];
-                              }
-                              if (cResult[54] === fieldText) {
-                                if (cResult[55] === numericalInputDisabled.appNumericalInputText) {
-                                  let tmp29 = cResult[56];
-                                }
-                                if (cResult[57] === numericalInputDisabled.appNumericalInputContainer) {
-                                  if (cResult[58] === tmp26) {
-                                  }
-                                }
-                                class Z {
-                                  constructor() {
-                                    tmp = jsx;
-                                    obj = { style: null, children: null };
-                                    items = [, ];
-                                    items[0] = closure_13;
-                                    items[1] = closure_6.numericalInputContainerBase;
-                                    obj.style = items;
-                                    tmp2 = View;
-                                    tmp3 = closure_6;
-                                    items1 = [, ];
-                                    items1[0] = closure_6.numericalInput;
-                                    numericalInputDisabled = closure_11;
-                                    tmp4 = closure_11;
-                                    if (closure_11) {
-                                      numericalInputDisabled = tmp3.numericalInputDisabled;
-                                    }
-                                    obj1 = { keyboardType: "number-pad", style: items1, editable: !tmp4, value: closure_9, onChangeText: closure_12, hitSlop: 8 };
-                                    items1[1] = numericalInputDisabled;
-                                    obj.children = tmp(closure_0(closure_2[12]).TextInput, obj1, metadataField);
-                                    return tmp(tmp2, obj, "_numericalInputContainer");
-                                  }
-                                }
-                                tmp35[0] = numericalInputDisabled.appNumericalInputContainer;
-                                let items = [tmp26, tmp29];
-                                tmp35[1] = items;
-                                const tmp36 = closure_13(applicationId, tmp35);
-                                cResult[57] = numericalInputDisabled.appNumericalInputContainer;
-                                cResult[58] = tmp26;
-                                cResult[59] = tmp29;
-                                class K {
-                                  constructor(arg0) {
-                                    tmp = closure_9;
-                                    if ("" === closure_9) {
-                                      tmp = closure_8;
-                                    }
-                                    tmp2 = closure_10(tmp);
-                                    tmp3 = null;
-                                    if (existingPendingConfiguration) {
-                                      type = undefined;
-                                      if (platform != null) {
-                                        type = platform.type;
-                                      }
-                                      if (type == null) {
-                                        type = closure_10;
-                                      }
-                                      obj = { connectionType: null, applicationId: null, connectionMetadataField: null, operator: null, value: null };
-                                      obj.connectionType = type;
-                                      tmp5 = applicationId;
-                                      obj.applicationId = applicationId;
-                                      tmp6 = metadataField;
-                                      obj.connectionMetadataField = metadataField;
-                                      tmp7 = closure_0;
-                                      obj.operator = closure_0;
-                                      tmp8 = closure_0;
-                                      tmp9 = closure_2;
-                                      obj2 = closure_0(closure_2[20]);
-                                      obj.value = obj2.storedValueFor(tmp, closure_0);
-                                      tmp3 = obj;
-                                    }
-                                    num = undefined;
-                                    tmp10 = onConfigurationChange;
-                                    if (closure_2 != null) {
-                                      num = closure_2.index;
-                                    }
-                                    if (num == null) {
-                                      num = -1;
-                                    }
-                                    tmp10Result = tmp10(tmp3, num);
-                                    return;
-                                  }
-                                }
-                                cResult[60] = tmp36;
-                              }
-                              const obj4 = { variant: "text-md/semibold", style: null, children: null };
-                              class Z {
-                                constructor() {
-                                  tmp = jsx;
-                                  obj = { style: null, children: null };
-                                  items = [, ];
-                                  items[0] = closure_13;
-                                  items[1] = closure_6.numericalInputContainerBase;
-                                  obj.style = items;
-                                  tmp2 = View;
-                                  tmp3 = closure_6;
-                                  items1 = [, ];
-                                  items1[0] = closure_6.numericalInput;
-                                  numericalInputDisabled = closure_11;
-                                  tmp4 = closure_11;
-                                  if (closure_11) {
-                                    numericalInputDisabled = tmp3.numericalInputDisabled;
-                                  }
-                                  obj1 = { keyboardType: "number-pad", style: items1, editable: !tmp4, value: closure_9, onChangeText: closure_12, hitSlop: 8 };
-                                  items1[1] = numericalInputDisabled;
-                                  obj.children = tmp(closure_0(closure_2[12]).TextInput, obj1, metadataField);
-                                  return tmp(tmp2, obj, "_numericalInputContainer");
-                                }
-                              }
-                              obj4.children = fieldText;
-                              const tmp31 = numericalInputContainerBase(tmp(tmp2[22]).Text, obj4);
-                              cResult[54] = fieldText;
-                              cResult[55] = numericalInputDisabled.appNumericalInputText;
-                              cResult[56] = tmp31;
-                              tmp29 = tmp31;
+                        class Z {
+                          constructor(arg0, arg1) {
+                            tmp = existingPendingConfiguration;
+                            if (typeof existingPendingConfiguration === "string") {
+                              tmp2 = arg1;
+                              tmp3 = jsx;
+                              tmp4 = closure_0;
+                              tmp5 = closure_2;
+                              obj = { variant: "text-md/semibold", style: null, children: null };
+                              tmp6 = closure_6;
+                              obj.style = closure_6.metadataRowText;
+                              obj.children = existingPendingConfiguration;
+                              tmp7 = globalThis;
+                              _HermesInternal = HermesInternal;
+                              str = "t-";
+                              tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
                             }
+                            return tmp;
                           }
                         }
                       }
-                      class Z {
+                      class X {
                         constructor() {
                           tmp = jsx;
                           obj = { style: null, children: null };
@@ -892,10 +895,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                           return tmp(tmp2, obj, "_numericalInputContainer");
                         }
                       }
-                      const obj5 = { children: null };
-                      const obj6 = { keyboardType: "number-pad", style: tmp24, editable: !tmp21, value, onChangeText: numericalInputContainerBase };
-                      obj5.children = numericalInputContainerBase(tmp(tmp2[12]).TextInput, obj6, metadataField);
-                      const tmp28 = numericalInputContainerBase(applicationId, obj5, "_numericalInputContainer");
+                      const obj4 = { children: null };
+                      const obj5 = { keyboardType: "number-pad", style: tmp27, editable: !tmp23, value, onChangeText: numericalInputContainerBase };
+                      obj4.children = numericalInputContainerBase(tmp(tmp2[12]).TextInput, obj5, metadataField);
+                      const tmp31 = numericalInputContainerBase(applicationId, obj4, "_numericalInputContainer");
                       cResult[48] = value;
                       class K {
                         constructor(arg0) {
@@ -940,13 +943,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                         }
                       }
                       cResult[50] = numericalInputContainerBase;
-                      cResult[51] = tmp24;
-                      cResult[52] = !tmp21;
-                      cResult[53] = tmp28;
-                      tmp26 = tmp28;
+                      cResult[51] = tmp27;
+                      cResult[52] = !tmp23;
+                      cResult[53] = tmp31;
                     }
-                    let items1 = [, ];
-                    class Z {
+                    let items = [, ];
+                    class X {
                       constructor() {
                         tmp = jsx;
                         obj = { style: null, children: null };
@@ -969,127 +971,78 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                         return tmp(tmp2, obj, "_numericalInputContainer");
                       }
                     }
-                    items1[1] = numericalInputDisabled2;
+                    items[1] = tmp26;
                     cResult[45] = numericalInputDisabled.appNumericalInput;
-                    cResult[46] = numericalInputDisabled2;
-                    cResult[47] = items1;
-                    tmp24 = items1;
+                    cResult[46] = tmp26;
+                    cResult[47] = items;
                   }
                   if (cResult[61] === applicationId) {
-                    let index;
-                    if (existingPendingConfiguration != null) {
-                      index = existingPendingConfiguration.index;
+                    class Z {
+                      constructor(arg0, arg1) {
+                        tmp = existingPendingConfiguration;
+                        if (typeof existingPendingConfiguration === "string") {
+                          tmp2 = arg1;
+                          tmp3 = jsx;
+                          tmp4 = closure_0;
+                          tmp5 = closure_2;
+                          obj = { variant: "text-md/semibold", style: null, children: null };
+                          tmp6 = closure_6;
+                          obj.style = closure_6.metadataRowText;
+                          obj.children = existingPendingConfiguration;
+                          tmp7 = globalThis;
+                          _HermesInternal = HermesInternal;
+                          str = "t-";
+                          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                        }
+                        return tmp;
+                      }
                     }
-                    if (cResult[62] === index) {
-                      if (cResult[63] === value) {
-                        if (cResult[64] === metadataField) {
-                          if (cResult[65] === onConfigurationChange) {
-                            let type1;
-                            if (platform != null) {
-                              type1 = platform.type;
-                            }
-                            if (cResult[66] === type1) {
-                              if (cResult[67] === tmp5) {
-                                if (cResult[68] === tmp7) {
-                                  let tmp56 = cResult[69];
-                                }
-                                if (cResult[70] === tmp20) {
-                                  if (cResult[71] === tmp37) {
-                                    if (cResult[72] === locked) {
-                                      if (cResult[73] === metadataField) {
-                                        if (cResult[74] === tmp56) {
-                                          let tmp59 = cResult[75];
-                                        }
-                                        return tmp59;
-                                      }
-                                    }
-                                  }
-                                }
-                                const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
-                                class Z {
-                                  constructor() {
-                                    tmp = jsx;
-                                    obj = { style: null, children: null };
-                                    items = [, ];
-                                    items[0] = closure_13;
-                                    items[1] = closure_6.numericalInputContainerBase;
-                                    obj.style = items;
-                                    tmp2 = View;
-                                    tmp3 = closure_6;
-                                    items1 = [, ];
-                                    items1[0] = closure_6.numericalInput;
-                                    numericalInputDisabled = closure_11;
-                                    tmp4 = closure_11;
-                                    if (closure_11) {
-                                      numericalInputDisabled = tmp3.numericalInputDisabled;
-                                    }
-                                    obj1 = { keyboardType: "number-pad", style: items1, editable: !tmp4, value: closure_9, onChangeText: closure_12, hitSlop: 8 };
-                                    items1[1] = numericalInputDisabled;
-                                    obj.children = tmp(closure_0(closure_2[12]).TextInput, obj1, metadataField);
-                                    return tmp(tmp2, obj, "_numericalInputContainer");
-                                  }
-                                }
-                                obj7.value = tmp20;
-                                obj7.disabled = locked;
-                                obj7.onValueChange = tmp56;
-                                const tmp61 = numericalInputContainerBase(tmp(tmp2[19]).TableSwitchRow, obj7, metadataField);
-                                cResult[70] = tmp20;
-                                cResult[71] = tmp37;
-                                cResult[72] = locked;
-                                cResult[73] = metadataField;
-                                class K {
-                                  constructor(arg0) {
-                                    tmp = closure_9;
-                                    if ("" === closure_9) {
-                                      tmp = closure_8;
-                                    }
-                                    tmp2 = closure_10(tmp);
-                                    tmp3 = null;
-                                    if (existingPendingConfiguration) {
-                                      type = undefined;
-                                      if (platform != null) {
-                                        type = platform.type;
-                                      }
-                                      if (type == null) {
-                                        type = closure_10;
-                                      }
-                                      obj = { connectionType: null, applicationId: null, connectionMetadataField: null, operator: null, value: null };
-                                      obj.connectionType = type;
-                                      tmp5 = applicationId;
-                                      obj.applicationId = applicationId;
-                                      tmp6 = metadataField;
-                                      obj.connectionMetadataField = metadataField;
-                                      tmp7 = closure_0;
-                                      obj.operator = closure_0;
-                                      tmp8 = closure_0;
-                                      tmp9 = closure_2;
-                                      obj2 = closure_0(closure_2[20]);
-                                      obj.value = obj2.storedValueFor(tmp, closure_0);
-                                      tmp3 = obj;
-                                    }
-                                    num = undefined;
-                                    tmp10 = onConfigurationChange;
-                                    if (closure_2 != null) {
-                                      num = closure_2.index;
-                                    }
-                                    if (num == null) {
-                                      num = -1;
-                                    }
-                                    tmp10Result = tmp10(tmp3, num);
-                                    return;
-                                  }
-                                }
-                                cResult[74] = tmp56;
-                                cResult[75] = tmp61;
-                                tmp59 = tmp61;
-                              }
-                            }
+                    if (existingPendingConfiguration != null) {
+                      class Z {
+                        constructor(arg0, arg1) {
+                          tmp = existingPendingConfiguration;
+                          if (typeof existingPendingConfiguration === "string") {
+                            tmp2 = arg1;
+                            tmp3 = jsx;
+                            tmp4 = closure_0;
+                            tmp5 = closure_2;
+                            obj = { variant: "text-md/semibold", style: null, children: null };
+                            tmp6 = closure_6;
+                            obj.style = closure_6.metadataRowText;
+                            obj.children = existingPendingConfiguration;
+                            tmp7 = globalThis;
+                            _HermesInternal = HermesInternal;
+                            str = "t-";
+                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
                           }
+                          return tmp;
+                        }
+                      }
+                    }
+                    if (cResult[62] === tmp48) {
+                      class Z {
+                        constructor(arg0, arg1) {
+                          tmp = existingPendingConfiguration;
+                          if (typeof existingPendingConfiguration === "string") {
+                            tmp2 = arg1;
+                            tmp3 = jsx;
+                            tmp4 = closure_0;
+                            tmp5 = closure_2;
+                            obj = { variant: "text-md/semibold", style: null, children: null };
+                            tmp6 = closure_6;
+                            obj.style = closure_6.metadataRowText;
+                            obj.children = existingPendingConfiguration;
+                            tmp7 = globalThis;
+                            _HermesInternal = HermesInternal;
+                            str = "t-";
+                            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                          }
+                          return tmp;
                         }
                       }
                     }
                   }
-                  class Z {
+                  class X {
                     constructor() {
                       tmp = jsx;
                       obj = { style: null, children: null };
@@ -1112,17 +1065,53 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                       return tmp(tmp2, obj, "_numericalInputContainer");
                     }
                   }
-                  let index1;
                   if (existingPendingConfiguration != null) {
-                    index1 = existingPendingConfiguration.index;
+                    class Z {
+                      constructor(arg0, arg1) {
+                        tmp = existingPendingConfiguration;
+                        if (typeof existingPendingConfiguration === "string") {
+                          tmp2 = arg1;
+                          tmp3 = jsx;
+                          tmp4 = closure_0;
+                          tmp5 = closure_2;
+                          obj = { variant: "text-md/semibold", style: null, children: null };
+                          tmp6 = closure_6;
+                          obj.style = closure_6.metadataRowText;
+                          obj.children = existingPendingConfiguration;
+                          tmp7 = globalThis;
+                          _HermesInternal = HermesInternal;
+                          str = "t-";
+                          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                        }
+                        return tmp;
+                      }
+                    }
                   }
-                  cResult[62] = index1;
+                  cResult[62] = undefined;
                   cResult[63] = value;
                   cResult[64] = metadataField;
                   cResult[65] = onConfigurationChange;
-                  let type2;
                   if (platform != null) {
-                    type2 = platform.type;
+                    class Z {
+                      constructor(arg0, arg1) {
+                        tmp = existingPendingConfiguration;
+                        if (typeof existingPendingConfiguration === "string") {
+                          tmp2 = arg1;
+                          tmp3 = jsx;
+                          tmp4 = closure_0;
+                          tmp5 = closure_2;
+                          obj = { variant: "text-md/semibold", style: null, children: null };
+                          tmp6 = closure_6;
+                          obj.style = closure_6.metadataRowText;
+                          obj.children = existingPendingConfiguration;
+                          tmp7 = globalThis;
+                          _HermesInternal = HermesInternal;
+                          str = "t-";
+                          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+                        }
+                        return tmp;
+                      }
+                    }
                   }
                   class K {
                     constructor(arg0) {
@@ -1166,11 +1155,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
                       return;
                     }
                   }
-                  cResult[66] = type2;
+                  cResult[66] = undefined;
                   cResult[67] = tmp5;
                   cResult[68] = tmp7;
                   cResult[69] = K;
-                  tmp56 = K;
                 }
               }
             }
@@ -1183,9 +1171,27 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
     cResult[7] = num;
     cResult[8] = metadataField;
     cResult[9] = onConfigurationChange;
-    let type3;
     if (platform != null) {
-      type3 = platform.type;
+      class Z {
+        constructor(arg0, arg1) {
+          tmp = existingPendingConfiguration;
+          if (typeof existingPendingConfiguration === "string") {
+            tmp2 = arg1;
+            tmp3 = jsx;
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = { variant: "text-md/semibold", style: null, children: null };
+            tmp6 = closure_6;
+            obj.style = closure_6.metadataRowText;
+            obj.children = existingPendingConfiguration;
+            tmp7 = globalThis;
+            _HermesInternal = HermesInternal;
+            str = "t-";
+            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+          }
+          return tmp;
+        }
+      }
     }
     function onInputValueChange(TableSwitchRow) {
       closure_10(TableSwitchRow);
@@ -1210,37 +1216,114 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
         onConfigurationChange(obj, num);
       }
     }
-    cResult[10] = type3;
+    cResult[10] = undefined;
     cResult[11] = tmp5;
     cResult[12] = onInputValueChange;
     numericalInputContainerBase = onInputValueChange;
+    tmp22 = null != configuration;
   }
   let obj = require("c");
   const realizedOperatorForResult = require("RoleConnectionRequirementUtils").realizedOperatorFor(operator);
   require = realizedOperatorForResult;
-  value3 = undefined;
   if (existingPendingConfiguration != null) {
-    if (existingPendingConfiguration.configuration != null) {
-      value3 = iter2.value;
+    class Z {
+      constructor(arg0, arg1) {
+        tmp = existingPendingConfiguration;
+        if (typeof existingPendingConfiguration === "string") {
+          tmp2 = arg1;
+          tmp3 = jsx;
+          tmp4 = closure_0;
+          tmp5 = closure_2;
+          obj = { variant: "text-md/semibold", style: null, children: null };
+          tmp6 = closure_6;
+          obj.style = closure_6.metadataRowText;
+          obj.children = existingPendingConfiguration;
+          tmp7 = globalThis;
+          _HermesInternal = HermesInternal;
+          str = "t-";
+          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+        }
+        return tmp;
+      }
+    }
+    if (tmp10 != null) {
+      class Z {
+        constructor(arg0, arg1) {
+          tmp = existingPendingConfiguration;
+          if (typeof existingPendingConfiguration === "string") {
+            tmp2 = arg1;
+            tmp3 = jsx;
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = { variant: "text-md/semibold", style: null, children: null };
+            tmp6 = closure_6;
+            obj.style = closure_6.metadataRowText;
+            obj.children = existingPendingConfiguration;
+            tmp7 = globalThis;
+            _HermesInternal = HermesInternal;
+            str = "t-";
+            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+          }
+          return tmp;
+        }
+      }
     }
   }
   const tmpResult3 = require("RoleConnectionRequirementUtils");
   const tmpResult4 = require("RoleConnectionRequirementUtils");
-  const str1 = require("RoleConnectionRequirementUtils").displayedValueFor(value3, realizedOperatorForResult).toString();
-  value4 = undefined;
+  const str1 = require("RoleConnectionRequirementUtils").displayedValueFor(undefined, realizedOperatorForResult).toString();
   if (existingPendingConfiguration != null) {
-    if (existingPendingConfiguration.configuration != null) {
-      value4 = iter3.value;
+    class Z {
+      constructor(arg0, arg1) {
+        tmp = existingPendingConfiguration;
+        if (typeof existingPendingConfiguration === "string") {
+          tmp2 = arg1;
+          tmp3 = jsx;
+          tmp4 = closure_0;
+          tmp5 = closure_2;
+          obj = { variant: "text-md/semibold", style: null, children: null };
+          tmp6 = closure_6;
+          obj.style = closure_6.metadataRowText;
+          obj.children = existingPendingConfiguration;
+          tmp7 = globalThis;
+          _HermesInternal = HermesInternal;
+          str = "t-";
+          tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+        }
+        return tmp;
+      }
+    }
+    if (tmp13 != null) {
+      class Z {
+        constructor(arg0, arg1) {
+          tmp = existingPendingConfiguration;
+          if (typeof existingPendingConfiguration === "string") {
+            tmp2 = arg1;
+            tmp3 = jsx;
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = { variant: "text-md/semibold", style: null, children: null };
+            tmp6 = closure_6;
+            obj.style = closure_6.metadataRowText;
+            obj.children = existingPendingConfiguration;
+            tmp7 = globalThis;
+            _HermesInternal = HermesInternal;
+            str = "t-";
+            tmp = jsx(closure_0(closure_2[22]).Text, obj, "t-" + arg1);
+          }
+          return tmp;
+        }
+      }
     }
   }
-  cResult[0] = value4;
+  cResult[0] = undefined;
   cResult[1] = operator;
   cResult[2] = realizedOperatorForResult;
-  cResult[3] = value3;
+  cResult[3] = undefined;
   cResult[4] = str1;
   tmp7 = str1;
-  tmp6 = value3;
-  const str = require("RoleConnectionRequirementUtils").displayedValueFor(value3, realizedOperatorForResult);
+  tmp6 = tmp9;
+  const str = require("RoleConnectionRequirementUtils").displayedValueFor(undefined, realizedOperatorForResult);
 }) : (function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
   existingPendingConfiguration = existingPendingConfiguration.existingPendingConfiguration;
@@ -1282,7 +1365,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19104).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19132).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1290,9 +1373,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(19104);
-  const tmpResult = metadataField(19104);
-  str1 = metadataField(19104).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19132);
+  const tmpResult = metadataField(19132);
+  str1 = metadataField(19132).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1368,7 +1451,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       obj5.children = onInputValueChange(metadataField(1202).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5232).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5234).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -1404,9 +1487,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(7293).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7295).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19104).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19132).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {
@@ -1515,7 +1598,86 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bluesk
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamMetadataRules(arg0) {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function LetterboxdMetadataRules(arg0) {
+  const cResult = c.c(16);
+  ({ configMetadataMap, onConfigurationChange, locked } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    value = PlatformsDefault.get(PlatformTypes.LETTERBOXD);
+    cResult[0] = value;
+    let first = value;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== configMetadataMap) {
+    value3 = configMetadataMap.get(React5.LETTERBOXD_WATCHES);
+    cResult[1] = configMetadataMap;
+    cResult[2] = value3;
+    let tmp8 = value3;
+  } else {
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] === locked) {
+    if (cResult[4] === onConfigurationChange) {
+      if (cResult[5] === tmp8) {
+        let tmp11 = cResult[6];
+      }
+      if (cResult[7] !== configMetadataMap) {
+        value4 = configMetadataMap.get(React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR);
+        cResult[7] = configMetadataMap;
+        cResult[8] = value4;
+        let tmp13 = value4;
+      } else {
+        tmp13 = cResult[8];
+      }
+      if (cResult[9] === locked) {
+        if (cResult[10] === onConfigurationChange) {
+          if (cResult[11] === tmp13) {
+            let tmp16 = cResult[12];
+          }
+          if (cResult[13] === tmp11) {
+            if (cResult[14] === tmp16) {
+              let tmp21 = cResult[15];
+            }
+            return tmp21;
+          }
+          const obj3 = { children: null };
+          const items = [tmp11, tmp16];
+          obj3.children = items;
+          const tmp24 = map1(closure_1_14, obj3);
+          cResult[13] = tmp11;
+          cResult[14] = tmp16;
+          cResult[15] = tmp24;
+          tmp21 = tmp24;
+        }
+      }
+      const obj4 = { fieldTextHook: util.t["6wOYUY"], metadataField: React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR, existingPendingConfiguration: tmp13, platform: first, onConfigurationChange, locked };
+      const tmp20 = onChangeText(closure_18, obj4);
+      cResult[9] = locked;
+      cResult[10] = onConfigurationChange;
+      cResult[11] = tmp13;
+      cResult[12] = tmp20;
+      tmp16 = tmp20;
+    }
+  }
+  const tmp12 = onChangeText(closure_18, { fieldTextHook: util.t["4hoFk3"], metadataField: React5.LETTERBOXD_WATCHES, existingPendingConfiguration: tmp8, platform: first, onConfigurationChange, locked });
+  cResult[3] = locked;
+  cResult[4] = onConfigurationChange;
+  cResult[5] = tmp8;
+  cResult[6] = tmp12;
+  tmp11 = tmp12;
+  const obj5 = { fieldTextHook: util.t["4hoFk3"], metadataField: React5.LETTERBOXD_WATCHES, existingPendingConfiguration: tmp8, platform: first, onConfigurationChange, locked };
+}) : (function LetterboxdMetadataRules(arg0) {
+  ({ configMetadataMap, onConfigurationChange, locked } = arg0);
+  value = PlatformsDefault.get(PlatformTypes.LETTERBOXD);
+  const obj2 = { children: null };
+  const items = [onChangeText(closure_18, { fieldTextHook: util.t["4hoFk3"], metadataField: React5.LETTERBOXD_WATCHES, existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_WATCHES), platform: value, onConfigurationChange, locked }), ];
+  const obj3 = { fieldTextHook: util.t["4hoFk3"], metadataField: React5.LETTERBOXD_WATCHES, existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_WATCHES), platform: value, onConfigurationChange, locked };
+  items[1] = onChangeText(closure_18, { fieldTextHook: util.t["6wOYUY"], metadataField: React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR, existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR), platform: value, onConfigurationChange, locked });
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
+});
+ReactCompilerGating = fn(558);
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamMetadataRules(arg0) {
   const cResult = c.c(30);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1648,7 +1810,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamM
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwitterMetadataRules(arg0) {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwitterMetadataRules(arg0) {
   const cResult = c.c(31);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1797,7 +1959,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Twitte
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedditMetadataRules(arg0) {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedditMetadataRules(arg0) {
   const cResult = c.c(32);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1962,7 +2124,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reddit
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function PaypalMetadataRules(arg0) {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function PaypalMetadataRules(arg0) {
   const cResult = c.c(17);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2057,7 +2219,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Paypal
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMetadataRules(arg0) {
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMetadataRules(arg0) {
   const cResult = c.c(38);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2233,7 +2395,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMe
   return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function TikTokMetadataRules(arg0) {
+let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function TikTokMetadataRules(arg0) {
   const cResult = c.c(31);
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2386,7 +2548,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionConfiguration.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleEditConnectionConfiguration(configurationItems) {
-  const cResult = c.c(48);
+  const cResult = c.c(50);
   configurationItems = configurationItems.configurationItems;
   const onConfigurationChange = configurationItems.onConfigurationChange;
   ({ locked, integrations } = configurationItems);
@@ -2468,7 +2630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   } else {
     applicationId = configurationItems[0].configuration.applicationId;
     if (null != applicationId) {
-      if (!tmp68) {
+      if (!tmp73) {
         let found;
         if (integrations != null) {
           found = integrations.find((application) => {
@@ -2483,7 +2645,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       }
     }
     if (null != applicationId) {
-      if (!tmp68) {
+      if (!tmp73) {
         if (null == tmp) {
           return null;
         }
@@ -2525,47 +2687,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         if (PlatformTypes.STEAM === type) {
           const obj5 = {};
           const merged = Object.assign(obj4);
-          let tmp21 = onChangeText(closure_20, obj5);
+          let tmp21 = onChangeText(closure_21, obj5);
           let tmp22 = onChangeText;
         } else if (PlatformTypes.TWITTER === type) {
           const obj6 = {};
           const merged1 = Object.assign(obj4);
-          tmp21 = onChangeText(closure_21, obj6);
+          tmp21 = onChangeText(closure_22, obj6);
           tmp22 = onChangeText;
         } else if (PlatformTypes.REDDIT === type) {
           const obj7 = {};
           const merged2 = Object.assign(obj4);
-          tmp21 = onChangeText(closure_22, obj7);
+          tmp21 = onChangeText(closure_23, obj7);
           tmp22 = onChangeText;
         } else if (PlatformTypes.BLUESKY === type) {
           const obj8 = {};
           const merged3 = Object.assign(obj4);
           tmp21 = onChangeText(closure_19, obj8);
           tmp22 = onChangeText;
-        } else if (PlatformTypes.PAYPAL === type) {
+        } else if (PlatformTypes.LETTERBOXD === type) {
           const obj9 = {};
           const merged4 = Object.assign(obj4);
-          tmp21 = onChangeText(closure_23, obj9);
+          tmp21 = onChangeText(closure_20, obj9);
           tmp22 = onChangeText;
-        } else if (PlatformTypes.EBAY === type) {
+        } else if (PlatformTypes.PAYPAL === type) {
           const obj10 = {};
           const merged5 = Object.assign(obj4);
           tmp21 = onChangeText(closure_24, obj10);
           tmp22 = onChangeText;
-        } else if (PlatformTypes.TIKTOK === type) {
+        } else if (PlatformTypes.EBAY === type) {
           const obj11 = {};
           const merged6 = Object.assign(obj4);
           tmp21 = onChangeText(closure_25, obj11);
           tmp22 = onChangeText;
-        } else {
+        } else if (PlatformTypes.TIKTOK === type) {
           const obj12 = {};
           const merged7 = Object.assign(obj4);
-          obj12.integration = tmp;
-          tmp21 = onChangeText(ApplicationMetadataRules, obj12);
+          tmp21 = onChangeText(closure_26, obj12);
+          tmp22 = onChangeText;
+        } else {
+          const obj13 = {};
+          const merged8 = Object.assign(obj4);
+          obj13.integration = tmp;
+          tmp21 = onChangeText(ApplicationMetadataRules, obj13);
           tmp22 = onChangeText;
         }
-        const obj13 = { hasIcons: true, children: null };
-        const obj14 = {
+        const obj14 = { hasIcons: true, children: null };
+        const obj15 = {
           platform: value,
           integration: tmp,
           onRemove() {
@@ -2573,9 +2740,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                 },
           locked
         };
-        const items = [tmp22(closure_16, obj14), tmp21];
-        obj13.children = items;
-        return map1(TableRowGroup.TableRowGroup, obj13);
+        const items = [tmp22(closure_16, obj15), tmp21];
+        obj14.children = items;
+        return map1(TableRowGroup.TableRowGroup, obj14);
       } catch (err) {
       }
     }

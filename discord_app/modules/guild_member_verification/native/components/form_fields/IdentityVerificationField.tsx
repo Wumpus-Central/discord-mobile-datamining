@@ -1,19 +1,19 @@
-// === Module 6916: IdentityVerificationField ===
+// === Module 6918: IdentityVerificationField ===
 
-// Module 6916 (IdentityVerificationField)
+// Module 6918 (IdentityVerificationField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5003 */;
-import MobilePhoneIcon2 from "MobilePhoneIcon" /* 7051 */;
-import EnvelopeIcon from "EnvelopeIcon" /* 7174 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
+import MobilePhoneIcon2 from "MobilePhoneIcon" /* 7053 */;
+import EnvelopeIcon from "EnvelopeIcon" /* 7176 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const Text_Text = CheckmarkLargeIcon(5232);
-const components_Button_Button = CheckmarkLargeIcon(5242);
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6917);
+const Text_Text = CheckmarkLargeIcon(5234);
+const components_Button_Button = CheckmarkLargeIcon(5244);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6919);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {
@@ -44,7 +44,7 @@ function getLabel(arg0, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

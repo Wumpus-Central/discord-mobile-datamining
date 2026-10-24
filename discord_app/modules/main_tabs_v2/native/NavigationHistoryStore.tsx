@@ -1,12 +1,12 @@
-// === Module 6801: NavigationHistoryStore ===
+// === Module 6803: NavigationHistoryStore ===
 
-// Module 6801 (NavigationHistoryStore)
+// Module 6803 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5148 */;
-import RootNavigationRef from "RootNavigationRef" /* 5149 */;
-import useChatLayout from "useChatLayout" /* 5151 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
+import RootNavigationRef from "RootNavigationRef" /* 5151 */;
+import useChatLayout from "useChatLayout" /* 5153 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 require = fn;
 function getIdFromHistoryItem(str) {

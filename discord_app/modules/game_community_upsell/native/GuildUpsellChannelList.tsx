@@ -1,27 +1,27 @@
-// === Module 17665: GuildUpsellChannelList ===
+// === Module 17697: GuildUpsellChannelList ===
 
-// Module 17665 (GuildUpsellChannelList)
+// Module 17697 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Card from "Card" /* 6903 */;
-import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 17675 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Card from "Card" /* 6905 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 17707 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14998 */;
-import ConsentStore from "ConsentStore" /* 6668 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15021 */;
+import ConsentStore from "ConsentStore" /* 6670 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(17666).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(17698).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, header: null, headerTitle: null, listContainer: null, subheaderWrapper: null, createDescription: null, templateScroll: null, templateRow: null, templateCard: null, templateIconWrapper: null, templateTitle: null, buttonGroup: null, descriptionSpacing: null, joinSection: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
 obj2.header = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
@@ -48,13 +48,13 @@ const obj12 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.joinSection = { gap: nativeDefault.space.PX_4 };
 let closure_14 = createStyles.createStyles(obj2);
 const obj13 = { gap: nativeDefault.space.PX_4 };
-let items = [{ id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14242).BumpingFistsSpotIllustration }, , ];
-const obj14 = { id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14242).BumpingFistsSpotIllustration };
-items[1] = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17667).ChatControllersSpotIllustration };
-const obj15 = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17667).ChatControllersSpotIllustration };
-items[2] = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17671).MiniaturesSpotIllustration };
+let items = [{ id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14266).BumpingFistsSpotIllustration }, , ];
+const obj14 = { id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14266).BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17699).ChatControllersSpotIllustration };
+const obj15 = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17699).ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17703).MiniaturesSpotIllustration };
 const ReactCompilerGating = fn(558);
-const obj16 = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17671).MiniaturesSpotIllustration };
+const obj16 = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17703).MiniaturesSpotIllustration };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildUps
     const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
     let intl = tmp(1128).intl;
     obj2.children = intl.string(tmp(1128).t["abaDI+"]);
-    const tmp19 = closure_12(tmp(5232).Text, obj2);
+    const tmp19 = closure_12(tmp(5234).Text, obj2);
     cResult[9] = tmp19;
   } else {
     class A {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildUps
       }
     }
     let obj3 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
-    const tmp23 = closure_12(tmp(5232).Text, obj3);
+    const tmp23 = closure_12(tmp(5234).Text, obj3);
     cResult[11] = tmp4.createDescription;
     cResult[12] = tmp23;
   } else {

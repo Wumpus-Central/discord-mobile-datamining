@@ -1,10 +1,10 @@
-// === Module 14309: useNote ===
+// === Module 14333: useNote ===
 
-// Module 14309 (useNote)
+// Module 14333 (useNote)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NoteStore from "NoteStore" /* 14310 */;
+import NoteStore from "NoteStore" /* 14334 */;
 
 const require = globalThis.__r;
 

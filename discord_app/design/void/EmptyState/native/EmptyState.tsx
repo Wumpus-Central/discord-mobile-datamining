@@ -1,11 +1,11 @@
-// === Module 15398: EmptyState ===
+// === Module 15418: EmptyState ===
 
-// Module 15398 (EmptyState)
+// Module 15418 (EmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4976 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
+import shared from "shared" /* 4978 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = { textTransform: "none" };
 let closure_7 = { accessible: false, accessibilityRole: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 }, textGroup: { alignSelf: "stretch", alignItems: "center" }, emptyTitle: { marginTop: 20, textTransform: "uppercase" }, emptyBody: { textAlign: "center", marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

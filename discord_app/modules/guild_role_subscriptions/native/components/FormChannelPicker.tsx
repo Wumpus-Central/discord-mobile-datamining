@@ -1,17 +1,17 @@
-// === Module 19245: FormChannelPicker ===
+// === Module 19296: FormChannelPicker ===
 
-// Module 19245 (FormChannelPicker)
+// Module 19296 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
@@ -44,7 +44,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(19246, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(19297, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null
   };
@@ -73,8 +73,7 @@ export default function FormChannelPicker(channelId) {
   }
   obj3.children = stringResult;
   items3[1] = closure_4(channelId(stateFromStores[13]).Text, obj3);
-  const tmpResult = require("TouchableHitBox");
-  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_11540") });
+  items3[2] = closure_4(channelId(stateFromStores[15]).ChevronSmallRightIcon, { size: "md" });
   obj2.children = items3;
-  return closure_5(tmpResult, obj2);
+  return closure_5(require("TouchableHitBox"), obj2);
 };

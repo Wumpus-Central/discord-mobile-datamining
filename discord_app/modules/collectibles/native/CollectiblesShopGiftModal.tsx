@@ -1,14 +1,14 @@
-// === Module 13852: CollectiblesShopGiftModal ===
+// === Module 13871: CollectiblesShopGiftModal ===
 
-// Module 13852 (CollectiblesShopGiftModal)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7647 */;
-import BadgeId from "BadgeId" /* 8671 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8684 */;
-import openGiftModal from "openGiftModal" /* 13851 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13854 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13857 */;
+// Module 13871 (CollectiblesShopGiftModal)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
+import BadgeId from "BadgeId" /* 8673 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8686 */;
+import openGiftModal from "openGiftModal" /* 13870 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13873 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13876 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7648 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
 
 require = fn;
 const application_id = fn(1087).COLLECTIBLES_APPLICATION_ID;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   } else {
     first = cResult[0];
   }
-  const GiftingBadgeExperiment = tmp(10495).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp(10496).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
   if (cResult[1] !== enabled) {
     class O {
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
         return;
       }
     }
-    tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7276).COLLECTIBLES_MOBILE_GIFT_MODAL;
+    tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7278).COLLECTIBLES_MOBILE_GIFT_MODAL;
     cResult[8] = analyticsLocations;
     cResult[9] = tmp14;
     const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
       }
     }
   }
-  const analyticsLocations2 = enabled(7251)(tmp14).analyticsLocations;
+  const analyticsLocations2 = enabled(7253)(tmp14).analyticsLocations;
   if (stateFromStores != null) {
     class O {
       constructor() {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
           }
         }
         const obj3 = { onDismiss: onGiftModalDismiss, title: tmp22 };
-        const tmp25 = jsx(tmp19(10577), { onDismiss: onGiftModalDismiss, title: tmp22 });
+        const tmp25 = jsx(tmp19(10578), { onDismiss: onGiftModalDismiss, title: tmp22 });
         cResult[13] = onGiftModalDismiss;
         cResult[14] = tmp25;
       } else {

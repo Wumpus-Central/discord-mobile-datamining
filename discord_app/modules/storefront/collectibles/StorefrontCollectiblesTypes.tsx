@@ -1,6 +1,6 @@
-// === Module 9382: StorefrontCollectiblesTypes ===
+// === Module 9383: StorefrontCollectiblesTypes ===
 
-// Module 9382 (StorefrontCollectiblesTypes)
+// Module 9383 (StorefrontCollectiblesTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/storefront/collectibles/StorefrontCollectiblesTypes.tsx");

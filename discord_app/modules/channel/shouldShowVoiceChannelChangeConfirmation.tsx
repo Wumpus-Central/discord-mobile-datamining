@@ -1,11 +1,11 @@
-// === Module 7878: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 7880: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 7878 (shouldShowVoiceChannelChangeConfirmation)
-import GameConsoleStore from "GameConsoleStore" /* 5713 */;
+// Module 7880 (shouldShowVoiceChannelChangeConfirmation)
+import GameConsoleStore from "GameConsoleStore" /* 5715 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");

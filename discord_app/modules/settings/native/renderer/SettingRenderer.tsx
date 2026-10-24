@@ -1,34 +1,34 @@
-// === Module 15952: SettingRenderer ===
+// === Module 15976: SettingRenderer ===
 
-// Module 15952 (SettingRenderer)
+// Module 15976 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4983 */;
-import HapticUtils from "HapticUtils" /* 5210 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5211 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useToken from "useToken" /* 5250 */;
-import ToastUtils from "ToastUtils" /* 5660 */;
-import GuildIcon from "GuildIcon" /* 6881 */;
-import TableRow from "TableRow" /* 6901 */;
-import TableRadioGroup from "TableRadioGroup" /* 6983 */;
-import ClipboardUtils from "ClipboardUtils" /* 7283 */;
-import TableSwitchRow from "TableSwitchRow" /* 7293 */;
-import FormSwitch from "FormSwitch" /* 7294 */;
-import ClydeIcon from "ClydeIcon" /* 10570 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11599 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15953 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 15955 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15956 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15957 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4985 */;
+import HapticUtils from "HapticUtils" /* 5212 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useToken from "useToken" /* 5252 */;
+import ToastUtils from "ToastUtils" /* 5662 */;
+import GuildIcon from "GuildIcon" /* 6883 */;
+import TableRow from "TableRow" /* 6903 */;
+import TableRadioGroup from "TableRadioGroup" /* 6985 */;
+import ClipboardUtils from "ClipboardUtils" /* 7285 */;
+import TableSwitchRow from "TableSwitchRow" /* 7295 */;
+import FormSwitch from "FormSwitch" /* 7296 */;
+import ClydeIcon from "ClydeIcon" /* 10571 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11619 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15977 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 15979 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15980 */;
+import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15951 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15975 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -97,14 +97,14 @@ function StaticSettingSearchResult(title) {
   obj.end = index === total - 1;
   return closure_14(title(index[12]).TableRow, obj);
 }
-let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
+let closure_3 = ["onChangeEnd", "step", "startIcon", "endIcon", "minValue", "maxValue", "valueLabel", "defaultValue", "onChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11205);
+const SettingRendererConstants = fn(11206);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
 obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
@@ -121,7 +121,7 @@ let closure_18 = noop.memo(function RouteSetting(arg0) {
   const stackNavigation = screen(preNavigationAction[14]).useStackNavigation();
   const obj = screen(preNavigationAction[14]);
   const items = [LocaleStore];
-  const stateFromStores = screen(preNavigationAction[13]).useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = screen(preNavigationAction[13]).useStateFromStores(items, () => callback.locale);
   preNavigationAction = undefined;
   const title = useTitle();
   if (usePreNavigationAction != null) {
@@ -370,7 +370,7 @@ let closure_22 = noop.memo(function PressableSetting(arg0) {
   ({ setting, onPress, useTitle, withArrow } = arg0);
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const items = [LocaleStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = initialize.useStateFromStores(items, () => callback.locale);
   let description;
   const title = useTitle();
   if (useDescription != null) {
@@ -501,7 +501,7 @@ let closure_24 = noop.memo(function ToggleSetting(arg0) {
   ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const items = [LocaleStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = initialize.useStateFromStores(items, () => callback.locale);
   const title = useTitle();
   value = useValue();
   let description;
@@ -599,7 +599,7 @@ let closure_26 = noop.memo(function RadioSetting(arg0) {
   const tmp = closure_17();
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const items = [LocaleStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = initialize.useStateFromStores(items, () => callback.locale);
   const title = useTitle();
   value = useValue();
   const options = useOptions();
@@ -638,10 +638,10 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15955).useHighlightSettingItem(setting);
-  let obj = trailing(15955);
+  let highlightSettingItem = trailing(15979).useHighlightSettingItem(setting);
+  let obj = trailing(15979);
   const items = [LocaleStore];
-  const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {
@@ -673,18 +673,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6901).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6903).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6901).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6903).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6901).TableRow, obj3), ];
+  const children = [closure_14(trailing(6903).TableRow, obj3), ];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);
@@ -698,7 +698,7 @@ let closure_28 = noop.memo(function VolumeSliderSetting(arg0) {
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const tmp4 = closure_17();
   const items = [LocaleStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = initialize.useStateFromStores(items, () => callback.locale);
   const title = useTitle();
   value = undefined;
   if (useValue != null) {
@@ -716,53 +716,51 @@ let closure_28 = noop.memo(function VolumeSliderSetting(arg0) {
 });
 let closure_29 = noop.memo(function SliderSetting(useTrailing) {
   useTrailing = useTrailing.useTrailing;
-  let onSlidingComplete;
+  let onChangeEnd;
   let num2;
   let num4;
   let num3;
-  let onValueChange;
   _objectWithoutProperties = undefined;
   value = undefined;
   closure_8 = undefined;
-  c9 = undefined;
+  let onChange;
   let callback1;
-  let callback3;
   ({ useTitle, start, end, useProps } = useTrailing);
-  const items = [c9];
-  const stateFromStores = onSlidingComplete(num2[13]).useStateFromStores(items, () => _undefined.locale);
+  const items = [onChange];
+  const stateFromStores = onChangeEnd(num2[13]).useStateFromStores(items, () => callback.locale);
   const title = useTitle();
   const props = useProps();
-  onSlidingComplete = props.onSlidingComplete;
+  onChangeEnd = props.onChangeEnd;
   const step = props.step;
   let num = 0.1;
   if (undefined !== step) {
     num = step;
   }
-  const minimumValue = props.minimumValue;
+  const minValue = props.minValue;
   num2 = 0;
   ({ startIcon, endIcon } = props);
-  if (undefined !== minimumValue) {
-    num2 = minimumValue;
+  if (undefined !== minValue) {
+    num2 = minValue;
   }
-  const maximumValue = props.maximumValue;
+  const maxValue = props.maxValue;
   num3 = 1;
   num4 = 1;
-  if (undefined !== maximumValue) {
-    num4 = maximumValue;
+  if (undefined !== maxValue) {
+    num4 = maxValue;
   }
   ({ valueLabel, defaultValue } = props);
   if (undefined !== defaultValue) {
     num3 = defaultValue;
   }
-  onValueChange = props.onValueChange;
+  onChange = props.onChange;
   const tmp7 = _objectWithoutProperties(props, num4);
   _objectWithoutProperties = tmp7;
   const tmp8 = closure_17();
-  const obj = onSlidingComplete(num2[13]);
-  const tmp3 = c9;
+  const obj = onChangeEnd(num2[13]);
+  const tmp3 = onChange;
   const items1 = [tmp3];
-  const stateFromStores1 = onSlidingComplete(num2[13]).useStateFromStores(items1, () => _undefined.locale);
-  const tmp10 = onValueChange(value.useState(() => {
+  const stateFromStores1 = onChangeEnd(num2[13]).useStateFromStores(items1, () => callback.locale);
+  const tmp10 = onChange(value.useState(() => {
     value = value.value;
     if (value == null) {
       value = num3;
@@ -771,98 +769,81 @@ let closure_29 = noop.memo(function SliderSetting(useTrailing) {
   }), 2);
   value = tmp10[0];
   closure_8 = tmp10[1];
-  const tmpResult = onSlidingComplete(num2[13]);
-  [tmp13, c9] = onValueChange(value.useState(false), 2);
-  const items2 = [onValueChange];
-  const callback = value.useCallback(() => {
-    _undefined(true);
-  }, []);
-  callback1 = value.useCallback((arg0) => {
+  const items2 = [onChange];
+  onChange = value.useCallback((arg0) => {
     closure_8(arg0);
-    if (onValueChange != null) {
-      onValueChange(arg0);
+    if (onChange != null) {
+      onChange(arg0);
     }
   }, items2);
-  const items3 = [onSlidingComplete];
-  const items4 = [callback1, onSlidingComplete];
-  const callback2 = value.useCallback((arg0) => {
-    _undefined(false);
-    if (onSlidingComplete != null) {
-      tmp2(arg0);
+  const items3 = [onChange, onChangeEnd];
+  callback1 = value.useCallback((arg0) => {
+    callback(arg0);
+    if (onChangeEnd != null) {
+      onChangeEnd(arg0);
     }
   }, items3);
-  callback3 = value.useCallback((arg0) => {
-    callback1(arg0);
-    if (onSlidingComplete != null) {
-      onSlidingComplete(arg0);
-    }
-  }, items4);
-  const items5 = [num3, callback3];
-  const items6 = [callback3, num4, num, value];
-  const callback4 = value.useCallback(() => callback3(num3), items5);
-  const items7 = [callback3, num2, num, value];
-  const callback5 = value.useCallback(() => {
-    callback3(Math.min(num4, first + num));
+  const items4 = [num3, callback1];
+  const items5 = [callback1, num4, num, value];
+  const callback2 = value.useCallback(() => callback1(num3), items4);
+  const items6 = [callback1, num2, num, value];
+  const callback3 = value.useCallback(() => {
+    callback1(Math.min(num4, first + num));
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+  }, items5);
+  let trailing;
+  const callback4 = value.useCallback(() => {
+    callback1(Math.max(num2, first - num));
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   }, items6);
-  let trailing;
-  const callback6 = value.useCallback(() => {
-    callback3(Math.max(num2, first - num));
-    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-  }, items7);
   if (useTrailing != null) {
     trailing = useTrailing();
   }
   const obj2 = { start, end, shadow: "none", border: "none", children: null };
   const obj3 = { style: tmp8.sliderTitle, children: null };
-  const items8 = [closure_14(onSlidingComplete(num2[23]).Text, { variant: "text-md/semibold", children: title }), trailing];
-  obj3.children = items8;
-  const items9 = [closure_16(closure_8, obj3), ];
-  let tmp22Result = null != value;
-  if (tmp22Result) {
+  const items7 = [closure_14(onChangeEnd(num2[23]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  obj3.children = items7;
+  const items8 = [closure_16(closure_8, obj3), ];
+  let tmp18Result = null != value;
+  if (tmp18Result) {
     if (formatPercentResult == null) {
       formatPercentResult = tmp(tmp2[36]).formatPercent(stateFromStores1, value);
       const tmpResult3 = tmp(tmp2[36]);
     }
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
-    tmp22Result = closure_14(tmp(tmp2[23]).Text, obj4);
+    tmp18Result = closure_14(tmp(tmp2[23]).Text, obj4);
   }
-  items9[1] = tmp22Result;
-  const items10 = [closure_16(onSlidingComplete(num2[35]).Stack, { direction: "horizontal", justify: "space-between", children: items9 }), , ];
-  const tmp12 = onValueChange(value.useState(false), 2);
-  const tmp24 = closure_8;
+  items8[1] = tmp18Result;
+  const items9 = [closure_16(onChangeEnd(num2[35]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
+  const tmp20 = closure_8;
+  const tmpResult = onChangeEnd(num2[13]);
   let slider;
   if (tmpResult4.isAndroid()) {
     slider = tmp8.slider;
   }
-  const obj5 = { style: slider, children: null };
-  const obj6 = {};
+  const obj5 = { children: null };
+  const obj6 = { style: slider, children: null };
+  const obj7 = {};
   const merged = Object.assign(tmp7);
-  obj6.accessibilityLabel = title;
-  obj6.step = num;
-  obj6.onValueChange = callback1;
-  obj6.value = value;
-  obj6.minimumValue = num2;
-  obj6.maximumValue = num4;
-  obj6.onSlidingStart = callback;
-  obj6.onSlidingComplete = callback2;
-  obj6.startIcon = closure_14(onSlidingComplete(num2[39]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
-  obj6.endIcon = closure_14(onSlidingComplete(num2[39]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
-  obj5.children = closure_14(onSlidingComplete(num2[38]).Slider, obj6);
-  items10[1] = closure_14(tmp24, obj5);
-  let tmp28 = !tmp13;
-  if (!tmp13) {
-    tmp28 = value === num3;
-  }
-  const obj7 = { children: null };
-  const obj8 = { disabled: tmp28, variant: "secondary", text: null, onPress: null };
+  obj7.accessibilityLabel = title;
+  obj7.step = num;
+  obj7.onChange = onChange;
+  obj7.value = value;
+  obj7.minValue = num2;
+  obj7.maxValue = num4;
+  obj7.onChangeEnd = onChangeEnd;
+  obj7.startIcon = closure_14(onChangeEnd(num2[39]).PressableOpacity, { accessible: false, onPress: callback4, children: startIcon });
+  obj7.endIcon = closure_14(onChangeEnd(num2[39]).PressableOpacity, { accessible: false, onPress: callback3, children: endIcon });
+  obj6.children = closure_14(onChangeEnd(num2[38]).Slider, obj7);
+  items9[1] = closure_14(tmp20, obj6);
+  const obj8 = { disabled: value === num3, variant: "secondary", text: null, onPress: null };
   const intl = tmp(tmp2[18]).intl;
-  obj8.text = intl.string(onSlidingComplete(num2[18]).t["3b//lO"]);
-  obj8.onPress = callback4;
-  items10[2] = closure_14(onSlidingComplete(num2[40]).Button, obj8);
-  obj7.children = items10;
-  obj2.children = closure_16(onSlidingComplete(num2[35]).Stack, obj7);
-  return closure_14(onSlidingComplete(num2[34]).Card, obj2);
+  obj8.text = intl.string(onChangeEnd(num2[18]).t["3b//lO"]);
+  obj8.onPress = callback2;
+  items9[2] = closure_14(onChangeEnd(num2[40]).Button, obj8);
+  obj5.children = items9;
+  obj2.children = closure_16(onChangeEnd(num2[35]).Stack, obj5);
+  return closure_14(onChangeEnd(num2[34]).Card, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingSearchResultBreadcrumbs(breadcrumbs) {

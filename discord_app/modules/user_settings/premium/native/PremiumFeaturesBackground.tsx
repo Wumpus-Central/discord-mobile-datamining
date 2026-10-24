@@ -1,18 +1,18 @@
-// === Module 9423: PremiumFeaturesBackground ===
+// === Module 9424: PremiumFeaturesBackground ===
 
-// Module 9423 (PremiumFeaturesBackground)
+// Module 9424 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import LinearGradientDefault from "LinearGradient" /* 5256 */;
+import LinearGradientDefault from "LinearGradient" /* 5258 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(7542).Gradients;
+const Gradients = fn(7544).Gradients;
 const PremiumTypes = fn(1394).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

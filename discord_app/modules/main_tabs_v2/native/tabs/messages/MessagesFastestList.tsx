@@ -1,25 +1,25 @@
-// === Module 17490: MessagesFastestList ===
+// === Module 17522: MessagesFastestList ===
 
-// Module 17490 (MessagesFastestList)
+// Module 17522 (MessagesFastestList)
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7155 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7157 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 17420 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17430 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17431 */;
-import useMessagesData from "useMessagesData" /* 17434 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17447 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17484 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 17485 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17486 */;
-import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17487 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7157 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7159 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 17452 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17462 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17463 */;
+import useMessagesData from "useMessagesData" /* 17466 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17479 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17516 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 17517 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17518 */;
+import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17519 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;

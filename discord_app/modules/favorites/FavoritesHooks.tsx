@@ -1,21 +1,21 @@
-// === Module 10841: FavoritesHooks ===
+// === Module 10842: FavoritesHooks ===
 
-// Module 10841 (FavoritesHooks)
+// Module 10842 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1991 */;
-import FavoritesUtils from "FavoritesUtils" /* 4846 */;
-import FavoritesLimits from "FavoritesLimits" /* 10842 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import FavoritesUtils from "FavoritesUtils" /* 4848 */;
+import FavoritesLimits from "FavoritesLimits" /* 10843 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import UserStore from "UserStore" /* 1392 */;
-import FavoriteStore from "FavoriteStore" /* 4824 */;
+import FavoriteStore from "FavoriteStore" /* 4826 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4834).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4836).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1394).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesLimits() {

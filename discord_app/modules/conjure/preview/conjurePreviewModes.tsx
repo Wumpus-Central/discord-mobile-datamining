@@ -1,8 +1,8 @@
-// === Module 11841: conjurePreviewModes ===
+// === Module 11867: conjurePreviewModes ===
 
-// Module 11841 (conjurePreviewModes)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6772 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10728 */;
+// Module 11867 (conjurePreviewModes)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10729 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -126,10 +126,21 @@ export const requiresPermissionReview = function requiresPermissionReview(arg0) 
   }
   return tmp3;
 };
-export function permissionReviewBlocksMode(activeMode, result) {
+export const permissionReviewBlocksMode = function permissionReviewBlocksMode(activeMode, result, arg2) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
   let tmp = result;
-  if (result) {
-    tmp = "bot" === activeMode;
+  if (tmp) {
+    let tmp3 = "bot" === activeMode;
+    if (!tmp3) {
+      if (flag) {
+        flag = "frame" === activeMode;
+      }
+      tmp3 = flag;
+    }
+    tmp = tmp3;
   }
   return tmp;
-}
+};

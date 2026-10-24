@@ -1,29 +1,29 @@
-// === Module 18022: ChannelDetails ===
+// === Module 18054: ChannelDetails ===
 
-// Module 18022 (ChannelDetails)
+// Module 18054 (ChannelDetails)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import timing from "timing" /* 5204 */;
-import timingPresets from "timingPresets" /* 5207 */;
-import spring from "spring" /* 5245 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13181 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13206 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 13215 */;
+import timing from "timing" /* 5206 */;
+import timingPresets from "timingPresets" /* 5209 */;
+import spring from "spring" /* 5247 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13218 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13243 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 13252 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13195 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import SearchQueryStore from "SearchQueryStore" /* 13232 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(9711);
+const ChannelDetailsStore = fn(9712);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10023);
+const ChannelDetailsConstants = fn(10024);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

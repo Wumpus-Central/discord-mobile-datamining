@@ -1,6 +1,6 @@
-// === Module 10551: useWishlistApplicationIds ===
+// === Module 10552: useWishlistApplicationIds ===
 
-// Module 10551 (useWishlistApplicationIds)
+// Module 10552 (useWishlistApplicationIds)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

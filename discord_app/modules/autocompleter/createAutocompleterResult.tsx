@@ -1,7 +1,7 @@
-// === Module 9076: AutocompleterConstants ===
+// === Module 9077: AutocompleterConstants ===
 
-// Module 9076 (AutocompleterConstants)
-import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6823 */;
+// Module 9077 (AutocompleterConstants)
+import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6825 */;
 import size from "module_2" /* 2 */;
 
 ({ HeaderRecord: closure_0, AutocompleterResultTypes: closure_1 } = AutocompleterConstants);

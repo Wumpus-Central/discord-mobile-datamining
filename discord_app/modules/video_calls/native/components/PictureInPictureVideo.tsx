@@ -1,31 +1,31 @@
-// === Module 11395: PictureInPictureVideo ===
+// === Module 11415: PictureInPictureVideo ===
 
-// Module 11395 (PictureInPictureVideo)
+// Module 11415 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useToken2 from "useToken" /* 5250 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8612 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11343 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11353 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11356 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11357 */;
-import VideoRenderer from "VideoRenderer" /* 11410 */;
-import UserTileDefault from "UserTile" /* 11420 */;
-import _modDef11422 from "module_11422" /* 11422 */;
+import useToken2 from "useToken" /* 5252 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8614 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11361 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11371 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11374 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11375 */;
+import VideoRenderer from "VideoRenderer" /* 11430 */;
+import UserTileDefault from "UserTile" /* 11440 */;
+import _modDef11442 from "module_11442" /* 11442 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6770 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SpeakingStore from "SpeakingStore" /* 6683 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11350 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import SpeakingStore from "SpeakingStore" /* 6685 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11368 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -35,12 +35,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10878);
+const ChannelCallStore = fn(10879);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5630).ParticipantTypes;
+const ParticipantTypes = fn(5632).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
 const native = fn(1202);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1202).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -909,7 +909,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                   let tmp36 = null;
                   if (tmp9) {
                     const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                    const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11422, color: tmp4.thermalAlertIcon.color };
+                    const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11442, color: tmp4.thermalAlertIcon.color };
                     obj4.children = value3(native2.Icon, obj5);
                     tmp36 = value3(hasOwnProperty, obj4);
                   }
@@ -1013,7 +1013,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp16Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11422, color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11442, color: tmp.thermalAlertIcon.color };
         obj8.children = tmp16(native2.Icon, obj9);
         tmp16Result = tmp16(hasOwnProperty, obj8);
       }

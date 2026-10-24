@@ -1,9 +1,9 @@
-// === Module 19368: AgeVerificationScreen ===
+// === Module 19428: AgeVerificationScreen ===
 
-// Module 19368 (AgeVerificationScreen)
+// Module 19428 (AgeVerificationScreen)
 import Server from "Server" /* 2000 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6655 */;
-import types from "types" /* 19355 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
+import types from "types" /* 19415 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

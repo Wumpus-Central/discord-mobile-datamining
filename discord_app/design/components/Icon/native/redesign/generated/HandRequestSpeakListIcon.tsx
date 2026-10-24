@@ -1,10 +1,10 @@
-// === Module 11528: HandRequestSpeakListIcon ===
+// === Module 11548: HandRequestSpeakListIcon ===
 
-// Module 11528 (HandRequestSpeakListIcon)
+// Module 11548 (HandRequestSpeakListIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5666 */;
-import _mod11529 from "module_11529" /* 11529 */;
+import BaseIconImage from "BaseIconImage" /* 5668 */;
+import _mod11549 from "module_11549" /* 11549 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const HandRequestSpeakListIcon = ReactCompilerGating.isReactCompilerEnabl
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11529;
+    const tmpResult = _mod11549;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const HandRequestSpeakListIcon = ReactCompilerGating.isReactCompilerEnabl
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11529, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

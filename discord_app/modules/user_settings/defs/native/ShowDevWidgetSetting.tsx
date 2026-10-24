@@ -1,14 +1,14 @@
-// === Module 16899: ShowDevWidgetSetting ===
+// === Module 16931: ShowDevWidgetSetting ===
 
-// Module 16899 (ShowDevWidgetSetting)
+// Module 16931 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 16900 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7791 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 16932 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7793 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowDevWidgetSettingToggleValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(16901).StaffBadgeIcon,
+  IconComponent: fn(16933).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
@@ -56,7 +56,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   }),
-  usePredicate: fn(16105).useStaffOrDeveloperSettingPredicate
+  usePredicate: fn(16129).useStaffOrDeveloperSettingPredicate
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");

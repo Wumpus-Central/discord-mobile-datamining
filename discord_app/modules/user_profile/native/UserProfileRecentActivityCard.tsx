@@ -1,28 +1,28 @@
-// === Module 14376: UserProfileRecentActivityCard ===
+// === Module 14400: UserProfileRecentActivityCard ===
 
-// Module 14376 (UserProfileRecentActivityCard)
+// Module 14400 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import StringUtils from "StringUtils" /* 2033 */;
-import shared from "shared" /* 4976 */;
-import native from "native" /* 5035 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import Pressables from "Pressables" /* 6906 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7251 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7276 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8072 */;
-import utils from "utils" /* 8615 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8827 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9244 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9245 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14252 */;
-import BadgesAll from "Badges" /* 14265 */;
-import TrendingType from "TrendingType" /* 14270 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14277 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14278 */;
+import shared from "shared" /* 4978 */;
+import native from "native" /* 5037 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import Pressables from "Pressables" /* 6908 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7253 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8074 */;
+import utils from "utils" /* 8617 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9246 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14276 */;
+import BadgesAll from "Badges" /* 14289 */;
+import TrendingType from "TrendingType" /* 14294 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14301 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14302 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -94,8 +94,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8615).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8615).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8617).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8617).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -153,7 +153,7 @@ items[5] = {
     return tmp3;
   }
 };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj7 = { body: null, content: null, imageContainer: null, imageAspectRatio: null, posterImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, badgeCell: null };
 let obj6 = {
   Badge: BadgesAll.MarathonBadge,
@@ -257,7 +257,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gaming
   cResult[4] = "user-profile";
   cResult[5] = str.badges;
   cResult[6] = tmp10;
-  tmpResult = badgeCell(8827);
+  tmpResult = badgeCell(8829);
 }) : (function GamingEntryBadges(entry) {
   entry = entry.entry;
   const tmp = closure_9();
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(14277)(tmp8);
+      const tmp9 = tmp6(14301)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(14278)(tmp10);
+        tmp6(14302)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           if (cResult[10] === user.id) {
             let tmp14 = cResult[11];
           }
-          const tmp15 = tmp6(9245)(tmp14);
+          const tmp15 = tmp6(9246)(tmp14);
           importDefault = tmp15;
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp15) {

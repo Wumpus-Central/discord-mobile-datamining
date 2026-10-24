@@ -1,8 +1,8 @@
-// === Module 4868: ChannelReader ===
+// === Module 4870: ChannelReader ===
 
-// Module 4868 (ChannelReader)
+// Module 4870 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const logger = new LoggerDefault("ChannelReader");

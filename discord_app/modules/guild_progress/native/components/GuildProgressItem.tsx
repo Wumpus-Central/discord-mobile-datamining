@@ -1,14 +1,14 @@
-// === Module 13471: GuildProgressItem ===
+// === Module 13508: GuildProgressItem ===
 
-// Module 13471 (GuildProgressItem)
-import GuildProgressUtils from "GuildProgressUtils" /* 13353 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13356 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 13473 */;
+// Module 13508 (GuildProgressItem)
+import GuildProgressUtils from "GuildProgressUtils" /* 13390 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13393 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 13510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 17037: DevToolsGuildPowerupsModal ===
+// === Module 17069: DevToolsGuildPowerupsModal ===
 
-// Module 17037 (DevToolsGuildPowerupsModal)
-import HeaderShared from "HeaderShared" /* 9698 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10030 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 17038 */;
+// Module 17069 (DevToolsGuildPowerupsModal)
+import HeaderShared from "HeaderShared" /* 9699 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10031 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 17070 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(9742);
+const NativeStackNavigator = fn(9743);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuildPowerupsModal() {
   const cResult = accessibilityNativeStackOptions(576).c(5);
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7093).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7095).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n(navigation) {
       const obj = {

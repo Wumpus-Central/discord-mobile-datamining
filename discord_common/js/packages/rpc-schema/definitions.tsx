@@ -1,15 +1,15 @@
-// === Module 15700: definitions ===
+// === Module 15721: definitions ===
 
-// Module 15700 (definitions)
+// Module 15721 (definitions)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Constants2 from "Constants" /* 2027 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8825 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10648 */;
-import ActivityPlatform from "ActivityPlatform" /* 11451 */;
-import SKUTypes from "SKUTypes" /* 15701 */;
-import helpers from "helpers" /* 15702 */;
-import contextMenuIcons from "contextMenuIcons" /* 15703 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10649 */;
+import ActivityPlatform from "ActivityPlatform" /* 11471 */;
+import SKUTypes from "SKUTypes" /* 15722 */;
+import helpers from "helpers" /* 15723 */;
+import contextMenuIcons from "contextMenuIcons" /* 15724 */;
 import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
@@ -2174,7 +2174,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "application", response: "round" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "code", response: "limit" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

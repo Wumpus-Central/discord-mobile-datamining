@@ -1,20 +1,19 @@
-// === Module 16363: HexagonCampaignThemeLegal ===
+// === Module 16381: HexagonCampaignThemeLegal ===
 
-// Module 16363 (HexagonCampaignThemeLegal)
+// Module 16381 (HexagonCampaignThemeLegal)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15845 */;
-import _modDef16364 from "module_16364" /* 16364 */;
+import _modDef4247 from "module_4247" /* 4247 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15869 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_4, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: hasOwnProperty } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { legal: { textAlign: "center" }, legalWithLogo: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, logo: { width: 32, height: 32 }, legalText: { flex: 1 }, link: { textDecorationLine: "underline" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -49,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
         if (cResult[7] !== tmp7) {
           const intl = tmp(1128).intl;
           const obj2 = { nonPremiumEndDate, premiumEndDate, learnMoreHook: tmp7 };
-          const formatResult = intl.format(tmp(1128).t.y2YmJv, obj2);
+          const formatResult = intl.format(legalWithLogo(4247).y2YmJv, obj2);
           cResult[7] = tmp7;
           cResult[8] = formatResult;
           let tmp12 = formatResult;
@@ -60,46 +59,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           if (cResult[10] === str) {
             if (cResult[11] === tmp11) {
               if (cResult[12] === tmp12) {
-                let tmp16 = cResult[13];
+                let tmp17 = cResult[13];
               }
               if (!tmp4) {
-                return tmp16;
+                return tmp17;
               } else {
                 if (cResult[14] !== legalWithLogo.logo) {
-                  const obj3 = { source: legalWithLogo(16364), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
-                  const tmp24 = closure_6(legalWithLogo(5667), obj3);
+                  const obj3 = { source: legalWithLogo(16382), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
+                  const tmp25 = closure_6(legalWithLogo(5669), obj3);
                   cResult[14] = legalWithLogo.logo;
-                  cResult[15] = tmp24;
-                  let tmp20 = tmp24;
-                  const tmp23 = legalWithLogo(5667);
+                  cResult[15] = tmp25;
+                  let tmp21 = tmp25;
+                  const tmp24 = legalWithLogo(5669);
                 } else {
-                  tmp20 = cResult[15];
+                  tmp21 = cResult[15];
                 }
-                if (cResult[16] === tmp16) {
+                if (cResult[16] === tmp17) {
                   if (cResult[17] === legalWithLogo.legalWithLogo) {
                   }
                 }
                 const obj4 = { style: legalWithLogo.legalWithLogo, children: null };
-                let items = [tmp20, tmp16];
+                let items = [tmp21, tmp17];
                 obj4.children = items;
-                const tmp28 = closure_7(View, obj4);
-                cResult[16] = tmp16;
+                const tmp29 = closure_7(View, obj4);
+                cResult[16] = tmp17;
                 legalWithLogo = legalWithLogo.legalWithLogo;
                 cResult[17] = legalWithLogo;
-                cResult[18] = tmp20;
-                cResult[19] = tmp28;
+                cResult[18] = tmp21;
+                cResult[19] = tmp29;
               }
             }
           }
         }
         const obj5 = { animated: tmp5, variant: "text-xs/medium", color: str, style: tmp11, children: tmp12 };
-        const tmp18 = closure_6(tmp(5232).Text, obj5);
+        const tmp19 = closure_6(tmp(5234).Text, obj5);
         cResult[9] = tmp5;
         cResult[10] = str;
         cResult[11] = tmp11;
         cResult[12] = tmp12;
-        cResult[13] = tmp18;
-        tmp16 = tmp18;
+        cResult[13] = tmp19;
+        tmp17 = tmp19;
       }
       const items1 = [headerSecondary, tmp10];
       cResult[4] = headerSecondary;
@@ -150,8 +149,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
   }
   let items = [headerSecondary, flag ? tmp.legalText : tmp.legal];
   obj.style = items;
-  const intl = tmp4(1128).intl;
-  obj.children = intl.format(animatedStyles(1128).t.y2YmJv, {
+  const intl = animatedStyles(1128).intl;
+  obj.children = intl.format(_modDef4247.y2YmJv, {
     nonPremiumEndDate,
     premiumEndDate,
     learnMoreHook(children, arg1) {
@@ -171,14 +170,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
       return timestampProducer(Text_Text.Text, obj, arg1);
     }
   });
-  const tmp3Result = closure_6(animatedStyles(5232).Text, obj);
-  let tmp8 = tmp3Result;
+  const tmp3Result = closure_6(animatedStyles(5234).Text, obj);
+  let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: _modDef16364, style: tmp.logo, resizeMode: "contain", accessible: false };
-    const items1 = [closure_6(FastImageDefault, obj4), tmp3Result];
+    const obj4 = { source: tmp7(16382), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const items1 = [closure_6(tmp7(5669), obj4), tmp3Result];
     obj3.children = items1;
-    tmp8 = closure_7(View, obj3);
+    tmp9 = closure_7(View, obj3);
+    const tmp7Result = tmp7(5669);
   }
-  return tmp8;
+  return tmp9;
 });

@@ -1,15 +1,15 @@
-// === Module 7898: ModalScreen ===
+// === Module 7900: ModalScreen ===
 
-// Module 7898 (ModalScreen)
+// Module 7900 (ModalScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

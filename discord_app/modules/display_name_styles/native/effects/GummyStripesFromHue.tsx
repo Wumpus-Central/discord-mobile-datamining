@@ -1,14 +1,14 @@
-// === Module 16669: GummyStripesFromHue ===
+// === Module 16701: GummyStripesFromHue ===
 
-// Module 16669 (GummyStripesFromHue)
-import ColorPickerUtils from "ColorPickerUtils" /* 15817 */;
+// Module 16701 (GummyStripesFromHue)
+import ColorPickerUtils from "ColorPickerUtils" /* 15840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 fn(558);
 const __initData = { code: "function GummyStripesFromHueTsx1(){const{hue,shift,hslToRgbWorklet,saturation,lightness}=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:\"rgb(\"+r+\", \"+g+\", \"+b+\")\"};}" };

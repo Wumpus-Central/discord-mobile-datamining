@@ -1,7 +1,7 @@
-// === Module 17015: OpenCaptchaTestModal ===
+// === Module 17047: OpenCaptchaTestModal ===
 
-// Module 17015 (OpenCaptchaTestModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+// Module 17047 (OpenCaptchaTestModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

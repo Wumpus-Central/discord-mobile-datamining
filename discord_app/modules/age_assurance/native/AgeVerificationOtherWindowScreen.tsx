@@ -1,21 +1,21 @@
-// === Module 7946: AgeVerificationOtherWindowScreen ===
+// === Module 7948: AgeVerificationOtherWindowScreen ===
 
-// Module 7946 (AgeVerificationOtherWindowScreen)
+// Module 7948 (AgeVerificationOtherWindowScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3090 from "module_3090" /* 3090 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7051 */;
-import ModalScreen from "ModalScreen" /* 7898 */;
-import ModalContent from "ModalContent" /* 7899 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7053 */;
+import ModalScreen from "ModalScreen" /* 7900 */;
+import ModalContent from "ModalContent" /* 7901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

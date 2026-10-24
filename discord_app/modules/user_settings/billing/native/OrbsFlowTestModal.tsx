@@ -1,18 +1,18 @@
-// === Module 17031: OrbsFlowTestModal ===
+// === Module 17063: OrbsFlowTestModal ===
 
-// Module 17031 (OrbsFlowTestModal)
+// Module 17063 (OrbsFlowTestModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5591 */;
-import LayerScope from "LayerScope" /* 5595 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import HeaderShared from "HeaderShared" /* 9698 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10030 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17032 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17034 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
+import LayerScope from "LayerScope" /* 5597 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import HeaderShared from "HeaderShared" /* 9699 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10031 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17064 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -70,15 +70,15 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9742);
+const NativeStackNavigator = fn(9743);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsFlowTestModal() {
   const cResult = accessibilityNativeStackOptions(576).c(5);
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7093).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7095).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n(navigation) {
       const obj = {

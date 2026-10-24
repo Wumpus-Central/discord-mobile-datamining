@@ -1,16 +1,16 @@
-// === Module 17085: CreateBugReportSetting ===
+// === Module 17117: CreateBugReportSetting ===
 
-// Module 17085 (CreateBugReportSetting)
+// Module 17117 (CreateBugReportSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1373 */;
-import BugReportManagerDefault from "BugReportManager" /* 13773 */;
+import BugReportManagerDefault from "BugReportManager" /* 13793 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateBugReportSettingToggleValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(16884).WrenchIcon,
+  IconComponent: fn(16916).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -69,7 +69,7 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(17078).useBugReporterExperimentSettingPredicate
+  usePredicate: fn(17110).useBugReporterExperimentSettingPredicate
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

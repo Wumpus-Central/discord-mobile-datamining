@@ -1,15 +1,15 @@
-// === Module 12981: FinalizeTraitTabs ===
+// === Module 13018: FinalizeTraitTabs ===
 
-// Module 12981 (FinalizeTraitTabs)
+// Module 13018 (FinalizeTraitTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import CheckpointPressable from "CheckpointPressable" /* 12969 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12983 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import CheckpointPressable from "CheckpointPressable" /* 13006 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13020 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,13 +18,13 @@ const CheckpointPressableDefault = CheckpointPressable;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6013);
+const CheckpointConstants = fn(6015);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [fn(6360).CheckpointCustomizationOption.BASE, fn(6360).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(6362).CheckpointCustomizationOption.BASE, fn(6362).CheckpointCustomizationOption.OUTFIT_COLOR];
 let closure_10 = items.length + 1;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 }, row: null, tabContainerActive: null, tab: null, tabActive: null, tabDisabled: null, tabLabel: null, tabLabelActive: null, tabLabelDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -253,7 +253,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
   dependencyMap = tmp4;
   closure_3 = tmp5;
   const tmp6 = closure_11();
-  const tmp7 = activeCustomizationOption(6360).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
+  const tmp7 = activeCustomizationOption(6362).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
   closure_4 = tmp7;
   if (cResult[0] === tmp7) {
     if (cResult[1] === tmp4) {
@@ -269,7 +269,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
       } else {
         tmp10 = cResult[5];
       }
-      const token = tmp(5250).useToken("text-subtle");
+      const token = tmp(5252).useToken("text-subtle");
       let tmp15 = token;
       if (!tmp4) {
         tmp15 = token;
@@ -321,7 +321,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
                                 }
                                 if (cResult[28] !== tmp15) {
                                   let obj2 = { color: tmp15, size: "xs" };
-                                  const tmp35 = closure_7(tmp(11075).ChevronSmallDownIcon, obj2);
+                                  const tmp35 = closure_7(tmp(11076).ChevronSmallDownIcon, obj2);
                                   cResult[28] = tmp15;
                                   cResult[29] = tmp35;
                                   let tmp33 = tmp35;
@@ -396,8 +396,8 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
                               const intl = tmp(1128).intl;
                               let stringResult1 = intl.string(onSelectOption(3088)["iXpQc+"]);
                             } else {
-                              stringResult1 = tmp(6360).getCustomizationOptionName(activeCustomizationOption);
-                              const tmpResult7 = tmp(6360);
+                              stringResult1 = tmp(6362).getCustomizationOptionName(activeCustomizationOption);
+                              const tmpResult7 = tmp(6362);
                             }
                             cResult[23] = activeCustomizationOption;
                             cResult[24] = tmp13;
@@ -437,7 +437,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
                   showNitroLockedToastDefault(closure_4);
                 } else {
                   const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-                  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12982, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+                  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13019, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
                 }
               }
             }
@@ -466,14 +466,14 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
       cResult[9] = onSelectOption;
       cResult[10] = handleSelectOption;
       tmp18 = handleSelectOption;
-      const tmpResult = tmp(5250);
+      const tmpResult = tmp(5252);
     }
   }
   let nitroLockedMessage;
   if (tmp4) {
     if (!tmp5) {
-      nitroLockedMessage = tmp(12983).getNitroLockedMessage(tmp7);
-      const tmpResult8 = tmp(12983);
+      nitroLockedMessage = tmp(13020).getNitroLockedMessage(tmp7);
+      const tmpResult8 = tmp(13020);
     }
   }
   cResult[0] = tmp7;
@@ -580,7 +580,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled() ? 
         showNitroLockedToastDefault(closure_4);
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12982, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13019, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
       }
     }
   };

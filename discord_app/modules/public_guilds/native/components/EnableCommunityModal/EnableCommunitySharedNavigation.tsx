@@ -1,9 +1,9 @@
-// === Module 19133: EnableCommunitySharedNavigation ===
+// === Module 19161: EnableCommunitySharedNavigation ===
 
-// Module 19133 (EnableCommunitySharedNavigation)
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19131 */;
+// Module 19161 (EnableCommunitySharedNavigation)
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19159 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9005 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 let GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, height: "100%" }, modal: { height: "100%", flex: 1, justifyContent: "space-between" }, button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 } });
 let obj2 = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
 const ReactCompilerGating = fn(558);

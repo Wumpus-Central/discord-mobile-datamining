@@ -1,6 +1,6 @@
-// === Module 18417: getAdjustedBottomOffsets ===
+// === Module 18449: getAdjustedBottomOffsets ===
 
-// Module 18417 (getAdjustedBottomOffsets)
+// Module 18449 (getAdjustedBottomOffsets)
 import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 

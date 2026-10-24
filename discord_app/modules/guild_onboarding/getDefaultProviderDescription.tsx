@@ -1,6 +1,6 @@
-// === Module 7269: getDefaultProviderDescription ===
+// === Module 7271: getDefaultProviderDescription ===
 
-// Module 7269 (getDefaultProviderDescription)
+// Module 7271 (getDefaultProviderDescription)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;

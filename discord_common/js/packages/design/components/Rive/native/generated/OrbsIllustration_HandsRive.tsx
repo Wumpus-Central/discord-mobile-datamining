@@ -1,9 +1,9 @@
-// === Module 5127: OrbsIllustration_HandsRive ===
+// === Module 5129: OrbsIllustration_HandsRive ===
 
-// Module 5127 (OrbsIllustration_HandsRive)
+// Module 5129 (OrbsIllustration_HandsRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 5044 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5098 */;
+import BaseRive from "BaseRive" /* 5046 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5100 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,9 +93,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsIl
           }
         }
       }
-      obj2 = { ref: tmp6, src: require("module_5128"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
+      obj2 = { ref: tmp6, src: require("module_5130"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
       let merged = Object.assign(tmp7);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5128"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
+      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5130"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

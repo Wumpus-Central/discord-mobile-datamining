@@ -1,6 +1,6 @@
-// === Module 6014: CheckpointTraitRarity ===
+// === Module 6016: CheckpointTraitRarity ===
 
-// Module 6014 (CheckpointTraitRarity)
+// Module 6016 (CheckpointTraitRarity)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx");

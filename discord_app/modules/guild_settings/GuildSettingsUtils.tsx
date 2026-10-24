@@ -1,9 +1,9 @@
-// === Module 19098: GuildSettingsUtils ===
+// === Module 19126: GuildSettingsUtils ===
 
-// Module 19098 (GuildSettingsUtils)
+// Module 19126 (GuildSettingsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4876 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18248 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4878 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18280 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

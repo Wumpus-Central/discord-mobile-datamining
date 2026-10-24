@@ -1,22 +1,22 @@
-// === Module 16313: BountiesScrollRecapFooter ===
+// === Module 16337: BountiesScrollRecapFooter ===
 
-// Module 16313 (BountiesScrollRecapFooter)
+// Module 16337 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5101 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7072 */;
-import OrbsIcon from "OrbsIcon" /* 9428 */;
+import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5103 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7074 */;
+import OrbsIcon from "OrbsIcon" /* 9429 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, headerLabel: { textTransform: "uppercase" }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };

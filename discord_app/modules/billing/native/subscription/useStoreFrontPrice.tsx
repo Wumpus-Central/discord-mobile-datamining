@@ -1,6 +1,6 @@
-// === Module 9799: useStoreFrontPrice ===
+// === Module 9800: useStoreFrontPrice ===
 
-// Module 9799 (useStoreFrontPrice)
+// Module 9800 (useStoreFrontPrice)
 import c from "c" /* 576 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
 import noop from "module_19" /* 19 */;

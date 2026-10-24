@@ -1,20 +1,20 @@
-// === Module 13842: useConjureAppChannelSheet ===
+// === Module 13861: useConjureAppChannelSheet ===
 
-// Module 13842 (useConjureAppChannelSheet)
+// Module 13861 (useConjureAppChannelSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import UserUtils from "UserUtils" /* 5023 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13843 */;
+import UserUtils from "UserUtils" /* 5025 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13862 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (arg1) {
     tmp5 = guild_id;
   }
-  const appChannelApplication = guild_id(7344).useAppChannelApplication(tmp5);
+  const appChannelApplication = guild_id(7346).useAppChannelApplication(tmp5);
   let tmp7 = null;
   if (arg1) {
     let conjureProjectId;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  const tmpResult = guild_id(7344);
+  const tmpResult = guild_id(7346);
   const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
   let tmp16 = null != tmp7;
   const tmpResult3 = guild_id(504);
@@ -148,9 +148,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     let formatToPlainStringResult;
     if (null != creator) {
       const intl = tmp(1128).intl;
-      const obj5 = { name: tmp(5023).getName(creator) };
+      const obj5 = { name: tmp(5025).getName(creator) };
       formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj5);
-      const tmpResult4 = tmp(5023);
+      const tmpResult4 = tmp(5025);
     }
     obj3.subtitle = formatToPlainStringResult;
     tmp20 = obj3;

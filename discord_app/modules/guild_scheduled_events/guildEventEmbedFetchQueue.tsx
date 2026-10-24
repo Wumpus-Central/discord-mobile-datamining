@@ -1,6 +1,6 @@
-// === Module 8893: guildEventEmbedFetchQueue ===
+// === Module 8895: guildEventEmbedFetchQueue ===
 
-// Module 8893 (guildEventEmbedFetchQueue)
+// Module 8895 (guildEventEmbedFetchQueue)
 import size from "module_2" /* 2 */;
 
 class GuildEventEmbedFetchQueueError extends Error {

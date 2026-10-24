@@ -1,16 +1,16 @@
-// === Module 13065: ForumPostMedia ===
+// === Module 13102: ForumPostMedia ===
 
-// Module 13065 (ForumPostMedia)
+// Module 13102 (ForumPostMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1498 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import shared from "shared" /* 4976 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5584 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10994 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 13066 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13068 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import shared from "shared" /* 4978 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5586 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10995 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 13103 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13105 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };
@@ -243,10 +243,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     if (cResult[0] !== isMediaPost) {
       const obj2 = {};
       const merged = Object.assign(isMediaPost);
-      const tmp29 = closure_9(ref(13067), obj2);
+      const tmp29 = closure_9(ref(13104), obj2);
       cResult[0] = isMediaPost;
       cResult[1] = tmp29;
-      const tmp25 = ref(13067);
+      const tmp25 = ref(13104);
     }
   } else {
     if (tmpResult.isAndroid()) {
@@ -272,7 +272,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
       tmp8 = cResult[5];
     }
     if (null != isMediaPost.obscureReason) {
-      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7392).AGE_VERIFICATION_OBSCURABLE_REASONS;
+      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7394).AGE_VERIFICATION_OBSCURABLE_REASONS;
       if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(isMediaPost.obscureReason)) {
         if (tmp7) {
           if (cResult[6] === isMediaPost.containerStyle) {
@@ -310,7 +310,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
                 }
               }
               const obj5 = { androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, activeOpacity: 0, onPress: M, children: tmp8 };
-              const tmp38 = closure_9(tmp(6906).PressableOpacity, obj5);
+              const tmp38 = closure_9(tmp(6908).PressableOpacity, obj5);
               cResult[10] = tmp8;
               cResult[11] = tmp38;
             } else {
@@ -385,9 +385,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(13067), obj2);
+    let tmp6Result = closure_9(ref(13104), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(13067);
+    const tmp19 = ref(13104);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -403,7 +403,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     tmp3Result = tmp3(1384);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7392).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7394).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -414,12 +414,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7881);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6655).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7883);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6657).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(6906).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(6908).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -443,7 +443,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(6906).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(6908).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };

@@ -1,15 +1,15 @@
-// === Module 16529: UserSettingsGuildRoleSubscriptions ===
+// === Module 16561: UserSettingsGuildRoleSubscriptions ===
 
-// Module 16529 (UserSettingsGuildRoleSubscriptions)
+// Module 16561 (UserSettingsGuildRoleSubscriptions)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 16530 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 16531 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16532 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 16535 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 16536 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 16562 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 16563 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16564 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 16567 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 16568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionsSectionHeader() {

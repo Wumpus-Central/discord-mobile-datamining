@@ -1,6 +1,6 @@
-// === Module 6823: autocompleter/AutocompleterConstants ===
+// === Module 6825: autocompleter/AutocompleterConstants ===
 
-// Module 6823 (autocompleter/AutocompleterConstants)
+// Module 6825 (autocompleter/AutocompleterConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");

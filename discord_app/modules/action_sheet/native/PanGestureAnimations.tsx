@@ -1,9 +1,9 @@
-// === Module 11708: PanGestureAnimations ===
+// === Module 11728: PanGestureAnimations ===
 
-// Module 11708 (PanGestureAnimations)
+// Module 11728 (PanGestureAnimations)
 import native from "native" /* 1202 */;
-import timing from "timing" /* 5204 */;
-import spring from "spring" /* 5245 */;
+import timing from "timing" /* 5206 */;
+import spring from "spring" /* 5247 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

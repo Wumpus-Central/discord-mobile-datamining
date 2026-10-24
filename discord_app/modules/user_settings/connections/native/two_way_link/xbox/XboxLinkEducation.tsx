@@ -1,15 +1,15 @@
-// === Module 14048: XboxLinkEducation ===
+// === Module 14067: XboxLinkEducation ===
 
-// Module 14048 (XboxLinkEducation)
+// Module 14067 (XboxLinkEducation)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9618 */;
-import _modDef14049 from "module_14049" /* 14049 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9619 */;
+import _modDef14068 from "module_14068" /* 14068 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj10 = { uri: _modDef14049 };
+    const obj10 = { uri: _modDef14068 };
     cResult[16] = obj10;
     let tmp18 = obj10;
   } else {
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14049 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14068 }), []);
   const items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

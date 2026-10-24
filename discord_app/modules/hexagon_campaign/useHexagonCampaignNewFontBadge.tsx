@@ -1,18 +1,18 @@
-// === Module 15837: useHexagonCampaignNewFontBadge ===
+// === Module 15861: useHexagonCampaignNewFontBadge ===
 
-// Module 15837 (useHexagonCampaignNewFontBadge)
+// Module 15861 (useHexagonCampaignNewFontBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4997 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 15828 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4999 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 15851 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15838 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15618 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15862 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15638 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(4994);
+const HexagonCampaignConstants = fn(4996);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty, HexagonCampaignPerk: metroRequire, HexagonCampaignPerkAvailability: closure_7 } = HexagonCampaignConstants);
 fn(558);
 let ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 17244: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 17276: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 17244 (useAllowFriendsFromMutualGuildsOnly)
+// Module 17276 (useAllowFriendsFromMutualGuildsOnly)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7089 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCo
   }
   return tmp5.mutualGuilds && !tmp5.all;
 }) : (function useAllowFriendsFromMutualGuildsOnly() {
-  const FriendSourceFlagsSetting = setting(4797).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(4799).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);

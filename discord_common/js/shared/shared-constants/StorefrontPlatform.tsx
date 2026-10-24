@@ -1,6 +1,6 @@
-// === Module 10573: StorefrontPlatform ===
+// === Module 10574: StorefrontPlatform ===
 
-// Module 10573 (StorefrontPlatform)
+// Module 10574 (StorefrontPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/StorefrontPlatform.tsx");

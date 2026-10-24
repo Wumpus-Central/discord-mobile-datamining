@@ -1,6 +1,6 @@
-// === Module 14619: AndroidTwoWeekTrialsExperiment ===
+// === Module 14642: AndroidTwoWeekTrialsExperiment ===
 
-// Module 14619 (AndroidTwoWeekTrialsExperiment)
+// Module 14642 (AndroidTwoWeekTrialsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

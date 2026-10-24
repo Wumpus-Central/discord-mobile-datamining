@@ -1,9 +1,9 @@
-// === Module 12939: CheckpointStatNumber ===
+// === Module 12976: CheckpointStatNumber ===
 
-// Module 12939 (CheckpointStatNumber)
+// Module 12976 (CheckpointStatNumber)
 import c from "c" /* 576 */;
-import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5115 */;
-import CheckpointTextDefault from "CheckpointText" /* 12930 */;
+import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5117 */;
+import CheckpointTextDefault from "CheckpointText" /* 12967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,12 +21,12 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6013).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6015).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 2.5675675675675675;
 let c8 = 28.7;
 let closure_9 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_10 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 const ReactCompilerGating = fn(558);
 function getCheckpointStatNumberWidth(end) {

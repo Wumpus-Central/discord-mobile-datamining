@@ -1,12 +1,12 @@
-// === Module 13289: EmojiSuggestionChatButton ===
+// === Module 13326: EmojiSuggestionChatButton ===
 
-// Module 13289 (EmojiSuggestionChatButton)
+// Module 13326 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import spring from "spring" /* 5245 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5295 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13285 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import spring from "spring" /* 5247 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -14,11 +14,11 @@ import ThemeStore from "ThemeStore" /* 1207 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = { swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical }, wrapper: { height, width: height }, glyphOverlay: null, glyphButton: null, image: null, surrogates: null };
   const obj2 = {};

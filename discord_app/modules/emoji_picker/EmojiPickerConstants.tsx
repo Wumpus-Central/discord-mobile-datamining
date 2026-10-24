@@ -1,11 +1,11 @@
-// === Module 6726: EmojiPickerConstants ===
+// === Module 6728: EmojiPickerConstants ===
 
-// Module 6726 (EmojiPickerConstants)
+// Module 6728 (EmojiPickerConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");
 
-export const EmojiCategoryTypes = { GUILD: "GUILD", UNICODE: "UNICODE", RECENT: "RECENT", CUSTOM: "CUSTOM", SEARCH_RESULTS: "SEARCH_RESULTS", FAVORITES: "FAVORITES", TOP_GUILD_EMOJI: "TOP_GUILD_EMOJI", PREMIUM_UPSELL: "PREMIUM_UPSELL", SUGGESTED: "SUGGESTED" };
+export const EmojiCategoryTypes = { GUILD: "GUILD", UNICODE: "UNICODE", RECENT: "RECENT", CUSTOM: "CUSTOM", PACK: "PACK", SEARCH_RESULTS: "SEARCH_RESULTS", FAVORITES: "FAVORITES", TOP_GUILD_EMOJI: "TOP_GUILD_EMOJI", PREMIUM_UPSELL: "PREMIUM_UPSELL", SUGGESTED: "SUGGESTED" };
 export const GRID_NAVIGATOR_ID = "emoji-picker-grid";
 export const EmojiCategories = { RECENT: "recent", FAVORITES: "favorites", TOP_GUILD_EMOJI: "top guild emoji", CUSTOM: "custom", PEOPLE: "people", NATURE: "nature", FOOD: "food", ACTIVITY: "activity", TRAVEL: "travel", OBJECTS: "objects", SYMBOLS: "symbols", FLAGS: "flags", PREMIUM_UPSELL: "premium emoji", SUGGESTED: "suggested" };
 export const EmojiSubCategory = { NONE: "", TOP_GUILD_EMOJI: "top_server", NEWLY_ADDED_EMOJI: "newly_added" };

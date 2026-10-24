@@ -1,17 +1,17 @@
-// === Module 17302: VEVOOPropBlurAmount ===
+// === Module 17334: VEVOOPropBlurAmount ===
 
-// Module 17302 (VEVOOPropBlurAmount)
+// Module 17334 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
-import FormSwitch from "FormSwitch" /* 7294 */;
-import Form from "Form" /* 8949 */;
+import FormSwitch from "FormSwitch" /* 7296 */;
+import Form from "Form" /* 8951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VEVOOStore = fn(5585);
+const VEVOOStore = fn(5587);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -34,38 +34,103 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   dependencyMap = tmp5Result[1];
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function h(blurAmountOverride) {
-      if (null != blurAmountOverride) {
-        closure_2(blurAmountOverride);
+    class O {
+      constructor(arg0) {
+        if (null != arg0) {
+          tmp = closure_2;
+          tmp2 = closure_2(arg0);
+        }
+        obj = {};
+        merged = Object.assign(closure_5());
+        obj.blurAmountOverride = arg0;
+        tmp4 = closure_6(obj);
+        return;
       }
-      const obj = {};
-      const merged = Object.assign(hasOwnProperty());
-      obj.blurAmountOverride = blurAmountOverride;
-      timestampProducer(obj);
-    };
-    cResult[1] = fn;
-    let tmp13 = fn;
-  } else {
-    tmp13 = cResult[1];
-  }
-  _slicedToArray = tmp13;
-  if (cResult[2] !== first1) {
-    let str;
-    if (first1 != null) {
-      str = first1.toFixed(3);
     }
-    if (str == null) {
-      str = "";
+    cResult[1] = O;
+  } else {
+    class O {
+      constructor(arg0) {
+        if (null != arg0) {
+          tmp = closure_2;
+          tmp2 = closure_2(arg0);
+        }
+        obj = {};
+        merged = Object.assign(closure_5());
+        obj.blurAmountOverride = arg0;
+        tmp4 = closure_6(obj);
+        return;
+      }
+    }
+  }
+  _slicedToArray = O;
+  if (cResult[2] !== first1) {
+    class O {
+      constructor(arg0) {
+        if (null != arg0) {
+          tmp = closure_2;
+          tmp2 = closure_2(arg0);
+        }
+        obj = {};
+        merged = Object.assign(closure_5());
+        obj.blurAmountOverride = arg0;
+        tmp4 = closure_6(obj);
+        return;
+      }
+    }
+    let toFixedResult;
+    if (first1 != null) {
+      class O {
+        constructor(arg0) {
+          if (null != arg0) {
+            tmp = closure_2;
+            tmp2 = closure_2(arg0);
+          }
+          obj = {};
+          merged = Object.assign(closure_5());
+          obj.blurAmountOverride = arg0;
+          tmp4 = closure_6(obj);
+          return;
+        }
+      }
+      toFixedResult = first1.toFixed(3);
+    }
+    if (toFixedResult == null) {
+      class O {
+        constructor(arg0) {
+          if (null != arg0) {
+            tmp = closure_2;
+            tmp2 = closure_2(arg0);
+          }
+          obj = {};
+          merged = Object.assign(closure_5());
+          obj.blurAmountOverride = arg0;
+          tmp4 = closure_6(obj);
+          return;
+        }
+      }
     }
     cResult[2] = first1;
-    cResult[3] = str;
-    let tmp14 = str;
+    cResult[3] = toFixedResult;
+    const tmp14 = toFixedResult;
   } else {
-    tmp14 = cResult[3];
+    class O {
+      constructor(arg0) {
+        if (null != arg0) {
+          tmp = closure_2;
+          tmp2 = closure_2(arg0);
+        }
+        obj = {};
+        merged = Object.assign(closure_5());
+        obj.blurAmountOverride = arg0;
+        tmp4 = closure_6(obj);
+        return;
+      }
+    }
   }
   const combined = "Blur Amount " + tmp14;
   if (cResult[4] !== first1) {
-    class E {
+    class C {
       constructor(arg0) {
         tmp = closure_0(arg0);
         tmp3 = undefined;
@@ -78,9 +143,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     cResult[4] = first1;
-    cResult[5] = E;
+    cResult[5] = C;
   } else {
-    class E {
+    class C {
       constructor(arg0) {
         tmp = closure_0(arg0);
         tmp3 = undefined;
@@ -94,7 +159,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   if (cResult[6] === tmp7) {
-    class E {
+    class C {
       constructor(arg0) {
         tmp = closure_0(arg0);
         tmp3 = undefined;
@@ -107,7 +172,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     if (cResult[9] === !tmp7) {
-      class E {
+      class C {
         constructor(arg0) {
           tmp = closure_0(arg0);
           tmp3 = undefined;
@@ -120,7 +185,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       if (cResult[12] === tmp4.enabledSwitchStyle) {
-        class E {
+        class C {
           constructor(arg0) {
             tmp = closure_0(arg0);
             tmp3 = undefined;
@@ -142,15 +207,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[16] = !tmp7;
       cResult[17] = tmp29;
     }
-    const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
-    const tmp25 = jsx(first1(17303), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
+    const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: O, accessibilityLabel: "Blur Amount" };
+    const tmp25 = jsx(first1(17335), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: O, accessibilityLabel: "Blur Amount" });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
   }
-  const tmp19 = jsx(FormSwitch.FormSwitch, { value: tmp7, onValueChange: E });
+  const tmp19 = jsx(FormSwitch.FormSwitch, { value: tmp7, onValueChange: C });
   cResult[6] = tmp7;
-  cResult[7] = E;
+  cResult[7] = C;
   cResult[8] = tmp19;
   ref = noop.useRef(first1);
 }) : (function VEVOOPropBlurAmount() {
@@ -205,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(17303), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(17335), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

@@ -1,17 +1,17 @@
-// === Module 18010: conjureBackgroundFrames ===
+// === Module 18042: conjureBackgroundFrames ===
 
-// Module 18010 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6776 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10727 */;
-import leaveFrame from "leaveFrame" /* 10764 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10765 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15683 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18011 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18013 */;
+// Module 18042 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6778 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10728 */;
+import leaveFrame from "leaveFrame" /* 10765 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10766 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15704 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18043 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18045 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6773 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import FramesStore from "FramesStore" /* 6775 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6774);
+const FramesConstants = fn(6776);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

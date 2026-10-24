@@ -1,14 +1,15 @@
-// === Module 12452: ConjurePublishCtaCard ===
+// === Module 12486: ConjurePublishCtaCard ===
 
-// Module 12452 (ConjurePublishCtaCard)
+// Module 12486 (ConjurePublishCtaCard)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11847 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12260 */;
-import conjurePublishCard from "conjurePublishCard" /* 12278 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12453 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12454 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11873 */;
+import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12286 */;
+import conjurePublishCard from "conjurePublishCard" /* 12304 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12487 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12488 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePublishActionDefault = useConjurePublishAction;
@@ -21,7 +22,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   const cResult = projectId(576).c(7);
   projectId = projectId.projectId;
   const publish = projectId.publish;
-  const context = noop.useContext(projectId(11847).ConjurePublishActionContext);
+  const context = noop.useContext(projectId(11873).ConjurePublishActionContext);
   if (cResult[0] === context) {
     if (cResult[1] === projectId) {
       let tmp6 = cResult[2];
@@ -36,8 +37,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
     }
     const obj2 = { direction: "horizontal", children: null };
     const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: tmp5, onPress: tmp6 };
-    obj2.children = closure_4(tmp(5242).Button, obj3);
-    const tmp9 = closure_4(tmp(5975).Stack, obj2);
+    obj2.children = closure_4(tmp(5244).Button, obj3);
+    const tmp9 = closure_4(tmp(5977).Stack, obj2);
     cResult[3] = publish.label;
     cResult[4] = tmp5;
     cResult[5] = tmp6;
@@ -88,23 +89,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       }
     }
   }
-  let tmp8Result2 = null;
+  let tmp8Result4 = null;
   if (null != tmp5) {
-    tmp8Result2 = null;
+    tmp8Result4 = null;
     if (tmpResult.isConjurePublishCtaVisible(tmp5, cta)) {
       const obj2 = { projectId, publish: tmp5 };
-      const items = [React4(closure_6, obj2), ];
+      const items = [React4(closure_6, obj2), , ];
       let tmp8Result = null;
-      if (null != turnId) {
-        const obj3 = { projectId, turnId, cta, status: tmp5.status };
-        tmp8Result = React4(ConjurePublishRatingDefault, obj3, turnId);
+      if (null != tmp5.failure) {
+        const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp5.failure };
+        tmp8Result = React4(Text_Text.Text, obj3);
       }
-      const obj4 = { children: null };
-      const obj5 = { spacing: 12, children: null };
       items[1] = tmp8Result;
-      obj5.children = items;
-      obj4.children = hasOwnProperty(Stack_Stack.Stack, obj5);
-      tmp8Result2 = React4(ConjureTipInlineCalloutDefault, obj4);
+      let tmp8Result3 = null;
+      if (null != turnId) {
+        const obj4 = { projectId, turnId, cta, status: tmp5.status };
+        tmp8Result3 = React4(ConjurePublishRatingDefault, obj4, turnId);
+      }
+      const obj5 = { children: null };
+      const obj6 = { spacing: 12, children: null };
+      items[2] = tmp8Result3;
+      obj6.children = items;
+      obj5.children = hasOwnProperty(Stack_Stack.Stack, obj6);
+      tmp8Result4 = React4(ConjureTipInlineCalloutDefault, obj5);
       const tmp4Result = ConjureTipInlineCalloutDefault;
     }
     tmpResult = conjurePublishCard;
@@ -113,31 +120,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   cResult[1] = projectId;
   cResult[2] = tmp5;
   cResult[3] = turnId;
-  cResult[4] = tmp8Result2;
-  tmp6 = tmp8Result2;
+  cResult[4] = tmp8Result4;
+  tmp6 = tmp8Result4;
 }) : (function ConjurePublishCtaCard(arg0) {
   ({ projectId, turnId, cta } = arg0);
   const tmp3 = useConjurePublishActionDefault(projectId);
-  let tmp6Result2 = null;
+  let tmp6Result4 = null;
   if (null != tmp3) {
-    tmp6Result2 = null;
+    tmp6Result4 = null;
     if (obj.isConjurePublishCtaVisible(tmp3, cta)) {
       const obj2 = { projectId, publish: tmp3 };
-      const items = [React4(closure_6, obj2), ];
+      const items = [React4(closure_6, obj2), , ];
       let tmp6Result = null;
-      if (null != turnId) {
-        const obj3 = { projectId, turnId, cta, status: tmp3.status };
-        tmp6Result = React4(ConjurePublishRatingDefault, obj3, turnId);
+      if (null != tmp3.failure) {
+        const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
+        tmp6Result = React4(Text_Text.Text, obj3);
       }
-      const obj4 = { children: null };
-      const obj5 = { spacing: 12, children: null };
       items[1] = tmp6Result;
-      obj5.children = items;
-      obj4.children = hasOwnProperty(Stack_Stack.Stack, obj5);
-      tmp6Result2 = React4(ConjureTipInlineCalloutDefault, obj4);
+      let tmp6Result3 = null;
+      if (null != turnId) {
+        const obj4 = { projectId, turnId, cta, status: tmp3.status };
+        tmp6Result3 = React4(ConjurePublishRatingDefault, obj4, turnId);
+      }
+      const obj5 = { children: null };
+      const obj6 = { spacing: 12, children: null };
+      items[2] = tmp6Result3;
+      obj6.children = items;
+      obj5.children = hasOwnProperty(Stack_Stack.Stack, obj6);
+      tmp6Result4 = React4(ConjureTipInlineCalloutDefault, obj5);
       const tmpResult = ConjureTipInlineCalloutDefault;
     }
     obj = conjurePublishCard;
   }
-  return tmp6Result2;
+  return tmp6Result4;
 });

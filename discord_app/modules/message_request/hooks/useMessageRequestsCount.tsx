@@ -1,9 +1,9 @@
-// === Module 18303: useMessageRequestsCount ===
+// === Module 18335: useMessageRequestsCount ===
 
-// Module 18303 (useMessageRequestsCount)
+// Module 18335 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import MessageRequestStore from "MessageRequestStore" /* 6783 */;
+import MessageRequestStore from "MessageRequestStore" /* 6785 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

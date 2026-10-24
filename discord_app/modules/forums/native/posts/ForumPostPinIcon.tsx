@@ -1,16 +1,16 @@
-// === Module 13058: ForumPostPinIcon ===
+// === Module 13095: ForumPostPinIcon ===
 
-// Module 13058 (ForumPostPinIcon)
+// Module 13095 (ForumPostPinIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _modDef13059 from "module_13059" /* 13059 */;
+import _modDef13096 from "module_13096" /* 13096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { pin: null, pinIcon: null };
 let size = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.pin = size;
@@ -30,8 +30,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.pinIcon) {
-      const obj2 = { source: _modDef13059, style: tmp4.pinIcon };
-      const tmp9 = jsx(native.Icon, { source: _modDef13059, style: tmp4.pinIcon });
+      const obj2 = { source: _modDef13096, style: tmp4.pinIcon };
+      const tmp9 = jsx(native.Icon, { source: _modDef13096, style: tmp4.pinIcon });
       cResult[3] = tmp4.pinIcon;
       cResult[4] = tmp9;
       let tmp6 = tmp9;
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   tmp5 = items;
 }) : (function ForumPostPinIcon(containerStyle) {
   const tmp = closure_5();
-  const obj = { style: null, children: jsx(native.Icon, { source: _modDef13059, style: tmp.pinIcon }) };
+  const obj = { style: null, children: jsx(native.Icon, { source: _modDef13096, style: tmp.pinIcon }) };
   const items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  return <View style={null}>{jsx(native.Icon, { source: _modDef13059, style: tmp.pinIcon })}</View>;
+  return <View style={null}>{jsx(native.Icon, { source: _modDef13096, style: tmp.pinIcon })}</View>;
 });

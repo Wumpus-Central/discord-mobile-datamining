@@ -1,15 +1,15 @@
-// === Module 13056: ForumChannelStore ===
+// === Module 13093: ForumChannelStore ===
 
-// Module 13056 (ForumChannelStore)
+// Module 13093 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8293 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8295 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let set = new Set();
-let obj = { layoutType: fn(4831).ForumLayout.LIST, sortOrder: fn(4830).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(4832).ThreadSearchTagSetting.MATCH_SOME };
+let obj = { layoutType: fn(4833).ForumLayout.LIST, sortOrder: fn(4832).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(4834).ThreadSearchTagSetting.MATCH_SOME };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
   obj.channelStates = {};

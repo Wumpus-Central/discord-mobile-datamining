@@ -1,16 +1,16 @@
-// === Module 18019: useChannelAppFrameTeardown ===
+// === Module 18051: useChannelAppFrameTeardown ===
 
-// Module 18019 (useChannelAppFrameTeardown)
-import leaveFrame from "leaveFrame" /* 10764 */;
+// Module 18051 (useChannelAppFrameTeardown)
+import leaveFrame from "leaveFrame" /* 10765 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import FramesStore from "FramesStore" /* 6773 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import FramesStore from "FramesStore" /* 6775 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(6774).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6776).getFrameSurfaceForChannel;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

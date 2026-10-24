@@ -1,20 +1,20 @@
-// === Module 17723: GuildsBarFavorites ===
+// === Module 17755: GuildsBarFavorites ===
 
-// Module 17723 (GuildsBarFavorites)
+// Module 17755 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import StarIcon from "StarIcon" /* 9948 */;
-import FavoritesHooks from "FavoritesHooks" /* 10841 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17526 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17706 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17709 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17721 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17724 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17725 */;
+import StarIcon from "StarIcon" /* 9949 */;
+import FavoritesHooks from "FavoritesHooks" /* 10842 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17558 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17738 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17741 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17753 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17756 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17757 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4824 */;
+import FavoriteStore from "FavoriteStore" /* 4826 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17721)(closure_1_5);
+      closure_1_1(17753)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17526)();
+      closure_1_1(17558)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {
@@ -169,7 +169,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 0, externalChildren: null, expandedChildren: null, children: null };
+  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: null, expandedChildren: null, children: null };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
   obj4.label = intl.string(util.t.wMWyci);
@@ -177,5 +177,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.expandedChildren = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(StarIcon.StarIcon, { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 0, externalChildren: null, expandedChildren: null, children: null });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: null, expandedChildren: null, children: null });
 }));

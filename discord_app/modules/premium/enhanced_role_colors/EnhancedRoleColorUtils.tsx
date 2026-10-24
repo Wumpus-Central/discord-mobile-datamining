@@ -1,6 +1,6 @@
-// === Module 4878: EnhancedRoleColorUtils ===
+// === Module 4880: EnhancedRoleColorUtils ===
 
-// Module 4878 (EnhancedRoleColorUtils)
+// Module 4880 (EnhancedRoleColorUtils)
 import Constants from "Constants" /* 1087 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import size from "module_2" /* 2 */;

@@ -1,7 +1,7 @@
-// === Module 18008: useFrame ===
+// === Module 18040: useFrame ===
 
-// Module 18008 (useFrame)
-import FramesStore from "FramesStore" /* 6773 */;
+// Module 18040 (useFrame)
+import FramesStore from "FramesStore" /* 6775 */;
 
 const require = globalThis.__r;
 

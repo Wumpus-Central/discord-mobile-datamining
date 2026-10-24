@@ -1,6 +1,6 @@
-// === Module 7710: TieredTenureBadgeUtils ===
+// === Module 7712: TieredTenureBadgeUtils ===
 
-// Module 7710 (TieredTenureBadgeUtils)
+// Module 7712 (TieredTenureBadgeUtils)
 import _modDef2049 from "module_2049" /* 2049 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;

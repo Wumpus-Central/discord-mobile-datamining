@@ -1,14 +1,14 @@
-// === Module 12993: CheckpointNavigationControls ===
+// === Module 13030: CheckpointNavigationControls ===
 
-// Module 12993 (CheckpointNavigationControls)
+// Module 13030 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1087 */;
-import CheckpointTextDefault from "CheckpointText" /* 12930 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12983 */;
+import CheckpointTextDefault from "CheckpointText" /* 12967 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13020 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6013 */;
+import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4969 */;
+import createStyles from "createStyles" /* 4971 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -48,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (cResult[0] !== nextBlockedTrait) {
     let nitroLockedMessage;
     if (null != nextBlockedTrait) {
-      nitroLockedMessage = onNext(12983).getNitroLockedMessage(nextBlockedTrait);
-      const tmpResult = onNext(12983);
+      nitroLockedMessage = onNext(13020).getNitroLockedMessage(nextBlockedTrait);
+      const tmpResult = onNext(13020);
     }
     cResult[0] = nextBlockedTrait;
     cResult[1] = nitroLockedMessage;
@@ -73,19 +73,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               if (cResult[12] === tmp13) {
                 let tmp14 = cResult[13];
               }
-              onNext(5250);
-              if (cResult[14] !== activeRoute) {
+              const _Symbol = Symbol;
+              const token = onNext(5252).useToken("text-subtle");
+              if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl = onNext(1128).intl;
-                if (activeRoute === onNext(6361).CheckpointRoute.PROFILE_WIDGET) {
-                  let PDTjLN = onNext(1128).t.i4jeWR;
-                } else {
-                  PDTjLN = onNext(1128).t.PDTjLN;
-                }
-                const stringResult = intl.string(PDTjLN);
-                cResult[14] = activeRoute;
-                cResult[15] = stringResult;
-              } else if (cResult[16] !== activeRoute) {
-                if (activeRoute === onNext(6361).CheckpointRoute.FINALIZE_CHARACTER) {
+                const stringResult = intl.string(onNext(1128).t.PDTjLN);
+                cResult[14] = stringResult;
+                let tmp17 = stringResult;
+              } else {
+                tmp17 = cResult[14];
+              }
+              if (cResult[15] !== activeRoute) {
+                if (activeRoute === onNext(6363).CheckpointRoute.FINALIZE_CHARACTER) {
                   const intl3 = onNext(1128).intl;
                   let stringResult1 = intl3.string(onNext(1128).t["R3BPH+"]);
                 } else {
@@ -93,38 +92,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     const intl2 = onNext(1128).intl;
                     stringResult1 = intl2.string(onNext(1128).t.PDTjLN);
                   }
-                  tmpResult4 = onNext(6361);
+                  tmpResult4 = onNext(6363);
                 }
-                cResult[16] = activeRoute;
-                cResult[17] = stringResult1;
-              } else if (activeRoute === onNext(6361).CheckpointRoute.HOME) {
-                if (cResult[18] === tmp14) {
-                  if (cResult[19] === tmp7.homeContainer) {
-                    let tmp71 = cResult[20];
+                cResult[15] = activeRoute;
+                cResult[16] = stringResult1;
+              } else if (activeRoute === onNext(6363).CheckpointRoute.HOME) {
+                if (cResult[17] === tmp14) {
+                  if (cResult[18] === tmp7.homeContainer) {
+                    let tmp68 = cResult[19];
                   }
-                  const _Symbol4 = Symbol;
-                  if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+                  const _Symbol5 = Symbol;
+                  if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl7 = onNext(1128).intl;
                     const stringResult2 = intl7.string(onNext(1128).t.I0v0Qv);
-                    cResult[21] = stringResult2;
-                    let tmp73 = stringResult2;
+                    cResult[20] = stringResult2;
+                    let tmp69 = stringResult2;
                   } else {
-                    tmp73 = cResult[21];
+                    tmp69 = cResult[20];
                   }
-                  if (cResult[22] !== tmp6) {
+                  if (cResult[21] !== tmp6) {
                     const obj2 = { disabled: tmp6 };
-                    cResult[22] = tmp6;
-                    cResult[23] = obj2;
-                    let tmp75 = obj2;
+                    cResult[21] = tmp6;
+                    cResult[22] = obj2;
+                    let tmp71 = obj2;
                   } else {
-                    tmp75 = cResult[23];
+                    tmp71 = cResult[22];
                   }
-                  if (cResult[24] === tmp11) {
-                    if (cResult[25] === tmp6) {
-                      if (cResult[26] === tmp75) {
-                        let tmp76 = cResult[27];
+                  if (cResult[23] === tmp11) {
+                    if (cResult[24] === tmp6) {
+                      if (cResult[25] === tmp71) {
+                        let tmp72 = cResult[26];
                       }
-                      if (cResult[28] !== tmp7.link) {
+                      if (cResult[27] !== tmp7.link) {
                         const intl8 = onNext(1128).intl;
                         const obj4 = {
                           learnMoreHook(children, arg1) {
@@ -132,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                                     variant: "text-sm/medium",
                                                     style: link.link,
                                                     onPress() {
-                                                      const obj = nextBlockedTrait(5658);
+                                                      const obj = nextBlockedTrait(5660);
                                                       return obj.openURL(nextBlockedTrait(2067).getArticleURL(constants.CHECKPOINT));
                                                     },
                                                     accessibilityRole: "link",
@@ -141,293 +140,297 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                                 }
                         };
                         const formatResult = intl8.format(nextBlockedTrait(3088).hcNhyq, obj4);
-                        cResult[28] = tmp7.link;
-                        cResult[29] = formatResult;
-                        let tmp80 = formatResult;
+                        cResult[27] = tmp7.link;
+                        cResult[28] = formatResult;
+                        let tmp76 = formatResult;
                       } else {
-                        tmp80 = cResult[29];
+                        tmp76 = cResult[28];
                       }
-                      if (cResult[30] !== tmp80) {
-                        const obj5 = { variant: "text-sm/medium", children: tmp80 };
-                        const tmp84 = closure_7(nextBlockedTrait(12930), obj5);
+                      if (cResult[29] !== tmp76) {
+                        const obj5 = { variant: "text-sm/medium", children: tmp76 };
+                        const tmp80 = closure_7(nextBlockedTrait(12967), obj5);
+                        cResult[29] = tmp76;
                         cResult[30] = tmp80;
-                        cResult[31] = tmp84;
-                        let tmp82 = tmp84;
+                        let tmp78 = tmp80;
                       } else {
-                        tmp82 = cResult[31];
+                        tmp78 = cResult[30];
                       }
-                      if (cResult[32] === tmp71) {
-                        if (cResult[33] === tmp76) {
-                          if (cResult[34] === tmp82) {
-                            let tmp85 = cResult[35];
+                      if (cResult[31] === tmp68) {
+                        if (cResult[32] === tmp72) {
+                          if (cResult[33] === tmp78) {
+                            let tmp81 = cResult[34];
                           }
-                          return tmp85;
+                          return tmp81;
                         }
                       }
-                      const obj6 = { style: tmp71, children: null };
-                      const items = [tmp76, tmp82];
+                      const obj6 = { style: tmp68, children: null };
+                      const items = [tmp72, tmp78];
                       obj6.children = items;
-                      const tmp88 = closure_8(link, obj6);
-                      cResult[32] = tmp71;
-                      cResult[33] = tmp76;
-                      cResult[34] = tmp82;
-                      cResult[35] = tmp88;
-                      tmp85 = tmp88;
+                      const tmp84 = closure_8(link, obj6);
+                      cResult[31] = tmp68;
+                      cResult[32] = tmp72;
+                      cResult[33] = tmp78;
+                      cResult[34] = tmp84;
+                      tmp81 = tmp84;
                     }
                   }
-                  const obj7 = { Icon: onNext(8763).PlayIcon, label: tmp73, onPress: tmp11, disabled: tmp6, accessibilityState: tmp75 };
-                  const tmp79 = closure_7(nextBlockedTrait(12994), obj7);
-                  cResult[24] = tmp11;
-                  cResult[25] = tmp6;
+                  const obj7 = { Icon: onNext(8765).PlayIcon, label: tmp69, onPress: tmp11, disabled: tmp6, accessibilityState: tmp71 };
+                  const tmp75 = closure_7(nextBlockedTrait(13031), obj7);
+                  cResult[23] = tmp11;
+                  cResult[24] = tmp6;
+                  cResult[25] = tmp71;
                   cResult[26] = tmp75;
-                  cResult[27] = tmp79;
-                  tmp76 = tmp79;
-                  const tmp12Result = nextBlockedTrait(12994);
+                  tmp72 = tmp75;
+                  const tmp12Result = nextBlockedTrait(13031);
                 }
                 const items1 = [tmp14, tmp7.homeContainer];
-                cResult[18] = tmp14;
-                cResult[19] = tmp7.homeContainer;
-                cResult[20] = items1;
-                tmp71 = items1;
-              } else if (activeRoute === onNext(6361).CheckpointRoute.SUMMARY) {
-                if (cResult[36] === tmp14) {
-                  if (cResult[37] === tmp7.routeControls) {
-                    let tmp49 = cResult[38];
+                cResult[17] = tmp14;
+                cResult[18] = tmp7.homeContainer;
+                cResult[19] = items1;
+                tmp68 = items1;
+              } else if (activeRoute === onNext(6363).CheckpointRoute.SUMMARY) {
+                if (cResult[35] === tmp14) {
+                  if (cResult[36] === tmp7.routeControls) {
+                    let tmp47 = cResult[37];
                   }
-                  if (cResult[39] !== color) {
+                  if (cResult[38] !== color) {
                     const obj8 = { borderColor: color };
-                    cResult[39] = color;
-                    cResult[40] = obj8;
-                    let tmp50 = obj8;
+                    cResult[38] = color;
+                    cResult[39] = obj8;
+                    let tmp48 = obj8;
                   } else {
-                    tmp50 = cResult[40];
+                    tmp48 = cResult[39];
                   }
-                  if (cResult[41] === tmp7.control) {
-                    if (cResult[42] === tmp7.editControl) {
-                      if (cResult[43] === tmp50) {
-                        let tmp51 = cResult[44];
+                  if (cResult[40] === tmp7.control) {
+                    if (cResult[41] === tmp7.editControl) {
+                      if (cResult[42] === tmp48) {
+                        let tmp49 = cResult[43];
                       }
-                      const _Symbol2 = Symbol;
-                      if (cResult[45] === Symbol.for("react.memo_cache_sentinel")) {
+                      const _Symbol3 = Symbol;
+                      if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
                         const intl5 = onNext(1128).intl;
                         const stringResult3 = intl5.string(onNext(1128).t.bt75uw);
-                        cResult[45] = stringResult3;
-                        let tmp53 = stringResult3;
+                        cResult[44] = stringResult3;
+                        let tmp50 = stringResult3;
                       } else {
-                        tmp53 = cResult[45];
+                        tmp50 = cResult[44];
                       }
-                      if (cResult[46] === color) {
-                        if (cResult[47] === tmp7.editIcon) {
-                          let tmp55 = cResult[48];
+                      if (cResult[45] === color) {
+                        if (cResult[46] === tmp7.editIcon) {
+                          let tmp52 = cResult[47];
                         }
-                        if (cResult[49] === onBack) {
-                          if (cResult[50] === tmp51) {
-                            if (cResult[51] === tmp55) {
-                              let tmp58 = cResult[52];
+                        if (cResult[48] === onBack) {
+                          if (cResult[49] === tmp49) {
+                            if (cResult[50] === tmp52) {
+                              let tmp55 = cResult[51];
                             }
-                            const _Symbol3 = Symbol;
-                            if (cResult[53] === Symbol.for("react.memo_cache_sentinel")) {
+                            const _Symbol4 = Symbol;
+                            if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
                               const intl6 = onNext(1128).intl;
                               const stringResult4 = intl6.string(onNext(1128).t.RDE0Sc);
-                              cResult[53] = stringResult4;
-                              let tmp62 = stringResult4;
+                              cResult[52] = stringResult4;
+                              let tmp59 = stringResult4;
                             } else {
-                              tmp62 = cResult[53];
+                              tmp59 = cResult[52];
                             }
-                            if (cResult[54] === color) {
-                              if (cResult[55] === onShare) {
-                                if (cResult[56] === shadowColor) {
-                                  if (cResult[57] === tmp7.share) {
-                                    let tmp64 = cResult[58];
+                            if (cResult[53] === color) {
+                              if (cResult[54] === onShare) {
+                                if (cResult[55] === shadowColor) {
+                                  if (cResult[56] === tmp7.share) {
+                                    let tmp61 = cResult[57];
                                   }
-                                  if (cResult[59] === tmp49) {
-                                    if (cResult[60] === tmp58) {
-                                      if (cResult[61] === tmp64) {
-                                        let tmp67 = cResult[62];
+                                  if (cResult[58] === tmp47) {
+                                    if (cResult[59] === tmp55) {
+                                      if (cResult[60] === tmp61) {
+                                        let tmp64 = cResult[61];
                                       }
-                                      return tmp67;
+                                      return tmp64;
                                     }
                                   }
-                                  const obj9 = { style: tmp49, children: null };
-                                  const items2 = [tmp58, tmp64];
+                                  const obj9 = { style: tmp47, children: null };
+                                  const items2 = [tmp55, tmp61];
                                   obj9.children = items2;
-                                  const tmp70 = closure_8(link, obj9);
-                                  cResult[59] = tmp49;
-                                  cResult[60] = tmp58;
-                                  cResult[61] = tmp64;
-                                  cResult[62] = tmp70;
-                                  tmp67 = tmp70;
+                                  const tmp67 = closure_8(link, obj9);
+                                  cResult[58] = tmp47;
+                                  cResult[59] = tmp55;
+                                  cResult[60] = tmp61;
+                                  cResult[61] = tmp67;
+                                  tmp64 = tmp67;
                                 }
                               }
                             }
-                            const obj10 = { label: tmp62, onPress: onShare, color, borderColor: color, shadowColor, style: tmp7.share };
-                            const tmp66 = closure_7(nextBlockedTrait(12994), obj10);
-                            cResult[54] = color;
-                            cResult[55] = onShare;
-                            cResult[56] = shadowColor;
-                            cResult[57] = tmp7.share;
-                            cResult[58] = tmp66;
-                            tmp64 = tmp66;
+                            const obj10 = { label: tmp59, onPress: onShare, color, borderColor: color, shadowColor, style: tmp7.share };
+                            const tmp63 = closure_7(nextBlockedTrait(13031), obj10);
+                            cResult[53] = color;
+                            cResult[54] = onShare;
+                            cResult[55] = shadowColor;
+                            cResult[56] = tmp7.share;
+                            cResult[57] = tmp63;
+                            tmp61 = tmp63;
                           }
                         }
-                        const obj11 = { style: tmp51, onPress: onBack, accessibilityRole: "button", accessibilityLabel: tmp53, children: tmp55 };
-                        const tmp61 = closure_7(closure_3, obj11);
-                        cResult[49] = onBack;
-                        cResult[50] = tmp51;
-                        cResult[51] = tmp55;
-                        cResult[52] = tmp61;
-                        tmp58 = tmp61;
+                        const obj11 = { style: tmp49, onPress: onBack, accessibilityRole: "button", accessibilityLabel: tmp50, children: tmp52 };
+                        const tmp58 = closure_7(closure_3, obj11);
+                        cResult[48] = onBack;
+                        cResult[49] = tmp49;
+                        cResult[50] = tmp52;
+                        cResult[51] = tmp58;
+                        tmp55 = tmp58;
                       }
                       const obj12 = { size: "custom", color, style: tmp7.editIcon };
-                      const tmp57 = closure_7(onNext(10119).PencilIcon, obj12);
-                      cResult[46] = color;
-                      cResult[47] = tmp7.editIcon;
-                      cResult[48] = tmp57;
-                      tmp55 = tmp57;
+                      const tmp54 = closure_7(onNext(10120).PencilIcon, obj12);
+                      cResult[45] = color;
+                      cResult[46] = tmp7.editIcon;
+                      cResult[47] = tmp54;
+                      tmp52 = tmp54;
                     }
                   }
                   const items3 = [, , ];
                   ({ control: arr5[0], editControl: arr5[1] } = tmp7);
-                  items3[2] = tmp50;
-                  cResult[41] = tmp7.control;
-                  cResult[42] = tmp7.editControl;
-                  cResult[43] = tmp50;
-                  cResult[44] = items3;
-                  tmp51 = items3;
+                  items3[2] = tmp48;
+                  cResult[40] = tmp7.control;
+                  cResult[41] = tmp7.editControl;
+                  cResult[42] = tmp48;
+                  cResult[43] = items3;
+                  tmp49 = items3;
                 }
                 const items4 = [tmp14, tmp7.routeControls];
-                cResult[36] = tmp14;
-                cResult[37] = tmp7.routeControls;
-                cResult[38] = items4;
-                tmp49 = items4;
+                cResult[35] = tmp14;
+                cResult[36] = tmp7.routeControls;
+                cResult[37] = items4;
+                tmp47 = items4;
               } else {
-                if (cResult[63] === tmp14) {
-                  if (cResult[64] === tmp7.routeControls) {
-                    let tmp23 = cResult[65];
+                if (cResult[62] === tmp14) {
+                  if (cResult[63] === tmp7.routeControls) {
+                    let tmp22 = cResult[64];
                   }
-                  const _Symbol = Symbol;
-                  if (cResult[66] === Symbol.for("react.memo_cache_sentinel")) {
+                  const _Symbol2 = Symbol;
+                  if (cResult[65] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = onNext(1128).intl;
                     const stringResult5 = intl4.string(onNext(1128).t["13/7kX"]);
-                    cResult[66] = stringResult5;
-                    let tmp25 = stringResult5;
+                    cResult[65] = stringResult5;
+                    let tmp23 = stringResult5;
                   } else {
-                    tmp25 = cResult[66];
+                    tmp23 = cResult[65];
                   }
-                  if (cResult[67] !== tmp4) {
+                  if (cResult[66] !== tmp4) {
                     const obj13 = { disabled: tmp4 };
-                    cResult[67] = tmp4;
-                    cResult[68] = obj13;
-                    let tmp27 = obj13;
+                    cResult[66] = tmp4;
+                    cResult[67] = obj13;
+                    let tmp25 = obj13;
                   } else {
-                    tmp27 = cResult[68];
+                    tmp25 = cResult[67];
                   }
-                  let tmp28 = tmp16;
+                  let tmp26 = token;
                   if (!tmp4) {
-                    tmp28 = closure_5;
+                    tmp26 = closure_5;
                   }
-                  if (cResult[69] !== tmp28) {
-                    const obj14 = { color: tmp28 };
-                    const tmp31 = closure_7(onNext(10749).ArrowSmallLeftIcon, obj14);
-                    cResult[69] = tmp28;
-                    cResult[70] = tmp31;
-                    let tmp29 = tmp31;
+                  if (cResult[68] !== tmp26) {
+                    const obj14 = { color: tmp26 };
+                    const tmp29 = closure_7(onNext(10750).ArrowSmallLeftIcon, obj14);
+                    cResult[68] = tmp26;
+                    cResult[69] = tmp29;
+                    let tmp27 = tmp29;
                   } else {
-                    tmp29 = cResult[70];
+                    tmp27 = cResult[69];
                   }
-                  if (cResult[71] === tmp4) {
-                    if (cResult[72] === onBack) {
-                      if (cResult[73] === tmp7.control) {
-                        if (cResult[74] === tmp27) {
-                          if (cResult[75] === tmp29) {
-                            let tmp32 = cResult[76];
+                  if (cResult[70] === tmp4) {
+                    if (cResult[71] === onBack) {
+                      if (cResult[72] === tmp7.control) {
+                        if (cResult[73] === tmp25) {
+                          if (cResult[74] === tmp27) {
+                            let tmp30 = cResult[75];
                           }
-                          let tmp36 = tmp5;
+                          let tmp34 = tmp5;
                           if (!tmp5) {
-                            tmp36 = tmp6;
+                            tmp34 = tmp6;
                           }
-                          let tmp37;
+                          let tmp35;
                           if (tmp5) {
                             if (!tmp6) {
-                              tmp37 = tmp8;
+                              tmp35 = tmp8;
                             }
                           }
-                          let tmp39 = tmp20;
-                          if (tmp20 == null) {
-                            tmp39 = tmp17;
+                          let tmp37 = tmp19;
+                          if (tmp19 == null) {
+                            tmp37 = tmp17;
                           }
                           if (!tmp5) {
                             tmp5 = tmp6;
                           }
-                          if (cResult[77] !== tmp5) {
+                          if (cResult[76] !== tmp5) {
                             const obj15 = { disabled: tmp5 };
-                            cResult[77] = tmp5;
-                            cResult[78] = obj15;
-                            let tmp40 = obj15;
+                            cResult[76] = tmp5;
+                            cResult[77] = obj15;
+                            let tmp38 = obj15;
                           } else {
-                            tmp40 = cResult[78];
+                            tmp38 = cResult[77];
                           }
-                          if (cResult[79] === tmp11) {
-                            if (cResult[80] === tmp20) {
-                              if (cResult[81] === tmp36) {
-                                if (cResult[82] === tmp37) {
-                                  if (cResult[83] === tmp39) {
-                                    if (cResult[84] === tmp40) {
-                                      let tmp41 = cResult[85];
-                                    }
-                                    if (cResult[86] === tmp23) {
-                                      if (cResult[87] === tmp32) {
-                                        if (cResult[88] === tmp41) {
-                                          let tmp45 = cResult[89];
-                                        }
-                                        return tmp45;
+                          if (cResult[78] === tmp11) {
+                            if (cResult[79] === tmp19) {
+                              if (cResult[80] === tmp6) {
+                                if (cResult[81] === tmp34) {
+                                  if (cResult[82] === tmp35) {
+                                    if (cResult[83] === tmp37) {
+                                      if (cResult[84] === tmp38) {
+                                        let tmp39 = cResult[85];
                                       }
+                                      if (cResult[86] === tmp22) {
+                                        if (cResult[87] === tmp30) {
+                                          if (cResult[88] === tmp39) {
+                                            let tmp43 = cResult[89];
+                                          }
+                                          return tmp43;
+                                        }
+                                      }
+                                      const obj16 = { style: tmp22, children: null };
+                                      const items5 = [tmp30, tmp39];
+                                      obj16.children = items5;
+                                      const tmp46 = closure_8(link, obj16);
+                                      cResult[86] = tmp22;
+                                      cResult[87] = tmp30;
+                                      cResult[88] = tmp39;
+                                      cResult[89] = tmp46;
+                                      tmp43 = tmp46;
                                     }
-                                    const obj16 = { style: tmp23, children: null };
-                                    const items5 = [tmp32, tmp41];
-                                    obj16.children = items5;
-                                    const tmp48 = closure_8(link, obj16);
-                                    cResult[86] = tmp23;
-                                    cResult[87] = tmp32;
-                                    cResult[88] = tmp41;
-                                    cResult[89] = tmp48;
-                                    tmp45 = tmp48;
                                   }
                                 }
                               }
                             }
                           }
-                          const obj17 = { Icon: onNext(10820).ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: tmp20, onPress: tmp11, disabled: tmp36, accessibilityHint: tmp37, accessibilityLabel: tmp39, accessibilityState: tmp40 };
-                          const tmp44 = closure_7(nextBlockedTrait(12994), obj17);
-                          cResult[79] = tmp11;
-                          cResult[80] = tmp20;
-                          cResult[81] = tmp36;
-                          cResult[82] = tmp37;
-                          cResult[83] = tmp39;
-                          cResult[84] = tmp40;
-                          cResult[85] = tmp44;
-                          tmp41 = tmp44;
-                          const tmp12Result2 = nextBlockedTrait(12994);
+                          const obj17 = { Icon: onNext(10821).ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: tmp19, onPress: tmp11, disabled: tmp34, loading: tmp6, accessibilityHint: tmp35, accessibilityLabel: tmp37, accessibilityState: tmp38 };
+                          const tmp42 = closure_7(nextBlockedTrait(13031), obj17);
+                          cResult[78] = tmp11;
+                          cResult[79] = tmp19;
+                          cResult[80] = tmp6;
+                          cResult[81] = tmp34;
+                          cResult[82] = tmp35;
+                          cResult[83] = tmp37;
+                          cResult[84] = tmp38;
+                          cResult[85] = tmp42;
+                          tmp39 = tmp42;
+                          const tmp12Result2 = nextBlockedTrait(13031);
                         }
                       }
                     }
                   }
-                  const obj18 = { style: tmp7.control, onPress: onBack, disabled: tmp4, accessibilityRole: "button", accessibilityLabel: tmp25, accessibilityState: tmp27, children: tmp29 };
-                  const tmp35 = closure_7(closure_3, obj18);
-                  cResult[71] = tmp4;
-                  cResult[72] = onBack;
-                  cResult[73] = tmp7.control;
+                  const obj18 = { style: tmp7.control, onPress: onBack, disabled: tmp4, accessibilityRole: "button", accessibilityLabel: tmp23, accessibilityState: tmp25, children: tmp27 };
+                  const tmp33 = closure_7(closure_3, obj18);
+                  cResult[70] = tmp4;
+                  cResult[71] = onBack;
+                  cResult[72] = tmp7.control;
+                  cResult[73] = tmp25;
                   cResult[74] = tmp27;
-                  cResult[75] = tmp29;
-                  cResult[76] = tmp35;
-                  tmp32 = tmp35;
+                  cResult[75] = tmp33;
+                  tmp30 = tmp33;
                 }
                 const items6 = [tmp14, tmp7.routeControls];
-                cResult[63] = tmp14;
-                cResult[64] = tmp7.routeControls;
-                cResult[65] = items6;
-                tmp23 = items6;
+                cResult[62] = tmp14;
+                cResult[63] = tmp7.routeControls;
+                cResult[64] = items6;
+                tmp22 = items6;
               }
+              const tmpResult3 = onNext(5252);
             }
             const items7 = [tmp7.container, tmp13];
             cResult[11] = tmp7.container;
@@ -492,11 +495,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
   let token = require("useToken").useToken("text-subtle");
   const intl = require("util").intl;
-  if (activeRoute === require("CheckpointNavigation").CheckpointRoute.PROFILE_WIDGET) {
-    let PDTjLN = require("util").t.i4jeWR;
-  } else {
-    PDTjLN = require("util").t.PDTjLN;
-  }
   const obj2 = require("useToken");
   if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
     const intl3 = require("util").intl;
@@ -540,7 +538,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5658);
+              const obj = flag(5660);
               return obj.openURL(flag(2067).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
@@ -596,12 +594,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     const obj16 = { color: token };
     obj14.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj16);
     const items7 = [closure_7(nextBlockedTrait, obj14), ];
-    const obj17 = { Icon: require("ArrowSmallRightIcon").ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: stringResult1, onPress: handleNextPress, disabled: null, accessibilityHint: null, accessibilityLabel: null, accessibilityState: null };
+    const obj17 = { Icon: require("ArrowSmallRightIcon").ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: stringResult1, onPress: handleNextPress, disabled: null, loading: null, accessibilityHint: null, accessibilityLabel: null, accessibilityState: null };
     let tmp12 = flag;
     if (!flag) {
       tmp12 = flag2;
     }
     obj17.disabled = tmp12;
+    obj17.loading = flag2;
     let tmp13;
     if (flag) {
       if (!flag2) {

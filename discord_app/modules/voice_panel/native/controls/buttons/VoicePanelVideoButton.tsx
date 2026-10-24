@@ -1,27 +1,27 @@
-// === Module 18590: VoicePanelVideoButton ===
+// === Module 18622: VoicePanelVideoButton ===
 
-// Module 18590 (VoicePanelVideoButton)
+// Module 18622 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import CameraRive from "CameraRive" /* 5105 */;
-import useAlertStore from "useAlertStore" /* 5908 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6650 */;
-import CallsUtils from "CallsUtils" /* 9152 */;
-import VideoIcon from "VideoIcon" /* 11306 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11370 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13989 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14303 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18591 */;
+import CameraRive from "CameraRive" /* 5107 */;
+import useAlertStore from "useAlertStore" /* 5910 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6652 */;
+import CallsUtils from "CallsUtils" /* 9153 */;
+import VideoIcon from "VideoIcon" /* 11324 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11388 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14008 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14327 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18623 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11350 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11368 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5716).Features;
+const Features = fn(5718).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

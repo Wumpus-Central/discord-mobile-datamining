@@ -1,28 +1,28 @@
-// === Module 19273: GuildSettingsRoleSubscriptionTierTemplateSelection ===
+// === Module 19321: GuildSettingsRoleSubscriptionTierTemplateSelection ===
 
-// Module 19273 (GuildSettingsRoleSubscriptionTierTemplateSelection)
+// Module 19321 (GuildSettingsRoleSubscriptionTierTemplateSelection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
-import NavigatorHeader from "NavigatorHeader" /* 6922 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16533 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19230 */;
-import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 19274 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import NavigatorHeader from "NavigatorHeader" /* 6924 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16565 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19282 */;
+import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 19322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16554 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16586 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, TouchableOpacity: closure_7, View: closure_8 } = get_ActivityIndicator);
-const usePriceTiers = fn(19222).usePriceTiers;
+const usePriceTiers = fn(19274).usePriceTiers;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let c15 = 16;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { marginTop: 16 }, title: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, text: { marginLeft: 16, marginRight: 16 }, activityIndicator: null, editIcon: null, startFromScratch: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.activityIndicator = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -49,7 +49,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
     }
   } else if (null != error) {
     if (cResult[2] !== error.message) {
-      Text = Text(5232).Text;
+      Text = Text(5234).Text;
       const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
       const items = ["Error: ", error.message];
       obj3.children = items;
@@ -105,10 +105,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
               }
             }
             obj5.ItemSeparatorComponent = sum;
-            sum = Text(19274).CARD_WIDTH + v16;
+            sum = Text(19322).CARD_WIDTH + v16;
             obj5.snapToInterval = sum;
             obj5.renderItem = tmp9;
-            const tmp13 = closure_13(Text(7218).FlashList, obj5);
+            const tmp13 = closure_13(Text(7220).FlashList, obj5);
             cResult[11] = tmp9;
             cResult[12] = templates;
             cResult[13] = tmp13;
@@ -141,7 +141,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
     let obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const items = ["Error: ", error.message];
     obj.children = items;
-    tmp3 = closure_14(guildId(5232).Text, obj);
+    tmp3 = closure_14(guildId(5234).Text, obj);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -159,11 +159,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
           obj.style = size;
           return closure_1_13(closure_1_8, obj);
         };
-        obj3.snapToInterval = guildId(19274).CARD_WIDTH + v16;
+        obj3.snapToInterval = guildId(19322).CARD_WIDTH + v16;
         obj3.renderItem = function renderItem(template) {
           return map1(GuildRoleSubscriptionTierTemplatePreviewCardDefault, { template: template.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };
-        tmp3 = closure_13(guildId(7218).FlashList, obj3);
+        tmp3 = closure_13(guildId(7220).FlashList, obj3);
       }
     }
   }

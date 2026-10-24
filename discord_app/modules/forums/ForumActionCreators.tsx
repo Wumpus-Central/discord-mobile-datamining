@@ -1,12 +1,12 @@
-// === Module 9726: ForumActionCreators ===
+// === Module 9727: ForumActionCreators ===
 
-// Module 9726 (ForumActionCreators)
+// Module 9727 (ForumActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9727 */;
-import ForumChannelSeenManager from "ForumChannelSeenManager" /* 9728 */;
-import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 9729 */;
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9728 */;
+import ForumChannelSeenManager from "ForumChannelSeenManager" /* 9729 */;
+import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 9730 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -172,7 +172,7 @@ export default {
     closure_0 = id;
     closure_1 = arg1;
     return (async () => {
-      await v1(8285).unarchiveThreadIfNecessary(tmp4);
+      await v1(8287).unarchiveThreadIfNecessary(tmp4);
       const HTTP = tmp4(1297).HTTP;
       const request = { url: closure_1_5.CHANNEL(closure_128_0), body: { applied_tags: closure_128_1 }, rejectWithError: tmp4(1297).rejectWithMigratedError() };
       return HTTP.patch(request);
@@ -204,7 +204,7 @@ export default {
     return (async () => {
       const channelId = tmp3;
       channelId(584).dispatch({ type: "FORUM_SEARCH_START", channelId });
-      await channelId(8285).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
+      await channelId(8287).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
       if (1 === tmp7) {
         dependencyMap = 0;
         channelId(584).dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
@@ -215,8 +215,8 @@ export default {
         throw value;
       } else if (arg0 !== 2) {
         closure_128_0 = value;
-        guild_id(8287).trackForumSearched({ guildId: closure_129_0, channelId: closure_129_1, numSearchResults: closure_128_0.length });
-        guild_id(8287);
+        guild_id(8289).trackForumSearched({ guildId: closure_129_0, channelId: closure_129_1, numSearchResults: closure_128_0.length });
+        guild_id(8289);
         channelId(584).dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: closure_129_1, threadIds: closure_128_0 });
         dependencyMap = 0;
         channelId(584);

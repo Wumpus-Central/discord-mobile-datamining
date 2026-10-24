@@ -1,16 +1,16 @@
-// === Module 17402: YouBarStackNavigator ===
+// === Module 17434: YouBarStackNavigator ===
 
-// Module 17402 (YouBarStackNavigator)
+// Module 17434 (YouBarStackNavigator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 5595 */;
-import Navigator from "Navigator" /* 7093 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8840 */;
-import notifications_Notifications from "notifications/Notifications" /* 17811 */;
-import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17932 */;
+import LayerScope from "LayerScope" /* 5597 */;
+import Navigator from "Navigator" /* 7095 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8842 */;
+import notifications_Notifications from "notifications/Notifications" /* 17843 */;
+import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17964 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 
 require = fn;
 function getGuildsComponent() {
@@ -24,10 +24,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11179).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11180).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9742);
+const NativeStackNavigator = fn(9743);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);

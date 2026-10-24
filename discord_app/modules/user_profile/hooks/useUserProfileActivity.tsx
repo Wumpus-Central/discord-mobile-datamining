@@ -1,14 +1,14 @@
-// === Module 14297: useUserProfileActivity ===
+// === Module 14321: useUserProfileActivity ===
 
-// Module 14297 (useUserProfileActivity)
+// Module 14321 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 5716 */;
-import utils from "utils" /* 8615 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8827 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14298 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9385 */;
+import Constants from "Constants" /* 5718 */;
+import utils from "utils" /* 8617 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14322 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9386 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PresenceStore from "PresenceStore" /* 5710 */;
+import PresenceStore from "PresenceStore" /* 5712 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   let tmp8 = null;
   if (stateFromStores) {
-    tmp8 = userProfileLiveActivities(10635)(arg0);
+    tmp8 = userProfileLiveActivities(10636)(arg0);
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore];
@@ -190,8 +190,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             tmp6 = !userProfileLiveActivities.some((item) => {
               let result = null != item;
               if (result) {
-                result = item(8823).isMatchingListeningActivity(item, item);
-                const obj = item(8823);
+                result = item(8825).isMatchingListeningActivity(item, item);
+                const obj = item(8825);
               }
               return result;
             });
@@ -202,8 +202,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             result = !userProfileLiveActivities.some((item) => {
               let result = null != item;
               if (result) {
-                result = item(8823).isMatchingWatchActivity(item, item);
-                const obj = item(8823);
+                result = item(8825).isMatchingWatchActivity(item, item);
+                const obj = item(8825);
               }
               return result;
             });
@@ -270,8 +270,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8823).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8823);
+                  result = userProfileLiveActivities(8825).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8825);
                 }
                 return result;
               });
@@ -282,8 +282,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8823).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8823);
+                  result = userProfileLiveActivities(8825).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8825);
                 }
                 return result;
               });

@@ -1,25 +1,29 @@
-// === Module 16734: ToastDurationSetting ===
+// === Module 16766: ToastDurationSetting ===
 
-// Module 16734 (ToastDurationSetting)
+// Module 16766 (ToastDurationSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11152 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15662 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16634 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11153 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15682 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16666 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
+function formatToastDuration(seconds) {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.geSp4K, { seconds });
+}
 const Accessibility = fn(1087).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDurationSettingProps() {
-  const cResult = c.c(15);
+  const cResult = c.c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function s() {
+    const fn = function o() {
       return minToastDurationMs.minToastDurationMs / 1000;
     };
     cResult[0] = items;
@@ -60,55 +64,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDu
     tmp11 = cResult[5];
     tmp12 = cResult[6];
   }
-  if (cResult[7] !== stateFromStores) {
-    const intl2 = util.intl;
-    const obj3 = { seconds: stateFromStores };
-    const formatToPlainStringResult = intl2.formatToPlainString(util.t.geSp4K, obj3);
-    cResult[7] = stateFromStores;
-    cResult[8] = formatToPlainStringResult;
-    let tmp16 = formatToPlainStringResult;
-  } else {
-    tmp16 = cResult[8];
-  }
-  if (cResult[9] !== tmp16) {
-    const obj4 = { text: tmp16 };
-    cResult[9] = tmp16;
-    cResult[10] = obj4;
-    let tmp18 = obj4;
-  } else {
-    tmp18 = cResult[10];
-  }
-  if (cResult[11] === stateFromStores) {
-    if (cResult[12] === tmp18) {
-      if (cResult[13] === tmp9) {
-        let tmp19 = cResult[14];
-      }
-      return tmp19;
+  if (cResult[7] === stateFromStores) {
+    if (cResult[8] === tmp9) {
+      let tmp16 = cResult[9];
     }
+    return tmp16;
   }
-  const obj5 = { value: stateFromStores, onValueChange: tmp8, minimumValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maximumValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: tmp11, endIcon: tmp12, accessibilityValue: tmp18, valueLabel: tmp9, defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
-  cResult[11] = stateFromStores;
-  cResult[12] = tmp18;
-  cResult[13] = tmp9;
-  cResult[14] = obj5;
-  tmp19 = obj5;
+  const obj3 = { value: stateFromStores, onChange: tmp8, minValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maxValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: tmp11, endIcon: tmp12, formatValue: formatToastDuration, valueLabel: tmp9, defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
+  cResult[7] = stateFromStores;
+  cResult[8] = tmp9;
+  cResult[9] = obj3;
+  tmp16 = obj3;
   const tmpResult = initialize;
 }) : (function useToastDurationSettingProps() {
   const items = [AccessibilityStore];
-  stateFromStores = stateFromStores(onValueChange[7]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);
-  onValueChange = noop.useCallback((arg0) => {
-    stateFromStores(callback[8]).setMinToastDuration(1000 * arg0);
+  stateFromStores = stateFromStores(onChange[8]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);
+  onChange = noop.useCallback((arg0) => {
+    stateFromStores(callback[9]).setMinToastDuration(1000 * arg0);
   }, []);
-  const items1 = [stateFromStores, onValueChange];
+  const items1 = [stateFromStores, onChange];
   return noop.useMemo(() => {
     const intl = util.intl;
-    const obj2 = { value: stateFromStores, onValueChange, minimumValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maximumValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}), accessibilityValue: null, valueLabel: null, defaultValue: null };
-    const obj3 = { text: null };
-    const intl2 = util.intl;
-    obj3.text = intl2.formatToPlainString(util.t.geSp4K, { seconds: stateFromStores });
-    obj2.accessibilityValue = obj3;
-    obj2.valueLabel = intl.format(util.t.pyvjRp, { seconds: stateFromStores });
-    obj2.defaultValue = Accessibility.TOAST_DURATION_DEFAULT_MS / 1000;
+    const obj2 = { value: stateFromStores, onChange, minValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maxValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}), formatValue: formatToastDuration, valueLabel: intl.format(util.t.pyvjRp, { seconds: stateFromStores }), defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
     return obj2;
   }, items1);
 });
@@ -117,12 +94,12 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(8330).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8332).MobileUserSettings.ACCESSIBILITY,
   useProps: ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDurationSettingProps() {
-    const cResult = c.c(15);
+    const cResult = c.c(10);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
-      const fn = function s() {
+      const fn = function o() {
         return minToastDurationMs.minToastDurationMs / 1000;
       };
       cResult[0] = items;
@@ -163,55 +140,28 @@ const slider = SettingBuilders.createSlider({
       tmp11 = cResult[5];
       tmp12 = cResult[6];
     }
-    if (cResult[7] !== stateFromStores) {
-      const intl2 = util.intl;
-      const obj3 = { seconds: stateFromStores };
-      const formatToPlainStringResult = intl2.formatToPlainString(util.t.geSp4K, obj3);
-      cResult[7] = stateFromStores;
-      cResult[8] = formatToPlainStringResult;
-      let tmp16 = formatToPlainStringResult;
-    } else {
-      tmp16 = cResult[8];
-    }
-    if (cResult[9] !== tmp16) {
-      const obj4 = { text: tmp16 };
-      cResult[9] = tmp16;
-      cResult[10] = obj4;
-      let tmp18 = obj4;
-    } else {
-      tmp18 = cResult[10];
-    }
-    if (cResult[11] === stateFromStores) {
-      if (cResult[12] === tmp18) {
-        if (cResult[13] === tmp9) {
-          let tmp19 = cResult[14];
-        }
-        return tmp19;
+    if (cResult[7] === stateFromStores) {
+      if (cResult[8] === tmp9) {
+        let tmp16 = cResult[9];
       }
+      return tmp16;
     }
-    const obj5 = { value: stateFromStores, onValueChange: tmp8, minimumValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maximumValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: tmp11, endIcon: tmp12, accessibilityValue: tmp18, valueLabel: tmp9, defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
-    cResult[11] = stateFromStores;
-    cResult[12] = tmp18;
-    cResult[13] = tmp9;
-    cResult[14] = obj5;
-    tmp19 = obj5;
+    const obj3 = { value: stateFromStores, onChange: tmp8, minValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maxValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: tmp11, endIcon: tmp12, formatValue: formatToastDuration, valueLabel: tmp9, defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
+    cResult[7] = stateFromStores;
+    cResult[8] = tmp9;
+    cResult[9] = obj3;
+    tmp16 = obj3;
     const tmpResult = initialize;
   }) : (function useToastDurationSettingProps() {
     const items = [AccessibilityStore];
-    stateFromStores = stateFromStores(onValueChange[7]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);
-    onValueChange = noop.useCallback((arg0) => {
-      stateFromStores(callback[8]).setMinToastDuration(1000 * arg0);
+    stateFromStores = stateFromStores(onChange[8]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);
+    onChange = noop.useCallback((arg0) => {
+      stateFromStores(callback[9]).setMinToastDuration(1000 * arg0);
     }, []);
-    const items1 = [stateFromStores, onValueChange];
+    const items1 = [stateFromStores, onChange];
     return noop.useMemo(() => {
       const intl = util.intl;
-      const obj2 = { value: stateFromStores, onValueChange, minimumValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maximumValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}), accessibilityValue: null, valueLabel: null, defaultValue: null };
-      const obj3 = { text: null };
-      const intl2 = util.intl;
-      obj3.text = intl2.formatToPlainString(util.t.geSp4K, { seconds: stateFromStores });
-      obj2.accessibilityValue = obj3;
-      obj2.valueLabel = intl.format(util.t.pyvjRp, { seconds: stateFromStores });
-      obj2.defaultValue = Accessibility.TOAST_DURATION_DEFAULT_MS / 1000;
+      const obj2 = { value: stateFromStores, onChange, minValue: Accessibility.TOAST_DURATION_MIN_SECONDS, maxValue: Accessibility.TOAST_DURATION_MAX_SECONDS, step: 1, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}), formatValue: formatToastDuration, valueLabel: intl.format(util.t.pyvjRp, { seconds: stateFromStores }), defaultValue: Accessibility.TOAST_DURATION_DEFAULT_MS / 1000 };
       return obj2;
     }, items1);
   })

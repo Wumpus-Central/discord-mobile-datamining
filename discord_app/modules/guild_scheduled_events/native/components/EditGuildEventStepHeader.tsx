@@ -1,15 +1,15 @@
-// === Module 9002: EditGuildEventStepHeader ===
+// === Module 9003: EditGuildEventStepHeader ===
 
-// Module 9002 (EditGuildEventStepHeader)
+// Module 9003 (EditGuildEventStepHeader)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
+import Text_Text from "Text/Text" /* 5234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_5 = createStyles.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

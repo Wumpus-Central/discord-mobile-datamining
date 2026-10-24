@@ -1,10 +1,10 @@
-// === Module 13982: ConversationCoachmark ===
+// === Module 14001: ConversationCoachmark ===
 
-// Module 13982 (ConversationCoachmark)
+// Module 14001 (ConversationCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
+import Text_Text from "Text/Text" /* 5234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(4805).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(4807).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round }, coachmarkWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj2.coachmarkWrapper = { marginRight: nativeDefault.space.PX_12 };
@@ -108,7 +108,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         return closure_1_6(closure_1_10, {});
       }
     }
-    const coachmark = tmp(9839).useCoachmark(ref, obj5);
+    const coachmark = tmp(9840).useCoachmark(ref, obj5);
     if (cResult[8] !== tmp7) {
       class N {
         constructor() {
@@ -180,7 +180,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     cResult[10] = children;
     cResult[11] = N;
     cResult[12] = childrenResult;
-    const tmpResult = tmp(9839);
+    const tmpResult = tmp(9840);
   }
   obj5 = { title: tmp8, description: tmp9, position: "bottom", visible: tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK, onDismiss: tmp13, renderImgComponent: E };
   cResult[5] = tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK;
@@ -192,7 +192,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
   ({ children, isLast } = arg0);
   const ref = noop.useRef(null);
   const tmp = closure_9();
-  const tmp3 = _slicedToArray(first(7494).useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(first(7496).useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
@@ -211,8 +211,8 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     };
     return obj;
   }, items);
-  let obj = first(7494);
-  const coachmark = first(9839).useCoachmark(ref, memo);
+  let obj = first(7496);
+  const coachmark = first(9840).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   const callback = noop.useCallback(() => {
@@ -222,7 +222,7 @@ export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled(
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
   const obj3 = { style: coachmarkWrapper, children: null };
-  const obj2 = first(9839);
+  const obj2 = first(9840);
   obj3.children = <View ref={ref}>{children(callback)}</View>;
   return <View style={coachmarkWrapper}>{null}</View>;
 });

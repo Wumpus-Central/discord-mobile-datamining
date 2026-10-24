@@ -1,8 +1,8 @@
-// === Module 9902: trackEmojiSuggestionSelected ===
+// === Module 9903: trackEmojiSuggestionSelected ===
 
-// Module 9902 (trackEmojiSuggestionSelected)
+// Module 9903 (trackEmojiSuggestionSelected)
 import Constants from "Constants" /* 1087 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5709 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

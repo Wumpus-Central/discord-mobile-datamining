@@ -1,23 +1,23 @@
-// === Module 12440: clarification/ConjureImageOptions ===
+// === Module 12473: clarification/ConjureImageOptions ===
 
-// Module 12440 (clarification/ConjureImageOptions)
+// Module 12473 (clarification/ConjureImageOptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5037 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import TrashIcon from "TrashIcon" /* 5687 */;
-import FormCheckbox from "FormCheckbox" /* 6899 */;
-import Card from "Card" /* 6903 */;
-import FormRadio from "FormRadio" /* 6986 */;
-import IconButton from "IconButton" /* 7957 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8550 */;
-import openMediaModal from "openMediaModal" /* 8749 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11803 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12436 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12441 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import TrashIcon from "TrashIcon" /* 5689 */;
+import FormCheckbox from "FormCheckbox" /* 6901 */;
+import Card from "Card" /* 6905 */;
+import FormRadio from "FormRadio" /* 6988 */;
+import IconButton from "IconButton" /* 7959 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8552 */;
+import openMediaModal from "openMediaModal" /* 8751 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11829 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12469 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12474 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 1024;
 let c11 = 104;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -1226,7 +1226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12443).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12476).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -1240,8 +1240,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12443).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12443);
+            closure_129_4.onUpload(tmp2(12476).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12476);
           }
           c3 = 3;
           return { value: "IconComponent", done: null };

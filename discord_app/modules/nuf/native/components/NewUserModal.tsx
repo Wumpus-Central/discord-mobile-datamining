@@ -1,8 +1,8 @@
-// === Module 18867: NewUserModal ===
+// === Module 18897: NewUserModal ===
 
-// Module 18867 (NewUserModal)
+// Module 18897 (NewUserModal)
 import nativeDefault from "native" /* 587 */;
-import NewUserUtils from "NewUserUtils" /* 18866 */;
+import NewUserUtils from "NewUserUtils" /* 18896 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,9 +11,9 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9742);
+const NativeStackNavigator = fn(9743);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj3 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_8 = createStyles.createStyles(obj3);
 const ReactCompilerGating = fn(558);
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj3 = {
         name: "enable-notification",
         getComponent() {
-              return closure_0(17380).RedesignNotificationScreen;
+              return closure_0(17412).RedesignNotificationScreen;
             },
         initialParams: null
       };
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj5 = {
         name: "choose-avatar",
         getComponent() {
-              return closure_0(18869).default;
+              return closure_0(18899).default;
             },
         options() {
               return {
@@ -116,13 +116,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
                   obj.onPress = function onPress() {
                     closure_0 = closure_1_4;
                     const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-                    closure_2_0(5908).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
+                    closure_2_0(5910).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
                       onConfirm() {
                         return closure_0(true);
                       }
                     }));
                   };
-                  return closure_2_5(closure_1(13559), obj);
+                  return closure_2_5(closure_1(13596), obj);
                 }
               };
             },
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
         name: "contact-sync",
         options: { headerShown: false },
         getComponent() {
-              return closure_0(13547).ContactSyncOnboardingModal;
+              return closure_0(13584).ContactSyncOnboardingModal;
             },
         initialParams: null
       };
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
         name: "discoverability",
         options: { headerShown: false },
         getComponent() {
-              return closure_0(18870).default;
+              return closure_0(18900).default;
             },
         initialParams: null
       };
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj11 = {
         name: "connect-guardian",
         getComponent() {
-              return closure_0(18876).default;
+              return closure_0(18906).default;
             },
         initialParams: null
       };
@@ -303,14 +303,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
     closure_5(closure_7.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(17380).RedesignNotificationScreen;
+        return closure_0(17412).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(18869).default;
+        return closure_0(18899).default;
       },
       options() {
         return {
@@ -320,13 +320,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
             obj.onPress = function onPress() {
               closure_0 = closure_1_4;
               const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-              closure_2_0(5908).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
+              closure_2_0(5910).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
                 onConfirm() {
                   return closure_0(true);
                 }
               }));
             };
-            return closure_2_5(closure_1(13559), obj);
+            return closure_2_5(closure_1(13596), obj);
           }
         };
       },
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(13547).ContactSyncOnboardingModal;
+        return closure_0(13584).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete }
     }),
@@ -344,14 +344,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(18870).default;
+        return closure_0(18900).default;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(18876).default;
+        return closure_0(18906).default;
       },
       initialParams: { onComplete }
     })

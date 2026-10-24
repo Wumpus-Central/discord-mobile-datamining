@@ -1,9 +1,9 @@
-// === Module 10487: ShineAnimation ===
+// === Module 10488: ShineAnimation ===
 
-// Module 10487 (ShineAnimation)
+// Module 10488 (ShineAnimation)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};

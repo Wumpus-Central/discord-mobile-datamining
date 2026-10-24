@@ -1,21 +1,21 @@
-// === Module 13747: NotificationSettingsMockChannels ===
+// === Module 19340: NotificationSettingsMockChannels ===
 
-// Module 13747 (NotificationSettingsMockChannels)
+// Module 19340 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import TextIcon from "TextIcon" /* 8549 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13233 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import TextIcon from "TextIcon" /* 8551 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13270 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6703).UnreadSetting;
+const UnreadSetting = fn(6705).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 }, channel: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 }, channelName: { display: "flex", flexDirection: "row", alignItems: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

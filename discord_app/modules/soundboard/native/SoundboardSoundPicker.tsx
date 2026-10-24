@@ -1,26 +1,26 @@
-// === Module 18475: SoundboardSoundPicker ===
+// === Module 18507: SoundboardSoundPicker ===
 
-// Module 18475 (SoundboardSoundPicker)
+// Module 18507 (SoundboardSoundPicker)
 import nativeDefault from "native" /* 587 */;
-import searchSounds from "searchSounds" /* 7449 */;
+import searchSounds from "searchSounds" /* 7451 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(18476);
+const ExpressionPickerStore = fn(18508);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(6006).SoundboardPickerType;
+const SoundboardPickerType = fn(6008).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4969);
-let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(18477).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
+const createStyles = fn(4971);
+let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(18509).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
 let closure_14 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(18477).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj3 = { paddingHorizontal: fn(18509).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 

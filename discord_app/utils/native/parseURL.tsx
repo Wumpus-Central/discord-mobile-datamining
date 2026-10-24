@@ -1,6 +1,6 @@
-// === Module 5694: parseURL ===
+// === Module 5696: parseURL ===
 
-// Module 5694 (parseURL)
+// Module 5696 (parseURL)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FingerprintUtils from "FingerprintUtils" /* 1280 */;
@@ -10,16 +10,16 @@ import UrlDefault from "Url" /* 1389 */;
 import _modDef1493 from "module_1493" /* 1493 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import _modDef1951 from "module_1951" /* 1951 */;
-import LinkUtils from "LinkUtils" /* 5604 */;
-import findCodedLinks from "findCodedLinks" /* 5697 */;
-import CodedLink from "CodedLink" /* 5701 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6370 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7513 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9205 */;
-import Authorize from "Authorize" /* 9629 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 14174 */;
-import QRLoginUtils from "QRLoginUtils" /* 15063 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 15064 */;
+import LinkUtils from "LinkUtils" /* 5606 */;
+import findCodedLinks from "findCodedLinks" /* 5699 */;
+import CodedLink from "CodedLink" /* 5703 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6372 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7515 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9206 */;
+import Authorize from "Authorize" /* 9630 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 14193 */;
+import QRLoginUtils from "QRLoginUtils" /* 15086 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 15087 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -46,9 +46,9 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: metroRequire, LinkingTypes: closure_7 } = Constants);
 const CollectiblesShopConstants = fn(1089);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const CONVERSATION_QUERY_PARAM = fn(5605).CONVERSATION_QUERY_PARAM;
-const UPDATE_CONFIG = fn(5695).UPDATE_CONFIG;
-const PaymentConstants = fn(5696);
+const CONVERSATION_QUERY_PARAM = fn(5607).CONVERSATION_QUERY_PARAM;
+const UPDATE_CONFIG = fn(5697).UPDATE_CONFIG;
+const PaymentConstants = fn(5698);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_12, MobileWebRedirectCheckoutDeepLinkQueryKeys: map1 } = PaymentConstants);
 const re14 = /feature\/([\w-]+)/;
 const re15 = /feature\/boost\/([0-9]+)/;
@@ -89,7 +89,7 @@ export default function parseURL(ctaLink) {
     }
     const tmp145Result = parseQuery(str);
     ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp145Result);
-    ({ username, didRegister, custom_id, link_id } = tmp145Result);
+    ({ username, didRegister, custom_id, link_id, channel_id } = tmp145Result);
     const tmpResult = UrlDefault;
     const findCodedLinkResult = findCodedLinks.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
@@ -113,7 +113,7 @@ export default function parseURL(ctaLink) {
                   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
                     if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
                       const obj9 = { fingerprint, attemptId, installationId, payload: null };
-                      const obj10 = { type: React5.ACTIVITY, applicationId: findCodedLinkResult.code, customId: custom_id, referrerId: referrer_id, linkId: link_id, isDeepLink: flag };
+                      const obj10 = { type: React5.ACTIVITY, applicationId: findCodedLinkResult.code, customId: custom_id, referrerId: referrer_id, linkId: link_id, channelId: channel_id, isDeepLink: flag };
                       obj9.payload = obj10;
                       return obj9;
                     } else if (CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {

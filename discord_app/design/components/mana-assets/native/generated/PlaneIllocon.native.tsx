@@ -1,23 +1,23 @@
-// === Module 19375: PlaneIllocon ===
+// === Module 19435: PlaneIllocon ===
 
-// Module 19375 (PlaneIllocon)
+// Module 19435 (PlaneIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import assetHelpers from "assetHelpers" /* 6993 */;
-import _modDef13360 from "module_13360" /* 13360 */;
-import _modDef19376 from "module_19376" /* 19376 */;
-import _modDef19377 from "module_19377" /* 19377 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef13397 from "module_13397" /* 13397 */;
+import _modDef19436 from "module_19436" /* 19436 */;
+import _modDef19437 from "module_19437" /* 19437 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19376 }, 3: null };
-const obj2 = { uri: _modDef19376 };
-obj[2] = { uri: _modDef13360 };
-const obj3 = { uri: _modDef13360 };
-obj[3] = { uri: _modDef19377 };
+let obj = { 1: null, 2: { uri: _modDef19436 }, 3: null };
+const obj2 = { uri: _modDef19436 };
+obj[2] = { uri: _modDef13397 };
+const obj3 = { uri: _modDef13397 };
+obj[3] = { uri: _modDef19437 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19377 };
+const obj4 = { uri: _modDef19437 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PlaneIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const PlaneIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6993).getAssetSource(obj);
+  obj.source = num(6995).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

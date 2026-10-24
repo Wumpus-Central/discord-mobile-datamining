@@ -1,37 +1,37 @@
-// === Module 13724: MessagePreviewText ===
+// === Module 13761: MessagePreviewText ===
 
-// Module 13724 (MessagePreviewText)
+// Module 13761 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5600 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5641 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import useMessageAuthor from "useMessageAuthor" /* 6364 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13715 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13725 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13726 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13727 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 13730 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13731 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5602 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5643 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import useMessageAuthor from "useMessageAuthor" /* 6366 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13752 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13762 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13763 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13764 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 13767 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13768 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13716);
+const InAppNotificationConstants = fn(13753);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 const PlatformUtils = fn(1385);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(4969);
+createStyles = fn(4971);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };

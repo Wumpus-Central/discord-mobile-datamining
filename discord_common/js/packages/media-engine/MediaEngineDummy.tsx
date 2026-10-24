@@ -1,9 +1,9 @@
-// === Module 5810: MediaEngineDummy ===
+// === Module 5812: MediaEngineDummy ===
 
-// Module 5810 (MediaEngineDummy)
-import MediaEngineEvent from "MediaEngineEvent" /* 5746 */;
-import Constants from "Constants" /* 5716 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5740 */;
+// Module 5812 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 5748 */;
+import Constants from "Constants" /* 5718 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5742 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -47,6 +47,9 @@ prototype["enable"] = function enable() {
 };
 prototype["setAudioMixerOptions"] = function setAudioMixerOptions() {
 
+};
+prototype["getSpatialAudioHrtfFiles"] = function getSpatialAudioHrtfFiles() {
+  return { directory: null, files: [] };
 };
 prototype["setInputVolume"] = function setInputVolume() {
 

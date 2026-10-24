@@ -1,13 +1,13 @@
-// === Module 17609: useConjureGuildUnreadSummary ===
+// === Module 17641: useConjureGuildUnreadSummary ===
 
-// Module 17609 (useConjureGuildUnreadSummary)
-import ConjureActionCreators from "ConjureActionCreators" /* 10719 */;
+// Module 17641 (useConjureGuildUnreadSummary)
+import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 require = fn;
-const ReadStateTypes = fn(6703).ReadStateTypes;
+const ReadStateTypes = fn(6705).ReadStateTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   const effect = noop.useEffect(tmp10, tmp11);
   const tmpResult = stateFromStoresArray(504);
-  return stateFromStoresArray(10721).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(10722).useConjureUnreadSummary(arg0);
 }) : (function useConjureGuildUnreadSummary(arg0) {
   const items = [ReadStateStore, ConjureProjectStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
@@ -80,5 +80,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
   }, items1);
   let obj = stateFromStoresArray(504);
-  return stateFromStoresArray(10721).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(10722).useConjureUnreadSummary(arg0);
 });

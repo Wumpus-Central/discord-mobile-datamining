@@ -1,11 +1,11 @@
-// === Module 4864: DatabaseManager ===
+// === Module 4866: DatabaseManager ===
 
-// Module 4864 (DatabaseManager)
+// Module 4866 (DatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 584 */;
-import _mod4848 from "module_4848" /* 4848 */;
-import StartupDataAll from "StartupData" /* 4865 */;
+import _mod4850 from "module_4850" /* 4850 */;
+import StartupDataAll from "StartupData" /* 4867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -46,7 +46,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
           const _HermesInternal = HermesInternal;
           timestampProducer.verbose("speculatively opening " + tmp25);
           c4 = 1;
-          const Database = require("module_4848").Database;
+          const Database = require("module_4850").Database;
           c5 = 2;
           c6 = 1;
           const obj4 = { value: Database.open(tmp25), done: false };
@@ -165,7 +165,7 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
             }
           }
         })(50, () => {
-          const Database = _mod4848.Database;
+          const Database = _mod4850.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -231,7 +231,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _mod4848.DatabaseState.Open;
+    tmp3 = stateResult !== _mod4850.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);

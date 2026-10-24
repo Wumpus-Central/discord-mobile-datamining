@@ -1,11 +1,11 @@
-// === Module 9246: useShouldOpenGameProfileModal ===
+// === Module 9247: useShouldOpenGameProfileModal ===
 
-// Module 9246 (useShouldOpenGameProfileModal)
+// Module 9247 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import utils from "utils" /* 5610 */;
-import GameFlags from "GameFlags" /* 9247 */;
+import utils from "utils" /* 5612 */;
+import GameFlags from "GameFlags" /* 9248 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2022 */;
 

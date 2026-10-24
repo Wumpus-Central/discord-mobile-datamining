@@ -1,25 +1,25 @@
-// === Module 7230: DropdownOptionsActionSheet ===
+// === Module 7232: DropdownOptionsActionSheet ===
 
-// Module 7230 (DropdownOptionsActionSheet)
+// Module 7232 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
-import BottomSheetModal from "BottomSheetModal" /* 5267 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
+import BottomSheetModal from "BottomSheetModal" /* 5269 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6723 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7193 */;
+import EmojiStore from "EmojiStore" /* 6725 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7195 */;
 
 require = fn;
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownOptionRow(option) {
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                   }
                   if (cResult[19] !== option.title) {
                     const obj2 = { variant: "text-md/normal", children: option.title };
-                    const tmp33 = closure_8(tmp(5232).Text, obj2);
+                    const tmp33 = closure_8(tmp(5234).Text, obj2);
                     cResult[19] = option.title;
                     cResult[20] = tmp33;
                     let tmp31 = tmp33;
@@ -129,7 +129,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                         }
                       }
                       const obj3 = { label: tmp34, selected: tmp11, leading: tmp16, trailing: tmp28, onPress: tmp13 };
-                      const tmp41 = closure_8(onSelect(7233), obj3);
+                      const tmp41 = closure_8(onSelect(7235), obj3);
                       cResult[25] = tmp16;
                       cResult[26] = tmp13;
                       cResult[27] = tmp34;
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                 if (canBeNew) {
                   tmp29 = null;
                   if (option.isUnseen) {
-                    tmp29 = closure_8(tmp(7231).Badge, { type: "new", variant: "primary" });
+                    tmp29 = closure_8(tmp(7233).Badge, { type: "new", variant: "primary" });
                   }
                 }
                 cResult[16] = canBeNew;
@@ -191,9 +191,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
             str = "";
           }
           obj8.name = str;
-          obj7.children = closure_8(onSelect(7225), obj8);
+          obj7.children = closure_8(onSelect(7227), obj8);
           let tmp20Result = closure_8(View, obj7);
-          const tmp23 = onSelect(7225);
+          const tmp23 = onSelect(7227);
         } else {
           const emoji6 = option.emoji;
           let name1;

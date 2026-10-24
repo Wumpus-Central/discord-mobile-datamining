@@ -1,23 +1,23 @@
-// === Module 14554: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 14577: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 14554 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 14577 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
-import ColorUtils from "ColorUtils" /* 4966 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import GuildIconDefault from "GuildIcon" /* 6881 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7072 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4837 */;
+import ColorUtils from "ColorUtils" /* 4968 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import GuildIconDefault from "GuildIcon" /* 6883 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7074 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };

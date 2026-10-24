@@ -1,24 +1,24 @@
-// === Module 16013: UserSettingsAccountEditPassword ===
+// === Module 16037: UserSettingsAccountEditPassword ===
 
-// Module 16013 (UserSettingsAccountEditPassword)
+// Module 16037 (UserSettingsAccountEditPassword)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import TextInput from "TextInput" /* 7006 */;
-import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7076 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7085 */;
-import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7086 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7091 */;
-import _modDef16014 from "module_16014" /* 16014 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import TextInput from "TextInput" /* 7008 */;
+import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7078 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7087 */;
+import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7088 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7093 */;
+import _modDef16038 from "module_16038" /* 16038 */;
 import noop from "module_19" /* 19 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4814 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7489 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4816 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7491 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const UserSettingsAccountUnverifiedHeaderDefault = UserSettingsAccountUnverifiedHeader;
@@ -30,7 +30,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
 let closure_14 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
@@ -148,7 +148,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef16014, style: tmp.image };
+    const obj4 = { source: _modDef16038, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -206,7 +206,7 @@ prototype["render"] = function render() {
   obj13.children = __initData(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(5035).ThemeContext;
+EditPassword.contextType = fn(5037).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
 const size = fn(2);
@@ -215,7 +215,7 @@ let result = size.fileFinishedImporting("modules/user_settings/account/native/Us
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPasswordWrapper() {
   const cResult = flag(576).c(6);
   let obj = flag(576);
-  const params = flag(7088).useSettingNavigationRoute().params;
+  const params = flag(7090).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   } else {
     tmp8 = cResult[2];
   }
-  let obj2 = flag(7088);
+  let obj2 = flag(7090);
   const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
   const tmpResult = flag(504);
   const navigation = flag(1505).useNavigation();
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   const obj3 = { navigation };
   const tmpResult2 = flag(1505);
 }) : (function EditPasswordWrapper() {
-  const params = flag(7088).useSettingNavigationRoute().params;
+  const params = flag(7090).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   if (flag == null) {
     flag = false;
   }
-  let obj = flag(7088);
+  let obj = flag(7090);
   let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();

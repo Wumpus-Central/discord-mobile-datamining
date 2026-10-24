@@ -1,13 +1,13 @@
-// === Module 16259: PremiumGiftingSetting ===
+// === Module 16283: PremiumGiftingSetting ===
 
-// Module 16259 (PremiumGiftingSetting)
+// Module 16283 (PremiumGiftingSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2065 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7527 */;
-import PromotionsHooks from "PromotionsHooks" /* 9518 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11035 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7529 */;
+import PromotionsHooks from "PromotionsHooks" /* 9519 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGiftingSettingTrailing() {
   const cResult = c.c(2);
   const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
@@ -67,7 +67,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12844).GiftIcon,
+  IconComponent: fn(12881).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

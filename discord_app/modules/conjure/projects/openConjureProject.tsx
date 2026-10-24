@@ -1,9 +1,9 @@
-// === Module 13485: openConjureProject ===
+// === Module 13522: openConjureProject ===
 
-// Module 13485 (openConjureProject)
+// Module 13522 (openConjureProject)
 import Constants from "Constants" /* 1087 */;
 import router_utils from "router_utils" /* 1114 */;
-import ChannelConstants from "ChannelConstants" /* 4828 */;
+import ChannelConstants from "ChannelConstants" /* 4830 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

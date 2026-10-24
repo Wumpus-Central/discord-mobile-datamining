@@ -14,15 +14,15 @@ import _modDef2049 from "module_2049" /* 2049 */;
 import PremiumSubscription from "PremiumSubscription" /* 2064 */;
 import _modDef2600 from "module_2600" /* 2600 */;
 import _modDef3250 from "module_3250" /* 3250 */;
-import BillingUtils from "BillingUtils" /* 4785 */;
-import DateUtils from "DateUtils" /* 4794 */;
-import ProductCatalog from "ProductCatalog" /* 5026 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5030 */;
-import openURLDefault from "openURL" /* 5654 */;
-import FileSizeUtils from "FileSizeUtils" /* 6377 */;
-import PriceUtils from "PriceUtils" /* 7337 */;
-import CheckoutError from "CheckoutError" /* 11044 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 14745 */;
+import BillingUtils from "BillingUtils" /* 4787 */;
+import DateUtils from "DateUtils" /* 4796 */;
+import ProductCatalog from "ProductCatalog" /* 5028 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5032 */;
+import openURLDefault from "openURL" /* 5656 */;
+import FileSizeUtils from "FileSizeUtils" /* 6379 */;
+import PriceUtils from "PriceUtils" /* 7339 */;
+import CheckoutError from "CheckoutError" /* 11045 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 14768 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -2562,7 +2562,7 @@ obj6.isPremiumSku = function isPremiumSku(skuId) {
   return skuId === __initData10.TIER_0 || skuId === __initData10.TIER_1 || skuId === __initData10.TIER_2;
 };
 obj6.getIntervalMonths = getIntervalMonths;
-obj6.getUserMaxFileSize = fn(5029).getUserMaxFileSize;
+obj6.getUserMaxFileSize = fn(5031).getUserMaxFileSize;
 obj6.getSkuIdForPlan = getSkuIdForPlan;
 obj6.getSkuIdForPremiumType = function getSkuIdForPremiumType(premiumType) {
   if (__initData11.TIER_0 === premiumType) {

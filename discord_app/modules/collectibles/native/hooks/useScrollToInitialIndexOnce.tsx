@@ -1,6 +1,6 @@
-// === Module 17167: useScrollToInitialIndexOnce ===
+// === Module 17199: useScrollToInitialIndexOnce ===
 
-// Module 17167 (useScrollToInitialIndexOnce)
+// Module 17199 (useScrollToInitialIndexOnce)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

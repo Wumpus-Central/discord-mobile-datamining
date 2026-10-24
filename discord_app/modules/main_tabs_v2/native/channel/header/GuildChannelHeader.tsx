@@ -1,21 +1,21 @@
-// === Module 14003: GuildChannelHeader ===
+// === Module 14022: GuildChannelHeader ===
 
-// Module 14003 (GuildChannelHeader)
+// Module 14022 (GuildChannelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import useChannelName from "useChannelName" /* 5602 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8500 */;
-import ChannelHeader from "ChannelHeader" /* 13990 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
+import ChannelHeader from "ChannelHeader" /* 14009 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14004 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7370 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5192 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14023 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7372 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -45,10 +45,10 @@ function computeVisibleChannelName(channel) {
   return stringResult;
 }
 let View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4825).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4827).THREAD_CHANNEL_TYPES;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_15, HelpdeskArticles: closure_16, StatusTypes: closure_17 } = Constants);
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 let c22 = 500;
@@ -58,7 +58,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   channel = channel.channel;
   const withSeparator = channel.withSeparator;
   let obj = channel(576);
-  const token = channel(5250).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  const token = channel(5252).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelMemberStore, ChannelMemberCountStore];
     cResult[0] = items;
@@ -79,7 +79,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
       const effect = noop.useEffect(tmp11, tmp12);
       if (null == total) {
-        const tmp18 = tmp(7020).ICON_SIZE[token];
+        const tmp18 = tmp(7022).ICON_SIZE[token];
         if (cResult[8] === online) {
           if (cResult[9] === tmp18) {
             if (cResult[10] === total) {
@@ -90,7 +90,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
             }
           }
         }
-        const tmpResult4 = tmp(13997);
+        const tmpResult4 = tmp(14016);
         const result = tmpResult4.renderMemberCountText(online, total, tmp4, tmp18);
         cResult[8] = online;
         cResult[9] = tmp18;
@@ -150,15 +150,15 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   cResult[2] = channel.id;
   cResult[3] = fn;
   tmp9 = fn;
-  const tmpResult = channel(5250);
+  const tmpResult = channel(5252);
 }) : (function GuildChannelMemberCount(channel) {
   channel = channel.channel;
   let flag = channel.withSeparator;
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5250).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5250);
+  const token = channel(5252).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5252);
   const items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -200,8 +200,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13997);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7020).ICON_SIZE[token]);
+    const tmpResult = tmp(14016);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7022).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 });
@@ -254,7 +254,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                 if (channel != null) {
                   id = channel.id;
                 }
-                const shouldChannelShowLoadingIndicator = guildId(13995).useShouldChannelShowLoadingIndicator(id);
+                const shouldChannelShowLoadingIndicator = guildId(14014).useShouldChannelShowLoadingIndicator(id);
                 if (cResult[15] === channel) {
                   if (cResult[16] === shouldChannelShowLoadingIndicator) {
                     let tmp26 = cResult[17];
@@ -264,7 +264,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                     if (tmp26) {
                       const _Symbol = Symbol;
                       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp41 = closure_19(guildId(13995).ChannelHeaderLoadingIndicator, {});
+                        const tmp41 = closure_19(guildId(14014).ChannelHeaderLoadingIndicator, {});
                         cResult[18] = tmp41;
                       }
                     } else {
@@ -302,7 +302,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                     }
                   }
                   const obj6 = { accessibleTitle: tmp14, subtitle: tmp29, disableArrow, guildId, icon };
-                  const renderChannelTitleResult = guildId(13997).renderChannelTitle(tmp7, obj6);
+                  const renderChannelTitleResult = guildId(14016).renderChannelTitle(tmp7, obj6);
                   if (cResult[26] === (null != appSubTitle || tmp26 || tmp20 || null != tmp15)) {
                     if (cResult[27] === renderChannelTitleResult) {
                       let tmp45 = cResult[28];
@@ -314,7 +314,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                   cResult[27] = renderChannelTitleResult;
                   cResult[28] = obj7;
                   tmp45 = obj7;
-                  const tmpResult8 = guildId(13997);
+                  const tmpResult8 = guildId(14016);
                 }
                 let isForumLikeChannelResult;
                 if (channel != null) {
@@ -328,7 +328,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                 cResult[16] = shouldChannelShowLoadingIndicator;
                 cResult[17] = tmp28;
                 tmp26 = tmp28;
-                const tmpResult7 = guildId(13995);
+                const tmpResult7 = guildId(14014);
               }
             }
           }
@@ -366,8 +366,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
       let result;
       if (tmp8) {
         if (null != parentChannel) {
-          result = guildId(13997).renderParentChannelSubTitle(parentChannel);
-          const tmpResult9 = guildId(13997);
+          result = guildId(14016).renderParentChannelSubTitle(parentChannel);
+          const tmpResult9 = guildId(14016);
         }
       }
       cResult[6] = tmp8;
@@ -378,7 +378,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
     }
   }
   const obj2 = { channel, guildId, showCreateThread, isConnected: guildId(504).useStateFromStores(tmp4, tmp5) };
-  const shouldNSFWGateGuildResult = guildId(9857).shouldNSFWGateGuild(guildId);
+  const shouldNSFWGateGuildResult = guildId(9858).shouldNSFWGateGuild(guildId);
   let tmp10 = !shouldNSFWGateGuildResult;
   if (!shouldNSFWGateGuildResult) {
     let tmp11 = showCreateThread;
@@ -396,7 +396,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   cResult[4] = showCreateThread;
   cResult[5] = tmp10;
   tmp8 = tmp10;
-  const tmpResult10 = guildId(9857);
+  const tmpResult10 = guildId(9858);
 }) : (function useChannelName(arg0) {
   ({ channel, parentChannel, guildId } = arg0);
   ({ disableGuildMemberCount, showCreateThread, appSubTitle } = arg0);
@@ -405,7 +405,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   const obj = guildId(504);
   const tmp3 = computeVisibleChannelName({ channel, guildId, showCreateThread, isConnected: guildId(504).useStateFromStores(items, () => connected.isConnected()) });
   const obj2 = { channel, guildId, showCreateThread, isConnected: guildId(504).useStateFromStores(items, () => connected.isConnected()) };
-  const shouldNSFWGateGuildResult = guildId(9857).shouldNSFWGateGuild(guildId);
+  const shouldNSFWGateGuildResult = guildId(9858).shouldNSFWGateGuild(guildId);
   let tmp5 = !shouldNSFWGateGuildResult;
   if (!shouldNSFWGateGuildResult) {
     let tmp6 = showCreateThread;
@@ -420,11 +420,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   }
   const intl = guildId(1128).intl;
   const t = guildId(1128).t;
-  const obj3 = guildId(9857);
+  const obj3 = guildId(9858);
   if (tmp5) {
     if (null != parentChannel) {
-      const result = guildId(13997).renderParentChannelSubTitle(parentChannel);
-      const tmpResult = guildId(13997);
+      const result = guildId(14016).renderParentChannelSubTitle(parentChannel);
+      const tmpResult = guildId(14016);
     }
   }
   const formatToPlainStringResult = intl.formatToPlainString(tmp5 ? t["OkzL+Q"] : t.UbNmGc, { channelName: tmp3 });
@@ -460,7 +460,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
     id = channel.id;
   }
   let isForumLikeChannelResult;
-  const shouldChannelShowLoadingIndicator = guildId(13995).useShouldChannelShowLoadingIndicator(id);
+  const shouldChannelShowLoadingIndicator = guildId(14014).useShouldChannelShowLoadingIndicator(id);
   if (channel != null) {
     isForumLikeChannelResult = channel.isForumLikeChannel();
   }
@@ -471,11 +471,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   if (null != appSubTitle) {
     const obj4 = { node: null, hasSubtitle: null };
     const obj5 = { accessibleTitle: formatToPlainStringResult, subtitle: appSubTitle, disableArrow, guildId, icon };
-    obj4.node = guildId(13997).renderChannelTitle(tmp3, obj5);
+    obj4.node = guildId(14016).renderChannelTitle(tmp3, obj5);
     obj4.hasSubtitle = null != appSubTitle || tmp18 || tmp12 || null != result;
     return obj4;
   } else if (tmp18) {
-    let tmp19Result = closure_19(guildId(13995).ChannelHeaderLoadingIndicator, {});
+    let tmp19Result = closure_19(guildId(14014).ChannelHeaderLoadingIndicator, {});
   } else {
     let tmp21 = tmp12;
     if (tmp12) {
@@ -489,14 +489,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
     tmp19Result = closure_21(closure_20, obj7);
     const tmp24 = null != parentChannel && result;
   }
-  const tmpResult5 = guildId(13995);
+  const tmpResult5 = guildId(14014);
 });
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelLinkedLobbyCoachmark(iconRef) {
   const cResult = require("c").c(13);
   ({ guild, channel } = iconRef);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [tmp(4805).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+    const items = [tmp(4807).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
     const obj2 = { bypassAutoDismiss: true };
     cResult[0] = items;
     cResult[1] = obj2;
@@ -546,7 +546,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         if (cResult[11] === tmp17) {
           let tmp19 = cResult[12];
         }
-        const coachmark = tmp(9839).useCoachmark(iconRef.iconRef, tmp19);
+        const coachmark = tmp(9840).useCoachmark(iconRef.iconRef, tmp19);
         return null;
       }
     }
@@ -559,8 +559,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   }
   let channelIconWithGuild;
   if (null != channel) {
-    channelIconWithGuild = tmp(8500).getChannelIconWithGuild(channel, guild);
-    const tmpResult4 = tmp(8500);
+    channelIconWithGuild = tmp(8502).getChannelIconWithGuild(channel, guild);
+    const tmpResult4 = tmp(8502);
   }
   cResult[6] = channel;
   cResult[7] = guild;
@@ -571,10 +571,10 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   guild = guild.guild;
   const channel = guild.channel;
   _slicedToArray = undefined;
-  const items = [guild(4805).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7494).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const items = [guild(4807).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = _slicedToArray(guild(7496).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(4805).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(4807).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
@@ -600,8 +600,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7494);
-  const coachmark = guild(9839).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7496);
+  const coachmark = guild(9840).useCoachmark(guild.iconRef, memo);
   return null;
 });
 ReactCompilerGating = fn(558);

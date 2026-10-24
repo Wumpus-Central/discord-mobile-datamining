@@ -1,25 +1,25 @@
-// === Module 14593: VoiceMemberEmbeddedActivity ===
+// === Module 14616: VoiceMemberEmbeddedActivity ===
 
-// Module 14593 (VoiceMemberEmbeddedActivity)
+// Module 14616 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11435 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11455 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5264).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const XSMALL = fn(1202).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1206).getThemedRippleConfig({ foreground: true });
 let size = { width: 32, height: 32, marginRight: 16, borderRadius: 4 };
 let c13 = 1.7777777777777777;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { voiceMemberItemRow: { paddingTop: 12, paddingBottom: 16, flexDirection: "column", display: "flex", justifyContent: "flex-start" }, innerRow: { paddingHorizontal: 16, alignItems: "center" }, activityDetails: { marginBottom: 8, flexDirection: "row", display: "flex" }, appIcon: size, appIconPlaceholder: null, centerGroup: null, applicationName: null, joinButton: null, joinButtonPill: null, joinButtonContainer: null, overflow: null, overflowBackgroundColor: null, overflowBackgroundColorActionSheet: null };
 let obj3 = {};
 const merged = Object.assign(size);

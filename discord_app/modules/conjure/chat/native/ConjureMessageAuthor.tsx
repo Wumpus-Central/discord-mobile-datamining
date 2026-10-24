@@ -1,25 +1,25 @@
-// === Module 12329: ConjureMessageAuthor ===
+// === Module 12355: ConjureMessageAuthor ===
 
-// Module 12329 (ConjureMessageAuthor)
+// Module 12355 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import Pressables from "Pressables" /* 6906 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 12330 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12331 */;
-import _modDef12334 from "module_12334" /* 12334 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import Pressables from "Pressables" /* 6908 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 12356 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12357 */;
+import _modDef12360 from "module_12360" /* 12360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(12316).MESSAGE_AVATAR_SIZE, height: fn(12316).MESSAGE_AVATAR_SIZE, borderRadius: fn(12316).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(12342).MESSAGE_AVATAR_SIZE, height: fn(12342).MESSAGE_AVATAR_SIZE, borderRadius: fn(12342).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -139,9 +139,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
   const cResult = messageAuthorUser(576).c(6);
   ({ at, userId } = arg0);
   let obj = messageAuthorUser(576);
-  messageAuthorUser = messageAuthorUser(12327).useMessageAuthorUser(userId);
-  const obj2 = messageAuthorUser(12327);
-  const name = messageAuthorUser(5023).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12353).useMessageAuthorUser(userId);
+  const obj2 = messageAuthorUser(12353);
+  const name = messageAuthorUser(5025).useName(messageAuthorUser);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -174,9 +174,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
 }) : (function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(12327).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(12327);
-  const name = messageAuthorUser(5023).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12353).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12353);
+  const name = messageAuthorUser(5025).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -227,7 +227,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     size = PressableOpacity(1202).AvatarSizes.NORMAL;
   }
   let obj = messageAuthorUser(576);
-  messageAuthorUser = PressableOpacity(12327).useMessageAuthorUser(userId);
+  messageAuthorUser = PressableOpacity(12353).useMessageAuthorUser(userId);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -258,7 +258,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6906).PressableOpacity;
+      PressableOpacity = PressableOpacity(6908).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_5(PressableOpacity, obj2);
       cResult[6] = tmp4;
@@ -272,14 +272,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     cResult[5] = tmp10;
     tmp8 = tmp10;
   }
-  const PressableOpacityResult = PressableOpacity(12327);
+  const PressableOpacityResult = PressableOpacity(12353);
 }) : (function ConjureUserAvatar(size) {
   let NORMAL = size.size;
   if (NORMAL === undefined) {
     NORMAL = messageAuthorUser(1202).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(12327).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(12353).useMessageAuthorUser(size.userId);
   const items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -293,7 +293,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     obj2.accessibilityLabel = intl.string(tmp3(1128).t.iXAna6);
     const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
     obj2.children = closure_5(tmp3(1202).Avatar, obj3);
-    tmp7 = closure_5(tmp3(6906).PressableOpacity, obj2);
+    tmp7 = closure_5(tmp3(6908).PressableOpacity, obj2);
   }
   return tmp7;
 });
@@ -308,7 +308,7 @@ export const ConjureAvatar = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const cResult = c.c(2);
   const tmp3 = closure_7();
   if (cResult[0] !== tmp3.agentAvatar) {
-    const obj2 = { source: _modDef12334, style: tmp3.agentAvatar };
+    const obj2 = { source: _modDef12360, style: tmp3.agentAvatar };
     const tmp8 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp3.agentAvatar;
     cResult[1] = tmp8;
@@ -320,7 +320,7 @@ export const ConjureAvatar = ReactCompilerGating.isReactCompilerEnabled() ? (fun
 }) : (function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef12334;
+  obj.source = _modDef12360;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 });

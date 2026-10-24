@@ -1,14 +1,14 @@
-// === Module 9518: PromotionsHooks ===
+// === Module 9519: PromotionsHooks ===
 
-// Module 9518 (PromotionsHooks)
+// Module 9519 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import PromotionUtils from "PromotionUtils" /* 9559 */;
-import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9560 */;
+import PromotionUtils from "PromotionUtils" /* 9560 */;
+import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9561 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import PromotionsStore from "PromotionsStore" /* 9519 */;
+import PromotionsStore from "PromotionsStore" /* 9520 */;
 
 const require = globalThis.__r;
 

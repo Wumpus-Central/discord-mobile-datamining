@@ -1,6 +1,6 @@
-// === Module 5139: mergeProps ===
+// === Module 5141: mergeProps ===
 
-// Module 5139 (mergeProps)
+// Module 5141 (mergeProps)
 import size from "module_2" /* 2 */;
 
 function chainCallbacks() {

@@ -1,10 +1,10 @@
-// === Module 8560: AnnouncementsWarningIcon ===
+// === Module 8562: AnnouncementsWarningIcon ===
 
-// Module 8560 (AnnouncementsWarningIcon)
+// Module 8562 (AnnouncementsWarningIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5666 */;
-import _mod8518 from "module_8518" /* 8518 */;
+import BaseIconImage from "BaseIconImage" /* 5668 */;
+import _mod8520 from "module_8520" /* 8520 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const AnnouncementsWarningIcon = ReactCompilerGating.isReactCompilerEnabl
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8518;
+    const tmpResult = _mod8520;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const AnnouncementsWarningIcon = ReactCompilerGating.isReactCompilerEnabl
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8518, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8520, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

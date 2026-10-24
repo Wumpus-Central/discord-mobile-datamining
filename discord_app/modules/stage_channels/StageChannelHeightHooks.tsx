@@ -1,7 +1,7 @@
-// === Module 11542: StageChannelHeightHooks ===
+// === Module 11562: StageChannelHeightHooks ===
 
-// Module 11542 (StageChannelHeightHooks)
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8104 */;
+// Module 11562 (StageChannelHeightHooks)
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8106 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

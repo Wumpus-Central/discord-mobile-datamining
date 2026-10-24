@@ -1,12 +1,12 @@
-// === Module 17194: FeedBlock ===
+// === Module 17226: FeedBlock ===
 
-// Module 17194 (FeedBlock)
+// Module 17226 (FeedBlock)
 import initializeDefault from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9447 */;
-import uniqByDefault from "uniqBy" /* 17175 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9448 */;
+import uniqByDefault from "uniqBy" /* 17207 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = [];
 let closure_11 = [];
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { feedContainer: { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 }, feedHeader: null, feedTitle: null, feedFooter: null, feedFooterImage: null, feedFooterOrbImage: null };
 let obj3 = { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 };
 obj2.feedHeader = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };

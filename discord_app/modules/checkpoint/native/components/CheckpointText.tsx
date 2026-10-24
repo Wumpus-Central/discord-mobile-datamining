@@ -1,14 +1,14 @@
-// === Module 12930: CheckpointText ===
+// === Module 12967: CheckpointText ===
 
-// Module 12930 (CheckpointText)
+// Module 12967 (CheckpointText)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
+import Text_Text from "Text/Text" /* 5234 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_2 = ["children", "style"];
 const jsx = fn(21).jsx;
-let closure_5 = { color: fn(6013).CHECKPOINT_PRIMARY };
+let closure_5 = { color: fn(6015).CHECKPOINT_PRIMARY };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointText.tsx");

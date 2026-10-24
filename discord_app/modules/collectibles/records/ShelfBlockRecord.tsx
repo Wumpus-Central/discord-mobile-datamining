@@ -1,7 +1,7 @@
-// === Module 7684: ShelfBlockRecord ===
+// === Module 7686: ShelfBlockRecord ===
 
-// Module 7684 (ShelfBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5638 */;
+// Module 7686 (ShelfBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5640 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function ShelfBlockRecord(show_button) {

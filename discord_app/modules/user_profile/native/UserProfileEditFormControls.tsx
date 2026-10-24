@@ -1,17 +1,17 @@
-// === Module 15843: UserProfileEditFormControls ===
+// === Module 15867: UserProfileEditFormControls ===
 
-// Module 15843 (UserProfileEditFormControls)
+// Module 15867 (UserProfileEditFormControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Pressables from "Pressables" /* 6906 */;
-import TableRowArrow from "TableRowArrow" /* 6910 */;
-import Input from "Input" /* 7007 */;
-import FormSwitch from "FormSwitch" /* 7294 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Pressables from "Pressables" /* 6908 */;
+import TableRowArrow from "TableRowArrow" /* 6912 */;
+import Input from "Input" /* 7009 */;
+import FormSwitch from "FormSwitch" /* 7296 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { button: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md }, buttonDisabled: { opacity: 0.5 }, buttonGroup: null, buttonInGroup: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
 let obj3 = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md };
 obj2.buttonGroup = { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
@@ -512,7 +512,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
           }
         }
         const obj4 = { "aria-hidden": true, value, onValueChange: tmp9, disabled: tmp4 };
-        const tmp21 = timestampProducer(tmp(7294).FormSwitch, obj4);
+        const tmp21 = timestampProducer(tmp(7296).FormSwitch, obj4);
         cResult[14] = tmp4;
         cResult[15] = tmp9;
         cResult[16] = value;
@@ -564,7 +564,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(6906).PressableHighlight;
+    let PressableHighlight = tmp2(6908).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }

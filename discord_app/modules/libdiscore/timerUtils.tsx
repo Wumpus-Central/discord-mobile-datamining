@@ -1,6 +1,6 @@
-// === Module 19421: timerUtils ===
+// === Module 19481: timerUtils ===
 
-// Module 19421 (timerUtils)
+// Module 19481 (timerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import timersAll from "timers" /* 567 */;

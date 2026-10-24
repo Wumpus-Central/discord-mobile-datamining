@@ -1,158 +1,147 @@
-// === Module 19248: FormEmojiPicker ===
+// === Module 19299: FormEmojiPicker ===
 
-// Module 19248 (FormEmojiPicker)
-import nativeDefault from "native" /* 587 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9824 */;
+// Module 19299 (FormEmojiPicker)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9825 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6649 */;
 
 require = fn;
-const Fonts = fn(1087).Fonts;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
-let obj2 = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
-let TextStyles = TextStyles_mod;
-const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_MUTED, 16));
-obj2.placeholder = {};
-let TextStyles = TextStyles_mod;
-const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 16));
-obj2.text = {};
-let closure_6 = createStyles.createStyles(obj2);
+const createStyles = fn(4971);
+let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, emojiPickerIcon: { width: 20, height: 20 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmojiPicker(onChange) {
-  const cResult = guildId(576).c(26);
+  const cResult = guildId(576).c(25);
   ({ emoji, guildId } = onChange);
   onChange = onChange.onChange;
   ({ emojiId, emojiName } = emoji);
   const tmp4 = closure_6();
-  const tmp6 = onChange(15118)();
+  const tmp6 = onChange(15140)();
   if (cResult[0] === emojiId) {
     if (cResult[1] === emojiName) {
       let tmp7 = cResult[2];
     }
-    const emojiByIdOrName = guildId(16561).useEmojiByIdOrName(guildId, tmp7);
+    const emojiByIdOrName = guildId(16593).useEmojiByIdOrName(guildId, tmp7);
+    let emojiPickerIcon = tmp7;
     if (cResult[3] === tmp7) {
       if (cResult[4] === guildId) {
-        if (cResult[6] === guildId) {
-          if (cResult[7] === onChange) {
-            let tmp18 = cResult[8];
-          }
-          if (cResult[9] === tmp6.textInput) {
-            if (cResult[10] === tmp4.container) {
-              let tmp19 = cResult[11];
+        if (cResult[5] === tmp4.emojiPickerIcon) {
+          if (cResult[7] === guildId) {
+            if (cResult[8] === onChange) {
+              let tmp16 = cResult[9];
             }
-            const tmp21 = null != emojiByIdOrName ? tmp4.text : tmp4.placeholder;
-            if (cResult[12] === tmp4.content) {
-              if (cResult[13] === tmp21) {
-                let tmp22 = cResult[14];
+            if (cResult[10] === tmp6.textInput) {
+              if (cResult[11] === tmp4.container) {
+                let tmp17 = cResult[12];
               }
-              if (cResult[15] !== emojiByIdOrName) {
+              let str2 = "text-muted";
+              if (null != emojiByIdOrName) {
+                str2 = "text-default";
+              }
+              if (cResult[13] !== emojiByIdOrName) {
                 if (null != emojiByIdOrName) {
-                  let allEmojiNamesString = guildId(4919).getAllEmojiNamesString(emojiByIdOrName);
-                  const tmpResult2 = guildId(4919);
+                  let allEmojiNamesString = guildId(4921).getAllEmojiNamesString(emojiByIdOrName);
+                  const tmpResult2 = guildId(4921);
                 } else {
                   const intl = guildId(1128).intl;
                   allEmojiNamesString = intl.string(guildId(1128).t.gXAN3P);
                 }
-                cResult[15] = emojiByIdOrName;
-                cResult[16] = allEmojiNamesString;
+                cResult[13] = emojiByIdOrName;
+                cResult[14] = allEmojiNamesString;
               } else {
-                if (cResult[17] === tmp22) {
-                  if (cResult[18] === tmp23) {
-                    let tmp26 = cResult[19];
-                  }
-                  const _Symbol = Symbol;
-                  if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                    let obj2 = { size: guildId(1202).Icon.Sizes.MEDIUM, source: tmp5(11540) };
-                    const tmp32 = closure_4(guildId(1202).Icon, obj2);
-                    cResult[20] = tmp32;
-                    let tmp30 = tmp32;
-                  } else {
-                    tmp30 = cResult[20];
-                  }
-                  if (cResult[21] === tmp11) {
-                    if (cResult[22] === tmp18) {
-                      if (cResult[23] === tmp19) {
-                        if (cResult[24] === tmp26) {
-                          let tmp33 = cResult[25];
+                if (cResult[15] === tmp4.content) {
+                  if (cResult[16] === str2) {
+                    if (cResult[17] === tmp19) {
+                      let tmp22 = cResult[18];
+                    }
+                    const _Symbol = Symbol;
+                    if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+                      const tmp28 = closure_4(guildId(7305).ChevronSmallRightIcon, { size: "md" });
+                      cResult[19] = tmp28;
+                      let tmp26 = tmp28;
+                    } else {
+                      tmp26 = cResult[19];
+                    }
+                    if (cResult[20] === tmp10) {
+                      if (cResult[21] === tmp16) {
+                        if (cResult[22] === tmp17) {
+                          if (cResult[23] === tmp22) {
+                            let tmp29 = cResult[24];
+                          }
+                          return tmp29;
                         }
-                        return tmp33;
                       }
                     }
+                    let obj2 = { style: tmp17, accessibilityRole: "link", onPress: tmp16, children: null };
+                    const items = [tmp10, tmp22, tmp26];
+                    obj2.children = items;
+                    const tmp31 = closure_5(tmp5(9041), obj2);
+                    cResult[20] = tmp10;
+                    cResult[21] = tmp16;
+                    cResult[22] = tmp17;
+                    cResult[23] = tmp22;
+                    cResult[24] = tmp31;
+                    tmp29 = tmp31;
                   }
-                  const obj3 = { style: tmp19, accessibilityRole: "link", onPress: tmp18, children: null };
-                  const items = [tmp11, tmp26, tmp30];
-                  obj3.children = items;
-                  const tmp35 = closure_5(tmp5(9040), obj3);
-                  cResult[21] = tmp11;
-                  cResult[22] = tmp18;
-                  cResult[23] = tmp19;
-                  cResult[24] = tmp26;
-                  cResult[25] = tmp35;
-                  tmp33 = tmp35;
                 }
-                const obj4 = { style: tmp22, children: cResult[16] };
-                const tmp28 = closure_4(guildId(1202).LegacyText, obj4);
-                cResult[17] = tmp22;
-                cResult[18] = cResult[16];
-                cResult[19] = tmp28;
-                tmp26 = tmp28;
+                const obj3 = { style: tmp4.content, variant: "text-md/medium", color: str2, children: cResult[14] };
+                const tmp24 = closure_4(guildId(5234).Text, obj3);
+                cResult[15] = tmp4.content;
+                cResult[16] = str2;
+                cResult[17] = cResult[14];
+                cResult[18] = tmp24;
+                tmp22 = tmp24;
               }
             }
-            const items1 = [tmp4.content, tmp21];
-            cResult[12] = tmp4.content;
-            cResult[13] = tmp21;
-            cResult[14] = items1;
-            tmp22 = items1;
+            const items1 = [tmp4.container, tmp6.textInput];
+            cResult[10] = tmp6.textInput;
+            cResult[11] = tmp4.container;
+            cResult[12] = items1;
+            tmp17 = items1;
           }
-          const items2 = [tmp4.container, tmp6.textInput];
-          cResult[9] = tmp6.textInput;
-          cResult[10] = tmp4.container;
-          cResult[11] = items2;
-          tmp19 = items2;
-        }
-        function handleSelectEmoji() {
-          const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet({
-            guildId,
-            onPressEmoji(id) {
-              if (null != id.id) {
-                if (onChange != null) {
-                  const obj2 = { emojiId: id.id };
-                  tmp3(obj2);
+          function handleSelectEmoji() {
+            const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet({
+              guildId,
+              onPressEmoji(id) {
+                if (null != id.id) {
+                  if (onChange != null) {
+                    const obj2 = { emojiId: id.id };
+                    tmp3(obj2);
+                  }
+                } else if (null != id.optionallyDiverseSequence) {
+                  if (onChange != null) {
+                    const obj = { emojiName: id.optionallyDiverseSequence };
+                    tmp(obj);
+                  }
                 }
-              } else if (null != id.optionallyDiverseSequence) {
-                if (onChange != null) {
-                  const obj = { emojiName: id.optionallyDiverseSequence };
-                  tmp(obj);
-                }
-              }
-            },
-            pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI
-          });
+              },
+              pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI
+            });
+          }
+          cResult[7] = guildId;
+          cResult[8] = onChange;
+          cResult[9] = handleSelectEmoji;
+          tmp16 = handleSelectEmoji;
         }
-        cResult[6] = guildId;
-        cResult[7] = onChange;
-        cResult[8] = handleSelectEmoji;
-        tmp18 = handleSelectEmoji;
       }
     }
-    if (null != tmp7) {
-      const obj5 = { guildId, id: tmp7 };
-      let tmp15 = closure_4(tmp5(16560), obj5);
+    if (null != emojiPickerIcon) {
+      const obj4 = { guildId, id: emojiPickerIcon };
+      let tmp13 = closure_4(tmp5(16592), obj4);
     } else {
-      const obj6 = { resizeMode: "contain", source: tmp5(19249) };
-      tmp15 = closure_4(tmp5(5667), obj6);
-      const tmp5Result = tmp5(5667);
+      const obj5 = { size: "custom", style: tmp4.emojiPickerIcon };
+      tmp13 = closure_4(guildId(9350).ReactionIcon, obj5);
     }
-    cResult[3] = tmp7;
+    cResult[3] = emojiPickerIcon;
     cResult[4] = guildId;
-    cResult[5] = tmp15;
-    const tmpResult = guildId(16561);
+    emojiPickerIcon = tmp4.emojiPickerIcon;
+    cResult[5] = emojiPickerIcon;
+    cResult[6] = tmp13;
+    const tmpResult = guildId(16593);
   }
   let result = emojiId;
   if (emojiId == null) {
@@ -160,8 +149,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     if (emojiName == null) {
       str = "";
     }
-    result = tmp5(4915).convertSurrogateToName(str, false);
-    const tmp5Result2 = tmp5(4915);
+    result = tmp5(4917).convertSurrogateToName(str, false);
+    const tmp5Result = tmp5(4917);
   }
   cResult[0] = emojiId;
   cResult[1] = emojiName;
@@ -177,20 +166,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     if (emojiName == null) {
       emojiName = "";
     }
-    emojiId = tmp2(4915).convertSurrogateToName(emojiName, false);
-    const tmp2Result = tmp2(4915);
+    emojiId = tmp2(4917).convertSurrogateToName(emojiName, false);
+    const tmp2Result = tmp2(4917);
   }
-  const tmp4 = onChange(15118)();
-  const emojiByIdOrName = guildId(16561).useEmojiByIdOrName(guildId, emojiId);
+  const tmp4 = onChange(15140)();
+  const emojiByIdOrName = guildId(16593).useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId, id: emojiId };
-    let tmp9 = closure_4(tmp2(16560), obj);
-    let tmp10 = closure_4;
+    let tmp8 = closure_4(tmp2(16592), obj);
+    let tmp7 = closure_4;
   } else {
-    const obj3 = { resizeMode: "contain", source: tmp2(19249) };
-    tmp9 = closure_4(tmp2(5667), obj3);
-    tmp10 = closure_4;
-    const tmp2Result3 = tmp2(5667);
+    tmp7 = closure_4;
+    const obj3 = { size: "custom", style: tmp.emojiPickerIcon };
+    tmp8 = closure_4(tmp5(9350).ReactionIcon, obj3);
   }
   const obj4 = {
     style: null,
@@ -218,22 +206,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   };
   const items = [tmp.container, tmp4.textInput];
   obj4.style = items;
-  const items1 = [tmp9, , ];
-  let obj2 = guildId(16561);
-  const items2 = [tmp.content, ];
-  const obj5 = { style: items2, children: null };
-  items2[1] = null != emojiByIdOrName ? tmp.text : tmp.placeholder;
+  const items1 = [tmp8, , ];
+  let obj2 = guildId(16593);
+  const obj5 = { style: tmp.content, variant: "text-md/medium", color: null, children: null };
+  let str = "text-muted";
   if (null != emojiByIdOrName) {
-    let allEmojiNamesString = tmp5(4919).getAllEmojiNamesString(emojiByIdOrName);
-    const tmp5Result = tmp5(4919);
+    str = "text-default";
+  }
+  obj5.color = str;
+  if (null != emojiByIdOrName) {
+    let allEmojiNamesString = tmp5(4921).getAllEmojiNamesString(emojiByIdOrName);
+    const tmp5Result = tmp5(4921);
   } else {
     const intl = tmp5(1128).intl;
     allEmojiNamesString = intl.string(tmp5(1128).t.gXAN3P);
   }
   obj5.children = allEmojiNamesString;
-  items1[1] = tmp10(guildId(1202).LegacyText, obj5);
-  const tmp2Result4 = onChange(9040);
-  items1[2] = tmp10(guildId(1202).Icon, { size: guildId(1202).Icon.Sizes.MEDIUM, source: onChange(11540) });
+  items1[1] = tmp7(guildId(5234).Text, obj5);
+  items1[2] = tmp7(guildId(7305).ChevronSmallRightIcon, { size: "md" });
   obj4.children = items1;
-  return closure_5(tmp2Result4, obj4);
+  return closure_5(onChange(9041), obj4);
 });

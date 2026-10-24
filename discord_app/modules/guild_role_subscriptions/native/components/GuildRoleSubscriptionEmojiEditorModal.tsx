@@ -1,18 +1,18 @@
-// === Module 19250: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 19300: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 19250 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 19300 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
-import common_AlertDefault from "common/Alert" /* 5976 */;
-import EmojiAliasDefault from "EmojiAlias" /* 19236 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
+import common_AlertDefault from "common/Alert" /* 5978 */;
+import EmojiAliasDefault from "EmojiAlias" /* 19287 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4924 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4926 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiList = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

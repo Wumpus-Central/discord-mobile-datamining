@@ -1,11 +1,11 @@
-// === Module 17996: JoinRequestActionSheet ===
+// === Module 18028: JoinRequestActionSheet ===
 
-// Module 17996 (JoinRequestActionSheet)
-import isChangelogUserDefault from "isChangelogUser" /* 4870 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6843 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8674 */;
+// Module 18028 (JoinRequestActionSheet)
+import isChangelogUserDefault from "isChangelogUser" /* 4872 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6845 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinRequestActionSheet(joinRequest) {

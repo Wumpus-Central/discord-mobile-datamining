@@ -1,19 +1,19 @@
-// === Module 8838: ICYMIUtils ===
+// === Module 8840: ICYMIUtils ===
 
-// Module 8838 (ICYMIUtils)
+// Module 8840 (ICYMIUtils)
 import util from "util" /* 1128 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6010 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8611 */;
-import ICYMITypes from "ICYMITypes" /* 8834 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8839 */;
-import generateHydrationId from "generateHydrationId" /* 8844 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8845 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8846 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8613 */;
+import ICYMITypes from "ICYMITypes" /* 8836 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
+import generateHydrationId from "generateHydrationId" /* 8846 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8847 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8835 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8837 */;
 
 require = fn;
 let closure_12 = async function _hydrateItems(arg0) {
@@ -47,10 +47,10 @@ let closure_12 = async function _hydrateItems(arg0) {
             let obj2 = ICYMIActionCreatorsDefault;
             const hydratedAttempt = obj2.loadHydratedAttempt(generateHydrationId.generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8834).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8836).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8834).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8836).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -86,7 +86,7 @@ let closure_12 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8834).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8836).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };
@@ -116,7 +116,7 @@ let closure_12 = async function _hydrateItems(arg0) {
     }
   }
 };
-const ThreadChannelRecord = fn(4825).ThreadChannelRecord;
+const ThreadChannelRecord = fn(4827).ThreadChannelRecord;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };

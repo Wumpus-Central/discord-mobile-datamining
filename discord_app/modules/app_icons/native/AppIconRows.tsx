@@ -1,26 +1,26 @@
-// === Module 16848: AppIconRows ===
+// === Module 16880: AppIconRows ===
 
-// Module 16848 (AppIconRows)
+// Module 16880 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppIconTypes from "AppIconTypes" /* 9865 */;
-import AppIconUtils from "AppIconUtils" /* 14739 */;
-import AppIconRowDefault from "AppIconRow" /* 16849 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16850 */;
+import AppIconTypes from "AppIconTypes" /* 9866 */;
+import AppIconUtils from "AppIconUtils" /* 14762 */;
+import AppIconRowDefault from "AppIconRow" /* 16881 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16882 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13094 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13131 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(9864).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
@@ -43,7 +43,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6985).TableRowGroup;
+  const TableRowGroup = tmp(6987).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_10(merged(6985).TableRowGroup, obj2);
+    obj.children = closure_10(merged(6987).TableRowGroup, obj2);
     return closure_10(View, obj);
   }
 });

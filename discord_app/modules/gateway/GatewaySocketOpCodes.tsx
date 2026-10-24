@@ -1,9 +1,9 @@
-// === Module 14926: GatewaySocketOpCodes ===
+// === Module 14949: GatewaySocketOpCodes ===
 
-// Module 14926 (GatewaySocketOpCodes)
+// Module 14949 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2012 */;
-import RTCRegionStore from "RTCRegionStore" /* 5811 */;
+import RTCRegionStore from "RTCRegionStore" /* 5813 */;
 
 require = fn;
 const EventEmitter = fn(580).EventEmitter;

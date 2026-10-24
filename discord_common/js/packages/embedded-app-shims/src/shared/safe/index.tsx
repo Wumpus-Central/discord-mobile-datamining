@@ -1,7 +1,7 @@
-// === Module 11476: Safe ===
+// === Module 11496: Safe ===
 
-// Module 11476 (Safe)
-import passThrough_mod from "passThrough" /* 11477 */;
+// Module 11496 (Safe)
+import passThrough_mod from "passThrough" /* 11497 */;
 import size from "module_2" /* 2 */;
 
 const obj = { asIterable: passThrough.asIterable, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
@@ -26,7 +26,7 @@ obj.NavigationDestination = passThrough.protectPrototype("NavigationDestination"
 let passThrough = passThrough_mod;
 obj.URL = passThrough.protectPrototype("URL", ["href", "origin", "pathname", "search"]);
 let passThrough = passThrough_mod;
-obj.EventTarget = passThrough.protectPrototype("EventTarget", ["addEventListener"]);
+obj.EventTarget = passThrough.protectPrototype("EventTarget", ["addEventListener", "dispatchEvent"]);
 let passThrough = passThrough_mod;
 obj.MessageEvent = passThrough.protectPrototype("MessageEvent", ["data", "origin", "ports", "source"]);
 let passThrough = passThrough_mod;
@@ -86,7 +86,7 @@ obj.Symbol = passThrough.protectStatics("Symbol", ["asyncIterator", "iterator"])
 let passThrough = passThrough_mod;
 obj.Crypto = passThrough.protectStatics("crypto", ["getRandomValues"]);
 let passThrough = passThrough_mod;
-obj.Constructor = passThrough.protectConstructors(["Blob", "Boolean", "Error", "Proxy", "Float32Array", "Map", "MessageChannel", "Set", "Uint32Array", "URL", "WeakMap", "WeakSet"]);
+obj.Constructor = passThrough.protectConstructors(["Blob", "Boolean", "Error", "Proxy", "Float32Array", "Map", "MessageChannel", "MessageEvent", "Set", "Uint32Array", "URL", "WeakMap", "WeakSet"]);
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/shared/safe/index.tsx");
 
 export const Safe = obj;

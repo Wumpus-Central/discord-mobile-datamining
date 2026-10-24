@@ -1,21 +1,21 @@
-// === Module 15789: LocalMessageCacheManager ===
+// === Module 15812: LocalMessageCacheManager ===
 
-// Module 15789 (LocalMessageCacheManager)
+// Module 15812 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import DateUtils from "DateUtils" /* 4794 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7564 */;
-import createMessageDefault from "createMessage" /* 10206 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 11319 */;
+import DateUtils from "DateUtils" /* 4796 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
+import createMessageDefault from "createMessage" /* 10207 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4912 */;
+import MessageRecord from "MessageRecord" /* 4914 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 6008 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import MessageStore from "MessageStore" /* 6010 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 
 require = fn;
@@ -243,7 +243,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1087).MessageStates;
-const MutexUtils = fn(15790);
+const MutexUtils = fn(15813);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -964,7 +964,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6489);
+                let obj9 = values(6491);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

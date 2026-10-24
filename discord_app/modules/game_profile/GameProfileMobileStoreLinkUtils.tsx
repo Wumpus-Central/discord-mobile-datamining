@@ -1,27 +1,27 @@
-// === Module 9321: GameProfileMobileStoreLinkUtils ===
+// === Module 9322: GameProfileMobileStoreLinkUtils ===
 
-// Module 9321 (GameProfileMobileStoreLinkUtils)
+// Module 9322 (GameProfileMobileStoreLinkUtils)
 import ApplicationDistributors from "ApplicationDistributors" /* 1106 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9272 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9273 */;
 import size from "module_2" /* 2 */;
 
 let obj = { appStore: null, googlePlay: null };
 const obj2 = { websiteCategories: null, websiteHostnames: null, distributor: null, buildUrl: null };
 const items = [ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.IPHONE, ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.IPAD];
 obj2.websiteCategories = items;
-obj2.websiteHostnames = ["apps.apple.com", "itunes.apple.com"];
+obj2.websiteHostnames = ThirdPartyGameApplicationWebsiteCategory.APP_STORE_WEBSITE_HOSTNAMES;
 obj2.distributor = ApplicationDistributors.ApplicationDistributors.APPLE_APP_STORE;
 obj2.buildUrl = function buildUrl(arg0) {
-  return "https://apps.apple.com/app/id" + arg0;
+  return "https://" + ThirdPartyGameApplicationWebsiteCategory.APP_STORE_WEBSITE_HOSTNAMES[0] + "/app/id" + arg0;
 };
 obj.appStore = obj2;
 const obj3 = { websiteCategories: null, websiteHostnames: null, distributor: null, buildUrl: null };
 const items1 = [ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.ANDROID];
 obj3.websiteCategories = items1;
-obj3.websiteHostnames = ["play.google.com"];
+obj3.websiteHostnames = ThirdPartyGameApplicationWebsiteCategory.GOOGLE_PLAY_WEBSITE_HOSTNAMES;
 obj3.distributor = ApplicationDistributors.ApplicationDistributors.GOOGLE_PLAY;
 obj3.buildUrl = function buildUrl(arg0) {
-  return "https://play.google.com/store/apps/details?id=" + encodeURIComponent(arg0);
+  return "https://" + ThirdPartyGameApplicationWebsiteCategory.GOOGLE_PLAY_WEBSITE_HOSTNAMES[0] + "/store/apps/details?id=" + encodeURIComponent(arg0);
 };
 obj.googlePlay = obj3;
 const values = Object.values(obj);

@@ -1,6 +1,6 @@
-// === Module 8614: getFallbackHeroColor ===
+// === Module 8616: getFallbackHeroColor ===
 
-// Module 8614 (getFallbackHeroColor)
+// Module 8616 (getFallbackHeroColor)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 

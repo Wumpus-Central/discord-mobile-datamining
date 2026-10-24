@@ -1,11 +1,11 @@
-// === Module 5848: NativeMuteManager ===
+// === Module 5850: NativeMuteManager ===
 
-// Module 5848 (NativeMuteManager)
+// Module 5850 (NativeMuteManager)
 import LoggerDefault from "Logger" /* 3 */;
 import inject from "inject" /* 2016 */;
-import Timers from "Timers" /* 4816 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
-import AudioRouteStore from "AudioRouteStore" /* 5732 */;
+import Timers from "Timers" /* 4818 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
+import AudioRouteStore from "AudioRouteStore" /* 5734 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
@@ -42,7 +42,7 @@ class NativeMuteManager {
 }
 const prototype = NativeMuteManager.prototype;
 prototype["nativeMuteChanged"] = function nativeMuteChanged() {
-  if (!MediaEngineStore.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveSystemTelecomCall()) {
     const self = this;
     if (this.ignoreForNativeUnmute) {
       self.ignoreForNativeUnmute = false;
@@ -54,7 +54,7 @@ prototype["nativeMuteChanged"] = function nativeMuteChanged() {
   }
 };
 prototype["updateNativeMute"] = function updateNativeMute() {
-  if (!MediaEngineStore.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveSystemTelecomCall()) {
     const self = this;
     if (this.needToUnmuteNative) {
       self.needToUnmuteNative = false;
@@ -83,7 +83,7 @@ let closure_129_0 = obj;
 obj.ignoreForNativeUnmute = false;
 obj.needToUnmuteNative = false;
 obj.ignoreForAudioRouteChange = false;
-let timeout = new fn(4816).Timeout();
+let timeout = new fn(4818).Timeout();
 obj.audioRouteChangeIgnoreTimer = timeout;
 obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {

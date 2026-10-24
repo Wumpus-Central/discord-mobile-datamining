@@ -1,12 +1,12 @@
-// === Module 13136: VocalChannelJoinButton ===
+// === Module 13173: VocalChannelJoinButton ===
 
-// Module 13136 (VocalChannelJoinButton)
+// Module 13173 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 587 */;
-import StageIcon from "StageIcon" /* 8566 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8570 */;
+import StageIcon from "StageIcon" /* 8568 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8572 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1087);
 ({ NOOP: closure_8, Permissions: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   const obj = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, marginVertical: -nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, minHeight: 28, justifyContent: "center", elevation: null, shadowRadius: 4, shadowOffset: null, shadowColor: null, shadowOpacity: null, borderColor: null, borderWidth: 1 };
   let num = 1;
@@ -225,20 +225,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     small = false;
   }
   let VJlc0S = dependencyMap;
-  const tmp = voiceStates(9708)();
-  const tmp2 = voiceStates(5203)();
-  let joinButtonText = closure_11(tmp, channel(4976).isThemeLight(tmp2));
-  const obj = channel(4976);
-  const isConnectedToVoiceChannel = channel(10882).useIsConnectedToVoiceChannel(channel);
-  const obj2 = channel(10882);
+  const tmp = voiceStates(9709)();
+  const tmp2 = voiceStates(5205)();
+  let joinButtonText = closure_11(tmp, channel(4978).isThemeLight(tmp2));
+  const obj = channel(4978);
+  const isConnectedToVoiceChannel = channel(10883).useIsConnectedToVoiceChannel(channel);
+  const obj2 = channel(10883);
   const items = [PermissionStore];
   const stateFromStores = channel(573).useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   const obj3 = channel(573);
-  const stageParticipantsCount = channel(6692).useStageParticipantsCount(channel.id, channel(6686).StageChannelParticipantNamedIndex.AUDIENCE);
+  const stageParticipantsCount = channel(6694).useStageParticipantsCount(channel.id, channel(6688).StageChannelParticipantNamedIndex.AUDIENCE);
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
-  const obj4 = channel(6692);
-  const obj5 = channel(6638);
-  const tmp8 = channel(6638).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
+  const obj4 = channel(6694);
+  const obj5 = channel(6640);
+  const tmp8 = channel(6640).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
   const items1 = [VoiceStateStore];
   const stateFromStores1 = channel(573).useStateFromStores(items1, () => VoiceStateStore.hasVideo(channel.id));
   const sum = stageParticipantsCount + voiceStates.length;
@@ -255,9 +255,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = tmp8;
   }
   const tmp3Result = channel(573);
-  const connectedUserLimit = channel(13137).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(13137);
-  let connectedUserLimitFormatted = channel(13137).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(13174).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(13174);
+  let connectedUserLimitFormatted = channel(13174).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -285,7 +285,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
     obj8.children = connectedUserLimitFormatted;
-    obj7.children = jsx(tmp3(5232).Text, { style: null, color: "interactive-text-default", variant: "text-xs/semibold", lineClamp: 1, children: null });
+    obj7.children = jsx(tmp3(5234).Text, { style: null, color: "interactive-text-default", variant: "text-xs/semibold", lineClamp: 1, children: null });
     obj6.children = <closure_4 style={joinButtonText.joinButtonContent}>{null}</closure_4>;
     let tmp17Result = <closure_5 accessibilityRole="none" pointerEvents="none" onPress={onPress} accessible={false} accessibilityElementsHidden importantForAccessibility="no" style={joinButtonText.joinButton}>{null}</closure_5>;
   } else if (tmp15) {
@@ -297,9 +297,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
         if (isGuildStageVoiceResult) {
-          let VoiceNormalIcon = tmp3(8566).StageIcon;
+          let VoiceNormalIcon = tmp3(8568).StageIcon;
         } else {
-          VoiceNormalIcon = tmp3(8570).VoiceNormalIcon;
+          VoiceNormalIcon = tmp3(8572).VoiceNormalIcon;
         }
         const obj10 = { size: "xs", style: items3 };
         <VoiceNormalIcon size="xs" style={items3} />;
@@ -326,5 +326,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(13137);
+  const tmp3Result4 = channel(13174);
 }));

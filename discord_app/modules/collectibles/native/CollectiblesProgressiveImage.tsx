@@ -1,9 +1,9 @@
-// === Module 17210: CollectiblesProgressiveImage ===
+// === Module 17242: CollectiblesProgressiveImage ===
 
-// Module 17210 (CollectiblesProgressiveImage)
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import FastImageDefault from "FastImage" /* 5667 */;
+// Module 17242 (CollectiblesProgressiveImage)
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import FastImageDefault from "FastImage" /* 5669 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,8 +41,8 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
     tmp5 = cResult[2];
   }
   const obj = sharedValue(576);
-  sharedValue = sharedValue(5050).useSharedValue(0);
-  const tmpResult = sharedValue(5050);
+  sharedValue = sharedValue(5052).useSharedValue(0);
+  const tmpResult = sharedValue(5052);
   class I {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -52,7 +52,7 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
   I.__closure = { backgroundImageOpacity: sharedValue };
   I.__workletHash = 14095099553650;
   I.__initData = __initData;
-  const animatedStyle = sharedValue(5050).useAnimatedStyle(I);
+  const animatedStyle = sharedValue(5052).useAnimatedStyle(I);
   if (cResult[4] !== sharedValue) {
     function handleImageLoad() {
       const obj2 = { duration: 500, easing: null };
@@ -117,25 +117,25 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
   cResult[7] = tmp6;
   cResult[8] = items;
   tmp13 = items;
-  const tmpResult2 = sharedValue(5050);
+  const tmpResult2 = sharedValue(5052);
 }) : (function CollectiblesProgressiveImage(arg0) {
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-  sharedValue = sharedValue(5050).useSharedValue(0);
-  const obj = sharedValue(5050);
+  sharedValue = sharedValue(5052).useSharedValue(0);
+  const obj = sharedValue(5052);
   const fn = function u() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { backgroundImageOpacity: sharedValue };
   fn.__workletHash = 13501599736881;
   fn.__initData = __initData2;
-  const animatedStyle = sharedValue(5050).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(5052).useAnimatedStyle(fn);
   const obj3 = { style: null, children: null };
   const items = [style, animatedStyle];
   obj3.style = items;
   const obj4 = {};
-  let obj2 = sharedValue(5050);
+  let obj2 = sharedValue(5052);
   const merged1 = Object.assign(merged);
   obj4.source = source;
   obj4.style = StyleSheet.absoluteFill;

@@ -1,19 +1,20 @@
-// === Module 17142: UserSettingsDesignSystemFormPrimitives ===
+// === Module 17174: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 17142 (UserSettingsDesignSystemFormPrimitives)
+// Module 17174 (UserSettingsDesignSystemFormPrimitives)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6898 */;
-import TableRow from "TableRow" /* 6901 */;
-import TableRadioRow from "TableRadioRow" /* 6982 */;
-import TableRadioGroup from "TableRadioGroup" /* 6983 */;
-import TableRowGroup from "TableRowGroup" /* 6985 */;
-import TableSwitchRow from "TableSwitchRow" /* 7293 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8570 */;
-import VoiceXIcon from "VoiceXIcon" /* 11600 */;
-import Checkbox from "Checkbox" /* 14040 */;
-import Slider from "Slider" /* 15270 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6900 */;
+import TableRow from "TableRow" /* 6903 */;
+import TableRadioRow from "TableRadioRow" /* 6984 */;
+import TableRadioGroup from "TableRadioGroup" /* 6985 */;
+import TableRowGroup from "TableRowGroup" /* 6987 */;
+import TableSwitchRow from "TableSwitchRow" /* 7295 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8572 */;
+import VoiceXIcon from "VoiceXIcon" /* 11620 */;
+import Checkbox from "Checkbox" /* 14059 */;
+import TableSliderRow from "TableSliderRow" /* 15272 */;
+import Slider from "Slider" /* 15273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +23,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Radio() {
@@ -372,7 +373,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slider
     const obj2 = { children: null };
     const items = [first, ];
     const obj3 = { start: true, end: true, label: "Volume", subLabel: null };
-    const obj4 = { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP };
+    const obj4 = { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onChange: NOOP, accessibilityLabel: "Volume" };
     obj3.subLabel = timestampProducer(Slider.Slider, obj4);
     items[1] = timestampProducer(TableRow.TableRow, obj3);
     obj2.children = items;
@@ -386,8 +387,63 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slider
 }) : (function SliderDemo() {
   const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
-  const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP }) };
+  const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onChange: NOOP, accessibilityLabel: "Volume" }) };
   items[1] = timestampProducer(TableRow.TableRow, obj2);
+  obj.children = items;
+  return React5(closure_1_8, obj);
+});
+ReactCompilerGating = fn(558);
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableSliderRowDemo() {
+  const cResult = c.c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp7 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "TableSliderRow" });
+    const tmp8 = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "A slider setting with its label and current value, for settings tables" });
+    cResult[0] = tmp7;
+    cResult[1] = tmp8;
+    tmp4 = tmp7;
+    tmp5 = tmp8;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { children: null };
+    const items = [tmp4, tmp5, ];
+    const obj3 = { hasIcons: false, children: null };
+    const obj4 = {
+      label: "Bitrate",
+      defaultValue: 64,
+      minValue: 8,
+      maxValue: 96,
+      formatValue(arg0) {
+          return "" + Math.round(arg0) + "kbps";
+        }
+    };
+    obj3.children = timestampProducer(TableSliderRow.TableSliderRow, obj4);
+    items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj3);
+    obj2.children = items;
+    const tmp13 = React5(closure_1_8, obj2);
+    cResult[2] = tmp13;
+    let tmp9 = tmp13;
+  } else {
+    tmp9 = cResult[2];
+  }
+  return tmp9;
+}) : (function TableSliderRowDemo() {
+  const obj = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "TableSliderRow" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "A slider setting with its label and current value, for settings tables" }), ];
+  const obj2 = {
+    hasIcons: false,
+    children: timestampProducer(TableSliderRow.TableSliderRow, {
+      label: "Bitrate",
+      defaultValue: 64,
+      minValue: 8,
+      maxValue: 96,
+      formatValue(arg0) {
+        return "" + Math.round(arg0) + "kbps";
+      }
+    })
+  };
+  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
   return React5(closure_1_8, obj);
 });
@@ -396,45 +452,48 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemFormPrimitives() {
-  const cResult = c.c(7);
+  const cResult = c.c(8);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp12 = timestampProducer(closure_10, {});
-    const tmp14 = timestampProducer(closure_12, {});
-    const tmp16 = timestampProducer(closure_16, {});
-    const tmp18 = timestampProducer(closure_15, {});
-    const tmp20 = timestampProducer(closure_17, {});
-    cResult[0] = tmp12;
-    cResult[1] = tmp14;
-    cResult[2] = tmp16;
-    cResult[3] = tmp18;
-    cResult[4] = tmp20;
-    tmp5 = tmp12;
-    tmp6 = tmp14;
-    tmp7 = tmp16;
-    tmp8 = tmp18;
-    tmp9 = tmp20;
+    const tmp13 = timestampProducer(closure_10, {});
+    const tmp15 = timestampProducer(closure_12, {});
+    const tmp17 = timestampProducer(closure_16, {});
+    const tmp19 = timestampProducer(closure_15, {});
+    const tmp21 = timestampProducer(closure_17, {});
+    const tmp23 = timestampProducer(closure_18, {});
+    cResult[0] = tmp13;
+    cResult[1] = tmp15;
+    cResult[2] = tmp17;
+    cResult[3] = tmp19;
+    cResult[4] = tmp21;
+    cResult[5] = tmp23;
+    tmp10 = tmp23;
+    tmp5 = tmp13;
+    tmp6 = tmp15;
+    tmp7 = tmp17;
+    tmp8 = tmp19;
+    tmp9 = tmp21;
   } else {
-    [tmp5, tmp6, tmp7, tmp8, tmp9] = cResult;
+    [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = cResult;
   }
-  if (cResult[5] !== tmp4.container) {
+  if (cResult[6] !== tmp4.container) {
     const obj2 = { children: null };
     const obj3 = { spacing: 24, style: tmp4.container, children: null };
-    const items = [tmp5, tmp6, tmp7, tmp8, tmp9];
+    const items = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10];
     obj3.children = items;
     obj2.children = React5(Stack_Stack.Stack, obj3);
-    const tmp25 = timestampProducer(ScrollView, obj2);
-    cResult[5] = tmp4.container;
-    cResult[6] = tmp25;
-    let tmp21 = tmp25;
+    const tmp28 = timestampProducer(ScrollView, obj2);
+    cResult[6] = tmp4.container;
+    cResult[7] = tmp28;
+    let tmp24 = tmp28;
   } else {
-    tmp21 = cResult[6];
+    tmp24 = cResult[7];
   }
-  return tmp21;
+  return tmp24;
 }) : (function UserSettingsDesignSystemFormPrimitives() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_9().container, children: null };
-  const items = [timestampProducer(closure_10, {}), timestampProducer(closure_12, {}), timestampProducer(closure_16, {}), timestampProducer(closure_15, {}), timestampProducer(closure_17, {})];
+  const items = [timestampProducer(closure_10, {}), timestampProducer(closure_12, {}), timestampProducer(closure_16, {}), timestampProducer(closure_15, {}), timestampProducer(closure_17, {}), timestampProducer(closure_18, {})];
   obj2.children = items;
   obj.children = React5(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);

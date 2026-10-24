@@ -1,10 +1,10 @@
-// === Module 16447: modules/SimpleMuxWrapper ===
+// === Module 16479: modules/SimpleMuxWrapper ===
 
-// Module 16447 (modules/SimpleMuxWrapper)
+// Module 16479 (modules/SimpleMuxWrapper)
 import logger_Logger from "logger/Logger" /* 4 */;
-import SessionManager2 from "SessionManager" /* 16448 */;
-import MuxIntegration2 from "MuxIntegration" /* 16449 */;
-import UDefault from "U" /* 16450 */;
+import SessionManager2 from "SessionManager" /* 16480 */;
+import MuxIntegration2 from "MuxIntegration" /* 16481 */;
+import UDefault from "U" /* 16482 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("SimpleMuxWrapper");

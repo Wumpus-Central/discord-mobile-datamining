@@ -1,16 +1,16 @@
-// === Module 12487: ChatInputActionButton ===
+// === Module 12521: ChatInputActionButton ===
 
-// Module 12487 (ChatInputActionButton)
+// Module 12521 (ChatInputActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5250 */;
-import Pressables from "Pressables" /* 6906 */;
+import useToken from "useToken" /* 5252 */;
+import Pressables from "Pressables" /* 6908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
   const obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };

@@ -1,6 +1,6 @@
-// === Module 8755: MediaSourceUtil ===
+// === Module 8757: MediaSourceUtil ===
 
-// Module 8755 (MediaSourceUtil)
+// Module 8757 (MediaSourceUtil)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
@@ -8,24 +8,24 @@ import FlagUtils from "FlagUtils" /* 1405 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1447 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1498 */;
 import Server from "Server" /* 2000 */;
-import ToastUtils from "ToastUtils" /* 5660 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5997 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6012 */;
-import EmbedUtils from "EmbedUtils" /* 6484 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6680 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7387 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7393 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8480 */;
-import transformMessageComponents from "transformMessageComponents" /* 8591 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8607 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8751 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8756 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8757 */;
-import MediaModalPortal from "MediaModalPortal" /* 8758 */;
+import ToastUtils from "ToastUtils" /* 5662 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5999 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6014 */;
+import EmbedUtils from "EmbedUtils" /* 6486 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6682 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7389 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7395 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8277 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8482 */;
+import transformMessageComponents from "transformMessageComponents" /* 8593 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8609 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8753 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8758 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8759 */;
+import MediaModalPortal from "MediaModalPortal" /* 8760 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 
 const require = globalThis.__r;
 
@@ -254,13 +254,9 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
       }
       let url3 = EmbedUtils.getEffectiveVideoProvider(name, url1);
       const tmp16Result3 = EmbedUtils;
-      const result1 = renderer_EmbedUtils.shouldPlayVideoInline(url3);
-      let tmp26 = result1;
-      if (result1) {
-        tmp26 = null != image.video;
-      }
+      let isWebviewVideoResult = renderer_EmbedUtils.isWebviewVideo(image);
       if (null != undefined) {
-        if (!result1) {
+        if (!isWebviewVideoResult) {
           const size = { uri: mobileOptimizedSrc, messageId: id.id, guildId: guildIdFromSearchContext, channelId: id.channel_id, mediaIndex, videoURI: undefined, embedURI: image.url, width: null, height: null, isGIFV: null, sourceURI: null, embedProviderName: null, accessoryType: "embed", noCarousel: null, spoiler: null, flags: null, contentScanVersion: null, contentType: null, obscure: null, thumbnail: null, shareURI: null };
           ({ width: obj10.width, height: obj10.height } = thumbnail);
           size.isGIFV = "gifv" === str7;
@@ -283,12 +279,12 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
           }
           size.contentType = contentType;
           size.obscure = result;
-          let tmp30;
+          let tmp29;
           if (null != image.thumbnail) {
             const size1 = { width: image.thumbnail.width, height: image.thumbnail.height, uri: image.thumbnail.url };
-            tmp30 = size1;
+            tmp29 = size1;
           }
-          size.thumbnail = tmp30;
+          size.thumbnail = tmp29;
           size.shareURI = image.url;
           return size;
         }
@@ -299,10 +295,10 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
       }
       const items = [];
       if (null == image.thumbnail) {
-        if (tmp26) {
-          tmp26 = null != image.video;
+        if (isWebviewVideoResult) {
+          isWebviewVideoResult = null != image.video;
         }
-        if (!tmp26) {
+        if (!isWebviewVideoResult) {
           if (0 !== items.length) {
             if (1 === items.length) {
               let first = items[0];
@@ -343,7 +339,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
               str30 = formatted2.endsWith(".avif");
               const formatted3 = uRL.pathname.toLowerCase();
               str7 = formatted3.endsWith(".webp");
-              if (!tmp35) {
+              if (!tmp34) {
                 str57 = proxyURL3;
                 if (str30) {
                   const searchParams10 = url4.searchParams;
@@ -384,7 +380,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             const formatted4 = str48.pathname.toLowerCase();
             const endsWithResult1 = formatted4.endsWith(".avif");
             const formatted5 = str48.pathname.toLowerCase();
-            if (tmp52) {
+            if (tmp51) {
               if (formatted5.endsWith(".webp")) {
                 const searchParams8 = str48.searchParams;
                 searchParams8.append("animated", "true");

@@ -1,10 +1,10 @@
-// === Module 8721: generated/NoResults ===
+// === Module 8723: generated/NoResults ===
 
-// Module 8721 (generated/NoResults)
+// Module 8723 (generated/NoResults)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4976 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import _mod8722 from "module_8722" /* 8722 */;
+import shared from "shared" /* 4978 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import _mod8724 from "module_8724" /* 8724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoResults
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_8723");
+          return require("module_8725");
         },
       darker() {
-          return require("module_8724");
+          return require("module_8726");
         },
       light() {
-          return require("module_8725");
+          return require("module_8727");
         }
     };
-    const illustrationSource = _mod8722.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8722;
+    const tmpResult = _mod8724;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useNoResultsSource() {
   const obj = shared;
-  return _mod8722.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_8723");
+      return require("module_8725");
     },
     darker() {
-      return require("module_8724");
+      return require("module_8726");
     },
     light() {
-      return require("module_8725");
+      return require("module_8727");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getNoResultsSource(theme) {
-  return _mod8722.getIllustrationSource(theme, {
+  return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_8723");
+      return require("module_8725");
     },
     darker() {
-      return require("module_8724");
+      return require("module_8726");
     },
     light() {
-      return require("module_8725");
+      return require("module_8727");
     }
   });
 }

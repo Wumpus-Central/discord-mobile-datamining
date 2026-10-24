@@ -1,6 +1,6 @@
-// === Module 13389: ExpiringPowerupCoachmarkExperiment ===
+// === Module 13426: ExpiringPowerupCoachmarkExperiment ===
 
-// Module 13389 (ExpiringPowerupCoachmarkExperiment)
+// Module 13426 (ExpiringPowerupCoachmarkExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
 

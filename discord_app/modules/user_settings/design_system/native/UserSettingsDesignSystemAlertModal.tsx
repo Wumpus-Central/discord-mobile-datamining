@@ -1,10 +1,10 @@
-// === Module 17106: UserSettingsDesignSystemAlertModal ===
+// === Module 17138: UserSettingsDesignSystemAlertModal ===
 
-// Module 17106 (UserSettingsDesignSystemAlertModal)
+// Module 17138 (UserSettingsDesignSystemAlertModal)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import useAlertStore from "useAlertStore" /* 5908 */;
-import AlertModal from "AlertModal" /* 5912 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import useAlertStore from "useAlertStore" /* 5910 */;
+import AlertModal from "AlertModal" /* 5914 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -150,7 +150,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
   obj.actions = items;
   return jsx(AlertModal.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
 });
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 12438: ConjureClarification ===
+// === Module 12471: ConjureClarification ===
 
-// Module 12438 (ConjureClarification)
+// Module 12471 (ConjureClarification)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

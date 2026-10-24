@@ -1,21 +1,21 @@
-// === Module 18554: VoicePanelVoiceChannelApp ===
+// === Module 18586: VoicePanelVoiceChannelApp ===
 
-// Module 18554 (VoicePanelVoiceChannelApp)
+// Module 18586 (VoicePanelVoiceChannelApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10895 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18440 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 18515 */;
-import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 18555 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10896 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18472 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 18547 */;
+import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 18587 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import VoicePanelStore from "VoicePanelStore" /* 6802 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import VoicePanelStore from "VoicePanelStore" /* 6804 */;
 
 require = fn;
-const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10895).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

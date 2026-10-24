@@ -1,20 +1,20 @@
-// === Module 11465: BaseEmbeddedAppWebView ===
+// === Module 11485: BaseEmbeddedAppWebView ===
 
-// Module 11465 (BaseEmbeddedAppWebView)
+// Module 11485 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
-import usePreviousDefault from "usePrevious" /* 6658 */;
-import WebView from "WebView" /* 7905 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10773 */;
-import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11474 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
+import usePreviousDefault from "usePrevious" /* 6660 */;
+import WebView from "WebView" /* 7907 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10774 */;
+import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11494 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5623 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5625 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -41,7 +41,7 @@ const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_10 = fn(2026).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
 const PlatformUtils = fn(1384);

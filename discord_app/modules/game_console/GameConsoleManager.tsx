@@ -1,23 +1,23 @@
-// === Module 18776: GameConsoleManager ===
+// === Module 18808: GameConsoleManager ===
 
-// Module 18776 (GameConsoleManager)
+// Module 18808 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Timers from "Timers" /* 4816 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11629 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11633 */;
-import _modDef18777 from "module_18777" /* 18777 */;
+import Timers from "Timers" /* 4818 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11649 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11653 */;
+import _modDef18809 from "module_18809" /* 18809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
-import SessionsStore from "SessionsStore" /* 5714 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
-import GameConsoleStore from "GameConsoleStore" /* 5713 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import SessionsStore from "SessionsStore" /* 5716 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+import GameConsoleStore from "GameConsoleStore" /* 5715 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;
 function syncLocalState() {
@@ -92,9 +92,9 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9625);
+const GameConsoleConstants = fn(9626);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
-const MediaEngineContextTypes = fn(5716).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5718).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
 const prototype = function GameConsoleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -225,14 +225,14 @@ const prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      closure_1_0(11629).disconnectRemote();
-      const obj = closure_1_0(11629);
+      closure_1_0(11649).disconnectRemote();
+      const obj = closure_1_0(11649);
       const obj3 = { title: null, body: null };
       const intl = closure_1_0(1128).intl;
       obj3.title = intl.string(closure_1_0(1128).t.wGMxr3);
       const intl2 = closure_1_0(1128).intl;
       obj3.body = intl2.string(closure_1_0(1128).t.i5k8b5);
-      closure_1_1(5906).show(obj3);
+      closure_1_1(5908).show(obj3);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef18777(device, result, error);
+          const tmp8Result = _modDef18809(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

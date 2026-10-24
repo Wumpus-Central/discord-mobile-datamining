@@ -1,18 +1,18 @@
-// === Module 17760: GuildsBarCreateJoinButton ===
+// === Module 17792: GuildsBarCreateJoinButton ===
 
-// Module 17760 (GuildsBarCreateJoinButton)
+// Module 17792 (GuildsBarCreateJoinButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 7305 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11152 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17706 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17721 */;
-import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 17761 */;
+import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 7307 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11153 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17738 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17753 */;
+import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 17793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -113,7 +113,7 @@ const Constants = fn(1087);
 ({ AnalyticsPages: closure_7, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: closure_9, UpsellTypes: c10 } = Constants);
 const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const obj6 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 };
-  const tmp22 = jsx(tmp17(17706), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 });
+  const tmp22 = jsx(tmp17(17738), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 });
   cResult[7] = stateFromStores;
   cResult[8] = tmp18;
   cResult[9] = guildsBarAnimatedWrapperStyles;
@@ -224,12 +224,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj = closure_1_0(dependencyMap[11]);
     }
   }), []);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 5, expandedChildren: "favorite_emojis", children: "message" };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "m", expandedChildren: "guilds-bar-drag-preview", children: null };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
   obj4.expandedChildren = jsx(HomeDrawerAddServerRow.HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 5, expandedChildren: "favorite_emojis", children: "message" });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "m", expandedChildren: "guilds-bar-drag-preview", children: null });
   return <View style={tmp.stretch}>{null}</View>;
 }));

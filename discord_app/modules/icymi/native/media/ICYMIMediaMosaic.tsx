@@ -1,27 +1,30 @@
-// === Module 17906: ICYMIMediaMosaic ===
+// === Module 17938: ICYMIMediaMosaic ===
 
-// Module 17906 (ICYMIMediaMosaic)
+// Module 17938 (ICYMIMediaMosaic)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8755 */;
-import common_VideoDefault from "common/Video" /* 8788 */;
-import ICYMITypes from "ICYMITypes" /* 8834 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8839 */;
-import ICYMIContext from "ICYMIContext" /* 17864 */;
-import ThumbhashUtils from "ThumbhashUtils" /* 17907 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
+import openMediaModal from "openMediaModal" /* 8751 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8757 */;
+import common_VideoDefault from "common/Video" /* 8790 */;
+import ICYMITypes from "ICYMITypes" /* 8836 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
+import ICYMIContext from "ICYMIContext" /* 17896 */;
+import ThumbhashUtils from "ThumbhashUtils" /* 17939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
-import ICYMIStore from "ICYMIStore" /* 8821 */;
+import ICYMIStore from "ICYMIStore" /* 8823 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -30,7 +33,7 @@ const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_18 = createStyles.createStyles(() => {
   const obj = { media: { borderRadius: nativeDefault.radii.xs }, video: null, thumbhashMedia: null, container: null, imagesContainer: null, imageRow: null, topRow: null, bottomRow: null, videoIcon: null, muteIcon: null, spoilerText: null, leftColumn: null, rightColumn: null, singleImage: null, centerContainer: null, absoluteContainer: null, iconBg: null, iconBgSelected: null };
   const obj2 = { borderRadius: nativeDefault.radii.xs };
@@ -180,8 +183,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
     }
     return { opacity: timing.withTiming(num, { duration: 150 }) };
   };
-  const obj2 = imageFinishedLoading(5050);
-  fn.__closure = { withTiming: imageFinishedLoading(5204).withTiming, imageFinishedLoading };
+  const obj2 = imageFinishedLoading(5052);
+  fn.__closure = { withTiming: imageFinishedLoading(5206).withTiming, imageFinishedLoading };
   fn.__workletHash = 7803531897566;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -215,34 +218,34 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
                   }
                   const _Symbol = Symbol;
                   if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                    class U {
+                    class G {
                       constructor() {
                         return closure_1(true);
                       }
                     }
-                    cResult[23] = U;
+                    cResult[23] = G;
                   } else {
-                    class U {
+                    class G {
                       constructor() {
                         return closure_1(true);
                       }
                     }
                   }
                   if (isSpoiler.isSpoiler) {
-                    class U {
+                    class G {
                       constructor() {
                         return closure_1(true);
                       }
                     }
                   }
                   if (cResult[24] === source.uri) {
-                    class U {
+                    class G {
                       constructor() {
                         return closure_1(true);
                       }
                     }
                   }
-                  const obj5 = { source: tmp21, style: tmp22, onLoadEnd: U, blurRadius: 0, fadeDuration: 0 };
+                  const obj5 = { source: tmp21, style: tmp22, onLoadEnd: G, blurRadius: 0, fadeDuration: 0 };
                   const tmp28 = closure_15(FastImageDefault, obj5, source.uri);
                   cResult[24] = source.uri;
                   cResult[25] = tmp21;
@@ -285,13 +288,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
     cResult[6] = items2;
     tmp11 = items2;
   } else {
-    class U {
+    class G {
       constructor() {
         return closure_1(true);
       }
     }
     if (cResult[2] !== tmp7) {
-      class U {
+      class G {
         constructor() {
           return closure_1(true);
         }
@@ -301,14 +304,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
       num = 3;
       cResult[3] = tmp9;
     } else {
-      class U {
+      class G {
         constructor() {
           return closure_1(true);
         }
       }
     }
   }
-  const obj3 = { withTiming: imageFinishedLoading(5204).withTiming, imageFinishedLoading };
+  const obj3 = { withTiming: imageFinishedLoading(5206).withTiming, imageFinishedLoading };
 }) : (function MediaMosaicImage(source) {
   source = source.source;
   ({ dimensions, style } = source);
@@ -323,8 +326,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
     }
     return { opacity: timing.withTiming(num, { duration: 150 }) };
   };
-  let obj = source(5050);
-  fn.__closure = { withTiming: source(5204).withTiming, imageFinishedLoading };
+  let obj = source(5052);
+  fn.__closure = { withTiming: source(5206).withTiming, imageFinishedLoading };
   fn.__workletHash = 8852576862173;
   fn.__initData = __initData2;
   const items = [source.placeholder];
@@ -341,8 +344,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
   const obj4 = { source: memo, style: null };
   const items2 = [style, tmp.media, dimensions];
   obj4.style = items2;
-  obj3.children = closure_15(imageFinishedLoading(5667), obj4);
-  const items3 = [closure_15(imageFinishedLoading(5050).View, obj3), ];
+  obj3.children = closure_15(imageFinishedLoading(5669), obj4);
+  const items3 = [closure_15(imageFinishedLoading(5052).View, obj3), ];
   const obj5 = {
     source: { uri: source.uri },
     style: null,
@@ -355,13 +358,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaM
   const items4 = [tmp.media, style, dimensions];
   obj5.style = items4;
   let num = 0;
-  const obj2 = { withTiming: source(5204).withTiming, imageFinishedLoading };
+  const obj2 = { withTiming: source(5206).withTiming, imageFinishedLoading };
   if (source.isSpoiler) {
     num = 100;
   }
   const obj6 = { children: null };
   obj5.blurRadius = num;
-  items3[1] = closure_15(imageFinishedLoading(5667), obj5, source.uri);
+  items3[1] = closure_15(imageFinishedLoading(5669), obj5, source.uri);
   obj6.children = items3;
   return closure_17(closure_16, obj6);
 });
@@ -405,14 +408,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [AccessibilityStore];
-        class G {
+        class U {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
         }
         cResult[6] = items1;
-        cResult[7] = G;
-        let tmp16 = G;
+        cResult[7] = U;
+        let tmp16 = U;
         let tmp15 = items1;
       } else {
         tmp15 = cResult[6];
@@ -454,7 +457,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
                                 }
                               }
                             }
-                            class G {
+                            class U {
                               constructor() {
                                 return closure_1_7.useReducedMotion;
                               }
@@ -477,7 +480,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
                     }
                   }
                   initialIndex(tmp2[25]);
-                  class G {
+                  class U {
                     constructor() {
                       return closure_1_7.useReducedMotion;
                     }
@@ -486,7 +489,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
                   closure_15(closure_22, obj3);
                 }
               }
-              class G {
+              class U {
                 constructor() {
                   return closure_1_7.useReducedMotion;
                 }
@@ -495,14 +498,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
                 if (!source.isGIFV) {
                   const urlMatchesFileExtension = initialIndex(tmp2[12]).urlMatchesFileExtension;
                   const sourceURI = source.sourceURI;
-                  class G {
+                  class U {
                     constructor() {
                       return closure_1_7.useReducedMotion;
                     }
                   }
                   const tmpResult8 = initialIndex(tmp2[12]);
                 }
-                class G {
+                class U {
                   constructor() {
                     return closure_1_7.useReducedMotion;
                   }
@@ -518,7 +521,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
           }
         }
         let tmp24 = null != source.videoURI && !isSpoiler;
-        class G {
+        class U {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
@@ -528,7 +531,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
         }
         if (tmp24) {
           const obj4 = { style: null, children: null };
-          class G {
+          class U {
             constructor() {
               return closure_1_7.useReducedMotion;
             }
@@ -549,7 +552,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Media(
       let tmp20 = isSpoiler;
       if (isSpoiler) {
         const obj7 = { style: null, children: null };
-        class G {
+        class U {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
@@ -879,7 +882,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoIma
     if (cResult[1] === result1) {
       let tmp6 = cResult[2];
     }
-    const dimensions = tmp6;
+    importDefault = tmp6;
     if (bottomRow) {
       bottomRow = tmp2.bottomRow;
     }
@@ -897,12 +900,18 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoIma
                 }
                 return tmp12;
               }
+              class R {
+                constructor(arg0, arg1) {
+                  obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
+                  return jsx(Media, obj, arg1);
+                }
+              }
               const obj2 = { style: tmp7, children: cResult[10] };
-              const tmp15 = closure_15(closure_6, obj2);
+              const tmp14 = closure_15(closure_6, obj2);
               cResult[14] = tmp7;
               cResult[15] = cResult[10];
-              cResult[16] = tmp15;
-              tmp12 = tmp15;
+              cResult[16] = tmp14;
+              tmp12 = tmp14;
             }
           }
         }
@@ -911,18 +920,26 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoIma
             let tmp9 = cResult[13];
           }
           const mapped = sources.map(tmp9);
-          cResult[7] = tmp6;
+          class R {
+            constructor(arg0, arg1) {
+              obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
+              return jsx(Media, obj, arg1);
+            }
+          }
           cResult[8] = handlePressMedia;
           cResult[9] = sources;
           cResult[10] = mapped;
         }
-        const fn = function y(source, initialIndex) {
-          return value2(closure_23, { handlePressMedia, initialIndex, source, dimensions }, initialIndex);
-        };
+        class R {
+          constructor(arg0, arg1) {
+            obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
+            return jsx(Media, obj, arg1);
+          }
+        }
         cResult[11] = tmp6;
         cResult[12] = handlePressMedia;
-        cResult[13] = fn;
-        tmp9 = fn;
+        cResult[13] = R;
+        tmp9 = R;
       }
     }
     const items = [, , ];
@@ -1642,7 +1659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIMed
   itemType = message.itemType;
   closure_18();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [ChannelStore];
+    const items = [ChannelStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -1740,7 +1757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIMed
   let nonEmbedSources;
   let handlePressMedia;
   const tmp = closure_18();
-  let items = [handlePressMedia];
+  const items = [handlePressMedia];
   const stateFromStores = message(itemType[16]).useStateFromStores(items, () => ChannelStore.getChannel(message.getChannelId()));
   let obj = message(itemType[16]);
   [tmp4, c4] = stateFromStores(noop.useState(false), 2);
@@ -1765,37 +1782,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIMed
   items2[3] = stateFromStores;
   items2[4] = itemType;
   handlePressMedia = obj2.useCallback((arg0) => {
-    let items;
     ({ ref, initialIndex } = arg0);
-    widthOverride(itemType[27]).itemInteracted(items.id, "message", "press_media");
-    let obj = widthOverride(itemType[27]);
-    widthOverride(itemType[27]).feedItemActioned({ itemId: items.id, itemType, actionParameters: { actionGestureType: "press", actionTargetElement: "media_mosaic", actionIntentType: "open", actionDestinationType: null } });
-    const obj2 = widthOverride(itemType[27]);
-    const obj3 = { itemId: items.id, itemType, actionParameters: { actionGestureType: "press", actionTargetElement: "media_mosaic", actionIntentType: "open", actionDestinationType: null } };
-    message(itemType[35]).ack(items.channel_id, { page: constants3.ICYMI, object: constants2.ACK_MEDIA_VIEWED, objectType: constants.ACK_SEMI_AUTOMATIC }, true, true, items.id);
-    items = [];
-    const item = allMediaSources.forEach((item) => {
-      const obj = {};
-      const merged = Object.assign(item);
-      obj.embedURI = undefined;
-      items.push(obj);
-    });
+    ICYMIActionCreatorsDefault.itemInteracted(message.id, "message", "press_media");
+    ICYMIActionCreatorsDefault.feedItemActioned({ itemId: message.id, itemType, actionParameters: { actionGestureType: "press", actionTargetElement: "media_mosaic", actionIntentType: "open", actionDestinationType: null } });
+    const obj3 = { itemId: message.id, itemType, actionParameters: { actionGestureType: "press", actionTargetElement: "media_mosaic", actionIntentType: "open", actionDestinationType: null } };
+    ReadStateActionCreators.ack(message.channel_id, { page: constants3.ICYMI, object: constants2.ACK_MEDIA_VIEWED, objectType: constants.ACK_SEMI_AUTOMATIC }, true, true, message.id);
     _undefined(true);
-    const obj4 = message(itemType[35]);
     const obj5 = { page: constants3.ICYMI, object: constants2.ACK_MEDIA_VIEWED, objectType: constants.ACK_SEMI_AUTOMATIC };
-    const obj7 = { disableDownload: false, initialSources: items, initialIndex, analyticsSource: "Channel", channelId: items.channel_id, contextName: null, contextIcon: "r", originViewOrOriginLayout: 0, onClose: "absolute" };
+    const obj7 = { disableDownload: false, initialSources: allMediaSources, initialIndex, analyticsSource: "Channel", channelId: message.channel_id, contextName: null, contextIcon: "r", originViewOrOriginLayout: 0, onClose: "absolute" };
     let str = "";
     if (null != stateFromStores) {
-      str = message(itemType[37]).computeChannelName(tmp8, UserStore, RelationshipStore);
-      const tmp4Result = message(itemType[37]);
+      str = useChannelName.computeChannelName(tmp7, UserStore, RelationshipStore);
+      const tmp4Result = useChannelName;
     }
     obj7.contextName = str;
     obj7.originViewOrOriginLayout = ref.current;
     obj7.onClose = function onClose() {
       return _undefined(false);
     };
-    message(itemType[36]).openMediaModal(obj7);
-    const obj6 = message(itemType[36]);
+    openMediaModal.openMediaModal(obj7);
   }, items2);
   if (0 !== nonEmbedSources.length) {
     let obj3 = { style: tmp.container, children: null };

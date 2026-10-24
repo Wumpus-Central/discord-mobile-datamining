@@ -1,13 +1,13 @@
-// === Module 7241: Form/FormRadio ===
+// === Module 7243: Form/FormRadio ===
 
-// Module 7241 (Form/FormRadio)
+// Module 7243 (Form/FormRadio)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5667 */;
+import FastImageDefault from "FastImage" /* 5669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_4 = createStyles.createStyles({ radio: { width: 22, height: 22 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadio(selected) {
   const cResult = c.c(3);
   const tmp3 = closure_4();
-  const tmp4Result = importDefault(selected.selected ? 7242 : 7243);
+  const tmp4Result = importDefault(selected.selected ? 7244 : 7245);
   if (cResult[0] === tmp3.radio) {
     if (cResult[1] === tmp4Result) {
       let tmp6 = cResult[2];
@@ -32,6 +32,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadi
 }) : (function FormRadio(selected) {
   const obj = { style: closure_4().radio, source: null };
   const tmp = closure_4();
-  obj.source = importDefault(selected.selected ? 7242 : 7243);
+  obj.source = importDefault(selected.selected ? 7244 : 7245);
   return jsx(FastImageDefault, { style: closure_4().radio, source: null });
 });

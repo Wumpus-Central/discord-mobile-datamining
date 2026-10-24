@@ -1,6 +1,6 @@
-// === Module 12043: useFormattedTimestamp ===
+// === Module 12069: useFormattedTimestamp ===
 
-// Module 12043 (useFormattedTimestamp)
+// Module 12069 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
     const effect = noop.useEffect(tmp6, tmp7);
     if ("R" === parsed.format) {
       if (null == tmp5) {
-        let TIMESTAMP_FORMATS = tmp(8497).TIMESTAMP_FORMATS;
+        let TIMESTAMP_FORMATS = tmp(8499).TIMESTAMP_FORMATS;
         let formatted = TIMESTAMP_FORMATS.R(parsed.parsed);
         parsed = parsed.parsed;
         cResult[4] = parsed;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
         let _setInterval = setInterval;
         format = setInterval(() => {
           const obj = { parsed: closure_0.parsed, formatted: null };
-          const TIMESTAMP_FORMATS = closure_0(8497).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = closure_0(8499).TIMESTAMP_FORMATS;
           obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
           closure_1_1(obj);
         }, result);
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
         let _setInterval = setInterval;
         format = setInterval(() => {
           const obj = { parsed: closure_0.parsed, formatted: null };
-          const TIMESTAMP_FORMATS = closure_0(8497).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = closure_0(8499).TIMESTAMP_FORMATS;
           obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
           closure_1_1(obj);
         }, result);

@@ -1,6 +1,6 @@
-// === Module 6195: ? ===
+// === Module 6197: ? ===
 
-// Module 6195
+// Module 6197
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/jester_carnival.png.js");

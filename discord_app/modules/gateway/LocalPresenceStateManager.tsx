@@ -1,9 +1,9 @@
-// === Module 14959: LocalPresenceStateManager ===
+// === Module 14982: LocalPresenceStateManager ===
 
-// Module 14959 (LocalPresenceStateManager)
-import rateLimitDefault from "rateLimit" /* 14961 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6496 */;
-import StateManager from "StateManager" /* 14960 */;
+// Module 14982 (LocalPresenceStateManager)
+import rateLimitDefault from "rateLimit" /* 14984 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
+import StateManager from "StateManager" /* 14983 */;
 
 class LocalPresenceStateManager extends tmp2 {
   constructor(arg0) {

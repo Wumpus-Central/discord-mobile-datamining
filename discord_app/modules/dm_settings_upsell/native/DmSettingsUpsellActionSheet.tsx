@@ -1,21 +1,21 @@
-// === Module 18743: DmSettingsUpsellActionSheet ===
+// === Module 18775: DmSettingsUpsellActionSheet ===
 
-// Module 18743 (DmSettingsUpsellActionSheet)
+// Module 18775 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7089 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15128 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18740 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18744 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15150 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18772 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18776 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center", width: 250 }, body: { textAlign: "center" }, guildContainer: null, guildInfo: null, footer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.guildContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
             const obj2 = { text: null, variant: "success" };
             const intl = guildId(1128).intl;
             obj2.text = intl.string(guildId(1128).t.rlYD1W);
-            stateFromStores(5661).open("DM_SETTINGS_UPSELL_SUCCESS_TOAST", obj2);
+            stateFromStores(5663).open("DM_SETTINGS_UPSELL_SUCCESS_TOAST", obj2);
           });
           const updateSettingResult = RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -108,12 +108,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
         tmp14 = cResult[12];
       }
       if (cResult[13] !== tmp4.headerImage) {
-        let obj2 = { source: stateFromStores(10941), style: tmp4.headerImage };
-        const tmp19 = closure_6(stateFromStores(5667), obj2);
+        let obj2 = { source: stateFromStores(10942), style: tmp4.headerImage };
+        const tmp19 = closure_6(stateFromStores(5669), obj2);
         cResult[13] = tmp4.headerImage;
         cResult[14] = tmp19;
         let tmp15 = tmp19;
-        const tmp18 = stateFromStores(5667);
+        const tmp18 = stateFromStores(5669);
       } else {
         tmp15 = cResult[14];
       }
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
       }
       if (cResult[16] !== tmp4.title) {
         let obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp4.title, children: tmp20 };
-        const tmp24 = closure_6(tmp(5232).Text, obj3);
+        const tmp24 = closure_6(tmp(5234).Text, obj3);
         cResult[16] = tmp4.title;
         cResult[17] = tmp24;
         let tmp22 = tmp24;
@@ -154,25 +154,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
           const obj5 = { variant: "eyebrow", color: "text-default", children: null };
           const intl3 = tmp(1128).intl;
           obj5.children = intl3.string(tmp(1128).t.KPB2iw);
-          const tmp32 = closure_6(tmp(5232).Text, obj5);
+          const tmp32 = closure_6(tmp(5234).Text, obj5);
           cResult[23] = tmp32;
           let tmp30 = tmp32;
         } else {
           tmp30 = cResult[23];
         }
         if (cResult[24] !== stateFromStores) {
-          const obj6 = { guild: stateFromStores, size: tmp(6881).GuildIconSizes.SMALL_32 };
-          const tmp37 = closure_6(stateFromStores(6881), obj6);
+          const obj6 = { guild: stateFromStores, size: tmp(6883).GuildIconSizes.SMALL_32 };
+          const tmp37 = closure_6(stateFromStores(6883), obj6);
           cResult[24] = stateFromStores;
           cResult[25] = tmp37;
           let tmp33 = tmp37;
-          const tmp36 = stateFromStores(6881);
+          const tmp36 = stateFromStores(6883);
         } else {
           tmp33 = cResult[25];
         }
         if (cResult[26] !== stateFromStores.name) {
           const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
-          const tmp40 = closure_6(tmp(5232).Text, obj7);
+          const tmp40 = closure_6(tmp(5234).Text, obj7);
           cResult[26] = stateFromStores.name;
           cResult[27] = tmp40;
           let tmp38 = tmp40;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
               }
               if (cResult[36] !== tmp14) {
                 const obj8 = { size: "lg", onPress: tmp14, text: tmp49 };
-                const tmp53 = closure_6(tmp(5242).Button, obj8);
+                const tmp53 = closure_6(tmp(5244).Button, obj8);
                 cResult[36] = tmp14;
                 cResult[37] = tmp53;
                 let tmp51 = tmp53;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
               }
               if (cResult[39] !== tmp12) {
                 const obj9 = { size: "lg", variant: "secondary", onPress: tmp12, text: tmp54 };
-                const tmp58 = closure_6(tmp(5242).Button, obj9);
+                const tmp58 = closure_6(tmp(5244).Button, obj9);
                 cResult[39] = tmp12;
                 cResult[40] = tmp58;
                 let tmp56 = tmp58;
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
                 const items2 = [tmp15, tmp22, tmp27, tmp45, tmp51, tmp56, tmp61];
                 obj12.children = items2;
                 obj11.children = closure_7(View, obj12);
-                const tmp68 = closure_6(tmp(7296).ActionSheet, obj11);
+                const tmp68 = closure_6(tmp(7298).ActionSheet, obj11);
                 cResult[46] = tmp4.container;
                 cResult[47] = tmp22;
                 cResult[48] = tmp27;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
                 tmp64 = tmp68;
               }
               const obj13 = { variant: "text-xs/normal", style: tmp4.footer, children: tmp59 };
-              const tmp63 = closure_6(tmp(5232).Text, obj13);
+              const tmp63 = closure_6(tmp(5234).Text, obj13);
               cResult[43] = tmp4.footer;
               cResult[44] = tmp59;
               cResult[45] = tmp63;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
         tmp41 = tmp44;
       }
       const obj16 = { variant: "text-md/normal", color: "text-default", style: tmp4.body, children: tmp25 };
-      const tmp29 = closure_6(tmp(5232).Text, obj16);
+      const tmp29 = closure_6(tmp(5234).Text, obj16);
       cResult[20] = tmp4.body;
       cResult[21] = tmp25;
       cResult[22] = tmp29;
@@ -334,29 +334,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(10941), style: tmp.headerImage };
-    const items2 = [closure_6(stateFromStores(5667), obj4), , , , , , ];
+    const obj4 = { source: stateFromStores(10942), style: tmp.headerImage };
+    const items2 = [closure_6(stateFromStores(5669), obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1128).intl;
     obj5.children = intl.string(tmp2(1128).t.w2BvnL);
-    items2[1] = closure_6(tmp2(5232).Text, obj5);
+    items2[1] = closure_6(tmp2(5234).Text, obj5);
     const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp.body, children: null };
     const intl2 = tmp2(1128).intl;
     const obj7 = { guild_name: stateFromStores.name };
     obj6.children = intl2.format(tmp2(1128).t.Depjkv, obj7);
-    items2[2] = closure_6(tmp2(5232).Text, obj6);
+    items2[2] = closure_6(tmp2(5234).Text, obj6);
     const obj8 = { style: tmp.guildContainer, children: null };
     const obj9 = { variant: "eyebrow", color: "text-default", children: null };
     const intl3 = tmp2(1128).intl;
     obj9.children = intl3.string(tmp2(1128).t.KPB2iw);
-    const items3 = [closure_6(tmp2(5232).Text, obj9), ];
+    const items3 = [closure_6(tmp2(5234).Text, obj9), ];
     const obj10 = { style: tmp.guildInfo, children: null };
     const obj11 = { guild: stateFromStores, size: null };
-    const tmp11 = stateFromStores(5667);
-    obj11.size = tmp2(6881).GuildIconSizes.SMALL_32;
-    const items4 = [closure_6(stateFromStores(6881), obj11), ];
+    const tmp11 = stateFromStores(5669);
+    obj11.size = tmp2(6883).GuildIconSizes.SMALL_32;
+    const items4 = [closure_6(stateFromStores(6883), obj11), ];
     const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
-    items4[1] = closure_6(tmp2(5232).Text, obj12);
+    items4[1] = closure_6(tmp2(5234).Text, obj12);
     obj10.children = items4;
     items3[1] = closure_7(View, obj10);
     obj8.children = items3;
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
             const obj2 = { text: null, variant: "success" };
             const intl = guildId(1128).intl;
             obj2.text = intl.string(guildId(1128).t.rlYD1W);
-            stateFromStores(5661).open("DM_SETTINGS_UPSELL_SUCCESS_TOAST", obj2);
+            stateFromStores(5663).open("DM_SETTINGS_UPSELL_SUCCESS_TOAST", obj2);
           });
           const updateSettingResult = RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
     };
     const intl4 = tmp2(1128).intl;
     obj13.text = intl4.string(tmp2(1128).t.TD7iUx);
-    items2[4] = closure_6(tmp2(5242).Button, obj13);
+    items2[4] = closure_6(tmp2(5244).Button, obj13);
     const obj14 = {
       size: "lg",
       variant: "secondary",
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
     };
     const intl5 = tmp2(1128).intl;
     obj14.text = intl5.string(tmp2(1128).t.PsWbcp);
-    items2[5] = closure_6(tmp2(5242).Button, obj14);
+    items2[5] = closure_6(tmp2(5244).Button, obj14);
     const obj15 = { variant: "text-xs/normal", style: tmp.footer, children: null };
     const intl6 = tmp2(1128).intl;
     const obj16 = {
@@ -406,11 +406,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
         }
     };
     obj15.children = intl6.format(tmp2(1128).t.IzZxXW, obj16);
-    items2[6] = closure_6(tmp2(5232).Text, obj15);
+    items2[6] = closure_6(tmp2(5234).Text, obj15);
     obj3.children = items2;
     obj2.children = closure_7(View, obj3);
-    tmp6 = closure_6(tmp2(7296).ActionSheet, obj2);
-    const tmp12 = stateFromStores(6881);
+    tmp6 = closure_6(tmp2(7298).ActionSheet, obj2);
+    const tmp12 = stateFromStores(6883);
   }
   return tmp6;
 });

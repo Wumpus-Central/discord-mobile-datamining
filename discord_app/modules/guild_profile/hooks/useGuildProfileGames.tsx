@@ -1,6 +1,6 @@
-// === Module 14142: useGuildProfileGames ===
+// === Module 14161: useGuildProfileGames ===
 
-// Module 14142 (useGuildProfileGames)
+// Module 14161 (useGuildProfileGames)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import noop from "module_19" /* 19 */;
@@ -73,7 +73,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllGuildP
   const tmp7 = null != games && !require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] === games.gameApplicationIds) {
     if (cResult[3] === tmp7) {
-      const games1 = tmp(7404).useGames(cResult[4]);
+      const games1 = tmp(7406).useGames(cResult[4]);
       const tmp11 = closure_6(games);
       dependencyMap = tmp11;
       const _Symbol = Symbol;
@@ -107,7 +107,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllGuildP
       cResult[7] = games.gameApplicationIds;
       cResult[8] = A;
       tmp14 = A;
-      const tmpResult3 = tmp(7404);
+      const tmpResult3 = tmp(7406);
     }
   }
   cResult[2] = games.gameApplicationIds;

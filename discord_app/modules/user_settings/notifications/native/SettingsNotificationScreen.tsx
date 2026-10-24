@@ -1,19 +1,19 @@
-// === Module 16801: SettingsNotificationScreen ===
+// === Module 16833: SettingsNotificationScreen ===
 
-// Module 16801 (SettingsNotificationScreen)
+// Module 16833 (SettingsNotificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Card from "Card" /* 6903 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7010 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7073 */;
-import SettingBuilders from "SettingBuilders" /* 11204 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13270 */;
-import SettingLayoutDefault from "SettingLayout" /* 15949 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16803 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16804 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16805 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Card from "Card" /* 6905 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7012 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7075 */;
+import SettingBuilders from "SettingBuilders" /* 11205 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13307 */;
+import SettingLayoutDefault from "SettingLayout" /* 15973 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16835 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16836 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -113,11 +113,11 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(16802).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8330).MobileUserSettings;
+let closure_5 = fn(16834).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8332).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { card: { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, cardContent: { flexDirection: "row", alignItems: "center", gap: 8 }, text: { flex: 1 } };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

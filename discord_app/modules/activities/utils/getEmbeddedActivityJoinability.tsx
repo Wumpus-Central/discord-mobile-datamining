@@ -1,13 +1,13 @@
-// === Module 11432: getEmbeddedActivityJoinability ===
+// === Module 11452: getEmbeddedActivityJoinability ===
 
-// Module 11432 (getEmbeddedActivityJoinability)
-import ChannelUtils from "ChannelUtils" /* 5992 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11433 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
+// Module 11452 (getEmbeddedActivityJoinability)
+import ChannelUtils from "ChannelUtils" /* 5994 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11453 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 require = fn;
 function getEmbeddedActivityJoinability(arg0) {

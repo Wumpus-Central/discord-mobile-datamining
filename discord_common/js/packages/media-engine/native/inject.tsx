@@ -17,13 +17,13 @@ export const supported = function supported() {
     return global.supported();
   }
 };
-export const supportsFeature = function supportsFeature(CLIPS_THUMBNAIL) {
+export const supportsFeature = function supportsFeature(SPATIAL_AUDIO) {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
     throw error;
   } else {
-    return global.supportsFeature(CLIPS_THUMBNAIL);
+    return global.supportsFeature(SPATIAL_AUDIO);
   }
 };
 export const setProcessPriority = function setProcessPriority(NORMAL) {

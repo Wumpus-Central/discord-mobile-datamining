@@ -1,14 +1,14 @@
-// === Module 9629: Authorize ===
+// === Module 9630: Authorize ===
 
-// Module 9629 (Authorize)
+// Module 9630 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
-import QueryStringUtils from "QueryStringUtils" /* 5700 */;
-import keysSorter from "keysSorter" /* 6720 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8825 */;
-import scopes from "scopes" /* 9630 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
+import QueryStringUtils from "QueryStringUtils" /* 5702 */;
+import keysSorter from "keysSorter" /* 6722 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
+import scopes from "scopes" /* 9631 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 
 require = fn;
 const Constants = fn(1087);

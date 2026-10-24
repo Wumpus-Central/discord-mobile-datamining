@@ -1,6 +1,6 @@
-// === Module 6041: ? ===
+// === Module 6043: ? ===
 
-// Module 6041
+// Module 6043
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/base/icy.png.js");

@@ -1,6 +1,6 @@
-// === Module 11792: conjureSettingsRequired ===
+// === Module 11818: conjureSettingsRequired ===
 
-// Module 11792 (conjureSettingsRequired)
+// Module 11818 (conjureSettingsRequired)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["select", "checkbox", "channel", "role", "user"]);

@@ -1,17 +1,17 @@
-// === Module 17417: MessagesHeader ===
+// === Module 17449: MessagesHeader ===
 
-// Module 17417 (MessagesHeader)
+// Module 17449 (MessagesHeader)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5050 */;
-import spring from "spring" /* 5245 */;
-import ButtonConstants from "ButtonConstants" /* 5248 */;
-import _modDef5671 from "module_5671" /* 5671 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6923 */;
-import _modDef7145 from "module_7145" /* 7145 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11055 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12170 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13181 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17418 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
+import spring from "spring" /* 5247 */;
+import ButtonConstants from "ButtonConstants" /* 5250 */;
+import _modDef5673 from "module_5673" /* 5673 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6925 */;
+import _modDef7147 from "module_7147" /* 7147 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11056 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12196 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13218 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17450 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,12 +23,12 @@ const jsxProd = fn(21);
 let c8 = 1.75;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { headerPanel: { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM }, headerPanelTitle: null, headerPanelButtons: null, headerBorder: null };
 let obj3 = { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj.headerPanelTitle = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
 let obj4 = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
-obj.headerPanelButtons = { height: fn(5248).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj.headerPanelButtons = { height: fn(5250).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj6.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
@@ -39,7 +39,7 @@ let closure_11 = createStyles.createStyles(obj);
 const __initData = { code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}" };
 const __initData2 = { code: "function MessagesHeaderTsx2(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}" };
 const ReactCompilerGating = fn(558);
-let obj5 = { height: fn(5248).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let obj5 = { height: fn(5250).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
@@ -66,17 +66,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       return { opacity: spring.withSpring(num) };
     };
-    let obj3 = { withSpring: scrollPosition(5245).withSpring, scrollPosition };
+    let obj3 = { withSpring: scrollPosition(5247).withSpring, scrollPosition };
     fn.__closure = obj3;
     fn.__workletHash = 17233409273245;
     fn.__initData = __initData;
-    const animatedStyle = scrollPosition(5050).useAnimatedStyle(fn);
-    const tmpResult = scrollPosition(5050);
-    const isHomeDrawerEnabled = scrollPosition(17412).useIsHomeDrawerEnabled();
+    const animatedStyle = scrollPosition(5052).useAnimatedStyle(fn);
+    const tmpResult = scrollPosition(5052);
+    const isHomeDrawerEnabled = scrollPosition(17444).useIsHomeDrawerEnabled();
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function f() {
-        const rootNavigationRef = scrollPosition(5149).getRootNavigationRef();
+        const rootNavigationRef = scrollPosition(5151).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("message-requests");
         }
@@ -211,7 +211,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const obj4 = { size: "sm", color: nativeDefault.colors.WHITE };
-      const tmp18 = closure_6(scrollPosition(10837).PlusLargeIcon, obj4);
+      const tmp18 = closure_6(scrollPosition(10838).PlusLargeIcon, obj4);
       cResult[9] = tmp18;
       const tmp17 = tmp18;
     } else {
@@ -254,7 +254,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const intl = scrollPosition(1128).intl;
       obj5.accessibilityLabel = intl.string(scrollPosition(1128).t.jD1qzM);
       obj5.onPress = I;
-      const tmp20 = closure_6(scrollPosition(7957).IconButton, obj5);
+      const tmp20 = closure_6(scrollPosition(7959).IconButton, obj5);
       cResult[10] = tmp20;
       const tmp19 = tmp20;
     } else {
@@ -365,7 +365,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         const obj6 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier, accessibilityRole: "header", children: tmp21 };
-        const tmp26 = closure_6(scrollPosition(5232).Text, obj6);
+        const tmp26 = closure_6(scrollPosition(5234).Text, obj6);
         cResult[13] = tmp21;
         cResult[14] = tmp26;
       } else {
@@ -421,10 +421,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return;
             }
           }
-          const obj7 = { onPress: E, variant: "secondary", size: "sm", icon: _modDef7145, accessibilityLabel: null };
+          const obj7 = { onPress: E, variant: "secondary", size: "sm", icon: _modDef7147, accessibilityLabel: null };
           const intl2 = scrollPosition(1128).intl;
           obj7.accessibilityLabel = intl2.string(scrollPosition(1128).t["5h0QOP"]);
-          const tmp33 = closure_6(scrollPosition(7957).IconButton, obj7);
+          const tmp33 = closure_6(scrollPosition(7959).IconButton, obj7);
           const obj9 = { noMargin: true, onPress: tmp11, alternateVariant: true };
           const tmp34 = closure_6(MessageRequestsButtonDefault, obj9);
           cResult[18] = tmp33;
@@ -468,10 +468,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return;
             }
           }
-          const obj10 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5671, onPress: B, maxFontSizeMultiplier: 1, text: null };
+          const obj10 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5673, onPress: B, maxFontSizeMultiplier: 1, text: null };
           const intl3 = scrollPosition(1128).intl;
           obj10.text = intl3.string(scrollPosition(1128).t.zIJnA6);
-          const tmp36 = closure_6(scrollPosition(5242).Button, obj10);
+          const tmp36 = closure_6(scrollPosition(5244).Button, obj10);
           cResult[20] = tmp36;
           const tmp35 = tmp36;
         } else {
@@ -593,7 +593,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[16] = tmp24;
       cResult[17] = tmp30;
     }
-    const tmpResult2 = scrollPosition(17412);
+    const tmpResult2 = scrollPosition(17444);
   }
   const items3 = [tmp4.headerPanel, tmp5];
   cResult[2] = tmp4.headerPanel;
@@ -618,13 +618,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return { opacity: spring.withSpring(num) };
   };
-  let obj = height(5050);
-  fn.__closure = { withSpring: height(5245).withSpring, scrollPosition };
+  let obj = height(5052);
+  fn.__closure = { withSpring: height(5247).withSpring, scrollPosition };
   fn.__workletHash = 5883359949214;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: height(5245).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(17412).useIsHomeDrawerEnabled();
+  let obj2 = { withSpring: height(5247).withSpring, scrollPosition };
+  const isHomeDrawerEnabled = height(17444).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[14]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -657,10 +657,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }, []);
-  let obj3 = height(17412);
+  let obj3 = height(17444);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(6923)("bespoke");
-  obj4.icon = closure_6(height(10837).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
+  const tmp12 = scrollPosition(6925)("bespoke");
+  obj4.icon = closure_6(height(10838).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
   const intl = height(1128).intl;
   obj4.accessibilityLabel = intl.string(height(1128).t.jD1qzM);
   obj4.onPress = callback3;
@@ -677,24 +677,24 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     stringResult = string(t.OIgYlQ);
   }
   obj8.children = stringResult;
-  obj7.children = closure_6(height(5232).Text, obj8);
+  obj7.children = closure_6(height(5234).Text, obj8);
   const items1 = [closure_6(closure_4, obj7), , , ];
   const obj9 = { style: tmp.headerPanelButtons, children: null };
-  const obj10 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(7145), accessibilityLabel: null };
+  const obj10 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(7147), accessibilityLabel: null };
   const intl3 = tmp3(1128).intl;
   obj10.accessibilityLabel = intl3.string(height(1128).t["5h0QOP"]);
-  const items2 = [closure_6(height(7957).IconButton, obj10), closure_6(scrollPosition(17418), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj11 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(5671), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const items2 = [closure_6(height(7959).IconButton, obj10), closure_6(scrollPosition(17450), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const obj11 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(5673), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1128).intl;
   obj11.text = intl4.string(height(1128).t.zIJnA6);
-  items2[2] = closure_6(height(5242).Button, obj11);
-  items2[3] = closure_6(height(7957).IconButton, obj4);
+  items2[2] = closure_6(height(5244).Button, obj11);
+  items2[3] = closure_6(height(7959).IconButton, obj4);
   obj9.children = items2;
   items1[1] = closure_7(closure_4, obj9);
   const obj12 = { style: null };
   const items3 = [tmp.headerBorder, animatedStyle];
   obj12.style = items3;
-  items1[2] = closure_6(scrollPosition(5050).View, obj12);
+  items1[2] = closure_6(scrollPosition(5052).View, obj12);
   items1[3] = tmp12;
   obj6.children = items1;
   return closure_7(closure_4, obj6);

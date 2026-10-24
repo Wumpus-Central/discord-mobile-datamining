@@ -1,13 +1,13 @@
-// === Module 17768: GuildsBarDragPreview ===
+// === Module 17800: GuildsBarDragPreview ===
 
-// Module 17768 (GuildsBarDragPreview)
+// Module 17800 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
-import _mod4884 from "module_4884" /* 4884 */;
-import native from "native" /* 5035 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import spring from "spring" /* 5245 */;
+import _mod4886 from "module_4886" /* 4886 */;
+import native from "native" /* 5037 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import spring from "spring" /* 5247 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17697 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17729 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -16,12 +16,12 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6699).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17694).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6701).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17726).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(4969);
+createStyles = fn(4971);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: 137438953, children: 868236524 };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "end", expanded: null, children: null };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "__packager_asset", expanded: 137438953, children: 868236524 };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "end", expanded: null, children: null };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null != dragSpecs) {
           if (null != overSpecs) {
             const state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: 752280, scrollPosition: 9215590, dragRegion: 5600251, windowSize: 6553557, dropComplete: 2790911, listInsets: 10747860 };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "EMBEDDED_APP_SHIM_DISCONNECT", scrollPosition: null, dragRegion: "WhatsApp", windowSize: "etf", dropComplete: "json", listInsets: "STAGE_MUSIC_PLAY" };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -694,7 +694,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first = cResult[0];
   }
-  const tmp5 = GuildsBarDnDStore(first, _mod4884.shallow);
+  const tmp5 = GuildsBarDnDStore(first, _mod4886.shallow);
   if (cResult[1] !== tmp5) {
     let tmp7 = null;
     if (null != tmp5) {
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: 752280, scrollPosition: 9215590, dragRegion: 5600251, windowSize: 6553557, dropComplete: 2790911, listInsets: 10747860 };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "EMBEDDED_APP_SHIM_DISCONNECT", scrollPosition: null, dragRegion: "WhatsApp", windowSize: "etf", dropComplete: "json", listInsets: "STAGE_MUSIC_PLAY" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -753,7 +753,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       return null;
     }
-  }, _mod4884.shallow);
+  }, _mod4886.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

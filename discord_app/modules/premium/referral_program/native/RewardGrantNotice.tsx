@@ -1,22 +1,22 @@
-// === Module 14737: RewardGrantNotice ===
+// === Module 14760: RewardGrantNotice ===
 
-// Module 14737 (RewardGrantNotice)
+// Module 14760 (RewardGrantNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7228 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 13925 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 14718 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7230 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 13944 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 14741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(14716);
+const Constants = fn(14739);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" }, orbsPillContainer: null, balancePillOverride: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 obj2.orbsPillContainer = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };

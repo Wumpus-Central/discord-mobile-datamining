@@ -1,11 +1,11 @@
-// === Module 13117: useShowConvoStarterInDM ===
+// === Module 13154: useShowConvoStarterInDM ===
 
-// Module 13117 (useShowConvoStarterInDM)
+// Module 13154 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
-import ChannelConstants from "ChannelConstants" /* 4828 */;
-import MessageRequestStore from "MessageRequestStore" /* 6783 */;
-import MessageStore from "MessageStore" /* 6008 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelConstants from "ChannelConstants" /* 4830 */;
+import MessageRequestStore from "MessageRequestStore" /* 6785 */;
+import MessageStore from "MessageStore" /* 6010 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 import Constants from "Constants" /* 1087 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -42,7 +42,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
       let tmp6 = cResult[4];
     }
     MessageStore = tmp6;
-    const strangerDangerWarning = tmp(10923).useStrangerDangerWarning(id.id);
+    const strangerDangerWarning = tmp(10924).useStrangerDangerWarning(id.id);
     if (cResult[5] !== id) {
       const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
       cResult[5] = id;
@@ -161,7 +161,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
     cResult[14] = items1;
     tmp19 = items1;
     tmp18 = O;
-    const tmpResult = tmp(10923);
+    const tmpResult = tmp(10924);
   }
   let recipientId = null;
   if (tmp4) {

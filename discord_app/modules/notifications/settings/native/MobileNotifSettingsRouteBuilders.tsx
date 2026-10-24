@@ -1,9 +1,9 @@
-// === Module 17287: MobileNotifSettingsRouteBuilders ===
+// === Module 17319: MobileNotifSettingsRouteBuilders ===
 
-// Module 17287 (MobileNotifSettingsRouteBuilders)
+// Module 17319 (MobileNotifSettingsRouteBuilders)
 import util from "util" /* 1128 */;
 import _modDef2864 from "module_2864" /* 2864 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16808 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16840 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");

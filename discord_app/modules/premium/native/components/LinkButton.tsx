@@ -1,15 +1,15 @@
-// === Module 7515: LinkButton ===
+// === Module 7517: LinkButton ===
 
-// Module 7515 (LinkButton)
+// Module 7517 (LinkButton)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Pressables from "Pressables" /* 6906 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Pressables from "Pressables" /* 6908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_4 = createStyles.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

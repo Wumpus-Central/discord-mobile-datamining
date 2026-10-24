@@ -1,8 +1,8 @@
-// === Module 5702: findCodedLinkUrls ===
+// === Module 5704: findCodedLinkUrls ===
 
-// Module 5702 (findCodedLinkUrls)
-import MarkupTypes from "MarkupTypes" /* 5978 */;
-import findCodedLinkUrlsUsingRegexDefault from "findCodedLinkUrlsUsingRegex" /* 15062 */;
+// Module 5704 (findCodedLinkUrls)
+import MarkupTypes from "MarkupTypes" /* 5980 */;
+import findCodedLinkUrlsUsingRegexDefault from "findCodedLinkUrlsUsingRegex" /* 15085 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.native.tsx");
@@ -12,9 +12,9 @@ export default function findCodedLinkUrls(content) {
     let items = findCodedLinkUrlsUsingRegexDefault(content);
   } else {
     items = [];
-    const _default = tmp(5703).default;
-    const parseToASTResult = tmp(5703).default.parseToAST(content, true, { allowLinks: true });
-    tmp(8344).walkAst(parseToASTResult, (type) => {
+    const _default = tmp(5705).default;
+    const parseToASTResult = tmp(5705).default.parseToAST(content, true, { allowLinks: true });
+    tmp(8346).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -23,7 +23,7 @@ export default function findCodedLinkUrls(content) {
         items.push(type.target);
       }
     });
-    const tmpResult = tmp(8344);
+    const tmpResult = tmp(8346);
   }
   return items;
 };

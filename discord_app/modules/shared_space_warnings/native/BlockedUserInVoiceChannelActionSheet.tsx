@@ -1,26 +1,26 @@
-// === Module 15021: BlockedUserInVoiceChannelActionSheet ===
+// === Module 15044: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 15021 (BlockedUserInVoiceChannelActionSheet)
+// Module 15044 (BlockedUserInVoiceChannelActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6632 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const setDismissalTimeForUser = fn(15018).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(15020);
+const setDismissalTimeForUser = fn(15041).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(15043);
 ({ BlockWarningEngagements: closure_8, VoiceChannelWarningSurfaces: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_11, jsxs: closure_12, jsx: map1 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, headerText: null, centerText: null, buttonGroup: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.headerText = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };

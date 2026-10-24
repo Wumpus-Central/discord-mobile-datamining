@@ -1,9 +1,9 @@
-// === Module 17394: isJankScreenReportingEnabled ===
+// === Module 17426: isJankScreenReportingEnabled ===
 
-// Module 17394 (isJankScreenReportingEnabled)
+// Module 17426 (isJankScreenReportingEnabled)
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DeviceUtils from "DeviceUtils" /* 4926 */;
+import DeviceUtils from "DeviceUtils" /* 4928 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/jank_stats/native/isJankScreenReportingEnabled.tsx");

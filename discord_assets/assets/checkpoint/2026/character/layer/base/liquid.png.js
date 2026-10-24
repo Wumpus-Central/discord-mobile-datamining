@@ -1,6 +1,6 @@
-// === Module 6064: ? ===
+// === Module 6066: ? ===
 
-// Module 6064
+// Module 6066
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/liquid.png.js");

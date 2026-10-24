@@ -1,10 +1,10 @@
-// === Module 17293: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
+// === Module 17325: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
 
-// Module 17293 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
+// Module 17325 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11204 */;
-import SettingLayoutDefault from "SettingLayout" /* 15949 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17287 */;
+import SettingBuilders from "SettingBuilders" /* 11205 */;
+import SettingLayoutDefault from "SettingLayout" /* 15973 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

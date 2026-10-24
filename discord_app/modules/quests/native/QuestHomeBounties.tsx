@@ -1,27 +1,27 @@
-// === Module 16324: QuestHomeBounties ===
+// === Module 16348: QuestHomeBounties ===
 
-// Module 16324 (QuestHomeBounties)
+// Module 16348 (QuestHomeBounties)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import dismissible_content from "dismissible_content" /* 4805 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9569 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16325 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16331 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 16338 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 16344 */;
+import dismissible_content from "dismissible_content" /* 4807 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9570 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16349 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16355 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 16362 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 16368 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7773 */;
+import BountyStore from "BountyStore" /* 7775 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { container: { marginBottom: nativeDefault.space.PX_48 } };
   return obj;
@@ -31,7 +31,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
   const cResult = first(576).c(9);
   if (cResult[0] !== arg0) {
     if (arg0) {
-      const items = [tmp(4805).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
+      const items = [tmp(4807).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
       let items1 = items;
     } else {
       items1 = [];
@@ -39,7 +39,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
     cResult[0] = arg0;
     cResult[1] = items1;
   } else {
-    const tmp6 = _slicedToArray(tmp(7494).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp6 = _slicedToArray(tmp(7496).useSelectedDismissibleContent(cResult[1]), 2);
     first = tmp6[0];
     importDefault = tmp8;
     dependencyMap = noop.useRef(false);
@@ -100,17 +100,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
     cResult[8] = items3;
     tmp13 = items3;
     tmp12 = S;
-    const tmpResult = tmp(7494);
+    const tmpResult = tmp(7496);
   }
   const obj = first(576);
 }) : (function useBountiesNux(arg0) {
   if (arg0) {
-    const items = [first(4805).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
+    const items = [first(4807).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const tmp3 = _slicedToArray(first(7494).useSelectedDismissibleContent(items1), 2);
+  const tmp3 = _slicedToArray(first(7496).useSelectedDismissibleContent(items1), 2);
   first = tmp3[0];
   closure_1 = tmp5;
   dependencyMap = noop.useRef(false);

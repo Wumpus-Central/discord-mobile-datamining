@@ -1,11 +1,11 @@
-// === Module 16789: StickerAutocompleteSetting ===
+// === Module 16821: StickerAutocompleteSetting ===
 
-// Module 16789 (StickerAutocompleteSetting)
+// Module 16821 (StickerAutocompleteSetting)
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import SettingsConstants from "SettingsConstants" /* 8330 */;
-import UserSettingsText from "UserSettingsText" /* 16782 */;
-import SettingBuilders from "SettingBuilders" /* 11204 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import SettingsConstants from "SettingsConstants" /* 8332 */;
+import UserSettingsText from "UserSettingsText" /* 16814 */;
+import SettingBuilders from "SettingBuilders" /* 11205 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

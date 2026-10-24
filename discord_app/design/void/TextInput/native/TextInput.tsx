@@ -1,11 +1,11 @@
-// === Module 8994: TextInput/TextInput ===
+// === Module 8995: TextInput/TextInput ===
 
-// Module 8994 (TextInput/TextInput)
+// Module 8995 (TextInput/TextInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ColorUtils from "ColorUtils" /* 4966 */;
-import shared from "shared" /* 4976 */;
+import ColorUtils from "ColorUtils" /* 4968 */;
+import shared from "shared" /* 4978 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1087);
 ({ KeyboardThemes: metroRequire, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };

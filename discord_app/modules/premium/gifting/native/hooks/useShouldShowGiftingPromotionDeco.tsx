@@ -1,8 +1,8 @@
-// === Module 10507: useShouldShowGiftingPromotionDeco ===
+// === Module 10508: useShouldShowGiftingPromotionDeco ===
 
-// Module 10507 (useShouldShowGiftingPromotionDeco)
+// Module 10508 (useShouldShowGiftingPromotionDeco)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import NativeGiftContext from "NativeGiftContext" /* 10449 */;
+import NativeGiftContext from "NativeGiftContext" /* 10450 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

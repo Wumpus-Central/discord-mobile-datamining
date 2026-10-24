@@ -1,9 +1,9 @@
-// === Module 17801: useICYMITabBadge ===
+// === Module 17833: useICYMITabBadge ===
 
-// Module 17801 (useICYMITabBadge)
+// Module 17833 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ICYMIStore from "ICYMIStore" /* 8821 */;
+import ICYMIStore from "ICYMIStore" /* 8823 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

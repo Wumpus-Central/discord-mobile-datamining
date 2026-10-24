@@ -1,27 +1,27 @@
-// === Module 15946: SettingsAccountHeader ===
+// === Module 15970: SettingsAccountHeader ===
 
-// Module 15946 (SettingsAccountHeader)
+// Module 15970 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import TableRow from "TableRow" /* 6901 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6919 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7091 */;
-import openUserSettings from "openUserSettings" /* 7488 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15947 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import TableRow from "TableRow" /* 6903 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6921 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7093 */;
+import openUserSettings from "openUserSettings" /* 7490 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15971 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1087).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7414).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7416).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

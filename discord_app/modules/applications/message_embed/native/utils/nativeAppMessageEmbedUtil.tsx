@@ -1,11 +1,11 @@
-// === Module 13001: nativeAppMessageEmbedUtil ===
+// === Module 13038: nativeAppMessageEmbedUtil ===
 
-// Module 13001 (nativeAppMessageEmbedUtil)
+// Module 13038 (nativeAppMessageEmbedUtil)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import useAvatarColor from "useAvatarColor" /* 8612 */;
-import useHeroColors from "useHeroColors" /* 8613 */;
-import ColorUtils_mod from "ColorUtils" /* 4966 */;
+import useAvatarColor from "useAvatarColor" /* 8614 */;
+import useHeroColors from "useHeroColors" /* 8615 */;
+import ColorUtils_mod from "ColorUtils" /* 4968 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "#000000";

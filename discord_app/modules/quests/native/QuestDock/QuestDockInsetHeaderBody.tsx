@@ -1,27 +1,27 @@
-// === Module 16504: QuestDockInsetHeaderBody ===
+// === Module 16536: QuestDockInsetHeaderBody ===
 
-// Module 16504 (QuestDockInsetHeaderBody)
+// Module 16536 (QuestDockInsetHeaderBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 14111 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14112 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 16468 */;
-import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 16471 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 14130 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14131 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 16500 */;
+import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 16503 */;
 import noop from "module_19" /* 19 */;
 
 const native = Button(1202);
-const Text_Text = Button(5232);
-const components_Button_Button = Button(5242);
-const QuestDockHooks = Button(16401);
+const Text_Text = Button(5234);
+const components_Button_Button = Button(5244);
+const QuestDockHooks = Button(16433);
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(16404);
+const QuestDockConstants = fn(16436);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { rewardTile: { borderRadius: nativeDefault.radii.lg }, wrapper: { flexGrow: 1, flexShrink: 0, justifyContent: "flex-end", paddingHorizontal: QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM }, rewardContentContainer: { position: "relative" }, rewardContentWrapper: null, contentBadge: null, rewardContent: null, rewardContentCopy: null, premiumRewardPerkPill: null, titleRow: null, questDockCtaWrapper: null, questDockCta: null, questDockCtaRow: null, questDockCtaSaparator: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg };
 obj.rewardContentWrapper = { borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, overflow: "hidden", padding: 8, paddingRight: 16 };

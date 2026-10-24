@@ -1,20 +1,20 @@
-// === Module 11248: OptInChannelsUtils ===
+// === Module 11249: OptInChannelsUtils ===
 
-// Module 11248 (OptInChannelsUtils)
+// Module 11249 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import useChannelName from "useChannelName" /* 5602 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6825 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7204 */;
-import ChannelListState from "ChannelListState" /* 7635 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11249 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6827 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
+import ChannelListState from "ChannelListState" /* 7637 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11250 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7205 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7207 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -25,10 +25,10 @@ function setIndex(arg0, index) {
 }
 const Constants = fn(1087);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(4828);
+const ChannelConstants = fn(4830);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7641).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6703).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7643).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6705).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {

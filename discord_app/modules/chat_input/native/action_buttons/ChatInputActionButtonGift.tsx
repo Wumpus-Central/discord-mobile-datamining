@@ -1,23 +1,23 @@
-// === Module 13100: ChatInputActionButtonGift ===
+// === Module 13137: ChatInputActionButtonGift ===
 
-// Module 13100 (ChatInputActionButtonGift)
+// Module 13137 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 587 */;
-import dismissible_content from "dismissible_content" /* 4805 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4806 */;
+import dismissible_content from "dismissible_content" /* 4807 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PromotionsStore from "PromotionsStore" /* 9519 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import PromotionsStore from "PromotionsStore" /* 9520 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12491).ChatInputActionType;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ChatInputActionType = fn(12525).ChatInputActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };

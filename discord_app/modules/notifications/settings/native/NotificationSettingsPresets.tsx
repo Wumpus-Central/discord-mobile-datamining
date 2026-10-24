@@ -1,14 +1,13 @@
-// === Module 13737: NotificationSettingsPresets ===
+// === Module 19332: NotificationSettingsPresets ===
 
-// Module 13737 (NotificationSettingsPresets)
+// Module 19332 (NotificationSettingsPresets)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7265 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8297 */;
-import BellSlashIcon from "BellSlashIcon" /* 10870 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10987 */;
-import MagicWandIcon from "MagicWandIcon" /* 12317 */;
-import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 13738 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8299 */;
+import BellSlashIcon from "BellSlashIcon" /* 10871 */;
+import MagicWandIcon from "MagicWandIcon" /* 12343 */;
+import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 19333 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -38,7 +37,7 @@ function getSegmentedControlItems() {
   items[2] = obj3;
   return items;
 }
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { customContainer: { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -112,7 +111,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
           tmp18 = cResult[10];
         }
         const _Symbol2 = Symbol;
-        class I {
+        class E {
           constructor() {
             tmp = c1;
             tmp2 = null == c1;
@@ -129,7 +128,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
         }
         if (tmp19 === Symbol.for("react.memo_cache_sentinel")) {
           const string = tmp(tmp2[3]).intl.string;
-          class I {
+          class E {
             constructor() {
               tmp = c1;
               tmp2 = null == c1;
@@ -152,7 +151,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { style: tmp18, children: null };
           const items = [, ];
-          class I {
+          class E {
             constructor() {
               tmp = c1;
               tmp2 = null == c1;
@@ -182,7 +181,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(tmp2[3]).intl;
           cResult[13] = intl2.string(tmp(tmp2[3]).t["ztO+l+"]);
-          class I {
+          class E {
             constructor() {
               tmp = c1;
               tmp2 = null == c1;
@@ -210,7 +209,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
                     }
           };
           const tmp32 = closure_4(tmp(tmp2[14]).Button, obj6);
-          class I {
+          class E {
             constructor() {
               tmp = c1;
               tmp2 = null == c1;
@@ -249,7 +248,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
         if (cResult[19] !== segmentedControlState) {
           const obj8 = { variant: "experimental_Large", state: segmentedControlState };
           let tmp17 = closure_4(tmp(tmp2[15]).SegmentedControl, obj8);
-          class I {
+          class E {
             constructor() {
               tmp = c1;
               tmp2 = null == c1;
@@ -272,7 +271,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
         return tmp15;
       }
     }
-    class I {
+    class E {
       constructor() {
         tmp = c1;
         tmp2 = null == c1;
@@ -290,10 +289,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
     const items2 = [num3, segmentedControlState];
     cResult[6] = segmentedControlState;
     cResult[7] = num3;
-    cResult[8] = I;
+    cResult[8] = E;
     cResult[9] = items2;
     tmp12 = items2;
-    tmp11 = I;
+    tmp11 = E;
     const tmpResult = tmp(tmp2[12]);
   }
   const obj9 = { pageWidth: 0, onSetActiveIndex: tmp5, items: tmp6, defaultIndex: num3 };
@@ -384,17 +383,19 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notific
   }
   return tmp7;
 });
-fn(558);
-let obj3 = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsGuildPresets(guildId) {
+let obj3 = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
+
+export const NotificationSettingsGuildPresets = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsGuildPresets(guildId) {
   _require = guildId;
   const cResult = require("c").c(5);
   const obj = require("c");
   const guildPresetSettings = require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId);
   if (cResult[0] !== guildId.guildId) {
-    const fn = function s(arg0) {
-      return notificationSettingsGuildFlagUtils.updateGuildPreset(guildId.guildId, arg0);
+    const fn = function s(MENTIONS) {
+      return notificationSettingsGuildFlagUtils.updateGuildPreset(guildId.guildId, MENTIONS);
     };
     cResult[0] = guildId.guildId;
     cResult[1] = fn;
@@ -417,52 +418,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
   _require = guildId;
   const obj = {
     preset: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId).preset,
-    updatePreset(arg0) {
-      return notificationSettingsGuildFlagUtils.updateGuildPreset(guildId.guildId, arg0);
-    }
-  };
-  return closure_4(closure_8, obj);
-});
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
-
-export const NotificationSettingsGuildPresets = tmp3;
-export const NotificationSettingsChannelPresets = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsChannelPresets(channel) {
-  _require = channel;
-  const cResult = require("c").c(6);
-  const obj = require("c");
-  const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel);
-  if (cResult[0] === channel.channel.guild_id) {
-    if (cResult[1] === channel.channel.id) {
-      let tmp3 = cResult[2];
-    }
-    if (cResult[3] === channelPresetSettings.preset) {
-      if (cResult[4] === tmp3) {
-        let tmp4 = cResult[5];
-      }
-      return tmp4;
-    }
-    const obj3 = { preset: channelPresetSettings.preset, updatePreset: tmp3 };
-    const tmp7 = closure_4(closure_8, obj3);
-    cResult[3] = channelPresetSettings.preset;
-    cResult[4] = tmp3;
-    cResult[5] = tmp7;
-    tmp4 = tmp7;
-  }
-  const fn = function s(arg0) {
-    return notficationSettingsChannelFlagUtils.updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
-  };
-  cResult[0] = channel.channel.guild_id;
-  cResult[1] = channel.channel.id;
-  cResult[2] = fn;
-  tmp3 = fn;
-  const obj2 = require("notficationSettingsChannelFlagUtils");
-}) : (function NotificationSettingsChannelPresets(channel) {
-  _require = channel;
-  const obj = {
-    preset: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel).preset,
-    updatePreset(arg0) {
-      return notficationSettingsChannelFlagUtils.updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
+    updatePreset(MENTIONS) {
+      return notificationSettingsGuildFlagUtils.updateGuildPreset(guildId.guildId, MENTIONS);
     }
   };
   return closure_4(closure_8, obj);

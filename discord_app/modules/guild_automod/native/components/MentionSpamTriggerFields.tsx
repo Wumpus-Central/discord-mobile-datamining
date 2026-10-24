@@ -1,17 +1,17 @@
-// === Module 18989: MentionSpamTriggerFields ===
+// === Module 19017: MentionSpamTriggerFields ===
 
-// Module 18989 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 18972 */;
+// Module 19017 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12769);
+const Constants = fn(12806);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -194,10 +194,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(18251).useHasMentionRaidLimitAccess(rule.guildId);
+  let hasMentionRaidLimitAccess = rule(18283).useHasMentionRaidLimitAccess(rule.guildId);
   const intl = rule(1128).intl;
   const stringResult = intl.string(rule(1128).t["s/26oQ"]);
-  let obj = rule(18251);
+  let obj = rule(18283);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
   const intl2 = rule(1128).intl;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
     const intl3 = tmp2(1128).intl;
     const obj4 = { minimum, maximum };
     obj3.children = intl3.formatToPlainString(tmp2(1128).t["8Y5zsp"], obj4);
-    tmp9 = closure_7(tmp2(5232).Text, obj3);
+    tmp9 = closure_7(tmp2(5234).Text, obj3);
   }
   obj2.helperText = tmp9;
   const obj5 = { label: stringResult, subLabel: null, trailing: null };
@@ -248,9 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
     status: "error",
     accessibilityLabel: stringResult
   };
-  obj6.children = closure_7(rule(7013).TextField, obj7);
+  obj6.children = closure_7(rule(7015).TextField, obj7);
   obj5.trailing = closure_7(View, obj6);
-  const items = [closure_7(rule(6901).TableRow, obj5), ];
+  const items = [closure_7(rule(6903).TableRow, obj5), ];
   if (hasMentionRaidLimitAccess) {
     const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
     const intl5 = tmp2(1128).intl;
@@ -267,9 +267,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionS
       obj.triggerMetadata = obj2;
       return dependencyMap(obj);
     };
-    hasMentionRaidLimitAccess = closure_7(tmp2(6898).TableCheckboxRow, obj8);
+    hasMentionRaidLimitAccess = closure_7(tmp2(6900).TableCheckboxRow, obj8);
   }
   items[1] = hasMentionRaidLimitAccess;
   obj2.children = items;
-  return closure_8(rule(6985).TableRowGroup, obj2);
+  return closure_8(rule(6987).TableRowGroup, obj2);
 });

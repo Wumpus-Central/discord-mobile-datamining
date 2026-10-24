@@ -1,24 +1,24 @@
-// === Module 17684: FavoritesGuildChannelList ===
+// === Module 17716: FavoritesGuildChannelList ===
 
-// Module 17684 (FavoritesGuildChannelList)
+// Module 17716 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7408 */;
-import ChannelListState from "ChannelListState" /* 7635 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7410 */;
+import ChannelListState from "ChannelListState" /* 7637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6782 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6768 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7211 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7634 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
-import FavoriteStore from "FavoriteStore" /* 4824 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6770 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7213 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7636 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import FavoriteStore from "FavoriteStore" /* 4826 */;
 
 const require = globalThis.__r;
 
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10841).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10842).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -589,12 +589,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     }
   };
 }
-const ChannelRecord = fn(4825);
+const ChannelRecord = fn(4827);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4900).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(4834);
+let closure_19 = fn(4902).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(4836);
 ({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_20, FAVORITES_RAW_GUILD_ID: closure_21, MAX_FAVORITE_CHANNELS: closure_22 } = FavoritesConstants);
-const constants = fn(7641).ChannelListChannelNoticeRow;
+const constants = fn(7643).ChannelListChannelNoticeRow;
 const Permissions = fn(1098).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
 const ReactCompilerGating = fn(558);
@@ -791,7 +791,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
       }
     }
     let flag2 = false;
-    if (tmp20 <= tmp(7635).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+    if (tmp20 <= tmp(7637).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       class I {
         constructor() {
           if (closure_2) {

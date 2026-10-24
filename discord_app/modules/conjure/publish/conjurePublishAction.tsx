@@ -1,11 +1,11 @@
-// === Module 11849: conjurePublishAction ===
+// === Module 11875: conjurePublishAction ===
 
-// Module 11849 (conjurePublishAction)
+// Module 11875 (conjurePublishAction)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10803 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11841 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11850 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10804 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11867 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11876 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -76,7 +76,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     if (result) {
       str6 = "consent_then_publish";
     }
-    const obj8 = { intent: str6, isUpdate: "live_outdated" === tmp.publishState && !tmp9, disabledReason: formatResult, confirmReason: null, missingSurface: null };
+    const obj8 = { intent: str6, isUpdate: "live_outdated" === tmp.publishState && !tmp9, upToDate: "live_current" === tmp.publishState && !tmp9, disabledReason: formatResult, confirmReason: null, missingSurface: null };
     let tmp24 = null;
     if (null == formatResult) {
       let str8 = input.guildName;

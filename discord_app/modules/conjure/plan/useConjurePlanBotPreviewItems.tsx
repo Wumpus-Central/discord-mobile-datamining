@@ -1,19 +1,19 @@
-// === Module 12418: useConjurePlanBotPreviewItems ===
+// === Module 12448: useConjurePlanBotPreviewItems ===
 
-// Module 12418 (useConjurePlanBotPreviewItems)
+// Module 12448 (useConjurePlanBotPreviewItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6010 */;
-import InteractionTypes from "InteractionTypes" /* 6017 */;
-import UserActionCreators from "UserActionCreators" /* 8668 */;
-import createMessage from "createMessage" /* 10206 */;
-import conjurePlanBot from "conjurePlanBot" /* 12419 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
+import InteractionTypes from "InteractionTypes" /* 6019 */;
+import UserActionCreators from "UserActionCreators" /* 8670 */;
+import createMessage from "createMessage" /* 10207 */;
+import conjurePlanBot from "conjurePlanBot" /* 12449 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 const require = globalThis.__r;
 const createMessageDefault = createMessage;
@@ -122,7 +122,7 @@ const Constants = fn(1087);
 let c10 = "31337";
 let c11 = "31338";
 let c12 = "31339";
-const guildTextChannelRecord = new fn(4825).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
+const guildTextChannelRecord = new fn(4827).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSampleUser(id, username, arg2) {
   _require = id;

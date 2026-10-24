@@ -1,8 +1,8 @@
-// === Module 14474: InteractionStatus ===
+// === Module 14498: InteractionStatus ===
 
-// Module 14474 (InteractionStatus)
+// Module 14498 (InteractionStatus)
 import util from "util" /* 1128 */;
-import InteractionUtils from "InteractionUtils" /* 8597 */;
+import InteractionUtils from "InteractionUtils" /* 8599 */;
 import size from "module_2" /* 2 */;
 
 const constants = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };

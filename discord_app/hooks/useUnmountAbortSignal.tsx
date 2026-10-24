@@ -1,9 +1,9 @@
-// === Module 7352: useUnmountAbortSignal ===
+// === Module 7354: useUnmountAbortSignal ===
 
-// Module 7352 (useUnmountAbortSignal)
+// Module 7354 (useUnmountAbortSignal)
 import c from "c" /* 576 */;
-import useMountEffect from "useMountEffect" /* 5261 */;
-import useInitialValueDefault from "useInitialValue" /* 5597 */;
+import useMountEffect from "useMountEffect" /* 5263 */;
+import useInitialValueDefault from "useInitialValue" /* 5599 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

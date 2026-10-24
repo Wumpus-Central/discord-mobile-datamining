@@ -1,28 +1,28 @@
-// === Module 9200: SecureFramesUserVerificationModal ===
+// === Module 9201: SecureFramesUserVerificationModal ===
 
-// Module 9200 (SecureFramesUserVerificationModal)
+// Module 9201 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9195 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9198 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9196 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9199 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9196);
+const SecureFramesConstants = fn(9197);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_8, USER_VERIFICATION_LENGTH: closure_9, USER_VERIFICATION_NUM_COLUMNS: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const Constants = fn(1087);
 ({ AnalyticsLocations: closure_12, AnalyticsSections: map1 } = Constants);
 const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1, padding: 16, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, footer: { flex: 1, gap: 16, justifyContent: "flex-end" }, footerText: { textAlign: "center" }, header: { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, subtitle: { textAlign: "center" }, code: { marginTop: 24 }, helpMessage: { marginBottom: 16 } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -250,15 +250,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
         const obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9195).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9195);
+          let userVerificationDeeplink = showShareActionSheet(9196).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9196);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }
-        showShareActionSheet = showShareActionSheet(8849).showShareActionSheet;
+        showShareActionSheet = showShareActionSheet(8851).showShareActionSheet;
         obj2 = { message: userVerificationDeeplink };
         showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(8849);
+        const showShareActionSheetResult1 = showShareActionSheet(8851);
       }
     }
   }, items4);

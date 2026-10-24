@@ -1,18 +1,18 @@
-// === Module 17950: UnavailableNotice ===
+// === Module 17982: UnavailableNotice ===
 
-// Module 17950 (UnavailableNotice)
+// Module 17982 (UnavailableNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import _modDef17637 from "module_17637" /* 17637 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import _modDef17669 from "module_17669" /* 17669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, brightTitle: null, unavailableContainer: null, unavailableInfo: null, unavailableDescription: null, joinCtaTitle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.brightTitle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Unavaila
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef17637 };
+      const obj2 = { source: _modDef17669 };
       const tmp11 = React4(FastImageDefault, obj2);
       cResult[3] = tmp11;
       let tmp7 = tmp11;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Unavaila
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.unavailableInfo, children: null };
-  const obj3 = { source: _modDef17637 };
+  const obj3 = { source: _modDef17669 };
   const items1 = [React4(FastImageDefault, obj3), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {

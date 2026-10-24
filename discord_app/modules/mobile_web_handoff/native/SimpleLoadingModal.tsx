@@ -1,7 +1,7 @@
-// === Module 7428: SimpleLoadingModal ===
+// === Module 7430: SimpleLoadingModal ===
 
-// Module 7428 (SimpleLoadingModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
+// Module 7430 (SimpleLoadingModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -21,5 +21,5 @@ export const showSimpleLoadingModal = function showSimpleLoadingModal(c3, arg1) 
       onDismissed();
     }
   };
-  obj.pushLazy(require("asyncRequireImpl")(7429, dependencyMap.paths), obj2, c3, { animation: "none" });
+  obj.pushLazy(require("asyncRequireImpl")(7431, dependencyMap.paths), obj2, c3, { animation: "none" });
 };

@@ -1,11 +1,13 @@
-// === Module 17652: ChannelListFastList ===
+// === Module 17684: ChannelListFastList ===
 
-// Module 17652 (ChannelListFastList)
+// Module 17684 (ChannelListFastList)
 import c from "c" /* 576 */;
-import FastListDefault from "FastList" /* 7165 */;
-import useForwardedRefDefault from "useForwardedRef" /* 17653 */;
+import FastList from "FastList" /* 7167 */;
+import useForwardedRefDefault from "useForwardedRef" /* 17685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const FastListDefault = FastList;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -14,16 +16,20 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListFastList.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelListFastList(arg0) {
-  const cResult = c.c(25);
-  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, scrollIndicatorInsetBottom, sections, waitFor, ref } = arg0);
-  const tmp4 = _slicedToArray(useForwardedRefDefault(ref), 2)[1];
+  const cResult = c.c(26);
+  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, scrollIndicatorInsetBottom, sections, waitFor, drawDistanceMode, ref } = arg0);
+  const tmp5 = _slicedToArray(useForwardedRefDefault(ref), 2)[1];
   if (cResult[0] !== scrollIndicatorInsetBottom) {
     const obj2 = { bottom: scrollIndicatorInsetBottom };
     cResult[0] = scrollIndicatorInsetBottom;
     cResult[1] = obj2;
-    let tmp5 = obj2;
+    let tmp6 = obj2;
   } else {
-    tmp5 = cResult[1];
+    tmp6 = cResult[1];
+  }
+  let num3 = 6;
+  if ("viewport" === drawDistanceMode) {
+    num3 = FastList.DEFAULT_BATCHES_TO_RENDER;
   }
   if (cResult[2] === endReachedThreshold) {
     if (cResult[3] === getItemSize) {
@@ -43,13 +49,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                 if (cResult[17] === renderItem) {
                                   if (cResult[18] === renderSectionFooter) {
                                     if (cResult[19] === renderSectionHeader) {
-                                      if (cResult[20] === tmp5) {
+                                      if (cResult[20] === tmp6) {
                                         if (cResult[21] === sections) {
-                                          if (cResult[22] === tmp4) {
-                                            if (cResult[23] === waitFor) {
-                                              let tmp6 = cResult[24];
+                                          if (cResult[22] === tmp5) {
+                                            if (cResult[23] === num3) {
+                                              if (cResult[24] === waitFor) {
+                                                let tmp7 = cResult[25];
+                                              }
+                                              return tmp7;
                                             }
-                                            return tmp6;
                                           }
                                         }
                                       }
@@ -71,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  const tmp7 = jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: tmp5, waitFor, ref: tmp4, chunkBase: listViewportHeight, stickyHeaderFooter: true, renderHeader, headerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection: renderSectionHeader, sectionSize: getSectionHeaderSize, renderItem, itemSize: getItemSize, renderSectionFooter, sectionFooterSize: getSectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
+  const tmp8 = jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: tmp6, waitFor, ref: tmp5, chunkBase: listViewportHeight, batchesToRender: num3, stickyHeaderFooter: true, renderHeader, headerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection: renderSectionHeader, sectionSize: getSectionHeaderSize, renderItem, itemSize: getItemSize, renderSectionFooter, sectionFooterSize: getSectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
   cResult[2] = endReachedThreshold;
   cResult[3] = getItemSize;
   cResult[4] = getRecyclerKey;
@@ -90,16 +98,40 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[17] = renderItem;
   cResult[18] = renderSectionFooter;
   cResult[19] = renderSectionHeader;
-  cResult[20] = tmp5;
+  cResult[20] = tmp6;
   cResult[21] = sections;
-  cResult[22] = tmp4;
-  cResult[23] = waitFor;
-  cResult[24] = tmp7;
-  tmp6 = tmp7;
+  cResult[22] = tmp5;
+  cResult[23] = num3;
+  cResult[24] = waitFor;
+  cResult[25] = tmp8;
+  tmp7 = tmp8;
 }) : (function ChannelListFastList(scrollIndicatorInsetBottom) {
   scrollIndicatorInsetBottom = scrollIndicatorInsetBottom.scrollIndicatorInsetBottom;
-  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, sections, waitFor, ref } = scrollIndicatorInsetBottom);
+  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, sections, waitFor, drawDistanceMode, ref } = scrollIndicatorInsetBottom);
   const items = [scrollIndicatorInsetBottom];
-  const scrollIndicatorInsets = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
-  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase, stickyHeaderFooter: true, renderHeader, headerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection, sectionSize, renderItem, itemSize, renderSectionFooter, sectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
+  const memo = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
+  const obj = { insetEnd, scrollIndicatorInsets: memo, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null };
+  let num = 6;
+  if ("viewport" === drawDistanceMode) {
+    num = FastList.DEFAULT_BATCHES_TO_RENDER;
+  }
+  obj.batchesToRender = num;
+  obj.renderHeader = renderHeader;
+  obj.headerSize = headerSize;
+  obj.endReachedThreshold = endReachedThreshold;
+  obj.onEndReached = onEndReached;
+  obj.renderAccessory = renderAccessory;
+  obj.sections = sections;
+  obj.renderSection = renderSectionHeader;
+  obj.sectionSize = getSectionHeaderSize;
+  obj.renderItem = renderItem;
+  obj.itemSize = getItemSize;
+  obj.renderSectionFooter = renderSectionFooter;
+  obj.sectionFooterSize = getSectionFooterSize;
+  obj.getRecyclerKey = getRecyclerKey;
+  obj.initialScrollSection = initialScrollSection;
+  obj.initialScrollItem = initialScrollItem;
+  obj.onScroll = onScroll;
+  obj.onScrollWorklet = onScrollWorklet;
+  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: memo, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null });
 }));

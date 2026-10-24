@@ -1,12 +1,12 @@
-// === Module 12913: CheckpointActionCreators ===
+// === Module 12950: CheckpointActionCreators ===
 
-// Module 12913 (CheckpointActionCreators)
+// Module 12950 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import CheckpointStore from "CheckpointStore" /* 12912 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import CheckpointStore from "CheckpointStore" /* 12949 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -251,6 +251,105 @@ let closure_11 = async function _sendSidekickMessage() {
   closure_130_4 = closure_131_1(closure_131_2[10]).parse(channel, closure_130_0);
   return closure_131_1(closure_131_2[11]).sendMessage(channel.id, closure_130_4, false, { location: "checkpoint-sidekick" });
 };
+let closure_12 = async function _sendCheckpointCard(arg0) {
+  if (c10 === 2) {
+    c10 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    while (true) {
+      c10 = 2;
+      let tmp4 = c9;
+      if (0 === c9) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_6 = tmp;
+          closure_5 = tmp4;
+          closure_133_0 = checkpointCardType;
+          closure_133_1 = dependencyMap;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
+          closure_133_4 = undefined;
+          let _Promise2 = Promise;
+          c9 = 1;
+          c10 = 1;
+          let obj4 = { value: Promise.all(_require.map(require("formatResults").getOrResolveChannelIdFromDestinationId)), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          let obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_133_2 = value.filter(closure_134_0(closure_134_2[13]).isNotNullish);
+          let _Promise = Promise;
+          c9 = 2;
+          c10 = 1;
+          let obj6 = {
+            value: Promise.allSettled(closure_133_2.map((item) => {
+                      channel = channel.getChannel(item);
+                      if (null != channel) {
+                        const obj = checkpointCardType(7566);
+                        const id = channel.id;
+                        const obj3 = { location: "checkpoint", checkpointCardType };
+                        return obj.sendMessage(id, checkpointCardType(7755).parse(channel, closure_1_0), false, obj3);
+                      }
+                    })),
+            done: false
+          };
+          return obj6;
+        }
+      } else if (2 === tmp4) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          closure_133_3 = value;
+          let channel = closure_133_3;
+          asyncGeneratorStep = closure_133_3[Symbol.iterator]();
+          while (asyncGeneratorStep !== undefined) {
+            c8 = 1;
+            closure_133_4 = tmp13;
+            if ("rejected" === closure_133_4.status) {
+              throw closure_133_4.reason;
+            } else {
+              c8 = 0;
+              continue;
+            }
+          }
+          c10 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        c8 = 0;
+        asyncGeneratorStep.return();
+        throw React5;
+      }
+    }
+  }
+};
 const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -298,6 +397,16 @@ export const resetCheckpoint = function resetCheckpoint() {
 export const sendSidekickMessage = function sendSidekickMessage() {
   const self = this;
   const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const sendCheckpointCard = function sendCheckpointCard() {
+  const self = this;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

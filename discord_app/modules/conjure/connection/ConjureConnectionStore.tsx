@@ -1,26 +1,26 @@
-// === Module 10697: ConjureConnectionStore ===
+// === Module 10698: ConjureConnectionStore ===
 
-// Module 10697 (ConjureConnectionStore)
+// Module 10698 (ConjureConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import createNonce from "createNonce" /* 10202 */;
-import conjureChatConnection from "conjureChatConnection" /* 10716 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10717 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10718 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10724 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10741 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 10783 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 10791 */;
-import conjurePublishConnection from "conjurePublishConnection" /* 10794 */;
-import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 10804 */;
-import conjureKnownStepKinds from "conjureKnownStepKinds" /* 10812 */;
-import ConjureWebSocket from "ConjureWebSocket" /* 10813 */;
+import createNonce from "createNonce" /* 10203 */;
+import conjureChatConnection from "conjureChatConnection" /* 10717 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10718 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10725 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10742 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 10784 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 10792 */;
+import conjurePublishConnection from "conjurePublishConnection" /* 10795 */;
+import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 10805 */;
+import conjureKnownStepKinds from "conjureKnownStepKinds" /* 10813 */;
+import ConjureWebSocket from "ConjureWebSocket" /* 10814 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureChatStore from "ConjureChatStore" /* 10698 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10703 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6771 */;
+import ConjureChatStore from "ConjureChatStore" /* 10699 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 require = fn;
 function setConnState(projectId, open) {
@@ -369,13 +369,13 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
               return closure_2_20(projectId, closure_1_1, arg0);
             };
             obj.onClose = function onClose() {
-              projectId(10794).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
-              obj = projectId(10794);
-              const result = projectId(10804).rejectPendingPublishSchedule(projectId);
-              obj2 = projectId(10804);
-              const result1 = projectId(10794).rejectPendingPatchNotesDraft(projectId, "Connection closed before the draft arrived");
-              const obj3 = projectId(10794);
-              const result2 = projectId(10783).clearConjurePreviewClaims(projectId);
+              projectId(10795).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
+              obj = projectId(10795);
+              const result = projectId(10805).rejectPendingPublishSchedule(projectId);
+              obj2 = projectId(10805);
+              const result1 = projectId(10795).rejectPendingPatchNotesDraft(projectId, "Connection closed before the draft arrived");
+              const obj3 = projectId(10795);
+              const result2 = projectId(10784).clearConjurePreviewClaims(projectId);
               if (closure_1_1.disposed) {
                 const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
                 closure_1(584).dispatch(obj6);
@@ -397,7 +397,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
                 closure_1_1.pendingTemplatePrep = null;
                 const obj5 = closure_1(584);
               }
-              const obj4 = projectId(10783);
+              const obj4 = projectId(10784);
             };
             obj.onError = function onError() {
 
@@ -507,40 +507,40 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10698).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10706);
-const ConjureSmartContextStore = fn(10707);
-const ConjureDebugLogStore = fn(10708);
-const ConjureLiveReloadStore = fn(10710);
-const ConjureModelSettingsStore = fn(10711);
-const ConjureOverlayBackgroundStore = fn(10712);
-const ConjurePublishStatusStore = fn(10713);
-const ConjureRemixStore = fn(10714);
-const ConjureSettingsStore = fn(10715);
+const getOlderHistoryCursor = fn(10699).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10707);
+const ConjureSmartContextStore = fn(10708);
+const ConjureDebugLogStore = fn(10709);
+const ConjureLiveReloadStore = fn(10711);
+const ConjureModelSettingsStore = fn(10712);
+const ConjureOverlayBackgroundStore = fn(10713);
+const ConjurePublishStatusStore = fn(10714);
+const ConjureRemixStore = fn(10715);
+const ConjureSettingsStore = fn(10716);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10731).browserSessionsFrameHandlers);
-const merged1 = Object.assign(fn(10716).chatFrameHandlers);
-const merged2 = Object.assign(fn(10732).debugFrameHandlers);
-const merged3 = Object.assign(fn(10734).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(10736).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(10737).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(10738).previewFrameHandlers);
-const merged7 = Object.assign(fn(10794).publishFrameHandlers);
-const merged8 = Object.assign(fn(10804).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(10806).remixFrameHandlers);
-const merged10 = Object.assign(fn(10807).settingsFrameHandlers);
-const merged11 = Object.assign(fn(10809).smartContextFrameHandlers);
+let merged = Object.assign(fn(10732).browserSessionsFrameHandlers);
+const merged1 = Object.assign(fn(10717).chatFrameHandlers);
+const merged2 = Object.assign(fn(10733).debugFrameHandlers);
+const merged3 = Object.assign(fn(10735).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(10737).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(10738).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(10739).previewFrameHandlers);
+const merged7 = Object.assign(fn(10795).publishFrameHandlers);
+const merged8 = Object.assign(fn(10805).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(10807).remixFrameHandlers);
+const merged10 = Object.assign(fn(10808).settingsFrameHandlers);
+const merged11 = Object.assign(fn(10810).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(10810).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(10716).chatStepHandlers);
-const merged14 = Object.assign(fn(10732).debugStepHandlers);
-const merged15 = Object.assign(fn(10738).previewStepHandlers);
-const merged16 = Object.assign(fn(10811).projectStepHandlers);
-const merged17 = Object.assign(fn(10794).publishStepHandlers);
+const merged12 = Object.assign(fn(10811).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10717).chatStepHandlers);
+const merged14 = Object.assign(fn(10733).debugStepHandlers);
+const merged15 = Object.assign(fn(10739).previewStepHandlers);
+const merged16 = Object.assign(fn(10812).projectStepHandlers);
+const merged17 = Object.assign(fn(10795).publishStepHandlers);
 const set1 = new Set(["hello", "history", "capture_preview", "control_preview", "control_claim", "control_abort", "capture_claim", "preview_operation", "request_upstream_ticket", "host_approvals"]);
 const map3 = new Map();
 const map4 = new Map();

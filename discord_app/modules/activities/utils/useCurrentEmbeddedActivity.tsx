@@ -1,9 +1,9 @@
-// === Module 11431: useCurrentEmbeddedActivity ===
+// === Module 11451: useCurrentEmbeddedActivity ===
 
-// Module 11431 (useCurrentEmbeddedActivity)
+// Module 11451 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,31 +1,31 @@
-// === Module 16175: FamilyCenterRequestsPage ===
+// === Module 16199: FamilyCenterRequestsPage ===
 
-// Module 16175 (FamilyCenterRequestsPage)
+// Module 16199 (FamilyCenterRequestsPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7219 */;
-import useUserLinks from "useUserLinks" /* 8123 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8124 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 10966 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12841 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16136 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 16176 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 16181 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 16189 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
+import useUserLinks from "useUserLinks" /* 8125 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8126 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 10967 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12878 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16160 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 16200 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 16205 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 16213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7644);
+const FamilyCenterConstants = fn(7646);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } = FamilyCenterConstants);
-const THROUGHLINE_URL = fn(10922).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10923).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4969);
+let createStyles = fn(4971);
 let obj2 = { container: { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   }
   return tmp10;
 });
-createStyles = fn(4969);
+createStyles = fn(4971);
 let obj6 = { container: null, supportHeader: null };
 let obj3 = { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
 obj6.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   }
   return tmp11;
 });
-createStyles = fn(4969);
+createStyles = fn(4971);
 const obj11 = { scrollView: { flex: 1 }, container: null };
 const obj8 = { marginBottom: nativeDefault.space.PX_4 };
 obj11.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

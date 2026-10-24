@@ -1,15 +1,15 @@
-// === Module 18764: UploadLogsActionSheet ===
+// === Module 18796: UploadLogsActionSheet ===
 
-// Module 18764 (UploadLogsActionSheet)
+// Module 18796 (UploadLogsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
-import DebugUploadManager from "DebugUploadManager" /* 13764 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
+import DebugUploadManager from "DebugUploadManager" /* 13784 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
       let obj2 = { title: null };
       const intl = tmp(1128).intl;
       obj2.title = intl.string(tmp(1128).t.KTjjrG);
-      const tmp9 = closure_6(tmp(7246).BottomSheetTitleHeader, obj2);
+      const tmp9 = closure_6(tmp(7248).BottomSheetTitleHeader, obj2);
       cResult[3] = tmp9;
       let tmp7 = tmp9;
     } else {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
     }
     if (cResult[5] !== tmp4.body) {
       let obj3 = { variant: "text-sm/normal", color: "text-muted", style: body, children: tmp10 };
-      const tmp14 = closure_6(tmp(5232).Text, obj3);
+      const tmp14 = closure_6(tmp(5234).Text, obj3);
       cResult[5] = tmp4.body;
       cResult[6] = tmp14;
       let tmp12 = tmp14;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
     }
     if (cResult[8] !== tmp5) {
       const obj4 = { text: tmp15, onPress: tmp5 };
-      const tmp19 = closure_6(tmp(5242).Button, obj4);
+      const tmp19 = closure_6(tmp(5244).Button, obj4);
       cResult[8] = tmp5;
       cResult[9] = tmp19;
       let tmp17 = tmp19;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
               return rtcConnectionId(dependencyMap[10]).hideActionSheet();
             }
       };
-      const tmp28 = closure_6(tmp(5242).Button, obj6);
+      const tmp28 = closure_6(tmp(5244).Button, obj6);
       cResult[13] = tmp28;
       let tmp26 = tmp28;
     } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
     const items = [tmp12, tmp17, tmp20, tmp26];
     obj8.children = items;
     obj7.children = closure_7(View, obj8);
-    const tmp33 = closure_6(tmp(5263).BottomSheet, obj7);
+    const tmp33 = closure_6(tmp(5265).BottomSheet, obj7);
     cResult[14] = tmp4.container;
     cResult[15] = tmp12;
     cResult[16] = tmp17;

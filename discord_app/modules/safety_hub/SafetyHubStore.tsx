@@ -1,11 +1,11 @@
-// === Module 7920: SafetyHubStore ===
+// === Module 7922: SafetyHubStore ===
 
-// Module 7920 (SafetyHubStore)
+// Module 7922 (SafetyHubStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SafetyHubModels from "SafetyHubModels" /* 7897 */;
-import _modDef7921 from "module_7921" /* 7921 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 7896 */;
+import SafetyHubModels from "SafetyHubModels" /* 7899 */;
+import _modDef7923 from "module_7923" /* 7923 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 7898 */;
 import size from "module_2" /* 2 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
@@ -147,7 +147,7 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
   },
   SAFETY_HUB_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility, expressiveModalV2Enabled, showExpressiveModalSubtitleAlt, manualReviewFallbackEnabled, manualReviewDecidedUnderage } = arg0);
-    closure_6 = _modDef7921(classifications, "id");
+    closure_6 = _modDef7923(classifications, "id");
     c9 = false;
     c10 = true;
     error = null;

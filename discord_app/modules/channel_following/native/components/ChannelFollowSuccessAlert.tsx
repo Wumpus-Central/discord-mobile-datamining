@@ -1,11 +1,11 @@
-// === Module 13328: ChannelFollowSuccessAlert ===
+// === Module 13365: ChannelFollowSuccessAlert ===
 
-// Module 13328 (ChannelFollowSuccessAlert)
+// Module 13365 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
-import useThemeDefault from "useTheme" /* 5203 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import common_AlertDefault from "common/Alert" /* 5976 */;
+import useThemeDefault from "useTheme" /* 5205 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import common_AlertDefault from "common/Alert" /* 5978 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(13329), fn(13330), fn(13331)];
-let items1 = [fn(13332), fn(13333), fn(13334)];
+let items = [fn(13366), fn(13367), fn(13368)];
+let items1 = [fn(13369), fn(13370), fn(13371)];
 let items2 = [
   () => {
     const intl = util.intl;
@@ -57,7 +57,7 @@ let items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       }
       if (cResult[15] !== tmp4.text) {
         const obj3 = { style: tmp4.text, variant: "text-md/medium", color: "text-muted", children: tmp23 };
-        const tmp27 = closure_3(tmp(5232).Text, obj3);
+        const tmp27 = closure_3(tmp(5234).Text, obj3);
         cResult[15] = tmp4.text;
         cResult[16] = tmp27;
         let tmp25 = tmp27;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       const tmp5Result = common_AlertDefault;
     }
     const obj5 = { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp18 };
-    const tmp22 = closure_3(tmp(5232).Text, obj5);
+    const tmp22 = closure_3(tmp(5234).Text, obj5);
     cResult[11] = tmp4.header;
     cResult[12] = tmp18;
     cResult[13] = tmp22;

@@ -1,16 +1,16 @@
-// === Module 15195: GuildActionSheetHeader ===
+// === Module 15214: GuildActionSheetHeader ===
 
-// Module 15195 (GuildActionSheetHeader)
+// Module 15214 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 587 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
-import _modDef9237 from "module_9237" /* 9237 */;
-import _modDef9240 from "module_9240" /* 9240 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15197 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4837 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
+import _modDef9238 from "module_9238" /* 9238 */;
+import _modDef9241 from "module_9241" /* 9241 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15216 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 15196 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7369 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 15215 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7371 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
 let size = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.avatarBackground = size;
@@ -46,16 +46,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Commun
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.TME4LJ);
     importDefault = stringResult;
-    let tmp9Result = _modDef9237;
+    let tmp9Result = _modDef9238;
     let tmp11 = stringResult;
     let tmp12;
-    if (guildVisibility === tmp(9233).GuildVisibility.PUBLIC) {
+    if (guildVisibility === tmp(9234).GuildVisibility.PUBLIC) {
       const intl2 = tmp(1128).intl;
       const stringResult1 = intl2.string(tmp(1128).t.op2cJ6);
       importDefault = stringResult1;
-      const GlobeEarthIcon = tmp(9491).GlobeEarthIcon;
+      const GlobeEarthIcon = tmp(9492).GlobeEarthIcon;
       _require = GlobeEarthIcon;
-      tmp9Result = tmp9(9240);
+      tmp9Result = tmp9(9241);
       tmp11 = stringResult1;
       tmp12 = GlobeEarthIcon;
     }
@@ -89,7 +89,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Commun
       }
       if (cResult[11] !== tmp4.communityPillText) {
         const obj2 = { variant: "text-xs/medium", color: "text-default", style: tmp4.communityPillText, children: tmp20 };
-        const tmp24 = closure_9(tmp(5232).Text, obj2);
+        const tmp24 = closure_9(tmp(5234).Text, obj2);
         cResult[11] = tmp4.communityPillText;
         cResult[12] = tmp24;
         let tmp22 = tmp24;
@@ -109,7 +109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Commun
       const obj3 = { style: tmp14, accessibilityRole: "button", onPress: tmp15, children: null };
       const items = [tmp16, tmp22];
       obj3.children = items;
-      const tmp27 = closure_10(tmp(6906).PressableOpacity, obj3);
+      const tmp27 = closure_10(tmp(6908).PressableOpacity, obj3);
       cResult[13] = tmp4.communityPill;
       cResult[14] = tmp15;
       cResult[15] = tmp16;
@@ -137,12 +137,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Commun
   const tmp = closure_11();
   const intl = GlobeEarthIcon(1128).intl;
   importDefault = intl.string(GlobeEarthIcon(1128).t.TME4LJ);
-  let tmp4Result = _modDef9237;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(9233).GuildVisibility.PUBLIC) {
+  let tmp4Result = _modDef9238;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(9234).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1128).intl;
     importDefault = intl2.string(tmp2(1128).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9491).GlobeEarthIcon;
-    tmp4Result = _modDef9240;
+    GlobeEarthIcon = tmp2(9492).GlobeEarthIcon;
+    tmp4Result = _modDef9241;
   }
   const obj = {
     style: tmp.communityPill,
@@ -156,9 +156,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Commun
   const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1128).intl;
   obj3.children = intl3.string(GlobeEarthIcon(1128).t.K7iRig);
-  items[1] = closure_9(GlobeEarthIcon(5232).Text, obj3);
+  items[1] = closure_9(GlobeEarthIcon(5234).Text, obj3);
   obj.children = items;
-  return closure_10(GlobeEarthIcon(6906).PressableOpacity, obj);
+  return closure_10(GlobeEarthIcon(6908).PressableOpacity, obj);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx");

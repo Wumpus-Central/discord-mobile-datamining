@@ -1,10 +1,10 @@
-// === Module 8677: UserProfileAnalyticsContext ===
+// === Module 8679: UserProfileAnalyticsContext ===
 
-// Module 8677 (UserProfileAnalyticsContext)
+// Module 8679 (UserProfileAnalyticsContext)
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1281 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7251 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8678 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8680 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -156,7 +156,7 @@ export const useCreateUserProfileAnalyticsContext = tmp2;
 export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileAnalyticsContext() {
   const cResult = context(576).c(18);
   context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7251)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7253)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === context) {
       let tmp3 = cResult[2];
@@ -271,7 +271,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
   tmp3 = fn;
 }) : (function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7251)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7253)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

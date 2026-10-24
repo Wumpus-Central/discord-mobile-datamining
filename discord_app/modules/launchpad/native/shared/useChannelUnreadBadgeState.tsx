@@ -1,9 +1,9 @@
-// === Module 17752: useChannelUnreadBadgeState ===
+// === Module 17784: useChannelUnreadBadgeState ===
 
-// Module 17752 (useChannelUnreadBadgeState)
-import NewChannelsStore from "NewChannelsStore" /* 7639 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+// Module 17784 (useChannelUnreadBadgeState)
+import NewChannelsStore from "NewChannelsStore" /* 7641 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 
 const require = globalThis.__r;
 
@@ -83,7 +83,7 @@ export const useChannelUnreadBadgeState = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores = tmp(504).useStateFromStores(first, tmp7, tmp8);
     const tmpResult = tmp(504);
-    const optInEnabledForGuild = tmp(6811).useOptInEnabledForGuild(guild_id.guild_id);
+    const optInEnabledForGuild = tmp(6813).useOptInEnabledForGuild(guild_id.guild_id);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items1 = [UserGuildSettingsStore];
@@ -107,7 +107,7 @@ export const useChannelUnreadBadgeState = ReactCompilerGating.isReactCompilerEna
         }
       }
     }
-    const tmpResult3 = tmp(6811);
+    const tmpResult3 = tmp(6813);
     const stateFromStores1 = tmp(504).useStateFromStores(tmp11, U);
     if (cResult[8] === isMentionLowImportance) {
       class U {

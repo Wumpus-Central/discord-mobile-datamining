@@ -1,18 +1,18 @@
-// === Module 18041: SearchListRow ===
+// === Module 18073: SearchListRow ===
 
-// Module 18041 (SearchListRow)
+// Module 18073 (SearchListRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Pressables from "Pressables" /* 6906 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Pressables from "Pressables" /* 6908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(9713).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(9714).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = { pressable: { paddingHorizontal: 16, paddingVertical }, body: { flexDirection: "row", alignItems: "center" }, labels: { justifyContent: "center", flex: 1 }, underlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE }, text: { flexShrink: 1 }, iconContainer: { marginRight: 12 }, extrasContainer: { marginLeft } };
   return obj;

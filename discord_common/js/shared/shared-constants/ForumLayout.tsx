@@ -1,6 +1,6 @@
-// === Module 4831: ForumLayout ===
+// === Module 4833: ForumLayout ===
 
-// Module 4831 (ForumLayout)
+// Module 4833 (ForumLayout)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([0, 1, 2]) };

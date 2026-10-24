@@ -1,13 +1,13 @@
-// === Module 8615: utils ===
+// === Module 8617: utils ===
 
-// Module 8615 (utils)
+// Module 8617 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import _mod4398 from "module_4398" /* 4398 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8611 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8616 */;
+import _mod4400 from "module_4400" /* 4400 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8613 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8618 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -392,7 +392,7 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4398;
+  const obj = _mod4400;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;

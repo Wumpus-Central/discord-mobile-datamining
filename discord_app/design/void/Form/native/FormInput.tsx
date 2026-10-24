@@ -1,15 +1,15 @@
-// === Module 8955: FormInput ===
+// === Module 8957: FormInput ===
 
-// Module 8955 (FormInput)
+// Module 8957 (FormInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import shared from "shared" /* 4976 */;
-import native2 from "native" /* 5035 */;
-import RedesignCompat from "RedesignCompat" /* 6984 */;
-import TextInput from "TextInput" /* 7006 */;
-import TextArea2 from "TextArea" /* 7178 */;
+import shared from "shared" /* 4978 */;
+import native2 from "native" /* 5037 */;
+import RedesignCompat from "RedesignCompat" /* 6986 */;
+import TextInput from "TextInput" /* 7008 */;
+import TextArea2 from "TextArea" /* 7180 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 let closure_2 = ["onChange", "keyboardAppearance", "keyboardType", "style", "inputTextStyle", "value", "title", "helpText", "error", "placeholder", "secureTextEntry", "disabled", "multiline", "autoFocus", "numberOfLines", "clearButtonVisibility", "autoCapitalize", "autoCorrect", "showBorder", "showCharactersRemaining", "enableAndroidSanitizedInputWorkaround", "allowRedesignTextInput", "ref"];
 const KeyboardThemes = fn(1087).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, inputText: null };
 let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj2.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };

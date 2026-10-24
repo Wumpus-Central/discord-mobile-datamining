@@ -1,7 +1,7 @@
-// === Module 10110: usePressHorizontalAutocompleteItemHandler ===
+// === Module 10111: usePressHorizontalAutocompleteItemHandler ===
 
-// Module 10110 (usePressHorizontalAutocompleteItemHandler)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10111 */;
+// Module 10111 (usePressHorizontalAutocompleteItemHandler)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

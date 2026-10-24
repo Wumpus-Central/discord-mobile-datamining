@@ -1,28 +1,28 @@
-// === Module 16206: UserSettingsAuthedApp ===
+// === Module 16230: UserSettingsAuthedApp ===
 
-// Module 16206 (UserSettingsAuthedApp)
+// Module 16230 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Link from "Link" /* 1506 */;
-import RootNavigationRef from "RootNavigationRef" /* 5149 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5684 */;
-import useAlertStore from "useAlertStore" /* 5908 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7085 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7089 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7208 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7213 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7257 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8858 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10769 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13481 */;
+import RootNavigationRef from "RootNavigationRef" /* 5151 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
+import useAlertStore from "useAlertStore" /* 5910 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7087 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7259 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10770 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13518 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7201 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 
 require = fn;
@@ -30,11 +30,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1087);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10023).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10955).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10024).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10956).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;

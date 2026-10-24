@@ -1,12 +1,12 @@
-// === Module 13439: useGuildPowerupExpiringNotificationsConfig ===
+// === Module 13476: useGuildPowerupExpiringNotificationsConfig ===
 
-// Module 13439 (useGuildPowerupExpiringNotificationsConfig)
+// Module 13476 (useGuildPowerupExpiringNotificationsConfig)
 import c from "c" /* 576 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import _modDef2992 from "module_2992" /* 2992 */;
-import Powerups from "Powerups" /* 5183 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 13440 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13441 */;
+import Powerups from "Powerups" /* 5185 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 13477 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13478 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

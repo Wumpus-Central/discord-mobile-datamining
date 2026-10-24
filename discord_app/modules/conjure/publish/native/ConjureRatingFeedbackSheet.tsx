@@ -1,6 +1,6 @@
-// === Module 12456: ConjureRatingFeedbackSheet ===
+// === Module 12490: ConjureRatingFeedbackSheet ===
 
-// Module 12456 (ConjureRatingFeedbackSheet)
+// Module 12490 (ConjureRatingFeedbackSheet)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,10 +24,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const cResult = bottomSheetClose(576).c(20);
   const tmp4 = closure_6();
   const obj = bottomSheetClose(576);
-  const bottomSheetRef1 = bottomSheetClose(8657).useBottomSheetRef();
+  const bottomSheetRef1 = bottomSheetClose(8659).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-  const obj2 = bottomSheetClose(8657);
-  const conjureRatingFeedback = bottomSheetClose(12455).useConjureRatingFeedback(rating.rating);
+  const obj2 = bottomSheetClose(8659);
+  const conjureRatingFeedback = bottomSheetClose(12489).useConjureRatingFeedback(rating.rating);
   ({ text, setText, send } = conjureRatingFeedback);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = bottomSheetClose(1128).intl;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { title: first };
-      const tmp13 = closure_4(bottomSheetClose(7246).BottomSheetTitleHeader, obj4);
+      const tmp13 = closure_4(bottomSheetClose(7248).BottomSheetTitleHeader, obj4);
       cResult[4] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               return tmp31;
             }
             const obj5 = { ref: bottomSheetRef, startExpanded: true, keyboardShouldPersistTaps: "handled", header: tmp11, children: tmp27 };
-            const tmp33 = closure_4(bottomSheetClose(7296).ActionSheet, obj5);
+            const tmp33 = closure_4(bottomSheetClose(7298).ActionSheet, obj5);
             cResult[17] = bottomSheetRef;
             cResult[18] = tmp27;
             cResult[19] = tmp33;
@@ -106,14 +106,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
         tmp27 = tmp30;
       }
       const obj7 = { variant: "primary", text: tmp20, disabled: !conjureRatingFeedback.canSend, onPress: tmp10 };
-      const tmp26 = closure_4(bottomSheetClose(5242).Button, obj7);
+      const tmp26 = closure_4(bottomSheetClose(5244).Button, obj7);
       cResult[10] = tmp10;
       cResult[11] = !conjureRatingFeedback.canSend;
       cResult[12] = tmp26;
       tmp24 = tmp26;
     }
-    const obj8 = { accessibilityLabel: first, placeholder: tmp14, maxLength: bottomSheetClose(12455).CONJURE_RATING_FEEDBACK_MAX_LENGTH, value: text, onChange: setText };
-    const tmp19 = closure_4(bottomSheetClose(7178).TextArea, obj8);
+    const obj8 = { accessibilityLabel: first, placeholder: tmp14, maxLength: bottomSheetClose(12489).CONJURE_RATING_FEEDBACK_MAX_LENGTH, value: text, onChange: setText };
+    const tmp19 = closure_4(bottomSheetClose(7180).TextArea, obj8);
     cResult[6] = setText;
     cResult[7] = text;
     cResult[8] = tmp19;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   cResult[2] = send;
   cResult[3] = handleSend;
   tmp10 = handleSend;
-  const obj3 = bottomSheetClose(12455);
+  const obj3 = bottomSheetClose(12489);
 }) : (function ConjureRatingFeedbackSheet(rating) {
   _require = undefined;
   importDefault = undefined;

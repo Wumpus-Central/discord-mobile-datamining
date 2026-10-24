@@ -1,25 +1,25 @@
-// === Module 17755: GuildsBarGeoRestrictedGuild ===
+// === Module 17787: GuildsBarGeoRestrictedGuild ===
 
-// Module 17755 (GuildsBarGeoRestrictedGuild)
+// Module 17787 (GuildsBarGeoRestrictedGuild)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5906 */;
-import GuildIcon from "GuildIcon" /* 6881 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9004 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17706 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17710 */;
-import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 17727 */;
-import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 17756 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
+import GuildIcon from "GuildIcon" /* 6883 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17738 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17742 */;
+import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 17759 */;
+import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 17788 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(17694).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17726).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;
@@ -42,7 +42,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     first = cResult[0];
   }
   let obj = restrictedGuild(576);
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles(first);
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles(first);
   if (cResult[1] === restrictedGuild.icon) {
     if (cResult[2] === restrictedGuild.id) {
       let tmp6 = cResult[3];
@@ -103,8 +103,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj7 = { source: tmp6, style: name.guildIcon, fadeDuration: 0 };
         let tmp23 = jsx(FastImageDefault, { source: tmp6, style: name.guildIcon, fadeDuration: 0 });
       } else {
-        const obj8 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6881).GuildIconSizes.LARGE };
-        tmp23 = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6881).GuildIconSizes.LARGE });
+        const obj8 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6883).GuildIconSizes.LARGE };
+        tmp23 = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp(6883).GuildIconSizes.LARGE });
       }
       cResult[11] = tmp6;
       cResult[12] = name.guildIcon;
@@ -143,12 +143,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[2] = restrictedGuild.id;
   cResult[3] = animatableSourceWithFallback;
   tmp6 = animatableSourceWithFallback;
-  const tmpResult = restrictedGuild(17706);
+  const tmpResult = restrictedGuild(17738);
 }) : (function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(17706);
+  let obj = restrictedGuild(17738);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -173,18 +173,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       AlertActionCreatorsDefault.show(obj2);
     }
   }), items);
-  const obj3 = { selected: false, unread: false, circle: false, styles: restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: "audio", expandedChildren: null, children: null };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  const obj3 = { selected: false, unread: false, circle: false, styles: restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}", expandedChildren: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}", children: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
   obj3.externalChildren = jsx(GuildsBarGeoRestrictedBadgeDefault, { style: tmp.geoRestrictedBadge });
   obj3.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj6 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
     let tmp8Result = jsx(FastImageDefault, { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 });
   } else {
-    const obj7 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6881).GuildIconSizes.LARGE };
-    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6881).GuildIconSizes.LARGE });
+    const obj7 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6883).GuildIconSizes.LARGE };
+    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(6883).GuildIconSizes.LARGE });
     const tmp9Result = GuildIconDefault;
   }
   obj3.children = tmp8Result;
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: false, unread: false, circle: false, styles: restrictedGuild(17706).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: "audio", expandedChildren: null, children: null });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: false, unread: false, circle: false, styles: restrictedGuild(17738).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}", expandedChildren: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}", children: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" });
 }));

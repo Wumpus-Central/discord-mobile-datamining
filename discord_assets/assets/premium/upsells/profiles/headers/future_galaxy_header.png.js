@@ -1,6 +1,6 @@
-// === Module 15896: ? ===
+// === Module 15920: ? ===
 
-// Module 15896
+// Module 15920
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/headers/future_galaxy_header.png.js");

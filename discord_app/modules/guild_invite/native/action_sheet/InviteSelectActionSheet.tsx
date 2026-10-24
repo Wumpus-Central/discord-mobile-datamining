@@ -1,19 +1,19 @@
-// === Module 19291: InviteSelectActionSheet ===
+// === Module 19351: InviteSelectActionSheet ===
 
-// Module 19291 (InviteSelectActionSheet)
+// Module 19351 (InviteSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5263 */;
-import TableRadioRow from "TableRadioRow" /* 6982 */;
-import TableRadioGroup from "TableRadioGroup" /* 6983 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
+import TableRadioRow from "TableRadioRow" /* 6984 */;
+import TableRadioGroup from "TableRadioGroup" /* 6985 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteSe
   }
   if (cResult[2] !== title) {
     const obj2 = { title };
-    const tmp8 = jsx(onChange(7246).BottomSheetTitleHeader, { title });
+    const tmp8 = jsx(onChange(7248).BottomSheetTitleHeader, { title });
     cResult[2] = title;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteSe
           }
         }
         const obj3 = { contentStyles: tmp4.content, header: tmp6, children: tmp14 };
-        const tmp19 = jsx(onChange(5263).BottomSheet, { contentStyles: tmp4.content, header: tmp6, children: tmp14 });
+        const tmp19 = jsx(onChange(5265).BottomSheet, { contentStyles: tmp4.content, header: tmp6, children: tmp14 });
         cResult[11] = tmp4.content;
         cResult[12] = tmp6;
         cResult[13] = tmp14;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteSe
       }
     }
     const obj4 = { value, onChange: tmp5, hasIcons: false, children: cResult[5] };
-    const tmp16 = jsx(onChange(6983).TableRadioGroup, { value, onChange: tmp5, hasIcons: false, children: cResult[5] });
+    const tmp16 = jsx(onChange(6985).TableRadioGroup, { value, onChange: tmp5, hasIcons: false, children: cResult[5] });
     cResult[7] = tmp5;
     cResult[8] = cResult[5];
     cResult[9] = value;

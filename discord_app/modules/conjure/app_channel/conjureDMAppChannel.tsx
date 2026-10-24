@@ -1,10 +1,10 @@
-// === Module 6805: conjureDMAppChannel ===
+// === Module 6807: conjureDMAppChannel ===
 
-// Module 6805 (conjureDMAppChannel)
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6806 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6809 */;
+// Module 6807 (conjureDMAppChannel)
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6808 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -84,7 +84,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
       if (tmpResult6.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
         id = data.id;
       }
-      tmpResult6 = tmp(6809);
+      tmpResult6 = tmp(6811);
     }
     cResult[6] = data;
     cResult[7] = id;
@@ -134,7 +134,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(6809);
+    tmpResult = tmp(6811);
   }
   return id;
 });

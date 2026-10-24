@@ -1,6 +1,6 @@
-// === Module 12095: getApplicationInstallURL ===
+// === Module 12121: getApplicationInstallURL ===
 
-// Module 12095 (getApplicationInstallURL)
+// Module 12121 (getApplicationInstallURL)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -8,7 +8,7 @@ const Routes = Constants.Routes;
 let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
-  ({ customId, referrerId, linkId } = applicationId);
+  ({ customId, referrerId, linkId, channelId } = applicationId);
   const str = new URL(Routes.ACTIVITY_DETAILS(applicationId.applicationId), "" + location.protocol + "//" + location.host);
   const searchParams = str.searchParams;
   if (null != linkId) {
@@ -19,6 +19,9 @@ export const getActivityLaunchURL = function getActivityLaunchURL(applicationId)
   }
   if (null != customId) {
     const result2 = searchParams.set("custom_id", customId);
+  }
+  if (null != channelId) {
+    const result3 = searchParams.set("channel_id", channelId);
   }
   return str.toString();
 };

@@ -1,6 +1,6 @@
-// === Module 10021: AlertStore ===
+// === Module 10022: AlertStore ===
 
-// Module 10021 (AlertStore)
+// Module 10022 (AlertStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

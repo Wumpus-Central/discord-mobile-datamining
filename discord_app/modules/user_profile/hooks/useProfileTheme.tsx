@@ -1,19 +1,19 @@
-// === Module 8716: useProfileTheme ===
+// === Module 8718: useProfileTheme ===
 
-// Module 8716 (useProfileTheme)
+// Module 8718 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import shims from "shims" /* 586 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import shared from "shared" /* 4976 */;
-import useThemeDefault from "useTheme" /* 5203 */;
-import useAvatarColor from "useAvatarColor" /* 8612 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8718 */;
+import shared from "shared" /* 4978 */;
+import useThemeDefault from "useTheme" /* 5205 */;
+import useAvatarColor from "useAvatarColor" /* 8614 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8720 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8717).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8719).useEffectiveThemeOverride;
 const ThemeTypes = fn(1087).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

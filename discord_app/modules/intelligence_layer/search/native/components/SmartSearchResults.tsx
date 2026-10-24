@@ -1,14 +1,14 @@
-// === Module 18094: SmartSearchResults ===
+// === Module 18126: SmartSearchResults ===
 
-// Module 18094 (SmartSearchResults)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13203 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13205 */;
-import SmartSearchCitation from "SmartSearchCitation" /* 18096 */;
+// Module 18126 (SmartSearchResults)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13240 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13242 */;
+import SmartSearchCitation from "SmartSearchCitation" /* 18128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_PRESENTED_CITATIONS = fn(13183).MAX_PRESENTED_CITATIONS;
+const MAX_PRESENTED_CITATIONS = fn(13220).MAX_PRESENTED_CITATIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -116,7 +116,7 @@ export const SmartSearchResults = ReactCompilerGating.isReactCompilerEnabled() ?
     const fn = function f() {
       SmartSearchAnalyticsManagerDefault.setAnswer({ smartSearchQuery: citations, answerText: entry.answerText, presentedCitations: citations, hasKeywordResults }, SearchSessionAnalyticsManagerDefault);
       return () => {
-        hasKeywordResults(13205).setAnswer(null, hasKeywordResults(13203));
+        hasKeywordResults(13242).setAnswer(null, hasKeywordResults(13240));
       };
     };
     const items1 = [smartSearchQuery, citations, entry.answerText, hasKeywordResults];
@@ -166,7 +166,7 @@ export const SmartSearchResults = ReactCompilerGating.isReactCompilerEnabled() ?
   const effect = memo.useEffect(() => {
     SmartSearchAnalyticsManagerDefault.setAnswer({ smartSearchQuery, answerText: entry.answerText, presentedCitations: memo, hasKeywordResults }, SearchSessionAnalyticsManagerDefault);
     return () => {
-      hasKeywordResults(13205).setAnswer(null, hasKeywordResults(13203));
+      hasKeywordResults(13242).setAnswer(null, hasKeywordResults(13240));
     };
   }, items2);
   let obj = { children: null };

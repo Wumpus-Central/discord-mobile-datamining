@@ -1,9 +1,9 @@
-// === Module 11565: useHasVideoPermission ===
+// === Module 11585: useHasVideoPermission ===
 
-// Module 11565 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6650 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
+// Module 11585 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6652 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
 
 const require = globalThis.__r;
 

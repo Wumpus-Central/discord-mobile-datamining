@@ -1,13 +1,13 @@
-// === Module 10716: conjureChatConnection ===
+// === Module 10717: conjureChatConnection ===
 
-// Module 10716 (conjureChatConnection)
+// Module 10717 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10702 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10717 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10718 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10719 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10703 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10718 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -228,10 +228,10 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(onSubmit, arg1) {
-    let tmp = null != onSubmit.clarification;
+  clarification(onKept, arg1) {
+    let tmp = null != onKept.clarification;
     if (tmp) {
-      const questions = onSubmit.clarification.questions;
+      const questions = onKept.clarification.questions;
       let num;
       if (questions != null) {
         num = questions.length;
@@ -242,8 +242,8 @@ let obj2 = {
       tmp = num > 0;
     }
     if (tmp) {
-      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: onSubmit.turn_id, patch: null };
-      obj3 = { clarification: onSubmit.clarification };
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: onKept.turn_id, patch: null };
+      obj3 = { clarification: onKept.clarification };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

@@ -1,32 +1,32 @@
-// === Module 19221: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 19273: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 19221 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 19273 (GuildRoleSubscriptionGroupDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Form from "Form" /* 8949 */;
-import FormHeaderDefault from "FormHeader" /* 9043 */;
-import FormStylesDefault from "FormStyles" /* 15118 */;
-import FormSeparatorDefault from "FormSeparator" /* 16537 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19217 */;
-import FormImagePicker from "FormImagePicker" /* 19223 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19224 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import TextArea from "TextArea" /* 7180 */;
+import FormHeaderDefault from "FormHeader" /* 9044 */;
+import FormStylesDefault from "FormStyles" /* 15140 */;
+import FormSeparatorDefault from "FormSeparator" /* 16569 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19270 */;
+import FormImagePicker from "FormImagePicker" /* 19275 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19276 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19222 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19274 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16525);
+const GuildRoleSubscriptionsConstants = fn(16557);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1087).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0) {
-  const cResult = c.c(32);
+  const cResult = c.c(33);
   ({ cover, setCover, description, setDescription } = arg0);
   const tmp4 = closure_12();
   const tmp6 = FormStylesDefault();
@@ -107,52 +107,61 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
             const _Symbol3 = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               const intl4 = util.intl;
-              const stringResult3 = intl4.string(util.t["3YHwoG"]);
+              const stringResult3 = intl4.string(util.t["74JctW"]);
               cResult[20] = stringResult3;
               let tmp33 = stringResult3;
             } else {
               tmp33 = cResult[20];
             }
-            if (cResult[21] === description) {
-              if (cResult[22] === tmp6.textInput) {
-                if (cResult[23] === roleSubscriptionSettingsDisabled) {
-                  if (cResult[24] === setDescription) {
-                    let tmp35 = cResult[25];
+            const _Symbol4 = Symbol;
+            if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl5 = util.intl;
+              const stringResult4 = intl5.string(util.t["3YHwoG"]);
+              cResult[21] = stringResult4;
+              let tmp35 = stringResult4;
+            } else {
+              tmp35 = cResult[21];
+            }
+            if (cResult[22] === description) {
+              if (cResult[23] === tmp6.inputContainer) {
+                if (cResult[24] === roleSubscriptionSettingsDisabled) {
+                  if (cResult[25] === setDescription) {
+                    let tmp37 = cResult[26];
                   }
-                  if (cResult[26] === tmp25) {
-                    if (cResult[27] === tmp30) {
-                      if (cResult[28] === tmp35) {
-                        if (cResult[29] === tmp10) {
-                          if (cResult[30] === tmp21) {
-                            let tmp39 = cResult[31];
+                  if (cResult[27] === tmp25) {
+                    if (cResult[28] === tmp30) {
+                      if (cResult[29] === tmp37) {
+                        if (cResult[30] === tmp10) {
+                          if (cResult[31] === tmp21) {
+                            let tmp41 = cResult[32];
                           }
-                          return tmp39;
+                          return tmp41;
                         }
                       }
                     }
                   }
                   const obj7 = { children: null };
-                  const items = [tmp10, tmp21, tmp25, tmp30, tmp35];
+                  const items = [tmp10, tmp21, tmp25, tmp30, tmp37];
                   obj7.children = items;
-                  const tmp42 = v65535(closure_1_11, obj7);
-                  cResult[26] = tmp25;
-                  cResult[27] = tmp30;
-                  cResult[28] = tmp35;
-                  cResult[29] = tmp10;
-                  cResult[30] = tmp21;
-                  cResult[31] = tmp42;
-                  tmp39 = tmp42;
+                  const tmp44 = v65535(closure_1_11, obj7);
+                  cResult[27] = tmp25;
+                  cResult[28] = tmp30;
+                  cResult[29] = tmp37;
+                  cResult[30] = tmp10;
+                  cResult[31] = tmp21;
+                  cResult[32] = tmp44;
+                  tmp41 = tmp44;
                 }
               }
             }
-            const obj8 = { style: tmp6.textInput, showTopContainer: false, multiline: true, maxLength, numberOfLines: 3, value: description, placeholder: tmp33, onChange: setDescription, disabled: roleSubscriptionSettingsDisabled };
-            const tmp38 = React6(Form.FormInput, obj8);
-            cResult[21] = description;
-            cResult[22] = tmp6.textInput;
-            cResult[23] = roleSubscriptionSettingsDisabled;
-            cResult[24] = setDescription;
-            cResult[25] = tmp38;
-            tmp35 = tmp38;
+            const obj8 = { containerStyle: tmp6.inputContainer, accessibilityLabel: tmp33, maxLength, value: description, placeholder: tmp35, onChange: setDescription, disabled: roleSubscriptionSettingsDisabled };
+            const tmp40 = React6(TextArea.TextArea, obj8);
+            cResult[22] = description;
+            cResult[23] = tmp6.inputContainer;
+            cResult[24] = roleSubscriptionSettingsDisabled;
+            cResult[25] = setDescription;
+            cResult[26] = tmp40;
+            tmp37 = tmp40;
           }
         }
         const obj9 = { style: tmp13, children: null };
@@ -200,12 +209,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
   const intl3 = util.intl;
   obj8.children = intl3.string(util.t["74JctW"]);
   items[3] = React6(FormHeaderDefault, obj8);
-  const obj9 = { style: tmp2.textInput, showTopContainer: false, multiline: true, maxLength, numberOfLines: 3, value: description, placeholder: null, onChange: null, disabled: null };
+  const obj9 = { containerStyle: tmp2.inputContainer, accessibilityLabel: null, maxLength: null, value: null, placeholder: null, onChange: null, disabled: null };
   const intl4 = util.intl;
-  obj9.placeholder = intl4.string(util.t["3YHwoG"]);
+  obj9.accessibilityLabel = intl4.string(util.t["74JctW"]);
+  obj9.maxLength = maxLength;
+  obj9.value = description;
+  const intl5 = util.intl;
+  obj9.placeholder = intl5.string(util.t["3YHwoG"]);
   obj9.onChange = setDescription;
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items[4] = React6(Form.FormInput, obj9);
+  items[4] = React6(TextArea.TextArea, obj9);
   obj2.children = items;
   return v65535(closure_1_11, obj2);
 });

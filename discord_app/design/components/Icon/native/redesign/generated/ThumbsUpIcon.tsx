@@ -1,10 +1,10 @@
-// === Module 9756: ThumbsUpIcon ===
+// === Module 9757: ThumbsUpIcon ===
 
-// Module 9756 (ThumbsUpIcon)
+// Module 9757 (ThumbsUpIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5666 */;
-import _mod9757 from "module_9757" /* 9757 */;
+import BaseIconImage from "BaseIconImage" /* 5668 */;
+import _mod9758 from "module_9758" /* 9758 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9757;
+    const tmpResult = _mod9758;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ThumbsUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9757, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9758, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

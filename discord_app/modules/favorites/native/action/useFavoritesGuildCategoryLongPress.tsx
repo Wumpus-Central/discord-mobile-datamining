@@ -1,9 +1,9 @@
-// === Module 17498: useFavoritesGuildCategoryLongPress ===
+// === Module 17530: useFavoritesGuildCategoryLongPress ===
 
-// Module 17498 (useFavoritesGuildCategoryLongPress)
+// Module 17530 (useFavoritesGuildCategoryLongPress)
 import util from "util" /* 1128 */;
-import FavoritesUtils from "FavoritesUtils" /* 4846 */;
-import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 17499 */;
+import FavoritesUtils from "FavoritesUtils" /* 4848 */;
+import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 17531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,14 +15,14 @@ const result = size.fileFinishedImporting("modules/favorites/native/action/useFa
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildCategoryLongPress(getGuildId) {
   const cResult = id(576).c(5);
   if (cResult[0] !== getGuildId) {
-    let isFavoritesGuildIdResult = tmp(4846).isFavoritesGuildId(getGuildId.getGuildId());
+    let isFavoritesGuildIdResult = tmp(4848).isFavoritesGuildId(getGuildId.getGuildId());
     if (isFavoritesGuildIdResult) {
       isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
     }
     cResult[0] = getGuildId;
     cResult[1] = isFavoritesGuildIdResult;
     let tmp4 = isFavoritesGuildIdResult;
-    const tmpResult = tmp(4846);
+    const tmpResult = tmp(4848);
   } else {
     tmp4 = cResult[1];
   }

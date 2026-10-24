@@ -1,12 +1,12 @@
-// === Module 13993: PrivateChannelHeader ===
+// === Module 14012: PrivateChannelHeader ===
 
-// Module 13993 (PrivateChannelHeader)
+// Module 14012 (PrivateChannelHeader)
 import nativeDefault from "native" /* 587 */;
-import ChannelHeader from "ChannelHeader" /* 13990 */;
+import ChannelHeader from "ChannelHeader" /* 14009 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import PresenceStore from "PresenceStore" /* 5710 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import PresenceStore from "PresenceStore" /* 5712 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { activityStatusText: { color: nativeDefault.colors.TEXT_MUTED }, groupDMIconAnchor: { marginRight: 12, flexShrink: 0 } };
 let closure_16 = createStyles.createStyles(obj);
 fn(558);

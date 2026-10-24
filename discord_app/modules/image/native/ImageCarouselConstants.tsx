@@ -1,6 +1,6 @@
-// === Module 10414: ImageCarouselConstants ===
+// === Module 10415: ImageCarouselConstants ===
 
-// Module 10414 (ImageCarouselConstants)
+// Module 10415 (ImageCarouselConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");

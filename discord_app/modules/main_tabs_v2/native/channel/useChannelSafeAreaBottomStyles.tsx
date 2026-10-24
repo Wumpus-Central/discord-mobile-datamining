@@ -1,24 +1,24 @@
-// === Module 10916: useChannelSafeAreaBottomStyles ===
+// === Module 10917: useChannelSafeAreaBottomStyles ===
 
-// Module 10916 (useChannelSafeAreaBottomStyles)
+// Module 10917 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import useToken from "useToken" /* 5250 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9707 */;
+import useToken from "useToken" /* 5252 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9708 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6494 */;
-import LurkingStore from "LurkingStore" /* 4902 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
+import LurkingStore from "LurkingStore" /* 4904 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 
 require = fn;
 const InputModes = fn(1087).InputModes;
-const StaticChannelRoute = fn(4828).StaticChannelRoute;
+const StaticChannelRoute = fn(4830).StaticChannelRoute;
 const constants = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
@@ -301,9 +301,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   }
   return prop;
 }) : (function useChannelSafeAreaBottomStyles(arg0) {
-  const token = gradientBottom(5250).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-  let obj = gradientBottom(5250);
-  gradientBottom = gradientBottom(9707).useGradientBottom();
+  const token = gradientBottom(5252).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let obj = gradientBottom(5252);
+  gradientBottom = gradientBottom(9708).useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {
     backgroundColor1 = gradientBottom.backgroundColor;

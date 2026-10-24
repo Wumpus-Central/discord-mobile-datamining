@@ -1,22 +1,22 @@
-// === Module 18339: Alerts ===
+// === Module 18371: Alerts ===
 
-// Module 18339 (Alerts)
+// Module 18371 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5035 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import timing from "timing" /* 5204 */;
-import spring from "spring" /* 5245 */;
-import springPresets from "springPresets" /* 5246 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5907 */;
-import OverlayViewDefault from "OverlayView" /* 5913 */;
-import ModalRegistryDefault from "ModalRegistry" /* 18340 */;
+import native from "native" /* 5037 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import timing from "timing" /* 5206 */;
+import spring from "spring" /* 5247 */;
+import springPresets from "springPresets" /* 5248 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
+import OverlayViewDefault from "OverlayView" /* 5915 */;
+import ModalRegistryDefault from "ModalRegistry" /* 18372 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15034 */;
-import PermissionVADStore from "PermissionVADStore" /* 15620 */;
-import SurveyStore from "SurveyStore" /* 7855 */;
-import AlertStore from "AlertStore" /* 10021 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15057 */;
+import PermissionVADStore from "PermissionVADStore" /* 15640 */;
+import SurveyStore from "SurveyStore" /* 7857 */;
+import AlertStore from "AlertStore" /* 10022 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -821,7 +821,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           obj3.renderItem = renderAlertItem;
           obj3.getItemKey = getAlertItemKey;
           obj3.wrapChildren = wrapAlerts;
-          const tmp22 = closure_12(tmp(5035).TransitionGroup, obj3);
+          const tmp22 = closure_12(tmp(5037).TransitionGroup, obj3);
           cResult[10] = tmp17;
           cResult[11] = tmp22;
           let tmp18 = tmp22;

@@ -1,6 +1,6 @@
-// === Module 4850: Classic ===
+// === Module 4852: Classic ===
 
-// Module 4850 (Classic)
+// Module 4852 (Classic)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

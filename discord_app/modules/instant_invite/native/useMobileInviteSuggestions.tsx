@@ -1,18 +1,18 @@
-// === Module 9063: useMobileInviteSuggestions ===
+// === Module 9064: useMobileInviteSuggestions ===
 
-// Module 9063 (useMobileInviteSuggestions)
+// Module 9064 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9064 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5715 */;
+import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9065 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7807).InviteTargetTypes;
+const InviteTargetTypes = fn(7809).InviteTargetTypes;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const size = fn(2);
@@ -52,8 +52,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(9080).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(9080);
+      isGuildVoiceResult = closure_0(9081).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9081);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -70,8 +70,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         });
       }
       const obj4 = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType: dependencyMap };
-      const inviteSuggestions = closure_0(9081).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(9081);
+      const inviteSuggestions = closure_0(9082).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9082);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

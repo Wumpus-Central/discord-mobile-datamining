@@ -1,13 +1,13 @@
-// === Module 17256: DoubleTapEmojiSetting ===
+// === Module 17288: DoubleTapEmojiSetting ===
 
-// Module 17256 (DoubleTapEmojiSetting)
+// Module 17288 (DoubleTapEmojiSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import EmojiDefault from "Emoji" /* 7225 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8324 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import EmojiDefault from "Emoji" /* 7227 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
@@ -153,7 +153,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTap
 });
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTapEmojiDescription() {
   const cResult = c.c(2);
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
@@ -189,7 +189,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8330).MobileUserSettings.CHAT,
+  parent: fn(8332).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
     let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };

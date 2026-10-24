@@ -1,18 +1,18 @@
-// === Module 17753: GuildsBarSeparator ===
+// === Module 17785: GuildsBarSeparator ===
 
-// Module 17753 (GuildsBarSeparator)
+// Module 17785 (GuildsBarSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
-import useToken from "useToken" /* 5250 */;
-import NativeViewDefault from "NativeView" /* 6884 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7166 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17412 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import useToken from "useToken" /* 5252 */;
+import NativeViewDefault from "NativeView" /* 6886 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7168 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17444 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };

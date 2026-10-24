@@ -1,9 +1,9 @@
-// === Module 14028: getAttachmentUploadAbortAlert ===
+// === Module 14047: getAttachmentUploadAbortAlert ===
 
-// Module 14028 (getAttachmentUploadAbortAlert)
+// Module 14047 (getAttachmentUploadAbortAlert)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import UploadUtils from "UploadUtils" /* 8144 */;
+import UploadUtils from "UploadUtils" /* 8146 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

@@ -1,19 +1,19 @@
-// === Module 19274: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 19322: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 19274 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 19322 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5709 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7072 */;
-import _modDef7247 from "module_7247" /* 7247 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19278 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19280 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7074 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 14880 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19326 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
@@ -282,33 +282,27 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
     tmp10 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { children: null };
-    const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7247, style: null };
-    const obj7 = { transform: null };
-    const items1 = [{ rotate: "180deg" }];
-    obj7.transform = items1;
-    obj6.style = obj7;
-    obj5.children = React6(native.Icon, obj6);
-    const tmp19 = React6(newPricesToPick, obj5);
-    cResult[4] = tmp19;
-    let tmp15 = tmp19;
+    const obj5 = { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) };
+    const tmp18 = React6(newPricesToPick, obj5);
+    cResult[4] = tmp18;
+    let tmp15 = tmp18;
   } else {
     tmp15 = cResult[4];
   }
   if (cResult[5] === tmp4.viewEntireTemplateFooter) {
     if (cResult[6] === tmp10) {
-      let tmp20 = cResult[7];
+      let tmp19 = cResult[7];
     }
-    return tmp20;
+    return tmp19;
   }
-  const obj8 = { style: tmp4.viewEntireTemplateFooter, children: null };
-  const items2 = [tmp10, tmp15];
-  obj8.children = items2;
-  const tmp21 = v65535(newPricesToPick, obj8);
+  const obj6 = { style: tmp4.viewEntireTemplateFooter, children: null };
+  const items1 = [tmp10, tmp15];
+  obj6.children = items1;
+  const tmp20 = v65535(newPricesToPick, obj6);
   cResult[5] = tmp4.viewEntireTemplateFooter;
   cResult[6] = tmp10;
-  cResult[7] = tmp21;
-  tmp20 = tmp21;
+  cResult[7] = tmp20;
+  tmp19 = tmp20;
 }) : (function ViewEntireTemplateFooter() {
   const tmp = closure_11();
   const obj = { style: tmp.viewEntireTemplateFooter, children: null };
@@ -318,15 +312,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
   obj3.children = intl.string(util.t.kejaOD);
   const items = [React6(Text_Text.Text, obj3), React6(native.Spacer, { size: 3 }), React6(newPricesToPick, { style: tmp.viewEntireTemplateFooterUnderline })];
   obj2.children = items;
-  const items1 = [v65535(newPricesToPick, obj2), ];
-  const obj5 = { children: null };
-  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7247, style: null };
-  const obj7 = { transform: null };
-  const items2 = [{ rotate: "180deg" }];
-  obj7.transform = items2;
-  obj6.style = obj7;
-  obj5.children = React6(native.Icon, obj6);
-  items1[1] = React6(newPricesToPick, obj5);
+  const items1 = [v65535(newPricesToPick, obj2), React6(newPricesToPick, { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) })];
   obj.children = items1;
   return v65535(newPricesToPick, obj);
 });
@@ -489,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                                 tmp63 = cResult[45];
                               }
                               function handleViewEntireTemplate() {
-                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19275, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
+                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19323, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
                               }
                               if (cResult[46] === handleViewEntireTemplate) {
                                 if (cResult[47] === tmp4.contentContainer) {
@@ -508,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                                   const items = [tmp15, tmp67];
                                   obj9.children = items;
                                   const tmp74 = closure_10(suggestedUnusedPrices, obj9);
-                                  class N {
+                                  class H {
                                     constructor(arg0, arg1) {
                                       tmp = closure_5;
                                       if (closure_7) {
@@ -538,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                               }
                               const obj10 = { style: tmp4.contentContainer, onPress: handleViewEntireTemplate, children: null };
                               const items1 = [, ];
-                              class N {
+                              class H {
                                 constructor(arg0, arg1) {
                                   tmp = closure_5;
                                   if (closure_7) {
@@ -574,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                             obj11.children = items2;
                             const tmp62 = closure_10(tmp(tmp2[25]).GappedList, obj11);
                             cResult[42] = tmp35;
-                            class N {
+                            class H {
                               constructor(arg0, arg1) {
                                 tmp = closure_5;
                                 if (closure_7) {
@@ -602,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                           }
                           const obj12 = { children: null };
                           const items3 = [tmp42, tmp46, tmp49, ];
-                          class N {
+                          class H {
                             constructor(arg0, arg1) {
                               tmp = closure_5;
                               if (closure_7) {
@@ -633,7 +619,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                         }
                         ({ name: obj14.title, description: obj14.description } = first2);
                         const tmp52 = closure_9(closure_14, { title: null, description: null });
-                        class N {
+                        class H {
                           constructor(arg0, arg1) {
                             tmp = closure_5;
                             if (closure_7) {
@@ -663,7 +649,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                       const obj15 = { title: tmp40, count: length2 };
                       const tmp45 = closure_9(closure_12, obj15);
                       cResult[31] = length2;
-                      class N {
+                      class H {
                         constructor(arg0, arg1) {
                           tmp = closure_5;
                           if (closure_7) {
@@ -689,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                       tmp42 = tmp45;
                     }
                     const obj16 = { children: null };
-                    class N {
+                    class H {
                       constructor(arg0, arg1) {
                         tmp = closure_5;
                         if (closure_7) {
@@ -723,7 +709,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                     tmp35 = tmp39;
                   }
                   const obj17 = { title: tmp19, count: length };
-                  class N {
+                  class H {
                     constructor(arg0, arg1) {
                       tmp = closure_5;
                       if (closure_7) {
@@ -753,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
               }
             }
             const obj18 = { template, handleSelectTemplateInPreview: tmp13, subscriptionPlanTextStyle: tmp4.subscriptionPlanTextStyle, descriptionTextStyle: null, closeActionSheet: false, descriptionTextProps: null };
-            class N {
+            class H {
               constructor(arg0, arg1) {
                 tmp = closure_5;
                 if (closure_7) {
@@ -785,7 +771,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             tmp15 = tmp17;
           }
         }
-        class N {
+        class H {
           constructor(arg0, arg1) {
             tmp = closure_5;
             if (closure_7) {
@@ -810,8 +796,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
         cResult[6] = tmp10;
         cResult[7] = tmp12;
         cResult[8] = suggestedUnusedPrices;
-        cResult[9] = N;
-        tmp13 = N;
+        cResult[9] = H;
+        tmp13 = H;
         let tmpResult = tmp(tmp2[23]);
       }
     }
@@ -878,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19279, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19327, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -888,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19275, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19323, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

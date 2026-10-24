@@ -1,11 +1,11 @@
-// === Module 18746: EmbeddedAppShimManager ===
+// === Module 18778: EmbeddedAppShimManager ===
 
-// Module 18746 (EmbeddedAppShimManager)
+// Module 18778 (EmbeddedAppShimManager)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 11444 */;
+import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 11464 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FramesStore from "FramesStore" /* 6773 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7212 */;
+import FramesStore from "FramesStore" /* 6775 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;
 function getParentState(iframeId) {
@@ -39,9 +39,9 @@ function handleShimPipeOpen(iframeId) {
     obj3.onDisconnect = function onDisconnect() {
       return EmbeddedAppShimActionCreators.disconnectShim(iframeId);
     };
-    const embeddedAppShimHost = iframeId(18747).createEmbeddedAppShimHost(tmp, obj3);
+    const embeddedAppShimHost = iframeId(18779).createEmbeddedAppShimHost(tmp, obj3);
     const result = map.set(iframeId, embeddedAppShimHost);
-    const obj5 = iframeId(18747);
+    const obj5 = iframeId(18779);
   }
 }
 function handleIFrameUnmount(id) {

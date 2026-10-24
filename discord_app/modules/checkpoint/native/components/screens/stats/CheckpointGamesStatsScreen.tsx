@@ -1,29 +1,29 @@
-// === Module 12970: CheckpointGamesStatsScreen ===
+// === Module 13007: CheckpointGamesStatsScreen ===
 
-// Module 12970 (CheckpointGamesStatsScreen)
+// Module 13007 (CheckpointGamesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import CheckpointTextDefault from "CheckpointText" /* 12930 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12940 */;
-import _modDef12941 from "module_12941" /* 12941 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12950 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import CheckpointTextDefault from "CheckpointText" /* 12967 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12977 */;
+import _modDef12978 from "module_12978" /* 12978 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12987 */;
 import GameStore from "GameStore" /* 2022 */;
-import CheckpointStore from "CheckpointStore" /* 12912 */;
-import CheckpointConstants from "CheckpointConstants" /* 6013 */;
+import CheckpointStore from "CheckpointStore" /* 12949 */;
+import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4969 */;
+import createStyles from "createStyles" /* 4971 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const CheckpointScreenDefault = tmp34(12932);
-const CheckpointApngPlayerDefault = tmp34(12935);
-const _modDef12942 = tmp34(12942);
-const CheckpointDisplayTextDefault = tmp34(12948);
+const CheckpointScreenDefault = tmp34(12969);
+const CheckpointApngPlayerDefault = tmp34(12972);
+const _modDef12979 = tmp34(12979);
+const CheckpointDisplayTextDefault = tmp34(12985);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -162,7 +162,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
                       tmp33 = tmp36;
                     }
                     const obj6 = { variant: "text-md/semibold", style: tmp4.gameName, lineClamp: 2, children: name };
-                    const tmp32 = closure_7(tmp(5232).Text, obj6);
+                    const tmp32 = closure_7(tmp(5234).Text, obj6);
                     cResult[19] = name;
                     cResult[20] = tmp4.gameName;
                     cResult[21] = tmp32;
@@ -202,7 +202,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
           const items4 = [, ];
           ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
           obj11.style = items4;
-          obj11.children = closure_7(tmp(8072).UnknownGameIcon, { size: "lg" });
+          obj11.children = closure_7(tmp(8074).UnknownGameIcon, { size: "lg" });
           tmp16 = closure_7(View, obj11);
         }
         cResult[8] = unknownCover;
@@ -261,7 +261,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
     const items1 = [, ];
     ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
     obj7.style = items1;
-    obj7.children = closure_7(tmp2(8072).UnknownGameIcon, { size: "lg" });
+    obj7.children = closure_7(tmp2(8074).UnknownGameIcon, { size: "lg" });
     tmp9 = closure_7;
     tmp10 = closure_7(View, obj7);
   }
@@ -275,7 +275,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
   obj5.children = items2;
   const items3 = [closure_8(View, obj5), ];
   const obj10 = { style: tmp.gameText, children: null };
-  const items4 = [tmp9(id(5232).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }), tmp9(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.gameLabel, children: label })];
+  const items4 = [tmp9(id(5234).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }), tmp9(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.gameLabel, children: label })];
   obj10.children = items4;
   items3[1] = closure_8(View, obj10);
   obj4.children = items3;
@@ -571,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               return games;
             }
           }
-          obj6.staticUri = _modDef12942;
+          obj6.staticUri = _modDef12979;
           obj6.style = tmp4.globe;
           const tmp39 = closure_7(CheckpointApngPlayerDefault, obj6);
           cResult[34] = tmp4.globe;
@@ -724,7 +724,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         return games;
       }
     }
-    const tmp67 = closure_7(tmp(9615).GameControllerIcon, { size: "refresh_sm", color: null });
+    const tmp67 = closure_7(tmp(9616).GameControllerIcon, { size: "refresh_sm", color: null });
     cResult[54] = tmp67;
     let tmp64 = tmp67;
     const obj12 = { size: "refresh_sm", color: null };
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj2 = stateFromStores1(504);
   const items2 = [CheckpointStore];
   let num;
-  const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () => stateFromStores1(12915).hasCheckpointGames(CheckpointStore.stats));
+  const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () => stateFromStores1(12952).hasCheckpointGames(CheckpointStore.stats));
   if (stateFromStores != null) {
     num = stateFromStores.totalGamesPlayed;
   }
@@ -790,7 +790,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       obj5.style = items3;
       const obj6 = { style: tmp.header, children: null };
       const obj7 = { style: tmp.globalHeading, children: null };
-      const obj8 = { animatedUri: _modDef12941, staticUri: _modDef12942, style: tmp.globe };
+      const obj8 = { animatedUri: _modDef12978, staticUri: _modDef12979, style: tmp.globe };
       const items4 = [closure_7(CheckpointApngPlayerDefault, obj8), ];
       const obj9 = { children: null };
       const tmp8Result = CheckpointApngPlayerDefault;
@@ -835,7 +835,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj13 = { style: tmp.container, children: null };
   const obj14 = { children: null };
   const obj15 = { style: tmp.title, children: null };
-  const items7 = [closure_7(stateFromStores1(9615).GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY }), ];
+  const items7 = [closure_7(stateFromStores1(9616).GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY }), ];
   const obj17 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const obj3 = stateFromStores1(504);

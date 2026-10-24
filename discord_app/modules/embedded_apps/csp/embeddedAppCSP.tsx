@@ -1,6 +1,6 @@
-// === Module 11471: embeddedAppCSP ===
+// === Module 11491: embeddedAppCSP ===
 
-// Module 11471 (embeddedAppCSP)
+// Module 11491 (embeddedAppCSP)
 import size from "module_2" /* 2 */;
 
 let c0 = "object-src 'none'";

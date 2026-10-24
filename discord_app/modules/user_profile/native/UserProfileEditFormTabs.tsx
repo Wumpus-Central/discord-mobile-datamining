@@ -1,22 +1,22 @@
-// === Module 15926: UserProfileEditFormTabs ===
+// === Module 15950: UserProfileEditFormTabs ===
 
-// Module 15926 (UserProfileEditFormTabs)
+// Module 15950 (UserProfileEditFormTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ChatInputUtils from "ChatInputUtils" /* 5157 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8730 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14350 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15925 */;
+import ChatInputUtils from "ChatInputUtils" /* 5159 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14374 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7302).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { container: { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING }, page: { paddingHorizontal: PROFILE_SIDE_PADDING }, boardPage: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING };
 obj.boardPage = { paddingTop: nativeDefault.space.PX_16 };

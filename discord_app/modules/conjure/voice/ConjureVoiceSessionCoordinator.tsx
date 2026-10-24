@@ -1,22 +1,22 @@
-// === Module 15682: ConjureVoiceSessionCoordinator ===
+// === Module 15703: ConjureVoiceSessionCoordinator ===
 
-// Module 15682 (ConjureVoiceSessionCoordinator)
+// Module 15703 (ConjureVoiceSessionCoordinator)
 import _modDef12 from "module_12" /* 12 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5849 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5852 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6776 */;
-import RPCErrorDefault from "RPCError" /* 9263 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15684 */;
-import FramesStore from "FramesStore" /* 6773 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5854 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6778 */;
+import RPCErrorDefault from "RPCError" /* 9264 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15705 */;
+import FramesStore from "FramesStore" /* 6775 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5712 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1087).RPCErrors;
-const Constants = fn(5716);
+const Constants = fn(5718);
 ({ Features: c10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -136,15 +136,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp39Result2 = tmp39(15683);
+            tmp39Result2 = tmp39(15704);
           }
-          tmp39Result = tmp39(15683);
+          tmp39Result = tmp39(15704);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = handleFrameLifecycleChange(15683);
+        obj11 = handleFrameLifecycleChange(15704);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -213,16 +213,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15686);
+    obj2 = obj2(15707);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15686).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15707).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15686);
+      const tmp11Result = tmp11(15707);
     }
     tmp11 = obj2;
   } else {
@@ -349,7 +349,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15687).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15708).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }
@@ -617,8 +617,8 @@ prototype["cancelPendingUpdate"] = function cancelPendingUpdate(updateTimer) {
     updateTimer.updateTimer = null;
   }
 };
-prototype["validateFrame"] = function validateFrame(id) {
-  const frame = validateEmbeddedAppFrameDefault(id).frame;
+prototype["validateFrame"] = function validateFrame(arg0) {
+  const frame = validateEmbeddedAppFrameDefault(arg0).frame;
   return { frame, frameId: frame.id, applicationId: frame.applicationId, channelId: getChannelIdForEmbeddedSurfaceDefault(frame.surface) };
 };
 prototype["validateSession"] = function validateSession(id, id) {

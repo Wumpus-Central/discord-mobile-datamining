@@ -1,29 +1,29 @@
-// === Module 7827: StreamActionCreators ===
+// === Module 7829: StreamActionCreators ===
 
-// Module 7827 (StreamActionCreators)
+// Module 7829 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5708 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5876 */;
-import ChannelUtils from "ChannelUtils" /* 5992 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6632 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6643 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6674 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7409 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7411 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7830 */;
-import transitionToStreamDefault from "transitionToStream" /* 7864 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5878 */;
+import ChannelUtils from "ChannelUtils" /* 5994 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6645 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6676 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7413 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7832 */;
+import transitionToStreamDefault from "transitionToStream" /* 7866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 5713 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7828 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7829 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6640 */;
+import GameConsoleStore from "GameConsoleStore" /* 5715 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7830 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7831 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import VoiceStateStore from "VoiceStateStore" /* 5628 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1087);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6641).StreamTypes;
+const StreamTypes = fn(6643).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -342,15 +342,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7864)(closure_1_1);
+          closure_1(7866)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5992).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5992);
+          closure_0(5994).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5994);
         }
       }
     };

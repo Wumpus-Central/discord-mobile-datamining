@@ -1,15 +1,15 @@
-// === Module 17428: usePrivateChannelWaveEligible ===
+// === Module 17460: usePrivateChannelWaveEligible ===
 
-// Module 17428 (usePrivateChannelWaveEligible)
+// Module 17460 (usePrivateChannelWaveEligible)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import MessageStore from "MessageStore" /* 6008 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import MessageStore from "MessageStore" /* 6010 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4828).ChannelFlags;
+const ChannelFlags = fn(4830).ChannelFlags;
 const MessageTypes = fn(1087).MessageTypes;
 let c7 = 1814400000;
 const ReactCompilerGating = fn(558);
@@ -255,7 +255,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
         }
       }
       const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
-      const tmpResult9 = tmp(4794);
+      const tmpResult9 = tmp(4796);
       const isWithinIntervalResult = tmpResult9.isWithinInterval(_modDef2049(), _modDef2049(extractTimestampResult), c7);
       cResult[19] = isDM.id;
       cResult[20] = isWithinIntervalResult;
@@ -268,7 +268,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       }
     }
     const tmpResult8 = tmp(504);
-    const strangerDangerWarning = tmp(10923).useStrangerDangerWarning(isDM.id);
+    const strangerDangerWarning = tmp(10924).useStrangerDangerWarning(isDM.id);
     if (tmp4) {
       class T {
         constructor() {

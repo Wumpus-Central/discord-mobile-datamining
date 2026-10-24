@@ -1,10 +1,10 @@
-// === Module 16357: HexagonCampaignPreviousPerkValues ===
+// === Module 16375: HexagonCampaignPreviousPerkValues ===
 
-// Module 16357 (HexagonCampaignPreviousPerkValues)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4996 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5200 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 15828 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
+// Module 16375 (HexagonCampaignPreviousPerkValues)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4998 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5202 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 15851 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
@@ -12,7 +12,7 @@ import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(9864).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
 const ClientThemesConstants = fn(1255);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: closure_7, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ClientThemesConstants);
 const SystemThemeState = fn(1210).SystemThemeState;
@@ -21,7 +21,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
 export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9865).FreemiumAppIconIds.DEFAULT;
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9866).FreemiumAppIconIds.DEFAULT;
 export const getHexagonCampaignClientThemeItem = function getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME) {
   _require = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
   if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId) {

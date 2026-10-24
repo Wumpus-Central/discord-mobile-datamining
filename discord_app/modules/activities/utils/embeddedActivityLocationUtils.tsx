@@ -1,6 +1,6 @@
-// === Module 4890: embeddedActivityLocationUtils ===
+// === Module 4892: embeddedActivityLocationUtils ===
 
-// Module 4890 (embeddedActivityLocationUtils)
+// Module 4892 (embeddedActivityLocationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");

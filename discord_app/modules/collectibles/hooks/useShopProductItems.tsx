@@ -1,6 +1,6 @@
-// === Module 8658: useShopProductItems ===
+// === Module 8660: useShopProductItems ===
 
-// Module 8658 (useShopProductItems)
+// Module 8660 (useShopProductItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ prototype["sortByTypes"] = function sortByTypes(arr) {
   }, new Map());
 };
 const ReactCompilerGating = fn(558);
-function getProductItems(items) {
+function getProductItems(product) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);

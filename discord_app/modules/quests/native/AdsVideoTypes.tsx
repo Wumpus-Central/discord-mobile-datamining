@@ -1,6 +1,6 @@
-// === Module 16277: AdsVideoTypes ===
+// === Module 16301: AdsVideoTypes ===
 
-// Module 16277 (AdsVideoTypes)
+// Module 16301 (AdsVideoTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/AdsVideoTypes.tsx");

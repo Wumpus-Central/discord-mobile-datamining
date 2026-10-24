@@ -1,8 +1,8 @@
-// === Module 4858: EntityDao ===
+// === Module 4860: EntityDao ===
 
-// Module 4858 (EntityDao)
-import Table from "Table" /* 4852 */;
-import TableId from "TableId" /* 4854 */;
+// Module 4860 (EntityDao)
+import Table from "Table" /* 4854 */;
+import TableId from "TableId" /* 4856 */;
 import size from "module_2" /* 2 */;
 
 let EntityDao;

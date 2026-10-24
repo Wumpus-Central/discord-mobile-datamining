@@ -1,21 +1,21 @@
-// === Module 16375: OrbsArcadeRewardPreview ===
+// === Module 16399: OrbsArcadeRewardPreview ===
 
-// Module 16375 (OrbsArcadeRewardPreview)
+// Module 16399 (OrbsArcadeRewardPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1989 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9402 */;
-import _modDef9403 from "module_9403" /* 9403 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9438 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16367 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9403 */;
+import _modDef9404 from "module_9404" /* 9404 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9439 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16391 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { container: { width, height: width, alignItems: "center", justifyContent: "center" }, avatar: null, decoration: null };
   const size = { width: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, height: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, borderRadius: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -39,7 +39,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collect
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.avatar) {
-    const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9403, accessible: false };
+    const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9404, accessible: false };
     const tmp11 = React4(FastImageDefault, obj3);
     cResult[2] = tmp4.avatar;
     cResult[3] = tmp11;
@@ -87,7 +87,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collect
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9403;
+  obj4.source = _modDef9404;
   const items = [React4(FastImageDefault, obj4), ];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {

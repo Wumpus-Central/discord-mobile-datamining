@@ -1,6 +1,6 @@
-// === Module 14623: VirtualCurrencyConstants ===
+// === Module 14646: VirtualCurrencyConstants ===
 
-// Module 14623 (VirtualCurrencyConstants)
+// Module 14646 (VirtualCurrencyConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/VirtualCurrencyConstants.tsx");

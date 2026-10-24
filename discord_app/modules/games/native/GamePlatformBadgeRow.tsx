@@ -1,20 +1,20 @@
-// === Module 13243: GamePlatformBadgeRow ===
+// === Module 13280: GamePlatformBadgeRow ===
 
-// Module 13243 (GamePlatformBadgeRow)
+// Module 13280 (GamePlatformBadgeRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 13245 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 13282 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(13244).GamePlatformAvailability.DESKTOP] = fn(9482).ScreenIcon;
-obj[fn(13244).GamePlatformAvailability.MOBILE] = fn(7051).MobilePhoneIcon;
-obj[fn(13244).GamePlatformAvailability.CONSOLE] = fn(9615).GameControllerIcon;
-obj[fn(13244).GamePlatformAvailability.ROBLOX] = fn(9281).RobloxNeutralIcon;
-const createStyles = fn(4969);
+obj[fn(13281).GamePlatformAvailability.DESKTOP] = fn(9483).ScreenIcon;
+obj[fn(13281).GamePlatformAvailability.MOBILE] = fn(7053).MobilePhoneIcon;
+obj[fn(13281).GamePlatformAvailability.CONSOLE] = fn(9616).GameControllerIcon;
+obj[fn(13281).GamePlatformAvailability.ROBLOX] = fn(9282).RobloxNeutralIcon;
+const createStyles = fn(4971);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(5975).Stack, {
+  return jsx(platforms(5977).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,

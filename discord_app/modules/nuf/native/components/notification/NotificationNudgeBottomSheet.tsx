@@ -1,21 +1,21 @@
-// === Module 17934: NotificationNudgeBottomSheet ===
+// === Module 17966: NotificationNudgeBottomSheet ===
 
-// Module 17934 (NotificationNudgeBottomSheet)
+// Module 17966 (NotificationNudgeBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13270 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13307 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-const NotificationPermissionConstants = fn(13269);
+const NotificationPermissionConstants = fn(13306);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ContentDismissActionType = fn(4818).ContentDismissActionType;
+const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" }, illustration: null, title: null, body: null, buttonsContainer: null };
 const obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.illustration = { marginVertical: nativeDefault.space.PX_24 };

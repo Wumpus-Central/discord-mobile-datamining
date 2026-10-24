@@ -1,17 +1,17 @@
-// === Module 5224: BurstReactionAnimation ===
+// === Module 5226: BurstReactionAnimation ===
 
-// Module 5224 (BurstReactionAnimation)
+// Module 5226 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4927 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4929 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
 let closure_3 = ["channelId", "messageId", "emoji", "isFullscreen", "onComplete", "withFadeOut"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
         if (null == burstReactionAnimationSource) {
           return null;
         } else {
-          const tmp25 = importDefault(tmp14 ? 5225 : 5226);
+          const tmp25 = importDefault(tmp14 ? 5227 : 5228);
           if (cResult[15] === tmp8) {
             if (cResult[16] === tmp14) {
               let num13 = 1.2;
@@ -148,6 +148,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 5225 : 5226), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 5227 : 5228), { style: tmp2.content, loop: false, speed: null });
   }
 });

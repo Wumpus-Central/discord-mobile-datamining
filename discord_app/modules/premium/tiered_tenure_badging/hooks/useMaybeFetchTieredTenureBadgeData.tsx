@@ -1,8 +1,8 @@
-// === Module 14744: useMaybeFetchTieredTenureBadgeData ===
+// === Module 14767: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 14744 (useMaybeFetchTieredTenureBadgeData)
-import useMountEffectDefault from "useMountEffect" /* 5261 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8674 */;
+// Module 14767 (useMaybeFetchTieredTenureBadgeData)
+import useMountEffectDefault from "useMountEffect" /* 5263 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -30,12 +30,12 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
   const obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   const tmpResult = stateFromStores(504);
-  const isPremiumSubscriber = stateFromStores(11078).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  const isPremiumSubscriber = stateFromStores(11079).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   if (cResult[2] === stateFromStores) {
     if (cResult[3] === isPremiumSubscriber) {
       let tmp9 = cResult[4];
     }
-    isPremiumSubscriber(5261)(tmp9);
+    isPremiumSubscriber(5263)(tmp9);
   }
   const fn2 = function c() {
     let id;
@@ -51,7 +51,7 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
   cResult[3] = isPremiumSubscriber;
   cResult[4] = fn2;
   tmp9 = fn2;
-  const tmpResult2 = stateFromStores(11078);
+  const tmpResult2 = stateFromStores(11079);
 }) : (function useMaybeFetchTieredTenureBadgeData() {
   const items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());

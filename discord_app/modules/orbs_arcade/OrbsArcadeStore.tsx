@@ -1,9 +1,9 @@
-// === Module 16366: OrbsArcadeStore ===
+// === Module 16390: OrbsArcadeStore ===
 
-// Module 16366 (OrbsArcadeStore)
+// Module 16390 (OrbsArcadeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16367 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16391 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -60,8 +60,8 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
   }
   return value;
 };
-prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
-  return set.has(gameId);
+prototype["isClaimingRewards"] = function isClaimingRewards(id) {
+  return set.has(id);
 };
 prototype["isLaunchingGame"] = function isLaunchingGame(id) {
   return set.has(id);

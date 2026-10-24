@@ -1,26 +1,13 @@
-// === Module 11341: canLaunchContextlessFrame ===
+// === Module 11391: canLaunchContextlessFrame ===
 
-// Module 11341 (canLaunchContextlessFrame)
-import Constants from "Constants" /* 1087 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5624 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9648 */;
+// Module 11391 (canLaunchContextlessFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11353 */;
 import size from "module_2" /* 2 */;
 
-const ApplicationFlags = Constants.ApplicationFlags;
-let result = size.fileFinishedImporting("modules/frames/utils/canLaunchContextlessFrame.tsx");
+const result = size.fileFinishedImporting("modules/frames/utils/canLaunchContextlessFrame.tsx");
 
 export const canLaunchContextlessFrame = function canLaunchContextlessFrame(application) {
-  if (null != application) {
-    if (obj.isRealApplication(application)) {
-      let result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(application, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
-      const tmpResult = EmbeddedSurfaceUtils;
-      if (result) {
-        result = tmpResult2.hasApplicationFlag(application, ApplicationFlags.CONTEXTLESS_ACTIVITY);
-      }
-      return result;
-    }
-    obj = AppLauncherUtils;
-  }
-  return false;
+  const frameSurfaces = getFrameSurfaces.getFrameSurfaces(application);
+  return frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
 };

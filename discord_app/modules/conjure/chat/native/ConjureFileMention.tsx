@@ -1,21 +1,21 @@
-// === Module 11797: ConjureFileMention ===
+// === Module 11823: ConjureFileMention ===
 
-// Module 11797 (ConjureFileMention)
+// Module 11823 (ConjureFileMention)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import conjureFileMentions from "conjureFileMentions" /* 11796 */;
-import conjureStoredAttachments from "conjureStoredAttachments" /* 11798 */;
-import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 11800 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import conjureFileMentions from "conjureFileMentions" /* 11822 */;
+import conjureStoredAttachments from "conjureStoredAttachments" /* 11824 */;
+import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 11826 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: 2, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, transform: null };
 let items = [{ translateY: nativeDefault.space.PX_4 }];

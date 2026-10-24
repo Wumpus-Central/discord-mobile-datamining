@@ -1,10 +1,10 @@
-// === Module 7761: ApplicationCodedLink ===
+// === Module 7763: ApplicationCodedLink ===
 
-// Module 7761 (ApplicationCodedLink)
+// Module 7763 (ApplicationCodedLink)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import CodedLink from "CodedLink" /* 5701 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7762 */;
-import activityBookmarkUtils from "activityBookmarkUtils" /* 7763 */;
+import CodedLink from "CodedLink" /* 5703 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7764 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 7765 */;
 import size from "module_2" /* 2 */;
 
 const items = [CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLink.CodedLinkType.APP_OAUTH2_LINK];

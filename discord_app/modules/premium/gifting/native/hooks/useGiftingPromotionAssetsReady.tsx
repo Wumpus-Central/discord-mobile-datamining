@@ -1,6 +1,6 @@
-// === Module 18387: useGiftingPromotionAssetsReady ===
+// === Module 18419: useGiftingPromotionAssetsReady ===
 
-// Module 18387 (useGiftingPromotionAssetsReady)
+// Module 18419 (useGiftingPromotionAssetsReady)
 import c from "c" /* 576 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1901 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,8 +11,8 @@ let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmarkAssetReady(arg0) {
   const cResult = themeAndReducedMotionAwareAssetUrl(576).c(3);
   let obj = themeAndReducedMotionAwareAssetUrl(576);
-  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10508).useThemeAndReducedMotionAwareAssetUrl(arg0);
-  let obj2 = themeAndReducedMotionAwareAssetUrl(10508);
+  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10509).useThemeAndReducedMotionAwareAssetUrl(arg0);
+  let obj2 = themeAndReducedMotionAwareAssetUrl(10509);
   [tmp4, importDefault] = noop.useState(null);
   if (cResult[0] !== themeAndReducedMotionAwareAssetUrl) {
     const fn = function u() {
@@ -46,7 +46,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoac
   const effect = noop.useEffect(tmp5, tmp6);
   return null == themeAndReducedMotionAwareAssetUrl || tmp4 === themeAndReducedMotionAwareAssetUrl;
 }) : (function useCoachmarkAssetReady(arg0) {
-  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10508).useThemeAndReducedMotionAwareAssetUrl(arg0);
+  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10509).useThemeAndReducedMotionAwareAssetUrl(arg0);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
   const items = [themeAndReducedMotionAwareAssetUrl];

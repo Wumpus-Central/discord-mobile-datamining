@@ -1,19 +1,19 @@
-// === Module 11821: ConjureModelSettingsSheet ===
+// === Module 11847: ConjureModelSettingsSheet ===
 
-// Module 11821 (ConjureModelSettingsSheet)
+// Module 11847 (ConjureModelSettingsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7246 */;
-import ActionSheet from "ActionSheet" /* 7296 */;
-import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 10737 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 11745 */;
-import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 11822 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
+import ActionSheet from "ActionSheet" /* 7298 */;
+import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 10738 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 11770 */;
+import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 11848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10697 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10711 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10698 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10712 */;
 
 require = fn;
 const View = fn(17).View;
@@ -141,7 +141,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ModelS
           } else {
             if (cResult[14] !== cResult[13]) {
               const obj2 = { variant: "text-xs/normal", color: "text-muted", children: tmp17 };
-              const tmp22 = closure_8(tmp(5232).Text, obj2);
+              const tmp22 = closure_8(tmp(5234).Text, obj2);
               cResult[14] = tmp17;
               cResult[15] = tmp22;
               let tmp20 = tmp22;
@@ -157,7 +157,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ModelS
             const obj3 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
             const items2 = [tmp15, tmp20];
             obj3.children = items2;
-            const tmp25 = closure_9(tmp(5975).Stack, obj3);
+            const tmp25 = closure_9(tmp(5977).Stack, obj3);
             cResult[16] = tmp15;
             cResult[17] = tmp20;
             cResult[18] = tmp25;
@@ -197,9 +197,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ModelS
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5232).Text, { variant: "text-xs/normal", color: "text-muted", children: stringResult });
+  items3[1] = closure_8(projectId(5234).Text, { variant: "text-xs/normal", color: "text-muted", children: stringResult });
   obj2.children = items3;
-  return closure_9(projectId(5975).Stack, obj2);
+  return closure_9(projectId(5977).Stack, obj2);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

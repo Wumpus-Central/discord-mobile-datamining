@@ -1,17 +1,17 @@
-// === Module 12010: useEmbeddedAppsForChannel ===
+// === Module 12036: useEmbeddedAppsForChannel ===
 
-// Module 12010 (useEmbeddedAppsForChannel)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7255 */;
+// Module 12036 (useEmbeddedAppsForChannel)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7257 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5710 */;
+import PresenceStore from "PresenceStore" /* 5712 */;
 import UserStore from "UserStore" /* 1392 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NO_ACTIVITIES = fn(4820).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4822).NO_ACTIVITIES;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedAppsForChannel(arg0, arg1) {

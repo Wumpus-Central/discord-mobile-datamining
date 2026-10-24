@@ -1,24 +1,24 @@
-// === Module 15203: GuildProgressOverview ===
+// === Module 15222: GuildProgressOverview ===
 
-// Module 15203 (GuildProgressOverview)
+// Module 15222 (GuildProgressOverview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import Pressables from "Pressables" /* 6906 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7288 */;
-import _modDef11540 from "module_11540" /* 11540 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 13353 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13356 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 15204 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import Pressables from "Pressables" /* 6908 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7290 */;
+import _modDef11560 from "module_11560" /* 11560 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 13390 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13393 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 15223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
@@ -46,7 +46,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgres
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { source: _modDef11540 };
+            const obj2 = { source: _modDef11560 };
             const tmp20 = hasOwnProperty(native.Icon, obj2);
             cResult[12] = tmp20;
             let tmp17 = tmp20;
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgres
   obj4.style = items;
   const items1 = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle })];
   obj3.children = items1;
-  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11540 })];
+  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11560 })];
   obj2.children = items2;
   const items3 = [timestampProducer(View, obj2), hasOwnProperty(GuildProgressBarDefault, { style: tmp.progressBar, percent: percentComplete })];
   obj.children = items3;

@@ -1,11 +1,11 @@
-// === Module 9619: TwoWayLinkStepHeader ===
+// === Module 9620: TwoWayLinkStepHeader ===
 
-// Module 9619 (TwoWayLinkStepHeader)
+// Module 9620 (TwoWayLinkStepHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7072 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9618 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7074 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

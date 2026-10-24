@@ -1,10 +1,11 @@
-// === Module 15844: HexagonCampaignDisplayNameStylePromo ===
+// === Module 15868: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 15844 (HexagonCampaignDisplayNameStylePromo)
+// Module 15868 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15845 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 15846 */;
+import _modDef4247 from "module_4247" /* 4247 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15869 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 15870 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { promo: { height: 32, justifyContent: "center", paddingBottom: 2, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_8 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -47,37 +48,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
     if (cResult[4] === tmp4) {
       if (cResult[6] !== cResult[5]) {
         const obj2 = { variant: "text-xxs/medium", color: "text-default", lineClamp: 1, children: tmp11 };
-        const tmp15 = closure_4(tmp(5232).Text, obj2);
+        const tmp17 = closure_4(tmp(5234).Text, obj2);
         cResult[6] = tmp11;
-        cResult[7] = tmp15;
-        let tmp13 = tmp15;
+        cResult[7] = tmp17;
+        let tmp15 = tmp17;
       } else {
-        tmp13 = cResult[7];
+        tmp15 = cResult[7];
       }
       if (cResult[8] === tmp5.promo) {
-        if (cResult[9] === tmp13) {
-          let tmp16 = cResult[10];
+        if (cResult[9] === tmp15) {
+          let tmp18 = cResult[10];
         }
-        return tmp16;
+        return tmp18;
       }
-      const obj3 = { theme: tmp(15848).ThemeTypes.DARK, children: null };
+      const obj3 = { theme: tmp(15872).ThemeTypes.DARK, children: null };
       const obj4 = { style: tmp5.promo, children: null };
-      const items = [tmp7, tmp13];
+      const items = [tmp7, tmp15];
       obj4.children = items;
       obj3.children = closure_5(View, obj4);
-      const tmp20 = closure_4(tmp(5035).ThemeContextProvider, obj3);
+      const tmp22 = closure_4(tmp(5037).ThemeContextProvider, obj3);
       cResult[8] = tmp5.promo;
-      cResult[9] = tmp13;
-      cResult[10] = tmp20;
-      tmp16 = tmp20;
+      cResult[9] = tmp15;
+      cResult[10] = tmp22;
+      tmp18 = tmp22;
     }
   }
   const intl = tmp(1128).intl;
   if (undefined !== showLearnMore && showLearnMore) {
     const obj5 = { learnMoreHook: tmp6 };
-    let formatResult = intl.format(tmp(1128).t.eb99JA, obj5);
+    let formatResult = intl.format(_modDef4247.eb99JA, obj5);
   } else {
-    formatResult = intl.string(tmp(1128).t.WyZOg3);
+    formatResult = intl.string(_modDef4247.WyZOg3);
   }
   cResult[3] = tmp6;
   cResult[4] = undefined !== showLearnMore && showLearnMore;
@@ -100,9 +101,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           return React4(Text_Text.Text, { variant: "text-xxs/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress: openHexagonCampaignLearnMore.openHexagonCampaignLearnMore, children }, arg1);
         }
     };
-    let formatResult = intl.format(tmp3(1128).t.eb99JA, obj3);
+    let formatResult = intl.format(_modDef4247.eb99JA, obj3);
   } else {
-    formatResult = intl.string(tmp3(1128).t.WyZOg3);
+    formatResult = intl.string(_modDef4247.WyZOg3);
   }
   items[1] = closure_4(require("Text/Text").Text, { variant: "text-xxs/medium", color: "text-default", lineClamp: 1, children: formatResult });
   obj2.children = items;

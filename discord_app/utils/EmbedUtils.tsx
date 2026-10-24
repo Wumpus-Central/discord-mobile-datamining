@@ -1,22 +1,22 @@
-// === Module 6484: EmbedUtils ===
+// === Module 6486: EmbedUtils ===
 
-// Module 6484 (EmbedUtils)
+// Module 6486 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6012 */;
-import EmbedConstants from "EmbedConstants" /* 6485 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6014 */;
+import EmbedConstants from "EmbedConstants" /* 6487 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
-function getEffectiveVideoProvider(name, url) {
+function getEffectiveVideoProvider(name, url1) {
   if ("YouTube" !== name) {
     if ("TikTok" !== name) {
-      if (null != url) {
+      if (null != url1) {
         try {
           const _URL = URL;
-          const uRL = new URL(url);
+          const uRL = new URL(url1);
           const hostname = uRL.hostname;
           if ("www.youtube.com" === hostname) {
             return "YouTube";

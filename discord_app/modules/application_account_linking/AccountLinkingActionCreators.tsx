@@ -1,6 +1,6 @@
-// === Module 7258: AccountLinkingActionCreators ===
+// === Module 7260: AccountLinkingActionCreators ===
 
-// Module 7258 (AccountLinkingActionCreators)
+// Module 7260 (AccountLinkingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

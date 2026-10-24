@@ -1,6 +1,6 @@
-// === Module 11474: isAllowedFrameNavigation ===
+// === Module 11494: isAllowedFrameNavigation ===
 
-// Module 11474 (isAllowedFrameNavigation)
+// Module 11494 (isAllowedFrameNavigation)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -89,8 +89,8 @@ export const isAllowedFrameNavigation = function isAllowedFrameNavigation(url, r
         url = uRL;
         const _HermesInternal = HermesInternal;
         if ("" + url.protocol + "//" + url.host === routerOrigin) {
-          let someResult = !uRL(11475).isTooLongForCloudflare(tmp8.href, routerOrigin);
-          const tmpResult = uRL(11475);
+          let someResult = !uRL(11495).isTooLongForCloudflare(tmp8.href, routerOrigin);
+          const tmpResult = uRL(11495);
         } else {
           someResult = (function getFrameSources(directives) {
             directives = directives.directives;

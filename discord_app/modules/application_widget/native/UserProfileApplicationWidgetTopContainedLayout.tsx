@@ -1,19 +1,19 @@
-// === Module 11970: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 11996: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 11970 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 11996 (UserProfileApplicationWidgetTopContainedLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11880 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11966 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11967 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11906 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11992 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, text: null, imageContainer: null, image: null, imageSkeleton: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };

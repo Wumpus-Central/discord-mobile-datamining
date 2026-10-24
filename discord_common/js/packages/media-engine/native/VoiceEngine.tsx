@@ -1,6 +1,6 @@
-// === Module 5803: discord_common/VoiceEngine ===
+// === Module 5805: discord_common/VoiceEngine ===
 
-// Module 5803 (discord_common/VoiceEngine)
+// Module 5805 (discord_common/VoiceEngine)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/VoiceEngine.tsx");

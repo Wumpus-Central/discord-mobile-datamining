@@ -1,6 +1,6 @@
-// === Module 6725: TopEmojiStore ===
+// === Module 6727: TopEmojiStore ===
 
-// Module 6725 (TopEmojiStore)
+// Module 6727 (TopEmojiStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

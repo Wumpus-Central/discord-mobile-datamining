@@ -1,18 +1,18 @@
-// === Module 7199: GuildOnboardingUtils ===
+// === Module 7201: GuildOnboardingUtils ===
 
-// Module 7199 (GuildOnboardingUtils)
+// Module 7201 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
 import StringUtils from "StringUtils" /* 2033 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7195 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7200 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6498 */;
-import GuildChannelStore from "GuildChannelStore" /* 4899 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7197 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
+import GuildChannelStore from "GuildChannelStore" /* 4901 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7194).OnboardingConnectionType;
+let closure_7 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7196).OnboardingConnectionType;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4887).GuildMemberFlags;
+const GuildMemberFlags = fn(4889).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);

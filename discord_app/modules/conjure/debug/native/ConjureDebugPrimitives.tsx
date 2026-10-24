@@ -1,13 +1,13 @@
-// === Module 12516: ConjureDebugPrimitives ===
+// === Module 12550: ConjureDebugPrimitives ===
 
-// Module 12516 (ConjureDebugPrimitives)
+// Module 12550 (ConjureDebugPrimitives)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12514 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, statGroup: null, statValueGroup: null, meterTrack: null, meterFill: null, meterFillCritical: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
 obj2.section = { gap: nativeDefault.space.PX_8 };

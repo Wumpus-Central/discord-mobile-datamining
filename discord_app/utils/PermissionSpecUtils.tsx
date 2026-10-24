@@ -1,19 +1,19 @@
-// === Module 18248: PermissionSpecUtils ===
+// === Module 18280: PermissionSpecUtils ===
 
-// Module 18248 (PermissionSpecUtils)
+// Module 18280 (PermissionSpecUtils)
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import ChannelRecord from "ChannelRecord" /* 4825 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7349 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7366 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7873 */;
-import Tracking from "Tracking" /* 8287 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9004 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12903 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 18249 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 18250 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 18252 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import ChannelRecord from "ChannelRecord" /* 4827 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7351 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7368 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7875 */;
+import Tracking from "Tracking" /* 8289 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12940 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 18281 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 18282 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 18284 */;
+import GuildStore from "GuildStore" /* 4845 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -60,15 +60,15 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7367).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(7369).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(6638);
-    const isStageVideoEnabledResult = tmp4(6638).isStageVideoEnabled(guild_id);
-    let result = tmp4(18251).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(6640);
+    const isStageVideoEnabledResult = tmp4(6640).isStageVideoEnabled(guild_id);
+    let result = tmp4(18283).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -102,13 +102,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1128).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1128).intl;
-        const items1 = [obj33(18252).generateChannelStageSection(tmp3, intl28.string(tmp4(1128).t.yniauk))];
+        const items1 = [obj33(18284).generateChannelStageSection(tmp3, intl28.string(tmp4(1128).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(18252);
+        const obj33Result = obj33(18284);
       } else {
         items2 = [];
       }
-      obj33 = obj33(18252);
+      obj33 = obj33(18284);
       const intl29 = tmp4(1128).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1128).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -251,7 +251,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(18251);
+    const tmp4Result2 = tmp4(18283);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

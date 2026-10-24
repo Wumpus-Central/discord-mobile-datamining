@@ -1,11 +1,11 @@
-// === Module 11996: AppLauncherOnboardingStore ===
+// === Module 12022: AppLauncherOnboardingStore ===
 
-// Module 11996 (AppLauncherOnboardingStore)
+// Module 12022 (AppLauncherOnboardingStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5632 */;
-import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 11994 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
+import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 12020 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

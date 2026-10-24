@@ -1,11 +1,11 @@
-// === Module 17697: GuildsBarDnDStore ===
+// === Module 17729: GuildsBarDnDStore ===
 
-// Module 17697 (GuildsBarDnDStore)
+// Module 17729 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import _mod4884 from "module_4884" /* 4884 */;
-import SortedGuildStore from "SortedGuildStore" /* 6699 */;
+import _mod4886 from "module_4886" /* 4886 */;
+import SortedGuildStore from "SortedGuildStore" /* 6701 */;
 import identity from "module_1269" /* 1269 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "end", overSpecs: "toCharArray$esjava$1" }));
+      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -109,7 +109,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     if (cResult[1] === arg1) {
       let tmp4 = cResult[2];
     }
-    return withEqualityFn(tmp4, _mod4884.shallow);
+    return withEqualityFn(tmp4, _mod4886.shallow);
   }
   const fn = function s(arg0) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
@@ -305,7 +305,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4884.shallow);
+  }, _mod4886.shallow);
 });
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

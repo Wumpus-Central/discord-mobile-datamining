@@ -1,10 +1,10 @@
-// === Module 11198: ActivityFlagUtils ===
+// === Module 11199: ActivityFlagUtils ===
 
-// Module 11198 (ActivityFlagUtils)
+// Module 11199 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import UserSettings from "UserSettings" /* 4797 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7810 */;
+import UserSettings from "UserSettings" /* 4799 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7812 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -20,8 +20,8 @@ export const computeActivityFlags = function computeActivityFlags(secrets) {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = result1;
-  if (result1 === undefined) {
+  let flag3 = isFrameAppResult;
+  if (isFrameAppResult === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;

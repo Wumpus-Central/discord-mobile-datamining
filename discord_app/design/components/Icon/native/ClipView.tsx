@@ -1,12 +1,12 @@
-// === Module 9405: ClipView ===
+// === Module 9406: ClipView ===
 
-// Module 9405 (ClipView)
+// Module 9406 (ClipView)
 import c from "c" /* 576 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9406 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9408 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9407 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9409 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5050 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 
 require = fn;
 let closure_3 = ["children", "cutouts", "style"];

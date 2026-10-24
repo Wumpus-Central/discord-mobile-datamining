@@ -1,22 +1,22 @@
-// === Module 13671: ForumTagFilterActionSheet ===
+// === Module 13708: ForumTagFilterActionSheet ===
 
-// Module 13671 (ForumTagFilterActionSheet)
+// Module 13708 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import EmojiDefault from "Emoji" /* 7225 */;
-import Tracking from "Tracking" /* 8287 */;
+import EmojiDefault from "Emoji" /* 7227 */;
+import Tracking from "Tracking" /* 8289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6723 */;
+import EmojiStore from "EmojiStore" /* 6725 */;
 
 require = fn;
-const ForumChannelStore = fn(13056);
+const ForumChannelStore = fn(13093);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
 let c12 = 18;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_13 = createStyles.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
 fn(558);
 const ReactCompilerGating = fn(558);

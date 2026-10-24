@@ -1,26 +1,26 @@
-// === Module 19226: GuildSettingsRoleSubscriptionTiers ===
+// === Module 19278: GuildSettingsRoleSubscriptionTiers ===
 
-// Module 19226 (GuildSettingsRoleSubscriptionTiers)
+// Module 19278 (GuildSettingsRoleSubscriptionTiers)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import PriceUtils from "PriceUtils" /* 7337 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9040 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16547 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16551 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19225 */;
-import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 19229 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19230 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import PriceUtils from "PriceUtils" /* 7339 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9041 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16579 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16583 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19277 */;
+import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 19281 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19282 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9005 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4894 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4896 */;
 
 require = fn;
 function getPriceText(first2, first1) {
@@ -41,14 +41,14 @@ function getPriceText(first2, first1) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(16525).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(16557).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1087);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = Constants);
 const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4969);
-let obj2 = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 }, tierColumn: { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 }, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierLabel: null, spinner: null, disabled: null };
+const createStyles = fn(4971);
+let obj2 = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 }, tierColumn: { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 }, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierIcon: null, createTierLabel: null, spinner: null, disabled: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
 obj2.tierIcon = size;
 obj2.tierPrice = { marginStart: 6 };
@@ -63,6 +63,8 @@ let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, border
 obj2.unsavedBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
 obj2.unsavedBadgeLabel = { textTransform: "uppercase" };
 obj2.detailsRow = { flexDirection: "row", alignItems: "center", marginTop: 3 };
+const size1 = { width: 40, height: 40, borderRadius: nativeDefault.radii.round, borderWidth: 2, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG, alignItems: "center", justifyContent: "center" };
+obj2.createTierIcon = size1;
 obj2.createTierLabel = { marginStart: 12 };
 obj2.spinner = { marginTop: 12 };
 obj2.disabled = { opacity: 0.5 };
@@ -297,11 +299,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
     tmp9 = undefined !== stateFromStores;
   }
   const tmpResult = editStateId(573);
-  const first1 = _slicedToArray(groupListingId(16547).useName(editStateId), 1)[0];
-  const obj3 = groupListingId(16547);
-  const first2 = _slicedToArray(groupListingId(16547).usePriceTier(editStateId), 1)[0];
-  const obj4 = groupListingId(16547);
-  const first3 = _slicedToArray(groupListingId(16547).useImage(editStateId, 250), 1)[0];
+  const first1 = _slicedToArray(groupListingId(16579).useName(editStateId), 1)[0];
+  const obj3 = groupListingId(16579);
+  const first2 = _slicedToArray(groupListingId(16579).usePriceTier(editStateId), 1)[0];
+  const obj4 = groupListingId(16579);
+  const first3 = _slicedToArray(groupListingId(16579).useImage(editStateId, 250), 1)[0];
   let first4;
   if (stateFromStores != null) {
     first4 = stateFromStores.subscription_plans[0];
@@ -328,7 +330,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
                 return;
               }
             }
-            const tmp24 = closure_17(tmp(5232).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null });
+            const tmp24 = closure_17(tmp(5234).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null });
             cResult[13] = first1;
             cResult[14] = tmp24;
             let tmp22 = tmp24;
@@ -420,7 +422,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
                           }
                         }
                         if (tmp44 === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp47 = closure_17(tmp(10119).PencilIcon, {});
+                          const tmp47 = closure_17(tmp(10120).PencilIcon, {});
                           class H {
                             constructor() {
                               obj = closure_1(closure_3[12]);
@@ -500,7 +502,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
             tmp38 = tmp40;
           }
           const obj10 = { style: tmp4.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: tmp14 };
-          const tmp37 = closure_17(tmp(5232).Text, obj10);
+          const tmp37 = closure_17(tmp(5234).Text, obj10);
           cResult[21] = tmp14;
           cResult[22] = tmp4.tierPrice;
           cResult[23] = tmp37;
@@ -526,7 +528,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
           tmp21[0] = tmp4.tierIcon;
           const obj11 = { uri: first3 };
           tmp21[2] = obj11;
-          tmp18 = closure_17(guildId(5667), tmp21);
+          tmp18 = closure_17(guildId(5669), tmp21);
         }
         cResult[10] = first3;
         cResult[11] = tmp4.tierIcon;
@@ -553,7 +555,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   cResult[4] = first4;
   cResult[5] = tmp15;
   tmp14 = tmp15;
-  const obj5 = groupListingId(16547);
+  const obj5 = groupListingId(16579);
 }) : (function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
   ({ guildId: importDefault, groupListingId: importAll } = editStateId);
@@ -592,7 +594,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   const obj5 = {
     onPress: editStateId.onPress,
     onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19227, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19279, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
     },
     children: null
   };
@@ -605,7 +607,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   }
   const items1 = [tmp9Result, , ];
   const obj8 = { style: tmp.tierColumn, children: null };
-  const items2 = [closure_17(editStateId(5232).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] }), ];
+  const items2 = [closure_17(editStateId(5234).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] }), ];
   const obj9 = { style: tmp.detailsRow, children: null };
   if (tmp9Result3) {
     tmp9Result3 = closure_17(closure_21, {});
@@ -622,19 +624,19 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   const obj10 = { children: null };
   items3[2] = tmp9Result4;
   const tmp8 = getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1);
-  items3[3] = closure_17(editStateId(5232).Text, { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1) });
+  items3[3] = closure_17(editStateId(5234).Text, { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1) });
   obj9.children = items3;
   items2[1] = closure_18(closure_7, obj9);
   obj8.children = items2;
   items1[1] = closure_18(closure_7, obj8);
-  items1[2] = closure_17(editStateId(10119).PencilIcon, {});
+  items1[2] = closure_17(editStateId(10120).PencilIcon, {});
   obj5.children = items1;
   obj10.children = closure_18(closure_24, obj5);
   return closure_17(closure_7, obj10);
 });
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
-  const cResult = guildId(first[19]).c(62);
+  const cResult = guildId(first[19]).c(65);
   guildId = guildId.guildId;
   closure_19();
   const bottom = navigation(first[26])().bottom;
@@ -717,7 +719,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1128).t.pXbGYc);
                               const intl2 = guildId(1128).intl;
                               obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                              return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6924).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -736,7 +738,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1128).t.pXbGYc);
                               const intl2 = guildId(1128).intl;
                               obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                              return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6924).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -755,7 +757,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1128).t.pXbGYc);
                               const intl2 = guildId(1128).intl;
                               obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                              return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6924).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -773,7 +775,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1128).t.pXbGYc);
                               const intl2 = guildId(1128).intl;
                               obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                              return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6924).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -791,7 +793,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1128).t.pXbGYc);
                               const intl2 = guildId(1128).intl;
                               obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                              return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6924).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -852,7 +854,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1128).t.pXbGYc);
                       const intl2 = guildId(1128).intl;
                       obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                      return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6924).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -871,7 +873,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1128).t.pXbGYc);
                       const intl2 = guildId(1128).intl;
                       obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-                      return closure_1_17(guildId(6922).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6924).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -932,7 +934,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
         obj.title = intl.string(guildId(1128).t.pXbGYc);
         const intl2 = guildId(1128).intl;
         obj.subtitle = intl2.string(guildId(1128).t["KzCF/6"]);
-        return closure_1_17(guildId(6922).NavigatorHeader, obj);
+        return closure_1_17(guildId(6924).NavigatorHeader, obj);
       }
     });
   });
@@ -992,7 +994,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(19229).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(19281).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -1006,7 +1008,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                 });
               }
             });
-            let obj = guildEligibleForTierTemplates(19229);
+            let obj = guildEligibleForTierTemplates(19281);
             const obj2 = {
               groupListingId: id,
               initialEditStateId,
@@ -1040,22 +1042,22 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
     items4[1] = closure_17(tmp5(tmp3[20]).Text, obj12);
     items4[2] = mapped;
     const obj14 = { onPress, disabled: roleSubscriptionSettingsDisabled, children: null };
-    const obj15 = { source: null };
-    const tmp2Result = tmp2(tmp3[38]);
-    obj15.source = tmp2(tmp3[39]);
-    const items5 = [closure_17(tmp2(tmp3[24]), obj15), ];
-    const obj16 = { style: tmp.createTierLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+    const obj15 = { style: tmp.createTierIcon, children: null };
+    const obj16 = { size: "sm", color: tmp2(tmp3[11]).colors.ICON_BRAND };
+    obj15.children = closure_17(tmp5(tmp3[39]).CirclePlusIcon, obj16);
+    const items5 = [closure_17(closure_7, obj15), ];
+    const obj17 = { style: tmp.createTierLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     const intl3 = tmp5(tmp3[15]).intl;
-    obj16.children = intl3.string(tmp5(tmp3[15]).t.PiFnny);
-    items5[1] = closure_17(tmp5(tmp3[20]).Text, obj16);
+    obj17.children = intl3.string(tmp5(tmp3[15]).t.PiFnny);
+    items5[1] = closure_17(tmp5(tmp3[20]).Text, obj17);
     obj14.children = items5;
     items4[3] = closure_18(closure_24, obj14);
     obj9.children = items4;
     obj8.children = closure_18(closure_7, obj9);
     return closure_17(onPress, obj8);
   } else {
-    const obj17 = { style: tmp.spinner, children: closure_17(first2, {}) };
-    return closure_17(closure_7, obj17);
+    const obj18 = { style: tmp.spinner, children: closure_17(first2, {}) };
+    return closure_17(closure_7, obj18);
   }
   const tmp5Result = guildId(first[22]);
 });

@@ -1,9 +1,9 @@
-// === Module 9834: useEmojiPickerSearchState ===
+// === Module 9835: useEmojiPickerSearchState ===
 
-// Module 9834 (useEmojiPickerSearchState)
+// Module 9835 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6723 */;
+import EmojiStore from "EmojiStore" /* 6725 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(4802).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(4804).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(4802).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(4804).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);

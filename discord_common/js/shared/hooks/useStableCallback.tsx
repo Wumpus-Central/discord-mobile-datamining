@@ -1,6 +1,6 @@
-// === Module 7056: hooks/useStableCallback ===
+// === Module 7058: hooks/useStableCallback ===
 
-// Module 7056 (hooks/useStableCallback)
+// Module 7058 (hooks/useStableCallback)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

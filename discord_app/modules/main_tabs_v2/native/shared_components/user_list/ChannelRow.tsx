@@ -1,21 +1,21 @@
-// === Module 10689: ChannelRow ===
+// === Module 10690: ChannelRow ===
 
-// Module 10689 (ChannelRow)
+// Module 10690 (ChannelRow)
 import nativeDefault from "native" /* 587 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import DateUtils from "DateUtils" /* 4794 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useChannelName from "useChannelName" /* 5602 */;
-import TextIcon2 from "TextIcon" /* 8549 */;
-import ForumIcon from "ForumIcon" /* 8557 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10690 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12899 */;
+import DateUtils from "DateUtils" /* 4796 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useChannelName from "useChannelName" /* 5604 */;
+import TextIcon2 from "TextIcon" /* 8551 */;
+import ForumIcon from "ForumIcon" /* 8559 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12936 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import RelationshipStore from "RelationshipStore" /* 4911 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -24,11 +24,11 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10615).UserRowModes;
-const ReadStateTypes = fn(6703).ReadStateTypes;
+const UserRowModes = fn(10616).UserRowModes;
+const ReadStateTypes = fn(6705).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: { marginHorizontal: nativeDefault.space.PX_4 }, threadName: { flexShrink: 1 } };
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -232,8 +232,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj2.guild = stateFromStores;
         obj2.channel = tmp4;
-        obj2.size = tmp(12899).GuildIconWithChannelTypeSizes.SMALL_32;
-        const tmp34 = closure_14(tmp(12899).GuildIconWithChannelType, obj2);
+        obj2.size = tmp(12936).GuildIconWithChannelTypeSizes.SMALL_32;
+        const tmp34 = closure_14(tmp(12936).GuildIconWithChannelType, obj2);
       }
       cResult[26] = tmp4;
       cResult[27] = stateFromStores;

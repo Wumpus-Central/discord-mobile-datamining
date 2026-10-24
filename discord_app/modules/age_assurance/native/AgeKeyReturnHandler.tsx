@@ -1,10 +1,10 @@
-// === Module 15208: AgeKeyReturnHandler ===
+// === Module 15227: AgeKeyReturnHandler ===
 
-// Module 15208 (AgeKeyReturnHandler)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5148 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6670 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7914 */;
-import AgeVerificationConstants from "AgeVerificationConstants" /* 6654 */;
+// Module 15227 (AgeKeyReturnHandler)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7916 */;
+import AgeVerificationConstants from "AgeVerificationConstants" /* 6656 */;
 import size from "module_2" /* 2 */;
 
 ({ AGE_VERIFICATION_GET_STARTED_MODAL_KEY: c3, AGE_VERIFICATION_MODAL_KEY: closure_4 } = AgeVerificationConstants);

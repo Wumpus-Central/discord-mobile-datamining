@@ -1,17 +1,17 @@
-// === Module 9859: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9860: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9859 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9860 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1128 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6828 */;
-import _modDef9672 from "module_9672" /* 9672 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9860 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
+import _modDef9673 from "module_9673" /* 9673 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9861 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(4828).StaticChannelRoute;
+const StaticChannelRoute = fn(4830).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     name = stateFromStores.name;
   }
   if (cResult[3] !== name) {
-    const obj2 = { image: tmp4(9672), title: null, description: null };
+    const obj2 = { image: tmp4(9673), title: null, description: null };
     let intl = tmp(1128).intl;
     obj2.title = intl.string(tmp(1128).t.cBjkcx);
     const intl2 = tmp(1128).intl;
@@ -118,14 +118,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
         }
       }
       const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 };
-      const tmp21 = jsx(tmp4(5976), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
+      const tmp21 = jsx(tmp4(5978), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
       cResult[14] = onClose;
       cResult[15] = P;
       cResult[16] = tmp16;
       cResult[17] = tmp21;
     }
     const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-    const tmp18 = jsx(tmp(9863).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+    const tmp18 = jsx(tmp(9864).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
     cResult[11] = diff;
     cResult[12] = tmp11;
     cResult[13] = tmp18;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9672, title: null, description: null };
+    const obj = { image: _modDef9673, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

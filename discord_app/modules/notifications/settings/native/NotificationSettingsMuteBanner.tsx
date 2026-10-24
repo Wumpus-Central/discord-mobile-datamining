@@ -1,18 +1,18 @@
-// === Module 13736: NotificationSettingsMuteBanner ===
+// === Module 19343: NotificationSettingsMuteBanner ===
 
-// Module 13736 (NotificationSettingsMuteBanner)
+// Module 19343 (NotificationSettingsMuteBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { card: { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -123,10 +123,10 @@ export const NotificationSettingsMuteBanner = ReactCompilerGating.isReactCompile
   obj.children = items2;
   return React4(View, obj);
 });
-export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(config) {
+export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(muteConfig) {
   let end_time;
-  if (config != null) {
-    end_time = config.end_time;
+  if (muteConfig != null) {
+    end_time = muteConfig.end_time;
   }
   if (null == end_time) {
     const intl = util.intl;
@@ -135,7 +135,7 @@ export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFro
     const intl2 = util.intl;
     const obj = { endTime: null };
     const _Date = Date;
-    const date = new Date(config.end_time);
+    const date = new Date(muteConfig.end_time);
     obj.endTime = date.toLocaleString(util.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
     stringResult = intl2.formatToPlainString(util.t.C7m4oh, obj);
   }

@@ -1,18 +1,18 @@
-// === Module 9151: EndEventActionSheet ===
+// === Module 9152: EndEventActionSheet ===
 
-// Module 9151 (EndEventActionSheet)
+// Module 9152 (EndEventActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8886 */;
-import CallsUtils from "CallsUtils" /* 9152 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8888 */;
+import CallsUtils from "CallsUtils" /* 9153 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4827).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_4 = fn(4829).EXPLICIT_END_EVENT_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: { fontSize: 24, fontFamily: fn(1087).Fonts.PRIMARY_BOLD, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, subtitle: { marginTop: 8, textAlign: "center" }, cancelButtonContainer: { marginTop: 24, alignSelf: "stretch" }, confirmButtonContainer: { marginTop: 8, alignSelf: "stretch" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
   channel = channel.channel;
   const tmp4 = closure_7();
   let obj = channel(576);
-  const activeEvent = channel(9021).useActiveEvent(channel.id);
+  const activeEvent = channel(9022).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
       }
       if (cResult[9] !== tmp4.subtitle) {
         const obj4 = { style: tmp4.subtitle, variant: "text-md/medium", color: "text-default", children: tmp14 };
-        const tmp18 = closure_5(tmp(5232).Text, obj4);
+        const tmp18 = closure_5(tmp(5234).Text, obj4);
         cResult[9] = tmp4.subtitle;
         cResult[10] = tmp18;
         let tmp16 = tmp18;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
       }
       if (cResult[12] !== tmp6) {
         const obj5 = { text: tmp19, grow: true, onPress: tmp6 };
-        const tmp23 = closure_5(tmp(5242).Button, obj5);
+        const tmp23 = closure_5(tmp(5244).Button, obj5);
         cResult[12] = tmp6;
         cResult[13] = tmp23;
         let tmp21 = tmp23;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
         }
         if (cResult[18] !== tmp7) {
           const obj6 = { text: tmp28, variant: "destructive", grow: true, onPress: tmp7 };
-          const tmp32 = closure_5(tmp(5242).Button, obj6);
+          const tmp32 = closure_5(tmp(5244).Button, obj6);
           cResult[18] = tmp7;
           cResult[19] = tmp32;
           let tmp30 = tmp32;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
           const items = [tmp11, tmp16, tmp24, tmp33];
           obj8.children = items;
           obj7.children = closure_6(View, obj8);
-          const tmp43 = closure_5(activeEvent(14159), obj7);
+          const tmp43 = closure_5(activeEvent(14178), obj7);
           cResult[23] = tmp4.container;
           cResult[24] = tmp24;
           cResult[25] = tmp33;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
           cResult[27] = tmp16;
           cResult[28] = tmp43;
           tmp37 = tmp43;
-          const tmp40 = activeEvent(14159);
+          const tmp40 = activeEvent(14178);
         }
         const obj9 = { style: tmp4.confirmButtonContainer, children: tmp30 };
         const tmp36 = closure_5(View, obj9);
@@ -178,11 +178,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
     cResult[4] = handleConfirmClick;
     tmp7 = handleConfirmClick;
   }
-  const obj2 = channel(9021);
+  const obj2 = channel(9022);
 }) : (function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const activeEvent = channel(9021).useActiveEvent(channel.id);
+  const activeEvent = channel(9022).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -199,13 +199,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
     const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
     const intl2 = tmp2(1128).intl;
     obj5.children = intl2.string(tmp2(1128).t["0I0B8f"]);
-    items[1] = closure_5(tmp2(5232).Text, obj5);
+    items[1] = closure_5(tmp2(5234).Text, obj5);
     const obj6 = { style: tmp.cancelButtonContainer, children: null };
     const obj7 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1128).intl;
     obj7.text = intl3.string(tmp2(1128).t.P60OAX);
     obj7.onPress = handleClose;
-    obj6.children = closure_5(tmp2(5242).Button, obj7);
+    obj6.children = closure_5(tmp2(5244).Button, obj7);
     items[2] = closure_5(View, obj6);
     const obj8 = { style: tmp.confirmButtonContainer, children: null };
     const obj9 = { text: null, variant: "destructive", grow: true, onPress: null };
@@ -218,11 +218,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
         CallsUtils.handleDisconnect(channel);
       }
     };
-    obj8.children = closure_5(tmp2(5242).Button, obj9);
+    obj8.children = closure_5(tmp2(5244).Button, obj9);
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(14159), obj2);
+    return closure_5(activeEvent(14178), obj2);
   }
-  let obj = channel(9021);
+  let obj = channel(9022);
 });

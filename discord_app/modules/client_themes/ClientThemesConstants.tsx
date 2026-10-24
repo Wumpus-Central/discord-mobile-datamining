@@ -5,6 +5,7 @@ import Constants from "Constants" /* 1098 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
+import _modDef4247 from "module_4247" /* 4247 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -363,7 +364,7 @@ const obj24 = {
   angle: 135,
   getName() {
     const intl = util.intl;
-    return intl.string(util.t["+xs8ZP"]);
+    return intl.string(_modDef4247["+xs8ZP"]);
   },
   midpointPercentage: 35,
   unsupported_overlayOpacityMultiplier: 0.8

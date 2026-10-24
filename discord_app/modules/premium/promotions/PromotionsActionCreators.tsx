@@ -1,14 +1,14 @@
-// === Module 9560: PromotionsActionCreators ===
+// === Module 9561: PromotionsActionCreators ===
 
-// Module 9560 (PromotionsActionCreators)
+// Module 9561 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import wrappers from "wrappers" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9561 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import UserStore from "UserStore" /* 1392 */;
-import PromotionsStore from "PromotionsStore" /* 9519 */;
+import PromotionsStore from "PromotionsStore" /* 9520 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -82,11 +82,11 @@ function dismissOutboundPromotionNotice() {
   DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4802).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4804).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", async (arg0) => {
       const StringValue = wrappers.StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(4802).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, lastDismissedOutboundPromotionStartDate(4804).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function fetchClaimedOutboundPromotionCodes() {

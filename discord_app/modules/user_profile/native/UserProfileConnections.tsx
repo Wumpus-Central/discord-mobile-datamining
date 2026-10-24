@@ -1,28 +1,28 @@
-// === Module 14388: UserProfileConnections ===
+// === Module 14412: UserProfileConnections ===
 
-// Module 14388 (UserProfileConnections)
+// Module 14412 (UserProfileConnections)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native2 from "native" /* 1202 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import shared from "shared" /* 4976 */;
-import HapticUtils from "HapticUtils" /* 5210 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import useToken from "useToken" /* 5250 */;
-import ToastUtils from "ToastUtils" /* 5660 */;
-import TableRow from "TableRow" /* 6901 */;
-import TableRowGroup from "TableRowGroup" /* 6985 */;
-import ClipboardUtils from "ClipboardUtils" /* 7283 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7301 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8858 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11266 */;
-import _modDef11271 from "module_11271" /* 11271 */;
+import shared from "shared" /* 4978 */;
+import HapticUtils from "HapticUtils" /* 5212 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import useToken from "useToken" /* 5252 */;
+import ToastUtils from "ToastUtils" /* 5662 */;
+import TableRow from "TableRow" /* 6903 */;
+import TableRowGroup from "TableRowGroup" /* 6987 */;
+import ClipboardUtils from "ClipboardUtils" /* 7285 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7303 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11267 */;
 import _modDef11272 from "module_11272" /* 11272 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14392 */;
+import _modDef11273 from "module_11273" /* 11273 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14416 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import StreamerModeStore from "StreamerModeStore" /* 5024 */;
+import StreamerModeStore from "StreamerModeStore" /* 5026 */;
 
 require = fn;
 function generateMetadataForPlatform(arg0) {
@@ -31,6 +31,8 @@ function generateMetadataForPlatform(arg0) {
     return ConnectionMetadataVanityItems.generateRedditMetadataItems(metadata, style);
   } else if (constants.STEAM === accountType) {
     return ConnectionMetadataVanityItems.generateSteamMetadataItems(metadata, style);
+  } else if (constants.LETTERBOXD === accountType) {
+    return ConnectionMetadataVanityItems.generateLetterboxdMetadataItems(metadata, style);
   } else {
     if (constants.BLUESKY !== accountType) {
       if (constants.TWITTER !== accountType) {
@@ -51,17 +53,17 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(7302);
+let Constants = fn(7304);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7274).MetadataFields;
+const MetadataFields = fn(7276).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1202).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1202);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 let obj4 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -119,7 +121,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11272, color: WHITE };
+      const obj4 = { source: _modDef11273, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -127,7 +129,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11271, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11272, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -153,10 +155,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11271, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11272, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11272, color: WHITE };
+    const obj5 = { source: _modDef11273, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -208,7 +210,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                   if (cResult[18] === account.name) {
                     if (cResult[21] === account.name) {
                       if (cResult[22] === tmp9) {
-                        class B {
+                        class H {
                           constructor() {
                             tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                             obj = closure_0(closure_2[25]);
@@ -252,7 +254,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                           }
                           if (cResult[30] !== tmp43) {
                             const tmp43Result = tmp43();
-                            class B {
+                            class H {
                               constructor() {
                                 tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                                 obj = closure_0(closure_2[25]);
@@ -266,7 +268,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                             }
                             cResult[31] = tmp43Result;
                           }
-                          class B {
+                          class H {
                             constructor() {
                               tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                               obj = closure_0(closure_2[25]);
@@ -375,7 +377,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                         tmp43 = Y;
                       }
                     }
-                    class B {
+                    class H {
                       constructor() {
                         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                         obj = closure_0(closure_2[25]);
@@ -414,7 +416,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     arr2.push(account.name);
                     if (null == tmp9) {
                       cResult[21] = account.name;
-                      class B {
+                      class H {
                         constructor() {
                           tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                           obj = closure_0(closure_2[25]);
@@ -456,7 +458,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     } else {
                       if (cResult[25] !== tmp9) {
                         let intl = tmp(tmp2[28]).intl;
-                        class B {
+                        class H {
                           constructor() {
                             tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                             obj = closure_0(closure_2[25]);
@@ -497,7 +499,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       arr2.push(tmp37);
                     }
                   }
-                  class B {
+                  class H {
                     constructor() {
                       tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                       obj = closure_0(closure_2[25]);
@@ -529,7 +531,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       return;
                     }
                   }
-                  cResult[20] = B;
+                  cResult[20] = H;
                 }
               }
             }
@@ -563,7 +565,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const source = tmp(tmp2[21]).makeSource(tmp25);
           if (tmp22 != null) {
             const getPlatformUserUrl = tmp22.getPlatformUserUrl;
-            class B {
+            class H {
               constructor() {
                 tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                 obj = closure_0(closure_2[25]);
@@ -593,7 +595,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   if (undefined === showMetadata || showMetadata) {
     tmp(tmp2[19]);
-    class B {
+    class H {
       constructor() {
         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
         obj = closure_0(closure_2[25]);
@@ -608,7 +610,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   if (undefined === showMetadata || showMetadata) {
     const obj3 = { accountType: null, metadata: null, style: null };
-    class B {
+    class H {
       constructor() {
         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
         obj = closure_0(closure_2[25]);
@@ -841,7 +843,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8679).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -894,7 +896,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         const obj5 = { label: str, icon: tmp14, onPress: tmp8, onLongPress: tmp8, accessibilityLabel: joined, accessibilityHint: tmp12, accessibilityRole: "button" };
-        const tmp20 = closure_12(tmp(6901).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6903).TableRow, obj5);
         cResult[13] = tmp12;
         cResult[14] = joined;
         cResult[15] = tmp8;
@@ -906,7 +908,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp15;
       if (null != tmp5) {
         const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-        tmp15 = closure_12(tmp(5666).BaseIconImage, obj6);
+        tmp15 = closure_12(tmp(5668).BaseIconImage, obj6);
       }
       cResult[10] = tmp5;
       cResult[11] = tmp4;
@@ -931,7 +933,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = trackUserProfileAction;
   cResult[4] = fn;
   tmp8 = fn;
-  let obj2 = trackUserProfileAction(8677);
+  let obj2 = trackUserProfileAction(8679);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1273,8 +1275,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
 }) : (function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5035).useThemeContext().theme;
-  const obj = userId(5035);
+  const theme = userId(5037).useThemeContext().theme;
+  const obj = userId(5037);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -1282,7 +1284,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14389)(userId));
+  ({ connections, appIdentities } = theme(14413)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1296,8 +1298,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6985).TableRowGroup, obj5);
-    return closure_12(tmp5(7301), obj4);
+    obj4.children = closure_12(tmp2(6987).TableRowGroup, obj5);
+    return closure_12(tmp5(7303), obj4);
   }
   return null;
 });

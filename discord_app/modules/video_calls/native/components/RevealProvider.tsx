@@ -1,21 +1,21 @@
-// === Module 11346: RevealProvider ===
+// === Module 11364: RevealProvider ===
 
-// Module 11346 (RevealProvider)
+// Module 11364 (RevealProvider)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10880 */;
-import StatusBarDefault from "StatusBar" /* 10885 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11347 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11348 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10881 */;
+import StatusBarDefault from "StatusBar" /* 10886 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11365 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11366 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5209 */;
-import GameConsoleStore from "GameConsoleStore" /* 5713 */;
+import ActionSheetStore from "ActionSheetStore" /* 5211 */;
+import GameConsoleStore from "GameConsoleStore" /* 5715 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(10878);
+const ChannelCallStore = fn(10879);
 ({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

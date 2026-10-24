@@ -1,12 +1,12 @@
-// === Module 10576: SocialLayerStorefrontGiftModal ===
+// === Module 10577: SocialLayerStorefrontGiftModal ===
 
-// Module 10576 (SocialLayerStorefrontGiftModal)
+// Module 10577 (SocialLayerStorefrontGiftModal)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10554 */;
-import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10578 */;
-import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10579 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10555 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10579 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10580 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6822 */;
+import SKUStore from "SKUStore" /* 6824 */;
 
 require = fn;
 const Constants = fn(1087);

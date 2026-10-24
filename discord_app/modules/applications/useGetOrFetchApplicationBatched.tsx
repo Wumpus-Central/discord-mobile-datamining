@@ -1,7 +1,7 @@
-// === Module 11252: useGetOrFetchApplicationBatched ===
+// === Module 11253: useGetOrFetchApplicationBatched ===
 
-// Module 11252 (useGetOrFetchApplicationBatched)
-import Timers from "Timers" /* 4816 */;
+// Module 11253 (useGetOrFetchApplicationBatched)
+import Timers from "Timers" /* 4818 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 
@@ -81,7 +81,7 @@ let closure_129_0 = obj4;
 obj4._lastFetchedAttempted = new Map();
 let map = new Map();
 obj4._pending = new Set();
-let delayedCall = new fn(4816).DelayedCall(32, () => obj._flush());
+let delayedCall = new fn(4818).DelayedCall(32, () => obj._flush());
 obj4._flushHandler = delayedCall;
 let ReactCompilerGating = fn(558);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequestApplication(arg0) {

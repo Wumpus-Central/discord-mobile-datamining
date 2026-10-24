@@ -1,9 +1,9 @@
-// === Module 12104: useLaunchingActivityButtonState ===
+// === Module 12130: useLaunchingActivityButtonState ===
 
-// Module 12104 (useLaunchingActivityButtonState)
+// Module 12130 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import FramesStore from "FramesStore" /* 6773 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import FramesStore from "FramesStore" /* 6775 */;
 
 const require = globalThis.__r;
 

@@ -1,11 +1,11 @@
-// === Module 19028: GuildSettingsEmojiStore ===
+// === Module 19056: GuildSettingsEmojiStore ===
 
-// Module 19028 (GuildSettingsEmojiStore)
+// Module 19056 (GuildSettingsEmojiStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import EmojiRecord from "EmojiRecord" /* 19029 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5000 */;
+import EmojiRecord from "EmojiRecord" /* 19057 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import priv from "priv" /* 1459 */;
 
 const dependencyMap = {};

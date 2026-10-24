@@ -1,24 +1,24 @@
-// === Module 12885: ForwardPreview ===
+// === Module 12922: ForwardPreview ===
 
-// Module 12885 (ForwardPreview)
+// Module 12922 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1498 */;
-import useThemeDefault from "useTheme" /* 5203 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6034 */;
-import ImageIcon from "ImageIcon" /* 8556 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8607 */;
-import CirclePlayIcon2 from "CirclePlayIcon" /* 9311 */;
-import ClipView from "ClipView" /* 9405 */;
-import ChatItemDefault from "ChatItem" /* 9771 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10422 */;
-import ImagesIcon2 from "ImagesIcon" /* 12483 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12886 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12889 */;
+import useThemeDefault from "useTheme" /* 5205 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6036 */;
+import ImageIcon from "ImageIcon" /* 8558 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8609 */;
+import CirclePlayIcon2 from "CirclePlayIcon" /* 9312 */;
+import ClipView from "ClipView" /* 9406 */;
+import ChatItemDefault from "ChatItem" /* 9772 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10423 */;
+import ImagesIcon2 from "ImagesIcon" /* 12517 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12923 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12926 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = new tmp4(8131)();
+        const obj3 = new tmp4(8133)();
         obj3.setOptions({ renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false });
         cResult[6] = obj3;
         let tmp10 = obj3;
@@ -85,7 +85,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
           return tmp17;
         }
         const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp8, message: tmp15, rowGenerator: tmp10 };
-        const tmp19 = closure_5(tmp4(9771), obj2);
+        const tmp19 = closure_5(tmp4(9772), obj2);
         cResult[10] = tmp8;
         cResult[11] = tmp15;
         cResult[12] = tmp19;
@@ -113,12 +113,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     tmp8 = fn;
   }
   const obj = attachmentCount(576);
-  const tmp7 = attachmentCount(4969).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
+  const tmp7 = attachmentCount(4971).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
   cResult[0] = TEXT_SUBTLE;
   cResult[1] = tmp5;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const tmpResult = attachmentCount(4969);
+  const tmpResult = attachmentCount(4971);
 }) : (function MessagePreview(content) {
   ({ message, attachmentCount } = content);
   importDefault = undefined;
@@ -128,7 +128,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     TEXT_SUBTLE = tmp(587).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4969).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4971).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -146,7 +146,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4969);
+  let obj = attachmentCount(4971);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;

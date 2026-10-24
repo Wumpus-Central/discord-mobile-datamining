@@ -1,13 +1,13 @@
-// === Module 17214: SettingsSecureFramesScreen ===
+// === Module 17246: SettingsSecureFramesScreen ===
 
-// Module 17214 (SettingsSecureFramesScreen)
+// Module 17246 (SettingsSecureFramesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8666 */;
-import UserActionCreators from "UserActionCreators" /* 8668 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9195 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
+import UserActionCreators from "UserActionCreators" /* 8670 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9196 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -79,7 +79,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = { user: stateFromStores, guildId: "Array", size: true };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: -1 };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {
@@ -238,7 +238,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, header: null, list: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.header = { marginTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_8 };

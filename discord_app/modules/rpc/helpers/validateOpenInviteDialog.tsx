@@ -1,15 +1,15 @@
-// === Module 15709: validateOpenInviteDialog ===
+// === Module 15730: validateOpenInviteDialog ===
 
-// Module 15709 (validateOpenInviteDialog)
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6775 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6776 */;
-import canViewInviteModal from "canViewInviteModal" /* 8902 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9257 */;
-import RPCErrorDefault from "RPCError" /* 9263 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9267 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import PermissionStore from "PermissionStore" /* 4901 */;
+// Module 15730 (validateOpenInviteDialog)
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6777 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6778 */;
+import canViewInviteModal from "canViewInviteModal" /* 8904 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9258 */;
+import RPCErrorDefault from "RPCError" /* 9264 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9268 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4903 */;
 
 require = fn;
 const RPCErrors = fn(1087).RPCErrors;

@@ -1,17 +1,17 @@
-// === Module 7320: PrivateChannelSortStore ===
+// === Module 7322: PrivateChannelSortStore ===
 
-// Module 7320 (PrivateChannelSortStore)
+// Module 7322 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7321 */;
-import MessageRequestStore from "MessageRequestStore" /* 6783 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6784 */;
-import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildStore from "GuildStore" /* 4843 */;
-import ReadStateStore from "ReadStateStore" /* 6769 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6702 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7323 */;
+import MessageRequestStore from "MessageRequestStore" /* 6785 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6786 */;
+import ChannelStore from "ChannelStore" /* 4823 */;
+import GuildStore from "GuildStore" /* 4845 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -61,10 +61,10 @@ function handleCacheLoaded() {
     continue;
   }
 }
-const isPrivate = fn(4825).isPrivate;
-const ChannelFlags = fn(4828).ChannelFlags;
+const isPrivate = fn(4827).isPrivate;
+const ChannelFlags = fn(4830).ChannelFlags;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4896).SecondaryIndexMap(function indexBy(value) {
+const secondaryIndexMap = new fn(4898).SecondaryIndexMap(function indexBy(value) {
   if (value.isRequest) {
     let items = [];
   } else {
@@ -77,7 +77,7 @@ const secondaryIndexMap = new fn(4896).SecondaryIndexMap(function indexBy(value)
 let values = [];
 let values2 = [];
 let closure_18 = [];
-const f41407 = () => {
+const f41477 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -90,7 +90,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f41407 === "function") {
+  if (typeof f41477 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

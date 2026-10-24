@@ -1,14 +1,14 @@
-// === Module 16667: showGummyCustomColorSheet ===
+// === Module 16699: showGummyCustomColorSheet ===
 
-// Module 16667 (showGummyCustomColorSheet)
+// Module 16699 (showGummyCustomColorSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import size from "module_2" /* 2 */;
 
 const DisplayNameStylesGummyCustomColorSheet = "DisplayNameStylesGummyCustomColorSheet";
 const result = size.fileFinishedImporting("modules/display_name_styles/native/showGummyCustomColorSheet.tsx");
 
 export default function showGummyCustomColorSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16668, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16700, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
 };
 export const DISPLAY_NAME_STYLES_GUMMY_CUSTOM_COLOR_SHEET_KEY = "DisplayNameStylesGummyCustomColorSheet";

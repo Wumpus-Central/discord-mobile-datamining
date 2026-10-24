@@ -1,7 +1,7 @@
-// === Module 8777: MediaModalSheetWrapper ===
+// === Module 8779: MediaModalSheetWrapper ===
 
-// Module 8777 (MediaModalSheetWrapper)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5208 */;
+// Module 8779 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
     _require = cResult[1];
     tmp4 = cResult[2];
   }
-  context = noop.useContext(context(5578));
+  context = noop.useContext(context(5580));
   if (cResult[3] !== context) {
     const fn = function f() {
       let transitionState;
@@ -92,16 +92,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = require("c");
   const merged = Object.assign(tmp4);
   obj3.onClose = M;
-  tmp16 = jsx(context(8778), {});
+  tmp16 = jsx(context(8780), {});
   cResult[8] = M;
   cResult[9] = tmp4;
   cResult[10] = tmp16;
-  const tmp8Result = context(8778);
+  const tmp8Result = context(8780);
 }) : (function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
-  context = noop.useContext(context(5578));
+  context = noop.useContext(context(5580));
   const items = [context];
   const effect = noop.useEffect(() => {
     let transitionState;
@@ -122,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.onClose = callback;
-  return jsx(context(8778), {});
+  return jsx(context(8780), {});
 });

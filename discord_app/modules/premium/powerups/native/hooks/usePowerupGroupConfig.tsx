@@ -1,14 +1,14 @@
-// === Module 13431: usePowerupGroupConfig ===
+// === Module 13468: usePowerupGroupConfig ===
 
-// Module 13431 (usePowerupGroupConfig)
+// Module 13468 (usePowerupGroupConfig)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import GuildTagUtils from "GuildTagUtils" /* 8652 */;
-import _modDef13432 from "module_13432" /* 13432 */;
-import _modDef13433 from "module_13433" /* 13433 */;
+import GuildTagUtils from "GuildTagUtils" /* 8654 */;
+import _modDef13469 from "module_13469" /* 13469 */;
+import _modDef13470 from "module_13470" /* 13470 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4843 */;
+import GuildStore from "GuildStore" /* 4845 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       const stringResult = intl.string(_modDef2568.KC9HRW);
       const intl2 = tmp(1128).intl;
       const stringResult1 = intl2.string(_modDef2568.GJiSmP);
-      const obj2 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
+      const obj2 = { staticUrl: _modDef13469, animatedUrl: _modDef13470 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       tmp14 = cResult[7];
     }
     if (cResult[8] !== tmp14) {
-      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: false };
+      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: "IconComponent" };
       cResult[8] = tmp14;
       cResult[9] = obj3;
       let tmp17 = obj3;
@@ -103,12 +103,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: false };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "IconComponent" };
       const intl = util.intl;
       obj2.title = intl.string(_modDef2568.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2568.GJiSmP);
-      const obj3 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
+      const obj3 = { staticUrl: _modDef13469, animatedUrl: _modDef13470 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

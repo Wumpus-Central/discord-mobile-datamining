@@ -1,15 +1,15 @@
-// === Module 12831: AgeVerificationSystemNotificationUtils ===
+// === Module 12868: AgeVerificationSystemNotificationUtils ===
 
-// Module 12831 (AgeVerificationSystemNotificationUtils)
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7926 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11028 */;
-import MessageStore from "MessageStore" /* 6008 */;
+// Module 12868 (AgeVerificationSystemNotificationUtils)
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7928 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11029 */;
+import MessageStore from "MessageStore" /* 6010 */;
 
 require = fn;
 const MessageEmbedTypes = fn(1087).MessageEmbedTypes;
 const obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
 let obj2 = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
-const obj3 = { VERIFIED_ADULT: "verified_adult", VERIFIED_TEEN: "verified_teen", ERROR: "error", FAE_FAILED: "fae_failed", ID_FAILED: "id_failed", UNDERAGE: "underage", MANUAL_REVIEW_SUBMITTED: "manual_review_submitted", TNS_SET_UNCONFIRMED: "tns_set_unconfirmed" };
+const obj3 = { VERIFIED_ADULT: "verified_adult", VERIFIED_TEEN: "verified_teen", ERROR: "error", FAE_FAILED: "fae_failed", ID_FAILED: "id_failed", UNDERAGE: "underage", MANUAL_REVIEW_SUBMITTED: "manual_review_submitted", TNS_SET_UNCONFIRMED: "tns_set_unconfirmed", TNS_SET_UNCONFIRMED_FRAUD: "tns_set_unconfirmed_fraud" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSystemNotificationUtils.tsx");
 
@@ -78,7 +78,15 @@ export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificat
             if (found != null) {
               rawValue = found.rawValue;
             }
-            return rawValue === obj3.TNS_SET_UNCONFIRMED;
+            let tmp5 = rawValue === obj3.TNS_SET_UNCONFIRMED;
+            if (!tmp5) {
+              let rawValue1;
+              if (found != null) {
+                rawValue1 = found.rawValue;
+              }
+              tmp5 = rawValue1 === tmp4.TNS_SET_UNCONFIRMED_FRAUD;
+            }
+            return tmp5;
           }
         }
       }

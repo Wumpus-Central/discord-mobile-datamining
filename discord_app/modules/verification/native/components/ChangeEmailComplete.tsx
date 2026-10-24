@@ -1,14 +1,14 @@
-// === Module 7092: ChangeEmailComplete ===
+// === Module 7094: ChangeEmailComplete ===
 
-// Module 7092 (ChangeEmailComplete)
+// Module 7094 (ChangeEmailComplete)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6919 */;
-import _modDef7002 from "module_7002" /* 7002 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6921 */;
+import _modDef7004 from "module_7004" /* 7004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,10 +18,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(6921).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6923).resetChangeEmailStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj2 = { contentContainer: { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { textAlign: "center" }, body: { textAlign: "center" }, bodyInner: { gap: 2 }, tooltip: null };
 let obj3 = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   email = email.email;
   const tmp4 = closure_8();
   if (cResult[0] !== tmp4.image) {
-    const obj2 = { style: tmp4.image, source: _modDef7002 };
+    const obj2 = { style: tmp4.image, source: _modDef7004 };
     const tmp9 = timestampProducer(FastImageDefault, obj2);
     cResult[0] = tmp4.image;
     cResult[1] = tmp9;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
 }) : (function ChangeEmailComplete(email) {
   const tmp = closure_8();
   const obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  const obj2 = { style: tmp.image, source: _modDef7002 };
+  const obj2 = { style: tmp.image, source: _modDef7004 };
   const items = [timestampProducer(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.bodyInner, children: null };
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

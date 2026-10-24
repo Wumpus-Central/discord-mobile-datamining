@@ -1,8 +1,8 @@
-// === Module 5658: Linking ===
+// === Module 5660: Linking ===
 
-// Module 5658 (Linking)
+// Module 5660 (Linking)
 import _mod17 from "module_17" /* 17 */;
-import handleURL from "handleURL" /* 5655 */;
+import handleURL from "handleURL" /* 5657 */;
 import size from "module_2" /* 2 */;
 
 const Linking = _mod17.Linking;

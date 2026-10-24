@@ -1,8 +1,8 @@
-// === Module 16372: OrbsArcadeRewardUtils ===
+// === Module 16396: OrbsArcadeRewardUtils ===
 
-// Module 16372 (OrbsArcadeRewardUtils)
+// Module 16396 (OrbsArcadeRewardUtils)
 import util from "util" /* 1128 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16367 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16391 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");
@@ -45,9 +45,9 @@ export const getOrbsArcadeFocusedReward = function getOrbsArcadeFocusedReward(re
     return null == claimedAt;
   });
 };
-export const getOrbsArcadeClaimableRewards = function getOrbsArcadeClaimableRewards(arr, arg1) {
-  closure_0 = arg1;
-  const found = arr.filter((item) => {
+export const getOrbsArcadeClaimableRewards = function getOrbsArcadeClaimableRewards(rewards, gameStateForGame) {
+  closure_0 = gameStateForGame;
+  const found = rewards.filter((item) => {
     let tmp2;
     if (closure_0 != null) {
       tmp2 = tmp.rewardGrants[item.id];
@@ -71,8 +71,15 @@ export const hasOrbsArcadeUnlockedRewards = function hasOrbsArcadeUnlockedReward
   const values = Object.values(rewardGrants);
   return values.some((pendingAt) => null != pendingAt.pendingAt);
 };
-export const hasOrbsArcadeUnclaimedRewards = function hasOrbsArcadeUnclaimedRewards(gameState) {
-  const values = Object.values(gameState.rewardGrants);
+export const hasOrbsArcadeUnclaimedRewards = function hasOrbsArcadeUnclaimedRewards(stateFromStores1) {
+  let rewardGrants;
+  if (stateFromStores1 != null) {
+    rewardGrants = stateFromStores1.rewardGrants;
+  }
+  if (rewardGrants == null) {
+    rewardGrants = {};
+  }
+  const values = Object.values(rewardGrants);
   return values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);
 };
 export const isOrbsArcadeEnrollmentOver = function isOrbsArcadeEnrollmentOver(gameStateForGame) {
@@ -84,11 +91,38 @@ export const isOrbsArcadeEnrollmentOver = function isOrbsArcadeEnrollmentOver(ga
     tmp = parsed <= Date.now();
   }
   if (tmp) {
-    const _Object = Object;
-    const values = Object.values(gameStateForGame.rewardGrants);
+    let rewardGrants;
+    if (gameStateForGame != null) {
+      rewardGrants = gameStateForGame.rewardGrants;
+    }
+    if (rewardGrants == null) {
+      rewardGrants = {};
+    }
+    const values = Object.values(rewardGrants);
     tmp = !values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);
   }
   return tmp;
+};
+export const mustClaimOrbsArcadeRewardsToPlay = function mustClaimOrbsArcadeRewardsToPlay(stateFromStores) {
+  let someResult = null != stateFromStores.expiresAt;
+  if (someResult) {
+    const _Date = Date;
+    const _Date2 = Date;
+    const parsed = Date.parse(stateFromStores.expiresAt);
+    someResult = parsed <= Date.now();
+  }
+  if (someResult) {
+    let rewardGrants;
+    if (stateFromStores != null) {
+      rewardGrants = stateFromStores.rewardGrants;
+    }
+    if (rewardGrants == null) {
+      rewardGrants = {};
+    }
+    const values = Object.values(rewardGrants);
+    someResult = values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);
+  }
+  return someResult;
 };
 export const getOrbsArcadeRewardScoreLabel = function getOrbsArcadeRewardScoreLabel(reward, orbsArcadeRewardStatus) {
   const intl = util.intl;

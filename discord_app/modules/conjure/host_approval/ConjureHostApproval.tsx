@@ -1,9 +1,9 @@
-// === Module 10734: ConjureHostApproval ===
+// === Module 10735: ConjureHostApproval ===
 
-// Module 10734 (ConjureHostApproval)
+// Module 10735 (ConjureHostApproval)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10718 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f107758 = (id) => id.id;
+    const f107991 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -79,7 +79,7 @@ let obj = {
     if (value == null) {
       value = closure_4;
     }
-    const f107758 = (id) => id.id;
+    const f107991 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {

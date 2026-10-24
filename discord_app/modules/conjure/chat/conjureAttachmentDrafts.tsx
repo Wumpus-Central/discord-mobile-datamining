@@ -1,10 +1,10 @@
-// === Module 12286: conjureAttachmentDrafts ===
+// === Module 11754: conjureAttachmentDrafts ===
 
-// Module 12286 (conjureAttachmentDrafts)
+// Module 11754 (conjureAttachmentDrafts)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11743 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11744 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11755 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11756 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
@@ -131,10 +131,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10697).sendUserMessage;
+const sendUserMessage = fn(10698).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5161).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5163).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;

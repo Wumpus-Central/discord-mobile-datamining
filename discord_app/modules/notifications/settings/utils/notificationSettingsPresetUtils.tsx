@@ -1,15 +1,15 @@
-// === Module 8297: notificationSettingsPresetUtils ===
+// === Module 8299: notificationSettingsPresetUtils ===
 
-// Module 8297 (notificationSettingsPresetUtils)
+// Module 8299 (notificationSettingsPresetUtils)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import _mod6482 from "module_6482" /* 6482 */;
-import ReadStateConstants from "ReadStateConstants" /* 6703 */;
+import _mod6484 from "module_6484" /* 6484 */;
+import ReadStateConstants from "ReadStateConstants" /* 6705 */;
 import size from "module_2" /* 2 */;
 
 function presetFromSettings(stateFromStores, stateFromStores1) {
   const items = [stateFromStores1, stateFromStores];
-  const match = _mod6482.match(items);
+  const match = _mod6484.match(items);
   const items1 = [UserNotificationSettings.ALL_MESSAGES, UnreadSetting.ALL_MESSAGES];
   const items2 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.UNSET];
   const withResult = match.with(items1, () => constants.ALL_MESSAGES);
@@ -28,17 +28,17 @@ const result = size.fileFinishedImporting("modules/notifications/settings/utils/
 
 export { Presets };
 export { presetFromSettings };
-export const webPresetFromSettings = function webPresetFromSettings(guildUnreadSetting, UserGuildSettingsStore) {
-  if (guildUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-    if (UserGuildSettingsStore === UserNotificationSettings.ONLY_MENTIONS) {
+export const webPresetFromSettings = function webPresetFromSettings(stateFromStores, stateFromStores1) {
+  if (stateFromStores === UnreadSetting.ALL_MESSAGES) {
+    if (stateFromStores1 === UserNotificationSettings.ONLY_MENTIONS) {
       let HYBRID = obj.HYBRID;
     }
     return HYBRID;
   }
-  HYBRID = presetFromSettings(guildUnreadSetting, UserGuildSettingsStore);
+  HYBRID = presetFromSettings(stateFromStores, stateFromStores1);
 };
 export const presetName = function presetName(tmp4Result5) {
-  const match = _mod6482.match(tmp4Result5);
+  const match = _mod6484.match(tmp4Result5);
   const withResult = match.with(obj.ALL_MESSAGES, () => {
     const intl = util.intl;
     return intl.string(util.t.hZrr6k);

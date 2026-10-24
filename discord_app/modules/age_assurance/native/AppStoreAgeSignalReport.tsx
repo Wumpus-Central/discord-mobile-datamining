@@ -1,9 +1,9 @@
-// === Module 8084: AppStoreAgeSignalReport ===
+// === Module 8086: AppStoreAgeSignalReport ===
 
-// Module 8084 (AppStoreAgeSignalReport)
+// Module 8086 (AppStoreAgeSignalReport)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5642 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7929 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5644 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -374,8 +374,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5642).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5642);
+      result = tmp4(5644).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5644);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

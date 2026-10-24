@@ -1,22 +1,22 @@
-// === Module 18718: background_sync/BackgroundSync ===
+// === Module 18750: background_sync/BackgroundSync ===
 
-// Module 18718 (background_sync/BackgroundSync)
+// Module 18750 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
-import modules_Messages from "modules/Messages" /* 7584 */;
-import GuildVersionsDefault from "GuildVersions" /* 7724 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7725 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7727 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4849 */;
+import modules_Messages from "modules/Messages" /* 7586 */;
+import GuildVersionsDefault from "GuildVersions" /* 7726 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7727 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 6769 */;
+import ReadStateStore from "ReadStateStore" /* 6771 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import FileSystemStore from "FileSystemStore" /* 7586 */;
+import FileSystemStore from "FileSystemStore" /* 7588 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -1024,14 +1024,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4825);
+const ChannelRecord = fn(4827);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6764);
-const ChannelStore = fn(4821);
-const EmojiStore = fn(6723);
-const GuildStore = fn(4843);
+const StickersStore = fn(6766);
+const ChannelStore = fn(4823);
+const EmojiStore = fn(6725);
+const GuildStore = fn(4845);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

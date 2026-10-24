@@ -1,8 +1,8 @@
-// === Module 5639: DismissibleContentFrameworkActionCreators ===
+// === Module 5641: DismissibleContentFrameworkActionCreators ===
 
-// Module 5639 (DismissibleContentFrameworkActionCreators)
+// Module 5641 (DismissibleContentFrameworkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4813 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4815 */;
 import size from "module_2" /* 2 */;
 
 const resetFatigueCooldown = DismissibleContentShownStateStore.resetFatigueCooldown;
@@ -13,6 +13,9 @@ export const handleDCShownToUser = function handleDCShownToUser(dismissibleConte
 };
 export const handleDCDismissed = function handleDCDismissed(dismissibleContent, guildId) {
   DispatcherDefault.dispatch({ type: "DCF_HANDLE_DC_DISMISSED", dismissibleContent, guildId });
+};
+export const handleDCActioned = function handleDCActioned(dismissibleContent) {
+  DispatcherDefault.dispatch({ type: "DCF_HANDLE_DC_ACTIONED", dismissibleContent });
 };
 export const resetDismissibleContentFrameworkStore = function resetDismissibleContentFrameworkStore() {
   DispatcherDefault.dispatch({ type: "DCF_RESET" });

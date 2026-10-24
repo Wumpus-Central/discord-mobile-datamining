@@ -1,12 +1,12 @@
-// === Module 9836: DoubleTapEmojiUpdatedToast ===
+// === Module 9837: DoubleTapEmojiUpdatedToast ===
 
-// Module 9836 (DoubleTapEmojiUpdatedToast)
+// Module 9837 (DoubleTapEmojiUpdatedToast)
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5265 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5661 */;
-import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
+import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;

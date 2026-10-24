@@ -1,13 +1,13 @@
-// === Module 17098: UserSettingsDesignSystemButtonGroup ===
+// === Module 17130: UserSettingsDesignSystemButtonGroup ===
 
-// Module 17098 (UserSettingsDesignSystemButtonGroup)
+// Module 17130 (UserSettingsDesignSystemButtonGroup)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5232 */;
-import components_Button_Button from "components/Button/Button" /* 5242 */;
-import Stack_Stack from "Stack/Stack" /* 5975 */;
-import ButtonGroup from "ButtonGroup" /* 6694 */;
-import _modDef7487 from "module_7487" /* 7487 */;
-import IconButton from "IconButton" /* 7957 */;
+import Text_Text from "Text/Text" /* 5234 */;
+import components_Button_Button from "components/Button/Button" /* 5244 */;
+import Stack_Stack from "Stack/Stack" /* 5977 */;
+import ButtonGroup from "ButtonGroup" /* 6696 */;
+import _modDef7489 from "module_7489" /* 7489 */;
+import IconButton from "IconButton" /* 7959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 64 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj7 = {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7487,
+      icon: _modDef7489,
       onPress() {
 
         }
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj11 = {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7487,
+      icon: _modDef7489,
       onPress() {
 
         }
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj17 = {
       accessibilityLabel: "Cancel",
       variant: "secondary",
-      icon: _modDef7487,
+      icon: _modDef7489,
       onPress() {
 
         }
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7487,
+      icon: _modDef7489,
       onPress() {
 
       }
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7487,
+    icon: _modDef7489,
     onPress() {
 
     }
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7487,
+    icon: _modDef7489,
     onPress() {
 
     }
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7487,
+    icon: _modDef7489,
     onPress() {
 
     }
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7487,
+    icon: _modDef7489,
     onPress() {
 
     }

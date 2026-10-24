@@ -1,15 +1,15 @@
-// === Module 16792: TextAndMediaSyncSetting ===
+// === Module 16824: TextAndMediaSyncSetting ===
 
-// Module 16792 (TextAndMediaSyncSetting)
+// Module 16824 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5866 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5868 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11204);
+const SettingBuilders = fn(11205);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTextAndMediaSyncSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8330).MobileUserSettings.CHAT,
+  parent: fn(8332).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useTextAndMediaSyncSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

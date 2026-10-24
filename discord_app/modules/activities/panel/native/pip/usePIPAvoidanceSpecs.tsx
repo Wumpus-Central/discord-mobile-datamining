@@ -1,10 +1,10 @@
-// === Module 18415: pip/usePIPAvoidanceSpecs ===
+// === Module 18447: pip/usePIPAvoidanceSpecs ===
 
-// Module 18415 (pip/usePIPAvoidanceSpecs)
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9975 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10900 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 18334 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 18417 */;
+// Module 18447 (pip/usePIPAvoidanceSpecs)
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9976 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10901 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 18366 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 18449 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,9 +19,9 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/pip/u
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(11834)();
+  const tmp2 = sharedValue(11860)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(18416)();
+  const tmp3 = sharedValue(18448)();
   __initData = tmp3;
   let obj = require("ReanimatedRexport");
   const fn = function c() {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPAv
     tmp = safeAreaState2;
   };
   let obj2 = require("ReanimatedRexport");
-  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(18334), getAdjustedBottomOffsets: sharedValue(18417), updateSharedValueIfChanged: sharedValue(10900), pipAvoidanceSpecs: sharedValue };
+  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(18366), getAdjustedBottomOffsets: sharedValue(18449), updateSharedValueIfChanged: sharedValue(10901), pipAvoidanceSpecs: sharedValue };
   fn2.__workletHash = 9489549686165;
   fn2.__initData = __initData2;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPAv
 }) : (function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(11834)();
+  const tmp2 = sharedValue(11860)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(18416)();
+  const tmp3 = sharedValue(18448)();
   closure_3 = tmp3;
   let obj = require("ReanimatedRexport");
   const fn = function c() {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPAv
     tmp = safeAreaState2;
   };
   let obj2 = require("ReanimatedRexport");
-  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(18334), getAdjustedBottomOffsets: sharedValue(18417), updateSharedValueIfChanged: sharedValue(10900), pipAvoidanceSpecs: sharedValue };
+  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(18366), getAdjustedBottomOffsets: sharedValue(18449), updateSharedValueIfChanged: sharedValue(10901), pipAvoidanceSpecs: sharedValue };
   fn2.__workletHash = 10685434620469;
   fn2.__initData = __initData4;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);

@@ -1,18 +1,18 @@
-// === Module 13320: ChatInputGuardReturnToGameProfile ===
+// === Module 13357: ChatInputGuardReturnToGameProfile ===
 
-// Module 13320 (ChatInputGuardReturnToGameProfile)
+// Module 13357 (ChatInputGuardReturnToGameProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5667 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 10749 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13314 */;
+import FastImageDefault from "FastImage" /* 5669 */;
+import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 10750 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4969);
+const createStyles = fn(4971);
 let obj = { icon: null };
 let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 obj.icon = size;
