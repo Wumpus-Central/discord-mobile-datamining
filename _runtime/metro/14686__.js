@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300.5,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108,
   scales: [2, 3],
-  hash: "767971903774f3e283939a2d77b5c958",
-  name: "server_boosts",
+  hash: "fdbdffcc03357c67352ab2f9dff83bf6",
+  name: "img_what_you_lose_profile_tier1_light",
   type: "png",
 });

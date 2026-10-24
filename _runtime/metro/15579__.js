@@ -1,11 +1,42 @@
 // _runtime/metro/15579__.js
-import _mod15527 from "15527__.js";
-import _mod15536 from "15536__.js";
-import all from "15546__.js";
+import _mod15544 from "15544__.js";
+import _mod15566 from "15566__.js";
 
-let closure_0 = _mod15527(Function.toString);
-if (!all(_mod15536.inspectSource)) {
-  _mod15536.inspectSource = (arg0) => closure_0(arg0);
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15566(arg1)) {
+          tmp11Result = _mod15544;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
+      }
+    }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 }
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
 
-export default _mod15536.inspectSource;
+export default isForced;

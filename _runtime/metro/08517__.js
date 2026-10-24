@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9ca1aab40b1d1dec8d5caf0688317d98",
-  name: "TextSpoilerIcon",
+  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
+  name: "StageLockIcon",
   type: "png",
 });

@@ -164,9 +164,9 @@ function createProgressTransitionRegister() {
         map.delete(arg0);
       }
     },
-    onTransitionStart(arg0, arg1) {
+    onTransitionStart(arg0, value) {
       c4 = c5;
-      const result = map1.set(arg0, arg1);
+      const result = map1.set(arg0, value);
       set.add(arg0);
       obj.frame(0);
     },
@@ -289,9 +289,9 @@ if (module_1661.shouldBeUseWeb()) {
             map.delete(arg0);
           }
         },
-        onTransitionStart(arg0, arg1) {
+        onTransitionStart(arg0, value) {
           c4 = c5;
-          const result = map1.set(arg0, arg1);
+          const result = map1.set(arg0, value);
           set.add(arg0);
           obj.frame(0);
         },

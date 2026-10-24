@@ -1,7 +1,6 @@
 // _runtime/metro/04553__.js
-import _typeof_mod from "04554__.js";
-import module_4434_mod from "04434__.js";
-import requiredArgs_mod from "../04253_requiredArgs.js";
+import _typeof_mod from "04254__.js";
+import requiredArgs_mod from "../04255_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -11,25 +10,17 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4434 = module_4434_mod;
-if (!module_4434) {
-  const obj2 = { default: module_4434 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4434;
-}
-module_4434 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_4434.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function isFriday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 5 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

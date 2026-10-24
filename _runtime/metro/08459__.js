@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d1dac949a0f852ec9c729a240d5758b0",
-  name: "MusicIcon",
+  hash: "8f1bbba7f556b427515687c5a1498793",
+  name: "TrophyIcon",
   type: "png",
 });

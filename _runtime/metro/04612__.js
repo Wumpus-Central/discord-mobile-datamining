@@ -1,6 +1,6 @@
 // _runtime/metro/04612__.js
 import module_4604_mod from "04604__.js";
-import requiredArgs_mod from "../04253_requiredArgs.js";
+import requiredArgs_mod from "../04255_requiredArgs.js";
 
 let module_4604 = module_4604_mod;
 if (!module_4604) {
@@ -19,7 +19,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
+export default function isThisMinute(arg0) {
   requiredArgs.default(1, arguments);
   return module_4604.default(Date.now(), arg0);
 };

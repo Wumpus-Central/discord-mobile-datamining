@@ -1,18 +1,28 @@
 // _runtime/metro/12649__.js
+import eventFromMessage from "../12633_eventFromMessage.js";
+import _mod12650 from "12650__.js";
+import setupIntegration from "12629__.js";
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
-    } else {
-      str = "warning";
-    }
-    tmp = str;
+export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  return tmp;
-};
+  closure_0 = obj.limit || 5;
+  closure_1 = obj.key || "cause";
+  return {
+    name: "LinkedErrors",
+    preprocessEvent(exception, originalException, getOptions) {
+      const options = getOptions.getOptions();
+      const result = _mod12650.applyAggregateErrorsToEvent(
+        eventFromMessage.exceptionFromError,
+        options.stackParser,
+        options.maxValueLength,
+        closure_1,
+        closure_0,
+        exception,
+        originalException,
+      );
+    },
+  };
+});

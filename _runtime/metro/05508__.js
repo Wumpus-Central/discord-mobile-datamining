@@ -1,11 +1,9 @@
 // _runtime/metro/05508__.js
-import _mod5509 from "05509__.js";
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod5509(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
+export default function _classCallCheck(arg0, arg1) {
+  if (!(arg0 instanceof arg1)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Cannot call a class as a function");
+    throw typeError;
   }
-  return text;
 }

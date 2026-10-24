@@ -1,50 +1,190 @@
 // _runtime/metro/12581__.js
-import _mod12539 from "12539__.js";
-import spanTimeInputToSeconds from "../12544_spanTimeInputToSeconds.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../12554_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
-import _mod12567 from "12567__.js";
+import _mod12574 from "12574__.js";
+import _mod12580 from "12580__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod12567.DEBUG_BUILD) {
-      const logger = _mod12539.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+function _htmlElementAsString(tagName, arr) {
+  let items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod12574.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
+            }
+          }
+        }
+      }
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
+      }
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + '="' + item[1] + '"]');
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = '="';
+            let str10 = '"]';
+            let arr2 = items.push("[" + tmp22 + '="' + tmp24 + '"]');
+          }
+          continue;
+        }
+        return items.join("");
+      }
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr7 = items.push("." + tmp14);
+            continue;
+          }
+        }
+        tmpResult = _mod12580;
+      }
     }
-    const obj2 = {};
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
+  }
+  return "";
+}
+
+export const getComponentName = function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod12574.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
   }
 };
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
+export const getDomElement = function getDomElement(arg0) {
+  let element = null;
+  if (_mod12574.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod12574.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod12574.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
     }
+  }
+  return element;
+};
+export const getLocationHref = function getLocationHref() {
+  try {
+    return _mod12574.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
+    return "";
+  }
+};
+export const htmlTreeAsString = function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      const items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
+    }
+  } else {
+    return "<unknown>";
   }
 };

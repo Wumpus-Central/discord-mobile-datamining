@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4ff7b09e67486edcd0ad75a5131670be",
-  name: "CirclePlayIcon-primary",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CirclePlayIcon-secondary",
   type: "png",
 });

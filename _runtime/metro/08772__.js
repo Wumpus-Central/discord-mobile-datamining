@@ -1,43 +1,37 @@
 // _runtime/metro/08772__.js
+import processColor from "../00050_processColor.js";
 import get_ActivityIndicator from "00017__.js";
+import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-const obj = {
-  stepNumber: { marginTop: 20, alignItems: "center", position: "absolute" },
-  sliderMainContainer: { zIndex: 1, width: "100%" },
-  defaultSlideriOS: { height: 40 },
-  defaultSlider: {},
-  stepsIndicator: null,
-  trackMarkContainer: null,
-  thumbImageContainer: null,
-  thumbImage: null,
-  stepIndicatorElement: null,
-  defaultIndicatorMarked: null,
-  defaultIndicatorIdle: null,
-};
-let num = 0;
-if ("ios" === get_ActivityIndicator.Platform.OS) {
-  num = 10;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
 }
-obj.stepsIndicator = { flex: 1, flexDirection: "row", justifyContent: "space-between", top: num, zIndex: 2 };
-obj.trackMarkContainer = {
-  alignItems: "center",
-  alignContent: "center",
-  alignSelf: "center",
-  justifyContent: "center",
-  position: "absolute",
-  zIndex: 3,
-};
-obj.thumbImageContainer = {
-  position: "absolute",
-  zIndex: 3,
-  justifyContent: "center",
-  alignItems: "center",
-  alignContent: "center",
-};
-obj.thumbImage = { alignContent: "center", alignItems: "center", position: "absolute" };
-obj.stepIndicatorElement = { alignItems: "center", alignContent: "center" };
-obj.defaultIndicatorMarked = { height: 20, width: 5, backgroundColor: "#CCCCCC" };
-obj.defaultIndicatorIdle = { height: 10, width: 2, backgroundColor: "#C0C0C0" };
+const obj3 = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: { process: resolveAssetSource }, maximumTrackTintColor: { process: processColor.default }, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, thumbSize: true, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.minimumTrackImage = { process: resolveAssetSource };
+const obj2 = { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } };
+const obj4 = { process: processColor.default };
+obj3.minimumTrackTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.thumbImage = { process: resolveAssetSource };
+const obj5 = { process: processColor.default };
+obj3.thumbTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.trackImage = { process: resolveAssetSource };
+__INTERNAL_VIEW_CONFIG.validAttributes = Object.assign(obj3, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 
-export const styles = StyleSheet.create(obj);
+export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNCSlider", () => obj);

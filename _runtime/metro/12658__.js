@@ -1,89 +1,68 @@
 // _runtime/metro/12658__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod12600 from "12600__.js";
+import _mod12660 from "12660__.js";
+import setupIntegration from "12629__.js";
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-}
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
+  return {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod12600.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod12660.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod12660;
+            _mod12600.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(12621).captureException(found, obj2);
+                  const tmp14Result = args(12621);
+                } else {
+                  const tmp14Result2 = args(12582);
+                  const safeJoinResult = args(12582).safeJoin(args, " ");
+                  args(12621).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(12621);
+                }
+              } else if (!args[0]) {
+                const obj = args(12582);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(12582).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(12621);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(12582).safeJoin(args.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = _mod12600;
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
     },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
-];
-
-export const LRUMap = _createClass(LRUMap, items);
+  };
+});

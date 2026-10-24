@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "50acfdf084b8dccbfa3fd235ea0ab8ff",
-  name: "PauseIcon",
+  hash: "1a98a09be102b24c083fe11e00ab3c2d",
+  name: "PlayIcon",
   type: "png",
 });

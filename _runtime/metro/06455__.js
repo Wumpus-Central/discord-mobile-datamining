@@ -1,14 +1,18 @@
 // _runtime/metro/06455__.js
-import _mod6387 from "06387__.js";
+import _mod1307 from "01307__.js";
+import _mod6403 from "06403__.js";
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod6387(arg0);
+let closure_2 = _mod1307("%Object.isExtensible%", true);
+
+export default _mod1307("%Object.preventExtensions%", true)
+  ? function IsExtensible(arg0) {
+      const tmp = _mod6403(arg0);
+      let tmp2 = !tmp;
+      if (!tmp) {
+        tmp2 = closure_2(arg0);
+      }
+      return tmp2;
     }
-    str = str2;
-  }
-  return str;
-}
+  : function IsExtensible(arg0) {
+      return !_mod6403(arg0);
+    };

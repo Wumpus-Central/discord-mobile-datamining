@@ -1,17 +1,25 @@
 // _runtime/metro/15547__.js
-import _mod15538 from "15538__.js";
-import _mod15546 from "15546__.js";
-import _mod15548 from "15548__.js";
-import _mod15549 from "15549__.js";
+import module_15548_mod from "15548__.js";
 
-export default _mod15538
-  ? (arg0) => typeof arg0 === "symbol"
-  : (arg0) => {
-      const tmp3 = _mod15548("Symbol");
-      let tmpResultResult = _mod15546(tmp3);
-      if (tmpResultResult) {
-        tmpResultResult = _mod15549(tmp3.prototype, Object(arg0));
-        const tmpResult = _mod15549;
+const call = prototype.call;
+let module_15548 = module_15548_mod;
+if (module_15548) {
+  const bind = prototype.bind;
+  module_15548 = bind.bind(call, call);
+}
+if (!module_15548) {
+  module_15548 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
       }
-      return tmpResultResult;
+      return applyArgumentsResult;
     };
+  };
+}
+
+export default module_15548;

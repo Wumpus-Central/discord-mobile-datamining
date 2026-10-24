@@ -1,12 +1,11 @@
 // _runtime/metro/08026__.js
-import _modDef7999 from "07999__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeTurbulence = arg1;
+const FeSpotLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +24,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTurbulence {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
+    tmp = c2(this, FeSpotLight);
     tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
+    obj = closure_4(FeSpotLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,18 +44,17 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef7999);
+_inherits(FeSpotLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(7976).warnUnimplementedFilter();
+    const result = FeSpotLight(7978).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

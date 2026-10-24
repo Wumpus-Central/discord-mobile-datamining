@@ -1,12 +1,12 @@
 // _runtime/metro/08025__.js
-import _modDef7999 from "07999__.js";
+import _modDef8001 from "08001__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeTile = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTile {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef7999);
+_inherits(FeSpecularLighting, _modDef8001);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(7976).warnUnimplementedFilter();
+    const result = FeSpecularLighting(7978).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

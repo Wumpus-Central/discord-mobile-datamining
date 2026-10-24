@@ -1,67 +1,49 @@
 // _runtime/metro/15655__.js
-import get_ActivityIndicator from "00017__.js";
 
-function getDevMenu() {}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
+export default (arg0) => {
+  let map = arg0;
+  if (!arg0) {
+    const _Map = Map;
+    map = new Map();
+  }
+  return {
+    all: map,
+    on(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
+      }
+    },
+    off(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        if (arg1) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
         } else {
-          throw new TypeError("Trying to call a non-function");
+          const result = map.set(arg0, []);
         }
       }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+    },
+    emit(arg0, arg1) {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
       }
-    }
-  },
-});
+      value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
+      }
+    },
+  };
+};

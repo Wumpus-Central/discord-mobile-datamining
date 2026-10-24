@@ -3,9 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/intl/messages",
-  scales: [1],
-  hash: "7744f404dfbb6c28fd6b6e2cf3cc40be",
-  name: "llm-pilot.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "7730e55139737e3f08bf4e9540ae6591",
+  name: "StatusOffline",
+  type: "png",
 });

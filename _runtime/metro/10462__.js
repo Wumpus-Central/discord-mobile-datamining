@@ -1,22 +1,19 @@
 // _runtime/metro/10462__.js
+import _mod19 from "00019__.js";
+import _modDef10463 from "10463__.js";
 
-export default function areHookInputsEqual(arg0, arg1) {
-  if (arg0.length !== arg1.length) {
-    return false;
-  } else {
-    if (0 < arg1.length) {
-      let num3 = 0;
-      if (0 < arg0.length) {
-        const _Object = Object;
-        while (Object.is(arg0[num3], arg1[num3])) {
-          let sum = num3 + 1;
-          if (sum < arg1.length) {
-            num3 = sum;
-          }
-        }
-        return false;
-      }
-    }
-    return true;
+const useRef = _mod19.useRef;
+let closure_3 = [];
+
+export default function useStableMemo(cResult, cResult2) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  } else if (!_modDef10463(cResult2, tmp2.current)) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
   }
+  return tmp.current;
 }

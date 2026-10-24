@@ -1,42 +1,32 @@
 // _runtime/metro/15559__.js
-import _mod15524 from "15524__.js";
-import _mod15546 from "15546__.js";
+import _mod15540 from "15540__.js";
+import _mod15544 from "15544__.js";
+import _mod15560 from "15560__.js";
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod15546(arg1)) {
-          tmp11Result = _mod15524;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-      }
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod15544(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod15540.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
     }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod15560;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod15560 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
 }
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
-};
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
 
-export default isForced;
+export default prop;

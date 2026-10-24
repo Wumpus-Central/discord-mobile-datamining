@@ -1034,8 +1034,8 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
     }
   }
 }
-function batchedUpdatesImpl(fn, arg1) {
-  return fn(arg1);
+function batchedUpdatesImpl(fn, value) {
+  return fn(value);
 }
 function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   if (isPropagationStopped) {
@@ -16539,10 +16539,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      { status: "pending", value: "Array", then: false }.then = function then(arg0) {
+      { status: "pending", value: "Array", then: true }.then = function then(arg0) {
         items.push(arg0);
       };
-      obj2 = { status: "pending", value: "Array", then: false };
+      obj2 = { status: "pending", value: "Array", then: true };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
@@ -16783,16 +16783,16 @@ let closure_210 = {
     mountWorkInProgressHook().memoizedState = items;
     return tmp5;
   },
-  useReducer(lastRenderedReducer, arg1, fn) {
+  useReducer(lastRenderedReducer, value, fn) {
     const tmp3 = mountWorkInProgressHook();
-    let tmp4 = arg1;
+    let tmp4 = value;
     if (undefined !== fn) {
-      const tmp5 = fn(arg1);
+      const tmp5 = fn(value);
       tmp4 = tmp5;
       if (c170) {
         setIsStrictModeForDevtools(true);
         try {
-          fn(arg1);
+          fn(value);
           setIsStrictModeForDevtools(false);
           tmp4 = tmp5;
         } catch (tmp12) {
@@ -17712,7 +17712,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
-  batchedUpdatesImpl = function batchedUpdatesImpl(fn, arg1) {
+  batchedUpdatesImpl = function batchedUpdatesImpl(fn, value) {
     closure_277 = closure_277 | 1;
     try {
       closure_277 = tmp2;
@@ -17720,7 +17720,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
         closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
       }
-      return fn(arg1);
+      return fn(value);
     } catch (tmp10) {
       closure_277 = tmp;
       if (0 === tmp) {

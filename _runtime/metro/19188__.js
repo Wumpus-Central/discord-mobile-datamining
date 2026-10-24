@@ -1,13 +1,4 @@
 // _runtime/metro/19188__.js
-import registerAsset from "01134__.js";
+import _mod19189 from "19189__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 87,
-  height: 61.5,
-  scales: [2, 3],
-  hash: "d8d9b21fdc821b420337e07a880866f5",
-  name: "asset_role_subscription_exclusive_perks",
-  type: "png",
-});
+export default _mod19189("toUpperCase");

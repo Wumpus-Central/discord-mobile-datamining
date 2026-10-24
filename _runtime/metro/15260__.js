@@ -1,40 +1,11 @@
 // _runtime/metro/15260__.js
-import _mod518 from "00518__.js";
-import baseKeys from "../00544_baseKeys.js";
-import _mod545 from "00545__.js";
-import _mod645 from "00645__.js";
+import registerAsset from "01134__.js";
 
-export default function isEmpty(size) {
-  if (null == size) {
-    return true;
-  } else {
-    if (_mod518(size)) {
-      return !size.length;
-    }
-    const tmp = _mod645(size);
-    if ("[object Map]" != tmp) {
-      if ("[object Set]" != tmp) {
-        if (_mod545(size)) {
-          return !baseKeys(size).length;
-        } else {
-          for (const key10021 in arg0) {
-            let call = hasOwnProperty.call;
-            if (typeof call === "unknown") {
-              let callResult = hasOwnProperty(key10021);
-            } else {
-              callResult = call(arg0, key10021);
-            }
-            if (!callResult) {
-              continue;
-            } else {
-              let flag = false;
-              return false;
-            }
-          }
-          return true;
-        }
-      }
-    }
-    return !size.size;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "3b38f8bf8ac6605b344df2f05c37673a",
+  name: "NitroGem9",
+  type: "lottie",
+});

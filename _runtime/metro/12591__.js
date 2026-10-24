@@ -1,72 +1,28 @@
 // _runtime/metro/12591__.js
-const require = arg1;
-const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  _sentryDebugIds = require("12540__.js").GLOBAL_OBJ._sentryDebugIds;
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
-      return reduced;
-    }
-    reduced = keys.reduce((acc, item) => {
-      let filename;
-      let tmp = obj;
-      if (!obj) {
-        obj = {};
-        tmp = obj;
-      }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
-      } else {
-        const arr = closure_0(item);
-        let diff = arr.length - 1;
-        if (0 <= diff) {
-          while (true) {
-            let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
-                break;
-              }
-            }
-            diff = diff - 1;
-          }
-          acc[filename] = tmp8;
-          const items = [filename, tmp8];
-          obj[item] = items;
-        }
-      }
-      return acc;
-    }, {});
-  } else {
-    return {};
-  }
-}
+import _mod12574 from "12574__.js";
+import _mod12575 from "12575__.js";
 
-export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
-        let arr = items.push(obj);
-      }
-      continue;
-    }
-    return items;
-  } else {
-    return items;
-  }
+require = arg1;
+const dependencyMap = arg6;
+
+export const getMainCarrier = function getMainCarrier() {
+  const GLOBAL_OBJ = _mod12574.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod12575.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod12575.SDK_VERSION;
+  tmp3[_mod12575.SDK_VERSION] = tmp3[_mod12575.SDK_VERSION] || {};
+  return _mod12574.GLOBAL_OBJ;
 };
-export { getFilenameToDebugIdMap };
+export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod12575.SDK_VERSION;
+  }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod12575.SDK_VERSION] || {};
+  tmp[_mod12575.SDK_VERSION] = tmp4;
+  return tmp4;
+};

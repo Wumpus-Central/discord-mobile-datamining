@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 12,
-  height: 12,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "78a34aca822219efd275dbb2e470061d",
-  name: "ic_closed_lock",
+  hash: "cf48a47923589f64877ce012e03ba342",
+  name: "SettingsInfoIcon",
   type: "png",
 });

@@ -1,15 +1,8 @@
 // _runtime/metro/04886__.js
-import noop from "00019__.js";
+const require = globalThis.__r;
 
-export const useShallow = function useShallow(cResult) {
-  noop.useRef(undefined);
-  return (arg0) => {
-    let current = cResult(arg0);
-    if (obj.shallow(ref.current, current)) {
-      current = ref.current;
-    } else {
-      ref.current = current;
-    }
-    return current;
-  };
-};
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shallow = require("04887__.js").shallow;
+export const useShallow = require("04888__.js").useShallow;

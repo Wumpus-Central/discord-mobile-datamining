@@ -1,26 +1,27 @@
 // _runtime/metro/08872__.js
-import _mod518 from "00518__.js";
-import _mod521 from "00521__.js";
-import _mod543 from "00543__.js";
-import eq from "../00627_eq.js";
+import baseFlatten from "../05795_baseFlatten.js";
+import baseRest from "../08873_baseRest.js";
+import _mod8874 from "08874__.js";
+import baseOrderBy from "../08875_baseOrderBy.js";
 
-export default function isIterateeCall(arg0, num, arg2) {
-  if (_mod521(arg2)) {
-    if (typeof num === "number") {
-      let tmp5 = _mod518(arg2) && _mod543(num, arg2.length);
-      const tmp4 = _mod518(arg2) && _mod543(num, arg2.length);
-    } else {
-      tmp5 = typeof num === "string";
-      if (typeof num === "string") {
-        tmp5 = num in arg2;
-      }
-    }
-    let tmp6 = tmp5;
-    if (tmp6) {
-      tmp6 = eq(arg2[num], arg0);
-    }
-    return tmp6;
+export default baseRest((arg0, arg1) => {
+  if (null == arg0) {
+    return [];
   } else {
-    return false;
+    if (arg1.length > 1) {
+      if (_mod8874(arg0, arg1[0], arg1[1])) {
+        let items = [];
+      }
+      return baseOrderBy(arg0, baseFlatten(items, 1), []);
+    }
+    let tmp3 = length > 2;
+    if (tmp3) {
+      tmp3 = _mod8874(arg1[0], arg1[1], arg1[2]);
+    }
+    items = arg1;
+    if (tmp3) {
+      const items1 = [arg1[0]];
+      items = items1;
+    }
   }
-}
+});

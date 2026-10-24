@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "348e12a01e4923ab4918827c81373de7",
-  name: "BellIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "a340f3b58cfcad04aa087b4d005eb5bd",
+  name: "ic_archived_thread_embed_16px",
   type: "png",
 });

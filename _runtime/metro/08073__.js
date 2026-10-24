@@ -1,13 +1,8 @@
 // _runtime/metro/08073__.js
-import registerAsset from "01134__.js";
+import _mod26 from "00026__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f008a1e156929bb73f7856d4125be1de",
-  name: "UnknownGameIcon",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGSvgView", validAttributes: { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: _mod26.colorAttribute, pointerEvents: true, hitSlop: true } };
+
+export default module_65.get("RNSVGSvgView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

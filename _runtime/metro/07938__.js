@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f6beefc7c46ba35914164c9b6ddbe0f6",
-  name: "GoogleNeutralIcon",
+  hash: "48354bca4647923912a0392de88da6fa",
+  name: "IdCardIcon",
   type: "png",
 });

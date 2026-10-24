@@ -1,9 +1,4 @@
 // _runtime/metro/07912__.js
-import _modDef7913 from "07913__.js";
+import _mod17 from "00017__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default function getWebViewProxy(iframeId) {
-  return new _modDef7913(iframeId);
-}
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

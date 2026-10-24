@@ -1,13 +1,28 @@
 // _runtime/metro/19189__.js
-import registerAsset from "01134__.js";
+import _mod637 from "00637__.js";
+import _mod19190 from "19190__.js";
+import stringToArray from "../19191_stringToArray.js";
+import castSlice from "../19194_castSlice.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 71,
-  height: 54,
-  scales: [2, 3],
-  hash: "9e37ee2a11d88922a3b56da1b883c062",
-  name: "asset_role_subscription_megaphone",
-  type: "png",
-});
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod637(arg0);
+    let tmp3;
+    if (_mod19190(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+}

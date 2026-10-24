@@ -1,4 +1,13 @@
 // _runtime/metro/15589__.js
-import _mod17 from "00017__.js";
+import _mod15590 from "15590__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod15590(tmp);
+    }
+  }
+  return num;
+};

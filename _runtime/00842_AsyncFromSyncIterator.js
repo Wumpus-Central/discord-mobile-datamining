@@ -301,8 +301,8 @@ let closure_8 = async function _instrumentStream(arg0) {
                 responseModel: "",
                 responseTimestamp: 0,
                 promptTokens: "r",
-                completionTokens: "unicodeVersion",
-                totalTokens: "next",
+                completionTokens: "__packager_asset",
+                totalTokens: "Path",
                 chatCompletionToolCalls: {},
                 responsesApiToolCalls: [],
               };

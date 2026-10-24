@@ -1,19 +1,53 @@
 // _runtime/metro/15526__.js
-import _mod15524 from "15524__.js";
-import _mod15527 from "15527__.js";
-import _mod15529 from "15529__.js";
+import _mod15443 from "15443__.js";
+import currencies2 from "../15527_currencies.js";
 
-let fn = Object;
-let closure_3 = _mod15527("".split);
-if (_mod15524(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod15529(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
+require = arg1;
+const dependencyMap = arg6;
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
+  }
+  try {
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod15443.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
+      }
     }
-    return tmp2;
-  };
+    return false;
+  } catch (err) {}
 }
 
-export default fn;
+export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
+  const items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
+        }
+      }
+    }
+  }
+  return items;
+};

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/polls/native/images",
-  width: 138,
-  height: 130,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 128,
+  height: 128,
   scales: [2, 3],
-  hash: "2b9e354438218d1560976bef68047eb2",
-  name: "load-issue-dark",
+  hash: "153e24032a5a8790888aef41caaf4b2c",
+  name: "app_dock_not_found_dark",
   type: "png",
 });

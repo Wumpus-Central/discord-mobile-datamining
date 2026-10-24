@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b04e363869889767a126da0fcdcaf9c8",
-  name: "AppleNeutralIcon",
+  hash: "f6beefc7c46ba35914164c9b6ddbe0f6",
+  name: "GoogleNeutralIcon",
   type: "png",
 });

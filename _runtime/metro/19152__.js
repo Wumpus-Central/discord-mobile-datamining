@@ -1,15 +1,13 @@
 // _runtime/metro/19152__.js
-import arrayReduce from "../05805_arrayReduce.js";
-import words from "../19153_words.js";
-import deburr from "../19157_deburr.js";
+import registerAsset from "01134__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
+  scales: [2, 3],
+  hash: "3c95b7ec7d2eb4c8fde35f37e918dd98",
+  name: "img_bans_empty_light",
+  type: "png",
+});

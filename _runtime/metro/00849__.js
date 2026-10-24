@@ -265,8 +265,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 responseModel: "",
                 promptTokens: "r",
                 completionTokens: "__initData",
-                cacheCreationInputTokens: "toCharArray$esjava$1",
-                cacheReadInputTokens: "toCharArray$esjava$1",
+                cacheCreationInputTokens: "formatToPlainString",
+                cacheReadInputTokens: "sa",
                 toolCalls: [],
                 activeToolBlocks: {},
               };
@@ -1174,8 +1174,8 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     responseModel: "",
     promptTokens: "r",
     completionTokens: "__initData",
-    cacheCreationInputTokens: "toCharArray$esjava$1",
-    cacheReadInputTokens: "toCharArray$esjava$1",
+    cacheCreationInputTokens: "formatToPlainString",
+    cacheReadInputTokens: "sa",
     toolCalls: [],
     activeToolBlocks: {},
   };

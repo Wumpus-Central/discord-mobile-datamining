@@ -1,128 +1,235 @@
 // _runtime/metro/12593__.js
-import _mod12586 from "12586__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(
-  protocol,
-  tunnel,
-  name,
-) {
-  let combined1 = tunnel;
-  if (!tunnel) {
-    let str2 = "";
-    if (protocol.protocol) {
-      const _HermesInternal = HermesInternal;
-      str2 = "" + protocol.protocol + ":";
-    }
-    let str4 = "";
-    if (protocol.port) {
-      const _HermesInternal2 = HermesInternal;
-      str4 = ":" + protocol.port;
-    }
-    const host = protocol.host;
-    let str6 = "";
-    if (protocol.path) {
-      const _HermesInternal3 = HermesInternal;
-      str6 = "/" + protocol.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const obj = { sentry_version: "7" };
-    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
-    if (protocol.publicKey) {
-      obj.sentry_key = protocol.publicKey;
-    }
-    if (name) {
-      const _HermesInternal6 = HermesInternal;
-      obj.sentry_client = "" + name.name + "/" + name.version;
-    }
-    const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
-    const _HermesInternal7 = HermesInternal;
-    combined1 = "" + combined + "?" + str13.toString();
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+  const obj = AsyncContextStack(12591);
+  const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12599);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12599);
   }
-  return combined1;
-};
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
-  const url = _mod12586.makeDsn(protocol);
-  if (url) {
-    let str = "";
-    if (url.protocol) {
-      const _HermesInternal = HermesInternal;
-      str = "" + url.protocol + ":";
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
+}
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+  const obj = AsyncContextStack(12591);
+  const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12599);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12599);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+  const obj = AsyncContextStack(12591);
+  const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12599).getDefaultCurrentScope();
+    const tmpResult = tmp(12599);
+    stack = new closure_3(defaultCurrentScope, tmp(12599).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12599);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+    const obj = AsyncContextStack(12591);
+    const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+      const tmp2Result = AsyncContextStack(12599);
+      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+      const tmp2Result2 = AsyncContextStack(12599);
     }
-    let str3 = "";
-    if (url.port) {
-      const _HermesInternal2 = HermesInternal;
-      str3 = ":" + url.port;
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
     }
-    const host = url.host;
-    let str5 = "";
-    if (url.path) {
-      const _HermesInternal3 = HermesInternal;
-      str5 = "/" + url.path;
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
     }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
-    const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod12586.dsnToString(url);
-    let tmp16 = combined1;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp16 = combined1;
-      while (keys[tmp] !== undefined) {
-        if ("dsn" === tmp19) {
-          continue;
-        } else {
-          combined1 = tmp18;
-          if ("onClose" === tmp19) {
-            continue;
-          } else {
-            if ("user" === tmp19) {
-              user = user.user;
-              combined1 = tmp18;
-              if (!user) {
-                continue;
-              } else {
-                let sum = tmp18;
-                if (user.name) {
-                  let _encodeURIComponent3 = encodeURIComponent;
-                  let _HermesInternal8 = HermesInternal;
-                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
-                }
-                combined1 = sum;
-                if (!user.email) {
-                  continue;
-                } else {
-                  let _encodeURIComponent4 = encodeURIComponent;
-                  let _HermesInternal9 = HermesInternal;
-                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let _encodeURIComponent = encodeURIComponent;
-              let _encodeURIComponent2 = encodeURIComponent;
-              let encodeURIComponentResult = encodeURIComponent(tmp19);
-              let _HermesInternal7 = HermesInternal;
-              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
-              continue;
-            }
-            continue;
-          }
-          continue;
-        }
-        continue;
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
+  }
+}
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then(
+          (result) => {
+            self._popScope();
+            return result;
+          },
+          (arg0) => {
+            self._popScope();
+            throw arg0;
+          },
+        );
+      } else {
+        self._popScope();
+        nextPromise = promise;
       }
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
     }
-    const _HermesInternal10 = HermesInternal;
-    return "" + combined + "?" + tmp16;
-  } else {
-    return "";
-  }
+  },
 };
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
+    },
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
+    },
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
+    },
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    },
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    },
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    },
+  },
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12591).getMainCarrier();
+      let obj = closure_0(12591);
+      let sentryCarrier = closure_0(12591).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let defaultCurrentScope = tmp(12599).getDefaultCurrentScope();
+        const tmpResult = tmp(12599);
+        stack = new closure_3(defaultCurrentScope, tmp(12599).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12599);
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+        const obj = AsyncContextStack(12591);
+        const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+          const tmp2Result = AsyncContextStack(12599);
+          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+          const tmp2Result2 = AsyncContextStack(12599);
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+      const obj = AsyncContextStack(12591);
+      const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12599);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12599);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12591).getMainCarrier();
+      const obj = AsyncContextStack(12591);
+      const sentryCarrier = AsyncContextStack(12591).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12599).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12599);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12599).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12599);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    },
+  };
+}

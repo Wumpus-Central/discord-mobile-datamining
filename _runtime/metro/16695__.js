@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
+  httpServerLocation: "/assets/modules/hexagon_campaign/images",
+  width: 32,
   height: 24,
-  scales: [2, 3],
-  hash: "581f8c52f7fbe4b74bb81eae47db1969",
-  name: "EmojiFaceWithMonocleIcon",
+  scales: [2, 3, 4],
+  hash: "c20f5cd14c5f693d97dedff22cf6001d",
+  name: "hexagon_campaign_font_logo",
   type: "png",
 });

@@ -1,14 +1,12 @@
 // _runtime/metro/07994__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7984 from "07984__.js";
-import _modDef7995 from "07995__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Ellipse = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Ellipse {
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,36 +46,15 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Ellipse, _modDef7984);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(7975).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(7975);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7995, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    return jsx(Defs(7995), { children: this.props.children });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

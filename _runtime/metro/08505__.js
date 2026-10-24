@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5e2fd14b31cdd1bad77d12d7b0ab7334",
-  name: "AppsIcon",
+  hash: "8aacc7898585bec38aca6cf682c01533",
+  name: "FolderIcon",
   type: "png",
 });

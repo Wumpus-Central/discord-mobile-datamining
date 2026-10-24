@@ -1,6 +1,19 @@
 // _runtime/metro/15575__.js
-import _mod15523 from "15523__.js";
-import _mod15524 from "15524__.js";
+import _mod15544 from "15544__.js";
+import element from "../15576_element.js";
+import getOwnPropertyDescriptor from "15543__.js";
 
-export default _mod15523 &&
-  _mod15524(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod15544(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
+}
+
+export default tmp2;

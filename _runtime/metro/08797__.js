@@ -1,20 +1,4 @@
 // _runtime/metro/08797__.js
+import _modDef8798 from "08798__.js";
 
-export default {
-  NONE: "",
-  INVERT: "CIColorInvert",
-  MONOCHROME: "CIColorMonochrome",
-  POSTERIZE: "CIColorPosterize",
-  FALSE: "CIFalseColor",
-  MAXIMUMCOMPONENT: "CIMaximumComponent",
-  MINIMUMCOMPONENT: "CIMinimumComponent",
-  CHROME: "CIPhotoEffectChrome",
-  FADE: "CIPhotoEffectFade",
-  INSTANT: "CIPhotoEffectInstant",
-  MONO: "CIPhotoEffectMono",
-  NOIR: "CIPhotoEffectNoir",
-  PROCESS: "CIPhotoEffectProcess",
-  TONAL: "CIPhotoEffectTonal",
-  TRANSFER: "CIPhotoEffectTransfer",
-  SEPIA: "CISepiaTone",
-};
+export default _modDef8798({ contain: null, cover: null, stretch: null });

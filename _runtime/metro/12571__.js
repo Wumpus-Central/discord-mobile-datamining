@@ -1,34 +1,55 @@
 // _runtime/metro/12571__.js
-import _mod12566 from "12566__.js";
+import _mod12572 from "12572__.js";
+import _mod12573 from "12573__.js";
+import stackParserFromStackParserOptions from "../12576_stackParserFromStackParserOptions.js";
 
 require = arg1;
-const dependencyMap = arg6;
+const dependencyMap = {};
+let closure_3 = {};
 
-export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  dependencyMap[console].push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
+};
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
+    try {
+      fn();
+    } catch (tmp5) {
+      if (_mod12572.DEBUG_BUILD) {
+        const logger = _mod12573.logger;
+        const _HermesInternal = HermesInternal;
+        logger.error("Error while instrumenting " + tmp, tmp5);
+      }
     }
   }
-  let tmp = tracesSampler;
-  const client = _mod12566.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
+};
+export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
+  const keys = Object.keys(closure_2);
+  const item = keys.forEach((item) => {
+    dependencyMap[item] = undefined;
+  });
+};
+export const triggerHandlers = function triggerHandlers(arg0, arg1) {
+  let tmp8 = arg0;
+  if (arg0) {
+    tmp8 = dependencyMap[arg0];
   }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
+  if (tmp8) {
+    const iter = tmp8[Symbol.iterator]();
+    if (iter !== undefined) {
+      try {
+        tmp15(arg1);
+      } catch (tmp18) {
+        if (_mod12572.DEBUG_BUILD) {
+          const logger = _mod12573.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = stackParserFromStackParserOptions;
+        }
+      }
     }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
+    const nextResult = iter.next();
   }
-  return tmp3;
 };

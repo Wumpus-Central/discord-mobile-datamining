@@ -1,14 +1,7 @@
 // _runtime/metro/15538__.js
-import prop_mod from "15539__.js";
+import _mod15604 from "15604__.js";
+import 15539__ from "15539__.js";
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
-
-export default prop;
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod15604;
+module_15539(obj, { assign: _mod15604 });

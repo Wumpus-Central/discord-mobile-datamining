@@ -1,13 +1,14 @@
 // _runtime/metro/08046__.js
-import _modDef7984 from "07984__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7986 from "07986__.js";
+import _modDef8047 from "08047__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Pattern = importDefault;
+const Path = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Pattern {
+class Path {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
-    tmp2 = closure_4;
-    obj = closure_4(Pattern);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Path);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Path);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,55 +49,23 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef7984);
+_inherits(Path, _modDef7986);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(7968)(patternTransform);
-    const size = {
-      x,
-      y,
-      width,
-      height,
-      name: id,
-      matrix: tmp3Result,
-      patternTransform: tmp3Result,
-      patternUnits: null,
-      patternContentUnits: null,
-    };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8038)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8038)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
+    const obj = {};
+    const merged = Object.assign(Path(7977).extract(this, props));
+    obj.d = props.d;
+    const obj2 = Path(7977);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const tmp3 = Pattern(7968);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(7973)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8047), {
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8047, {
       ref(arg0) {
         return self.refMethod(arg0);
       },
@@ -103,8 +73,7 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

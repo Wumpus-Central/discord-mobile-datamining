@@ -1,16 +1,17 @@
 // _runtime/metro/06427__.js
-import _mod1307 from "01307__.js";
-import callBoundIntrinsic from "../01341_callBoundIntrinsic.js";
+import _mod1332 from "01332__.js";
+import _mod1333 from "01333__.js";
+import _mod1339 from "01339__.js";
+import _mod6419 from "06419__.js";
 
-const tmp = _mod1307("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1339(num)) {
+      if (_mod6419(num)) {
+        const tmp = _mod1332(num);
+        return _mod1333(tmp) === tmp;
+      }
+    }
+  }
+  return false;
 }
-let closure_0 = tmp2;
-
-export default tmp.isArray ||
-  function IsArray(arg0) {
-    return "[object Array]" === closure_0(arg0);
-  };

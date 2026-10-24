@@ -1,43 +1,42 @@
 // _runtime/metro/12646__.js
-import _mod12545 from "12545__.js";
-import _mod12566 from "12566__.js";
+import _mod12573 from "12573__.js";
+import _mod12587 from "12587__.js";
+import _mod12600 from "12600__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const captureFeedback = function captureFeedback(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let currentScope = arg2;
-  if (arg2 === undefined) {
-    currentScope = _mod12566.getCurrentScope();
-  }
-  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
-  const obj4 = {
-    feedback: _mod12545.dropUndefinedKeys({
-      contact_email: email,
-      name,
-      message,
-      url,
-      source,
-      associated_event_id: associatedEventId,
-    }),
-  };
-  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj2.contexts = obj4;
-  obj2.tags = tags;
-  let client = currentScope;
-  if (currentScope) {
-    client = currentScope.getClient();
-  }
-  if (!client) {
-    client = _mod12566.getClient();
-    const tmp3Result = _mod12566;
-  }
+export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod12600.getClient();
+  const isolationScope = _mod12600.getIsolationScope();
   if (client) {
-    client.emit("beforeSendFeedback", obj2, obj);
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
+    }
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod12587.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod12573.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod12573;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod12587;
+    }
   }
-  return currentScope.captureEvent(obj2, obj);
 };

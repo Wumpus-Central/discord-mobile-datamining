@@ -1,107 +1,37 @@
 // _runtime/metro/15610__.js
-import _createClassDefault from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
 
-function monadic(call, get, fn, map) {
-  let tmp2 = map;
-  if (!tmp) {
-    tmp2 = fn(map);
-  }
-  value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(map) : call(self, map);
-    result = get.set(tmp2, tmp6);
-  }
-}
-function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
-  if (undefined === value) {
-    const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
-    value = applyResult;
-  }
-  return value;
-}
-function strategyDefault(c165, cache) {
-  cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
-}
-let _classCallCheck = _classCallCheck_mod;
-function serializerDefault() {
-  return JSON.stringify(arguments);
-}
-class ObjectWithoutPrototypeCache {
-  constructor() {
-    tmp = closure_0(this, ObjectWithoutPrototypeCache);
-    this.cache = Object.create(null);
-    return;
-  }
-}
-_classCallCheck = ObjectWithoutPrototypeCache;
-const entry = {
-  key: "get",
-  value: function get(arg0) {
-    return this.cache[arg0];
+export default {
+  name: "react-native-url-polyfill",
+  version: "2.0.0",
+  description: "A lightweight and trustworthy URL polyfill for React Native",
+  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
+  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
+  homepage: "https://github.com/charpeni/react-native-url-polyfill",
+  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
+  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
+  main: "index.js",
+  types: "index.d.ts",
+  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
+  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
+  license: "MIT",
+  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
+  devDependencies: {
+    "@react-native-community/eslint-config": "3.2.0",
+    detox: "20.9.1",
+    eslint: "8.44.0",
+    "eslint-plugin-prettier": "4.2.1",
+    husky: "8.0.3",
+    jest: "29.5.0",
+    "lint-staged": "13.2.3",
+    "metro-react-native-babel-preset": "0.76.7",
+    nanoid: "3.3.6",
+    prettier: "2.8.8",
+    react: "18.2.0",
+    "react-native": "0.72.1",
+    "react-native-bundle-scale": "1.1.0",
+    typescript: "5.1.6",
   },
-};
-const items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      this.cache[arg0] = arg1;
-    },
-  },
-];
-let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
-let closure_6 = {
-  create() {
-    return new closure_5();
-  },
-};
-
-export const memoize = function memoize(arg0, cache) {
-  if (cache) {
-    if (cache.cache) {
-      cache = cache.cache;
-    }
-    if (cache) {
-      if (cache.serializer) {
-        let serializer = cache.serializer;
-      }
-      if (cache) {
-        if (cache.strategy) {
-          let strategy = cache.strategy;
-        }
-        const obj = { cache, serializer };
-        return strategy(arg0, obj);
-      }
-      strategy = strategyDefault;
-    }
-    serializer = serializerDefault;
-  }
-  cache = closure_6;
-};
-export const strategies = {
-  variadic: function strategyVariadic(c165, cache) {
-    cache = cache.cache;
-    return variadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-  monadic: function strategyMonadic(c165, cache) {
-    cache = cache.cache;
-    return monadic.bind(this, c165, cache.create(), cache.serializer);
-  },
+  peerDependencies: { "react-native": "*" },
+  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
+  "lint-staged": { "*.js": ["eslint --fix"] },
 };
