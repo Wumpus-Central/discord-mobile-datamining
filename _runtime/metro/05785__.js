@@ -1,12 +1,12 @@
 // === Module 5785: ? ===
 
 // Module 5785
-import shortOut from "shortOut" /* 5786 */;
-import overRest from "overRest" /* 5790 */;
-import flatten from "flatten" /* 5792 */;
+import baseGetAllKeys from "baseGetAllKeys" /* 668 */;
+import _mod5768 from "module_5768" /* 5768 */;
+import keysIn from "keysIn" /* 5770 */;
 
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+export default function getAllKeysIn(arg0) {
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keysIn, _mod5768);
 };

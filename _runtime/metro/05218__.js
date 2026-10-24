@@ -1,20 +1,52 @@
 // === Module 5218: ? ===
 
 // Module 5218
-import PATTERN_CHARS_mod from "PATTERN_CHARS" /* 5219 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef5215 from "module_5215" /* 5215 */;
 
-const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.success = PATTERN_CHARS.pattern("oO.O");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.error = PATTERN_CHARS.pattern("OO.OO");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.warning = PATTERN_CHARS.pattern("O.O");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.notification = PATTERN_CHARS.pattern("o-O=o");
+const useMemo = _mod19.useMemo;
 
-export const Patterns = obj;
+export const useHaptics = function useHaptics(enableVibrateFallback) {
+  closure_0 = enableVibrateFallback;
+  let prop;
+  if (enableVibrateFallback != null) {
+    prop = enableVibrateFallback.enableVibrateFallback;
+  }
+  let prop1;
+  if (enableVibrateFallback != null) {
+    prop1 = enableVibrateFallback.ignoreAndroidSystemSettings;
+  }
+  const items = [prop, prop1];
+  return useMemo(() => ({
+    trigger(arg0, arg1) {
+      const merged = Object.assign(enableVibrateFallback);
+      const merged1 = Object.assign(arg1);
+      _modDef5215.trigger(arg0, {});
+    },
+    triggerPattern(arg0, arg1) {
+      const merged = Object.assign(enableVibrateFallback);
+      const merged1 = Object.assign(arg1);
+      _modDef5215.triggerPattern(arg0, {});
+    },
+    stop() {
+      closure_1_1(5215).stop();
+    },
+    isSupported() {
+      return closure_1_1(5215).isSupported();
+    },
+    playHaptic(arg0, arg1, arg2) {
+      const merged = Object.assign(enableVibrateFallback);
+      const merged1 = Object.assign(arg2);
+      return closure_0(5219).playHaptic(arg0, arg1, {});
+    },
+    impact(arg0, arg1, arg2) {
+      const merged = Object.assign(enableVibrateFallback);
+      const merged1 = Object.assign(arg2);
+      _modDef5215.impact(arg0, arg1, {});
+    },
+    setEnabled: _modDef5215.setEnabled,
+    isEnabled: _modDef5215.isEnabled,
+    getSystemHapticStatus: _modDef5215.getSystemHapticStatus,
+    playAHAP: _modDef5215.playAHAP
+  }), items);
+};

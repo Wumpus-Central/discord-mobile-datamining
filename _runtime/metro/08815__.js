@@ -1,36 +1,8 @@
 // === Module 8815: ? ===
 
 // Module 8815
-import colorPropType from "colorPropType" /* 8800 */;
-import _mod8802 from "module_8802" /* 8802 */;
-import _mod8816 from "module_8816" /* 8816 */;
-import flattenStyle from "module_8805" /* 8805 */;
-import emptyFunction_mod from "module_5008" /* 5008 */;
+import emptyFunction from "module_5010" /* 5010 */;
 
-const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
-const module_8816 = flattenStyle(_mod8816);
-let emptyFunction = emptyFunction_mod;
-obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
-obj.numberOfLines = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onLayout = emptyFunction.func;
-obj.onPress = emptyFunction.func;
-obj.onLongPress = emptyFunction.func;
-obj.pressRetentionOffset = _mod8802;
-obj.selectable = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-obj.suppressHighlighting = emptyFunction.bool;
-obj.style = module_8816;
-obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.accessible = emptyFunction.bool;
-obj.adjustsFontSizeToFit = emptyFunction.bool;
-obj.minimumFontScale = emptyFunction.number;
-obj.disabled = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
+const point = { x: emptyFunction.number, y: emptyFunction.number };
 
-export default obj;
+export default emptyFunction.shape(point);

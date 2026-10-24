@@ -1,11 +1,7 @@
 // === Module 7912: ? ===
 
 // Module 7912
-import _modDef7913 from "module_7913" /* 7913 */;
+import _mod17 from "module_17" /* 17 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
 
-export default function getWebViewProxy(iframeId) {
-  return new _modDef7913(iframeId);
-};
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

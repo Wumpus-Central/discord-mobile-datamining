@@ -1,8 +1,5 @@
 // === Module 8813: ? ===
 
 // Module 8813
-import emptyFunction from "module_5008" /* 5008 */;
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
-
-export default emptyFunction.shape(point);
+export default { DeprecatedAccessibilityRoles: ["none", "button", "togglebutton", "link", "search", "image", "keyboardkey", "text", "adjustable", "imagebutton", "header", "summary", "alert", "checkbox", "combobox", "menu", "menubar", "menuitem", "progressbar", "radio", "radiogroup", "scrollbar", "spinbutton", "switch", "tab", "tablist", "timer", "toolbar"] };

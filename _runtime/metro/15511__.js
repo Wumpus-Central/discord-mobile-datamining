@@ -1,5 +1,412 @@
 // === Module 15511: ? ===
 
 // Module 15511
+import e from "e" /* 1174 */;
 
-export const timezones = ["Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", "Africa/Asmara", "Africa/Bamako", "Africa/Bangui", "Africa/Banjul", "Africa/Bissau", "Africa/Blantyre", "Africa/Brazzaville", "Africa/Bujumbura", "Africa/Cairo", "Africa/Casablanca", "Africa/Ceuta", "Africa/Conakry", "Africa/Dakar", "Africa/Dar_es_Salaam", "Africa/Djibouti", "Africa/Douala", "Africa/El_Aaiun", "Africa/Freetown", "Africa/Gaborone", "Africa/Harare", "Africa/Johannesburg", "Africa/Juba", "Africa/Kampala", "Africa/Khartoum", "Africa/Kigali", "Africa/Kinshasa", "Africa/Lagos", "Africa/Libreville", "Africa/Lome", "Africa/Luanda", "Africa/Lubumbashi", "Africa/Lusaka", "Africa/Malabo", "Africa/Maputo", "Africa/Maseru", "Africa/Mbabane", "Africa/Mogadishu", "Africa/Monrovia", "Africa/Nairobi", "Africa/Ndjamena", "Africa/Niamey", "Africa/Nouakchott", "Africa/Ouagadougou", "Africa/Porto-Novo", "Africa/Sao_Tome", "Africa/Tripoli", "Africa/Tunis", "Africa/Windhoek", "America/Adak", "America/Anchorage", "America/Anguilla", "America/Antigua", "America/Araguaina", "America/Argentina/Buenos_Aires", "America/Argentina/Catamarca", "America/Argentina/Cordoba", "America/Argentina/Jujuy", "America/Argentina/La_Rioja", "America/Argentina/Mendoza", "America/Argentina/Rio_Gallegos", "America/Argentina/Salta", "America/Argentina/San_Juan", "America/Argentina/San_Luis", "America/Argentina/Tucuman", "America/Argentina/Ushuaia", "America/Aruba", "America/Asuncion", "America/Atikokan", "America/Bahia_Banderas", "America/Bahia", "America/Barbados", "America/Belem", "America/Belize", "America/Blanc-Sablon", "America/Boa_Vista", "America/Bogota", "America/Boise", "America/Cambridge_Bay", "America/Campo_Grande", "America/Cancun", "America/Caracas", "America/Cayenne", "America/Cayman", "America/Chicago", "America/Chihuahua", "America/Ciudad_Juarez", "America/Costa_Rica", "America/Creston", "America/Cuiaba", "America/Curacao", "America/Danmarkshavn", "America/Dawson_Creek", "America/Dawson", "America/Denver", "America/Detroit", "America/Dominica", "America/Edmonton", "America/Eirunepe", "America/El_Salvador", "America/Fort_Nelson", "America/Fortaleza", "America/Glace_Bay", "America/Goose_Bay", "America/Grand_Turk", "America/Grenada", "America/Guadeloupe", "America/Guatemala", "America/Guayaquil", "America/Guyana", "America/Halifax", "America/Havana", "America/Hermosillo", "America/Indiana/Indianapolis", "America/Indiana/Knox", "America/Indiana/Marengo", "America/Indiana/Petersburg", "America/Indiana/Tell_City", "America/Indiana/Vevay", "America/Indiana/Vincennes", "America/Indiana/Winamac", "America/Inuvik", "America/Iqaluit", "America/Jamaica", "America/Juneau", "America/Kentucky/Louisville", "America/Kentucky/Monticello", "America/Kralendijk", "America/La_Paz", "America/Lima", "America/Los_Angeles", "America/Lower_Princes", "America/Maceio", "America/Managua", "America/Manaus", "America/Marigot", "America/Martinique", "America/Matamoros", "America/Mazatlan", "America/Menominee", "America/Merida", "America/Metlakatla", "America/Mexico_City", "America/Miquelon", "America/Moncton", "America/Monterrey", "America/Montevideo", "America/Montserrat", "America/Nassau", "America/New_York", "America/Nipigon", "America/Nome", "America/Noronha", "America/North_Dakota/Beulah", "America/North_Dakota/Center", "America/North_Dakota/New_Salem", "America/Nuuk", "America/Ojinaga", "America/Panama", "America/Pangnirtung", "America/Paramaribo", "America/Phoenix", "America/Port_of_Spain", "America/Port-au-Prince", "America/Porto_Velho", "America/Puerto_Rico", "America/Punta_Arenas", "America/Rainy_River", "America/Rankin_Inlet", "America/Recife", "America/Regina", "America/Resolute", "America/Rio_Branco", "America/Santarem", "America/Santiago", "America/Santo_Domingo", "America/Sao_Paulo", "America/Scoresbysund", "America/Sitka", "America/St_Barthelemy", "America/St_Johns", "America/St_Kitts", "America/St_Lucia", "America/St_Thomas", "America/St_Vincent", "America/Swift_Current", "America/Tegucigalpa", "America/Thule", "America/Thunder_Bay", "America/Tijuana", "America/Toronto", "America/Tortola", "America/Vancouver", "America/Whitehorse", "America/Winnipeg", "America/Yakutat", "America/Yellowknife", "Antarctica/Casey", "Antarctica/Davis", "Antarctica/DumontDUrville", "Antarctica/Macquarie", "Antarctica/Mawson", "Antarctica/McMurdo", "Antarctica/Palmer", "Antarctica/Rothera", "Antarctica/Syowa", "Antarctica/Troll", "Antarctica/Vostok", "Arctic/Longyearbyen", "Asia/Aden", "Asia/Almaty", "Asia/Amman", "Asia/Anadyr", "Asia/Aqtau", "Asia/Aqtobe", "Asia/Ashgabat", "Asia/Atyrau", "Asia/Baghdad", "Asia/Bahrain", "Asia/Baku", "Asia/Bangkok", "Asia/Barnaul", "Asia/Beirut", "Asia/Bishkek", "Asia/Brunei", "Asia/Chita", "Asia/Choibalsan", "Asia/Colombo", "Asia/Damascus", "Asia/Dhaka", "Asia/Dili", "Asia/Dubai", "Asia/Dushanbe", "Asia/Famagusta", "Asia/Gaza", "Asia/Hebron", "Asia/Ho_Chi_Minh", "Asia/Hong_Kong", "Asia/Hovd", "Asia/Irkutsk", "Asia/Jakarta", "Asia/Jayapura", "Asia/Jerusalem", "Asia/Kabul", "Asia/Kamchatka", "Asia/Karachi", "Asia/Kathmandu", "Asia/Khandyga", "Asia/Kolkata", "Asia/Krasnoyarsk", "Asia/Kuala_Lumpur", "Asia/Kuching", "Asia/Kuwait", "Asia/Macau", "Asia/Magadan", "Asia/Makassar", "Asia/Manila", "Asia/Muscat", "Asia/Nicosia", "Asia/Novokuznetsk", "Asia/Novosibirsk", "Asia/Omsk", "Asia/Oral", "Asia/Phnom_Penh", "Asia/Pontianak", "Asia/Pyongyang", "Asia/Qatar", "Asia/Qostanay", "Asia/Qyzylorda", "Asia/Riyadh", "Asia/Sakhalin", "Asia/Samarkand", "Asia/Seoul", "Asia/Shanghai", "Asia/Singapore", "Asia/Srednekolymsk", "Asia/Taipei", "Asia/Tashkent", "Asia/Tbilisi", "Asia/Tehran", "Asia/Thimphu", "Asia/Tokyo", "Asia/Tomsk", "Asia/Ulaanbaatar", "Asia/Urumqi", "Asia/Ust-Nera", "Asia/Vientiane", "Asia/Vladivostok", "Asia/Yakutsk", "Asia/Yangon", "Asia/Yekaterinburg", "Asia/Yerevan", "Atlantic/Azores", "Atlantic/Bermuda", "Atlantic/Canary", "Atlantic/Cape_Verde", "Atlantic/Faroe", "Atlantic/Madeira", "Atlantic/Reykjavik", "Atlantic/South_Georgia", "Atlantic/St_Helena", "Atlantic/Stanley", "Australia/Adelaide", "Australia/Brisbane", "Australia/Broken_Hill", "Australia/Currie", "Australia/Darwin", "Australia/Eucla", "Australia/Hobart", "Australia/Lindeman", "Australia/Lord_Howe", "Australia/Melbourne", "Australia/Perth", "Australia/Sydney", "Europe/Amsterdam", "Europe/Andorra", "Europe/Astrakhan", "Europe/Athens", "Europe/Belgrade", "Europe/Berlin", "Europe/Bratislava", "Europe/Brussels", "Europe/Bucharest", "Europe/Budapest", "Europe/Busingen", "Europe/Chisinau", "Europe/Copenhagen", "Europe/Dublin", "Europe/Gibraltar", "Europe/Guernsey", "Europe/Helsinki", "Europe/Isle_of_Man", "Europe/Istanbul", "Europe/Jersey", "Europe/Kaliningrad", "Europe/Kyiv", "Europe/Kirov", "Europe/Lisbon", "Europe/Ljubljana", "Europe/London", "Europe/Luxembourg", "Europe/Madrid", "Europe/Malta", "Europe/Mariehamn", "Europe/Minsk", "Europe/Monaco", "Europe/Moscow", "Europe/Oslo", "Europe/Paris", "Europe/Podgorica", "Europe/Prague", "Europe/Riga", "Europe/Rome", "Europe/Samara", "Europe/San_Marino", "Europe/Sarajevo", "Europe/Saratov", "Europe/Simferopol", "Europe/Skopje", "Europe/Sofia", "Europe/Stockholm", "Europe/Tallinn", "Europe/Tirane", "Europe/Ulyanovsk", "Europe/Uzhgorod", "Europe/Vaduz", "Europe/Vatican", "Europe/Vienna", "Europe/Vilnius", "Europe/Volgograd", "Europe/Warsaw", "Europe/Zagreb", "Europe/Zaporozhye", "Europe/Zurich", "Indian/Antananarivo", "Indian/Chagos", "Indian/Christmas", "Indian/Cocos", "Indian/Comoro", "Indian/Kerguelen", "Indian/Mahe", "Indian/Maldives", "Indian/Mauritius", "Indian/Mayotte", "Indian/Reunion", "Pacific/Apia", "Pacific/Auckland", "Pacific/Bougainville", "Pacific/Chatham", "Pacific/Chuuk", "Pacific/Easter", "Pacific/Efate", "Pacific/Kanton", "Pacific/Fakaofo", "Pacific/Fiji", "Pacific/Funafuti", "Pacific/Galapagos", "Pacific/Gambier", "Pacific/Guadalcanal", "Pacific/Guam", "Pacific/Honolulu", "Pacific/Kiritimati", "Pacific/Kosrae", "Pacific/Kwajalein", "Pacific/Majuro", "Pacific/Marquesas", "Pacific/Midway", "Pacific/Nauru", "Pacific/Niue", "Pacific/Norfolk", "Pacific/Noumea", "Pacific/Pago_Pago", "Pacific/Palau", "Pacific/Pitcairn", "Pacific/Pohnpei", "Pacific/Port_Moresby", "Pacific/Rarotonga", "Pacific/Saipan", "Pacific/Tahiti", "Pacific/Tarawa", "Pacific/Tongatapu", "Pacific/Wake", "Pacific/Wallis"];
+require = arg1;
+const exports = arg5;
+const dependencyMap = arg6;
+function parseUnicodeLanguageId(locale) {
+  let parts = locale;
+  if (typeof locale === "string") {
+    parts = locale.split(exports.SEPARATOR);
+  }
+  const arr = parts.shift();
+  if (arr) {
+    if ("root" === arr) {
+      const obj2 = { lang: "root", variants: [] };
+      return obj2;
+    } else if (re12.test(arr)) {
+      let length = parts.length;
+      if (length) {
+        length = re8.test(parts[0]);
+      }
+      let arr5;
+      if (length) {
+        arr5 = parts.shift();
+      }
+      let length2 = parts.length;
+      if (length2) {
+        length2 = re10.test(parts[0]);
+      }
+      let arr6;
+      if (length2) {
+        arr6 = parts.shift();
+      }
+      const obj = {};
+      if (parts.length) {
+        if (re11.test(parts[0])) {
+          const arr7 = parts.shift();
+          while (!(arr7 in obj)) {
+            obj[arr7] = 1;
+          }
+          const _RangeError3 = RangeError;
+          const concat = "Duplicate variant \"".concat;
+          const rangeError = new RangeError("Duplicate variant \"".concat(arr7, "\""));
+          throw rangeError;
+        }
+      }
+      const obj3 = { lang: arr, script: arr5, region: arr6, variants: null };
+      const _Object = Object;
+      obj3.variants = Object.keys(obj);
+      return obj3;
+    } else {
+      const _RangeError2 = RangeError;
+      const rangeError1 = new RangeError("Malformed unicode_language_subtag");
+      throw rangeError1;
+    }
+  } else {
+    const _RangeError = RangeError;
+    const rangeError2 = new RangeError("Missing unicode_language_subtag");
+    throw rangeError2;
+  }
+}
+function parseTransformedExtension(parts) {
+  let arr;
+  try {
+    const items = [];
+    if (parts.length) {
+      if (re13.test(parts[0])) {
+        while (true) {
+          arr = parts.shift();
+          let items1 = [];
+          if (parts.length) {
+            if (re5.test(parts[0])) {
+              let arr2 = items1.push(parts.shift());
+              while (parts.length) {
+                if (!re5.test(parts[0])) {
+                  break;
+                }
+              }
+            }
+          }
+          if (!items1.length) {
+            break;
+          } else {
+            let items2 = [arr, items1.join(exports.SEPARATOR)];
+            let arr3 = items.push(items2);
+          }
+        }
+        const _RangeError = RangeError;
+        const concat = "Missing tvalue for tkey \"".concat;
+        const rangeError = new RangeError("Missing tvalue for tkey \"".concat(arr, "\""));
+        throw rangeError;
+      }
+    }
+    if (items.length) {
+      const obj = { type: "t", fields: items, lang: tmp2 };
+      return obj;
+    } else {
+      const _RangeError2 = RangeError;
+      const rangeError1 = new RangeError("Malformed transformed_extension");
+      throw rangeError1;
+    }
+    tmp2 = parseUnicodeLanguageId(parts);
+  } catch (err) {
+  }
+}
+const re3 = /^[a-z0-9]{1,8}$/i;
+const re4 = /^[a-z0-9]{2,8}$/i;
+const re5 = /^[a-z0-9]{3,8}$/i;
+const re6 = /^[a-z0-9][a-z]$/i;
+const re7 = /^[a-z0-9]{3,8}$/i;
+const re8 = /^[a-z]{4}$/i;
+const re9 = /^[0-9a-svwyz]$/i;
+const re10 = /^([a-z]{2}|[0-9]{3})$/i;
+const re11 = /^([a-z0-9]{5,8}|[0-9][a-z0-9]{3})$/i;
+const re12 = /^([a-z]{2,3}|[a-z]{5,8})$/i;
+const re13 = /^[a-z][0-9]$/i;
+
+export const isUnicodeLanguageSubtag = function isUnicodeLanguageSubtag(GetOptionResult) {
+  return re12.test(GetOptionResult);
+};
+export const isStructurallyValidLanguageTag = function isStructurallyValidLanguageTag(locale) {
+  try {
+    parseUnicodeLanguageId(locale.split(exports.SEPARATOR));
+    return true;
+  } catch (err) {
+    return false;
+  }
+};
+export const isUnicodeRegionSubtag = function isUnicodeRegionSubtag(GetOptionResult2) {
+  return re10.test(GetOptionResult2);
+};
+export const isUnicodeScriptSubtag = function isUnicodeScriptSubtag(GetOptionResult1) {
+  return re8.test(GetOptionResult1);
+};
+export const isUnicodeVariantSubtag = function isUnicodeVariantSubtag(arg0) {
+  return re11.test(arg0);
+};
+export { parseUnicodeLanguageId };
+export const parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
+  const parts = arr3.split(exports.SEPARATOR);
+  const lang = parseUnicodeLanguageId(parts);
+  const items = [];
+  if (parts.length) {
+    const obj2 = {};
+    let tmp2;
+    let tmp3;
+    let tmp4;
+    const arr = parts.shift();
+    while ("u" !== arr) {
+      if ("U" === arr) {
+        break;
+      } else {
+        if ("t" !== arr) {
+          if ("T" !== arr) {
+            if ("x" !== arr) {
+              if ("X" !== arr) {
+                if (re9.test(arr)) {
+                  if (arr in obj2) {
+                    let tmp22 = globalThis;
+                    let _RangeError2 = RangeError;
+                    let str10 = "There can only be 1 -";
+                    let concat = "There can only be 1 -".concat;
+                    let str11 = "- extension";
+                    let tmp23 = new.target;
+                    let tmp24 = new.target;
+                    let rangeError = new RangeError("There can only be 1 -".concat(arr, "- extension"));
+                    throw rangeError;
+                  } else {
+                    let obj3 = { type: arr, value: null };
+                    let items1 = [];
+                    if (parts.length) {
+                      if (re4.test(parts[0])) {
+                        let arr2 = items1.push(parts.shift());
+                        while (parts.length) {
+                          if (!re4.test(parts[0])) {
+                            break;
+                          }
+                        }
+                      }
+                    }
+                    let str9 = "";
+                    if (items1.length) {
+                      str9 = items1.join(exports.SEPARATOR);
+                    }
+                    obj3.value = str9;
+                    obj2[obj3.type] = obj3;
+                    arr3 = items.push(obj3);
+                    let tmp19 = tmp2;
+                    let tmp20 = tmp3;
+                    let tmp21 = tmp4;
+                  }
+                } else {
+                  let tmp9 = globalThis;
+                  let _RangeError = RangeError;
+                  let tmp10 = new.target;
+                  let str8 = "Malformed extension type";
+                  let tmp11 = new.target;
+                  let rangeError1 = new RangeError("Malformed extension type");
+                  throw rangeError1;
+                }
+              }
+            }
+            if (tmp2) {
+              let tmp37 = globalThis;
+              let _RangeError4 = RangeError;
+              let tmp38 = new.target;
+              let str13 = "There can only be 1 -x- extension";
+              let tmp39 = new.target;
+              let rangeError2 = new RangeError("There can only be 1 -x- extension");
+              throw rangeError2;
+            } else {
+              let items2 = [];
+              if (parts.length) {
+                if (re3.test(parts[0])) {
+                  let arr4 = items2.push(parts.shift());
+                  while (parts.length) {
+                    if (!re3.test(parts[0])) {
+                      break;
+                    }
+                  }
+                }
+              }
+              if (items2.length) {
+                let obj4 = { type: "x", value: items2.join(exports.SEPARATOR) };
+                let arr5 = items.push(obj4);
+                tmp19 = obj4;
+                tmp20 = tmp3;
+                tmp21 = tmp4;
+              } else {
+                let tmp30 = globalThis;
+                let _RangeError3 = RangeError;
+                let tmp31 = new.target;
+                let str12 = "Malformed private_use_extension";
+                let tmp32 = new.target;
+                let rangeError3 = new RangeError("Malformed private_use_extension");
+                throw rangeError3;
+              }
+            }
+          }
+          tmp2 = tmp19;
+          tmp3 = tmp20;
+          tmp4 = tmp21;
+          if (parts.length) {
+            continue;
+          } else {
+            let obj5 = { extensions: items };
+            let obj8 = obj5;
+          }
+        }
+        if (tmp3) {
+          let tmp45 = globalThis;
+          let _RangeError5 = RangeError;
+          let tmp46 = new.target;
+          let str14 = "There can only be 1 -t- extension";
+          let tmp47 = new.target;
+          let rangeError4 = new RangeError("There can only be 1 -t- extension");
+          throw rangeError4;
+        } else {
+          let tmp43 = parseTransformedExtension(parts);
+          let arr6 = items.push(tmp43);
+          tmp19 = tmp2;
+          tmp20 = tmp43;
+          tmp21 = tmp4;
+        }
+      }
+    }
+    if (tmp4) {
+      const _RangeError7 = RangeError;
+      const rangeError5 = new RangeError("There can only be 1 -u- extension");
+      throw rangeError5;
+    } else {
+      const items3 = [];
+      if (parts.length) {
+        let tmp51;
+        if (re6.test(parts[0])) {
+          const items4 = [];
+          if (parts.length) {
+            if (re7.test(parts[0])) {
+              items4.push(parts.shift());
+              while (parts.length) {
+                if (!re7.test(parts[0])) {
+                  break;
+                }
+              }
+            }
+          }
+          let str15 = "";
+          if (items4.length) {
+            str15 = items4.join(exports.SEPARATOR);
+          }
+          const items5 = [parts.shift(), str15];
+          tmp51 = items5;
+          const arr7 = parts.shift();
+        }
+        if (tmp51) {
+          items3.push(tmp51);
+          while (parts.length) {
+            let tmp59;
+            if (re6.test(parts[0])) {
+              let items6 = [];
+              let arr10 = parts.shift();
+              if (parts.length) {
+                if (re7.test(parts[0])) {
+                  let arr11 = items6.push(parts.shift());
+                  while (parts.length) {
+                    if (!re7.test(parts[0])) {
+                      break;
+                    }
+                  }
+                }
+              }
+              let str16 = "";
+              if (items6.length) {
+                str16 = items6.join(exports.SEPARATOR);
+              }
+              let items7 = [arr10, str16];
+              tmp59 = items7;
+            }
+            tmp51 = tmp59;
+            if (!tmp59) {
+              break;
+            }
+          }
+        }
+      }
+      const items8 = [];
+      if (items3.length) {
+        const obj6 = { type: "u", keywords: items3, attributes: items8 };
+        let obj7 = obj6;
+      } else {
+        if (parts.length) {
+          if (re5.test(parts[0])) {
+            items8.push(parts.shift());
+            while (parts.length) {
+              if (!re5.test(parts[0])) {
+                break;
+              }
+            }
+          }
+        }
+        if (parts.length) {
+          let tmp69;
+          if (re6.test(parts[0])) {
+            const items9 = [];
+            if (parts.length) {
+              if (re7.test(parts[0])) {
+                items9.push(parts.shift());
+                while (parts.length) {
+                  if (!re7.test(parts[0])) {
+                    break;
+                  }
+                }
+              }
+            }
+            let str17 = "";
+            if (items9.length) {
+              str17 = items9.join(exports.SEPARATOR);
+            }
+            const items10 = [parts.shift(), str17];
+            tmp69 = items10;
+            const arr13 = parts.shift();
+          }
+          if (tmp69) {
+            items3.push(tmp69);
+            while (parts.length) {
+              let tmp77;
+              if (re6.test(parts[0])) {
+                let items11 = [];
+                let arr33 = parts.shift();
+                if (parts.length) {
+                  if (re7.test(parts[0])) {
+                    let arr34 = items11.push(parts.shift());
+                    while (parts.length) {
+                      if (!re7.test(parts[0])) {
+                        break;
+                      }
+                    }
+                  }
+                }
+                let str18 = "";
+                if (items11.length) {
+                  str18 = items11.join(exports.SEPARATOR);
+                }
+                let items12 = [arr33, str18];
+                tmp77 = items12;
+              }
+              tmp69 = tmp77;
+              if (!tmp77) {
+                break;
+              }
+            }
+          }
+        }
+        if (!items3.length) {
+          if (!items8.length) {
+            const _RangeError6 = RangeError;
+            const rangeError6 = new RangeError("Malformed unicode_extension");
+            throw rangeError6;
+          }
+        }
+        obj7 = { type: "u", attributes: items8, keywords: items3 };
+      }
+      items.push(obj7);
+    }
+  } else {
+    obj8 = { extensions: items };
+  }
+  return e.__assign({ lang }, obj8);
+};
+export const SEPARATOR = "-";

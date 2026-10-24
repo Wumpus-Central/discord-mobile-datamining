@@ -1,48 +1,83 @@
 // === Module 15540: ? ===
 
 // Module 15540
-import _mod15520 from "module_15520" /* 15520 */;
-import _mod15541 from "module_15541" /* 15541 */;
-
-let tmp = _mod15520.process && _mod15520.process.versions;
-if (!tmp) {
-  tmp = _mod15520.Deno && _mod15520.Deno.version;
-  const tmp2 = _mod15520.Deno && _mod15520.Deno.version;
+let _globalThis = typeof globalThis === "object";
+if (typeof globalThis === "object") {
+  _globalThis = globalThis;
 }
-let str = tmp;
+let tmp = _globalThis;
+if (_globalThis) {
+  const _Math = Math;
+  tmp = _globalThis.Math === Math;
+}
 if (tmp) {
-  str = tmp.v8;
+  tmp = _globalThis;
 }
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
+if (!tmp) {
+  const _window = window;
+  let _window2 = typeof window === "object";
+  if (typeof window === "object") {
+    _window2 = window;
   }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod15541;
-}
-if (_module) {
-  const match = _mod15541.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
+  let tmp2 = _window2;
+  if (_window2) {
+    const _Math2 = Math;
+    tmp2 = _window2.Math === Math;
   }
-  _module = tmp8;
-  tmp4 = match;
+  if (tmp2) {
+    tmp2 = _window2;
+  }
+  tmp = tmp2;
 }
-if (_module) {
-  _module = _mod15541.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
+if (!tmp) {
+  const _self = self;
+  let _self2 = typeof self === "object";
+  if (typeof self === "object") {
+    _self2 = self;
+  }
+  let tmp3 = _self2;
+  if (_self2) {
+    const _Math3 = Math;
+    tmp3 = _self2.Math === Math;
+  }
+  if (tmp3) {
+    tmp3 = _self2;
+  }
+  tmp = tmp3;
 }
-if (_module) {
-  tmp3 = +tmp4[1];
+if (!tmp) {
+  let tmp5 = typeof global === "object";
+  if (typeof global === "object") {
+    tmp5 = global;
+  }
+  let tmp6 = tmp5;
+  if (tmp5) {
+    const _Math4 = Math;
+    tmp6 = tmp5.Math === Math;
+  }
+  if (tmp6) {
+    tmp6 = tmp5;
+  }
+  tmp = tmp6;
+}
+if (!tmp) {
+  let self = typeof this === "object";
+  if (typeof this === "object") {
+    self = this;
+  }
+  let tmp7 = self;
+  if (self) {
+    const _Math5 = Math;
+    tmp7 = self.Math === Math;
+  }
+  if (tmp7) {
+    tmp7 = self;
+  }
+  tmp = tmp7;
+}
+if (!tmp) {
+  const _Function = Function;
+  tmp = Function("return this")();
 }
 
-export default tmp3;
+export default tmp;

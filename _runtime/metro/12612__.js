@@ -1,44 +1,69 @@
 // === Module 12612: ? ===
 
 // Module 12612
-import _mod12539 from "module_12539" /* 12539 */;
-import _mod12553 from "module_12553" /* 12553 */;
-import _mod12566 from "module_12566" /* 12566 */;
+import _mod12573 from "module_12573" /* 12573 */;
+import _mod12600 from "module_12600" /* 12600 */;
+import _mod12601 from "module_12601" /* 12601 */;
+import _mod12605 from "module_12605" /* 12605 */;
+import _mod12613 from "module_12613" /* 12613 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod12566.getClient();
-  const isolationScope = _mod12566.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: _mod12553.dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = _mod12539.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = _mod12539;
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod12600.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
       }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
+    }
+    const tmpResult = _mod12600;
+    const parseSampleRateResult = _mod12613.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod12601.DEBUG_BUILD) {
+        const logger3 = _mod12573.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod12601.DEBUG_BUILD) {
+          const logger2 = _mod12573.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
         }
-        isolationScope.addBreadcrumb(obj2, num);
+        items2 = [false, parseSampleRateResult];
       }
-      const tmpResult = _mod12553;
+    } else {
+      if (_mod12601.DEBUG_BUILD) {
+        const logger = _mod12573.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
     }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
   }
+  obj = _mod12605;
 };

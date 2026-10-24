@@ -1,90 +1,42 @@
 // === Module 8805: ? ===
 
 // Module 8805
-const require = globalThis.__r;
+import _mod8806 from "module_8806" /* 8806 */;
+import _mod8814 from "module_8814" /* 8814 */;
+import flattenStyle from "module_8807" /* 8807 */;
+import "module_5010";
+import emptyFunction_mod from "module_5010" /* 5010 */;
 
-function flattenStyle(obj) {
-  if (null !== obj) {
-    if (typeof obj === "object") {
-      const _Array = Array;
-      if (Array.isArray(obj)) {
-        obj = {};
-        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
-          let tmp3 = flattenStyle(obj[num3]);
-          if (tmp3) {
-            for (const key10019 in tmp3) {
-              obj[key10019] = tmp3[key10019];
-              continue;
-            }
-          }
-        }
-        return obj;
-      } else {
-        return obj;
-      }
-    }
-  }
-}
+const obj = {};
+const module_8806 = Object.assign(_mod8806);
+obj.style = flattenStyle(_mod8814);
+let emptyFunction = emptyFunction_mod;
+const obj2 = { uri: emptyFunction.string, headers: null };
+let emptyFunction = emptyFunction_mod;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number, ];
+let emptyFunction = emptyFunction_mod;
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+let emptyFunction = emptyFunction_mod;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
+obj.testID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
 
-export default function DeprecatedStyleSheetPropType(arg0) {
-  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
-  return (arg0, arg1, arg2, arg3) => {
-    const substr = [...arguments].slice();
-    if (arg0[arg1]) {
-      let tmp4;
-      if (null !== arg0[arg1]) {
-        if (typeof arr === "object") {
-          const _Array = Array;
-          tmp4 = arr;
-          if (Array.isArray(arr)) {
-            const obj = {};
-            let num3 = 0;
-            tmp4 = obj;
-            if (0 < arr.length) {
-              do {
-                let arr2 = arr[num3];
-                let tmp6;
-                if (null !== arr2) {
-                  if (typeof arr2 === "object") {
-                    let _Array2 = Array;
-                    tmp6 = arr2;
-                    if (Array.isArray(arr2)) {
-                      let obj2 = {};
-                      let length2 = arr2.length;
-                      let num4 = 0;
-                      tmp6 = obj2;
-                      if (0 < length2) {
-                        do {
-                          let tmp8 = flattenStyle(arr2[num4]);
-                          if (tmp8) {
-                            for (const key10029 in tmp8) {
-                              obj2[key10029] = tmp8[key10029];
-                              continue;
-                            }
-                          }
-                          num4 = num4 + 1;
-                          tmp6 = obj2;
-                        } while (num4 < length2);
-                      }
-                    }
-                  }
-                }
-                if (tmp6) {
-                  for (const key10032 in tmp6) {
-                    obj[key10032] = tmp6[key10032];
-                    continue;
-                  }
-                }
-                num3 = num3 + 1;
-                tmp4 = obj;
-              } while (num3 < length);
-            }
-          }
-        }
-      }
-      const obj3 = {};
-      obj3[arg1] = tmp4;
-    }
-    return closure_0(arg1, arg2, arg3, ...substr);
-  };
-};
+export default obj;

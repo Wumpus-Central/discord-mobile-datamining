@@ -1,13 +1,44 @@
 // === Module 15579: ? ===
 
 // Module 15579
-import _mod15527 from "module_15527" /* 15527 */;
-import _mod15536 from "module_15536" /* 15536 */;
-import all from "module_15546" /* 15546 */;
+import _mod15544 from "module_15544" /* 15544 */;
+import _mod15566 from "module_15566" /* 15566 */;
 
-let closure_0 = _mod15527(Function.toString);
-if (!all(_mod15536.inspectSource)) {
-  _mod15536.inspectSource = (arg0) => closure_0(arg0);
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15566(arg1)) {
+          tmp11Result = _mod15544;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
+      }
+    }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 }
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
 
-export default _mod15536.inspectSource;
+export default isForced;

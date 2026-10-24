@@ -1,34 +1,80 @@
 // === Module 15539: ? ===
 
 // Module 15539
-import _mod15520 from "module_15520" /* 15520 */;
-import _mod15524 from "module_15524" /* 15524 */;
 import _mod15540 from "module_15540" /* 15540 */;
+import _mod15541 from "module_15541" /* 15541 */;
+import _mod15542 from "module_15542" /* 15542 */;
+import _mod15579 from "module_15579" /* 15579 */;
+import _mod15580 from "module_15580" /* 15580 */;
+import _mod15596 from "module_15596" /* 15596 */;
+import _mod15597 from "module_15597" /* 15597 */;
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod15524(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod15520.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod15540;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod15541(target, {});
+      }
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod15540[target].prototype;
+      }
     }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod15542;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod15579;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod15580(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
       if (!sham) {
-        tmp2Result = _mod15540;
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
       }
-      if (tmp2Result) {
-        tmp2Result = _mod15540 < 41;
+      if (sham) {
+        let tmp14 = _mod15596(tmp21, "sham", true);
       }
-      tmp5 = tmp2Result;
+      let tmp19 = _mod15597(prototype, key10024, tmp21, arg0);
+      continue;
     }
-    return tmp5;
-  });
-}
-
-export default prop;
+  }
+};

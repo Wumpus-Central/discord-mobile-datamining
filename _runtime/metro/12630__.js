@@ -1,154 +1,61 @@
 // === Module 12630: ? ===
 
 // Module 12630
-import _mod12631 from "module_12631" /* 12631 */;
-import setupIntegration from "module_12595" /* 12595 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-
-export const generateIteratee = function generateIteratee(arg0) {
-  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (root) => {
-    if (root.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-      if (!isMatch) {
-        const filename = root.filename;
-        let hasItem = filename.includes("\\");
-        if (hasItem) {
-          const filename2 = root.filename;
-          hasItem = !filename2.includes("/");
-        }
-        isMatch = hasItem;
-      }
-      if (fn) {
-        if (root) {
-          const filename1 = root.filename;
-          if (0 === filename1.indexOf(root)) {
-            root.filename = filename1.replace(root, prefix);
-          }
-        }
-      } else if (isMatch) {
-        if (isMatch) {
-          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-          const str5 = str3.replace(/^[a-zA-Z]:/, "");
-        } else {
-          replaced = str3;
-        }
-        const obj2 = _mod12631;
-        if (root) {
-          let relativeResult = obj2.relative(root, replaced);
-        } else {
-          relativeResult = obj2.basename(replaced);
-        }
-        const _HermesInternal = HermesInternal;
-        root.filename = "" + prefix + relativeResult;
-      }
-      return root;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      return root;
+      callResult = call(constructResult);
     }
-  };
-};
-export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let fn;
-  ({ prefix, root } = obj);
-  if (!prefix) {
-    prefix = "app:///";
-  }
-  fn = obj.iteratee;
-  if (!fn) {
-    fn = (root) => {
-      if (root.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-        if (!isMatch) {
-          const filename = root.filename;
-          let hasItem = filename.includes("\\");
-          if (hasItem) {
-            const filename2 = root.filename;
-            hasItem = !filename2.includes("/");
-          }
-          isMatch = hasItem;
-        }
-        if (fn) {
-          if (root) {
-            const filename1 = root.filename;
-            if (0 === filename1.indexOf(root)) {
-              root.filename = filename1.replace(root, prefix);
-            }
-          }
-        } else if (isMatch) {
-          if (isMatch) {
-            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-            const str5 = str3.replace(/^[a-zA-Z]:/, "");
-          } else {
-            replaced = str3;
-          }
-          const obj2 = _mod12631;
-          if (root) {
-            let relativeResult = obj2.relative(root, replaced);
-          } else {
-            relativeResult = obj2.basename(replaced);
-          }
-          const _HermesInternal = HermesInternal;
-          root.filename = "" + prefix + relativeResult;
-        }
-        return root;
-      } else {
-        return root;
-      }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return {
-    name: "RewriteFrames",
-    processEvent(exception) {
-      exception = exception.exception;
-      if (exception) {
-        const _Array = Array;
-        exception = Array.isArray(exception.exception.values);
-      }
-      let tmp2 = exception;
-      if (exception) {
-        tmp2 = (function _processExceptionsEvent(exception) {
-          try {
-            const obj = {};
-            let merged = Object.assign(exception);
-            let obj2 = {};
-            let merged1 = Object.assign(exception.exception);
-            const values = exception.exception.values;
-            obj2.values = values.map((stacktrace) => {
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
-              if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
-                const obj2 = {};
-                const merged1 = Object.assign(stacktrace2);
-                let frames = stacktrace2;
-                if (stacktrace2) {
-                  frames = stacktrace2.frames;
-                }
-                if (frames) {
-                  const frames1 = stacktrace2.frames;
-                  frames = frames1.map((item) => closure_1_0(item));
-                }
-                const obj3 = { stacktrace: null };
-                obj2.frames = frames;
-                obj3.stacktrace = obj2;
-                stacktrace = obj3;
-              }
-              const merged2 = Object.assign(stacktrace);
-              return {};
-            });
-            obj.exception = obj2;
-            return obj;
-          } catch (err) {
-            return tmp;
-          }
-        })(exception);
-      }
-      return tmp2;
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class SentryError {
+  constructor(arg0) {
+    str = require;
+    if (require === undefined) {
+      str = "warn";
     }
-  };
-});
+    self = this;
+    tmp = closure_0(this, SentryError);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(SentryError);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.message = global;
+    tmp3Result.logLevel = str;
+    return tmp3Result;
+  }
+}
+_classCallCheck = SentryError;
+_inherits(SentryError, _wrapNativeSuper(Error));
+
+export const SentryError = _createClass(SentryError);

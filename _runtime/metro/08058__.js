@@ -1,19 +1,15 @@
 // === Module 8058: ? ===
 
 // Module 8058
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 7968 */;
-import extractPropsDefault from "extractProps" /* 7975 */;
-import extractFontDefault from "extractFont" /* 7982 */;
-import _modDef7984 from "module_7984" /* 7984 */;
-import _modDef8061 from "module_8061" /* 8061 */;
+import _modDef7986 from "module_7986" /* 7986 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Text = fn;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,71 +29,50 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(8059);
 const jsx = fn(21).jsx;
-class Text {
+class Symbol {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
+    tmp = c2(this, Symbol);
+    tmp2 = closure_4;
+    obj = closure_4(Symbol);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(7975).propsAndStyles(matrix);
-      const obj = Text(7975);
-      const merged = Object.assign(propsAndStylesResult, Text(7976).pickNotNil(extractFontDefault(propsAndStylesResult, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(7976);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Text, _modDef7984);
+_inherits(Symbol, _modDef7986);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = Text(7975).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(7975);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8061, {});
+    const self = this;
+    const props = this.props;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign({ name: props.id });
+    const merged1 = Object.assign(Symbol(7975)(props));
+    obj2.children = props.children;
+    return jsx(Symbol(8059), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const items = [entry];
+const importDefaultResultResult = _createClass(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

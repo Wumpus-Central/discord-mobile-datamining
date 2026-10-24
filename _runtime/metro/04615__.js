@@ -2,7 +2,7 @@
 
 // Module 4615
 import module_4607_mod from "module_4607" /* 4607 */;
-import requiredArgs_mod from "requiredArgs" /* 4253 */;
+import requiredArgs_mod from "requiredArgs" /* 4255 */;
 
 let module_4607 = module_4607_mod;
 if (!module_4607) {
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
+export default function isThisSecond(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4607.default(arg0, Date.now());
+  return module_4607.default(Date.now(), arg0);
 };
 export default exports.default;

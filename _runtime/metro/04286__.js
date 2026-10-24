@@ -1,29 +1,30 @@
 // === Module 4286: ? ===
 
 // Module 4286
+import module_2071 from "module_2071" /* 2071 */;
+import module_2074 from "module_2074" /* 2074 */;
+import date_mod from "module_2075" /* 2075 */;
+import date_mod from "module_2077" /* 2077 */;
 import module_4287 from "module_4287" /* 4287 */;
-import module_4288 from "module_4288" /* 4288 */;
-import module_4289 from "module_4289" /* 4289 */;
-import date_mod from "module_4290" /* 4290 */;
-import date_mod from "module_4291" /* 4291 */;
 
-if (!module_4287) {
-  const obj = { default: module_4287 };
+if (!module_2071) {
+  const obj = { default: module_2071 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4287;
+  tmp3 = module_2071;
 }
-if (!module_4288) {
-  const obj2 = { default: module_4288 };
+if (!module_2074) {
+  const obj2 = { default: module_2074 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4288;
+  tmp5 = module_2074;
 }
-if (!module_4289) {
-  const obj3 = { default: module_4289 };
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4289;
+  tmp7 = date;
 }
 let date = date_mod;
 if (!date) {
@@ -32,13 +33,12 @@ if (!date) {
 } else {
   tmp9 = date;
 }
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
+if (!module_4287) {
+  const obj5 = { default: module_4287 };
   let tmp11 = obj5;
 } else {
-  tmp11 = date;
+  tmp11 = module_4287;
 }
 
-export default { code: "es", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

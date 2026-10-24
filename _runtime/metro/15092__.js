@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/build_overrides/native/images", width: 60, height: 46, scales: [2, 3], hash: "cca9165d24749fb9aec98d0d9c04f23f", name: "code-illustration-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "928ec3b0cfa6ddcb7b852c71960488c7", name: "Share", type: "png" });

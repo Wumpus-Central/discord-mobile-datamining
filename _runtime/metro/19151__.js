@@ -1,15 +1,7 @@
 // === Module 19151: ? ===
 
 // Module 19151
-import _mod19152 from "module_19152" /* 19152 */;
-import capitalize from "capitalize" /* 19160 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default _mod19152((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 212, scales: [2, 3], hash: "13ff76500b381861f2432b0c193716ac", name: "img_bans_empty_darker", type: "png" });

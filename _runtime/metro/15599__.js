@@ -1,69 +1,13 @@
 // === Module 15599: ? ===
 
 // Module 15599
+import _mod15547 from "module_15547" /* 15547 */;
+import _mod15556 from "module_15556" /* 15556 */;
+import all from "module_15566" /* 15566 */;
 
-export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    return tmp;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
-    if (tmp) {
-      tmp = input <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = input >= 97;
-      if (tmp2) {
-        tmp2 = input <= 122;
-      }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = decodeResult >= 65;
-      if (tmp2) {
-        tmp2 = decodeResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = decodeResult >= 97;
-      if (tmp3) {
-        tmp3 = decodeResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
-};
+let closure_0 = _mod15547(Function.toString);
+if (!all(_mod15556.inspectSource)) {
+  _mod15556.inspectSource = (arg0) => closure_0(arg0);
+}
+
+export default _mod15556.inspectSource;

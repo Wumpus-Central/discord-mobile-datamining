@@ -1,33 +1,39 @@
 // === Module 12613: ? ===
 
 // Module 12613
-import setupIntegration from "module_12595" /* 12595 */;
+import _mod12573 from "module_12573" /* 12573 */;
+import _mod12601 from "module_12601" /* 12601 */;
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function() {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(12545).getOriginalFunction(this);
-        const obj = closure_1_0(12545);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
+export const parseSampleRate = function parseSampleRate(flag) {
+  if (typeof flag === "boolean") {
+    const _Number = Number;
+    return Number(flag);
+  } else {
+    let parsed = flag;
+    if (typeof flag === "string") {
+      const _parseFloat = parseFloat;
+      parsed = parseFloat(flag);
+    }
+    if (typeof parsed === "number") {
+      const _isNaN = isNaN;
+      if (!isNaN(parsed)) {
+        if (parsed >= 0) {
+          if (parsed <= 1) {
+            return parsed;
           }
         }
-        return toString.apply(self, items);
-      };
-    } catch (err) {
+      }
     }
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
+    if (_mod12601.DEBUG_BUILD) {
+      const logger = _mod12573.logger;
+      const _JSON = JSON;
+      const json = JSON.stringify(flag);
+      const _JSON2 = JSON;
+      const _HermesInternal = HermesInternal;
+      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
+    }
   }
-}));
+};

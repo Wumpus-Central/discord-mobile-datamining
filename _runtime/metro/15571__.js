@@ -1,15 +1,15 @@
 // === Module 15571: ? ===
 
 // Module 15571
-import _mod15569 from "module_15569" /* 15569 */;
+import _mod15566 from "module_15566" /* 15566 */;
+import _mod15572 from "module_15572" /* 15572 */;
 
 
-export default (arg0, arg1) => {
-  const tmp = _mod15569(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
+export default (arg0) => {
+  if (_mod15566(arg0)) {
+    return arg0;
   } else {
-    tmp3 = min(tmp, arg1);
+    const tmp6 = new TypeError(_mod15572(arg0) + " is not a function");
+    throw tmp6;
   }
-  return tmp3;
 };

@@ -1,102 +1,200 @@
 // === Module 12640: ? ===
 
 // Module 12640
-import _mod12545 from "module_12545" /* 12545 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12617 from "module_12617" /* 12617 */;
+import _mod12620 from "module_12620" /* 12620 */;
+import _mod12627 from "module_12627" /* 12627 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
-
-export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod12545.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
+function eventFromEnvelope(arg0, arg1) {
+  closure_0 = arg1;
+  _mod12617.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+    if (items.includes(arg1)) {
+      const _Array = Array;
+      let tmp3;
+      if (Array.isArray(arg0)) {
+        tmp3 = arg0[1];
+      }
+      closure_1 = tmp3;
+    }
+    return closure_1;
   });
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
+  return dependencyMap;
+}
+
+export { eventFromEnvelope };
+export function makeMultiplexedTransport(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (arg0) => {
+    let tunnel = arg0;
+    function getTransport(arg0, arg1) {
+      let combined = arg0;
+      if (arg1) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + arg0 + ":" + arg1;
+      }
+      value = map.get(combined);
+      if (value) {
+        const items = [arg0, value];
+        return items;
+      } else {
+        const dsnFromStringResult = _mod12620.dsnFromString(arg0);
+        if (dsnFromStringResult) {
+          let merged = tunnel;
+          const envelopeEndpointWithUrlEncodedAuth = _mod12627.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
+          let tmp9 = tunnel;
+          let obj3 = {};
+          if (arg1) {
+            merged = Object.assign(merged);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            const tmp9Result = tmp9(obj3);
+            closure_1 = tmp9Result;
+            const obj4 = {};
+            const merged1 = Object.assign(tmp9Result);
+            tmp9 = asyncGeneratorStep;
+            tunnel = asyncGeneratorStep(async (release) => {
+              c1 = 0;
+              return (async (arg0) => {
+                if (c1 === 2) {
+                  c1 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    return { value: "IconComponent", done: null };
+                  }
+                } else {
+                  try {
+                    c1 = 2;
+                    if (arg0 === 1) {
+                      c1 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c1 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
+                      if (tmp6) {
+                        tmp6.release = release;
+                      }
+                      c1 = 3;
+                      const obj = { value: closure_1.send(release), done: true };
+                      return obj;
+                    }
+                  } catch (tmp9) {
+                    c1 = tmp;
+                    throw tmp9;
+                  }
+                }
+              })();
+            });
+            obj4.send = function send(arg0) {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            let tmp9Result2 = obj4;
+          } else {
+            const merged2 = Object.assign(merged);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            tmp9Result2 = tmp9(obj3);
           }
+          obj3 = map.set(combined, tmp9Result2);
+          const tmp4Result = _mod12627;
         }
-        return item;
-      })(item), "");
-      continue;
+      }
     }
-    continue;
-  }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
-    }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
-  }
-  return str;
-};
-export const simpleHash = function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
-};
+    closure_4 = async function _send() {
+      c2 = 0;
+      c1 = 0;
+      return (async (arg0) => {
+        const mapped = v3({
+          envelope,
+          getEvent(arg0) {
+            let items = arg0;
+            if (!arg0) {
+              items = ["event"];
+            }
+            dependencyMap(12617).forEachEnvelopeItem(dependencyMap, () => { ... });
+            return dependencyMap2;
+          }
+        }).map((dsn) => {
+          if (typeof dsn === "string") {
+            let tmp2 = closure_1_3(dsn, undefined);
+          } else {
+            tmp2 = closure_1_3(dsn.dsn, dsn.release);
+          }
+          return tmp2;
+        });
+        const found = mapped.filter((item) => item);
+        let arr3 = found;
+        if (!found.length) {
+          let items = ["", closure_2_1];
+          const items1 = [items];
+          arr3 = items1;
+        }
+        await Promise.all(arr3.map((item) => {
+          [tmp, obj] = item;
+          const first = 5;
+          if (tmp) {
+            const obj3 = {};
+            const merged = Object.assign(first);
+            obj3.dsn = tmp;
+            let tmp4 = obj3;
+          } else {
+            tmp4 = first;
+          }
+          return obj.send(dependencyMap(12617).createEnvelope(tmp4, 12617));
+        }));
+        return value[0];
+      })();
+    };
+    closure_5 = async function _flush() {
+      closure_2 = tmp2;
+      closure_130_0 = closure_0;
+      closure_1 = 0;
+      const items = [];
+      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
+      closure_1 = arraySpreadResult;
+      items[arraySpreadResult] = closure_2_1;
+      closure_1 = closure_1 + 1;
+      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
+      return value.every((item) => item);
+    };
+    closure_1 = tunnel(arg0);
+    const map = new Map();
+    return {
+      send(arg0) {
+        const self = this;
+        const apply = closure_4.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      },
+      flush(arg0) {
+        const self = this;
+        const apply = closure_5.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
+    };
+  };
+}

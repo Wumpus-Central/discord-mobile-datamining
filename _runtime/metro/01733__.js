@@ -80,8 +80,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "gom",
-      reduceMotion: "kok"
+      startTimestamp: "keyword",
+      reduceMotion: "to top left"
     };
     let num = obj.velocity;
     if (num == null) {

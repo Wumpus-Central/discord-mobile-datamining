@@ -1,79 +1,34 @@
 // === Module 12634: ? ===
 
 // Module 12634
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12542 */;
-import setupIntegration from "module_12595" /* 12595 */;
+import _mod12579 from "module_12579" /* 12579 */;
+import _mod12617 from "module_12617" /* 12617 */;
+import _mod12620 from "module_12620" /* 12620 */;
 
-let c2 = "_sentryBundlerPluginAppKey:";
+require = arg1;
+const dependencyMap = arg6;
 
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  return {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(dependencyMap[2]);
-        }
-      });
-    },
-    processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
-          }
-          return mapped;
-        });
-      }
-      if (mapped) {
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
-        } else {
-          str2 = "every";
-        }
-        if (mapped[str2]((arr) => !arr.some((item) => {
-          filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(item);
-        }))) {
-          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = {};
-              const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
-              tags.tags = obj2;
-            }
-          }
-          return null;
-        }
-      }
-      return tags;
-    }
-  };
-});
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12620.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12579.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12617.createEnvelope(obj, items1);
+};

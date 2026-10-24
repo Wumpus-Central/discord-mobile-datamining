@@ -52,10 +52,10 @@ const fn = function() {
   function qualify(arg0) {
     return String(arg0).replace(/([ -])(?!$)/g, "$1?");
   }
-  function reduce(arg0, fn) {
+  function reduce(height, fn) {
     let num = 0;
-    if (arg0) {
-      num = arg0.length;
+    if (height) {
+      num = height.length;
     }
     if (typeof num === "number") {
       if (num > -1) {
@@ -65,7 +65,7 @@ const fn = function() {
           let tmp4 = null;
           if (0 < num) {
             do {
-              tmp11 = fn(tmp11, arg0[num3], num3, arg0);
+              tmp11 = fn(tmp11, height[num3], num3, height);
               num3 = num3 + 1;
               tmp4 = tmp11;
             } while (num3 < num);
@@ -82,10 +82,10 @@ const fn = function() {
       while (keys[tmp] !== undefined) {
         let call = hasOwnProperty.call;
         let tmp15 = tmp7;
-        if (!(typeof call === "unknown" ? hasOwnProperty(tmp7) : call(arg0, tmp7))) {
+        if (!(typeof call === "unknown" ? hasOwnProperty(tmp7) : call(height, tmp7))) {
           continue;
         } else {
-          tmp3 = fn(tmp6, arg0[tmp7], tmp15, arg0);
+          tmp3 = fn(tmp6, height[tmp7], tmp15, height);
           continue;
         }
         continue;

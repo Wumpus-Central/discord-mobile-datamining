@@ -1,56 +1,78 @@
 // === Module 12637: ? ===
 
 // Module 12637
-import _mod12539 from "module_12539" /* 12539 */;
-import _mod12566 from "module_12566" /* 12566 */;
-import _mod12567 from "module_12567" /* 12567 */;
+import _mod12597 from "module_12597" /* 12597 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const profiler = {
-  startProfiler() {
-    const client = _mod12566.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod12567.DEBUG_BUILD) {
-          const logger3 = _mod12539.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12567.DEBUG_BUILD) {
-        const logger2 = _mod12539.logger;
-        logger2.warn("ProfilingIntegration is not available");
+export function makePromiseBuffer(bufferSize) {
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
       }
-    } else if (_mod12567.DEBUG_BUILD) {
-      const logger = _mod12539.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod12566.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod12567.DEBUG_BUILD) {
-          const logger3 = _mod12539.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
         }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12567.DEBUG_BUILD) {
-        const logger2 = _mod12539.logger;
-        logger2.warn("ProfilingIntegration is not available");
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first;
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
+      } else {
+        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
       }
-    } else if (_mod12567.DEBUG_BUILD) {
-      const logger = _mod12539.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+    },
+    drain(arg0) {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod12597.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
+        }
+        arr = length;
+      });
     }
-  }
-};
+  };
+}

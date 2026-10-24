@@ -1,8 +1,8 @@
 // === Module 4579: ? ===
 
 // Module 4579
-import _mod4558 from "module_4558" /* 4558 */;
-import module_4580_mod from "module_4580" /* 4580 */;
+import _mod4560 from "module_4560" /* 4560 */;
+import module_4578_mod from "module_4578" /* 4578 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISODayParser, Parser) {
+function _setPrototypeOf(LocalDayParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISODayParser, Parser) {
-      ISODayParser.__proto__ = Parser;
-      return ISODayParser;
+    _setPrototypeOf = function _setPrototypeOf(LocalDayParser, Parser) {
+      LocalDayParser.__proto__ = Parser;
+      return LocalDayParser;
     };
   }
-  return _setPrototypeOf(ISODayParser, Parser);
+  return _setPrototypeOf(LocalDayParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,17 +56,17 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-let module_4580 = module_4580_mod;
-if (!module_4580) {
-  let obj = { default: module_4580 };
+let module_4578 = module_4578_mod;
+if (!module_4578) {
+  let obj = { default: module_4578 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4580;
+  tmp3 = module_4578;
 }
-module_4580 = tmp3;
-const Parser = _mod4558.Parser;
+module_4578 = tmp3;
+const Parser = _mod4560.Parser;
 _createSuperInternal = undefined;
-class ISODayParser {
+class LocalDayParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -116,7 +116,7 @@ class ISODayParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "E", "e", "c", "t", "T"];
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -140,7 +140,7 @@ class ISODayParser {
     }
   }
 }
-let dependencyMap = ISODayParser;
+let dependencyMap = LocalDayParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -152,9 +152,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISODayParser.prototype = Object.create(prototype, { constructor: { value: ISODayParser, writable: true, configurable: true } });
+LocalDayParser.prototype = Object.create(prototype, { constructor: { value: LocalDayParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(ISODayParser, Parser);
+  _setPrototypeOf(LocalDayParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -215,32 +215,27 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("i" !== arg1) {
-      if ("ii" !== arg1) {
-        if ("io" === arg1) {
-          return ordinalNumber.ordinalNumber(arg0, { unit: "day" });
+  value: function parse(arg0, arg1, ordinalNumber, arg3) {
+    const weekStartsOn = arg3;
+    function valueCallback(arg0) {
+      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
+    }
+    if ("e" !== arg1) {
+      if ("ee" !== arg1) {
+        if ("eo" === arg1) {
+          return _createSuperInternal(4562).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
+        } else if ("eee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         } else {
-          function valueCallback(arg0) {
-            let num = 7;
-            if (0 !== arg0) {
-              num = arg0;
-            }
-            return num;
-          }
-          if ("iii" === arg1) {
-            return _createSuperInternal(4560).mapValue(ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }), valueCallback);
-          } else if ("iiiii" === arg1) {
-            return _createSuperInternal(4560).mapValue(ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }), valueCallback);
-          } else if ("iiiiii" === arg1) {
-            return _createSuperInternal(4560).mapValue(ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }), valueCallback);
-          } else {
-            return _createSuperInternal(4560).mapValue(ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }), valueCallback);
-          }
+          return ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         }
       }
     }
-    return _createSuperInternal(4560).parseNDigits(arg1.length, arg0);
+    return _createSuperInternal(4562).mapValue(_createSuperInternal(4562).parseNDigits(arg1.length, arg0), valueCallback);
   }
 };
 let items = [
@@ -248,17 +243,17 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
+      let tmp = arg1 >= 0;
       if (tmp) {
-        tmp = arg1 <= 7;
+        tmp = arg1 <= 6;
       }
       return tmp;
     }
   },
   {
     key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const defaultResult = module_4580.default(arg0, arg2);
+    value: function set(arg0, arg1, arg2, arg3) {
+      const defaultResult = module_4578.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
     }
@@ -282,4 +277,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISODayParser };
+export { LocalDayParser };

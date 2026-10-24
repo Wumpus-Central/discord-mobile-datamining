@@ -1,200 +1,105 @@
 // === Module 12606: ? ===
 
 // Module 12606
-import _mod12583 from "module_12583" /* 12583 */;
-import _mod12586 from "module_12586" /* 12586 */;
-import _mod12593 from "module_12593" /* 12593 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod12583.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
+const SentryNonRecordingSpan = require;
+class SentryNonRecordingSpan {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
     }
-    return closure_1;
-  });
-  return dependencyMap;
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
+    if (!traceId) {
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
+      traceId = obj2.generateTraceId();
+    }
+    self._traceId = traceId;
+    spanId = obj.spanId;
+    if (!spanId) {
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
+      spanId = obj3.generateSpanId();
+    }
+    self._spanId = spanId;
+    return;
+  }
 }
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12578).TRACE_FLAG_NONE };
+  }
+};
+const items = [
+  entry,
+  {
+    key: "end",
+    value: function end(arg0) {
 
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
-      }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
-      } else {
-        const dsnFromStringResult = _mod12586.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12593.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
-          }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12593;
-        }
-      }
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12583).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12583).createEnvelope(tmp4, 12583));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      }
-    };
-  };
-}
+  },
+  {
+    key: "setAttribute",
+    value: function setAttribute(arg0, arg1) {
+      return this;
+    }
+  },
+  {
+    key: "setAttributes",
+    value: function setAttributes(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "setStatus",
+    value: function setStatus(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "updateName",
+    value: function updateName(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "isRecording",
+    value: function isRecording() {
+      return false;
+    }
+  },
+  {
+    key: "addEvent",
+    value: function addEvent(arg0, arg1, arg2) {
+      return this;
+    }
+  },
+  {
+    key: "addLink",
+    value: function addLink(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "addLinks",
+    value: function addLinks(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "recordException",
+    value: function recordException(arg0, arg1) {
+
+    }
+  }
+];
+
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

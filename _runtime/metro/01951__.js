@@ -331,7 +331,7 @@ let fn = function t() {
           key.key = key.key;
           return items;
         },
-      html(arg0, fn, arg2) {
+      html(arg0, fn, key) {
           num = 0;
           let str = "";
           let str2 = "";
@@ -366,7 +366,7 @@ let fn = function t() {
                   }
                 }
               }
-              str = str + fn(tmp4, arg2);
+              str = str + fn(tmp4, key);
               num = tmp5 + 1;
               str2 = str;
             } while (num < arg0.length);
@@ -405,8 +405,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag(`h${content.level}`, fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag(`h${content.level}`, fn(content.content, key));
         }
     };
     defaultRules.heading = obj3;
@@ -517,8 +517,8 @@ let fn = function t() {
     const obj9 = {
       order: 6,
       match: blockRegex(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
-      parse(arg0, fn, arg2) {
-          obj = { content: fn(arg0[0].replace(/^ *> ?/gm, ""), arg2) };
+      parse(arg0, fn, key) {
+          obj = { content: fn(arg0[0].replace(/^ *> ?/gm, ""), key) };
           return obj;
         },
       react(content, fn, key) {
@@ -536,8 +536,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("blockquote", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("blockquote", fn(content.content, key));
         }
     };
     defaultRules.blockQuote = obj9;
@@ -791,8 +791,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("div", fn(content.content, arg2), { class: "paragraph" });
+      html(content, fn, key) {
+          return htmlTag("div", fn(content.content, key), { class: "paragraph" });
         }
     };
     defaultRules.paragraph = obj14;
@@ -877,8 +877,8 @@ let fn = function t() {
     const _RegExp3 = RegExp;
     const regExp5 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\(\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*\\)");
     obj20.match = inlineRegex(regExp5);
-    obj20.parse = function parse(arg0, fn, arg2) {
-      obj = { content: fn(arg0[1], arg2), target: null, title: null };
+    obj20.parse = function parse(arg0, fn, key) {
+      obj = { content: fn(arg0[1], key), target: null, title: null };
       if (typeof unescapeUrl === "function") {
         obj.target = str.replace(re18, "$1");
         obj.title = arg0[3];
@@ -903,8 +903,8 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj20.html = function html(target, fn, arg2) {
-      return htmlTag("a", fn(target.content, arg2), { href: sanitizeUrl(target.target), title: target.title });
+    obj20.html = function html(target, fn, key) {
+      return htmlTag("a", fn(target.content, key), { href: sanitizeUrl(target.target), title: target.title });
     };
     defaultRules.link = obj20;
     const obj21 = { order: 18, match: null, parse: null, react: null, html: null };
@@ -1286,8 +1286,8 @@ let fn = function t() {
     obj24.quality = function quality(arg0) {
       return arg0[0].length + 0.2;
     };
-    obj24.parse = function parse(arg0, fn, arg2) {
-      return { content: fn(arg0[2] || arg0[1], arg2) };
+    obj24.parse = function parse(arg0, fn, key) {
+      return { content: fn(arg0[2] || arg0[1], key) };
     };
     obj24.react = function react(content, fn, key) {
       const props = { children: fn(content.content, key) };
@@ -1304,8 +1304,8 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj24.html = function html(content, fn, arg2) {
-      return htmlTag("em", fn(content.content, arg2));
+    obj24.html = function html(content, fn, key) {
+      return htmlTag("em", fn(content.content, key));
     };
     defaultRules.em = obj24;
     const obj25 = {
@@ -1331,8 +1331,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("strong", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("strong", fn(content.content, key));
         }
     };
     defaultRules.strong = obj25;
@@ -1359,8 +1359,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("u", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("u", fn(content.content, key));
         }
     };
     defaultRules.u = obj26;
@@ -1384,8 +1384,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("del", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("del", fn(content.content, key));
         }
     };
     defaultRules.del = obj27;

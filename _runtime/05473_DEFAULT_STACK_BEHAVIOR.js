@@ -1,6 +1,0 @@
-// === Module 5473: DEFAULT_STACK_BEHAVIOR ===
-
-// Module 5473 (DEFAULT_STACK_BEHAVIOR)
-
-export const DEFAULT_STACK_BEHAVIOR = "switch";
-export const DEFAULT_ENABLE_DISMISS_ON_CLOSE = true;

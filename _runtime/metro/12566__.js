@@ -1,71 +1,7 @@
 // === Module 12566: ? ===
 
 // Module 12566
-import _mod12540 from "module_12540" /* 12540 */;
-import _mod12545 from "module_12545" /* 12545 */;
-import _mod12557 from "module_12557" /* 12557 */;
-import _mod12558 from "module_12558" /* 12558 */;
-import ScopeClass from "ScopeClass" /* 12560 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod12557.getMainCarrier();
-  const asyncContextStrategy = _mod12558.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-};
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12557.getMainCarrier();
-  const asyncContextStrategy = _mod12558.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12540.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12557.getMainCarrier();
-  const asyncContextStrategy = _mod12558.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12545.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12557.getMainCarrier();
-  const asyncContextStrategy = _mod12558.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
-  }
-};
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12557.getMainCarrier();
-  const asyncContextStrategy = _mod12558.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3b7bd4c82e3e8c361f5983d530550253", name: "ArrowSmallDownIcon", type: "png" });

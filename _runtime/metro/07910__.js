@@ -1,7 +1,14 @@
 // === Module 7910: ? ===
 
 // Module 7910
-import _mod17 from "module_17" /* 17 */;
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

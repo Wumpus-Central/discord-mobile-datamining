@@ -1,11 +1,5 @@
 // === Module 15523: ? ===
 
 // Module 15523
-import _mod15524 from "module_15524" /* 15524 */;
 
-
-export default !_mod15524(() => 7 !== Object.defineProperty({}, 1, {
-  get() {
-    return 7;
-  }
-})[1]);
+export const calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];

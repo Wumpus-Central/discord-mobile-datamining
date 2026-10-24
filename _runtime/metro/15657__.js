@@ -1,24 +1,34 @@
 // === Module 15657: ? ===
 
 // Module 15657
-import get_ActivityIndicator from "module_17" /* 17 */;
+let closure_0 = { url: "http://localhost:8081" };
 
-
-export default function getReactNativePlatformConstants() {
-  const obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
-  } else {
-    return obj;
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
   }
+  return () => {
+    url = Object.assign({}, url, obj);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: payload.file, lineNumber: null };
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj.lineNumber = num;
+          const _fetch = fetch;
+          const request = { method: "POST", body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(obj);
+          const response = fetch(combined, request);
+        }
+      }
+    };
+    return obj;
+  };
 };

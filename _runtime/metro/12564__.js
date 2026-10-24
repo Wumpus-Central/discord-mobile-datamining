@@ -1,46 +1,7 @@
 // === Module 12564: ? ===
 
 // Module 12564
-function merge(arg0, obj) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 2;
-  }
-  if (obj) {
-    if (typeof obj === "object") {
-      if (num > 0) {
-        if (arg0) {
-          if (obj) {
-            const _Object = Object;
-            if (0 === Object.keys(obj).length) {
-              return arg0;
-            }
-          }
-        }
-        obj = {};
-        const merged = Object.assign(arg0);
-        for (const key10016 in arg1) {
-          let _Object2 = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10016);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10016);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
-            continue;
-          }
-          continue;
-        }
-        return obj;
-      }
-    }
-  }
-  return obj;
-}
+import registerAsset from "module_1134" /* 1134 */;
 
-export { merge };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6f5a76861191f4dd121da59ef71950f", name: "ArrowSmallUpIcon", type: "png" });

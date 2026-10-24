@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images", width: 375, height: 460, scales: [1], hash: "c8d53ba30e41e7296c825f2501df590c", name: "premium_gift_plan_selection_header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images", width: 216, height: 115, scales: [1], hash: "6aec591fd331d7a257e3dc97a1b2a4c2", name: "gift_cake", type: "png" });

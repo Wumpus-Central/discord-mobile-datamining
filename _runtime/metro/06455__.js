@@ -1,17 +1,18 @@
 // === Module 6455: ? ===
 
 // Module 6455
-import _mod6387 from "module_6387" /* 6387 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import _mod6403 from "module_6403" /* 6403 */;
 
+let closure_2 = _mod1307("%Object.isExtensible%", true);
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod6387(arg0);
-    }
-    str = str2;
+export default _mod1307("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
+  const tmp = _mod6403(arg0);
+  let tmp2 = !tmp;
+  if (!tmp) {
+    tmp2 = closure_2(arg0);
   }
-  return str;
-};
+  return tmp2;
+}) : (function IsExtensible(arg0) {
+  return !_mod6403(arg0);
+});
