@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 240,
   height: 130,
   scales: [2, 3],
-  hash: "c5a514a204d76328abe2ecbd82735ce3",
-  name: "no_mutual_friends_dark",
+  hash: "931bea5d9b6a7fc7a53130a431abe666",
+  name: "no_mutual_servers_dark",
   type: "png",
 });

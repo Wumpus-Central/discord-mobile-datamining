@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f8bf13e5289aa31d46196df3283f80c3",
-  name: "FullscreenEnterIcon",
+  hash: "6abfee45e74bcd203f98d0b7a2a2c9af",
+  name: "TranscriptOutlineIcon",
   type: "png",
 });

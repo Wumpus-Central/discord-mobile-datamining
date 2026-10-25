@@ -1,7 +1,47 @@
 // _runtime/metro/15538__.js
-import _mod15604 from "15604__.js";
-import 15539__ from "15539__.js";
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod15604;
-module_15539(obj, { assign: _mod15604 });
+export const units = [
+  "degree",
+  "acre",
+  "hectare",
+  "percent",
+  "bit",
+  "byte",
+  "gigabit",
+  "gigabyte",
+  "kilobit",
+  "kilobyte",
+  "megabit",
+  "megabyte",
+  "petabyte",
+  "terabit",
+  "terabyte",
+  "day",
+  "hour",
+  "millisecond",
+  "minute",
+  "month",
+  "second",
+  "week",
+  "year",
+  "centimeter",
+  "foot",
+  "inch",
+  "kilometer",
+  "meter",
+  "mile-scandinavian",
+  "mile",
+  "millimeter",
+  "yard",
+  "gram",
+  "kilogram",
+  "ounce",
+  "pound",
+  "stone",
+  "celsius",
+  "fahrenheit",
+  "fluid-ounce",
+  "gallon",
+  "liter",
+  "milliliter",
+];

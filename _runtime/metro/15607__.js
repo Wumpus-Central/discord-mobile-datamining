@@ -1,7 +1,12 @@
 // _runtime/metro/15607__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill_mod from "../15608_setupURLPolyfill.js";
+import _mod15545 from "15545__.js";
+import all from "15571__.js";
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+let _moduleResult = all(_mod15545.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod15545.WeakMap));
+  const obj = /native code/;
+}
+
+export default _moduleResult;

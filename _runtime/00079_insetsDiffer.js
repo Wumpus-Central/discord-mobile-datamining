@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "test", right: "y", bottom: "IconComponent" };
+let closure_0 = { top: "toCharArray$esjava$1", left: "test", right: "ix", bottom: "test" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

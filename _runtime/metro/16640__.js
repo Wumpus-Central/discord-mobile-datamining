@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 161,
   height: 161,
   scales: [1],
-  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
-  name: "graggle_2",
+  hash: "0bdcf228295d7206b9649c79781a956c",
+  name: "cap_2",
   type: "png",
 });

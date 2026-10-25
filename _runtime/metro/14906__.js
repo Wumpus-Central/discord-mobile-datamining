@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 34,
-  height: 34,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "36d299b9a20b89def78675ec02a95049",
-  name: "badge_2",
+  hash: "3cb1cd2fa7a6da13fc0880992d84830f",
+  name: "ChevronLargeDownIcon",
   type: "png",
 });

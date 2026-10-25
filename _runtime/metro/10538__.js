@@ -35,9 +35,9 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     const userDefinedConflictGestures = {
       onBegin: "Array",
       onStart: "ix",
-      onUpdate: "url",
-      onEnd: "",
-      onFinalize: "IconComponent",
+      onUpdate: "Symbol",
+      onEnd: "window",
+      onFinalize: "emoji",
     };
     withTestIdResult.onBegin = (onBegin) => {
       obj.onBegin = onBegin;

@@ -1,12 +1,19 @@
 // _runtime/metro/15571__.js
-import _mod15566 from "15566__.js";
-import _mod15572 from "15572__.js";
-
-export default (arg0) => {
-  if (_mod15566(arg0)) {
-    return arg0;
-  } else {
-    const tmp6 = new TypeError(_mod15572(arg0) + " is not a function");
-    throw tmp6;
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
   }
-};
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

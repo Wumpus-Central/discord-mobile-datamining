@@ -1,25 +1,28 @@
 // _runtime/metro/15547__.js
-import module_15548_mod from "15548__.js";
+import _mod15548 from "15548__.js";
+import _mod15550 from "15550__.js";
+import text from "../15557_text.js";
+import _mod15568 from "15568__.js";
+import _mod15578 from "15578__.js";
+import _mod15580 from "15580__.js";
+import _mod15582 from "15582__.js";
+import _mod15583 from "15583__.js";
 
-const call = prototype.call;
-let module_15548 = module_15548_mod;
-if (module_15548) {
-  const bind = prototype.bind;
-  module_15548 = bind.bind(call, call);
-}
-if (!module_15548) {
-  module_15548 = (arg0) => {
-    closure_0 = arg0;
-    return () => {
-      const apply = call.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
-      } else {
-        applyArgumentsResult = apply(closure_0, arguments);
+if (!_mod15548) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod15550(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod15580) {
+      if (_mod15568(tmp3, tmp4)) {
+        const tmpResult = _mod15582;
+        return tmpResult(!_mod15578(_mod15583.f, tmp3, tmp4), tmp3[tmp4]);
       }
-      return applyArgumentsResult;
-    };
+    } else {
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
+    }
   };
 }
 
-export default module_15548;
+export const f = getOwnPropertyDescriptor;

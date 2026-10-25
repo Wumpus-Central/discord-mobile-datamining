@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/hub/native/images",
-  width: 119,
-  height: 83,
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "0b100afac52015c470ea1ec3ef8acf50",
-  name: "redesign_email_header",
+  hash: "d719145f0510a722efd9724a4e3cf026",
+  name: "verify-email",
   type: "png",
 });

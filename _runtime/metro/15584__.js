@@ -1,38 +1,42 @@
 // _runtime/metro/15584__.js
-import _mod15545 from "15545__.js";
-import _mod15547 from "15547__.js";
-import _mod15563 from "15563__.js";
-import _mod15585 from "15585__.js";
-import _mod15586 from "15586__.js";
+import _mod15549 from "15549__.js";
+import _mod15571 from "15571__.js";
 
-let closure_2 = _mod15547([].push);
-
-export default (arg0, arg1) => {
-  const tmp = _mod15545(arg0);
-  const items = [];
-  for (const key10010 in tmp) {
-    let tmp14 = _mod15563;
-    let tmp14Result = tmp14(_mod15585, key10010);
-    let tmp2 = !tmp14Result;
-    if (!tmp14Result) {
-      tmp2 = _mod15563(tmp, key10010);
-    }
-    if (!tmp2) {
-      continue;
-    } else {
-      let tmp4 = closure_2(items, key10010);
-      continue;
-    }
-    continue;
-  }
-  for (let num = 0; arg1.length > num; num = num + 1) {
-    let tmp7 = arg1[num];
-    if (_mod15563(tmp, tmp7)) {
-      let tmp5Result = _mod15586;
-      if (!~tmp5Result.indexOf(items, tmp7)) {
-        let tmp10 = closure_2(items, tmp7);
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15571(arg1)) {
+          tmp11Result = _mod15549;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
       }
     }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return items;
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

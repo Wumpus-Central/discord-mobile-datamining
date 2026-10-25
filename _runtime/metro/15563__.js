@@ -1,10 +1,14 @@
 // _runtime/metro/15563__.js
-import _mod15547 from "15547__.js";
-import _mod15564 from "15564__.js";
+import prop_mod from "15564__.js";
 
-let closure_2 = _mod15547({}.hasOwnProperty);
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
 
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod15564(arg0), arg1);
-  };
+export default prop;

@@ -1,25 +1,19 @@
 // _runtime/metro/15499__.js
-import e from "../01174_e.js";
+import _mod15489 from "15489__.js";
+import BestAvailableLocale from "../15492_BestAvailableLocale.js";
 
-e.__extends(function MissingLocaleDataError() {
-  const self = this;
-  let tmp2 = null !== Error;
-  if (!tmp2) {
-    if (!tmp2) {
-      tmp2 = self;
-    }
-    tmp2.type = "MISSING_LOCALE_DATA";
-    return tmp2;
-  } else {
-    const apply = Error.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+require = arg1;
+const dependencyMap = arg6;
+
+export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
+  const items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod15489.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
     }
   }
-}, Error);
-
-export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
-  return "MISSING_LOCALE_DATA" === type.type;
+  return items;
 };

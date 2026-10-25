@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 62,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "45f60dd7d404beac5f4bf97c97606d27",
-  name: "poop_light_large",
+  hash: "296c2ec8ad1d8af66f5b6c763e93cbfa",
+  name: "ConnectionAverageIcon",
   type: "png",
 });

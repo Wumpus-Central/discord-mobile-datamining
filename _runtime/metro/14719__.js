@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "7e68c2960201e89a20761843ca26d40b",
-  name: "super_reaction",
+  hash: "fac2e3b3b87c5c331642c571eab831c9",
+  name: "sticker",
   type: "png",
 });

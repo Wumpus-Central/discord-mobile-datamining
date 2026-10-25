@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 48,
   height: 48,
   scales: [2, 3],
-  hash: "cae160e8dcd3fb84e6eda225bda4b4a6",
-  name: "img_clubs",
+  hash: "ddab91eeff97f71a819bf48cb718a6b3",
+  name: "img_create_my_own",
   type: "png",
 });

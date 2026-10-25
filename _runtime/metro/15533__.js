@@ -1,47 +1,29 @@
 // _runtime/metro/15533__.js
+const require = globalThis.__r;
 
-export const units = [
-  "degree",
-  "acre",
-  "hectare",
-  "percent",
-  "bit",
-  "byte",
-  "gigabit",
-  "gigabyte",
-  "kilobit",
-  "kilobyte",
-  "megabit",
-  "megabyte",
-  "petabyte",
-  "terabit",
-  "terabyte",
-  "day",
-  "hour",
-  "millisecond",
-  "minute",
-  "month",
-  "second",
-  "week",
-  "year",
-  "centimeter",
-  "foot",
-  "inch",
-  "kilometer",
-  "meter",
-  "mile-scandinavian",
-  "mile",
-  "millimeter",
-  "yard",
-  "gram",
-  "kilogram",
-  "ounce",
-  "pound",
-  "stone",
-  "celsius",
-  "fahrenheit",
-  "fluid-ounce",
-  "gallon",
-  "liter",
-  "milliliter",
-];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+};

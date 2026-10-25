@@ -293,7 +293,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   items7[1] = tmp40Result;
   let tmp42 = null;
   if (null != headerRightResult) {
-    const obj18 = { children: headerRightResult };
+    const obj18 = { hidesSharedBackground: true, children: headerRightResult };
     tmp42 = closure_10(colors(5916).ScreenStackHeaderRightView, obj18);
   }
   items7[2] = tmp42;
@@ -311,7 +311,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     backgroundColor,
     backTitle: headerBackTitle,
     backTitleVisible: "minimal" !== headerBackButtonDisplayMode,
-    backButtonDisplayMode: "gap",
+    backButtonDisplayMode: "formatToPlainString",
     backTitleFontFamily: tmp10,
     backTitleFontSize: fontSize,
     blurEffect: headerBlurEffect,
@@ -327,22 +327,22 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     largeTitleFontFamily: true,
     largeTitleFontSize: true,
     largeTitleFontWeight: true,
-    largeTitleHideShadow: "CONNECTION_OPEN",
-    title: "BACKGROUND_SYNC",
-    titleColor: "/assets/.cache/intl/ZGVzaWdu",
+    largeTitleHideShadow: "addListener",
+    title: null,
+    titleColor: "None Monthly",
     titleFontFamily: null,
-    titleFontSize: "02f56068c65887a24dbfc34e29cb0e47",
-    titleFontWeight: "bg.messages.02f56068c65887a24dbfc34e29cb0e47.compiled.messages",
-    topInsetEnabled: "jsona",
-    disableTopInsetApplication: "debug",
+    titleFontSize: null,
+    titleFontWeight: 1,
+    topInsetEnabled: "row",
+    disableTopInsetApplication: "center",
     disableLeftInsetApplication: null,
-    disableRightInsetApplication: true,
-    disableBottomInsetApplication: true,
-    translucent: true,
-    children: true,
-    headerLeftBarButtonItems: true,
-    headerRightBarButtonItems: true,
-    experimental_userInterfaceStyle: true,
+    disableRightInsetApplication: 0,
+    disableBottomInsetApplication: null,
+    translucent: null,
+    children: null,
+    headerLeftBarButtonItems: null,
+    headerRightBarButtonItems: null,
+    experimental_userInterfaceStyle: "emit",
   };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(6933);

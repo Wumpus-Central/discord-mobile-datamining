@@ -1,42 +1,29 @@
 // _runtime/metro/12646__.js
-import _mod12573 from "12573__.js";
-import _mod12587 from "12587__.js";
-import _mod12600 from "12600__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod12600.getClient();
-  const isolationScope = _mod12600.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: _mod12587.dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = _mod12573.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = _mod12573;
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
-        }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-      const tmpResult = _mod12587;
-    }
+export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
   }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  let tmp2 = dsn && arr.includes(dsn.host);
+  if (!tmp2) {
+    let flag = false;
+    if (tunnel) {
+      let substr = arr;
+      if ("/" === arr[arr.length - 1]) {
+        substr = arr.slice(0, -1);
+      }
+      let substr1 = tunnel;
+      if ("/" === tunnel[tunnel.length - 1]) {
+        substr1 = tunnel.slice(0, -1);
+      }
+      flag = substr === substr1;
+    }
+    tmp2 = flag;
+  }
+  return tmp2;
 };
