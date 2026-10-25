@@ -356,7 +356,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "Array", type: "handleRemoveAnswerImage", listener: "r" };
+          obj = { fired: false, wrapFn: "a", target: "me", type: "ConjureHistoryNotice", listener: "Version" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -381,7 +381,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "Array", type: "handleRemoveAnswerImage", listener: "r" };
+          obj = { fired: false, wrapFn: "a", target: "me", type: "ConjureHistoryNotice", listener: "Version" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

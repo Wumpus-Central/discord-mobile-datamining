@@ -1,140 +1,32 @@
 // === Module 12582: ? ===
 
 // Module 12582
-import _mod12580 from "module_12580" /* 12580 */;
+import _mod12576 from "module_12576" /* 12576 */;
+import _mod12579 from "module_12579" /* 12579 */;
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const isMatchingPattern = function isMatchingPattern(arr, test) {
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  const isStringResult = _mod12580.isString(arr);
-  if (!isStringResult) {
-    return isStringResult;
-  } else {
-    if (tmpResult.isRegExp(test)) {
-      let isMatch = test.test(arr);
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod12579.GLOBAL_OBJ.onunhandledrejection;
+  _mod12579.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+    _mod12576.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
     } else {
-      isMatch = _mod12580.isString(test);
-      if (isMatch) {
-        if (flag) {
-          let hasItem = arr === test;
-        } else {
-          hasItem = arr.includes(test);
-        }
-      }
-      const tmpResult2 = _mod12580;
-    }
-    tmpResult = _mod12580;
-  }
-};
-export const safeJoin = function safeJoin(arg0, arg1) {
-  if (Array.isArray(arg0)) {
-    const items = [];
-    let num = 0;
-    if (0 < arg0.length) {
-      try {
-        const push = items.push;
-        if (obj.isVueViewModel(tmp2)) {
-          push("[VueViewModel]");
-        } else {
-          const _String = String;
-          push(String(tmp2));
-        }
-        num = num + 1;
-        obj = _mod12580;
-      } catch (err) {
-        arr.push(tmp);
-      }
-    }
-    return items.join(arg1);
-  } else {
-    return "";
-  }
-};
-export const snipLine = function snipLine(arr, lineno) {
-  if (arr.length <= 150) {
-    return arr;
-  } else {
-    let tmp = lineno;
-    if (lineno > length) {
-      tmp = length;
-    }
-    const _Math = Math;
-    let num3 = Math.max(tmp - 60, 0);
-    if (num3 < 5) {
-      num3 = 0;
-    }
-    const _Math2 = Math;
-    let bound = Math.min(num3 + 140, length);
-    if (bound > length - 5) {
-      bound = length;
-    }
-    if (bound === length) {
-      const _Math3 = Math;
-      num3 = Math.max(bound - 140, 0);
-    }
-    const substr = arr.slice(num3, bound);
-    let combined = substr;
-    if (num3 > 0) {
-      const _HermesInternal = HermesInternal;
-      combined = "'{snip} " + substr;
-    }
-    let text = combined;
-    if (bound < length) {
-      text = `${tmp6} {snip}`;
-    }
-    return text;
-  }
-};
-export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
-  if (items === undefined) {
-    items = [];
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  return items.some((test) => {
-    const isStringResult = _mod12580.isString(transaction);
-    if (!isStringResult) {
-      return isStringResult;
-    } else {
-      if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(transaction);
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
-        isMatch = _mod12580.isString(test);
-        if (isMatch) {
-          if (flag) {
-            let hasItem = transaction === test;
-          } else {
-            hasItem = transaction.includes(test);
-          }
-        }
-        const tmpResult2 = _mod12580;
-      }
-      tmpResult = _mod12580;
-    }
-  });
-};
-export const truncate = function truncate(str) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 0;
-  }
-  let combined = str;
-  if (typeof str === "string") {
-    combined = str;
-    if (0 !== num) {
-      combined = str;
-      if (str.length > num) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + str.slice(0, num) + "...";
+        applyArgumentsResult = apply(self, arguments);
       }
     }
-  }
-  return combined;
+  };
+  _mod12579.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
+
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod12576.addHandler("unhandledrejection", errorCallback);
+  _mod12576.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

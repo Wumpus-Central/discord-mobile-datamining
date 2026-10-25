@@ -2,50 +2,33 @@
 
 // Module 15655
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
-  }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
-      }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
+export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
+  try {
+    if (constants) {
+      if (constants.reactNativeVersion) {
+        const major = constants.reactNativeVersion.major;
+        const minor = constants.reactNativeVersion.minor;
+        const patch = constants.reactNativeVersion.patch;
+        const prerelease = constants.reactNativeVersion.prerelease;
+        if (typeof major !== "number") {
+          return null;
         } else {
-          const result = map.set(arg0, []);
+          const items = [];
+          const _HermesInternal2 = HermesInternal;
+          items.push("" + tmp4 + "." + minor + "." + patch);
+          if (prerelease) {
+            const _HermesInternal = HermesInternal;
+            arr2.push("-" + prerelease);
+          }
+          return items.join("");
         }
+      } else {
+        return null;
       }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
-      }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
-      }
+    } else {
+      return null;
     }
-  };
+  } catch (err) {
+    return null;
+  }
 };

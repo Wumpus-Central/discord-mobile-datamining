@@ -1,154 +1,38 @@
 // === Module 12664: ? ===
 
 // Module 12664
-import _mod12665 from "module_12665" /* 12665 */;
-import setupIntegration from "module_12629" /* 12629 */;
+import _mod12576 from "module_12576" /* 12576 */;
+import _mod12578 from "module_12578" /* 12578 */;
+import _mod12579 from "module_12579" /* 12579 */;
 
-
-export const generateIteratee = function generateIteratee(arg0) {
-  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (root) => {
-    if (root.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-      if (!isMatch) {
-        const filename = root.filename;
-        let hasItem = filename.includes("\\");
-        if (hasItem) {
-          const filename2 = root.filename;
-          hasItem = !filename2.includes("/");
-        }
-        isMatch = hasItem;
-      }
-      if (fn) {
-        if (root) {
-          const filename1 = root.filename;
-          if (0 === filename1.indexOf(root)) {
-            root.filename = filename1.replace(root, prefix);
-          }
-        }
-      } else if (isMatch) {
-        if (isMatch) {
-          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-          const str5 = str3.replace(/^[a-zA-Z]:/, "");
-        } else {
-          replaced = str3;
-        }
-        const obj2 = _mod12665;
-        if (root) {
-          let relativeResult = obj2.relative(root, replaced);
-        } else {
-          relativeResult = obj2.basename(replaced);
-        }
-        const _HermesInternal = HermesInternal;
-        root.filename = "" + prefix + relativeResult;
-      }
-      return root;
-    } else {
-      return root;
-    }
-  };
-};
-export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let fn;
-  ({ prefix, root } = obj);
-  if (!prefix) {
-    prefix = "app:///";
-  }
-  fn = obj.iteratee;
-  if (!fn) {
-    fn = (root) => {
-      if (root.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-        if (!isMatch) {
-          const filename = root.filename;
-          let hasItem = filename.includes("\\");
-          if (hasItem) {
-            const filename2 = root.filename;
-            hasItem = !filename2.includes("/");
-          }
-          isMatch = hasItem;
-        }
-        if (fn) {
-          if (root) {
-            const filename1 = root.filename;
-            if (0 === filename1.indexOf(root)) {
-              root.filename = filename1.replace(root, prefix);
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod12579.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod12578.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(12579).GLOBAL_OBJ.console) {
+        tmp(12584).fill(tmp(12579).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod12578.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            level(12576).triggerHandlers("console", { args: items, level });
+            const obj3 = level(12578).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(12579).GLOBAL_OBJ.console, items);
             }
-          }
-        } else if (isMatch) {
-          if (isMatch) {
-            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-            const str5 = str3.replace(/^[a-zA-Z]:/, "");
-          } else {
-            replaced = str3;
-          }
-          const obj2 = _mod12665;
-          if (root) {
-            let relativeResult = obj2.relative(root, replaced);
-          } else {
-            relativeResult = obj2.basename(replaced);
-          }
-          const _HermesInternal = HermesInternal;
-          root.filename = "" + prefix + relativeResult;
-        }
-        return root;
-      } else {
-        return root;
+            const obj = { args: items, level };
+            const obj2 = level(12576);
+          };
+        });
+        const tmpResult = tmp(12584);
       }
-    };
+    });
   }
-  return {
-    name: "RewriteFrames",
-    processEvent(exception) {
-      exception = exception.exception;
-      if (exception) {
-        const _Array = Array;
-        exception = Array.isArray(exception.exception.values);
-      }
-      let tmp2 = exception;
-      if (exception) {
-        tmp2 = (function _processExceptionsEvent(exception) {
-          try {
-            const obj = {};
-            let merged = Object.assign(exception);
-            let obj2 = {};
-            let merged1 = Object.assign(exception.exception);
-            const values = exception.exception.values;
-            obj2.values = values.map((stacktrace) => {
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
-              if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
-                const obj2 = {};
-                const merged1 = Object.assign(stacktrace2);
-                let frames = stacktrace2;
-                if (stacktrace2) {
-                  frames = stacktrace2.frames;
-                }
-                if (frames) {
-                  const frames1 = stacktrace2.frames;
-                  frames = frames1.map((item) => closure_1_0(item));
-                }
-                const obj3 = { stacktrace: null };
-                obj2.frames = frames;
-                obj3.stacktrace = obj2;
-                stacktrace = obj3;
-              }
-              const merged2 = Object.assign(stacktrace);
-              return {};
-            });
-            obj.exception = obj2;
-            return obj;
-          } catch (err) {
-            return tmp;
-          }
-        })(exception);
-      }
-      return tmp2;
-    }
-  };
-});
+}
+
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
+  _mod12576.addHandler("console", errorCallback);
+  _mod12576.maybeInstrument("console", instrumentConsole);
+};

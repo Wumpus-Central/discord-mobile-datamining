@@ -3191,7 +3191,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f86834;
+      let f86850;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3242,7 +3242,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f86834 = function() {
+          f86850 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4540,7 +4540,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F141558 */ function() { ... };
+                            return /* F141584 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4606,7 +4606,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F141558 */ function() { ... };
+                            return /* F141584 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5443,7 +5443,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f141600(map[8]);
+      const normalizer = f141626(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -5607,7 +5607,7 @@ function getLargestContentfulPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod693.browserPerformanceTimeOrigin() || _mod693.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "gap" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "formatToPlainString" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5665,7 +5665,7 @@ function getInteractionToNextPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod693.browserPerformanceTimeOrigin() || _mod693.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "gap" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "formatToPlainString" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {

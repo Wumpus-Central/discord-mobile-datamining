@@ -268,7 +268,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   items7[1] = tmp40Result;
   let tmp42 = null;
   if (null != headerRightResult) {
-    const obj18 = { children: headerRightResult };
+    const obj18 = { hidesSharedBackground: true, children: headerRightResult };
     tmp42 = closure_10(colors(5916).ScreenStackHeaderRightView, obj18);
   }
   items7[2] = tmp42;
@@ -281,7 +281,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp44 = closure_10(colors(5916).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
-  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "gap", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "CONNECTION_OPEN", title: "BACKGROUND_SYNC", titleColor: "/assets/.cache/intl/ZGVzaWdu", titleFontFamily: null, titleFontSize: "02f56068c65887a24dbfc34e29cb0e47", titleFontWeight: "bg.messages.02f56068c65887a24dbfc34e29cb0e47.compiled.messages", topInsetEnabled: "jsona", disableTopInsetApplication: "debug", disableLeftInsetApplication: null, disableRightInsetApplication: true, disableBottomInsetApplication: true, translucent: true, children: true, headerLeftBarButtonItems: true, headerRightBarButtonItems: true, experimental_userInterfaceStyle: true };
+  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "formatToPlainString", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "addListener", title: null, titleColor: "None Monthly", titleFontFamily: null, titleFontSize: null, titleFontWeight: 1, topInsetEnabled: "row", disableTopInsetApplication: "center", disableLeftInsetApplication: null, disableRightInsetApplication: 0, disableBottomInsetApplication: null, translucent: null, children: null, headerLeftBarButtonItems: null, headerRightBarButtonItems: null, experimental_userInterfaceStyle: "emit" };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(6933);
   if (!tmp50) {

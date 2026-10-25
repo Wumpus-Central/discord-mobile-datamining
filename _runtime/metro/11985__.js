@@ -1,10 +1,8 @@
 // === Module 11985: ? ===
 
 // Module 11985
-import _mod11915 from "module_11915" /* 11915 */;
-import _mod11919 from "module_11919" /* 11919 */;
-
-const require = globalThis.__r;
+import _mod11916 from "module_11916" /* 11916 */;
+import _mod11986 from "module_11986" /* 11986 */;
 
 const self = this;
 let self2 = this;
@@ -57,53 +55,31 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.ZodError = undefined;
-    exports.ZodRealError = undefined;
-    const fnResult = fn(_mod11915);
-    let closure_5 = fn(_mod11919);
-    function initializer(prototype, arg1) {
-      _require = prototype;
-      const $ZodError = require("module_11915").$ZodError;
-      $ZodError.init(prototype, arg1);
-      prototype.name = "ZodError";
-      Object.defineProperties(prototype, {
-        format: {
-          value(arg0) {
-            return fnResult.formatError(closure_0, arg0);
-          }
-        },
-        flatten: {
-          value(arg0) {
-            return fnResult.flattenError(closure_0, arg0);
-          }
-        },
-        addIssue: {
-          value(arg0) {
-            const issues = prototype.issues;
-            issues.push(arg0);
-            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
-          }
-        },
-        addIssues: {
-          value(arg0) {
-            const issues = prototype.issues;
-            const items = [...arg0];
-            issues.push.apply(items);
-            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
-          }
-        },
-        isEmpty: {
-          get() {
-            return 0 === prototype.issues.length;
-          }
-        }
-      });
-    }
-    exports.ZodError = fnResult.$constructor("ZodError", initializer);
-    let obj = { Parent: null };
-    const _Error = Error;
-    obj.Parent = Error;
-    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, obj);
+    exports.parse = undefined;
+    exports.parseAsync = undefined;
+    exports.safeParse = undefined;
+    exports.safeParseAsync = undefined;
+    exports.encode = undefined;
+    exports.decode = undefined;
+    exports.encodeAsync = undefined;
+    exports.decodeAsync = undefined;
+    exports.safeEncode = undefined;
+    exports.safeDecode = undefined;
+    exports.safeEncodeAsync = undefined;
+    exports.safeDecodeAsync = undefined;
+    const fnResult = fn(_mod11916);
+    exports.parse = fnResult._parse(_mod11986.ZodRealError);
+    exports.parseAsync = fnResult._parseAsync(_mod11986.ZodRealError);
+    exports.safeParse = fnResult._safeParse(_mod11986.ZodRealError);
+    exports.safeParseAsync = fnResult._safeParseAsync(_mod11986.ZodRealError);
+    exports.encode = fnResult._encode(_mod11986.ZodRealError);
+    exports.decode = fnResult._decode(_mod11986.ZodRealError);
+    exports.encodeAsync = fnResult._encodeAsync(_mod11986.ZodRealError);
+    exports.decodeAsync = fnResult._decodeAsync(_mod11986.ZodRealError);
+    exports.safeEncode = fnResult._safeEncode(_mod11986.ZodRealError);
+    exports.safeDecode = fnResult._safeDecode(_mod11986.ZodRealError);
+    exports.safeEncodeAsync = fnResult._safeEncodeAsync(_mod11986.ZodRealError);
+    exports.safeDecodeAsync = fnResult._safeDecodeAsync(_mod11986.ZodRealError);
   } else {
     const _Object2 = Object;
   }

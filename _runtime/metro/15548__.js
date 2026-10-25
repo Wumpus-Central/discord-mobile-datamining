@@ -1,17 +1,11 @@
 // === Module 15548: ? ===
 
 // Module 15548
-import _mod15544 from "module_15544" /* 15544 */;
+import _mod15549 from "module_15549" /* 15549 */;
 
 
-export default !_mod15544(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+export default !_mod15549(() => 7 !== Object.defineProperty({}, 1, {
+  get() {
+    return 7;
   }
-  return hasOwnPropertyResult;
-});
+})[1]);

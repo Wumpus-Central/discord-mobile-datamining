@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 20, height: 20, scales: [1, 2, 3, 4], hash: "2477b520035213801129f8906948e423", name: "maximize", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/badge", width: 30, height: 30, scales: [2, 3], hash: "394e48046e846651a339ee88e4f1b0b4", name: "ic_profile_badge_active_developer", type: "png" });

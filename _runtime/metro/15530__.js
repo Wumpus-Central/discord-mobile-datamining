@@ -1,25 +1,5 @@
 // === Module 15530: ? ===
 
 // Module 15530
-const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
-  _require = locale;
-  const timezones = require("module_15531").timezones;
-  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
-    }
-    try {
-      const obj = { timeZone };
-      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
-      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
-    } catch (err) {
-      return false;
-    }
-  })(item, closure_0));
-};
+export const collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];

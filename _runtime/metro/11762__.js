@@ -1,12 +1,8 @@
 // === Module 11762: ? ===
 
 // Module 11762
-import _mod11761 from "module_11761" /* 11761 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11761.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

@@ -1,7 +1,15 @@
 // === Module 15326: ? ===
 
 // Module 15326
-import _mod15314 from "module_15314" /* 15314 */;
+import _mod15318 from "module_15318" /* 15318 */;
 
 
-export default (arg0, arg1) => new _mod15314(arg0, arg1).patch;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod15318(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

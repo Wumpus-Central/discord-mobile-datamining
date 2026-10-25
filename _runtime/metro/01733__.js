@@ -78,10 +78,10 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "enabled",
+      current: "emoji",
       lastTimestamp: null,
-      startTimestamp: "keyword",
-      reduceMotion: "to top left"
+      startTimestamp: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

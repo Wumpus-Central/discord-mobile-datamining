@@ -8,11 +8,11 @@ import _slicedToArray from "module_32" /* 32 */;
 const RiveColor2 = tmp(5079);
 require = fn;
 fn(19).useCallback;
-const f33556 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const f33561 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(arg0, arg1) {
   const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod5084.useRiveProperty(arg1, arg0, f33556), 3);
+  const tmp4 = _slicedToArray(_mod5084.useRiveProperty(arg1, arg0, f33561), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {

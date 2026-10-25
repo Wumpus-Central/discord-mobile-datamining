@@ -1,7 +1,7 @@
 // === Module 15569: ? ===
 
 // Module 15569
-import _mod15547 from "module_15547" /* 15547 */;
+import _mod15555 from "module_15555" /* 15555 */;
 
 
-export default _mod15547({}.isPrototypeOf);
+export default (arg0) => Object(_mod15555(arg0));
