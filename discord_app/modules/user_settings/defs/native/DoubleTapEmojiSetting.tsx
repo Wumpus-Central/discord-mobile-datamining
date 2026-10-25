@@ -179,7 +179,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDoubleTapEmojiDescription() {
       const cResult = c.c(2);

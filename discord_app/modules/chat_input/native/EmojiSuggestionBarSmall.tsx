@@ -163,13 +163,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } = displayEmojis);
       ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
       const tmp = closure_9(displayEmojis.anchorTop);
-      const suggestionBarHeight = displayEmojis(13322).useSuggestionBarHeight(
+      const suggestionBarHeight = displayEmojis(13327).useSuggestionBarHeight(
         transitionState,
         cleanUp,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
         onOccupiedHeightChange,
       );
-      let obj = displayEmojis(13322);
+      let obj = displayEmojis(13327);
       const fn = function j() {
         const obj = { opacity: null };
         const items = [0, closure_8];
@@ -287,7 +287,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
       let obj = require("c");
       const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(
         tmp6,
-        tmp(13322).MAX_SUGGESTIONS_LARGE,
+        tmp(13327).MAX_SUGGESTIONS_LARGE,
         1,
         tmp7,
       );

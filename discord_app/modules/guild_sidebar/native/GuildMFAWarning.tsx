@@ -7,7 +7,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef17624 from "../../../../_runtime/metro/17624__.js";
+import _modDef17629 from "../../../../_runtime/metro/17629__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(10);
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.MFAWarningIcon) {
-        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef17624 };
+        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef17629 };
         const tmp9 = hasOwnProperty(FastImageDefault, obj2);
         cResult[0] = tmp4.MFAWarningIcon;
         cResult[1] = tmp9;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GuildMFAWarning() {
       const tmp = closure_7();
       const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-      const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17624 };
+      const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17629 };
       const items = [hasOwnProperty(FastImageDefault, obj2)];
       const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
       const intl = util.intl;

@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp18;
           }
-          const obj3 = { theme: tmp(15872).ThemeTypes.DARK, children: null };
+          const obj3 = { theme: tmp(15877).ThemeTypes.DARK, children: null };
           const obj4 = { style: tmp5.promo, children: null };
           const items = [tmp7, tmp15];
           obj4.children = items;

@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const AppIconTypes = ClydeIcon(9866);
 const ClydeIcon2 = ClydeIcon(10571);
-const AppIconUtils = ClydeIcon(14762);
+const AppIconUtils = ClydeIcon(14767);
 require = fn;
 const getIconById = fn(9865).getIconById;
 const jsx = fn(21).jsx;

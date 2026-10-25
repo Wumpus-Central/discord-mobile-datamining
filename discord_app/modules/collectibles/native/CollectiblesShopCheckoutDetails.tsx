@@ -21,7 +21,7 @@ import _modDef9437 from "../../../../discord_assets/assets/orbs/orb_profile_badg
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef13874 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef13879 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import OrbCheckoutAmountTagDefault from "../../virtual_currency/native/OrbCheckoutAmountTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -115,7 +115,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
       borderWidth: 2,
       borderColor: BORDER_FEEDBACK_CRITICAL,
       marginHorizontal: tmp4(587).space.PX_16,
-      backgroundColor: "__packager_asset",
+      backgroundColor: "application",
     },
   };
   return obj;
@@ -155,7 +155,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef13874 };
+          const obj2 = { uri: _modDef13879 };
           cResult[0] = obj2;
           let first = obj2;
         } else {
@@ -226,7 +226,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp4) {
         const obj = { style: tmp.profileEffectContainer, children: null };
         const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-        const obj3 = { uri: _modDef13874 };
+        const obj3 = { uri: _modDef13879 };
         obj2.source = obj3;
         obj2.accessibilityLabel = tmp4.accessibilityLabel;
         obj2.style = tmp.profileEffect;

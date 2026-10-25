@@ -136,7 +136,7 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1631).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1631).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11002, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11003, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
       tmp10 = closure_29(tmp2(7485).HeaderActionButton, obj6);
     }
@@ -193,7 +193,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(13971).KeyboardIcon;
+      let ImageIcon = tmp2(13976).KeyboardIcon;
     } else {
       ImageIcon = tmp2(8558).ImageIcon;
     }

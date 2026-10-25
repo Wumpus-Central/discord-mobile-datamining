@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           label: tmp10,
           value: echoCancellation,
-          onValueChange: inputMode(11626).handleEchoCancellationChange,
+          onValueChange: inputMode(11627).handleEchoCancellationChange,
         };
         obj2.children = closure_5(inputMode(7295).TableSwitchRow, obj3);
-        const tmp14 = closure_5(inputMode(11610).UserSettingsTableRowGroup, obj2);
+        const tmp14 = closure_5(inputMode(11611).UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
         let tmp12 = tmp14;
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: tmp19,
           subLabel: tmp20,
           value: automaticGainControl,
-          onValueChange: inputMode(11626).handleAutomaticGainControlChange,
+          onValueChange: inputMode(11627).handleAutomaticGainControlChange,
         };
         const tmp25 = closure_5(inputMode(7295).TableSwitchRow, obj4);
         cResult[9] = automaticGainControl;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { hasIcons: false, children: null };
           const items2 = [tmp23, tmp26];
           obj6.children = items2;
-          const tmp31 = closure_6(inputMode(11610).UserSettingsTableRowGroup, obj6);
+          const tmp31 = closure_6(inputMode(11611).UserSettingsTableRowGroup, obj6);
           cResult[15] = tmp23;
           cResult[16] = tmp26;
           cResult[17] = tmp31;

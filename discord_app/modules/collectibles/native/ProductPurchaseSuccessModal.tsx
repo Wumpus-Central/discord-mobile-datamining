@@ -642,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = orbBalancePriorToPurchase;
       }
       const currentUser = useCurrentUser.useCurrentUser();
-      const backgroundColors = currentUser(13940)(product.styles).backgroundColors;
+      const backgroundColors = currentUser(13945)(product.styles).backgroundColors;
       let tertiary;
       if (backgroundColors != null) {
         tertiary = backgroundColors.tertiary;
@@ -681,7 +681,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             _undefined.current = [];
           };
         }, items);
-        const avatarDecorationPreviewSizes = tmp(13942).useAvatarDecorationPreviewSizes();
+        const avatarDecorationPreviewSizes = tmp(13947).useAvatarDecorationPreviewSizes();
         ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -697,7 +697,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           [tmp16, tmp17] = cResult;
         }
-        const tmpResult10 = tmp(13942);
+        const tmpResult10 = tmp(13947);
         const stateFromStores = tmp(504).useStateFromStores(tmp16, N);
         let tmp20 = product.type === tmp(1995).CollectiblesItemType.PROFILE_EFFECT;
         if (!tmp20) {
@@ -706,7 +706,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult11 = tmp(504);
         ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_24(stateFromStores, tmp20));
         const tmp22 = closure_24(stateFromStores, tmp20);
-        const category = tmp(13943).useFetchCollectiblesProductCategory(product.skuId).category;
+        const category = tmp(13948).useFetchCollectiblesProductCategory(product.skuId).category;
         if (category != null) {
           let imageBackground = category.mobileBgUrl;
         }
@@ -716,7 +716,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[4] === stageCollectibleChangeForEditProfile) {
               let tmp25 = cResult[5];
             }
-            const handleUseNow = tmp(11179).useHandleUseNow(tmp25);
+            const handleUseNow = tmp(11180).useHandleUseNow(tmp25);
             class N {
               constructor() {
                 return closure_8.useReducedMotion;
@@ -1388,7 +1388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[7] = currentUser;
             cResult[8] = avatarSource;
             tmp28 = avatarSource;
-            const tmpResult13 = tmp(11179);
+            const tmpResult13 = tmp(11180);
           }
         }
         const obj21 = { product, onSuccess, stageCollectibleChangeForEditProfile };
@@ -1397,7 +1397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = stageCollectibleChangeForEditProfile;
         cResult[5] = obj21;
         tmp25 = obj21;
-        const tmpResult12 = tmp(13943);
+        const tmpResult12 = tmp(13948);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1455,9 +1455,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             _undefined.current = [];
           };
         }, items);
-        const avatarDecorationPreviewSizes = tmp2(13942).useAvatarDecorationPreviewSizes();
+        const avatarDecorationPreviewSizes = tmp2(13947).useAvatarDecorationPreviewSizes();
         ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
-        const tmp2Result8 = tmp2(13942);
+        const tmp2Result8 = tmp2(13947);
         const items1 = [AccessibilityStore];
         const stateFromStores = tmp2(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
         let tmp15 = product.type === tmp2(1995).CollectiblesItemType.PROFILE_EFFECT;
@@ -1467,21 +1467,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp2Result9 = tmp2(504);
         ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_24(stateFromStores, tmp15));
         const tmp17 = closure_24(stateFromStores, tmp15);
-        const category = tmp2(13943).useFetchCollectiblesProductCategory(product.skuId).category;
+        const category = tmp2(13948).useFetchCollectiblesProductCategory(product.skuId).category;
         if (category != null) {
           const mobileBgUrl = category.mobileBgUrl;
         }
-        const tmp2Result10 = tmp2(13943);
+        const tmp2Result10 = tmp2(13948);
         let obj2 = {
           product,
           onSuccess,
           stageCollectibleChangeForEditProfile: orbBalancePriorToPurchase.stageCollectibleChangeForEditProfile,
         };
-        const handleUseNow1 = tmp2(11179).useHandleUseNow(obj2);
+        const handleUseNow1 = tmp2(11180).useHandleUseNow(obj2);
         const isApplying = handleUseNow1.isApplying;
         ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow1);
         const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
-        const tmp2Result11 = tmp2(11179);
+        const tmp2Result11 = tmp2(11180);
         const effect1 = noop.useEffect(() => {
           _undefined(dependencyMap[30]).lockOrientation(constants.PORTRAIT);
           return () => {
@@ -1520,7 +1520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               initialRenderedBalance: prop,
               balance: tmp2Result12.useFetchVirtualCurrencyBalance().balance,
             };
-            showOrbBalancePill = tmp32(tmp2(13944).BalanceWidgetPill, obj10);
+            showOrbBalancePill = tmp32(tmp2(13949).BalanceWidgetPill, obj10);
           }
           obj9.children = showOrbBalancePill;
           const items4 = [tmp32(closure_7, obj9)];
@@ -1588,7 +1588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp31Result2 = null;
             if (tmp2(1995).CollectiblesItemType.NAMEPLATE === type) {
               const obj19 = { user: currentUser, nameplate: product.items[0], animate: true };
-              tmp31Result2 = tmp31(tmp2(11171).NameplatePreview, obj19);
+              tmp31Result2 = tmp31(tmp2(11172).NameplatePreview, obj19);
             }
           }
           obj13.children = tmp31Result2;

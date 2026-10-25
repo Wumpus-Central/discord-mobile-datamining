@@ -34,7 +34,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10804).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(10805).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
@@ -531,8 +531,8 @@ export const publishProject = function publishProject(projectId, arg1) {
       }
     });
 };
-export const draftPatchNotes = function draftPatchNotes(c0) {
-  closure_0 = c0;
+export const draftPatchNotes = function draftPatchNotes(arg0) {
+  closure_0 = arg0;
   return new Promise((resolve, reject) => {
     const conjureSocket = conjureProjectSockets.getConjureSocket(closure_0);
     if (null != conjureSocket) {

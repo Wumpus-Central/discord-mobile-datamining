@@ -6,9 +6,9 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-const SharedSpacesWarningStore = fn(15041);
+const SharedSpacesWarningStore = fn(15046);
 ({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
-const constants = fn(15043).VoiceChannelWarningSurfaces;
+const constants = fn(15048).VoiceChannelWarningSurfaces;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx",
@@ -26,8 +26,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj3.blocked_user_ids = items;
     obj3.warning_surface = constants.POST_JOIN_SHEET;
     obj2.impressionProperties = obj3;
-    obj.openLazy(asyncRequireImpl(15044, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
-    const tmp11 = asyncRequireImpl(15044, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(15049, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = asyncRequireImpl(15049, dependencyMap.paths);
   } else {
     React4();
   }

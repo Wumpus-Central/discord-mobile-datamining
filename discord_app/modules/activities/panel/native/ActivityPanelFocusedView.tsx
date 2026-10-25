@@ -25,14 +25,14 @@ const ActivityPanelConstants = fn(5609);
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18361);
+const ActivityPanelNativeConstants = fn(18366);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1087).ThemeTypes;
-const IS_IOS = fn(10897).IS_IOS;
+const IS_IOS = fn(10898).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };

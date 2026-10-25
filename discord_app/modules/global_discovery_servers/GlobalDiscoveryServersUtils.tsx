@@ -217,8 +217,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: "<string:285212949>",
-    emojis: "<string:37883713>",
+    discoverySplash: "<string:4042981379>",
+    emojis: "<string:3617128449>",
   };
   ({
     approximate_presence_count: obj.presenceCount,

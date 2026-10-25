@@ -77,7 +77,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17352).StackNavigationAnimationSettings;
+let closure_7 = fn(17357).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

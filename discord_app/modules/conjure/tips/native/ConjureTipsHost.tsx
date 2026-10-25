@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_6();
       const obj = onShow(576);
       const tmp3Result = useConjureTipsDefault(
-        onShow(12338).CONJURE_TIPS,
+        onShow(12340).CONJURE_TIPS,
         projectId,
         messages,
         draftHasText,
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let joined;
       ({ projectId, messages, draftHasText, onAskForIdeas } = onShow);
       const tmp = closure_6();
-      const tmp2Result = joined(12328)(onShow(12338).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
+      const tmp2Result = joined(12329)(onShow(12340).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
       const mapped = tmp2Result.map((tip) => "" + tip.tip.id + ":" + tip.presentation);
       joined = mapped.join(",");
       const items = [joined, onShow];

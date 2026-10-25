@@ -434,7 +434,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14192, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14197, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;

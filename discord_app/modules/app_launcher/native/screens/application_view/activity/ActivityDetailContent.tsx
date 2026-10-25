@@ -531,13 +531,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         asyncGeneratorStep(async () => {
           v2(1267).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
             application_id: applicationId,
-            button_action: tmp3(11166).EntryPointCommandButtonActions.OPEN_APP_DM,
+            button_action: tmp3(11167).EntryPointCommandButtonActions.OPEN_APP_DM,
           });
           const _setTimeout = setTimeout;
           closure_3.current = setTimeout(() => {
             closure_1_2(true);
           }, 250);
-          await v2(11357).launch({ applicationId, analyticsLocations });
+          await v2(11358).launch({ applicationId, analyticsLocations });
           if (1 === tmp7) {
             dependencyMap = 0;
             const _clearTimeout = clearTimeout;
@@ -577,10 +577,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ context, sectionName, onActivityItemSelected, entrypoint } = application);
       const tmp4 = closure_15();
       let obj = application(576);
-      const width = application(11165).useRequiredAppLauncherContext().width;
-      const obj2 = application(11165);
-      const getPrimaryAppCommand = application(11400).useGetPrimaryAppCommand(context, application.id);
-      const obj3 = application(11400);
+      const width = application(11166).useRequiredAppLauncherContext().width;
+      const obj2 = application(11166);
+      const getPrimaryAppCommand = application(11401).useGetPrimaryAppCommand(context, application.id);
+      const obj3 = application(11401);
       const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
       [r10041, importDefault] = noop.useState(undefined);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -594,7 +594,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp7 = _slicedToArray(noop.useState(undefined), 2);
       const isScreenLandscape = application(8691).useIsScreenLandscape();
-      entrypoint !== application(11166).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+      entrypoint !== application(11167).AppLauncherEntrypoint.VOICE && isScreenLandscape;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperActivityShelfStore];
         cResult[1] = items;
@@ -766,10 +766,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = undefined;
       ({ sectionName, onActivityItemSelected, hasCommands } = application);
       const tmp = closure_15();
-      const width = application(11165).useRequiredAppLauncherContext().width;
-      let obj = application(11165);
-      const getPrimaryAppCommand = application(11400).useGetPrimaryAppCommand(context, application.id);
-      const obj2 = application(11400);
+      const width = application(11166).useRequiredAppLauncherContext().width;
+      let obj = application(11166);
+      const getPrimaryAppCommand = application(11401).useGetPrimaryAppCommand(context, application.id);
+      const obj2 = application(11401);
       const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
       [tmp8, c1] = noop.useState(undefined);
       const callback = noop.useCallback((nativeEvent) => {
@@ -778,7 +778,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = _slicedToArray(noop.useState(undefined), 2);
       const isScreenLandscape = application(8691).useIsScreenLandscape();
       let detailsContainerLandscape =
-        entrypoint !== application(11166).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+        entrypoint !== application(11167).AppLauncherEntrypoint.VOICE && isScreenLandscape;
       const obj3 = application(8691);
       const items = [DeveloperActivityShelfStore];
       const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({
@@ -832,15 +832,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp2Result8 = tmp2(7257);
         const obj9 = { context, applicationId: application.id };
-        const activityAction = tmp2(12034).useActivityAction(obj9);
-        const tmp2Result9 = tmp2(12034);
-        const delayedSwapToActivityActionLeave = tmp2(12132).useDelayedSwapToActivityActionLeave(activityAction);
+        const activityAction = tmp2(12035).useActivityAction(obj9);
+        const tmp2Result9 = tmp2(12035);
+        const delayedSwapToActivityActionLeave = tmp2(12133).useDelayedSwapToActivityActionLeave(activityAction);
         const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-        const tmp2Result10 = tmp2(12132);
-        ({ reason, disabled } = tmp5(12133)(obj10));
+        const tmp2Result10 = tmp2(12133);
+        ({ reason, disabled } = tmp5(12134)(obj10));
         const obj11 = { context, application, botUserId: null };
         let id;
-        tmp5(12134);
+        tmp5(12135);
         if (bot != null) {
           id = bot.id;
         }
@@ -920,13 +920,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
         const obj25 = { applicationId: application.id, width: null, contentWidth: null };
         let result = width;
-        const tmp29 = tmp5(12133)(obj10);
+        const tmp29 = tmp5(12134)(obj10);
         if (detailsContainerLandscape) {
           result = (65 * width) / 100;
         }
         obj25.width = result;
         obj25.contentWidth = tmp8;
-        obj24.children = closure_11(tmp5(12071), obj25);
+        obj24.children = closure_11(tmp5(12072), obj25);
         const items4 = [closure_11(View, obj24)];
         const items5 = [tmp.details];
         if (detailsContainerLandscape) {
@@ -941,17 +941,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
         const obj30 = { style: tmp.tagIcon, size: "xs" };
         obj29.icon = closure_11(tmp2(8560).GroupIcon, obj30);
-        const tmp5Result3 = tmp5(12071);
+        const tmp5Result3 = tmp5(12072);
         let num5 = num;
         if (num == null) {
           num5 = 0;
         }
-        obj29.tagName = tmp2(12136).getItemSubtitleForMaxPlayersShort(num5);
-        const tmp2Result12 = tmp2(12136);
+        obj29.tagName = tmp2(12137).getItemSubtitleForMaxPlayersShort(num5);
+        const tmp2Result12 = tmp2(12137);
         if (num == null) {
           num = 0;
         }
-        obj29.accessibilityLabel = tmp5(12136)(num);
+        obj29.accessibilityLabel = tmp5(12137)(num);
         const items7 = [closure_11(closure_16, obj29, "participants")];
         const tags = application.tags;
         let mapped;

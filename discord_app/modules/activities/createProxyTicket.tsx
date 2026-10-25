@@ -5,8 +5,8 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_7 = async function _createProxyTicket(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
+  if (c8 === 2) {
+    c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -19,66 +19,72 @@ let closure_7 = async function _createProxyTicket(arg0) {
     }
   } else {
     try {
-      c7 = 2;
-      if (0 === c6) {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
+          c8 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          closure_131_2 = closure_2;
-          closure_131_3 = undefined;
-          const tmp30 = prefetchKey(closure_0, closure_1, closure_2);
-          value = map.get(tmp30);
-          map.delete(tmp30);
-          if (null != value) {
-            const _Date = Date;
-            if (value.expiresAt > Date.now()) {
-              c5 = 1;
-              c6 = 2;
-              c7 = 1;
-              const obj4 = { value: value.ticket, done: false };
-              return obj4;
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          closure_132_2 = closure_2;
+          closure_132_3 = undefined;
+          if (null != closure_3) {
+            c8 = 3;
+            const obj4 = { value: mintProxyTicket(closure_0, closure_1, closure_2, closure_3), done: true };
+            return obj4;
+          } else {
+            const tmp36 = prefetchKey(closure_0, closure_1, closure_2);
+            value = map.get(tmp36);
+            map.delete(tmp36);
+            if (null != value) {
+              const _Date = Date;
+              if (value.expiresAt > Date.now()) {
+                c6 = 1;
+                c7 = 2;
+                c8 = 1;
+                const obj5 = { value: value.ticket, done: false };
+                return obj5;
+              }
             }
           }
         }
       } else {
         if (1 === tmp7) {
-          c5 = 0;
+          c6 = 0;
         } else if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          c6 = 0;
+          c8 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          closure_131_3 = value;
-          if (null == closure_131_3) {
-            c5 = 0;
+          closure_132_3 = value;
+          if (null == closure_132_3) {
+            c6 = 0;
           }
         }
-        c5 = 0;
-        c7 = 3;
-        const obj = { value: closure_131_3, done: true };
+        c6 = 0;
+        c8 = 3;
+        const obj = { value: closure_132_3, done: true };
         return obj;
       }
-      closure_132_9(closure_131_0, closure_131_1, closure_131_2);
-      c7 = 3;
-    } catch (tmp18) {
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp18;
+      closure_133_9(closure_132_0, closure_132_1, closure_132_2);
+      c8 = 3;
+    } catch (tmp23) {
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp23;
       } else {
-        c6 = tmp;
+        c7 = tmp;
       }
     }
   }
@@ -109,9 +115,10 @@ function mintProxyTicket() {
 }
 let closure_10 = async function _mintProxyTicket(arg0) {
   closure_0 = arg0;
+  closure_3 = arg3;
+  c5 = 0;
   c4 = 0;
-  c3 = 0;
-  return (async (arg0, value, arg2) => {
+  return (async (arg0, value, arg2, arg3) => {
     (function prewarmApplication(arg0) {
       const tmp = channel_id(surface[4])(arg0);
       if (null != tmp) {
@@ -125,6 +132,9 @@ let closure_10 = async function _mintProxyTicket(arg0) {
       }
     })(closure_0);
     const obj4 = { use_stateless_ticket: true };
+    if (null != closure_3) {
+      ({ channelId: obj7.invite_channel_id, messageId: obj7.invite_message_id } = closure_3);
+    }
     if (null != channel_id) {
       obj4.channel_id = channel_id;
     }

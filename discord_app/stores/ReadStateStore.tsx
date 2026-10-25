@@ -3246,7 +3246,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "any", isExplicitUserAction: null, trackAnalytics: null });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "any", isExplicitUserAction: "Take Screenshot", trackAnalytics: "" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3633,7 +3633,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "bindOpenRoleSubscriptionOverview", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

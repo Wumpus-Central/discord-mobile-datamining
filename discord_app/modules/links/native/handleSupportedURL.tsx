@@ -54,7 +54,7 @@ const NativePermissionTypes = fn(7868).NativePermissionTypes;
 let closure_22 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7646).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5698).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15089).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15094).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8332).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -309,7 +309,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15101, dependencyMap.paths),
+                    asyncRequireImpl(15106, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );

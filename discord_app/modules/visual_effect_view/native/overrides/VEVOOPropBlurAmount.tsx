@@ -226,7 +226,7 @@ export default noop.memo(
             onValueChange: O,
             accessibilityLabel: "Blur Amount",
           };
-          const tmp25 = jsx(first1(17335), {
+          const tmp25 = jsx(first1(17340), {
             disabled: !tmp7,
             disabledOpacity: !tmp7,
             initialValue: ref,
@@ -295,7 +295,7 @@ export default noop.memo(
           },
         };
         const ref = noop.useRef(first);
-        obj.subLabel = jsx(first(17335), {
+        obj.subLabel = jsx(first(17340), {
           disabled: !tmp3,
           disabledOpacity: !tmp3,
           initialValue: noop.useRef(first),

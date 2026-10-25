@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp11,
             onValueChange: tmp13,
           };
-          const tmp16 = jsx(tmp(15867).UserProfileEditFormSwitch, {
+          const tmp16 = jsx(tmp(15872).UserProfileEditFormSwitch, {
             value: tmp6,
             label: first,
             subLabel: cResult[3],
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           UserProfileSettingsActionCreators.setPendingChanges(obj2);
         }
       };
-      return jsx(setting(15867).UserProfileEditFormSwitch, {
+      return jsx(setting(15872).UserProfileEditFormSwitch, {
         value: !tmp4,
         label: null,
         subLabel: null,

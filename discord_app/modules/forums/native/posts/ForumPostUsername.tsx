@@ -13,7 +13,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(13093).useForumChannelStore;
+const useForumChannelStore = fn(13098).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4971);

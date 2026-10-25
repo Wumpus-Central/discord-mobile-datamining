@@ -34,14 +34,14 @@ export default noop.memo(
         }
         if (cResult[0] !== num) {
           if (1 === num) {
-            StageTileSize = tmp(11698).StageTileSize;
+            StageTileSize = tmp(11699).StageTileSize;
             let HALF = StageTileSize.FULL;
             cResult[0] = num;
             cResult[1] = HALF;
           } else if (2 !== num) {
-            HALF = tmp(11698).StageTileSize.THIRD;
+            HALF = tmp(11699).StageTileSize.THIRD;
           }
-          HALF = tmp(11698).StageTileSize.HALF;
+          HALF = tmp(11699).StageTileSize.HALF;
         } else {
           const size = tmp5;
           let containerLandscape = isScreenLandscape;

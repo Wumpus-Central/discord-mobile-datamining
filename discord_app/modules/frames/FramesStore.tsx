@@ -105,7 +105,7 @@ FramesStoreClass.displayName = "FramesStore";
 const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
   FRAME_LAUNCH_START: function handleFrameLaunchStart(arg0) {
     ({ frameId, surface, hostWindowKey } = arg0);
-    ({ applicationId, launch, launchRequestId } = arg0);
+    ({ applicationId, launch, invite, launchRequestId } = arg0);
     const obj = {
       id: frameId,
       applicationId,
@@ -115,6 +115,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
       data: null,
       hostWindowKey: null,
       launch: null,
+      invite: null,
       launchRequestId: null,
     };
     if (hostWindowKey == null) {
@@ -122,13 +123,14 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     }
     obj.hostWindowKey = hostWindowKey;
     obj.launch = launch;
+    obj.invite = invite;
     obj.launchRequestId = launchRequestId;
     const result = map.set(frameId, obj);
     const tmp = timestampProducer(surface);
   },
   FRAME_LAUNCH: function handleFrameLaunch(arg0) {
     ({ frameId, hostWindowKey, launchRequestId } = arg0);
-    ({ proxyTicket, launch } = arg0);
+    ({ proxyTicket, launch, invite } = arg0);
     value = map.get(frameId);
     if (null != value) {
       if (!tmp2) {
@@ -181,6 +183,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           }
           obj5.hostWindowKey = hostWindowKey;
           obj5.launch = launch;
+          obj5.invite = invite;
           obj3.data = obj5;
           const result = map.set(frameId, obj3);
         }

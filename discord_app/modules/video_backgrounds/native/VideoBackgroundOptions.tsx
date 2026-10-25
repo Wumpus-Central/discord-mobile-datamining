@@ -85,8 +85,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
         const intl2 = tmp(1128).intl;
         obj4.label = intl2.string(tmp(1128).t.LhSyL8);
-        const obj5 = { IconComponent: tmp(11635).BlurBackgroundIcon };
-        obj4.icon = jsx(tmp(6911).TableRowIcon, { IconComponent: tmp(11635).BlurBackgroundIcon });
+        const obj5 = { IconComponent: tmp(11636).BlurBackgroundIcon };
+        obj4.icon = jsx(tmp(6911).TableRowIcon, { IconComponent: tmp(11636).BlurBackgroundIcon });
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {

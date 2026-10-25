@@ -35,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }),
       );
     };
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountUsernameSettingDescription() {
       let Text = require;

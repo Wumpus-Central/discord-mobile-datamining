@@ -78,11 +78,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_9();
   if (cResult[0] !== guildIds) {
-    const result = tmp(16138).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(16143).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(16138);
+    const tmpResult = tmp(16143);
   } else {
     arr = cResult[1];
   }
@@ -245,7 +245,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(16138).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(16143).ChangeDirection.RESTRICTING) {
       class B {
         constructor() {
           return closure_1.map(() => { ... });

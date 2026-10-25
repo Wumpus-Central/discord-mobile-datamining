@@ -156,7 +156,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(17071);
+const DevToolsGuildPowerupsConstants = fn(17076);
 ({
   GUILD_DCS: closure_11,
   SERVER_TAG_GUILD_DCS: closure_12,

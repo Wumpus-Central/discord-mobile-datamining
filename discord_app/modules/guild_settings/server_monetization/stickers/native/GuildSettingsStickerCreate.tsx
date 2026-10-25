@@ -538,7 +538,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(19075).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(19080).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(6908).PressableHighlight, obj16);

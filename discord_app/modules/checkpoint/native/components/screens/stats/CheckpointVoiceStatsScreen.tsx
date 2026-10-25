@@ -280,15 +280,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const formatToPlainStringResult = intl2.formatToPlainString(tmp36(3088).RqXsIs, obj7);
         }
       }
-      const tmp36Result = tmp36(12969);
+      const tmp36Result = tmp36(12974);
       const container = tmp4.container;
       if (cResult[29] !== tmp4.image) {
-        const obj8 = { animatedUri: tmp36(12973), staticUri: tmp36(12974), style: tmp4.image };
-        const tmp44 = React5(tmp36(12972), obj8);
+        const obj8 = { animatedUri: tmp36(12978), staticUri: tmp36(12979), style: tmp4.image };
+        const tmp44 = React5(tmp36(12977), obj8);
         cResult[29] = tmp4.image;
         cResult[30] = tmp44;
         let tmp41 = tmp44;
-        const tmp36Result4 = tmp36(12972);
+        const tmp36Result4 = tmp36(12977);
       } else {
         tmp41 = cResult[30];
       }
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.titleText,
           children: stringResult.toLocaleUpperCase(),
         };
-        items4[1] = React5(tmp36(12967), obj11);
+        items4[1] = React5(tmp36(12972), obj11);
         obj10.children = items4;
         const tmp54 = closure_1_8(View, obj10);
         if (cResult[35] === tmp30) {
@@ -327,10 +327,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj12.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
             obj12.style = tmp4.number;
             const obj14 = { end: rounded };
-            obj12.children = React5(tmp36(12977), obj14);
+            obj12.children = React5(tmp36(12982), obj14);
             tmp52Result = React5(View, obj12);
           }
-          const tmp36Result6 = tmp36(12967);
+          const tmp36Result6 = tmp36(12972);
           if (tmp29) {
             const intl5 = util.intl;
             let stringResult1 = intl5.string(tmp36(3088).huiTne);
@@ -400,14 +400,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (tmp52Result2) {
           ({ value: obj13.value, label: obj13.accessibilityLabel } = tmp30);
-          tmp52Result2 = React5(tmp36(12975), { value: null, accessibilityLabel: null });
+          tmp52Result2 = React5(tmp36(12980), { value: null, accessibilityLabel: null });
           const obj17 = { value: null, accessibilityLabel: null };
         }
         cResult[35] = tmp30;
         cResult[36] = tmp29;
         cResult[37] = tmp52Result2;
         tmp55 = tmp52Result2;
-        const tmp36Result5 = tmp36(12967);
+        const tmp36Result5 = tmp36(12972);
       }
       const tmp46 = React5(View, { style: tmp4.imageContainer, children: tmp41 });
       cResult[31] = tmp4.imageContainer;
@@ -462,7 +462,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         prop = stateFromStores.totalVoiceMinutesPercentile;
       }
-      const checkpointTopPercent = stateFromStores1(12952).getCheckpointTopPercent(prop);
+      const checkpointTopPercent = stateFromStores1(12957).getCheckpointTopPercent(prop);
       const intl = tmp2(1128).intl;
       if (rounded <= 0) {
         let stringResult = intl.string(_modDef3088.ZCwB8J);
@@ -488,22 +488,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { style: tmp.imageContainer, children: null };
-      const tmp2Result = stateFromStores1(12952);
+      const tmp2Result = stateFromStores1(12957);
       const obj7 = { animatedUri: null, staticUri: null, style: null };
-      const tmp12Result = tmp12(12969);
-      obj7.animatedUri = tmp12(12973);
-      obj7.staticUri = tmp12(12974);
+      const tmp12Result = tmp12(12974);
+      obj7.animatedUri = tmp12(12978);
+      obj7.staticUri = tmp12(12979);
       obj7.style = tmp.image;
-      obj6.children = closure_7(tmp12(12972), obj7);
+      obj6.children = closure_7(tmp12(12977), obj7);
       const items3 = [closure_7(View, obj6)];
       const obj8 = { style: tmp.copy, children: null };
       const obj9 = { style: tmp.title, children: null };
-      const items4 = [closure_7(stateFromStores1(11642).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
+      const items4 = [closure_7(stateFromStores1(11643).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
       const obj11 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const obj10 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp12Result4 = tmp12(12972);
+      const tmp12Result4 = tmp12(12977);
       obj11.children = stringResult.toLocaleUpperCase();
-      items4[1] = closure_7(tmp12(12967), obj11);
+      items4[1] = closure_7(tmp12(12972), obj11);
       obj9.children = items4;
       const items5 = [closure_8(View, obj9), , ,];
       let tmp15Result = tmp7;
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp15Result) {
         ({ value: obj14.value, label: obj14.accessibilityLabel } = memo);
-        tmp15Result = closure_7(tmp12(12975), { value: null, accessibilityLabel: null });
+        tmp15Result = closure_7(tmp12(12980), { value: null, accessibilityLabel: null });
         const obj12 = { value: null, accessibilityLabel: null };
       }
       items5[1] = tmp15Result;
@@ -523,12 +523,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj13.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
         obj13.style = tmp.number;
         const obj15 = { end: rounded };
-        obj13.children = closure_7(tmp12(12977), obj15);
+        obj13.children = closure_7(tmp12(12982), obj15);
         tmp15Result2 = closure_7(View, obj13);
       }
       items5[2] = tmp15Result2;
       const obj16 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-      const tmp12Result5 = tmp12(12967);
+      const tmp12Result5 = tmp12(12972);
       if (rounded <= 0) {
         const intl5 = tmp2(1128).intl;
         let stringResult1 = intl5.string(tmp12(3088).huiTne);
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj19 = { children: null };
       obj16.children = stringResult1;
-      items5[3] = closure_7(tmp12(12967), obj16);
+      items5[3] = closure_7(tmp12(12972), obj16);
       obj8.children = items5;
       items3[1] = closure_8(View, obj8);
       obj5.children = items3;

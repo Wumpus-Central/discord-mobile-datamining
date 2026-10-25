@@ -5,8 +5,8 @@ import useGuildApplicationDefault from "../../../applications/useGuildApplicatio
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const PlaceholderDefault = tmp3(19200);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(19201);
+const PlaceholderDefault = tmp3(19205);
+const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(19206);
 require = fn;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);

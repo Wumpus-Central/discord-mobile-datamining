@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === application_id.id) {
           let tmp4 = cResult[2];
         }
-        const tmp6 = application_id(11884)(application_id, tmp4);
+        const tmp6 = application_id(11885)(application_id, tmp4);
         dependencyMap = tmp6;
         const appChannelApplication = tmp(7346).useAppChannelApplication(application_id);
         let bot;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return restartFrames.restartFrame(closure_2);
               }
               if (cResult[7] !== t3) {
-                const obj2 = { label: tmp14, IconComponent: tmp(11785).RefreshIcon, action: t3 };
+                const obj2 = { label: tmp14, IconComponent: tmp(11786).RefreshIcon, action: t3 };
                 cResult[7] = t3;
                 cResult[8] = obj2;
                 let tmp16 = obj2;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[10] !== t6) {
                 const obj3 = { label: DoorExitIcon, IconComponent: null, action: null };
-                DoorExitIcon = tmp(11534).DoorExitIcon;
+                DoorExitIcon = tmp(11535).DoorExitIcon;
                 obj3.IconComponent = DoorExitIcon;
                 obj3.action = t6;
                 cResult[10] = t6;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      const tmp3 = application_id(11884)(application_id, memo);
+      const tmp3 = application_id(11885)(application_id, memo);
       dependencyMap = tmp3;
       const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(application_id);
       bot = undefined;

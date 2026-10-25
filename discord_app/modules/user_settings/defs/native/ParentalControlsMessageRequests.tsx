@@ -16,7 +16,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 function useIsDisabled() {
   return useParentalControlSettings.useDefaultGuildsRestricted();
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useValue() {
       if (typeof useIsDisabled === "function") {

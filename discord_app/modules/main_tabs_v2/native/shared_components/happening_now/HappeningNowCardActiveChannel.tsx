@@ -12,8 +12,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(15016).MAX_STORED_MESSAGES;
-let closure_10 = fn(16648).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(15021).MAX_STORED_MESSAGES;
+let closure_10 = fn(16653).HappeningNowCardTrackingType;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);

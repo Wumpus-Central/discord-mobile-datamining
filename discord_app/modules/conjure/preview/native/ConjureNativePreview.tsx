@@ -29,7 +29,7 @@ const UserProfileApplicationWidgetTypes = intl(7708);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11858);
+const conjureDesignFeedbackStore = fn(11859);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({
@@ -314,7 +314,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj.getConjurePreviewGuildId(closure_15.getProject(projectId));
               }
             }
-            const effect1 = obj3.useEffect(U, tmp25);
+            const effect1 = obj3.useEffect(D, tmp25);
             if (launch != null) {
               class N {
                 constructor() {
@@ -333,7 +333,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _HermesInternal = HermesInternal;
             const combined = "" + frameSurface + ":" + tmp27;
-            class U {
+            class D {
               constructor() {
                 if (null != c6) {
                   tmp2 = closure_0;
@@ -389,7 +389,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[24] = items1;
             tmp32 = visible(obj3.useState(combined), 2);
           }
-          class U {
+          class D {
             constructor() {
               if (null != c6) {
                 tmp2 = closure_0;
@@ -404,7 +404,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           const items2 = [undefined, visible];
           cResult[13] = undefined;
           cResult[14] = visible;
-          cResult[15] = U;
+          cResult[15] = D;
           cResult[16] = items2;
           tmp25 = items2;
         }
@@ -735,7 +735,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               id = null;
             }
             if (cResult[10] !== id) {
-              class W {
+              class U {
                 constructor() {
                   if (null != c7) {
                     tmp2 = closure_1;
@@ -749,11 +749,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const items2 = [id];
               cResult[10] = id;
-              cResult[11] = W;
+              cResult[11] = U;
               cResult[12] = items2;
               let tmp22 = items2;
             } else {
-              class W {
+              class U {
                 constructor() {
                   if (null != c7) {
                     tmp2 = closure_1;
@@ -767,10 +767,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               }
               tmp22 = cResult[12];
             }
-            const effect1 = obj2.useEffect(W, tmp22);
+            const effect1 = obj2.useEffect(U, tmp22);
             const _Symbol = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              class W {
+              class U {
                 constructor() {
                   if (null != c7) {
                     tmp2 = closure_1;
@@ -786,7 +786,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = items3;
               const tmp24 = items3;
             } else {
-              class W {
+              class U {
                 constructor() {
                   if (null != c7) {
                     tmp2 = closure_1;
@@ -800,7 +800,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[14] !== id) {
-              class X {
+              class J {
                 constructor() {
                   hasUnreadResult = null != c7;
                   if (hasUnreadResult) {
@@ -813,11 +813,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               const items4 = [id];
               cResult[14] = id;
               cResult[15] = items4;
-              cResult[16] = X;
-              let tmp26 = X;
+              cResult[16] = J;
+              let tmp26 = J;
               const tmp25 = items4;
             } else {
-              class X {
+              class J {
                 constructor() {
                   hasUnreadResult = null != c7;
                   if (hasUnreadResult) {
@@ -832,7 +832,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
             const stateFromStores1 = tmp(504).useStateFromStores(tmp24, tmp26, tmp25);
             const _Symbol2 = Symbol;
             if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-              class X {
+              class J {
                 constructor() {
                   hasUnreadResult = null != c7;
                   if (hasUnreadResult) {
@@ -843,17 +843,17 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const items5 = [AppStateStore];
-              class Y {
+              class Z {
                 constructor() {
                   return closure_1_12.getState() === closure_1_19.ACTIVE;
                 }
               }
               cResult[17] = items5;
-              cResult[18] = Y;
-              let tmp29 = Y;
+              cResult[18] = Z;
+              let tmp29 = Z;
               const tmp28 = items5;
             } else {
-              class X {
+              class J {
                 constructor() {
                   hasUnreadResult = null != c7;
                   if (hasUnreadResult) {
@@ -868,7 +868,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
             const tmpResult3 = tmp(504);
             const stateFromStores2 = tmp(504).useStateFromStores(tmp28, tmp29);
             if (cResult[19] === stateFromStores2) {
-              class X {
+              class J {
                 constructor() {
                   hasUnreadResult = null != c7;
                   if (hasUnreadResult) {
@@ -1097,10 +1097,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           alwaysRespectKeyboard: true,
           disableGradient: true,
         };
-        const items8 = [closure_22(previewApplicationId(10888), obj7, stateFromStores.id)];
+        const items8 = [closure_22(previewApplicationId(10889), obj7, stateFromStores.id)];
         let tmp30Result = null;
         if (tmp7Result4.isAndroid()) {
-          tmp30Result = closure_22(tmp7(12010).PortalKeyboardRenderer, { portal: true });
+          tmp30Result = closure_22(tmp7(12011).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp30Result;
         obj6.children = items8;
@@ -1171,9 +1171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = util.intl;
-          const stringResult1 = intl5.string(_modDef3830.xu1I8B);
+          const stringResult1 = intl5.string(_modDef3830.FExK4w);
           const intl6 = util.intl;
-          const stringResult2 = intl6.string(_modDef3830["8qJtGr"]);
+          const stringResult2 = intl6.string(_modDef3830["2pDCXO"]);
           cResult[7] = stringResult1;
           cResult[8] = stringResult2;
           let tmp28 = stringResult2;
@@ -1310,9 +1310,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (null != permissionsGate) {
         const obj4 = { title: null, body: null, children: null };
         const intl5 = util.intl;
-        obj4.title = intl5.string(_modDef3830.xu1I8B);
+        obj4.title = intl5.string(_modDef3830.FExK4w);
         const intl6 = util.intl;
-        obj4.body = intl6.string(_modDef3830["8qJtGr"]);
+        obj4.body = intl6.string(_modDef3830["2pDCXO"]);
         const obj5 = { variant: "primary", size: "sm", text: null, onPress: null, loading: null };
         const intl7 = util.intl;
         obj5.text = intl7.string(_modDef3830["Nub/J6"]);

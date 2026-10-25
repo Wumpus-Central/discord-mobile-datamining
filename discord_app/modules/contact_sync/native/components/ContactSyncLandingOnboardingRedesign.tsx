@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NativePermissionUtilsDefault from "../../../native_permissions/NativePermissionUtils.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef13593 from "../../../../../_runtime/metro/13593__.js";
+import _modDef13598 from "../../../../../_runtime/metro/13598__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp4.headerImage) {
-        const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13593 };
+        const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13598 };
         const tmp11 = closure_7(FastImageDefault, obj2);
         cResult[2] = tmp4.headerImage;
         cResult[3] = tmp11;
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13593 };
+      let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13598 };
       const items1 = [closure_7(FastImageDefault, obj3), , , ,];
       let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
       const intl = onNext(1128).intl;

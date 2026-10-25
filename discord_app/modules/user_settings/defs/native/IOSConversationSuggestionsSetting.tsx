@@ -29,7 +29,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIOSConversationSuggestionsSettingValue() {
       const cResult = c.c(2);

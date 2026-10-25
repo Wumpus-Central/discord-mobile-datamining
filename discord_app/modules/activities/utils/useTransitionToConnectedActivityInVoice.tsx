@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj4 = { channelId: embeddedActivityLocationChannelId };
                             c3 = 1;
                             c4 = 1;
-                            const obj5 = { value: closure_2_1(11414)(obj4), done: false };
+                            const obj5 = { value: closure_2_1(11415)(obj4), done: false };
                             return obj5;
                           }
                         }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_3 = guild_id;
                   const _setTimeout = setTimeout;
                   const timerId = setTimeout(() => {
-                    closure_3_1(11361)(closure_1_3, _location);
+                    closure_3_1(11362)(closure_1_3, _location);
                     if (closure_0 != null) {
                       closure_0();
                     }
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj5 = { channelId: embeddedActivityLocationChannelId };
                             c3 = 2;
                             c4 = 1;
-                            const obj6 = { value: closure_2_1(11414)(obj5), done: false };
+                            const obj6 = { value: closure_2_1(11415)(obj5), done: false };
                             return obj6;
                           }
                         }
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_3 = guild_id;
                   const _setTimeout = setTimeout;
                   const timerId = setTimeout(() => {
-                    closure_3_1(11361)(closure_1_3, _location);
+                    closure_3_1(11362)(closure_1_3, _location);
                     if (closure_0 != null) {
                       closure_0();
                     }

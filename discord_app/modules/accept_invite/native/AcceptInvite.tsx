@@ -9,7 +9,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
-import _modDef13665 from "../../../../_runtime/metro/13665__.js";
+import _modDef13670 from "../../../../_runtime/metro/13670__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -179,12 +179,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {};
           const merged = Object.assign(invite);
           obj3.invite = invite;
-          const tmp32 = closure_10(first(13656), obj3);
+          const tmp32 = closure_10(first(13661), obj3);
           cResult[7] = invite;
           cResult[8] = invite;
           cResult[9] = tmp32;
           tmp25 = tmp32;
-          const tmp28 = first(13656);
+          const tmp28 = first(13661);
         } else if (tmp38.ERROR === first) {
           if (cResult[10] === invite) {
             if (cResult[11] === invite) {
@@ -195,12 +195,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {};
           const merged1 = Object.assign(invite);
           obj4.invite = invite;
-          const tmp24 = closure_10(first(13660), obj4);
+          const tmp24 = closure_10(first(13665), obj4);
           cResult[10] = invite;
           cResult[11] = invite;
           cResult[12] = tmp24;
           tmp17 = tmp24;
-          const tmp20 = first(13660);
+          const tmp20 = first(13665);
         } else {
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
@@ -246,12 +246,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const merged = Object.assign(invite);
         obj2.invite = invite;
-        return closure_10(first(13656), obj2);
+        return closure_10(first(13661), obj2);
       } else if (tmp22.ERROR === first) {
         let obj = {};
         const merged1 = Object.assign(invite);
         obj.invite = invite;
-        return closure_10(first(13660), obj);
+        return closure_10(first(13665), obj);
       } else {
         return closure_10(closure_15, {});
       }
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         splash = guild.splash;
       }
       if (null == splash) {
-        let guildSplashSource = _modDef13665;
+        let guildSplashSource = _modDef13670;
       } else {
         const obj10 = { id: null, splash: null, size: null };
         ({ id: obj4.id, splash: obj4.splash } = guild);
@@ -461,7 +461,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         splash = guild.splash;
       }
       if (null == splash) {
-        let guildSplashSource = _modDef13665;
+        let guildSplashSource = _modDef13670;
       } else {
         const obj2 = { id: null, splash: null, size: null };
         ({ id: obj3.id, splash: obj3.splash } = guild);

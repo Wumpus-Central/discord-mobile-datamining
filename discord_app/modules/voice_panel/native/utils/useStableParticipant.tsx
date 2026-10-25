@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 userAvatarDecoration: null,
                 streamId: "Set",
                 ringing: null,
-                hasVideo: 0,
+                hasVideo: 0.21,
                 isSelf: 1,
               };
               id = AuthenticationStore.getId();
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   userAvatarDecoration: null,
                   streamId: "Set",
                   ringing: null,
-                  hasVideo: 0,
+                  hasVideo: 0.21,
                   isSelf: 1,
                 };
                 id = AuthenticationStore.getId();

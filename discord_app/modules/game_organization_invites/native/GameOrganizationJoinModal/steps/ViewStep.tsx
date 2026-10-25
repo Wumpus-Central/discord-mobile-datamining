@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(12717).GameOrganizationJoinScenes;
+let closure_3 = fn(12722).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4971);
@@ -116,7 +116,7 @@ export const ViewStep = ReactCompilerGating.isReactCompilerEnabled()
                                                       },
                                                     };
                                                     obj5.children = closure_4(tmp(5244).Button, obj6);
-                                                    const tmp69 = closure_4(tmp(12722).ModalFooter, obj5);
+                                                    const tmp69 = closure_4(tmp(12727).ModalFooter, obj5);
                                                     cResult[54] = navigation;
                                                     cResult[55] = tmp69;
                                                     let tmp67 = tmp69;
@@ -374,7 +374,7 @@ export const ViewStep = ReactCompilerGating.isReactCompilerEnabled()
           return navigation.navigate(constants.ACCEPT);
         };
         obj18.children = closure_4(tmp2(5244).Button, obj19);
-        items5[1] = closure_4(tmp2(12722).ModalFooter, obj18);
+        items5[1] = closure_4(tmp2(12727).ModalFooter, obj18);
         obj16.children = items5;
         return closure_5(tmp2(7900).ModalScreen, obj16);
       }

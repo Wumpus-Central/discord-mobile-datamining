@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "applicationId",
+      items: "application",
     };
     return tmp3;
   }

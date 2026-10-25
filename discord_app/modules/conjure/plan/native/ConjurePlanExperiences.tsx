@@ -9,7 +9,7 @@ import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx"
 import conjurePlanExperienceSections from "../conjurePlanExperienceSections.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjurePlanCommandText2 = ConjurePlanCommandText(12460);
+const ConjurePlanCommandText2 = ConjurePlanCommandText(12464);
 require = fn;
 function frameBlocks(proposal, experience, infoRows) {
   const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
@@ -48,11 +48,11 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   frame: fn(9616).GameControllerIcon,
-  overlay_widget: fn(12462).WindowTopIcon,
-  user_widget: fn(10815).UserCircleIcon,
-  bot: fn(11796).RobotIcon,
-  commands: fn(11796).RobotIcon,
-  automod: fn(10950).ShieldIcon,
+  overlay_widget: fn(12466).WindowTopIcon,
+  user_widget: fn(10816).UserCircleIcon,
+  bot: fn(11797).RobotIcon,
+  commands: fn(11797).RobotIcon,
+  automod: fn(10951).ShieldIcon,
 };
 const createStyles = fn(4971);
 let obj3 = {

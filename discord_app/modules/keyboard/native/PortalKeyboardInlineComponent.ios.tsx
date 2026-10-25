@@ -119,11 +119,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10916).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10917).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10916);
+                      const obj3 = messagesRef(10917);
                     }
                   }
                 }
@@ -241,11 +241,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10916).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10917).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10916);
+                      const obj3 = messagesRef(10917);
                     }
                   }
                 }

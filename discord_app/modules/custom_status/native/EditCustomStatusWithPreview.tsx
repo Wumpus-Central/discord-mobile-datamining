@@ -298,7 +298,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11150, dependencyMap.paths),
+        asyncRequireImpl(11151, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
@@ -339,7 +339,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11060).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11061).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;

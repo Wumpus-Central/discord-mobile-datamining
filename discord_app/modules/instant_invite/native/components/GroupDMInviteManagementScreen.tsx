@@ -6,8 +6,8 @@ import discord_common_AnalyticsUtils from "../../../../../discord_common/js/pack
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import InstantInviteDefault from "../../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef10836 from "../../../../../_runtime/metro/10836__.js";
 import _modDef10837 from "../../../../../_runtime/metro/10837__.js";
+import _modDef10838 from "../../../../../_runtime/metro/10838__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -310,14 +310,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 return jsx(View, obj);
               }
             }
-            let obj3 = { lightSource: _modDef10836, darkSource: _modDef10837, title: null, body: null };
+            let obj3 = { lightSource: _modDef10837, darkSource: _modDef10838, title: null, body: null };
             const intl = SceneLoadingIndicator(1128).intl;
             obj3.title = intl.string(SceneLoadingIndicator(1128).t["+nLJkZ"]);
             const intl2 = SceneLoadingIndicator(1128).intl;
             obj3.body = intl2.string(SceneLoadingIndicator(1128).t.F53CAc);
             tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, {
-              lightSource: _modDef10836,
-              darkSource: _modDef10837,
+              lightSource: _modDef10837,
+              darkSource: _modDef10838,
               title: null,
               body: null,
             });
@@ -464,14 +464,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp3[0]) {
         let tmp12 = jsx(channelId(7134).SceneLoadingIndicator, {});
       } else if (0 === first.length) {
-        let obj2 = { lightSource: tmp4(10836), darkSource: tmp4(10837), title: null, body: null };
+        let obj2 = { lightSource: tmp4(10837), darkSource: tmp4(10838), title: null, body: null };
         const intl = channelId(1128).intl;
         obj2.title = intl.string(channelId(1128).t["+nLJkZ"]);
         const intl2 = channelId(1128).intl;
         obj2.body = intl2.string(channelId(1128).t.F53CAc);
         tmp12 = jsx(channelId(1202).EmptyState, {
-          lightSource: tmp4(10836),
-          darkSource: tmp4(10837),
+          lightSource: tmp4(10837),
+          darkSource: tmp4(10838),
           title: null,
           body: null,
         });

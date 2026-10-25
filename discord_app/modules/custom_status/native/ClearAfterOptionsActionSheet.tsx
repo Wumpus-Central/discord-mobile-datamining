@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(11060).ClearAfterOptions;
+const ClearAfterOptions = fn(11061).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4971);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const mapped = ClearAfterOptions.map((value) =>
-            closure_1_7(onChange(6984).TableRadioRow, { value, label: first(11151)(value) }, value),
+            closure_1_7(onChange(6984).TableRadioRow, { value, label: first(11152)(value) }, value),
           );
           cResult[5] = mapped;
           let tmp15 = mapped;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.title = intl2.string(util.t.E45wvP);
       obj3.defaultValue = initialValue;
       obj3.children = ClearAfterOptions.map((value) =>
-        closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11151)(value) }, value),
+        closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11152)(value) }, value),
       );
       const items = [closure_7(TableRadioGroup.TableRadioGroup, obj3)];
       const obj4 = { style: tmp.buttonWrapper, children: null };

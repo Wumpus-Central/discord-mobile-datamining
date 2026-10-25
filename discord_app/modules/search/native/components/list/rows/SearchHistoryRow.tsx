@@ -129,7 +129,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       let obj = searchContext(576);
-      const onPressSearchHistoryText = searchContext(18078).useOnPressSearchHistoryText(tmp5);
+      const onPressSearchHistoryText = searchContext(18083).useOnPressSearchHistoryText(tmp5);
       if (cResult[2] === onPressSearchHistoryText) {
         if (cResult[3] === searchContext) {
           if (cResult[4] === searchHistoryItem.tags) {
@@ -193,7 +193,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           iconContainerStyle: tmp4.textIconContainer,
                           icon: tmp26,
                         };
-                        const tmp32 = closure_12(tmp(18073).SearchListRow, obj4);
+                        const tmp32 = closure_12(tmp(18078).SearchListRow, obj4);
                         cResult[24] = tmp7;
                         cResult[25] = tmp4.textIconContainer;
                         cResult[26] = tmp14;
@@ -272,14 +272,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = searchHistoryItem.type;
       cResult[7] = fn;
       tmp7 = fn;
-      const tmpResult = searchContext(18078);
+      const tmpResult = searchContext(18083);
     }
   : function SearchHistoryTextRow(searchContext) {
       searchContext = searchContext.searchContext;
       const searchHistoryItem = searchContext.searchHistoryItem;
       const tmp = closure_14();
       dependencyMap = tmp;
-      const onPressSearchHistoryText = searchContext(18078).useOnPressSearchHistoryText({ searchContext });
+      const onPressSearchHistoryText = searchContext(18083).useOnPressSearchHistoryText({ searchContext });
       const items = [onPressSearchHistoryText, searchContext, , ,];
       ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
       const callback = noop.useCallback(() => {
@@ -323,7 +323,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.onPress = callback;
       obj3.trailing = closure_12(closure_15, { searchContext, searchHistoryItem });
       obj3.iconContainerStyle = tmp.textIconContainer;
-      let obj = searchContext(18078);
+      let obj = searchContext(18083);
       const obj4 = {
         lineClamp: 1,
         variant: "text-md/semibold",
@@ -338,7 +338,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           color: "interactive-text-default",
         }),
       });
-      return closure_12(searchContext(18073).SearchListRow, obj3);
+      return closure_12(searchContext(18078).SearchListRow, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()

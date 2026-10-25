@@ -6,7 +6,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useProfileColorsSettingValue() {
       const cResult = c.c(2);
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
         const items = [AccessibilityStore];
         return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
       },
-  onValueChange: fn(15682).toggleSyncProfileThemeWithUserTheme,
+  onValueChange: fn(15687).toggleSyncProfileThemeWithUserTheme,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

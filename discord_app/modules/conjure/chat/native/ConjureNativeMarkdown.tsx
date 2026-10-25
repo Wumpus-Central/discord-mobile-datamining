@@ -33,11 +33,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = closure_9();
       _require = tmp4;
       if (cResult[0] !== source) {
-        const splitMarkdownBlocksResult = tmp(12278).splitMarkdownBlocks(source);
+        const splitMarkdownBlocksResult = tmp(12279).splitMarkdownBlocks(source);
         cResult[0] = source;
         cResult[1] = splitMarkdownBlocksResult;
         marker = splitMarkdownBlocksResult;
-        const tmpResult = tmp(12278);
+        const tmpResult = tmp(12279);
       } else {
         marker = cResult[1];
       }
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               variant: "text-md/normal",
               color: "text-default",
-              children: closure_0(11821).parseConjureMarkup(children.text, true, obj2),
+              children: closure_0(11822).parseConjureMarkup(children.text, true, obj2),
             };
             obj5.children = closure_2_4(closure_0(5234).Text, obj6);
             items1[1] = closure_2_4(View, obj5);

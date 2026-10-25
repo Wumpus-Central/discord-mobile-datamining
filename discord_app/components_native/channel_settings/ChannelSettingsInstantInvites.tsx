@@ -11,9 +11,9 @@ const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7150);
-const _modDef10836 = tmp2(10836);
 const _modDef10837 = tmp2(10837);
-const InstantInviteSelfMeasurerDefault = tmp2(18270);
+const _modDef10838 = tmp2(10838);
+const InstantInviteSelfMeasurerDefault = tmp2(18275);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1087).ChannelSettingsSections;
@@ -323,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items7);
       if (!loading) {
         if (0 === memo1.length) {
-          const obj5 = { lightSource: _modDef10836, darkSource: _modDef10837, title: null, body: null };
+          const obj5 = { lightSource: _modDef10837, darkSource: _modDef10838, title: null, body: null };
           const intl = tmpResult(1128).intl;
           obj5.title = intl.string(tmpResult(1128).t["+nLJkZ"]);
           const intl2 = tmpResult(1128).intl;

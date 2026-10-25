@@ -162,7 +162,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                                   const items = [tmp67, tmp74];
                                                   obj5.children = items;
                                                   obj4.children = closure_7(tmp(6696).ButtonGroup, obj5);
-                                                  const tmp81 = closure_6(tmp(12722).ModalFooter, obj4);
+                                                  const tmp81 = closure_6(tmp(12727).ModalFooter, obj4);
                                                   cResult[56] = tmp67;
                                                   cResult[57] = tmp81;
                                                   let tmp78 = tmp81;
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4) {
         const obj4 = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: tmp4, headerBackTitle: tmp6 };
-        const tmp10 = closure_6(tmp(11146).Modal, obj4);
+        const tmp10 = closure_6(tmp(11147).Modal, obj4);
         cResult[3] = tmp4;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -615,5 +615,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
       let intl = teenId(1128).intl;
       obj.headerBackTitle = intl.string(teenId(1128).t["13/7kX"]);
-      return closure_6(teenId(11146).Modal, obj);
+      return closure_6(teenId(11147).Modal, obj);
     };

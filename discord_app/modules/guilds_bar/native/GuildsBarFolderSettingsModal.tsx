@@ -32,7 +32,7 @@ function GuildFolderSettingsScene(color) {
     if (color == null) {
       tmp3 = defaultColor;
     }
-    obj.openLazy(asyncRequireImpl(17735, dependencyMap.paths), "RoleColorPicker", {
+    obj.openLazy(asyncRequireImpl(17740, dependencyMap.paths), "RoleColorPicker", {
       color: tmp3,
       defaultColor,
       onSelect: onColorChange,
@@ -75,7 +75,7 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(15839), { color: tmp11, style: tmp.colorBlock });
+  obj5.trailing = closure_10(onColorChange(15844), { color: tmp11, style: tmp.colorBlock });
   obj6.children = closure_10(color(6903).TableRow, obj5);
   items1[1] = closure_10(color(6987).TableRowGroup, obj6);
   obj3.children = items1;
@@ -84,7 +84,7 @@ function GuildFolderSettingsScene(color) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17734);
+const GuildsBarConstants = fn(17739);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             const fn3 = function j() {
-              const result = folderId(17732).hideGuildsBarFolderModal();
+              const result = folderId(17737).hideGuildsBarFolderModal();
             };
             cResult[8] = fn3;
             let tmp15 = fn3;

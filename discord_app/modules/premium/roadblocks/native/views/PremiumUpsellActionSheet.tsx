@@ -23,7 +23,7 @@ import _modDef9692 from "../../../../../../_runtime/metro/09692__.js";
 import _modDef9693 from "../../../../../../_runtime/metro/09693__.js";
 import ScheduledMessagesUtils from "../../../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import NitroScheduleMessageSpotIllustration from "../../../../../design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx";
-import _modDef14042 from "../../../../../../_runtime/metro/14042__.js";
+import _modDef14047 from "../../../../../../_runtime/metro/14047__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -278,7 +278,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       description: tmp82,
                       analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY,
                       upsellType: constants.STREAM_QUALITY_UPSELL,
-                      image: _modDef14042,
+                      image: _modDef14047,
                       imageGradientBackground: null,
                     };
                     const obj14 = { colors: null, start: null, end: null };
@@ -628,7 +628,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj20.description = intl17.formatToPlainString(util.t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
       obj20.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
       obj20.upsellType = constants.STREAM_QUALITY_UPSELL;
-      obj20.image = _modDef14042;
+      obj20.image = _modDef14047;
       const obj22 = {
         colors: null,
         start: ConstantsIOS.HorizontalGradient.START,

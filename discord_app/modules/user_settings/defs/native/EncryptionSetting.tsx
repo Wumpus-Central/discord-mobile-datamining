@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [SecureFramesPersistedStore];
       return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
     };
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSecureFramesEncryptionDescription() {
       const cResult = c.c(2);

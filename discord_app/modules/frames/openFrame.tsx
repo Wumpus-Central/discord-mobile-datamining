@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/frames/openFrame.tsx");
 export default function openFrame(arg0) {
   ({ applicationId, channel, analyticsContext, launch } = arg0);
   if (null == channel) {
-    const obj2 = { applicationId, surface, analyticsContext, launch };
+    const obj2 = { applicationId, surface, analyticsContext, launch, invite: tmp };
     const obj3 = { frameId: null, launched: null };
     obj3.frameId = hasOwnProperty(applicationId, surface);
     obj3.launched = FramesActionCreatorsDefault.launchFrame(obj2);

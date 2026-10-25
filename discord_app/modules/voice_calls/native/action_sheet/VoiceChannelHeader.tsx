@@ -8,7 +8,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10857 from "../../../../../_runtime/metro/10857__.js";
+import _modDef10858 from "../../../../../_runtime/metro/10858__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -182,7 +182,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-      const tmp10 = stateFromStores1(11558)(channel);
+      const tmp10 = stateFromStores1(11559)(channel);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [EmbeddedActivitiesStore];
         cResult[3] = items1;
@@ -462,9 +462,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
       if (isRoleRequiredDefault(channel)) {
-        let tmp5Result = tmp5(14630);
+        let tmp5Result = tmp5(14635);
       } else {
-        tmp5Result = tmp5(11665);
+        tmp5Result = tmp5(11666);
       }
       obj6.source = tmp5Result;
       obj6.style = tmp.icons;
@@ -529,7 +529,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = v65535(closure_15, {
         onPress,
-        iconSource: _modDef10857,
+        iconSource: _modDef10858,
         iconStyle: tmp4.icons,
         accessibilityLabel: first,
       });
@@ -537,12 +537,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4.icons;
       cResult[3] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { onPress, iconSource: _modDef10857, iconStyle: tmp4.icons, accessibilityLabel: first };
+      const obj2 = { onPress, iconSource: _modDef10858, iconStyle: tmp4.icons, accessibilityLabel: first };
     }
   : function AddMemberButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        iconSource: _modDef10857,
+        iconSource: _modDef10858,
         iconStyle: closure_12().icons,
         accessibilityLabel: null,
       };

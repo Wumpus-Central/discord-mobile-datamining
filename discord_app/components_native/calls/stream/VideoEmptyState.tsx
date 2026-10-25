@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = !removeSplashImage;
         if (!removeSplashImage) {
           let obj2 = { style: tmp2.placeholderImage };
-          tmp10 = closure_7(stream(11424).StreamEnded, obj2);
+          tmp10 = closure_7(stream(11425).StreamEnded, obj2);
         }
         let obj3 = { children: null };
         const items = [tmp10];

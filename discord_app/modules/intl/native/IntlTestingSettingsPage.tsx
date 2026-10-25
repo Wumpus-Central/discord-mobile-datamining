@@ -7,8 +7,8 @@ import _mod1167 from "../../../../_runtime/metro/01167__.js";
 import _modDef2049 from "../../../../_runtime/metro/02049__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef16981 from "../messages/Test.messages.js";
-import _modDef17013 from "../messages/SecondTest.messages.js";
+import _modDef16986 from "../messages/Test.messages.js";
+import _modDef17018 from "../messages/SecondTest.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { variant: "text-md/normal", children: null };
         const intl = tmp(1128).intl;
-        obj4.children = intl.format(_modDef16981.HMvEC5, {});
+        obj4.children = intl.format(_modDef16986.HMvEC5, {});
         const tmp21 = closure_10(tmp(5234).Text, obj4);
         cResult[7] = tmp21;
         const tmp19 = tmp21;
@@ -522,7 +522,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { variant: "text-md/normal", children: null };
         const intl2 = tmp(1128).intl;
-        obj5.children = intl2.format(_modDef17013.swfLzV, {});
+        obj5.children = intl2.format(_modDef17018.swfLzV, {});
         const tmp24 = closure_10(tmp(5234).Text, obj5);
         cResult[8] = tmp24;
         const tmp22 = tmp24;
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj6 = { variant: "text-md/normal", children: null };
         const intl3 = tmp(1128).intl;
-        obj6.children = intl3.format(_modDef16981.rmps8y, {});
+        obj6.children = intl3.format(_modDef16986.rmps8y, {});
         const tmp27 = closure_10(tmp(5234).Text, obj6);
         cResult[9] = tmp27;
         const tmp25 = tmp27;
@@ -583,7 +583,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           linkTarget() {},
         };
-        obj7.children = intl4.format(_modDef16981.uczI4g, obj8);
+        obj7.children = intl4.format(_modDef16986.uczI4g, obj8);
         const tmp30 = closure_10(tmp(5234).Text, obj7);
         cResult[10] = tmp30;
         const tmp28 = tmp30;
@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj9 = { variant: "text-md/normal", children: null };
         const intl5 = tmp(1128).intl;
-        obj9.children = intl5.format(_modDef16981.rdfRyh, {});
+        obj9.children = intl5.format(_modDef16986.rdfRyh, {});
         const tmp33 = closure_10(tmp(5234).Text, obj9);
         cResult[11] = tmp33;
         const tmp31 = tmp33;
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_10(closure_1_6, obj);
           },
         };
-        obj10.children = intl6.format(_modDef16981.XOdbAy, obj11);
+        obj10.children = intl6.format(_modDef16986.XOdbAy, obj11);
         const tmp36 = closure_10(tmp(5234).Text, obj10);
         cResult[12] = tmp36;
         const tmp34 = tmp36;
@@ -738,29 +738,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_10(closure_14, {}), closure_10(closure_13, {}), , , , , ,];
       const obj3 = { variant: "text-md/normal", children: null };
       const intl = require("util").intl;
-      obj3.children = intl.format(_modDef16981.HMvEC5, {});
+      obj3.children = intl.format(_modDef16986.HMvEC5, {});
       items[2] = closure_10(require("Text/Text").Text, obj3);
       const obj4 = { variant: "text-md/normal", children: null };
       const intl2 = require("util").intl;
-      obj4.children = intl2.format(_modDef17013.swfLzV, {});
+      obj4.children = intl2.format(_modDef17018.swfLzV, {});
       items[3] = closure_10(require("Text/Text").Text, obj4);
       const obj5 = { variant: "text-md/normal", children: null };
       const intl3 = require("util").intl;
-      obj5.children = intl3.format(_modDef16981.rmps8y, {});
+      obj5.children = intl3.format(_modDef16986.rmps8y, {});
       items[4] = closure_10(require("Text/Text").Text, obj5);
       const obj6 = { variant: "text-md/normal", children: null };
       const intl4 = require("util").intl;
-      obj6.children = intl4.format(_modDef16981.uczI4g, {
+      obj6.children = intl4.format(_modDef16986.uczI4g, {
         linkTarget() {},
       });
       items[5] = closure_10(require("Text/Text").Text, obj6);
       const obj8 = { variant: "text-md/normal", children: null };
       const intl5 = require("util").intl;
-      obj8.children = intl5.format(_modDef16981.rdfRyh, {});
+      obj8.children = intl5.format(_modDef16986.rdfRyh, {});
       items[6] = closure_10(require("Text/Text").Text, obj8);
       const obj9 = { variant: "text-md/normal", children: null };
       const intl6 = require("util").intl;
-      obj9.children = intl6.format(_modDef16981.XOdbAy, {
+      obj9.children = intl6.format(_modDef16986.XOdbAy, {
         username: "some user",
         usernameHook(children) {
           const obj = {

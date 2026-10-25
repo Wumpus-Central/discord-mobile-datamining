@@ -176,7 +176,7 @@ export default noop.memo(
               const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
               return hasOwnProperty(native.Avatar, obj, user.id);
             });
-            tmp20 = closure_5(guildId(14308).AvatarPile, obj7);
+            tmp20 = closure_5(guildId(14313).AvatarPile, obj7);
           }
           cResult[9] = arr;
           cResult[10] = guildId;
@@ -232,7 +232,7 @@ export default noop.memo(
             const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
             return hasOwnProperty(native.Avatar, obj, user.id);
           });
-          tmp4Result = closure_5(tmp5(14308).AvatarPile, obj6);
+          tmp4Result = closure_5(tmp5(14313).AvatarPile, obj6);
         }
         items2[1] = tmp4Result;
         obj2.children = items2;

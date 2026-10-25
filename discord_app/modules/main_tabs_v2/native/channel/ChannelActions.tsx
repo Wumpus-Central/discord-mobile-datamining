@@ -955,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (hasForumSearchQuery) {
-        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(14002).ForumChannelCloseSearchButton;
+        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(14007).ForumChannelCloseSearchButton;
         obj = { channelId };
         let tmp10 = closure_14(ForumChannelCloseSearchButton, obj);
       } else {
@@ -1009,7 +1009,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: containerStyle, children: null };
       if (obj2.useHasForumSearchQuery(channelId)) {
         const obj4 = { channelId };
-        let tmp4Result = closure_14(tmp(14002).ForumChannelCloseSearchButton, obj4);
+        let tmp4Result = closure_14(tmp(14007).ForumChannelCloseSearchButton, obj4);
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {

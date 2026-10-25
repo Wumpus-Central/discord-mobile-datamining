@@ -99,7 +99,7 @@ const ChannelRecord = fn(4827);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(4841).isGuildNSFW;
-let closure_25 = fn(18255).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(18260).ChannelSettingsAutoFocusElement;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_26,
@@ -179,7 +179,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       if (!tmpResult.useStateFromStores(first, tmp6)) {
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp18 = closure_47(tmp(10858).PinIcon, {});
+          const tmp18 = closure_47(tmp(10859).PinIcon, {});
           cResult[8] = tmp18;
           let tmp16 = tmp18;
         } else {
@@ -232,7 +232,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = closure_47(View, obj2);
       }
       const obj4 = { style: channelId.style, children: null };
-      const items1 = [closure_47(channelId(10858).PinIcon, {}), tmp4];
+      const items1 = [closure_47(channelId(10859).PinIcon, {}), tmp4];
       obj4.children = items1;
       return closure_48(View, obj4);
     };
@@ -583,7 +583,7 @@ class ChannelSettingsOverview extends PureComponent {
       closure_128_6 = tmp2(7345).conjureChannelAppId(closure_128_1);
       if (tmp106 != guild2) {
         if (tmp106 != closure_128_6) {
-          const conjureServerApp = tmp2(12792).loadConjureServerApp(guild2.id, closure_128_6);
+          const conjureServerApp = tmp2(12797).loadConjureServerApp(guild2.id, closure_128_6);
           tmp106 = closure_128_5;
           conjureServerApp.then((app) => {
             if (null == app) {
@@ -595,7 +595,7 @@ class ChannelSettingsOverview extends PureComponent {
             }
             return tmp6;
           }, closure_128_5);
-          tmp2(12792);
+          tmp2(12797);
         }
       }
       closure_128_5();
@@ -910,7 +910,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
       obj2.maxValue = length.length - 1;
       obj2.onChange = self.handleSlowmodeChange;
       obj2.formatValue = formatSlowmodeCooldown;
-      obj.children = closure_1_47(tmp8(15272).TableSliderRow, obj2);
+      obj.children = closure_1_47(tmp8(15277).TableSliderRow, obj2);
       items.push(closure_1_47(tmp8(6987).TableRowGroup, obj, "slowmode-section"));
       return items;
     } else {
@@ -951,7 +951,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(18260).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(18265).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1415,7 +1415,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(6903).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(4833).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(18267).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(18272).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1778,7 +1778,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(5604);
       }
       const obj2 = {
-        icon: closure_47(tmp7(17578).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(17583).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

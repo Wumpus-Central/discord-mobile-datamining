@@ -19,13 +19,13 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
   [USER_INTERACTION]: fn(8542).ChatIcon,
-  [USER_CALLED]: fn(12879).PhoneIcon,
+  [USER_CALLED]: fn(12884).PhoneIcon,
   [USER_ADD]: fn(5666).FriendsIcon,
-  [GUILD_ADD]: fn(14895).ServerGridIcon,
+  [GUILD_ADD]: fn(14900).ServerGridIcon,
   [GUILD_INTERACTION]: fn(8544).ThreadIcon,
   [PURCHASES]: fn(7943).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(5691).ClockIcon,
-  [GIFTS]: fn(12881).GiftIcon,
+  [GIFTS]: fn(12886).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
   fn(7646).TeenActionDisplayType);
@@ -207,7 +207,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       obj = container(576);
-      const ageSpecificText = container(12878).useAgeSpecificText(tmp4, tmp5);
+      const ageSpecificText = container(12883).useAgeSpecificText(tmp4, tmp5);
       container = useIsInAdultAgeGroupDefault();
       if (cResult[2] === ageSpecificText) {
         if (cResult[3] === container) {
@@ -231,7 +231,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         obj3.text = intl3.string(tmp(1128).t["NX+WJN"]);
                         obj3.onPress = ModalActionCreatorsDefault.pop;
                         obj2.children = closure_6(tmp(5244).Button, obj3);
-                        const tmp36 = closure_6(tmp(12722).ModalFooter, obj2);
+                        const tmp36 = closure_6(tmp(12727).ModalFooter, obj2);
                         cResult[25] = tmp36;
                         let tmp34 = tmp36;
                       } else {
@@ -275,7 +275,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = container(12878);
+      const tmpResult = container(12883);
       const sortedActivityTypeConfigs = container(8128).getSortedActivityTypeConfigs();
       const ModalScreen = tmp(7900).ModalScreen;
       const ModalContent = tmp(7901).ModalContent;

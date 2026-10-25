@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 require = fn;
 const QuestDockMode = fn(6710).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16436).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16441).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj = { questDockContentCollapsed: null };
@@ -39,7 +39,7 @@ export default noop.memo(
         ({ children, hideOnExpand } = arg0);
         _require = tmp4;
         const tmp5 = closure_7();
-        const activeQuestDockMode = noop.useContext(tmp(16437).QuestDockGestureContext).activeQuestDockMode;
+        const activeQuestDockMode = noop.useContext(tmp(16442).QuestDockGestureContext).activeQuestDockMode;
         let obj = require("c");
         class C {
           constructor() {
@@ -122,7 +122,7 @@ export default noop.memo(
           tmp = hideOnExpand;
         }
         hideOnExpand = tmp;
-        const activeQuestDockMode = noop.useContext(hideOnExpand(16437).QuestDockGestureContext).activeQuestDockMode;
+        const activeQuestDockMode = noop.useContext(hideOnExpand(16442).QuestDockGestureContext).activeQuestDockMode;
         const tmp2 = closure_7();
         class D {
           constructor() {

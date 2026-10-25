@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp26[0] = tmp8;
                 const items1 = [tmp16, tmp21];
                 tmp26[2] = items1;
-                const tmp27 = closure_8(tmp(11610).UserSettingsTableRowGroup, tmp26);
+                const tmp27 = closure_8(tmp(11611).UserSettingsTableRowGroup, tmp26);
                 cResult[14] = tmp16;
                 cResult[15] = tmp21;
                 cResult[16] = tmp27;
@@ -293,6 +293,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = tmp4Result;
       obj2.children = items1;
-      return closure_8(inputMode(11610).UserSettingsTableRowGroup, obj2);
+      return closure_8(inputMode(11611).UserSettingsTableRowGroup, obj2);
     };
 export { handleInputModePress };

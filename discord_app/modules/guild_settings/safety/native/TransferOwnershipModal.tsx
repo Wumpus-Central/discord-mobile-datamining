@@ -57,8 +57,8 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12786).close();
-      const obj = toUser(12786);
+      toUser(12791).close();
+      const obj = toUser(12791);
       toUser(9005).close();
       const obj2 = toUser(9005);
       const result = closure_0(5662).showTransferOwnershipSuccess();
@@ -125,7 +125,7 @@ function getScreens(guild, toUser) {
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12788);
+const TransferOwnershipConstants = fn(12793);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;

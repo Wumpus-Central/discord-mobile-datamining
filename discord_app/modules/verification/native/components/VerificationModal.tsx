@@ -393,15 +393,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
     return tmp14;
   }
   const obj = navigation(576);
-  const tmp15 = jsx(navigation(1202).EmptyState, { Illustration: navigation(18969).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
+  const tmp15 = jsx(navigation(1202).EmptyState, { Illustration: navigation(18974).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
   cResult[5] = tmp4.button;
   cResult[6] = tmp11;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const obj3 = { Illustration: navigation(18969).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
+  const obj3 = { Illustration: navigation(18974).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
 }) : (function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
-  const obj = { Illustration: navigation(18969).VerifyPhone, title: null, body: null, children: null };
+  const obj = { Illustration: navigation(18974).VerifyPhone, title: null, body: null, children: null };
   const intl = navigation(1128).intl;
   obj.title = intl.string(navigation(1128).t.KLnLIP);
   const intl2 = navigation(1128).intl;
@@ -426,7 +426,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
   };
   obj2.children = jsx(navigation(5244).Button, { text: null, onPress: null });
   obj.children = <View style={closure_12().button}>{null}</View>;
-  return jsx(navigation(1202).EmptyState, { Illustration: navigation(18969).VerifyPhone, title: null, body: null, children: null });
+  return jsx(navigation(1202).EmptyState, { Illustration: navigation(18974).VerifyPhone, title: null, body: null, children: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

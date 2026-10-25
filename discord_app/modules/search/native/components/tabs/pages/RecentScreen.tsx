@@ -23,7 +23,7 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 require = fn;
 const SearchConstants = fn(9714);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13234).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13239).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1087).SearchTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -670,16 +670,16 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const messages = stateFromStoresObject.messages;
   ({ isLoadingMediaGrid, isInitialSearchQuery } = stateFromStoresObject);
   if (cResult[3] !== searchContext) {
-    const searchContextId = tmp2(13225).getSearchContextId(searchContext);
+    const searchContextId = tmp2(13230).getSearchContextId(searchContext);
     cResult[3] = searchContext;
     cResult[4] = searchContextId;
     let tmp11 = searchContextId;
-    const tmp2Result2 = tmp2(13225);
+    const tmp2Result2 = tmp2(13230);
   } else {
     tmp11 = cResult[4];
   }
   const arr3 = closure_21(tmp11);
-  const tmp15 = messages(18081)(searchContext.width);
+  const tmp15 = messages(18086)(searchContext.width);
   dependencyMap = tmp15;
   if (null != messages) {
     if (0 !== messages.length) {
@@ -691,7 +691,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       items1 = [];
       const obj4 = messages[Symbol.iterator]();
       while (obj4 !== undefined) {
-        let obj5 = searchContext(13218);
+        let obj5 = searchContext(13223);
         let items2 = [tmp19];
         let media = obj5.getMedia(searchContext, items2);
         let item = media.forEach((item) => items1.push(item));
@@ -712,7 +712,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp30 = cResult[10];
     }
     let num11 = searchContext;
-    const onPressMediaItem = searchContext(18078).useOnPressMediaItem(tmp30);
+    const onPressMediaItem = searchContext(18083).useOnPressMediaItem(tmp30);
     if (cResult[11] === messages) {
       if (cResult[12] === onPressMediaItem) {
         let tmp35 = cResult[13];
@@ -725,7 +725,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       } else {
         tmp36 = cResult[14];
       }
-      const fullscreenPlaceholderCount = num11(18082).useFullscreenPlaceholderCount(tmp36);
+      const fullscreenPlaceholderCount = num11(18087).useFullscreenPlaceholderCount(tmp36);
       if (cResult[15] === tmp35) {
         if (cResult[16] === isInitialSearchQuery) {
           if (cResult[17] === EMPTY_MEDIA_RESULTS) {
@@ -1051,7 +1051,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           arr8.push(element);
         });
       }
-      const num11Result = num11(18082);
+      const num11Result = num11(18087);
     }
     class G {
       constructor(arg0) {
@@ -1081,7 +1081,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[12] = onPressMediaItem;
     cResult[13] = G;
     tmp35 = G;
-    const obj7 = searchContext(18078);
+    const obj7 = searchContext(18083);
   }
   const obj13 = { searchContext, allMediaResults: EMPTY_MEDIA_RESULTS };
   cResult[8] = EMPTY_MEDIA_RESULTS;

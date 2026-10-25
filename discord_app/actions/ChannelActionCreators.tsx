@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "application" },
       silent: flag2,
     });
     if (flag) {
@@ -470,7 +470,7 @@ export default {
     };
     const obj2 = {
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "application" },
       silent: flag2,
     };
     const tmpResult2 = DispatcherDefault;

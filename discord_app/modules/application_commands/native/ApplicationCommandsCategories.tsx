@@ -9,7 +9,7 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(13291);
+const ApplicationCommandsCategoriesConstants = fn(13296);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);

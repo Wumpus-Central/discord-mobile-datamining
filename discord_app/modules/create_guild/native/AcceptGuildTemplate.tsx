@@ -13,8 +13,8 @@ import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import _modDef12744 from "../../../../_runtime/metro/12744__.js";
-import _modDef12745 from "../../../../_runtime/metro/12745__.js";
+import _modDef12749 from "../../../../_runtime/metro/12749__.js";
+import _modDef12750 from "../../../../_runtime/metro/12750__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../rebrand/native/TextStyles.tsx";
 
@@ -827,9 +827,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (isGuildVocalChannelType(type)) {
           let tmp10Result = _modDef8928;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = _modDef12744;
+          tmp10Result = _modDef12749;
         } else {
-          tmp10Result = _modDef12745;
+          tmp10Result = _modDef12750;
         }
         obj2.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj2)];
@@ -897,9 +897,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (isGuildVocalChannelType(type)) {
               let tmp10Result = _modDef8928;
             } else if (type === constants2.GUILD_CATEGORY) {
-              tmp10Result = _modDef12744;
+              tmp10Result = _modDef12749;
             } else {
-              tmp10Result = _modDef12745;
+              tmp10Result = _modDef12750;
             }
             obj2.source = tmp10Result;
             const items1 = [closure_2_11(native.Icon, obj2)];

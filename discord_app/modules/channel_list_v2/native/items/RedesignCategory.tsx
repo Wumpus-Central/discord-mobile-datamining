@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(11148).PlusMediumIcon;
+    Icon = trailingAction(11149).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -164,7 +164,7 @@ function renderCategoryItem(muted) {
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12059);
+const RedesignChannelListConstants = fn(12060);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -369,7 +369,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj6 = {};
       merged = Object.assign(merged);
-      ChevronSmallDownIcon = ChevronSmallDownIcon(11076).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = ChevronSmallDownIcon(11077).ChevronSmallDownIcon;
       obj6.icon = closure_12(ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -444,7 +444,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj7 = {};
       const merged1 = Object.assign(merged);
-      obj7.icon = closure_12(channel(11076).ChevronSmallDownIcon, {
+      obj7.icon = closure_12(channel(11077).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed2 ? obj3 : obj4,
@@ -505,7 +505,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const colors = stateFromStores(587).colors;
         const obj5 = {};
         merged = Object.assign(merged);
-        ChevronSmallDownIcon = ChevronSmallDownIcon(11076).ChevronSmallDownIcon;
+        ChevronSmallDownIcon = ChevronSmallDownIcon(11077).ChevronSmallDownIcon;
         const obj6 = {
           size: "xxs",
           color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -558,7 +558,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = stateFromStores(587).colors;
       obj3 = {};
       const merged1 = Object.assign(merged);
-      obj3.icon = closure_12(tmp2(11076).ChevronSmallDownIcon, {
+      obj3.icon = closure_12(tmp2(11077).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed ? obj3 : obj4,

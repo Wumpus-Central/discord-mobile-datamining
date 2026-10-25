@@ -31,22 +31,21 @@ const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
 const useMediaPlayerManagerStore = module_570.create((arg0) => {
   closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "IconComponent",
     mediaSourceMessage: "Set",
-    canAccessMedia: "emoji",
+    canAccessMedia: "duration",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "Reflect",
-    showPip: "japonsk\u00FD",
+    showPip: "Generated Test Users",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "mo\u0159sk\u00E9 plody"
+    currentlyDisplayedChannelId: 245
   };
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {
@@ -284,7 +283,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "emoji", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "duration", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

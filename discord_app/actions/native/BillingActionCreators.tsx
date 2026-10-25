@@ -18,7 +18,7 @@ import ACOMExperiments from "../../modules/billing/native/ACOMExperiments.tsx";
 import showSpendingLimitReachedAlert from "../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import IAPUtils from "../../utils/native/IAPUtils.tsx";
-import _mod13910 from "../../../_runtime/metro/13910__.js";
+import _mod13915 from "../../../_runtime/metro/13915__.js";
 import ErrorUtilsAll from "../../utils/ErrorUtils.tsx";
 import purchaseExceptionAlerts from "../../modules/billing/native/apple/purchaseExceptionAlerts.tsx";
 import APBRequestOperations from "../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx";
@@ -144,9 +144,9 @@ let closure_24 = async function _applyTransactionFromListener(arg0) {
                       const transactionReason = parsed.transactionReason;
                       let tmp61 = "autoRenewable" === _require.productType;
                       if (tmp61) {
-                        let tmp58 = transactionReason === _mod13910.TransactionReason.PURCHASE;
+                        let tmp58 = transactionReason === _mod13915.TransactionReason.PURCHASE;
                         if (!tmp58) {
-                          tmp58 = transactionReason === _mod13910.TransactionReason.RENEWAL;
+                          tmp58 = transactionReason === _mod13915.TransactionReason.RENEWAL;
                         }
                         tmp61 = tmp58;
                       }
@@ -317,7 +317,7 @@ function handlePurchaseException(code, purchase_type, arg2) {
     if (obj.isSpendingLimitError(billingError)) {
       const result = showSpendingLimitReachedAlert.showSpendingLimitReachedAlert();
       const tmpResult = showSpendingLimitReachedAlert;
-    } else if (code.code !== _mod13910.ErrorCode.E_DEFERRED_PAYMENT) {
+    } else if (code.code !== _mod13915.ErrorCode.E_DEFERRED_PAYMENT) {
       const message = code.message;
       const obj3 = {};
       const merged = Object.assign(code);
@@ -477,7 +477,7 @@ let closure_32 = async function _clearAndMakeIAPRequest() {
   closure_133_2 = closure_2;
   closure_133_3 = closure_3;
   closure_133_4 = closure_4;
-  await _mod13910.clearTransactionIOS();
+  await _mod13915.clearTransactionIOS();
   return closure_134_33(closure_133_0, closure_133_1, closure_133_2, closure_133_3, closure_133_4);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3, arg4) {
@@ -2252,9 +2252,9 @@ const jsx = fn(21).jsx;
 const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
 new LoggerDefault("BillingActionCreators.tsx");
-let items = [fn(13910).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(13915).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
-const items1 = [fn(13910).ErrorCode.E_UNKNOWN, fn(13910).ErrorCode.E_DEFERRED_PAYMENT];
+const items1 = [fn(13915).ErrorCode.E_UNKNOWN, fn(13915).ErrorCode.E_DEFERRED_PAYMENT];
 const set1 = new Set(items1);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);
@@ -2413,7 +2413,7 @@ export default {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: _mod13910.initConnection(), done: false };
+              const obj4 = { value: _mod13915.initConnection(), done: false };
               return obj4;
             }
           } else if (1 === tmp7) {

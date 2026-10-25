@@ -121,19 +121,19 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = tmp18;
       }
       const obj = onConfirm(576);
-      const conjurePublishBlockedCopy = onConfirm(10803).getConjurePublishBlockedCopy(reason, message);
+      const conjurePublishBlockedCopy = onConfirm(10804).getConjurePublishBlockedCopy(reason, message);
       cResult[0] = message;
       cResult[1] = reason;
       cResult[2] = conjurePublishBlockedCopy;
       tmp5 = conjurePublishBlockedCopy;
-      const tmpResult = onConfirm(10803);
+      const tmpResult = onConfirm(10804);
     }
   : function ConjurePublishBlockedSheet(onConfirm) {
       onConfirm = onConfirm.onConfirm;
       ({ reason, message } = onConfirm);
       const tmp = closure_7();
       const tmp2 = onConfirm;
-      const conjurePublishBlockedCopy = onConfirm(10803).getConjurePublishBlockedCopy(reason, message);
+      const conjurePublishBlockedCopy = onConfirm(10804).getConjurePublishBlockedCopy(reason, message);
       const obj2 = {
         header: closure_4(onConfirm(7248).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }),
         children: null,

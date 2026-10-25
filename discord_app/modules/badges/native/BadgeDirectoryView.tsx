@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return closure_8.hasCatalogFetchErrorFor(targetUserId);
                 }
               }
-              const badgeIndicatorIds = targetUsername(11123).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
+              const badgeIndicatorIds = targetUsername(11124).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
               class U {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
@@ -591,7 +591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl = targetUsername(1128).intl;
               const obj3 = { username: targetUsername };
               stringResult = intl.formatToPlainString(targetUsername(1128).t.EIcwoe, obj3);
-              const tmpResult8 = targetUsername(11123);
+              const tmpResult8 = targetUsername(11124);
             }
             const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
             cResult[28] = stateFromStoresArray;
@@ -738,7 +738,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { badges: stateFromStoresArray, enabled: null };
         let tmp33Result = !tmp10;
         obj3.enabled = tmp33Result;
-        const badgeIndicatorIds = targetUsername(11123).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+        const badgeIndicatorIds = targetUsername(11124).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
         if (null != targetUserId && targetUserId !== stateFromStores) {
           if (null != targetUsername) {
             const intl2 = targetUsername(1128).intl;
@@ -852,7 +852,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = targetUsername(1128).intl;
         formatToPlainStringResult = intl.string(targetUsername(1128).t.UqnlQF);
-        const tmp6Result6 = targetUsername(11123);
+        const tmp6Result6 = targetUsername(11124);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

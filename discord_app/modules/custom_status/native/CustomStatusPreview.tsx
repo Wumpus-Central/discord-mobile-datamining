@@ -59,7 +59,7 @@ export default function CustomStatusPreview(user) {
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(11071, dependencyMap.paths),
+      asyncRequireImpl(11072, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji },
       "stack",

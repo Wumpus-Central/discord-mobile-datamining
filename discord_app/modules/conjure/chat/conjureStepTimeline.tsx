@@ -9,26 +9,26 @@ function pushStep(items, todosAt, turn_seq) {
           todosAt.todosAt = items.length;
           items.push(turn_seq);
           if (null != turn_seq.turn_seq) {
-            const seenSeq4 = todosAt.seenSeq;
-            seenSeq4.add(turn_seq.turn_seq);
-          }
-        } else {
-          if (null != items[todosAt.todosAt].turn_seq) {
-            const seenSeq2 = todosAt.seenSeq;
-            seenSeq2.delete(tmp2.turn_seq);
-          }
-          items[todosAt.todosAt] = turn_seq;
-          if (null != turn_seq.turn_seq) {
             const seenSeq3 = todosAt.seenSeq;
             seenSeq3.add(turn_seq.turn_seq);
           }
+        } else {
+          if (null != turn_seq.turn_seq) {
+            const seenSeq2 = todosAt.seenSeq;
+            seenSeq2.add(turn_seq.turn_seq);
+          }
+          turn_seq = items[todosAt.todosAt].turn_seq;
+          if (!tmp3) {
+            items[todosAt.todosAt] = turn_seq;
+          }
+          tmp3 = null != turn_seq.turn_seq && null != turn_seq && turn_seq.turn_seq < turn_seq;
         }
       }
     }
     items.push(turn_seq);
     if (null != turn_seq.turn_seq) {
-      const seenSeq5 = todosAt.seenSeq;
-      seenSeq5.add(turn_seq.turn_seq);
+      const seenSeq4 = todosAt.seenSeq;
+      seenSeq4.add(turn_seq.turn_seq);
     }
   } else {
     const seenSeq = todosAt.seenSeq;

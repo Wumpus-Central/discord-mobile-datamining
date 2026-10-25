@@ -23,7 +23,7 @@ export const openAddMembersActionSheet = function openAddMembersActionSheet(stat
 export const openChannelMembersActionSheet = function openChannelMembersActionSheet(id, guild_id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(11307, dependencyMap.paths), "channel-members-" + id, {
+  obj2.openLazy(asyncRequireImpl(11308, dependencyMap.paths), "channel-members-" + id, {
     channelId: id,
     guildId: guild_id,
   });

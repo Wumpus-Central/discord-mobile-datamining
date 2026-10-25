@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     dependencyMap = 1;
                     c3 = 1;
                     let obj4 = {
-                      value: Promise.all(first1.map(tmp2(12900).getOrResolveChannelIdFromDestinationId)),
+                      value: Promise.all(first1.map(tmp2(12905).getOrResolveChannelIdFromDestinationId)),
                       done: false,
                     };
                     return obj4;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-                closure_128_1 = tmp2(15738).resolveActivityShareMessageContent(
+                closure_128_1 = tmp2(15743).resolveActivityShareMessageContent(
                   closure_129_4,
                   closure_129_15,
                   closure_129_13,
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                   })(),
                 );
-                let obj5 = tmp2(15738);
+                let obj5 = tmp2(15743);
                 let obj7 = { text: null };
                 const intl = tmp2(1128).intl;
                 const obj8 = { applicationName: closure_129_15.name };
@@ -356,8 +356,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3(5663).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
                 closure_129_5(true, closure_129_8);
                 let obj6 = tmp3(5663);
-                const result = tmp2(15736).closeActivityShareLinkModal();
-                const obj9 = tmp2(15736);
+                const result = tmp2(15741).closeActivityShareLinkModal();
+                const obj9 = tmp2(15741);
               }
               c3 = 3;
               let obj = { value, done: true };

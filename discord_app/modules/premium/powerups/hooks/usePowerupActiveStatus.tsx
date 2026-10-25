@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (arr2.length <= 0) {
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { type: constants.INACTIVE, sourceEntitlement: "r", sourcePowerup: "toCharArray$esjava$1" };
+            const obj2 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "application" };
             cResult[2] = obj2;
           }
         } else {
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = closure_10(arg0, items);
       if (tmpResult.length <= 0) {
-        const obj = { type: constants.INACTIVE, sourceEntitlement: "r", sourcePowerup: "toCharArray$esjava$1" };
+        const obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "application" };
         let first = obj;
       } else {
         first = tmpResult[0];

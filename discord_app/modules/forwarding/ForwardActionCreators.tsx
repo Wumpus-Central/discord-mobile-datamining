@@ -130,8 +130,8 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(12902).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(12902);
+                  result = tmp2(12907).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(12907);
                 }
                 if (!result) {
                   const obj3 = item(7566);

@@ -172,7 +172,7 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(14372).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(14377).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_11(value(7180).TextArea, obj4)];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };

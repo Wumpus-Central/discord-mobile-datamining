@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp10Result;
       let tmp13 = rendererProps;
       if (rendererProps == null) {
-        tmp13 = tmp9(12000)(userId, widget.applicationId);
+        tmp13 = tmp9(12001)(userId, widget.applicationId);
       }
       ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = tmp13);
       const tmp14 = stateFromStores(7254)(getOrFetchApplication);
@@ -369,10 +369,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         trackEntryPointImpression: true,
         stackingBehavior: "stack",
       };
-      const tmp15 = stateFromStores(12003)(widget.applicationId, stateFromStores1);
-      ({ pending, refresh } = stateFromStores(12004)(widget.applicationId));
-      const tmp17 = surfaceConfigs[userId(undefined, 11869).ApplicationWidgetConfigSurface.WIDGET_TOP];
-      const tmp18 = surfaceConfigs[userId(undefined, 11869).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
+      const tmp15 = stateFromStores(12004)(widget.applicationId, stateFromStores1);
+      ({ pending, refresh } = stateFromStores(12005)(widget.applicationId));
+      const tmp17 = surfaceConfigs[userId(undefined, 11870).ApplicationWidgetConfigSurface.WIDGET_TOP];
+      const tmp18 = surfaceConfigs[userId(undefined, 11870).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
       let tmp19 = null;
       if (null != iconURL) {
         const obj5 = { source: null, style: null };
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { style: cardStyle, title: str, titleLeadingIcon: tmp19, children: null };
             const obj8 = { style: tmp.stillSyncing, children: null };
             const obj9 = { size: "xs", color: tmp9(587).colors.TEXT_MUTED };
-            const items3 = [closure_8(tmp2(12008).HourglassIcon, obj9)];
+            const items3 = [closure_8(tmp2(12009).HourglassIcon, obj9)];
             const obj10 = { variant: "text-sm/medium", color: "text-muted", children: null };
             const intl = tmp2(1128).intl;
             obj10.children = intl.string(tmp2(1128).t.z5K4Uv);
@@ -423,8 +423,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp16 = stateFromStores(12004)(widget.applicationId);
-      const result = userId(11906).bindResolveFieldValue(resolutionContext);
+      const tmp16 = stateFromStores(12005)(widget.applicationId);
+      const result = userId(11907).bindResolveFieldValue(resolutionContext);
       const obj11 = {
         style: tmp.header,
         onPress() {
@@ -450,14 +450,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp31Result = null;
       if (null != tmp17) {
-        if (tmp2(11904).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
+        if (tmp2(11905).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
           const obj12 = { header: tmp32, topConfig: tmp17, resolveFieldValue: result, numberFormat: memo };
-          tmp31Result = closure_8(tmp9(11905), obj12);
+          tmp31Result = closure_8(tmp9(11906), obj12);
         } else {
           tmp31Result = null;
-          if (tmp2(11904).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
+          if (tmp2(11905).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
             const obj13 = { header: tmp32, topConfig: tmp17, resolveFieldValue: result, numberFormat: memo };
-            tmp31Result = closure_8(tmp9(11996), obj13);
+            tmp31Result = closure_8(tmp9(11997), obj13);
           }
         }
       }
@@ -466,17 +466,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp31Result2 = null;
       if (null != tmp18) {
-        if (tmp2(11904).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
+        if (tmp2(11905).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
           const obj14 = { bottomConfig: tmp18, resolveFieldValue: result, numberFormat: memo };
-          tmp31Result2 = closure_8(tmp9(11997), obj14);
-        } else if (tmp2(11904).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
+          tmp31Result2 = closure_8(tmp9(11998), obj14);
+        } else if (tmp2(11905).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
           const obj15 = { bottomConfig: tmp18, resolveFieldValue: result };
-          tmp31Result2 = closure_8(tmp9(11998), obj15);
+          tmp31Result2 = closure_8(tmp9(11999), obj15);
         } else {
           tmp31Result2 = null;
-          if (tmp2(11904).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
+          if (tmp2(11905).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
             const obj16 = { bottomConfig: tmp18, resolveFieldValue: result };
-            tmp31Result2 = closure_8(tmp9(11999), obj16);
+            tmp31Result2 = closure_8(tmp9(12000), obj16);
           }
         }
       }
@@ -508,7 +508,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj19.onPress = refresh;
               obj19.style = tmp.refresh;
               const obj20 = { size: "xs", color: tmp9(587).colors.TEXT_MUTED };
-              const items6 = [closure_8(tmp2(11787).RetryIcon, obj20)];
+              const items6 = [closure_8(tmp2(11788).RetryIcon, obj20)];
               const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
               const intl3 = tmp2(1128).intl;
               obj21.children = intl3.string(tmp2(1128).t.wzzjk9);

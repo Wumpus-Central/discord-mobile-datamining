@@ -355,7 +355,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12243, dependencyMap.paths), v65535, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12244, dependencyMap.paths), v65535, {
           channelId,
           index,
           answer,

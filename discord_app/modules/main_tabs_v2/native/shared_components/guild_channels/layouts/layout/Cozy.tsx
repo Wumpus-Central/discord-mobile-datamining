@@ -89,7 +89,7 @@ obj.typing = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 obj.separator = { margin: { marginVertical: 20 } };
-const importDefaultResultResult = deepmerge(fn(12063).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(12064).CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj10 = {
   layout: { marginThread: { marginLeft: 0 } },
   container: { paddingThread: { paddingLeft: 20 } },

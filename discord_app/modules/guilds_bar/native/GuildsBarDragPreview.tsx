@@ -15,7 +15,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(6701).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17726).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17731).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({
@@ -189,7 +189,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "end",
+              color: "enabled",
               expanded: null,
               children: null,
             };
@@ -379,7 +379,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "end",
+              color: "enabled",
               expanded: null,
               children: null,
             };
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "EMBEDDED_APP_SHIM_DISCONNECT",
-                    scrollPosition: null,
-                    dragRegion: "WhatsApp",
-                    windowSize: "etf",
-                    dropComplete: "json",
-                    listInsets: "STAGE_MUSIC_PLAY",
+                    gestureState: "enabled",
+                    scrollPosition: "hasTwoStates",
+                    dragRegion: "goBackGesture",
+                    windowSize: "screensRefs",
+                    dropComplete: "currentScreenId",
+                    listInsets: "transitionAnimation",
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "EMBEDDED_APP_SHIM_DISCONNECT",
-                  scrollPosition: null,
-                  dragRegion: "WhatsApp",
-                  windowSize: "etf",
-                  dropComplete: "json",
-                  listInsets: "STAGE_MUSIC_PLAY",
+                  gestureState: "enabled",
+                  scrollPosition: "hasTwoStates",
+                  dragRegion: "goBackGesture",
+                  windowSize: "screensRefs",
+                  dropComplete: "currentScreenId",
+                  listInsets: "transitionAnimation",
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;

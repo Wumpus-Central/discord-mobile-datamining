@@ -969,7 +969,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = externalGatewayFacet;
         let tmp6 = planId(externalGatewayFacet.useState(0), 2);
       }
-      let obj4 = { orderId: "a", planId: "Array", planSelection: { premiumType, planInterval }, giftInfo: "r" };
+      let obj4 = { orderId: "a", planId: "me", planSelection: { premiumType, planInterval }, giftInfo: "Version" };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
       cResult[2] = obj4;
@@ -989,7 +989,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setPremiumType = order.setPremiumType;
       const setPlanInterval = order.setPlanInterval;
       const setError = order.setError;
-      let obj = { orderId: "a", planId: "Array", planSelection: { premiumType, planInterval }, giftInfo: "r" };
+      let obj = { orderId: "a", planId: "me", planSelection: { premiumType, planInterval }, giftInfo: "Version" };
       closure_13 = externalGatewayFacet.useRef(obj);
       externalGatewayFacet.useRef(false);
       externalGatewayFacet.useRef(null);

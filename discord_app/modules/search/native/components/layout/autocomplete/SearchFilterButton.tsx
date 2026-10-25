@@ -20,7 +20,7 @@ export default noop.memo(
         searchContext = searchContext.searchContext;
         ({ onOpen, onClose } = searchContext);
         let obj = searchContext(576);
-        const validOrderedFilterTokens = searchContext(18064).useValidOrderedFilterTokens(searchContext);
+        const validOrderedFilterTokens = searchContext(18069).useValidOrderedFilterTokens(searchContext);
         if (cResult[0] === searchContext) {
           if (cResult[1] === validOrderedFilterTokens) {
             const _Symbol = Symbol;
@@ -152,7 +152,7 @@ export default noop.memo(
         cResult[0] = searchContext;
         cResult[1] = validOrderedFilterTokens;
         cResult[2] = mapped;
-        let obj2 = searchContext(18064);
+        let obj2 = searchContext(18069);
       }
     : function SearchFilterButton(searchContext) {
         searchContext = searchContext.searchContext;

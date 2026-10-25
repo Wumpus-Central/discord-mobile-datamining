@@ -33,7 +33,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const id = approval.id;
       ({ host, reason } = approval);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(tmp(11815).ConjureAwaitingPulseRing, {});
+        const tmp7 = closure_4(tmp(11816).ConjureAwaitingPulseRing, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -197,7 +197,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp50[3] = tmp18;
                 tmp50[4] = tmp44;
                 obj10.children = tmp50;
-                const tmp51 = closure_5(id(11816), obj10);
+                const tmp51 = closure_5(id(11817), obj10);
                 cResult[30] = tmp4.card;
                 cResult[31] = tmp44;
                 cResult[32] = tmp15;

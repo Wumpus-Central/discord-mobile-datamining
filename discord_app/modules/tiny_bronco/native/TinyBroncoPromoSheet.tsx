@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = dismissOnce;
       const isVerifiedTeen = dismissOnce(6654).useIsVerifiedTeen();
       let obj2 = dismissOnce(6654);
-      dismissOnce = dismissOnce(16006).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(16011).useDismissOnce(markAsDismissed.markAsDismissed);
       if (cResult[0] !== dismissOnce) {
         const fn = function o() {
           dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1128).intl;
-      const obj3 = dismissOnce(16006);
+      const obj3 = dismissOnce(16011);
       if (isVerifiedTeen) {
         class M {
           constructor() {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       const isVerifiedTeen = dismissOnce(6654).useIsVerifiedTeen();
       let obj = dismissOnce(6654);
-      dismissOnce = dismissOnce(16006).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(16011).useDismissOnce(markAsDismissed.markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
       const callback = noop.useCallback(() => {
@@ -279,8 +279,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
       const obj5 = { source: null, style: null, resizeMode: "contain" };
-      let obj2 = dismissOnce(16006);
-      obj5.source = tmp14(16007);
+      let obj2 = dismissOnce(16011);
+      obj5.source = tmp14(16012);
       obj5.style = tmp.illustration;
       obj4.illustration = closure_8(tmp14(5669), obj5);
       const intl2 = tmp2(1128).intl;
@@ -306,5 +306,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items5[1] = closure_8(dismissOnce(5244).Button, obj10);
       obj8.children = items5;
       obj4.actions = closure_9(dismissOnce(6696).ButtonGroup, obj8);
-      return closure_8(dismissOnce(10852).PromoSheet, obj4);
+      return closure_8(dismissOnce(10853).PromoSheet, obj4);
     };

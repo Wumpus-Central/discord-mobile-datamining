@@ -362,8 +362,8 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "heading-lg/extrabold",
-        selectedChannelId: "text-default",
+        messageChannel: "2026-01-bug-reporter",
+        selectedChannelId: "user",
         tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;

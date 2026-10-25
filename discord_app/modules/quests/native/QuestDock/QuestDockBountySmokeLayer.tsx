@@ -8,15 +8,15 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
 import BountiesAndroidQuestBarSmokeAnimationExperiment from "../../experiments/BountiesAndroidQuestBarSmokeAnimationExperiment.tsx";
-import _modDef16542 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
-import _modDef16543 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js";
+import _modDef16547 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
+import _modDef16548 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef16545 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
+import _modDef16550 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _modDef16546 = tmp9(16546);
+const _modDef16551 = tmp9(16551);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestsExperimentLocations = fn(6710).QuestsExperimentLocations;
@@ -36,11 +36,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         );
       if (obj2.isAndroid()) {
         if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-          let tmp3 = _modDef16543;
+          let tmp3 = _modDef16548;
         }
         return tmp3;
       }
-      tmp3 = _modDef16542;
+      tmp3 = _modDef16547;
       obj2 = PlatformUtils;
     }
   : function useQuestDockBountySmokeCollapsedPlaceholderUrl() {
@@ -50,11 +50,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         );
       if (obj2.isAndroid()) {
         if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-          let tmp3 = _modDef16543;
+          let tmp3 = _modDef16548;
         }
         return tmp3;
       }
-      tmp3 = _modDef16542;
+      tmp3 = _modDef16547;
       obj2 = PlatformUtils;
     };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -73,7 +73,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           accessible: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj3 = { uri: _modDef16542 };
+        const obj3 = { uri: _modDef16547 };
         obj2.source = obj3;
         obj2.style = StyleSheet.absoluteFillObject;
         const tmp8 = closure_1_8(FastImageDefault, obj2);
@@ -92,7 +92,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      const obj2 = { uri: _modDef16542 };
+      const obj2 = { uri: _modDef16547 };
       obj.source = obj2;
       obj.style = StyleSheet.absoluteFillObject;
       return closure_1_8(FastImageDefault, obj);
@@ -183,7 +183,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           onReadyForDisplay: null,
           onError: null,
         };
-        const obj3 = { uri: _modDef16545 };
+        const obj3 = { uri: _modDef16550 };
         obj2.source = obj3;
         if (!tmp4) {
           class M {
@@ -246,7 +246,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           onReadyForDisplay: null,
           onError: null,
         };
-        const obj4 = { uri: _modDef16545 };
+        const obj4 = { uri: _modDef16550 };
         obj3.source = obj4;
         if (!flag) {
           flag = !tmp5;
@@ -331,7 +331,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (!stateFromStores) {
         tmp9Result = null;
         if (tmp16) {
-          tmp9Result = _modDef16546;
+          tmp9Result = _modDef16551;
         }
       }
       const tmp11Result = tmp11(noop.useState(tmp9Result), 2);
@@ -556,7 +556,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (!stateFromStores) {
         tmp4Result = null;
         if (tmp11) {
-          tmp4Result = tmp4(16546);
+          tmp4Result = tmp4(16551);
         }
       }
       const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -621,7 +621,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           accessible: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj6 = { uri: tmp4(16543) };
+        const obj6 = { uri: tmp4(16548) };
         obj5.source = obj6;
         obj5.style = StyleSheet.absoluteFillObject;
         tmp30 = closure_8(tmp4(5669), obj5);

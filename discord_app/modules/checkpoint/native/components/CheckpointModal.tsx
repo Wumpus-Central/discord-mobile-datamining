@@ -437,7 +437,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12949).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12954).CheckpointFetchStates;
 const CheckpointConstants = fn(6015);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);

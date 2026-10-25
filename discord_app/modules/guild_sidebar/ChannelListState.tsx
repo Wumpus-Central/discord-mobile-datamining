@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "heading-lg/extrabold",
+      version: "2026-01-bug-reporter",
     });
     merged.id = global;
     obj = closure_25;

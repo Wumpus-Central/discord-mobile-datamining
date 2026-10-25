@@ -560,7 +560,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: v1(11360)(obj4), done: false };
+                  const obj5 = { value: v1(11361)(obj4), done: false };
                   return obj5;
                 } else {
                   dependencyMap = 3;
@@ -570,8 +570,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const result = tmp2(11454).setOrientationLockState(closure_128_3);
-              const obj = tmp2(11454);
+              const result = tmp2(11455).setOrientationLockState(closure_128_3);
+              const obj = tmp2(11455);
             }
             dependencyMap = 3;
             const obj6 = { value, done: true };

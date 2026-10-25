@@ -10,13 +10,13 @@ import _modDef8631 from "../../../../discord_assets/assets/checkpoint/2026/recap
 import _modDef8634 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
 import _modDef8637 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
 import _modDef8640 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
-import _modDef12957 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
-import _modDef12959 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
-import _modDef12963 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef12973 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres.png.js";
-import _modDef12978 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12982 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop.png.js";
-import _modDef13009 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop.png.js";
+import _modDef12962 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
+import _modDef12964 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
+import _modDef12968 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef12978 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres.png.js";
+import _modDef12983 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12987 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop.png.js";
+import _modDef13014 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -24,25 +24,25 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(12949).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12954).CheckpointFetchStates;
 let items = [
   _modDef5112,
   _modDef5116,
   _modDef5118,
-  _modDef12963,
+  _modDef12968,
   _modDef8629,
-  _modDef12982,
-  _modDef12973,
+  _modDef12987,
   _modDef12978,
-  _modDef13009,
+  _modDef12983,
+  _modDef13014,
   _modDef8625,
   _modDef8628,
   _modDef8631,
   _modDef8634,
   _modDef8637,
   _modDef8640,
-  _modDef12959,
-  _modDef12957,
+  _modDef12964,
+  _modDef12962,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

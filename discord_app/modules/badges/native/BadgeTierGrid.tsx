@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (complex_icon_static_url == null) {
                 complex_icon_static_url = owned.complex_icon_static_url;
               }
-              const tierRowSubtitle = badge(11122).getTierRowSubtitle({
+              const tierRowSubtitle = badge(11123).getTierRowSubtitle({
                 tier: owned,
                 isUnlocked: owned,
                 isViewingOtherUser,
@@ -344,8 +344,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 items1[1] = dimmedIcon;
                 obj4.style = items1;
-                tmp9Result = closure_2_4(isViewingOtherUser(11114), obj4);
-                const tmp11 = isViewingOtherUser(11114);
+                tmp9Result = closure_2_4(isViewingOtherUser(11115), obj4);
+                const tmp11 = isViewingOtherUser(11115);
               }
               const items2 = [tmp9Result, ,];
               let tmp13Result = null != owned.name;

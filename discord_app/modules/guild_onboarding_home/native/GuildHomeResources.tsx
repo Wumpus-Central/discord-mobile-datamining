@@ -5,7 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef18014 from "../../../../_runtime/metro/18014__.js";
+import _modDef18019 from "../../../../_runtime/metro/18019__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -174,8 +174,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_7.getMessages(channelId);
           }
         }
-        const shouldObscure = tmp(13102).useSharedMediaProps(obj2).shouldObscure;
-        stateFromStores(18013)(tmp15);
+        const shouldObscure = tmp(13107).useSharedMediaProps(obj2).shouldObscure;
+        stateFromStores(18018)(tmp15);
         if (cResult[14] === stateFromStores) {
           class F {
             constructor() {
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = stateFromStores;
         cResult[15] = stateFromStores2;
         cResult[16] = tmp22;
-        const tmpResult10 = tmp(13102);
+        const tmpResult10 = tmp(13107);
       }
       obj2 = { channel: stateFromStores, media: null };
       cResult[11] = stateFromStores;
@@ -274,8 +274,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = forumPostMediaProperties[0];
       }
       const obj6 = channelId(8848);
-      let flag = channelId(13102).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-      const tmp11 = stateFromStores(18013)(firstResult);
+      let flag = channelId(13107).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+      const tmp11 = stateFromStores(18018)(firstResult);
       const tmp12 =
         null != stateFromStores &&
         null == stateFromStores2.first() &&
@@ -384,7 +384,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   obj17.firstMessageId = id;
                   obj17.containerStyle = tmp.thumbnail;
-                  tmp19Result6 = closure_11(tmp2(13102).ForumPostMediaThumbnail, obj17);
+                  tmp19Result6 = closure_11(tmp2(13107).ForumPostMediaThumbnail, obj17);
                   const tmp2Result2 = tmp2(8848);
                 }
               }
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = cResult[2];
         }
         if (cResult[3] !== tmp4.emptyStateImage) {
-          const obj3 = { style: tmp4.emptyStateImage, source: _modDef18014 };
+          const obj3 = { style: tmp4.emptyStateImage, source: _modDef18019 };
           const tmp23 = closure_11(FastImageDefault, obj3);
           cResult[3] = tmp4.emptyStateImage;
           cResult[4] = tmp23;
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = guildId(1128).intl;
         obj3.children = intl.string(guildId(1128).t.owvC9U);
         const items = [closure_11(guildId(5234).Text, obj3), ,];
-        const obj4 = { style: tmp.emptyStateImage, source: _modDef18014 };
+        const obj4 = { style: tmp.emptyStateImage, source: _modDef18019 };
         items[1] = closure_11(FastImageDefault, obj4);
         const obj5 = {
           onPress() {

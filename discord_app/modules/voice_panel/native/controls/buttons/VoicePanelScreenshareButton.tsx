@@ -13,9 +13,9 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1630);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13449).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13454).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18627).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18632).MobilePhoneShareIcon;
 }
 const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({

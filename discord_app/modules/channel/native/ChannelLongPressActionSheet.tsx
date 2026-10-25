@@ -288,7 +288,7 @@ function getActionSheetButtons(channel) {
       obj10.label = intl6.string(tmp14(isOptedIn[24]).t.OQ9MKu);
       obj10.IconComponent = tmp14(isOptedIn[38]).LinkIcon;
       obj10.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10817, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10818, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj10);
     }
@@ -656,7 +656,7 @@ function getActionSheetButtons(channel) {
             obj38.IconComponent = tmp97(isOptedIn[73]).ChatIcon;
             obj38.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10877, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10878, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj38);
@@ -1040,7 +1040,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp5;
       const tmp4 = onClose(7253);
-      const isFavoritesGuildSelected = channel(10842).useIsFavoritesGuildSelected();
+      const isFavoritesGuildSelected = channel(10843).useIsFavoritesGuildSelected();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[2] = items;
@@ -1058,7 +1058,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult = channel(10842);
+      const tmpResult = channel(10843);
       const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PermissionStore];

@@ -172,7 +172,7 @@ let closure_12 = noop.memo(
           obj4.sessionId = voiceState2.sessionId;
           obj4.channel = channel;
           obj4.isGuest = isGuest;
-          const tmp15 = closure_6(tmp4(17541), obj4, user.id);
+          const tmp15 = closure_6(tmp4(17546), obj4, user.id);
           cResult[5] = channel;
           cResult[6] = collapsed;
           cResult[7] = isGuest;
@@ -262,7 +262,7 @@ let closure_12 = noop.memo(
         obj5.sessionId = voiceState2.sessionId;
         obj5.channel = channel;
         obj5.isGuest = isGuest;
-        obj2.children = closure_6(tmp(17541), obj5, user.id);
+        obj2.children = closure_6(tmp(17546), obj5, user.id);
         return closure_6(View, obj2);
       },
 );
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === guild_id) {
         if (cResult[1] === voiceStates) {
           let tmp5 = channel;
-          const arr2 = channel(17545)(cResult[2]);
+          const arr2 = channel(17550)(cResult[2]);
           if (cResult[3] === guild_id) {
             if (cResult[4] === arr2) {
               const subscribeGuildMembers = tmp(7408).useSubscribeGuildMembers(cResult[5], "voice_channel_games");
@@ -410,7 +410,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[16] === tmp13) {
                         }
                       }
-                      tmp5 = tmp5(17548);
+                      tmp5 = tmp5(17553);
                       const obj2 = { collapsed, children: null };
                       const items = [tmp13, tmp15];
                       obj2.children = items;

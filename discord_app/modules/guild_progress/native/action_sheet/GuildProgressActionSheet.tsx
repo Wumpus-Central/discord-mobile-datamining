@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(13385);
+const GuildProgressConstants = fn(13390);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1087);
 ({
@@ -282,8 +282,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let base64;
                 tmp5(9005).init(View);
                 const obj6 = tmp5(9005);
-                tmp2(13390).hideActionSheet(id.id);
-                const obj7 = tmp2(13390);
+                tmp2(13395).hideActionSheet(id.id);
+                const obj7 = tmp2(13395);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;

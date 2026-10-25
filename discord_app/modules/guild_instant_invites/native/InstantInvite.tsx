@@ -83,16 +83,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const getOrFetchApplication = channel(7257).useGetOrFetchApplication(application_id);
       const tmpResult3 = channel(7257);
-      const canUnlinkLobbyChannel = channel(10819).useCanUnlinkLobbyChannel(channel);
+      const canUnlinkLobbyChannel = channel(10820).useCanUnlinkLobbyChannel(channel);
       let str;
-      const tmpResult4 = channel(10819);
+      const tmpResult4 = channel(10820);
       if (getOrFetchApplication != null) {
         str = getOrFetchApplication.name;
       }
       if (str == null) {
         str = "";
       }
-      const tmp15Result = canUnlinkLobbyChannel(10820)(channel.id, str);
+      const tmp15Result = canUnlinkLobbyChannel(10821)(channel.id, str);
       dependencyMap = tmp15Result;
       if (cResult[3] === canUnlinkLobbyChannel) {
         if (cResult[4] === tmp15Result) {
@@ -121,7 +121,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp21 = cResult[10];
           }
           if (cResult[11] !== tmp17) {
-            let obj2 = { label: tmp21, iconSource: tmp14(10823).revoke, variant: "destructive", action: tmp17 };
+            let obj2 = { label: tmp21, iconSource: tmp14(10824).revoke, variant: "destructive", action: tmp17 };
             cResult[11] = tmp17;
             cResult[12] = obj2;
             let tmp23 = obj2;
@@ -272,7 +272,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj5 = { channel };
-                      const tmp44 = closure_11(tmp(10827).InstantInviteDetails, obj5);
+                      const tmp44 = closure_11(tmp(10828).InstantInviteDetails, obj5);
                       cResult[31] = channel;
                       cResult[32] = tmp44;
                     } else {
@@ -367,7 +367,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       cResult[38] = tmp51;
                     }
                     const obj9 = { user: stateFromStores, guildId: channel.guild_id };
-                    const tmp47 = closure_11(tmp14(10828), obj9);
+                    const tmp47 = closure_11(tmp14(10829), obj9);
                     cResult[33] = channel.guild_id;
                     cResult[34] = stateFromStores;
                     cResult[35] = tmp47;
@@ -412,7 +412,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj13 = {
           label: tmp18,
-          IconComponent: tmp(10821).ArrowSmallRightIcon,
+          IconComponent: tmp(10822).ArrowSmallRightIcon,
           action() {
             router_utils.transitionTo(Routes.CHANNEL(channel.guild_id, channel.id));
           },
@@ -438,7 +438,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp15Result;
       cResult[5] = fn2;
       tmp17 = fn2;
-      const tmp15 = canUnlinkLobbyChannel(10820);
+      const tmp15 = canUnlinkLobbyChannel(10821);
     }
   : function LinkedChannelInvite(channel) {
       channel = channel.channel;
@@ -463,16 +463,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const getOrFetchApplication = channel(7257).useGetOrFetchApplication(application_id);
       let obj2 = channel(7257);
-      canUnlinkLobbyChannel = channel(10819).useCanUnlinkLobbyChannel(channel);
+      canUnlinkLobbyChannel = channel(10820).useCanUnlinkLobbyChannel(channel);
       let str;
-      const tmp2Result = channel(10819);
+      const tmp2Result = channel(10820);
       if (getOrFetchApplication != null) {
         str = getOrFetchApplication.name;
       }
       if (str == null) {
         str = "";
       }
-      const tmp9Result = canUnlinkLobbyChannel(10820)(channel.id, str);
+      const tmp9Result = canUnlinkLobbyChannel(10821)(channel.id, str);
       dependencyMap = tmp9Result;
       const items1 = [canUnlinkLobbyChannel, tmp9Result];
       action = noop.useCallback(() => {
@@ -509,7 +509,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const obj3 = { style: tmp.gameWrapper, children: null };
       const obj4 = { game: getOrFetchApplication, size: null };
-      const tmp9 = canUnlinkLobbyChannel(10820);
+      const tmp9 = canUnlinkLobbyChannel(10821);
       obj4.size = channel(7261).GameIconSizes.SIZE_24;
       const items3 = [closure_11(canUnlinkLobbyChannel(7261), obj4)];
       const obj5 = {
@@ -537,7 +537,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = {
               size: "sm",
               variant: "secondary",
-              icon: canUnlinkLobbyChannel(10823).more,
+              icon: canUnlinkLobbyChannel(10824).more,
               accessibilityLabel: null,
               ref: null,
             };
@@ -552,12 +552,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       obj7.children = items4;
       const items5 = [
         closure_12(channel(5977).Stack, obj7),
-        closure_11(channel(10827).InstantInviteDetails, { channel }),
+        closure_11(channel(10828).InstantInviteDetails, { channel }),
       ];
       const obj9 = { direction: "horizontal", align: "flex-end", children: null };
       const obj10 = {
         style: tmp.creatorWrapper,
-        children: closure_11(canUnlinkLobbyChannel(10828), { user: stateFromStores, guildId: channel.guild_id }),
+        children: closure_11(canUnlinkLobbyChannel(10829), { user: stateFromStores, guildId: channel.guild_id }),
       };
       obj9.children = closure_11(View, obj10);
       items5[2] = closure_11(channel(5977).Stack, obj9);
@@ -868,7 +868,7 @@ export default noop.memo(
         const memo = noop.useMemo(() => closure_8(invite.channel), items);
         const tmp = closure_13();
         const items1 = [invite.roles];
-        const inviteActions = invite(10830).useInviteActions({
+        const inviteActions = invite(10831).useInviteActions({
           invite,
           onInviteRevoked: onInviteRevoked.onInviteRevoked,
         });
@@ -901,7 +901,7 @@ export default noop.memo(
         ];
         obj2.children = items2;
         const items3 = [closure_12(invite(5977).Stack, obj2), , ,];
-        let obj = invite(10830);
+        let obj = invite(10831);
         const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
         const obj4 = {
           items: inviteActions,
@@ -921,7 +921,7 @@ export default noop.memo(
             return closure_1_11(invite(7959).IconButton, obj);
           },
         };
-        items3[1] = closure_11(invite(10827).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+        items3[1] = closure_11(invite(10828).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
         if (tmp9Result) {
           const obj6 = { roleIds: memo1, guildId: id };
           tmp9Result = closure_11(InviteRolesDisplayDefault, obj6);

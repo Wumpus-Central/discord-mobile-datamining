@@ -31,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -23,7 +23,7 @@ const initialize = nW6E3m(504);
 const util = nW6E3m(1128);
 const CollectiblesUtils = nW6E3m(7662);
 const useShopProductItems = nW6E3m(8660);
-const useFetchCollectiblesProduct = nW6E3m(11048);
+const useFetchCollectiblesProduct = nW6E3m(11049);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -834,7 +834,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "tertiary", icon: tmp4(10658), accessibilityLabel: null, onPress: null };
         const intl3 = tmp2(1128).intl;
         obj8.accessibilityLabel = intl3.string(tmp2(1128).t.cpT0Cq);
-        obj8.onPress = tmp2(16411).closeOrbsArcadeRewardsCollectedModal;
+        obj8.onPress = tmp2(16416).closeOrbsArcadeRewardsCollectedModal;
         obj7.children = closure_10(tmp2(7959).IconButton, obj8);
         const items4 = [closure_10(page, obj7), ,];
         const obj9 = { style: tmp.pager, onLayout: callback, children: null };
@@ -895,7 +895,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28Result3 = closure_10(tmp27, obj12);
         }
         const items5 = [tmp28Result3];
-        if (tmp16.type === tmp2(16391).OrbsArcadeRewardType.COLLECTIBLE) {
+        if (tmp16.type === tmp2(16396).OrbsArcadeRewardType.COLLECTIBLE) {
           const obj15 = { reward: tmp16 };
           let tmp28Result4 = closure_10(closure_19, obj15, tmp16.id);
         } else {

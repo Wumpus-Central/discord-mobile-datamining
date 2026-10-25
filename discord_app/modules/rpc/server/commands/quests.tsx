@@ -11,7 +11,7 @@ require = fn;
 const Constants = fn(1087);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15720);
+let CONTEXT_MENU_ICON_NAMES = fn(15725);
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_QUEST_ENROLLMENT_STATUS,
   {
@@ -51,7 +51,7 @@ obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPC
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(15720);
+CONTEXT_MENU_ICON_NAMES = fn(15725);
 let obj3 = {
   scope: fn(8827).OAuth2Scopes.IDENTIFY,
   handler(socket) {
@@ -127,7 +127,7 @@ obj[RPCCommands.QUEST_START_TIMER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
     throw new RPCErrorDefault(obj9, "Quest not found: " + quest_id);
   },
 });
-CONTEXT_MENU_ICON_NAMES = fn(15720);
+CONTEXT_MENU_ICON_NAMES = fn(15725);
 let obj5 = {
   scope: fn(8827).OAuth2Scopes.IDENTIFY,
   handler(socket) {

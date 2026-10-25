@@ -141,15 +141,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let orbsArcadeClaimableRewards;
                   let gameState;
                   closure_128_3 = undefined;
-                  orbsArcadeClaimableRewards = tmp5(16396).getOrbsArcadeClaimableRewards(
+                  orbsArcadeClaimableRewards = tmp5(16401).getOrbsArcadeClaimableRewards(
                     tmp5.rewards,
                     gameStateForGame.getGameStateForGame(tmp5.id),
                   );
                   c2 = 1;
-                  const obj6 = tmp5(16396);
+                  const obj6 = tmp5(16401);
                   c3 = 2;
                   c4 = 1;
-                  const obj4 = { value: tmp5(16395).claimOrbsArcadeRewards(tmp5.id), done: false };
+                  const obj4 = { value: tmp5(16400).claimOrbsArcadeRewards(tmp5.id), done: false };
                   return obj4;
                 }
               } else if (1 === tmp8) {
@@ -181,11 +181,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     showOrbsArcadeClaimRewardsError();
                   }
                   if (closure_128_3.length > 0) {
-                    const result = tmp5(16411).openOrbsArcadeRewardsCollectedModal(
+                    const result = tmp5(16416).openOrbsArcadeRewardsCollectedModal(
                       closure_128_3,
                       closure_128_0.entitlements,
                     );
-                    const obj = tmp5(16411);
+                    const obj = tmp5(16416);
                   }
                 }
                 c4 = 3;
@@ -289,15 +289,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let orbsArcadeClaimableRewards;
                   let gameState;
                   closure_128_3 = undefined;
-                  orbsArcadeClaimableRewards = tmp5(16396).getOrbsArcadeClaimableRewards(
+                  orbsArcadeClaimableRewards = tmp5(16401).getOrbsArcadeClaimableRewards(
                     game.rewards,
                     gameStateForGame.getGameStateForGame(game.id),
                   );
                   dependencyMap = 1;
-                  const obj6 = tmp5(16396);
+                  const obj6 = tmp5(16401);
                   c3 = 2;
                   c4 = 1;
-                  const obj4 = { value: tmp5(16395).claimOrbsArcadeRewards(game.id), done: false };
+                  const obj4 = { value: tmp5(16400).claimOrbsArcadeRewards(game.id), done: false };
                   return obj4;
                 }
               } else if (1 === tmp8) {
@@ -329,11 +329,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     showOrbsArcadeClaimRewardsError();
                   }
                   if (closure_128_3.length > 0) {
-                    const result = tmp5(16411).openOrbsArcadeRewardsCollectedModal(
+                    const result = tmp5(16416).openOrbsArcadeRewardsCollectedModal(
                       closure_128_3,
                       closure_128_0.entitlements,
                     );
-                    const obj = tmp5(16411);
+                    const obj = tmp5(16416);
                   }
                 }
                 c4 = 3;

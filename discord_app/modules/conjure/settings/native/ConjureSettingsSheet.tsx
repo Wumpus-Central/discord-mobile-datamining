@@ -193,7 +193,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { onLayout: callback, children: null };
       if (tabs.length > 3) {
         const obj4 = { state: segmentedControlState };
-        let tmp10Result = closure_12(tmp5(11849).Tabs, obj4);
+        let tmp10Result = closure_12(tmp5(11850).Tabs, obj4);
       } else {
         const obj5 = { state: segmentedControlState };
         tmp10Result = closure_12(tmp5(9146).SegmentedControl, obj5);
@@ -391,8 +391,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp5Result = tmp5(11800);
-      closure_3 = tmp5(11800)(projectId, undefined);
+      const tmp5Result = tmp5(11801);
+      closure_3 = tmp5(11801)(projectId, undefined);
       if (cResult[17] === isPreview) {
         class N {
           constructor() {
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[22] = scopeKeys;
       cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
       let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-      const tmp5ResultResult = tmp5(11800)(projectId, undefined);
+      const tmp5ResultResult = tmp5(11801)(projectId, undefined);
     }
   : function ConjureSettingsSheet(projectId) {
       projectId = projectId.projectId;

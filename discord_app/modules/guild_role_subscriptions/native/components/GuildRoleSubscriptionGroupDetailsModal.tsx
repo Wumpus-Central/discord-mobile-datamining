@@ -15,7 +15,7 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16557);
+const GuildRoleSubscriptionsConstants = fn(16562);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1087).UPLOAD_BANNER_SIZE;

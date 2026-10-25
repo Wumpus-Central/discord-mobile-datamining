@@ -75,28 +75,28 @@ const obj2 = {
 };
 obj.buildOverride = {
   headerTitle: "Build Override",
-  Icon: fn(11785).RefreshIcon,
+  Icon: fn(11786).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   },
 };
 const obj3 = {
   headerTitle: "Build Override",
-  Icon: fn(11785).RefreshIcon,
+  Icon: fn(11786).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   },
 };
 obj.experiments = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(16941).BeakerIcon,
+  Icon: fn(16946).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
 };
 const obj4 = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(16941).BeakerIcon,
+  Icon: fn(16946).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
@@ -137,42 +137,42 @@ const obj6 = {
 };
 obj.generatedTestUsers = {
   headerTitle: "Generated Test Users",
-  Icon: fn(11837).UserIcon,
+  Icon: fn(11838).UserIcon,
   render() {
     return jsx(DevToolsGeneratedTestUsersScreen.default, {});
   },
 };
 const obj7 = {
   headerTitle: "Generated Test Users",
-  Icon: fn(11837).UserIcon,
+  Icon: fn(11838).UserIcon,
   render() {
     return jsx(DevToolsGeneratedTestUsersScreen.default, {});
   },
 };
 obj.dataStorage = {
   headerTitle: "Data Storage",
-  Icon: fn(11789).FileUpIcon,
+  Icon: fn(11790).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 const obj8 = {
   headerTitle: "Data Storage",
-  Icon: fn(11789).FileUpIcon,
+  Icon: fn(11790).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(16614).PaintPaletteIcon,
+  Icon: fn(16619).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(16614).PaintPaletteIcon,
+  Icon: fn(16619).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
@@ -235,14 +235,14 @@ const obj13 = {
 };
 obj.profiling = {
   headerTitle: "Profiling",
-  Icon: fn(11303).TimerIcon,
+  Icon: fn(11304).TimerIcon,
   render() {
     return jsx(DevToolsProfilingScreen.default, {});
   },
 };
 const obj14 = {
   headerTitle: "Profiling",
-  Icon: fn(11303).TimerIcon,
+  Icon: fn(11304).TimerIcon,
   render() {
     return jsx(DevToolsProfilingScreen.default, {});
   },
@@ -263,28 +263,28 @@ const obj15 = {
 };
 obj.quickActions = {
   headerTitle: "Quick Actions",
-  Icon: fn(12343).MagicWandIcon,
+  Icon: fn(12345).MagicWandIcon,
   render() {
     return jsx(DevToolsQuickActionsScreen.default, {});
   },
 };
 const obj16 = {
   headerTitle: "Quick Actions",
-  Icon: fn(12343).MagicWandIcon,
+  Icon: fn(12345).MagicWandIcon,
   render() {
     return jsx(DevToolsQuickActionsScreen.default, {});
   },
 };
 obj.revenuePlayground = {
   headerTitle: "Revenue Playground",
-  Icon: fn(12882).PiggyBankIcon,
+  Icon: fn(12887).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   },
 };
 const obj17 = {
   headerTitle: "Revenue Playground",
-  Icon: fn(12882).PiggyBankIcon,
+  Icon: fn(12887).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   },
@@ -305,98 +305,98 @@ const obj18 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16704).EyeDropperIcon,
+  Icon: fn(16709).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 const obj19 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(16704).EyeDropperIcon,
+  Icon: fn(16709).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 obj.ageVerification = {
   headerTitle: "Age Verification",
-  Icon: fn(10950).ShieldIcon,
+  Icon: fn(10951).ShieldIcon,
   render() {
     return jsx(DevToolsAgeVerificationScreen.default, {});
   },
 };
 const obj20 = {
   headerTitle: "Age Verification",
-  Icon: fn(10950).ShieldIcon,
+  Icon: fn(10951).ShieldIcon,
   render() {
     return jsx(DevToolsAgeVerificationScreen.default, {});
   },
 };
 obj.components = {
   headerTitle: "Bot Components Testing",
-  Icon: fn(11796).RobotIcon,
+  Icon: fn(11797).RobotIcon,
   render() {
     return jsx(DevToolsComponentsTestingScreen.default, {});
   },
 };
 const obj21 = {
   headerTitle: "Bot Components Testing",
-  Icon: fn(11796).RobotIcon,
+  Icon: fn(11797).RobotIcon,
   render() {
     return jsx(DevToolsComponentsTestingScreen.default, {});
   },
 };
 obj.shop = {
   headerTitle: "Shop",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(DevToolsShopScreen.default, {});
   },
 };
 const obj22 = {
   headerTitle: "Shop",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(DevToolsShopScreen.default, {});
   },
 };
 obj.shopProductPreview = {
   headerTitle: "Collectibles Tool",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(CollectiblesTool.default, {});
   },
 };
 const obj23 = {
   headerTitle: "Collectibles Tool",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(CollectiblesTool.default, {});
   },
 };
 obj.slayerStorefront = {
   headerTitle: "Slayer Storefront",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(SlayerStorefrontDevTools.default, {});
   },
 };
 const obj24 = {
   headerTitle: "Slayer Storefront",
-  Icon: fn(12127).ShopIcon,
+  Icon: fn(12128).ShopIcon,
   render() {
     return jsx(SlayerStorefrontDevTools.default, {});
   },
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(16951).CompassIcon,
+  Icon: fn(16956).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(16951).CompassIcon,
+  Icon: fn(16956).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
@@ -417,21 +417,21 @@ const obj26 = {
 };
 obj.performanceTesting = {
   headerTitle: "Performance Testing",
-  Icon: fn(11597).SpeedometerIcon,
+  Icon: fn(11598).SpeedometerIcon,
   render() {
     return jsx(DevToolsPerformanceTestingScreen.default, {});
   },
 };
 const obj27 = {
   headerTitle: "Performance Testing",
-  Icon: fn(11597).SpeedometerIcon,
+  Icon: fn(11598).SpeedometerIcon,
   render() {
     return jsx(DevToolsPerformanceTestingScreen.default, {});
   },
 };
 obj.inAppNotificationTesting = {
   headerTitle: "In App Notification Testing",
-  Icon: fn(12343).MagicWandIcon,
+  Icon: fn(12345).MagicWandIcon,
   render() {
     return jsx(DevToolsInAppNotificationTestingScreen.default, {});
   },
@@ -439,14 +439,14 @@ obj.inAppNotificationTesting = {
 const obj29 = { displayNameEffectsBenchmark: null };
 const obj28 = {
   headerTitle: "In App Notification Testing",
-  Icon: fn(12343).MagicWandIcon,
+  Icon: fn(12345).MagicWandIcon,
   render() {
     return jsx(DevToolsInAppNotificationTestingScreen.default, {});
   },
 };
 obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(16614).PaintPaletteIcon,
+  Icon: fn(16619).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   },

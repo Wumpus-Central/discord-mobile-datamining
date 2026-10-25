@@ -32,7 +32,7 @@ function getChatInputMaxHeight() {
     ),
   );
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12525).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12529).CHAT_INPUT_PILL_CONTENT_SIZE;
 let c6 = 200;
 function getChatInputMaxHeightWorklet() {
   const keyboardStateWorklet = useKeyboardStateSharedValue.getKeyboardStateWorklet();
@@ -49,9 +49,9 @@ function getChatInputMaxHeightWorklet() {
   );
 }
 getChatInputMaxHeightWorklet.__closure = {
-  getKeyboardStateWorklet: fn(12530).getKeyboardStateWorklet,
+  getKeyboardStateWorklet: fn(12534).getKeyboardStateWorklet,
   KeyboardTypes: fn(1631).KeyboardTypes,
-  getWindowDimensionsWorklet: fn(12531).getWindowDimensionsWorklet,
+  getWindowDimensionsWorklet: fn(12535).getWindowDimensionsWorklet,
   MAX_HEIGHT: 200,
   MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE,
 };
@@ -90,9 +90,9 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
 }
 let obj3 = { getChatInputMaxHeightWorklet, withTiming: null, timingFastDuration: null, Easing: null };
 let obj = {
-  getKeyboardStateWorklet: fn(12530).getKeyboardStateWorklet,
+  getKeyboardStateWorklet: fn(12534).getKeyboardStateWorklet,
   KeyboardTypes: fn(1631).KeyboardTypes,
-  getWindowDimensionsWorklet: fn(12531).getWindowDimensionsWorklet,
+  getWindowDimensionsWorklet: fn(12535).getWindowDimensionsWorklet,
   MAX_HEIGHT: 200,
   MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE,
 };

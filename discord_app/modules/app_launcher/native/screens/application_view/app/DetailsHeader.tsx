@@ -690,10 +690,10 @@ export default noop.memo(
           tmp33 = he;
           const tmpResult7 = tmp(8691);
         } else if (cResult[7] !== tmp16) {
-          let result = tmp(11158).parseBioReactWithCachedAST(tmp16);
+          let result = tmp(11159).parseBioReactWithCachedAST(tmp16);
           cResult[7] = tmp16;
           cResult[8] = result;
-          const tmpResult8 = tmp(11158);
+          const tmpResult8 = tmp(11159);
         }
       }
     : function DetailsHeader(viewContainerStyle) {

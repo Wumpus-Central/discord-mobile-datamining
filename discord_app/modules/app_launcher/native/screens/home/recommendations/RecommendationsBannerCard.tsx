@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (isLandscape) {
-              BaseAppRow = BaseAppRow(12056).BaseAppRow;
+              BaseAppRow = BaseAppRow(12057).BaseAppRow;
               obj = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
               class T {
                 constructor() {
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           isFirstRow: isFirst,
           isLastRow: isLast,
         };
-        let tmp12Result2 = closure_6(tmp4(12056).BaseAppRow, obj5);
+        let tmp12Result2 = closure_6(tmp4(12057).BaseAppRow, obj5);
       } else {
         const items1 = [tmp.container, ,];
         let num = 8;

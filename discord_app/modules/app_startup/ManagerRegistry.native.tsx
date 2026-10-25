@@ -923,13 +923,7 @@ const obj = {
     neverLoadBeforeConnectionOpen: true,
   },
   NativeNotificationsManager: {
-    actions: [
-      "MESSAGE_ACK",
-      "CHANNEL_SELECT",
-      "POST_CONNECTION_OPEN",
-      "EXPERIMENT_OVERRIDE_BUCKET",
-      "EXPERIMENTS_FETCH_SUCCESS",
-    ],
+    actions: ["MESSAGE_ACK", "CHANNEL_SELECT", "POST_CONNECTION_OPEN"],
     inlineRequire() {
       return require("NativeNotificationsManager").default;
     },

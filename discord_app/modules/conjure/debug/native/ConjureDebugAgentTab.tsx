@@ -1,551 +1,58 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugAgentTab.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
-import conjureDebugConnection from "../conjureDebugConnection.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import ConjureUsageTypes from "../../usage/ConjureUsageTypes.tsx";
+import ConjureDebugLabels from "../ConjureDebugLabels.tsx";
+import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
+import ConjureDebugPrimitives from "ConjureDebugPrimitives.tsx";
+import ConjureDebugAnalytics from "ConjureDebugAnalytics.tsx";
+import useConjureDebugAgentStateDefault from "../useConjureDebugAgentState.tsx";
+import ConjureDebugGitSection from "ConjureDebugGitSection.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ConjureChatStore from "../../chat/ConjureChatStore.tsx";
-import ConjureDebugStore from "../ConjureDebugStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 }, forceCompaction: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
 obj2.forceCompaction = { gap: nativeDefault.space.PX_8 };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { gap: nativeDefault.space.PX_8 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugAgentTab.tsx");
+let result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugAgentTab.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConjureDebugAgentTab(projectId) {
-      const cResult = projectId(576).c(102);
-      projectId = projectId.projectId;
-      ({ status, fetchState, onRefresh } = projectId);
-      closure_11();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjureDebugStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
+  ? function ConjureDebugAgentTab(arg0) {
+      const cResult = c.c(72);
+      ({ projectId, status, fetchState, onRefresh } = arg0);
+      const tmp4 = closure_8();
+      const tmp6 = useConjureDebugAgentStateDefault(projectId, status);
+      ({
+        lastTurn,
+        lastCompaction,
+        lastDecline,
+        forceState,
+        restartState,
+        handleForceCompaction,
+        handleForceCompactionOverride,
+        handleRestartWorkspace,
+        lifetime,
+        limits,
+        session,
+        contextCeiling,
+      } = tmp6);
+      let tmp7 = null;
+      if (typeof forceState === "object") {
+        tmp7 = forceState;
       }
-      if (cResult[1] !== projectId) {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        const items1 = [projectId];
-        cResult[1] = projectId;
-        cResult[2] = S;
-        cResult[3] = items1;
-        let tmp8 = items1;
-      } else {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        tmp8 = cResult[3];
-      }
-      const obj = projectId(576);
-      const stateFromStores = projectId(504).useStateFromStores(first, S, tmp8);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        const items2 = [ConjureDebugStore];
-        cResult[4] = items2;
-        const tmp10 = items2;
-      } else {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-      }
-      if (cResult[5] !== projectId) {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        const items3 = [projectId];
-        cResult[5] = projectId;
-        cResult[6] = tmp13;
-        cResult[7] = items3;
-        let tmp12 = items3;
-      } else {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        tmp12 = cResult[7];
-      }
-      const tmpResult = projectId(504);
-      const stateFromStores1 = projectId(504).useStateFromStores(tmp10, tmp13, tmp12);
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-        const items4 = [ConjureDebugStore];
-        cResult[8] = items4;
-        const tmp15 = items4;
-      } else {
-        class S {
-          constructor() {
-            return closure_7.getLastTurnUsage(projectId);
-          }
-        }
-      }
-      if (cResult[9] !== projectId) {
-        class T {
-          constructor() {
-            return closure_7.getLastCompactionDecline(projectId);
-          }
-        }
-        const items5 = [projectId];
-        cResult[9] = projectId;
-        cResult[10] = T;
-        cResult[11] = items5;
-        let tmp17 = items5;
-      } else {
-        class T {
-          constructor() {
-            return closure_7.getLastCompactionDecline(projectId);
-          }
-        }
-        tmp17 = cResult[11];
-      }
-      const tmpResult6 = projectId(504);
-      const stateFromStores2 = projectId(504).useStateFromStores(tmp15, T, tmp17);
-      if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
-          constructor() {
-            return closure_7.getLastCompactionDecline(projectId);
-          }
-        }
-        const items6 = [ConjureDebugStore];
-        cResult[12] = items6;
-        const tmp19 = items6;
-      } else {
-        class T {
-          constructor() {
-            return closure_7.getLastCompactionDecline(projectId);
-          }
-        }
-      }
-      if (cResult[13] !== projectId) {
-        class I {
-          constructor() {
-            return closure_7.getForceCompactionState(projectId);
-          }
-        }
-        const items7 = [projectId];
-        cResult[13] = projectId;
-        cResult[14] = I;
-        cResult[15] = items7;
-        let tmp21 = items7;
-      } else {
-        class I {
-          constructor() {
-            return closure_7.getForceCompactionState(projectId);
-          }
-        }
-        tmp21 = cResult[15];
-      }
-      const tmpResult7 = projectId(504);
-      const stateFromStores3 = projectId(504).useStateFromStores(tmp19, I, tmp21);
-      if (cResult[16] !== projectId) {
-        class O {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId);
-          }
-        }
-        cResult[16] = projectId;
-        cResult[17] = O;
-      } else {
-        class O {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId);
-          }
-        }
-      }
-      if (cResult[18] !== projectId) {
-        class B {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId, true);
-          }
-        }
-        cResult[18] = projectId;
-        cResult[19] = B;
-      } else {
-        class B {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId, true);
-          }
-        }
-      }
-      if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId, true);
-          }
-        }
-        const items8 = [ConjureDebugStore];
-        cResult[20] = items8;
-        const tmp25 = items8;
-      } else {
-        class B {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.forceCompaction(projectId, true);
-          }
-        }
-      }
-      if (cResult[21] !== projectId) {
-        class L {
-          constructor() {
-            return closure_7.getSandboxRestartState(projectId);
-          }
-        }
-        const items9 = [projectId];
-        cResult[21] = projectId;
-        cResult[22] = L;
-        cResult[23] = items9;
-        let tmp27 = items9;
-      } else {
-        class L {
-          constructor() {
-            return closure_7.getSandboxRestartState(projectId);
-          }
-        }
-        tmp27 = cResult[23];
-      }
-      const tmpResult8 = projectId(504);
-      const stateFromStores4 = projectId(504).useStateFromStores(tmp25, L, tmp27);
-      if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-        class L {
-          constructor() {
-            return closure_7.getSandboxRestartState(projectId);
-          }
-        }
-        const items10 = [ConjureChatStore];
-        cResult[24] = items10;
-        const tmp29 = items10;
-      } else {
-        class L {
-          constructor() {
-            return closure_7.getSandboxRestartState(projectId);
-          }
-        }
-      }
-      if (cResult[25] !== projectId) {
-        class V {
-          constructor() {
-            return closure_6.isThinking(projectId);
-          }
-        }
-        const items11 = [projectId];
-        cResult[25] = projectId;
-        cResult[26] = V;
-        cResult[27] = items11;
-        let tmp31 = items11;
-      } else {
-        class V {
-          constructor() {
-            return closure_6.isThinking(projectId);
-          }
-        }
-        tmp31 = cResult[27];
-      }
-      const tmpResult9 = projectId(504);
-      const stateFromStores5 = projectId(504).useStateFromStores(tmp29, V, tmp31);
-      if (cResult[28] !== projectId) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-        cResult[28] = projectId;
-        cResult[29] = K;
-      } else {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (status != null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-        if (tmp35 != null) {
-          class K {
-            constructor() {
-              obj = closure_0(closure_2[16]);
-              return obj.restartConjureSandbox(projectId);
-            }
-          }
-        }
-      }
-      if (undefined == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (status != null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-        if (tmp37 != null) {
-          class K {
-            constructor() {
-              obj = closure_0(closure_2[16]);
-              return obj.restartConjureSandbox(projectId);
-            }
-          }
-        }
-      }
-      if (undefined == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (status != null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-        if (tmp39 != null) {
-          class K {
-            constructor() {
-              obj = closure_0(closure_2[16]);
-              return obj.restartConjureSandbox(projectId);
-            }
-          }
-        }
-      }
-      if (undefined == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      let tmp40;
-      if (stateFromStores1 != null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (tmp40 == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-        if (tmp36 != null) {
-          class K {
-            constructor() {
-              obj = closure_0(closure_2[16]);
-              return obj.restartConjureSandbox(projectId);
-            }
-          }
-        }
-        tmp40 = tmp41;
-      }
-      if (tmp40 == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (typeof stateFromStores3 === "object") {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (status != null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (undefined == null) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      if (cResult[30] === fetchState) {
-        class K {
-          constructor() {
-            obj = closure_0(closure_2[16]);
-            return obj.restartConjureSandbox(projectId);
-          }
-        }
-      }
-      const tmpResult10 = projectId(504);
-      cResult[30] = fetchState;
-      cResult[31] = onRefresh;
-      cResult[32] = undefined;
-      cResult[33] = closure_8(projectId(12550).DebugSnapshotToolbar, { generatedAt: undefined, fetchState, onRefresh });
-      const tmp43 = closure_8(projectId(12550).DebugSnapshotToolbar, { generatedAt: undefined, fetchState, onRefresh });
-    }
-  : function ConjureDebugAgentTab(projectId) {
-      projectId = projectId.projectId;
-      const status = projectId.status;
-      ({ fetchState, onRefresh } = projectId);
-      const tmp = closure_11();
-      const tmp2 = projectId;
-      const items = [ConjureDebugStore];
-      const items1 = [projectId];
-      const stateFromStores = projectId(504).useStateFromStores(
-        items,
-        () => ConjureDebugStore.getLastTurnUsage(projectId),
-        items1,
-      );
-      const obj = projectId(504);
-      const items2 = [ConjureDebugStore];
-      const items3 = [projectId];
-      const stateFromStores1 = projectId(504).useStateFromStores(
-        items2,
-        () => ConjureDebugStore.getLastCompaction(projectId),
-        items3,
-      );
-      const obj2 = projectId(504);
-      const items4 = [ConjureDebugStore];
-      const items5 = [projectId];
-      const stateFromStores2 = projectId(504).useStateFromStores(
-        items4,
-        () => ConjureDebugStore.getLastCompactionDecline(projectId),
-        items5,
-      );
-      const obj3 = projectId(504);
-      const items6 = [ConjureDebugStore];
-      const items7 = [projectId];
-      const stateFromStores3 = projectId(504).useStateFromStores(
-        items6,
-        () => ConjureDebugStore.getForceCompactionState(projectId),
-        items7,
-      );
-      const items8 = [projectId];
-      const items9 = [projectId];
-      const callback = noop.useCallback(() => conjureDebugConnection.forceCompaction(projectId), items8);
-      const callback1 = noop.useCallback(() => conjureDebugConnection.forceCompaction(projectId, true), items9);
-      const obj4 = projectId(504);
-      const items10 = [ConjureDebugStore];
-      const items11 = [projectId];
-      const stateFromStores4 = projectId(504).useStateFromStores(
-        items10,
-        () => ConjureDebugStore.getSandboxRestartState(projectId),
-        items11,
-      );
-      const obj5 = projectId(504);
-      const items12 = [ConjureChatStore];
-      const items13 = [projectId];
-      const items14 = [projectId];
-      const stateFromStores5 = projectId(504).useStateFromStores(
-        items12,
-        () => ConjureChatStore.isThinking(projectId),
-        items13,
-      );
-      let lifetime;
-      const callback2 = noop.useCallback(() => conjureDebugConnection.restartConjureSandbox(projectId), items14);
-      if (status != null) {
-        const agent = status.agent;
-        if (agent != null) {
-          lifetime = agent.lifetime;
-        }
-      }
-      if (lifetime == null) {
-        lifetime = null;
-      }
-      let limits;
-      if (status != null) {
-        const agent2 = status.agent;
-        if (agent2 != null) {
-          limits = agent2.limits;
-        }
-      }
-      if (limits == null) {
-        limits = null;
-      }
-      let session;
-      if (status != null) {
-        const agent3 = status.agent;
-        if (agent3 != null) {
-          session = agent3.session;
-        }
-      }
-      if (session == null) {
-        session = null;
-      }
-      let promptCeiling;
-      if (stateFromStores1 != null) {
-        promptCeiling = stateFromStores1.promptCeiling;
-      }
-      if (promptCeiling == null) {
-        let prop;
-        if (limits != null) {
-          prop = limits.context_window_tokens;
-        }
-        promptCeiling = prop;
-      }
-      if (promptCeiling == null) {
-        promptCeiling = null;
-      }
-      let tmp18 = null;
-      if (typeof stateFromStores3 === "object") {
-        tmp18 = stateFromStores3;
-      }
-      const obj7 = { style: tmp.tab, children: null };
       let generated_at;
       if (status != null) {
         generated_at = status.generated_at;
@@ -553,125 +60,918 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (generated_at == null) {
         generated_at = null;
       }
-      const items15 = [
-        closure_8(tmp2(12550).DebugSnapshotToolbar, { generatedAt: generated_at, fetchState, onRefresh }),
+      if (cResult[0] === fetchState) {
+        if (cResult[1] === onRefresh) {
+          if (cResult[2] === generated_at) {
+            let tmp9 = cResult[3];
+          }
+          const _Symbol = Symbol;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl = util.intl;
+            const stringResult = intl.string(_modDef3830.JghNal);
+            cResult[4] = stringResult;
+            let tmp12 = stringResult;
+          } else {
+            tmp12 = cResult[4];
+          }
+          if (cResult[5] === lifetime) {
+            if (cResult[6] === status) {
+              const _Symbol2 = Symbol;
+              if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl4 = util.intl;
+                const stringResult1 = intl4.string(_modDef3830.dZHPE5);
+                cResult[8] = stringResult1;
+                let tmp20 = stringResult1;
+              } else {
+                tmp20 = cResult[8];
+              }
+              if (cResult[9] !== lastTurn) {
+                let obj2 = { title: tmp20, children: null };
+                if (null == lastTurn) {
+                  const obj3 = { children: null };
+                  const intl5 = util.intl;
+                  obj3.children = intl5.string(_modDef3830.DfVjal);
+                  let tmp120Result = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj3);
+                } else {
+                  const intl40 = util.intl;
+                  const total = lastTurn.total;
+                  const obj4 = { label: intl40.string(_modDef3830["7X3i9d"]), value: null, hint: null };
+                  const intl41 = util.intl;
+                  const obj5 = { count: null };
+                  const stringResult2 = intl40.string(_modDef3830["7X3i9d"]);
+                  const tmpResult = ConjureDebugFormat;
+                  obj5.count = tmpResult.formatCount(ConjureUsageTypes.runeCount(total));
+                  obj4.value = intl41.formatToPlainString(_modDef3830.yHJxuP, obj5);
+                  const tmpResult44 = ConjureUsageTypes;
+                  const formatCountResult = ConjureDebugFormat.formatCount(total.input_tokens);
+                  const tmpResult45 = ConjureDebugFormat;
+                  const tmpResult46 = ConjureDebugFormat;
+                  const formatCountResult1 = ConjureDebugFormat.formatCount(total.output_tokens);
+                  const _HermesInternal7 = HermesInternal;
+                  obj4.hint =
+                    "" +
+                    formatCountResult +
+                    " in \u00B7 " +
+                    formatCountResult1 +
+                    " out \u00B7 " +
+                    ConjureDebugFormat.formatCount(total.cache_read_input_tokens) +
+                    " cache read";
+                  const items = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj4)];
+                  const obj6 = { label: null, value: null };
+                  const intl42 = util.intl;
+                  obj6.label = intl42.string(_modDef3830["8OUg09"]);
+                  let cache_hit_rate = lastTurn.cache_hit_rate;
+                  if (cache_hit_rate == null) {
+                    cache_hit_rate = ConjureUsageTypes.cacheHitRate(lastTurn.total);
+                    const tmpResult48 = ConjureUsageTypes;
+                  }
+                  const obj7 = { children: null };
+                  const _HermesInternal = HermesInternal;
+                  obj6.value = "" + Math.round(100 * cache_hit_rate) + "%";
+                  items[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj6);
+                  obj7.children = items;
+                  tmp120Result = React5(timestampProducer, obj7);
+                  const tmpResult47 = ConjureDebugFormat;
+                }
+                obj2.children = tmp120Result;
+                obj2 = hasOwnProperty(ConjureDebugPrimitives.DebugSection, obj2);
+                cResult[9] = lastTurn;
+                cResult[10] = obj2;
+              } else {
+                const _Symbol3 = Symbol;
+                if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+                  const intl6 = util.intl;
+                  const stringResult3 = intl6.string(_modDef3830.NbRk9a);
+                  cResult[11] = stringResult3;
+                  let tmp26 = stringResult3;
+                } else {
+                  tmp26 = cResult[11];
+                }
+                if (cResult[12] === contextCeiling) {
+                  if (cResult[13] === lastCompaction) {
+                    if (cResult[15] !== lastDecline) {
+                      let tmp38 = null;
+                      if (null != lastDecline) {
+                        const obj8 = { label: null, value: null, critical: true, hint: null };
+                        const intl12 = util.intl;
+                        obj8.label = intl12.string(_modDef3830["4BX5KK"]);
+                        const tmpResult49 = ConjureDebugFormat;
+                        const formatCountResult2 = ConjureDebugFormat.formatCount(lastDecline.projected);
+                        const _HermesInternal3 = HermesInternal;
+                        obj8.value =
+                          "" + formatCountResult2 + " / " + ConjureDebugFormat.formatCount(lastDecline.threshold);
+                        const intl13 = util.intl;
+                        const obj9 = { time: null };
+                        const tmpResult50 = ConjureDebugFormat;
+                        obj9.time = ConjureDebugFormat.formatObservedAt(lastDecline.observedAt);
+                        obj8.hint = intl13.formatToPlainString(_modDef3830["6ngCax"], obj9);
+                        tmp38 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
+                        const tmpResult51 = ConjureDebugFormat;
+                      }
+                      cResult[15] = lastDecline;
+                      cResult[16] = tmp38;
+                      let tmp37 = tmp38;
+                    } else {
+                      tmp37 = cResult[16];
+                    }
+                    const _Symbol4 = Symbol;
+                    if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+                      const intl14 = util.intl;
+                      const stringResult4 = intl14.string(_modDef3830["1EiJeb"]);
+                      cResult[17] = stringResult4;
+                      let tmp41 = stringResult4;
+                    } else {
+                      tmp41 = cResult[17];
+                    }
+                    if (cResult[18] === handleForceCompaction) {
+                      if (cResult[19] === tmp43) {
+                        let tmp44 = cResult[20];
+                      }
+                      let str10 = "text-muted";
+                      if (null != tmp7) {
+                        str10 = "text-muted";
+                        if ("compacted" !== tmp7.outcome) {
+                          str10 = "text-feedback-critical";
+                        }
+                      }
+                      if (cResult[21] !== forceState) {
+                        const result = ConjureDebugLabels.forceCompactionStatus(forceState);
+                        cResult[21] = forceState;
+                        cResult[22] = result;
+                        let tmp47 = result;
+                        const tmpResult52 = ConjureDebugLabels;
+                      } else {
+                        tmp47 = cResult[22];
+                      }
+                      if (cResult[23] === str10) {
+                        if (cResult[24] === tmp47) {
+                          let tmp49 = cResult[25];
+                        }
+                        let pendingTurn;
+                        if (tmp7 != null) {
+                          pendingTurn = tmp7.pendingTurn;
+                        }
+                        if (cResult[26] === pendingTurn) {
+                          if (cResult[27] === handleForceCompactionOverride) {
+                            let tmp53 = cResult[28];
+                          }
+                          if (cResult[29] === tmp4.forceCompaction) {
+                            if (cResult[30] === tmp44) {
+                              if (cResult[31] === tmp49) {
+                                if (cResult[32] === tmp53) {
+                                  let tmp57 = cResult[33];
+                                }
+                                const _Symbol5 = Symbol;
+                                if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+                                  const intl15 = util.intl;
+                                  const stringResult5 = intl15.string(_modDef3830["5qCjBu"]);
+                                  cResult[34] = stringResult5;
+                                  let tmp61 = stringResult5;
+                                } else {
+                                  tmp61 = cResult[34];
+                                }
+                                let turnRunning = tmp63;
+                                if ("pending" !== restartState) {
+                                  turnRunning = tmp6.turnRunning;
+                                }
+                                if (cResult[35] === handleRestartWorkspace) {
+                                  if (cResult[36] === tmp63) {
+                                    if (cResult[37] === turnRunning) {
+                                      let tmp64 = cResult[38];
+                                    }
+                                    let str12 = "text-muted";
+                                    if (typeof restartState === "object") {
+                                      str12 = "text-muted";
+                                      if ("restarted" !== restartState.outcome) {
+                                        str12 = "text-feedback-critical";
+                                      }
+                                    }
+                                    if (cResult[39] !== restartState) {
+                                      const sandboxRestartStatusResult =
+                                        ConjureDebugLabels.sandboxRestartStatus(restartState);
+                                      cResult[39] = restartState;
+                                      cResult[40] = sandboxRestartStatusResult;
+                                      let tmp67 = sandboxRestartStatusResult;
+                                      const tmpResult53 = ConjureDebugLabels;
+                                    } else {
+                                      tmp67 = cResult[40];
+                                    }
+                                    if (cResult[41] === str12) {
+                                      if (cResult[42] === tmp67) {
+                                        let tmp69 = cResult[43];
+                                      }
+                                      if (cResult[44] === tmp4.forceCompaction) {
+                                        if (cResult[45] === tmp64) {
+                                          if (cResult[46] === tmp69) {
+                                            let tmp72 = cResult[47];
+                                          }
+                                          if (cResult[48] !== projectId) {
+                                            const obj10 = { projectId };
+                                            const tmp78 = hasOwnProperty(
+                                              ConjureDebugGitSection.ConjureDebugRestartAgent,
+                                              obj10,
+                                            );
+                                            cResult[48] = projectId;
+                                            cResult[49] = tmp78;
+                                            let tmp76 = tmp78;
+                                          } else {
+                                            tmp76 = cResult[49];
+                                          }
+                                          if (cResult[50] === tmp37) {
+                                            if (cResult[51] === tmp57) {
+                                              if (cResult[52] === tmp72) {
+                                                if (cResult[53] === tmp76) {
+                                                  if (cResult[54] === tmp28) {
+                                                    let tmp79 = cResult[55];
+                                                  }
+                                                  if (cResult[56] !== projectId) {
+                                                    const obj11 = { projectId };
+                                                    const tmp84 = hasOwnProperty(
+                                                      ConjureDebugGitSection.ConjureDebugGitSection,
+                                                      obj11,
+                                                    );
+                                                    cResult[56] = projectId;
+                                                    cResult[57] = tmp84;
+                                                    let tmp82 = tmp84;
+                                                  } else {
+                                                    tmp82 = cResult[57];
+                                                  }
+                                                  if (cResult[58] === session) {
+                                                    if (cResult[59] === status) {
+                                                      let tmp85 = cResult[60];
+                                                    }
+                                                    if (cResult[61] !== limits) {
+                                                      let tmp98 = null;
+                                                      if (null != limits) {
+                                                        const obj12 = { title: null, children: null };
+                                                        const intl23 = util.intl;
+                                                        obj12.title = intl23.string(_modDef3830["LEIhp/"]);
+                                                        const obj13 = { label: null, value: null };
+                                                        const intl24 = util.intl;
+                                                        obj13.label = intl24.string(_modDef3830.IlDBN3);
+                                                        obj13.value = ConjureDebugFormat.formatCount(
+                                                          limits.max_subagent_iterations,
+                                                        );
+                                                        const items1 = [
+                                                          hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj13),
+                                                          ,
+                                                          ,
+                                                          ,
+                                                          ,
+                                                        ];
+                                                        const obj14 = { label: null, value: null };
+                                                        const intl25 = util.intl;
+                                                        obj14.label = intl25.string(_modDef3830["ZdzKR+"]);
+                                                        const intl26 = util.intl;
+                                                        const obj15 = { count: null };
+                                                        const tmpResult54 = ConjureDebugFormat;
+                                                        obj15.count = ConjureDebugFormat.formatCount(
+                                                          limits.context_window_tokens,
+                                                        );
+                                                        obj14.value = intl26.formatToPlainString(
+                                                          _modDef3830.yHJxuP,
+                                                          obj15,
+                                                        );
+                                                        items1[1] = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj14,
+                                                        );
+                                                        const obj16 = { label: null, value: null };
+                                                        const intl27 = util.intl;
+                                                        obj16.label = intl27.string(_modDef3830.cIhN2W);
+                                                        const intl28 = util.intl;
+                                                        const obj17 = { count: null };
+                                                        const tmpResult55 = ConjureDebugFormat;
+                                                        obj17.count = ConjureDebugFormat.formatCount(
+                                                          limits.per_turn_max_output_tokens,
+                                                        );
+                                                        obj16.value = intl28.formatToPlainString(
+                                                          _modDef3830.yHJxuP,
+                                                          obj17,
+                                                        );
+                                                        items1[2] = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj16,
+                                                        );
+                                                        const obj18 = { label: null, value: null };
+                                                        const intl29 = util.intl;
+                                                        obj18.label = intl29.string(_modDef3830["+fOn/q"]);
+                                                        const tmpResult56 = ConjureDebugFormat;
+                                                        obj18.value = ConjureDebugFormat.formatCount(
+                                                          limits.max_user_message_chars,
+                                                        );
+                                                        items1[3] = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj18,
+                                                        );
+                                                        const obj19 = { label: null, value: null };
+                                                        const intl30 = util.intl;
+                                                        obj19.label = intl30.string(_modDef3830.kIHga0);
+                                                        const tmpResult57 = ConjureDebugFormat;
+                                                        obj19.value = ConjureDebugFormat.formatCount(
+                                                          limits.max_build_attempts,
+                                                        );
+                                                        items1[4] = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj19,
+                                                        );
+                                                        const obj20 = { label: null, value: null };
+                                                        const intl31 = util.intl;
+                                                        obj20.label = intl31.string(_modDef3830.Iw03yW);
+                                                        const tmpResult58 = ConjureDebugFormat;
+                                                        obj20.value = ConjureDebugFormat.formatCount(
+                                                          limits.max_session_attempts,
+                                                        );
+                                                        items1[5] = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj20,
+                                                        );
+                                                        obj12.children = items1;
+                                                        tmp98 = React5(ConjureDebugPrimitives.DebugSection, obj12);
+                                                        const tmpResult59 = ConjureDebugFormat;
+                                                      }
+                                                      cResult[61] = limits;
+                                                      cResult[62] = tmp98;
+                                                      let tmp97 = tmp98;
+                                                    } else {
+                                                      tmp97 = cResult[62];
+                                                    }
+                                                    if (cResult[63] === tmp4.tab) {
+                                                      if (cResult[64] === tmp9) {
+                                                        if (cResult[65] === tmp79) {
+                                                          if (cResult[66] === tmp82) {
+                                                            if (cResult[67] === tmp85) {
+                                                              if (cResult[68] === tmp97) {
+                                                                if (cResult[69] === tmp14) {
+                                                                  if (cResult[70] === tmp22) {
+                                                                    let tmp101 = cResult[71];
+                                                                  }
+                                                                  return tmp101;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                    const obj21 = { style: tmp4.tab, children: null };
+                                                    const items2 = [tmp9, tmp14, tmp22, tmp79, tmp82, tmp85, tmp97];
+                                                    obj21.children = items2;
+                                                    const tmp104 = React5(View, obj21);
+                                                    cResult[63] = tmp4.tab;
+                                                    cResult[64] = tmp9;
+                                                    cResult[65] = tmp79;
+                                                    cResult[66] = tmp82;
+                                                    cResult[67] = tmp85;
+                                                    cResult[68] = tmp97;
+                                                    cResult[69] = tmp14;
+                                                    cResult[70] = tmp22;
+                                                    cResult[71] = tmp104;
+                                                    tmp101 = tmp104;
+                                                  }
+                                                  if (null != session) {
+                                                    const obj22 = { title: null, children: null };
+                                                    const intl16 = util.intl;
+                                                    obj22.title = intl16.string(_modDef3830.EsSzCS);
+                                                    let tmp88Result = null;
+                                                    if (null != session) {
+                                                      const obj23 = { label: null, value: null, hint: null };
+                                                      const intl17 = util.intl;
+                                                      obj23.label = intl17.string(_modDef3830.CLXHAs);
+                                                      obj23.value = ConjureDebugFormat.formatObservedAt(
+                                                        session.instance_since,
+                                                      );
+                                                      const intl18 = util.intl;
+                                                      obj23.hint = intl18.string(_modDef3830.UCwUEX);
+                                                      const items3 = [
+                                                        hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj23),
+                                                        ,
+                                                        ,
+                                                      ];
+                                                      const obj24 = { label: null, value: null };
+                                                      const intl19 = util.intl;
+                                                      obj24.label = intl19.string(_modDef3830["8V8e1Z"]);
+                                                      const tmpResult60 = ConjureDebugFormat;
+                                                      obj24.value = ConjureDebugFormat.formatCount(session.sockets);
+                                                      items3[1] = hasOwnProperty(
+                                                        ConjureDebugPrimitives.DebugStatRow,
+                                                        obj24,
+                                                      );
+                                                      const obj25 = { label: null, value: null };
+                                                      const intl20 = util.intl;
+                                                      obj25.label = intl20.string(_modDef3830["4pBzYW"]);
+                                                      const intl21 = util.intl;
+                                                      const tmp5Result = _modDef3830;
+                                                      obj25.value = intl21.string(
+                                                        session.turn_inflight
+                                                          ? tmp5Result.Wv025I
+                                                          : tmp5Result["7/lsFY"],
+                                                      );
+                                                      items3[2] = hasOwnProperty(
+                                                        ConjureDebugPrimitives.DebugStatRow,
+                                                        obj25,
+                                                      );
+                                                      let tmp91Result = null;
+                                                      if (session.queued_messages > 0) {
+                                                        const obj26 = { label: null, value: null };
+                                                        const intl22 = util.intl;
+                                                        obj26.label = intl22.string(_modDef3830["3oUYnv"]);
+                                                        obj26.value = ConjureDebugFormat.formatCount(
+                                                          session.queued_messages,
+                                                        );
+                                                        tmp91Result = hasOwnProperty(
+                                                          ConjureDebugPrimitives.DebugStatRow,
+                                                          obj26,
+                                                        );
+                                                        const tmpResult62 = ConjureDebugFormat;
+                                                      }
+                                                      const obj27 = { children: null };
+                                                      items3[3] = tmp91Result;
+                                                      obj27.children = items3;
+                                                      tmp88Result = React5(timestampProducer, obj27);
+                                                      const tmpResult61 = ConjureDebugFormat;
+                                                    }
+                                                    const items4 = [tmp88Result];
+                                                    let analytics;
+                                                    if (status != null) {
+                                                      analytics = status.analytics;
+                                                    }
+                                                    let tmp95 = null;
+                                                    if (null != analytics) {
+                                                      const obj28 = { analytics: status.analytics };
+                                                      tmp95 = hasOwnProperty(
+                                                        ConjureDebugAnalytics.ConjureDebugAgentAnalyticsRows,
+                                                        obj28,
+                                                      );
+                                                    }
+                                                    items4[1] = tmp95;
+                                                    obj22.children = items4;
+                                                    let tmp88Result2 = React5(
+                                                      ConjureDebugPrimitives.DebugSection,
+                                                      obj22,
+                                                    );
+                                                  } else {
+                                                    let analytics1;
+                                                    if (status != null) {
+                                                      analytics1 = status.analytics;
+                                                    }
+                                                    tmp88Result2 = null;
+                                                  }
+                                                  cResult[58] = session;
+                                                  cResult[59] = status;
+                                                  cResult[60] = tmp88Result2;
+                                                  tmp85 = tmp88Result2;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          const obj29 = { title: tmp26, children: null };
+                                          const items5 = [tmp28, tmp37, tmp57, tmp72, tmp76];
+                                          obj29.children = items5;
+                                          const tmp81 = React5(ConjureDebugPrimitives.DebugSection, obj29);
+                                          cResult[50] = tmp37;
+                                          cResult[51] = tmp57;
+                                          cResult[52] = tmp72;
+                                          cResult[53] = tmp76;
+                                          cResult[54] = tmp28;
+                                          cResult[55] = tmp81;
+                                          tmp79 = tmp81;
+                                        }
+                                      }
+                                      const obj30 = { style: tmp4.forceCompaction, children: null };
+                                      const items6 = [tmp64, tmp69];
+                                      obj30.children = items6;
+                                      const tmp75 = React5(View, obj30);
+                                      cResult[44] = tmp4.forceCompaction;
+                                      cResult[45] = tmp64;
+                                      cResult[46] = tmp69;
+                                      cResult[47] = tmp75;
+                                      tmp72 = tmp75;
+                                    }
+                                    const obj31 = {
+                                      variant: "text-xs/normal",
+                                      accessibilityLiveRegion: "polite",
+                                      color: str12,
+                                      children: tmp67,
+                                    };
+                                    const tmp71 = hasOwnProperty(Text_Text.Text, obj31);
+                                    cResult[41] = str12;
+                                    cResult[42] = tmp67;
+                                    cResult[43] = tmp71;
+                                    tmp69 = tmp71;
+                                  }
+                                }
+                                const obj32 = {
+                                  variant: "secondary",
+                                  size: "sm",
+                                  text: tmp61,
+                                  loading: "pending" === restartState,
+                                  disabled: turnRunning,
+                                  onPress: handleRestartWorkspace,
+                                };
+                                const tmp66 = hasOwnProperty(components_Button_Button.Button, obj32);
+                                cResult[35] = handleRestartWorkspace;
+                                cResult[36] = "pending" === restartState;
+                                cResult[37] = turnRunning;
+                                cResult[38] = tmp66;
+                                tmp64 = tmp66;
+                              }
+                            }
+                          }
+                          const obj33 = { style: tmp4.forceCompaction, children: null };
+                          const items7 = [tmp44, tmp49, tmp53];
+                          obj33.children = items7;
+                          const tmp60 = React5(View, obj33);
+                          cResult[29] = tmp4.forceCompaction;
+                          cResult[30] = tmp44;
+                          cResult[31] = tmp49;
+                          cResult[32] = tmp53;
+                          cResult[33] = tmp60;
+                          tmp57 = tmp60;
+                        }
+                        let pendingTurn1;
+                        if (tmp7 != null) {
+                          pendingTurn1 = tmp7.pendingTurn;
+                        }
+                        let tmp55 = null;
+                        if (true === pendingTurn1) {
+                          const obj34 = { children: null };
+                          const obj35 = { variant: "critical-primary", size: "sm", text: null, onPress: null };
+                          const intl43 = util.intl;
+                          obj35.text = intl43.string(_modDef3830.ZxG2AI);
+                          obj35.onPress = handleForceCompactionOverride;
+                          const items8 = [hasOwnProperty(components_Button_Button.Button, obj35)];
+                          const obj36 = { variant: "text-xs/normal", color: "text-muted", children: null };
+                          const intl44 = util.intl;
+                          obj36.children = intl44.string(_modDef3830.V73vdN);
+                          items8[1] = hasOwnProperty(Text_Text.Text, obj36);
+                          obj34.children = items8;
+                          tmp55 = React5(timestampProducer, obj34);
+                        }
+                        let pendingTurn2;
+                        if (tmp7 != null) {
+                          pendingTurn2 = tmp7.pendingTurn;
+                        }
+                        cResult[26] = pendingTurn2;
+                        cResult[27] = handleForceCompactionOverride;
+                        cResult[28] = tmp55;
+                        tmp53 = tmp55;
+                      }
+                      const obj37 = { variant: "text-xs/normal", color: str10, children: tmp47 };
+                      const tmp51 = hasOwnProperty(Text_Text.Text, obj37);
+                      cResult[23] = str10;
+                      cResult[24] = tmp47;
+                      cResult[25] = tmp51;
+                      tmp49 = tmp51;
+                    }
+                    const obj38 = {
+                      variant: "secondary",
+                      size: "sm",
+                      text: tmp41,
+                      disabled: "pending" === forceState,
+                      onPress: handleForceCompaction,
+                    };
+                    const tmp46 = hasOwnProperty(components_Button_Button.Button, obj38);
+                    cResult[18] = handleForceCompaction;
+                    cResult[19] = "pending" === forceState;
+                    cResult[20] = tmp46;
+                    tmp44 = tmp46;
+                  }
+                }
+                if (null == lastCompaction) {
+                  if (null != contextCeiling) {
+                    const intl8 = util.intl;
+                    const obj39 = { ceiling: ConjureDebugFormat.formatCount(contextCeiling) };
+                    let formatToPlainStringResult = intl8.formatToPlainString(_modDef3830.GMLCNv, obj39);
+                    const tmpResult63 = ConjureDebugFormat;
+                  } else {
+                    const intl7 = util.intl;
+                    formatToPlainStringResult = intl7.string(_modDef3830.s0U5Fv);
+                  }
+                  const obj40 = { children: formatToPlainStringResult };
+                  let tmp29Result = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj40);
+                  cResult[12] = contextCeiling;
+                  cResult[13] = lastCompaction;
+                  cResult[14] = tmp29Result;
+                }
+                const obj41 = { children: null };
+                const obj42 = { label: null, used: null, max: null, formatValue: null };
+                const intl9 = util.intl;
+                obj42.label = intl9.string(_modDef3830.Kw5wiQ);
+                obj42.used = lastCompaction.tokensAfter;
+                obj42.max = contextCeiling;
+                obj42.formatValue = ConjureDebugFormat.formatCount;
+                const items9 = [hasOwnProperty(ConjureDebugPrimitives.DebugMeter, obj42)];
+                const obj43 = { label: null, value: null, hint: null };
+                const intl10 = util.intl;
+                obj43.label = intl10.string(_modDef3830.mRbSns);
+                const tmpResult64 = ConjureDebugFormat;
+                const formatCountResult3 = ConjureDebugFormat.formatCount(lastCompaction.tokensBefore);
+                const _HermesInternal2 = HermesInternal;
+                obj43.value =
+                  "" + formatCountResult3 + " \u2192 " + ConjureDebugFormat.formatCount(lastCompaction.tokensAfter);
+                const intl11 = util.intl;
+                const obj44 = { count: null, time: null };
+                const tmpResult65 = ConjureDebugFormat;
+                obj44.count = ConjureDebugFormat.formatCount(lastCompaction.retainedMessages);
+                const tmpResult66 = ConjureDebugFormat;
+                obj44.time = ConjureDebugFormat.formatObservedAt(lastCompaction.observedAt);
+                obj43.hint = intl11.formatToPlainString(_modDef3830.Vq3skS, obj44);
+                items9[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj43);
+                obj41.children = items9;
+                tmp29Result = React5(timestampProducer, obj41);
+                const tmpResult67 = ConjureDebugFormat;
+              }
+            }
+          }
+          let obj45 = { title: tmp12, children: null };
+          if (null == lifetime) {
+            const obj46 = { children: null };
+            const intl3 = util.intl;
+            obj46.children = intl3.string(_modDef3830.s0U5Fv);
+            let tmp105Result = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj46);
+          } else {
+            const obj47 = { label: null, value: null, hint: null };
+            const intl32 = util.intl;
+            obj47.label = intl32.string(_modDef3830["9nqym2"]);
+            const tmpResult68 = ConjureDebugFormat;
+            obj47.value = tmpResult68.formatCount(ConjureUsageTypes.runesFromUsd(lifetime.cost_usd));
+            const intl33 = util.intl;
+            const obj48 = { count: null };
+            const tmpResult69 = ConjureUsageTypes;
+            obj48.count = ConjureDebugFormat.formatCount(lifetime.turns);
+            obj47.hint = intl33.formatToPlainString(_modDef3830.NCdUIh, obj48);
+            const items10 = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj47), , , ,];
+            const intl34 = util.intl;
+            const orchestrator = lifetime.orchestrator;
+            const tmpResult70 = ConjureDebugFormat;
+            const obj49 = { label: intl34.string(_modDef3830.xtxP0e), value: null, hint: null };
+            const intl35 = util.intl;
+            const obj50 = { count: null };
+            const stringResult6 = intl34.string(_modDef3830.xtxP0e);
+            const tmpResult71 = ConjureDebugFormat;
+            obj50.count = tmpResult71.formatCount(ConjureUsageTypes.runeCount(orchestrator));
+            obj49.value = intl35.formatToPlainString(_modDef3830.yHJxuP, obj50);
+            const tmpResult72 = ConjureUsageTypes;
+            const formatCountResult4 = ConjureDebugFormat.formatCount(orchestrator.input_tokens);
+            const tmpResult73 = ConjureDebugFormat;
+            const tmpResult74 = ConjureDebugFormat;
+            const formatCountResult5 = ConjureDebugFormat.formatCount(orchestrator.output_tokens);
+            const _HermesInternal4 = HermesInternal;
+            obj49.hint =
+              "" +
+              formatCountResult4 +
+              " in \u00B7 " +
+              formatCountResult5 +
+              " out \u00B7 " +
+              ConjureDebugFormat.formatCount(orchestrator.cache_read_input_tokens) +
+              " cache read";
+            items10[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj49);
+            const intl36 = util.intl;
+            const codegen = lifetime.codegen;
+            const tmpResult75 = ConjureDebugFormat;
+            const obj51 = { label: intl36.string(_modDef3830["9Sj3SX"]), value: null, hint: null };
+            const intl37 = util.intl;
+            const obj52 = { count: null };
+            const stringResult7 = intl36.string(_modDef3830["9Sj3SX"]);
+            const tmpResult76 = ConjureDebugFormat;
+            obj52.count = tmpResult76.formatCount(ConjureUsageTypes.runeCount(codegen));
+            obj51.value = intl37.formatToPlainString(_modDef3830.yHJxuP, obj52);
+            const tmpResult77 = ConjureUsageTypes;
+            const formatCountResult6 = ConjureDebugFormat.formatCount(codegen.input_tokens);
+            const tmpResult78 = ConjureDebugFormat;
+            const tmpResult79 = ConjureDebugFormat;
+            const formatCountResult7 = ConjureDebugFormat.formatCount(codegen.output_tokens);
+            const _HermesInternal5 = HermesInternal;
+            obj51.hint =
+              "" +
+              formatCountResult6 +
+              " in \u00B7 " +
+              formatCountResult7 +
+              " out \u00B7 " +
+              ConjureDebugFormat.formatCount(codegen.cache_read_input_tokens) +
+              " cache read";
+            items10[2] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj51);
+            const intl38 = util.intl;
+            const tmpResult80 = ConjureDebugFormat;
+            const stringResult8 = intl38.string(_modDef3830.ANCEo3);
+            const usageOrEmptyResult = ConjureUsageTypes.usageOrEmpty(lifetime.compaction);
+            const obj53 = { label: stringResult8, value: null, hint: null };
+            const intl39 = util.intl;
+            const obj54 = { count: null };
+            const tmpResult81 = ConjureUsageTypes;
+            const tmpResult82 = ConjureDebugFormat;
+            obj54.count = tmpResult82.formatCount(ConjureUsageTypes.runeCount(usageOrEmptyResult));
+            obj53.value = intl39.formatToPlainString(_modDef3830.yHJxuP, obj54);
+            const tmpResult83 = ConjureUsageTypes;
+            const formatCountResult8 = ConjureDebugFormat.formatCount(usageOrEmptyResult.input_tokens);
+            const tmpResult84 = ConjureDebugFormat;
+            const tmpResult85 = ConjureDebugFormat;
+            const formatCountResult9 = ConjureDebugFormat.formatCount(usageOrEmptyResult.output_tokens);
+            const _HermesInternal6 = HermesInternal;
+            obj53.hint =
+              "" +
+              formatCountResult8 +
+              " in \u00B7 " +
+              formatCountResult9 +
+              " out \u00B7 " +
+              ConjureDebugFormat.formatCount(usageOrEmptyResult.cache_read_input_tokens) +
+              " cache read";
+            items10[3] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj53);
+            let outcomes;
+            if (status != null) {
+              const agent = status.agent;
+              if (agent != null) {
+                outcomes = agent.outcomes;
+              }
+            }
+            let tmp15Result2 = null;
+            if (null != outcomes) {
+              const _Object = Object;
+              tmp15Result2 = null;
+              if (Object.keys(status.agent.outcomes).length > 0) {
+                const obj55 = { label: null, value: null };
+                const intl2 = util.intl;
+                obj55.label = intl2.string(_modDef3830.SQHm7C);
+                const _Object2 = Object;
+                const entries = Object.entries(status.agent.outcomes);
+                const sorted = entries.sort((arg0, arg1) => _slicedToArray(arg1, 2)[1] - _slicedToArray(arg0, 2)[1]);
+                const mapped = sorted.map((item) => {
+                  [tmp2, tmp3] = item;
+                  const tmp = _slicedToArray(item, 2);
+                  return "" + ConjureDebugFormat.formatCount(tmp3) + " " + tmp2;
+                });
+                obj55.value = mapped.join(" \u00B7 ");
+                tmp15Result2 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj55);
+              }
+            }
+            const obj56 = { children: null };
+            items10[4] = tmp15Result2;
+            obj56.children = items10;
+            tmp105Result = React5(timestampProducer, obj56);
+            const tmpResult86 = ConjureDebugFormat;
+          }
+          obj45.children = tmp105Result;
+          obj45 = hasOwnProperty(ConjureDebugPrimitives.DebugSection, obj45);
+          cResult[5] = lifetime;
+          cResult[6] = status;
+          cResult[7] = obj45;
+        }
+      }
+      const tmp10 = hasOwnProperty(ConjureDebugPrimitives.DebugSnapshotToolbar, {
+        generatedAt: generated_at,
+        fetchState,
+        onRefresh,
+      });
+      cResult[0] = fetchState;
+      cResult[1] = onRefresh;
+      cResult[2] = generated_at;
+      cResult[3] = tmp10;
+      tmp9 = tmp10;
+    }
+  : function ConjureDebugAgentTab(arg0) {
+      ({ projectId, status } = arg0);
+      ({ fetchState, onRefresh } = arg0);
+      const tmp = closure_8();
+      const tmp4 = useConjureDebugAgentStateDefault(projectId, status);
+      ({ lastTurn, lastCompaction, lastDecline, forceState, restartState, lifetime, limits, session, contextCeiling } =
+        tmp4);
+      let tmp5 = null;
+      ({ turnRunning, handleForceCompaction, handleForceCompactionOverride, handleRestartWorkspace } = tmp4);
+      if (typeof forceState === "object") {
+        tmp5 = forceState;
+      }
+      const obj = { style: tmp.tab, children: null };
+      let generated_at;
+      if (status != null) {
+        generated_at = status.generated_at;
+      }
+      if (generated_at == null) {
+        generated_at = null;
+      }
+      const items = [
+        hasOwnProperty(ConjureDebugPrimitives.DebugSnapshotToolbar, {
+          generatedAt: generated_at,
+          fetchState,
+          onRefresh,
+        }),
         ,
         ,
         ,
         ,
         ,
       ];
-      const obj8 = { title: null, children: null };
-      const intl = tmp2(1128).intl;
-      obj8.title = intl.string(_modDef3830.JghNal);
+      const obj2 = { title: null, children: null };
+      const intl = util.intl;
+      obj2.title = intl.string(_modDef3830.JghNal);
       if (null == lifetime) {
-        const obj9 = { children: null };
-        const intl3 = tmp2(1128).intl;
-        obj9.children = intl3.string(_modDef3830.s0U5Fv);
-        let tmp19Result5 = closure_8(tmp2(12550).DebugNote, obj9);
+        const obj3 = { children: null };
+        const intl3 = util.intl;
+        obj3.children = intl3.string(_modDef3830.s0U5Fv);
+        let tmp6Result5 = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj3);
       } else {
-        const obj10 = { label: null, value: null, hint: null };
-        const intl32 = tmp2(1128).intl;
-        obj10.label = intl32.string(_modDef3830["9nqym2"]);
-        const tmp2Result = tmp2(12548);
-        obj10.value = tmp2Result.formatCount(tmp2(10706).runesFromUsd(lifetime.cost_usd));
-        const intl33 = tmp2(1128).intl;
-        const obj11 = { count: null };
-        const tmp2Result44 = tmp2(10706);
-        obj11.count = tmp2(12548).formatCount(lifetime.turns);
-        obj10.hint = intl33.formatToPlainString(_modDef3830.NCdUIh, obj11);
-        const items16 = [closure_8(tmp2(12550).DebugStatRow, obj10), , , ,];
-        const intl34 = tmp2(1128).intl;
+        const obj4 = { label: null, value: null, hint: null };
+        const intl32 = util.intl;
+        obj4.label = intl32.string(_modDef3830["9nqym2"]);
+        const tmp9Result = ConjureDebugFormat;
+        obj4.value = tmp9Result.formatCount(ConjureUsageTypes.runesFromUsd(lifetime.cost_usd));
+        const intl33 = util.intl;
+        const obj5 = { count: null };
+        const tmp9Result44 = ConjureUsageTypes;
+        obj5.count = ConjureDebugFormat.formatCount(lifetime.turns);
+        obj4.hint = intl33.formatToPlainString(_modDef3830.NCdUIh, obj5);
+        const items1 = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj4), , , ,];
+        const intl34 = util.intl;
         const orchestrator = lifetime.orchestrator;
-        const tmp2Result45 = tmp2(12548);
-        const obj12 = { label: intl34.string(_modDef3830.xtxP0e), value: null, hint: null };
-        const intl35 = tmp2(1128).intl;
-        const obj13 = { count: null };
+        const tmp9Result45 = ConjureDebugFormat;
+        const obj6 = { label: intl34.string(_modDef3830.xtxP0e), value: null, hint: null };
+        const intl35 = util.intl;
+        const obj7 = { count: null };
         const stringResult = intl34.string(_modDef3830.xtxP0e);
-        const tmp2Result46 = tmp2(12548);
-        obj13.count = tmp2Result46.formatCount(tmp2(10706).runeCount(orchestrator));
-        obj12.value = intl35.formatToPlainString(_modDef3830.yHJxuP, obj13);
-        const tmp2Result47 = tmp2(10706);
-        const formatCountResult = tmp2(12548).formatCount(orchestrator.input_tokens);
-        const tmp2Result48 = tmp2(12548);
-        const tmp2Result49 = tmp2(12548);
-        const formatCountResult1 = tmp2(12548).formatCount(orchestrator.output_tokens);
+        const tmp9Result46 = ConjureDebugFormat;
+        obj7.count = tmp9Result46.formatCount(ConjureUsageTypes.runeCount(orchestrator));
+        obj6.value = intl35.formatToPlainString(_modDef3830.yHJxuP, obj7);
+        const tmp9Result47 = ConjureUsageTypes;
+        const formatCountResult = ConjureDebugFormat.formatCount(orchestrator.input_tokens);
+        const tmp9Result48 = ConjureDebugFormat;
+        const tmp9Result49 = ConjureDebugFormat;
+        const formatCountResult1 = ConjureDebugFormat.formatCount(orchestrator.output_tokens);
         const _HermesInternal4 = HermesInternal;
-        obj12.hint =
+        obj6.hint =
           "" +
           formatCountResult +
           " in \u00B7 " +
           formatCountResult1 +
           " out \u00B7 " +
-          tmp2(12548).formatCount(orchestrator.cache_read_input_tokens) +
+          ConjureDebugFormat.formatCount(orchestrator.cache_read_input_tokens) +
           " cache read";
-        items16[1] = closure_8(tmp2(12550).DebugStatRow, obj12);
-        const intl36 = tmp2(1128).intl;
+        items1[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj6);
+        const intl36 = util.intl;
         const codegen = lifetime.codegen;
-        const tmp2Result50 = tmp2(12548);
-        const obj14 = { label: intl36.string(_modDef3830["9Sj3SX"]), value: null, hint: null };
-        const intl37 = tmp2(1128).intl;
-        const obj15 = { count: null };
+        const tmp9Result50 = ConjureDebugFormat;
+        const obj8 = { label: intl36.string(_modDef3830["9Sj3SX"]), value: null, hint: null };
+        const intl37 = util.intl;
+        const obj9 = { count: null };
         const stringResult1 = intl36.string(_modDef3830["9Sj3SX"]);
-        const tmp2Result51 = tmp2(12548);
-        obj15.count = tmp2Result51.formatCount(tmp2(10706).runeCount(codegen));
-        obj14.value = intl37.formatToPlainString(_modDef3830.yHJxuP, obj15);
-        const tmp2Result52 = tmp2(10706);
-        const formatCountResult2 = tmp2(12548).formatCount(codegen.input_tokens);
-        const tmp2Result53 = tmp2(12548);
-        const tmp2Result54 = tmp2(12548);
-        const formatCountResult3 = tmp2(12548).formatCount(codegen.output_tokens);
+        const tmp9Result51 = ConjureDebugFormat;
+        obj9.count = tmp9Result51.formatCount(ConjureUsageTypes.runeCount(codegen));
+        obj8.value = intl37.formatToPlainString(_modDef3830.yHJxuP, obj9);
+        const tmp9Result52 = ConjureUsageTypes;
+        const formatCountResult2 = ConjureDebugFormat.formatCount(codegen.input_tokens);
+        const tmp9Result53 = ConjureDebugFormat;
+        const tmp9Result54 = ConjureDebugFormat;
+        const formatCountResult3 = ConjureDebugFormat.formatCount(codegen.output_tokens);
         const _HermesInternal5 = HermesInternal;
-        obj14.hint =
+        obj8.hint =
           "" +
           formatCountResult2 +
           " in \u00B7 " +
           formatCountResult3 +
           " out \u00B7 " +
-          tmp2(12548).formatCount(codegen.cache_read_input_tokens) +
+          ConjureDebugFormat.formatCount(codegen.cache_read_input_tokens) +
           " cache read";
-        items16[2] = closure_8(tmp2(12550).DebugStatRow, obj14);
-        const intl38 = tmp2(1128).intl;
-        const tmp2Result55 = tmp2(12548);
+        items1[2] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
+        const intl38 = util.intl;
+        const tmp9Result55 = ConjureDebugFormat;
         const stringResult2 = intl38.string(_modDef3830.ANCEo3);
-        const usageOrEmptyResult = tmp2(10706).usageOrEmpty(lifetime.compaction);
-        const obj16 = { label: stringResult2, value: null, hint: null };
-        const intl39 = tmp2(1128).intl;
-        const obj17 = { count: null };
-        const tmp2Result56 = tmp2(10706);
-        const tmp2Result57 = tmp2(12548);
-        obj17.count = tmp2Result57.formatCount(tmp2(10706).runeCount(usageOrEmptyResult));
-        obj16.value = intl39.formatToPlainString(_modDef3830.yHJxuP, obj17);
-        const tmp2Result58 = tmp2(10706);
-        const formatCountResult4 = tmp2(12548).formatCount(usageOrEmptyResult.input_tokens);
-        const tmp2Result59 = tmp2(12548);
-        const tmp2Result60 = tmp2(12548);
-        const formatCountResult5 = tmp2(12548).formatCount(usageOrEmptyResult.output_tokens);
+        const usageOrEmptyResult = ConjureUsageTypes.usageOrEmpty(lifetime.compaction);
+        const obj10 = { label: stringResult2, value: null, hint: null };
+        const intl39 = util.intl;
+        const obj11 = { count: null };
+        const tmp9Result56 = ConjureUsageTypes;
+        const tmp9Result57 = ConjureDebugFormat;
+        obj11.count = tmp9Result57.formatCount(ConjureUsageTypes.runeCount(usageOrEmptyResult));
+        obj10.value = intl39.formatToPlainString(_modDef3830.yHJxuP, obj11);
+        const tmp9Result58 = ConjureUsageTypes;
+        const formatCountResult4 = ConjureDebugFormat.formatCount(usageOrEmptyResult.input_tokens);
+        const tmp9Result59 = ConjureDebugFormat;
+        const tmp9Result60 = ConjureDebugFormat;
+        const formatCountResult5 = ConjureDebugFormat.formatCount(usageOrEmptyResult.output_tokens);
         const _HermesInternal6 = HermesInternal;
-        obj16.hint =
+        obj10.hint =
           "" +
           formatCountResult4 +
           " in \u00B7 " +
           formatCountResult5 +
           " out \u00B7 " +
-          tmp2(12548).formatCount(usageOrEmptyResult.cache_read_input_tokens) +
+          ConjureDebugFormat.formatCount(usageOrEmptyResult.cache_read_input_tokens) +
           " cache read";
-        items16[3] = closure_8(tmp2(12550).DebugStatRow, obj16);
+        items1[3] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj10);
         let outcomes;
         if (status != null) {
-          const agent4 = status.agent;
-          if (agent4 != null) {
-            outcomes = agent4.outcomes;
+          const agent = status.agent;
+          if (agent != null) {
+            outcomes = agent.outcomes;
           }
         }
-        let tmp21Result6 = null;
+        let tmp8Result6 = null;
         if (null != outcomes) {
           const _Object = Object;
-          tmp21Result6 = null;
+          tmp8Result6 = null;
           if (Object.keys(status.agent.outcomes).length > 0) {
-            const obj18 = { label: null, value: null };
-            const intl2 = tmp2(1128).intl;
-            obj18.label = intl2.string(_modDef3830.SQHm7C);
+            const obj12 = { label: null, value: null };
+            const intl2 = util.intl;
+            obj12.label = intl2.string(_modDef3830.SQHm7C);
             const _Object2 = Object;
             const entries = Object.entries(status.agent.outcomes);
             const sorted = entries.sort((arg0, arg1) => {
@@ -681,320 +981,320 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
             const mapped = sorted.map((item) => {
               [tmp, tmp2] = item;
-              return "" + projectId(dependencyMap[11]).formatCount(tmp2) + " " + tmp;
+              return "" + ConjureDebugFormat.formatCount(tmp2) + " " + tmp;
             });
-            obj18.value = mapped.join(" \u00B7 ");
-            tmp21Result6 = closure_8(tmp2(12550).DebugStatRow, obj18);
+            obj12.value = mapped.join(" \u00B7 ");
+            tmp8Result6 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj12);
           }
         }
-        const obj19 = { children: null };
-        items16[4] = tmp21Result6;
-        obj19.children = items16;
-        tmp19Result5 = closure_10(closure_9, obj19);
-        const tmp2Result61 = tmp2(12548);
+        const obj13 = { children: null };
+        items1[4] = tmp8Result6;
+        obj13.children = items1;
+        tmp6Result5 = React5(timestampProducer, obj13);
+        const tmp9Result61 = ConjureDebugFormat;
       }
-      obj8.children = tmp19Result5;
-      items15[1] = closure_8(tmp2(12550).DebugSection, obj8);
-      const obj20 = { title: null, children: null };
-      const intl4 = tmp2(1128).intl;
-      obj20.title = intl4.string(_modDef3830.dZHPE5);
-      if (null == stateFromStores) {
-        const obj21 = { children: null };
-        const intl5 = tmp2(1128).intl;
-        obj21.children = intl5.string(_modDef3830.DfVjal);
-        let tmp21Result7 = closure_8(tmp2(12550).DebugNote, obj21);
+      obj2.children = tmp6Result5;
+      items[1] = hasOwnProperty(ConjureDebugPrimitives.DebugSection, obj2);
+      const obj14 = { title: null, children: null };
+      const intl4 = util.intl;
+      obj14.title = intl4.string(_modDef3830.dZHPE5);
+      if (null == lastTurn) {
+        const obj15 = { children: null };
+        const intl5 = util.intl;
+        obj15.children = intl5.string(_modDef3830.DfVjal);
+        let tmp8Result7 = hasOwnProperty(ConjureDebugPrimitives.DebugNote, obj15);
       } else {
-        const intl40 = tmp2(1128).intl;
-        const total = stateFromStores.total;
-        const obj22 = { label: intl40.string(_modDef3830["7X3i9d"]), value: null, hint: null };
-        const intl41 = tmp2(1128).intl;
-        const obj23 = { count: null };
+        const intl40 = util.intl;
+        const total = lastTurn.total;
+        const obj16 = { label: intl40.string(_modDef3830["7X3i9d"]), value: null, hint: null };
+        const intl41 = util.intl;
+        const obj17 = { count: null };
         const stringResult3 = intl40.string(_modDef3830["7X3i9d"]);
-        const tmp2Result62 = tmp2(12548);
-        obj23.count = tmp2Result62.formatCount(tmp2(10706).runeCount(total));
-        obj22.value = intl41.formatToPlainString(_modDef3830.yHJxuP, obj23);
-        const tmp2Result63 = tmp2(10706);
-        const formatCountResult6 = tmp2(12548).formatCount(total.input_tokens);
-        const tmp2Result64 = tmp2(12548);
-        const tmp2Result65 = tmp2(12548);
-        const formatCountResult7 = tmp2(12548).formatCount(total.output_tokens);
+        const tmp9Result62 = ConjureDebugFormat;
+        obj17.count = tmp9Result62.formatCount(ConjureUsageTypes.runeCount(total));
+        obj16.value = intl41.formatToPlainString(_modDef3830.yHJxuP, obj17);
+        const tmp9Result63 = ConjureUsageTypes;
+        const formatCountResult6 = ConjureDebugFormat.formatCount(total.input_tokens);
+        const tmp9Result64 = ConjureDebugFormat;
+        const tmp9Result65 = ConjureDebugFormat;
+        const formatCountResult7 = ConjureDebugFormat.formatCount(total.output_tokens);
         const _HermesInternal7 = HermesInternal;
-        obj22.hint =
+        obj16.hint =
           "" +
           formatCountResult6 +
           " in \u00B7 " +
           formatCountResult7 +
           " out \u00B7 " +
-          tmp2(12548).formatCount(total.cache_read_input_tokens) +
+          ConjureDebugFormat.formatCount(total.cache_read_input_tokens) +
           " cache read";
-        const items17 = [closure_8(tmp2(12550).DebugStatRow, obj22)];
-        const obj24 = { label: null, value: null };
-        const intl42 = tmp2(1128).intl;
-        obj24.label = intl42.string(_modDef3830["8OUg09"]);
-        let cache_hit_rate = stateFromStores.cache_hit_rate;
+        const items2 = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj16)];
+        const obj18 = { label: null, value: null };
+        const intl42 = util.intl;
+        obj18.label = intl42.string(_modDef3830["8OUg09"]);
+        let cache_hit_rate = lastTurn.cache_hit_rate;
         if (cache_hit_rate == null) {
-          cache_hit_rate = tmp2(10706).cacheHitRate(stateFromStores.total);
-          const tmp2Result67 = tmp2(10706);
+          cache_hit_rate = ConjureUsageTypes.cacheHitRate(lastTurn.total);
+          const tmp9Result67 = ConjureUsageTypes;
         }
-        const obj25 = { children: null };
+        const obj19 = { children: null };
         const _HermesInternal = HermesInternal;
-        obj24.value = "" + Math.round(100 * cache_hit_rate) + "%";
-        items17[1] = closure_8(tmp2(12550).DebugStatRow, obj24);
-        obj25.children = items17;
-        tmp21Result7 = closure_10(closure_9, obj25);
-        const tmp2Result66 = tmp2(12548);
+        obj18.value = "" + Math.round(100 * cache_hit_rate) + "%";
+        items2[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj18);
+        obj19.children = items2;
+        tmp8Result7 = React5(timestampProducer, obj19);
+        const tmp9Result66 = ConjureDebugFormat;
       }
-      obj20.children = tmp21Result7;
-      items15[2] = closure_8(tmp2(12550).DebugSection, obj20);
-      const obj26 = { title: null, children: null };
-      const intl6 = tmp2(1128).intl;
-      obj26.title = intl6.string(_modDef3830.NbRk9a);
-      if (null != stateFromStores1) {
-        if (null != promptCeiling) {
-          const obj27 = { children: null };
-          const obj28 = { label: null, used: null, max: null, formatValue: null };
-          const intl9 = tmp2(1128).intl;
-          obj28.label = intl9.string(_modDef3830.Kw5wiQ);
-          obj28.used = stateFromStores1.tokensAfter;
-          obj28.max = promptCeiling;
-          obj28.formatValue = tmp2(12548).formatCount;
-          const items18 = [closure_8(tmp2(12550).DebugMeter, obj28)];
-          const obj29 = { label: null, value: null, hint: null };
-          const intl10 = tmp2(1128).intl;
-          obj29.label = intl10.string(_modDef3830.mRbSns);
-          const tmp2Result68 = tmp2(12548);
-          const formatCountResult8 = tmp2(12548).formatCount(stateFromStores1.tokensBefore);
+      obj14.children = tmp8Result7;
+      items[2] = hasOwnProperty(ConjureDebugPrimitives.DebugSection, obj14);
+      const obj20 = { title: null, children: null };
+      const intl6 = util.intl;
+      obj20.title = intl6.string(_modDef3830.NbRk9a);
+      if (null != lastCompaction) {
+        if (null != contextCeiling) {
+          const obj21 = { children: null };
+          const obj22 = { label: null, used: null, max: null, formatValue: null };
+          const intl9 = util.intl;
+          obj22.label = intl9.string(_modDef3830.Kw5wiQ);
+          obj22.used = lastCompaction.tokensAfter;
+          obj22.max = contextCeiling;
+          obj22.formatValue = ConjureDebugFormat.formatCount;
+          const items3 = [hasOwnProperty(ConjureDebugPrimitives.DebugMeter, obj22)];
+          const obj23 = { label: null, value: null, hint: null };
+          const intl10 = util.intl;
+          obj23.label = intl10.string(_modDef3830.mRbSns);
+          const tmp9Result68 = ConjureDebugFormat;
+          const formatCountResult8 = ConjureDebugFormat.formatCount(lastCompaction.tokensBefore);
           const _HermesInternal2 = HermesInternal;
-          obj29.value = "" + formatCountResult8 + " \u2192 " + tmp2(12548).formatCount(stateFromStores1.tokensAfter);
-          const intl11 = tmp2(1128).intl;
-          const obj30 = { count: null, time: null };
-          const tmp2Result69 = tmp2(12548);
-          obj30.count = tmp2(12548).formatCount(stateFromStores1.retainedMessages);
-          const tmp2Result70 = tmp2(12548);
-          obj30.time = tmp2(12548).formatObservedAt(stateFromStores1.observedAt);
-          obj29.hint = intl11.formatToPlainString(_modDef3830.Vq3skS, obj30);
-          items18[1] = closure_8(tmp2(12550).DebugStatRow, obj29);
-          obj27.children = items18;
-          let tmp21Result11 = closure_10(closure_9, obj27);
-          const tmp2Result71 = tmp2(12548);
+          obj23.value =
+            "" + formatCountResult8 + " \u2192 " + ConjureDebugFormat.formatCount(lastCompaction.tokensAfter);
+          const intl11 = util.intl;
+          const obj24 = { count: null, time: null };
+          const tmp9Result69 = ConjureDebugFormat;
+          obj24.count = ConjureDebugFormat.formatCount(lastCompaction.retainedMessages);
+          const tmp9Result70 = ConjureDebugFormat;
+          obj24.time = ConjureDebugFormat.formatObservedAt(lastCompaction.observedAt);
+          obj23.hint = intl11.formatToPlainString(_modDef3830.Vq3skS, obj24);
+          items3[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj23);
+          obj21.children = items3;
+          let tmp8Result11 = React5(timestampProducer, obj21);
+          const tmp9Result71 = ConjureDebugFormat;
         }
-        const items19 = [tmp21Result11, , , ,];
-        let tmp21Result8 = null;
-        if (null != stateFromStores2) {
-          const obj31 = { label: null, value: null, critical: true, hint: null };
-          const intl12 = tmp2(1128).intl;
-          obj31.label = intl12.string(_modDef3830["4BX5KK"]);
-          const tmp2Result72 = tmp2(12548);
-          const formatCountResult9 = tmp2(12548).formatCount(stateFromStores2.projected);
+        const items4 = [tmp8Result11, , , ,];
+        let tmp8Result8 = null;
+        if (null != lastDecline) {
+          const obj25 = { label: null, value: null, critical: true, hint: null };
+          const intl12 = util.intl;
+          obj25.label = intl12.string(_modDef3830["4BX5KK"]);
+          const tmp9Result72 = ConjureDebugFormat;
+          const formatCountResult9 = ConjureDebugFormat.formatCount(lastDecline.projected);
           const _HermesInternal3 = HermesInternal;
-          obj31.value = "" + formatCountResult9 + " / " + tmp2(12548).formatCount(stateFromStores2.threshold);
-          const intl13 = tmp2(1128).intl;
-          const obj32 = { time: null };
-          const tmp2Result73 = tmp2(12548);
-          obj32.time = tmp2(12548).formatObservedAt(stateFromStores2.observedAt);
-          obj31.hint = intl13.formatToPlainString(_modDef3830["6ngCax"], obj32);
-          tmp21Result8 = closure_8(tmp2(12550).DebugStatRow, obj31);
-          const tmp2Result74 = tmp2(12548);
+          obj25.value = "" + formatCountResult9 + " / " + ConjureDebugFormat.formatCount(lastDecline.threshold);
+          const intl13 = util.intl;
+          const obj26 = { time: null };
+          const tmp9Result73 = ConjureDebugFormat;
+          obj26.time = ConjureDebugFormat.formatObservedAt(lastDecline.observedAt);
+          obj25.hint = intl13.formatToPlainString(_modDef3830["6ngCax"], obj26);
+          tmp8Result8 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj25);
+          const tmp9Result74 = ConjureDebugFormat;
         }
-        items19[1] = tmp21Result8;
-        const obj33 = { style: tmp.forceCompaction, children: null };
-        const obj34 = { variant: "secondary", size: "sm", text: null, disabled: null, onPress: null };
-        const intl14 = tmp2(1128).intl;
-        obj34.text = intl14.string(_modDef3830["1EiJeb"]);
-        obj34.disabled = "pending" === stateFromStores3;
-        obj34.onPress = callback;
-        const items20 = [closure_8(tmp2(5244).Button, obj34), ,];
+        items4[1] = tmp8Result8;
+        const obj27 = { style: tmp.forceCompaction, children: null };
+        const obj28 = { variant: "secondary", size: "sm", text: null, disabled: null, onPress: null };
+        const intl14 = util.intl;
+        obj28.text = intl14.string(_modDef3830["1EiJeb"]);
+        obj28.disabled = "pending" === forceState;
+        obj28.onPress = handleForceCompaction;
+        const items5 = [hasOwnProperty(components_Button_Button.Button, obj28), ,];
         let str9 = "text-muted";
-        if (null != tmp18) {
+        if (null != tmp5) {
           str9 = "text-muted";
-          if ("compacted" !== tmp18.outcome) {
+          if ("compacted" !== tmp5.outcome) {
             str9 = "text-feedback-critical";
           }
         }
-        const obj35 = {
+        const obj29 = {
           variant: "text-xs/normal",
           color: str9,
-          children: tmp2(12547).forceCompactionStatus(stateFromStores3),
+          children: ConjureDebugLabels.forceCompactionStatus(forceState),
         };
-        items20[1] = closure_8(tmp2(5234).Text, obj35);
+        items5[1] = hasOwnProperty(Text_Text.Text, obj29);
         let pendingTurn;
-        if (tmp18 != null) {
-          pendingTurn = tmp18.pendingTurn;
+        if (tmp5 != null) {
+          pendingTurn = tmp5.pendingTurn;
         }
-        let tmp19Result6 = null;
+        let tmp6Result6 = null;
         if (true === pendingTurn) {
-          const obj36 = { children: null };
-          const obj37 = { variant: "critical-primary", size: "sm", text: null, onPress: null };
-          const intl43 = tmp2(1128).intl;
-          obj37.text = intl43.string(_modDef3830.ZxG2AI);
-          obj37.onPress = callback1;
-          const items21 = [closure_8(tmp2(5244).Button, obj37)];
-          const obj38 = { variant: "text-xs/normal", color: "text-muted", children: null };
-          const intl44 = tmp2(1128).intl;
-          obj38.children = intl44.string(_modDef3830.V73vdN);
-          items21[1] = closure_8(tmp2(5234).Text, obj38);
-          obj36.children = items21;
-          tmp19Result6 = closure_10(closure_9, obj36);
+          const obj30 = { children: null };
+          const obj31 = { variant: "critical-primary", size: "sm", text: null, onPress: null };
+          const intl43 = util.intl;
+          obj31.text = intl43.string(_modDef3830.ZxG2AI);
+          obj31.onPress = handleForceCompactionOverride;
+          const items6 = [hasOwnProperty(components_Button_Button.Button, obj31)];
+          const obj32 = { variant: "text-xs/normal", color: "text-muted", children: null };
+          const intl44 = util.intl;
+          obj32.children = intl44.string(_modDef3830.V73vdN);
+          items6[1] = hasOwnProperty(Text_Text.Text, obj32);
+          obj30.children = items6;
+          tmp6Result6 = React5(timestampProducer, obj30);
         }
-        items20[2] = tmp19Result6;
-        obj33.children = items20;
-        items19[2] = closure_10(View, obj33);
-        const obj39 = { style: tmp.forceCompaction, children: null };
-        const obj40 = { variant: "secondary", size: "sm", text: null, loading: null, disabled: null, onPress: null };
-        const intl15 = tmp2(1128).intl;
-        obj40.text = intl15.string(_modDef3830["5qCjBu"]);
-        let tmp38 = "pending" === stateFromStores4;
-        obj40.loading = tmp38;
-        if (!tmp38) {
-          tmp38 = stateFromStores5;
+        items5[2] = tmp6Result6;
+        obj27.children = items5;
+        items4[2] = React5(View, obj27);
+        const obj33 = { style: tmp.forceCompaction, children: null };
+        const obj34 = { variant: "secondary", size: "sm", text: null, loading: null, disabled: null, onPress: null };
+        const intl15 = util.intl;
+        obj34.text = intl15.string(_modDef3830["5qCjBu"]);
+        let tmp25 = "pending" === restartState;
+        obj34.loading = tmp25;
+        if (!tmp25) {
+          tmp25 = turnRunning;
         }
-        obj40.disabled = tmp38;
-        obj40.onPress = callback2;
-        const items22 = [closure_8(tmp2(5244).Button, obj40)];
+        obj34.disabled = tmp25;
+        obj34.onPress = handleRestartWorkspace;
+        const items7 = [hasOwnProperty(components_Button_Button.Button, obj34)];
         let str11 = "text-muted";
-        if (typeof stateFromStores4 === "object") {
+        if (typeof restartState === "object") {
           str11 = "text-muted";
-          if ("restarted" !== stateFromStores4.outcome) {
+          if ("restarted" !== restartState.outcome) {
             str11 = "text-feedback-critical";
           }
         }
-        const obj41 = { variant: "text-xs/normal", accessibilityLiveRegion: "polite", color: str11, children: null };
-        const tmp2Result75 = tmp2(12547);
-        obj41.children = tmp2(12547).sandboxRestartStatus(stateFromStores4);
-        items22[1] = closure_8(tmp2(5234).Text, obj41);
-        obj39.children = items22;
-        items19[3] = closure_10(View, obj39);
-        const obj42 = { projectId };
-        items19[4] = closure_8(tmp2(12554).ConjureDebugRestartAgent, obj42);
-        obj26.children = items19;
-        items15[3] = closure_10(tmp2(12550).DebugSection, obj26);
-        const obj43 = { projectId };
-        items15[4] = closure_8(tmp2(12554).ConjureDebugGitSection, obj43);
+        const obj35 = { variant: "text-xs/normal", accessibilityLiveRegion: "polite", color: str11, children: null };
+        const tmp9Result75 = ConjureDebugLabels;
+        obj35.children = ConjureDebugLabels.sandboxRestartStatus(restartState);
+        items7[1] = hasOwnProperty(Text_Text.Text, obj35);
+        obj33.children = items7;
+        items4[3] = React5(View, obj33);
+        const obj36 = { projectId };
+        items4[4] = hasOwnProperty(ConjureDebugGitSection.ConjureDebugRestartAgent, obj36);
+        obj20.children = items4;
+        items[3] = React5(ConjureDebugPrimitives.DebugSection, obj20);
+        const obj37 = { projectId };
+        items[4] = hasOwnProperty(ConjureDebugGitSection.ConjureDebugGitSection, obj37);
         if (null != session) {
-          const obj44 = { title: null, children: null };
-          const intl16 = tmp2(1128).intl;
-          obj44.title = intl16.string(_modDef3830.EsSzCS);
-          let tmp19Result7 = null;
+          const obj38 = { title: null, children: null };
+          const intl16 = util.intl;
+          obj38.title = intl16.string(_modDef3830.EsSzCS);
+          let tmp6Result7 = null;
           if (null != session) {
-            const obj45 = { label: null, value: null, hint: null };
-            const intl17 = tmp2(1128).intl;
-            obj45.label = intl17.string(_modDef3830.CLXHAs);
-            obj45.value = tmp2(12548).formatObservedAt(session.instance_since);
-            const intl18 = tmp2(1128).intl;
-            obj45.hint = intl18.string(_modDef3830.UCwUEX);
-            const items23 = [closure_8(tmp2(12550).DebugStatRow, obj45), , ,];
-            const obj46 = { label: null, value: null };
-            const intl19 = tmp2(1128).intl;
-            obj46.label = intl19.string(_modDef3830["8V8e1Z"]);
-            const tmp2Result77 = tmp2(12548);
-            obj46.value = tmp2(12548).formatCount(session.sockets);
-            items23[1] = closure_8(tmp2(12550).DebugStatRow, obj46);
-            const obj47 = { label: null, value: null };
-            const intl20 = tmp2(1128).intl;
-            obj47.label = intl20.string(_modDef3830["4pBzYW"]);
-            const intl21 = tmp2(1128).intl;
-            const tmp23Result = _modDef3830;
-            obj47.value = intl21.string(session.turn_inflight ? tmp23Result.Wv025I : tmp23Result["7/lsFY"]);
-            items23[2] = closure_8(tmp2(12550).DebugStatRow, obj47);
-            let tmp21Result9 = null;
+            const obj39 = { label: null, value: null, hint: null };
+            const intl17 = util.intl;
+            obj39.label = intl17.string(_modDef3830.CLXHAs);
+            obj39.value = ConjureDebugFormat.formatObservedAt(session.instance_since);
+            const intl18 = util.intl;
+            obj39.hint = intl18.string(_modDef3830.UCwUEX);
+            const items8 = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj39), , ,];
+            const obj40 = { label: null, value: null };
+            const intl19 = util.intl;
+            obj40.label = intl19.string(_modDef3830["8V8e1Z"]);
+            const tmp9Result77 = ConjureDebugFormat;
+            obj40.value = ConjureDebugFormat.formatCount(session.sockets);
+            items8[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj40);
+            const obj41 = { label: null, value: null };
+            const intl20 = util.intl;
+            obj41.label = intl20.string(_modDef3830["4pBzYW"]);
+            const intl21 = util.intl;
+            const tmp2Result = _modDef3830;
+            obj41.value = intl21.string(session.turn_inflight ? tmp2Result.Wv025I : tmp2Result["7/lsFY"]);
+            items8[2] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj41);
+            let tmp8Result9 = null;
             if (session.queued_messages > 0) {
-              const obj48 = { label: null, value: null };
-              const intl22 = tmp2(1128).intl;
-              obj48.label = intl22.string(_modDef3830["3oUYnv"]);
-              obj48.value = tmp2(12548).formatCount(session.queued_messages);
-              tmp21Result9 = closure_8(tmp2(12550).DebugStatRow, obj48);
-              const tmp2Result79 = tmp2(12548);
+              const obj42 = { label: null, value: null };
+              const intl22 = util.intl;
+              obj42.label = intl22.string(_modDef3830["3oUYnv"]);
+              obj42.value = ConjureDebugFormat.formatCount(session.queued_messages);
+              tmp8Result9 = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj42);
+              const tmp9Result79 = ConjureDebugFormat;
             }
-            const obj49 = { children: null };
-            items23[3] = tmp21Result9;
-            obj49.children = items23;
-            tmp19Result7 = closure_10(closure_9, obj49);
-            const tmp2Result78 = tmp2(12548);
+            const obj43 = { children: null };
+            items8[3] = tmp8Result9;
+            obj43.children = items8;
+            tmp6Result7 = React5(timestampProducer, obj43);
+            const tmp9Result78 = ConjureDebugFormat;
           }
-          const items24 = [tmp19Result7];
+          const items9 = [tmp6Result7];
           let analytics;
           if (status != null) {
             analytics = status.analytics;
           }
-          let tmp21Result10 = null;
+          let tmp8Result10 = null;
           if (null != analytics) {
-            const obj50 = { analytics: status.analytics };
-            tmp21Result10 = closure_8(tmp2(12552).ConjureDebugAgentAnalyticsRows, obj50);
+            const obj44 = { analytics: status.analytics };
+            tmp8Result10 = hasOwnProperty(ConjureDebugAnalytics.ConjureDebugAgentAnalyticsRows, obj44);
           }
-          items24[1] = tmp21Result10;
-          obj44.children = items24;
-          let tmp19Result8 = closure_10(tmp2(12550).DebugSection, obj44);
+          items9[1] = tmp8Result10;
+          obj38.children = items9;
+          let tmp6Result8 = React5(ConjureDebugPrimitives.DebugSection, obj38);
         } else {
           let analytics1;
           if (status != null) {
             analytics1 = status.analytics;
           }
-          tmp19Result8 = null;
+          tmp6Result8 = null;
         }
-        items15[5] = tmp19Result8;
-        let tmp19Result9 = null;
+        items[5] = tmp6Result8;
+        let tmp6Result9 = null;
         if (null != limits) {
-          const obj51 = { title: null, children: null };
-          const intl23 = tmp2(1128).intl;
-          obj51.title = intl23.string(_modDef3830["LEIhp/"]);
+          const obj45 = { title: null, children: null };
+          const intl23 = util.intl;
+          obj45.title = intl23.string(_modDef3830["LEIhp/"]);
+          const obj46 = { label: null, value: null };
+          const intl24 = util.intl;
+          obj46.label = intl24.string(_modDef3830.IlDBN3);
+          obj46.value = ConjureDebugFormat.formatCount(limits.max_subagent_iterations);
+          const items10 = [hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj46), , , , ,];
+          const obj47 = { label: null, value: null };
+          const intl25 = util.intl;
+          obj47.label = intl25.string(_modDef3830["ZdzKR+"]);
+          const intl26 = util.intl;
+          const obj48 = { count: null };
+          const tmp9Result80 = ConjureDebugFormat;
+          obj48.count = ConjureDebugFormat.formatCount(limits.context_window_tokens);
+          obj47.value = intl26.formatToPlainString(_modDef3830.yHJxuP, obj48);
+          items10[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj47);
+          const obj49 = { label: null, value: null };
+          const intl27 = util.intl;
+          obj49.label = intl27.string(_modDef3830.cIhN2W);
+          const intl28 = util.intl;
+          const obj50 = { count: null };
+          const tmp9Result81 = ConjureDebugFormat;
+          obj50.count = ConjureDebugFormat.formatCount(limits.per_turn_max_output_tokens);
+          obj49.value = intl28.formatToPlainString(_modDef3830.yHJxuP, obj50);
+          items10[2] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj49);
+          const obj51 = { label: null, value: null };
+          const intl29 = util.intl;
+          obj51.label = intl29.string(_modDef3830["+fOn/q"]);
+          const tmp9Result82 = ConjureDebugFormat;
+          obj51.value = ConjureDebugFormat.formatCount(limits.max_user_message_chars);
+          items10[3] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj51);
           const obj52 = { label: null, value: null };
-          const intl24 = tmp2(1128).intl;
-          obj52.label = intl24.string(_modDef3830.IlDBN3);
-          obj52.value = tmp2(12548).formatCount(limits.max_subagent_iterations);
-          const items25 = [closure_8(tmp2(12550).DebugStatRow, obj52), , , , ,];
+          const intl30 = util.intl;
+          obj52.label = intl30.string(_modDef3830.kIHga0);
+          const tmp9Result83 = ConjureDebugFormat;
+          obj52.value = ConjureDebugFormat.formatCount(limits.max_build_attempts);
+          items10[4] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj52);
           const obj53 = { label: null, value: null };
-          const intl25 = tmp2(1128).intl;
-          obj53.label = intl25.string(_modDef3830["ZdzKR+"]);
-          const intl26 = tmp2(1128).intl;
-          const obj54 = { count: null };
-          const tmp2Result80 = tmp2(12548);
-          obj54.count = tmp2(12548).formatCount(limits.context_window_tokens);
-          obj53.value = intl26.formatToPlainString(_modDef3830.yHJxuP, obj54);
-          items25[1] = closure_8(tmp2(12550).DebugStatRow, obj53);
-          const obj55 = { label: null, value: null };
-          const intl27 = tmp2(1128).intl;
-          obj55.label = intl27.string(_modDef3830.cIhN2W);
-          const intl28 = tmp2(1128).intl;
-          const obj56 = { count: null };
-          const tmp2Result81 = tmp2(12548);
-          obj56.count = tmp2(12548).formatCount(limits.per_turn_max_output_tokens);
-          obj55.value = intl28.formatToPlainString(_modDef3830.yHJxuP, obj56);
-          items25[2] = closure_8(tmp2(12550).DebugStatRow, obj55);
-          const obj57 = { label: null, value: null };
-          const intl29 = tmp2(1128).intl;
-          obj57.label = intl29.string(_modDef3830["+fOn/q"]);
-          const tmp2Result82 = tmp2(12548);
-          obj57.value = tmp2(12548).formatCount(limits.max_user_message_chars);
-          items25[3] = closure_8(tmp2(12550).DebugStatRow, obj57);
-          const obj58 = { label: null, value: null };
-          const intl30 = tmp2(1128).intl;
-          obj58.label = intl30.string(_modDef3830.kIHga0);
-          const tmp2Result83 = tmp2(12548);
-          obj58.value = tmp2(12548).formatCount(limits.max_build_attempts);
-          items25[4] = closure_8(tmp2(12550).DebugStatRow, obj58);
-          const obj59 = { label: null, value: null };
-          const intl31 = tmp2(1128).intl;
-          obj59.label = intl31.string(_modDef3830.Iw03yW);
-          const tmp2Result84 = tmp2(12548);
-          obj59.value = tmp2(12548).formatCount(limits.max_session_attempts);
-          items25[5] = closure_8(tmp2(12550).DebugStatRow, obj59);
-          obj51.children = items25;
-          tmp19Result9 = closure_10(tmp2(12550).DebugSection, obj51);
-          const tmp2Result85 = tmp2(12548);
+          const intl31 = util.intl;
+          obj53.label = intl31.string(_modDef3830.Iw03yW);
+          const tmp9Result84 = ConjureDebugFormat;
+          obj53.value = ConjureDebugFormat.formatCount(limits.max_session_attempts);
+          items10[5] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj53);
+          obj45.children = items10;
+          tmp6Result9 = React5(ConjureDebugPrimitives.DebugSection, obj45);
+          const tmp9Result85 = ConjureDebugFormat;
         }
-        items15[6] = tmp19Result9;
-        obj7.children = items15;
-        return closure_10(View, obj7);
+        items[6] = tmp6Result9;
+        obj.children = items;
+        return React5(View, obj);
       }
-      if (null != promptCeiling) {
-        const intl8 = tmp2(1128).intl;
-        const obj60 = { ceiling: tmp2(12548).formatCount(promptCeiling) };
-        let formatToPlainStringResult = intl8.formatToPlainString(_modDef3830.GMLCNv, obj60);
-        const tmp2Result86 = tmp2(12548);
+      if (null != contextCeiling) {
+        const intl8 = util.intl;
+        const obj54 = { ceiling: ConjureDebugFormat.formatCount(contextCeiling) };
+        let formatToPlainStringResult = intl8.formatToPlainString(_modDef3830.GMLCNv, obj54);
+        const tmp9Result86 = ConjureDebugFormat;
       } else {
-        const intl7 = tmp2(1128).intl;
+        const intl7 = util.intl;
         formatToPlainStringResult = intl7.string(_modDef3830.s0U5Fv);
       }
-      tmp21Result11 = closure_8(tmp2(12550).DebugNote, { children: formatToPlainStringResult });
-      const obj6 = projectId(504);
+      tmp8Result11 = hasOwnProperty(ConjureDebugPrimitives.DebugNote, { children: formatToPlainStringResult });
     };

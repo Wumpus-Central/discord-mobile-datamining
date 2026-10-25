@@ -176,7 +176,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "bottom" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "round" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(10559).MOBILE_HERO_HEIGHT_PX,
@@ -1488,8 +1488,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           sku_id: skuId,
           guild_id: true,
           application_id: true,
-          cta_type: null,
-          location_stack: null,
+          cta_type: false,
+          location_stack: false,
         };
         applicationId = undefined;
         if (stateFromStores != null) {

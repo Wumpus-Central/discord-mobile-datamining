@@ -54,7 +54,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -116,7 +116,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           disableHighlightOnPress: true,
           resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
         };
-        const tmp13 = closure_11(tmp5(17550), obj5);
+        const tmp13 = closure_11(tmp5(17555), obj5);
         cResult[3] = channel;
         cResult[4] = tmp7;
         cResult[5] = selected;
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj.channel = channel;
       obj.selected = selected;
       obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-      const children = [closure_11(onChannelSelected(17550), obj)];
+      const children = [closure_11(onChannelSelected(17555), obj)];
       if (selected) {
         const obj2 = { style: tmp.selectedIcon, children: null };
         const obj3 = { size: "md", color: tmp2(587).colors.ICON_BRAND, secondaryColor: tmp2(587).colors.WHITE };

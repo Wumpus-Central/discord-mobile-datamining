@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17738), {
+        const tmp22 = jsx(tmp17(17743), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,7 +265,7 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "m",
+          label: null,
           expandedChildren: "guilds-bar-drag-preview",
           children: null,
         };
@@ -284,7 +284,7 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "m",
+          label: null,
           expandedChildren: "guilds-bar-drag-preview",
           children: null,
         });

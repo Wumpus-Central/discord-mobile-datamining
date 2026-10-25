@@ -20,7 +20,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13753);
+const InAppNotificationConstants = fn(13758);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
@@ -83,7 +83,7 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "enabled" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "emoji" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

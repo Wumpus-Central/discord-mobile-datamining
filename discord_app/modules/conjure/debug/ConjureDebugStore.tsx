@@ -57,15 +57,15 @@ prototype["getLastCompactionDecline"] = function getLastCompactionDecline(projec
   }
   return value;
 };
-prototype["getForceCompactionState"] = function getForceCompactionState(projectId) {
-  let str = map2.get(projectId);
+prototype["getForceCompactionState"] = function getForceCompactionState(arg0) {
+  let str = map2.get(arg0);
   if (str == null) {
     str = "idle";
   }
   return str;
 };
-prototype["getSandboxRestartState"] = function getSandboxRestartState(projectId) {
-  let str = map3.get(projectId);
+prototype["getSandboxRestartState"] = function getSandboxRestartState(arg0) {
+  let str = map3.get(arg0);
   if (str == null) {
     str = "idle";
   }

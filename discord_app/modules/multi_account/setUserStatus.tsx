@@ -42,7 +42,7 @@ let closure_7 = async function _setUserStatus() {
       const obj2 = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1128).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(13750).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(13755).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1128).intl;

@@ -14,12 +14,12 @@ import _modDef9124 from "../../../../../_runtime/metro/09124__.js";
 import _modDef9125 from "../../../../../_runtime/metro/09125__.js";
 import _modDef9174 from "../../../../../_runtime/metro/09174__.js";
 import _modDef10437 from "../../../../../_runtime/metro/10437__.js";
-import _modDef10872 from "../../../../../_runtime/metro/10872__.js";
+import _modDef10873 from "../../../../../_runtime/metro/10873__.js";
 import ToggleIconButton from "../../../../design/components/Button/native/ToggleIconButton.native.tsx";
 import useToggleButtonProps from "../../../../design/components/Button/native/useToggleButtonProps.native.tsx";
 import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
 import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState.tsx";
-import _modDef17125 from "../../../../../_runtime/metro/17125__.js";
+import _modDef17130 from "../../../../../_runtime/metro/17130__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -201,7 +201,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef17125;
+    tmpResult = _modDef17130;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;
@@ -588,14 +588,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
       }
     }
   }
-  const tmp9 = v65535(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10872, pressed, onPress: tmp7, variant, size: "md" });
+  const tmp9 = v65535(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10873, pressed, onPress: tmp7, variant, size: "md" });
   cResult[2] = pressed;
   cResult[3] = combined;
   cResult[4] = tmp7;
   cResult[5] = variant;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-  const obj2 = { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10872, pressed, onPress: tmp7, variant, size: "md" };
+  const obj2 = { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10873, pressed, onPress: tmp7, variant, size: "md" };
 }) : (function ExampleToggleIconButton(variant) {
   variant = variant.variant;
   pressed = undefined;
@@ -604,7 +604,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   return v65535(ToggleIconButton.ToggleIconButton, {
     accessibilityLabel: "" + variant + " notifications",
     icon: _modDef8280,
-    selectedIcon: _modDef10872,
+    selectedIcon: _modDef10873,
     pressed,
     onPress() {
       return closure_1(!first);

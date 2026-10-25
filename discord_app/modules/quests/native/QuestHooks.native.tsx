@@ -96,11 +96,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult9 = tmp(9565);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(16443).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(16448).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(16443);
+        const tmpResult10 = tmp(16448);
       } else {
         tmp16 = cResult[5];
       }

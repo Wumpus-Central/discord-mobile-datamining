@@ -8,7 +8,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 const Features = fn(5718).Features;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSidechainCompressionSettingValue() {
       const cResult = c.c(2);

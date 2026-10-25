@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             status = mediaAttachmentState.status;
           }
         }
-        if (status === tmp(12234).PollMediaUploadAttachmentStatus.PREPARING) {
+        if (status === tmp(12235).PollMediaUploadAttachmentStatus.PREPARING) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const tmp38 = <ActivityIndicator />;

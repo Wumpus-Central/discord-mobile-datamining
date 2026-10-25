@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = {
-  headerSpacer: { height: fn(12119).EXPANDED_HEADER_HEIGHT - fn(12119).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12120).EXPANDED_HEADER_HEIGHT - fn(12120).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12119).EXPANDED_HEADER_HEIGHT - fn(12119).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12120).EXPANDED_HEADER_HEIGHT - fn(12120).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {

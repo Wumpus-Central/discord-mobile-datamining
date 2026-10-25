@@ -7,7 +7,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const SoundboardStyleConstants = fn(18509);
+const SoundboardStyleConstants = fn(18514);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
 const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
 fn(558);

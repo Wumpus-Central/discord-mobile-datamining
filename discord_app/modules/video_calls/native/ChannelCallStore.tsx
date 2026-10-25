@@ -12,7 +12,7 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10880);
+const ChannelCallConstants = fn(10881);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2026).OrientationLockState;
 const ParticipantTypes = fn(5632).ParticipantTypes;
@@ -174,7 +174,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10883);
+        tmpResult = tmp(10884);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

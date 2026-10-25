@@ -8,7 +8,7 @@ import ApplicationFrecencyStore from "../../../../applications/ApplicationFrecen
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 const initialize = tmp(504);
-const useActivityApplications = tmp(12015);
+const useActivityApplications = tmp(12016);
 require = fn;
 const constants = fn(4820).DismissibleContentGroupName;
 let ReactCompilerGating = fn(558);

@@ -13,7 +13,7 @@ function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10883).useIsConnectedToVoiceChannel(channel);
+  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10884).useIsConnectedToVoiceChannel(channel);
   const id = noop.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = noop.useEffect(() => {
@@ -24,7 +24,7 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(10883);
+  let obj = isConnectedToVoiceChannel(10884);
   const isChannelContentGated = isConnectedToVoiceChannel(6662).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
@@ -114,13 +114,13 @@ function MainCallScreen(channel) {
       }
     };
   }, []);
-  isConnectedToVoiceChannel(11558);
+  isConnectedToVoiceChannel(11559);
   if (isChannelContentGated) {
     let obj3 = { onReturnToSafety: id(6672).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(10892), obj3);
+    let tmp14Result2 = closure_12(id(10893), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(10892);
+    const tmp20 = id(10893);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -133,7 +133,7 @@ function MainCallScreen(channel) {
     let tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj7 = { channel };
-      tmp14Result = closure_12(id(11512), obj7);
+      tmp14Result = closure_12(id(11513), obj7);
     }
     obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
@@ -141,7 +141,7 @@ function MainCallScreen(channel) {
   }
   let obj2 = isConnectedToVoiceChannel(6662);
   const tmp21 = id(5146)();
-  const tmp22 = id(11570);
+  const tmp22 = id(11571);
   const tmp2Result = isConnectedToVoiceChannel(1384);
   const tmp23 = isConnectedToVoiceChannel(1384).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, {
@@ -152,7 +152,7 @@ function MainCallScreen(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(10880).ChannelCallScreens;
+const ChannelCallScreens = fn(10881).ChannelCallScreens;
 const ComponentActions = fn(1087).ComponentActions;
 let closure_11 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
 const jsxProd = fn(21);
@@ -303,7 +303,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18 = null;
           if (channel.isGuildStageVoice()) {
             const obj5 = { channel };
-            tmp18 = closure_12(tmp5(11512), obj5);
+            tmp18 = closure_12(tmp5(11513), obj5);
           }
           cResult[5] = channel;
           cResult[6] = tmp18;
@@ -363,7 +363,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp29 = null;
             if (tmp13) {
               const obj9 = { channel };
-              tmp29 = closure_12(tmp5(10878), obj9);
+              tmp29 = closure_12(tmp5(10879), obj9);
             }
             cResult[13] = channel;
             cResult[14] = tmp13;
@@ -481,7 +481,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp16 = null;
       if (channel.isGuildStageVoice()) {
         const obj6 = { channel };
-        tmp16 = closure_12(tmp2(11512), obj6);
+        tmp16 = closure_12(tmp2(11513), obj6);
       }
       const items1 = [tmp16];
       const obj7 = { pointerEvents: "box-none", style: null };
@@ -494,7 +494,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp18Result = null;
       if (tmp11[0]) {
         const obj9 = { channel };
-        tmp18Result = closure_12(tmp2(10878), obj9);
+        tmp18Result = closure_12(tmp2(10879), obj9);
       }
       obj8.children = tmp18Result;
       items3[1] = closure_12(closure_6, obj8);

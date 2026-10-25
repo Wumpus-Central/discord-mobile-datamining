@@ -302,8 +302,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
       ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
       let obj2 = defaultSelection(10450);
-      const canPurchaseIAP = defaultSelection(13908).useCanPurchaseIAP(productId);
-      const obj3 = defaultSelection(13908);
+      const canPurchaseIAP = defaultSelection(13913).useCanPurchaseIAP(productId);
+      const obj3 = defaultSelection(13913);
       let items = [c7];
       const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
         const marketingComponentByType = _undefined2.getMarketingComponentByType(
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const tmp4Result = defaultSelection(504);
-      const product = defaultSelection(11048).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
+      const product = defaultSelection(11049).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
       let tmp14 = null != product;
       if (tmp14) {
         tmp14 = product.items.length > 0;

@@ -9,7 +9,7 @@ import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture
 import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
 import StreamQualityLiveIndicatorDefault from "../../../go_live/native/StreamQualityLiveIndicator.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
-import _modDef11439 from "../../../../../_runtime/metro/11439__.js";
+import _modDef11440 from "../../../../../_runtime/metro/11440__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -203,16 +203,16 @@ let closure_15 = noop.memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: tmp(11423).VideoEmptyTypes.STREAM_FAILED,
+              type: tmp(11424).VideoEmptyTypes.STREAM_FAILED,
               style: StyleSheet.absoluteFill,
             };
-            const tmp45 = closure_10(tmp9(11423), obj2);
+            const tmp45 = closure_10(tmp9(11424), obj2);
             cResult[3] = stateFromStores;
             cResult[4] = removeEmptyStateButton;
             cResult[5] = removeEmptyStateImage;
             cResult[6] = tmp45;
             tmp41 = tmp45;
-            const tmp9Result = tmp9(11423);
+            const tmp9Result = tmp9(11424);
           } else if (ApplicationStreamStates.ENDED === state) {
             if (cResult[7] === stateFromStores) {
               if (cResult[8] === removeEmptyStateButton) {
@@ -226,16 +226,16 @@ let closure_15 = noop.memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: tmp(11423).VideoEmptyTypes.STREAM_ENDED,
+              type: tmp(11424).VideoEmptyTypes.STREAM_ENDED,
               style: StyleSheet.absoluteFill,
             };
-            const tmp40 = closure_10(tmp9(11423), obj3);
+            const tmp40 = closure_10(tmp9(11424), obj3);
             cResult[7] = stateFromStores;
             cResult[8] = removeEmptyStateButton;
             cResult[9] = removeEmptyStateImage;
             cResult[10] = tmp40;
             tmp36 = tmp40;
-            const tmp9Result4 = tmp9(11423);
+            const tmp9Result4 = tmp9(11424);
           } else if (ApplicationStreamStates.RECONNECTING === state) {
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
@@ -294,27 +294,27 @@ let closure_15 = noop.memo(
                 stream: stateFromStores,
                 removeCloseButton: removeEmptyStateButton,
                 removeSplashImage: removeEmptyStateImage,
-                type: tmp(11423).VideoEmptyTypes.STREAM_FAILED,
+                type: tmp(11424).VideoEmptyTypes.STREAM_FAILED,
                 style: StyleSheet.absoluteFill,
                 avError: tmp10,
               };
-              const tmp35 = closure_10(tmp9(11423), obj7);
+              const tmp35 = closure_10(tmp9(11424), obj7);
               cResult[19] = stateFromStores;
               cResult[20] = removeEmptyStateButton;
               cResult[21] = removeEmptyStateImage;
               cResult[22] = tmp10;
               cResult[23] = tmp35;
               tmp31 = tmp35;
-              const tmp9Result6 = tmp9(11423);
+              const tmp9Result6 = tmp9(11424);
             } else {
               if (cResult[24] === participant) {
                 if (cResult[25] === tmp4.liveTag) {
                   let tmp26 = cResult[26];
                 }
                 if (stateFromStores.ownerId === tmp47) {
-                  let REMOTE_STREAM = tmp(11429).VideoSpinnerContext.SELF_STREAM;
+                  let REMOTE_STREAM = tmp(11430).VideoSpinnerContext.SELF_STREAM;
                 } else {
-                  REMOTE_STREAM = tmp(11429).VideoSpinnerContext.REMOTE_STREAM;
+                  REMOTE_STREAM = tmp(11430).VideoSpinnerContext.REMOTE_STREAM;
                 }
                 class P {
                   constructor() {
@@ -331,7 +331,7 @@ let closure_15 = noop.memo(
                   userId: user.id,
                   paused: stateFromStores.state === ApplicationStreamStates.PAUSED,
                 };
-                const tmp30 = closure_10(tmp9(11430), obj8);
+                const tmp30 = closure_10(tmp9(11431), obj8);
                 cResult[27] = gestureEnabled;
                 cResult[28] = resizeMode;
                 cResult[29] = streamId;
@@ -375,19 +375,19 @@ let closure_15 = noop.memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: tmp(11423).VideoEmptyTypes.STREAM_FAILED,
+              type: tmp(11424).VideoEmptyTypes.STREAM_FAILED,
               style: StyleSheet.absoluteFill,
             };
-            return closure_10(tmp4(11423), obj2);
+            return closure_10(tmp4(11424), obj2);
           } else if (ApplicationStreamStates.ENDED === state) {
             const obj3 = {
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: tmp(11423).VideoEmptyTypes.STREAM_ENDED,
+              type: tmp(11424).VideoEmptyTypes.STREAM_ENDED,
               style: StyleSheet.absoluteFill,
             };
-            return closure_10(tmp4(11423), obj3);
+            return closure_10(tmp4(11424), obj3);
           } else {
             if (ApplicationStreamStates.RECONNECTING === state) {
               const obj4 = { title: null };
@@ -412,11 +412,11 @@ let closure_15 = noop.memo(
                 stream: stateFromStores,
                 removeCloseButton: removeEmptyStateButton,
                 removeSplashImage: removeEmptyStateImage,
-                type: tmp(11423).VideoEmptyTypes.STREAM_FAILED,
+                type: tmp(11424).VideoEmptyTypes.STREAM_FAILED,
                 style: StyleSheet.absoluteFill,
                 avError: tmp5,
               };
-              return closure_10(tmp4(11423), obj7);
+              return closure_10(tmp4(11424), obj7);
             } else {
               const id = AuthenticationStore.getId();
               const obj8 = {
@@ -431,15 +431,15 @@ let closure_15 = noop.memo(
                 paused: null,
               };
               if (stateFromStores.ownerId === id) {
-                let REMOTE_STREAM = tmp(11429).VideoSpinnerContext.SELF_STREAM;
+                let REMOTE_STREAM = tmp(11430).VideoSpinnerContext.SELF_STREAM;
               } else {
-                REMOTE_STREAM = tmp(11429).VideoSpinnerContext.REMOTE_STREAM;
+                REMOTE_STREAM = tmp(11430).VideoSpinnerContext.REMOTE_STREAM;
               }
               const obj9 = { children: null };
               obj8.videoSpinnerContext = REMOTE_STREAM;
               obj8.userId = user.id;
               obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-              const items1 = [closure_10(tmp4(11430), obj8), tmp9];
+              const items1 = [closure_10(tmp4(11431), obj8), tmp9];
               obj9.children = items1;
               return closure_11(closure_12, obj9);
             }
@@ -467,7 +467,7 @@ let closure_16 = noop.memo(
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const rect = { top: 4, left: 4, right: 4, bottom: 4 };
             const obj2 = {
-              source: _modDef11439,
+              source: _modDef11440,
               size: native.Icon.Sizes.SMALL,
               color: nativeDefault.unsafe_rawColors.WHITE,
             };
@@ -518,7 +518,7 @@ let closure_16 = noop.memo(
         obj.style = items;
         const tmp = closure_13();
         obj.children = v65535(native.Icon, {
-          source: _modDef11439,
+          source: _modDef11440,
           size: native.Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.WHITE,
         });

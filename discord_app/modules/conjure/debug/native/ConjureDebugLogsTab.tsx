@@ -13,9 +13,9 @@ const Text_Text = Text(5234);
 const Card = Text(6905);
 const Pressables = Text(6908);
 const ChevronSmallRightIcon2 = Text(7305);
-const ChevronSmallDownIcon = Text(11076);
-const ConjureTimeFormat = Text(12539);
-const ConjureDebugJson = Text(12546);
+const ChevronSmallDownIcon = Text(11077);
+const ConjureTimeFormat = Text(12543);
+const ConjureDebugJson = Text(12550);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -321,7 +321,7 @@ let closure_11 = noop.memo(
           str = "text-feedback-critical";
         }
         if (expanded) {
-          let ChevronSmallRightIcon = tmp3(11076).ChevronSmallDownIcon;
+          let ChevronSmallRightIcon = tmp3(11077).ChevronSmallDownIcon;
           let tmp6 = tmp3;
         } else {
           ChevronSmallRightIcon = tmp3(7305).ChevronSmallRightIcon;
@@ -329,7 +329,7 @@ let closure_11 = noop.memo(
         }
         const obj = { style: tmp.row, children: null };
         const obj2 = { style: tmp.rowHead, children: null };
-        let ts = tmp6(12539).formatClockTime(entry.ts);
+        let ts = tmp6(12543).formatClockTime(entry.ts);
         if (ts == null) {
           ts = entry.ts;
         }
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = tmp18[0];
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { pageWidth: 0, items: null, onSetActiveIndex: null };
-        const DEBUG_LOG_FILTERS = tmp(12547).DEBUG_LOG_FILTERS;
+        const DEBUG_LOG_FILTERS = tmp(12551).DEBUG_LOG_FILTERS;
         obj2.items = DEBUG_LOG_FILTERS.map((id) => {
           const obj = { id, label: projectId(showSource[20]).debugLogFilterLabel(id), page: null };
           return obj;
@@ -704,7 +704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[27] = tmp41;
             }
             const obj7 = { state: stateFromStores1, hasRows: stateFromStores.length > 0 };
-            const tmp37 = closure_7(tmp(12549).ConjureHistoryNotice, obj7);
+            const tmp37 = closure_7(tmp(12553).ConjureHistoryNotice, obj7);
             cResult[21] = stateFromStores1;
             cResult[22] = stateFromStores.length > 0;
             cResult[23] = tmp37;
@@ -725,12 +725,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult5 = projectId(8901);
-      const tmpResult6 = projectId(12547);
+      const tmpResult6 = projectId(12551);
       cResult[9] = tmp17;
       cResult[10] = stateFromStores;
       cResult[11] = first1;
-      cResult[12] = projectId(12547).filterDebugLogs(stateFromStores, tmp17, first1);
-      const filterDebugLogsResult = projectId(12547).filterDebugLogs(stateFromStores, tmp17, first1);
+      cResult[12] = projectId(12551).filterDebugLogs(stateFromStores, tmp17, first1);
+      const filterDebugLogsResult = projectId(12551).filterDebugLogs(stateFromStores, tmp17, first1);
     }
   : function ConjureDebugLogsTab(projectId) {
       projectId = projectId.projectId;

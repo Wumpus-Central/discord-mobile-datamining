@@ -370,13 +370,13 @@ let closure_22 = noop.memo(
         }
         closure_20(subtitle(9709)(), tmp7);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp11 = tmp4(18098)();
+          const tmp11 = tmp4(18103)();
           cResult[2] = tmp11;
         }
         const tmp6 = subtitle(9709)();
-        const isConnectedToVoiceChannel = channel(10883).useIsConnectedToVoiceChannel(channel);
-        const tmpResult6 = channel(10883);
-        const baseChannelUnreadBadgeState = channel(17784).useBaseChannelUnreadBadgeState(
+        const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
+        const tmpResult6 = channel(10884);
+        const baseChannelUnreadBadgeState = channel(17789).useBaseChannelUnreadBadgeState(
           channel,
           !isConnectedToVoiceChannel,
         );
@@ -403,7 +403,7 @@ let closure_22 = noop.memo(
             }
           }
         }
-        const tmpResult7 = channel(17784);
+        const tmpResult7 = channel(17789);
         const stateFromStores = channel(504).useStateFromStores(tmp14, G);
         const tmpResult8 = channel(504);
         const stageParticipantsCount = channel(6694).useStageParticipantsCount(
@@ -411,7 +411,7 @@ let closure_22 = noop.memo(
           tmp(6688).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         closure_19(channel);
-        const arr2 = subtitle(12036)(channel);
+        const arr2 = subtitle(12037)(channel);
         if (cResult[6] === channel) {
           class G {
             constructor() {
@@ -420,7 +420,7 @@ let closure_22 = noop.memo(
           }
         }
         const tmpResult9 = channel(6694);
-        const channelAccessibilityProps = channel(18097).getChannelAccessibilityProps({
+        const channelAccessibilityProps = channel(18102).getChannelAccessibilityProps({
           channel,
           unread,
           mentionCount,
@@ -434,7 +434,7 @@ let closure_22 = noop.memo(
         cResult[10] = voiceStates;
         cResult[11] = channelAccessibilityProps;
         const obj2 = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr2.length };
-        const tmpResult10 = channel(18097);
+        const tmpResult10 = channel(18102);
       }
     : function UnmemoedVoiceOrStageChannelBase(channel) {
         channel = channel.channel;
@@ -451,16 +451,16 @@ let closure_22 = noop.memo(
         const tmp3 = subtitle(5205)();
         const tmp4 = subtitle(9709)();
         const tmp6 = closure_20(tmp4, channel(4978).isThemeLight(tmp3));
-        const tmp7 = subtitle(18098)();
+        const tmp7 = subtitle(18103)();
         const obj = channel(4978);
-        const isConnectedToVoiceChannel = channel(10883).useIsConnectedToVoiceChannel(channel);
-        const obj2 = channel(10883);
-        const baseChannelUnreadBadgeState = channel(17784).useBaseChannelUnreadBadgeState(
+        const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
+        const obj2 = channel(10884);
+        const baseChannelUnreadBadgeState = channel(17789).useBaseChannelUnreadBadgeState(
           channel,
           !isConnectedToVoiceChannel,
         );
         ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-        const obj3 = channel(17784);
+        const obj3 = channel(17789);
         const items = [UserGuildSettingsStore];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserGuildSettingsStore.resolveUnreadSetting(channel),
@@ -472,16 +472,16 @@ let closure_22 = noop.memo(
         );
         const sum = stageParticipantsCount + voiceStates.length;
         const obj5 = channel(6694);
-        const arr3 = subtitle(12036)(channel);
+        const arr3 = subtitle(12037)(channel);
         const tmp13 = closure_19(channel);
-        let channelAccessibilityProps = channel(18097).getChannelAccessibilityProps({
+        let channelAccessibilityProps = channel(18102).getChannelAccessibilityProps({
           channel,
           unread,
           mentionCount,
           voiceStates,
           embeddedActivitiesCount: arr3.length,
         });
-        const obj6 = channel(18097);
+        const obj6 = channel(18102);
         const obj7 = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr3.length };
         const items1 = [StageInstanceStore];
         const items2 = [channel.id];
@@ -500,7 +500,7 @@ let closure_22 = noop.memo(
           arr6 = speakerVoiceStates;
         }
         const mapped = arr6.map((user) => user.user);
-        const tmp19 = subtitle(18687)();
+        const tmp19 = subtitle(18692)();
         const tmp17 = subtitle(5604)(channel, false);
         const fontScale = channel(5253).useFontScale();
         const tmp5Result = channel(5253);
@@ -552,12 +552,12 @@ let closure_22 = noop.memo(
           needSubscriptionToAccess: null,
           showGuildBadgeIcon: true,
         };
-        const tmpResult = subtitle(18685);
-        const tmpResult2 = subtitle(18097);
+        const tmpResult = subtitle(18690);
+        const tmpResult2 = subtitle(18102);
         if (topic == null) {
           topic = subtitle;
         }
-        obj11.subtitle = channel(18689).renderChannelSubtitle({
+        obj11.subtitle = channel(18694).renderChannelSubtitle({
           subtitle: topic,
           channelId: id,
           guildId: guild_id,
@@ -569,16 +569,16 @@ let closure_22 = noop.memo(
         obj11.unread = unread;
         obj11.resolvedUnreadSetting = stateFromStores;
         obj11.mentionCount = mentionCount;
-        obj11.mentionBadge = subtitle(18684)({ mentionCount, locale: stateFromStores2 });
+        obj11.mentionBadge = subtitle(18689)({ mentionCount, locale: stateFromStores2 });
         obj11.live = null != stateFromStores1;
         if (arr3.length > 0) {
           const obj12 = { embeddedApps: arr3, size: tmp7.joinVoiceButton.icon.gameSize };
-          let tmp31 = closure_14(tmp(17657), obj12);
+          let tmp31 = closure_14(tmp(17662), obj12);
           let tmp30 = closure_14;
         } else {
           tmp30 = closure_14;
           const obj13 = { channel, voiceStates };
-          tmp31 = closure_14(tmp5(13171).VocalChannelJoinButton, obj13);
+          tmp31 = closure_14(tmp5(13176).VocalChannelJoinButton, obj13);
         }
         obj11.end = tmp31;
         obj11.connected = isConnectedToVoiceChannel;
@@ -592,7 +592,7 @@ let closure_22 = noop.memo(
           const items7 = [tmp6.voiceUsers, tmp7.voiceUsers.margin];
           obj14.style = items7;
           const obj15 = { users: mapped, max: 5, guildId: channel.guild_id, audienceCount: stageParticipantsCount };
-          obj14.children = tmp30(tmp(18693), obj15);
+          obj14.children = tmp30(tmp(18698), obj15);
           tmp30Result = tmp30(View, obj14);
         }
         items6[1] = tmp30Result;

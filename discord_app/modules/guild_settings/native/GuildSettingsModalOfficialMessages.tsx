@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef16636 from "../../../../_runtime/metro/16636__.js";
+import _modDef16641 from "../../../../_runtime/metro/16641__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -148,7 +148,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { source: _modDef16636 };
+                const obj3 = { source: _modDef16641 };
                 const tmp24 = __initData(native.Avatar, obj3);
                 cResult[15] = tmp24;
                 let tmp21 = tmp24;
@@ -340,7 +340,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(v65535).hex() }];
       obj4.style = items1;
       const hexResult1 = _modDef683(selectedColor).alpha(v65535).hex();
-      const items2 = [__initData(native.Avatar, { source: _modDef16636 })];
+      const items2 = [__initData(native.Avatar, { source: _modDef16641 })];
       const obj6 = { style: tmp.chatContent, children: null };
       const obj7 = { style: tmp.chatHeader, children: null };
       const obj8 = {
@@ -457,7 +457,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(17735, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(17740, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

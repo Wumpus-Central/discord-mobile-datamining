@@ -7,7 +7,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import PublicGuildsUtils from "../../PublicGuildsUtils.tsx";
-import _modDef11328 from "../../../../../_runtime/metro/11328__.js";
+import _modDef11329 from "../../../../../_runtime/metro/11329__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: _modDef11328, disableColor: true };
+        const obj3 = { source: _modDef11329, disableColor: true };
         const tmp14 = React4(native.Icon, obj3);
         cResult[3] = tmp14;
         let tmp11 = tmp14;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
       const items = [React4(tmp2, obj3), , ,];
       const obj5 = { style: tmp.nameWrapper, children: null };
-      const items1 = [React4(native.Icon, { source: _modDef11328, disableColor: true })];
+      const items1 = [React4(native.Icon, { source: _modDef11329, disableColor: true })];
       const obj7 = {
         style: tmp.headerText,
         variant: "heading-xl/extrabold",

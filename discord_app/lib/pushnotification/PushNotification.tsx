@@ -2,6 +2,7 @@
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import RNCPushNotificationIOSDefault from "../../../_runtime/10754_RNCPushNotificationIOS.js";
 import NativePushNotificationMonitorModule from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
+import NativeNotificationManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeNotificationManagerModule.tsx";
 import openNotificationSettingsDefault from "../../modules/native_permissions/mobile/openNotificationSettings.native.tsx";
 import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
 import size from "../../../_runtime/metro/00002__.js";
@@ -157,13 +158,13 @@ export default {
   },
   getScheduledLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const scheduledLocalNotifications = RNCPushNotificationIOSDefault.getScheduledLocalNotifications(arg0);
+      const scheduledLocalNotifications = NativeNotificationManagerModuleDefault.getScheduledLocalNotifications(arg0);
     }
     obj = PlatformUtils;
   },
   cancelLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const result = RNCPushNotificationIOSDefault.cancelLocalNotifications(arg0);
+      const result = NativeNotificationManagerModuleDefault.cancelLocalNotifications(arg0);
     }
     obj = PlatformUtils;
   },

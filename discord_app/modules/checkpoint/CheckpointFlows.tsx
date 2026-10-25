@@ -28,9 +28,9 @@ export const getCheckpointFlow = function getCheckpointFlow(flag) {
 export const getCheckpointRoutes = function getCheckpointRoutes(arg0, arg1) {
   _require = arg1;
   if (arg0 === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12954).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(12959).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12955).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(12960).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
@@ -50,9 +50,9 @@ export const getCheckpointRoutes = function getCheckpointRoutes(arg0, arg1) {
 export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(arg0, arg1, arg2, arg3) {
   _require = arg3;
   if (arg0 === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12954).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(12959).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12955).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(12960).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {

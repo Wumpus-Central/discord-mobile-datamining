@@ -2,8 +2,8 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef18307 from "../../../_runtime/metro/18307__.js";
-import _modDef18308 from "../../../_runtime/metro/18308__.js";
+import _modDef18312 from "../../../_runtime/metro/18312__.js";
+import _modDef18313 from "../../../_runtime/metro/18313__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -66,7 +66,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         LIST = tmp(4833).ForumLayout.LIST;
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { icon: closure_7(tmp(18267).GridSquareIcon, {}), label: null, value: null };
+        let obj2 = { icon: closure_7(tmp(18272).GridSquareIcon, {}), label: null, value: null };
         const intl2 = tmp(1128).intl;
         obj2.label = intl2.string(tmp(1128).t["U+rQfW"]);
         obj2.value = tmp(4833).ForumLayout.GRID;
@@ -121,11 +121,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp23 = cResult[11];
         }
         if (tmp6 === tmp(4833).ForumLayout.GRID) {
-          let tmp28 = _modDef18307;
+          let tmp28 = _modDef18312;
           let tmp27 = importDefault;
         } else {
           tmp27 = importDefault;
-          tmp28 = _modDef18308;
+          tmp28 = _modDef18313;
         }
         if (cResult[12] === tmp4.thumbnailImagePortrait) {
           if (cResult[13] === tmp28) {
@@ -191,7 +191,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.defaultValue = LIST;
       obj2.onChange = callback;
-      const obj3 = { icon: closure_7(channel(18267).GridSquareIcon, {}), label: null, value: null };
+      const obj3 = { icon: closure_7(channel(18272).GridSquareIcon, {}), label: null, value: null };
       const intl2 = tmp7(1128).intl;
       obj3.label = intl2.string(channel(1128).t["U+rQfW"]);
       obj3.value = channel(4833).ForumLayout.GRID;
@@ -214,9 +214,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.thumbnailImagePortrait, source: null };
       const tmp2 = _slicedToArray(noop.useState(channel.defaultForumLayout), 2);
       if (tmp3 === channel(4833).ForumLayout.GRID) {
-        let tmp10Result = tmp10(18307);
+        let tmp10Result = tmp10(18312);
       } else {
-        tmp10Result = tmp10(18308);
+        tmp10Result = tmp10(18313);
       }
       obj7.source = tmp10Result;
       items2[3] = closure_7(FastImageDefault, obj7);

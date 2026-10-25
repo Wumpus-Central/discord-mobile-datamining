@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../../../design/components/Icon/native/BaseIconImage.tsx";
-import _mod16446 from "../../../../../_runtime/metro/16446__.js";
+import _mod16451 from "../../../../../_runtime/metro/16451__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod16446;
+        const tmpResult = _mod16451;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod16446,
+        source: _mod16451,
         color: INTERACTIVE_TEXT_DEFAULT,
         style: color.style,
       });

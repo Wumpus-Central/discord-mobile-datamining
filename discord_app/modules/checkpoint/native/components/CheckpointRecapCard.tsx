@@ -20,7 +20,7 @@ let c14 = "M0 40H30L40 30V0H10L0 10V40Z";
 let c15 = 240;
 let c16 = 150;
 let c17 = 2026;
-const CheckpointStatNumber = fn(12976);
+const CheckpointStatNumber = fn(12981);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
 const createStyles = fn(4971);
 let obj3 = {
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj6 = { value, color: primaryBackgroundColor, size: 64 };
-                      const tmp54 = closure_7(first(12976), obj6);
+                      const tmp54 = closure_7(first(12981), obj6);
                       cResult[31] = primaryBackgroundColor;
                       cResult[32] = tmp54;
                     } else {

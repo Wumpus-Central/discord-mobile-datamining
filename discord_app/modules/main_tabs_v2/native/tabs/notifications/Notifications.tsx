@@ -34,7 +34,7 @@ function goBack() {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11180).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11181).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -165,7 +165,7 @@ let closure_11 = noop.memo(
           const intl = tmp(1128).intl;
           obj6.accessibilityLabel = intl.string(tmp(1128).t["13/7kX"]);
           obj6.onPress = goBack;
-          obj6.children = closure_7(tmp(17845).LeftBackIconWithBadge, {});
+          obj6.children = closure_7(tmp(17850).LeftBackIconWithBadge, {});
           const items1 = [closure_7(tmp(6908).PressableOpacity, obj6), ,];
           const obj7 = {
             color: "mobile-text-heading-primary",
@@ -223,7 +223,7 @@ let closure_11 = noop.memo(
           const intl = tmp11(1128).intl;
           obj3.accessibilityLabel = intl.string(tmp11(1128).t["13/7kX"]);
           obj3.onPress = goBack;
-          obj3.children = closure_7(tmp11(17845).LeftBackIconWithBadge, {});
+          obj3.children = closure_7(tmp11(17850).LeftBackIconWithBadge, {});
           const items1 = [closure_7(tmp11(6908).PressableOpacity, obj3), ,];
           const obj4 = {
             color: "mobile-text-heading-primary",

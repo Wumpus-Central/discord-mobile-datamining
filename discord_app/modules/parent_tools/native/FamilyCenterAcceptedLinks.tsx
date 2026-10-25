@@ -8,12 +8,12 @@ import useUserLinks from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import _modDef16212 from "../../../../_runtime/metro/16212__.js";
+import _modDef16217 from "../../../../_runtime/metro/16217__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = intl(1128);
 const Text_Text = intl(5234);
-const useAgeSpecificText2 = intl(12878);
+const useAgeSpecificText2 = intl(12883);
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
   let tmp4Result = null;
@@ -28,10 +28,10 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2536.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16210, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16215, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1202).Icon.Sizes.SMALL, disableColor: true, source: _modDef16212 };
+    const obj4 = { size: str(1202).Icon.Sizes.SMALL, disableColor: true, source: _modDef16217 };
     obj.children = closure_6(str(1202).Icon, obj4);
     obj2.actions = closure_6(str(6908).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);

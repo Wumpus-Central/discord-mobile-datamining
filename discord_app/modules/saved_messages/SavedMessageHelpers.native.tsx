@@ -40,7 +40,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
           obj3.cancelText = intl5.string(closure_0(1128).t.ZGbTcy);
           obj3.onCancel = function onCancel() {
             const SavedMessageSortTypes = displayToast(10078).SavedMessageSortTypes;
-            return displayToast(13798).showForLaterModal(
+            return displayToast(13803).showForLaterModal(
               closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
             );
           };
@@ -146,7 +146,7 @@ let closure_8 = async function _removeSavedMessage() {
   return "Reflect";
 };
 const AbortCodes = fn(1087).AbortCodes;
-const SavedMessagesConstants = fn(13808);
+const SavedMessagesConstants = fn(13813);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

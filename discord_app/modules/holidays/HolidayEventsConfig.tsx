@@ -1,8 +1,8 @@
 // discord_app/modules/holidays/HolidayEventsConfig.tsx
 import util from "../../intl/index.native.tsx";
 import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment.tsx";
-import _modDef18821 from "../../../_runtime/metro/18821__.js";
-import _modDef18822 from "../../../_runtime/metro/18822__.js";
+import _modDef18826 from "../../../_runtime/metro/18826__.js";
+import _modDef18827 from "../../../_runtime/metro/18827__.js";
 
 require = fn;
 const obj = {
@@ -16,9 +16,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(11524).Soundpacks.HALLOWEEN,
+  soundpack: fn(11525).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1128).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef18821, webmLight: _modDef18822 },
+  appSpinnerSources: { webmDark: _modDef18826, webmLight: _modDef18827 },
   getLoadingTips() {
     const intl = util.intl;
     const items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , ,];

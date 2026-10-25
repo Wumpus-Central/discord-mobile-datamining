@@ -74,7 +74,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const star = tmp4.star;
             if (cResult[6] !== rating) {
-              let result = tmp(12489).conjurePublishRatingOptionLabel(rating);
+              let result = tmp(12493).conjurePublishRatingOptionLabel(rating);
               cResult[6] = rating;
               class I {
                 constructor() {
@@ -88,7 +88,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               }
               cResult[7] = result;
               let tmp13 = result;
-              const tmpResult4 = tmp(12489);
+              const tmpResult4 = tmp(12493);
             } else {
               tmp13 = cResult[7];
             }
@@ -267,7 +267,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       let obj2 = rating(5052);
-      obj3.accessibilityLabel = rating(12489).conjurePublishRatingOptionLabel(rating);
+      obj3.accessibilityLabel = rating(12493).conjurePublishRatingOptionLabel(rating);
       obj3.disabled = null != picked;
       obj3.hitSlop = reducedMotion(587).space.PX_8;
       obj3.onPress = rating.onPress;
@@ -347,11 +347,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(12490, dependencyMap.paths),
+          asyncRequireImpl(12494, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(12490, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(12494, dependencyMap.paths);
       }
     };
     return closure_1_7(closure_1_12, obj, rating);

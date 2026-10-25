@@ -11,7 +11,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import VoicePanelStore from "../VoicePanelStore.tsx";
 
 require = fn;
-const VoicePanelControlsModes = fn(10895).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10896).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj2 = { layer: null };

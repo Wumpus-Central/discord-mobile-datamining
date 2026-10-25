@@ -219,15 +219,15 @@ export const filterConjureMentionCandidates = function filterConjureMentionCandi
 export { splitConjureMentions };
 export const useRequestConjureMentionedUsers = tmp3;
 export const withConjureMentionNames = function withConjureMentionNames(body) {
-  const f114369 = (arg0) => user.getUser(arg0);
-  const f114370 = (arg0) => attachment.getAttachment(arg0);
+  const f114389 = (arg0) => user.getUser(arg0);
+  const f114390 = (arg0) => attachment.getAttachment(arg0);
   return body.replace(closure_6, (arg0, arg1, arg2) => {
     if (null == arg1) {
       let str2 = arg2;
       if (arg2 == null) {
         str2 = "";
       }
-      const tmp7Result = f149139(str2);
+      const tmp7Result = f149167(str2);
       let name;
       if (tmp7Result != null) {
         name = tmp7Result.name;
@@ -240,7 +240,7 @@ export const withConjureMentionNames = function withConjureMentionNames(body) {
       return "@" + name;
     } else {
       let combined = arg0;
-      const tmp3 = f149138(arg1);
+      const tmp3 = f149166(arg1);
       if (null != tmp3) {
         const _HermesInternal = HermesInternal;
         combined = "@" + closure_0(5025).getName(tmp3);
@@ -263,15 +263,15 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
       }
       if (cResult[1] !== arg0) {
         const fn = function u() {
-          const f149136 = (arg0) => user.getUser(arg0);
-          const f149137 = (arg0) => attachment.getAttachment(arg0);
+          const f149164 = (arg0) => user.getUser(arg0);
+          const f149165 = (arg0) => attachment.getAttachment(arg0);
           return closure_0.replace(re6, (arg0, arg1, arg2) => {
             if (null == arg1) {
               let str2 = arg2;
               if (arg2 == null) {
                 str2 = "";
               }
-              const tmp7Result = f149139(str2);
+              const tmp7Result = f149167(str2);
               let name;
               if (tmp7Result != null) {
                 name = tmp7Result.name;
@@ -284,7 +284,7 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
               return "@" + name;
             } else {
               let combined = arg0;
-              const tmp3 = f149138(arg1);
+              const tmp3 = f149166(arg1);
               if (null != tmp3) {
                 const _HermesInternal = HermesInternal;
                 combined = "@" + closure_0(5025).getName(tmp3);
@@ -314,15 +314,15 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
       return require("initialize").useStateFromStores(
         items,
         () => {
-          const f149138 = (arg0) => user.getUser(arg0);
-          const f149139 = (arg0) => attachment.getAttachment(arg0);
+          const f149166 = (arg0) => user.getUser(arg0);
+          const f149167 = (arg0) => attachment.getAttachment(arg0);
           return closure_0.replace(re6, (arg0, arg1, arg2) => {
             if (null == arg1) {
               let str2 = arg2;
               if (arg2 == null) {
                 str2 = "";
               }
-              const tmp7Result = f149139(str2);
+              const tmp7Result = f149167(str2);
               let name;
               if (tmp7Result != null) {
                 name = tmp7Result.name;
@@ -335,7 +335,7 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
               return "@" + name;
             } else {
               let combined = arg0;
-              const tmp3 = f149138(arg1);
+              const tmp3 = f149166(arg1);
               if (null != tmp3) {
                 const _HermesInternal = HermesInternal;
                 combined = "@" + closure_0(5025).getName(tmp3);

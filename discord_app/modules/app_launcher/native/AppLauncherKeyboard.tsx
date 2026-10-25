@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12013).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12014).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4971);
@@ -419,11 +419,11 @@ export default noop.memo(
               let trackWithMetadata = require;
               let APP_LAUNCHER_EXPANDED = dependencyMap;
               if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-                let current = trackWithMetadata(11165).AppLauncherBottomSheetExpandReason.KEYBOARD;
+                let current = trackWithMetadata(11166).AppLauncherBottomSheetExpandReason.KEYBOARD;
               } else if (arg2 === trackWithMetadata(5269).ANIMATION_SOURCE.GESTURE) {
-                current = trackWithMetadata(11165).AppLauncherBottomSheetExpandReason.GESTURE;
+                current = trackWithMetadata(11166).AppLauncherBottomSheetExpandReason.GESTURE;
               } else if (arg2 !== trackWithMetadata(5269).ANIMATION_SOURCE.USER) {
-                current = trackWithMetadata(11165).AppLauncherBottomSheetExpandReason.OTHER;
+                current = trackWithMetadata(11166).AppLauncherBottomSheetExpandReason.OTHER;
               } else {
                 current = ref1.current;
               }

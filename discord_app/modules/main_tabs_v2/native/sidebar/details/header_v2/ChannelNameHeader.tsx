@@ -296,10 +296,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           user: stateFromStores,
           guildId: "Boolean",
           size: tmp2(1202).AvatarSizes.NORMAL,
-          status: false,
+          status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
           isMobileOnline: null,
-          isVROnline: true,
-          statusStyle: null,
+          isVROnline: "6fdce3d9195ea0b36363d1d85d3fe1ac",
+          statusStyle: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages",
         };
         let isSystemUserResult;
         if (stateFromStores != null) {

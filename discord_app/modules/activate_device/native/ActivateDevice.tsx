@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import NativeImageManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import ConsoleOAuthApplications from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
-import _modDef15122 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
-import _modDef15123 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
+import _modDef15127 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
+import _modDef15128 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -616,11 +616,11 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled()
             ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID,
           ];
           if (items.includes(userCodeData.clientId)) {
-            closure_3(_modDef15122);
+            closure_3(_modDef15127);
           } else {
             const scopes = userCodeData.scopes;
             if (scopes.some((item) => first(first1[13]).isSocialLayerUmbrellaScope(item))) {
-              closure_3(_modDef15123);
+              closure_3(_modDef15128);
             }
           }
         }

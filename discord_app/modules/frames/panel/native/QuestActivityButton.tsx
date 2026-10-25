@@ -43,14 +43,14 @@ function QuestActivityButtonInner(quest) {
     if (null == enrolledAt) {
       const obj2 = { questId: quest.id };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(18469, dependencyMap.paths),
+        asyncRequireImpl(18474, dependencyMap.paths),
         obj2,
         QUEST_ACTIVITY_UNENROLLED_MODAL_KEY,
       );
     } else {
       const obj4 = { questId: quest.id };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(18470, dependencyMap.paths),
+        asyncRequireImpl(18475, dependencyMap.paths),
         "QuestProgressBottomSheet",
         obj4,
       );
@@ -158,21 +158,21 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = quest(5052);
-  obj6.source = quest(16420);
+  obj6.source = quest(16425);
   obj5.children = closure_9(stateFromStores(5228), obj6);
   const items6 = [closure_9(closure_4, obj5), , ,];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp20 = stateFromStores(5228);
-  obj8.icon = stateFromStores(14153);
+  obj8.icon = stateFromStores(14158);
   obj8.onPress = callback;
   const intl = tmp(1128).intl;
   obj8.accessibilityLabel = intl.string(quest(1128).t.JALI2K);
-  obj7.children = closure_9(stateFromStores(18471), obj8);
+  obj7.children = closure_9(stateFromStores(18476), obj8);
   items6[1] = closure_9(closure_4, obj7);
   const obj9 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(18471);
+  const tmp21 = stateFromStores(18476);
   size.children = closure_9(quest(7962).Circle, {
     cx: 16,
     cy: 16,
@@ -291,7 +291,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     if (!tmp2) {
       const obj2 = { questId: memo.id };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(18469, dependencyMap.paths),
+        asyncRequireImpl(18474, dependencyMap.paths),
         obj2,
         QUEST_ACTIVITY_UNENROLLED_MODAL_KEY,
       );

@@ -10,13 +10,13 @@ import useIsSpeakingDefault from "../../../../hooks/useIsSpeaking.tsx";
 import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.tsx";
 import StreamerApplicationSelectors from "../../../go_live/utils/StreamerApplicationSelectors.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
-import _modDef11442 from "../../../../../_runtime/metro/11442__.js";
-import _modDef14618 from "../../../../../_runtime/metro/14618__.js";
-import _modDef14619 from "../../../../../_runtime/metro/14619__.js";
-import _modDef14620 from "../../../../../_runtime/metro/14620__.js";
-import _modDef14621 from "../../../../../_runtime/metro/14621__.js";
-import _modDef14622 from "../../../../../_runtime/metro/14622__.js";
+import _modDef11443 from "../../../../../_runtime/metro/11443__.js";
 import _modDef14623 from "../../../../../_runtime/metro/14623__.js";
+import _modDef14624 from "../../../../../_runtime/metro/14624__.js";
+import _modDef14625 from "../../../../../_runtime/metro/14625__.js";
+import _modDef14626 from "../../../../../_runtime/metro/14626__.js";
+import _modDef14627 from "../../../../../_runtime/metro/14627__.js";
+import _modDef14628 from "../../../../../_runtime/metro/14628__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SoundboardStore from "../../../soundboard/SoundboardStore.tsx";
@@ -549,7 +549,7 @@ let closure_19 = noop.memo(
             const obj9 = { style: tmp2.row, children: null };
             let tmp21Result = null;
             if (user.isSpectating) {
-              const obj10 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14623), style: tmp20 };
+              const obj10 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14628), style: tmp20 };
               tmp21Result = closure_14(tmp8(1202).Icon, obj10);
             }
             const items4 = [tmp21Result, , , ,];
@@ -557,7 +557,7 @@ let closure_19 = noop.memo(
               items4[1] = null;
               let tmp21Result5 = null;
               if (tmp15) {
-                const obj11 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14620), style: tmp20 };
+                const obj11 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14625), style: tmp20 };
                 tmp21Result5 = closure_14(tmp8(1202).Icon, obj11);
               }
               items4[2] = tmp21Result5;
@@ -575,21 +575,21 @@ let closure_19 = noop.memo(
                 if (localVideoDisabled) {
                   const obj13 = {
                     size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16,
-                    source: channel(14621),
+                    source: channel(14626),
                     style: tmp2.voiceStatusIconMargin,
                     disableColor: true,
                   };
                   let obj14 = obj13;
                 } else {
-                  obj14 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14622), style: tmp20 };
+                  obj14 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14627), style: tmp20 };
                 }
                 closure_14(tmp8(1202).Icon, obj14);
               }
             } else {
               if (tmp8Result.isThemeDark(stateFromStores1)) {
-                let tmp5Result = channel(14618);
+                let tmp5Result = channel(14623);
               } else {
-                tmp5Result = channel(14619);
+                tmp5Result = channel(14624);
               }
               const obj15 = {
                 size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16,
@@ -628,7 +628,7 @@ let closure_19 = noop.memo(
         obj16.label = closure_14(user(8951).FormRow.Label, obj19);
         if (localVideoAutoDisabled) {
           const obj20 = { style: tmp2.autoDisabledVideo, children: null };
-          const obj21 = { source: channel(11442), size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+          const obj21 = { source: channel(11443), size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, disableColor: true };
           const items7 = [closure_14(tmp8(1202).Icon, obj21)];
           const obj22 = {
             variant: "text-xs/medium",
@@ -749,9 +749,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 },
               };
-              obj4.children = closure_14(channel(11708), obj5);
+              obj4.children = closure_14(channel(11709), obj5);
               tmp31Result = closure_14(closure_5, obj4);
-              const tmp34 = channel(11708);
+              const tmp34 = channel(11709);
             }
             cResult[11] = channel;
             cResult[12] = tmp4;
@@ -829,9 +829,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          obj4.children = closure_14(channel(11708), obj5);
+          obj4.children = closure_14(channel(11709), obj5);
           tmp10Result = closure_14(closure_5, obj4);
-          const tmp20 = channel(11708);
+          const tmp20 = channel(11709);
         }
         const obj6 = { children: null };
         items1[1] = tmp10Result;

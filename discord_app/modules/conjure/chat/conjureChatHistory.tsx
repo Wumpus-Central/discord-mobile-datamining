@@ -58,22 +58,16 @@ function newMessageFromHistory(ts) {
     if (true === startsWithResult) {
       substr = id.slice(length.length);
     }
+    let extractTimestampResult = null;
     if (null != substr) {
-      if (obj.test(substr)) {
-        const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(substr);
-        const _Number = Number;
-        let tmp9 = null;
-        if (Number.isFinite(extractTimestampResult)) {
-          tmp9 = null;
-          if (extractTimestampResult > 0) {
-            tmp9 = extractTimestampResult;
-          }
-        }
-        return tmp9;
+      extractTimestampResult = null;
+      if (obj.isProbablyAValidSnowflake(substr)) {
+        extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(substr);
+        const tmp6Result = SnowflakeUtilsDefault;
       }
-      obj = /^\d+$/;
+      obj = SnowflakeUtilsDefault;
     }
-    return null;
+    return extractTimestampResult;
   })(ts.id);
   let tmp3 = null == tmp2;
   if (!tmp3) {
@@ -87,7 +81,7 @@ function newMessageFromHistory(ts) {
     if (null != ts.ts) {
       const _Date = Date;
       const parsed = Date.parse(ts.ts);
-      let _Number = Number;
+      const _Number = Number;
       if (Number.isFinite(parsed)) {
         tmp.settled_at = parsed;
       }

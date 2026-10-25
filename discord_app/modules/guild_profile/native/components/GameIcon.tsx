@@ -6,7 +6,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressables = PressableHighlight(6908);
-const FireIcon2 = PressableHighlight(14159);
+const FireIcon2 = PressableHighlight(14164);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

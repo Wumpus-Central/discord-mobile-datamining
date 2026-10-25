@@ -9,7 +9,7 @@ import TableRadioRow from "../../../../design/components/TableRow/native/TableRa
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
-import _modDef19091 from "../../../../../_runtime/metro/19091__.js";
+import _modDef19096 from "../../../../../_runtime/metro/19096__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef19091 };
+          const obj2 = { source: _modDef19096 };
           const tmp10 = timestampProducer(TableRow.TableRow.Icon, obj2);
           cResult[2] = tmp10;
           let tmp7 = tmp10;
@@ -131,7 +131,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj.accessibilityLabel = intl.string(util.t["+Josox"]);
         obj.onPress = tmp;
-        const obj2 = { source: _modDef19091 };
+        const obj2 = { source: _modDef19096 };
         obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
         tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
       }
@@ -285,7 +285,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   value = self(6502).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(19090).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(19095).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -338,11 +338,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
       hasIcons: false,
       children: null,
     };
-    const obj17 = { value: tmp15(19092).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const obj17 = { value: tmp15(19097).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
     const intl6 = tmp15(1128).intl;
     obj17.label = intl6.string(tmp15(1128).t["6kpw4i"]);
     const items3 = [closure_6(tmp15(6984).TableRadioRow, obj17)];
-    const obj18 = { value: tmp15(19092).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const obj18 = { value: tmp15(19097).IntegrationExpireBehaviorTypes.KICK, label: null };
     const intl7 = tmp15(1128).intl;
     obj18.label = intl7.string(tmp15(1128).t.fQUQIJ);
     items3[1] = closure_6(tmp15(6984).TableRadioRow, obj18);

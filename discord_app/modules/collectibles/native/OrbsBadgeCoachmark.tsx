@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef11111 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import _modDef11112 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -23,7 +23,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp3 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef11111 };
+        const obj2 = { uri: _modDef11112 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -55,7 +55,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_8();
       const obj = { style: tmp.coachmarkImageContainer, children: null };
       const obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef11111 };
+      const obj3 = { uri: _modDef11112 };
       obj2.source = obj3;
       obj2.style = tmp.coachmarkImage;
       obj.children = jsx(FastImageDefault, { source: null, style: null });

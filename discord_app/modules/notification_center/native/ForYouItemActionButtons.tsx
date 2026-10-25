@@ -1181,7 +1181,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const callback4 = notification_center_v2.useCallback(() => {
         const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
         dMChannel.then((channelId) => {
-          closure_1(15088)({
+          closure_1(15093)({
             payload: closure_1(5696)("https://discord.com/channels/@me/" + channelId).payload,
             safe: true,
             navigationReplace: false,

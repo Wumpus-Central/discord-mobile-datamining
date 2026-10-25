@@ -7,13 +7,7 @@ import "ReactCompilerGating";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.freeze({
-  name: "",
-  emojiId: "unicodeVersion",
-  emojiName: "ip",
-  description: "formatToPlainString",
-  refId: "includes",
-});
+let closure_2 = Object.freeze({ name: "", emojiId: "ix", emojiName: "PX_8", description: "message", refId: "call" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

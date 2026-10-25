@@ -244,7 +244,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (fetchState !== tmp4(10078).BookmarksFetchState.LOADED_HAS_MORE) {
             const obj3 = { value: analyticsLocations, children: null };
             const obj4 = { type };
-            obj3.children = closure_8(tmp(13824), obj4);
+            obj3.children = closure_8(tmp(13829), obj4);
             let tmp18 = closure_8(tmp4(7253).AnalyticsLocationProvider, obj3);
           }
         }

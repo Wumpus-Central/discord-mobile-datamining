@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return () => {
             closure_1_9.current = false;
             if (ref.current) {
-              first(5210).hideActionSheet(projectId(11894).CONJURE_DESIGN_REMARK_SHEET_KEY);
+              first(5210).hideActionSheet(projectId(11895).CONJURE_DESIGN_REMARK_SHEET_KEY);
               const obj = first(5210);
             }
           };
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return () => {
             const result = projectId(10742).inspectConjurePreviewPoint(
               closure_1_0,
-              projectId(10760).CONJURE_INSPECT_CLEAR_POINT,
+              projectId(10761).CONJURE_INSPECT_CLEAR_POINT,
             );
           };
         };
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return () => {
           closure_1_9.current = false;
           if (ref.current) {
-            size(5210).hideActionSheet(projectId(11894).CONJURE_DESIGN_REMARK_SHEET_KEY);
+            size(5210).hideActionSheet(projectId(11895).CONJURE_DESIGN_REMARK_SHEET_KEY);
             const obj = size(5210);
           }
         };
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => () => {
           const result = projectId(10742).inspectConjurePreviewPoint(
             closure_1_0,
-            projectId(10760).CONJURE_INSPECT_CLEAR_POINT,
+            projectId(10761).CONJURE_INSPECT_CLEAR_POINT,
           );
         },
         items1,

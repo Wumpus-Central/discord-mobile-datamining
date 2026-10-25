@@ -44,18 +44,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         fallbackGuildId = entry.fallbackGuildId;
       }
       if (cResult[0] !== entry) {
-        const result = tmp(11747).describeConjureProjectRow(entry);
+        const result = tmp(11748).describeConjureProjectRow(entry);
         cResult[0] = entry;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(11747);
+        const tmpResult = tmp(11748);
       } else {
         tmp4 = cResult[1];
       }
       ({ serverName, label } = tmp4);
       if (cResult[2] !== entry.project) {
         let obj2 = { project: entry.project, size: "list" };
-        const tmp9 = closure_6(fallbackGuildId(11853), obj2);
+        const tmp9 = closure_6(fallbackGuildId(11854), obj2);
         cResult[2] = entry.project;
         cResult[3] = tmp9;
         let tmp6 = tmp9;
@@ -153,13 +153,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (fallbackGuildId == null) {
         fallbackGuildId = entry.fallbackGuildId;
       }
-      const result = entry(11747).describeConjureProjectRow(entry);
+      const result = entry(11748).describeConjureProjectRow(entry);
       ({ serverName, label } = result);
       let obj2 = {
         label: entry.name,
         subLabel: serverName,
         accessibilityLabel: label,
-        icon: closure_6(fallbackGuildId(11853), { project: entry.project, size: "list" }),
+        icon: closure_6(fallbackGuildId(11854), { project: entry.project, size: "list" }),
         trailing: null,
         disabled: null,
         onPress: null,
@@ -277,7 +277,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { label: null, icon: null, arrow: true, onPress: null };
           const intl = tmp(1128).intl;
           obj2.label = intl.string(_modDef3830.UPLaGM);
-          const obj3 = { IconComponent: tmp(11837).UserIcon };
+          const obj3 = { IconComponent: tmp(11838).UserIcon };
           obj2.icon = closure_6(tmp(6903).TableRow.Icon, obj3);
           obj2.onPress = function onPress() {
             const obj2 = {
@@ -311,7 +311,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj2 = forMeGuildId(5151);
-                  forMeGuildId(13522).openConjureProject(id, projectId);
+                  forMeGuildId(13527).openConjureProject(id, projectId);
                 },
               }),
             };
@@ -357,7 +357,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = forMeGuildId(5151);
-              forMeGuildId(13522).openConjureProject(guild.id, undefined);
+              forMeGuildId(13527).openConjureProject(guild.id, undefined);
             };
             return closure_6(guild(6903).TableRow, obj, guild.id);
           };
@@ -406,7 +406,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { label: null, icon: null, arrow: true, onPress: null };
           const intl = tmp3(1128).intl;
           obj2.label = intl.string(_modDef3830.UPLaGM);
-          const obj3 = { IconComponent: tmp3(11837).UserIcon };
+          const obj3 = { IconComponent: tmp3(11838).UserIcon };
           obj2.icon = closure_6(tmp3(6903).TableRow.Icon, obj3);
           obj2.onPress = function onPress() {
             let obj2 = {
@@ -440,7 +440,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj2 = forMeGuildId(5151);
-                  forMeGuildId(13522).openConjureProject(id, projectId);
+                  forMeGuildId(13527).openConjureProject(id, projectId);
                 },
               }),
             };
@@ -479,7 +479,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = forMeGuildId(5151);
-              forMeGuildId(13522).openConjureProject(guild.id, undefined);
+              forMeGuildId(13527).openConjureProject(guild.id, undefined);
             };
             return closure_6(guild(6903).TableRow, obj, guild.id);
           }),
@@ -499,11 +499,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = stateFromStores1(576).c(47);
       let state = closure_9(0);
       const obj = stateFromStores1(576);
-      const conjureProjects = stateFromStores1(11747).useConjureProjects(ConjureProjectsSheet);
-      const obj2 = stateFromStores1(11747);
-      const conjureEligibleGuilds = stateFromStores1(11747).useConjureEligibleGuilds(ConjureProjectsSheet);
-      const obj3 = stateFromStores1(11747);
-      const conjureForMeGuildId = stateFromStores1(11747).useConjureForMeGuildId(ConjureProjectsSheet);
+      const conjureProjects = stateFromStores1(11748).useConjureProjects(ConjureProjectsSheet);
+      const obj2 = stateFromStores1(11748);
+      const conjureEligibleGuilds = stateFromStores1(11748).useConjureEligibleGuilds(ConjureProjectsSheet);
+      const obj3 = stateFromStores1(11748);
+      const conjureForMeGuildId = stateFromStores1(11748).useConjureForMeGuildId(ConjureProjectsSheet);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         const fn = function h() {
@@ -516,7 +516,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp3, tmp4] = cResult;
       }
-      const obj4 = stateFromStores1(11747);
+      const obj4 = stateFromStores1(11748);
       const stateFromStores = Stack(504).useStateFromStores(tmp3, tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SelectedGuildStore];

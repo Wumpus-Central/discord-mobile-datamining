@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "gap",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "gap",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "gap",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "gap",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           imageUri: tryItOutPresetConfig.getBannerSrc(false),
           staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
           description: tryItOutPresetConfig.getBannerAltText(),
-          originalAsset: "gap",
+          originalAsset: "formatToPlainString",
         });
         const themeColors = tryItOutPresetConfig.themeColors;
         obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

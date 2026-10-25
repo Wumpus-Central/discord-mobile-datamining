@@ -8,7 +8,7 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDataSavingModeSettingValue() {
       const cResult = c.c(2);

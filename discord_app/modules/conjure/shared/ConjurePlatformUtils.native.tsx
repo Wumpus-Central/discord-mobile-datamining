@@ -634,7 +634,7 @@ let items = [fn(8827).OAuth2Scopes.BOT, fn(8827).OAuth2Scopes.APPLICATIONS_COMMA
 let c15 = 0;
 let c16 = 0;
 let c19 = 0;
-const conjurePreviewControlLease = fn(10761);
+const conjurePreviewControlLease = fn(10762);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -737,7 +737,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(10763);
+const conjurePreviewOperationSurfaces = fn(10764);
 let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

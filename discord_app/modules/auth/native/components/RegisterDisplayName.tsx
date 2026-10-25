@@ -26,9 +26,9 @@ function getGlobalNameError(first1) {
   }
 }
 const View = fn(17).View;
-const RegistrationUIStore = fn(17357);
+const RegistrationUIStore = fn(17362);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17358);
+const RegistrationConstants = fn(17363);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

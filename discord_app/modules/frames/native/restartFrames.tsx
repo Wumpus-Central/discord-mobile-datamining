@@ -9,26 +9,32 @@ function restartFrame(item10016) {
   if (isLaunched(item10016)) {
     launch = item10016.data.launch;
   }
+  let invite;
+  if (isLaunched(item10016)) {
+    invite = item10016.data.invite;
+  }
   const mainFrame = FramesStore.getMainFrame();
   let id;
   if (mainFrame != null) {
     id = mainFrame.id;
   }
   leaveFrame.leaveFrame(item10016.id);
-  const obj3 = { applicationId: item10016.applicationId, surface: item10016.surface, launch };
+  const obj3 = { applicationId: item10016.applicationId, surface: item10016.surface, launch, invite };
   FramesActionCreatorsDefault.launchFrame({
     applicationId: item10016.applicationId,
     surface: item10016.surface,
     launch,
+    invite,
   }).catch(() => {});
   if (id !== item10016.id) {
     FramesActionCreatorsDefault.demoteMainFrame(item10016.id);
-    const tmp6Result = FramesActionCreatorsDefault;
+    const tmp8Result = FramesActionCreatorsDefault;
   }
   const launchFrameResult = FramesActionCreatorsDefault.launchFrame({
     applicationId: item10016.applicationId,
     surface: item10016.surface,
     launch,
+    invite,
   });
 }
 const isLaunched = fn(6776).isLaunched;

@@ -241,7 +241,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "emoji", positionPercentage: false };
+    sectionItemFromPosition = { item: "duration", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -274,7 +274,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6701).GuildsNodeType;
-const GuildsBarConstants = fn(17726);
+const GuildsBarConstants = fn(17731);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;

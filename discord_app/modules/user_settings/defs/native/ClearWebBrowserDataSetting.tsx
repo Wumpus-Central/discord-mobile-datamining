@@ -6,7 +6,7 @@ import BrowserManager from "../../../links/native/BrowserManager.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

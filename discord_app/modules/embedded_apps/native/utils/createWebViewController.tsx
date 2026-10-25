@@ -28,7 +28,7 @@ export default function createWebViewController(id, contextSource) {
   }
   closure_5 = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10758)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10759)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;

@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-      stateFromStores1(17649)(stateFromStores);
+      stateFromStores1(17654)(stateFromStores);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildBoostingProgressBarPersistedStore];
         cResult[4] = items2;

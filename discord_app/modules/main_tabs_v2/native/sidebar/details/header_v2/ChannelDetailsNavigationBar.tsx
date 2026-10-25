@@ -36,7 +36,7 @@ let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(13260).SEARCH_BAR_HEIGHT,
+    height: fn(13265).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -47,7 +47,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(13260).SEARCH_BAR_HEIGHT,
+  height: fn(13265).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -56,7 +56,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13260).SEARCH_BAR_HEIGHT,
+  height: fn(13265).SEARCH_BAR_HEIGHT,
 };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
 let obj4 = {
@@ -65,7 +65,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13260).SEARCH_BAR_HEIGHT,
+  height: fn(13265).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,
@@ -150,7 +150,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp14 = cResult[6];
         }
-        const tmp16 = navigation(stateFromStores ? 10872 : 8280);
+        const tmp16 = navigation(stateFromStores ? 10873 : 8280);
         if (cResult[7] === tmp11) {
           if (cResult[8] === size) {
             if (cResult[9] === tmp16) {
@@ -223,7 +223,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.onPress = callback;
       obj3.variant = variant;
       obj3.size = size;
-      obj3.icon = navigation(stateFromStores ? 10872 : 8280);
+      obj3.icon = navigation(stateFromStores ? 10873 : 8280);
       return closure_15(channelId(7959).IconButton, obj3, constants.MUTE);
     };
 ReactCompilerGating = fn(558);
@@ -557,7 +557,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
         ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-        const tmp10 = closure_15(cleanUp(18056), obj8);
+        const tmp10 = closure_15(cleanUp(18061), obj8);
         cResult[3] = channel.guild_id;
         cResult[4] = channel.id;
         cResult[5] = ref;
@@ -626,7 +626,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj3 = {
         style: null,
-        children: closure_15(cleanUp(18056), {
+        children: closure_15(cleanUp(18061), {
           ref,
           channelId: channel.id,
           guildId: channel.guild_id,

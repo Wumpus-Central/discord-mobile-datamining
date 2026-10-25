@@ -12,7 +12,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOptions() {
       const cResult = c.c(3);
@@ -199,7 +199,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17307, dependencyMap.paths),
+        asyncRequireImpl(17312, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

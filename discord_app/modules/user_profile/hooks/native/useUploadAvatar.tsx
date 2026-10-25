@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj10 = { imageUri: base64, description: null, originalMd5: null };
-              const obj2 = guildId(15835);
+              const obj2 = guildId(15840);
               obj10.description = guildId(8658).generateAvatarDescription();
               obj10.originalMd5 = originalMd5;
               closure_128_4 = obj2.createPendingImage(obj10);
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj10 = { imageUri: base64, description: null, originalMd5: null };
-                const obj2 = v0(15835);
+                const obj2 = v0(15840);
                 obj10.description = v0(8658).generateAvatarDescription();
                 obj10.originalMd5 = originalMd5;
                 closure_128_4 = obj2.createPendingImage(obj10);

@@ -1,12 +1,17 @@
 // discord_app/modules/conjure/tips/conjureIdeasIntroTip.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-function resolveIdeasIntroTip(turn) {
-  if (null == turn.turn) {
-    let str = null;
-    return str;
+function resolveIdeasIntroTip(arg0) {
+  ({ turn, publish, hasPublished, justRemixed } = arg0);
+  let tmp = null;
+  if (!obj.isBotPermissionsReviewPending(publish)) {
+    if (null == turn) {
+      let str = null;
+      tmp = str;
+    }
+    str = "card";
   }
-  str = "card";
+  return tmp;
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureIdeasIntroTip.tsx");
 

@@ -16,7 +16,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StageChannelListStore = fn(11696);
+const StageChannelListStore = fn(11697);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } =
   StageChannelListStore);
 const MAX_AUDIENCE_ROW_LIMIT = fn(6637).MAX_AUDIENCE_ROW_LIMIT;
@@ -898,9 +898,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       let width;
       let isScreenLandscape;
-      const throttleDurationForChannel = width(11723).useThrottleDurationForChannel(channel.id);
+      const throttleDurationForChannel = width(11724).useThrottleDurationForChannel(channel.id);
       width = isScreenLandscape(1499)().width;
-      let obj = width(11723);
+      let obj = width(11724);
       isScreenLandscape = width(8691).useIsScreenLandscape();
       const items = [width, isScreenLandscape];
       const memo = noop.useMemo(() => {
@@ -917,7 +917,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = width(8691);
       const tmp4 = _slicedToArray(
-        width(11723).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+        width(11724).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
         2,
       );
       return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });

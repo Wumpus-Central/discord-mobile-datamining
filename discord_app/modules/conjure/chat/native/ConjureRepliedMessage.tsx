@@ -18,12 +18,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(12342).MESSAGE_EDGE_INSET + fn(12342).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(12342).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(12344).MESSAGE_EDGE_INSET + fn(12344).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12344).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(4971);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(12342).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(12344).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -52,7 +52,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(12342).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(12344).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",
@@ -245,8 +245,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       replied = replied.replied;
       const onJump = replied.onJump;
       const tmp = closure_8();
-      const messageAuthorUser = replied(12353).useMessageAuthorUser(replied.userId);
-      const obj = replied(12353);
+      const messageAuthorUser = replied(12356).useMessageAuthorUser(replied.userId);
+      const obj = replied(12356);
       let str = replied(5025).useName(messageAuthorUser);
       if (str == null) {
         str = "";
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      const tmp2Result = replied(12354);
+      const tmp2Result = replied(12357);
       const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
       const obj3 = {
         style: tmp.root,
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != messageAuthorUser) {
         const obj5 = { style: tmp.avatar, children: null };
         const obj6 = { userId: replied.userId, size: tmp2(1202).AvatarSizes.SIZE_16 };
-        obj5.children = closure_6(tmp2(12355).ConjureUserAvatar, obj6);
+        obj5.children = closure_6(tmp2(12358).ConjureUserAvatar, obj6);
         tmp11Result = closure_6(closure_5, obj5);
       }
       items1[1] = tmp11Result;

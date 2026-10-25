@@ -15,7 +15,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsMutualGuildsSettingValue() {
       const cResult = c.c(2);

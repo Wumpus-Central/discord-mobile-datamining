@@ -18,13 +18,13 @@ import useShouldOpenGameProfileModal from "../../../game_profile/hooks/useShould
 import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import _modDef11714 from "../../../../../_runtime/metro/11714__.js";
+import _modDef11715 from "../../../../../_runtime/metro/11715__.js";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef18527 from "../../../../../_runtime/metro/18527__.js";
+import _modDef18532 from "../../../../../_runtime/metro/18532__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef18574 from "../../../../../_runtime/metro/18574__.js";
-import _modDef18575 from "../../../../../_runtime/metro/18575__.js";
+import _modDef18579 from "../../../../../_runtime/metro/18579__.js";
+import _modDef18580 from "../../../../../_runtime/metro/18580__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -35,7 +35,7 @@ import ReanimatedRexport_mod from "../../../reanimated/ReanimatedRexport.tsx";
 const useGameProfileObscuredDefault = tmp3(8581);
 const GuildTagDefault = tmp3(9225);
 const useResolveGameForProfileDefault = tmp3(9249);
-const GameTagChipletDefault = tmp3(18579);
+const GameTagChipletDefault = tmp3(18584);
 require = fn;
 function getAccessibilityLabel(tmp4ResultResult, label) {
   if (null != tmp4ResultResult.find((type) => type.type === require("useVoicePanelCardUserStateIcons").VoicePanelCardUserStateIconType.STREAM_ICON)) {
@@ -63,10 +63,10 @@ function getAccessibilityLabel(tmp4ResultResult, label) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10897);
+const VoicePanelConstants = fn(10898);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10895).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(10900).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(10896).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(10901).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1087).ThemeTypes;
 const CallConstants = fn(5632);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
@@ -129,13 +129,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(5052).useAnimatedStyle(fn);
-  let tmp4Result = _modDef18527;
+  let tmp4Result = _modDef18532;
   if (voicePlatform === constants2.XBOX) {
-    tmp4Result = _modDef18574;
+    tmp4Result = _modDef18579;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp4Result = _modDef11714;
+    tmp4Result = _modDef11715;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp4Result = _modDef18575;
+    tmp4Result = _modDef18580;
   }
   if (cResult[0] === animatedStyle) {
     if (cResult[1] === tmp3.iconWithoutBackground) {
@@ -183,13 +183,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   fn.__workletHash = 15914667672663;
   fn.__initData = __initData2;
   const animatedStyle = controlsSpecs(5052).useAnimatedStyle(fn);
-  let tmp2Result = _modDef18527;
+  let tmp2Result = _modDef18532;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef18574;
+    tmp2Result = _modDef18579;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef11714;
+    tmp2Result = _modDef11715;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef18575;
+    tmp2Result = _modDef18580;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -492,7 +492,7 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cResult = participant(576).c(14);
   participant = participant.participant;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(10896)).guildId;
+  guildId = noop.useContext(guildId(10897)).guildId;
   const tmp5 = closure_23();
   const tmp6 = closure_33(participant.controlsHidden, closure_29);
   if (cResult[0] === guildId) {
@@ -524,16 +524,16 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           cResult[13] = tmp20;
           tmp17 = tmp20;
         }
-        const obj3 = { icon: tmp4(18576), onPress: tmp7, accessibilityLabel: cResult[5] };
-        const tmp16 = closure_16(tmp4(18471), obj3);
+        const obj3 = { icon: tmp4(18581), onPress: tmp7, accessibilityLabel: cResult[5] };
+        const tmp16 = closure_16(tmp4(18476), obj3);
         cResult[6] = tmp7;
         cResult[7] = cResult[5];
         cResult[8] = tmp16;
         tmp13 = tmp16;
-        const tmp4Result = tmp4(18471);
+        const tmp4Result = tmp4(18476);
       }
     }
-    let result = tmp(18499).isStableActivityParticipant(participant);
+    let result = tmp(18504).isStableActivityParticipant(participant);
     const intl = tmp(1128).intl;
     const string = intl.string;
     let t = tmp(1128).t;
@@ -548,7 +548,7 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[3] = isSelf;
     cResult[4] = participant;
     cResult[5] = stringResult;
-    let tmpResult = tmp(18499);
+    let tmpResult = tmp(18504);
   }
   const fn = function o() {
     if (obj.isStableStreamParticipant(participant)) {
@@ -581,7 +581,7 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   participant = participant.participant;
   let guildId;
   ({ controlsHidden, isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(10896)).guildId;
+  guildId = noop.useContext(guildId(10897)).guildId;
   const items = [guildId, participant];
   const tmp = closure_23();
   let obj = { style: tmp.topLeftButton, hideStyles: closure_33(controlsHidden, closure_29), layout, children: null };
@@ -609,10 +609,10 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }, items);
   let obj2 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp2 = closure_33(controlsHidden, closure_29);
-  obj2.icon = guildId(18576);
+  obj2.icon = guildId(18581);
   obj2.onPress = callback;
-  const tmp6 = guildId(18471);
-  let result = participant(18499).isStableActivityParticipant(participant);
+  const tmp6 = guildId(18476);
+  let result = participant(18504).isStableActivityParticipant(participant);
   const intl = participant(1128).intl;
   const string = intl.string;
   const t = participant(1128).t;
@@ -1184,7 +1184,7 @@ let closure_54 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(18579), obj);
+      let tmp9 = closure_16(tmp(18584), obj);
     }
     return tmp9;
   }

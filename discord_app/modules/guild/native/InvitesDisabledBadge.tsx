@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef13664 from "../../../../_runtime/metro/13664__.js";
+import _modDef13669 from "../../../../_runtime/metro/13669__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -56,12 +56,12 @@ export default noop.memo(
             const obj2 = {
               style: tmp4.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef13664,
+              source: _modDef13669,
             };
             const tmp9 = jsx(native.ThemedIcon, {
               style: tmp4.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef13664,
+              source: _modDef13669,
             });
             cResult[3] = tmp4.pause;
             cResult[4] = tmp9;
@@ -109,7 +109,7 @@ export default noop.memo(
           children: jsx(native.ThemedIcon, {
             style: tmp.pause,
             themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-            source: _modDef13664,
+            source: _modDef13669,
           }),
         };
         obj.children = (
@@ -117,7 +117,7 @@ export default noop.memo(
             {jsx(native.ThemedIcon, {
               style: tmp.pause,
               themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              source: _modDef13664,
+              source: _modDef13669,
             })}
           </View>
         );

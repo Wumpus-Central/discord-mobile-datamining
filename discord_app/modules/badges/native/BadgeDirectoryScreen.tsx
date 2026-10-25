@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === stateFromStores1) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const headerCloseButton = Navigator(6924).getHeaderCloseButton(Navigator(11118).closeBadgeDirectoryScreen);
+            const headerCloseButton = Navigator(6924).getHeaderCloseButton(Navigator(11119).closeBadgeDirectoryScreen);
             cResult[8] = headerCloseButton;
             let tmp15 = headerCloseButton;
             const NavigatorResult2 = Navigator(6924);
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp18;
                 }
                 const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-                const tmp21 = jsx(Navigator(11146).Modal, {
+                const tmp21 = jsx(Navigator(11147).Modal, {
                   screens: sheetHeader,
                   initialRouteName,
                   viewStyle: view.view,
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[19] = tmp21;
                 tmp18 = tmp21;
               }
-              NavigatorResult3 = Navigator(11118);
+              NavigatorResult3 = Navigator(11119);
             }
           }
           const obj4 = {};
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           } else {
             const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-            tmp9Result = jsx(tmp2(11146).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+            tmp9Result = jsx(tmp2(11147).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
           }
           return tmp9Result;
         }

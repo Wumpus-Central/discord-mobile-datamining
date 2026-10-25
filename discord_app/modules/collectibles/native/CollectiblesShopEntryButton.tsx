@@ -84,7 +84,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj5 = {
             ref: shopButtonRef,
-            IconComponent: navigateToShop(12127).ShopIcon,
+            IconComponent: navigateToShop(12128).ShopIcon,
             accessibilityLabel: first,
             onPress: tmp9,
             showRedDot: tmp6,
@@ -134,7 +134,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         showRedDot: null,
       };
       const obj = navigateToShop(7496);
-      obj3.IconComponent = navigateToShop(12127).ShopIcon;
+      obj3.IconComponent = navigateToShop(12128).ShopIcon;
       const intl = navigateToShop(1128).intl;
       obj3.accessibilityLabel = intl.string(navigateToShop(1128).t.pWG4ze);
       obj3.onPress = function onPress() {
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const markAsDismissed = visibleContent.markAsDismissed;
           const obj = {
             ref: markAsDismissed,
-            IconComponent: navigateToShop(12127).ShopIcon,
+            IconComponent: navigateToShop(12128).ShopIcon,
             accessibilityLabel: null,
             onPress: null,
             showRedDot: null,
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           };
           obj.showRedDot = null != visibleContent;
-          return closure_1_6(shopButtonRef(14149), obj);
+          return closure_1_6(shopButtonRef(14154), obj);
         }
         cResult[6] = navigateToShop;
         cResult[7] = shopButtonRef;
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const markAsDismissed = visibleContent.markAsDismissed;
           const obj = {
             ref: markAsDismissed,
-            IconComponent: navigateToShop(12127).ShopIcon,
+            IconComponent: navigateToShop(12128).ShopIcon,
             accessibilityLabel: null,
             onPress: null,
             showRedDot: null,
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           };
           obj.showRedDot = null != visibleContent;
-          return closure_1_6(shopButtonRef(14149), obj);
+          return closure_1_6(shopButtonRef(14154), obj);
         }
         if (tmp4) {
           let type1;

@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = null == data;
       }
       const tmpResult = frame(504);
-      const baseActivityView = frame(11456).useBaseActivityView({
+      const baseActivityView = frame(11457).useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
         setShowLoadingStateForLockingOrientation: tmp5[1],
@@ -233,15 +233,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ignoreSilentHardwareSwitch: null,
       };
       const obj4 = { type: null, frameId: null };
-      const tmpResult3 = frame(11456);
+      const tmpResult3 = frame(11457);
       obj4.type = frame(6777).EmbeddedContextSourceType.FRAME;
       obj4.frameId = frame.id;
       obj3.contextSource = obj4;
-      const tmp12 = layoutMode(18432);
-      obj3.queryParams = layoutMode(18429)(frame, frame(11471).ActivityPlatform.MOBILE);
+      const tmp12 = layoutMode(18437);
+      obj3.queryParams = layoutMode(18434)(frame, frame(11472).ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp13 = layoutMode(18429);
-      obj3.allowPopups = frame(11502).allowPopups(data);
+      const tmp13 = layoutMode(18434);
+      obj3.allowPopups = frame(11503).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
         landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -276,5 +276,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ignoreSilentHardwareSwitch={null}
         />
       );
-      return jsx(frame(11456).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+      return jsx(frame(11457).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
     };

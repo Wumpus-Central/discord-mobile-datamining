@@ -127,8 +127,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(11004, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(11004, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(11005, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(11005, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -371,7 +371,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const items = [closure_1_27(tmp7(6987).TableRowGroup, obj4, "mute")];
     let tmp10Result = null;
     if (muted) {
-      const obj6 = { muteConfig, type: tmp7(11006).MuteSettingType.SERVER };
+      const obj6 = { muteConfig, type: tmp7(11007).MuteSettingType.SERVER };
       tmp10Result = closure_1_27(MutedUntilTextDefault, obj6, "muted-until");
     }
     items[1] = tmp10Result;
@@ -614,7 +614,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = guildId(504);
-      const shouldUseNewNotificationSystem = guildId(10986).useShouldUseNewNotificationSystem(
+      const shouldUseNewNotificationSystem = guildId(10987).useShouldUseNewNotificationSystem(
         "NotificationSettingsModalNative",
       );
       if (cResult[9] === tmp18) {
@@ -632,7 +632,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const merged = Object.assign(tmp13);
       const obj3 = { guildId, channels: tmp18, navigation, shouldUseNewNotificationSystem };
-      const tmpResult2 = guildId(10986);
+      const tmpResult2 = guildId(10987);
       cResult[9] = tmp18;
       cResult[10] = guildId;
       cResult[11] = navigation;
@@ -687,14 +687,14 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp3 = _objectWithoutProperties(stateFromStoresObject, closure_4);
       const obj4 = { children: null };
-      const obj3 = guildId(10986);
+      const obj3 = guildId(10987);
       const merged = Object.assign(tmp3);
       const items2 = [
         closure_27(NotificationSettings, {
           guildId,
           channels: memo,
           navigation,
-          shouldUseNewNotificationSystem: guildId(10986).useShouldUseNewNotificationSystem(
+          shouldUseNewNotificationSystem: guildId(10987).useShouldUseNewNotificationSystem(
             "NotificationSettingsModalNative",
           ),
         }),

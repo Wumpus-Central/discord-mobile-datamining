@@ -21,12 +21,12 @@ import Form from "../../../design/void/Form/native/index.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../actions/native/CreateChannelModalActionCreators.tsx";
 import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import FavoritesActionCreators from "../../favorites/FavoritesActionCreators.tsx";
-import _modDef12745 from "../../../../_runtime/metro/12745__.js";
+import _modDef12750 from "../../../../_runtime/metro/12750__.js";
 import ChannelSortingUtils from "../../channel_sorting/ChannelSortingUtils.tsx";
-import _modDef16651 from "../../../../_runtime/metro/16651__.js";
+import _modDef16656 from "../../../../_runtime/metro/16656__.js";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
-import _modDef17572 from "../../../../_runtime/metro/17572__.js";
-import _modDef17574 from "../../../../_runtime/metro/17574__.js";
+import _modDef17577 from "../../../../_runtime/metro/17577__.js";
+import _modDef17579 from "../../../../_runtime/metro/17579__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -154,7 +154,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(17572), style: actionIconStyle };
+      const obj6 = { source: tmp11(17577), style: actionIconStyle };
       tmp3Result = value3(native.Icon, obj6);
     }
   }
@@ -375,7 +375,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           if (stateFromStores) {
             tmp = null;
             if (sortingEnabled) {
-              const obj = { source: _modDef17572, style: actionIconStyle };
+              const obj = { source: _modDef17577, style: actionIconStyle };
               tmp = value3(Form.FormRow.Icon, obj);
             }
           }
@@ -495,7 +495,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores) {
         tmp7Result2 = null;
         if (sortingEnabled) {
-          const obj10 = { source: tmp13(17572), style: actionIconStyle };
+          const obj10 = { source: tmp13(17577), style: actionIconStyle };
           tmp7Result2 = closure_16(channel(8951).FormRow.Icon, obj10);
         }
       }
@@ -772,18 +772,18 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef17574;
+        obj.icon = _modDef17579;
         obj.onPress = function onPress() {
-          closure_1_1(17570).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(17575).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef12745;
+      obj2.icon = _modDef12750;
       obj2.onPress = function onPress() {
-        closure_1_1(17570).startReordering(
+        closure_1_1(17575).startReordering(
           constants.GUILD_TEXT,
           constants.GUILD_ANNOUNCEMENT,
           constants.GUILD_FORUM,
@@ -795,9 +795,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16651;
+      obj3.icon = _modDef16656;
       obj3.onPress = function onPress() {
-        closure_1_1(17570).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(17575).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -882,8 +882,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
                               const appChannelBotUserId =
-                                applyArgumentsResult(11308).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(11308);
+                                applyArgumentsResult(11309).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(11309);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(
                                 localChannel,
                                 channel,

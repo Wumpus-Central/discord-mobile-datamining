@@ -64,9 +64,9 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "ix",
-    triggeredMigrations: "no",
-    offlineEditDataVersion: "Button",
+    loading: "color",
+    triggeredMigrations: null,
+    offlineEditDataVersion: null,
   };
   return obj;
 };

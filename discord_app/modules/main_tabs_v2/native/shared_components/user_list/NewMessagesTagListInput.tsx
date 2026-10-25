@@ -217,9 +217,9 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(13250).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(13255).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(11153).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(11154).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
             jsx(onSelectUser(6908).PressableOpacity, {

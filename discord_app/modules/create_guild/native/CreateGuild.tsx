@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onPress: onIconPress,
             icon: guild.icon,
           };
-          const tmp27 = closure_7(ref(12739), obj2);
+          const tmp27 = closure_7(ref(12744), obj2);
           cResult[15] = guild.icon;
           cResult[16] = onIconPress;
           cResult[17] = tmp4.contentContainer.backgroundColor;
@@ -457,7 +457,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj4.children = customDescription;
       items1[1] = closure_7(isScreenReaderEnabled(5234).Text, obj4);
-      items1[2] = closure_7(ref(12739), {
+      items1[2] = closure_7(ref(12744), {
         iconBackgroundColor: tmp.contentContainer.backgroundColor,
         style: tmp.iconUploader,
         onPress: onIconPress,
