@@ -1,11 +1,11 @@
-// === Module 12041: BotsBanner ===
+// === Module 12042: BotsBanner ===
 
-// Module 12041 (BotsBanner)
+// Module 12042 (BotsBanner)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import ApplicationsImageDefault from "ApplicationsImage" /* 12027 */;
-import BannerBaseDefault from "BannerBase" /* 12038 */;
-import useBannerBots from "useBannerBots" /* 12042 */;
+import ApplicationsImageDefault from "ApplicationsImage" /* 12028 */;
+import BannerBaseDefault from "BannerBase" /* 12039 */;
+import useBannerBots from "useBannerBots" /* 12043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

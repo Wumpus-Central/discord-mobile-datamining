@@ -1,6 +1,6 @@
-// === Module 19250: CreatorHighlightSection ===
+// === Module 19255: CreatorHighlightSection ===
 
-// Module 19250 (CreatorHighlightSection)
+// Module 19255 (CreatorHighlightSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import LinkingDefault from "Linking" /* 5660 */;
 import _mod7220 from "module_7220" /* 7220 */;
 import _modDef9863 from "module_9863" /* 9863 */;
-import EmojiIconDefault from "EmojiIcon" /* 16592 */;
+import EmojiIconDefault from "EmojiIcon" /* 16597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -130,7 +130,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
   const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-  const tmp7 = guild_id(19251)(guild_id, 3, 60);
+  const tmp7 = guild_id(19256)(guild_id, 3, 60);
   dependencyMap = tmp7;
   const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
   if (cResult[0] === tmp7.details) {
@@ -140,7 +140,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
     if (tmp8) {
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp71 = closure_5(tmp6(19200), {});
+        const tmp71 = closure_5(tmp6(19205), {});
         cResult[3] = tmp71;
         let tmp69 = tmp71;
       } else {
@@ -437,12 +437,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(19251)(guild_id, 3, 60);
+  const tmp6 = guild_id(19256)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19200), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19205), {}) };
     return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;

@@ -1,7 +1,7 @@
-// === Module 12256: conjureExternalConnectionRequests ===
+// === Module 12257: conjureExternalConnectionRequests ===
 
-// Module 12256 (conjureExternalConnectionRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10793 */;
+// Module 12257 (conjureExternalConnectionRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

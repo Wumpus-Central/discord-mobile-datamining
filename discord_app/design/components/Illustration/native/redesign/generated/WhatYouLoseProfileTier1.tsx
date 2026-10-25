@@ -1,6 +1,6 @@
-// === Module 14683: WhatYouLoseProfileTier1 ===
+// === Module 14688: WhatYouLoseProfileTier1 ===
 
-// Module 14683 (WhatYouLoseProfileTier1)
+// Module 14688 (WhatYouLoseProfileTier1)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWhatYouLo
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_14684");
+          return require("module_14689");
         },
       darker() {
-          return require("module_14685");
+          return require("module_14690");
         },
       light() {
-          return require("module_14686");
+          return require("module_14691");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWhatYouLo
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14684");
+      return require("module_14689");
     },
     darker() {
-      return require("module_14685");
+      return require("module_14690");
     },
     light() {
-      return require("module_14686");
+      return require("module_14691");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getWhatYouLoseProfileTier1Source(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_14684");
+      return require("module_14689");
     },
     darker() {
-      return require("module_14685");
+      return require("module_14690");
     },
     light() {
-      return require("module_14686");
+      return require("module_14691");
     }
   });
 }

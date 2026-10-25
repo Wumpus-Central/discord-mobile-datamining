@@ -1,6 +1,6 @@
-// === Module 13158: VoicePanelChatView ===
+// === Module 13163: VoicePanelChatView ===
 
-// Module 13158 (VoicePanelChatView)
+// Module 13163 (VoicePanelChatView)
 import c from "c" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
@@ -10,13 +10,13 @@ import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7168 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10625 */;
 import _modDef10658 from "module_10658" /* 10658 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10896 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13156 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10897 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(10895).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(10896).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1087);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

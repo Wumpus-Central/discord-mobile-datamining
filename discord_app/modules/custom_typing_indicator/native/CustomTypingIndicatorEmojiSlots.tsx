@@ -1,6 +1,6 @@
-// === Module 16713: CustomTypingIndicatorEmojiSlots ===
+// === Module 16718: CustomTypingIndicatorEmojiSlots ===
 
-// Module 16713 (CustomTypingIndicatorEmojiSlots)
+// Module 16718 (CustomTypingIndicatorEmojiSlots)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
@@ -8,7 +8,7 @@ import spring from "spring" /* 5247 */;
 import springPresets from "springPresets" /* 5248 */;
 import EmojiDefault from "Emoji" /* 7227 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9825 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13078 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const jsx = fn(21).jsx;
 let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
-let items = [fn(16714).EmojiAngryFaceWithHornsIcon, fn(16716).EmojiColdFaceIcon, fn(16718).EmojiCowboyHatFaceIcon, fn(16720).EmojiCryingFaceIcon, fn(16722).EmojiDisguisedFaceIcon, fn(16724).EmojiFaceVomitingIcon, fn(16726).EmojiFaceWithMonocleIcon, fn(16728).EmojiFaceWithSpiralEyesIcon, fn(16730).EmojiMeltingFaceIcon, fn(16732).EmojiMoneyMouthFaceIcon, fn(16734).EmojiNerdFaceIcon, fn(16736).EmojiPartyingFaceIcon, fn(16738).EmojiSalutingFaceIcon, fn(16740).EmojiSkullIcon, fn(16742).EmojiSmilingFaceWithHornsIcon, fn(16744).EmojiSmilingFaceWithSunglassesIcon, fn(16746).EmojiSquintingFaceWithTongueIcon, fn(16748).EmojiUpsideDownFaceIcon, fn(16750).EmojiWoozyFaceIcon, fn(16752).EmojiZanyFaceIcon, fn(16754).EmojiRollingOnTheFloorLaughingIcon, fn(16756).EmojiSmilingFaceWithHeartsIcon];
+let items = [fn(16719).EmojiAngryFaceWithHornsIcon, fn(16721).EmojiColdFaceIcon, fn(16723).EmojiCowboyHatFaceIcon, fn(16725).EmojiCryingFaceIcon, fn(16727).EmojiDisguisedFaceIcon, fn(16729).EmojiFaceVomitingIcon, fn(16731).EmojiFaceWithMonocleIcon, fn(16733).EmojiFaceWithSpiralEyesIcon, fn(16735).EmojiMeltingFaceIcon, fn(16737).EmojiMoneyMouthFaceIcon, fn(16739).EmojiNerdFaceIcon, fn(16741).EmojiPartyingFaceIcon, fn(16743).EmojiSalutingFaceIcon, fn(16745).EmojiSkullIcon, fn(16747).EmojiSmilingFaceWithHornsIcon, fn(16749).EmojiSmilingFaceWithSunglassesIcon, fn(16751).EmojiSquintingFaceWithTongueIcon, fn(16753).EmojiUpsideDownFaceIcon, fn(16755).EmojiWoozyFaceIcon, fn(16757).EmojiZanyFaceIcon, fn(16759).EmojiRollingOnTheFloorLaughingIcon, fn(16761).EmojiSmilingFaceWithHeartsIcon];
 const createStyles = fn(4971);
 let closure_11 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);

@@ -1,8 +1,8 @@
-// === Module 14376: UserProfileGameWidgetTagMetadata ===
+// === Module 14381: UserProfileGameWidgetTagMetadata ===
 
-// Module 14376 (UserProfileGameWidgetTagMetadata)
+// Module 14381 (UserProfileGameWidgetTagMetadata)
 import util from "util" /* 1128 */;
-import WidgetGameTag from "WidgetGameTag" /* 14377 */;
+import WidgetGameTag from "WidgetGameTag" /* 14382 */;
 import size from "module_2" /* 2 */;
 
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };

@@ -1,14 +1,14 @@
-// === Module 16144: UseDataToCustomizeDiscordSetting ===
+// === Module 16149: UseDataToCustomizeDiscordSetting ===
 
-// Module 16144 (UseDataToCustomizeDiscordSetting)
+// Module 16149 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
 import common_AlertDefault from "common/Alert" /* 5978 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16104 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16142 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16143 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16109 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 16147 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16148 */;
 import ConsentStore from "ConsentStore" /* 6670 */;
 
 require = fn;
@@ -19,7 +19,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

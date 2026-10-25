@@ -1,6 +1,6 @@
-// === Module 13322: EmojiSuggestionBarUtils ===
+// === Module 13327: EmojiSuggestionBarUtils ===
 
-// Module 13322 (EmojiSuggestionBarUtils)
+// Module 13327 (EmojiSuggestionBarUtils)
 import native from "native" /* 5037 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
@@ -283,7 +283,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
   const tmp10 = chatInputStateRef;
   const tmpResult = chatInputRef(504);
   analyticsLocations = chatInputStateRef(7253)(chatInputStateRef(7278).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp12 = chatInputStateRef(13287)(tmp4[1], 16);
+  const tmp12 = chatInputStateRef(13292)(tmp4[1], 16);
   setData = tmp12.setData;
   setDataImmediate = tmp12.setDataImmediate;
   if (cResult[2] !== setData) {
@@ -313,7 +313,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
               if (cResult[11] === text) {
                 let tmp16 = cResult[12];
               }
-              const tmp17 = tmp10(13323)(tmp16);
+              const tmp17 = tmp10(13328)(tmp16);
               const unlockedEmojis = tmp17.unlockedEmojis;
               ({ lockedEmojis, queryEnd } = tmp17);
               clear = tmp17.clear;
@@ -499,7 +499,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
   analyticsLocations = chatInputStateRef(7253)(chatInputStateRef(7278).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(13287)(tmp[1], 16);
+  const tmp5 = chatInputStateRef(13292)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
@@ -512,7 +512,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
   obj3.enabled = focused;
   obj3.maxCount = maxCount;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(13323)(obj3);
+  const tmp7Result = chatInputStateRef(13328)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -551,7 +551,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
     const obj4 = { emoji, displayedSuggestions: unlockedEmojis };
     ref = queryEnd + combined.length;
   }, items2);
-  const tmp7 = chatInputStateRef(13323);
+  const tmp7 = chatInputStateRef(13328);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

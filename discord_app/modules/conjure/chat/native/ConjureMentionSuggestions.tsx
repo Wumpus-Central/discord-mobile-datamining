@@ -1,6 +1,6 @@
-// === Module 12527: ConjureMentionSuggestions ===
+// === Module 12531: ConjureMentionSuggestions ===
 
-// Module 12527 (ConjureMentionSuggestions)
+// Module 12531 (ConjureMentionSuggestions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;

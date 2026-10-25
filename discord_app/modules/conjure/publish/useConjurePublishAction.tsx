@@ -1,14 +1,14 @@
-// === Module 11873: useConjurePublishAction ===
+// === Module 11874: useConjurePublishAction ===
 
-// Module 11873 (useConjurePublishAction)
+// Module 11874 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
 import UserActionCreators from "UserActionCreators" /* 8670 */;
 import conjureAppInServer from "conjureAppInServer" /* 10731 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10804 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 11875 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10805 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 11876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -400,7 +400,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(11874).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(11875).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10720).getProject(projectId);
                     project.catch(() => {
 
@@ -408,7 +408,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     const tmp9Result = closure_0(10720);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(11874)(ok));
+                  const error = new Error(closure_1(11875)(ok));
                   throw error;
                 }
               }).then((result) => {
@@ -423,8 +423,8 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                   });
                   const tmpResult3 = project(10731);
                 }
-                result = project(10785).refreshPublishedProject(projectId, { isPreview: false });
-                const tmpResult4 = project(10785);
+                result = project(10786).refreshPublishedProject(projectId, { isPreview: false });
+                const tmpResult4 = project(10786);
                 const catchPromise1 = result.catch(() => {
 
                 });
@@ -512,7 +512,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(11874).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(11875).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10720).getProject(projectId);
                     project.catch(() => {
 
@@ -520,7 +520,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     const tmp9Result = closure_0(10720);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(11874)(ok));
+                  const error = new Error(closure_1(11875)(ok));
                   throw error;
                 }
               });
@@ -808,40 +808,33 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
             closure_134_3 = undefined;
             closure_134_4 = undefined;
             closure_134_5 = undefined;
-            closure_134_6 = undefined;
             const guildId = closure_2.guildId;
             closure_134_3 = guildId;
-            const platform = closure_2.platform;
-            closure_134_4 = platform;
-            const tmp81 = readPublishSubject(closure_0, guildId);
-            if (null != tmp81) {
+            const tmp71 = readPublishSubject(closure_0, guildId);
+            if (null != tmp71) {
               if (!projectPublishing.isProjectPublishing(closure_0)) {
-                if ("consent_then_publish" === intent.intent) {
+                if ("consent_then_publish" !== intent.intent) {
+                  c10 = 1;
+                  c11 = 1;
+                  const obj4 = { value: startPublish(tmp71, intent, closure_2), done: false };
+                  return obj4;
+                } else {
                   set.add(closure_0);
                   c9 = 1;
-                  const requestConsent = platform.requestConsent;
-                  f160162 = requestConsent;
+                  const requestConsent = closure_2.platform.requestConsent;
+                  f160193 = requestConsent;
                   if (requestConsent == null) {
-                    f160162 = (arg0) => closure_2_18(arg0, closure_1_3);
+                    f160193 = (arg0) => closure_2_18(arg0, closure_1_3);
                   }
                   c10 = 3;
                   c11 = 1;
-                  const obj4 = { value: f160162(closure_0), done: false };
-                  return obj4;
-                } else {
-                  c10 = 2;
-                  c11 = 1;
-                  const obj5 = { value: startPublish(tmp81, intent, closure_2), done: false };
+                  const obj5 = { value: f160193(closure_0), done: false };
                   return obj5;
                 }
               }
             }
           }
         } else if (1 === tmp7) {
-          c9 = 0;
-          closure_135_24.delete(closure_134_0);
-          throw closure_8;
-        } else if (2 === tmp7) {
           if (arg0 === 1) {
             c11 = 3;
             throw value;
@@ -850,85 +843,85 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
             const obj6 = { value, done: true };
             return obj6;
           }
-        } else {
-          if (3 === tmp7) {
-            if (arg0 === 1) {
-              c11 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c9 = 0;
-              closure_135_24.delete(closure_134_0);
-              c11 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            } else {
-              c9 = 0;
-              closure_135_24.delete(closure_134_0);
-              if (closure_135_14.isProjectPublishing(closure_134_0)) {
-                c11 = 3;
-                return { value: "IconComponent", done: null };
-              } else {
-                closure_134_5 = closure_135_17(closure_134_0, closure_134_3);
-                let integrationStatus;
-                if (closure_134_5 != null) {
-                  integrationStatus = closure_134_5.input.integrationStatus;
-                }
-                c4 = integrationStatus;
-                if (integrationStatus == null) {
-                  c4 = null;
-                }
-                closure_134_6 = c4;
-                if (null != closure_134_5) {
-                  const obj8 = { installScope: closure_134_5.project.install_scope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
-                  let preview_ready;
-                  if (closure_134_6 != null) {
-                    preview_ready = closure_134_6.preview_ready;
-                  }
-                  obj8.previewReady = true === preview_ready;
-                  let prop;
-                  if (closure_134_6 != null) {
-                    prop = closure_134_6.integration_installed;
-                  }
-                  integrationInstalled = prop;
-                  if (prop == null) {
-                    integrationInstalled = null;
-                  }
-                  obj8.integrationInstalled = integrationInstalled;
-                  let prop1;
-                  if (closure_134_6 != null) {
-                    prop1 = closure_134_6.bot_permissions_changed;
-                  }
-                  obj8.botPermissionsChanged = true === prop1;
-                  if (!obj9.requiresPermissionReview(obj8)) {
-                    c10 = 4;
-                    c11 = 1;
-                    const obj10 = { value: closure_135_20(closure_134_5, closure_134_1, closure_134_2), done: false };
-                    return obj10;
-                  }
-                  obj9 = closure_135_0(closure_135_2[31]);
-                }
-                if (null != closure_134_5) {
-                  const intl = closure_135_0(closure_135_2[19]).intl;
-                  closure_134_4.showError(intl.string(closure_135_1(closure_135_2[20]).zJUQOI));
-                }
-                c11 = 3;
-              }
-            }
-          } else if (arg0 === 1) {
+        } else if (2 === tmp7) {
+          c9 = 0;
+          closure_135_24.delete(closure_134_0);
+          throw closure_8;
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
             c11 = 3;
             throw value;
+          } else if (arg0 === 2) {
+            c9 = 0;
+            closure_135_24.delete(closure_134_0);
+            c11 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c9 = 0;
+            closure_135_24.delete(closure_134_0);
+            if (closure_135_14.isProjectPublishing(closure_134_0)) {
+              c11 = 3;
+              return { value: "IconComponent", done: null };
+            } else {
+              closure_134_4 = closure_135_17(closure_134_0, closure_134_3);
+              let integrationStatus;
+              if (closure_134_4 != null) {
+                integrationStatus = closure_134_4.input.integrationStatus;
+              }
+              c4 = integrationStatus;
+              if (integrationStatus == null) {
+                c4 = null;
+              }
+              closure_134_5 = c4;
+              if (null != closure_134_4) {
+                const obj8 = { installScope: closure_134_4.project.install_scope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
+                let preview_ready;
+                if (closure_134_5 != null) {
+                  preview_ready = closure_134_5.preview_ready;
+                }
+                obj8.previewReady = true === preview_ready;
+                let prop;
+                if (closure_134_5 != null) {
+                  prop = closure_134_5.integration_installed;
+                }
+                integrationInstalled = prop;
+                if (prop == null) {
+                  integrationInstalled = null;
+                }
+                obj8.integrationInstalled = integrationInstalled;
+                let prop1;
+                if (closure_134_5 != null) {
+                  prop1 = closure_134_5.bot_permissions_changed;
+                }
+                obj8.botPermissionsChanged = true === prop1;
+                if (!obj9.requiresPermissionReview(obj8)) {
+                  c10 = 4;
+                  c11 = 1;
+                  const obj10 = { value: closure_135_20(closure_134_4, closure_134_1, closure_134_2), done: false };
+                  return obj10;
+                }
+                obj9 = closure_135_0(closure_135_2[31]);
+              }
+              c11 = 3;
+              return { value: "IconComponent", done: null };
+            }
           }
+        } else if (arg0 === 1) {
+          c11 = 3;
+          throw value;
+        } else if (arg0 === 2) {
           c11 = 3;
           const obj = { value, done: true };
           return obj;
         }
         c11 = 3;
         return { value: "IconComponent", done: null };
-      } catch (tmp55) {
-        closure_8 = tmp55;
+      } catch (tmp45) {
+        closure_8 = tmp45;
         if (tmp4 === c9) {
           c11 = tmp2;
-          throw tmp55;
+          throw tmp45;
         } else {
           c10 = tmp;
         }

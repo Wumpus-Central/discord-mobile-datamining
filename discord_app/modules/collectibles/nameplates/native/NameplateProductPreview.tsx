@@ -1,6 +1,6 @@
-// === Module 14451: NameplateProductPreview ===
+// === Module 14456: NameplateProductPreview ===
 
-// Module 14451 (NameplateProductPreview)
+// Module 14456 (NameplateProductPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -102,7 +102,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
           tmp26 = tmp28;
         }
       }
-      const obj5 = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration: tmp9, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": null };
+      const obj5 = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration: tmp9, animate: !stateFromStores, autoStatusCutout: false, "aria-hidden": false };
       const tmp25 = timestampProducer(native.Avatar, obj5);
       cResult[12] = tmp9;
       cResult[13] = !stateFromStores;
@@ -157,7 +157,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": null };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: false, "aria-hidden": false };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[22]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });

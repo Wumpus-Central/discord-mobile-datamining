@@ -1,6 +1,6 @@
-// === Module 11003: AvailableForumTag ===
+// === Module 11004: AvailableForumTag ===
 
-// Module 11003 (AvailableForumTag)
+// Module 11004 (AvailableForumTag)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import Text_Text from "Text/Text" /* 5234 */;

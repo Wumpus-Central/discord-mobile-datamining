@@ -1,18 +1,18 @@
-// === Module 17522: MessagesFastestList ===
+// === Module 17527: MessagesFastestList ===
 
-// Module 17522 (MessagesFastestList)
+// Module 17527 (MessagesFastestList)
 import nativeDefault from "native" /* 587 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7157 */;
 import FastestListItemTypeDefault from "FastestListItemType" /* 7159 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 17452 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17462 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17463 */;
-import useMessagesData from "useMessagesData" /* 17466 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17479 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17516 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 17517 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17518 */;
-import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17519 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 17457 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17467 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17468 */;
+import useMessagesData from "useMessagesData" /* 17471 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 17484 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 17521 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 17522 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 17523 */;
+import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 17524 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;

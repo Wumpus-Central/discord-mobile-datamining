@@ -1,9 +1,9 @@
-// === Module 13806: ForLaterMessageCard ===
+// === Module 13811: ForLaterMessageCard ===
 
-// Module 13806 (ForLaterMessageCard)
+// Module 13811 (ForLaterMessageCard)
 import nativeDefault from "native" /* 587 */;
 import _modDef5690 from "module_5690" /* 5690 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 13807 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 13812 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
@@ -364,7 +364,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: tmp4(13811).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: tmp4(13816).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -458,7 +458,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
   const tmp = closure_12();
-  const savedMessageChannel = savedMessage(13811).useSavedMessageChannel(savedMessage);
+  const savedMessageChannel = savedMessage(13816).useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
@@ -522,7 +522,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(13811).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(13816).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -587,7 +587,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }), items);
-  let obj = savedMessage(13811);
+  let obj = savedMessage(13816);
   const items1 = [PermissionStore];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
@@ -611,12 +611,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return tmp2;
       })) {
         let obj3 = { savedMessage, jumpToMessage: callback, throttledNow };
-        const tmp8 = closure_10(savedMessageChannel(13813), obj3);
+        const tmp8 = closure_10(savedMessageChannel(13818), obj3);
         let obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp.card, onPress: callback, children: null };
         let tmp6Result = null;
         if (null != savedMessage.saveData.dueAt) {
           let obj5 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = closure_10(tmp2(13820).ForLaterCardReminderHeader, obj5);
+          tmp6Result = closure_10(tmp2(13825).ForLaterCardReminderHeader, obj5);
         }
         const items2 = [tmp6Result, , , ];
         let obj6 = { channel: savedMessageChannel, actions: null };
@@ -625,11 +625,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp12 = tmp8;
         }
         obj6.actions = tmp12;
-        items2[1] = closure_10(tmp2(13822).ForLaterCardHeader, obj6);
+        items2[1] = closure_10(tmp2(13827).ForLaterCardHeader, obj6);
         const obj7 = { style: tmp.cardDivider };
         items2[2] = closure_10(View, obj7);
         let obj8 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-        items2[3] = closure_10(tmp2(13823).ForLaterMessageRow, obj8);
+        items2[3] = closure_10(tmp2(13828).ForLaterMessageRow, obj8);
         obj4.children = items2;
         return closure_11(tmp2(6905).Card, obj4);
       }

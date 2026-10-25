@@ -1,6 +1,6 @@
-// === Module 17983: GuildRoleSubscriptionPurchasePage ===
+// === Module 17988: GuildRoleSubscriptionPurchasePage ===
 
-// Module 17983 (GuildRoleSubscriptionPurchasePage)
+// Module 17988 (GuildRoleSubscriptionPurchasePage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import LinkingDefault from "Linking" /* 5660 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
-import _modDef11560 from "module_11560" /* 11560 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17993 */;
+import _modDef11561 from "module_11561" /* 11561 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17998 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     }
     let tmp12 = tmp5;
     if (tmp5) {
-      const obj4 = { source: _modDef11560, style: tmp4.socialBadgeArrow };
+      const obj4 = { source: _modDef11561, style: tmp4.socialBadgeArrow };
       tmp12 = closure_1_14(native.Icon, obj4);
     }
     cResult[5] = tmp5;
@@ -168,7 +168,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   obj.onPress = onPress;
   const items = [closure_1_14(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef11560, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef11561, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj3);
   }
   items[2] = tmp5Result;

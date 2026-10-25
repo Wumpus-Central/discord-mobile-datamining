@@ -1,6 +1,6 @@
-// === Module 11478: LeakyBucket ===
+// === Module 11479: LeakyBucket ===
 
-// Module 11478 (LeakyBucket)
+// Module 11479 (LeakyBucket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");

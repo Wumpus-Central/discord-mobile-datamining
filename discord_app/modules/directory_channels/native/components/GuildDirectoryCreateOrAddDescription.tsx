@@ -1,7 +1,7 @@
-// === Module 13199: GuildDirectoryCreateOrAddDescription ===
+// === Module 13204: GuildDirectoryCreateOrAddDescription ===
 
-// Module 13199 (GuildDirectoryCreateOrAddDescription)
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13197 */;
+// Module 13204 (GuildDirectoryCreateOrAddDescription)
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13202 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -129,5 +129,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(directoryChannelId(13189).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(13194).GuildDirectoryAddModalScreen, obj);
 };

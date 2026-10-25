@@ -1,6 +1,6 @@
-// === Module 16578: UserSettingsGuildRoleSubscriptionsCancel ===
+// === Module 16583: UserSettingsGuildRoleSubscriptionsCancel ===
 
-// Module 16578 (UserSettingsGuildRoleSubscriptionsCancel)
+// Module 16583 (UserSettingsGuildRoleSubscriptionsCancel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,13 +10,13 @@ import Text_Text from "Text/Text" /* 5234 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import GuildIconDefault from "GuildIcon" /* 6883 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7074 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16564 */;
-import FormSeparatorDefault from "FormSeparator" /* 16569 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16575 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16579 */;
-import _modDef16587 from "module_16587" /* 16587 */;
-import FastAssetImageDefault from "FastAssetImage" /* 16588 */;
-import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 16589 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16569 */;
+import FormSeparatorDefault from "FormSeparator" /* 16574 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16580 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16584 */;
+import _modDef16592 from "module_16592" /* 16592 */;
+import FastAssetImageDefault from "FastAssetImage" /* 16593 */;
+import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 16594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -345,7 +345,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function WhatYo
               tmp51 = cResult[27];
             }
             if (cResult[28] !== tmp4.cactus) {
-              const obj15 = { source: _modDef16587, style: tmp4.cactus };
+              const obj15 = { source: _modDef16592, style: tmp4.cactus };
               const tmp58 = v65535(FastImageDefault, obj15);
               cResult[28] = tmp4.cactus;
               cResult[29] = tmp58;
@@ -441,7 +441,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function WhatYo
   const obj13 = { source: null, style: null };
   const formatToPlainStringResult = intl2.formatToPlainString(util.t.OVlNGT, { numEmojis: _slicedToArray(obj.useTierEmojiIds(listingId, guild.id), 1)[0].size, numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length, numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length });
   const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef16587;
+  obj13.source = _modDef16592;
   obj13.style = tmp.cactus;
   items2[6] = v65535(FastImageDefault, obj13);
   obj7.children = items2;

@@ -1,6 +1,6 @@
-// === Module 16831: ClearWebBrowserDataSetting ===
+// === Module 16836: ClearWebBrowserDataSetting ===
 
-// Module 16831 (ClearWebBrowserDataSetting)
+// Module 16836 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,7 +8,7 @@ import BrowserManager from "BrowserManager" /* 5693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

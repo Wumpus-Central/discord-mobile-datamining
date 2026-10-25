@@ -1,14 +1,14 @@
-// === Module 12055: AppLauncherNavigator ===
+// === Module 12056: AppLauncherNavigator ===
 
-// Module 12055 (AppLauncherNavigator)
+// Module 12056 (AppLauncherNavigator)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12056 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12116 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12143 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12204 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12057 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12117 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12144 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12205 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -177,7 +177,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                             return tmp71;
                                                           }
                                                           const obj5 = { value: tmp70, children: tmp61 };
-                                                          const tmp73 = closure_9(entrypoint(11165).AppLauncherContext.Provider, obj5);
+                                                          const tmp73 = closure_9(entrypoint(11166).AppLauncherContext.Provider, obj5);
                                                           cResult[66] = tmp70;
                                                           cResult[67] = tmp61;
                                                           cResult[68] = tmp73;

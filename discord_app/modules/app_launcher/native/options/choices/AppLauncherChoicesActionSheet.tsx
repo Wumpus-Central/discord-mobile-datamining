@@ -1,6 +1,6 @@
-// === Module 12155: AppLauncherChoicesActionSheet ===
+// === Module 12156: AppLauncherChoicesActionSheet ===
 
-// Module 12155 (AppLauncherChoicesActionSheet)
+// Module 12156 (AppLauncherChoicesActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F113401 */ function() { ... });
+        return choices.map(/* F113417 */ function() { ... });
       }
     }
     cResult[2] = option.choices;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F113401 */ function() { ... });
+        return choices.map(/* F113417 */ function() { ... });
       }
     }
   }
@@ -291,11 +291,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_9(tmp3(12156).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_9(tmp3(12157).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_9(tmp3(12156).AppLauncherListEmptyState, {});
+    let tmp20 = closure_9(tmp3(12157).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -312,5 +312,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_10(option(12158).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_10(option(12159).AppLauncherCommandOptionActionSheet, obj2);
 });

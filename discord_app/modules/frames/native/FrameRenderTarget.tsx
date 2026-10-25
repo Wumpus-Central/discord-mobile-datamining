@@ -1,8 +1,8 @@
-// === Module 11887: FrameRenderTarget ===
+// === Module 11888: FrameRenderTarget ===
 
-// Module 11887 (FrameRenderTarget)
+// Module 11888 (FrameRenderTarget)
 import c from "c" /* 576 */;
-import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 11888 */;
+import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 11889 */;
 import noop from "module_19" /* 19 */;
 
 const WebView = WebViewTarget(7907);

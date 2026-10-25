@@ -1,6 +1,6 @@
-// === Module 17584: GuildThemeNuxActionSheet ===
+// === Module 17589: GuildThemeNuxActionSheet ===
 
-// Module 17584 (GuildThemeNuxActionSheet)
+// Module 17589 (GuildThemeNuxActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
                 v0 = 1;
                 v2 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(17585).saveGuildThemeNuxPreference(tmp48, closure_1_6), done: false };
+                const obj5 = { value: closure_0(17590).saveGuildThemeNuxPreference(tmp48, closure_1_6), done: false };
                 return obj5;
               } else {
                 c5 = 3;
@@ -303,8 +303,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(17585).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(17585).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(17590).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(17590).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   obj3.dismissAccessibilityLabel = intl2.string(guildId(1128).t.cpT0Cq);
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
-  const items7 = [closure_10(markAsDismissed(17586), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [closure_10(markAsDismissed(17591), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1128).intl;
   obj4.children = intl3.string(guildId(1128).t.Q9zFy9);

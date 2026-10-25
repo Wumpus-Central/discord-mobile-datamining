@@ -1,15 +1,15 @@
-// === Module 10777: activityLaunchErrorUtils ===
+// === Module 10778: activityLaunchErrorUtils ===
 
-// Module 10777 (activityLaunchErrorUtils)
+// Module 10778 (activityLaunchErrorUtils)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6018 */;
 import InteractionUtils from "InteractionUtils" /* 8599 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10776 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10779 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10777 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10780 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10778 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10779 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5625 */;
 
 require = fn;

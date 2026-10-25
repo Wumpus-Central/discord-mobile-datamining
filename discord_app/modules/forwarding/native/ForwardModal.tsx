@@ -1,6 +1,6 @@
-// === Module 12898: ForwardModal ===
+// === Module 12903: ForwardModal ===
 
-// Module 12898 (ForwardModal)
+// Module 12903 (ForwardModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HapticUtils from "HapticUtils" /* 5212 */;
@@ -10,10 +10,10 @@ import LinkIcon from "LinkIcon" /* 5678 */;
 import ChannelUtils from "ChannelUtils" /* 5994 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12895 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12896 */;
-import formatResults from "formatResults" /* 12900 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12902 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12900 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12901 */;
+import formatResults from "formatResults" /* 12905 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12899).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(12904).MAX_DESTINATION_COUNT;
 let UserRowModes = fn(10616).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 if (forwardOptions(source[27])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5910).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12905), {
+                    closure_1_0(5910).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12910), {
                       onConfirm() {
                         return closure_0(true);
                       },

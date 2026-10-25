@@ -1,8 +1,8 @@
-// === Module 15083: reactParserFor ===
+// === Module 15088: reactParserFor ===
 
-// Module 15083 (reactParserFor)
+// Module 15088 (reactParserFor)
 import markup_MarkupParserDefault from "markup/MarkupParser" /* 8345 */;
-import Spoiler from "Spoiler" /* 12066 */;
+import Spoiler from "Spoiler" /* 12067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

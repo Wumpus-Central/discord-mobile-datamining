@@ -1,6 +1,6 @@
-// === Module 11403: confirmActivityLaunchChecks ===
+// === Module 11404: confirmActivityLaunchChecks ===
 
-// Module 11403 (confirmActivityLaunchChecks)
+// Module 11404 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
@@ -177,7 +177,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11407)(tmp, channel, () => {
+                  shouldClosePopout(11408)(tmp, channel, () => {
                     const result = closure_0(c2[10]).leaveEmbeddedActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));

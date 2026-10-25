@@ -1,12 +1,12 @@
-// === Module 17110: BugReporterSetting ===
+// === Module 17115: BugReporterSetting ===
 
-// Module 17110 (BugReporterSetting)
+// Module 17115 (BugReporterSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import BugReporterExperimentDefault from "BugReporterExperiment" /* 13794 */;
-import BugReportStore from "BugReportStore" /* 13780 */;
+import BugReporterExperimentDefault from "BugReporterExperiment" /* 13799 */;
+import BugReportStore from "BugReportStore" /* 13785 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -23,18 +23,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBugRepo
 }) : (function useBugReporterExperimentSettingPredicate() {
   return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 });
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(12295).BugIcon,
+  IconComponent: fn(12296).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13781, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13786, dependencyMap.paths));
     }
   },
   withArrow: true,

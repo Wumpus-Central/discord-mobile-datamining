@@ -1,13 +1,13 @@
-// === Module 13738: ChannelContainer ===
+// === Module 13743: ChannelContainer ===
 
-// Module 13738 (ChannelContainer)
+// Module 13743 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
 import useChatLayoutDefault from "useChatLayout" /* 5153 */;
-import common_NotificationsDefault from "common/Notifications" /* 13739 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 13838 */;
+import common_NotificationsDefault from "common/Notifications" /* 13744 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 13843 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4904 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -91,7 +91,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp10 = !isStageChannel;
   if (isStageChannel) {
-    tmp10 = channelId(11386)(stateFromStoresObject.voiceChannelId);
+    tmp10 = channelId(11387)(stateFromStoresObject.voiceChannelId);
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LurkingStore];
@@ -137,7 +137,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp21 = cResult[13];
         }
         const effect = noop.useEffect(tmp20, tmp21);
-        const channelStyles = tmp(13838).useChannelStyles();
+        const channelStyles = tmp(13843).useChannelStyles();
         if (cResult[14] === channel) {
           if (cResult[15] === stateFromStores) {
             let tmp25 = cResult[16];
@@ -191,7 +191,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp32 = tmp10;
           if (tmp10) {
             const obj4 = { style: channelStyles.callPTTButton };
-            tmp32 = closure_10(tmp9(11576), obj4);
+            tmp32 = closure_10(tmp9(11577), obj4);
           }
           cResult[17] = channelStyles.callPTTButton;
           cResult[18] = tmp10;
@@ -207,14 +207,14 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           tmp29 = null;
           if (stateFromStores) {
             const obj5 = { channel };
-            tmp29 = closure_10(tmp9(13839), obj5);
+            tmp29 = closure_10(tmp9(13844), obj5);
           }
         }
         cResult[14] = channel;
         cResult[15] = stateFromStores;
         cResult[16] = tmp29;
         tmp25 = tmp29;
-        const tmpResult4 = tmp(13838);
+        const tmpResult4 = tmp(13843);
       }
     }
   }
@@ -268,7 +268,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(11386)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11387)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -321,13 +321,13 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(13839), obj4);
+      tmp15 = closure_10(channelId(13844), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11576), obj5);
+    tmp5 = closure_10(channelId(11577), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

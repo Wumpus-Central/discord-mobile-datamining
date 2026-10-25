@@ -1,23 +1,23 @@
-// === Module 14936: HoldingGemSpotIllustration ===
+// === Module 14941: HoldingGemSpotIllustration ===
 
-// Module 14936 (HoldingGemSpotIllustration)
+// Module 14941 (HoldingGemSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef14937 from "module_14937" /* 14937 */;
-import _modDef14938 from "module_14938" /* 14938 */;
-import _modDef14939 from "module_14939" /* 14939 */;
+import _modDef14942 from "module_14942" /* 14942 */;
+import _modDef14943 from "module_14943" /* 14943 */;
+import _modDef14944 from "module_14944" /* 14944 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14937 }, 3: null };
-let obj2 = { uri: _modDef14937 };
-obj[2] = { uri: _modDef14938 };
-const obj3 = { uri: _modDef14938 };
-obj[3] = { uri: _modDef14939 };
+let obj = { 1: null, 2: { uri: _modDef14942 }, 3: null };
+let obj2 = { uri: _modDef14942 };
+obj[2] = { uri: _modDef14943 };
+const obj3 = { uri: _modDef14943 };
+obj[3] = { uri: _modDef14944 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14939 };
+const obj4 = { uri: _modDef14944 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HoldingGemSpotIllustration.native.tsx");
 

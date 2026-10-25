@@ -1,10 +1,10 @@
-// === Module 19367: MessageSendFailureNotificationManager ===
+// === Module 19372: MessageSendFailureNotificationManager ===
 
-// Module 19367 (MessageSendFailureNotificationManager)
+// Module 19372 (MessageSendFailureNotificationManager)
 import util from "util" /* 1128 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13752 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13754 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13757 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13759 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import UserStore from "UserStore" /* 1392 */;

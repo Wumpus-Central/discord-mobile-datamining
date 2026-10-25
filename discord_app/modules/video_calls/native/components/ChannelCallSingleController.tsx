@@ -1,6 +1,6 @@
-// === Module 11677: ChannelCallSingleController ===
+// === Module 11678: ChannelCallSingleController ===
 
-// Module 11677 (ChannelCallSingleController)
+// Module 11678 (ChannelCallSingleController)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
 import noop from "module_19" /* 19 */;
@@ -99,7 +99,7 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
         }
       }
       let tmp17 = channel;
-      tmp17 = tmp17(tmp15 ? 11678 : 11680);
+      tmp17 = tmp17(tmp15 ? 11679 : 11681);
       let obj2 = { participant: selectedParticipant, channel };
       const tmp16Result = <tmp17 participant={selectedParticipant} channel={channel} />;
       cResult[7] = channel;
@@ -133,13 +133,13 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11678 : 11680);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11679 : 11681);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(11681), { participant: selectedParticipant, channel });
+    return jsx(channel(11682), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

@@ -1,12 +1,12 @@
-// === Module 16678: FavoritesGuildToggleSetting ===
+// === Module 16683: FavoritesGuildToggleSetting ===
 
-// Module 16678 (FavoritesGuildToggleSetting)
+// Module 16683 (FavoritesGuildToggleSetting)
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
 import SettingsConstants from "SettingsConstants" /* 8332 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10841 */;
-import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 16679 */;
-import SettingBuilders from "SettingBuilders" /* 11205 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10842 */;
+import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 16684 */;
+import SettingBuilders from "SettingBuilders" /* 11206 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

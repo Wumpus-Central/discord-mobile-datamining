@@ -1,10 +1,10 @@
-// === Module 16407: OrbsArcadeHowToPlaySheet ===
+// === Module 16412: OrbsArcadeHowToPlaySheet ===
 
-// Module 16407 (OrbsArcadeHowToPlaySheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16408 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16409 */;
+// Module 16412 (OrbsArcadeHowToPlaySheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16413 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16414 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16390 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       str = "";
     }
     if (cResult[7] !== stateFromStores) {
-      const obj3 = { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16409).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
-      const tmp20 = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16409).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
+      const obj3 = { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
+      const tmp20 = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
       cResult[7] = stateFromStores;
       cResult[8] = tmp20;
       let tmp15 = tmp20;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       }
     }
     const obj4 = { illustration: tmp9, title: tmp13, description: str, actions: tmp15 };
-    const tmp23 = jsx(tmp(10852).PromoSheet, { illustration: tmp9, title: tmp13, description: str, actions: tmp15 });
+    const tmp23 = jsx(tmp(10853).PromoSheet, { illustration: tmp9, title: tmp13, description: str, actions: tmp15 });
     cResult[9] = tmp9;
     cResult[10] = str;
     cResult[11] = tmp15;
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       str = "";
     }
     obj3.description = str;
-    const obj4 = { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16409).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16409).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
-    tmp5Result2 = jsx(tmp(10852).PromoSheet, { illustration: tmp5Result, title: null, description: null, actions: null });
+    const obj4 = { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeHowToPlaySheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
+    tmp5Result2 = jsx(tmp(10853).PromoSheet, { illustration: tmp5Result, title: null, description: null, actions: null });
   }
   return tmp5Result2;
 });

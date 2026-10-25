@@ -1,6 +1,6 @@
-// === Module 13731: ChannelNavbar ===
+// === Module 13736: ChannelNavbar ===
 
-// Module 13731 (ChannelNavbar)
+// Module 13736 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

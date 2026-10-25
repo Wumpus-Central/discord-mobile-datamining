@@ -1,6 +1,6 @@
-// === Module 12023: completeAppLauncherOnboarding ===
+// === Module 12024: completeAppLauncherOnboarding ===
 
-// Module 12023 (completeAppLauncherOnboarding)
+// Module 12024 (completeAppLauncherOnboarding)
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
 import size from "module_2" /* 2 */;

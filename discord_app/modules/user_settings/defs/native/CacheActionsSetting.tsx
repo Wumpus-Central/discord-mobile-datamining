@@ -1,6 +1,6 @@
-// === Module 16923: CacheActionsSetting ===
+// === Module 16928: CacheActionsSetting ===
 
-// Module 16923 (CacheActionsSetting)
+// Module 16928 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -13,11 +13,11 @@ import TableRow from "TableRow" /* 6903 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import ActionSheet from "ActionSheet" /* 7298 */;
-import FileUpIcon from "FileUpIcon" /* 11789 */;
-import FileIcon from "FileIcon" /* 11827 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 16924 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 16925 */;
-import FileWarningIcon from "FileWarningIcon" /* 16929 */;
+import FileUpIcon from "FileUpIcon" /* 11790 */;
+import FileIcon from "FileIcon" /* 11828 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 16929 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 16930 */;
+import FileWarningIcon from "FileWarningIcon" /* 16934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
@@ -62,7 +62,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
     [tmp7, tmp8] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp15 = closure_7(tmp(11789).FileUpIcon, {});
+    const tmp15 = closure_7(tmp(11790).FileUpIcon, {});
     const intl3 = tmp(1128).intl;
     const stringResult1 = intl3.string(tmp(1128).t["/GUaXh"]);
     cResult[2] = tmp15;
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
             } else {
               c1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(16928).writeCaches(), done: false };
+              const obj5 = { value: tmp2(16933).writeCaches(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -154,7 +154,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
       }
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp29 = closure_7(tmp(16929).FileWarningIcon, { color: "text-feedback-critical" });
+        const tmp29 = closure_7(tmp(16934).FileWarningIcon, { color: "text-feedback-critical" });
         const intl5 = tmp(1128).intl;
         const stringResult2 = intl5.string(tmp(1128).t.tgwiMO);
         cResult[11] = tmp29;
@@ -192,10 +192,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v1(16925).clearCaches();
-                  const obj5 = v1(16925);
-                  tmp2(16928).clearCaches();
-                  const obj6 = tmp2(16928);
+                  v1(16930).clearCaches();
+                  const obj5 = v1(16930);
+                  tmp2(16933).clearCaches();
+                  const obj6 = tmp2(16933);
                   v1 = 1;
                   dependencyMap = 1;
                   const obj4 = { value: tmp2(5693).browserManagerClearWebsiteData(), done: false };
@@ -290,7 +290,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
   }
   let tmp24Result2 = null != DiskUsageManagerDefault.calculateSize;
   if (tmp24Result2) {
-    const obj9 = { icon: closure_7(tmp(11827).FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
+    const obj9 = { icon: closure_7(tmp(11828).FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
     const intl4 = tmp(1128).intl;
     const t = tmp(1128).t;
     obj9.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
@@ -469,7 +469,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
   obj2.children = items1;
   return closure_1_8(ActionSheet.ActionSheet, obj2);
 });
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCacheActionsPredicate() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -500,7 +500,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(16929).FileWarningIcon,
+  IconComponent: fn(16934).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), CacheActionsActionSheet);
   },

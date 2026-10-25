@@ -1,6 +1,6 @@
-// === Module 16364: BountiesBannerBackground ===
+// === Module 16369: BountiesBannerBackground ===
 
-// Module 16364 (BountiesBannerBackground)
+// Module 16369 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 5258 */;

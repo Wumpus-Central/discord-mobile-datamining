@@ -1,6 +1,6 @@
-// === Module 18329: MessageRequestPreview ===
+// === Module 18334: MessageRequestPreview ===
 
-// Module 18329 (MessageRequestPreview)
+// Module 18334 (MessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const style = channel.style;
   const tmp4 = closure_9();
   let obj = channel(576);
-  const messageRequestPreview = channel(13515).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(13520).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp9 = cResult[3];
   }
-  const obj2 = channel(13515);
+  const obj2 = channel(13520);
   const stateFromStoresObject = channel(504).useStateFromStoresObject(first, S, tmp9);
   if (cResult[4] === channel) {
     class S {
@@ -626,10 +626,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(13515).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(13520).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(13515);
+  let obj = channel(13520);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {

@@ -1,6 +1,6 @@
-// === Module 13537: getMutualFriendsLabel ===
+// === Module 13542: getMutualFriendsLabel ===
 
-// Module 13537 (getMutualFriendsLabel)
+// Module 13542 (getMutualFriendsLabel)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

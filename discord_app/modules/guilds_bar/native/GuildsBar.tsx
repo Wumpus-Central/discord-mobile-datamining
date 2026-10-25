@@ -1,13 +1,13 @@
-// === Module 17727: GuildsBar ===
+// === Module 17732: GuildsBar ===
 
-// Module 17727 (GuildsBar)
+// Module 17732 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 6886 */;
 import FastListDefault from "FastList" /* 7167 */;
-import StartupProfilerDefault from "StartupProfiler" /* 13052 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17604 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 17728 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 17736 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 17800 */;
+import StartupProfilerDefault from "StartupProfiler" /* 13057 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17609 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 17733 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 17741 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 17805 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       return tmp26;
                     }
-                    const obj3 = { profile: fastListRef(13052).Profiles.Guilds, children: null };
+                    const obj3 = { profile: fastListRef(13057).Profiles.Guilds, children: null };
                     const obj4 = { gesture, children: tmp23 };
                     obj3.children = closure_4(fastListRef(5297).GestureDetector, obj4);
                     const tmp29 = closure_4(StartupProfilerDefault, obj3);
@@ -273,7 +273,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   closure_7(listProps, fastListRef);
   const obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(13052).Profiles.Guilds;
+  obj.profile = fastListRef(13057).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp9 = StartupProfilerDefault;

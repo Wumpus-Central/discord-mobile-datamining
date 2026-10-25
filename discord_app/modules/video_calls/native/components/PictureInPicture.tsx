@@ -1,6 +1,6 @@
-// === Module 11370: PictureInPicture ===
+// === Module 11371: PictureInPicture ===
 
-// Module 11370 (PictureInPicture)
+// Module 11371 (PictureInPicture)
 import spring from "spring" /* 5247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(10879).toggleFocus;
+const toggleFocus = fn(10880).toggleFocus;
 const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);

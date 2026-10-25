@@ -1,6 +1,6 @@
-// === Module 13849: useFavoritesGuildChannelFilter ===
+// === Module 13854: useFavoritesGuildChannelFilter ===
 
-// Module 13849 (useFavoritesGuildChannelFilter)
+// Module 13854 (useFavoritesGuildChannelFilter)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FavoritesUtils from "FavoritesUtils" /* 4848 */;
 import sortByMatchScore from "sortByMatchScore" /* 9067 */;

@@ -1,6 +1,6 @@
-// === Module 11407: confirmActivityChangeAlert ===
+// === Module 11408: confirmActivityChangeAlert ===
 
-// Module 11407 (confirmActivityChangeAlert)
+// Module 11408 (confirmActivityChangeAlert)
 import util from "util" /* 1128 */;
 import StringUtils from "StringUtils" /* 2033 */;
 import useChannelName from "useChannelName" /* 5604 */;

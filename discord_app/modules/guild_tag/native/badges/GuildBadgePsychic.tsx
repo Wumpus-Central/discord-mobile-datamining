@@ -1,9 +1,9 @@
-// === Module 15177: GuildBadgePsychic ===
+// === Module 15182: GuildBadgePsychic ===
 
-// Module 15177 (GuildBadgePsychic)
+// Module 15182 (GuildBadgePsychic)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7962 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15161 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15166 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

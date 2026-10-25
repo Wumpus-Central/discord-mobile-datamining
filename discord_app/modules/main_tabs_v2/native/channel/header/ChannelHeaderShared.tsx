@@ -1,6 +1,6 @@
-// === Module 14016: ChannelHeaderShared ===
+// === Module 14021: ChannelHeaderShared ===
 
-// Module 14016 (ChannelHeaderShared)
+// Module 14021 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -17,8 +17,8 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
 import BotTagDefault from "BotTag" /* 9134 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10661 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10688 */;
-import _modDef14017 from "module_14017" /* 14017 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 14018 */;
+import _modDef14022 from "module_14022" /* 14022 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 14023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef14017, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef14022, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -273,7 +273,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef14017, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef14022, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -327,7 +327,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
       }
     }
   }
-  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: false };
+  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: "jsona" };
   const tmp7 = closure_1_8(native.Avatar, obj2);
   cResult[0] = isMobileOnline;
   cResult[1] = isVROnline;
@@ -339,7 +339,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
 }) : (function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isMobileOnline: null, isVROnline: "6fdce3d9195ea0b36363d1d85d3fe1ac", style: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages", autoStatusCutout: "jsona" };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;

@@ -1,6 +1,6 @@
-// === Module 12987: CheckpointRankTag ===
+// === Module 12992: CheckpointRankTag ===
 
-// Module 12987 (CheckpointRankTag)
+// Module 12992 (CheckpointRankTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;

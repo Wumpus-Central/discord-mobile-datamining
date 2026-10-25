@@ -6,10 +6,10 @@ import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 10728 */;
 import ApplicationUtils from "ApplicationUtils" /* 10744 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 10757 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10761 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10762 */;
-import restartFrames from "restartFrames" /* 10764 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 10758 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10762 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10763 */;
+import restartFrames from "restartFrames" /* 10765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
@@ -636,7 +636,7 @@ let items = [fn(8827).OAuth2Scopes.BOT, fn(8827).OAuth2Scopes.APPLICATIONS_COMMA
 let c15 = 0;
 let c16 = 0;
 let c19 = 0;
-const conjurePreviewControlLease = fn(10761);
+const conjurePreviewControlLease = fn(10762);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -739,7 +739,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(10763);
+const conjurePreviewOperationSurfaces = fn(10764);
 let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

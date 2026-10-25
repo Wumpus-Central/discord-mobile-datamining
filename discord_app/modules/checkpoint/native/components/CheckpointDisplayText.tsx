@@ -1,8 +1,8 @@
-// === Module 12985: CheckpointDisplayText ===
+// === Module 12990: CheckpointDisplayText ===
 
-// Module 12985 (CheckpointDisplayText)
+// Module 12990 (CheckpointDisplayText)
 import c from "c" /* 576 */;
-import CheckpointTextDefault from "CheckpointText" /* 12967 */;
+import CheckpointTextDefault from "CheckpointText" /* 12972 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13558: PortalKeyboardInlineComponent ===
+// === Module 13563: PortalKeyboardInlineComponent ===
 
-// Module 13558 (PortalKeyboardInlineComponent)
+// Module 13563 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
@@ -115,8 +115,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(5162);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10916).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10916);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10917).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10917);
               }
             }
           }
@@ -229,8 +229,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(5162);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10916).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10916);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10917).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10917);
               }
             }
           }

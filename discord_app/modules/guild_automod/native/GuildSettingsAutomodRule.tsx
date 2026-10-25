@@ -1,11 +1,11 @@
-// === Module 19015: GuildSettingsAutomodRule ===
+// === Module 19020: GuildSettingsAutomodRule ===
 
-// Module 19015 (GuildSettingsAutomodRule)
+// Module 19020 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19000 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19005 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,10 +13,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(18997).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(18999);
+const useAutomodRulesList = fn(19002).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19004);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12806).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12811).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -538,7 +538,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(12811).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(12816).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {

@@ -1,6 +1,6 @@
-// === Module 19131: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 19136: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 19131 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 19136 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,8 +14,8 @@ import TableRow from "TableRow" /* 6903 */;
 import Pressables from "Pressables" /* 6908 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11253 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19132 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11254 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -1365,7 +1365,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19132).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19137).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1373,9 +1373,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(19132);
-  const tmpResult = metadataField(19132);
-  str1 = metadataField(19132).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19137);
+  const tmpResult = metadataField(19137);
+  str1 = metadataField(19137).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1489,7 +1489,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
     };
     return onInputValueChange(metadataField(7295).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19132).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19137).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {

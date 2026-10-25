@@ -1,6 +1,6 @@
-// === Module 10835: InstantInviteUsesLabel ===
+// === Module 10836: InstantInviteUsesLabel ===
 
-// Module 10835 (InstantInviteUsesLabel)
+// Module 10836 (InstantInviteUsesLabel)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import noop from "module_19" /* 19 */;

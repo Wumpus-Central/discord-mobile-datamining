@@ -1,6 +1,6 @@
-// === Module 12864: openAccountStanding ===
+// === Module 12869: openAccountStanding ===
 
-// Module 12864 (openAccountStanding)
+// Module 12869 (openAccountStanding)
 import Constants from "Constants" /* 1087 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
 import size from "module_2" /* 2 */;

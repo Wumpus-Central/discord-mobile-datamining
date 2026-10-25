@@ -1,6 +1,6 @@
-// === Module 11277: openPlaintextFilePreview ===
+// === Module 11278: openPlaintextFilePreview ===
 
-// Module 11277 (openPlaintextFilePreview)
+// Module 11278 (openPlaintextFilePreview)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import size from "module_2" /* 2 */;
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/media/native/openPlaintextFil
 
 export const PLAINTEXT_FILE_PREVIEW_MODAL_KEY = "PlaintextFilePreview";
 export const openPlaintextFilePreview = function openPlaintextFilePreview(merged) {
-  return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11278, dependencyMap.paths), merged, PlaintextFilePreview);
+  return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11279, dependencyMap.paths), merged, PlaintextFilePreview);
 };

@@ -1,6 +1,6 @@
-// === Module 13855: canManageChannelList ===
+// === Module 13860: canManageChannelList ===
 
-// Module 13855 (canManageChannelList)
+// Module 13860 (canManageChannelList)
 import ChannelStore from "ChannelStore" /* 4823 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 

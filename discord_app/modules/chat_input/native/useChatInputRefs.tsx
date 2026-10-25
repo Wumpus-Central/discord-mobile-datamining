@@ -1,6 +1,6 @@
-// === Module 13083: useChatInputRefs ===
+// === Module 13088: useChatInputRefs ===
 
-// Module 13083 (useChatInputRefs)
+// Module 13088 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ChatInputUtils from "ChatInputUtils" /* 5159 */;
 import StickersUtils from "StickersUtils" /* 6488 */;
@@ -8,8 +8,8 @@ import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 8304 */;
 import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10085 */;
 import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10087 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12512 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 13089 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12516 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 13094 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8307 */;
 import StickersStore from "StickersStore" /* 6766 */;
@@ -361,7 +361,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(13089).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(13094).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -382,8 +382,8 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(13089).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(13089);
+                  const result = chatInputProps(13094).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(13094);
                 }
                 const keyboardType = chatInputProps(5161).getKeyboardType();
                 if (keyboardType === chatInputProps(1631).KeyboardTypes.SYSTEM) {

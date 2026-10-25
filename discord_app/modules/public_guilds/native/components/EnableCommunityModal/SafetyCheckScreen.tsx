@@ -1,6 +1,6 @@
-// === Module 19162: SafetyCheckScreen ===
+// === Module 19167: SafetyCheckScreen ===
 
-// Module 19162 (SafetyCheckScreen)
+// Module 19167 (SafetyCheckScreen)
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

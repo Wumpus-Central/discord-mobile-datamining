@@ -1,6 +1,6 @@
-// === Module 19300: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 19305: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 19300 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 19305 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
 import common_AlertDefault from "common/Alert" /* 5978 */;
-import EmojiAliasDefault from "EmojiAlias" /* 19287 */;
+import EmojiAliasDefault from "EmojiAlias" /* 19292 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

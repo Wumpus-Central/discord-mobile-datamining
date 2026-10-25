@@ -1,6 +1,6 @@
-// === Module 17979: NavigationTTIRegionHierarchy ===
+// === Module 17984: NavigationTTIRegionHierarchy ===
 
-// Module 17979 (NavigationTTIRegionHierarchy)
+// Module 17984 (NavigationTTIRegionHierarchy)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;

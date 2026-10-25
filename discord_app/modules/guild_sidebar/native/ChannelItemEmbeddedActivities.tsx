@@ -1,6 +1,6 @@
-// === Module 17657: ChannelItemEmbeddedActivities ===
+// === Module 17662: ChannelItemEmbeddedActivities ===
 
-// Module 17657 (ChannelItemEmbeddedActivities)
+// Module 17662 (ChannelItemEmbeddedActivities)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;

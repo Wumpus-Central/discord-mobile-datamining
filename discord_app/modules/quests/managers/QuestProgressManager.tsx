@@ -1,6 +1,6 @@
-// === Module 19444: QuestProgressManager ===
+// === Module 19449: QuestProgressManager ===
 
-// Module 19444 (QuestProgressManager)
+// Module 19449 (QuestProgressManager)
 import DurationsDefault from "Durations" /* 1104 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import QuestVariants from "QuestVariants" /* 6711 */;
@@ -14,7 +14,7 @@ import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7819 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7820 */;
 import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7821 */;
 import QuestActionCreators from "QuestActionCreators" /* 9571 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14125 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
@@ -24,7 +24,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import DetectableGameStore from "DetectableGameStore" /* 2039 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
 import QuestStore from "QuestStore" /* 7776 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 18468 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 18473 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18744: ATTManager ===
+// === Module 18749: ATTManager ===
 
-// Module 18744 (ATTManager)
+// Module 18749 (ATTManager)
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import AdUserActionCreators from "AdUserActionCreators" /* 7805 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;

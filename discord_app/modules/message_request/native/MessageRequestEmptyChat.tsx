@@ -1,6 +1,6 @@
-// === Module 13551: MessageRequestEmptyChat ===
+// === Module 13556: MessageRequestEmptyChat ===
 
-// Module 13551 (MessageRequestEmptyChat)
+// Module 13556 (MessageRequestEmptyChat)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;

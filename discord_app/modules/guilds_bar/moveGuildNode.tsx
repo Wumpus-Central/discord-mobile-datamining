@@ -1,6 +1,6 @@
-// === Module 17780: moveGuildNode ===
+// === Module 17785: moveGuildNode ===
 
-// Module 17780 (moveGuildNode)
+// Module 17785 (moveGuildNode)
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5868 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import SortedGuildStore from "SortedGuildStore" /* 6701 */;

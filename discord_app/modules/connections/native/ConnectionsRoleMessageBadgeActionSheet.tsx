@@ -1,6 +1,6 @@
-// === Module 12761: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12766: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12761 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12766 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -19,8 +19,8 @@ import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6919 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7275 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import BotTagDefault from "BotTag" /* 9134 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11256 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11260 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11257 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -28,7 +28,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 import GuildRoleStore from "GuildRoleStore" /* 4877 */;
 import GuildStore from "GuildStore" /* 4845 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12762 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12767 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

@@ -1,9 +1,9 @@
-// === Module 13700: GuildDirectoryEmpty ===
+// === Module 13705: GuildDirectoryEmpty ===
 
-// Module 13700 (GuildDirectoryEmpty)
+// Module 13705 (GuildDirectoryEmpty)
 import nativeDefault from "native" /* 587 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9050 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13188 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13193 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
 
@@ -245,13 +245,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
   const obj = guild(504);
   const obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  const obj2 = guild(13187);
+  const obj2 = guild(13192);
   items1[1] = { paddingBottom: channel(1633)().bottom + 16 };
   obj3.contentContainerStyle = items1;
   const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
   const obj5 = { source: null, style: null };
   const obj4 = { paddingBottom: channel(1633)().bottom + 16 };
-  obj5.source = channel(13701);
+  obj5.source = channel(13706);
   obj5.style = tmp.header;
   const items2 = [closure_6(channel(5669), obj5), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
       onPress() {
           return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id });
         },
-      iconSource: tmp2(13702),
+      iconSource: tmp2(13707),
       title: null
     };
     const intl3 = tmp4(1128).intl;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
     onPress() {
       return instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channel.id, closure_2, constants.HUB_EMPTY_STATE);
     },
-    iconSource: channel(13703),
+    iconSource: channel(13708),
     title: null
   };
   const intl4 = tmp4(1128).intl;

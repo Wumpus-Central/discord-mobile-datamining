@@ -1,6 +1,6 @@
-// === Module 15851: HexagonActionCreators ===
+// === Module 15856: HexagonActionCreators ===
 
-// Module 15851 (HexagonActionCreators)
+// Module 15856 (HexagonActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

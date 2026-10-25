@@ -1,6 +1,6 @@
-// === Module 12905: ForwardStaffToNonStaffWarningModal ===
+// === Module 12910: ForwardStaffToNonStaffWarningModal ===
 
-// Module 12905 (ForwardStaffToNonStaffWarningModal)
+// Module 12910 (ForwardStaffToNonStaffWarningModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AlertModal from "AlertModal" /* 5914 */;

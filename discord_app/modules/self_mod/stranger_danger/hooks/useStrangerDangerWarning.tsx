@@ -1,13 +1,13 @@
-// === Module 10924: useStrangerDangerWarning ===
+// === Module 10925: useStrangerDangerWarning ===
 
-// Module 10924 (useStrangerDangerWarning)
+// Module 10925 (useStrangerDangerWarning)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useUserIsTeen from "useUserIsTeen" /* 8124 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10925 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 10926 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10927 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10928 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10926 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10927 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10928 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10929 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

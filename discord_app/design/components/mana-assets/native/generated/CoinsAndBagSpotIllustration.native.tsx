@@ -1,23 +1,23 @@
-// === Module 19221: CoinsAndBagSpotIllustration ===
+// === Module 19226: CoinsAndBagSpotIllustration ===
 
-// Module 19221 (CoinsAndBagSpotIllustration)
+// Module 19226 (CoinsAndBagSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19222 from "module_19222" /* 19222 */;
-import _modDef19223 from "module_19223" /* 19223 */;
-import _modDef19224 from "module_19224" /* 19224 */;
+import _modDef19227 from "module_19227" /* 19227 */;
+import _modDef19228 from "module_19228" /* 19228 */;
+import _modDef19229 from "module_19229" /* 19229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19222 }, 3: null };
-let obj2 = { uri: _modDef19222 };
-obj[2] = { uri: _modDef19223 };
-const obj3 = { uri: _modDef19223 };
-obj[3] = { uri: _modDef19224 };
+let obj = { 1: null, 2: { uri: _modDef19227 }, 3: null };
+let obj2 = { uri: _modDef19227 };
+obj[2] = { uri: _modDef19228 };
+const obj3 = { uri: _modDef19228 };
+obj[3] = { uri: _modDef19229 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19224 };
+const obj4 = { uri: _modDef19229 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CoinsAndBagSpotIllustration.native.tsx");
 

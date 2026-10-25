@@ -1,6 +1,6 @@
-// === Module 11365: useIsActivityFocused ===
+// === Module 11366: useIsActivityFocused ===
 
-// Module 11365 (useIsActivityFocused)
+// Module 11366 (useIsActivityFocused)
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6780 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;

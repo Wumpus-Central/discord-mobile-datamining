@@ -1,22 +1,22 @@
-// === Module 12984: CheckpointServersStatsScreen ===
+// === Module 12989: CheckpointServersStatsScreen ===
 
-// Module 12984 (CheckpointServersStatsScreen)
+// Module 12989 (CheckpointServersStatsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import GuildIcon from "GuildIcon" /* 6883 */;
-import CheckpointTextDefault from "CheckpointText" /* 12967 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12969 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12972 */;
-import _modDef12978 from "module_12978" /* 12978 */;
-import _modDef12979 from "module_12979" /* 12979 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12985 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12986 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12987 */;
+import CheckpointTextDefault from "CheckpointText" /* 12972 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12974 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12977 */;
+import _modDef12983 from "module_12983" /* 12983 */;
+import _modDef12984 from "module_12984" /* 12984 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12990 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12991 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12992 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12949 */;
+import CheckpointStore from "CheckpointStore" /* 12954 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -522,8 +522,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return tmp2(tmp3, obj, guild.id);
         }
       }
-      obj12.animatedUri = _modDef12978;
-      obj12.staticUri = _modDef12979;
+      obj12.animatedUri = _modDef12983;
+      obj12.staticUri = _modDef12984;
       obj12.style = tmp4.globe;
       const tmp60 = closure_6(tmp59, obj12);
       cResult[5] = tmp4.globe;
@@ -890,8 +890,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef12978;
-  obj15.staticUri = _modDef12979;
+  obj15.animatedUri = _modDef12983;
+  obj15.staticUri = _modDef12984;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15), ];
   const obj16 = { children: null };

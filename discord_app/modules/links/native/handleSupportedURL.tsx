@@ -1,6 +1,6 @@
-// === Module 15088: handleSupportedURL ===
+// === Module 15093: handleSupportedURL ===
 
-// Module 15088 (handleSupportedURL)
+// Module 15093 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -22,19 +22,19 @@ import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 934
 import QuestUtils from "QuestUtils" /* 9567 */;
 import ApplicationUtils from "ApplicationUtils" /* 10744 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 10746 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 10767 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12732 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12872 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13608 */;
-import BountyActionCreators from "BountyActionCreators" /* 14129 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15097 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15131 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15227 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 10768 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12737 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12877 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13613 */;
+import BountyActionCreators from "BountyActionCreators" /* 14134 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15102 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15136 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14702 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14707 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -49,7 +49,7 @@ const NativePermissionTypes = fn(7868).NativePermissionTypes;
 let closure_22 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7646).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5698).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15089).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15094).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8332).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -288,7 +288,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           remoteAuthFingerprint(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15101, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15106, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[41]);
             const tmp3 = payload(inviteCode[41]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;

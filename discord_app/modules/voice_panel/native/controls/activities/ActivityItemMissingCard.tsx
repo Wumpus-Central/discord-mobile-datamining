@@ -1,6 +1,6 @@
-// === Module 18567: ActivityItemMissingCard ===
+// === Module 18572: ActivityItemMissingCard ===
 
-// Module 18567 (ActivityItemMissingCard)
+// Module 18572 (ActivityItemMissingCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import NativeViewDefault from "NativeView" /* 6886 */;

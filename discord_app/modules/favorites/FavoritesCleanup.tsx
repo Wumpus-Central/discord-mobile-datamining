@@ -1,6 +1,6 @@
-// === Module 10854: FavoritesCleanup ===
+// === Module 10855: FavoritesCleanup ===
 
-// Module 10854 (FavoritesCleanup)
+// Module 10855 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1104 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6822 */;

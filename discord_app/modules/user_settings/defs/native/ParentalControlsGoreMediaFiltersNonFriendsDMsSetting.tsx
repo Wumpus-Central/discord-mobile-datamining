@@ -1,10 +1,10 @@
-// === Module 17300: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
+// === Module 17305: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
 
-// Module 17300 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
+// Module 17305 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16104 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16108 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16109 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16113 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
 
 const ExplicitMediaRedactionUtils = obj(8586);
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGoreCon
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(16108);
+    const obj = selectedTeenId(16113);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1128).intl;
     obj3.title = intl.string(selectedTeenId(1128).t["16/3Bi"]);
@@ -55,15 +55,15 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(16113).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16113);
+    const result = selectedTeenId(16118).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16118);
   }
 }
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["Yh+HX1"]);
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const pressable = SettingBuilders.createPressable({ useTitle: getTitle, parent: fn(8332).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS, useTrailing: tmp2, onPress: onGoreContentNonFriendsDmOnPress, unsearchable: true });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");

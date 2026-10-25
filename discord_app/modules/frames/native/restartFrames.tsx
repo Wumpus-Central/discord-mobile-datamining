@@ -1,8 +1,8 @@
-// === Module 10764: restartFrames ===
+// === Module 10765: restartFrames ===
 
-// Module 10764 (restartFrames)
-import leaveFrame from "leaveFrame" /* 10765 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10766 */;
+// Module 10765 (restartFrames)
+import leaveFrame from "leaveFrame" /* 10766 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
 import FramesStore from "FramesStore" /* 6775 */;
 
 require = fn;
@@ -11,21 +11,25 @@ function restartFrame(item10016) {
   if (isLaunched(item10016)) {
     launch = item10016.data.launch;
   }
+  let invite;
+  if (isLaunched(item10016)) {
+    invite = item10016.data.invite;
+  }
   const mainFrame = FramesStore.getMainFrame();
   let id;
   if (mainFrame != null) {
     id = mainFrame.id;
   }
   leaveFrame.leaveFrame(item10016.id);
-  const obj3 = { applicationId: item10016.applicationId, surface: item10016.surface, launch };
-  FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch }).catch(() => {
+  const obj3 = { applicationId: item10016.applicationId, surface: item10016.surface, launch, invite };
+  FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch, invite }).catch(() => {
 
   });
   if (id !== item10016.id) {
     FramesActionCreatorsDefault.demoteMainFrame(item10016.id);
-    const tmp6Result = FramesActionCreatorsDefault;
+    const tmp8Result = FramesActionCreatorsDefault;
   }
-  const launchFrameResult = FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch });
+  const launchFrameResult = FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch, invite });
 }
 const isLaunched = fn(6776).isLaunched;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 12785: GuildEnableCommunicationAlert ===
+// === Module 12790: GuildEnableCommunicationAlert ===
 
-// Module 12785 (GuildEnableCommunicationAlert)
+// Module 12790 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
 import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 8334 */;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(12784).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(12789).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

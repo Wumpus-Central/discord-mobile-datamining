@@ -1,6 +1,6 @@
-// === Module 19325: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 19330: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 19325 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 19330 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

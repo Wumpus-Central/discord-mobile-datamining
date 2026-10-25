@@ -1,6 +1,6 @@
-// === Module 18138: SmartSearchExpandButton ===
+// === Module 18143: SmartSearchExpandButton ===
 
-// Module 18138 (SmartSearchExpandButton)
+// Module 18143 (SmartSearchExpandButton)
 import nativeDefault from "native" /* 587 */;
 import _modDef4085 from "module_4085" /* 4085 */;
 import HapticUtils from "HapticUtils" /* 5212 */;
@@ -30,11 +30,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = onPress(576).c(17);
   ({ isCollapsed, onPress } = arg0);
   const obj = onPress(576);
-  const tmp4 = closure_10(onPress(18137).useSearchHostSurfaceColor());
+  const tmp4 = closure_10(onPress(18142).useSearchHostSurfaceColor());
   if (isCollapsed) {
-    let ChevronSmallUpIcon = onPress(11076).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = onPress(11077).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(14880).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
   }
   if (cResult[0] !== onPress) {
     const fn = function l() {
@@ -107,14 +107,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[13] = tmp25;
     tmp21 = tmp25;
   }
-  const obj2 = onPress(18137);
+  const obj2 = onPress(18142);
 }) : (function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
-  const tmp3 = closure_10(onPress(18137).useSearchHostSurfaceColor());
+  const tmp3 = closure_10(onPress(18142).useSearchHostSurfaceColor());
   if (isCollapsed) {
-    let ChevronSmallUpIcon = onPress(11076).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = onPress(11077).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(14880).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
   }
   const items = [onPress];
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -135,7 +135,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj3.accessibilityLabel = intl.string(FKLBbW);
   obj3.onPress = callback;
   const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" }), ];
-  const obj = onPress(18137);
+  const obj = onPress(18142);
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
   items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(587).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items1;

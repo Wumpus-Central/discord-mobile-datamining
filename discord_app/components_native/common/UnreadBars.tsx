@@ -1,13 +1,13 @@
-// === Module 17795: UnreadBars ===
+// === Module 17800: UnreadBars ===
 
-// Module 17795 (UnreadBars)
+// Module 17800 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import HapticUtils from "HapticUtils" /* 5212 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
-import TransitionGroup from "TransitionGroup" /* 13319 */;
+import TransitionGroup from "TransitionGroup" /* 13324 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import TextStyles from "TextStyles" /* 6651 */;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadBa
                   tmp20[0] = noop.Fragment;
                   const items1 = [tmp11, tmp16];
                   tmp20[1] = items1;
-                  const tmp22 = closure_9(tmp(13319).TransitionGroup, tmp20);
+                  const tmp22 = closure_9(tmp(13324).TransitionGroup, tmp20);
                   cResult[18] = tmp11;
                   cResult[19] = tmp16;
                   cResult[20] = tmp22;

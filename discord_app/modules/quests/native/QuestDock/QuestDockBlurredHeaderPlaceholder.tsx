@@ -1,13 +1,13 @@
-// === Module 16531: QuestDockBlurredHeaderPlaceholder ===
+// === Module 16536: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 16531 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 16532 */;
+// Module 16536 (QuestDockBlurredHeaderPlaceholder)
+import thumbHashToRGBA from "thumbHashToRGBA" /* 16537 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(6710).QuestDockMode;
-const QuestDockConstants = fn(16436);
+const QuestDockConstants = fn(16441);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBlurredHeaderPlaceholder(arg0) {
   const cResult = questDockWrapperSpecs(576).c(22);
   ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-  const context = noop.useContext(questDockWrapperSpecs(16437).QuestDockGestureContext);
+  const context = noop.useContext(questDockWrapperSpecs(16442).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
   if (cResult[0] !== placeholder) {
     let thumbHashToDataURLResult = globalThis;
@@ -49,10 +49,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp6 = cResult[2];
     }
     const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-    thumbHashToDataURLResult = tmp(16532).thumbHashToDataURL(_Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6));
+    thumbHashToDataURLResult = tmp(16537).thumbHashToDataURL(_Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6));
     cResult[0] = placeholder;
     cResult[1] = thumbHashToDataURLResult;
-    const tmpResult = tmp(16532);
+    const tmpResult = tmp(16537);
   } else {
     if (cResult[3] !== cResult[1]) {
       const obj2 = { uri: tmp5 };

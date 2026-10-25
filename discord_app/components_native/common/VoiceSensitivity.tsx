@@ -1,6 +1,6 @@
-// === Module 11617: VoiceSensitivity ===
+// === Module 11618: VoiceSensitivity ===
 
-// Module 11617 (VoiceSensitivity)
+// Module 11618 (VoiceSensitivity)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;

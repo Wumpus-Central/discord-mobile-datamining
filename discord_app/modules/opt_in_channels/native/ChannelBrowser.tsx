@@ -1,6 +1,6 @@
-// === Module 11246: ChannelBrowser ===
+// === Module 11247: ChannelBrowser ===
 
-// Module 11246 (ChannelBrowser)
+// Module 11247 (ChannelBrowser)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

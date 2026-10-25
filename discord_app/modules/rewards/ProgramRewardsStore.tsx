@@ -1,14 +1,14 @@
-// === Module 15033: ProgramRewardsStore ===
+// === Module 15038: ProgramRewardsStore ===
 
-// Module 15033 (ProgramRewardsStore)
+// Module 15038 (ProgramRewardsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef4402 from "module_4402" /* 4402 */;
 import _modDef4419 from "module_4419" /* 4419 */;
 import differenceInMillisecondsDefault from "differenceInMilliseconds" /* 4447 */;
-import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15034 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15036 */;
+import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15039 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -109,7 +109,7 @@ function updateTtl() {
 }
 const DidNotFetchReason = { NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD", CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH" };
 let c6 = 86400000;
-const networkTtlCache = new fn(15031).NetworkTtlCache({ ttlMs: 86400000 });
+const networkTtlCache = new fn(15036).NetworkTtlCache({ ttlMs: 86400000 });
 let closure_8 = { MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD", LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD", PAST_REWARD_DATE: "PAST_REWARD_DATE" };
 const PersistedStore = initializeDefault.PersistedStore;
 class ProgramRewardsStore extends PersistedStore {

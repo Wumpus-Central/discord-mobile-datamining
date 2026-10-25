@@ -1,6 +1,6 @@
-// === Module 18318: ContextMenuCommandNavigator ===
+// === Module 18323: ContextMenuCommandNavigator ===
 
-// Module 18318 (ContextMenuCommandNavigator)
+// Module 18323 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import HeaderShared from "HeaderShared" /* 9699 */;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
           obj3.title = intl.string(tmp(1128).t.PHjkRE);
           obj2.options = obj3;
           obj2.getComponent = function getComponent() {
-            return closure_0(18319).default;
+            return closure_0(18324).default;
           };
           const tmp16 = closure_7(closure_9.Screen, obj2);
           cResult[11] = tmp16;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
                       return { title };
                     },
             getComponent() {
-                      return closure_0(18321).default;
+                      return closure_0(18326).default;
                     }
           };
           const tmp20 = closure_7(closure_9.Screen, obj4);
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(18319).default;
+    return closure_0(18324).default;
   };
   const items1 = [
     closure_7(Screen, obj4),
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
         return { title };
       },
       getComponent() {
-        return closure_0(18321).default;
+        return closure_0(18326).default;
       }
     })
   ];

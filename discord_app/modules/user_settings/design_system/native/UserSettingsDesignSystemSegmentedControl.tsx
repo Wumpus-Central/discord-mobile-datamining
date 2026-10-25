@@ -1,6 +1,6 @@
-// === Module 17142: UserSettingsDesignSystemSegmentedControl ===
+// === Module 17147: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 17142 (UserSettingsDesignSystemSegmentedControl)
+// Module 17147 (UserSettingsDesignSystemSegmentedControl)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;

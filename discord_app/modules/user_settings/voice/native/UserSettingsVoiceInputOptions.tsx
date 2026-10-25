@@ -1,10 +1,10 @@
-// === Module 11616: UserSettingsVoiceInputOptions ===
+// === Module 11617: UserSettingsVoiceInputOptions ===
 
-// Module 11616 (UserSettingsVoiceInputOptions)
+// Module 11617 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1128 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7290 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 11617 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 11618 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             tmp26[0] = tmp8;
             const items1 = [tmp16, tmp21];
             tmp26[2] = items1;
-            const tmp27 = closure_8(tmp(11610).UserSettingsTableRowGroup, tmp26);
+            const tmp27 = closure_8(tmp(11611).UserSettingsTableRowGroup, tmp26);
             cResult[14] = tmp16;
             cResult[15] = tmp21;
             cResult[16] = tmp27;
@@ -257,6 +257,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   items1[1] = tmp4Result;
   obj2.children = items1;
-  return closure_8(inputMode(11610).UserSettingsTableRowGroup, obj2);
+  return closure_8(inputMode(11611).UserSettingsTableRowGroup, obj2);
 });
 export { handleInputModePress };

@@ -1,6 +1,6 @@
-// === Module 13666: HubEmailConnectionModal ===
+// === Module 13671: HubEmailConnectionModal ===
 
-// Module 13666 (HubEmailConnectionModal)
+// Module 13671 (HubEmailConnectionModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
@@ -8,13 +8,13 @@ import useInitialValueDefault from "useInitialValue" /* 5599 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import Navigator from "Navigator" /* 7095 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
-import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13667 */;
-import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13670 */;
-import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13677 */;
-import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13679 */;
-import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13680 */;
-import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13681 */;
-import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13684 */;
+import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13672 */;
+import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13675 */;
+import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13682 */;
+import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13684 */;
+import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13685 */;
+import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13686 */;
+import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13689 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -95,7 +95,7 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(13657).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13662).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj2 = { safeArea: { marginTop: fn(5268).NAV_BAR_HEIGHT, flex: 1 } };

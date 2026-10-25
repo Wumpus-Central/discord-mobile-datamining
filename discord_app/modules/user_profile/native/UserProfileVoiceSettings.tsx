@@ -1,12 +1,12 @@
-// === Module 14324: UserProfileVoiceSettings ===
+// === Module 14329: UserProfileVoiceSettings ===
 
-// Module 14324 (UserProfileVoiceSettings)
+// Module 14329 (UserProfileVoiceSettings)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9200 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13540 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13545 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6006 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -671,7 +671,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
     if (stateFromStores) {
       let MicrophoneIcon = tmp2(9173).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(11642).MicrophoneIcon;
+      MicrophoneIcon = tmp2(11643).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;

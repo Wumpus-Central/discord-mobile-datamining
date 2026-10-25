@@ -1,6 +1,6 @@
-// === Module 18754: ChangelogManager ===
+// === Module 18759: ChangelogManager ===
 
-// Module 18754 (ChangelogManager)
+// Module 18759 (ChangelogManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2068 */;

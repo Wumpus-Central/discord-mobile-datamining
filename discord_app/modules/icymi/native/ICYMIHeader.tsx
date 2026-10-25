@@ -1,6 +1,6 @@
-// === Module 17959: ICYMIHeader ===
+// === Module 17964: ICYMIHeader ===
 
-// Module 17959 (ICYMIHeader)
+// Module 17964 (ICYMIHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createICYMIStyles = fn(17895);
+const createICYMIStyles = fn(17900);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { text: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin }, separator: null };
   const size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: nativeDefault.space.PX_16 };

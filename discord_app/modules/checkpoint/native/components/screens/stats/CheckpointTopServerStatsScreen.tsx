@@ -1,12 +1,12 @@
-// === Module 12988: CheckpointTopServerStatsScreen ===
+// === Module 12993: CheckpointTopServerStatsScreen ===
 
-// Module 12988 (CheckpointTopServerStatsScreen)
+// Module 12993 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12980 */;
-import CheckpointStore from "CheckpointStore" /* 12949 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12985 */;
+import CheckpointStore from "CheckpointStore" /* 12954 */;
 import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4971 */;
@@ -19,12 +19,12 @@ const Text_Text = intl(5234);
 const GuildIcon = intl(6883);
 const GuildIconDefault = sIDTV1(6883);
 const ServerIcon = intl(9646);
-const CheckpointStatsUtils = intl(12952);
-const CheckpointTextDefault = sIDTV1(12967);
-const CheckpointScreenDefault = sIDTV1(12969);
-const CheckpointCountUpStatNumberDefault = sIDTV1(12977);
-const CheckpointGuildStatsDefault = sIDTV1(12986);
-const CheckpointRankTagDefault = sIDTV1(12987);
+const CheckpointStatsUtils = intl(12957);
+const CheckpointTextDefault = sIDTV1(12972);
+const CheckpointScreenDefault = sIDTV1(12974);
+const CheckpointCountUpStatNumberDefault = sIDTV1(12982);
+const CheckpointGuildStatsDefault = sIDTV1(12991);
+const CheckpointRankTagDefault = sIDTV1(12992);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);

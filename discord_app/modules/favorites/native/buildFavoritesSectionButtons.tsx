@@ -1,6 +1,6 @@
-// === Module 10855: buildFavoritesSectionButtons ===
+// === Module 10856: buildFavoritesSectionButtons ===
 
-// Module 10855 (buildFavoritesSectionButtons)
+// Module 10856 (buildFavoritesSectionButtons)
 import _modDef3412 from "module_3412" /* 3412 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

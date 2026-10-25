@@ -1,6 +1,6 @@
-// === Module 19167: ChannelSetup ===
+// === Module 19172: ChannelSetup ===
 
-// Module 19167 (ChannelSetup)
+// Module 19172 (ChannelSetup)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelSe
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_19168");
+          return require("module_19173");
         },
       darker() {
-          return require("module_19169");
+          return require("module_19174");
         },
       light() {
-          return require("module_19170");
+          return require("module_19175");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelSe
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19168");
+      return require("module_19173");
     },
     darker() {
-      return require("module_19169");
+      return require("module_19174");
     },
     light() {
-      return require("module_19170");
+      return require("module_19175");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getChannelSetupSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_19168");
+      return require("module_19173");
     },
     darker() {
-      return require("module_19169");
+      return require("module_19174");
     },
     light() {
-      return require("module_19170");
+      return require("module_19175");
     }
   });
 }

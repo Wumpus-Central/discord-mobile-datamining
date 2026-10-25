@@ -1,6 +1,6 @@
-// === Module 19295: GuildRoleSubscriptionBenefitEditorModal ===
+// === Module 19300: GuildRoleSubscriptionBenefitEditorModal ===
 
-// Module 19295 (GuildRoleSubscriptionBenefitEditorModal)
+// Module 19300 (GuildRoleSubscriptionBenefitEditorModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,12 +12,12 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19294 */;
+import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19299 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(16557);
+const GuildRoleSubscriptionsConstants = fn(16562);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -174,7 +174,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     return value;
   };
   const tmp2 = closure_15();
-  const tmp5 = value(15140)();
+  const tmp5 = value(15145)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp7;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -233,7 +233,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
               closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
             }
       };
-      let tmp27 = closure_13(tmp3(19296), obj2);
+      let tmp27 = closure_13(tmp3(19301), obj2);
       let tmp28 = closure_13;
     } else {
       let obj = { containerStyle: tmp5.inputContainer, accessibilityLabel: stringResult1, maxLength: maxLength2, value, placeholder: null, onChange: null, returnKeyType: "done", autoFocus: true, clearable: true };
@@ -260,7 +260,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         },
       listingId: merged.listingId
     };
-    const items = [tmp28(tmp3(19298), obj4), ];
+    const items = [tmp28(tmp3(19303), obj4), ];
     let obj5 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp2.scrollContainer, ];
     const obj6 = { paddingBottom: value(1633)().bottom + 32 + 16 };
@@ -280,7 +280,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp28(tmp3(19299), obj9);
+    items2[3] = tmp28(tmp3(19304), obj9);
     const obj11 = { style: tmp5.header, children: null };
     const tmp31 = first2;
     const tmp32 = closure_6;

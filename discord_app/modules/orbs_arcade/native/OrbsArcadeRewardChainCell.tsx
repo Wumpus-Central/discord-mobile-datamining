@@ -1,6 +1,6 @@
-// === Module 16418: OrbsArcadeRewardChainCell ===
+// === Module 16423: OrbsArcadeRewardChainCell ===
 
-// Module 16418 (OrbsArcadeRewardChainCell)
+// Module 16423 (OrbsArcadeRewardChainCell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;

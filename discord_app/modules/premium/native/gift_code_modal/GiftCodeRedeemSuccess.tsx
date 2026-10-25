@@ -1,6 +1,6 @@
-// === Module 11178: GiftCodeRedeemSuccess ===
+// === Module 11179: GiftCodeRedeemSuccess ===
 
-// Module 11178 (GiftCodeRedeemSuccess)
+// Module 11179 (GiftCodeRedeemSuccess)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -13,10 +13,10 @@ import GameIcon from "GameIcon" /* 7261 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7330 */;
 import BundleSampleV2Default from "BundleSampleV2" /* 9390 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9418 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11052 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11170 */;
-import NameplatePreview from "NameplatePreview" /* 11171 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11172 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11053 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11171 */;
+import NameplatePreview from "NameplatePreview" /* 11172 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 6824 */;
@@ -71,11 +71,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   let obj = giftCode(576);
   const stateFromStores = giftCode(504).useStateFromStores(first, tmp7);
   let tmpResult = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(11044).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const tmpResult7 = giftCode(11044);
+  const getOrFetchSubscriptionPlan = giftCode(11045).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const tmpResult7 = giftCode(11045);
   const getOrFetchApplication = giftCode(7257).useGetOrFetchApplication(giftCode.applicationId);
   const tmpResult8 = giftCode(7257);
-  const tmpResult9 = giftCode(11048);
+  const tmpResult9 = giftCode(11049);
   let skuId = null;
   if (tmpResult10.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
     tmp20 = cResult[8];
   }
   const tmpResult11 = giftCode(8660);
-  const handleUseNow1 = giftCode(11179).useHandleUseNow(tmp20);
+  const handleUseNow1 = giftCode(11180).useHandleUseNow(tmp20);
   const handleUseNow = handleUseNow1.handleUseNow;
   const canUseNow = handleUseNow1.canUseNow;
   const isApplying = handleUseNow1.isApplying;
@@ -496,11 +496,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   const items = [SKUStore];
   const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
   let obj = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(11044).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const obj2 = giftCode(11044);
+  const getOrFetchSubscriptionPlan = giftCode(11045).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const obj2 = giftCode(11045);
   const getOrFetchApplication = giftCode(7257).useGetOrFetchApplication(giftCode.applicationId);
   const obj3 = giftCode(7257);
-  const obj4 = giftCode(11048);
+  const obj4 = giftCode(11049);
   let skuId = null;
   if (obj5.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -528,10 +528,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
     const obj7 = { skuId: "", type: tmp2(1995).CollectiblesItemType.BUNDLE, items: [] };
     tmp12 = obj7;
   }
-  const handleUseNow1 = giftCode(11179).useHandleUseNow({ product: tmp12 });
+  const handleUseNow1 = giftCode(11180).useHandleUseNow({ product: tmp12 });
   const isApplying = handleUseNow1.isApplying;
   ({ handleUseNow, canUseNow } = handleUseNow1);
-  const tmp2Result6 = giftCode(11179);
+  const tmp2Result6 = giftCode(11180);
   [tmp15, c3] = noop.useState();
   const callback = noop.useCallback((nativeEvent) => {
     ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);

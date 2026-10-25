@@ -1,6 +1,6 @@
-// === Module 10918: useCreateThreadViewProps ===
+// === Module 10919: useCreateThreadViewProps ===
 
-// Module 10918 (useCreateThreadViewProps)
+// Module 10919 (useCreateThreadViewProps)
 import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10091 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 

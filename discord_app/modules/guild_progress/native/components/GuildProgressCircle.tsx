@@ -1,10 +1,10 @@
-// === Module 13510: GuildProgressCircle ===
+// === Module 13515: GuildProgressCircle ===
 
-// Module 13510 (GuildProgressCircle)
+// Module 13515 (GuildProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 13390 */;
-import ProgressCircleDefault from "ProgressCircle" /* 13511 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 13395 */;
+import ProgressCircleDefault from "ProgressCircle" /* 13516 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

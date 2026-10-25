@@ -1,6 +1,6 @@
-// === Module 11353: getFrameSurfaces ===
+// === Module 11354: getFrameSurfaces ===
 
-// Module 11353 (getFrameSurfaces)
+// Module 11354 (getFrameSurfaces)
 import Constants from "Constants" /* 1087 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;

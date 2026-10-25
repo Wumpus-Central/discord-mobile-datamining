@@ -1,6 +1,6 @@
-// === Module 16836: SettingsNotificationUtils ===
+// === Module 16841: SettingsNotificationUtils ===
 
-// Module 16836 (SettingsNotificationUtils)
+// Module 16841 (SettingsNotificationUtils)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import DeviceUtils from "DeviceUtils" /* 4928 */;
 import size from "module_2" /* 2 */;

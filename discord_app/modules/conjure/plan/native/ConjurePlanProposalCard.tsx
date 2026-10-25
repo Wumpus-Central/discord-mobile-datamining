@@ -1,21 +1,21 @@
-// === Module 12438: ConjurePlanProposalCard ===
+// === Module 12442: ConjurePlanProposalCard ===
 
-// Module 12438 (ConjurePlanProposalCard)
+// Module 12442 (ConjurePlanProposalCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11829 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12277 */;
-import conjurePlanOverlayDesign from "conjurePlanOverlayDesign" /* 12439 */;
-import useConjureOverlayBackgroundDefault from "useConjureOverlayBackground" /* 12441 */;
-import _modDef12442 from "module_12442" /* 12442 */;
-import conjurePlanBot from "conjurePlanBot" /* 12449 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12452 */;
-import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12453 */;
-import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12454 */;
-import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12456 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11830 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12278 */;
+import conjurePlanOverlayDesign from "conjurePlanOverlayDesign" /* 12443 */;
+import useConjureOverlayBackgroundDefault from "useConjureOverlayBackground" /* 12445 */;
+import _modDef12446 from "module_12446" /* 12446 */;
+import conjurePlanBot from "conjurePlanBot" /* 12453 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12456 */;
+import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12457 */;
+import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12458 */;
+import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12460 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
@@ -34,20 +34,20 @@ obj2.replyHint = { flexShrink: 1 };
 let obj5 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.design = { width: "100%", aspectRatio: 1.5, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center" };
 let obj6 = { width: "100%", aspectRatio: 1.5, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center" };
-obj2.overlayDesign = { width: "100%", aspectRatio: fn(12439).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
+obj2.overlayDesign = { width: "100%", aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 let obj8 = { transform: null };
 let items = [{ scale: 1.1 }];
 obj8.transform = items;
 obj2.blurredBackground = obj8;
-let obj7 = { width: "100%", aspectRatio: fn(12439).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-obj2.overlayWidget = { position: "absolute", top: fn(12439).CONJURE_PLAN_OVERLAY_WIDGET_TOP, end: fn(12439).CONJURE_PLAN_OVERLAY_WIDGET_END };
+let obj7 = { width: "100%", aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
+obj2.overlayWidget = { position: "absolute", top: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_TOP, end: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_END };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanOverlayWidget(projectId) {
   const cResult = c.c(24);
   ({ src, alt, size, onError } = projectId);
   const tmp4 = closure_11();
-  const tmp6Result = useConjureOverlayBackgroundDefault(projectId.projectId, _modDef12442);
+  const tmp6Result = useConjureOverlayBackgroundDefault(projectId.projectId, _modDef12446);
   if (cResult[0] !== size) {
     const result = conjurePlanOverlayDesign.conjurePlanOverlayWidgetBox(size);
     cResult[0] = size;
@@ -158,7 +158,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanOv
 }) : (function PlanOverlayWidget(arg0) {
   ({ projectId, src, alt, size, onError } = arg0);
   const tmp = closure_11();
-  const tmp4Result = useConjureOverlayBackgroundDefault(projectId, _modDef12442);
+  const tmp4Result = useConjureOverlayBackgroundDefault(projectId, _modDef12446);
   const size2 = conjurePlanOverlayDesign.conjurePlanOverlayWidgetBox(size);
   const obj2 = { style: tmp.overlayDesign, children: null };
   let tmp9Result = null;
@@ -282,7 +282,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanDe
   }
 });
 ReactCompilerGating = fn(558);
-let obj9 = { position: "absolute", top: fn(12439).CONJURE_PLAN_OVERLAY_WIDGET_TOP, end: fn(12439).CONJURE_PLAN_OVERLAY_WIDGET_END };
+let obj9 = { position: "absolute", top: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_TOP, end: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_END };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanProposalCard.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 18386: GiftingPromotionCoachmark ===
+// === Module 18391: GiftingPromotionCoachmark ===
 
-// Module 18386 (GiftingPromotionCoachmark)
+// Module 18391 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import usePreviousDefault from "usePrevious" /* 6660 */;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingP
       items4[2] = closure_12(tmp22, obj6);
       const obj9 = { grow: true, icon: null, text: null, onPress: null };
       const obj10 = { size: "sm", color: tmp11(587).colors.WHITE };
-      obj9.icon = closure_11(markAsDismissed(12881).GiftIcon, obj10);
+      obj9.icon = closure_11(markAsDismissed(12886).GiftIcon, obj10);
       const intl = markAsDismissed(1128).intl;
       obj9.text = intl.string(markAsDismissed(1128).t.Ve9Ge6);
       obj9.onPress = tmp17;

@@ -1,6 +1,6 @@
-// === Module 16689: useDisplayNameStylesHandleApply ===
+// === Module 16694: useDisplayNameStylesHandleApply ===
 
-// Module 16689 (useDisplayNameStylesHandleApply)
+// Module 16694 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -106,8 +106,8 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                           closure_0 = tmp8;
                           closure_128_0 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(15851).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(15851);
+                            const result = displayNameStyles(15856).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj4 = displayNameStyles(15856);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -172,8 +172,8 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                       const obj13 = { font_name: displayNameStyles(1412).DisplayNameFont[closure_2], effect_name: displayNameStyles(1411).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1267).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(15851).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(15851);
+                        const result2 = displayNameStyles(15856).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj10 = displayNameStyles(15856);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();

@@ -1,19 +1,19 @@
-// === Module 18586: VoicePanelVoiceChannelApp ===
+// === Module 18591: VoicePanelVoiceChannelApp ===
 
-// Module 18586 (VoicePanelVoiceChannelApp)
+// Module 18591 (VoicePanelVoiceChannelApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10896 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18472 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 18547 */;
-import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 18587 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10897 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18477 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 18552 */;
+import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 18592 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import VoicePanelStore from "VoicePanelStore" /* 6804 */;
 
 require = fn;
-const VoicePanelControlsModes = fn(10895).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10896).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj2 = { layer: null };

@@ -1,16 +1,16 @@
-// === Module 16657: LightModeThemeSetting ===
+// === Module 16662: LightModeThemeSetting ===
 
-// Module 16657 (LightModeThemeSetting)
+// Module 16662 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16658 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16663 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
 const SystemTheme = fn(1210).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

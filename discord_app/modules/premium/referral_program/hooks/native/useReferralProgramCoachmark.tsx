@@ -1,12 +1,12 @@
-// === Module 18233: useReferralProgramCoachmark ===
+// === Module 18238: useReferralProgramCoachmark ===
 
-// Module 18233 (useReferralProgramCoachmark)
+// Module 18238 (useReferralProgramCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
-import _modDef18234 from "module_18234" /* 18234 */;
+import _modDef18239 from "module_18239" /* 18239 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,8 +24,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Referr
   const cResult = c.c(5);
   const tmp3 = closure_9();
   if (cResult[0] !== tmp3.coachmarkImage) {
-    const obj2 = { source: _modDef18234, style: tmp3.coachmarkImage };
-    const tmp8 = jsx(FastImageDefault, { source: _modDef18234, style: tmp3.coachmarkImage });
+    const obj2 = { source: _modDef18239, style: tmp3.coachmarkImage };
+    const tmp8 = jsx(FastImageDefault, { source: _modDef18239, style: tmp3.coachmarkImage });
     cResult[0] = tmp3.coachmarkImage;
     cResult[1] = tmp8;
     let tmp4 = tmp8;
@@ -47,8 +47,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Referr
 }) : (function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: _modDef18234, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef18234, style: tmp.coachmarkImage });
+  const obj2 = { source: _modDef18239, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef18239, style: tmp.coachmarkImage });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 });
 ReactCompilerGating = fn(558);

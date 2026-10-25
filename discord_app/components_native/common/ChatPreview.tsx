@@ -24,13 +24,13 @@ import handleMessagesTapLink from "handleMessagesTapLink" /* 10008 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10068 */;
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10073 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10074 */;
-import GuildNSFWDefault from "GuildNSFW" /* 10892 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 10894 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11236 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11237 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11275 */;
-import contentHandlers2 from "contentHandlers" /* 11276 */;
-import ChatDefault from "Chat" /* 12843 */;
+import GuildNSFWDefault from "GuildNSFW" /* 10893 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 10895 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11237 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11238 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11276 */;
+import contentHandlers2 from "contentHandlers" /* 11277 */;
+import ChatDefault from "Chat" /* 12848 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ActionSheetStore from "ActionSheetStore" /* 5211 */;
@@ -291,8 +291,8 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "heading-lg/extrabold",
-        selectedChannelId: "text-default",
+        messageChannel: "2026-01-bug-reporter",
+        selectedChannelId: "user",
         tapLinkData: null
       };
       channel = applyArgumentsResult.props.channel;

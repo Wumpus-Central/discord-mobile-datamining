@@ -4,7 +4,7 @@
 import _modDef3830 from "module_3830" /* 3830 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
 import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10725 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 10807 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 10808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 

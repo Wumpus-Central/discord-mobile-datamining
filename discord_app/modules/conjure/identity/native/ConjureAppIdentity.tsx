@@ -1,6 +1,6 @@
-// === Module 11810: ConjureAppIdentity ===
+// === Module 11811: ConjureAppIdentity ===
 
-// Module 11810 (ConjureAppIdentity)
+// Module 11811 (ConjureAppIdentity)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ImagePickerDefault from "ImagePicker" /* 8155 */;
@@ -237,7 +237,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
                               tmp22 = null;
                               if (!disabled) {
                                 let obj3 = { style: tmp4.editIcon };
-                                tmp22 = closure_7(onError(11813), obj3);
+                                tmp22 = closure_7(onError(11814), obj3);
                               }
                             }
                             cResult[23] = disabled;
@@ -267,7 +267,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
           }
           if (tmp5) {
             const obj5 = { size: "md", color: onError(587).colors.ICON_MUTED };
-            let tmp13Result = closure_7(tmp(11811).ImagePlusIcon, obj5);
+            let tmp13Result = closure_7(tmp(11812).ImagePlusIcon, obj5);
           } else {
             const obj6 = { source: null, style: null, resizeMode: "cover" };
             const obj7 = { uri: iconURL };
@@ -476,7 +476,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
   obj2.onPress = callback;
   if (null == iconURL) {
     let obj3 = { size: "md", color: onError(587).colors.ICON_MUTED };
-    let tmp6Result = closure_7(onChange(11811).ImagePlusIcon, obj3);
+    let tmp6Result = closure_7(onChange(11812).ImagePlusIcon, obj3);
     let tmp9 = onError;
   } else {
     tmp9 = onError;
@@ -493,7 +493,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
     tmp6Result2 = null;
     if (!disabled) {
       const obj6 = { style: tmp.editIcon };
-      tmp6Result2 = closure_7(tmp9(11813), obj6);
+      tmp6Result2 = closure_7(tmp9(11814), obj6);
     }
   }
   items2[1] = tmp6Result2;

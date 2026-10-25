@@ -1,6 +1,6 @@
-// === Module 13050: MessagesUtils ===
+// === Module 13055: MessagesUtils ===
 
-// Module 13050 (MessagesUtils)
+// Module 13055 (MessagesUtils)
 import CodedLink from "CodedLink" /* 5703 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5997 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7427 */;

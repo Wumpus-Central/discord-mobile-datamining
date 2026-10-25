@@ -1,6 +1,6 @@
-// === Module 13935: PremiumGiftPurchaseSuccess ===
+// === Module 13940: PremiumGiftPurchaseSuccess ===
 
-// Module 13935 (PremiumGiftPurchaseSuccess)
+// Module 13940 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import ToastUtils from "ToastUtils" /* 5662 */;

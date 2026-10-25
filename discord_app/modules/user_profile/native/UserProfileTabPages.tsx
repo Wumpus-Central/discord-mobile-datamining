@@ -1,12 +1,12 @@
-// === Module 14427: UserProfileTabPages ===
+// === Module 14432: UserProfileTabPages ===
 
-// Module 14427 (UserProfileTabPages)
+// Module 14432 (UserProfileTabPages)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 11144 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

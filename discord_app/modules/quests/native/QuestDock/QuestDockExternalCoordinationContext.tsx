@@ -1,15 +1,15 @@
-// === Module 16440: QuestDockExternalCoordinationContext ===
+// === Module 16445: QuestDockExternalCoordinationContext ===
 
-// Module 16440 (QuestDockExternalCoordinationContext)
+// Module 16445 (QuestDockExternalCoordinationContext)
 import DurationsDefault from "Durations" /* 1104 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import QuestActionCreators from "QuestActionCreators" /* 9571 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16434 */;
+import QuestDockStore from "QuestDockStore" /* 16439 */;
 
 require = fn;
 let QuestDockMode = fn(6710).QuestDockMode;
-let closure_5 = fn(16436).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let closure_5 = fn(16441).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };

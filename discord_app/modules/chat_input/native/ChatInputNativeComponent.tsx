@@ -1,6 +1,6 @@
-// === Module 12528: chat_input/ChatInputNativeComponent ===
+// === Module 12532: chat_input/ChatInputNativeComponent ===
 
-// Module 12528 (chat_input/ChatInputNativeComponent)
+// Module 12532 (chat_input/ChatInputNativeComponent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ColorUtils from "ColorUtils" /* 4968 */;
 import shared from "shared" /* 4978 */;
 import useTheme from "useTheme" /* 5205 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12513 */;
-import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12533 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12517 */;
+import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12537 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
 
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num6 = 1;
   }
   if (maxHeight == null) {
-    maxHeight = tmp10(12529)(onMaxHeightChanged);
+    maxHeight = tmp10(12533)(onMaxHeightChanged);
   }
   tmpResult10 = PlatformUtils;
   const isMobileMarkdownFormatMenuEnabled = MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
@@ -208,7 +208,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num2 = 1;
   }
   tmp4Result4 = PlatformUtils;
-  const tmp13 = tmp9(12529)(onMaxHeightChanged);
+  const tmp13 = tmp9(12533)(onMaxHeightChanged);
   const isMobileMarkdownFormatMenuEnabled = MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
   const obj4 = { accessible, accessibilityLabel: tmp11, children: tmp12, editable, showFormatMenu: isMobileMarkdownFormatMenuEnabled, keyboardAppearance: num2, keyboardType: "default", markAsSpoilerTitle, maxHeight: null, onBeginFocus: null, onEndBlur: null, onChangeContentSize: null, onSelectionOrTextChange: null, onTextFlushed: null, onPasteImage: null, onPasteCommand: null, onTapAction: null, onRequestSend: null, placeholder: null, placeholderColor: null, ref: null, selectionColor: null, setNoExtractUI: null, shouldShowCursor: null, style: null, textColor: null, verticalInset: null };
   if (maxHeight == null) {

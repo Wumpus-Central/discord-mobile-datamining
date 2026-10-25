@@ -1,6 +1,6 @@
-// === Module 15955: useTabSelectedGuildId ===
+// === Module 15960: useTabSelectedGuildId ===
 
-// Module 15955 (useTabSelectedGuildId)
+// Module 15960 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;

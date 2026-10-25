@@ -1,6 +1,6 @@
-// === Module 17453: MessagesItemChannelBase ===
+// === Module 17458: MessagesItemChannelBase ===
 
-// Module 17453 (MessagesItemChannelBase)
+// Module 17458 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
@@ -287,7 +287,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
     ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
     const tmpResult9 = tmp(504);
-    ({ isIncomingCall, isOngoingCall } = setIsPressed(17454)(channel.id));
+    ({ isIncomingCall, isOngoingCall } = setIsPressed(17459)(channel.id));
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -350,7 +350,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const tmp20 = setIsPressed(17454)(channel.id);
+    const tmp20 = setIsPressed(17459)(channel.id);
     const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
     ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
     const _Symbol4 = Symbol;

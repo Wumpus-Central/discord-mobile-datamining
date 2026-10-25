@@ -1,7 +1,7 @@
-// === Module 18128: SmartSearchCitation ===
+// === Module 18133: SmartSearchCitation ===
 
-// Module 18128 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18129 */;
+// Module 18133 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -219,7 +219,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(13242).trackSmartSearchCitationOpened(obj4, v2(13240));
+            const result = v2(13247).trackSmartSearchCitationOpened(obj4, v2(13245));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -227,7 +227,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(13242);
+            const obj6 = v2(13247);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

@@ -1,6 +1,6 @@
-// === Module 10990: ForumPostActionBar ===
+// === Module 10991: ForumPostActionBar ===
 
-// Module 10990 (ForumPostActionBar)
+// Module 10991 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import Client from "Client" /* 5201 */;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
         }
         let obj2 = { style: tmp4.reactionRow, children: null };
         const obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp20 };
-        obj2.children = closure_10(tmp(10991).ForumPostActionBarReactions, obj3);
+        obj2.children = closure_10(tmp(10992).ForumPostActionBarReactions, obj3);
         tmp30 = closure_10(View, obj2);
       }
       cResult[23] = channel;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(10991).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(10992).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(View, obj7);
   }
   const items5 = [tmp11, ];
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11013).ArrowLargeUpIcon, { size: "xs" });
+    obj11.children = closure_10(tmp2(11014).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = closure_10(tmp2(6908).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = closure_11(View, obj9);

@@ -1,6 +1,6 @@
-// === Module 18774: DmSettingsUpsellConstants ===
+// === Module 18779: DmSettingsUpsellConstants ===
 
-// Module 18774 (DmSettingsUpsellConstants)
+// Module 18779 (DmSettingsUpsellConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellConstants.tsx");

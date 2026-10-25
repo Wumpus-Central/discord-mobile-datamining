@@ -1,10 +1,10 @@
-// === Module 10961: InappropriateConversationWarningBanner ===
+// === Module 10962: InappropriateConversationWarningBanner ===
 
-// Module 10961 (InappropriateConversationWarningBanner)
+// Module 10962 (InappropriateConversationWarningBanner)
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10936 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10937 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10965 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10937 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10938 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10966 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 
@@ -70,9 +70,9 @@ class InappropriateConversationWarningBanner {
               obj.warningId = warningId;
               obj.warningType = closure_3_5.INAPPROPRIATE_CONVERSATION_TIER_2;
               obj.senderId = senderId;
-              obj.analyticsBlockContext = closure_3_0(10936).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
-              obj.analyticsBlockAndReportContext = closure_3_0(10936).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
-              obj.analyticsCancelContext = closure_3_0(10936).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
+              obj.analyticsBlockContext = closure_3_0(10937).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
+              obj.analyticsBlockAndReportContext = closure_3_0(10937).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsCancelContext = closure_3_0(10937).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
               obj.onDismiss = onDismiss;
               return closure_3_6(closure_0, obj);
             };

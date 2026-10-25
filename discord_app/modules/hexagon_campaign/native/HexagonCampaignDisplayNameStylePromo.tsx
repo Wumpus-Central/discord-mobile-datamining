@@ -1,11 +1,11 @@
-// === Module 15868: HexagonCampaignDisplayNameStylePromo ===
+// === Module 15873: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 15868 (HexagonCampaignDisplayNameStylePromo)
+// Module 15873 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 587 */;
 import _modDef4247 from "module_4247" /* 4247 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15869 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 15870 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15874 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 15875 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
         }
         return tmp18;
       }
-      const obj3 = { theme: tmp(15872).ThemeTypes.DARK, children: null };
+      const obj3 = { theme: tmp(15877).ThemeTypes.DARK, children: null };
       const obj4 = { style: tmp5.promo, children: null };
       const items = [tmp7, tmp15];
       obj4.children = items;

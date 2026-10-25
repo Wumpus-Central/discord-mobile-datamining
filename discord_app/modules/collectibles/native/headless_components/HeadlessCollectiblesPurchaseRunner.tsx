@@ -1,8 +1,8 @@
-// === Module 14480: HeadlessCollectiblesPurchaseRunner ===
+// === Module 14485: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 14480 (HeadlessCollectiblesPurchaseRunner)
+// Module 14485 (HeadlessCollectiblesPurchaseRunner)
 import c from "c" /* 576 */;
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 14481 */;
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 14486 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

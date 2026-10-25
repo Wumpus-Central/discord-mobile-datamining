@@ -1,6 +1,6 @@
-// === Module 13861: useConjureAppChannelSheet ===
+// === Module 13866: useConjureAppChannelSheet ===
 
-// Module 13861 (useConjureAppChannelSheet)
+// Module 13866 (useConjureAppChannelSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import UserUtils from "UserUtils" /* 5025 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13862 */;
+import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13867 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 

@@ -1,6 +1,6 @@
-// === Module 18273: ViewModerators ===
+// === Module 18278: ViewModerators ===
 
-// Module 18273 (ViewModerators)
+// Module 18278 (ViewModerators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -24,7 +24,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(18274, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
+  obj2.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/channel_permissions/ViewModerators.tsx");
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
               const obj5 = { title: null, hasIcons: true, children: null };
               let intl = tmp(1128).intl;
               obj5.title = intl.string(tmp(1128).t.f7VbhF);
-              let obj6 = { icon: closure_10(tmp(11153).CirclePlusIcon, {}), label: null, onPress: null, disabled: null, arrow: true };
+              let obj6 = { icon: closure_10(tmp(11154).CirclePlusIcon, {}), label: null, onPress: null, disabled: null, arrow: true };
               let intl2 = tmp(1128).intl;
               obj6.label = intl2.string(tmp(1128).t.n3bcy8);
               obj6.onPress = function onPress() {
@@ -248,8 +248,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
                   const _HermesInternal = HermesInternal;
                   const obj2 = ActionSheetActionCreatorsDefault;
                   const obj3 = { channel, canSkip: false };
-                  obj2.openLazy(asyncRequireImpl(18274, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-                  const tmp7 = asyncRequireImpl(18274, dependencyMap.paths);
+                  obj2.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+                  const tmp7 = asyncRequireImpl(18279, dependencyMap.paths);
                 }
               };
               obj6.disabled = !canUpdateStageChannelModerators;
@@ -447,8 +447,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(18274, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(18274, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(18279, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;

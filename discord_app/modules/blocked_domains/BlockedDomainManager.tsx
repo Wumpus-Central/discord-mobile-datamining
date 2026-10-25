@@ -1,6 +1,6 @@
-// === Module 18751: BlockedDomainManager ===
+// === Module 18756: BlockedDomainManager ===
 
-// Module 18751 (BlockedDomainManager)
+// Module 18756 (BlockedDomainManager)
 import js_shim_shim from "js_shim/shim" /* 562 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 

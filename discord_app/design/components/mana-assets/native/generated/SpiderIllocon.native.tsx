@@ -1,23 +1,23 @@
-// === Module 12420: SpiderIllocon ===
+// === Module 12424: SpiderIllocon ===
 
-// Module 12420 (SpiderIllocon)
+// Module 12424 (SpiderIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef12421 from "module_12421" /* 12421 */;
-import _modDef12422 from "module_12422" /* 12422 */;
-import _modDef12423 from "module_12423" /* 12423 */;
+import _modDef12425 from "module_12425" /* 12425 */;
+import _modDef12426 from "module_12426" /* 12426 */;
+import _modDef12427 from "module_12427" /* 12427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12421 }, 3: null };
-const obj2 = { uri: _modDef12421 };
-obj[2] = { uri: _modDef12422 };
-const obj3 = { uri: _modDef12422 };
-obj[3] = { uri: _modDef12423 };
+let obj = { 1: null, 2: { uri: _modDef12425 }, 3: null };
+const obj2 = { uri: _modDef12425 };
+obj[2] = { uri: _modDef12426 };
+const obj3 = { uri: _modDef12426 };
+obj[3] = { uri: _modDef12427 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12423 };
+const obj4 = { uri: _modDef12427 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SpiderIllocon.native.tsx");
 

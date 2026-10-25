@@ -1,6 +1,6 @@
-// === Module 11881: ConjureNativePreview ===
+// === Module 11882: ConjureNativePreview ===
 
-// Module 11881 (ConjureNativePreview)
+// Module 11882 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -11,11 +11,11 @@ import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10728 */;
 import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10742 */;
-import leaveFrame from "leaveFrame" /* 10765 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10766 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11882 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11885 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11903 */;
+import leaveFrame from "leaveFrame" /* 10766 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11883 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11886 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11904 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6775 */;
@@ -31,7 +31,7 @@ const UserProfileApplicationWidgetTypes = intl(7708);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11858);
+const conjureDesignFeedbackStore = fn(11859);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
@@ -286,7 +286,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewFrame
             return obj.getConjurePreviewGuildId(closure_15.getProject(projectId));
           }
         }
-        const effect1 = obj3.useEffect(U, tmp25);
+        const effect1 = obj3.useEffect(D, tmp25);
         if (launch != null) {
           class N {
             constructor() {
@@ -305,7 +305,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewFrame
         }
         const _HermesInternal = HermesInternal;
         const combined = "" + frameSurface + ":" + tmp27;
-        class U {
+        class D {
           constructor() {
             if (null != c6) {
               tmp2 = closure_0;
@@ -361,7 +361,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewFrame
         cResult[24] = items1;
         tmp32 = visible(obj3.useState(combined), 2);
       }
-      class U {
+      class D {
         constructor() {
           if (null != c6) {
             tmp2 = closure_0;
@@ -376,7 +376,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewFrame
       const items2 = [undefined, visible];
       cResult[13] = undefined;
       cResult[14] = visible;
-      cResult[15] = U;
+      cResult[15] = D;
       cResult[16] = items2;
       tmp25 = items2;
     }
@@ -698,7 +698,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           id = null;
         }
         if (cResult[10] !== id) {
-          class W {
+          class U {
             constructor() {
               if (null != c7) {
                 tmp2 = closure_1;
@@ -712,11 +712,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           }
           const items2 = [id];
           cResult[10] = id;
-          cResult[11] = W;
+          cResult[11] = U;
           cResult[12] = items2;
           let tmp22 = items2;
         } else {
-          class W {
+          class U {
             constructor() {
               if (null != c7) {
                 tmp2 = closure_1;
@@ -730,10 +730,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           }
           tmp22 = cResult[12];
         }
-        const effect1 = obj2.useEffect(W, tmp22);
+        const effect1 = obj2.useEffect(U, tmp22);
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          class W {
+          class U {
             constructor() {
               if (null != c7) {
                 tmp2 = closure_1;
@@ -749,7 +749,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           cResult[13] = items3;
           const tmp24 = items3;
         } else {
-          class W {
+          class U {
             constructor() {
               if (null != c7) {
                 tmp2 = closure_1;
@@ -763,7 +763,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           }
         }
         if (cResult[14] !== id) {
-          class X {
+          class J {
             constructor() {
               hasUnreadResult = null != c7;
               if (hasUnreadResult) {
@@ -776,11 +776,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
           const items4 = [id];
           cResult[14] = id;
           cResult[15] = items4;
-          cResult[16] = X;
-          let tmp26 = X;
+          cResult[16] = J;
+          let tmp26 = J;
           const tmp25 = items4;
         } else {
-          class X {
+          class J {
             constructor() {
               hasUnreadResult = null != c7;
               if (hasUnreadResult) {
@@ -795,7 +795,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
         const stateFromStores1 = tmp(504).useStateFromStores(tmp24, tmp26, tmp25);
         const _Symbol2 = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          class X {
+          class J {
             constructor() {
               hasUnreadResult = null != c7;
               if (hasUnreadResult) {
@@ -806,17 +806,17 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
             }
           }
           const items5 = [AppStateStore];
-          class Y {
+          class Z {
             constructor() {
               return closure_1_12.getState() === closure_1_19.ACTIVE;
             }
           }
           cResult[17] = items5;
-          cResult[18] = Y;
-          let tmp29 = Y;
+          cResult[18] = Z;
+          let tmp29 = Z;
           const tmp28 = items5;
         } else {
-          class X {
+          class J {
             constructor() {
               hasUnreadResult = null != c7;
               if (hasUnreadResult) {
@@ -831,7 +831,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
         const tmpResult3 = tmp(504);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp28, tmp29);
         if (cResult[19] === stateFromStores2) {
-          class X {
+          class J {
             constructor() {
               hasUnreadResult = null != c7;
               if (hasUnreadResult) {
@@ -1034,10 +1034,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(10888), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(10889), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(12010).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(12011).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
@@ -1097,9 +1097,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl5 = util.intl;
-      const stringResult1 = intl5.string(_modDef3830.xu1I8B);
+      const stringResult1 = intl5.string(_modDef3830.FExK4w);
       const intl6 = util.intl;
-      const stringResult2 = intl6.string(_modDef3830["8qJtGr"]);
+      const stringResult2 = intl6.string(_modDef3830["2pDCXO"]);
       cResult[7] = stringResult1;
       cResult[8] = stringResult2;
       let tmp28 = stringResult2;
@@ -1226,9 +1226,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   } else if (null != permissionsGate) {
     const obj4 = { title: null, body: null, children: null };
     const intl5 = util.intl;
-    obj4.title = intl5.string(_modDef3830.xu1I8B);
+    obj4.title = intl5.string(_modDef3830.FExK4w);
     const intl6 = util.intl;
-    obj4.body = intl6.string(_modDef3830["8qJtGr"]);
+    obj4.body = intl6.string(_modDef3830["2pDCXO"]);
     const obj5 = { variant: "primary", size: "sm", text: null, onPress: null, loading: null };
     const intl7 = util.intl;
     obj5.text = intl7.string(_modDef3830["Nub/J6"]);

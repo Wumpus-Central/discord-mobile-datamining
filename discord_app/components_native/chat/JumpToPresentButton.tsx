@@ -1,6 +1,6 @@
-// === Module 13155: JumpToPresentButton ===
+// === Module 13160: JumpToPresentButton ===
 
-// Module 13155 (JumpToPresentButton)
+// Module 13160 (JumpToPresentButton)
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 5252 */;
 import noop from "module_19" /* 19 */;
@@ -208,10 +208,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(11568).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(11568);
-  const isVoicePanelOpen = channelId(11568).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(11568);
+  const isVoicePanelMounted = channelId(11569).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(11569);
+  const isVoicePanelOpen = channelId(11569).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(11569);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -235,11 +235,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13157), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13156), { accessibilityLabel: stringResult, icon: screenIndex(13157), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(13156);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13162), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13161), { accessibilityLabel: stringResult, icon: screenIndex(13162), onPress: channelId.onJumpToPresent });
+    const tmp16 = screenIndex(13161);
   } else {
-    tmp12Result = jsx(tmp3(13158).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13163).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

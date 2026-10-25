@@ -1,18 +1,18 @@
-// === Module 12043: AppLauncherSearchUtils ===
+// === Module 12044: AppLauncherSearchUtils ===
 
-// Module 12043 (AppLauncherSearchUtils)
+// Module 12044 (AppLauncherSearchUtils)
 import Server from "Server" /* 2000 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9655 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12045 */;
-import ArraySearch from "ArraySearch" /* 12046 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12047 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12046 */;
+import ArraySearch from "ArraySearch" /* 12047 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9652 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9651 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12044 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12045 */;
 
 require = fn;
 function sortApplicationFreceny(id, id2) {
@@ -28,7 +28,7 @@ function sortCommandsAlpha(displayName, displayName2) {
 }
 const ApplicationCommandIndexStore = fn(9650);
 ({ appLauncherOnlyCompareNames: closure_7, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: c10 } = ApplicationCommandIndexStore);
-const FetchState = fn(12044).FetchState;
+const FetchState = fn(12045).FetchState;
 const BuiltInSectionId = fn(5983).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5984).COMMAND_SENTINEL;
 let ReactCompilerGating = fn(558);
@@ -1419,7 +1419,7 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(11166).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(11167).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

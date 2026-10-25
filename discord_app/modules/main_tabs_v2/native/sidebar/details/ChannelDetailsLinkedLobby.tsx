@@ -1,6 +1,6 @@
-// === Module 18185: ChannelDetailsLinkedLobby ===
+// === Module 18190: ChannelDetailsLinkedLobby ===
 
-// Module 18185 (ChannelDetailsLinkedLobby)
+// Module 18190 (ChannelDetailsLinkedLobby)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

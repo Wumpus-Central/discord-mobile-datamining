@@ -1,6 +1,6 @@
-// === Module 13137: ChatInputActionButtonGift ===
+// === Module 13142: ChatInputActionButtonGift ===
 
-// Module 13137 (ChatInputActionButtonGift)
+// Module 13142 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12525).ChatInputActionType;
+const ChatInputActionType = fn(12529).ChatInputActionType;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

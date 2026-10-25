@@ -1,8 +1,8 @@
-// === Module 12567: ConjureDebugGit ===
+// === Module 12572: ConjureDebugGit ===
 
-// Module 12567 (ConjureDebugGit)
+// Module 12572 (ConjureDebugGit)
 import conjureDebugConnection from "conjureDebugConnection" /* 10733 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12548 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;

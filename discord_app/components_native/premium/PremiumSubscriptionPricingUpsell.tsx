@@ -1,10 +1,10 @@
-// === Module 14842: PremiumSubscriptionPricingUpsell ===
+// === Module 14847: PremiumSubscriptionPricingUpsell ===
 
-// Module 14842 (PremiumSubscriptionPricingUpsell)
+// Module 14847 (PremiumSubscriptionPricingUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14706 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;

@@ -1,6 +1,6 @@
-// === Module 12535: ConjurePerfTraceTab ===
+// === Module 12539: ConjurePerfTraceTab ===
 
-// Module 12535 (ConjurePerfTraceTab)
+// Module 12539 (ConjurePerfTraceTab)
 import nativeDefault from "native" /* 587 */;
 import v1 from "v1" /* 1281 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -10,15 +10,15 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import Card from "Card" /* 6905 */;
 import FileManagerUtils from "FileManagerUtils" /* 8696 */;
 import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10734 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12538 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12540 */;
-import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12543 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12542 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12544 */;
+import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;
 
-const ConjureHeaderIconButtonDefault = tmp5(11856);
+const ConjureHeaderIconButtonDefault = tmp5(11857);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -75,7 +75,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     }
     if (cResult[7] !== tmp11) {
       const obj2 = { status: tmp11 };
-      const tmp16 = closure_8(trace(12542), obj2);
+      const tmp16 = closure_8(trace(12546), obj2);
       cResult[7] = tmp11;
       cResult[8] = tmp16;
       let tmp13 = tmp16;
@@ -87,11 +87,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
         let tmp17 = cResult[11];
       }
       if (cResult[12] !== trace) {
-        const perfTraceDurationResult = tmp(12538).perfTraceDuration(trace);
+        const perfTraceDurationResult = tmp(12542).perfTraceDuration(trace);
         cResult[12] = trace;
         cResult[13] = perfTraceDurationResult;
         let tmp20 = perfTraceDurationResult;
-        const tmpResult3 = tmp(12538);
+        const tmpResult3 = tmp(12542);
       } else {
         tmp20 = cResult[13];
       }
@@ -111,11 +111,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
               let tmp25 = cResult[20];
             }
             if (cResult[21] !== trace) {
-              const perfTraceSummaryResult = tmp(12538).perfTraceSummary(trace);
+              const perfTraceSummaryResult = tmp(12542).perfTraceSummary(trace);
               cResult[21] = trace;
               cResult[22] = perfTraceSummaryResult;
               let tmp29 = perfTraceSummaryResult;
-              const tmpResult4 = tmp(12538);
+              const tmpResult4 = tmp(12542);
             } else {
               tmp29 = cResult[22];
             }
@@ -207,7 +207,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     tmp17 = tmp19;
   }
   const fn = function f() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12536, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12540, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
   };
   cResult[2] = projectId;
   cResult[3] = trace.id;
@@ -227,7 +227,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj2 = {
     variant: "primary",
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12536, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12540, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
     },
     accessibilityLabel: trace.name,
     children: null
@@ -235,7 +235,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(12542);
+  const tmp9 = trace(12546);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   const items = [closure_8(tmp9, obj5), closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", style: tmp.rowName, lineClamp: 1, children: trace.name }), ];
   const obj8 = { variant: "text-xs/normal", color: "text-subtle", children: null };
@@ -261,7 +261,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
 ReactCompilerGating = fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 function openPerfTrace(projectId, traceId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12536, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12540, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/native/ConjurePerfTraceTab.tsx");
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       cResult[8] = tmp18;
     }
     if (cResult[9] !== tmp12) {
-      const tmpResult3 = tmp(12540);
+      const tmpResult3 = tmp(12544);
       cResult[9] = tmp12;
       class B {
         constructor() {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           return;
         }
       }
-      const sumPerfTraceStatsResult = tmp(12540).sumPerfTraceStats(tmp12);
+      const sumPerfTraceStatsResult = tmp(12544).sumPerfTraceStats(tmp12);
     }
     if (cResult[11] === tmp12) {
       if (cResult[12] === projectId) {
@@ -1373,12 +1373,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp21 = B;
   }
   const tmp10 = _slicedToArray(noop.useState(""), 2);
-  const filterPerfTracesResult = projectId(12543).filterPerfTraces(stateFromStoresArray, first1);
+  const filterPerfTracesResult = projectId(12547).filterPerfTraces(stateFromStoresArray, first1);
   cResult[4] = first1;
   cResult[5] = stateFromStoresArray;
   cResult[6] = filterPerfTracesResult;
   tmp12 = filterPerfTracesResult;
-  const tmpResult4 = projectId(12543);
+  const tmpResult4 = projectId(12547);
 }) : (function ConjurePerfTraceTab(projectId) {
   projectId = projectId.projectId;
   let first;

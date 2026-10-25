@@ -1,14 +1,14 @@
-// === Module 11572: GlobalStageChannelStatus ===
+// === Module 11573: GlobalStageChannelStatus ===
 
-// Module 11572 (GlobalStageChannelStatus)
+// Module 11573 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useChannelNameDefault from "useChannelName" /* 5604 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7873 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import StatusBarDefault from "StatusBar" /* 10886 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11386 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11564 */;
+import StatusBarDefault from "StatusBar" /* 10887 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11387 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         }
       }
     }
-    const getStageRTCPanelHeight = tmp(11562).useGetStageRTCPanelHeight(tmp21);
+    const getStageRTCPanelHeight = tmp(11563).useGetStageRTCPanelHeight(tmp21);
     if (cResult[7] !== channel) {
       class S {
         constructor() {
@@ -365,7 +365,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
       cResult[14] = tmp26;
       cResult[15] = items2;
     }
-    const tmpResult6 = tmp(11562);
+    const tmpResult6 = tmp(11563);
   }
   cResult[4] = stringResult;
   if (stateFromStores != null) {
@@ -502,7 +502,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
     id2 = channel.id;
   }
   let stageIgnoredUsersCount = channel(8106).useStageIgnoredUsersCount(id2);
-  channel(11562);
+  channel(11563);
   if (channel != null) {
     const id = channel.id;
   }

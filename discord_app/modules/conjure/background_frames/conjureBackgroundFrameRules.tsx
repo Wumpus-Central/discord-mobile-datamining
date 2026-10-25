@@ -1,15 +1,15 @@
-// === Module 18043: conjureBackgroundFrameRules ===
+// === Module 18048: conjureBackgroundFrameRules ===
 
-// Module 18043 (conjureBackgroundFrameRules)
+// Module 18048 (conjureBackgroundFrameRules)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 10728 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13860 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15704 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13865 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15709 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import FramesStore from "FramesStore" /* 6775 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18044 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15706 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18049 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15711 */;
 
 require = fn;
 const FrameIntent = fn(6776).FrameIntent;

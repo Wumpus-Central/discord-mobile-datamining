@@ -1,6 +1,6 @@
-// === Module 11693: StageChannelAnimationUtils ===
+// === Module 11694: StageChannelAnimationUtils ===
 
-// Module 11693 (StageChannelAnimationUtils)
+// Module 11694 (StageChannelAnimationUtils)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

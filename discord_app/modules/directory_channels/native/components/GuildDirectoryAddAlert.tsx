@@ -1,6 +1,6 @@
-// === Module 13202: GuildDirectoryAddAlert ===
+// === Module 13207: GuildDirectoryAddAlert ===
 
-// Module 13202 (GuildDirectoryAddAlert)
+// Module 13207 (GuildDirectoryAddAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

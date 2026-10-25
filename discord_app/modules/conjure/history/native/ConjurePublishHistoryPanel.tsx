@@ -1,14 +1,14 @@
-// === Module 12274: ConjurePublishHistoryPanel ===
+// === Module 12275: ConjurePublishHistoryPanel ===
 
-// Module 12274 (ConjurePublishHistoryPanel)
+// Module 12275 (ConjurePublishHistoryPanel)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
-import useConjurePublishHistory from "useConjurePublishHistory" /* 12275 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12277 */;
+import useConjurePublishHistory from "useConjurePublishHistory" /* 12276 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const cResult = projectId(576).c(33);
   projectId = projectId.projectId;
   const obj = projectId(576);
-  const iter = projectId(12275).useConjurePublishHistory(projectId);
+  const iter = projectId(12276).useConjurePublishHistory(projectId);
   let entries = iter.state;
   if ("loading" === entries.status) {
     const _Symbol6 = Symbol;
@@ -490,10 +490,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     cResult[13] = fn;
     tmp9 = fn;
   }
-  const obj2 = projectId(12275);
+  const obj2 = projectId(12276);
 }) : (function ConjurePublishHistoryPanel(projectId) {
   projectId = projectId.projectId;
-  const iter = projectId(12275).useConjurePublishHistory(projectId);
+  const iter = projectId(12276).useConjurePublishHistory(projectId);
   const state = iter.state;
   if ("loading" === state.status) {
     const obj2 = { variant: "text-sm/normal", children: null };

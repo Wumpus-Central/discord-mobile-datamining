@@ -1,16 +1,16 @@
-// === Module 12472: conjureClarificationLinks ===
+// === Module 12476: conjureClarificationLinks ===
 
-// Module 12472 (conjureClarificationLinks)
-import conjureLinkedApps from "conjureLinkedApps" /* 11841 */;
+// Module 12476 (conjureClarificationLinks)
+import conjureLinkedApps from "conjureLinkedApps" /* 11842 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/clarification/conjureClarificationLinks.tsx");
 
-export const sendAfterLinkingApps = function sendAfterLinkingApps(arg0, result1, arg2, first1, fn) {
-  closure_0 = arg0;
+export const sendAfterLinkingApps = function sendAfterLinkingApps(projectId, questions, arg2, first1, fn) {
+  closure_0 = projectId;
   closure_1 = arg2;
   closure_2 = first1;
-  const questions = result1.questions;
+  questions = questions.questions;
   const flatMapResult = questions.flatMap((link) => {
     if (true === link.link) {
       let kind;

@@ -1,6 +1,6 @@
-// === Module 11022: XSmallBoldIcon ===
+// === Module 11023: XSmallBoldIcon ===
 
-// Module 11022 (XSmallBoldIcon)
+// Module 11023 (XSmallBoldIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;

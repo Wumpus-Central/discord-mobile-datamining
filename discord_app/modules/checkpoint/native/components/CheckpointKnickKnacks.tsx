@@ -1,6 +1,6 @@
-// === Module 12968: CheckpointKnickKnacks ===
+// === Module 12973: CheckpointKnickKnacks ===
 
-// Module 12968 (CheckpointKnickKnacks)
+// Module 12973 (CheckpointKnickKnacks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;

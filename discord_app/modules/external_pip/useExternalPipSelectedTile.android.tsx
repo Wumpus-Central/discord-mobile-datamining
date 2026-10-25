@@ -1,15 +1,15 @@
-// === Module 18655: useExternalPipSelectedTile ===
+// === Module 18660: useExternalPipSelectedTile ===
 
-// Module 18655 (useExternalPipSelectedTile)
+// Module 18660 (useExternalPipSelectedTile)
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15047 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15052 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VoicePanelPIPModes = fn(18442).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(18447).VoicePanelPIPModes;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");

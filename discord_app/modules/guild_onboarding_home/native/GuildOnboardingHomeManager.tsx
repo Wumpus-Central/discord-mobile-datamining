@@ -1,11 +1,11 @@
-// === Module 18810: GuildOnboardingHomeManager ===
+// === Module 18815: GuildOnboardingHomeManager ===
 
-// Module 18810 (GuildOnboardingHomeManager)
+// Module 18815 (GuildOnboardingHomeManager)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13165 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 4876 */;
@@ -91,7 +91,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(18811, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(18816, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -185,11 +185,11 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != closure_129_5;
             }
             if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(13165).NewMemberActionTypes.VIEW;
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(13170).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(13164).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(13164);
+              const result = applyArgumentsResult(13169).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(13169);
             }
             arr = memberActions;
           }

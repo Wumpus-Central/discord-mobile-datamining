@@ -1,15 +1,15 @@
-// === Module 12436: ConjureTodoList ===
+// === Module 12440: ConjureTodoList ===
 
-// Module 12436 (ConjureTodoList)
+// Module 12440 (ConjureTodoList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import FormCheckbox from "FormCheckbox" /* 6901 */;
-import ConjureTodoState from "ConjureTodoState" /* 12307 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12321 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12342 */;
+import ConjureTodoState from "ConjureTodoState" /* 12308 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12322 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12344 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -539,7 +539,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp32;
                                 obj2.hideLabel = tmp33;
                                 obj2.children = tmp50;
-                                const tmp57 = closure_6(textCompleted(12437), obj2);
+                                const tmp57 = closure_6(textCompleted(12441), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -833,7 +833,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp30 = closure_6(tmp(12437).ConjureNativeCollapsibleMeta, obj5);
+        const tmp30 = closure_6(tmp(12441).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -859,11 +859,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp15 = cResult[9];
   }
   if (cResult[10] !== tmp15) {
-    const groupAgentsByTodoResult = tmp(12321).groupAgentsByTodo(tmp15);
+    const groupAgentsByTodoResult = tmp(12322).groupAgentsByTodo(tmp15);
     cResult[10] = tmp15;
     cResult[11] = groupAgentsByTodoResult;
     let tmp17 = groupAgentsByTodoResult;
-    const tmpResult2 = tmp(12321);
+    const tmpResult2 = tmp(12322);
   } else {
     tmp17 = cResult[11];
   }
@@ -958,8 +958,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12307);
-  ({ completed, total } = agents(12307).todoProgress(todos));
+  let obj = agents(12308);
+  ({ completed, total } = agents(12308).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -972,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     return null;
   }
   const intl = agents(1128).intl;
-  const todoProgressResult = agents(12307).todoProgress(todos);
+  const todoProgressResult = agents(12308).todoProgress(todos);
   const intl2 = agents(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3830)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -986,7 +986,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12437).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12441).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -1041,5 +1041,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12437), obj2);
+  return closure_6(flag2(12441), obj2);
 });

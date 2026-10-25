@@ -1,9 +1,9 @@
-// === Module 12547: ConjureDebugLabels ===
+// === Module 12551: ConjureDebugLabels ===
 
-// Module 12547 (ConjureDebugLabels)
+// Module 12551 (ConjureDebugLabels)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12548 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12552 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = {
@@ -122,29 +122,29 @@ export const filterDebugLogs = function filterDebugLogs(stateFromStores, arg1, f
     return tmp2;
   });
 };
-export const forceCompactionStatus = function forceCompactionStatus(stateFromStores3) {
-  if ("idle" === stateFromStores3) {
+export const forceCompactionStatus = function forceCompactionStatus(forceState) {
+  if ("idle" === forceState) {
     const intl4 = util.intl;
     return intl4.string(_modDef3830.wox6Ev);
-  } else if ("pending" === stateFromStores3) {
+  } else if ("pending" === forceState) {
     const intl3 = util.intl;
     return intl3.string(_modDef3830.OcPHQ1);
   } else {
-    const formatObservedAtResult = ConjureDebugFormat.formatObservedAt(stateFromStores3.observedAt);
-    if ("compacted" === stateFromStores3.outcome) {
+    const formatObservedAtResult = ConjureDebugFormat.formatObservedAt(forceState.observedAt);
+    if ("compacted" === forceState.outcome) {
       const intl2 = util.intl;
       const obj2 = { time: formatObservedAtResult };
       return intl2.formatToPlainString(_modDef3830.BhRjZZ, obj2);
     } else {
-      if ("declined" === stateFromStores3.outcome) {
+      if ("declined" === forceState.outcome) {
         let ZoUSVK = _modDef3830["o/FKzF"];
-      } else if ("busy" === stateFromStores3.outcome) {
+      } else if ("busy" === forceState.outcome) {
         ZoUSVK = _modDef3830.YZb4hK;
       } else {
         ZoUSVK = _modDef3830.ZoUSVK;
       }
       const intl = util.intl;
-      let str2 = stateFromStores3.reason;
+      let str2 = forceState.reason;
       if (str2 == null) {
         str2 = "no reason given";
       }
@@ -211,25 +211,25 @@ export const analyticsRoleLabel = function analyticsRoleLabel(role) {
   }
   return stringResult;
 };
-export const sandboxRestartStatus = function sandboxRestartStatus(stateFromStores4) {
-  if ("idle" === stateFromStores4) {
+export const sandboxRestartStatus = function sandboxRestartStatus(restartState) {
+  if ("idle" === restartState) {
     const intl2 = util.intl;
     return intl2.string(_modDef3830.mlok8D);
-  } else if ("pending" === stateFromStores4) {
+  } else if ("pending" === restartState) {
     const intl = util.intl;
     return intl.string(_modDef3830["1ugSyK"]);
   } else {
     const intl3 = util.intl;
-    if ("restarted" === stateFromStores4.outcome) {
+    if ("restarted" === restartState.outcome) {
       let FiVRoT = _modDef3830["76mfqO"];
     } else {
       FiVRoT = _modDef3830.FiVRoT;
     }
-    let str = stateFromStores4.reason;
+    let str = restartState.reason;
     if (str == null) {
       str = "";
     }
-    const obj = { reason: str, time: ConjureDebugFormat.formatObservedAt(stateFromStores4.observedAt) };
+    const obj = { reason: str, time: ConjureDebugFormat.formatObservedAt(restartState.observedAt) };
     return intl3.formatToPlainString(FiVRoT, obj);
   }
 };

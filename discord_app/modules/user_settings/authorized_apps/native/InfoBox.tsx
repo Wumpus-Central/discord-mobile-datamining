@@ -1,6 +1,6 @@
-// === Module 11051: InfoBox ===
+// === Module 11052: InfoBox ===
 
-// Module 11051 (InfoBox)
+// Module 11052 (InfoBox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;

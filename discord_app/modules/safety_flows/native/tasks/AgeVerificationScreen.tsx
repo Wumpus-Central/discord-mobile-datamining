@@ -1,9 +1,9 @@
-// === Module 19428: AgeVerificationScreen ===
+// === Module 19433: AgeVerificationScreen ===
 
-// Module 19428 (AgeVerificationScreen)
+// Module 19433 (AgeVerificationScreen)
 import Server from "Server" /* 2000 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
-import types from "types" /* 19415 */;
+import types from "types" /* 19420 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

@@ -1,6 +1,6 @@
-// === Module 17686: useShouldRenderChannelList ===
+// === Module 17691: useShouldRenderChannelList ===
 
-// Module 17686 (useShouldRenderChannelList)
+// Module 17691 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
 import RootNavigationRef from "RootNavigationRef" /* 5151 */;

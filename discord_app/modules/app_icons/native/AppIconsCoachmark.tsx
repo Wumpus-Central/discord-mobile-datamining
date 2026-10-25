@@ -1,13 +1,13 @@
-// === Module 18384: AppIconsCoachmark ===
+// === Module 18389: AppIconsCoachmark ===
 
-// Module 18384 (AppIconsCoachmark)
+// Module 18389 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import _modDef9934 from "module_9934" /* 9934 */;
-import AppIconUtils from "AppIconUtils" /* 14762 */;
-import _modDef18385 from "module_18385" /* 18385 */;
+import AppIconUtils from "AppIconUtils" /* 14767 */;
+import _modDef18390 from "module_18390" /* 18390 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    let obj2 = { source: _modDef18385, style: tmp4.image };
+    let obj2 = { source: _modDef18390, style: tmp4.image };
     const tmp19 = closure_7(FastImageDefault, obj2);
     cResult[10] = tmp4.image;
     cResult[11] = tmp19;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef18385;
+  obj5.source = _modDef18390;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.titleContainer, children: null };

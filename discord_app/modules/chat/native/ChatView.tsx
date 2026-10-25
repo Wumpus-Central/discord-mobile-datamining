@@ -1,22 +1,22 @@
-// === Module 10888: ChatView ===
+// === Module 10889: ChatView ===
 
-// Module 10888 (ChatView)
+// Module 10889 (ChatView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ChatInputUtils from "ChatInputUtils" /* 5159 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7410 */;
 import SummaryActionCreators from "SummaryActionCreators" /* 10070 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 10909 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10922 */;
-import MessagesDefault from "Messages" /* 11023 */;
-import ChatInputDefault from "ChatInput" /* 13053 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13155 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 13384 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 13558 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 13559 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 13563 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 13566 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 10910 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10923 */;
+import MessagesDefault from "Messages" /* 11024 */;
+import ChatInputDefault from "ChatInput" /* 13058 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13160 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 13389 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 13563 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 13564 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 13568 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 13571 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -677,14 +677,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const channelContentGate = flag(10889).useChannelContentGate(guildId, stateFromStores);
+  const channelContentGate = flag(10890).useChannelContentGate(guildId, stateFromStores);
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
   channelId(5599)(() => new channelId(isActive[16])());
-  const tmp10 = channelId(10907)(channelId);
+  const tmp10 = channelId(10908)(channelId);
   isResourceChannel = tmp10;
-  let obj3 = flag(10889);
+  let obj3 = flag(10890);
   const items3 = [MessageStore];
   const items4 = [channelId, tmp10];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items3, () => {
@@ -747,17 +747,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj4 = { profile: null, children: null };
   const tmp16 = channel;
   const tmp3Result = flag(504);
-  obj4.profile = flag(13052).Profiles.ChatView;
+  obj4.profile = flag(13057).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(13718), { channelId, guildId }), , ];
+  const items10 = [stateFromStores(channelId(13723), { channelId, guildId }), , ];
   let setInterstitialResult = null;
   if (!flag2) {
     setInterstitialResult = setInterstitial(tmp9(10625), { absolute: true });
   }
   items10[1] = setInterstitialResult;
   if (null != channelContentGate) {
-    let result = tmp3(10889).renderChannelContentGate(channelContentGate);
-    const tmp3Result2 = tmp3(10889);
+    let result = tmp3(10890).renderChannelContentGate(channelContentGate);
+    const tmp3Result2 = tmp3(10890);
     tmp9(9).setInterstitial(channelContentGate.kind);
     const tmp9Result = tmp9(9);
   } else {
@@ -817,12 +817,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(13569), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(13574), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(13704), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(13709), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {
@@ -831,5 +831,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   items10[2] = result;
   obj4.children = items10;
-  return tmp16(channelId(13052), obj4);
+  return tmp16(channelId(13057), obj4);
 }));

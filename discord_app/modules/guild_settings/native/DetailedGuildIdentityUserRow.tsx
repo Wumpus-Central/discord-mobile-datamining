@@ -1,6 +1,6 @@
-// === Module 10829: DetailedGuildIdentityUserRow ===
+// === Module 10830: DetailedGuildIdentityUserRow ===
 
-// Module 10829 (DetailedGuildIdentityUserRow)
+// Module 10830 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

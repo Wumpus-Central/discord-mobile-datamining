@@ -1,14 +1,14 @@
-// === Module 15876: UserProfileBadgesEditButton ===
+// === Module 15881: UserProfileBadgesEditButton ===
 
-// Module 15876 (UserProfileBadgesEditButton)
+// Module 15881 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11113 */;
-import BadgeUtils from "BadgeUtils" /* 11122 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15877 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11114 */;
+import BadgeUtils from "BadgeUtils" /* 11123 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11121 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11122 */;
 
 const require = globalThis.__r;
 

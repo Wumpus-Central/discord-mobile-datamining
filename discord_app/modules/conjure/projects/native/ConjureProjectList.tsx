@@ -1,19 +1,19 @@
-// === Module 11743: ConjureProjectList ===
+// === Module 11744: ConjureProjectList ===
 
-// Module 11743 (ConjureProjectList)
+// Module 11744 (ConjureProjectList)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10696 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11742 */;
-import ConjureActivity from "ConjureActivity" /* 11744 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 11745 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11799 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11853 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 11855 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 11856 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11743 */;
+import ConjureActivity from "ConjureActivity" /* 11745 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 11746 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11800 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11854 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 11856 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 11857 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     if (cResult[11] === guildId) {
       if (cResult[15] !== stateFromStoresArray1) {
         const substr = stateFromStoresArray1.slice();
-        const sorted = substr.sort(tmp(11744).compareConjureProjectsByUpdatedAt);
+        const sorted = substr.sort(tmp(11745).compareConjureProjectsByUpdatedAt);
         cResult[15] = stateFromStoresArray1;
         cResult[16] = sorted;
       }
@@ -477,11 +477,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         cResult[23] = tmp25;
         cResult[24] = tmp28;
       }
-      const projectOpenerResult = tmp(11742).projectOpener(guildId, U);
+      const projectOpenerResult = tmp(11743).projectOpener(guildId, U);
       cResult[19] = guildId;
       cResult[20] = U;
       cResult[21] = projectOpenerResult;
-      const tmpResult6 = tmp(11742);
+      const tmpResult6 = tmp(11743);
     }
   }
   if (cResult[13] !== guildId) {
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     }
   }
   const found = stateFromStoresArray.filter(M);
-  const sorted1 = found.sort(tmp(11744).compareConjureProjectsByUpdatedAt);
+  const sorted1 = found.sort(tmp(11745).compareConjureProjectsByUpdatedAt);
   cResult[10] = stateFromStoresArray;
   cResult[11] = guildId;
   cResult[12] = sorted1;

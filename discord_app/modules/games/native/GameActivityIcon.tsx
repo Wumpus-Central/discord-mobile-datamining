@@ -1,6 +1,6 @@
-// === Module 14175: GameActivityIcon ===
+// === Module 14180: GameActivityIcon ===
 
-// Module 14175 (GameActivityIcon)
+// Module 14180 (GameActivityIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 5037 */;

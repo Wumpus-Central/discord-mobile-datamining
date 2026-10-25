@@ -1,6 +1,6 @@
-// === Module 14276: ContentInventoryActivityImageUtils ===
+// === Module 14281: ContentInventoryActivityImageUtils ===
 
-// Module 14276 (ContentInventoryActivityImageUtils)
+// Module 14281 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -15,10 +15,10 @@ import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8832 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10646 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10652 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14277 */;
-import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 14279 */;
-import isOnXboxDefault from "isOnXbox" /* 14283 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 14284 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14282 */;
+import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 14284 */;
+import isOnXboxDefault from "isOnXbox" /* 14288 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 14289 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import Constants from "Constants" /* 1087 */;
 import "ReactCompilerGating";

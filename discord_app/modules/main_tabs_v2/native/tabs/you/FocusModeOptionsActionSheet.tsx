@@ -1,6 +1,6 @@
-// === Module 17821: FocusModeOptionsActionSheet ===
+// === Module 17826: FocusModeOptionsActionSheet ===
 
-// Module 17821 (FocusModeOptionsActionSheet)
+// Module 17826 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FocusMod
   const cResult = onSelect(576).c(9);
   onSelect = onSelect.onSelect;
   const obj = onSelect(576);
-  const focusModeEnabled = onSelect(13748).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(13753).useFocusModeEnabled();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t["sNX1E+"]);
@@ -169,10 +169,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FocusMod
   cResult[2] = onSelect;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = onSelect(13748);
+  const obj2 = onSelect(13753);
 }) : (function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  const focusModeEnabled = onSelect(13748).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(13753).useFocusModeEnabled();
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1128).intl;
   obj2.title = intl.string(onSelect(1128).t["sNX1E+"]);

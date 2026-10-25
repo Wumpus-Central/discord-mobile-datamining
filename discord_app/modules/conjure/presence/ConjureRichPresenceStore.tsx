@@ -1,6 +1,6 @@
-// === Module 11194: ConjureRichPresenceStore ===
+// === Module 11195: ConjureRichPresenceStore ===
 
-// Module 11194 (ConjureRichPresenceStore)
+// Module 11195 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
@@ -204,7 +204,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F109432 */ function() { ... });
+                        let found = prop.filter(/* F109448 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];

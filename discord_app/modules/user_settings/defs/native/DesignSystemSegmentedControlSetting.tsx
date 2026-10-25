@@ -1,9 +1,9 @@
-// === Module 17141: DesignSystemSegmentedControlSetting ===
+// === Module 17146: DesignSystemSegmentedControlSetting ===
 
-// Module 17141 (DesignSystemSegmentedControlSetting)
+// Module 17146 (DesignSystemSegmentedControlSetting)
 import Constants from "Constants" /* 1087 */;
 import SettingsConstants from "SettingsConstants" /* 8332 */;
-import SettingBuilders from "SettingBuilders" /* 11205 */;
+import SettingBuilders from "SettingBuilders" /* 11206 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

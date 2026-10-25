@@ -1,6 +1,6 @@
-// === Module 12964: CheckpointOverlay ===
+// === Module 12969: CheckpointOverlay ===
 
-// Module 12964 (CheckpointOverlay)
+// Module 12969 (CheckpointOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -11,19 +11,19 @@ import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
 import GameControllerIcon from "GameControllerIcon" /* 9616 */;
 import ServerIcon from "ServerIcon" /* 9646 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11642 */;
-import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 12965 */;
-import CheckpointStatsIntroScreenDefault from "CheckpointStatsIntroScreen" /* 12970 */;
-import CheckpointVoiceStatsScreenDefault from "CheckpointVoiceStatsScreen" /* 12971 */;
-import CheckpointMessagesStatsScreenDefault from "CheckpointMessagesStatsScreen" /* 12981 */;
-import CheckpointServersStatsScreenDefault from "CheckpointServersStatsScreen" /* 12984 */;
-import CheckpointTopServerStatsScreenDefault from "CheckpointTopServerStatsScreen" /* 12988 */;
-import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 12989 */;
-import CheckpointEmojiStatsScreenDefault from "CheckpointEmojiStatsScreen" /* 12991 */;
-import CheckpointGamesStatsScreenDefault from "CheckpointGamesStatsScreen" /* 13007 */;
-import CheckpointGameTimeStatsScreenDefault from "CheckpointGameTimeStatsScreen" /* 13008 */;
-import CheckpointFriendsStatsScreenDefault from "CheckpointFriendsStatsScreen" /* 13011 */;
-import CheckpointSummaryStatsScreenDefault from "CheckpointSummaryStatsScreen" /* 13015 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11643 */;
+import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 12970 */;
+import CheckpointStatsIntroScreenDefault from "CheckpointStatsIntroScreen" /* 12975 */;
+import CheckpointVoiceStatsScreenDefault from "CheckpointVoiceStatsScreen" /* 12976 */;
+import CheckpointMessagesStatsScreenDefault from "CheckpointMessagesStatsScreen" /* 12986 */;
+import CheckpointServersStatsScreenDefault from "CheckpointServersStatsScreen" /* 12989 */;
+import CheckpointTopServerStatsScreenDefault from "CheckpointTopServerStatsScreen" /* 12993 */;
+import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 12994 */;
+import CheckpointEmojiStatsScreenDefault from "CheckpointEmojiStatsScreen" /* 12996 */;
+import CheckpointGamesStatsScreenDefault from "CheckpointGamesStatsScreen" /* 13012 */;
+import CheckpointGameTimeStatsScreenDefault from "CheckpointGameTimeStatsScreen" /* 13013 */;
+import CheckpointFriendsStatsScreenDefault from "CheckpointFriendsStatsScreen" /* 13016 */;
+import CheckpointSummaryStatsScreenDefault from "CheckpointSummaryStatsScreen" /* 13020 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

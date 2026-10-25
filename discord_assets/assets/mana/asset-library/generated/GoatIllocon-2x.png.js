@@ -1,6 +1,6 @@
-// === Module 12394: ? ===
+// === Module 12398: ? ===
 
-// Module 12394
+// Module 12398
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GoatIllocon-2x.png.js");

@@ -1,8 +1,8 @@
-// === Module 10805: conjurePublishScheduleRequests ===
+// === Module 10806: conjurePublishScheduleRequests ===
 
-// Module 10805 (conjurePublishScheduleRequests)
+// Module 10806 (conjurePublishScheduleRequests)
 import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
-import ConjurePublishScheduleErrorDefault from "ConjurePublishScheduleError" /* 10806 */;
+import ConjurePublishScheduleErrorDefault from "ConjurePublishScheduleError" /* 10807 */;
 import size from "module_2" /* 2 */;
 
 function rejectPendingPublishSchedule(projectId) {

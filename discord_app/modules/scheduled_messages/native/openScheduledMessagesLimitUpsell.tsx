@@ -1,6 +1,6 @@
-// === Module 14037: openScheduledMessagesLimitUpsell ===
+// === Module 14042: openScheduledMessagesLimitUpsell ===
 
-// Module 14037 (openScheduledMessagesLimitUpsell)
+// Module 14042 (openScheduledMessagesLimitUpsell)
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5030 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9680 */;
 import size from "module_2" /* 2 */;

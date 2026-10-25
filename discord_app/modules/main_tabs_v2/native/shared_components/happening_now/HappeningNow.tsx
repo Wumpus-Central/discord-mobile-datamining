@@ -1,25 +1,25 @@
-// === Module 17480: HappeningNow ===
+// === Module 17485: HappeningNow ===
 
-// Module 17480 (HappeningNow)
+// Module 17485 (HappeningNow)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
-import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 10901 */;
-import HappeningNowAnalytics from "HappeningNowAnalytics" /* 17481 */;
-import happeningNowRankingUtils from "happeningNowRankingUtils" /* 17489 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 17491 */;
-import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 17492 */;
-import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 17494 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 17495 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 17507 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 17508 */;
-import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 17509 */;
-import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 17510 */;
-import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 17511 */;
-import HappeningNowActions from "HappeningNowActions" /* 17512 */;
+import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 10902 */;
+import HappeningNowAnalytics from "HappeningNowAnalytics" /* 17486 */;
+import happeningNowRankingUtils from "happeningNowRankingUtils" /* 17494 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 17496 */;
+import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 17497 */;
+import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 17499 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 17500 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 17512 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 17513 */;
+import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 17514 */;
+import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 17515 */;
+import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 17516 */;
+import HappeningNowActions from "HappeningNowActions" /* 17517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -166,7 +166,7 @@ function getItemType(kind) {
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16648);
+const HappeningNowConstants = fn(16653);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_9, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: c10, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_11 } = HappeningNowConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -361,7 +361,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = listRef(576);
   const isFocused = listRef(1506).useIsFocused();
   if (cResult[0] !== isFocused) {
-    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "IconComponent", isFocused };
+    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "#297071", isFocused };
     cResult[0] = isFocused;
     cResult[1] = obj3;
     let tmp6 = obj3;
@@ -371,9 +371,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = listRef(1506);
   const tmp7 = isFocused;
   const tmp8 = _slicedToArray;
-  [arr, tmp10] = isFocused(17482)(listRef.cards, tmp6);
+  [arr, tmp10] = isFocused(17487)(listRef.cards, tmp6);
   dependencyMap = tmp10;
-  const tmp9 = _slicedToArray(isFocused(17482)(listRef.cards, tmp6), 2);
+  const tmp9 = _slicedToArray(isFocused(17487)(listRef.cards, tmp6), 2);
   const analyticsLocations = isFocused(7253)(isFocused(7278).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
   let num3 = 0;
   const obj4 = sharedValue;
@@ -442,7 +442,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return obj.cardSize(listRef) === closure_1_10;
             }
           }
-          const first = tmp8(tmp7(17490)(num9, D), 2)[0];
+          const first = tmp8(tmp7(17495)(num9, D), 2)[0];
           class N {
             constructor() {
               if (!closure_1) {
@@ -467,7 +467,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
             let result = obj6.filterHappeningNowCards(length);
-            const result1 = tmp(17489).sortHappeningNowCards(result);
+            const result1 = tmp(17494).sortHappeningNowCards(result);
             class N {
               constructor() {
                 if (!closure_1) {
@@ -486,7 +486,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
             cResult[14] = length;
             cResult[15] = result1;
-            const tmpResult = tmp(17489);
+            const tmpResult = tmp(17494);
           } else {
             class A {
               constructor(arg0) {
@@ -495,8 +495,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmp8Result = tmp8(tmp7(17490)(num9, D), 2);
-          const happeningNowScrollSnapping = tmp(17490).useHappeningNowScrollSnapping(listRef);
+          const tmp8Result = tmp8(tmp7(17495)(num9, D), 2);
+          const happeningNowScrollSnapping = tmp(17495).useHappeningNowScrollSnapping(listRef);
           if (cResult[16] !== tmp10) {
             class Y {
               constructor(arg0) {
@@ -529,7 +529,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmpResult3 = tmp(17490);
+          const tmpResult3 = tmp(17495);
           sharedValue = tmp(5052).useSharedValue([]);
           if (cResult[18] !== sharedValue) {
             class X {
@@ -814,7 +814,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let callback2;
   const tmp = closure_15();
   const isFocused = listRef(children[17]).useIsFocused();
-  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "IconComponent", isFocused };
+  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "#297071", isFocused };
   const tmp7 = ref(isFocused(children[18])(listRef.cards, obj2), 2);
   children = tmp7[0];
   const loading = tmp8;

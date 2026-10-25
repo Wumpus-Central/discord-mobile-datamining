@@ -1,13 +1,13 @@
-// === Module 16604: StreamOutputVolumeSetting ===
+// === Module 16609: StreamOutputVolumeSetting ===
 
-// Module 16604 (StreamOutputVolumeSetting)
+// Module 16609 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5739 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11613 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11614 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -64,7 +64,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStreamVol
     return num;
   });
 });
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasStreamVolumeSetting() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

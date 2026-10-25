@@ -1,7 +1,7 @@
-// === Module 11496: Safe ===
+// === Module 11497: Safe ===
 
-// Module 11496 (Safe)
-import passThrough_mod from "passThrough" /* 11497 */;
+// Module 11497 (Safe)
+import passThrough_mod from "passThrough" /* 11498 */;
 import size from "module_2" /* 2 */;
 
 const obj = { asIterable: passThrough.asIterable, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };

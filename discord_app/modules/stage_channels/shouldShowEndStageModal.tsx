@@ -1,6 +1,6 @@
-// === Module 11532: shouldShowEndStageModal ===
+// === Module 11533: shouldShowEndStageModal ===
 
-// Module 11532 (shouldShowEndStageModal)
+// Module 11533 (shouldShowEndStageModal)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6641 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6686 */;

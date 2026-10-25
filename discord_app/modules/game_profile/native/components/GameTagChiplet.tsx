@@ -1,6 +1,6 @@
-// === Module 18579: GameTagChiplet ===
+// === Module 18584: GameTagChiplet ===
 
-// Module 18579 (GameTagChiplet)
+// Module 18584 (GameTagChiplet)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import GuildTag from "GuildTag" /* 9225 */;

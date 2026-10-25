@@ -1,6 +1,6 @@
-// === Module 11485: BaseEmbeddedAppWebView ===
+// === Module 11486: BaseEmbeddedAppWebView ===
 
-// Module 11485 (BaseEmbeddedAppWebView)
+// Module 11486 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import URLUtilsDefault from "URLUtils" /* 1386 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
 import usePreviousDefault from "usePrevious" /* 6660 */;
 import WebView from "WebView" /* 7907 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10774 */;
-import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11494 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10775 */;
+import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11495 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

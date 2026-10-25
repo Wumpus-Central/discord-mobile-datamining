@@ -1,10 +1,10 @@
-// === Module 11296: useGroupDMNitroUpsellAction ===
+// === Module 11297: useGroupDMNitroUpsellAction ===
 
-// Module 11296 (useGroupDMNitroUpsellAction)
+// Module 11297 (useGroupDMNitroUpsellAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11289 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11295 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11290 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

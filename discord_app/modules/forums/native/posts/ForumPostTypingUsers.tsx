@@ -1,6 +1,6 @@
-// === Module 13112: ForumPostTypingUsers ===
+// === Module 13117: ForumPostTypingUsers ===
 
-// Module 13112 (ForumPostTypingUsers)
+// Module 13117 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;

@@ -1,16 +1,16 @@
-// === Module 16348: QuestHomeBounties ===
+// === Module 16353: QuestHomeBounties ===
 
-// Module 16348 (QuestHomeBounties)
+// Module 16353 (QuestHomeBounties)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9570 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16349 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16355 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 16362 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 16368 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 16354 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16360 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 16367 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 16373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BountyStore from "BountyStore" /* 7775 */;

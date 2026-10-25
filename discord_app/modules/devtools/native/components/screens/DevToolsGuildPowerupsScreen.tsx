@@ -1,6 +1,6 @@
-// === Module 17070: DevToolsGuildPowerupsScreen ===
+// === Module 17075: DevToolsGuildPowerupsScreen ===
 
-// Module 17070 (DevToolsGuildPowerupsScreen)
+// Module 17075 (DevToolsGuildPowerupsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
@@ -9,12 +9,12 @@ import _modDef2049 from "module_2049" /* 2049 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4804 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import TableSwitchRow from "TableSwitchRow" /* 7295 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13413 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16974 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13418 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13481 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13486 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 
@@ -153,7 +153,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(17071);
+const DevToolsGuildPowerupsConstants = fn(17076);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, getGuildDCString: closure_14, getUserDCString: closure_15 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1087).Endpoints;
 const jsxProd = fn(21);

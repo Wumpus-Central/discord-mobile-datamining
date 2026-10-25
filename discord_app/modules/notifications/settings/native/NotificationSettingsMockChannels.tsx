@@ -1,11 +1,11 @@
-// === Module 19340: NotificationSettingsMockChannels ===
+// === Module 19345: NotificationSettingsMockChannels ===
 
-// Module 19340 (NotificationSettingsMockChannels)
+// Module 19345 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import TextIcon from "TextIcon" /* 8551 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13270 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13275 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

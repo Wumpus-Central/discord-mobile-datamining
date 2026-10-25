@@ -1,6 +1,6 @@
-// === Module 15208: GameOrganizationInviteRow ===
+// === Module 15213: GameOrganizationInviteRow ===
 
-// Module 15208 (GameOrganizationInviteRow)
+// Module 15213 (GameOrganizationInviteRow)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;

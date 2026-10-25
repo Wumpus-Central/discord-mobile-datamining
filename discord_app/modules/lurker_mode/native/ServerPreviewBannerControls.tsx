@@ -1,13 +1,13 @@
-// === Module 17601: ServerPreviewBannerControls ===
+// === Module 17606: ServerPreviewBannerControls ===
 
-// Module 17601 (ServerPreviewBannerControls)
+// Module 17606 (ServerPreviewBannerControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef6929 from "module_6929" /* 6929 */;
 import transitionToGuild from "transitionToGuild" /* 7449 */;
 import IconButton from "IconButton" /* 7959 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 17602 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 17607 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

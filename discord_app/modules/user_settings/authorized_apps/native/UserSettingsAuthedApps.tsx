@@ -1,6 +1,6 @@
-// === Module 16227: UserSettingsAuthedApps ===
+// === Module 16232: UserSettingsAuthedApps ===
 
-// Module 16227 (UserSettingsAuthedApps)
+// Module 16232 (UserSettingsAuthedApps)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 const CircleInformationIcon = GlobeEarthIcon(5686);
 const GlobeEarthIcon2 = GlobeEarthIcon(9492);
-const EmbedIcon = GlobeEarthIcon(14061);
+const EmbedIcon = GlobeEarthIcon(14066);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);

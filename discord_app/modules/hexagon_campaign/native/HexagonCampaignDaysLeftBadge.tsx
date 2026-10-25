@@ -1,6 +1,6 @@
-// === Module 15875: HexagonCampaignDaysLeftBadge ===
+// === Module 15880: HexagonCampaignDaysLeftBadge ===
 
-// Module 15875 (HexagonCampaignDaysLeftBadge)
+// Module 15880 (HexagonCampaignDaysLeftBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;

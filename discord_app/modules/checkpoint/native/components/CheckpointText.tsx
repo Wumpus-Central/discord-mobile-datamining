@@ -1,6 +1,6 @@
-// === Module 12967: CheckpointText ===
+// === Module 12972: CheckpointText ===
 
-// Module 12967 (CheckpointText)
+// Module 12972 (CheckpointText)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

@@ -1,6 +1,6 @@
-// === Module 19324: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 19329: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 19324 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 19329 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import PriceUtils from "PriceUtils" /* 7339 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16583 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

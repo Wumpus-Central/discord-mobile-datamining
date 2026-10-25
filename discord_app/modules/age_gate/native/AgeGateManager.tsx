@@ -1,6 +1,6 @@
-// === Module 18731: AgeGateManager ===
+// === Module 18736: AgeGateManager ===
 
-// Module 18731 (AgeGateManager)
+// Module 18736 (AgeGateManager)
 import AgeGateUtils from "AgeGateUtils" /* 6662 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

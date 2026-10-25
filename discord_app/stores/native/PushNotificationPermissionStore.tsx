@@ -1,6 +1,6 @@
-// === Module 13305: PushNotificationPermissionStore ===
+// === Module 13310: PushNotificationPermissionStore ===
 
-// Module 13305 (PushNotificationPermissionStore)
+// Module 13310 (PushNotificationPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;

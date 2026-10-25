@@ -1,11 +1,11 @@
-// === Module 16607: NoiseSuppressionKrispSetting ===
+// === Module 16612: NoiseSuppressionKrispSetting ===
 
-// Module 16607 (NoiseSuppressionKrispSetting)
+// Module 16612 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11626 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11627 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11627 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11628 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
@@ -93,7 +93,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseSu
   items[2] = obj4;
   return items;
 });
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNoiseSuppressionKrispSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

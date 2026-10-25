@@ -1,14 +1,19 @@
-// === Module 12332: conjureIdeasIntroTip ===
+// === Module 12333: conjureIdeasIntroTip ===
 
-// Module 12332 (conjureIdeasIntroTip)
+// Module 12333 (conjureIdeasIntroTip)
 import size from "module_2" /* 2 */;
 
-function resolveIdeasIntroTip(turn) {
-  if (null == turn.turn) {
-    let str = null;
-    return str;
+function resolveIdeasIntroTip(arg0) {
+  ({ turn, publish, hasPublished, justRemixed } = arg0);
+  let tmp = null;
+  if (!obj.isBotPermissionsReviewPending(publish)) {
+    if (null == turn) {
+      let str = null;
+      tmp = str;
+    }
+    str = "card";
   }
-  str = "card";
+  return tmp;
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureIdeasIntroTip.tsx");
 

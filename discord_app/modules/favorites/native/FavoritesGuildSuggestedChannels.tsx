@@ -1,22 +1,22 @@
-// === Module 17625: FavoritesGuildSuggestedChannels ===
+// === Module 17630: FavoritesGuildSuggestedChannels ===
 
-// Module 17625 (FavoritesGuildSuggestedChannels)
+// Module 17630 (FavoritesGuildSuggestedChannels)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import useScaledRowHeightDefault from "useScaledRowHeight" /* 7144 */;
-import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 17627 */;
-import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 17628 */;
+import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 17632 */;
+import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 17633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(17626);
+const FavoritesGuildSuggestionsStore = fn(17631);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1087).NOOP;
-let closure_8 = fn(12059).getScaledCategoryRowHeight;
+let closure_8 = fn(12060).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const cResult = arr(576).c(21);
   const tmp4 = closure_13();
   let obj = arr(576);
-  const categoryStyles = arr(17528).useCategoryStyles();
+  const categoryStyles = arr(17533).useCategoryStyles();
   arr = closure_5();
   const tmp6 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
         const intl = util.intl;
         obj3.text = intl.string(util.t.OYkgVk);
         obj3.onPress = function onPress() {
-          const tmp = closure_1(17628);
-          return tmp(arr(12900).getDestinationIdFromResult(closure_0));
+          const tmp = closure_1(17633);
+          return tmp(arr(12905).getDestinationIdFromResult(closure_0));
         };
         obj2.trailing = React6(components_Button_Button.Button, obj3);
         obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -134,17 +134,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     obj7.name = intl2.string(_modDef3412.oHWnLy);
     obj7.styles = categoryStyles;
     obj7.trailingAction = tmp10;
-    const renderCategoryItemResult = tmp(17528).renderCategoryItem(obj7);
+    const renderCategoryItemResult = tmp(17533).renderCategoryItem(obj7);
     cResult[5] = categoryStyles;
     cResult[6] = tmp10;
     cResult[7] = renderCategoryItemResult;
     tmp14 = renderCategoryItemResult;
-    const tmpResult = tmp(17528);
+    const tmpResult = tmp(17533);
   }
-  let obj2 = arr(17528);
+  let obj2 = arr(17533);
 }) : (function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  const categoryStyles = arr(17528).useCategoryStyles();
+  const categoryStyles = arr(17533).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     obj3.name = intl.string(_modDef3412.oHWnLy);
     obj3.styles = categoryStyles;
     obj3.trailingAction = memo;
-    const items2 = [tmp2(17528).renderCategoryItem(obj3), ];
+    const items2 = [tmp2(17533).renderCategoryItem(obj3), ];
     const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -180,8 +180,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
           const intl = util.intl;
           obj3.text = intl.string(util.t.OYkgVk);
           obj3.onPress = function onPress() {
-            const tmp = closure_1(17628);
-            return tmp(arr(12900).getDestinationIdFromResult(closure_0));
+            const tmp = closure_1(17633);
+            return tmp(arr(12905).getDestinationIdFromResult(closure_0));
           };
           obj2.trailing = React6(components_Button_Button.Button, obj3);
           obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     items2[1] = closure_9(View, obj4);
     obj2.children = items2;
     tmp9 = closure_10(View, obj2);
-    const tmp2Result = tmp2(17528);
+    const tmp2Result = tmp2(17533);
   }
   return tmp9;
 });

@@ -1,6 +1,6 @@
-// === Module 14238: useEntranceAnimation ===
+// === Module 14243: useEntranceAnimation ===
 
-// Module 14238 (useEntranceAnimation)
+// Module 14243 (useEntranceAnimation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;

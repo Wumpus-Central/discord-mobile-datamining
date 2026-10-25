@@ -1,6 +1,6 @@
-// === Module 12337: conjureTipSelection ===
+// === Module 12339: conjureTipSelection ===
 
-// Module 12337 (conjureTipSelection)
+// Module 12339 (conjureTipSelection)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipSelection.tsx");

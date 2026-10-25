@@ -1,6 +1,6 @@
-// === Module 11075: UserProfilePrimaryInfo ===
+// === Module 11076: UserProfilePrimaryInfo ===
 
-// Module 11075 (UserProfilePrimaryInfo)
+// Module 11076 (UserProfilePrimaryInfo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;
@@ -18,8 +18,8 @@ import captureAdUserAction from "captureAdUserAction" /* 9573 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10661 */;
 import types from "types" /* 10662 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11118 */;
-import BadgeUtils from "BadgeUtils" /* 11122 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11119 */;
+import BadgeUtils from "BadgeUtils" /* 11123 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -261,7 +261,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayName(
     ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
     const items1 = [closure_13(UsernameWithEffectsDefault, obj8), renderBotTag(), ];
     if (showChevron) {
-      showChevron = closure_13(tmp13(11076).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+      showChevron = closure_13(tmp13(11077).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
     }
     items1[2] = showChevron;
     obj7.children = items1;

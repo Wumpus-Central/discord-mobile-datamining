@@ -1,10 +1,10 @@
-// === Module 16879: UserSettingsAppIcons ===
+// === Module 16884: UserSettingsAppIcons ===
 
-// Module 16879 (UserSettingsAppIcons)
+// Module 16884 (UserSettingsAppIcons)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9792 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9793 */;
-import AppIconRowsDefault from "AppIconRows" /* 16880 */;
+import AppIconRowsDefault from "AppIconRows" /* 16885 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -62,7 +62,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             c5 = 1;
             c7 = 2;
             c8 = 1;
-            const obj6 = { value: stateFromStores(15851).ensureHexagonCampaignEnrollment(constants.APP_ICON), done: false };
+            const obj6 = { value: stateFromStores(15856).ensureHexagonCampaignEnrollment(constants.APP_ICON), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
@@ -80,12 +80,12 @@ export default noop.memo(function UserSettingsAppIcons() {
             const obj7 = { value, done: true };
             return obj7;
           } else if (value) {
-            const tmp51 = stateFromStores(16375);
+            const tmp51 = stateFromStores(16380);
             dependencyMap = tmp51;
             closure_1 = tmp51.saveHexagonCampaignPreviousAppIcon;
             c7 = 3;
             c8 = 1;
-            const obj9 = { value: stateFromStores(14762).fetchCurrentAppIcon(), done: false };
+            const obj9 = { value: stateFromStores(14767).fetchCurrentAppIcon(), done: false };
             return obj9;
           } else {
             const obj10 = { text: null };
@@ -116,7 +116,7 @@ export default noop.memo(function UserSettingsAppIcons() {
             }
             c7 = 4;
             c8 = 1;
-            const obj15 = { value: stateFromStores(14762).setAppIcon(closure_131_0, premiumType), done: false };
+            const obj15 = { value: stateFromStores(14767).setAppIcon(closure_131_0, premiumType), done: false };
             return obj15;
           }
         } else if (arg0 === 1) {
@@ -130,15 +130,15 @@ export default noop.memo(function UserSettingsAppIcons() {
           return obj16;
         } else {
           if (value) {
-            const result = stateFromStores(15851).markHexagonCampaignPerkApplied(constants.APP_ICON);
-            const obj = stateFromStores(15851);
+            const result = stateFromStores(15856).markHexagonCampaignPerkApplied(constants.APP_ICON);
+            const obj = stateFromStores(15856);
             const obj17 = { perks: null, content: null, contentSurface: null };
             const items = [constants.APP_ICON];
             obj17.perks = items;
             obj17.content = stateFromStores(6713).QuestContent.APP_ICON_SETTINGS;
-            obj17.contentSurface = stateFromStores(15852).HexagonCampaignContentSurface.APP_ICON_PICKER;
-            const result1 = stateFromStores(15852).trackHexagonCampaignPerkAction(obj17);
-            const obj2 = stateFromStores(15852);
+            obj17.contentSurface = stateFromStores(15857).HexagonCampaignContentSurface.APP_ICON_PICKER;
+            const result1 = stateFromStores(15857).trackHexagonCampaignPerkAction(obj17);
+            const obj2 = stateFromStores(15857);
           }
           c5 = 0;
           closure_132_7(null);
@@ -234,7 +234,7 @@ export default noop.memo(function UserSettingsAppIcons() {
                     }
                     dependencyMap = 2;
                     v3 = num2;
-                    const obj11 = { value: stateFromStores(14762).setAppIcon(id, premiumType), done: false };
+                    const obj11 = { value: stateFromStores(14767).setAppIcon(id, premiumType), done: false };
                     return obj11;
                   }
                 } else {
@@ -244,7 +244,7 @@ export default noop.memo(function UserSettingsAppIcons() {
                   }
                   dependencyMap = 3;
                   v3 = num2;
-                  const obj12 = { value: stateFromStores(14762).setAppIcon(stateFromStores(9866).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
+                  const obj12 = { value: stateFromStores(14767).setAppIcon(stateFromStores(9866).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
                   return obj12;
                 }
               }
@@ -291,8 +291,8 @@ export default noop.memo(function UserSettingsAppIcons() {
   let items = [setPending];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => setPending.getCurrentUser());
   let obj = stateFromStores(504);
-  importDefault = stateFromStores(14762).useCurrentAppIcon();
-  let obj2 = stateFromStores(14762);
+  importDefault = stateFromStores(14767).useCurrentAppIcon();
+  let obj2 = stateFromStores(14767);
   const isPremiumResult = stateFromStores(1991).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;

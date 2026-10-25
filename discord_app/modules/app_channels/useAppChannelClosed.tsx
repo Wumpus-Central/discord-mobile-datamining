@@ -1,8 +1,8 @@
-// === Module 18050: useAppChannelClosed ===
+// === Module 18055: useAppChannelClosed ===
 
-// Module 18050 (useAppChannelClosed)
+// Module 18055 (useAppChannelClosed)
 import c from "c" /* 576 */;
-import useFrameBySurfaceDefault from "useFrameBySurface" /* 11884 */;
+import useFrameBySurfaceDefault from "useFrameBySurface" /* 11885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 16390: OrbsArcadeStore ===
+// === Module 16395: OrbsArcadeStore ===
 
-// Module 16390 (OrbsArcadeStore)
+// Module 16395 (OrbsArcadeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16391 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16396 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

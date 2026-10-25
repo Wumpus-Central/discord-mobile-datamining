@@ -1,12 +1,12 @@
-// === Module 17932: AnnouncementMessageRow ===
+// === Module 17937: AnnouncementMessageRow ===
 
-// Module 17932 (AnnouncementMessageRow)
+// Module 17937 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 587 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10074 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import ICYMIShared from "ICYMIShared" /* 17934 */;
+import ICYMIShared from "ICYMIShared" /* 17939 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildStore from "GuildStore" /* 4845 */;
@@ -16,10 +16,10 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(17933).ITEM_PADDING;
+const ITEM_PADDING = fn(17938).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(17895);
+const createICYMIStyles = fn(17900);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

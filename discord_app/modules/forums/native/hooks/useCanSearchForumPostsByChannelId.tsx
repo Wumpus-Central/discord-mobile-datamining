@@ -1,6 +1,6 @@
-// === Module 14003: useCanSearchForumPostsByChannelId ===
+// === Module 14008: useCanSearchForumPostsByChannelId ===
 
-// Module 14003 (useCanSearchForumPostsByChannelId)
+// Module 14008 (useCanSearchForumPostsByChannelId)
 import ChannelStore from "ChannelStore" /* 4823 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 

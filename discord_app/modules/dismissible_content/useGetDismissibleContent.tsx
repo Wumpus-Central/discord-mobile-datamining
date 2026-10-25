@@ -891,31 +891,32 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
     }
     tmp7 = tmp8;
   }
+  let prop;
   if (tmp7 != null) {
-    const lastDismissedObjectId = tmp7.lastDismissedObjectId;
+    prop = tmp7.lastDismissedObjectId;
   }
   if (cResult[3] === PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-    if (cResult[4] === lastDismissedObjectId) {
+    if (cResult[4] === prop) {
       if (cResult[5] === id) {
-        c3 = tmp10;
-        const tmp25 = useGetVisibleContent(cResult[6], stateFromStores, groupName, undefined, id);
+        c3 = tmp11;
+        const tmp22 = useGetVisibleContent(cResult[6], stateFromStores, groupName, undefined, id);
         if (cResult[7] === cResult[6]) {
           if (cResult[8] === groupName) {
             if (cResult[9] === stateFromStores) {
               if (cResult[10] === id) {
-                let tmp26 = cResult[11];
+                let tmp23 = cResult[11];
               }
-              if (cResult[12] === tmp26) {
-                if (cResult[13] === tmp25) {
-                  let tmp27 = cResult[14];
+              if (cResult[12] === tmp23) {
+                if (cResult[13] === tmp22) {
+                  let tmp24 = cResult[14];
                 }
-                return tmp27;
+                return tmp24;
               }
-              const items1 = [tmp25, tmp26];
-              cResult[12] = tmp26;
-              cResult[13] = tmp25;
+              const items1 = [tmp22, tmp23];
+              cResult[12] = tmp23;
+              cResult[13] = tmp22;
               cResult[14] = items1;
-              tmp27 = items1;
+              tmp24 = items1;
             }
           }
         }
@@ -931,48 +932,50 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
         cResult[9] = stateFromStores;
         cResult[10] = id;
         cResult[11] = fn2;
-        tmp26 = fn2;
+        tmp23 = fn2;
       }
     }
   }
   c3 = null;
-  let tmp11 = null;
-  if (null == PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-    cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
-    cResult[4] = lastDismissedObjectId;
-    cResult[5] = id;
-    cResult[6] = tmp11;
-  } else {
-    result = result(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
-    if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
-      tmp11 = null;
-      if (null != lastDismissedObjectId) {
-        let tmp15 = null;
-        if (!result) {
-          tmp15 = null;
-          if (1 === obj5.compare(id, lastDismissedObjectId)) {
-            tmp15 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+  let tmp12 = null;
+  if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
+    tmp12 = null;
+    if ("" !== id) {
+      result = result(5023).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+      if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+        tmp12 = null;
+        if (null != prop) {
+          let tmp13 = null;
+          if (!result) {
+            tmp13 = null;
+            if (1 === obj4.compare(id, prop)) {
+              tmp13 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+            }
+            obj4 = SnowflakeUtilsDefault;
           }
-          obj5 = SnowflakeUtilsDefault;
+          c3 = tmp13;
+          tmp12 = tmp13;
         }
-        c3 = tmp15;
-        tmp11 = tmp15;
+      }
+      const resultResult1 = result(5023);
+    }
+    let tmp15 = null;
+    if (!result) {
+      if (null == prop) {
+        tmp15 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+      } else {
+        result = SnowflakeUtilsDefault;
+        result.compare(id, prop);
+        tmp15 = null;
       }
     }
-    const resultResult1 = result(5023);
+    c3 = tmp15;
+    tmp12 = tmp15;
   }
-  let tmp17 = null;
-  if (!result) {
-    if (null == lastDismissedObjectId) {
-      tmp17 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
-    } else {
-      result = SnowflakeUtilsDefault;
-      result.compare(id, lastDismissedObjectId);
-      tmp17 = null;
-    }
-  }
-  c3 = tmp17;
-  tmp11 = tmp17;
+  cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+  cResult[4] = prop;
+  cResult[5] = id;
+  cResult[6] = tmp12;
   const resultResult = result(504);
 }) : (function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, id, stateFromStores, groupName) {
   _require = id;
@@ -998,35 +1001,38 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
   closure_3 = null;
   let tmp7 = null;
   if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-    let result = require("NewUserDismissibleContentRegistry").disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
-    if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
-      let tmp13 = null;
-      if (!result) {
-        if (null == lastDismissedObjectId) {
-          tmp13 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
-        } else {
-          SnowflakeUtilsDefault;
-          tmp13 = null;
-        }
-      }
-      closure_3 = tmp13;
-      tmp7 = tmp13;
-    } else {
-      tmp7 = null;
-      if (null != lastDismissedObjectId) {
-        let tmp11 = null;
+    tmp7 = null;
+    if ("" !== id) {
+      let result = require("NewUserDismissibleContentRegistry").disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+      if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+        let tmp10 = null;
         if (!result) {
-          tmp11 = null;
-          if (1 === obj4.compare(id, lastDismissedObjectId)) {
-            tmp11 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+          if (null == lastDismissedObjectId) {
+            tmp10 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+          } else {
+            SnowflakeUtilsDefault;
+            tmp10 = null;
           }
-          obj4 = SnowflakeUtilsDefault;
         }
-        closure_3 = tmp11;
-        tmp7 = tmp11;
+        closure_3 = tmp10;
+        tmp7 = tmp10;
+      } else {
+        tmp7 = null;
+        if (null != lastDismissedObjectId) {
+          let tmp8 = null;
+          if (!result) {
+            tmp8 = null;
+            if (1 === obj3.compare(id, lastDismissedObjectId)) {
+              tmp8 = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+            }
+            obj3 = SnowflakeUtilsDefault;
+          }
+          closure_3 = tmp8;
+          tmp7 = tmp8;
+        }
       }
+      const tmpResult = require("NewUserDismissibleContentRegistry");
     }
-    const tmpResult = require("NewUserDismissibleContentRegistry");
   }
   const items1 = [useGetVisibleContent(tmp7, stateFromStores, groupName, undefined, id), ];
   const items2 = [tmp7, groupName, stateFromStores, id];

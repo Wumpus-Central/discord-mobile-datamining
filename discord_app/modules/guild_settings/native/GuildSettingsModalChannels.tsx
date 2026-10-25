@@ -1,6 +1,6 @@
-// === Module 17571: GuildSettingsModalChannels ===
+// === Module 17576: GuildSettingsModalChannels ===
 
-// Module 17571 (GuildSettingsModalChannels)
+// Module 17576 (GuildSettingsModalChannels)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
@@ -22,20 +22,20 @@ import HeaderActionButton from "HeaderActionButton" /* 7485 */;
 import Form from "Form" /* 8951 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8975 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10093 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10841 */;
-import _modDef12745 from "module_12745" /* 12745 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13856 */;
-import _modDef16651 from "module_16651" /* 16651 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17570 */;
-import _modDef17572 from "module_17572" /* 17572 */;
-import _modDef17574 from "module_17574" /* 17574 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10842 */;
+import _modDef12750 from "module_12750" /* 12750 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13861 */;
+import _modDef16656 from "module_16656" /* 16656 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17575 */;
+import _modDef17577 from "module_17577" /* 17577 */;
+import _modDef17579 from "module_17579" /* 17579 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 17569 */;
+import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 17574 */;
 import TextStyles_mod from "TextStyles" /* 6651 */;
 
 require = fn;
@@ -132,7 +132,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(17572), style: actionIconStyle };
+      const obj6 = { source: tmp11(17577), style: actionIconStyle };
       tmp3Result = value3(native.Icon, obj6);
     }
   }
@@ -337,7 +337,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       if (stateFromStores) {
         tmp = null;
         if (sortingEnabled) {
-          const obj = { source: _modDef17572, style: actionIconStyle };
+          const obj = { source: _modDef17577, style: actionIconStyle };
           tmp = value3(Form.FormRow.Icon, obj);
         }
       }
@@ -445,7 +445,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(17572), style: actionIconStyle };
+      const obj10 = { source: tmp13(17577), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(8951).FormRow.Icon, obj10);
     }
   }
@@ -715,26 +715,26 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef17574;
+        obj.icon = _modDef17579;
         obj.onPress = function onPress() {
-          closure_1_1(17570).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(17575).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef12745;
+      obj2.icon = _modDef12750;
       obj2.onPress = function onPress() {
-        closure_1_1(17570).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
+        closure_1_1(17575).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
       };
       items.push(obj2);
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16651;
+      obj3.icon = _modDef16656;
       obj3.onPress = function onPress() {
-        closure_1_1(17570).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(17575).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -804,8 +804,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                         if (null != channel) {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
-                              const appChannelBotUserId = applyArgumentsResult(11308).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(11308);
+                              const appChannelBotUserId = applyArgumentsResult(11309).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(11309);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(localChannel, channel, appChannelBotUserId);
                               let areChannelsLockedResult1 = PermissionUtilsAll.areChannelsLocked(localChannel, ChannelStore.getChannel(localChannel.parent_id), appChannelBotUserId);
                               let tmp9 = null == localChannel.parent_id && !areChannelsLockedResult;

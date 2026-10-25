@@ -1,10 +1,10 @@
-// === Module 18214: ContactSuggestionRow ===
+// === Module 18219: ContactSuggestionRow ===
 
-// Module 18214 (ContactSuggestionRow)
+// Module 18219 (ContactSuggestionRow)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17465 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17470 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -122,12 +122,12 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const suggestedContactNameForSuggestion = tmp(17464).getSuggestedContactNameForSuggestion(tmp11, tmp7);
+              const suggestedContactNameForSuggestion = tmp(17469).getSuggestedContactNameForSuggestion(tmp11, tmp7);
               cResult[20] = tmp7;
               cResult[21] = tmp11;
               cResult[22] = suggestedContactNameForSuggestion;
               tmp30 = null != undefined;
-              const tmpResult2 = tmp(17464);
+              const tmpResult2 = tmp(17469);
             }
           }
           const fn = function h(nativeEvent) {

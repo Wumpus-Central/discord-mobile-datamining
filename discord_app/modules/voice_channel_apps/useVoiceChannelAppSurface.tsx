@@ -1,11 +1,11 @@
-// === Module 18547: useVoiceChannelAppSurface ===
+// === Module 18552: useVoiceChannelAppSurface ===
 
-// Module 18547 (useVoiceChannelAppSurface)
-import voiceChannelAppSession from "voiceChannelAppSession" /* 12707 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18051 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 18263 */;
+// Module 18552 (useVoiceChannelAppSurface)
+import voiceChannelAppSession from "voiceChannelAppSession" /* 12712 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18056 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 18268 */;
 import FramesStore from "FramesStore" /* 6775 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18044 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18049 */;
 
 require = fn;
 fn(558);

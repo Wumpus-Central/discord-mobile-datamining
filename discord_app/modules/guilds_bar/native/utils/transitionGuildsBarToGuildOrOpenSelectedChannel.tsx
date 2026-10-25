@@ -1,6 +1,6 @@
-// === Module 17753: transitionGuildsBarToGuildOrOpenSelectedChannel ===
+// === Module 17758: transitionGuildsBarToGuildOrOpenSelectedChannel ===
 
-// Module 17753 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+// Module 17758 (transitionGuildsBarToGuildOrOpenSelectedChannel)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
 import RootNavigationRef from "RootNavigationRef" /* 5151 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;

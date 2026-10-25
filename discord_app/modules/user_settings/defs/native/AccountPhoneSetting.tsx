@@ -1,6 +1,6 @@
-// === Module 15999: AccountPhoneSetting ===
+// === Module 16004: AccountPhoneSetting ===
 
-// Module 15999 (AccountPhoneSetting)
+// Module 16004 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 let closure_4 = fn(7138).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountPhoneSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

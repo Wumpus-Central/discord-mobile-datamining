@@ -1,6 +1,6 @@
-// === Module 13430: useHasAllocateBoostPermission ===
+// === Module 13435: useHasAllocateBoostPermission ===
 
-// Module 13430 (useHasAllocateBoostPermission)
+// Module 13435 (useHasAllocateBoostPermission)
 import GuildStore from "GuildStore" /* 4845 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 

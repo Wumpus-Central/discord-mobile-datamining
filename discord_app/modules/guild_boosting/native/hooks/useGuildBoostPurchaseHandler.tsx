@@ -1,6 +1,6 @@
-// === Module 13457: useGuildBoostPurchaseHandler ===
+// === Module 13462: useGuildBoostPurchaseHandler ===
 
-// Module 13457 (useGuildBoostPurchaseHandler)
+// Module 13462 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

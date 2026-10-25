@@ -1,6 +1,6 @@
-// === Module 11712: useFetchStreamPreview ===
+// === Module 11713: useFetchStreamPreview ===
 
-// Module 11712 (useFetchStreamPreview)
+// Module 11713 (useFetchStreamPreview)
 import StreamActionCreators from "StreamActionCreators" /* 7829 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7831 */;

@@ -1,23 +1,23 @@
-// === Module 18394: DisplayNameStylesV2AbstractUI ===
+// === Module 18399: DisplayNameStylesV2AbstractUI ===
 
-// Module 18394 (DisplayNameStylesV2AbstractUI)
+// Module 18399 (DisplayNameStylesV2AbstractUI)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef18395 from "module_18395" /* 18395 */;
-import _modDef18396 from "module_18396" /* 18396 */;
-import _modDef18397 from "module_18397" /* 18397 */;
+import _modDef18400 from "module_18400" /* 18400 */;
+import _modDef18401 from "module_18401" /* 18401 */;
+import _modDef18402 from "module_18402" /* 18402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18395 }, 3: null };
-let obj2 = { uri: _modDef18395 };
-obj[2] = { uri: _modDef18396 };
-const obj3 = { uri: _modDef18396 };
-obj[3] = { uri: _modDef18397 };
+let obj = { 1: null, 2: { uri: _modDef18400 }, 3: null };
+let obj2 = { uri: _modDef18400 };
+obj[2] = { uri: _modDef18401 };
+const obj3 = { uri: _modDef18401 };
+obj[3] = { uri: _modDef18402 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18397 };
+const obj4 = { uri: _modDef18402 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");
 

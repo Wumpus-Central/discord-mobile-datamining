@@ -1,11 +1,11 @@
-// === Module 19356: MidjourneyOnboardingManager ===
+// === Module 19361: MidjourneyOnboardingManager ===
 
-// Module 19356 (MidjourneyOnboardingManager)
+// Module 19361 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(15098).MIDJOURNEY_GUILD_ID;
+const MIDJOURNEY_GUILD_ID = fn(15103).MIDJOURNEY_GUILD_ID;
 const Routes = fn(1087).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -44,12 +44,12 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp2(15097).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp2(15102).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(15097);
+            obj6 = tmp2(15102);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;

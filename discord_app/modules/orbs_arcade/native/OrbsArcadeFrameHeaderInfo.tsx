@@ -1,10 +1,10 @@
-// === Module 18362: OrbsArcadeFrameHeaderInfo ===
+// === Module 18367: OrbsArcadeFrameHeaderInfo ===
 
-// Module 18362 (OrbsArcadeFrameHeaderInfo)
+// Module 18367 (OrbsArcadeFrameHeaderInfo)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16390 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       }
       if (cResult[8] !== balance) {
         const obj2 = { balance };
-        const tmp17 = closure_5(tmp(13944).BalanceWidgetPill, obj2);
+        const tmp17 = closure_5(tmp(13949).BalanceWidgetPill, obj2);
         cResult[8] = balance;
         cResult[9] = tmp17;
         let tmp15 = tmp17;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp7 = closure_5(View, obj4);
     }
   }
-  const items2 = [tmp7, closure_5(applicationId(13944).BalanceWidgetPill, { balance: applicationId(9451).useFetchVirtualCurrencyBalance().balance })];
+  const items2 = [tmp7, closure_5(applicationId(13949).BalanceWidgetPill, { balance: applicationId(9451).useFetchVirtualCurrencyBalance().balance })];
   obj3.children = items2;
   return closure_6(View, obj3);
 });

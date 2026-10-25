@@ -1,6 +1,6 @@
-// === Module 15362: hasPerformanceForKrispFullband ===
+// === Module 15367: hasPerformanceForKrispFullband ===
 
-// Module 15362 (hasPerformanceForKrispFullband)
+// Module 15367 (hasPerformanceForKrispFullband)
 import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5840 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 13933: PremiumGiftSuccess ===
+// === Module 13938: PremiumGiftSuccess ===
 
-// Module 13933 (PremiumGiftSuccess)
+// Module 13938 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;

@@ -1,6 +1,6 @@
-// === Module 11704: StageSectionHeader ===
+// === Module 11705: StageSectionHeader ===
 
-// Module 11704 (StageSectionHeader)
+// Module 11705 (StageSectionHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;

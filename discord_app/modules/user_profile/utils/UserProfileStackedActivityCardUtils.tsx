@@ -1,6 +1,6 @@
-// === Module 14322: UserProfileStackedActivityCardUtils ===
+// === Module 14327: UserProfileStackedActivityCardUtils ===
 
-// Module 14322 (UserProfileStackedActivityCardUtils)
+// Module 14327 (UserProfileStackedActivityCardUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;

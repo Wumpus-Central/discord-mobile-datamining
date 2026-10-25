@@ -1,6 +1,6 @@
-// === Module 17435: guilds/Guilds ===
+// === Module 17440: guilds/Guilds ===
 
-// Module 17435 (guilds/Guilds)
+// Module 17440 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -9,20 +9,20 @@ import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5146 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
 import RootNavigationRef from "RootNavigationRef" /* 5151 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5156 */;
-import QuestDockDefault from "QuestDock" /* 16519 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17436 */;
-import MainChannelsDefault from "MainChannels" /* 17438 */;
-import YouBarDefault from "YouBar" /* 17803 */;
+import QuestDockDefault from "QuestDock" /* 16524 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17441 */;
+import MainChannelsDefault from "MainChannels" /* 17443 */;
+import YouBarDefault from "YouBar" /* 17808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
 
 const native = ThemeContextProvider(5037);
 const QuestsEligibility = ThemeContextProvider(9565);
-const QuestDockExternalCoordinationContext = ThemeContextProvider(16440);
-const GuildsRenderExperiment2 = ThemeContextProvider(17437);
+const QuestDockExternalCoordinationContext = ThemeContextProvider(16445);
+const GuildsRenderExperiment2 = ThemeContextProvider(17442);
 require = fn;
-const YouBarNavigatorScreens = fn(11180).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11181).YouBarNavigatorScreens;
 const ComponentActions = fn(1087).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

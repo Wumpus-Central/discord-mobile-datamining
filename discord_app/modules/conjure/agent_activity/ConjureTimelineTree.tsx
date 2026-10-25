@@ -1,6 +1,6 @@
-// === Module 12308: ConjureTimelineTree ===
+// === Module 12309: ConjureTimelineTree ===
 
-// Module 12308 (ConjureTimelineTree)
+// Module 12309 (ConjureTimelineTree)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -621,7 +621,7 @@ export { segmentDurations };
 export { sharedTimelineTree };
 export const turnSegments = function turnSegments(steps, arg1) {
   let hasItem;
-  let tmp19;
+  let tmp26;
   obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -652,11 +652,11 @@ export const turnSegments = function turnSegments(steps, arg1) {
     continue;
   }
   const set = new Set();
-  for (const item10041 of tmp6) {
+  for (const item10041 of tmp7) {
     let addResult = set.add(item10041.segment);
     continue;
   }
-  for (const item10051 of tmp8) {
+  for (const item10051 of tmp9) {
     let addResult1 = set.add(item10051.task.segment);
     continue;
   }
@@ -665,33 +665,41 @@ export const turnSegments = function turnSegments(steps, arg1) {
   if (found != null) {
     segment = found.segment;
   }
-  const items1 = [0];
+  let applyResult;
   if (null != segment) {
-    const items2 = [segment];
-    let items3 = items2;
-  } else {
-    items3 = [];
+    const _Math = Math;
+    const items1 = [segment];
+    HermesBuiltin.arraySpread(tmp6, 1);
+    const _Math2 = Math;
+    applyResult = HermesBuiltin.apply(items1, Math);
   }
-  HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(set, HermesBuiltin.arraySpread(map.keys(), 1)));
-  const applyResult = Math.max.apply(items1);
-  const items4 = [];
-  let num = 0;
-  if (0 <= applyResult) {
+  const items2 = [0];
+  if (null != applyResult) {
+    const items3 = [applyResult];
+    let items4 = items3;
+  } else {
+    items4 = [];
+  }
+  HermesBuiltin.arraySpread(items4, HermesBuiltin.arraySpread(set, HermesBuiltin.arraySpread(map.keys(), 1)));
+  const applyResult1 = Math.max.apply(items2);
+  const items5 = [];
+  let num2 = 0;
+  if (0 <= applyResult1) {
     while (true) {
-      value = map.get(num);
-      hasItem = set.has(num);
-      let tmp17 = null != value;
-      if (!tmp17) {
-        tmp17 = hasItem;
+      value = map.get(num2);
+      hasItem = set.has(num2);
+      let tmp24 = null != value;
+      if (!tmp24) {
+        tmp24 = hasItem;
       }
-      tmp19 = segment === num;
-      if (!tmp17) {
-        tmp17 = tmp19;
+      tmp26 = applyResult === num2;
+      if (!tmp24) {
+        tmp24 = tmp26;
       }
-      if (tmp17) {
+      if (tmp24) {
         break;
       } else {
-        num = num + 1;
+        num2 = num2 + 1;
       }
     }
     let key;
@@ -700,9 +708,9 @@ export const turnSegments = function turnSegments(steps, arg1) {
     }
     if (key == null) {
       const _HermesInternal = HermesInternal;
-      key = "work-" + num;
+      key = "work-" + num2;
     }
-    let obj3 = { key, index: num };
+    let obj3 = { key, index: num2 };
     if (null != value) {
       const obj4 = { prose: value };
       let obj5 = obj4;
@@ -711,17 +719,17 @@ export const turnSegments = function turnSegments(steps, arg1) {
     }
     const merged = Object.assign(obj5);
     obj3.hasWork = hasItem;
-    obj3.hasTodos = tmp19;
-    if (obj2.has(num)) {
-      const obj6 = { durationMs: obj2.get(num) };
+    obj3.hasTodos = tmp26;
+    if (obj2.has(num2)) {
+      const obj6 = { durationMs: obj2.get(num2) };
       let obj7 = obj6;
     } else {
       obj7 = {};
     }
     const merged1 = Object.assign(obj7);
-    obj3 = items4.push(obj3);
+    obj3 = items5.push(obj3);
   }
-  return items4;
+  return items5;
 };
 export const turnLifecycle = function turnLifecycle(arr, turnActive) {
   const found = arr.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);

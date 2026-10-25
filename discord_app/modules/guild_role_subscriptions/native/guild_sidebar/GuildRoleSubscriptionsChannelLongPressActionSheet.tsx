@@ -1,15 +1,15 @@
-// === Module 17630: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 17635: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 17630 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 17635 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import ActionSheet from "ActionSheet" /* 7298 */;
 import Form from "Form" /* 8951 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10860 */;
-import _modDef13736 from "module_13736" /* 13736 */;
-import _modDef17520 from "module_17520" /* 17520 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10861 */;
+import _modDef13741 from "module_13741" /* 13741 */;
+import _modDef17525 from "module_17525" /* 17525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const onClose = guildId.onClose;
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { disableColor: true, source: onClose(13736) };
+    const obj2 = { disableColor: true, source: onClose(13741) };
     const tmp8 = closure_5(tmp(1202).Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     tmp15 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { source: onClose(17520) };
+    const obj5 = { source: onClose(17525) };
     const tmp21 = closure_5(tmp(1202).Icon, obj5);
     cResult[6] = tmp21;
     let tmp18 = tmp21;
@@ -129,14 +129,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13736 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13741 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef13736 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef17520 });
+  const obj4 = { disableColor: true, source: _modDef13741 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef17525 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

@@ -1,6 +1,6 @@
-// === Module 17221: useCardLayout ===
+// === Module 17226: useCardLayout ===
 
-// Module 17221 (useCardLayout)
+// Module 17226 (useCardLayout)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 9357 */;
@@ -18,7 +18,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   if (num < 2) {
     if (cResult[0] !== num) {
-      const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+      const obj2 = { columns: num, cardWidth: "Array", rowWidth: "application" };
       cResult[0] = num;
       cResult[1] = obj2;
       let tmp31 = obj2;
@@ -84,7 +84,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
           if (1 < tmp14) {
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "applicationId" };
+              const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "application" };
               cResult[6] = obj3;
               let tmp30 = obj3;
             } else {
@@ -125,7 +125,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "application" };
     return obj2;
   } else {
     let num2 = 2;
@@ -179,7 +179,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const diff2 = tmp12 - 1;
     if (result3 + (bound + tmp10(9357).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
-        let obj = { columns: 1, cardWidth: "Array", rowWidth: "applicationId" };
+        let obj = { columns: 1, cardWidth: "Array", rowWidth: "application" };
       }
       return obj;
     }

@@ -1,6 +1,6 @@
-// === Module 16380: DisplayNameStylesEditPreview ===
+// === Module 16385: DisplayNameStylesEditPreview ===
 
-// Module 16380 (DisplayNameStylesEditPreview)
+// Module 16385 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                                             let tmp46 = null != appIconId;
                                                             if (tmp46) {
                                                               const obj3 = { id: appIconId, size: 102, style: tmp10.appIconTilted };
-                                                              tmp46 = closure_7(guildId(16379), obj3);
+                                                              tmp46 = closure_7(guildId(16384), obj3);
                                                             }
                                                             cResult[49] = appIconId;
                                                             cResult[50] = tmp10;
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                             obj5.pendingAvatarSrc = stateFromStores;
                                             obj5.pendingDisplayNameStyles = tmp18;
                                             obj5.pendingGlobalName = displayName;
-                                            obj4.children = closure_7(tmp(11171).NameplatePreview, obj5);
+                                            obj4.children = closure_7(tmp(11172).NameplatePreview, obj5);
                                             tmp39Result = closure_7(View, obj4);
                                           }
                                           cResult[38] = stateFromStores;
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               }
             }
             const obj8 = { user, displayName, guildId, displayNameStylesOverride: tmp18, isPremiumTryItOut: tmp4, compact: true, hideFrame: true, hideBadges: tmp6, hidePronouns: tmp7, hideGuildTag: tmp8, maxWidth: 320, style: profilePreviewTilted, accessibilityLabel: tmp21 };
-            const tmp27 = closure_7(guildId(11053), obj8);
+            const tmp27 = closure_7(guildId(11054), obj8);
             cResult[15] = displayName;
             cResult[16] = tmp18;
             cResult[17] = guildId;

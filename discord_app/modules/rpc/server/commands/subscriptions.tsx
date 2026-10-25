@@ -1,6 +1,6 @@
-// === Module 15753: subscriptions ===
+// === Module 15758: subscriptions ===
 
-// Module 15753 (subscriptions)
+// Module 15758 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

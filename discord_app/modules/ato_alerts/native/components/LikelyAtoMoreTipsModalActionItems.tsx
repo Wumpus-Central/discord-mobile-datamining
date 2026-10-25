@@ -1,6 +1,6 @@
-// === Module 10954: LikelyAtoMoreTipsModalActionItems ===
+// === Module 10955: LikelyAtoMoreTipsModalActionItems ===
 
-// Module 10954 (LikelyAtoMoreTipsModalActionItems)
+// Module 10955 (LikelyAtoMoreTipsModalActionItems)
 import UserUtilsDefault from "UserUtils" /* 5025 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LikelyAt
     tmp14 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp18 = jsx(tmp(10871).BellSlashIcon, {});
+    const tmp18 = jsx(tmp(10872).BellSlashIcon, {});
     cResult[9] = tmp18;
     let tmp16 = tmp18;
   } else {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LikelyAt
   const intl2 = senderId(1128).intl;
   obj3.subLabel = intl2.string(senderId(1128).t.w2ve0t);
   obj3.onPress = senderId.handleMutePressed;
-  obj3.icon = jsx(senderId(10871).BellSlashIcon, {});
+  obj3.icon = jsx(senderId(10872).BellSlashIcon, {});
   obj2.children = jsx(senderId(6903).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
   return jsx(senderId(6987).TableRowGroup, { hasIcons: true, children: null });
 });

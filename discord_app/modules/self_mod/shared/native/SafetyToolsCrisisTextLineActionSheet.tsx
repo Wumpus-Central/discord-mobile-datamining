@@ -1,15 +1,15 @@
-// === Module 10972: SafetyToolsCrisisTextLineActionSheet ===
+// === Module 10973: SafetyToolsCrisisTextLineActionSheet ===
 
-// Module 10972 (SafetyToolsCrisisTextLineActionSheet)
+// Module 10973 (SafetyToolsCrisisTextLineActionSheet)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 5660 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10936 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10973 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10937 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(10923);
+const Constants = fn(10924);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

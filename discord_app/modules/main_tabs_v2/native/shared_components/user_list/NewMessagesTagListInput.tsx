@@ -1,6 +1,6 @@
-// === Module 13249: NewMessagesTagListInput ===
+// === Module 13254: NewMessagesTagListInput ===
 
-// Module 13249 (NewMessagesTagListInput)
+// Module 13254 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -163,9 +163,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       const obj5 = { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null };
       if (forceSearchResults) {
-        let CirclePlusIcon = onSelectUser(13250).ChevronLargeRightIcon;
+        let CirclePlusIcon = onSelectUser(13255).ChevronLargeRightIcon;
       } else {
-        CirclePlusIcon = onSelectUser(11153).CirclePlusIcon;
+        CirclePlusIcon = onSelectUser(11154).CirclePlusIcon;
       }
       obj5.children = <CirclePlusIcon size="xs" />;
       jsx(onSelectUser(6908).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null });

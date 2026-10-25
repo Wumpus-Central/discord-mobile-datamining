@@ -1,6 +1,6 @@
-// === Module 11708: TouchableStreamPreview ===
+// === Module 11709: TouchableStreamPreview ===
 
-// Module 11708 (TouchableStreamPreview)
+// Module 11709 (TouchableStreamPreview)
 import nativeDefault from "native" /* 587 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;

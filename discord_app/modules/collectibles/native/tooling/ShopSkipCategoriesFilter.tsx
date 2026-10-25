@@ -1,6 +1,6 @@
-// === Module 17088: ShopSkipCategoriesFilter ===
+// === Module 17093: ShopSkipCategoriesFilter ===
 
-// Module 17088 (ShopSkipCategoriesFilter)
+// Module 17093 (ShopSkipCategoriesFilter)
 import nativeDefault from "native" /* 587 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
 import noop from "module_19" /* 19 */;

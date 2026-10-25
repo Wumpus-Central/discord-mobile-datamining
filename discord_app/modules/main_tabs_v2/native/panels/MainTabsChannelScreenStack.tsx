@@ -1,6 +1,6 @@
-// === Module 17970: MainTabsChannelScreenStack ===
+// === Module 17975: MainTabsChannelScreenStack ===
 
-// Module 17970 (MainTabsChannelScreenStack)
+// Module 17975 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Link from "Link" /* 1506 */;
@@ -14,14 +14,14 @@ import useThemeDefault from "useTheme" /* 5205 */;
 import useMountEffect from "useMountEffect" /* 5263 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
 import Suspender from "Suspender" /* 5939 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11222 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11883 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17421 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17422 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17971 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17973 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17974 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17975 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11223 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11884 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17426 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17427 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17976 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17978 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17979 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

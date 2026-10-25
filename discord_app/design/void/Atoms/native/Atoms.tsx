@@ -1,6 +1,6 @@
-// === Module 15419: Atoms ===
+// === Module 15424: Atoms ===
 
-// Module 15419 (Atoms)
+// Module 15424 (Atoms)
 import _mod17 from "module_17" /* 17 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8966 */;

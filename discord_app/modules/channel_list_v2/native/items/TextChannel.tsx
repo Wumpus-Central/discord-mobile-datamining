@@ -1,13 +1,13 @@
-// === Module 17651: TextChannel ===
+// === Module 17656: TextChannel ===
 
-// Module 17651 (TextChannel)
+// Module 17656 (TextChannel)
 import nativeDefault from "native" /* 587 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1126 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
 import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5993 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17652 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17657 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import GatedChannelStore from "GatedChannelStore" /* 4875 */;
@@ -18,7 +18,7 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12059);
+const RedesignChannelListConstants = fn(12060);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

@@ -1,13 +1,13 @@
-// === Module 12961: CheckpointCharacterStage ===
+// === Module 12966: CheckpointCharacterStage ===
 
-// Module 12961 (CheckpointCharacterStage)
+// Module 12966 (CheckpointCharacterStage)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import CheckpointTrait from "CheckpointTrait" /* 6039 */;
 import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6364 */;
 import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6365 */;
-import CheckpointStore from "CheckpointStore" /* 12949 */;
+import CheckpointStore from "CheckpointStore" /* 12954 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4971 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

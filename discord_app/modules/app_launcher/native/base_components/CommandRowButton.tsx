@@ -1,6 +1,6 @@
-// === Module 12093: CommandRowButton ===
+// === Module 12094: CommandRowButton ===
 
-// Module 12093 (CommandRowButton)
+// Module 12094 (CommandRowButton)
 import c from "c" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -107,7 +107,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             c3 = 1;
             const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             const obj2 = tmp3(9649);
-            obj6.optionValues = tmp3(12095).parseOptionValuesForSend(commandContext.channel, command, {});
+            obj6.optionValues = tmp3(12096).parseOptionValuesForSend(commandContext.channel, command, {});
             obj6.context = commandContext;
             obj6.sectionName = sectionName;
             obj6.commandOrigin = tmp3(5634).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;

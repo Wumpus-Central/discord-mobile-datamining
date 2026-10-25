@@ -15,9 +15,9 @@ import activityBookmarkUtils from "activityBookmarkUtils" /* 7765 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8866 */;
 import QuestUtils from "QuestUtils" /* 9567 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10555 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11226 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11279 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11357 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11227 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11280 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -402,7 +402,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14192, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14197, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;

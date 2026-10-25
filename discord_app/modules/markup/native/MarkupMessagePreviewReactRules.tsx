@@ -1,15 +1,15 @@
-// === Module 12058: MarkupMessagePreviewReactRules ===
+// === Module 12059: MarkupMessagePreviewReactRules ===
 
-// Module 12058 (MarkupMessagePreviewReactRules)
+// Module 12059 (MarkupMessagePreviewReactRules)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import MarkupRulesDefault from "MarkupRules" /* 5982 */;
 import IconSize from "IconSize" /* 7022 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 8471 */;
-import ChannelListLayout from "ChannelListLayout" /* 12060 */;
-import HighlightTextDefault from "HighlightText" /* 12065 */;
-import SpoilerDefault from "Spoiler" /* 12066 */;
-import TimestampDefault from "Timestamp" /* 12068 */;
+import ChannelListLayout from "ChannelListLayout" /* 12061 */;
+import HighlightTextDefault from "HighlightText" /* 12066 */;
+import SpoilerDefault from "Spoiler" /* 12067 */;
+import TimestampDefault from "Timestamp" /* 12069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -158,7 +158,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(5980).AST_KEY.MENTION] = obj15;
   const obj16 = {};
   const merged13 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5980).AST_KEY.CHANNEL_MENTION]);
-  obj16.react = num(12067).inlineChannelMentionReact;
+  obj16.react = num(12068).inlineChannelMentionReact;
   obj[num(5980).AST_KEY.CHANNEL_MENTION] = obj16;
   const obj17 = {};
   const merged14 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5980).AST_KEY.ATTACHMENT_LINK]);
@@ -174,7 +174,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj18.react = defaultReactFn;
   obj[num(5980).AST_KEY.SOUNDBOARD] = obj18;
   obj[num(5980).AST_KEY.GUILD] = { react: defaultReactFn };
-  const obj19 = { react: num(12067).createInlineChannelReact("\u{1F4AC}") };
+  const obj19 = { react: num(12068).createInlineChannelReact("\u{1F4AC}") };
   obj[num(5980).AST_KEY.CHANNEL] = obj19;
   const obj21 = {};
   const merged16 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5980).AST_KEY.COMMAND_MENTION]);
@@ -211,7 +211,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(5980).AST_KEY.SUBTEXT] = { react: defaultReactFn };
   return obj;
 }
-const MUTED_OPACITY_CONTENT = fn(12059).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(12060).MUTED_OPACITY_CONTENT;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

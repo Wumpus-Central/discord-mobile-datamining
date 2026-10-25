@@ -1,14 +1,14 @@
-// === Module 19212: HowItWorksSection ===
+// === Module 19217: HowItWorksSection ===
 
-// Module 19212 (HowItWorksSection)
+// Module 19217 (HowItWorksSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 19213 */;
-import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 19217 */;
-import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 19221 */;
+import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 19218 */;
+import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 19222 */;
+import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 19226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

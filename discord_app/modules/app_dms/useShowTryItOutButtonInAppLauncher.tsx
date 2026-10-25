@@ -1,10 +1,10 @@
-// === Module 12134: useShowTryItOutButtonInAppLauncher ===
+// === Module 12135: useShowTryItOutButtonInAppLauncher ===
 
-// Module 12134 (useShowTryItOutButtonInAppLauncher)
+// Module 12135 (useShowTryItOutButtonInAppLauncher)
 import c from "c" /* 576 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11391 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11400 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12135 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11392 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11401 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12136 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

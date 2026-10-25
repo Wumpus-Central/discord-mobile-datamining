@@ -1,9 +1,9 @@
-// === Module 11002: ForumPostTagsActionSheet ===
+// === Module 11003: ForumPostTagsActionSheet ===
 
-// Module 11002 (ForumPostTagsActionSheet)
+// Module 11003 (ForumPostTagsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9727 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 11003 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 11004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
-// === Module 18176: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 18181: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 18176 (useAutoTrackSearchTabCountsViewedAnalytics)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13239 */;
+// Module 18181 (useAutoTrackSearchTabCountsViewedAnalytics)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13244 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

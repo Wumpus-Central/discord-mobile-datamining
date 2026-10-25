@@ -1,16 +1,16 @@
-// === Module 19382: AVErrorManager ===
+// === Module 19387: AVErrorManager ===
 
-// Module 19382 (AVErrorManager)
+// Module 19387 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AVError from "AVError" /* 5897 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 19383 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 19403 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 19388 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 19408 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import VoiceStateStore from "VoiceStateStore" /* 5630 */;
-import AVErrorStore from "AVErrorStore" /* 11422 */;
+import AVErrorStore from "AVErrorStore" /* 11423 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;

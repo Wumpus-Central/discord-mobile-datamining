@@ -1,6 +1,6 @@
-// === Module 14820: BoostingUnavailablePill ===
+// === Module 14825: BoostingUnavailablePill ===
 
-// Module 14820 (BoostingUnavailablePill)
+// Module 14825 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -19,7 +19,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(14821, dependencyMap.paths);
+  const tmp = asyncRequireImpl(14826, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3250["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }

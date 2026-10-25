@@ -1,6 +1,6 @@
-// === Module 16117: ExplicitMediaFiltersGuildsSetting ===
+// === Module 16122: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 16117 (ExplicitMediaFiltersGuildsSetting)
+// Module 16122 (ExplicitMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
@@ -8,11 +8,11 @@ import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicit
 import useUserIsTeen from "useUserIsTeen" /* 8124 */;
 import SettingsConstants from "SettingsConstants" /* 8332 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8586 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16112 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16113 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16117 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16118 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11205 */;
+import SettingBuilders from "SettingBuilders" /* 11206 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

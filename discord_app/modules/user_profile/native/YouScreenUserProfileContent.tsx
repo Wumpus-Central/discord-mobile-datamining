@@ -1,6 +1,6 @@
-// === Module 18239: YouScreenUserProfileContent ===
+// === Module 18244: YouScreenUserProfileContent ===
 
-// Module 18239 (YouScreenUserProfileContent)
+// Module 18244 (YouScreenUserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -9,30 +9,30 @@ import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 749
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
 import UserProfileAvatarDefault from "UserProfileAvatar" /* 8746 */;
 import tracking_Tracking from "tracking/Tracking" /* 9566 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11061 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11075 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11115 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11156 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13061 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 14275 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 14332 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14345 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14348 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14349 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14370 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14371 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14374 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14395 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14409 */;
-import UserProfileConnections from "UserProfileConnections" /* 14412 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14417 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14421 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15860 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17064 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17811 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18246 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18248 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18250 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11062 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11076 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11116 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11157 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13066 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 14280 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 14337 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14350 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14353 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14354 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14375 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14376 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14379 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14400 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14414 */;
+import UserProfileConnections from "UserProfileConnections" /* 14417 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14422 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14426 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15865 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17069 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 17816 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18251 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18253 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
@@ -46,7 +46,7 @@ const useIsContentShown = fn(4815).useIsContentShown;
 const UserProfileSections = fn(8672).UserProfileSections;
 let UserProfileThemeTypes = fn(7304).UserProfileThemeTypes;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const constants = fn(15831).UserProfileEditAutoFocusElement;
+const constants = fn(15836).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReactCompilerGating = fn(558);

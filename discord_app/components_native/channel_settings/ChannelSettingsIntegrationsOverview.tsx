@@ -1,6 +1,6 @@
-// === Module 18288: ChannelSettingsIntegrationsOverview ===
+// === Module 18293: ChannelSettingsIntegrationsOverview ===
 
-// Module 18288 (ChannelSettingsIntegrationsOverview)
+// Module 18293 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,8 +10,8 @@ import TableRow2 from "TableRow" /* 6903 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import Form2 from "Form" /* 8951 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8980 */;
-import WebhookIcon from "WebhookIcon" /* 18180 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18289 */;
+import WebhookIcon from "WebhookIcon" /* 18185 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18294 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
       obj7.label = intl.string(Form(1128).t.jp25Id);
       const intl2 = Form(1128).intl;
       obj7.subLabel = intl2.string(Form(1128).t.mKIOkI);
-      obj7.icon = closure_6(Form(18180).WebhookIcon, {});
+      obj7.icon = closure_6(Form(18185).WebhookIcon, {});
       obj7.onPress = function onPress() {
         return navigation.push(ChannelSettingsSections.WEBHOOKS);
       };
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
         obj8.label = intl3.string(Form(1128).t.OrV60r);
         const intl4 = Form(1128).intl;
         obj8.subLabel = intl4.string(Form(1128).t.rQREJl);
-        obj8.icon = closure_6(Form(18289).ChannelsFollowedIcon, {});
+        obj8.icon = closure_6(Form(18294).ChannelsFollowedIcon, {});
         obj8.onPress = function onPress() {
           return navigation.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };

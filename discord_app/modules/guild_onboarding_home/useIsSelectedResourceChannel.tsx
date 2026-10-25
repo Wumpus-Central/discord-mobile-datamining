@@ -1,8 +1,8 @@
-// === Module 10907: useIsSelectedResourceChannel ===
+// === Module 10908: useIsSelectedResourceChannel ===
 
-// Module 10907 (useIsSelectedResourceChannel)
+// Module 10908 (useIsSelectedResourceChannel)
 import FlagUtils from "FlagUtils" /* 1405 */;
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 10908 */;
+import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 10909 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6791 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;

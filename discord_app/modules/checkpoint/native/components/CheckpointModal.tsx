@@ -1,20 +1,20 @@
-// === Module 12948: CheckpointModal ===
+// === Module 12953: CheckpointModal ===
 
-// Module 12948 (CheckpointModal)
+// Module 12953 (CheckpointModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 2000 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 6022 */;
 import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12895 */;
-import CheckpointFlows from "CheckpointFlows" /* 12953 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13032 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12900 */;
+import CheckpointFlows from "CheckpointFlows" /* 12958 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13037 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12949 */;
+import CheckpointStore from "CheckpointStore" /* 12954 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -407,7 +407,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12949).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12954).CheckpointFetchStates;
 const CheckpointConstants = fn(6015);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);

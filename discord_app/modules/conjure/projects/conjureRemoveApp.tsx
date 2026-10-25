@@ -1,12 +1,12 @@
-// === Module 11794: conjureRemoveApp ===
+// === Module 11795: conjureRemoveApp ===
 
-// Module 11794 (conjureRemoveApp)
+// Module 11795 (conjureRemoveApp)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import useChannelName from "useChannelName" /* 5604 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import conjureAppInServer from "conjureAppInServer" /* 10731 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10804 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10805 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import UserProfileStore from "UserProfileStore" /* 7703 */;

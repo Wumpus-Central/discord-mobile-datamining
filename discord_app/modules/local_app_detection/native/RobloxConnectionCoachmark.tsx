@@ -1,6 +1,6 @@
-// === Module 18387: RobloxConnectionCoachmark ===
+// === Module 18392: RobloxConnectionCoachmark ===
 
-// Module 18387 (RobloxConnectionCoachmark)
+// Module 18392 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -20,7 +20,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import UserStore from "UserStore" /* 1392 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15021 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15026 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -393,7 +393,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
         const intl3 = tmp(1128).intl;
         const stringResult2 = intl3.string(tmp(1128).t.ItuabN);
         const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-        const tmp43 = closure_13(tmp(14026).WindowLaunchIcon, obj10);
+        const tmp43 = closure_13(tmp(14031).WindowLaunchIcon, obj10);
         cResult[26] = stringResult2;
         cResult[27] = tmp43;
         let tmp40 = tmp43;
@@ -535,7 +535,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const intl3 = markAsDismissed(1128).intl;
   obj10.text = intl3.string(markAsDismissed(1128).t.ItuabN);
   let obj3 = { title: null, leading: closure_13(markAsDismissed(7293).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(14026).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj10.icon = closure_13(markAsDismissed(14031).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -568,7 +568,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocalAppDetectionStore];
     const fn = function s() {
-      return appInstalled.isAppInstalled(stateFromStores(15022).DetectableAppNames.ROBLOX);
+      return appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -675,7 +675,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   const tmpResult2 = stateFromStores(504);
 }) : (function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15022).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

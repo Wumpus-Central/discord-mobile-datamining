@@ -1,8 +1,8 @@
-// === Module 13852: useChannelMoveAction ===
+// === Module 13857: useChannelMoveAction ===
 
-// Module 13852 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13854 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13856 */;
+// Module 13857 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13859 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13861 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7207 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
@@ -10,7 +10,7 @@ import RelationshipStore from "RelationshipStore" /* 4913 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 import UserStore from "UserStore" /* 1392 */;
-import getChannelListRecord from "getChannelListRecord" /* 13853 */;
+import getChannelListRecord from "getChannelListRecord" /* 13858 */;
 
 require = fn;
 function areDestinationsEqual(arr, arg1) {

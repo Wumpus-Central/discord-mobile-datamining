@@ -1,6 +1,6 @@
-// === Module 13277: Autocomplete ===
+// === Module 13282: Autocomplete ===
 
-// Module 13277 (Autocomplete)
+// Module 13282 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -21,9 +21,9 @@ import _modDef8607 from "module_8607" /* 8607 */;
 import Form from "Form" /* 8951 */;
 import StickersHooks from "StickersHooks" /* 10154 */;
 import StickerDefault from "Sticker" /* 10170 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13278 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13279 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13280 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13283 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13284 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13285 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;

@@ -1,6 +1,6 @@
-// === Module 12897: showSearchableDestinationListModal ===
+// === Module 12902: showSearchableDestinationListModal ===
 
-// Module 12897 (showSearchableDestinationListModal)
+// Module 12902 (showSearchableDestinationListModal)
 import ChatInputUtils from "ChatInputUtils" /* 5159 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 7038 */;

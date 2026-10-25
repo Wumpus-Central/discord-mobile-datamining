@@ -1,9 +1,9 @@
-// === Module 12542: ConjurePerfTraceStatusDot ===
+// === Module 12546: ConjurePerfTraceStatusDot ===
 
-// Module 12542 (ConjurePerfTraceStatusDot)
+// Module 12546 (ConjurePerfTraceStatusDot)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12538 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

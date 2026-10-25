@@ -1,6 +1,6 @@
-// === Module 16359: useBadBundleFilter ===
+// === Module 16364: useBadBundleFilter ===
 
-// Module 16359 (useBadBundleFilter)
+// Module 16364 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;

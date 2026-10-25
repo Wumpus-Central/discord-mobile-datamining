@@ -1,9 +1,9 @@
-// === Module 15843: HuePicker ===
+// === Module 15848: HuePicker ===
 
-// Module 15843 (HuePicker)
+// Module 15848 (HuePicker)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 15840 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 15845 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

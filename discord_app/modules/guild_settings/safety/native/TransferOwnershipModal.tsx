@@ -1,11 +1,11 @@
-// === Module 12787: TransferOwnershipModal ===
+// === Module 12792: TransferOwnershipModal ===
 
-// Module 12787 (TransferOwnershipModal)
+// Module 12792 (TransferOwnershipModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Navigator from "Navigator" /* 7095 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12786 */;
-import TransferOwnershipDefault from "TransferOwnership" /* 12789 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12791 */;
+import TransferOwnershipDefault from "TransferOwnership" /* 12794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,8 +56,8 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12786).close();
-      const obj = toUser(12786);
+      toUser(12791).close();
+      const obj = toUser(12791);
       toUser(9005).close();
       const obj2 = toUser(9005);
       const result = closure_0(5662).showTransferOwnershipSuccess();
@@ -118,7 +118,7 @@ function getScreens(guild, toUser) {
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12788);
+const TransferOwnershipConstants = fn(12793);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 16037: UserSettingsAccountEditPassword ===
+// === Module 16042: UserSettingsAccountEditPassword ===
 
-// Module 16037 (UserSettingsAccountEditPassword)
+// Module 16042 (UserSettingsAccountEditPassword)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,7 +15,7 @@ import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreat
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7087 */;
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7088 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7093 */;
-import _modDef16038 from "module_16038" /* 16038 */;
+import _modDef16043 from "module_16043" /* 16043 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4816 */;
 import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7491 */;
@@ -148,7 +148,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef16038, style: tmp.image };
+    const obj4 = { source: _modDef16043, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;

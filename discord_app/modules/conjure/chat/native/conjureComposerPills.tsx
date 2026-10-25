@@ -1,14 +1,14 @@
-// === Module 12510: conjureComposerPills ===
+// === Module 12514: conjureComposerPills ===
 
-// Module 12510 (conjureComposerPills)
+// Module 12514 (conjureComposerPills)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import UserUtils from "UserUtils" /* 5025 */;
-import _modDef11828 from "module_11828" /* 11828 */;
-import ChatInputParser from "ChatInputParser" /* 12511 */;
+import _modDef11829 from "module_11829" /* 11829 */;
+import ChatInputParser from "ChatInputParser" /* 12515 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 11825 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 11826 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export const conjureFilePillIcon = function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11828).uri;
+  return Image.resolveAssetSource(_modDef11829).uri;
 };
 export const conjurePillText = function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export const conjureUserPillLabel = function conjureUserPillLabel(id) {
 export const decodeConjurePills = function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12354).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12357).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -111,7 +111,7 @@ export const decodeConjurePills = function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11828).uri;
+        uri = Image.resolveAssetSource(_modDef11829).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

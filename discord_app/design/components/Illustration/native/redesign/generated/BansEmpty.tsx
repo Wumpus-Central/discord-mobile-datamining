@@ -1,6 +1,6 @@
-// === Module 19149: BansEmpty ===
+// === Module 19154: BansEmpty ===
 
-// Module 19149 (BansEmpty)
+// Module 19154 (BansEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBansEmpty
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_19150");
+          return require("module_19155");
         },
       darker() {
-          return require("module_19151");
+          return require("module_19156");
         },
       light() {
-          return require("module_19152");
+          return require("module_19157");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBansEmpty
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19150");
+      return require("module_19155");
     },
     darker() {
-      return require("module_19151");
+      return require("module_19156");
     },
     light() {
-      return require("module_19152");
+      return require("module_19157");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getBansEmptySource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_19150");
+      return require("module_19155");
     },
     darker() {
-      return require("module_19151");
+      return require("module_19156");
     },
     light() {
-      return require("module_19152");
+      return require("module_19157");
     }
   });
 }

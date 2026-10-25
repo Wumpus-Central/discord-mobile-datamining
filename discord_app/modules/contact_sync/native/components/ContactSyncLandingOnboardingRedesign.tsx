@@ -1,12 +1,12 @@
-// === Module 13592: ContactSyncLandingOnboardingRedesign ===
+// === Module 13597: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13592 (ContactSyncLandingOnboardingRedesign)
+// Module 13597 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7885 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13585 */;
-import _modDef13593 from "module_13593" /* 13593 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13594 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13590 */;
+import _modDef13598 from "module_13598" /* 13598 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13599 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.headerImage) {
-    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13593 };
+    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13598 };
     const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[2] = tmp4.headerImage;
     cResult[3] = tmp11;
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13593 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13598 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1128).intl;

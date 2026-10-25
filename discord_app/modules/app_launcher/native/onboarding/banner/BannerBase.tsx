@@ -1,6 +1,6 @@
-// === Module 12038: BannerBase ===
+// === Module 12039: BannerBase ===
 
-// Module 12038 (BannerBase)
+// Module 12039 (BannerBase)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,7 +8,7 @@ import ColorUtils from "ColorUtils" /* 4968 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import spring from "spring" /* 5247 */;
-import _mod12039 from "module_12039" /* 12039 */;
+import _mod12040 from "module_12040" /* 12040 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -23,7 +23,7 @@ const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
 const createStyles = fn(4971);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerTextContainerWithImage: null, bannerTextContainerWithoutImage: null, bannerText: null, bannerTextCentered: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12027).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12028).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                 let tmp35 = null != image;
                 if (tmp35) {
                   const obj7 = { style: tmp4.imageContainer, children: null };
-                  const obj8 = { style: tmp4.trinketsLottie, source: _mod12039, autoPlay: !stateFromStores };
+                  const obj8 = { style: tmp4.trinketsLottie, source: _mod12040, autoPlay: !stateFromStores };
                   class M {
                     constructor() {
                       obj = closure_1;
@@ -762,7 +762,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
   let tmp11Result = null != image;
   if (tmp11Result) {
     const obj9 = { style: tmp.imageContainer, children: null };
-    const obj10 = { style: tmp.trinketsLottie, source: tmp4(12039), autoPlay: !stateFromStores };
+    const obj10 = { style: tmp.trinketsLottie, source: tmp4(12040), autoPlay: !stateFromStores };
     const items5 = [closure_7(tmp7(5228), obj10), image];
     obj9.children = items5;
     tmp11Result = closure_8(View, obj9);

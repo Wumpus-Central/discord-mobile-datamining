@@ -1,6 +1,6 @@
-// === Module 13013: useSidekickLeave ===
+// === Module 13018: useSidekickLeave ===
 
-// Module 13013 (useSidekickLeave)
+// Module 13018 (useSidekickLeave)
 import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import noop from "module_19" /* 19 */;
 

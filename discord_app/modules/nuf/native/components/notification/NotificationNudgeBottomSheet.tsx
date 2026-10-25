@@ -1,15 +1,15 @@
-// === Module 17966: NotificationNudgeBottomSheet ===
+// === Module 17971: NotificationNudgeBottomSheet ===
 
-// Module 17966 (NotificationNudgeBottomSheet)
+// Module 17971 (NotificationNudgeBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13307 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13312 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-const NotificationPermissionConstants = fn(13306);
+const NotificationPermissionConstants = fn(13311);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;

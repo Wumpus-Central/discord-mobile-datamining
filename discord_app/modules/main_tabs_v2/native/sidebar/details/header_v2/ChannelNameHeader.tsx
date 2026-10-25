@@ -1,6 +1,6 @@
-// === Module 18184: ChannelNameHeader ===
+// === Module 18189: ChannelNameHeader ===
 
-// Module 18184 (ChannelNameHeader)
+// Module 18189 (ChannelNameHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -271,7 +271,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Direct
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1202).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1202).AvatarSizes.NORMAL, status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isMobileOnline: null, isVROnline: "6fdce3d9195ea0b36363d1d85d3fe1ac", statusStyle: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages" };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();

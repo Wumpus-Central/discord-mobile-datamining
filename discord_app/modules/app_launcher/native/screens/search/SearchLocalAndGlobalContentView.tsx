@@ -1,6 +1,6 @@
-// === Module 12092: SearchLocalAndGlobalContentView ===
+// === Module 12093: SearchLocalAndGlobalContentView ===
 
-// Module 12092 (SearchLocalAndGlobalContentView)
+// Module 12093 (SearchLocalAndGlobalContentView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,11 +9,11 @@ import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
 import TableRow from "TableRow" /* 6903 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7630 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11166 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12028 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12031 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12033 */;
-import CommandRowButton from "CommandRowButton" /* 12093 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11167 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12029 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12032 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12034 */;
+import CommandRowButton from "CommandRowButton" /* 12094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ function keyExtractor(type, arg1) {
 }
 const View = fn(17).View;
 const getSection = fn(9650).getSection;
-const FetchState = fn(12044).FetchState;
+const FetchState = fn(12045).FetchState;
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -209,15 +209,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12028).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12029).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12033), obj2);
+    tmp4 = closure_10(onPressSend(12034), obj2);
   }
-  obj = hasOptions(12028);
-  const tmpResult = hasOptions(12093);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11166).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12029);
+  const tmpResult = hasOptions(12094);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11167).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -239,14 +239,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11166).AppLauncherSectionName.SEARCH };
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11167).AppLauncherSectionName.SEARCH };
   obj4.subLabel = hasOptions(9649).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12093), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj4.trailing = closure_10(onPressSend(12094), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return closure_10(hasOptions(6903).TableRow, obj4);
 });
 ReactCompilerGating = fn(558);

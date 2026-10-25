@@ -1,9 +1,9 @@
-// === Module 15201: GuildBadgeSpider ===
+// === Module 15206: GuildBadgeSpider ===
 
-// Module 15201 (GuildBadgeSpider)
+// Module 15206 (GuildBadgeSpider)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7962 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15161 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15166 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11283: GuildChannelUserList ===
+// === Module 11284: GuildChannelUserList ===
 
-// Module 11283 (GuildChannelUserList)
+// Module 11284 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1128 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4908 */;

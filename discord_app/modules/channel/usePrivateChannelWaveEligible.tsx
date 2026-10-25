@@ -1,6 +1,6 @@
-// === Module 17460: usePrivateChannelWaveEligible ===
+// === Module 17465: usePrivateChannelWaveEligible ===
 
-// Module 17460 (usePrivateChannelWaveEligible)
+// Module 17465 (usePrivateChannelWaveEligible)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import MessageStore from "MessageStore" /* 6010 */;
@@ -268,7 +268,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       }
     }
     const tmpResult8 = tmp(504);
-    const strangerDangerWarning = tmp(10924).useStrangerDangerWarning(isDM.id);
+    const strangerDangerWarning = tmp(10925).useStrangerDangerWarning(isDM.id);
     if (tmp4) {
       class T {
         constructor() {

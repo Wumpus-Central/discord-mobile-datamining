@@ -1,10 +1,10 @@
-// === Module 18136: SmartSearchBottomFade ===
+// === Module 18141: SmartSearchBottomFade ===
 
-// Module 18136 (SmartSearchBottomFade)
+// Module 18141 (SmartSearchBottomFade)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
 import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 18137 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 18142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,7 +64,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function SmartSearchBottomFade(height) {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(18137).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(18142).useSearchHostSurfaceColor();
   let items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef683(searchHostSurfaceColor);

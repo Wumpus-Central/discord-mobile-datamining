@@ -1,6 +1,6 @@
-// === Module 14329: UserProfileModeratorActions ===
+// === Module 14334: UserProfileModeratorActions ===
 
-// Module 14329 (UserProfileModeratorActions)
+// Module 14334 (UserProfileModeratorActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,11 +12,11 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import TableRow from "TableRow" /* 6903 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7873 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 12775 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12781 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 12799 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 12801 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13540 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 12780 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12786 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 12804 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 12806 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13545 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6686 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -364,7 +364,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11833, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11834, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }
@@ -393,7 +393,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12777, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12782, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {

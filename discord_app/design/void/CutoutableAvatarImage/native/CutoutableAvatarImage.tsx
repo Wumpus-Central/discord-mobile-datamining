@@ -1,6 +1,6 @@
-// === Module 14309: CutoutableAvatarImage ===
+// === Module 14314: CutoutableAvatarImage ===
 
-// Module 14309 (CutoutableAvatarImage)
+// Module 14314 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
@@ -10,8 +10,8 @@ import spring from "spring" /* 5247 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import inlineStylesDefault from "inlineStyles" /* 7962 */;
 import ClipView from "ClipView" /* 9406 */;
-import getChannelIcon from "getChannelIcon" /* 14311 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 14312 */;
+import getChannelIcon from "getChannelIcon" /* 14316 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 14317 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -316,7 +316,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(14310).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14315).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

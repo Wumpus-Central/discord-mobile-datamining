@@ -1,6 +1,6 @@
-// === Module 17728: useGuildsBarGesture ===
+// === Module 17733: useGuildsBarGesture ===
 
-// Module 17728 (useGuildsBarGesture)
+// Module 17733 (useGuildsBarGesture)
 import util from "util" /* 1128 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
@@ -11,12 +11,12 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
 import FastList from "FastList" /* 7167 */;
 import ContextMenuState from "ContextMenuState" /* 9762 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12070 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import SortedGuildStore from "SortedGuildStore" /* 6701 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17729 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17734 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -243,7 +243,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "emoji", positionPercentage: false };
+    sectionItemFromPosition = { item: "duration", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -276,7 +276,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6701).GuildsNodeType;
-const GuildsBarConstants = fn(17726);
+const GuildsBarConstants = fn(17731);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;

@@ -1,23 +1,23 @@
-// === Module 12396: FrogIllocon ===
+// === Module 12400: FrogIllocon ===
 
-// Module 12396 (FrogIllocon)
+// Module 12400 (FrogIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef12397 from "module_12397" /* 12397 */;
-import _modDef12398 from "module_12398" /* 12398 */;
-import _modDef12399 from "module_12399" /* 12399 */;
+import _modDef12401 from "module_12401" /* 12401 */;
+import _modDef12402 from "module_12402" /* 12402 */;
+import _modDef12403 from "module_12403" /* 12403 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12397 }, 3: null };
-const obj2 = { uri: _modDef12397 };
-obj[2] = { uri: _modDef12398 };
-const obj3 = { uri: _modDef12398 };
-obj[3] = { uri: _modDef12399 };
+let obj = { 1: null, 2: { uri: _modDef12401 }, 3: null };
+const obj2 = { uri: _modDef12401 };
+obj[2] = { uri: _modDef12402 };
+const obj3 = { uri: _modDef12402 };
+obj[3] = { uri: _modDef12403 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12399 };
+const obj4 = { uri: _modDef12403 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
 

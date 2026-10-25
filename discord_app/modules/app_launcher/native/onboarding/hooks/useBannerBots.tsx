@@ -1,13 +1,13 @@
-// === Module 12042: useBannerBots ===
+// === Module 12043: useBannerBots ===
 
-// Module 12042 (useBannerBots)
+// Module 12043 (useBannerBots)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useActivityApplications from "useActivityApplications" /* 12015 */;
-import AppLauncherSearchUtils from "AppLauncherSearchUtils" /* 12043 */;
+import useActivityApplications from "useActivityApplications" /* 12016 */;
+import AppLauncherSearchUtils from "AppLauncherSearchUtils" /* 12044 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12022 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12023 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -280,8 +280,8 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   context = context.context;
   let first1;
   const obj = closure_6({ context });
-  const apps = first1(12043).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = first1(12043);
+  const apps = first1(12044).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = first1(12044);
   const tmp2 = first1;
   const obj3 = closure_7({ context });
   const tmp4 = closure_5({ context });
@@ -290,8 +290,8 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12015).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12015);
+  const activityApplications = first1(12016).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12016);
   const items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;

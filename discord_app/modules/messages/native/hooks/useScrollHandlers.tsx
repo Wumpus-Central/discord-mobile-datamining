@@ -1,6 +1,6 @@
-// === Module 11233: useScrollHandlers ===
+// === Module 11234: useScrollHandlers ===
 
-// Module 11233 (useScrollHandlers)
+// Module 11234 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
@@ -8,7 +8,7 @@ import QuestTypes from "QuestTypes" /* 6713 */;
 import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7748 */;
 import NativeChatUtilsDefault from "NativeChatUtils" /* 9995 */;
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9997 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11219 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

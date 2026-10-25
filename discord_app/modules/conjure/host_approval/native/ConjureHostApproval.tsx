@@ -1,6 +1,6 @@
-// === Module 11814: host_approval/ConjureHostApproval ===
+// === Module 11815: host_approval/ConjureHostApproval ===
 
-// Module 11814 (host_approval/ConjureHostApproval)
+// Module 11815 (host_approval/ConjureHostApproval)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
 import ConjureHostApproval from "ConjureHostApproval" /* 10735 */;
-import ConjureAwaitingUser from "ConjureAwaitingUser" /* 11815 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11816 */;
+import ConjureAwaitingUser from "ConjureAwaitingUser" /* 11816 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   const id = approval.id;
   ({ host, reason } = approval);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = closure_4(tmp(11815).ConjureAwaitingPulseRing, {});
+    const tmp7 = closure_4(tmp(11816).ConjureAwaitingPulseRing, {});
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -194,7 +194,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
             tmp50[3] = tmp18;
             tmp50[4] = tmp44;
             obj10.children = tmp50;
-            const tmp51 = closure_5(id(11816), obj10);
+            const tmp51 = closure_5(id(11817), obj10);
             cResult[30] = tmp4.card;
             cResult[31] = tmp44;
             cResult[32] = tmp15;

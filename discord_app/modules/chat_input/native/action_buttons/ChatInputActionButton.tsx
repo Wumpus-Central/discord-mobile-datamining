@@ -1,6 +1,6 @@
-// === Module 12521: ChatInputActionButton ===
+// === Module 12525: ChatInputActionButton ===
 
-// Module 12521 (ChatInputActionButton)
+// Module 12525 (ChatInputActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 5252 */;

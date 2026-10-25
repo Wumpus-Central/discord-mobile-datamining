@@ -1,11 +1,11 @@
-// === Module 18045: conjureBackgroundFramePlatform ===
+// === Module 18050: conjureBackgroundFramePlatform ===
 
-// Module 18045 (conjureBackgroundFramePlatform)
+// Module 18050 (conjureBackgroundFramePlatform)
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5609 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10766 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11889 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11890 */;
 import FramesConstants from "FramesConstants" /* 6776 */;
 import size from "module_2" /* 2 */;
 

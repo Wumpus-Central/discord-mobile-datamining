@@ -1,8 +1,8 @@
-// === Module 12733: AcceptGuildTemplateModal ===
+// === Module 12738: AcceptGuildTemplateModal ===
 
-// Module 12733 (AcceptGuildTemplateModal)
+// Module 12738 (AcceptGuildTemplateModal)
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12735 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12740 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   [first2, _slicedToArray] = noop.useState(null);
   const tmpResult = require("initialize");
   [tmp17, noop] = noop.useState(null);
-  stateFromStores(12734)(stateFromStores);
+  stateFromStores(12739)(stateFromStores);
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === first2) {
       if (cResult[6] === first1) {
@@ -161,7 +161,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
         }
       }
       const obj2 = { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 };
-      const tmp25 = jsx(tmp18(12736), { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 });
+      const tmp25 = jsx(tmp18(12741), { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 });
       cResult[10] = code;
       cResult[11] = tmp17;
       cResult[12] = stateFromStores;
@@ -199,7 +199,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12734)(stateFromStores);
+  stateFromStores(12739)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -274,7 +274,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(12736), {
+  obj3.children = jsx(stateFromStores(12741), {
     code,
     guildTemplate: stateFromStores,
     name,

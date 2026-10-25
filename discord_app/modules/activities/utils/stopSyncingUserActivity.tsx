@@ -1,6 +1,6 @@
-// === Module 14942: stopSyncingUserActivity ===
+// === Module 14947: stopSyncingUserActivity ===
 
-// Module 14942 (stopSyncingUserActivity)
+// Module 14947 (stopSyncingUserActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

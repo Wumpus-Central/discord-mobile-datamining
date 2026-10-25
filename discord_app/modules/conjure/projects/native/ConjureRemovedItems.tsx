@@ -1,6 +1,6 @@
-// === Module 11795: ConjureRemovedItems ===
+// === Module 11796: ConjureRemovedItems ===
 
-// Module 11795 (ConjureRemovedItems)
+// Module 11796 (ConjureRemovedItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,7 +14,7 @@ import TableRowGroup from "TableRowGroup" /* 6987 */;
 import FolderIcon from "FolderIcon" /* 8545 */;
 import AppsIcon from "AppsIcon" /* 8577 */;
 import BotTagDefault from "BotTag" /* 9134 */;
-import RobotIcon from "RobotIcon" /* 11796 */;
+import RobotIcon from "RobotIcon" /* 11797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

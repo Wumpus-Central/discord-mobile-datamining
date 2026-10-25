@@ -1,6 +1,6 @@
-// === Module 14048: openForumExplicitMediaWarning ===
+// === Module 14053: openForumExplicitMediaWarning ===
 
-// Module 14048 (openForumExplicitMediaWarning)
+// Module 14053 (openForumExplicitMediaWarning)
 import jsxProd from "jsxProd" /* 21 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
@@ -14,7 +14,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(14049, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(14054, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

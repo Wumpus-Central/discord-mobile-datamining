@@ -1,7 +1,7 @@
-// === Module 18051: useChannelAppFrameTeardown ===
+// === Module 18056: useChannelAppFrameTeardown ===
 
-// Module 18051 (useChannelAppFrameTeardown)
-import leaveFrame from "leaveFrame" /* 10765 */;
+// Module 18056 (useChannelAppFrameTeardown)
+import leaveFrame from "leaveFrame" /* 10766 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import PermissionStore from "PermissionStore" /* 4903 */;

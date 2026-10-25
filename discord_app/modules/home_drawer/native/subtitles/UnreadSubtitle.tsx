@@ -1,6 +1,6 @@
-// === Module 17769: UnreadSubtitle ===
+// === Module 17774: UnreadSubtitle ===
 
-// Module 17769 (UnreadSubtitle)
+// Module 17774 (UnreadSubtitle)
 import Text_Text from "Text/Text" /* 5234 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   const cResult = subtitleStyles(576).c(16);
   ({ guild, channel, channelName, count } = arg0);
   const obj = subtitleStyles(576);
-  subtitleStyles = subtitleStyles(17767).useSubtitleStyles();
+  subtitleStyles = subtitleStyles(17772).useSubtitleStyles();
   if (cResult[0] === channel) {
     if (cResult[1] === guild) {
       let tmp5 = cResult[2];
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   cResult[1] = guild;
   cResult[2] = channelIconComponentWithGuild;
   tmp5 = channelIconComponentWithGuild;
-  const obj2 = subtitleStyles(17767);
+  const obj2 = subtitleStyles(17772);
 }) : (function UnreadSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   let subtitleStyles;

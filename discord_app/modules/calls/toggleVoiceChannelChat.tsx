@@ -1,6 +1,6 @@
-// === Module 15765: toggleVoiceChannelChat ===
+// === Module 15770: toggleVoiceChannelChat ===
 
-// Module 15765 (toggleVoiceChannelChat)
+// Module 15770 (toggleVoiceChannelChat)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;

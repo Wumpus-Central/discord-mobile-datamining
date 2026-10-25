@@ -1,8 +1,8 @@
-// === Module 16467: openVideoQuestModal ===
+// === Module 16472: openVideoQuestModal ===
 
-// Module 16467 (openVideoQuestModal)
+// Module 16472 (openVideoQuestModal)
 import v1All from "v1" /* 1281 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14122 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14127 */;
 import QuestStore from "QuestStore" /* 7776 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(16460)();
+      sourceQuestContent(16465)();
     }
   }
   const v4Result = v1All.v4();
@@ -39,6 +39,6 @@ export default function openVideoQuestModal(questId) {
     },
     sourceQuestContent
   };
-  const tmp8 = questId(2002)(16468, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj4, questId(14122).getVideoQuestModalKey(questId));
+  const tmp8 = questId(2002)(16473, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj4, questId(14127).getVideoQuestModalKey(questId));
 };

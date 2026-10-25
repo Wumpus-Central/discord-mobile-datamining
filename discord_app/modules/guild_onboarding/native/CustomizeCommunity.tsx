@@ -1,6 +1,6 @@
-// === Module 11240: CustomizeCommunity ===
+// === Module 11241: CustomizeCommunity ===
 
-// Module 11240 (CustomizeCommunity)
+// Module 11241 (CustomizeCommunity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -200,7 +200,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyC
     if (cResult[3] === setTab) {
       let tmp11 = cResult[4];
     }
-    const tmp5Result = tmp5(isThemeDarkResult ? 11241 : 11242);
+    const tmp5Result = tmp5(isThemeDarkResult ? 11242 : 11243);
     if (cResult[5] === tmp4.emptyContainerImage) {
       if (cResult[6] === tmp5Result) {
         let tmp13 = cResult[7];
@@ -292,7 +292,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyC
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj4 = { style: tmp.emptyContainerImage, source: null };
   const obj2 = setTab(504);
-  obj4.source = tmp4(isThemeDarkResult ? 11241 : 11242);
+  obj4.source = tmp4(isThemeDarkResult ? 11242 : 11243);
   const items1 = [closure_15(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1128).intl;
@@ -1265,7 +1265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Customiz
   const tmpResult = guildId(504);
   const stateFromStores1 = guildId(504).useStateFromStores(tmp10, N);
   const tmpResult2 = guildId(504);
-  ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, newAnswersCount, onboardingPrompts } = tmp5(11243)(guildId));
+  ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, newAnswersCount, onboardingPrompts } = tmp5(11244)(guildId));
   if (cResult[6] === guildId) {
     class N {
       constructor() {
@@ -1316,7 +1316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Customiz
   cResult[6] = guildId;
   cResult[7] = stateFromStores;
   cResult[8] = D;
-  const tmp14 = tmp5(11243)(guildId);
+  const tmp14 = tmp5(11244)(guildId);
 }) : (function CustomizeCommunity(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
@@ -1334,7 +1334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Customiz
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11243)(guildId);
+  const tmp7 = stateFromStores(11244)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

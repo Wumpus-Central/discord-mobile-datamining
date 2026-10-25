@@ -1,6 +1,6 @@
-// === Module 14067: XboxLinkEducation ===
+// === Module 14072: XboxLinkEducation ===
 
-// Module 14067 (XboxLinkEducation)
+// Module 14072 (XboxLinkEducation)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
@@ -9,7 +9,7 @@ import components_Button_Button from "components/Button/Button" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9619 */;
-import _modDef14068 from "module_14068" /* 14068 */;
+import _modDef14073 from "module_14073" /* 14073 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj10 = { uri: _modDef14068 };
+    const obj10 = { uri: _modDef14073 };
     cResult[16] = obj10;
     let tmp18 = obj10;
   } else {
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14068 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14073 }), []);
   const items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

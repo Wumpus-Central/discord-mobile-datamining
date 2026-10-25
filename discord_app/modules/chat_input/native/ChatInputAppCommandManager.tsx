@@ -1,10 +1,10 @@
-// === Module 13301: ChatInputAppCommandManager ===
+// === Module 13306: ChatInputAppCommandManager ===
 
-// Module 13301 (ChatInputAppCommandManager)
+// Module 13306 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 587 */;
 import useGameProfileObscured from "useGameProfileObscured" /* 8581 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13085 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 13302 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13090 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 13307 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8306 */;

@@ -4,7 +4,8 @@
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 10754 */;
 import NativePushNotificationMonitorModule from "NativePushNotificationMonitorModule" /* 10755 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 10756 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10756 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 10757 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -159,13 +160,13 @@ export default {
   },
   getScheduledLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const scheduledLocalNotifications = RNCPushNotificationIOSDefault.getScheduledLocalNotifications(arg0);
+      const scheduledLocalNotifications = NativeNotificationManagerModuleDefault.getScheduledLocalNotifications(arg0);
     }
     obj = PlatformUtils;
   },
   cancelLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const result = RNCPushNotificationIOSDefault.cancelLocalNotifications(arg0);
+      const result = NativeNotificationManagerModuleDefault.cancelLocalNotifications(arg0);
     }
     obj = PlatformUtils;
   },

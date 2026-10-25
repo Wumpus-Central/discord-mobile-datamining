@@ -1,6 +1,6 @@
-// === Module 14273: UserProfileTextButtonGroup ===
+// === Module 14278: UserProfileTextButtonGroup ===
 
-// Module 14273 (UserProfileTextButtonGroup)
+// Module 14278 (UserProfileTextButtonGroup)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import noop from "module_19" /* 19 */;

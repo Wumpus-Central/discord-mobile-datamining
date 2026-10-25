@@ -1,6 +1,6 @@
-// === Module 17222: CollectiblesShopCardsGrid ===
+// === Module 17227: CollectiblesShopCardsGrid ===
 
-// Module 17222 (CollectiblesShopCardsGrid)
+// Module 17227 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9357 */;
@@ -210,13 +210,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(17221).useCardLayout();
+  const cardLayout = products(17226).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
-  let obj = products(17221);
+  let obj = products(17226);
   obj2.contentContainerStyle = { gap: products(9357).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;

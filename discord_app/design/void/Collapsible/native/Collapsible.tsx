@@ -1,6 +1,6 @@
-// === Module 15392: Collapsible ===
+// === Module 15397: Collapsible ===
 
-// Module 15392 (Collapsible)
+// Module 15397 (Collapsible)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5247 */;
 import _slicedToArray from "module_32" /* 32 */;

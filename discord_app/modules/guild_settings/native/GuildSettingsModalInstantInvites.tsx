@@ -1,6 +1,6 @@
-// === Module 19141: GuildSettingsModalInstantInvites ===
+// === Module 19146: GuildSettingsModalInstantInvites ===
 
-// Module 19141 (GuildSettingsModalInstantInvites)
+// Module 19146 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,11 +13,11 @@ import TableCheckboxRow from "TableCheckboxRow" /* 6900 */;
 import TableRowIcon from "TableRowIcon" /* 6911 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8385 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8387 */;
-import InstantInvite from "InstantInvite" /* 10818 */;
-import _modDef14916 from "module_14916" /* 14916 */;
+import InstantInvite from "InstantInvite" /* 10819 */;
+import _modDef14921 from "module_14921" /* 14921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11235 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11236 */;
 import InviteRecord from "InviteRecord" /* 8868 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildStore from "GuildStore" /* 4845 */;
@@ -114,7 +114,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12768, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12773, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);
@@ -230,7 +230,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function InvitesDis
     if (cResult[5] !== invitesDisabled) {
       let tmp15 = null;
       if (invitesDisabled) {
-        const obj5 = { source: _modDef14916 };
+        const obj5 = { source: _modDef14921 };
         tmp15 = __initData(TableRowIcon.TableRowIcon, obj5);
       }
       cResult[5] = invitesDisabled;
@@ -271,7 +271,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function InvitesDis
   const obj3 = { label: intl.string(util.t.Uwsjn6), subLabel: __initData(Text_Text.Text, { variant: "text-xs/medium", children: stringResult1 }), icon: null, checked: null, onPress: null, start: true, end: true };
   let tmp7Result = null;
   if (invitesDisabled) {
-    const obj4 = { source: _modDef14916 };
+    const obj4 = { source: _modDef14921 };
     tmp7Result = __initData(TableRowIcon.TableRowIcon, obj4);
   }
   obj3.icon = tmp7Result;

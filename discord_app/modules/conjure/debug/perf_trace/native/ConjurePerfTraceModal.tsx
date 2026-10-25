@@ -1,16 +1,16 @@
-// === Module 12536: ConjurePerfTraceModal ===
+// === Module 12540: ConjurePerfTraceModal ===
 
-// Module 12536 (ConjurePerfTraceModal)
+// Module 12540 (ConjurePerfTraceModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7305 */;
-import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 12537 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12538 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12540 */;
-import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 12541 */;
+import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 12541 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12542 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12544 */;
+import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 12545 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;
 
@@ -466,11 +466,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(12537).usePerfCategoryColors();
+  const perfCategoryColors = node(12541).usePerfCategoryColors();
   if (collapsed) {
     let ChevronSmallDownIcon = tmp2(7305).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(11076).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(11077).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -510,7 +510,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop, ];
-  let obj = node(12537);
+  let obj = node(12541);
   items1[1] = { paddingLeft: node.depth * selected(587).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -570,7 +570,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   const obj11 = { variant: "text-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = { variant: "text-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation };
   const obj5 = { paddingLeft: node.depth * selected(587).space.PX_12 };
-  obj16.children = node(12538).perfNodeDuration(node);
+  obj16.children = node(12542).perfNodeDuration(node);
   items2[7] = tmp13(node(5234).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), , ];
@@ -587,8 +587,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
     const obj21 = { paddingLeft: node.depth * selected(587).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(12538);
-    obj20.children = tmp2(12538).perfNodeSections(node).map((item) => {
+    const tmp2Result2 = tmp2(12542);
+    obj20.children = tmp2(12542).perfNodeSections(node).map((item) => {
       ({ title, rows } = item);
       let obj = { style: detail.detail, children: null };
       let tmp3 = null;
@@ -620,7 +620,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       return React6(timestampProducer, obj, title);
     });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(12538).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(12542).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -899,7 +899,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   const cResult = toggle(576).c(64);
   trace = trace.trace;
   const tmp4 = closure_11();
-  toggle = selectedKey(12541)(trace);
+  toggle = selectedKey(12545)(trace);
   if (cResult[0] !== trace) {
     const perfTraceExtentResult = tmp(10734).perfTraceExtent(trace);
     cResult[0] = trace;
@@ -923,11 +923,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       let tmp9 = cResult[6];
     }
     if (cResult[7] !== trace) {
-      const perfTraceDurationResult = tmp(12538).perfTraceDuration(trace);
+      const perfTraceDurationResult = tmp(12542).perfTraceDuration(trace);
       cResult[7] = trace;
       cResult[8] = perfTraceDurationResult;
       let tmp10 = perfTraceDurationResult;
-      const tmpResult4 = tmp(12538);
+      const tmpResult4 = tmp(12542);
     } else {
       tmp10 = cResult[8];
     }
@@ -941,11 +941,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       tmp12 = cResult[10];
     }
     if (cResult[11] !== trace) {
-      const perfTraceSummaryResult = tmp(12538).perfTraceSummary(trace);
+      const perfTraceSummaryResult = tmp(12542).perfTraceSummary(trace);
       cResult[11] = trace;
       cResult[12] = perfTraceSummaryResult;
       let tmp15 = perfTraceSummaryResult;
-      const tmpResult5 = tmp(12538);
+      const tmpResult5 = tmp(12542);
     } else {
       tmp15 = cResult[12];
     }
@@ -977,9 +977,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       if (0 !== trace.dropped) {
         const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
         const _HermesInternal2 = HermesInternal;
-        obj6.children = "" + tmp(12538).formatSpanCount(trace.dropped) + " not recorded";
+        obj6.children = "" + tmp(12542).formatSpanCount(trace.dropped) + " not recorded";
         tmp25 = closure_8(tmp(5234).Text, obj6);
-        const tmpResult6 = tmp(12538);
+        const tmpResult6 = tmp(12542);
       }
       cResult[17] = trace.dropped;
       cResult[18] = tmp25;
@@ -1313,9 +1313,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   if (0 !== trace.dropped) {
     const obj10 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(12538).formatSpanCount(trace.dropped) + " not recorded";
+    obj10.children = "" + tmp4(12542).formatSpanCount(trace.dropped) + " not recorded";
     tmp8Result2 = closure_8(tmp4(5234).Text, obj10);
-    const tmp4Result = tmp4(12538);
+    const tmp4Result = tmp4(12542);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;
@@ -1452,7 +1452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         }
         if (cResult[12] !== tmp12) {
           const obj2 = { initialRouteName: perf_trace, screens: tmp12 };
-          const tmp17 = closure_8(tmp(11146).Modal, obj2);
+          const tmp17 = closure_8(tmp(11147).Modal, obj2);
           cResult[12] = tmp12;
           cResult[13] = tmp17;
           let tmp14 = tmp17;

@@ -1,6 +1,6 @@
-// === Module 17614: GameClaimCoachmark ===
+// === Module 17619: GameClaimCoachmark ===
 
-// Module 17614 (GameClaimCoachmark)
+// Module 17619 (GameClaimCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -10,10 +10,10 @@ import Card from "Card" /* 6905 */;
 import Pressables from "Pressables" /* 6908 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8092 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11056 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14380 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 17615 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17616 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14385 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 17620 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17621 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ guild, markAsDismissed } = arg0);
   const tmp4 = closure_13();
   let obj = markAsDismissed(576);
-  let first = markAsDismissed(17616).useUnclaimedGameIdsForGuild(guild.id)[0];
+  let first = markAsDismissed(17621).useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first1 = cResult[0];
   }
-  const obj2 = markAsDismissed(17616);
+  const obj2 = markAsDismissed(17621);
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
   if (null == coverImageUrl) {
     return null;

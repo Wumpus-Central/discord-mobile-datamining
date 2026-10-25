@@ -1,6 +1,6 @@
-// === Module 11402: ApplicationInstallUtils ===
+// === Module 11403: ApplicationInstallUtils ===
 
-// Module 11402 (ApplicationInstallUtils)
+// Module 11403 (ApplicationInstallUtils)
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9650 */;
 

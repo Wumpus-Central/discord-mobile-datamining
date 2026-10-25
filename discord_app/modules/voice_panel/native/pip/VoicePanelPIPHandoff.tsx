@@ -1,6 +1,6 @@
-// === Module 10905: VoicePanelPIPHandoff ===
+// === Module 10906: VoicePanelPIPHandoff ===
 
-// Module 10905 (VoicePanelPIPHandoff)
+// Module 10906 (VoicePanelPIPHandoff)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

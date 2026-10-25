@@ -1,15 +1,15 @@
-// === Module 18325: MessageRequestsScreenWithTabs ===
+// === Module 18330: MessageRequestsScreenWithTabs ===
 
-// Module 18325 (MessageRequestsScreenWithTabs)
+// Module 18330 (MessageRequestsScreenWithTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import SegmentedControlState from "SegmentedControlState" /* 8901 */;
 import SegmentedControl from "SegmentedControl" /* 9146 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 11144 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12850 */;
-import MessageRequestListDefault from "MessageRequestList" /* 18326 */;
-import SpamMessageListDefault from "SpamMessageList" /* 18342 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11145 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12855 */;
+import MessageRequestListDefault from "MessageRequestList" /* 18331 */;
+import SpamMessageListDefault from "SpamMessageList" /* 18347 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

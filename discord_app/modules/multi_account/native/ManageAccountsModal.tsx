@@ -1,6 +1,6 @@
-// === Module 17817: ManageAccountsModal ===
+// === Module 17822: ManageAccountsModal ===
 
-// Module 17817 (ManageAccountsModal)
+// Module 17822 (ManageAccountsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -8,7 +8,7 @@ import timing from "timing" /* 5206 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
 import HeaderShared from "HeaderShared" /* 9699 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10031 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13313 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13318 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,10 +22,10 @@ const require = globalThis.__r;
 require = fn;
 let closure_4 = ["children"];
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13309).MultiAccountTokenStatus;
-let Constants = fn(13310);
+const MultiAccountTokenStatus = fn(13314).MultiAccountTokenStatus;
+let Constants = fn(13315);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_14, MAX_ACCOUNTS: closure_15, MultiAccountSwitchLocation: closure_16 } = Constants);
-const ManageAccountsScreens = fn(17818).ManageAccountsScreens;
+const ManageAccountsScreens = fn(17823).ManageAccountsScreens;
 Constants = fn(1087);
 ({ AnalyticEvents: closure_18, AuthStates: closure_19 } = Constants);
 const jsxProd = fn(21);
@@ -111,7 +111,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { color: username(587).colors.ICON_FEEDBACK_CRITICAL };
-            const tmp24 = closure_20(tmp(16666).CircleMinusIcon, obj2);
+            const tmp24 = closure_20(tmp(16671).CircleMinusIcon, obj2);
             cResult[13] = tmp24;
             let tmp21 = tmp24;
           } else {
@@ -276,8 +276,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           return obj8;
         } else {
           if (value) {
-            v3(13313).removeAccount(closure_128_0.id);
-            const obj = v3(13313);
+            v3(13318).removeAccount(closure_128_0.id);
+            const obj = v3(13318);
           }
           v3 = 3;
           return { value: "IconComponent", done: null };
@@ -323,7 +323,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_20(tmp(16666).CircleMinusIcon, obj4);
+    obj3.children = closure_20(tmp(16671).CircleMinusIcon, obj4);
     return closure_20(tmp(6908).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -728,7 +728,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return obj;
             },
         children() {
-              return closure_1_20(first(17388), {
+              return closure_1_20(first(17393), {
                 handleLogin(login, password, undelete) {
                   isEditing(6668).login({ login, password, undelete });
                 },
@@ -769,7 +769,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return { headerShown: false };
             },
         children() {
-              return closure_1_20(first(17387), { isMultiAccount: true });
+              return closure_1_20(first(17392), { isMultiAccount: true });
             }
       };
       const tmp29 = closure_20(closure_22.Screen, obj5);
@@ -885,7 +885,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj;
       },
       children() {
-        return closure_1_20(isEditing(17388), {
+        return closure_1_20(isEditing(17393), {
           handleLogin(login, password, undelete) {
             isEditing(6668).login({ login, password, undelete });
           },
@@ -910,7 +910,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { headerShown: false };
       },
       children() {
-        return closure_1_20(isEditing(17387), { isMultiAccount: true });
+        return closure_1_20(isEditing(17392), { isMultiAccount: true });
       }
     })
   ];

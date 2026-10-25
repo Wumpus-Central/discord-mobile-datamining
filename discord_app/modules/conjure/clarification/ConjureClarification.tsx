@@ -1,10 +1,12 @@
-// === Module 12471: ConjureClarification ===
+// === Module 12475: ConjureClarification ===
 
-// Module 12471 (ConjureClarification)
+// Module 12475 (ConjureClarification)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ChannelTypes = fn(1087).ChannelTypes;
@@ -68,11 +70,11 @@ export const nextClarificationStep = function nextClarificationStep(questions, a
   }
   return null;
 };
-export const followingClarificationStep = function followingClarificationStep(result1, arg1, bound) {
-  if (bound < result1.questions.length - 1) {
+export const followingClarificationStep = function followingClarificationStep(clarification, arg1, bound) {
+  if (bound < clarification.questions.length - 1) {
     let sum = bound + 1;
   } else {
-    const questions = result1.questions;
+    const questions = clarification.questions;
     let num = 1;
     sum = null;
     if (1 <= questions.length) {
@@ -96,10 +98,10 @@ export const followingClarificationStep = function followingClarificationStep(re
   }
   return sum;
 };
-export const formatClarificationAnswers = function formatClarificationAnswers(result1, arg1) {
+export const formatClarificationAnswers = function formatClarificationAnswers(questions, arg1) {
   closure_0 = arg1;
-  const questions = result1.questions;
-  const mapped = questions.map((question, index) => ({ question, index, answer: closure_0[question.id] }));
+  questions = questions.questions;
+  const mapped = questions.map((question, index) => ({ question, index, answer: questions[question.id] }));
   const found = mapped.filter((answer) => {
     let tmp = null != answer.answer;
     if (tmp) {
@@ -273,11 +275,11 @@ export const clarificationPickerPlaceholder = function clarificationPickerPlaceh
   }
   return intl.string(obj[input][num]);
 };
-export const clarificationAnswerAttachments = function clarificationAnswerAttachments(clarification, arg1) {
+export const clarificationAnswerAttachments = function clarificationAnswerAttachments(questions, arg1) {
   closure_0 = arg1;
-  const questions = clarification.questions;
+  questions = questions.questions;
   return questions.flatMap((item) => {
-    if (null != closure_0[item.id]) {
+    if (null != dependencyMap[item.id]) {
       if ("" !== str.trim()) {
         if ("image" === tmp.kind) {
           const items = [tmp.attachment];
@@ -290,11 +292,11 @@ export const clarificationAnswerAttachments = function clarificationAnswerAttach
     }
   });
 };
-export const clarificationAnswersPayload = function clarificationAnswersPayload(clarification, arg1) {
+export const clarificationAnswersPayload = function clarificationAnswersPayload(questions, arg1) {
   closure_0 = arg1;
-  const questions = clarification.questions;
+  questions = questions.questions;
   const flatMapResult = questions.flatMap((id) => {
-    if (null != closure_0[id.id]) {
+    if (null != dependencyMap[id.id]) {
       if ("" !== str9.trim()) {
         if ("option" === tmp.kind) {
           const items = [tmp.optionId];
@@ -355,8 +357,137 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
   });
   let tmp = null;
   if (flatMapResult.length > 0) {
-    obj = { clarification_id: clarification.id, answers: flatMapResult };
+    obj = { clarification_id: questions.id, answers: flatMapResult };
     tmp = obj;
   }
   return tmp;
+};
+export const submitClarificationAnswers = function submitClarificationAnswers(projectId, clarification, arg2, first1, onSubmit) {
+  closure_1 = arg2;
+  dependencyMap = onSubmit;
+  _require = arg2;
+  let questions = clarification.questions;
+  const mapped = questions.map((question, index) => ({ question, index, answer: questions[question.id] }));
+  const found = mapped.filter((answer) => {
+    let tmp = null != answer.answer;
+    if (tmp) {
+      tmp = "" !== answer.answer.text.trim();
+    }
+    return tmp;
+  });
+  const mapped1 = found.map((answer) => {
+    const sum = answer.index + 1;
+    return "" + sum + ". " + answer.question.question + " \u2192 " + answer.answer.text.trim();
+  });
+  const joined = mapped1.join("\n");
+  if ("" !== joined) {
+    let obj2 = require("conjureClarificationLinks");
+    obj2.sendAfterLinkingApps(projectId, clarification, arg2, first1, () => {
+      questions = closure_1;
+      questions = questions.questions;
+      const flatMapResult = questions.flatMap((id) => {
+        if (null != dependencyMap[id.id]) {
+          if ("" !== str9.trim()) {
+            if ("option" === tmp.kind) {
+              const items = [tmp.optionId];
+              let tmp2 = items;
+            } else {
+              tmp2 = "multi" === tmp.kind ? tmp.optionIds : [];
+            }
+            if ("custom" === tmp.kind) {
+              let custom = tmp.text.trim();
+            } else if ("multi" === tmp.kind) {
+              custom = tmp.custom;
+            }
+            const arr2 = "entities" === tmp.kind ? tmp.entities : [];
+            if ("entities" === tmp.kind) {
+              if (arr2.length > 0) {
+                const guildId = tmp.guildId;
+              }
+            }
+            if ("image" === tmp.kind) {
+              const attachment = tmp.attachment;
+            }
+            obj = { question_id: id.id, option_ids: tmp2 };
+            if (null != custom) {
+              if ("" !== custom) {
+                const obj2 = { custom };
+                let obj9 = obj2;
+              }
+              const merged = Object.assign(obj9);
+              if (null != attachment) {
+                const obj3 = { attachment_id: attachment.id };
+                let obj4 = obj3;
+              } else {
+                obj4 = {};
+              }
+              const merged1 = Object.assign(obj4);
+              if (arr2.length > 0) {
+                const obj5 = { entities: arr2 };
+                let obj6 = obj5;
+              } else {
+                obj6 = {};
+              }
+              const merged2 = Object.assign(obj6);
+              if (null != guildId) {
+                const obj7 = { guild_id: guildId };
+                let obj8 = obj7;
+              } else {
+                obj8 = {};
+              }
+              const merged3 = Object.assign(obj8);
+              const items1 = [obj];
+              return items1;
+            }
+            obj9 = {};
+          }
+          str9 = tmp.text;
+        }
+        return [];
+      });
+      let tmp5 = null;
+      if (flatMapResult.length > 0) {
+        obj = { clarification_id: tmp3.id, answers: flatMapResult };
+        tmp5 = obj;
+      }
+      questions = closure_1;
+      const questions2 = tmp3.questions;
+      return onSubmit(joined, tmp5, questions2.flatMap((item) => {
+        if (null != dependencyMap[item.id]) {
+          if ("" !== str.trim()) {
+            if ("image" === tmp.kind) {
+              const items = [tmp.attachment];
+              let items1 = items;
+            } else {
+              items1 = [];
+            }
+          }
+          return [];
+        }
+      }));
+    });
+  }
+};
+export const clarificationDraftAnswer = function clarificationDraftAnswer(entityAnswerResult, multiSelectAnswerResult, str) {
+  if (null != entityAnswerResult) {
+    let tmp6 = null;
+    if ("" !== entityAnswerResult.text) {
+      tmp6 = entityAnswerResult;
+    }
+    return tmp6;
+  } else if (null != multiSelectAnswerResult) {
+    let tmp5 = null;
+    if ("" !== multiSelectAnswerResult.text) {
+      tmp5 = multiSelectAnswerResult;
+    }
+    return tmp5;
+  } else {
+    const trimmed = str.trim();
+    let tmp4 = null;
+    if ("" !== trimmed) {
+      obj = { kind: "custom", text: trimmed };
+      tmp4 = obj;
+    }
+    return tmp4;
+  }
 };

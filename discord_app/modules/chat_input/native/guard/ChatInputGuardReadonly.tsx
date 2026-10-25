@@ -1,13 +1,13 @@
-// === Module 13383: ChatInputGuardReadonly ===
+// === Module 13388: ChatInputGuardReadonly ===
 
-// Module 13383 (ChatInputGuardReadonly)
+// Module 13388 (ChatInputGuardReadonly)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13351 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13356 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
@@ -23,7 +23,7 @@ function sortChannelsByLastMessageId(id, id2) {
 }
 const isTextChannel = fn(4827).isTextChannel;
 let closure_6 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(12525).TextAreaCta;
+const TextAreaCta = fn(12529).TextAreaCta;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;

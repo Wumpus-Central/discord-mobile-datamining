@@ -1,6 +1,6 @@
-// === Module 12966: TextWritingAnimation ===
+// === Module 12971: TextWritingAnimation ===
 
-// Module 12966 (TextWritingAnimation)
+// Module 12971 (TextWritingAnimation)
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 

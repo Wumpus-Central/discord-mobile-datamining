@@ -1,6 +1,6 @@
-// === Module 11564: useIsInvitedToSpeak ===
+// === Module 11565: useIsInvitedToSpeak ===
 
-// Module 11564 (useIsInvitedToSpeak)
+// Module 11565 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5996 */;

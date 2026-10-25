@@ -1,6 +1,6 @@
-// === Module 13486: GuildPowerupsCard ===
+// === Module 13491: GuildPowerupsCard ===
 
-// Module 13486 (GuildPowerupsCard)
+// Module 13491 (GuildPowerupsCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Card from "Card" /* 6905 */;

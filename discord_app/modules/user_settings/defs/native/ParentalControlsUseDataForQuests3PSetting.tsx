@@ -1,9 +1,9 @@
-// === Module 17304: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 17309: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 17304 (ParentalControlsUseDataForQuests3PSetting)
+// Module 17309 (ParentalControlsUseDataForQuests3PSetting)
 import util from "util" /* 1128 */;
 import useSelectedTeen from "useSelectedTeen" /* 8127 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16105 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16110 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToS
   const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
   return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
 });
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToSupportQuests3PSettingIsDisabled() {
   const selectedTeenId = useSelectedTeen.useSelectedTeenId();
   const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;

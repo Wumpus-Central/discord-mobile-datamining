@@ -27,16 +27,16 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10025 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10093 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10696 */;
-import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 10840 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10860 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10861 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10864 */;
-import markChannelUnreadDefault from "markChannelUnread" /* 10869 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10875 */;
-import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10876 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 13840 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 13841 */;
-import closeFrameDefault from "closeFrame" /* 13842 */;
+import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 10841 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10861 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10862 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10865 */;
+import markChannelUnreadDefault from "markChannelUnread" /* 10870 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10876 */;
+import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10877 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13845 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 13846 */;
+import closeFrameDefault from "closeFrame" /* 13847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6683 */;
@@ -255,7 +255,7 @@ function getActionSheetButtons(channel) {
       obj10.label = intl6.string(tmp14(isOptedIn[24]).t.OQ9MKu);
       obj10.IconComponent = tmp14(isOptedIn[38]).LinkIcon;
       obj10.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10817, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10818, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj10);
     }
@@ -602,7 +602,7 @@ function getActionSheetButtons(channel) {
             obj38.IconComponent = tmp97(isOptedIn[73]).ChatIcon;
             obj38.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10877, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10878, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj38);
@@ -960,7 +960,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   }
   dependencyMap = tmp5;
   const tmp4 = onClose(7253);
-  const isFavoritesGuildSelected = channel(10842).useIsFavoritesGuildSelected();
+  const isFavoritesGuildSelected = channel(10843).useIsFavoritesGuildSelected();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[2] = items;
@@ -978,7 +978,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     tmp10 = cResult[4];
   }
-  const tmpResult = channel(10842);
+  const tmpResult = channel(10843);
   const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PermissionStore];

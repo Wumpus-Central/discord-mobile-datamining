@@ -1,16 +1,17 @@
-// === Module 19357: NativeNotificationsManager ===
+// === Module 19362: NativeNotificationsManager ===
 
-// Module 19357 (NativeNotificationsManager)
+// Module 19362 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
-let require = fn;
-const NativeModules = fn(17).NativeModules;
+require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_7 = new LoggerDefault("NativeNotificationsManager");
+let closure_6 = new LoggerDefault("NativeNotificationsManager");
 const prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.handleAck = function handleAck(channelId) {
@@ -19,14 +20,10 @@ const prototype = function NativeNotificationsManager() {
       const result = PushNotificationDefault.setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
     }
     if (null != channelId) {
-      const DCDNotificationManager = NativeModules.DCDNotificationManager;
-      if (DCDNotificationManager != null) {
-        const result1 = DCDNotificationManager.clearNotificationsForChannel(channelId);
-      }
+      const result1 = NativeNotificationManagerModuleDefault.clearNotificationsForChannel(channelId);
     }
-    obj = applyArgumentsResult(1384);
+    obj = PlatformUtils;
   };
-  require = applyArgumentsResult;
   applyArgumentsResult.handlePostConnectionOpen = asyncGeneratorStep(async () => {
     if (c8 === 2) {
       c8 = 3;
@@ -35,22 +32,22 @@ const prototype = function NativeNotificationsManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
         c8 = 2;
-        if (0 === logger) {
+        if (0 === c7) {
           if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp6;
@@ -63,15 +60,12 @@ const prototype = function NativeNotificationsManager() {
             closure_131_6 = undefined;
             closure_131_7 = undefined;
             closure_131_8 = undefined;
-            if (!obj14.isIOS()) {
-              let result = applyArgumentsResult.handleSetCallNotificationExperiment();
-            }
             c6 = 1;
             function moveAndReadData() {
               const self = this;
               const apply = closure_10.apply;
               if (typeof apply === "unknown") {
-                applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
                 applyArgumentsResult = apply(self, arguments);
               }
@@ -115,7 +109,7 @@ const prototype = function NativeNotificationsManager() {
               closure_10 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
-                applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
                 applyArgumentsResult = apply(self, arguments);
               }
@@ -133,24 +127,23 @@ const prototype = function NativeNotificationsManager() {
                 return rounded;
               }
             };
-            obj14 = applyArgumentsResult(1384);
             let str2 = "cache";
-            if (obj8.isIOS()) {
+            if (obj13.isIOS()) {
               str2 = "shared";
             }
             closure_131_0 = str2;
             closure_131_1 = "processing_notifications";
             closure_131_2 = "processing_notification_states";
-            logger = 2;
+            c7 = 2;
             c8 = 1;
-            const obj5 = { value: moveAndReadData("notifications_to_track", "processing_notifications"), done: false };
-            return obj5;
+            const obj6 = { value: moveAndReadData("notifications_to_track", "processing_notifications"), done: false };
+            return obj6;
           }
         } else {
           if (1 === tmp9) {
             c6 = 0;
             closure_131_12 = closure_5;
-            logger.error("Error tracking push notifications", closure_131_12);
+            closure_132_6.error("Error tracking push notifications", closure_131_12);
             c8 = 3;
           } else {
             if (2 === tmp9) {
@@ -160,8 +153,8 @@ const prototype = function NativeNotificationsManager() {
               } else if (arg0 === 2) {
                 c6 = 0;
                 c8 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj7 = { value, done: true };
+                return obj7;
               } else {
                 closure_131_3 = value;
                 if (null == closure_131_3) {
@@ -172,19 +165,19 @@ const prototype = function NativeNotificationsManager() {
                   const _Map = Map;
                   const map = new Map();
                   closure_131_4 = map;
-                  if (obj13.isIOS()) {
-                    logger = 3;
+                  if (obj12.isIOS()) {
+                    c7 = 3;
                     c8 = 1;
-                    const obj7 = { value: closure_131_9("notification_states_to_track", closure_131_2), done: false };
-                    return obj7;
+                    const obj8 = { value: closure_131_9("notification_states_to_track", closure_131_2), done: false };
+                    return obj8;
                   } else {
                     closure_131_6 = closure_131_3.trim().split("\n");
                     closure_1 = closure_131_6;
                     closure_1 = closure_131_6;
-                    applyArgumentsResult = closure_131_6[Symbol.iterator]();
+                    closure_0 = closure_131_6[Symbol.iterator]();
                     const str = closure_131_3.trim();
                   }
-                  obj13 = applyArgumentsResult(1384);
+                  obj12 = closure_132_0(closure_132_2[5]);
                 }
               }
             } else if (3 === tmp9) {
@@ -204,7 +197,7 @@ const prototype = function NativeNotificationsManager() {
               }
             } else if (4 === tmp9) {
               c6 = 1;
-              applyArgumentsResult.return();
+              closure_0.return();
               throw closure_5;
             } else {
               if (5 === tmp9) {
@@ -217,7 +210,7 @@ const prototype = function NativeNotificationsManager() {
                   const obj9 = { value, done: true };
                   return obj9;
                 } else {
-                  applyArgumentsResult(1384);
+                  closure_132_0(closure_132_2[5]);
                 }
               } else if (arg0 === 1) {
                 c8 = 3;
@@ -235,40 +228,25 @@ const prototype = function NativeNotificationsManager() {
             const obj10 = { value, done: true };
             return obj10;
           }
-          logger = 6;
+          c7 = 6;
           c8 = 1;
-          const obj11 = { value: applyArgumentsResult(8696).removeFile(closure_131_0, closure_131_2), done: false };
+          const obj11 = { value: closure_132_0(closure_132_2[8]).removeFile(closure_131_0, closure_131_2), done: false };
           return obj11;
         }
-      } catch (tmp39) {
-        closure_5 = tmp39;
+      } catch (tmp38) {
+        closure_5 = tmp38;
         if (tmp4 === c6) {
           c8 = tmp2;
-          throw tmp39;
-        } else if (tmp === tmp41) {
-          logger = tmp;
+          throw tmp38;
+        } else if (tmp === tmp40) {
+          c7 = tmp;
         } else {
-          logger = tmp5;
+          c7 = tmp5;
         }
       }
     }
   });
-  applyArgumentsResult.handleSetCallNotificationExperiment = function handleSetCallNotificationExperiment() {
-    if (!obj.isIOS()) {
-      const DCDNotificationManager = NativeModules.DCDNotificationManager;
-      const setShowMissedCallNotifications = DCDNotificationManager.setShowMissedCallNotifications;
-      if (setShowMissedCallNotifications != null) {
-        const result = setShowMissedCallNotifications(true);
-      }
-      const DCDNotificationManager2 = NativeModules.DCDNotificationManager;
-      const setShowFullscreenCallUI = DCDNotificationManager2.setShowFullscreenCallUI;
-      if (setShowFullscreenCallUI != null) {
-        const result1 = setShowFullscreenCallUI(true);
-      }
-    }
-    obj = applyArgumentsResult(1384);
-  };
-  applyArgumentsResult.actions = { MESSAGE_ACK: applyArgumentsResult.handleAck, CHANNEL_SELECT: applyArgumentsResult.handleAck, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, EXPERIMENT_OVERRIDE_BUCKET: applyArgumentsResult.handleSetCallNotificationExperiment, EXPERIMENTS_FETCH_SUCCESS: applyArgumentsResult.handleSetCallNotificationExperiment };
+  applyArgumentsResult.actions = { MESSAGE_ACK: applyArgumentsResult.handleAck, CHANNEL_SELECT: applyArgumentsResult.handleAck, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {

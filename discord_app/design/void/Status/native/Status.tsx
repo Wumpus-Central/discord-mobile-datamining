@@ -1,19 +1,19 @@
-// === Module 15401: Status ===
+// === Module 15406: Status ===
 
-// Module 15401 (Status)
+// Module 15406 (Status)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5247 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15399 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15400 */;
-import _modDef15402 from "module_15402" /* 15402 */;
-import _modDef15403 from "module_15403" /* 15403 */;
-import _modDef15404 from "module_15404" /* 15404 */;
-import _modDef15405 from "module_15405" /* 15405 */;
-import _modDef15406 from "module_15406" /* 15406 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15404 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15405 */;
 import _modDef15407 from "module_15407" /* 15407 */;
 import _modDef15408 from "module_15408" /* 15408 */;
+import _modDef15409 from "module_15409" /* 15409 */;
+import _modDef15410 from "module_15410" /* 15410 */;
+import _modDef15411 from "module_15411" /* 15411 */;
+import _modDef15412 from "module_15412" /* 15412 */;
+import _modDef15413 from "module_15413" /* 15413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1203).STATUS_PADDING;
 const StatusTypes = fn(1087).StatusTypes;
-const ChannelAnimationConstants = fn(14310);
+const ChannelAnimationConstants = fn(14315);
 ({ TYPING_ENTERING: closure_7, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -110,23 +110,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
           }
         }
         if (tmp5) {
-          let tmp14 = _modDef15402;
+          let tmp14 = _modDef15407;
         } else if (tmp4) {
-          tmp14 = _modDef15403;
+          tmp14 = _modDef15408;
         } else if (tmp3) {
-          tmp14 = _modDef15404;
+          tmp14 = _modDef15409;
         } else if (StatusTypes.IDLE === status) {
-          tmp14 = _modDef15405;
+          tmp14 = _modDef15410;
         } else {
           if (StatusTypes.DND === status) {
-            tmp14 = _modDef15406;
+            tmp14 = _modDef15411;
           } else if (StatusTypes.OFFLINE !== status) {
             if (StatusTypes.INVISIBLE !== status) {
               const ONLINE = StatusTypes.ONLINE;
-              tmp14 = _modDef15408;
+              tmp14 = _modDef15413;
             }
           }
-          tmp14 = _modDef15407;
+          tmp14 = _modDef15412;
         }
         cResult[7] = tmp3;
         cResult[8] = tmp4;
@@ -166,23 +166,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15402;
+    let tmp4Result = _modDef15407;
   } else if (flag2) {
-    tmp4Result = _modDef15403;
+    tmp4Result = _modDef15408;
   } else if (flag) {
-    tmp4Result = _modDef15404;
+    tmp4Result = _modDef15409;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15405;
+    tmp4Result = _modDef15410;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15406;
+    tmp4Result = _modDef15411;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15408;
+        tmp4Result = _modDef15413;
       }
     }
-    tmp4Result = _modDef15407;
+    tmp4Result = _modDef15412;
   }
   obj2.source = tmp4Result;
   obj.children = v65535(FastImageDefault, obj2);

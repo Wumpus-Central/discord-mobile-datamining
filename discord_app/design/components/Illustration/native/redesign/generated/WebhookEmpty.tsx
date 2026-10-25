@@ -1,6 +1,6 @@
-// === Module 18296: WebhookEmpty ===
+// === Module 18301: WebhookEmpty ===
 
-// Module 18296 (WebhookEmpty)
+// Module 18301 (WebhookEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWebhookEm
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18297");
+          return require("module_18302");
         },
       darker() {
-          return require("module_18298");
+          return require("module_18303");
         },
       light() {
-          return require("module_18299");
+          return require("module_18304");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWebhookEm
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18297");
+      return require("module_18302");
     },
     darker() {
-      return require("module_18298");
+      return require("module_18303");
     },
     light() {
-      return require("module_18299");
+      return require("module_18304");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getWebhookEmptySource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_18297");
+      return require("module_18302");
     },
     darker() {
-      return require("module_18298");
+      return require("module_18303");
     },
     light() {
-      return require("module_18299");
+      return require("module_18304");
     }
   });
 }

@@ -1,6 +1,6 @@
-// === Module 14064: XboxLinkSuccess ===
+// === Module 14069: XboxLinkSuccess ===
 
-// Module 14064 (XboxLinkSuccess)
+// Module 14069 (XboxLinkSuccess)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         return;
       }
     }
-    const obj4 = { source: require("module_14065"), style: tmp4.image };
+    const obj4 = { source: require("module_14070"), style: tmp4.image };
     const tmp16 = closure_12(require("FastImage"), obj4);
     cResult[6] = tmp4.image;
     cResult[7] = tmp16;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         return;
       }
     }
-    const obj9 = { source: require("module_11715"), style: tmp4.appLogo };
+    const obj9 = { source: require("module_11716"), style: tmp4.appLogo };
     const tmp28 = closure_12(require("FastImage"), obj9);
     cResult[14] = tmp4.appLogo;
     cResult[15] = tmp28;
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
               return;
             }
           }
-          const obj10 = { source: require("module_14066"), style: tmp4.icon };
+          const obj10 = { source: require("module_14071"), style: tmp4.icon };
           let tmp36Result = closure_12(require("FastImage"), obj10);
           const tmp40 = require("FastImage");
         } else {
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
               return;
             }
           }
-          tmp37[0] = require("module_11664");
+          tmp37[0] = require("module_11665");
           tmp37[1] = tmp(tmp2[19]).Icon.Sizes.SMALL;
           tmp37[2] = tmp4.externalLinkIcon.color;
           tmp37[3] = tmp4.icon;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[12]);
-  obj5.source = require("module_14065");
+  obj5.source = require("module_14070");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj10 = { source: null, style: null };
   const tmp15 = require("FastImage");
-  obj10.source = require("module_11715");
+  obj10.source = require("module_11716");
   obj10.style = tmp.appLogo;
   obj9.children = closure_12(require("FastImage"), obj10);
   const items3 = [closure_12(closure_5, obj9), , ];

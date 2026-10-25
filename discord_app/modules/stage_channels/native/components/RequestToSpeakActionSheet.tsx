@@ -1,6 +1,6 @@
-// === Module 11536: RequestToSpeakActionSheet ===
+// === Module 11537: RequestToSpeakActionSheet ===
 
-// Module 11536 (RequestToSpeakActionSheet)
+// Module 11537 (RequestToSpeakActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,13 +11,13 @@ import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6
 import TableSwitchRow from "TableSwitchRow" /* 7295 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7873 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7883 */;
-import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 11537 */;
+import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 11538 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
-const _modDef11542 = tmp8(11542);
+const _modDef11543 = tmp8(11543);
 require = fn;
 const View = fn(17).View;
 let closure_8 = fn(6637).REQUEST_TO_SPEAK_SHEET_KEY;
@@ -143,9 +143,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
       cResult[6] = stringResult;
     } else {
       if (tmp12) {
-        let MicrophoneArrowRightIcon = tmp(11538).GroupArrowDownIcon;
+        let MicrophoneArrowRightIcon = tmp(11539).GroupArrowDownIcon;
       } else {
-        MicrophoneArrowRightIcon = tmp(11540).MicrophoneArrowRightIcon;
+        MicrophoneArrowRightIcon = tmp(11541).MicrophoneArrowRightIcon;
       }
       if (cResult[7] !== MicrophoneArrowRightIcon) {
         const tmp19 = closure_9(MicrophoneArrowRightIcon, {});
@@ -157,7 +157,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
       }
       const _Symbol = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: _modDef11542 };
+        let obj2 = { source: _modDef11543 };
         const tmp22 = closure_9(tmp(1202).Icon, obj2);
         cResult[9] = tmp22;
         let tmp20 = tmp22;
@@ -219,9 +219,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(11538).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(11539).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(11540).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(11541).MicrophoneArrowRightIcon;
   }
   let obj2 = {
     onPress: function handleSetSelfSpeaker() {
@@ -241,7 +241,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
     trailing: null
   };
   const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
-  obj2.trailing = closure_9(channel(1202).Icon, { source: _modDef11542 });
+  obj2.trailing = closure_9(channel(1202).Icon, { source: _modDef11543 });
   return closure_9(channel(6903).TableRow, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RequestT
             tmp46 = tmp48;
           }
           const obj13 = { channel: stateFromStores, height: bound };
-          const tmp45 = closure_9(tmp4(11543), obj13);
+          const tmp45 = closure_9(tmp4(11544), obj13);
           cResult[24] = stateFromStores;
           cResult[25] = bound;
           cResult[26] = tmp45;
@@ -545,13 +545,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RequestT
     const obj16 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj16.height = Math.max(first1 - first - 8, 0);
-    items4[1] = closure_9(tmp3(11543), obj16);
+    items4[1] = closure_9(tmp3(11544), obj16);
     obj7.children = items4;
     obj6.children = closure_10(tmp(5977).Stack, obj7);
     obj5.children = closure_9(tmp(5269).BottomSheetScrollView, obj6);
     obj4.children = closure_9(tmp(5265).BottomSheet, obj5);
     tmp14 = closure_9(tmp(7253).AnalyticsLocationProvider, obj4);
-    const tmp3Result = tmp3(11543);
+    const tmp3Result = tmp3(11544);
   }
   return tmp14;
 });

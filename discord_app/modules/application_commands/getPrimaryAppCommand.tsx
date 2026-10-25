@@ -1,6 +1,6 @@
-// === Module 11400: getPrimaryAppCommand ===
+// === Module 11401: getPrimaryAppCommand ===
 
-// Module 11400 (getPrimaryAppCommand)
+// Module 11401 (getPrimaryAppCommand)
 import c from "c" /* 576 */;
 import Server from "Server" /* 2000 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;

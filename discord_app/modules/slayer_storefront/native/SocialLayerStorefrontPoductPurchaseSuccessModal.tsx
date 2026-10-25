@@ -1,6 +1,6 @@
-// === Module 13869: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 13874: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 13869 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 13874 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;

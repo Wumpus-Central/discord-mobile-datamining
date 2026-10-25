@@ -1,12 +1,12 @@
-// === Module 14088: CrunchyrollLinkLanding ===
+// === Module 14093: CrunchyrollLinkLanding ===
 
-// Module 14088 (CrunchyrollLinkLanding)
+// Module 14093 (CrunchyrollLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import _modDef14089 from "module_14089" /* 14089 */;
+import _modDef14094 from "module_14094" /* 14094 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14087).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14092).CrunchyrollLinkModalScenes;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -66,12 +66,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
     return tmp16;
   }
   const obj2 = navigation(1505);
-  const tmp17 = jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14089, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first });
+  const tmp17 = jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14094, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first });
   cResult[6] = tmp7;
   cResult[7] = tmp4.image;
   cResult[8] = tmp17;
   tmp16 = tmp17;
-  const obj5 = { platformType: constants2.CRUNCHYROLL, img: _modDef14089, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first };
+  const obj5 = { platformType: constants2.CRUNCHYROLL, img: _modDef14094, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first };
 }) : (function CrunchyrollLinkLanding() {
   const tmp = closure_8();
   navigation = navigation(1505).useNavigation();
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14089, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14094, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1128).intl;
   obj2.headerConnect = intl.string(navigation(1128).t["Da+3NJ"]);
   const intl2 = navigation(1128).intl;
@@ -96,5 +96,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14089, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14094, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 });

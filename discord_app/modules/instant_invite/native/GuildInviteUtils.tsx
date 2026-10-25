@@ -1,6 +1,6 @@
-// === Module 14247: GuildInviteUtils ===
+// === Module 14252: GuildInviteUtils ===
 
-// Module 14247 (GuildInviteUtils)
+// Module 14252 (GuildInviteUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -60,7 +60,7 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(14248).setSendState;
+const setSendState = fn(14253).setSendState;
 const InviteSendStates = fn(7809).InviteSendStates;
 const Constants = fn(1087);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
@@ -72,7 +72,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(14249, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
+  obj3.openLazy(asyncRequireImpl(14254, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
 };
 export const useServerInviteRows = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerInviteRows(arg0, arg1) {
   _require = arg0;

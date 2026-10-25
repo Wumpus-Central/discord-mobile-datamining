@@ -1,6 +1,6 @@
-// === Module 14202: ShareIcon ===
+// === Module 14207: ShareIcon ===
 
-// Module 14202 (ShareIcon)
+// Module 14207 (ShareIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;

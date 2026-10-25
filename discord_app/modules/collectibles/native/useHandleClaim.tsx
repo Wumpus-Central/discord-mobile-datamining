@@ -1,6 +1,6 @@
-// === Module 14476: useHandleClaim ===
+// === Module 14481: useHandleClaim ===
 
-// Module 14476 (useHandleClaim)
+// Module 14481 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,8 +45,8 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     } else if (arg0 !== 2) {
       stageCollectibleChangeForEditProfile(5210).hideAllActionSheets();
       stageCollectibleChangeForEditProfile(5210);
-      stageCollectibleChangeForEditProfile(13938).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
-      stageCollectibleChangeForEditProfile(13938);
+      stageCollectibleChangeForEditProfile(13943).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
+      stageCollectibleChangeForEditProfile(13943);
       const collectiblesPurchases = product(7649).fetchCollectiblesPurchases();
       c3 = 0;
       product(7649);

@@ -1,6 +1,6 @@
-// === Module 10765: leaveFrame ===
+// === Module 10766: leaveFrame ===
 
-// Module 10765 (leaveFrame)
+// Module 10766 (leaveFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FramesStore from "FramesStore" /* 6775 */;

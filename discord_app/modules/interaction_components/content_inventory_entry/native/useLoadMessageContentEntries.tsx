@@ -1,6 +1,6 @@
-// === Module 11223: useLoadMessageContentEntries ===
+// === Module 11224: useLoadMessageContentEntries ===
 
-// Module 11223 (useLoadMessageContentEntries)
+// Module 11224 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2000 */;
 import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8612 */;
@@ -698,9 +698,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2026).ImageSizes;
-const promiseDeduper = new fn(10788).PromiseDeduper();
-const promiseDeduper3 = new fn(10788).PromiseDeduper();
-const promiseDeduper4 = new fn(10788).PromiseDeduper();
+const promiseDeduper = new fn(10789).PromiseDeduper();
+const promiseDeduper3 = new fn(10789).PromiseDeduper();
+const promiseDeduper4 = new fn(10789).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");

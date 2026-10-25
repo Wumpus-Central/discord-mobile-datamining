@@ -1,6 +1,6 @@
-// === Module 13892: GiftingBadgeConstants ===
+// === Module 13897: GiftingBadgeConstants ===
 
-// Module 13892 (GiftingBadgeConstants)
+// Module 13897 (GiftingBadgeConstants)
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
 import size from "module_2" /* 2 */;
 

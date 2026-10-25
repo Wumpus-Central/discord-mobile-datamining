@@ -1,6 +1,6 @@
-// === Module 16128: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 16133: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 16128 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 16133 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
 import _mod4886 from "module_4886" /* 4886 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -119,7 +119,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
   const cResult = c.c(2);
   const tmp2 = closure_8();
@@ -158,7 +158,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16129).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16134).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
     const cResult = c.c(2);
     const tmp2 = closure_8();

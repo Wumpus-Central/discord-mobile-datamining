@@ -1,6 +1,6 @@
-// === Module 17154: UserSettingsDesignSystemTooltip ===
+// === Module 17159: UserSettingsDesignSystemTooltip ===
 
-// Module 17154 (UserSettingsDesignSystemTooltip)
+// Module 17159 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import LayerScope from "LayerScope" /* 5597 */;

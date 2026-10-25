@@ -1,6 +1,6 @@
-// === Module 16189: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 16194: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 16189 (FamilyCenterActivityPurchaseRowUtils)
+// Module 16194 (FamilyCenterActivityPurchaseRowUtils)
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;

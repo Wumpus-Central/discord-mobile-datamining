@@ -1,13 +1,13 @@
-// === Module 15899: EditNameplateSection ===
+// === Module 15904: EditNameplateSection ===
 
-// Module 15899 (EditNameplateSection)
+// Module 15904 (EditNameplateSection)
 import c from "c" /* 576 */;
 import utils from "utils" /* 1992 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import NameplateDefault from "Nameplate" /* 9411 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 14490 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14491 */;
-import useNameplateSections from "useNameplateSections" /* 15898 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 14495 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14496 */;
+import useNameplateSections from "useNameplateSections" /* 15903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,9 +16,9 @@ const isNameplateRecord = fn(1993).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4971);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14490).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14490).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(14490).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14495).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14495).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14495).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -263,7 +263,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((n
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj2.style = items2;
   obj.children = closure_6(setSelectedNameplate(9411), obj2);
-  return closure_6(nameplate(14491).EditCollectiblesListItemProduct, obj);
+  return closure_6(nameplate(14496).EditCollectiblesListItemProduct, obj);
 }));
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

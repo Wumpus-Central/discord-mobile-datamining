@@ -1,6 +1,6 @@
-// === Module 14445: DynamicBadgeTooltip ===
+// === Module 14450: DynamicBadgeTooltip ===
 
-// Module 14445 (DynamicBadgeTooltip)
+// Module 14450 (DynamicBadgeTooltip)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Pressables from "Pressables" /* 6908 */;

@@ -1,6 +1,6 @@
-// === Module 13086: DraftCommandUtils ===
+// === Module 13091: DraftCommandUtils ===
 
-// Module 13086 (DraftCommandUtils)
+// Module 13091 (DraftCommandUtils)
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5984 */;
 import DraftCommand from "DraftCommand" /* 7632 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10204 */;

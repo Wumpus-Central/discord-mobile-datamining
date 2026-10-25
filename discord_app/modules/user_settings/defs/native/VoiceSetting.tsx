@@ -1,6 +1,6 @@
-// === Module 16598: VoiceSetting ===
+// === Module 16603: VoiceSetting ===
 
-// Module 16598 (VoiceSetting)
+// Module 16603 (VoiceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -10,7 +10,7 @@ require = fn;
 const Constants = fn(1087);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11642).MicrophoneIcon,
+  IconComponent: fn(11643).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);

@@ -1,11 +1,11 @@
-// === Module 16670: DmsMessagePreviewsSetting ===
+// === Module 16675: DmsMessagePreviewsSetting ===
 
-// Module 16670 (DmsMessagePreviewsSetting)
+// Module 16675 (DmsMessagePreviewsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5643 */;
-import useMessagePreviews from "useMessagePreviews" /* 16671 */;
+import useMessagePreviews from "useMessagePreviews" /* 16676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ ReactCompilerGating = fn(558);
 function useDMsMessagePreviewsValue() {
   return useMessagePreviews.useMessagePreviewSetting();
 }
-const SettingBuilders = fn(11205);
+const SettingBuilders = fn(11206);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMsMessagePreviewsOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

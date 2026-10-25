@@ -1,6 +1,6 @@
-// === Module 18734: ExistingUserAgeGate ===
+// === Module 18739: ExistingUserAgeGate ===
 
-// Module 18734 (ExistingUserAgeGate)
+// Module 18739 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,7 +14,7 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1112);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
-let closure_11 = fn(18733).ExistingUserAgeGateScreens;
+let closure_11 = fn(18738).ExistingUserAgeGateScreens;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);

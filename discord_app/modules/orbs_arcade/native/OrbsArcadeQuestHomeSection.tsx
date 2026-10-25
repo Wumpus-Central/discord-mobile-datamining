@@ -1,13 +1,13 @@
-// === Module 16389: OrbsArcadeQuestHomeSection ===
+// === Module 16394: OrbsArcadeQuestHomeSection ===
 
-// Module 16389 (OrbsArcadeQuestHomeSection)
+// Module 16394 (OrbsArcadeQuestHomeSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import SkeletonCardDefault from "SkeletonCard" /* 9474 */;
-import useFetchOrbsArcadeGamesDefault from "useFetchOrbsArcadeGames" /* 16393 */;
-import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile" /* 16397 */;
+import useFetchOrbsArcadeGamesDefault from "useFetchOrbsArcadeGames" /* 16398 */;
+import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile" /* 16402 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16390 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
 
 const initialize = Stack(504);
 const util = Stack(1128);
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = { section: { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: { gap: 2, paddingHorizontal: 4, paddingBottom: 2 }, skeletonTile: null };
-let size = { width: "100%", height: fn(16392).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
+let size = { width: "100%", height: fn(16397).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
 obj2.skeletonTile = size;
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

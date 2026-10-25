@@ -1,6 +1,6 @@
-// === Module 10883: VoiceChatHooks ===
+// === Module 10884: VoiceChatHooks ===
 
-// Module 10883 (VoiceChatHooks)
+// Module 10884 (VoiceChatHooks)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VoiceStateStore from "VoiceStateStore" /* 5630 */;
 

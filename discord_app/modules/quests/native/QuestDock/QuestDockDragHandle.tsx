@@ -1,13 +1,13 @@
-// === Module 16523: QuestDockDragHandle ===
+// === Module 16528: QuestDockDragHandle ===
 
-// Module 16523 (QuestDockDragHandle)
+// Module 16528 (QuestDockDragHandle)
 import spring from "spring" /* 5247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(6710).QuestDockMode;
-const QuestDockConstants = fn(16436);
+const QuestDockConstants = fn(16441);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_COLLAPSED_MAX_WIDTH: metroRequire } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -50,13 +50,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = activeQuestDockMode(576).c(26);
   isExpanded = isExpanded.isExpanded;
   const tmp4 = closure_9();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16437).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16442).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp6;
   const obj = activeQuestDockMode(576);
-  youBarHorizontalMargin = activeQuestDockMode(16438).useYouBarHorizontalMargin();
-  let obj2 = activeQuestDockMode(16438);
+  youBarHorizontalMargin = activeQuestDockMode(16443).useYouBarHorizontalMargin();
+  let obj2 = activeQuestDockMode(16443);
   const fn = function n() {
     return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
   };
@@ -213,7 +213,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tmp39 = tmp42;
               }
             }
-            const obj14 = { style: animatedStyle1, layout: tmp(16435).dimensionsLayoutTransition, children: null };
+            const obj14 = { style: animatedStyle1, layout: tmp(16440).dimensionsLayoutTransition, children: null };
             let items = [tmp21, tmp30];
             obj14.children = items;
             const tmp38 = closure_8(windowDimensions(7168), obj14);
@@ -253,12 +253,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_9();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16437).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16442).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  youBarHorizontalMargin = activeQuestDockMode(16438).useYouBarHorizontalMargin();
-  const obj = activeQuestDockMode(16438);
+  youBarHorizontalMargin = activeQuestDockMode(16443).useYouBarHorizontalMargin();
+  const obj = activeQuestDockMode(16443);
   const tmp2 = activeQuestDockMode;
   const fn = function n() {
     return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
@@ -343,7 +343,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp12 = windowDimensions;
   const obj11 = { style: animatedStyle1, layout: null, children: null };
   const tmp13 = windowDimensions(7168);
-  obj11.layout = activeQuestDockMode(16435).dimensionsLayoutTransition;
+  obj11.layout = activeQuestDockMode(16440).dimensionsLayoutTransition;
   const obj12 = { style: null, children: null };
   const items1 = [tmp.dragHandleOverlay, animatedStyle3];
   obj12.style = items1;

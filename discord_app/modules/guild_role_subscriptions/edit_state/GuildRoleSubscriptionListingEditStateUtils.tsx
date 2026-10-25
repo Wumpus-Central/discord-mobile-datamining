@@ -1,14 +1,14 @@
-// === Module 16579: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 16584: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 16579 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 16584 (GuildRoleSubscriptionListingEditStateUtils)
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1281 */;
 import RolePermissionUtils from "RolePermissionUtils" /* 4894 */;
 import useInitialValueDefault from "useInitialValue" /* 5599 */;
 import StoreUtils from "StoreUtils" /* 6383 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16564 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 16581 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 16584 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16569 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 16586 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 16589 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4896 */
 const require = globalThis.__r;
 
 const utils_ColorUtils = obj(1105);
-const Contants = obj(16582);
+const Contants = obj(16587);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -382,9 +382,9 @@ let closure_23 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(16580);
+const GuildRoleSubscriptionEditStore = fn(16585);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(16557).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(16562).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1087);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
@@ -1495,8 +1495,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(16583).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(16583).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(16588).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(16588).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }

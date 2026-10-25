@@ -1,6 +1,6 @@
-// === Module 17463: MessagesItemSuggestedFriend ===
+// === Module 17468: MessagesItemSuggestedFriend ===
 
-// Module 17463 (MessagesItemSuggestedFriend)
+// Module 17468 (MessagesItemSuggestedFriend)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,10 +8,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;
 import _mod7220 from "module_7220" /* 7220 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11056 */;
-import _mod13868 from "module_13868" /* 13868 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 17464 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17465 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
+import _mod13873 from "module_13873" /* 13873 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 17469 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17470 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
@@ -203,7 +203,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemSuggestedFriendLegend(arg0) {
   const cResult = c.c(4);
-  [tmp3, tmp4] = _mod13868.useRecyclingState(false);
+  [tmp3, tmp4] = _mod13873.useRecyclingState(false);
   if (cResult[0] === tmp3) {
     if (cResult[1] === arg0) {
       if (cResult[2] === tmp4) {
@@ -224,7 +224,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(ReactCompilerGating.i
   tmp5 = tmp7;
 }) : (function MessagesItemSuggestedFriendLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod13868.useRecyclingState(false);
+  [tmp2, tmp3] = _mod13873.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

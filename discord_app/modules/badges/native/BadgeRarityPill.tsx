@@ -1,6 +1,6 @@
-// === Module 11131: BadgeRarityPill ===
+// === Module 11132: BadgeRarityPill ===
 
-// Module 11131 (BadgeRarityPill)
+// Module 11132 (BadgeRarityPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,10 +9,10 @@ import ColorUtils from "ColorUtils" /* 4968 */;
 import shared from "shared" /* 4978 */;
 import useThemeDefault from "useTheme" /* 5205 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11132 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11134 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11136 */;
-import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11138 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11133 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11135 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11137 */;
+import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

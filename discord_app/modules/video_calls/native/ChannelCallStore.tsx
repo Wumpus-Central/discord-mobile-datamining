@@ -1,12 +1,12 @@
-// === Module 10879: ChannelCallStore ===
+// === Module 10880: ChannelCallStore ===
 
-// Module 10879 (ChannelCallStore)
+// Module 10880 (ChannelCallStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
 import DeviceOrientation from "DeviceOrientation" /* 8820 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10881 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 10882 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10884 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10882 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 10883 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10885 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import apply from "module_12" /* 12 */;
@@ -14,7 +14,7 @@ import apply from "module_12" /* 12 */;
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10880);
+const ChannelCallConstants = fn(10881);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2026).OrientationLockState;
 const ParticipantTypes = fn(5632).ParticipantTypes;
@@ -142,7 +142,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
       tmp18 = cResult[5];
       tmp19 = cResult[6];
     }
-    tmpResult = tmp(10883);
+    tmpResult = tmp(10884);
     const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

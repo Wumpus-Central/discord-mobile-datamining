@@ -1,6 +1,6 @@
-// === Module 15850: useUserProfileEditForm ===
+// === Module 15855: useUserProfileEditForm ===
 
-// Module 15850 (useUserProfileEditForm)
+// Module 15855 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -720,7 +720,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             let firstFieldErrorMessage3;
             if (!stateFromStores) {
               if (!first) {
-                const pendingHexagonCampaignEnrollment = pendingChanges(15851).getPendingHexagonCampaignEnrollment();
+                const pendingHexagonCampaignEnrollment = pendingChanges(15856).getPendingHexagonCampaignEnrollment();
                 if (null != pendingHexagonCampaignEnrollment) {
                   closure_3(true);
                   c7 = 1;
@@ -728,7 +728,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   const obj6 = { value: pendingHexagonCampaignEnrollment, done: false };
                   return obj6;
                 }
-                const obj29 = pendingChanges(15851);
+                const obj29 = pendingChanges(15856);
               }
             }
             c8 = 3;
@@ -783,9 +783,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   const items = [constants.DISPLAY_NAME_STYLE];
                   obj13.perks = items;
                   obj13.content = pendingChanges(6713).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj13.contentSurface = pendingChanges(15852).HexagonCampaignContentSurface.USER_PROFILE;
-                  const result1 = pendingChanges(15852).trackHexagonCampaignPerkAction(obj13);
-                  const obj24 = pendingChanges(15852);
+                  obj13.contentSurface = pendingChanges(15857).HexagonCampaignContentSurface.USER_PROFILE;
+                  const result1 = pendingChanges(15857).trackHexagonCampaignPerkAction(obj13);
+                  const obj24 = pendingChanges(15857);
                 }
                 const result2 = pendingChanges(7078).resetPendingAccountChanges();
                 const obj26 = pendingChanges(7078);
@@ -817,9 +817,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                       const intl = pendingChanges(1128).intl;
                       pendingChanges = intl.string(pendingChanges(1128).t["84MExs"]);
                     }
-                    const result4 = pendingChanges(15853).showGenericProfileUpdateFailureToast(pendingChanges);
+                    const result4 = pendingChanges(15858).showGenericProfileUpdateFailureToast(pendingChanges);
                     closure_132_7 = true;
-                    const obj51 = pendingChanges(15853);
+                    const obj51 = pendingChanges(15858);
                   }
                 }
               }
@@ -878,7 +878,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 const obj17 = { displayOrder: pendingChanges2.pendingBadgeDisplayOrder, hiddenBadges: pendingChanges2.pendingBadgeHiddenBadges };
                 c7 = 4;
                 c8 = 1;
-                const obj20 = { value: pendingChanges(15854).updateBadgeSettings(obj17), done: false };
+                const obj20 = { value: pendingChanges(15859).updateBadgeSettings(obj17), done: false };
                 return obj20;
               }
             }
@@ -903,9 +903,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 const aPIError1 = new pendingChanges(6374).APIError(closure_132_12);
                 firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
-                  const result6 = pendingChanges(15853).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                  const result6 = pendingChanges(15858).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_132_7 = true;
-                  const obj18 = pendingChanges(15853);
+                  const obj18 = pendingChanges(15858);
                 }
               }
               let tmp85 = closure_132_6;
@@ -986,8 +986,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 const obj38 = { value, done: true };
                 return obj38;
               } else {
-                const result7 = pendingChanges(14403).resetPendingBadgeSettings();
-                const obj7 = pendingChanges(14403);
+                const result7 = pendingChanges(14408).resetPendingBadgeSettings();
+                const obj7 = pendingChanges(14408);
               }
             } else if (7 === tmp7) {
               c6 = 0;
@@ -1027,9 +1027,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   const aPIError2 = new pendingChanges(6374).APIError(closure_132_18);
                   firstFieldErrorMessage3 = aPIError2.getFirstFieldErrorMessage("banner");
                   if (null != firstFieldErrorMessage3) {
-                    const result10 = pendingChanges(15853).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
+                    const result10 = pendingChanges(15858).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
                     closure_132_7 = true;
-                    const obj2 = pendingChanges(15853);
+                    const obj2 = pendingChanges(15858);
                   }
                 }
                 let tmp29 = closure_132_6;
@@ -1052,8 +1052,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
               }
               if (!tmp180) {
                 const intl2 = pendingChanges(1128).intl;
-                const result11 = pendingChanges(15853).showGenericProfileUpdateFailureToast(intl2.string(pendingChanges(1128).t["84MExs"]));
-                const obj35 = pendingChanges(15853);
+                const result11 = pendingChanges(15858).showGenericProfileUpdateFailureToast(intl2.string(pendingChanges(1128).t["84MExs"]));
+                const obj35 = pendingChanges(15858);
               }
               c8 = 3;
               const obj43 = { value: closure_132_6, done: true };
@@ -1070,18 +1070,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             if (undefined !== primaryGuildId) {
               c7 = 9;
               c8 = 1;
-              const obj47 = { value: pendingChanges(15157).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
+              const obj47 = { value: pendingChanges(15162).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
               return obj47;
             }
           }
         }
         pendingChanges2 = pendingChanges.getPendingChanges();
-        accountUpdateForUpdateRequest = pendingChanges(11182).getAccountUpdateForUpdateRequest(pendingChanges2);
-        const obj30 = pendingChanges(11182);
-        profileChangesForUpdateRequest = pendingChanges(11182).getProfileChangesForUpdateRequest(pendingChanges2);
-        const obj31 = pendingChanges(11182);
-        primaryGuildChangesForUpdateRequest = pendingChanges(11182).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
-        const obj32 = pendingChanges(11182);
+        accountUpdateForUpdateRequest = pendingChanges(11183).getAccountUpdateForUpdateRequest(pendingChanges2);
+        const obj30 = pendingChanges(11183);
+        profileChangesForUpdateRequest = pendingChanges(11183).getProfileChangesForUpdateRequest(pendingChanges2);
+        const obj31 = pendingChanges(11183);
+        primaryGuildChangesForUpdateRequest = pendingChanges(11183).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
+        const obj32 = pendingChanges(11183);
         let result12 = pendingChanges(4998).hasHexagonCampaignDisplayNameFont(accountUpdateForUpdateRequest.displayNameStyles);
         if (result12) {
           const currentUser1 = authStore.getCurrentUser();

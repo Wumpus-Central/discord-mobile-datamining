@@ -1,11 +1,11 @@
-// === Module 17693: useChannelNoticeRows ===
+// === Module 17698: useChannelNoticeRows ===
 
-// Module 17693 (useChannelNoticeRows)
+// Module 17698 (useChannelNoticeRows)
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildProgressStore from "GuildProgressStore" /* 13391 */;
+import GuildProgressStore from "GuildProgressStore" /* 13396 */;
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -52,7 +52,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMob
   ({ fetched, hasAlreadyLinked } = tmp7);
   ({ connectionApp, canStartAuthorization, startAuthorization } = tmp7);
   const tmpResult4 = guildId(6809);
-  const defaultAuthorizationNotifiers = guildId(17694).useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
+  const defaultAuthorizationNotifiers = guildId(17699).useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
   if (fetched) {
     fetched = !hasAlreadyLinked;
   }
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMob
     tmp25 = items3;
     tmp24 = fn2;
   }
-  const tmpResult5 = guildId(17694);
+  const tmpResult5 = guildId(17699);
 }) : (function useMobileAccountLinkRow(guildId) {
   guildId = guildId.guildId;
   hasAlreadyLinked = undefined;
@@ -141,7 +141,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMob
   ({ fetched, hasAlreadyLinked } = tmp3);
   ({ connectionApp, canStartAuthorization, startAuthorization } = tmp3);
   let obj2 = guildId(6809);
-  const defaultAuthorizationNotifiers = guildId(17694).useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
+  const defaultAuthorizationNotifiers = guildId(17699).useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
   if (fetched) {
     fetched = !hasAlreadyLinked;
   }
@@ -160,7 +160,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMob
   if (fetched) {
     fetched = null != connectionApp.applicationAccountLinkBenefitConfig.reward_image;
   }
-  const obj3 = guildId(17694);
+  const obj3 = guildId(17699);
   if (fetched) {
     const items1 = [tmp(4807).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER];
     let items2 = items1;
@@ -227,9 +227,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
     }
     const stateFromStores1 = tmp(573).useStateFromStores(tmp11, tmp13, tmp14);
     const tmpResult5 = tmp(573);
-    const guildHasLiveChannelNotice = tmp(17608).useGuildHasLiveChannelNotice(id);
-    const tmpResult6 = tmp(17608);
-    const canShowGameClaimCoachmark = tmp(17695).useCanShowGameClaimCoachmark(id);
+    const guildHasLiveChannelNotice = tmp(17613).useGuildHasLiveChannelNotice(id);
+    const tmpResult6 = tmp(17613);
+    const canShowGameClaimCoachmark = tmp(17700).useCanShowGameClaimCoachmark(id);
     if (cResult[9] !== canShowGameClaimCoachmark) {
       if (canShowGameClaimCoachmark) {
         const items2 = [tmp(4807).DismissibleContent.GAME_CLAIM_COACHMARK];
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
       tmp32 = items4;
       const tmp31 = closure_13(tmp29);
     }
-    const tmpResult7 = tmp(17695);
+    const tmpResult7 = tmp(17700);
   }
   const fn2 = function k() {
     let result = null != mfaEnabled;

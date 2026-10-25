@@ -1,6 +1,6 @@
-// === Module 17436: TabsPerformanceTracker ===
+// === Module 17441: TabsPerformanceTracker ===
 
-// Module 17436 (TabsPerformanceTracker)
+// Module 17441 (TabsPerformanceTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;

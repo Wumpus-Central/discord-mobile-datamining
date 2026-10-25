@@ -1,6 +1,6 @@
-// === Module 16178: FamilyCenterModalDataTooltip ===
+// === Module 16183: FamilyCenterModalDataTooltip ===
 
-// Module 16178 (FamilyCenterModalDataTooltip)
+// Module 16183 (FamilyCenterModalDataTooltip)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8126 */;
-import Modal from "Modal" /* 11146 */;
+import Modal from "Modal" /* 11147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8542).ChatIcon, [USER_CALLED]: fn(12879).PhoneIcon, [USER_ADD]: fn(5666).FriendsIcon, [GUILD_ADD]: fn(14895).ServerGridIcon, [GUILD_INTERACTION]: fn(8544).ThreadIcon, [PURCHASES]: fn(7943).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5691).ClockIcon, [GIFTS]: fn(12881).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(8542).ChatIcon, [USER_CALLED]: fn(12884).PhoneIcon, [USER_ADD]: fn(5666).FriendsIcon, [GUILD_ADD]: fn(14900).ServerGridIcon, [GUILD_INTERACTION]: fn(8544).ThreadIcon, [PURCHASES]: fn(7943).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5691).ClockIcon, [GIFTS]: fn(12886).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7646).TeenActionDisplayType);
 let createStyles = fn(4971);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     [tmp4, tmp5] = cResult;
   }
   obj = container(576);
-  const ageSpecificText = container(12878).useAgeSpecificText(tmp4, tmp5);
+  const ageSpecificText = container(12883).useAgeSpecificText(tmp4, tmp5);
   container = useIsInAdultAgeGroupDefault();
   if (cResult[2] === ageSpecificText) {
     if (cResult[3] === container) {
@@ -171,7 +171,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
                     obj3.text = intl3.string(tmp(1128).t["NX+WJN"]);
                     obj3.onPress = ModalActionCreatorsDefault.pop;
                     obj2.children = closure_6(tmp(5244).Button, obj3);
-                    const tmp36 = closure_6(tmp(12722).ModalFooter, obj2);
+                    const tmp36 = closure_6(tmp(12727).ModalFooter, obj2);
                     cResult[25] = tmp36;
                     let tmp34 = tmp36;
                   } else {
@@ -215,7 +215,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
       }
     }
   }
-  const tmpResult = container(12878);
+  const tmpResult = container(12883);
   const sortedActivityTypeConfigs = container(8128).getSortedActivityTypeConfigs();
   const ModalScreen = tmp(7900).ModalScreen;
   const ModalContent = tmp(7901).ModalContent;

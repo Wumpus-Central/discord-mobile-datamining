@@ -1,6 +1,6 @@
-// === Module 12703: openChannelCallModalForChannelId ===
+// === Module 12708: openChannelCallModalForChannelId ===
 
-// Module 12703 (openChannelCallModalForChannelId)
+// Module 12708 (openChannelCallModalForChannelId)
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7878 */;
 import ChannelStore from "ChannelStore" /* 4823 */;

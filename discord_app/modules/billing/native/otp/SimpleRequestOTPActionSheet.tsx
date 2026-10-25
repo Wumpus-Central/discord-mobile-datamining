@@ -1,6 +1,6 @@
-// === Module 17062: SimpleRequestOTPActionSheet ===
+// === Module 17067: SimpleRequestOTPActionSheet ===
 
-// Module 17062 (SimpleRequestOTPActionSheet)
+// Module 17067 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1281 */;
@@ -129,7 +129,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   let items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(11048).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(11049).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -270,9 +270,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(13877)(obj6);
+  closure_8 = tmp(13882)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(11048);
+  let obj4 = selectedSkuId(11049);
   const obj7 = { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } };
   [tmp16, tmp17] = tmp3(obj.useMemo(() => {
     if (null == c5) {

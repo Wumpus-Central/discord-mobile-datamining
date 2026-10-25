@@ -1,6 +1,6 @@
-// === Module 14347: BadgeDirectoryNuxGraphicUtils ===
+// === Module 14352: BadgeDirectoryNuxGraphicUtils ===
 
-// Module 14347 (BadgeDirectoryNuxGraphicUtils)
+// Module 14352 (BadgeDirectoryNuxGraphicUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 let items = [fn(8673).BadgeId.STREAMING, fn(8673).BadgeId.GAME_VARIETY, fn(8673).BadgeId.GAME_TIME, fn(8673).BadgeId.ACCOUNT_AGE];

@@ -1,19 +1,19 @@
-// === Module 12723: AcceptStep ===
+// === Module 12728: AcceptStep ===
 
-// Module 12723 (AcceptStep)
+// Module 12728 (AcceptStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12719 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GameOrganizationJoinModalConstants = fn(12717);
+const GameOrganizationJoinModalConstants = fn(12722);
 ({ closeGameOrganizationJoinModal: closure_7, GameOrganizationJoinScenes: closure_8 } = GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -199,7 +199,7 @@ export const AcceptStep = function AcceptStep(code) {
     obj4.children = intl6.formatToPlainString(tmp2(2406).WmxMAI, obj7);
     const items = [closure_9(tmp5(5234).Text, obj4), ];
     let obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_9(tmp2(12724), obj8);
+    items[1] = closure_9(tmp2(12729), obj8);
     obj3.children = items;
     const items1 = [closure_10(tmp5(5977).Stack, obj3), ];
     const obj9 = { spacing: tmp2(587).space.PX_24, children: null };
@@ -249,7 +249,7 @@ export const AcceptStep = function AcceptStep(code) {
     items5[1] = closure_9(tmp5(5244).Button, obj17);
     obj15.children = items5;
     obj14.children = closure_10(tmp5(6696).ButtonGroup, obj15);
-    items4[1] = closure_9(tmp5(12722).ModalFooter, obj14);
+    items4[1] = closure_9(tmp5(12727).ModalFooter, obj14);
     obj5.children = items4;
     return closure_10(tmp5(7900).ModalScreen, obj5);
   }

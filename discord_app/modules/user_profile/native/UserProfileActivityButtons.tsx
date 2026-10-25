@@ -1,6 +1,6 @@
-// === Module 14313: UserProfileActivityButtons ===
+// === Module 14318: UserProfileActivityButtons ===
 
-// Module 14313 (UserProfileActivityButtons)
+// Module 14318 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,10 +16,10 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7878 */;
 import isStreamingDefault from "isStreaming" /* 8749 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9609 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11357 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 14314 */;
-import getActivityJoinability from "getActivityJoinability" /* 14315 */;
-import getStreamURLDefault from "getStreamURL" /* 14317 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11358 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14319 */;
+import getActivityJoinability from "getActivityJoinability" /* 14320 */;
+import getStreamURLDefault from "getStreamURL" /* 14322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 4823 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
 import GuildStore from "GuildStore" /* 4845 */;
-import LocalActivityStore from "LocalActivityStore" /* 11191 */;
+import LocalActivityStore from "LocalActivityStore" /* 11192 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
@@ -509,7 +509,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(11338).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(11339).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
@@ -526,7 +526,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(11338);
+              const obj7 = closure_0(11339);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {
