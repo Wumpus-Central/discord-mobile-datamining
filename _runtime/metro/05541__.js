@@ -195,48 +195,91 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       c3 = 0;
       c4 = 0;
       const iter = (function*(arg0) {
-        if (1 === tmp5) {
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
-            const data = engagedIndices.props.data;
-            if (data) {
-              if (data.length > 0) {
-                closure_129_2 = data.length - 1;
-                engagedIndices = engagedIndices.getEngagedIndices();
-                if (!engagedIndices.includes(closure_129_2)) {
-                  c3 = 2;
-                  c4 = 1;
-                  return { value: closure_1_13.scrollToIndex({ index: closure_129_2, animated }), done: false };
+            return { value: "IconComponent", done: "+352" };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_2 = tmp5;
+                let animated;
+                let obj4 = engagedIndices;
+                if (engagedIndices === undefined) {
+                  obj4 = {};
                 }
+                animated = obj4.animated;
+                let data;
+                closure_129_2 = undefined;
+                c3 = 1;
+                c4 = 1;
+                return { value: "Reflect", done: null };
               }
+            } else {
+              if (1 === tmp5) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  data = engagedIndices.props.data;
+                  if (data) {
+                    if (data.length > 0) {
+                      closure_129_2 = data.length - 1;
+                      engagedIndices = engagedIndices.getEngagedIndices();
+                      if (!engagedIndices.includes(closure_129_2)) {
+                        const obj6 = { index: closure_129_2, animated };
+                        c3 = 2;
+                        c4 = 1;
+                        const obj7 = { value: closure_1_13.scrollToIndex(obj6), done: false };
+                        return obj7;
+                      }
+                    }
+                  }
+                }
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                let obj = { value, done: true };
+                return obj;
+              }
+              closure_1_7(() => {
+                const current = ref.current;
+                if (current != null) {
+                  const obj = { animated };
+                  current.scrollToEnd(obj);
+                }
+              }, 0);
+              c4 = 3;
+              return { value: "IconComponent", done: "+352" };
             }
+          } catch (tmp17) {
+            c4 = tmp;
+            throw tmp17;
           }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          return { value, done: true };
         }
-        closure_1_7(() => {
-          const current = ref.current;
-          if (current != null) {
-            const obj = { animated };
-            current.scrollToEnd(obj);
-          }
-        }, 0);
-        yield "IconComponent";
-        let obj4 = engagedIndices;
-        if (engagedIndices === undefined) {
-          obj4 = {};
-        }
-        animated = obj4.animated;
-        return "Reflect";
       })();
       iter.next();
       return iter;

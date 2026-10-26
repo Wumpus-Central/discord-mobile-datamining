@@ -66,7 +66,7 @@ export const KeyboardProvider = (enabled) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -103,7 +103,7 @@ export const KeyboardProvider = (enabled) => {
           return obj;
         } else {
           v3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp14) {
         v3 = tmp;
@@ -246,7 +246,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   const obj13 = { value: tmp9, children: null };
-  const obj14 = { ref: tmp3, enabled, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "nl-BQ", onKeyboardMoveInteractive: "nl", onKeyboardMoveEnd: 0, onFocusedInputLayoutChangedReanimated: null, children: "Boolean" };
+  const obj14 = { ref: tmp3, enabled, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "nl-BE", onKeyboardMoveInteractive: "nl", onKeyboardMoveEnd: 0, onFocusedInputLayoutChangedReanimated: null, children: "Boolean" };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;
   if (!updateSharedValues) {

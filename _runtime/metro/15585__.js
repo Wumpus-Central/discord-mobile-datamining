@@ -1,24 +1,20 @@
 // === Module 15585: ? ===
 
 // Module 15585
-import _mod15568 from "module_15568" /* 15568 */;
-import _mod15586 from "module_15586" /* 15586 */;
+import _mod15551 from "module_15551" /* 15551 */;
+import _mod15572 from "module_15572" /* 15572 */;
+import f2 from "f" /* 15586 */;
+import _mod15596 from "module_15596" /* 15596 */;
+import _mod15597 from "module_15597" /* 15597 */;
 
+let closure_2 = _mod15551([].concat);
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod15586(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod15568(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod15568(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default _mod15572("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod15596(arg0));
+  const f = _mod15597.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-};
+  return tmp2;
+});

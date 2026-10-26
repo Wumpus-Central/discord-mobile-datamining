@@ -1,14 +1,34 @@
 // === Module 15351: ? ===
 
 // Module 15351
-import _mod15348 from "module_15348" /* 15348 */;
+import _mod15318 from "module_15318" /* 15318 */;
+
+const require = globalThis.__r;
 
 
-export default (arg0, arg1) => {
-  const tmp = new _mod15348(arg0, arg1);
-  return new _mod15348(arg0, arg1).set.map((arr) => {
-    const mapped = arr.map((value) => value.value);
-    const str = mapped.join(" ");
-    return mapped.join(" ").trim().split(" ");
-  });
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("module_15347")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = -1 !== closure_2.compare(item);
+        }
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod15318(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
+      }
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
+  }
 };

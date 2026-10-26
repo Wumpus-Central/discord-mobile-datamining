@@ -1,8 +1,7 @@
 // === Module 11989: ? ===
 
 // Module 11989
-import _mod11916 from "module_11916" /* 11916 */;
-import _mod11982 from "module_11982" /* 11982 */;
+const require = globalThis.__r;
 
 const self = this;
 let self2 = this;
@@ -55,23 +54,35 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.string = function string(message) {
-      return closure_2._coercedString(closure_3.ZodString, message);
+    exports.ZodIssueCode = undefined;
+    exports.$brand = undefined;
+    exports.config = undefined;
+    exports.ZodFirstPartyTypeKind = undefined;
+    exports.setErrorMap = function setErrorMap(customError) {
+      closure_4.config({ customError });
     };
-    exports.number = function number(message) {
-      return closure_2._coercedNumber(closure_3.ZodNumber, message);
+    exports.getErrorMap = function getErrorMap() {
+      return closure_4.config().customError;
     };
-    exports.boolean = function boolean(message) {
-      return closure_2._coercedBoolean(closure_3.ZodBoolean, message);
+    let closure_4 = fn(require("module_11918"));
+    exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_11918").$brand;
+          }
     };
-    exports.bigint = function bigint(message) {
-      return closure_2._coercedBigint(closure_3.ZodBigInt, message);
+    Object.defineProperty(exports, "$brand", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_11918").config;
+          }
     };
-    exports.date = function date(message) {
-      return closure_2._coercedDate(closure_3.ZodDate, message);
-    };
-    let closure_2 = fn(_mod11916);
-    let closure_3 = fn(_mod11982);
+    Object.defineProperty(exports, "config", obj2);
+    exports.ZodFirstPartyTypeKind = {};
   } else {
     const _Object2 = Object;
   }

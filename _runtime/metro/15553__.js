@@ -1,17 +1,9 @@
 // === Module 15553: ? ===
 
 // Module 15553
-import _mod15549 from "module_15549" /* 15549 */;
+import _mod15551 from "module_15551" /* 15551 */;
 
+let closure_0 = _mod15551({}.toString);
+let closure_1 = _mod15551("".slice);
 
-export default !_mod15549(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

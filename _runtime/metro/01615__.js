@@ -27,7 +27,7 @@ export const useThenable = function useThenable(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ export const useThenable = function useThenable(arg0) {
               noop(items2);
             }
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp28) {
           closure_2 = tmp28;

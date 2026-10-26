@@ -47,5 +47,5 @@ export const warn = function warn(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "warn", message, attributes, severityNumber: "colors" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "warn", message, attributes, severityNumber: "color" }, obj.scope);
 };

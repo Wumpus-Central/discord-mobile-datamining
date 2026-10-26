@@ -216,7 +216,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
         }
         let tmp23 = substr1[substr1.length - 1];
         let _Object3 = Object;
-        let merged1 = Object.assign(obj5, { initial: "toCharArray$esjava$1", screen: "test", params: "ix", state: "test" });
+        let merged1 = Object.assign(obj5, { initial: "registerAsset", screen: "unicodeVersion", params: "httpServerLocation", state: "call" });
         if (1 === substr1.length) {
           if (undefined === substr1[0].key) {
             obj5.initial = true;

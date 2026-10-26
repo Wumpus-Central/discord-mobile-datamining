@@ -1,44 +1,24 @@
 // === Module 15584: ? ===
 
 // Module 15584
-import _mod15549 from "module_15549" /* 15549 */;
-import _mod15571 from "module_15571" /* 15571 */;
+import _mod15567 from "module_15567" /* 15567 */;
+import _mod15585 from "module_15585" /* 15585 */;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod15571(arg1)) {
-          tmp11Result = _mod15549;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
+
+export default (arg0, arg1, arg2) => {
+  const arr = _mod15585(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp6 = _mod15567(arg0, tmp3);
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = _mod15567(arg2, tmp3);
       }
+      tmp6 = tmp8;
     }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
+    }
   }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
 };
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
-
-export default isForced;

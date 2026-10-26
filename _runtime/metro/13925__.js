@@ -4,79 +4,46 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 get_ActivityIndicator = fn(17);
-({ Linking: c2, NativeModules } = get_ActivityIndicator);
-({ RNIapModule: c3, RNIapModule } = NativeModules);
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  if (c6 === 2) {
-    c6 = 3;
+const Linking = get_ActivityIndicator.Linking;
+const RNIapIos = get_ActivityIndicator.NativeModules.RNIapIos;
+asyncGeneratorStep(async () => {
+  if (v3 === 2) {
+    v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const packageName = tmp5;
-          closure_4 = tmp2;
-          let sku;
-          sku = closure_0.sku;
-          c5 = 1;
-          c6 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          const result = closure_0(openURL[3]).checkNativeAndroidAvailable();
-          openURL = openURL.openURL;
-          c5 = 2;
-          c6 = 1;
-          const obj6 = { value: packageName.getPackageName(), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
+      v3 = 2;
+      if (arg0 === 1) {
+        v3 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        v3 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        const _HermesInternal = HermesInternal;
-        c6 = 3;
-        const obj = { value: openURL("https://play.google.com/store/account/subscriptions?package=" + value + "&sku=" + sku), done: true };
-        return obj;
+        const iosModule = v3(dependencyMap[2]).getIosModule();
+        v3 = 3;
+        const obj4 = { value: iosModule.getPendingTransactions(), done: true };
+        return obj4;
       }
-    } catch (tmp18) {
-      c6 = tmp;
-      throw tmp18;
+    } catch (tmp6) {
+      v3 = tmp;
+      throw tmp6;
     }
   }
 });
-let closure_129_0 = asyncGeneratorStep(async (arg0) => {
-  if (c3 === 2) {
-    c3 = 3;
+asyncGeneratorStep(async (arg0) => {
+  if (c5 === 2) {
+    c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -85,89 +52,297 @@ let closure_129_0 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
-      c3 = 2;
-      if (0 === c2) {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          c3 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
+          c5 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({ packageName: closure_129_0, productId: closure_129_1, productToken: closure_129_2, accessToken: closure_129_3, isSub: closure_129_4 } = closure_0);
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          c2 = 1;
-          c3 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          let str = "products";
-          if (closure_129_4) {
-            str = "subscriptions";
-          }
-          const _HermesInternal = HermesInternal;
-          closure_129_5 = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" + tmp30 + "/purchases/" + str + "/" + closure_129_1 + "/tokens/" + closure_129_2 + "?access_token=" + closure_129_3;
-          const _fetch = fetch;
-          const obj5 = { method: "GET", headers: { "Content-Type": "application/json" } };
-          c2 = 2;
-          c3 = 1;
-          const obj6 = { value: fetch(closure_129_5, obj5), done: false };
-          return obj6;
+          closure_2 = tmp2;
+          let forceRefresh;
+          forceRefresh = closure_0.forceRefresh;
+          c4 = 1;
+          c5 = 1;
+          return { value: "Reflect", done: null };
         }
       } else if (arg0 === 1) {
-        c3 = 3;
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        closure_129_6 = value;
-        if (closure_129_6.ok) {
-          c3 = 3;
-          const obj8 = { value: closure_129_6.json(), done: true };
-          return obj8;
+        if (obj4.isIosStorekit2()) {
+          Promise.reject("Only available on Sk1");
+        } else {
+          dependencyMap = forceRefresh;
+          if (forceRefresh == null) {
+            dependencyMap = false;
+          }
+          const receipt = tmp5.requestReceipt(dependencyMap);
+        }
+        c5 = 3;
+        obj4 = closure_0(dependencyMap[2]);
+      }
+    } catch (tmp16) {
+      c5 = tmp;
+      throw tmp16;
+    }
+  }
+});
+asyncGeneratorStep(async () => {
+  if (v3 === 2) {
+    v3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "+352" };
+    }
+  } else {
+    try {
+      v3 = 2;
+      if (arg0 === 1) {
+        v3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        v3 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        const iosModule = v3(dependencyMap[2]).getIosModule();
+        v3 = 3;
+        const obj4 = { value: iosModule.presentCodeRedemptionSheet(), done: true };
+        return obj4;
+      }
+    } catch (tmp6) {
+      v3 = tmp;
+      throw tmp6;
+    }
+  }
+});
+let closure_129_0 = asyncGeneratorStep(async (arg0, arg1) => {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "+352" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp4;
+          closure_130_0 = undefined;
+          const _fetch = fetch;
+          const request = { method: "POST", headers: { Accept: "application/json", "Content-Type": "application/json" }, body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(closure_1);
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: fetch(closure_0, request), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_130_0 = value;
+        if (closure_130_0.ok) {
+          c4 = 3;
+          const obj6 = { value: closure_130_0.json(), done: true };
+          return obj6;
         } else {
           const _Object = Object;
           const _Error = Error;
-          const error = new Error(closure_129_6.statusText);
-          const obj = { statusCode: closure_129_6.status };
+          const error = new Error(closure_130_0.statusText);
+          const obj = { statusCode: closure_130_0.status };
           throw Object.assign(error, obj);
         }
       }
-    } catch (tmp21) {
-      c3 = tmp;
-      throw tmp21;
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
+    }
+  }
+});
+function fetchJsonOrThrow(arg0, arg1) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+asyncGeneratorStep(async (arg0) => {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  await v3("https://buy.itunes.apple.com/verifyReceipt", closure_0);
+  if (1 === tmp5) {
+    if (arg0 === 1) {
+      v3 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      v3 = 3;
+      return { value, done: true };
+    } else {
+      closure_129_1 = value;
+      if (closure_129_1) {
+        if (21007 === closure_129_1.status) {
+          c3 = 2;
+          v3 = 1;
+          return { value: v3("https://sandbox.itunes.apple.com/verifyReceipt", closure_129_0), done: false };
+        }
+      }
+      let tmp6 = closure_129_1;
+    }
+  } else if (arg0 === 1) {
+    v3 = 3;
+    throw value;
+  } else {
+    tmp6 = value;
+    if (arg0 === 2) {
+      v3 = 3;
+      return { value, done: true };
+    }
+  }
+  return tmp6;
+});
+function requestAgnosticReceiptValidationIos(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (v3 === 2) {
+    v3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "+352" };
+    }
+  } else {
+    try {
+      v3 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ receiptBody: closure_129_0, isTest: closure_129_1 } = closure_0);
+          closure_129_2 = undefined;
+          c3 = 1;
+          v3 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else if (null == closure_129_1) {
+          c3 = 2;
+          v3 = 1;
+          const obj5 = { value: requestAgnosticReceiptValidationIos(closure_129_0), done: false };
+          return obj5;
+        } else {
+          let str = "https://buy.itunes.apple.com/verifyReceipt";
+          if (closure_129_1) {
+            str = "https://sandbox.itunes.apple.com/verifyReceipt";
+          }
+          closure_129_2 = str;
+          c3 = 3;
+          v3 = 1;
+          const obj6 = { value: v3(closure_129_2, closure_129_0), done: false };
+          return obj6;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          v3 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        v3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        v3 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        v3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp17) {
+      v3 = tmp;
+      throw tmp17;
     }
   }
 });
 
-export const AndroidModule = RNIapModule;
-export const getInstallSourceAndroid = () => {
-  const InstallSourceAndroid = closure_0(13917).InstallSourceAndroid;
-  return React3 ? InstallSourceAndroid.GOOGLE_PLAY : InstallSourceAndroid.AMAZON;
-};
-export const deepLinkToSubscriptionsAndroid = function deepLinkToSubscriptionsAndroid(arg0) {
+export const getPendingPurchasesIOS = function getPendingPurchasesIOS() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -177,7 +352,7 @@ export const deepLinkToSubscriptionsAndroid = function deepLinkToSubscriptionsAn
   }
   return applyArgumentsResult;
 };
-export const validateReceiptAndroid = function validateReceiptAndroid(arg0) {
+export const getReceiptIOS = function getReceiptIOS(arg0) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -187,17 +362,44 @@ export const validateReceiptAndroid = function validateReceiptAndroid(arg0) {
   }
   return applyArgumentsResult;
 };
-export const acknowledgePurchaseAndroid = (arg0) => {
-  ({ token, developerPayload } = arg0);
-  const androidModule = closure_0(13918).getAndroidModule();
-  return androidModule.acknowledgePurchase(token, developerPayload);
-};
-export const isFeatureSupported = (arg0) => {
-  if (closure_0(13918).isAndroid) {
-    if (React3) {
-      let isFeatureSupportedResult = RNIapModule.isFeatureSupported(arg0);
-    }
-    return isFeatureSupportedResult;
+export const presentCodeRedemptionSheetIOS = function presentCodeRedemptionSheetIOS() {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  isFeatureSupportedResult = Promise.reject("This is only available on Android clients");
+  return applyArgumentsResult;
 };
+export const getPromotedProductIOS = () => {
+  if (obj.isIosStorekit2()) {
+    let rejectResult = Promise.reject("Only available on Sk1");
+  } else {
+    rejectResult = RNIapIos.promotedProduct();
+  }
+  return rejectResult;
+};
+export const buyPromotedProductIOS = () => {
+  const iosModule = closure_0(13917).getIosModule();
+  return iosModule.buyPromotedProduct();
+};
+export const validateReceiptIos = function validateReceiptIos(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const clearTransactionIOS = () => {
+  const iosModule = closure_0(13917).getIosModule();
+  return iosModule.clearTransaction();
+};
+export const clearProductsIOS = () => {
+  const iosModule = closure_0(13917).getIosModule();
+  return iosModule.clearProducts();
+};
+export const deepLinkToSubscriptionsIos = () => Linking.openURL("https://apps.apple.com/account/subscriptions");
