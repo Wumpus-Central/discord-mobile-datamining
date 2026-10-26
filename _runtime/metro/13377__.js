@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 56, height: 65, scales: [1, 2, 3], hash: "260617da8a2932d3af6bc2abf2ba2716", name: "rejected-alert", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following/dark", width: 280, height: 120, scales: [2, 3], hash: "9c2cfd53ed0ab3abd70ee33b26a982e5", name: "channel_following_success_2", type: "png" });

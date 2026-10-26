@@ -1,30 +1,13 @@
 // === Module 15604: ? ===
 
 // Module 15604
-import _mod15567 from "module_15567" /* 15567 */;
-import getOwnPropertyDescriptor_mod from "module_15547" /* 15547 */;
+import _mod15552 from "module_15552" /* 15552 */;
+import _mod15561 from "module_15561" /* 15561 */;
+import all from "module_15571" /* 15571 */;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod15567(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
-
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
+let closure_0 = _mod15552(Function.toString);
+if (!all(_mod15561.inspectSource)) {
+  _mod15561.inspectSource = (arg0) => closure_0(arg0);
 }
 
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default _mod15561.inspectSource;

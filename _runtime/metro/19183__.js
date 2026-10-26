@@ -1,15 +1,7 @@
 // === Module 19183: ? ===
 
 // Module 19183
-import _mod19184 from "module_19184" /* 19184 */;
-import capitalize from "capitalize" /* 19191 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default _mod19184((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 88, height: 80, scales: [2, 3], hash: "6d22576d9f7927048034966be0fe9d4c", name: "channel_setup_darker", type: "png" });

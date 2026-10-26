@@ -1,56 +1,23 @@
 // === Module 15327: ? ===
 
 // Module 15327
-import _mod15317 from "module_15317" /* 15317 */;
+import _mod15319 from "module_15319" /* 15319 */;
 
 
-export default (arg0, arg1) => {
-  const obj = _mod15317(arg0, null, true);
-  const tmp = _mod15317(arg1, null, true);
-  const compareResult = obj.compare(tmp);
-  if (0 === compareResult) {
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    if (version instanceof _mod15319) {
+      version = version.version;
+    }
+    const tmp72 = new _mod15319(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
     return null;
-  } else {
-    let tmp3 = tmp;
-    if (compareResult > 0) {
-      tmp3 = obj;
-    }
-    let tmp4 = obj;
-    if (compareResult > 0) {
-      tmp4 = tmp;
-    }
-    if (tmp4.prerelease.length) {
-      if (!length) {
-        if (tmp4.patch) {
-          let str2 = "patch";
-          if (!tmp3.patch) {
-            let str3 = "major";
-            if (tmp3.minor) {
-              str3 = "minor";
-            }
-            str2 = str3;
-          }
-          let str = str2;
-        } else {
-          str = "major";
-        }
-        return str;
-      }
-    }
-    let str4 = "";
-    if (tmp3.prerelease.length) {
-      str4 = "pre";
-    }
-    if (obj.major !== tmp.major) {
-      let str5 = `${str4}major`;
-    } else if (obj.minor !== tmp.minor) {
-      str5 = `${str4}minor`;
-    } else {
-      str5 = "prerelease";
-      if (obj.patch !== tmp.patch) {
-        str5 = `${str4}patch`;
-      }
-    }
-    return str5;
   }
 };

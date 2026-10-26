@@ -1,7 +1,7 @@
 // === Module 15352: ? ===
 
 // Module 15352
-import _mod15318 from "module_15318" /* 15318 */;
+import _mod15319 from "module_15319" /* 15319 */;
 
 const require = globalThis.__r;
 
@@ -12,17 +12,17 @@ export default (arr, arg1, arg2) => {
   closure_2 = null;
   let regex = null;
   try {
-    let tmp9 = new require("module_15347")(arg1, arg2);
+    let tmp9 = new require("module_15348")(arg1, arg2);
     regex = tmp9;
     const item = arr.forEach((item) => {
       if (regex.test(item)) {
         let tmp = closure_1;
         if (closure_1) {
-          tmp = 1 !== closure_2.compare(item);
+          tmp = -1 !== closure_2.compare(item);
         }
         if (!tmp) {
           closure_1 = item;
-          const tmp9 = new _mod15318(closure_1, closure_0);
+          const tmp9 = new _mod15319(closure_1, closure_0);
           closure_2 = tmp9;
         }
       }

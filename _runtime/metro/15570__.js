@@ -1,21 +1,14 @@
 // === Module 15570: ? ===
 
 // Module 15570
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod15571 from "module_15571" /* 15571 */;
+
+
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod15571(obj);
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+  return tmp2;
+};

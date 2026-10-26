@@ -201,7 +201,7 @@ class FeedbackWidget {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -234,7 +234,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "toCharArray$esjava$1", attachment: "test", attachmentUri: "ix" });
+                  debug.setState({ filename: "children", attachment: "k", attachmentUri: "borderRadius" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -618,7 +618,7 @@ let items = [
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -633,7 +633,7 @@ let items = [
                 } else {
                   v3(closure_1_2[7]).feedbackAlertDialog(props2.errorTitle, props2.captureScreenshotError);
                   v3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp8) {
                 v3 = tmp;

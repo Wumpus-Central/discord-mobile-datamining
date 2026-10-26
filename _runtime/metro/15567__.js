@@ -1,11 +1,18 @@
 // === Module 15567: ? ===
 
 // Module 15567
-import _mod15551 from "module_15551" /* 15551 */;
-import _mod15568 from "module_15568" /* 15568 */;
+import _mod15552 from "module_15552" /* 15552 */;
 
-let closure_2 = _mod15551({}.hasOwnProperty);
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod15552(1.toString);
 
-export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return closure_2(_mod15568(arg0), arg1);
-});
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
+  }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

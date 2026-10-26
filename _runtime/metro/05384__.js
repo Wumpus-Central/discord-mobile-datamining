@@ -53,7 +53,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
   const fn = function h(handlerTag) {
     let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "r" };
+      const obj = { lastUpdateEvent: "Array" };
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }

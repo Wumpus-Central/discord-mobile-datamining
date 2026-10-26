@@ -1,32 +1,26 @@
 // === Module 12582: ? ===
 
 // Module 12582
-import _mod12576 from "module_12576" /* 12576 */;
-import _mod12579 from "module_12579" /* 12579 */;
+import _mod12583 from "module_12583" /* 12583 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod12579.GLOBAL_OBJ.onunhandledrejection;
-  _mod12579.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
-    _mod12576.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-  };
-  _mod12579.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
 
-export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-  _mod12576.addHandler("unhandledrejection", errorCallback);
-  _mod12576.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+export const GLOBAL_OBJ = globalThis;
+export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
+  }
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod12583.SDK_VERSION] || {};
+  tmp2[_mod12583.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[globalMetricsAggregators];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[globalMetricsAggregators] = tmp6;
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };

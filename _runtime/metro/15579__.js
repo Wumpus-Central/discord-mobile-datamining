@@ -1,17 +1,39 @@
 // === Module 15579: ? ===
 
 // Module 15579
-import _mod15548 from "module_15548" /* 15548 */;
-import element from "element" /* 15580 */;
-import getOwnPropertyDescriptor from "module_15547" /* 15547 */;
+import _mod15570 from "module_15570" /* 15570 */;
+import _mod15571 from "module_15571" /* 15571 */;
+import _mod15578 from "module_15578" /* 15578 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod15548(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
+
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15571(toString)) {
+      const tmp4 = _mod15578(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod15570;
     }
-  }).a);
-}
-
-export default tmp2;
+  }
+  const valueOf = arg0.valueOf;
+  if (_mod15571(valueOf)) {
+    const tmp8 = _mod15578(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15570;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15571(toString2)) {
+      const tmp10 = _mod15578(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15570;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

@@ -1,7 +1,7 @@
 // === Module 15330: ? ===
 
 // Module 15330
-import _mod15318 from "module_15318" /* 15318 */;
+import _mod15319 from "module_15319" /* 15319 */;
 
 
-export default (arg0, arg1) => new _mod15318(arg0, arg1).patch;
+export default (arg0, arg1) => new _mod15319(arg0, arg1).minor;

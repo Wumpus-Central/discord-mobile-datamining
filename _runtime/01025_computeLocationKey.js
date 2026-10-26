@@ -401,7 +401,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -545,7 +545,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -1582,8 +1582,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f141758) {
-    result.afterAllSetup(f141758);
+  obj3.afterAllSetup = function afterAllSetup(f141848) {
+    result.afterAllSetup(f141848);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1600,11 +1600,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj2[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f141758, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f141848, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f141758);
+      weakSet.add(f141848);
     }
   };
   return obj3;

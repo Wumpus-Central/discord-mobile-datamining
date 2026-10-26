@@ -1,556 +1,133 @@
 // === Module 12644: ? ===
 
 // Module 12644
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _mod12581 from "module_12581" /* 12581 */;
+import _mod12605 from "module_12605" /* 12605 */;
+import _mod12609 from "module_12609" /* 12609 */;
+import _mod12625 from "module_12625" /* 12625 */;
+import _mod12638 from "module_12638" /* 12638 */;
+import _mod12646 from "module_12646" /* 12646 */;
 
-let c3 = 100;
-let c4 = 5000;
+const require = globalThis.__r;
 
-export const MIN_DELAY = 100;
-export const START_DELAY = 5000;
-export function makeOfflineTransport(arg0) {
-  closure_0 = arg0;
-  function log() {
-    const items = [...arguments];
-    if (closure_0(log[1]).DEBUG_BUILD) {
-      const logger = closure_0(log[2]).logger;
-      const info = logger.info;
-      const items1 = ["[Offline]:"];
-      HermesBuiltin.arraySpread(items, 1);
-      HermesBuiltin.apply(items1, logger);
+require = arg1;
+let dependencyMap = arg6;
+
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export const createTransport = function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
     }
+    promiseBuffer = require("module_12645").makePromiseBuffer(num);
+    let obj = require("module_12645");
   }
-  return (createStore) => {
-    closure_0 = createStore;
-    function flushIn(arg0) {
-      if (timerId) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(timerId);
-      }
-      timerId = setTimeout(asyncGeneratorStep(async () => {
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            return { value: "IconComponent", done: "+352" };
+  closure_3 = {};
+  return {
+    send(arg0) {
+      const items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod12625.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
           }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
         } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                closure_0 = tmp2;
-                closure_128_0 = undefined;
-                c2 = undefined;
-                c2 = 1;
-                c3 = 1;
-                const obj3 = { value: closure_2_3.shift(), done: false };
-                return obj3;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_128_0 = value;
-              if (closure_128_0) {
-                tmp5("Attempting to send previously queued event");
-                const _Date = Date;
-                const date = new Date();
-                closure_128_0[0].sent_at = date.toISOString();
-                closure_129_7(closure_128_0, true).catch((error) => {
-                  closure_1_1("Failed to retry sending", error);
-                });
-                const promise = closure_129_7(closure_128_0, true);
-              }
-              c3 = 3;
-              return { value: "IconComponent", done: "+352" };
-            }
-          } catch (tmp18) {
-            c3 = tmp;
-            throw tmp18;
-          }
+          items.push(arg0);
         }
-      }), arg0);
-      let unref = typeof timerId !== "number";
-      if (typeof timerId !== "number") {
-        unref = timerId.unref;
-      }
-      if (unref) {
-        timerId.unref();
-      }
-    }
-    function flushWithBackOff() {
-      if (!timerId) {
-        if (tmp) {
-          const _clearTimeout = clearTimeout;
-          clearTimeout(timerId);
-        }
-        const _setTimeout = setTimeout;
-        timerId = setTimeout(asyncGeneratorStep(async () => {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              return { value: "IconComponent", done: "+352" };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
-                } else {
-                  closure_0 = tmp2;
-                  closure_128_0 = undefined;
-                  c2 = undefined;
-                  c2 = 1;
-                  c3 = 1;
-                  const obj3 = { value: closure_2_3.shift(), done: false };
-                  return obj3;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
-              } else {
-                closure_128_0 = value;
-                if (closure_128_0) {
-                  tmp5("Attempting to send previously queued event");
-                  const _Date = Date;
-                  const date = new Date();
-                  closure_128_0[0].sent_at = date.toISOString();
-                  closure_129_7(closure_128_0, true).catch((error) => {
-                    closure_1_1("Failed to retry sending", error);
-                  });
-                  const promise = closure_129_7(closure_128_0, true);
-                }
-                c3 = 3;
-                return { value: "IconComponent", done: "+352" };
-              }
-            } catch (tmp18) {
-              c3 = tmp;
-              throw tmp18;
-            }
-          }
-        }), closure_4);
-        let unref = typeof timerId !== "number";
-        if (typeof timerId !== "number") {
-          unref = timerId.unref;
-        }
-        if (unref) {
-          timerId.unref();
-        }
-        const _Math = Math;
-        closure_4 = Math.min(2 * closure_4, 3600000);
-      }
-    }
-    function send(arg0) {
-      const self = this;
-      const apply = closure_8.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        obj2 = _mod12646;
+      });
+      if (0 === items.length) {
+        return bufferSize(tmp2[3]).resolvedSyncPromise({});
       } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    }
-    closure_8 = async function _send(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: "+352" };
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {
+
         }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_3 = tmp2;
-              closure_2 = tmp6;
-              closure_130_1 = undefined;
-              closure_130_0 = shouldStore;
-              let flag = closure_1;
-              if (closure_1 === undefined) {
-                flag = false;
+        const tmpResult2 = bufferSize(tmp2[1]);
+        return recordEnvelopeLoss.add(() => {
+          const obj = { body: _mod12625.serializeEnvelope(dependencyMap) };
+          return dependencyMap(obj).then((statusCode) => {
+            let DEBUG_BUILD = undefined !== statusCode.statusCode;
+            if (DEBUG_BUILD) {
+              let tmp = statusCode.statusCode < 200;
+              if (!tmp) {
+                tmp = statusCode.statusCode >= 300;
               }
-              closure_130_1 = flag;
-              closure_130_2 = undefined;
-              closure_130_3 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "Reflect", done: null };
+              DEBUG_BUILD = tmp;
             }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              if (!closure_130_1) {
-                if (obj13.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
-                  c6 = 2;
-                  c7 = 1;
-                  const obj6 = { value: closure_131_3.push(closure_130_0), done: false };
-                  return obj6;
-                }
-                obj13 = createStore(12622);
-              }
-              c5 = 1;
-              c6 = 5;
-              c7 = 1;
-              const obj7 = { value: closure_131_1.send(closure_130_0), done: false };
-              return obj7;
+            if (DEBUG_BUILD) {
+              DEBUG_BUILD = items(12609).DEBUG_BUILD;
             }
-          } else if (2 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
-            } else {
-              closure_131_5(closure_2_3);
-              c7 = 3;
-              const obj9 = { value: {}, done: true };
-              return obj9;
+            if (DEBUG_BUILD) {
+              const logger = items(12581).logger;
+              const _HermesInternal = HermesInternal;
+              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
             }
-          } else if (3 === tmp6) {
-            c5 = 0;
-            closure_130_4 = closure_4;
-            c6 = 4;
-            c7 = 1;
-            const obj10 = {
-              value: (function shouldQueue(arg0, arg1, arg2) {
-                      const result = createStore(12622).envelopeContainsItemType(arg0, ["client_report"]);
-                      let tmp2 = !result;
-                      if (!result) {
-                        shouldStore = shouldStore.shouldStore;
-                        let shouldStoreResult = !shouldStore;
-                        if (shouldStore) {
-                          shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
-                        }
-                        tmp2 = shouldStoreResult;
-                        obj2 = shouldStore;
-                      }
-                      return tmp2;
-                    })(closure_130_0, closure_130_4, closure_131_4),
-              done: false
-            };
-            return obj10;
-          } else if (4 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
-            } else if (value) {
-              if (closure_130_1) {
-                c6 = 7;
-                c7 = 1;
-                const obj12 = { value: closure_131_3.unshift(closure_130_0), done: false };
-                return obj12;
-              } else {
-                c6 = 6;
-                c7 = 1;
-                const obj14 = { value: closure_131_3.push(closure_130_0), done: false };
-                return obj14;
-              }
-            } else {
-              throw closure_130_4;
-            }
-          } else if (5 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj15 = { value, done: true };
-              return obj15;
-            } else {
-              closure_130_2 = value;
-              closure_130_3 = closure_2_3;
-              if (!closure_130_2) {
-                closure_131_5(closure_130_3);
-                closure_131_4 = closure_2_4;
-                c5 = 0;
-                c7 = 3;
-              } else if (!closure_130_2.headers) {
-                if (closure_130_2.headers) {
-                  if (closure_130_2.headers["x-sentry-rate-limits"]) {
-                    closure_130_3 = 60000;
+            closure_3 = items(12646).updateRateLimits(closure_3, statusCode);
+            return statusCode;
+          }, (arg0) => {
+            if (typeof recordEnvelopeLoss === "function") {
+              const network_error = "network_error";
+              closure_0(12625).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
                   }
+                  const tmp = tmp4;
                 }
-                let num7 = closure_130_2.statusCode;
-                if (!num7) {
-                  num7 = 0;
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              throw arg0;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+        }).then((result) => result, (arg0) => {
+          if (arg0 instanceof _mod12638.SentryError) {
+            if (_mod12609.DEBUG_BUILD) {
+              const logger = _mod12581.logger;
+              logger.error("Skipped sending event because buffer is full.");
+            }
+            if (typeof recordEnvelopeLoss === "function") {
+              const queue_overflow = "queue_overflow";
+              _mod12625.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
+                  }
+                  const tmp = tmp4;
                 }
-                if (num7 >= 400) {
-                  c5 = 0;
-                  c7 = 3;
-                  const obj16 = { value: closure_130_2, done: true };
-                  return obj16;
-                }
-              }
-              closure_130_3 = createStore(12643).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
-              const obj5 = createStore(12643);
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              const tmpResult = _mod12625;
+              return _mod12605.resolvedSyncPromise({});
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
           } else {
-            if (6 === tmp6) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj17 = { value, done: true };
-                return obj17;
-              }
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj = { value, done: true };
-              return obj;
-            }
-            closure_131_6();
-            closure_1("Error sending. Event queued.", closure_130_4);
-            c7 = 3;
-            const obj18 = { value: {}, done: true };
-            return obj18;
+            throw arg0;
           }
-        } catch (tmp67) {
-          closure_4 = tmp67;
-          if (tmp3 === c5) {
-            c7 = tmp;
-            throw tmp67;
-          } else {
-            c6 = tmp;
-          }
-        }
+        });
       }
-    };
-    closure_1 = closure_0(createStore);
-    if (createStore.createStore) {
-      closure_3 = createStore.createStore(createStore);
-      closure_4 = closure_1_4;
-      if (createStore.flushAtStartup) {
-        if (!timerId) {
-          if (tmp7) {
-            let _clearTimeout = clearTimeout;
-            clearTimeout(timerId);
-          }
-          let _setTimeout = setTimeout;
-          timerId = setTimeout(asyncGeneratorStep(async () => {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "IconComponent", done: "+352" };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === c2) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    c2 = undefined;
-                    c2 = 1;
-                    c3 = 1;
-                    const obj3 = { value: closure_2_3.shift(), done: false };
-                    return obj3;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_128_0 = value;
-                  if (closure_128_0) {
-                    tmp5("Attempting to send previously queued event");
-                    const _Date = Date;
-                    const date = new Date();
-                    closure_128_0[0].sent_at = date.toISOString();
-                    closure_129_7(closure_128_0, true).catch((error) => {
-                      closure_1_1("Failed to retry sending", error);
-                    });
-                    const promise = closure_129_7(closure_128_0, true);
-                  }
-                  c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
-                }
-              } catch (tmp18) {
-                c3 = tmp;
-                throw tmp18;
-              }
-            }
-          }), closure_4);
-          let unref = typeof timerId !== "number";
-          if (typeof timerId !== "number") {
-            unref = timerId.unref;
-          }
-          if (unref) {
-            timerId.unref();
-          }
-          let _Math = Math;
-          closure_4 = Math.min(2 * closure_4, 3600000);
-        }
-      }
-      let obj = {
-        send,
-        flush(arg0) {
-            if (undefined === arg0) {
-              closure_4 = c4;
-              if (timerId) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(timerId);
-              }
-              const _setTimeout = setTimeout;
-              timerId = setTimeout(asyncGeneratorStep(async () => {
-                if (c3 === 2) {
-                  c3 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp4 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj = { value, done: true };
-                    return obj;
-                  } else {
-                    return { value: "IconComponent", done: "+352" };
-                  }
-                } else {
-                  try {
-                    c3 = 2;
-                    if (0 === c2) {
-                      if (arg0 === 1) {
-                        c3 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c3 = 3;
-                        const obj2 = { value, done: true };
-                        return obj2;
-                      } else {
-                        closure_0 = tmp2;
-                        closure_128_0 = undefined;
-                        c2 = undefined;
-                        c2 = 1;
-                        c3 = 1;
-                        const obj3 = { value: closure_2_3.shift(), done: false };
-                        return obj3;
-                      }
-                    } else if (arg0 === 1) {
-                      c3 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c3 = 3;
-                      const obj4 = { value, done: true };
-                      return obj4;
-                    } else {
-                      closure_128_0 = value;
-                      if (closure_128_0) {
-                        tmp5("Attempting to send previously queued event");
-                        const _Date = Date;
-                        const date = new Date();
-                        closure_128_0[0].sent_at = date.toISOString();
-                        closure_129_7(closure_128_0, true).catch((error) => {
-                          closure_1_1("Failed to retry sending", error);
-                        });
-                        const promise = closure_129_7(closure_128_0, true);
-                      }
-                      c3 = 3;
-                      return { value: "IconComponent", done: "+352" };
-                    }
-                  } catch (tmp18) {
-                    c3 = tmp;
-                    throw tmp18;
-                  }
-                }
-              }), c3);
-              let unref = typeof timerId !== "number";
-              if (typeof timerId !== "number") {
-                unref = timerId.unref;
-              }
-              if (unref) {
-                timerId.unref();
-              }
-            }
-            return closure_1.flush(arg0);
-          }
-      };
-      return obj;
-    } else {
-      const _Error = Error;
-      const error = new Error("No `createStore` function was provided");
-      throw error;
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
     }
   };
-}
+};

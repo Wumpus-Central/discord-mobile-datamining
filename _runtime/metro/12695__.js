@@ -1,51 +1,47 @@
 // === Module 12695: ? ===
 
 // Module 12695
+import _mod12696 from "module_12696" /* 12696 */;
 
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
-  return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
-      }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
-      }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
-    },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
-      } else {
-        return false;
+require = arg1;
+const module = arg4;
+const dependencyMap = arg6;
+function dynamicRequire(require, arg1) {
+  return require.require(arg1);
+}
+
+export { dynamicRequire };
+export const isNodeEnv = function isNodeEnv() {
+  const isBrowserBundleResult = _mod12696.isBrowserBundle();
+  if (isBrowserBundleResult) {
+    return !isBrowserBundleResult;
+  } else {
+    const _Object = Object;
+    const call = toString.call;
+    const _process = process;
+    let str = 0;
+    if (typeof process !== "undefined") {
+      str = process;
+    }
+    str = "[object process]";
+    const tmp3 = typeof call === "unknown" ? toString() : call(str);
+  }
+};
+export const loadModule = function loadModule(arg0) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = module;
+  }
+  try {
+    let tmp3 = dynamicRequire(tmp, arg0);
+    if (!tmp3) {
+      try {
+        const _HermesInternal = HermesInternal;
+        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
+      } catch (err) {
       }
     }
-  };
-}
+    return tmp3;
+  } catch (err) {
+  }
+};
