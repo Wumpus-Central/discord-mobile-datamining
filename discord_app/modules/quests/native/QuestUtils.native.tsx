@@ -19,8 +19,8 @@ import QuestActionCreators from "QuestActionCreators" /* 9571 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9589 */;
 import GameControllerIcon from "GameControllerIcon" /* 9616 */;
 import CloudIcon from "CloudIcon" /* 12560 */;
-import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 14144 */;
-import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 14152 */;
+import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 14143 */;
+import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 14151 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9568 */;
@@ -28,14 +28,14 @@ import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9568 */;
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14137, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14136, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14137, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14136, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -61,7 +61,7 @@ let closure_15 = async function _handleRewardClaim(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -161,7 +161,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
           closure_129_9 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

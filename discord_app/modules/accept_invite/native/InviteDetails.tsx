@@ -1,6 +1,6 @@
-// === Module 13661: InviteDetails ===
+// === Module 13660: InviteDetails ===
 
-// Module 13661 (InviteDetails)
+// Module 13660 (InviteDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,11 +14,11 @@ import FastImageDefault from "FastImage" /* 5669 */;
 import ButtonGroup from "ButtonGroup" /* 6696 */;
 import GuildBadgeDefault from "GuildBadge" /* 6887 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7808 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 13663 */;
-import InviteRolesListDefault from "InviteRolesList" /* 13664 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 13662 */;
+import InviteRolesListDefault from "InviteRolesList" /* 13663 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 13314 */;
+import MultiAccountStore from "MultiAccountStore" /* 13313 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -61,7 +61,7 @@ function shouldShowInviter(invite, isGuildMember) {
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(13662).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(13661).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(4971);
@@ -124,7 +124,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
       if (null != invite.inviter) {
         let tmp10 = null;
         if (null != invite.inviter) {
-          const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: true };
+          const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: null };
           const tmp16 = new UserRecord(invite.inviter);
           obj2.user = tmp16;
           obj2.size = native.AvatarSizes.XLARGE;
@@ -154,7 +154,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: null };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = native.AvatarSizes.XLARGE;

@@ -1,6 +1,6 @@
-// === Module 13943: ProductPurchaseSuccessActionCreators ===
+// === Module 13942: ProductPurchaseSuccessActionCreators ===
 
-// Module 13943 (ProductPurchaseSuccessActionCreators)
+// Module 13942 (ProductPurchaseSuccessActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

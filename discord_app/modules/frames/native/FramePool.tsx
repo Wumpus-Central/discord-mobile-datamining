@@ -1,13 +1,13 @@
-// === Module 18431: FramePool ===
+// === Module 18430: FramePool ===
 
-// Module 18431 (FramePool)
+// Module 18430 (FramePool)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import makeIframeIdDefault from "makeIframeId" /* 11462 */;
-import WebViewContext from "WebViewContext" /* 11487 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11890 */;
+import makeIframeIdDefault from "makeIframeId" /* 11464 */;
+import WebViewContext from "WebViewContext" /* 11489 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6775 */;
@@ -27,7 +27,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   id = frame.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      return first1(11462)();
+      return first1(11464)();
     };
     cResult[0] = fn;
     let first = fn;
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
         }
       }
     }
-    const syncExternalStore = noop.useSyncExternalStore(first1(11890).subscribe, P);
+    const syncExternalStore = noop.useSyncExternalStore(first1(11892).subscribe, P);
     if (cResult[11] !== syncExternalStore) {
       class P {
         constructor() {
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
       }
     }
     const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
-    const tmp23 = jsx(first1(18432), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 }, first1);
+    const tmp23 = jsx(first1(18431), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 }, first1);
     cResult[13] = frame;
     cResult[14] = first1;
     cResult[15] = tmp17;
@@ -165,7 +165,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   iframeId = undefined;
   dependencyMap = undefined;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => first(11462)());
+  [iframeId, dependencyMap] = noop.useState(() => first(11464)());
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -181,14 +181,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   const callback = noop.useCallback(() => {
     dependencyMap(makeIframeIdDefault());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(11890).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(11892).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
   if (syncExternalStore == null) {
     const obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(18432), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(18431), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

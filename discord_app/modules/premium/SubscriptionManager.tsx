@@ -1,6 +1,6 @@
-// === Module 18957: SubscriptionManager ===
+// === Module 18956: SubscriptionManager ===
 
-// Module 18957 (SubscriptionManager)
+// Module 18956 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
 import BillingInfoStore from "BillingInfoStore" /* 2054 */;
@@ -32,7 +32,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ const prototype = function SubscriptionManager() {
               }
             }
             currentUser = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -142,7 +142,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ const prototype = function SubscriptionManager() {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp8) {
         v3 = tmp;
         throw tmp8;
@@ -196,7 +196,7 @@ const prototype = function SubscriptionManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -240,7 +240,7 @@ const prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp13) {
         c2 = tmp;

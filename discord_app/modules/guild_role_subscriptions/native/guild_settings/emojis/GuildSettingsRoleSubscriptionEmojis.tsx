@@ -1,12 +1,12 @@
-// === Module 19323: GuildSettingsRoleSubscriptionEmojis ===
+// === Module 19322: GuildSettingsRoleSubscriptionEmojis ===
 
-// Module 19323 (GuildSettingsRoleSubscriptionEmojis)
+// Module 19322 (GuildSettingsRoleSubscriptionEmojis)
 import c from "c" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 4925 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19282 */;
-import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 19324 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19281 */;
+import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 19323 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import apply from "module_12" /* 12 */;
@@ -14,15 +14,15 @@ import apply from "module_12" /* 12 */;
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(19275).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(19275);
+  const roleSubscriptionSettingsDisabled = guildId(19274).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(19274);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp(1128).intl;
-    const obj3 = { maxSlots: stateFromStores(19324)(stateFromStores) };
+    const obj3 = { maxSlots: stateFromStores(19323)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1128).t.H9Jxp6, obj3),
@@ -37,7 +37,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
               emoji = arg0;
               closure_1 = arg1;
               const obj = ActionSheetActionCreatorsDefault;
-              obj.openLazy(asyncRequireImpl(19325, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, {
+              obj.openLazy(asyncRequireImpl(19324, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {
@@ -56,7 +56,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
         },
       disabled: roleSubscriptionSettingsDisabled
     };
-    return jsx(tmp(19060).ManageEmojisModal, {
+    return jsx(tmp(19059).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1128).t.H9Jxp6, obj3),
       computeEmojiItems,
@@ -70,7 +70,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
               emoji = arg0;
               closure_1 = arg1;
               const obj = ActionSheetActionCreatorsDefault;
-              obj.openLazy(asyncRequireImpl(19325, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, {
+              obj.openLazy(asyncRequireImpl(19324, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {

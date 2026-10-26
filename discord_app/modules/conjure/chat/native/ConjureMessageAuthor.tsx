@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(12344).MESSAGE_AVATAR_SIZE, height: fn(12344).MESSAGE_AVATAR_SIZE, borderRadius: fn(12344).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(12343).MESSAGE_AVATAR_SIZE, height: fn(12343).MESSAGE_AVATAR_SIZE, borderRadius: fn(12343).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -265,7 +265,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       cResult[7] = tmp8;
       cResult[8] = tmp;
     }
-    const obj3 = { size, user: messageAuthorUser, guildId: "r" };
+    const obj3 = { size, user: messageAuthorUser, guildId: "Array" };
     const tmp10 = closure_5(PressableOpacity(1202).Avatar, obj3);
     cResult[3] = size;
     cResult[4] = messageAuthorUser;
@@ -291,7 +291,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     const obj2 = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp3(1128).intl;
     obj2.accessibilityLabel = intl.string(tmp3(1128).t.iXAna6);
-    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
+    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
     obj2.children = closure_5(tmp3(1202).Avatar, obj3);
     tmp7 = closure_5(tmp3(6908).PressableOpacity, obj2);
   }

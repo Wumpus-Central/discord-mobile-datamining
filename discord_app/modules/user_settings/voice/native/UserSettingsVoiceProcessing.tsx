@@ -1,6 +1,6 @@
-// === Module 11626: UserSettingsVoiceProcessing ===
+// === Module 11628: UserSettingsVoiceProcessing ===
 
-// Module 11626 (UserSettingsVoiceProcessing)
+// Module 11628 (UserSettingsVoiceProcessing)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,10 +10,10 @@ import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import TableRadioRow from "TableRadioRow" /* 6984 */;
 import TableRadioGroup from "TableRadioGroup" /* 6985 */;
 import TableSwitchRow from "TableSwitchRow" /* 7295 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 11611 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11627 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11628 */;
-import KrispLogoDefault from "KrispLogo" /* 11631 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 11613 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11629 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11630 */;
+import KrispLogoDefault from "KrispLogo" /* 11633 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
@@ -400,9 +400,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   if (cResult[4] !== echoCancellation) {
     const obj2 = { title: tmp8, hasIcons: false, children: null };
-    const obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(11627).handleEchoCancellationChange };
+    const obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(11629).handleEchoCancellationChange };
     obj2.children = closure_5(inputMode(7295).TableSwitchRow, obj3);
-    const tmp14 = closure_5(inputMode(11611).UserSettingsTableRowGroup, obj2);
+    const tmp14 = closure_5(inputMode(11613).UserSettingsTableRowGroup, obj2);
     cResult[4] = echoCancellation;
     cResult[5] = tmp14;
     let tmp12 = tmp14;
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     tmp20 = cResult[8];
   }
   if (cResult[9] !== automaticGainControl) {
-    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(11627).handleAutomaticGainControlChange };
+    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(11629).handleAutomaticGainControlChange };
     const tmp25 = closure_5(inputMode(7295).TableSwitchRow, obj4);
     cResult[9] = automaticGainControl;
     cResult[10] = tmp25;
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj6 = { hasIcons: false, children: null };
       const items2 = [tmp23, tmp26];
       obj6.children = items2;
-      const tmp31 = closure_6(inputMode(11611).UserSettingsTableRowGroup, obj6);
+      const tmp31 = closure_6(inputMode(11613).UserSettingsTableRowGroup, obj6);
       cResult[15] = tmp23;
       cResult[16] = tmp26;
       cResult[17] = tmp31;

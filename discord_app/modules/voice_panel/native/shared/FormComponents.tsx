@@ -14,7 +14,7 @@ import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7811 
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 9165 */;
 import GuildTagDefault from "GuildTag" /* 9225 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14178 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14177 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5712 */;

@@ -1,6 +1,6 @@
-// === Module 17928: ScienceIcon ===
+// === Module 17927: ScienceIcon ===
 
-// Module 17928 (ScienceIcon)
+// Module 17927 (ScienceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;

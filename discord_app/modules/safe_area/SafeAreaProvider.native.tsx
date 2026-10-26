@@ -1,6 +1,6 @@
-// === Module 15826: SafeAreaProvider ===
+// === Module 15825: SafeAreaProvider ===
 
-// Module 15826 (SafeAreaProvider)
+// Module 15825 (SafeAreaProvider)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import SafeAreaConstants from "SafeAreaConstants" /* 1635 */;

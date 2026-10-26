@@ -1,20 +1,20 @@
-// === Module 17311: ActivityPrivacyDefaultSharingSetting ===
+// === Module 17310: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 17311 (ActivityPrivacyDefaultSharingSetting)
+// Module 17310 (ActivityPrivacyDefaultSharingSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16143 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOptions() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -152,7 +152,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17312, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17311, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

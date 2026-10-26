@@ -23,7 +23,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ export default {
             return obj;
           }
           guildId = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         } catch (tmp7) {
           guildId = tmp;
           throw tmp7;

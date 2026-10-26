@@ -1,6 +1,6 @@
-// === Module 11499: constants ===
+// === Module 11501: constants ===
 
-// Module 11499 (constants)
+// Module 11501 (constants)
 import size from "module_2" /* 2 */;
 
 const combined = "" + "__DISCORD_SHIM" + "_CHECK";

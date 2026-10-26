@@ -1,6 +1,6 @@
-// === Module 18150: ThreadChannelUserList ===
+// === Module 18149: ThreadChannelUserList ===
 
-// Module 18150 (ThreadChannelUserList)
+// Module 18149 (ThreadChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;
 import noop from "module_19" /* 19 */;

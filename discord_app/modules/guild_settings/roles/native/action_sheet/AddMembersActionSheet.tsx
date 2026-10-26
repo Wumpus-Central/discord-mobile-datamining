@@ -1,6 +1,6 @@
-// === Module 19113: action_sheet/AddMembersActionSheet ===
+// === Module 19112: action_sheet/AddMembersActionSheet ===
 
-// Module 19113 (action_sheet/AddMembersActionSheet)
+// Module 19112 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,14 +13,14 @@ import RegexUtilsDefault from "RegexUtils" /* 5608 */;
 import GuildUtilsDefault from "GuildUtils" /* 6829 */;
 import FormCheckbox from "FormCheckbox" /* 6901 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10830 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19112 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10832 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19111 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19107).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19106).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4971);

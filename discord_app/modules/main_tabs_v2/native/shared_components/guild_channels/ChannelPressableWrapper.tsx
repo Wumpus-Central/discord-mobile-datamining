@@ -1,7 +1,7 @@
-// === Module 17884: ChannelPressableWrapper ===
+// === Module 17883: ChannelPressableWrapper ===
 
-// Module 17884 (ChannelPressableWrapper)
-import ChannelListLayout from "ChannelListLayout" /* 12061 */;
+// Module 17883 (ChannelPressableWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 12063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

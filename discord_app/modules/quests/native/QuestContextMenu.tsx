@@ -1,6 +1,6 @@
-// === Module 16498: QuestContextMenu ===
+// === Module 16497: QuestContextMenu ===
 
-// Module 16498 (QuestContextMenu)
+// Module 16497 (QuestContextMenu)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
@@ -20,8 +20,8 @@ import captureAdUserAction from "captureAdUserAction" /* 9573 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9594 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9607 */;
-import _modDef16432 from "module_16432" /* 16432 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16457 */;
+import _modDef16431 from "module_16431" /* 16431 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16456 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7776 */;
@@ -372,7 +372,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16432;
+    obj2.iconSource = _modDef16431;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

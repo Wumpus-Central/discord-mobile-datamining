@@ -1,10 +1,10 @@
-// === Module 17793: GuildsBarGeoRestrictedBadge ===
+// === Module 17792: GuildsBarGeoRestrictedBadge ===
 
-// Module 17793 (GuildsBarGeoRestrictedBadge)
+// Module 17792 (GuildsBarGeoRestrictedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import _modDef16244 from "module_16244" /* 16244 */;
+import _modDef16243 from "module_16243" /* 16243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp4 = cResult[2];
     }
     if (cResult[3] !== tmp3.badgeImage) {
-      const obj2 = { source: _modDef16244, style: tmp3.badgeImage };
-      const tmp9 = jsx(FastImageDefault, { source: _modDef16244, style: tmp3.badgeImage });
+      const obj2 = { source: _modDef16243, style: tmp3.badgeImage };
+      const tmp9 = jsx(FastImageDefault, { source: _modDef16243, style: tmp3.badgeImage });
       cResult[3] = tmp3.badgeImage;
       cResult[4] = tmp9;
       let tmp5 = tmp9;
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef16244, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16244, style: tmp.badgeImage });
+  const obj2 = { source: _modDef16243, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16243, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 }));

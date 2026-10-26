@@ -1,6 +1,6 @@
-// === Module 16625: SettingsAppearanceThemePickerScreen ===
+// === Module 16624: SettingsAppearanceThemePickerScreen ===
 
-// Module 16625 (SettingsAppearanceThemePickerScreen)
+// Module 16624 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
@@ -15,14 +15,14 @@ import Text_Text from "Text/Text" /* 5234 */;
 import QuestTypes from "QuestTypes" /* 6713 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6880 */;
 import Pressables from "Pressables" /* 6908 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 13840 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 15856 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 15857 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16380 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16381 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16382 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 16626 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16628 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 13839 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 15855 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 15856 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16379 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16380 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16381 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 16625 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16627 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -354,7 +354,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -457,7 +457,7 @@ function ThemePicker(defaultIndex) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -497,7 +497,7 @@ function ThemePicker(defaultIndex) {
                 callback1(tmp12);
                 close();
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
           }
@@ -556,7 +556,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

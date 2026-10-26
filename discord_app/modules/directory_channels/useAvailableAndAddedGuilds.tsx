@@ -1,13 +1,13 @@
-// === Module 13203: useAvailableAndAddedGuilds ===
+// === Module 13202: useAvailableAndAddedGuilds ===
 
-// Module 13203 (useAvailableAndAddedGuilds)
+// Module 13202 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 import SortedGuildStore from "SortedGuildStore" /* 6701 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13197 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13196 */;
 
 const require = globalThis.__r;
 
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvail
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvail
             } else {
               closure_128_2(false);
               v3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp15) {
             v3 = tmp;
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvail
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvail
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp15) {
           v3 = tmp;

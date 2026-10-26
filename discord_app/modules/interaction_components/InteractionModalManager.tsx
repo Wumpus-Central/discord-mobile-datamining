@@ -1,10 +1,10 @@
-// === Module 18832: InteractionModalManager ===
+// === Module 18831: InteractionModalManager ===
 
-// Module 18832 (InteractionModalManager)
+// Module 18831 (InteractionModalManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15801 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 18844 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18847 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15800 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 18843 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18846 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import InteractionStore from "InteractionStore" /* 8270 */;
@@ -22,7 +22,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp19) {
       c4 = tmp;

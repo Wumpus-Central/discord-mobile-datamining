@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp13.avatar, guildId: "r", size: "r", user: "toCharArray$esjava$1" };
+      const obj44 = { style: tmp13.avatar, guildId: "r", size: "Reflect", user: null };
       const AvatarSizes = tmp(tmp2[29]).AvatarSizes;
       obj44.size = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

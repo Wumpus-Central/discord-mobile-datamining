@@ -1,6 +1,6 @@
-// === Module 11486: BaseEmbeddedAppWebView ===
+// === Module 11488: BaseEmbeddedAppWebView ===
 
-// Module 11486 (BaseEmbeddedAppWebView)
+// Module 11488 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -10,7 +10,7 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
 import usePreviousDefault from "usePrevious" /* 6660 */;
 import WebView from "WebView" /* 7907 */;
 import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10775 */;
-import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11495 */;
+import isAllowedFrameNavigation from "isAllowedFrameNavigation" /* 11497 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -481,7 +481,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                                                                                 const obj2 = { value, done: true };
                                                                                 return obj2;
                                                                               } else {
-                                                                                return { value: "IconComponent", done: null };
+                                                                                return { value: "IconComponent", done: "+352" };
                                                                               }
                                                                             } else {
                                                                               try {
@@ -533,7 +533,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                                                                                   closure_2_29(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[31])(item).replace(/\\\*/g, ".*")));
                                                                                   closure_2_27(true);
                                                                                   c5 = 3;
-                                                                                  return { value: "IconComponent", done: null };
+                                                                                  return { value: "IconComponent", done: "+352" };
                                                                                 }
                                                                               } catch (tmp10) {
                                                                                 c5 = tmp;
@@ -584,7 +584,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                                                                                 const obj2 = { value, done: true };
                                                                                 return obj2;
                                                                               } else {
-                                                                                return { value: "IconComponent", done: null };
+                                                                                return { value: "IconComponent", done: "+352" };
                                                                               }
                                                                             } else {
                                                                               try {
@@ -804,7 +804,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                                                                           const obj2 = { value, done: true };
                                                                           return obj2;
                                                                         } else {
-                                                                          return { value: "IconComponent", done: null };
+                                                                          return { value: "IconComponent", done: "+352" };
                                                                         }
                                                                       } else {
                                                                         try {
@@ -856,7 +856,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                                                                             closure_2_29(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[31])(item).replace(/\\\*/g, ".*")));
                                                                             closure_2_27(true);
                                                                             c5 = 3;
-                                                                            return { value: "IconComponent", done: null };
+                                                                            return { value: "IconComponent", done: "+352" };
                                                                           }
                                                                         } catch (tmp10) {
                                                                           c5 = tmp;
@@ -1277,7 +1277,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -1432,7 +1432,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -1596,7 +1596,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -1648,7 +1648,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                 closure_1_29(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[31])(item).replace(/\\\*/g, ".*")));
                 closure_1_27(true);
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp10) {
               c5 = tmp;
@@ -1736,7 +1736,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseEm
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {

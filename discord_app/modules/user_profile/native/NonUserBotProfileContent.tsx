@@ -220,7 +220,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                       }
                                                     }
                                                     const obj10 = { userId: user.id, displayProfile, channel, style: tmp46 };
-                                                    const tmp49 = closure_7(tmp4(11157), obj10);
+                                                    const tmp49 = closure_7(tmp4(11159), obj10);
                                                     cResult[51] = channel;
                                                     cResult[52] = displayProfile;
                                                     cResult[53] = tmp46;
@@ -248,7 +248,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     }
                                   }
                                   const obj12 = { user, guildId: guild_id1, displayName: name, pronouns, badges: tmp10, badgeContainerBackground: containerBackground, displayNameAccessibilityHint: tmp36, onPressDisplayName: tmp19, onPressUserTag: tmp19, onPressPronouns: tmp20, showBadgeToastOnPress: true };
-                                  const tmp40 = closure_7(tmp4(11076), obj12);
+                                  const tmp40 = closure_7(tmp4(11078), obj12);
                                   cResult[34] = tmp10;
                                   cResult[35] = containerBackground;
                                   cResult[36] = name;
@@ -405,7 +405,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
       ToastUtils.presentUserPronouns();
     };
-    obj8.children = closure_7(tmp(11076), obj9);
+    obj8.children = closure_7(tmp(11078), obj9);
     const items3 = [closure_7(View, obj8), ];
     const obj11 = { style: tmp3.cards, children: null };
     const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -413,7 +413,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj13 = { backgroundColor: containerBackground };
     items4[1] = obj13;
     obj12.style = items4;
-    obj11.children = closure_7(tmp(11157), obj12);
+    obj11.children = closure_7(tmp(11159), obj12);
     items3[1] = closure_7(View, obj11);
     obj6.children = items3;
     items1[1] = closure_8(View, obj6);

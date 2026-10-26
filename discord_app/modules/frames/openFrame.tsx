@@ -1,6 +1,6 @@
-// === Module 11396: openFrame ===
+// === Module 11398: openFrame ===
 
-// Module 11396 (openFrame)
+// Module 11398 (openFrame)
 import router_utils from "router_utils" /* 1114 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;

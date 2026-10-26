@@ -1,6 +1,6 @@
-// === Module 11618: VoiceSensitivity ===
+// === Module 11620: VoiceSensitivity ===
 
-// Module 11618 (VoiceSensitivity)
+// Module 11620 (VoiceSensitivity)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -678,7 +678,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
               mediaEngine.on(auto(5739).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp17) {
           c2 = tmp;

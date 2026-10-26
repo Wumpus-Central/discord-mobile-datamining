@@ -1,6 +1,6 @@
-// === Module 13984: EditAttachmentActionSheet ===
+// === Module 13983: EditAttachmentActionSheet ===
 
-// Module 13984 (EditAttachmentActionSheet)
+// Module 13983 (EditAttachmentActionSheet)
 import util from "util" /* 1128 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAtta
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -391,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAtta
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

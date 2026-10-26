@@ -1,7 +1,7 @@
-// === Module 13348: ChatInputGuardMessageRequest ===
+// === Module 13347: ChatInputGuardMessageRequest ===
 
-// Module 13348 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 13356 */;
+// Module 13347 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 13355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -174,7 +174,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -203,7 +203,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return obj;
             } else {
               c1 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp9) {
             c1 = tmp;
@@ -237,7 +237,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -268,7 +268,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           } else {
             closure_0(acceptMessageRequest[12]).transitionToChannel(closure_0.id, { navigationReplace: true });
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -313,7 +313,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         } else {
           channel(c2[12]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -363,7 +363,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -392,7 +392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -402,12 +402,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   };
   importDefault = channel(1505).useNavigation();
   let obj = channel(1505);
-  const isMessageRequestRestrictedViewer = channel(13349).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(13349);
+  const isMessageRequestRestrictedViewer = channel(13348).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(13348);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(13350).useMessageRequestActions({
+  const messageRequestActions = channel(13349).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -434,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(13350);
+  let obj4 = channel(13349);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

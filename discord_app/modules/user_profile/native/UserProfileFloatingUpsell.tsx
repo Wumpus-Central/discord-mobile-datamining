@@ -1,9 +1,9 @@
-// === Module 15941: UserProfileFloatingUpsell ===
+// === Module 15940: UserProfileFloatingUpsell ===
 
-// Module 15941 (UserProfileFloatingUpsell)
+// Module 15940 (UserProfileFloatingUpsell)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15942 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

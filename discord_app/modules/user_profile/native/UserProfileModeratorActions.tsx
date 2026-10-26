@@ -1,6 +1,6 @@
-// === Module 14334: UserProfileModeratorActions ===
+// === Module 14333: UserProfileModeratorActions ===
 
-// Module 14334 (UserProfileModeratorActions)
+// Module 14333 (UserProfileModeratorActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,7 +16,7 @@ import GuildMemberUtils from "GuildMemberUtils" /* 12780 */;
 import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12786 */;
 import showKickConfirmModalDefault from "showKickConfirmModal" /* 12804 */;
 import showBanConfirmModalDefault from "showBanConfirmModal" /* 12806 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13545 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13544 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6686 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -364,7 +364,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11834, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11836, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }

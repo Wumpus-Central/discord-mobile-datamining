@@ -1,6 +1,6 @@
-// === Module 17787: GuildsBarDirectMessage ===
+// === Module 17786: GuildsBarDirectMessage ===
 
-// Module 17787 (GuildsBarDirectMessage)
+// Module 17786 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
@@ -382,7 +382,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "6fdce3d9195ea0b36363d1d85d3fe1ac", children: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages" };
+  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null };
   let tmp11Result = null;
   if (null != channel) {
     const obj5 = { channel };
@@ -405,5 +405,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   obj4.children = tmp11Result2;
-  return jsx(stateFromStores(channel[13]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "6fdce3d9195ea0b36363d1d85d3fe1ac", children: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages" });
+  return jsx(stateFromStores(channel[13]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null });
 }));

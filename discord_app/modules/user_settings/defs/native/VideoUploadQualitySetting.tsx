@@ -1,17 +1,17 @@
-// === Module 16820: VideoUploadQualitySetting ===
+// === Module 16819: VideoUploadQualitySetting ===
 
-// Module 16820 (VideoUploadQualitySetting)
+// Module 16819 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
-import UserSettingsText from "UserSettingsText" /* 16819 */;
+import UserSettingsText from "UserSettingsText" /* 16818 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 
 require = fn;
 const VideoQualitySettings = fn(1209).VideoQualitySettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoUploadQualitySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

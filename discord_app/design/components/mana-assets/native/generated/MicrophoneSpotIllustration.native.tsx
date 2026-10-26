@@ -1,23 +1,23 @@
-// === Module 11579: MicrophoneSpotIllustration ===
+// === Module 11581: MicrophoneSpotIllustration ===
 
-// Module 11579 (MicrophoneSpotIllustration)
+// Module 11581 (MicrophoneSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef11580 from "module_11580" /* 11580 */;
-import _modDef11581 from "module_11581" /* 11581 */;
 import _modDef11582 from "module_11582" /* 11582 */;
+import _modDef11583 from "module_11583" /* 11583 */;
+import _modDef11584 from "module_11584" /* 11584 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11580 }, 3: null };
-let obj2 = { uri: _modDef11580 };
-obj[2] = { uri: _modDef11581 };
-const obj3 = { uri: _modDef11581 };
-obj[3] = { uri: _modDef11582 };
+let obj = { 1: null, 2: { uri: _modDef11582 }, 3: null };
+let obj2 = { uri: _modDef11582 };
+obj[2] = { uri: _modDef11583 };
+const obj3 = { uri: _modDef11583 };
+obj[3] = { uri: _modDef11584 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef11582 };
+const obj4 = { uri: _modDef11584 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx");
 

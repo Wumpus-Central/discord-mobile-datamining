@@ -1,6 +1,6 @@
-// === Module 12903: ForwardModal ===
+// === Module 12902: ForwardModal ===
 
-// Module 12903 (ForwardModal)
+// Module 12902 (ForwardModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HapticUtils from "HapticUtils" /* 5212 */;
@@ -10,10 +10,10 @@ import LinkIcon from "LinkIcon" /* 5678 */;
 import ChannelUtils from "ChannelUtils" /* 5994 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12900 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12901 */;
-import formatResults from "formatResults" /* 12905 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12907 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12899 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12900 */;
+import formatResults from "formatResults" /* 12904 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12904).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(12903).MAX_DESTINATION_COUNT;
 let UserRowModes = fn(10616).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 if (forwardOptions(source[27])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5910).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12910), {
+                    closure_1_0(5910).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12909), {
                       onConfirm() {
                         return closure_0(true);
                       },

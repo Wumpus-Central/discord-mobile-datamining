@@ -1,9 +1,9 @@
-// === Module 15190: GuildBadgeFrog ===
+// === Module 15189: GuildBadgeFrog ===
 
-// Module 15190 (GuildBadgeFrog)
+// Module 15189 (GuildBadgeFrog)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7962 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15166 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15165 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

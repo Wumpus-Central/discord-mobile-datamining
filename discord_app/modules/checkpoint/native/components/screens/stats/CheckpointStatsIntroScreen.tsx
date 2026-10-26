@@ -1,10 +1,10 @@
-// === Module 12975: CheckpointStatsIntroScreen ===
+// === Module 12974: CheckpointStatsIntroScreen ===
 
-// Module 12975 (CheckpointStatsIntroScreen)
+// Module 12974 (CheckpointStatsIntroScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointTextDefault from "CheckpointText" /* 12972 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12974 */;
+import CheckpointTextDefault from "CheckpointText" /* 12971 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

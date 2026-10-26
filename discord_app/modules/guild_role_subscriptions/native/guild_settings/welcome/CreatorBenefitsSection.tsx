@@ -1,23 +1,23 @@
-// === Module 19230: CreatorBenefitsSection ===
+// === Module 19229: CreatorBenefitsSection ===
 
-// Module 19230 (CreatorBenefitsSection)
+// Module 19229 (CreatorBenefitsSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4978 */;
 import useThemeDefault from "useTheme" /* 5205 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import AvatarRoseExample from "AvatarRoseExample" /* 19231 */;
-import AvatarLokyExample from "AvatarLokyExample" /* 19235 */;
-import AvatarGraggleExample from "AvatarGraggleExample" /* 19239 */;
-import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 19243 */;
-import StarKeySpotIllustration from "StarKeySpotIllustration" /* 19247 */;
-import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 19251 */;
+import AvatarRoseExample from "AvatarRoseExample" /* 19230 */;
+import AvatarLokyExample from "AvatarLokyExample" /* 19234 */;
+import AvatarGraggleExample from "AvatarGraggleExample" /* 19238 */;
+import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 19242 */;
+import StarKeySpotIllustration from "StarKeySpotIllustration" /* 19246 */;
+import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 19250 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(16562).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(16561).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4971);

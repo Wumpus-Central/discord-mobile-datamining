@@ -1,10 +1,10 @@
-// === Module 12168: AppLauncherAttachmentOption ===
+// === Module 12170: AppLauncherAttachmentOption ===
 
-// Module 12168 (AppLauncherAttachmentOption)
+// Module 12170 (AppLauncherAttachmentOption)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FileIcon from "FileIcon" /* 11828 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 12169 */;
+import FileIcon from "FileIcon" /* 11830 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 12171 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8293 */;
 

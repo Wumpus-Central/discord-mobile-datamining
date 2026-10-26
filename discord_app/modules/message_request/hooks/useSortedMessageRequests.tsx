@@ -1,6 +1,6 @@
-// === Module 18337: useSortedMessageRequests ===
+// === Module 18336: useSortedMessageRequests ===
 
-// Module 18337 (useSortedMessageRequests)
+// Module 18336 (useSortedMessageRequests)
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import UserStore from "UserStore" /* 1392 */;

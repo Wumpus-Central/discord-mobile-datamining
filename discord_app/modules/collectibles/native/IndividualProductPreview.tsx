@@ -1,20 +1,20 @@
-// === Module 14454: IndividualProductPreview ===
+// === Module 14453: IndividualProductPreview ===
 
-// Module 14454 (IndividualProductPreview)
+// Module 14453 (IndividualProductPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import LinearGradientDefault from "LinearGradient" /* 5258 */;
 import useCurrentUser from "useCurrentUser" /* 8667 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11053 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11171 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14455 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14456 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11055 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11173 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14454 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14455 */;
 import noop from "module_19" /* 19 */;
 
 const FractionalPremiumSKUs = FractionalNitroPreview(1090);
-const FractionalNitroPreview2 = FractionalNitroPreview(14457);
-const OrbBadgePreview = FractionalNitroPreview(14460);
+const FractionalNitroPreview2 = FractionalNitroPreview(14456);
+const OrbBadgePreview = FractionalNitroPreview(14459);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
     }
     if (cResult[3] !== product) {
       const obj2 = { product };
-      const tmp8 = closure_7(onTrackPress(14455), obj2);
+      const tmp8 = closure_7(onTrackPress(14454), obj2);
       cResult[3] = product;
       cResult[4] = tmp8;
       let tmp5 = tmp8;

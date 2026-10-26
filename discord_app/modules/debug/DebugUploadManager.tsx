@@ -1,6 +1,6 @@
-// === Module 13789: DebugUploadManager ===
+// === Module 13788: DebugUploadManager ===
 
-// Module 13789 (DebugUploadManager)
+// Module 13788 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       } else {
         c5 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp35) {
       closure_4 = tmp35;
@@ -124,7 +124,7 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

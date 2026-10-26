@@ -1,10 +1,10 @@
-// === Module 16440: QuestDockUtils ===
+// === Module 16439: QuestDockUtils ===
 
-// Module 16440 (QuestDockUtils)
+// Module 16439 (QuestDockUtils)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import spring from "spring" /* 5247 */;
-import QuestDockConstants from "QuestDockConstants" /* 16441 */;
+import QuestDockConstants from "QuestDockConstants" /* 16440 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;
@@ -26,25 +26,32 @@ function getQuestDockExpandedHeightLimits(height, top, expandedHeight) {
 getQuestDockExpandedHeightLimits.__closure = { QUEST_DOCK_COLLAPSED_HEIGHT };
 getQuestDockExpandedHeightLimits.__workletHash = 880847803554;
 getQuestDockExpandedHeightLimits.__initData = { code: "function getQuestDockExpandedHeightLimits_QuestDockUtilsTsx2(windowHeight,safeAreaTop,minContentHeight){const{QUEST_DOCK_COLLAPSED_HEIGHT}=this.__closure;return{minHeight:QUEST_DOCK_COLLAPSED_HEIGHT,maxHeight:Math.min(minContentHeight,windowHeight-safeAreaTop)};}" };
-function getQuestDockCollapsedWidth(width, youBarHorizontalMargin, youBarHorizontalMargin2) {
-  const bound = Math.max(youBarHorizontalMargin, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED);
-  return Math.min(width - bound - Math.max(youBarHorizontalMargin2, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED), QUEST_DOCK_COLLAPSED_MAX_WIDTH);
+function getQuestDockCollapsedWidth(width, left, right) {
+  let num = youBarHorizontalMargin;
+  if (youBarHorizontalMargin === undefined) {
+    num = 0;
+  }
+  return Math.min(width - left - right - 2 * Math.max(num, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED), QUEST_DOCK_COLLAPSED_MAX_WIDTH);
 }
 getQuestDockCollapsedWidth.__closure = { QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED, QUEST_DOCK_COLLAPSED_MAX_WIDTH };
-getQuestDockCollapsedWidth.__workletHash = 1119343760780;
-getQuestDockCollapsedWidth.__initData = { code: "function getQuestDockCollapsedWidth_QuestDockUtilsTsx3(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED,QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;safeAreaLeft=Math.max(safeAreaLeft,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED);safeAreaRight=Math.max(safeAreaRight,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED);return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
+getQuestDockCollapsedWidth.__workletHash = 1563792935153;
+getQuestDockCollapsedWidth.__initData = { code: "function getQuestDockCollapsedWidth_QuestDockUtilsTsx3(windowWidth,safeAreaLeft,safeAreaRight,horizontalMargin=0){const{QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED,QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;const gutter=Math.max(horizontalMargin,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED);return Math.min(windowWidth-safeAreaLeft-safeAreaRight-gutter*2,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
 function getQuestDockExpandedWidth(width, left, right) {
   return Math.min(width - left - right, QUEST_DOCK_COLLAPSED_MAX_WIDTH);
 }
 getQuestDockExpandedWidth.__closure = { QUEST_DOCK_COLLAPSED_MAX_WIDTH };
 getQuestDockExpandedWidth.__workletHash = 6480418564130;
 getQuestDockExpandedWidth.__initData = { code: "function getQuestDockExpandedWidth_QuestDockUtilsTsx4(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
-function getQuestDockClosedWidth(width, left, right) {
-  return Math.min(width - left - right, QUEST_DOCK_COLLAPSED_MAX_WIDTH);
+function getQuestDockClosedWidth(width2, left, right) {
+  let num = youBarHorizontalMargin;
+  if (youBarHorizontalMargin === undefined) {
+    num = 0;
+  }
+  return Math.min(width2 - left - right - 2 * num, QUEST_DOCK_COLLAPSED_MAX_WIDTH);
 }
 getQuestDockClosedWidth.__closure = { QUEST_DOCK_COLLAPSED_MAX_WIDTH };
-getQuestDockClosedWidth.__workletHash = 14159592925974;
-getQuestDockClosedWidth.__initData = { code: "function getQuestDockClosedWidth_QuestDockUtilsTsx5(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
+getQuestDockClosedWidth.__workletHash = 13166304747138;
+getQuestDockClosedWidth.__initData = { code: "function getQuestDockClosedWidth_QuestDockUtilsTsx5(windowWidth,safeAreaLeft,safeAreaRight,horizontalMargin=0){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight-horizontalMargin*2,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
 let closure_7 = 3 * DurationsDefault.Millis.HOUR;
 function dimensionsLayoutTransition(originX) {
   const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null };

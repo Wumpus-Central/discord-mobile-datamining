@@ -1,6 +1,6 @@
-// === Module 14886: useFetchGuildBoostSlots ===
+// === Module 14885: useFetchGuildBoostSlots ===
 
-// Module 14886 (useFetchGuildBoostSlots)
+// Module 14885 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
               } else {
                 v1(false);
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp13) {
               c2 = tmp;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
             } else {
               v1(false);
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp13) {
             c2 = tmp;

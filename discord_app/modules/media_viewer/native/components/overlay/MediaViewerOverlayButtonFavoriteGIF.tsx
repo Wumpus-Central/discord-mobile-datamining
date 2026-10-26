@@ -1,6 +1,6 @@
-// === Module 14216: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 14215: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 14216 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 14215 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1128 */;
 import frecency_user_settings from "frecency_user_settings" /* 1247 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;

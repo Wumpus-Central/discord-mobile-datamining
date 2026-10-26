@@ -1,6 +1,6 @@
-// === Module 11361: handleJoinEmbeddedActivity ===
+// === Module 11363: handleJoinEmbeddedActivity ===
 
-// Module 11361 (handleJoinEmbeddedActivity)
+// Module 11363 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -22,7 +22,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           closure_129_17 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

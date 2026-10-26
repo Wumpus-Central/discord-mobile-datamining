@@ -1,6 +1,6 @@
-// === Module 15893: EditProfileEffectActionSheet ===
+// === Module 15892: EditProfileEffectActionSheet ===
 
-// Module 15893 (EditProfileEffectActionSheet)
+// Module 15892 (EditProfileEffectActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -11,8 +11,8 @@ import UserProfileActionCreators from "UserProfileActionCreators" /* 8656 */;
 import useShopProductItems from "useShopProductItems" /* 8660 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8662 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11053 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 15895 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11055 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 15894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7665 */;
@@ -468,7 +468,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11053), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(11055), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;

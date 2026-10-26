@@ -1,10 +1,10 @@
-// === Module 16825: ChatEmojiEmoticonsSetting ===
+// === Module 16824: ChatEmojiEmoticonsSetting ===
 
-// Module 16825 (ChatEmojiEmoticonsSetting)
+// Module 16824 (ChatEmojiEmoticonsSetting)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import SettingsConstants from "SettingsConstants" /* 8332 */;
-import SettingBuilders from "SettingBuilders" /* 11206 */;
+import SettingBuilders from "SettingBuilders" /* 11208 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

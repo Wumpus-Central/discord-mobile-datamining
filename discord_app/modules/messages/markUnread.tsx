@@ -1,6 +1,6 @@
-// === Module 10871: markUnread ===
+// === Module 10873: markUnread ===
 
-// Module 10871 (markUnread)
+// Module 10873 (markUnread)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8287 */;
@@ -22,7 +22,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

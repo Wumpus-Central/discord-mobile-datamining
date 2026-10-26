@@ -6,7 +6,7 @@ import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
 import timingPresets from "timingPresets" /* 5209 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11159 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11161 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -570,10 +570,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp33 = he;
     const tmpResult7 = tmp(8691);
   } else if (cResult[7] !== tmp16) {
-    let result = tmp(11159).parseBioReactWithCachedAST(tmp16);
+    let result = tmp(11161).parseBioReactWithCachedAST(tmp16);
     cResult[7] = tmp16;
     cResult[8] = result;
-    const tmpResult8 = tmp(11159);
+    const tmpResult8 = tmp(11161);
   }
 }) : (function DetailsHeader(viewContainerStyle) {
   ({ application, mainContainerStyle, hideName } = viewContainerStyle);

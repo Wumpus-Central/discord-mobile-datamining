@@ -1,6 +1,6 @@
-// === Module 14499: EditCollectiblesPreviewDetails ===
+// === Module 14498: EditCollectiblesPreviewDetails ===
 
-// Module 14499 (EditCollectiblesPreviewDetails)
+// Module 14498 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;

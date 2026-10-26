@@ -1,6 +1,6 @@
-// === Module 18233: IgnoredUserRequestsScreen ===
+// === Module 18232: IgnoredUserRequestsScreen ===
 
-// Module 18233 (IgnoredUserRequestsScreen)
+// Module 18232 (IgnoredUserRequestsScreen)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;

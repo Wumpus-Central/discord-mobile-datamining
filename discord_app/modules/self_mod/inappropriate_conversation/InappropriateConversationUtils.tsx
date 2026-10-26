@@ -1,7 +1,7 @@
-// === Module 10972: InappropriateConversationUtils ===
+// === Module 10974: InappropriateConversationUtils ===
 
-// Module 10972 (InappropriateConversationUtils)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10937 */;
+// Module 10974 (InappropriateConversationUtils)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10939 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import UserStore from "UserStore" /* 1392 */;
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10693 */;

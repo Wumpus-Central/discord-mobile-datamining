@@ -1,6 +1,6 @@
-// === Module 13552: ProvisionalAccountExplainer ===
+// === Module 13551: ProvisionalAccountExplainer ===
 
-// Module 13552 (ProvisionalAccountExplainer)
+// Module 13551 (ProvisionalAccountExplainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import Card from "Card" /* 6905 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7012 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7303 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13553 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13552 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNati
       if (cResult[4] === userId) {
         let tmp5 = cResult[5];
       }
-      return iconSize(13554).useProvisionalAccountExplanationText(tmp5);
+      return iconSize(13553).useProvisionalAccountExplanationText(tmp5);
     }
     const obj2 = { userId, renderApplicationName: tmp4 };
     cResult[3] = tmp4;
@@ -56,7 +56,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNati
   const textVariant = userId.textVariant;
   const items = [iconSize, textVariant];
   const renderApplicationName = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  return iconSize(13554).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+  return iconSize(13553).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
 });
 fn(558);
 ReactCompilerGating = fn(558);

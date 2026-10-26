@@ -1,15 +1,15 @@
-// === Module 14036: ScheduledMessageCard ===
+// === Module 14035: ScheduledMessageCard ===
 
-// Module 14036 (ScheduledMessageCard)
+// Module 14035 (ScheduledMessageCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9695 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12238 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13826 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 14037 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12240 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13825 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 14036 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
@@ -232,7 +232,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(13827).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(13826).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
@@ -377,7 +377,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(13828).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(13827).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -407,7 +407,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(13827).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(13826).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
@@ -429,7 +429,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(13828).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(13827).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
@@ -570,7 +570,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(13827).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(13826).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
@@ -715,7 +715,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(13828).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(13827).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -745,7 +745,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(13827).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(13826).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
@@ -767,7 +767,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(13828).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(13827).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;

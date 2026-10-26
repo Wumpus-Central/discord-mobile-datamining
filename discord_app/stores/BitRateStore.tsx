@@ -1,6 +1,6 @@
-// === Module 15302: BitRateStore ===
+// === Module 15301: BitRateStore ===
 
-// Module 15302 (BitRateStore)
+// Module 15301 (BitRateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 5718 */;

@@ -1,8 +1,8 @@
-// === Module 13585: ContactSyncManager ===
+// === Module 13584: ContactSyncManager ===
 
-// Module 13585 (ContactSyncManager)
+// Module 13584 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13584 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13583 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -20,7 +20,7 @@ let closure_11 = async function _requestAndSyncContacts() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_11 = async function _requestAndSyncContacts() {
           if (null == phone) {
             c4 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } else {
             c5 = 2;
             c6 = 1;
@@ -117,9 +117,9 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13583);
+const ContactSyncPersistedStore = fn(13582);
 ({ setStoredContacts: hasOwnProperty, deleteStoredContacts: metroRequire, useContactSyncStore: closure_7 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(13582).ContactPermissions;
+const ContactPermissions = fn(13581).ContactPermissions;
 const PlatformTypes = fn(1087).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

@@ -1,6 +1,6 @@
-// === Module 12092: useAnimatedScrollLock ===
+// === Module 12094: useAnimatedScrollLock ===
 
-// Module 12092 (useAnimatedScrollLock)
+// Module 12094 (useAnimatedScrollLock)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import noop from "module_19" /* 19 */;
 

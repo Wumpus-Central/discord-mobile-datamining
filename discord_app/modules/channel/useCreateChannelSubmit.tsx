@@ -28,7 +28,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -60,7 +60,7 @@ export default function useCreateChannelSubmit(arg0) {
             let guild_id;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {

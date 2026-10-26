@@ -1,6 +1,6 @@
-// === Module 11878: useConjurePublishProgressLabel ===
+// === Module 11880: useConjurePublishProgressLabel ===
 
-// Module 11878 (useConjurePublishProgressLabel)
+// Module 11880 (useConjurePublishProgressLabel)
 import _modDef3830 from "module_3830" /* 3830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const obj2 = { action: null, detail: null };
     const intl2 = formatElapsed(1128).intl;
     obj2.action = intl2.string(obj[stageStartedAt.stage]);
-    formatElapsed = formatElapsed(11879).formatElapsed;
+    formatElapsed = formatElapsed(11881).formatElapsed;
     formatElapsedResult2 = formatElapsed(stage - stageStartedAt.stageStartedAt);
     obj2.detail = formatElapsedResult2;
     const formatToPlainStringResult = intl.formatToPlainString(stageStartedAt(3830)["ndkR+x"], obj2);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     stageStartedAt = stageStartedAt.stageStartedAt;
     cResult[9] = stageStartedAt;
     cResult[10] = formatToPlainStringResult;
-    const formatElapsedResult1 = formatElapsed(11879);
+    const formatElapsedResult1 = formatElapsed(11881);
   }
   const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
 }) : (function useConjurePublishProgressLabel(arg0) {
@@ -175,9 +175,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1128).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(11879).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    obj2.detail = tmp(11881).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
     formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3830)["ndkR+x"], obj2);
-    const tmpResult = tmp(11879);
+    const tmpResult = tmp(11881);
   }
   return formatToPlainStringResult;
 });

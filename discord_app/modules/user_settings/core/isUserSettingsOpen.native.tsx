@@ -1,6 +1,6 @@
-// === Module 15071: isUserSettingsOpen ===
+// === Module 15070: isUserSettingsOpen ===
 
-// Module 15071 (isUserSettingsOpen)
+// Module 15070 (isUserSettingsOpen)
 import RootNavigationRef from "RootNavigationRef" /* 5151 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -8,7 +8,7 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import CopyIcon from "CopyIcon" /* 5682 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import conjureDebugConnection from "conjureDebugConnection" /* 10733 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 11871 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 11873 */;
 import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12539 */;
 import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12548 */;
 import _slicedToArray from "module_32" /* 32 */;

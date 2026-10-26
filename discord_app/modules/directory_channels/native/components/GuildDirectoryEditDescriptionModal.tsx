@@ -1,9 +1,9 @@
-// === Module 13200: GuildDirectoryEditDescriptionModal ===
+// === Module 13199: GuildDirectoryEditDescriptionModal ===
 
-// Module 13200 (GuildDirectoryEditDescriptionModal)
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 13199 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13201 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13202 */;
+// Module 13199 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 13198 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13200 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13201 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -120,7 +120,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
         } else {
           GuildDirectoryEditDescriptionModalActionCreatorsDefault.close();
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp15) {
         c4 = tmp;
@@ -187,7 +187,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -201,7 +201,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(13201);
+            const obj3 = tmp4(13200);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = { value: obj3.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
@@ -215,9 +215,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(13199).close();
+          closure_1(13198).close();
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp15) {
         c4 = tmp;

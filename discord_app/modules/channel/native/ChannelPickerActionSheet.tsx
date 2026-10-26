@@ -1,6 +1,6 @@
-// === Module 11834: ChannelPickerActionSheet ===
+// === Module 11836: ChannelPickerActionSheet ===
 
-// Module 11834 (ChannelPickerActionSheet)
+// Module 11836 (ChannelPickerActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import useChannelName from "useChannelName" /* 5604 */;
 import TableRowIcon from "TableRowIcon" /* 6911 */;
@@ -595,7 +595,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelP
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_11835") };
+    let obj4 = { source: require("module_11837") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

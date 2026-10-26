@@ -1,6 +1,6 @@
-// === Module 18501: useCanInviteMembers ===
+// === Module 18500: useCanInviteMembers ===
 
-// Module 18501 (useCanInviteMembers)
+// Module 18500 (useCanInviteMembers)
 import ChannelStore from "ChannelStore" /* 4823 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 

@@ -1,6 +1,6 @@
-// === Module 17867: ForYouItemActionButtons ===
+// === Module 17866: ForYouItemActionButtons ===
 
-// Module 17867 (ForYouItemActionButtons)
+// Module 17866 (ForYouItemActionButtons)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
@@ -11,8 +11,8 @@ import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6788 
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7414 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10629 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15093 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17470 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15092 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17469 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -1037,7 +1037,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
   const callback4 = notification_center_v2.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15093)({ payload: closure_1(5696)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(15092)({ payload: closure_1(5696)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {
@@ -1074,7 +1074,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1111,7 +1111,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
         closure_128_1();
         focusChatInput(closure_128_0.message_channel_id);
         navigation = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp18) {
         navigation = tmp;
         throw tmp18;

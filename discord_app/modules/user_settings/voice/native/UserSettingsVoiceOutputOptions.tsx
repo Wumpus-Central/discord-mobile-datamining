@@ -1,9 +1,9 @@
-// === Module 11619: UserSettingsVoiceOutputOptions ===
+// === Module 11621: UserSettingsVoiceOutputOptions ===
 
-// Module 11619 (UserSettingsVoiceOutputOptions)
+// Module 11621 (UserSettingsVoiceOutputOptions)
 import _modDef38 from "module_38" /* 38 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11620 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11622 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -310,5 +310,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   items4[1] = tmp9Result;
   obj4.children = items4;
-  return closure_10(stateFromStores1(11611).UserSettingsTableRowGroup, obj4);
+  return closure_10(stateFromStores1(11613).UserSettingsTableRowGroup, obj4);
 });

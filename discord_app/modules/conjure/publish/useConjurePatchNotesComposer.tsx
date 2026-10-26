@@ -106,7 +106,7 @@ export default function useConjurePatchNotesComposer(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export default function useConjurePatchNotesComposer(projectId) {
             c2 = 0;
             if (closure_129_0.cancelled) {
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             } else {
               closure_1_10(false);
               closure_1_11(true);
@@ -230,7 +230,7 @@ export default function useConjurePatchNotesComposer(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

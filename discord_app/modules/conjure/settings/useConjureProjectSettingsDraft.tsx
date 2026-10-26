@@ -1,6 +1,6 @@
-// === Module 11802: useConjureProjectSettingsDraft ===
+// === Module 11804: useConjureProjectSettingsDraft ===
 
-// Module 11802 (useConjureProjectSettingsDraft)
+// Module 11804 (useConjureProjectSettingsDraft)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
@@ -231,7 +231,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

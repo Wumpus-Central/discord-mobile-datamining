@@ -1,6 +1,6 @@
-// === Module 11431: VideoRenderer ===
+// === Module 11433: VideoRenderer ===
 
-// Module 11431 (VideoRenderer)
+// Module 11433 (VideoRenderer)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensions from "useWindowDimensions" /* 1499 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -394,8 +394,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const first3 = tmp13[0];
   let obj = resizeMode(5838);
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(11432)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(11433)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(11434)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(11435)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -546,7 +546,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items9);
   if (tmp17) {
     const obj3 = { animate: true, style: tmp2.spinner };
-    tmp35 = ref(tmp18(11435), obj3);
+    tmp35 = ref(tmp18(11437), obj3);
   }
   const tmp37 = store === resizeMode(8820).OrientationType.PORTRAIT;
   const obj2 = resizeMode(8820);
@@ -559,10 +559,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let size = { width, height: first1, alignItems: "center", justifyContent: "center" };
     obj6.style = size;
     const obj7 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo2 };
-    const items11 = [ref(tmp18(11436), obj7), tmp35];
+    const items11 = [ref(tmp18(11438), obj7), tmp35];
     obj6.children = items11;
     obj5.children = c9(first2, obj6);
-    const items12 = [ref(tmp18(11438), obj5), ];
+    const items12 = [ref(tmp18(11440), obj5), ];
     const obj8 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -582,13 +582,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     items12[1] = ref(first2, obj8);
     obj4.children = items12;
     let tmp43Result1 = c9(tmp52, obj4);
-    const tmp18Result = tmp18(11438);
+    const tmp18Result = tmp18(11440);
   } else if (flag) {
     const obj9 = { ref, onLayout: callback2, style: closure_6.absoluteFillObject, contentContainerStyle: memo4, bounces: false, pinchGestureEnabled: !tmp17, maximumZoomScale: 8, minimumZoomScale: 1, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, scrollEventThrottle: 16, children: null };
     const obj10 = { collapsable: false, style: memo4, onLayout: callback3, children: null };
     const obj11 = { style: memo3, children: null };
     const obj12 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    const items13 = [ref(tmp18(11436), obj12), ];
+    const items13 = [ref(tmp18(11438), obj12), ];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -618,7 +618,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items16 = [tmp2.center, closure_6.absoluteFillObject];
     obj14.style = items16;
     const obj15 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    const items17 = [ref(tmp18(11436), obj15), tmp35];
+    const items17 = [ref(tmp18(11438), obj15), tmp35];
     obj14.children = items17;
     tmp43Result1 = c9(first2, obj14);
   }

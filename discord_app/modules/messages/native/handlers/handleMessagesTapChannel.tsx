@@ -1,6 +1,6 @@
-// === Module 11238: handleMessagesTapChannel ===
+// === Module 11240: handleMessagesTapChannel ===
 
-// Module 11238 (handleMessagesTapChannel)
+// Module 11240 (handleMessagesTapChannel)
 import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -35,7 +35,7 @@ let closure_15 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -91,185 +91,250 @@ let closure_15 = async function _maybeStartLurking(arg0, arg1) {
   })();
 };
 let closure_16 = async function _handleMessagesTapChannel(arg0) {
-  if (1 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      const channelId = closure_129_0.channelId;
-      const guildId = closure_129_0.guildId;
-      const messageId = closure_129_0.messageId;
-      let channel = null;
-      if (null != channelId) {
-        channel = closure_130_7.getChannel(channelId);
-      }
-      closure_129_7 = channel;
-      guild = closure_130_8.getGuild(guildId);
-      const result = closure_130_1(closure_130_3[9]).trackDiscordLinkClicked({ guildId, channelId, messageId });
-      if (null != guildId) {
-        if (null != channelId) {
-          if (obj9.isStaticRouteIconType(channelId)) {
-            closure_130_1(closure_130_3[11])({ guildId, staticRoute: channelId, itemId: messageId, navigationReplace: closure_129_1 });
-          }
+      return { value: "IconComponent", done: "+352" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      }
-      if (null != messageId) {
-        if (null != closure_129_7) {
-          if (!closure_129_7.isPrivate()) {
-            c3 = 2;
-            c4 = 1;
-            return { value: closure_130_14(guild, closure_129_7.guild_id, closure_129_7.id, messageId), done: false };
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_1 = tmp5;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ data: closure_129_0, navigationReplace } = closure_0);
+          if (navigationReplace === undefined) {
+            navigationReplace = false;
           }
+          closure_129_1 = navigationReplace;
+          ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
+          let channelId;
+          let guildId;
+          let messageId;
+          closure_129_7 = undefined;
+          guild = undefined;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
         }
-      }
-      if (null != closure_129_7) {
-        if (null != guildId) {
-          if (closure_129_7.isPrivate()) {
-            if (closure_130_5(closure_129_7.type)) {
-              if (obj14.canViewChannel(closure_129_7)) {
-                if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
-                  if (!closure_130_9.can(closure_130_12.CONNECT, closure_129_7)) {
-                    c4 = 3;
-                    return { value: "IconComponent", done: null };
-                  }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            channelId = closure_129_0.channelId;
+            guildId = closure_129_0.guildId;
+            messageId = closure_129_0.messageId;
+            let channel = null;
+            if (null != channelId) {
+              channel = closure_130_7.getChannel(channelId);
+            }
+            closure_129_7 = channel;
+            guild = closure_130_8.getGuild(guildId);
+            const obj5 = { guildId, channelId, messageId };
+            const result = closure_130_1(closure_130_3[9]).trackDiscordLinkClicked(obj5);
+            if (null != guildId) {
+              if (null != channelId) {
+                if (obj9.isStaticRouteIconType(channelId)) {
+                  const obj6 = { guildId, staticRoute: channelId, itemId: messageId, navigationReplace: closure_129_1 };
+                  closure_130_1(closure_130_3[11])(obj6);
                 }
+                c4 = 3;
+                c4 = 3;
+                return { value: "IconComponent", done: "+352" };
+              }
+            }
+            if (null != messageId) {
+              if (null != closure_129_7) {
+                if (!closure_129_7.isPrivate()) {
+                  c3 = 2;
+                  c4 = 1;
+                  const obj8 = { value: closure_130_14(guild, closure_129_7.guild_id, closure_129_7.id, messageId), done: false };
+                  return obj8;
+                }
+              }
+            }
+            if (null != closure_129_7) {
+              if (null != guildId) {
+                if (closure_129_7.isPrivate()) {
+                  if (closure_130_5(closure_129_7.type)) {
+                    if (obj14.canViewChannel(closure_129_7)) {
+                      if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
+                        if (!closure_130_9.can(closure_130_12.CONNECT, closure_129_7)) {
+                          c4 = 3;
+                          return { value: "IconComponent", done: "+352" };
+                        }
+                      }
+                      if (closure_129_3 != null) {
+                        closure_129_3();
+                      }
+                      if (closure_129_2 != null) {
+                        closure_129_2();
+                      }
+                      closure_130_0(closure_130_3[16]).openChannelCallModal(closure_129_7);
+                      const obj16 = closure_130_0(closure_130_3[16]);
+                    }
+                    obj14 = closure_130_0(closure_130_3[15]);
+                  }
+                  if (closure_129_2 != null) {
+                    closure_129_2();
+                  }
+                  const obj10 = { navigationReplace: closure_129_1, openChannel: true };
+                  closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, closure_129_7.id), obj10);
+                  const tmp147 = closure_130_1(closure_130_3[12]);
+                } else {
+                  c3 = 4;
+                  c4 = 1;
+                  const obj12 = { value: closure_130_14(guild, guildId, closure_129_7.id, messageId), done: false };
+                  return obj12;
+                }
+              }
+            }
+            if (null != channelId) {
+              if (null != guildId) {
+                c3 = 5;
+                c4 = 1;
+                const obj13 = { value: closure_130_14(guild, guildId, channelId, messageId), done: false };
+                return obj13;
+              }
+            }
+            if (null != closure_129_7) {
+              if (closure_129_7.isPrivate()) {
                 if (closure_129_3 != null) {
                   closure_129_3();
                 }
                 if (closure_129_2 != null) {
                   closure_129_2();
                 }
-                closure_130_0(closure_130_3[16]).openChannelCallModal(closure_129_7);
-                closure_130_0(closure_130_3[16]);
+                const voiceChannel = closure_130_1(closure_130_3[17]).selectVoiceChannel(channelId);
+                const obj11 = closure_130_1(closure_130_3[17]);
               }
-              obj14 = closure_130_0(closure_130_3[15]);
             }
-            if (closure_129_2 != null) {
-              closure_129_2();
+            let tmp89 = null != channelId;
+            if (tmp89) {
+              tmp89 = null == guildId;
             }
-            closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, closure_129_7.id), { navigationReplace: closure_129_1, openChannel: true });
-            closure_130_1(closure_130_3[12]);
+            if (tmp89) {
+              if (closure_129_2 != null) {
+                closure_129_2();
+              }
+              const obj15 = { navigationReplace: closure_129_1, openChannel: true };
+              closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, channelId, messageId), obj15);
+              const tmp98 = closure_130_1(closure_130_3[12]);
+            }
+            const obj7 = closure_130_1(closure_130_3[9]);
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj17 = { value, done: true };
+            return obj17;
+          } else if (value) {
+            c4 = 3;
+            return { value: "IconComponent", done: "+352" };
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj18 = { value, done: true };
+            return obj18;
           } else {
-            c3 = 4;
-            c4 = 1;
-            return { value: closure_130_14(guild, guildId, closure_129_7.id, messageId), done: false };
+            let payload = null;
+            if (null != closure_129_0.originalLink) {
+              payload = closure_130_1(closure_130_3[13])(closure_129_0.originalLink).payload;
+            }
+            closure_129_9 = payload;
+            let type;
+            if (closure_129_9 != null) {
+              type = closure_129_9.type;
+            }
+            let conversationId = null;
+            if (type === closure_130_11.MESSAGE) {
+              conversationId = closure_129_9.conversationId;
+            }
+            closure_129_10 = conversationId;
+            let tmp36 = null != closure_129_10;
+            if (tmp36) {
+              tmp36 = null != closure_129_7.guild_id;
+            }
+            if (tmp36) {
+              const obj19 = { guildId: closure_129_7.guild_id, channelId: closure_129_7.id, conversationId: closure_129_10, messageId };
+              closure_130_1(closure_130_3[14])(obj19);
+            }
           }
-        }
-      }
-      if (null != channelId) {
-        if (null != guildId) {
-          c3 = 5;
-          c4 = 1;
-          return { value: closure_130_14(guild, guildId, channelId, messageId), done: false };
-        }
-      }
-      if (null != closure_129_7) {
-        if (closure_129_7.isPrivate()) {
-          if (closure_129_3 != null) {
-            closure_129_3();
+        } else if (4 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj20 = { value, done: true };
+            return obj20;
+          } else if (value) {
+            c4 = 3;
+            return { value: "IconComponent", done: "+352" };
           }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj21 = { value, done: true };
+          return obj21;
+        } else if (!value) {
           if (closure_129_2 != null) {
-            closure_129_2();
+            tmp7();
           }
-          const voiceChannel = closure_130_1(closure_130_3[17]).selectVoiceChannel(channelId);
-          closure_130_1(closure_130_3[17]);
+          const obj = { navigationReplace: closure_129_1, openChannel: true };
+          closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, channelId, messageId), obj);
+          const tmp14 = closure_130_1(closure_130_3[12]);
         }
-      }
-      let tmp89 = null != channelId;
-      if (tmp89) {
-        tmp89 = null == guildId;
-      }
-      if (tmp89) {
         if (closure_129_2 != null) {
-          closure_129_2();
+          tmp183();
         }
-        closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, channelId, messageId), { navigationReplace: closure_129_1, openChannel: true });
-        closure_130_1(closure_130_3[12]);
+        const obj22 = { navigationReplace: closure_129_1, openChannel: true };
+        c3 = 3;
+        c4 = 1;
+        const obj23 = { value: closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(closure_129_7.guild_id, closure_129_7.id, messageId), obj22), done: false };
+        return obj23;
       }
-      closure_130_1(closure_130_3[9]);
+    } catch (tmp205) {
+      c4 = tmp;
+      throw tmp205;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else if (value) {
-      c4 = 3;
-      return { value: "IconComponent", done: null };
-    }
-  } else if (3 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else {
-      let payload = null;
-      if (null != closure_129_0.originalLink) {
-        payload = closure_130_1(closure_130_3[13])(closure_129_0.originalLink).payload;
-      }
-      closure_129_9 = payload;
-      let type;
-      if (closure_129_9 != null) {
-        type = closure_129_9.type;
-      }
-      let conversationId = null;
-      if (type === closure_130_11.MESSAGE) {
-        conversationId = closure_129_9.conversationId;
-      }
-      closure_129_10 = conversationId;
-      let tmp36 = null != closure_129_10;
-      if (tmp36) {
-        tmp36 = null != closure_129_7.guild_id;
-      }
-      if (tmp36) {
-        closure_130_1(closure_130_3[14])({ guildId: closure_129_7.guild_id, channelId: closure_129_7.id, conversationId: closure_129_10, messageId });
-      }
-    }
-  } else if (4 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else if (value) {
-      c4 = 3;
-      return { value: "IconComponent", done: null };
-    }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
-  } else if (!value) {
-    if (closure_129_2 != null) {
-      tmp7();
-    }
-    closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(guildId, channelId, messageId), { navigationReplace: closure_129_1, openChannel: true });
-    closure_130_1(closure_130_3[12]);
   }
-  if (closure_129_2 != null) {
-    tmp183();
-  }
-  await closure_130_1(closure_130_3[12])(closure_130_13.CHANNEL(closure_129_7.guild_id, closure_129_7.id, messageId), { navigationReplace: closure_129_1, openChannel: true });
-  closure_2 = tmp2;
-  ({ data: closure_129_0, navigationReplace } = closure_0);
-  if (navigationReplace === undefined) {
-    navigationReplace = false;
-  }
-  closure_129_1 = navigationReplace;
-  ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
-  return "Reflect";
 };
 const isGuildVocalChannelType = fn(4827).isGuildVocalChannelType;
 const isGuildLurker = fn(4841).isGuildLurker;

@@ -62,7 +62,7 @@ prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       while (true) {

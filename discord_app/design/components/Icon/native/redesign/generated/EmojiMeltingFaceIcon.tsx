@@ -1,10 +1,10 @@
-// === Module 16735: EmojiMeltingFaceIcon ===
+// === Module 16734: EmojiMeltingFaceIcon ===
 
-// Module 16735 (EmojiMeltingFaceIcon)
+// Module 16734 (EmojiMeltingFaceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod16736 from "module_16736" /* 16736 */;
+import _mod16735 from "module_16735" /* 16735 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiMeltingFaceIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16736;
+    const tmpResult = _mod16735;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiMeltingFaceIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16736, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16735, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

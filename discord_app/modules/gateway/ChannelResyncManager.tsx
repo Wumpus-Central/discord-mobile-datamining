@@ -1,12 +1,12 @@
-// === Module 18764: ChannelResyncManager ===
+// === Module 18763: ChannelResyncManager ===
 
-// Module 18764 (ChannelResyncManager)
+// Module 18763 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7725 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14985 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -247,7 +247,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     let obj2 = closure_2_1(1267);
                   }
                 }
-                obj = closure_2_0(14985);
+                obj = closure_2_0(14984);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;
@@ -398,7 +398,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp9) {
       c4 = tmp;

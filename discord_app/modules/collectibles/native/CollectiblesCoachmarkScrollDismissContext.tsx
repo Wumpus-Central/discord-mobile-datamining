@@ -1,6 +1,6 @@
-// === Module 17209: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 17208: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 17209 (CollectiblesCoachmarkScrollDismissContext)
+// Module 17208 (CollectiblesCoachmarkScrollDismissContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "a"
+  handleDismissCoachmarkOnScroll: "Array"
 });
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

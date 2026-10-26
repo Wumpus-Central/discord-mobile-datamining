@@ -1,10 +1,10 @@
-// === Module 15800: FramesManager ===
+// === Module 15799: FramesManager ===
 
-// Module 15800 (FramesManager)
+// Module 15799 (FramesManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ChannelRecord from "ChannelRecord" /* 4827 */;
 import leaveFrame from "leaveFrame" /* 10766 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15801 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15800 */;
 import FramesStore from "FramesStore" /* 6775 */;
 import Constants from "Constants" /* 1087 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
@@ -21,14 +21,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15720).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(15719).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15720).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(15719).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(15720).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(15719).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

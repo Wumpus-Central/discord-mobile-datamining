@@ -1,7 +1,7 @@
-// === Module 18133: SmartSearchCitation ===
+// === Module 18132: SmartSearchCitation ===
 
-// Module 18133 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18134 */;
+// Module 18132 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -107,7 +107,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -203,7 +203,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -219,7 +219,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(13247).trackSmartSearchCitationOpened(obj4, v2(13245));
+            const result = v2(13246).trackSmartSearchCitationOpened(obj4, v2(13244));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -227,7 +227,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(13247);
+            const obj6 = v2(13246);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

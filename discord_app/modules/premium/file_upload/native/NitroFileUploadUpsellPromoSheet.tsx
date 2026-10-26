@@ -1,6 +1,6 @@
-// === Module 18418: NitroFileUploadUpsellPromoSheet ===
+// === Module 18417: NitroFileUploadUpsellPromoSheet ===
 
-// Module 18418 (NitroFileUploadUpsellPromoSheet)
+// Module 18417 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 587 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
 import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9916 */;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const tmp16 = jsx(tmp(18414).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp16 = jsx(tmp(18413).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[10] = tmp16;
     const tmp15 = tmp16;
   } else {
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
     const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-    const tmp31 = jsx(tmp(10853).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
+    const tmp31 = jsx(tmp(10855).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
     cResult[19] = tmp14;
     cResult[20] = tmp27;
     cResult[21] = tmp17;

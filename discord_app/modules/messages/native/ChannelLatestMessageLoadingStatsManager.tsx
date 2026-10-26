@@ -1,6 +1,6 @@
-// === Module 11233: ChannelLatestMessageLoadingStatsManager ===
+// === Module 11235: ChannelLatestMessageLoadingStatsManager ===
 
-// Module 11233 (ChannelLatestMessageLoadingStatsManager)
+// Module 11235 (ChannelLatestMessageLoadingStatsManager)
 import Constants from "Constants" /* 1087 */;
 import Clickstream from "Clickstream" /* 7575 */;
 import size from "module_2" /* 2 */;

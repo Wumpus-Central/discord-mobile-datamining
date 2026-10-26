@@ -1,6 +1,6 @@
-// === Module 18392: RobloxConnectionCoachmark ===
+// === Module 18391: RobloxConnectionCoachmark ===
 
-// Module 18392 (RobloxConnectionCoachmark)
+// Module 18391 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -20,7 +20,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import UserStore from "UserStore" /* 1392 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15026 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15025 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -219,7 +219,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
     tmp9 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
+    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
     const tmp15 = map1(native.Avatar, obj3);
     cResult[4] = stateFromStores;
     cResult[5] = tmp15;
@@ -252,7 +252,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [map1(View, { style: tmp.avatarInnerBorder }), ];
   const obj3 = { style: tmp.avatarInnerBorder };
-  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
+  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
   obj2.children = items1;
   return closure_1_14(View, obj2);
 });
@@ -393,7 +393,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
         const intl3 = tmp(1128).intl;
         const stringResult2 = intl3.string(tmp(1128).t.ItuabN);
         const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-        const tmp43 = closure_13(tmp(14031).WindowLaunchIcon, obj10);
+        const tmp43 = closure_13(tmp(14030).WindowLaunchIcon, obj10);
         cResult[26] = stringResult2;
         cResult[27] = tmp43;
         let tmp40 = tmp43;
@@ -535,7 +535,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const intl3 = markAsDismissed(1128).intl;
   obj10.text = intl3.string(markAsDismissed(1128).t.ItuabN);
   let obj3 = { title: null, leading: closure_13(markAsDismissed(7293).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(14031).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj10.icon = closure_13(markAsDismissed(14030).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -568,7 +568,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocalAppDetectionStore];
     const fn = function s() {
-      return appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX);
+      return appInstalled.isAppInstalled(stateFromStores(15026).DetectableAppNames.ROBLOX);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -675,7 +675,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   const tmpResult2 = stateFromStores(504);
 }) : (function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15026).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

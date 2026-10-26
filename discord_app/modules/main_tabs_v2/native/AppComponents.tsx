@@ -1,23 +1,23 @@
-// === Module 18430: AppComponents ===
+// === Module 18429: AppComponents ===
 
-// Module 18430 (AppComponents)
+// Module 18429 (AppComponents)
 import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4981 */;
 import PortalKeyboard from "PortalKeyboard" /* 5165 */;
 import AlertModal from "AlertModal" /* 5914 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12011 */;
-import common_NotificationsDefault from "common/Notifications" /* 13744 */;
-import ContextMenuContainer from "ContextMenuContainer" /* 15280 */;
-import MainShared from "MainShared" /* 18369 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 18388 */;
-import FramePoolDefault from "FramePool" /* 18431 */;
-import ExternalPipViewDefault from "ExternalPipView" /* 18438 */;
-import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 18448 */;
-import FramePanelContainerDefault from "FramePanelContainer" /* 18479 */;
-import VoicePanelContainerDefault from "VoicePanelContainer" /* 18488 */;
-import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 18662 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12013 */;
+import common_NotificationsDefault from "common/Notifications" /* 13743 */;
+import ContextMenuContainer from "ContextMenuContainer" /* 15279 */;
+import MainShared from "MainShared" /* 18368 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 18387 */;
+import FramePoolDefault from "FramePool" /* 18430 */;
+import ExternalPipViewDefault from "ExternalPipView" /* 18437 */;
+import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 18447 */;
+import FramePanelContainerDefault from "FramePanelContainer" /* 18478 */;
+import VoicePanelContainerDefault from "VoicePanelContainer" /* 18487 */;
+import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 18661 */;
 import jsxProd from "jsxProd" /* 21 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
-import AppFreezer_mod from "AppFreezer" /* 17968 */;
+import AppFreezer_mod from "AppFreezer" /* 17967 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx, jsxs, Fragment } = jsxProd);

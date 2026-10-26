@@ -1,6 +1,6 @@
-// === Module 16896: SupportUtils ===
+// === Module 16895: SupportUtils ===
 
-// Module 16896 (SupportUtils)
+// Module 16895 (SupportUtils)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
 import LinkingDefault from "Linking" /* 5660 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_6 = async function _emailSupport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_6 = async function _emailSupport() {
       } else {
         openURL(value);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp11) {
       c3 = tmp;

@@ -1,23 +1,23 @@
-// === Module 18399: DisplayNameStylesV2AbstractUI ===
+// === Module 18398: DisplayNameStylesV2AbstractUI ===
 
-// Module 18399 (DisplayNameStylesV2AbstractUI)
+// Module 18398 (DisplayNameStylesV2AbstractUI)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef18399 from "module_18399" /* 18399 */;
 import _modDef18400 from "module_18400" /* 18400 */;
 import _modDef18401 from "module_18401" /* 18401 */;
-import _modDef18402 from "module_18402" /* 18402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18400 }, 3: null };
-let obj2 = { uri: _modDef18400 };
-obj[2] = { uri: _modDef18401 };
-const obj3 = { uri: _modDef18401 };
-obj[3] = { uri: _modDef18402 };
+let obj = { 1: null, 2: { uri: _modDef18399 }, 3: null };
+let obj2 = { uri: _modDef18399 };
+obj[2] = { uri: _modDef18400 };
+const obj3 = { uri: _modDef18400 };
+obj[3] = { uri: _modDef18401 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18402 };
+const obj4 = { uri: _modDef18401 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");
 

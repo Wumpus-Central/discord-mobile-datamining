@@ -1,6 +1,6 @@
-// === Module 10929: useInappropriateConversationWarningsForChannel ===
+// === Module 10931: useInappropriateConversationWarningsForChannel ===
 
-// Module 10929 (useInappropriateConversationWarningsForChannel)
+// Module 10931 (useInappropriateConversationWarningsForChannel)
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10693 */;
 
 const require = globalThis.__r;

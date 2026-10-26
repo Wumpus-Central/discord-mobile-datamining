@@ -1,8 +1,8 @@
-// === Module 18767: CommonTriggerPointManager ===
+// === Module 18766: CommonTriggerPointManager ===
 
-// Module 18767 (CommonTriggerPointManager)
-import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint" /* 18361 */;
-import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint" /* 18768 */;
+// Module 18766 (CommonTriggerPointManager)
+import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint" /* 18360 */;
+import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint" /* 18767 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;

@@ -38,7 +38,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           };
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp10) {
         if (arg0 === 1) {
@@ -253,7 +253,7 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

@@ -1,11 +1,11 @@
-// === Module 18445: useExternalPipParticipant ===
+// === Module 18444: useExternalPipParticipant ===
 
-// Module 18445 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 10903 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18446 */;
+// Module 18444 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 10905 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18445 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15052 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15051 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -44,7 +44,7 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
   }
 }
 const ParticipantTypes = fn(5632).ParticipantTypes;
-const VoicePanelModes = fn(10898).VoicePanelModes;
+const VoicePanelModes = fn(10900).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
   const cResult = selectedParticipantStreamId(576).c(3);
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetH
     }
   }, items);
 });
-let closure_10 = { participantType: "Reflect", selectedParticipantId: "data", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
+let closure_10 = { participantType: "Reflect", selectedParticipantId: "ddd", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 ReactCompilerGating = fn(558);
 const size = fn(2);

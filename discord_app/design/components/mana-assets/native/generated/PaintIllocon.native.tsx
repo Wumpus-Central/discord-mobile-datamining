@@ -1,23 +1,23 @@
-// === Module 13636: PaintIllocon ===
+// === Module 13635: PaintIllocon ===
 
-// Module 13636 (PaintIllocon)
+// Module 13635 (PaintIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef13636 from "module_13636" /* 13636 */;
 import _modDef13637 from "module_13637" /* 13637 */;
 import _modDef13638 from "module_13638" /* 13638 */;
-import _modDef13639 from "module_13639" /* 13639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13637 }, 3: null };
-const obj2 = { uri: _modDef13637 };
-obj[2] = { uri: _modDef13638 };
-const obj3 = { uri: _modDef13638 };
-obj[3] = { uri: _modDef13639 };
+let obj = { 1: null, 2: { uri: _modDef13636 }, 3: null };
+const obj2 = { uri: _modDef13636 };
+obj[2] = { uri: _modDef13637 };
+const obj3 = { uri: _modDef13637 };
+obj[3] = { uri: _modDef13638 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13639 };
+const obj4 = { uri: _modDef13638 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");
 

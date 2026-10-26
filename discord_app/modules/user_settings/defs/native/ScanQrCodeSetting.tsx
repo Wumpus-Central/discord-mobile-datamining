@@ -1,6 +1,6 @@
-// === Module 16273: ScanQrCodeSetting ===
+// === Module 16272: ScanQrCodeSetting ===
 
-// Module 16273 (ScanQrCodeSetting)
+// Module 16272 (ScanQrCodeSetting)
 import util from "util" /* 1128 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7885 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 require = fn;
 const NativePermissionTypes = fn(7868).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
   if (c3 === 2) {
     c3 = 3;
@@ -21,7 +21,7 @@ const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(16174).QrCodeIcon,
+  IconComponent: fn(16173).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -96,7 +96,7 @@ const pressable = SettingBuilders.createPressable({
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

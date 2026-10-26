@@ -1,6 +1,6 @@
-// === Module 11144: BadgeTierGrid ===
+// === Module 11146: BadgeTierGrid ===
 
-// Module 11144 (BadgeTierGrid)
+// Module 11146 (BadgeTierGrid)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(11123).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(11125).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1128).intl;
       const t = badge(1128).t;
       const items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -289,8 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(11115), obj4);
-        const tmp11 = isViewingOtherUser(11115);
+        tmp9Result = closure_2_4(isViewingOtherUser(11117), obj4);
+        const tmp11 = isViewingOtherUser(11117);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;

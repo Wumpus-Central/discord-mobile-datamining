@@ -1,13 +1,13 @@
-// === Module 16442: QuestDockGestureContext ===
+// === Module 16441: QuestDockGestureContext ===
 
-// Module 16442 (QuestDockGestureContext)
+// Module 16441 (QuestDockGestureContext)
 import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12536 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16439 */;
+import QuestDockStore from "QuestDockStore" /* 16438 */;
 
 const require = fn;
 const QuestDockMode = fn(6710).QuestDockMode;
-const height = fn(16441).QUEST_DOCK_COLLAPSED_HEIGHT;
+const height = fn(16440).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
 let ReanimatedHelperTypes = fn(7169);
@@ -32,15 +32,18 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
   const tmp2 = sharedValue2;
   const youBarHorizontalMargin = sharedValue(sharedValue2[8]).useYouBarHorizontalMargin();
   const obj4 = sharedValue(sharedValue2[8]);
+  const safeAreaInsets = sharedValue(sharedValue2[9]).getSafeAreaInsets();
+  ({ left, right } = safeAreaInsets);
+  const obj5 = sharedValue(sharedValue2[9]);
   const size2 = { width: null, height: null, x: 0, y: -8, prevDeltaY: 0 };
-  const obj5 = sharedValue(sharedValue2[7]);
-  size2.width = sharedValue(sharedValue2[9]).getQuestDockCollapsedWidth(size.width, youBarHorizontalMargin, youBarHorizontalMargin);
+  const obj6 = sharedValue(sharedValue2[7]);
+  size2.width = sharedValue(sharedValue2[10]).getQuestDockCollapsedWidth(size.width, left, right, youBarHorizontalMargin);
   size2.height = height;
-  const sharedValue1 = obj5.useSharedValue(size2);
-  const obj7 = sharedValue(sharedValue2[9]);
-  const obj8 = sharedValue(sharedValue2[7]);
-  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
-  const obj9 = sharedValue(sharedValue2[9]);
+  const sharedValue1 = obj6.useSharedValue(size2);
+  const obj8 = sharedValue(sharedValue2[10]);
+  const obj9 = sharedValue(sharedValue2[7]);
+  sharedValue2 = obj9.useSharedValue(sharedValue(sharedValue2[10]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
+  const obj10 = sharedValue(sharedValue2[10]);
   sharedValue3 = tmp(tmp2[7]).useSharedValue(children.expandedHeight);
   const items = [sharedValue];
   const effect = obj.useEffect(() => subscribeToWindowDimensionsDefault((arg0) => {

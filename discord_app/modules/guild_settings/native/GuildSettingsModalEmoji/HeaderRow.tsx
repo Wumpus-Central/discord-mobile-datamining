@@ -1,15 +1,15 @@
-// === Module 19067: HeaderRow ===
+// === Module 19066: HeaderRow ===
 
-// Module 19067 (HeaderRow)
+// Module 19066 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13136 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13135 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19061 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19060 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -34,7 +34,7 @@ function HeaderRow(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

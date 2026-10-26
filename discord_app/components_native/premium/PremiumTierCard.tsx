@@ -1,6 +1,6 @@
-// === Module 14878: PremiumTierCard ===
+// === Module 14877: PremiumTierCard ===
 
-// Module 14878 (PremiumTierCard)
+// Module 14877 (PremiumTierCard)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
@@ -11,8 +11,8 @@ import _modDef7548 from "module_7548" /* 7548 */;
 import _modDef7549 from "module_7549" /* 7549 */;
 import _modDef8438 from "module_8438" /* 8438 */;
 import _modDef10472 from "module_10472" /* 10472 */;
+import _modDef14878 from "module_14878" /* 14878 */;
 import _modDef14879 from "module_14879" /* 14879 */;
-import _modDef14880 from "module_14880" /* 14880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((premiumType) => 
   if (cResult[0] !== premiumType) {
     function getTextLogo() {
       if (PremiumTypes.TIER_0 === premiumType) {
-        return _modDef14879;
+        return _modDef14878;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        return _modDef14880;
+        return _modDef14879;
       } else if (PremiumTypes.TIER_2 === premiumType) {
         return _modDef8438;
       }
@@ -271,9 +271,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((premiumType) => 
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef14879;
+    let tmp5Result = _modDef14878;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef14880;
+    tmp5Result = _modDef14879;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8438;
   }

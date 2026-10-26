@@ -1,6 +1,6 @@
-// === Module 13030: TraitOptionItem ===
+// === Module 13029: TraitOptionItem ===
 
-// Module 13030 (TraitOptionItem)
+// Module 13029 (TraitOptionItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;

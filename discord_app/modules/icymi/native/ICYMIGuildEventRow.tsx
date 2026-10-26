@@ -1,6 +1,6 @@
-// === Module 17962: ICYMIGuildEventRow ===
+// === Module 17961: ICYMIGuildEventRow ===
 
-// Module 17962 (ICYMIGuildEventRow)
+// Module 17961 (ICYMIGuildEventRow)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import transitionToGuild from "transitionToGuild" /* 7449 */;
@@ -20,7 +20,7 @@ let GuildScheduledEventStore = fn(6784);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(17900);
+const createICYMIStyles = fn(17899);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin, marginLeft: marginHorizontal.margin + marginHorizontal.inset }, card: { marginTop: nativeDefault.space.PX_12 }, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
   const obj2 = { marginTop: nativeDefault.space.PX_12 };
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
               }
             }
             const tmp28Result = tmp28(undefined, undefined, tmp23);
-            guild(17946);
+            guild(17945);
             const _Symbol = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               class F {
@@ -842,7 +842,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(17946);
+  const tmp2Result3 = guild(17945);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;

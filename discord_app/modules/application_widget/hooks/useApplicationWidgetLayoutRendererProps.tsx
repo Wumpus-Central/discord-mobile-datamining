@@ -1,12 +1,12 @@
-// === Module 12001: useApplicationWidgetLayoutRendererProps ===
+// === Module 12003: useApplicationWidgetLayoutRendererProps ===
 
-// Module 12001 (useApplicationWidgetLayoutRendererProps)
+// Module 12003 (useApplicationWidgetLayoutRendererProps)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11907 */;
-import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12003 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11909 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12002 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12004 */;
 import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10792 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 

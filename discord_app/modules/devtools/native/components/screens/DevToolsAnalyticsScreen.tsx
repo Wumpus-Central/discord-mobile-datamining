@@ -1,6 +1,6 @@
-// === Module 16942: DevToolsAnalyticsScreen ===
+// === Module 16941: DevToolsAnalyticsScreen ===
 
-// Module 16942 (DevToolsAnalyticsScreen)
+// Module 16941 (DevToolsAnalyticsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -8,7 +8,7 @@ import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import AnalyticsLogStore from "AnalyticsLogStore" /* 15647 */;
+import AnalyticsLogStore from "AnalyticsLogStore" /* 15646 */;
 
 require = fn;
 const View = fn(17).View;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     if (cResult[3] === str) {
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp18 = closure_8(tmp(12142).ArrowsUpDownIcon, {});
+        const tmp18 = closure_8(tmp(12144).ArrowsUpDownIcon, {});
         cResult[6] = tmp18;
         let tmp16 = tmp18;
       } else {
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       }
       const _Symbol2 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { arrow: true, variant: "danger", icon: closure_8(tmp(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: tmp(16937).clearAnalyticsLog };
+        const obj3 = { arrow: true, variant: "danger", icon: closure_8(tmp(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: tmp(16936).clearAnalyticsLog };
         const tmp24 = closure_8(tmp(6903).TableRow, obj3);
         cResult[9] = tmp24;
         let tmp22 = tmp24;
@@ -469,12 +469,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const obj2 = { style: tmp.analyticsContainer, children: null };
   const obj3 = { title: "Actions", hasIcons: true, children: null };
   const str2 = str.toLowerCase();
-  const items2 = [closure_8(trimmed(7295).TableSwitchRow, { icon: closure_8(trimmed(12142).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
-  const obj4 = { icon: closure_8(trimmed(12142).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
-  items2[1] = closure_8(trimmed(6903).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(16937).clearAnalyticsLog });
+  const items2 = [closure_8(trimmed(7295).TableSwitchRow, { icon: closure_8(trimmed(12144).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
+  const obj4 = { icon: closure_8(trimmed(12144).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
+  items2[1] = closure_8(trimmed(6903).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(16936).clearAnalyticsLog });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(6987).TableRowGroup, obj3), , ];
-  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(16937).clearAnalyticsLog };
+  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(5689).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(16936).clearAnalyticsLog };
   items3[1] = closure_8(View, { style: tmp.searchFieldContainer, children: closure_8(trimmed(7145).SearchBar, { placeholder: "Search by event name", onChange: tmp8 }) });
   if (0 === loggedEvents.length) {
     let tmp11Result = closure_8(tmp2(6903).TableRow, { label: "No events logged." });

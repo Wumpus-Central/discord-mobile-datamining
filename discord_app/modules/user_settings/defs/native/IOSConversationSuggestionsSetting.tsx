@@ -1,6 +1,6 @@
-// === Module 16141: IOSConversationSuggestionsSetting ===
+// === Module 16140: IOSConversationSuggestionsSetting ===
 
-// Module 16141 (IOSConversationSuggestionsSetting)
+// Module 16140 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -29,7 +29,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConv
 });
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

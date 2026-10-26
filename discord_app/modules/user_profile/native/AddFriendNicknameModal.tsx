@@ -1,6 +1,6 @@
-// === Module 14267: AddFriendNicknameModal ===
+// === Module 14266: AddFriendNicknameModal ===
 
-// Module 14267 (AddFriendNicknameModal)
+// Module 14266 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -40,7 +40,7 @@ export default function AddFriendNicknameModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

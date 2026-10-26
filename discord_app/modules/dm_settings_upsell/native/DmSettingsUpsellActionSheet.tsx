@@ -1,13 +1,13 @@
-// === Module 18780: DmSettingsUpsellActionSheet ===
+// === Module 18779: DmSettingsUpsellActionSheet ===
 
-// Module 18780 (DmSettingsUpsellActionSheet)
+// Module 18779 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15155 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18777 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18781 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15154 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18776 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18780 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
         tmp14 = cResult[12];
       }
       if (cResult[13] !== tmp4.headerImage) {
-        let obj2 = { source: stateFromStores(10943), style: tmp4.headerImage };
+        let obj2 = { source: stateFromStores(10945), style: tmp4.headerImage };
         const tmp19 = closure_6(stateFromStores(5669), obj2);
         cResult[13] = tmp4.headerImage;
         cResult[14] = tmp19;
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(10943), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(10945), style: tmp.headerImage };
     const items2 = [closure_6(stateFromStores(5669), obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1128).intl;

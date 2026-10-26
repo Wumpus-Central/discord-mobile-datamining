@@ -1,6 +1,6 @@
-// === Module 11416: PictureInPictureVideo ===
+// === Module 11418: PictureInPictureVideo ===
 
-// Module 11416 (PictureInPictureVideo)
+// Module 11418 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,13 +10,13 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useToken2 from "useToken" /* 5252 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8614 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11362 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11372 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11375 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11376 */;
-import VideoRenderer from "VideoRenderer" /* 11431 */;
-import UserTileDefault from "UserTile" /* 11441 */;
-import _modDef11443 from "module_11443" /* 11443 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11364 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11374 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11377 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11378 */;
+import VideoRenderer from "VideoRenderer" /* 11433 */;
+import UserTileDefault from "UserTile" /* 11443 */;
+import _modDef11445 from "module_11445" /* 11445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
@@ -25,7 +25,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import SpeakingStore from "SpeakingStore" /* 6685 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11369 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11371 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -35,7 +35,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10880);
+const ChannelCallStore = fn(10882);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(5632).ParticipantTypes;
 const jsxProd = fn(21);
@@ -909,7 +909,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                   let tmp36 = null;
                   if (tmp9) {
                     const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                    const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11443, color: tmp4.thermalAlertIcon.color };
+                    const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11445, color: tmp4.thermalAlertIcon.color };
                     obj4.children = value3(native2.Icon, obj5);
                     tmp36 = value3(hasOwnProperty, obj4);
                   }
@@ -1013,7 +1013,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp16Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11443, color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11445, color: tmp.thermalAlertIcon.color };
         obj8.children = tmp16(native2.Icon, obj9);
         tmp16Result = tmp16(hasOwnProperty, obj8);
       }

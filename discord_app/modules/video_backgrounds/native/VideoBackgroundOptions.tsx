@@ -1,6 +1,6 @@
-// === Module 11635: VideoBackgroundOptions ===
+// === Module 11637: VideoBackgroundOptions ===
 
-// Module 11635 (VideoBackgroundOptions)
+// Module 11637 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5869 */;
@@ -82,8 +82,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
     const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
     const intl2 = tmp(1128).intl;
     obj4.label = intl2.string(tmp(1128).t.LhSyL8);
-    const obj5 = { IconComponent: tmp(11636).BlurBackgroundIcon };
-    obj4.icon = jsx(tmp(6911).TableRowIcon, { IconComponent: tmp(11636).BlurBackgroundIcon });
+    const obj5 = { IconComponent: tmp(11638).BlurBackgroundIcon };
+    obj4.icon = jsx(tmp(6911).TableRowIcon, { IconComponent: tmp(11638).BlurBackgroundIcon });
     cResult[2] = obj4;
     let tmp10 = obj4;
   } else {

@@ -1,6 +1,6 @@
-// === Module 16038: SafetyHubViolationsContainer ===
+// === Module 16037: SafetyHubViolationsContainer ===
 
-// Module 16038 (SafetyHubViolationsContainer)
+// Module 16037 (SafetyHubViolationsContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -9,7 +9,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 7897 */;
 import SafetyHubModels from "SafetyHubModels" /* 7899 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9041 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12834 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7922 */;
@@ -17,8 +17,8 @@ import SafetyHubStore from "SafetyHubStore" /* 7922 */;
 const util = chevron(1128);
 const Text_Text = chevron(5234);
 const WarningIcon = chevron(7957);
-const ChevronSmallDownIcon2 = chevron(11077);
-const ChevronSmallUpIcon = chevron(14885);
+const ChevronSmallDownIcon2 = chevron(11079);
+const ChevronSmallUpIcon = chevron(14884);
 require = fn;
 function ClassificationDetail(classification) {
   classification = classification.classification;
@@ -81,7 +81,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12832, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12831, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
     },
     children: null
   };
@@ -505,7 +505,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp = opened;
   [tmp8, dependencyMap] = safetyHubAccountStanding(stateFromStores.useState(3), 2);
   const tmp7 = safetyHubAccountStanding(stateFromStores.useState(3), 2);
-  safetyHubAccountStanding = opened(12836).useSafetyHubAccountStanding();
+  safetyHubAccountStanding = opened(12835).useSafetyHubAccountStanding();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
     const fn = function y() {
@@ -518,7 +518,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   } else {
     [tmp10, tmp11] = cResult;
   }
-  const obj3 = opened(12836);
+  const obj3 = opened(12835);
   stateFromStores = tmp(504).useStateFromStores(tmp10, tmp11);
   if (cResult[2] === classifications) {
     if (cResult[3] === tmp8) {
@@ -661,8 +661,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp4 = first1(is_dsa_eligible.useState(3), 2);
   first1 = tmp4[0];
   is_dsa_eligible = tmp4[1];
-  const safetyHubAccountStanding = classifications(12836).useSafetyHubAccountStanding();
-  let obj = classifications(12836);
+  const safetyHubAccountStanding = classifications(12835).useSafetyHubAccountStanding();
+  let obj = classifications(12835);
   const items = [memo];
   const stateFromStores = classifications(504).useStateFromStores(items, () => memo.getIsDsaEligible());
   const items1 = [classifications, first1];

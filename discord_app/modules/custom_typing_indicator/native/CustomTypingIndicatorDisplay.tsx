@@ -1,16 +1,16 @@
-// === Module 13080: CustomTypingIndicatorDisplay ===
+// === Module 13079: CustomTypingIndicatorDisplay ===
 
-// Module 13080 (CustomTypingIndicatorDisplay)
+// Module 13079 (CustomTypingIndicatorDisplay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13081 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13080 */;
 import noop from "module_19" /* 19 */;
 
 const util = PressableOpacity(1128);
 const Text_Text = PressableOpacity(5234);
 const Stack_Stack = PressableOpacity(5977);
 const Pressables = PressableOpacity(6908);
-const CustomTypingIndicatorUtils = PressableOpacity(13068);
+const CustomTypingIndicatorUtils = PressableOpacity(13067);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 12295: conjurePublishPopoutMode ===
+// === Module 12297: conjurePublishPopoutMode ===
 
-// Module 12295 (conjurePublishPopoutMode)
+// Module 12297 (conjurePublishPopoutMode)
 import ConjurePublishTypes from "ConjurePublishTypes" /* 10805 */;
 import size from "module_2" /* 2 */;
 

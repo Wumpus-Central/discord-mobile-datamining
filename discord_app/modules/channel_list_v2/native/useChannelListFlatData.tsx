@@ -1,6 +1,6 @@
-// === Module 17688: useChannelListFlatData ===
+// === Module 17687: useChannelListFlatData ===
 
-// Module 17688 (useChannelListFlatData)
+// Module 17687 (useChannelListFlatData)
 import FastList from "FastList" /* 7167 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13277: DoubleTapToReactActionSheet ===
+// === Module 13276: DoubleTapToReactActionSheet ===
 
-// Module 13277 (DoubleTapToReactActionSheet)
+// Module 13276 (DoubleTapToReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -723,7 +723,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "+352" };
                             }
                           } else {
                             try {
@@ -761,7 +761,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
                               const _setTimeout = setTimeout;
                               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
                               c3 = 3;
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "+352" };
                             } catch (tmp23) {
                               c3 = tmp;
                               throw tmp23;
@@ -994,7 +994,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1034,7 +1034,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

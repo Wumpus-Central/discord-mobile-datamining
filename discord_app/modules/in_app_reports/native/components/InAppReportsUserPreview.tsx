@@ -1,6 +1,6 @@
-// === Module 14577: InAppReportsUserPreview ===
+// === Module 14576: InAppReportsUserPreview ===
 
-// Module 14577 (InAppReportsUserPreview)
+// Module 14576 (InAppReportsUserPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrev
                 let tmp17 = cResult[15];
               }
               if (cResult[16] !== user) {
-                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
+                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
                 const tmp20 = React3(native.Avatar, obj4);
                 cResult[16] = user;
                 cResult[17] = tmp20;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrev
   const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj5.style = items2;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" }), ];
+  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
   const obj7 = { style: tmp.userProfileInfo, children: null };
   let tmp8Result = null != user.globalName;
   if (tmp8Result) {

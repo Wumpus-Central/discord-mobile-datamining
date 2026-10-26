@@ -1,14 +1,14 @@
-// === Module 11640: ChannelCallMicButton ===
+// === Module 11642: ChannelCallMicButton ===
 
-// Module 11640 (ChannelCallMicButton)
+// Module 11642 (ChannelCallMicButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useMuteStatesDefault from "useMuteStates" /* 7453 */;
-import CallBarActionAll from "CallBarAction" /* 11379 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11641 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11642 */;
+import CallBarActionAll from "CallBarAction" /* 11381 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11643 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11644 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5715 */;
 
@@ -62,7 +62,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
     } else {
       tmp16 = cResult[7];
     }
-    const tmp5Result = importDefault(mute ? 11645 : 11646);
+    const tmp5Result = importDefault(mute ? 11647 : 11648);
     if (!tmp4) {
       tmp4 = mute;
     }
@@ -116,7 +116,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const items = [GameConsoleStore];
   const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const obj = mute(504);
-  const muteHandler = mute(11641).createMuteHandler(tmp3, stateFromStores);
+  const muteHandler = mute(11643).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -124,7 +124,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const intl = mute(1128).intl;
   obj3.accessibilityLabel = intl.string(mute(1128).t.B3zz0G);
   obj3.onPress = muteHandler.onPress;
-  obj3.source = importDefault(mute ? 11645 : 11646);
+  obj3.source = importDefault(mute ? 11647 : 11648);
   if (!flag) {
     flag = mute;
   }

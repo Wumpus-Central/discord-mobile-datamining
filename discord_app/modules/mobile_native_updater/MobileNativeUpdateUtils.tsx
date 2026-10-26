@@ -1,6 +1,6 @@
-// === Module 15154: MobileNativeUpdateUtils ===
+// === Module 15153: MobileNativeUpdateUtils ===
 
-// Module 15154 (MobileNativeUpdateUtils)
+// Module 15153 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

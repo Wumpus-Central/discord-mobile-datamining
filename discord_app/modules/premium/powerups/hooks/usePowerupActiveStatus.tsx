@@ -1,6 +1,6 @@
-// === Module 13424: usePowerupActiveStatus ===
+// === Module 13423: usePowerupActiveStatus ===
 
-// Module 13424 (usePowerupActiveStatus)
+// Module 13423 (usePowerupActiveStatus)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5181 */;

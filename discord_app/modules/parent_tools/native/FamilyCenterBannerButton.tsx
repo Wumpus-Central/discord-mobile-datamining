@@ -1,6 +1,6 @@
-// === Module 16168: FamilyCenterBannerButton ===
+// === Module 16167: FamilyCenterBannerButton ===
 
-// Module 16168 (FamilyCenterBannerButton)
+// Module 16167 (FamilyCenterBannerButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -11,8 +11,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7885 */;
 import useUserLinks from "useUserLinks" /* 8125 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16170 */;
-import QrCodeIcon from "QrCodeIcon" /* 16174 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16169 */;
+import QrCodeIcon from "QrCodeIcon" /* 16173 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
@@ -66,7 +66,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React6.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16171, dependencyMap.paths), React5, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16170, dependencyMap.paths), React5, obj4);
     }
   }, items4);
   const obj8 = { direction: "horizontal", spacing: getLinkCode2(stateFromStores[9]).space.PX_8, style: tmp.container, children: null };

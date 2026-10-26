@@ -1,6 +1,6 @@
-// === Module 11268: ConnectionMetadataVanityItems ===
+// === Module 11270: ConnectionMetadataVanityItems ===
 
-// Module 11268 (ConnectionMetadataVanityItems)
+// Module 11270 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,8 +9,8 @@ import native from "native" /* 1202 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7275 */;
-import _modDef11269 from "module_11269" /* 11269 */;
-import _modDef11270 from "module_11270" /* 11270 */;
+import _modDef11271 from "module_11271" /* 11271 */;
+import _modDef11272 from "module_11272" /* 11272 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -456,7 +456,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11269;
+    obj2.imageSrc = _modDef11271;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -466,7 +466,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11270;
+    obj4.imageSrc = _modDef11272;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

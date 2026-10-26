@@ -1,6 +1,6 @@
-// === Module 11808: ConjureSmartContext ===
+// === Module 11810: ConjureSmartContext ===
 
-// Module 11808 (ConjureSmartContext)
+// Module 11810 (ConjureSmartContext)
 import conjureSmartContextConnection from "conjureSmartContextConnection" /* 10811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

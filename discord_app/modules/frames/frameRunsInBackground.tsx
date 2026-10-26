@@ -1,6 +1,6 @@
-// === Module 13865: frameRunsInBackground ===
+// === Module 13864: frameRunsInBackground ===
 
-// Module 13865 (frameRunsInBackground)
+// Module 13864 (frameRunsInBackground)
 import FramesConstants from "FramesConstants" /* 6776 */;
 import size from "module_2" /* 2 */;
 

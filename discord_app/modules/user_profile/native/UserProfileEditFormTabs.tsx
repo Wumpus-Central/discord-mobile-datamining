@@ -1,13 +1,13 @@
-// === Module 15955: UserProfileEditFormTabs ===
+// === Module 15954: UserProfileEditFormTabs ===
 
-// Module 15955 (UserProfileEditFormTabs)
+// Module 15954 (UserProfileEditFormTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ChatInputUtils from "ChatInputUtils" /* 5159 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14379 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15954 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14378 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

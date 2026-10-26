@@ -1,6 +1,6 @@
-// === Module 19209: useCreatorMonetizationAcceptTerms ===
+// === Module 19208: useCreatorMonetizationAcceptTerms ===
 
-// Module 19209 (useCreatorMonetizationAcceptTerms)
+// Module 19208 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -72,12 +72,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj6 = { value: tmp47(19210).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                const obj6 = { value: tmp47(19209).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                 return obj6;
               } else {
                 c4 = 3;
                 c5 = 1;
-                const obj7 = { value: tmp47(19210).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                const obj7 = { value: tmp47(19209).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                 return obj7;
               }
             }

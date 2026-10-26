@@ -1,23 +1,23 @@
-// === Module 17098: SafetyChatSpotIllustration ===
+// === Module 17097: SafetyChatSpotIllustration ===
 
-// Module 17098 (SafetyChatSpotIllustration)
+// Module 17097 (SafetyChatSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef17098 from "module_17098" /* 17098 */;
 import _modDef17099 from "module_17099" /* 17099 */;
 import _modDef17100 from "module_17100" /* 17100 */;
-import _modDef17101 from "module_17101" /* 17101 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17099 }, 3: null };
-let obj2 = { uri: _modDef17099 };
-obj[2] = { uri: _modDef17100 };
-const obj3 = { uri: _modDef17100 };
-obj[3] = { uri: _modDef17101 };
+let obj = { 1: null, 2: { uri: _modDef17098 }, 3: null };
+let obj2 = { uri: _modDef17098 };
+obj[2] = { uri: _modDef17099 };
+const obj3 = { uri: _modDef17099 };
+obj[3] = { uri: _modDef17100 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17101 };
+const obj4 = { uri: _modDef17100 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyChatSpotIllustration.native.tsx");
 

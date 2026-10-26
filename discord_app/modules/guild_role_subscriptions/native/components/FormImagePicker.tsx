@@ -1,6 +1,6 @@
-// === Module 19280: FormImagePicker ===
+// === Module 19279: FormImagePicker ===
 
-// Module 19280 (FormImagePicker)
+// Module 19279 (FormImagePicker)
 import nativeDefault from "native" /* 587 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -38,7 +38,7 @@ let closure_13 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_13 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp17) {
         c4 = tmp;

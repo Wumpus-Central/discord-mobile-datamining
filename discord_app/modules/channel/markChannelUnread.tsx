@@ -1,7 +1,7 @@
-// === Module 10870: markChannelUnread ===
+// === Module 10872: markChannelUnread ===
 
-// Module 10870 (markChannelUnread)
-import markUnreadDefault from "markUnread" /* 10871 */;
+// Module 10872 (markChannelUnread)
+import markUnreadDefault from "markUnread" /* 10873 */;
 import ReadStateStore from "ReadStateStore" /* 6771 */;
 
 const require = globalThis.__r;

@@ -1,8 +1,8 @@
-// === Module 12982: CheckpointCountUpStatNumber ===
+// === Module 12981: CheckpointCountUpStatNumber ===
 
-// Module 12982 (CheckpointCountUpStatNumber)
+// Module 12981 (CheckpointCountUpStatNumber)
 import c from "c" /* 576 */;
-import CheckpointStatNumber from "CheckpointStatNumber" /* 12981 */;
+import CheckpointStatNumber from "CheckpointStatNumber" /* 12980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
@@ -186,5 +186,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   return <View style={closure_5(() => {
     const obj = { width: CheckpointStatNumber.getCheckpointStatNumberWidth(end, num2) };
     return obj;
-  }, items)}>{jsx(num2(12981), { value: closure_10(end, num), size: num2 })}</View>;
+  }, items)}>{jsx(num2(12980), { value: closure_10(end, num), size: num2 })}</View>;
 });

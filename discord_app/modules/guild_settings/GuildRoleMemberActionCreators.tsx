@@ -48,7 +48,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

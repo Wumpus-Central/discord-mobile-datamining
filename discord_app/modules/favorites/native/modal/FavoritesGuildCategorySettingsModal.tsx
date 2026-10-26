@@ -1,11 +1,11 @@
-// === Module 17539: FavoritesGuildCategorySettingsModal ===
+// === Module 17538: FavoritesGuildCategorySettingsModal ===
 
-// Module 17539 (FavoritesGuildCategorySettingsModal)
+// Module 17538 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10842 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4826 */;

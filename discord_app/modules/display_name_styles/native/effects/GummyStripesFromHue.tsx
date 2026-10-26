@@ -1,7 +1,7 @@
-// === Module 16706: GummyStripesFromHue ===
+// === Module 16705: GummyStripesFromHue ===
 
-// Module 16706 (GummyStripesFromHue)
-import ColorPickerUtils from "ColorPickerUtils" /* 15845 */;
+// Module 16705 (GummyStripesFromHue)
+import ColorPickerUtils from "ColorPickerUtils" /* 15844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

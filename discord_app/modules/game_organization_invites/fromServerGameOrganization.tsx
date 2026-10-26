@@ -1,6 +1,6 @@
-// === Module 11028: fromServerGameOrganization ===
+// === Module 11030: fromServerGameOrganization ===
 
-// Module 11028 (fromServerGameOrganization)
+// Module 11030 (fromServerGameOrganization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/fromServerGameOrganization.tsx");

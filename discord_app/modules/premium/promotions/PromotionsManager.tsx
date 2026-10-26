@@ -1,6 +1,6 @@
-// === Module 18930: PromotionsManager ===
+// === Module 18929: PromotionsManager ===
 
-// Module 18930 (PromotionsManager)
+// Module 18929 (PromotionsManager)
 import PromotionsActionCreators from "PromotionsActionCreators" /* 9561 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;

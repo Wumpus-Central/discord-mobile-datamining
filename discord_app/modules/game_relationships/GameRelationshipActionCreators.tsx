@@ -32,114 +32,172 @@ function deleteGameRelationship() {
   return applyArgumentsResult;
 }
 let closure_8 = async function _deleteGameRelationship(arg0) {
-  if (c6 === 2) {
+  closure_2 = tmp3;
+  closure_1 = tmp5;
+  ({ userId: closure_129_0, applicationId: closure_129_1, onSuccess: closure_129_2 } = closure_0);
+  await "Reflect";
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  await HTTP.del({ url: closure_130_4.USER_GAME_RELATIONSHIP(closure_129_0, closure_129_1), oldFormErrors: true, rejectWithError: false });
+  if (2 === tmp8) {
+    c4 = 0;
+    closure_130_6(closure_3);
     c6 = 3;
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_129_2();
+    c4 = 0;
+  }
+  return value;
+};
+let closure_9 = async function _removeGameFriend(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          c6 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c4 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
+          dependencyMap = tmp5;
+          closure_1 = tmp2;
           closure_129_0 = undefined;
           closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ userId: closure_129_0, applicationId: closure_129_1, onSuccess: closure_129_2 } = closure_0);
-          c5 = 1;
-          c6 = 1;
-          return { value: "Reflect", done: true };
+          ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
         }
-      } else if (1 === tmp8) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
-          c6 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c4 = 3;
           const obj4 = { value, done: true };
           return obj4;
         } else {
+          const obj5 = {
+            userId: closure_129_0,
+            applicationId: closure_129_1,
+            onSuccess() {
+                      const AccessibilityAnnouncer = closure_1_0(4978).AccessibilityAnnouncer;
+                      const intl = closure_1_0(1128).intl;
+                      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t.zRf8cO));
+                    }
+          };
+          c3 = 2;
           c4 = 1;
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const obj5 = { url: closure_130_4.USER_GAME_RELATIONSHIP(closure_129_0, closure_129_1), oldFormErrors: true, rejectWithError: false };
-          c5 = 3;
-          c6 = 1;
-          const obj6 = { value: HTTP.del(obj5), done: false };
+          const obj6 = { value: closure_130_7(obj5), done: false };
           return obj6;
         }
-      } else {
-        if (2 === tmp8) {
-          c4 = 0;
-          closure_130_6(closure_3);
-          c6 = 3;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_129_2();
-          c4 = 0;
-        }
-        c4 = 0;
-        c6 = 3;
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
         const obj = { value, done: true };
         return obj;
-      }
-    } catch (tmp25) {
-      closure_3 = tmp25;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp25;
       } else {
-        c5 = tmp;
+        c4 = 3;
+        return { value: "IconComponent", done: "+352" };
       }
+    } catch (tmp12) {
+      c4 = tmp;
+      throw tmp12;
     }
   }
 };
-let closure_9 = async function _removeGameFriend() {
-  await closure_130_7({
-    userId: closure_129_0,
-    applicationId: closure_129_1,
-    onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4978).AccessibilityAnnouncer;
-      const intl = closure_1_0(1128).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t.zRf8cO));
+let closure_10 = async function _cancelGameFriendRequest(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "+352" };
     }
-  });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
-};
-let closure_10 = async function _cancelGameFriendRequest() {
-  await closure_130_7({
-    userId: closure_129_0,
-    applicationId: closure_129_1,
-    onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4978).AccessibilityAnnouncer;
-      const intl = closure_1_0(1128).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t.XMf21q));
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          dependencyMap = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj5 = {
+            userId: closure_129_0,
+            applicationId: closure_129_1,
+            onSuccess() {
+                      const AccessibilityAnnouncer = closure_1_0(4978).AccessibilityAnnouncer;
+                      const intl = closure_1_0(1128).intl;
+                      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t.XMf21q));
+                    }
+          };
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: closure_130_7(obj5), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c4 = 3;
+        return { value: "IconComponent", done: "+352" };
+      }
+    } catch (tmp12) {
+      c4 = tmp;
+      throw tmp12;
     }
-  });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
+  }
 };
 const Constants = fn(1087);
 ({ Endpoints: closure_4, RelationshipTypes: hasOwnProperty } = Constants);

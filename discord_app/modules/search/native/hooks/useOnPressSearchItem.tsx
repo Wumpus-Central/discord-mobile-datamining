@@ -1,20 +1,20 @@
-// === Module 18083: useOnPressSearchItem ===
+// === Module 18082: useOnPressSearchItem ===
 
-// Module 18083 (useOnPressSearchItem)
+// Module 18082 (useOnPressSearchItem)
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import LinkingDefault from "Linking" /* 5660 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13223 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13244 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13248 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13222 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13243 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13247 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 7701 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
-import SearchQueryStore from "SearchQueryStore" /* 13237 */;
+import SearchQueryStore from "SearchQueryStore" /* 13236 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -50,7 +50,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -91,7 +91,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(9714);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18084).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18083).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(9713).SearchFilterAddLocations;
 const Constants = fn(1087);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
@@ -307,7 +307,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -368,7 +368,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         }
       } catch (tmp12) {
@@ -409,7 +409,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -470,7 +470,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         }
       } catch (tmp12) {
@@ -919,8 +919,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13223).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13223);
+        const result = searchContext(13222).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13222);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -952,8 +952,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13223).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13223);
+      const result = searchContext(13222).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13222);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

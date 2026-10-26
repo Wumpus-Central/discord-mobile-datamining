@@ -1,13 +1,13 @@
-// === Module 19325: SelectEmojiRolesActionSheet ===
+// === Module 19324: SelectEmojiRolesActionSheet ===
 
-// Module 19325 (SelectEmojiRolesActionSheet)
+// Module 19324 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import Pressables from "Pressables" /* 6908 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import ActionSheet from "ActionSheet" /* 7298 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16569 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     tmp12 = cResult[2];
   }
   let obj = onSave(576);
-  const subscriptionListingsForGuild = onSave(16569).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
+  const subscriptionListingsForGuild = onSave(16568).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     function toggleRole(arg0) {
       closure_0 = arg0;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   cResult[5] = first;
   cResult[6] = handleSave;
   tmp14 = handleSave;
-  const tmpResult = onSave(16569);
+  const tmpResult = onSave(16568);
 }) : (function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
   let first;

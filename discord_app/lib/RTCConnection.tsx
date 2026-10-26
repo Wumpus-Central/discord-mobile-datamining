@@ -47,7 +47,7 @@ import ThermalUtilsDefault from "ThermalUtils" /* 5904 */;
 import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 5906 */;
 import DaveMessageValidator from "DaveMessageValidator" /* 5907 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15078 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15077 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5721 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5731 */;
@@ -1793,7 +1793,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1829,7 +1829,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[52]);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

@@ -1,6 +1,6 @@
-// === Module 18203: FriendsScreen ===
+// === Module 18202: FriendsScreen ===
 
-// Module 18203 (FriendsScreen)
+// Module 18202 (FriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
@@ -8,9 +8,9 @@ import components_Button_Button from "components/Button/Button" /* 5244 */;
 import SendMessageIcon from "SendMessageIcon" /* 5680 */;
 import TableRow from "TableRow" /* 6903 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
-import NoResultsDefault from "NoResults" /* 12924 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16460 */;
-import _modDef17888 from "module_17888" /* 17888 */;
+import NoResultsDefault from "NoResults" /* 12923 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16459 */;
+import _modDef17887 from "module_17887" /* 17887 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7731 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef17888, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef17887, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef17888 };
+      const obj8 = { source: _modDef17887 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

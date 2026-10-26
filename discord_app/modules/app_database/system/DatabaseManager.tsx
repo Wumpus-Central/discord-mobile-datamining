@@ -26,7 +26,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -270,7 +270,7 @@ function carefullySpeculativelyOpen(userId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

@@ -18,7 +18,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;
 
-const ConjureHeaderIconButtonDefault = tmp5(11857);
+const ConjureHeaderIconButtonDefault = tmp5(11859);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } catch (tmp12) {
                 dependencyMap = tmp;
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } catch (tmp12) {
                 dependencyMap = tmp;
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -609,7 +609,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     return obj;
                   } else {
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp12) {
                   dependencyMap = tmp;
@@ -692,7 +692,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -735,7 +735,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -812,7 +812,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -855,7 +855,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -950,7 +950,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -993,7 +993,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     return obj;
                   } else {
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp12) {
                   dependencyMap = tmp;
@@ -1058,7 +1058,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -1101,7 +1101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -1178,7 +1178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -1221,7 +1221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -1305,7 +1305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -1348,7 +1348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 return obj;
               } else {
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp12) {
               dependencyMap = tmp;
@@ -1450,7 +1450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -1493,7 +1493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

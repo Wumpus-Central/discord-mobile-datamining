@@ -1,13 +1,13 @@
-// === Module 12218: useCreatePollFormData ===
+// === Module 12220: useCreatePollFormData ===
 
-// Module 12218 (useCreatePollFormData)
+// Module 12220 (useCreatePollFormData)
 import util from "util" /* 1128 */;
 import PollsUtils from "PollsUtils" /* 8284 */;
-import useRequestDefault from "useRequest" /* 12219 */;
-import PollsActionCreatorsDefault from "PollsActionCreators" /* 12220 */;
-import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12233 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12234 */;
-import PollTypes from "PollTypes" /* 12235 */;
+import useRequestDefault from "useRequest" /* 12221 */;
+import PollsActionCreatorsDefault from "PollsActionCreators" /* 12222 */;
+import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12235 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12236 */;
+import PollTypes from "PollTypes" /* 12237 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -494,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
           return obj;
         } else {
           channel = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp5) {
         channel = tmp;

@@ -1,12 +1,12 @@
-// === Module 19435: ParentalConsentConnectionScreen ===
+// === Module 19434: ParentalConsentConnectionScreen ===
 
-// Module 19435 (ParentalConsentConnectionScreen)
+// Module 19434 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import _modDef2832 from "module_2832" /* 2832 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16170 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16169 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -126,7 +126,7 @@ export default function ParentalConsentConnectionScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -194,7 +194,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2832.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2832["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(16171, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(16170, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

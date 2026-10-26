@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
                 }
               }
               const obj3 = { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty };
-              const tmp30 = jsx(onSubmit(11840), { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty });
+              const tmp30 = jsx(onSubmit(11842), { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty });
               cResult[23] = allowEmpty;
               cResult[24] = channelId;
               cResult[25] = labelComponent;
@@ -690,5 +690,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11840), obj2);
+  return tmp9(onSubmit(11842), obj2);
 });

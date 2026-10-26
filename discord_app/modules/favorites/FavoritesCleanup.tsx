@@ -1,6 +1,6 @@
-// === Module 10855: FavoritesCleanup ===
+// === Module 10857: FavoritesCleanup ===
 
-// Module 10855 (FavoritesCleanup)
+// Module 10857 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1104 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6822 */;
@@ -49,7 +49,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp9) {
       c1 = tmp;

@@ -1,6 +1,6 @@
-// === Module 13016: CheckpointFriendsStatsScreen ===
+// === Module 13015: CheckpointFriendsStatsScreen ===
 
-// Module 13016 (CheckpointFriendsStatsScreen)
+// Module 13015 (CheckpointFriendsStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -16,19 +16,19 @@ import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10446 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11643 */;
-import CheckpointTextDefault from "CheckpointText" /* 12972 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12974 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12981 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12990 */;
-import useFriendsAnimationState from "useFriendsAnimationState" /* 13017 */;
-import useSidekickLeave from "useSidekickLeave" /* 13018 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11645 */;
+import CheckpointTextDefault from "CheckpointText" /* 12971 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12973 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12980 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12989 */;
+import useFriendsAnimationState from "useFriendsAnimationState" /* 13016 */;
+import useSidekickLeave from "useSidekickLeave" /* 13017 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import UserStore from "UserStore" /* 1392 */;
-import CheckpointStore from "CheckpointStore" /* 12954 */;
+import CheckpointStore from "CheckpointStore" /* 12953 */;
 
 const require = globalThis.__r;
 
@@ -50,7 +50,7 @@ function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12886).GiftIcon, obj6);
+    obj5.children = closure_13(user(12885).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {

@@ -1,6 +1,6 @@
-// === Module 18834: InteractionModalUtils ===
+// === Module 18833: InteractionModalUtils ===
 
-// Module 18834 (InteractionModalUtils)
+// Module 18833 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -19,7 +19,7 @@ import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8293 */;
-import InteractionModalStore from "InteractionModalStore" /* 15646 */;
+import InteractionModalStore from "InteractionModalStore" /* 15645 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8596 */;
 
 require = fn;
@@ -2093,7 +2093,7 @@ let closure_21 = async function _submitModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -2187,7 +2187,7 @@ let closure_21 = async function _submitModal(arg0) {
         closure_131_7 = send;
         send();
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp10) {
       c6 = tmp;
@@ -2196,7 +2196,7 @@ let closure_21 = async function _submitModal(arg0) {
   }
 };
 const DraftType = fn(7631).DraftType;
-const InteractionModalState = fn(15646).InteractionModalState;
+const InteractionModalState = fn(15645).InteractionModalState;
 const Endpoints = fn(1087).Endpoints;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -2437,7 +2437,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -2472,7 +2472,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;
@@ -2524,7 +2524,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -2559,7 +2559,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;

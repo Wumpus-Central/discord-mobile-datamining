@@ -1,6 +1,6 @@
-// === Module 13397: GuildProgressActionSheet ===
+// === Module 13396: GuildProgressActionSheet ===
 
-// Module 13397 (GuildProgressActionSheet)
+// Module 13396 (GuildProgressActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -12,9 +12,9 @@ import ToastUtils from "ToastUtils" /* 5662 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9050 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 13395 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13398 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13403 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 13394 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13397 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
@@ -24,7 +24,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(13390);
+const GuildProgressConstants = fn(13389);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1087);
 ({ UPLOAD_MEDIUM_SIZE: c10, AnalyticEvents: closure_11, ComponentActions: closure_12, InstantInviteSources: map1 } = Constants);
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -247,8 +247,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
             let base64;
             tmp5(9005).init(View);
             const obj6 = tmp5(9005);
-            tmp2(13395).hideActionSheet(id.id);
-            const obj7 = tmp2(13395);
+            tmp2(13394).hideActionSheet(id.id);
+            const obj7 = tmp2(13394);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
             const obj = tmp5(9005);
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   };
   let obj5 = { uri: null };
   let obj3 = guild(numFinished[12]);
-  obj5.uri = require("module_13399");
+  obj5.uri = require("module_13398");
   obj4.source = obj5;
   const intl = guild(numFinished[19]).intl;
   obj4.title = intl.string(guild(numFinished[19]).t.q9n0Ta);
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   };
   let obj7 = { uri: null };
   const tmp11 = closure_14(require("ProgressItem"), obj4);
-  obj7.uri = require("module_13401");
+  obj7.uri = require("module_13400");
   obj6.source = obj7;
   const intl2 = guild(numFinished[19]).intl;
   obj6.title = intl2.string(guild(numFinished[19]).t.DWB2YZ);
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   };
   let obj9 = { uri: null };
   const tmp13 = closure_14(require("ProgressItem"), obj6);
-  obj9.uri = require("module_13402");
+  obj9.uri = require("module_13401");
   obj8.source = obj9;
   const intl3 = guild(numFinished[19]).intl;
   obj8.title = intl3.string(guild(numFinished[19]).t.dNktpr);
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   };
   const obj11 = { uri: null };
   const tmp15 = closure_14(require("ProgressItem"), obj8);
-  obj11.uri = require("module_13512");
+  obj11.uri = require("module_13511");
   obj10.source = obj11;
   const intl4 = guild(numFinished[19]).intl;
   obj10.title = intl4.string(guild(numFinished[19]).t["6Qbqxw"]);

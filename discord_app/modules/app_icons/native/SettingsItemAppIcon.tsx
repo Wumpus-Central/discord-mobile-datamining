@@ -1,14 +1,14 @@
-// === Module 16883: SettingsItemAppIcon ===
+// === Module 16882: SettingsItemAppIcon ===
 
-// Module 16883 (SettingsItemAppIcon)
+// Module 16882 (SettingsItemAppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppIconDefault from "AppIcon" /* 16384 */;
+import AppIconDefault from "AppIcon" /* 16383 */;
 import noop from "module_19" /* 19 */;
 
 const AppIconTypes = ClydeIcon(9866);
 const ClydeIcon2 = ClydeIcon(10571);
-const AppIconUtils = ClydeIcon(14767);
+const AppIconUtils = ClydeIcon(14766);
 require = fn;
 const getIconById = fn(9865).getIconById;
 const jsx = fn(21).jsx;

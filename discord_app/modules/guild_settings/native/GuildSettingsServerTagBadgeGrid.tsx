@@ -1,11 +1,11 @@
-// === Module 19088: GuildSettingsServerTagBadgeGrid ===
+// === Module 19087: GuildSettingsServerTagBadgeGrid ===
 
-// Module 19088 (GuildSettingsServerTagBadgeGrid)
+// Module 19087 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 587 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13403 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 19089 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 19090 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 19091 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13402 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 19088 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 19089 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 19090 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(15164).GuildBadge, size);
+      obj.children = closure_1_7(guildId(15163).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
   });
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(15164).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(15163).GuildBadge, size, badge.kind);
     });
     const items2 = [closure_7(closure_5, obj5), , ];
     const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

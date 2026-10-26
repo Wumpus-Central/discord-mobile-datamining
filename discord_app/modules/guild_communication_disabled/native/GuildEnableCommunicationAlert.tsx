@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
           obj7.text = intl.string(tmp4(1128).t["/Mmbfv"]);
           v1(5663).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

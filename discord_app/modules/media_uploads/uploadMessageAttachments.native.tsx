@@ -1,6 +1,6 @@
-// === Module 14645: uploadMessageAttachments ===
+// === Module 14644: uploadMessageAttachments ===
 
-// Module 14645 (uploadMessageAttachments)
+// Module 14644 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UploadStore from "UploadStore" /* 8273 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -43,7 +43,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -55,7 +55,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           return obj5;
         } else if (closure_131_5.has(closure_130_2)) {
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         } else {
           const tmp16 = new closure_131_1(closure_131_2[2])();
           closure_130_5 = tmp16;

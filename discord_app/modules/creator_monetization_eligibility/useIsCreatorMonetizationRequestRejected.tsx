@@ -1,8 +1,8 @@
-// === Module 19261: useIsCreatorMonetizationRequestRejected ===
+// === Module 19260: useIsCreatorMonetizationRequestRejected ===
 
-// Module 19261 (useIsCreatorMonetizationRequestRejected)
+// Module 19260 (useIsCreatorMonetizationRequestRejected)
 import util from "util" /* 1128 */;
-import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 19207 */;
+import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 19206 */;
 import size from "module_2" /* 2 */;
 
 const constants = CreatorMonetizationEligibilityConstants.CreatorMonetizationApplicationState;

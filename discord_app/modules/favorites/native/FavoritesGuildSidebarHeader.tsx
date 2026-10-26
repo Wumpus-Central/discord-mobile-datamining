@@ -1,6 +1,6 @@
-// === Module 17727: FavoritesGuildSidebarHeader ===
+// === Module 17726: FavoritesGuildSidebarHeader ===
 
-// Module 17727 (FavoritesGuildSidebarHeader)
+// Module 17726 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,12 +10,12 @@ import Stack_Stack from "Stack/Stack" /* 5977 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
 import TextIcon from "TextIcon" /* 8551 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8572 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13852 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17631).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17630).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";

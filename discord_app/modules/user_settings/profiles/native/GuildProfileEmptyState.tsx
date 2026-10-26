@@ -1,11 +1,11 @@
-// === Module 15961: GuildProfileEmptyState ===
+// === Module 15960: GuildProfileEmptyState ===
 
-// Module 15961 (GuildProfileEmptyState)
+// Module 15960 (GuildProfileEmptyState)
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 15962 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 15961 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ export default function GuildProfileEmptyState() {
         } else {
           value.default.openCreateGuildModal();
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp8) {
         c0 = tmp;
@@ -100,7 +100,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ export default function GuildProfileEmptyState() {
         } else {
           const result = value.default.openGuildJoinServerScreen();
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp8) {
         c0 = tmp;

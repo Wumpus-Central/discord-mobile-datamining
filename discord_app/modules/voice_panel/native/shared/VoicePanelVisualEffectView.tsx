@@ -1,6 +1,6 @@
-// === Module 18612: VoicePanelVisualEffectView ===
+// === Module 18611: VoicePanelVisualEffectView ===
 
-// Module 18612 (VoicePanelVisualEffectView)
+// Module 18611 (VoicePanelVisualEffectView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

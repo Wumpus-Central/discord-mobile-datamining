@@ -1,6 +1,6 @@
-// === Module 15017: OnlineFriendsStore ===
+// === Module 15016: OnlineFriendsStore ===
 
-// Module 15017 (OnlineFriendsStore)
+// Module 15016 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;

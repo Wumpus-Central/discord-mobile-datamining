@@ -1,6 +1,6 @@
-// === Module 18191: ChannelDetailsTopic ===
+// === Module 18190: ChannelDetailsTopic ===
 
-// Module 18191 (ChannelDetailsTopic)
+// Module 18190 (ChannelDetailsTopic)
 import c from "c" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;
 import spring from "spring" /* 5247 */;

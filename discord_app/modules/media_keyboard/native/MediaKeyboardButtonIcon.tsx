@@ -1,12 +1,12 @@
-// === Module 13135: MediaKeyboardButtonIcon ===
+// === Module 13134: MediaKeyboardButtonIcon ===
 
-// Module 13135 (MediaKeyboardButtonIcon)
+// Module 13134 (MediaKeyboardButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 5161 */;
 import timing from "timing" /* 5206 */;
 import timingPresets from "timingPresets" /* 5209 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13136 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13135 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -54,7 +54,7 @@ export const MediaKeyboardButtonIcon = ReactCompilerGating.isReactCompilerEnable
   if (cResult[2] !== tmp4) {
     const obj3 = {};
     const merged1 = Object.assign(tmp4);
-    const tmp17 = jsx(tmp(10839).PlusLargeIcon, {});
+    const tmp17 = jsx(tmp(10841).PlusLargeIcon, {});
     cResult[2] = tmp4;
     cResult[3] = tmp17;
     let tmp12 = tmp17;

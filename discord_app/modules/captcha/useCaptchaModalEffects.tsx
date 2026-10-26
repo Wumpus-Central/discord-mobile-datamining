@@ -1,6 +1,6 @@
-// === Module 18717: useCaptchaModalEffects ===
+// === Module 18716: useCaptchaModalEffects ===
 
-// Module 18717 (useCaptchaModalEffects)
+// Module 18716 (useCaptchaModalEffects)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
 

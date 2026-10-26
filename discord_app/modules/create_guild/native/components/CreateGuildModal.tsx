@@ -1,13 +1,13 @@
-// === Module 13614: CreateGuildModal ===
+// === Module 13613: CreateGuildModal ===
 
-// Module 13614 (CreateGuildModal)
+// Module 13613 (CreateGuildModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import Navigator from "Navigator" /* 7095 */;
 import useIsWindowSmall from "useIsWindowSmall" /* 9731 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13613 */;
-import components_JoinServerDefault from "components/JoinServer" /* 13658 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13612 */;
+import components_JoinServerDefault from "components/JoinServer" /* 13657 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
 
@@ -25,7 +25,7 @@ function getScreens(arg0, initialRoute, arg2) {
     },
     headerLeft: require("NavigatorHeader").getHeaderCloseButton(CreateGuildModalActionCreatorsDefault.closeCreateGuildModal),
     render() {
-      return jsx(closure_1(13615), { trigger: constants2.IN_APP });
+      return jsx(closure_1(13614), { trigger: constants2.IN_APP });
     }
   };
   impressionProperties[constants.GUILD_TEMPLATES] = obj2;
@@ -39,7 +39,7 @@ function getScreens(arg0, initialRoute, arg2) {
       return null;
     },
     render(guildTemplate) {
-      return jsx(closure_1(13644), { guildTemplate: guildTemplate.guildTemplate, trigger: constants2.IN_APP });
+      return jsx(closure_1(13643), { guildTemplate: guildTemplate.guildTemplate, trigger: constants2.IN_APP });
     }
   };
   let obj4 = {
@@ -50,7 +50,7 @@ function getScreens(arg0, initialRoute, arg2) {
       return null;
     },
     render(guildTemplate) {
-      return jsx(closure_1(13644), { guildTemplate: guildTemplate.guildTemplate, trigger: constants2.IN_APP });
+      return jsx(closure_1(13643), { guildTemplate: guildTemplate.guildTemplate, trigger: constants2.IN_APP });
     }
   };
   impressionProperties[constants.CREATE_SERVER] = {
@@ -66,7 +66,7 @@ function getScreens(arg0, initialRoute, arg2) {
       const merged = Object.assign(arg0);
       obj.onCreate = function onCreate(guild) {
         const id = guild.guild.id;
-        const guildProgress = closure_0(13395).createGuildProgress(id);
+        const guildProgress = closure_0(13394).createGuildProgress(id);
         defaultChannel = defaultChannel.getDefaultChannel(id);
         if (null != defaultChannel) {
           closure_1(9057).init(id, defaultChannel.id, { location: "Guild Create Flow" });
@@ -78,11 +78,11 @@ function getScreens(arg0, initialRoute, arg2) {
           closure_1(1267).track(constants3.USER_FLOW_TRANSITION, obj7);
           const obj4 = closure_1(1267);
         }
-        const obj = closure_0(13395);
+        const obj = closure_0(13394);
       };
       const intl = initialRoute(1128).intl;
       obj.customTitle = intl.string(initialRoute(1128).t["5HZu07"]);
-      return closure_10(closure_1(13218), obj);
+      return closure_10(closure_1(13217), obj);
     }
   };
   const obj5 = {
@@ -98,7 +98,7 @@ function getScreens(arg0, initialRoute, arg2) {
       const merged = Object.assign(arg0);
       obj.onCreate = function onCreate(guild) {
         const id = guild.guild.id;
-        const guildProgress = closure_0(13395).createGuildProgress(id);
+        const guildProgress = closure_0(13394).createGuildProgress(id);
         defaultChannel = defaultChannel.getDefaultChannel(id);
         if (null != defaultChannel) {
           closure_1(9057).init(id, defaultChannel.id, { location: "Guild Create Flow" });
@@ -110,11 +110,11 @@ function getScreens(arg0, initialRoute, arg2) {
           closure_1(1267).track(constants3.USER_FLOW_TRANSITION, obj7);
           const obj4 = closure_1(1267);
         }
-        const obj = closure_0(13395);
+        const obj = closure_0(13394);
       };
       const intl = initialRoute(1128).intl;
       obj.customTitle = intl.string(initialRoute(1128).t["5HZu07"]);
-      return closure_10(closure_1(13218), obj);
+      return closure_10(closure_1(13217), obj);
     }
   };
   impressionProperties[constants.GUILD_INVITE] = {
@@ -126,7 +126,7 @@ function getScreens(arg0, initialRoute, arg2) {
     },
     render(guildId) {
       guildId = guildId.guildId;
-      return jsx(closure_1(13653), {
+      return jsx(closure_1(13652), {
         closeOnEditInviteLink: false,
         onClose() {
           const result = GuildActionCreatorsDefault.transitionToGuildSync(guildId);
@@ -147,7 +147,7 @@ function getScreens(arg0, initialRoute, arg2) {
     },
     render(guildId) {
       guildId = guildId.guildId;
-      return jsx(closure_1(13653), {
+      return jsx(closure_1(13652), {
         closeOnEditInviteLink: false,
         onClose() {
           const result = GuildActionCreatorsDefault.transitionToGuildSync(guildId);
@@ -204,8 +204,8 @@ function getScreens(arg0, initialRoute, arg2) {
       return null;
     },
     render(code) {
-      const obj = { code: code.code, onPressClose: closure_1(13613).closeCreateGuildModal };
-      return jsx(closure_1(13659), { code: code.code, onPressClose: closure_1(13613).closeCreateGuildModal });
+      const obj = { code: code.code, onPressClose: closure_1(13612).closeCreateGuildModal };
+      return jsx(closure_1(13658), { code: code.code, onPressClose: closure_1(13612).closeCreateGuildModal });
     }
   };
   const obj9 = {
@@ -220,7 +220,7 @@ function getScreens(arg0, initialRoute, arg2) {
       return null;
     },
     render() {
-      return jsx(closure_1(13671), { isNestedNavigator: true });
+      return jsx(closure_1(13670), { isNestedNavigator: true });
     }
   };
   impressionProperties[constants.JOIN_STUDENT_HUB] = obj9;

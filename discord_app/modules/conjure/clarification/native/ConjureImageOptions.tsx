@@ -15,7 +15,7 @@ import FormRadio from "FormRadio" /* 6988 */;
 import IconButton from "IconButton" /* 7959 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 8552 */;
 import openMediaModal from "openMediaModal" /* 8751 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11830 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11832 */;
 import ConjureImageOptions from "ConjureImageOptions" /* 12473 */;
 import MaximizeIcon2 from "MaximizeIcon" /* 12478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -1207,7 +1207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1244,7 +1244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             const obj = tmp2(12480);
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp16) {
         c3 = tmp;

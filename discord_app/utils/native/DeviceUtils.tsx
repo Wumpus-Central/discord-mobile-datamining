@@ -12,7 +12,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
-  return "iPad" === closure_3.deviceModel;
+  let tmp = "iPad" === closure_3.deviceModel;
+  if (!tmp) {
+    tmp = "iPhone19,4" === closure_3.deviceProduct;
+  }
+  return tmp;
 };
 export const isGestureNavigationEnabled = function isGestureNavigationEnabled() {
   return closure_3.isGestureNavigationEnabled;

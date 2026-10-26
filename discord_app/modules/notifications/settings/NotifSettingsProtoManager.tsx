@@ -1,7 +1,7 @@
-// === Module 18916: NotifSettingsProtoManager ===
+// === Module 18915: NotifSettingsProtoManager ===
 
-// Module 18916 (NotifSettingsProtoManager)
-import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17335 */;
+// Module 18915 (NotifSettingsProtoManager)
+import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17334 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;

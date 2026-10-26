@@ -1,15 +1,15 @@
-// === Module 16678: MessagePreviewManager ===
+// === Module 16677: MessagePreviewManager ===
 
-// Module 16678 (MessagePreviewManager)
+// Module 16677 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 16679 */;
+import RemoteFetchData from "RemoteFetchData" /* 16678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15030 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15029 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 
 require = fn;
@@ -74,7 +74,7 @@ class MessagePreviewManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         while (true) {
@@ -103,7 +103,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           } else {
             if (1 === tmp4) {
@@ -214,7 +214,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -382,7 +382,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
             tmp5(584).dispatch(obj7);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp12) {
           c3 = tmp;

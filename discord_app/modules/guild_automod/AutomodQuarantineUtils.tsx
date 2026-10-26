@@ -4,9 +4,9 @@
 import util from "util" /* 1128 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4909 */;
 import openUserSettings2 from "openUserSettings" /* 7490 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11187 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11189 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11122 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11124 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 import GuildStore from "GuildStore" /* 4845 */;
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "Array", bio: "Reflect" };
+      const obj = { nick: "dispatch", bio: "ix" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "Reflect" };
+    const obj = { nick: "dispatch", bio: "ix" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

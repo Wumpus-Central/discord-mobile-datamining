@@ -1,13 +1,13 @@
-// === Module 14457: FractionalNitroPreview ===
+// === Module 14456: FractionalNitroPreview ===
 
-// Module 14457 (FractionalNitroPreview)
+// Module 14456 (FractionalNitroPreview)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import LinearGradientDefault from "LinearGradient" /* 5258 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7230 */;
-import _modDef14458 from "module_14458" /* 14458 */;
-import NitroIconDefault from "NitroIcon" /* 14459 */;
+import _modDef14457 from "module_14457" /* 14457 */;
+import NitroIconDefault from "NitroIcon" /* 14458 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -77,7 +77,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { uri: _modDef14458 };
+    const obj5 = { uri: _modDef14457 };
     cResult[4] = obj5;
     let tmp12 = obj5;
   } else {
@@ -181,7 +181,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef14458;
+  obj8.uri = _modDef14457;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

@@ -1,23 +1,23 @@
-// === Module 14755: FistBumpSpotIllustration ===
+// === Module 14754: FistBumpSpotIllustration ===
 
-// Module 14755 (FistBumpSpotIllustration)
+// Module 14754 (FistBumpSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef14755 from "module_14755" /* 14755 */;
 import _modDef14756 from "module_14756" /* 14756 */;
 import _modDef14757 from "module_14757" /* 14757 */;
-import _modDef14758 from "module_14758" /* 14758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14756 }, 3: null };
-let obj2 = { uri: _modDef14756 };
-obj[2] = { uri: _modDef14757 };
-const obj3 = { uri: _modDef14757 };
-obj[3] = { uri: _modDef14758 };
+let obj = { 1: null, 2: { uri: _modDef14755 }, 3: null };
+let obj2 = { uri: _modDef14755 };
+obj[2] = { uri: _modDef14756 };
+const obj3 = { uri: _modDef14756 };
+obj[3] = { uri: _modDef14757 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14758 };
+const obj4 = { uri: _modDef14757 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 11742: ConjureStandaloneScreen ===
+// === Module 11744: ConjureStandaloneScreen ===
 
-// Module 11742 (ConjureStandaloneScreen)
+// Module 11744 (ConjureStandaloneScreen)
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11743 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 11744 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 11858 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11745 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 11746 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 11860 */;
 import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12538 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

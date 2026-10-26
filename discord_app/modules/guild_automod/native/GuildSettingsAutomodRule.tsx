@@ -1,11 +1,11 @@
-// === Module 19020: GuildSettingsAutomodRule ===
+// === Module 19019: GuildSettingsAutomodRule ===
 
-// Module 19020 (GuildSettingsAutomodRule)
+// Module 19019 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19005 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,8 +13,8 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(19002).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19004);
+const useAutomodRulesList = fn(19001).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19003);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
 const MAX_RULE_NAME_LENGTH = fn(12811).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                       v0(closure_130_1, closure_0);
                       closure_1.pop();
                       c6 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp41) {
                     closure_3 = tmp41;

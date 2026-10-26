@@ -1,6 +1,6 @@
-// === Module 11275: UserProfileSection ===
+// === Module 11277: UserProfileSection ===
 
-// Module 11275 (UserProfileSection)
+// Module 11277 (UserProfileSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4968 */;

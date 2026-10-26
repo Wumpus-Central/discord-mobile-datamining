@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         obj8.headerTitle = intl.string(util.t.VJEVbu);
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(14920), {});
+          return closure_1_8(guildBoostSlots(14919), {});
         };
         obj5[constants.CONFIRMATION] = obj8;
         obj4.screens = obj5;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         obj8.headerTitle = intl.string(util.t.VJEVbu);
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(14920), {});
+          return closure_1_8(guildBoostSlots(14919), {});
         };
         obj5[constants.CONFIRMATION] = obj8;
         obj4.screens = obj5;

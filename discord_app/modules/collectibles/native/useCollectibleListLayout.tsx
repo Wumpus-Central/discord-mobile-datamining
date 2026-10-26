@@ -1,6 +1,6 @@
-// === Module 14495: useCollectibleListLayout ===
+// === Module 14494: useCollectibleListLayout ===
 
-// Module 14495 (useCollectibleListLayout)
+// Module 14494 (useCollectibleListLayout)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 

@@ -1,6 +1,6 @@
-// === Module 19306: GuildRoleSubscriptionBenefitPreview ===
+// === Module 19305: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 19306 (GuildRoleSubscriptionBenefitPreview)
+// Module 19305 (GuildRoleSubscriptionBenefitPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4917 */;
@@ -9,13 +9,13 @@ import useChannelNameDefault from "useChannelName" /* 5604 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7305 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
 import TextIcon2 from "TextIcon" /* 8551 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16590 */;
-import EmojiIconDefault from "EmojiIcon" /* 16597 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16589 */;
+import EmojiIconDefault from "EmojiIcon" /* 16596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16562).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16561).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4971);

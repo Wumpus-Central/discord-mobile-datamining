@@ -1,6 +1,6 @@
-// === Module 11262: GuildRoleConnectionsModal ===
+// === Module 11264: GuildRoleConnectionsModal ===
 
-// Module 11262 (GuildRoleConnectionsModal)
+// Module 11264 (GuildRoleConnectionsModal)
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,7 +43,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return jsx(guildId(7485).HeaderActionButton, { source: onClose(8115), onPress, accessibilityLabel: null });
   };
   obj4.render = function render() {
-    return jsx(onClose(11263), { guildId, onCloseModal });
+    return jsx(onClose(11265), { guildId, onCloseModal });
   };
   obj3[GUILD_ROLE_CONNECTIONS_SCREEN] = obj4;
   cResult[0] = guildId;
@@ -71,7 +71,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return jsx(guildId(7485).HeaderActionButton, { source: onClose(8115), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11263), { guildId, onCloseModal });
+      return jsx(onClose(11265), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;

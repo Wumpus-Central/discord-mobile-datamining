@@ -1,9 +1,9 @@
-// === Module 18734: AcceptInviteModal ===
+// === Module 18733: AcceptInviteModal ===
 
-// Module 18734 (AcceptInviteModal)
+// Module 18733 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 5701 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13659 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13658 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

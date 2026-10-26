@@ -1,6 +1,6 @@
-// === Module 19339: NotificationSettingsMessageNotification ===
+// === Module 19338: NotificationSettingsMessageNotification ===
 
-// Module 19339 (NotificationSettingsMessageNotification)
+// Module 19338 (NotificationSettingsMessageNotification)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import Pressables from "Pressables" /* 6908 */;
-import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 19340 */;
-import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 19341 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 19339 */;
+import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 19340 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -250,7 +250,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     style: style.style,
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19342, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19341, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
     }
   };
   return closure_4(closure_7, obj);

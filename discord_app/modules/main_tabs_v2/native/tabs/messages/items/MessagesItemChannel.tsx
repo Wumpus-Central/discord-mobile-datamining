@@ -1,14 +1,14 @@
-// === Module 17457: MessagesItemChannel ===
+// === Module 17456: MessagesItemChannel ===
 
-// Module 17457 (MessagesItemChannel)
+// Module 17456 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _mod7220 from "module_7220" /* 7220 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
-import _mod13873 from "module_13873" /* 13873 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 17458 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17467 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
+import _mod13872 from "module_13872" /* 13872 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 17457 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17466 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -196,7 +196,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemChannelLegend(arg0) {
   const cResult = c.c(4);
-  [tmp3, tmp4] = _mod13873.useRecyclingState(false);
+  [tmp3, tmp4] = _mod13872.useRecyclingState(false);
   if (cResult[0] === tmp3) {
     if (cResult[1] === arg0) {
       if (cResult[2] === tmp4) {
@@ -217,7 +217,7 @@ export const MessagesItemChannelLegend = noop.memo(ReactCompilerGating.isReactCo
   tmp5 = tmp7;
 }) : (function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod13873.useRecyclingState(false);
+  [tmp2, tmp3] = _mod13872.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

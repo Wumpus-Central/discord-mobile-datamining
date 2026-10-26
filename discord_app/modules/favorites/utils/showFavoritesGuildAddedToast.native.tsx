@@ -1,6 +1,6 @@
-// === Module 10854: showFavoritesGuildAddedToast ===
+// === Module 10856: showFavoritesGuildAddedToast ===
 
-// Module 10854 (showFavoritesGuildAddedToast)
+// Module 10856 (showFavoritesGuildAddedToast)
 import util from "util" /* 1128 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import StarIcon from "StarIcon" /* 9949 */;

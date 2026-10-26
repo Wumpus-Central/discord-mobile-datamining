@@ -37,7 +37,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -223,7 +223,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
         const backoff = closure_130_1.backoff;
         backoff.succeed();
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp29) {
       if (tmp4 === c4) {

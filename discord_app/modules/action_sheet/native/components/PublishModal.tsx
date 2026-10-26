@@ -1,10 +1,10 @@
-// === Module 13977: PublishModal ===
+// === Module 13976: PublishModal ===
 
-// Module 13977 (PublishModal)
+// Module 13976 (PublishModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 13978 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 13977 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -5,8 +5,8 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import DiscordNativeDefault from "DiscordNative" /* 4785 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 15299 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 15301 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 15298 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 15300 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -23,7 +23,7 @@ let closure_36 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

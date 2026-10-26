@@ -15,7 +15,7 @@ let closure_3 = async function _copy(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_3 = async function _copy(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp13) {
       c2 = tmp;

@@ -1,6 +1,6 @@
-// === Module 16481: useVideoQuestPlayerAnalytics ===
+// === Module 16480: useVideoQuestPlayerAnalytics ===
 
-// Module 16481 (useVideoQuestPlayerAnalytics)
+// Module 16480 (useVideoQuestPlayerAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6468 */;
 import MetricEvents from "MetricEvents" /* 6473 */;
 import QuestTypes from "QuestTypes" /* 6713 */;
@@ -10,9 +10,9 @@ import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7779 */;
 import AnalyticsActions from "AnalyticsActions" /* 7792 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
 import AdDataUtils from "AdDataUtils" /* 7802 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14127 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16306 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 16316 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14126 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16305 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 16315 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import NetworkStore from "NetworkStore" /* 5890 */;
@@ -58,7 +58,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             obj13.trackQuestEvent(obj12);
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp53) {
           closure_5 = tmp53;

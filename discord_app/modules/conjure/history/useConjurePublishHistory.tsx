@@ -1,10 +1,10 @@
-// === Module 12276: useConjurePublishHistory ===
+// === Module 12278: useConjurePublishHistory ===
 
-// Module 12276 (useConjurePublishHistory)
+// Module 12278 (useConjurePublishHistory)
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 12277 */;
+import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 12279 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePu
     if (cResult[5] === arg0) {
       let tmp14 = cResult[6];
     }
-    historyLoad = tmp(12272).useHistoryLoad(tmp14);
+    historyLoad = tmp(12274).useHistoryLoad(tmp14);
     nextCursor = null;
     if ("loaded" === historyLoad.state.status) {
       nextCursor = historyLoad.state.data.nextCursor;
@@ -167,7 +167,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePu
     cResult[16] = C;
     cResult[17] = tmp23;
     cResult[18] = obj2;
-    const tmpResult = tmp(12272);
+    const tmpResult = tmp(12274);
   }
   const fn = function p() {
     return conjurePublishHistoryRequests.fetchPublishHistory(closure_0, closure_2);

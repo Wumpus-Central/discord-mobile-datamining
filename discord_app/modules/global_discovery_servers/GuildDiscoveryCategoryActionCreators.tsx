@@ -1,10 +1,10 @@
-// === Module 17919: GuildDiscoveryCategoryActionCreators ===
+// === Module 17918: GuildDiscoveryCategoryActionCreators ===
 
-// Module 17919 (GuildDiscoveryCategoryActionCreators)
+// Module 17918 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17920 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17919 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -120,7 +120,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -214,7 +214,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
         closure_130_1(closure_130_2[5]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp18) {
       closure_3 = tmp18;

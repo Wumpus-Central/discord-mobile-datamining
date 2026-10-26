@@ -1,6 +1,6 @@
-// === Module 11067: useSafeAreaAvoidingInputs ===
+// === Module 11069: useSafeAreaAvoidingInputs ===
 
-// Module 11067 (useSafeAreaAvoidingInputs)
+// Module 11069 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensions from "useWindowDimensions" /* 1499 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 5594 */;
@@ -43,7 +43,7 @@ let closure_7 = async function _calculateScrollOffset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_7 = async function _calculateScrollOffset(arg0) {
               return obj8;
             } else {
               c6 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           }
         }
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
               if (null != current2) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp3(11068).measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp3(11070).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
             closure_128_2 = value;
             dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(11068).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            const obj6 = { value: tmp3(11070).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
         } else {
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
                 if (null != closure_128_3) {
                   dependencyMap = 3;
                   c3 = 1;
-                  const obj9 = { value: tmp3(11068).measureViewInWindow(closure_128_0), done: false };
+                  const obj9 = { value: tmp3(11070).measureViewInWindow(closure_128_0), done: false };
                   return obj9;
                 }
               }

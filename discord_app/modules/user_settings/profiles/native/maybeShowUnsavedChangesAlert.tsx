@@ -1,6 +1,6 @@
-// === Module 11069: maybeShowUnsavedChangesAlert ===
+// === Module 11071: maybeShowUnsavedChangesAlert ===
 
-// Module 11069 (maybeShowUnsavedChangesAlert)
+// Module 11071 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1128 */;
 import AlertModal from "AlertModal" /* 5914 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +22,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -163,7 +163,7 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       tmp7(5909).show(obj4);
       const tmp7Result4 = tmp7(5909);
     }
-    obj2 = onReset(11070);
+    obj2 = onReset(11072);
   } else {
     onContinue();
   }

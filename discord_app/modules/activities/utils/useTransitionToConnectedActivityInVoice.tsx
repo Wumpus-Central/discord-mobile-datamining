@@ -1,6 +1,6 @@
-// === Module 18654: useTransitionToConnectedActivityInVoice ===
+// === Module 18653: useTransitionToConnectedActivityInVoice ===
 
-// Module 18654 (useTransitionToConnectedActivityInVoice)
+// Module 18653 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -63,13 +63,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
                         const obj4 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 1;
                         c4 = 1;
-                        const obj5 = { value: closure_2_1(11415)(obj4), done: false };
+                        const obj5 = { value: closure_2_1(11417)(obj4), done: false };
                         return obj5;
                       }
                     }
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11362)(closure_1_3, _location);
+                closure_3_1(11364)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
                 closure_129_3 = undefined;
                 c3 = 1;
                 c4 = 1;
-                return { value: "Reflect", done: true };
+                return { value: "Reflect", done: null };
               }
             } else {
               if (1 === tmp5) {
@@ -198,13 +198,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(11415)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11417)(obj5), done: false };
                         return obj6;
                       }
                     }
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11362)(closure_1_3, _location);
+                closure_3_1(11364)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

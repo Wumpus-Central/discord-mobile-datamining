@@ -1,6 +1,6 @@
-// === Module 11800: ConjureSettingsSheet ===
+// === Module 11802: ConjureSettingsSheet ===
 
-// Module 11800 (ConjureSettingsSheet)
+// Module 11802 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -182,7 +182,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(11850).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(11852).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
     tmp10Result = closure_12(tmp5(9146).SegmentedControl, obj5);
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }
-  const tmp5Result = tmp5(11801);
-  closure_3 = tmp5(11801)(projectId, undefined);
+  const tmp5Result = tmp5(11803);
+  closure_3 = tmp5(11803)(projectId, undefined);
   if (cResult[17] === isPreview) {
     class N {
       constructor() {
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   cResult[22] = scopeKeys;
   cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
   let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-  const tmp5ResultResult = tmp5(11801)(projectId, undefined);
+  const tmp5ResultResult = tmp5(11803)(projectId, undefined);
 }) : (function ConjureSettingsSheet(projectId) {
   projectId = projectId.projectId;
   let stateFromStores1;
@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

@@ -2,7 +2,7 @@
 
 // Module 12382 (useConjurePatchNotesLink)
 import router_utils from "router_utils" /* 1114 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11874 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11876 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10714 */;

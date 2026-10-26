@@ -1,6 +1,6 @@
-// === Module 11324: showGameOrganizationInviteErrorToast ===
+// === Module 11326: showGameOrganizationInviteErrorToast ===
 
-// Module 11324 (showGameOrganizationInviteErrorToast)
+// Module 11326 (showGameOrganizationInviteErrorToast)
 import util from "util" /* 1128 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import size from "module_2" /* 2 */;

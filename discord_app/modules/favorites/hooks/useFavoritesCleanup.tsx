@@ -1,7 +1,7 @@
-// === Module 17569: useFavoritesCleanup ===
+// === Module 17568: useFavoritesCleanup ===
 
-// Module 17569 (useFavoritesCleanup)
-import FavoritesCleanup from "FavoritesCleanup" /* 10855 */;
+// Module 17568 (useFavoritesCleanup)
+import FavoritesCleanup from "FavoritesCleanup" /* 10857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -29,7 +29,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ export default function useFavoritesCleanup(arg0) {
               closure_129_4(false);
             }
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
           c3 = 0;
           closure_129_11.current = false;
@@ -143,7 +143,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

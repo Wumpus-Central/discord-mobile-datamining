@@ -1,9 +1,9 @@
-// === Module 11854: ConjureProjectIcon ===
+// === Module 11856: ConjureProjectIcon ===
 
-// Module 11854 (ConjureProjectIcon)
+// Module 11856 (ConjureProjectIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11855 */;
+import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11857 */;
 import noop from "module_19" /* 19 */;
 
 const AvatarUtils = obj(1417);

@@ -1,6 +1,6 @@
-// === Module 18273: MessagePreview ===
+// === Module 18272: MessagePreview ===
 
-// Module 18273 (MessagePreview)
+// Module 18272 (MessagePreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;

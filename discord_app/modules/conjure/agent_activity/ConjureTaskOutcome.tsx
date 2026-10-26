@@ -3,7 +3,7 @@
 // Module 12437 (ConjureTaskOutcome)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureDuration from "ConjureDuration" /* 11879 */;
+import ConjureDuration from "ConjureDuration" /* 11881 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTaskOutcome.tsx");

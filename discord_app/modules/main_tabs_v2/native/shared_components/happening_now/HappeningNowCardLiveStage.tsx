@@ -1,6 +1,6 @@
-// === Module 17497: HappeningNowCardLiveStage ===
+// === Module 17496: HappeningNowCardLiveStage ===
 
-// Module 17497 (HappeningNowCardLiveStage)
+// Module 17496 (HappeningNowCardLiveStage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import useChannelNameDefault from "useChannelName" /* 5604 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import HappeningNowCard from "HappeningNowCard" /* 16654 */;
-import useLiveStageData from "useLiveStageData" /* 17498 */;
+import HappeningNowCard from "HappeningNowCard" /* 16653 */;
+import useLiveStageData from "useLiveStageData" /* 17497 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -95,7 +95,7 @@ function getUsersSubtitle(usersSubtitle) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(16653);
+const HappeningNowConstants = fn(16652);
 ({ HappeningNowCardTrackingType: hasOwnProperty, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);

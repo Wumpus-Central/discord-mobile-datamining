@@ -1,6 +1,6 @@
-// === Module 17202: useOpenDeepLinkedProduct ===
+// === Module 17201: useOpenDeepLinkedProduct ===
 
-// Module 17202 (useOpenDeepLinkedProduct)
+// Module 17201 (useOpenDeepLinkedProduct)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7661 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8665 */;

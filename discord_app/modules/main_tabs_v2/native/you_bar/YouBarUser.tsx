@@ -1,6 +1,6 @@
-// === Module 17832: YouBarUser ===
+// === Module 17831: YouBarUser ===
 
-// Module 17832 (YouBarUser)
+// Module 17831 (YouBarUser)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5247 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16443);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -115,7 +115,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tmp27 = tmp29;
             }
             const obj7 = { userId: stateFromStores.id, username: name };
-            const tmp26 = closure_9(tmp16(17835), obj7);
+            const tmp26 = closure_9(tmp16(17834), obj7);
             cResult[28] = stateFromStores.id;
             cResult[29] = name;
             cResult[30] = tmp26;
@@ -128,7 +128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp23 = items2;
         }
         const obj8 = { isLargeAvatar: tmp8, onPress: onAvatarPress };
-        const tmp21 = closure_9(tmp16(17834), obj8);
+        const tmp21 = closure_9(tmp16(17833), obj8);
         cResult[21] = tmp8;
         cResult[22] = onAvatarPress;
         cResult[23] = tmp21;
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[6] !== tmp8) {
       const obj9 = { isLarge: tmp8 };
-      const tmp36 = closure_9(tmp16(17833), obj9);
+      const tmp36 = closure_9(tmp16(17832), obj9);
       cResult[6] = tmp8;
       cResult[7] = tmp36;
       let tmp34 = tmp36;
@@ -254,19 +254,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(17834), obj5), ];
+      const items2 = [closure_9(tmp9(17833), obj5), ];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(17835), obj7);
+      obj6.children = closure_9(tmp9(17834), obj7);
       items2[1] = closure_9(tmp9(5052).View, obj6);
       obj3.children = items2;
     }
     return tmp11(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items4 = [closure_9(sharedValue(17833), { isLarge: !isQuestRendered }), ];
+  const items4 = [closure_9(sharedValue(17832), { isLarge: !isQuestRendered }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items5;

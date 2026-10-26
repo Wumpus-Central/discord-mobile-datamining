@@ -1,10 +1,10 @@
-// === Module 16386: HexagonCampaignThemeLegal ===
+// === Module 16385: HexagonCampaignThemeLegal ===
 
-// Module 16386 (HexagonCampaignThemeLegal)
+// Module 16385 (HexagonCampaignThemeLegal)
 import nativeDefault from "native" /* 587 */;
 import _modDef4247 from "module_4247" /* 4247 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15874 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15873 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
                 return tmp17;
               } else {
                 if (cResult[14] !== legalWithLogo.logo) {
-                  const obj3 = { source: legalWithLogo(16387), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
+                  const obj3 = { source: legalWithLogo(16386), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
                   const tmp25 = closure_6(legalWithLogo(5669), obj3);
                   cResult[14] = legalWithLogo.logo;
                   cResult[15] = tmp25;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: tmp7(16387), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const obj4 = { source: tmp7(16386), style: tmp.logo, resizeMode: "contain", accessible: false };
     const items1 = [closure_6(tmp7(5669), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);

@@ -1,6 +1,6 @@
-// === Module 14884: UserSettingsGiftingBadgeProgress ===
+// === Module 14883: UserSettingsGiftingBadgeProgress ===
 
-// Module 14884 (UserSettingsGiftingBadgeProgress)
+// Module 14883 (UserSettingsGiftingBadgeProgress)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2632 from "module_2632" /* 2632 */;
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                 const _Symbol = Symbol;
                                                 if (cResult[84] === Symbol.for("react.memo_cache_sentinel")) {
                                                   let obj3 = { size: "sm", color: tmp7(587).unsafe_rawColors.WHITE };
-                                                  const tmp83 = closure_9(tmp(12886).GiftIcon, obj3);
+                                                  const tmp83 = closure_9(tmp(12885).GiftIcon, obj3);
                                                   const intl4 = tmp(1128).intl;
                                                   const stringResult = intl4.string(tmp7(2632).DZnomS);
                                                   cResult[84] = tmp83;
@@ -445,9 +445,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                   }
                                                   if (cResult[93] !== tmp6) {
                                                     if (tmp6) {
-                                                      let ChevronSmallDownIcon = tmp(14885).ChevronSmallUpIcon;
+                                                      let ChevronSmallDownIcon = tmp(14884).ChevronSmallUpIcon;
                                                     } else {
-                                                      ChevronSmallDownIcon = tmp(11077).ChevronSmallDownIcon;
+                                                      ChevronSmallDownIcon = tmp(11079).ChevronSmallDownIcon;
                                                     }
                                                     const obj6 = { color: tmp7(587).colors.INTERACTIVE_ICON_DEFAULT };
                                                     const tmp97Result = closure_9(ChevronSmallDownIcon, obj6);
@@ -1009,7 +1009,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const items5 = [closure_10(closure_6, obj6), , , , ];
     const obj18 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj19 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-    obj18.icon = closure_9(tmp7(12886).GiftIcon, obj19);
+    obj18.icon = closure_9(tmp7(12885).GiftIcon, obj19);
     const intl4 = tmp7(1128).intl;
     obj18.text = intl4.string(tmp4(2632).DZnomS);
     obj18.onPress = function onPress() {
@@ -1030,9 +1030,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj22.children = intl5.string(tmp4(2632).WZ4cXA);
     const items6 = [closure_9(tmp7(5234).Text, obj22), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(14885).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(14884).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(11077).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(11079).ChevronSmallDownIcon;
     }
     const obj23 = { color: tmp4(587).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj23);

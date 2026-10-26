@@ -2,7 +2,7 @@
 
 // Module 12474 (useConjureOwnImages)
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11756 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11758 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -236,7 +236,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F162749 */ function() { ... });
+                  result.catch(/* F162766 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -300,7 +300,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F162749 */ function() { ... });
+                result.catch(/* F162766 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);

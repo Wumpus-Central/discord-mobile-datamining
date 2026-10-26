@@ -1,6 +1,6 @@
-// === Module 13131: ChatInputImageCarousel ===
+// === Module 13130: ChatInputImageCarousel ===
 
-// Module 13131 (ChatInputImageCarousel)
+// Module 13130 (ChatInputImageCarousel)
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8307 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8293 */;

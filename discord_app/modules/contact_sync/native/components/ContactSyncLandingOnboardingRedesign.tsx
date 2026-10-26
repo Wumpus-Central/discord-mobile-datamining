@@ -1,12 +1,12 @@
-// === Module 13597: ContactSyncLandingOnboardingRedesign ===
+// === Module 13596: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13597 (ContactSyncLandingOnboardingRedesign)
+// Module 13596 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7885 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13590 */;
-import _modDef13598 from "module_13598" /* 13598 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13599 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13589 */;
+import _modDef13597 from "module_13597" /* 13597 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13598 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
               tmp4();
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp11) {
           c2 = tmp;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.headerImage) {
-    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13598 };
+    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13597 };
     const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[2] = tmp4.headerImage;
     cResult[3] = tmp11;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
             closure_128_0();
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp11) {
         c2 = tmp;
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13598 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13597 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1128).intl;

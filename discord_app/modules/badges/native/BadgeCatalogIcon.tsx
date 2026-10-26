@@ -1,9 +1,9 @@
-// === Module 11114: BadgeCatalogIcon ===
+// === Module 11116: BadgeCatalogIcon ===
 
-// Module 11114 (BadgeCatalogIcon)
+// Module 11116 (BadgeCatalogIcon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11115 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 13220: GuildDirectoryRow ===
+// === Module 13219: GuildDirectoryRow ===
 
-// Module 13220 (GuildDirectoryRow)
+// Module 13219 (GuildDirectoryRow)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import GuildIconDefault from "GuildIcon" /* 6883 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13198 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13197 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
                 closure_129_3(false);
               }
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             } else {
               let guildId;
               if (channel2 != null) {
@@ -130,7 +130,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
             closure_129_3(false);
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp67) {
         if (tmp5 === c3) {

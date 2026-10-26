@@ -1,6 +1,6 @@
-// === Module 18871: GenericIAPStore ===
+// === Module 18870: GenericIAPStore ===
 
-// Module 18871 (GenericIAPStore)
+// Module 18870 (GenericIAPStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

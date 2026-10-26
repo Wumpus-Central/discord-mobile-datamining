@@ -1,11 +1,11 @@
-// === Module 12339: conjureTipSelection ===
+// === Module 12338: conjureTipSelection ===
 
-// Module 12339 (conjureTipSelection)
+// Module 12338 (conjureTipSelection)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipSelection.tsx");
 
-export const selectConjureTips = function selectConjureTips(arg0, arg1, cResult) {
+export const selectConjureTips = function selectConjureTips(arg0, arg1, isDismissed) {
   const obj = { callout: null, hint: null };
   const items = [...arg0];
   const sorted = items.sort((priority, priority2) => priority2.priority - priority.priority);
@@ -20,7 +20,7 @@ export const selectConjureTips = function selectConjureTips(arg0, arg1, cResult)
       }
       return obj;
     }
-    if (!cResult(obj2)) {
+    if (!isDismissed(obj2)) {
       let resolveResult = obj2.resolve(arg1);
       let tmp6 = resolveResult;
       if (null != resolveResult) {

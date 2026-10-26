@@ -1,6 +1,6 @@
-// === Module 10876: showThreadBrowserModal ===
+// === Module 10878: showThreadBrowserModal ===
 
-// Module 10876 (showThreadBrowserModal)
+// Module 10878 (showThreadBrowserModal)
 import RootNavigationRef from "RootNavigationRef" /* 5151 */;
 import ThreadUtils from "ThreadUtils" /* 8308 */;
 import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10024 */;

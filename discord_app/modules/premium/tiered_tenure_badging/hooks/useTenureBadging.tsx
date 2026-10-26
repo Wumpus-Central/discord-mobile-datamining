@@ -1,13 +1,13 @@
-// === Module 11108: useTenureBadging ===
+// === Module 11110: useTenureBadging ===
 
-// Module 11108 (useTenureBadging)
+// Module 11110 (useTenureBadging)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7712 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11109 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11110 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11111 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11112 */;
 import UserProfileStore from "UserProfileStore" /* 7703 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;

@@ -1,6 +1,6 @@
-// === Module 13734: GuildDirectoryNicknameUpsellModalActionCreators ===
+// === Module 13733: GuildDirectoryNicknameUpsellModalActionCreators ===
 
-// Module 13734 (GuildDirectoryNicknameUpsellModalActionCreators)
+// Module 13733 (GuildDirectoryNicknameUpsellModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/native/com
 
 export default {
   open(merged) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13735, dependencyMap.paths), merged, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13734, dependencyMap.paths), merged, c3);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(c3);

@@ -1,6 +1,6 @@
-// === Module 14040: ScheduledMessageEditContentModal ===
+// === Module 14039: ScheduledMessageEditContentModal ===
 
-// Module 14040 (ScheduledMessageEditContentModal)
+// Module 14039 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
               const arr = channelId(stateFromStores[16]);
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp9) {
           c2 = tmp;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             const arr = v1(6672);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

@@ -1,6 +1,6 @@
-// === Module 17796: GuildsBarItemEmptyNUX ===
+// === Module 17795: GuildsBarItemEmptyNUX ===
 
-// Module 17796 (GuildsBarItemEmptyNUX)
+// Module 17795 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5247 */;
 import transitionToGuild from "transitionToGuild" /* 7449 */;
@@ -13,10 +13,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17731);
+const GuildsBarConstants = fn(17730);
 ({ GUILD_ITEM_HIT_SLOP: closure_7, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1087).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11181).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11183).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4971);

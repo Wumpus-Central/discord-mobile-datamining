@@ -1,6 +1,6 @@
-// === Module 16349: BountiesModalContent ===
+// === Module 16348: BountiesModalContent ===
 
-// Module 16349 (BountiesModalContent)
+// Module 16348 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -15,11 +15,11 @@ import AdCreativeType from "AdCreativeType" /* 6717 */;
 import QuestDataUtils from "QuestDataUtils" /* 7772 */;
 import AnalyticsActions from "AnalyticsActions" /* 7792 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import AnimationUtils from "AnimationUtils" /* 13958 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14105 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14127 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14142 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16294 */;
+import AnimationUtils from "AnimationUtils" /* 13957 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14104 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14126 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14141 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(6710);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16298);
+const BountiesModalConstants = fn(16297);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -279,7 +279,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                 const obj3 = { value, done: true };
                                 return obj3;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "+352" };
                               }
                             } else {
                               try {
@@ -341,7 +341,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                     }
                                   }
                                   ref = 3;
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+352" };
                                 }
                               } catch (tmp40) {
                                 if (tmp4 === c3) {
@@ -506,7 +506,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -567,7 +567,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             }
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp40) {
         if (tmp4 === c3) {

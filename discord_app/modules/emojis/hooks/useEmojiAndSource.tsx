@@ -508,7 +508,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F159775 */ function() { ... });
+      closure_0 = closure_2(/* F159788 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {
@@ -614,7 +614,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -668,7 +668,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
             current();
           }
           v3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

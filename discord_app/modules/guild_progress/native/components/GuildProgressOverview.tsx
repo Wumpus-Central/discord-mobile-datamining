@@ -1,6 +1,6 @@
-// === Module 15227: GuildProgressOverview ===
+// === Module 15226: GuildProgressOverview ===
 
-// Module 15227 (GuildProgressOverview)
+// Module 15226 (GuildProgressOverview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,10 +8,10 @@ import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import Pressables from "Pressables" /* 6908 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7290 */;
-import _modDef11561 from "module_11561" /* 11561 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 13395 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13398 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 15228 */;
+import _modDef11563 from "module_11563" /* 11563 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 13394 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13397 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 15227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgres
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { source: _modDef11561 };
+            const obj2 = { source: _modDef11563 };
             const tmp20 = hasOwnProperty(native.Icon, obj2);
             cResult[12] = tmp20;
             let tmp17 = tmp20;
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgres
   obj4.style = items;
   const items1 = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle })];
   obj3.children = items1;
-  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11561 })];
+  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11563 })];
   obj2.children = items2;
   const items3 = [timestampProducer(View, obj2), hasOwnProperty(GuildProgressBarDefault, { style: tmp.progressBar, percent: percentComplete })];
   obj.children = items3;

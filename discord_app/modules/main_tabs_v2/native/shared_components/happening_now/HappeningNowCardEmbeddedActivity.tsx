@@ -1,6 +1,6 @@
-// === Module 17512: HappeningNowCardEmbeddedActivity ===
+// === Module 17511: HappeningNowCardEmbeddedActivity ===
 
-// Module 17512 (HappeningNowCardEmbeddedActivity)
+// Module 17511 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16653);
+const HappeningNowConstants = fn(16652);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);

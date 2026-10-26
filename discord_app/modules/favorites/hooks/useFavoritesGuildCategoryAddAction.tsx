@@ -1,8 +1,8 @@
-// === Module 13851: useFavoritesGuildCategoryAddAction ===
+// === Module 13850: useFavoritesGuildCategoryAddAction ===
 
-// Module 13851 (useFavoritesGuildCategoryAddAction)
+// Module 13850 (useFavoritesGuildCategoryAddAction)
 import _modDef3412 from "module_3412" /* 3412 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13852 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13851 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

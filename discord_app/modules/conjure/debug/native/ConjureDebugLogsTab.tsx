@@ -15,7 +15,7 @@ const Text_Text = Text(5234);
 const Card = Text(6905);
 const Pressables = Text(6908);
 const ChevronSmallRightIcon2 = Text(7305);
-const ChevronSmallDownIcon = Text(11077);
+const ChevronSmallDownIcon = Text(11079);
 const ConjureTimeFormat = Text(12543);
 const ConjureDebugJson = Text(12550);
 require = fn;
@@ -276,7 +276,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11077).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(11079).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
     ChevronSmallRightIcon = tmp3(7305).ChevronSmallRightIcon;

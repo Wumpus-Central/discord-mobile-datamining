@@ -1,8 +1,8 @@
 // === Module 12449: conjurePlanWidget ===
 
 // Module 12449 (conjurePlanWidget)
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 11870 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11907 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 11872 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11909 */;
 import ApplicationAssetType from "ApplicationAssetType" /* 12450 */;
 import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 12451 */;
 import _slicedToArray from "module_32" /* 32 */;

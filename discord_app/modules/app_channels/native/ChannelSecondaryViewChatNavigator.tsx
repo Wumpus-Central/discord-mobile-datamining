@@ -1,15 +1,15 @@
-// === Module 18319: ChannelSecondaryViewChatNavigator ===
+// === Module 18318: ChannelSecondaryViewChatNavigator ===
 
-// Module 18319 (ChannelSecondaryViewChatNavigator)
+// Module 18318 (ChannelSecondaryViewChatNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import HeaderShared from "HeaderShared" /* 9699 */;
 import ChannelActionsDefault from "ChannelActions" /* 9711 */;
-import ChatViewDefault from "ChatView" /* 10889 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12011 */;
-import ChannelContainer from "ChannelContainer" /* 13743 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14014 */;
+import ChatViewDefault from "ChatView" /* 10891 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12013 */;
+import ChannelContainer from "ChannelContainer" /* 13742 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14013 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

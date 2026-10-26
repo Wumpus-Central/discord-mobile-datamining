@@ -1,6 +1,6 @@
-// === Module 11673: useMuteAwareLocalVolume ===
+// === Module 11675: useMuteAwareLocalVolume ===
 
-// Module 11673 (useMuteAwareLocalVolume)
+// Module 11675 (useMuteAwareLocalVolume)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;

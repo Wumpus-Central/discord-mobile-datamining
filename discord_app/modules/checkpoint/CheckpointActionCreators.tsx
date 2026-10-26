@@ -1,12 +1,12 @@
-// === Module 12955: CheckpointActionCreators ===
+// === Module 12954: CheckpointActionCreators ===
 
-// Module 12955 (CheckpointActionCreators)
+// Module 12954 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
-import CheckpointStore from "CheckpointStore" /* 12954 */;
+import CheckpointStore from "CheckpointStore" /* 12953 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -262,7 +262,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     while (true) {
@@ -340,7 +340,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         c8 = 0;

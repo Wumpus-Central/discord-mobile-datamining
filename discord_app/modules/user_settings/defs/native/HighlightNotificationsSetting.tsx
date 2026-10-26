@@ -1,6 +1,6 @@
-// === Module 16880: HighlightNotificationsSetting ===
+// === Module 16879: HighlightNotificationsSetting ===
 
-// Module 16880 (HighlightNotificationsSetting)
+// Module 16879 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHighlig
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 });
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

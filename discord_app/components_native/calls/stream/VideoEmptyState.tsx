@@ -1,13 +1,13 @@
-// === Module 11424: VideoEmptyState ===
+// === Module 11426: VideoEmptyState ===
 
-// Module 11424 (VideoEmptyState)
+// Module 11426 (VideoEmptyState)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useMountEffectDefault from "useMountEffect" /* 5263 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6645 */;
 import StreamActionCreators from "StreamActionCreators" /* 7829 */;
-import StreamEnded from "StreamEnded" /* 11425 */;
+import StreamEnded from "StreamEnded" /* 11427 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoEmp
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp10 = closure_7(stream(11425).StreamEnded, obj2);
+      tmp10 = closure_7(stream(11427).StreamEnded, obj2);
     }
     let obj3 = { children: null };
     const items = [tmp10, ];

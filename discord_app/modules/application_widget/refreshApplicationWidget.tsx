@@ -1,6 +1,6 @@
-// === Module 12006: refreshApplicationWidget ===
+// === Module 12008: refreshApplicationWidget ===
 
-// Module 12006 (refreshApplicationWidget)
+// Module 12008 (refreshApplicationWidget)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export const refreshApplicationWidget = function refreshApplicationWidget(play) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

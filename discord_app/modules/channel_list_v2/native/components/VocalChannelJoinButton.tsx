@@ -1,6 +1,6 @@
-// === Module 13178: VocalChannelJoinButton ===
+// === Module 13177: VocalChannelJoinButton ===
 
-// Module 13178 (VocalChannelJoinButton)
+// Module 13177 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 587 */;
 import StageIcon from "StageIcon" /* 8568 */;
 import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8572 */;
@@ -229,8 +229,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp2 = voiceStates(5205)();
   let joinButtonText = closure_11(tmp, channel(4978).isThemeLight(tmp2));
   const obj = channel(4978);
-  const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
-  const obj2 = channel(10884);
+  const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
+  const obj2 = channel(10886);
   const items = [PermissionStore];
   const stateFromStores = channel(573).useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   const obj3 = channel(573);
@@ -255,9 +255,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = tmp8;
   }
   const tmp3Result = channel(573);
-  const connectedUserLimit = channel(13179).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(13179);
-  let connectedUserLimitFormatted = channel(13179).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(13178).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(13178);
+  let connectedUserLimitFormatted = channel(13178).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -326,5 +326,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(13179);
+  const tmp3Result4 = channel(13178);
 }));

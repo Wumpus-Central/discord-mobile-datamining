@@ -1,6 +1,6 @@
-// === Module 13766: MessagePreviewText ===
+// === Module 13765: MessagePreviewText ===
 
-// Module 13766 (MessagePreviewText)
+// Module 13765 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
@@ -11,18 +11,18 @@ import isForwardMessageDefault from "isForwardMessage" /* 5602 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5643 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import useMessageAuthor from "useMessageAuthor" /* 6366 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13757 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13767 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13768 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13769 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 13772 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13773 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13756 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13766 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13767 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13768 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 13771 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13772 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13758);
+const InAppNotificationConstants = fn(13757);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
@@ -39,7 +39,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "emoji" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "enabled" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

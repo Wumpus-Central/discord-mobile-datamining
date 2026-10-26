@@ -1,6 +1,6 @@
-// === Module 11708: CallTile ===
+// === Module 11710: CallTile ===
 
-// Module 11708 (CallTile)
+// Module 11710 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -9,13 +9,13 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11709 */;
-import _modDef11714 from "module_11714" /* 11714 */;
-import _modDef11715 from "module_11715" /* 11715 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11711 */;
 import _modDef11716 from "module_11716" /* 11716 */;
 import _modDef11717 from "module_11717" /* 11717 */;
 import _modDef11718 from "module_11718" /* 11718 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11719 */;
+import _modDef11719 from "module_11719" /* 11719 */;
+import _modDef11720 from "module_11720" /* 11720 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11721 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10880);
+const ChannelCallStore = fn(10882);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(5632);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
@@ -58,7 +58,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { aspectRatio: "duration", borderRadius: false };
+      const obj2 = { aspectRatio: "emoji", borderRadius: false };
       cResult[3] = obj2;
       let tmp6 = obj2;
     } else {
@@ -111,7 +111,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
   obj.children = map1(TouchableStreamPreviewDefault, {
     guildId: participant.stream.guildId,
     userId: participant.user.id,
-    style: { aspectRatio: "duration", borderRadius: false },
+    style: { aspectRatio: "emoji", borderRadius: false },
     disableTransition: true,
     onPress() {
       return closure_1_8();
@@ -127,17 +127,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef11714;
+    let tmp4 = _modDef11716;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef11715;
-    } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef11716;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp4 = _modDef11717;
-    } else if (constants2.QUEST === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp4 = _modDef11718;
+    } else if (constants2.PLAYSTATION === voicePlatform) {
+      tmp4 = _modDef11719;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp4 = _modDef11720;
     }
   }
   if (null == tmp4) {
@@ -157,17 +157,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
 }) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11714;
+    let tmp3 = _modDef11716;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11715;
-    } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef11716;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = _modDef11717;
-    } else if (constants2.QUEST === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef11718;
+    } else if (constants2.PLAYSTATION === voicePlatform) {
+      tmp3 = _modDef11719;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef11720;
     }
   }
   let tmp14 = null;
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11365).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11367).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -332,7 +332,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11365).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11367).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {

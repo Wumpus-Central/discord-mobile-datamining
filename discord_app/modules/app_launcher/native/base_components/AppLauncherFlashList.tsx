@@ -1,7 +1,7 @@
-// === Module 12091: AppLauncherFlashList ===
+// === Module 12093: AppLauncherFlashList ===
 
-// Module 12091 (AppLauncherFlashList)
-import useAnimatedScrollLock from "useAnimatedScrollLock" /* 12092 */;
+// Module 12093 (AppLauncherFlashList)
+import useAnimatedScrollLock from "useAnimatedScrollLock" /* 12094 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherF
     obj.children = <ScrollView ref={ref.ref} />;
     return jsx(simultaneousHandlers(dependencyMap[4]).GestureDetector, { gesture: memo, children: null });
   }, items);
-  if (AnimatedFlashListResult.useAppLauncherContext().entrypoint === AnimatedFlashList(11167).AppLauncherEntrypoint.VOICE) {
+  if (AnimatedFlashListResult.useAppLauncherContext().entrypoint === AnimatedFlashList(11169).AppLauncherEntrypoint.VOICE) {
     if (cResult[3] === showsVerticalScrollIndicator) {
       if (cResult[4] === viewabilityConfigCallbackPairs.ListHeaderComponent) {
         if (cResult[5] === viewabilityConfigCallbackPairs.animatedOnScroll) {
@@ -155,7 +155,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherF
     cResult[37] = tmp9;
     tmp7 = tmp9;
   }
-  AnimatedFlashListResult = AnimatedFlashList(11166);
+  AnimatedFlashListResult = AnimatedFlashList(11168);
 }) : (function AppLauncherFlashList(ref) {
   let merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const items = [merged.simultaneousHandlers];
@@ -170,7 +170,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherF
     obj.children = <ScrollView ref={ref.ref} />;
     return jsx(simultaneousHandlers(dependencyMap[4]).GestureDetector, { gesture: memo, children: null });
   }, items);
-  if (obj.useAppLauncherContext().entrypoint === merged.simultaneousHandlers(11167).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === merged.simultaneousHandlers(11169).AppLauncherEntrypoint.VOICE) {
     const obj5 = { renderScrollComponent: memo, ListHeaderComponent: null, onScroll: null, contentContainerStyle: null, scrollIndicatorInsets: null, renderItem: null, getItemType: null, data: null, automaticallyAdjustsScrollIndicatorInsets: null, keyboardDismissMode: null, keyboardShouldPersistTaps: null, showsVerticalScrollIndicator: null, onViewableItemsChanged: null, viewabilityConfigCallbackPairs: null, animatedProps: null, overScrollMode: "never", ref: null };
     ({ ListHeaderComponent: obj2.ListHeaderComponent, animatedOnScroll: obj2.onScroll, contentContainerStyle: obj2.contentContainerStyle, scrollIndicatorInsets: obj2.scrollIndicatorInsets, renderItem: obj2.renderItem, getItemType: obj2.getItemType, data: obj2.data, automaticallyAdjustsScrollIndicatorInsets: obj2.automaticallyAdjustsScrollIndicatorInsets, keyboardDismissMode: obj2.keyboardDismissMode, keyboardShouldPersistTaps: obj2.keyboardShouldPersistTaps, showsVerticalScrollIndicator: obj2.showsVerticalScrollIndicator, onViewableItemsChanged: obj2.onViewableItemsChanged, viewabilityConfigCallbackPairs: obj2.viewabilityConfigCallbackPairs, animatedProps: obj2.animatedProps } = merged);
     obj5.ref = ref;

@@ -1,6 +1,6 @@
-// === Module 13304: ApplicationCommandBar ===
+// === Module 13303: ApplicationCommandBar ===
 
-// Module 13304 (ApplicationCommandBar)
+// Module 13303 (ApplicationCommandBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import usePreviousDefault from "usePrevious" /* 6660 */;
 import Pressables from "Pressables" /* 6908 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13128 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13305 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13127 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13304 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

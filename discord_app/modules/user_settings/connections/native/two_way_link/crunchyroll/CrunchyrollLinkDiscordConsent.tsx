@@ -1,10 +1,10 @@
-// === Module 14097: CrunchyrollLinkDiscordConsent ===
+// === Module 14096: CrunchyrollLinkDiscordConsent ===
 
-// Module 14097 (CrunchyrollLinkDiscordConsent)
+// Module 14096 (CrunchyrollLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(14092).CrunchyrollLinkModalScenes;
+let closure_3 = fn(14091).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
 const CrunchyrollConnectionConstants = fn(8826);
 ({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: metroRequire } = CrunchyrollConnectionConstants);

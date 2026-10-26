@@ -1,6 +1,6 @@
-// === Module 18024: GuildSettingsModalMembers ===
+// === Module 18023: GuildSettingsModalMembers ===
 
-// Module 18024 (GuildSettingsModalMembers)
+// Module 18023 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
@@ -8,7 +8,7 @@ import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7365 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8972 */;
 import sortByMatchScore from "sortByMatchScore" /* 9067 */;
-import RolePillDefault from "RolePill" /* 10835 */;
+import RolePillDefault from "RolePill" /* 10837 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -308,7 +308,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_17(guildMember(10830), obj4);
+    return closure_17(guildMember(10832), obj4);
   }
   const obj = guild(1505);
 }));

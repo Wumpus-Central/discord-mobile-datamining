@@ -1,11 +1,11 @@
-// === Module 15945: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 15944: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 15945 (UserProfileTryItOutGetPremiumUpsell)
+// Module 15944 (UserProfileTryItOutGetPremiumUpsell)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9792 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9793 */;
 import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9916 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15941 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj2 = analyticsLocations(7556);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS));
   const tmp7 = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15946).useMobileNitroPreviewDirectCheckoutEnabled();
+  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15945).useMobileNitroPreviewDirectCheckoutEnabled();
   if (cResult[2] !== tmp6) {
     const intl = tmp(1128).intl;
     const obj3 = { onClick: tmp6 };
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   cResult[10] = tmp6;
   cResult[11] = tmp16;
   tmp15 = tmp16;
-  const tmpResult = analyticsLocations(15946);
+  const tmpResult = analyticsLocations(15945);
 }) : (function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
   let nitroTrialCtaOverride = analyticsLocations(7556).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
@@ -99,9 +99,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   let obj = analyticsLocations(7556);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15946).useMobileNitroPreviewDirectCheckoutEnabled();
+  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15945).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", loading: null, onButtonPress: null, onLayout: null };
-  const obj2 = analyticsLocations(15946);
+  const obj2 = analyticsLocations(15945);
   const intl = analyticsLocations(1128).intl;
   obj3.text = intl.format(analyticsLocations(1128).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

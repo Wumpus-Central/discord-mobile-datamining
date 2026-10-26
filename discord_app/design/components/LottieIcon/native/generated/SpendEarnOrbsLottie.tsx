@@ -1,9 +1,9 @@
-// === Module 13955: SpendEarnOrbsLottie ===
+// === Module 13954: SpendEarnOrbsLottie ===
 
-// Module 13955 (SpendEarnOrbsLottie)
+// Module 13954 (SpendEarnOrbsLottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 11589 */;
-import _mod13956 from "module_13956" /* 13956 */;
+import LottieIcon from "LottieIcon" /* 11591 */;
+import _mod13955 from "module_13955" /* 13955 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const SpendEarnOrbsLottie = ReactCompilerGating.isReactCompilerEnabled() 
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13956;
+    const tmpResult = _mod13955;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const SpendEarnOrbsLottie = ReactCompilerGating.isReactCompilerEnabled() 
 }) : (function SpendEarnOrbsLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod13956, ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod13955, ref: ref.ref, layers, markers: items });
 });

@@ -1,6 +1,6 @@
-// === Module 11518: GuildScheduledEventPrompts ===
+// === Module 11520: GuildScheduledEventPrompts ===
 
-// Module 11518 (GuildScheduledEventPrompts)
+// Module 11520 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8906 */;

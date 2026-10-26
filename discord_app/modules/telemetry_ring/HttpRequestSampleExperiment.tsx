@@ -1,6 +1,6 @@
-// === Module 18713: HttpRequestSampleExperiment ===
+// === Module 18712: HttpRequestSampleExperiment ===
 
-// Module 18713 (HttpRequestSampleExperiment)
+// Module 18712 (HttpRequestSampleExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

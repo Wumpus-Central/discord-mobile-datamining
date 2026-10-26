@@ -1,21 +1,27 @@
-// === Module 12333: conjureIdeasIntroTip ===
+// === Module 12350: conjureIdeasIntroTip ===
 
-// Module 12333 (conjureIdeasIntroTip)
+// Module 12350 (conjureIdeasIntroTip)
+import conjureBotPermissionsTip from "conjureBotPermissionsTip" /* 12347 */;
 import size from "module_2" /* 2 */;
 
-function resolveIdeasIntroTip(arg0) {
-  ({ turn, publish, hasPublished, justRemixed } = arg0);
-  let tmp = null;
-  if (!obj.isBotPermissionsReviewPending(publish)) {
-    if (null == turn) {
-      let str = null;
-      tmp = str;
+function resolveIdeasIntroTip(ideasIntroAnchorId) {
+  let tmp5 = null;
+  if (null != ideasIntroAnchorId.ideasIntroAnchorId) {
+    tmp5 = null;
+    if (!obj.isBotPermissionsReviewPending(tmp2)) {
+      if (null == tmp) {
+        if (!tmp3) {
+          let str = null;
+        }
+        tmp5 = str;
+      }
+      str = "card";
     }
-    str = "card";
+    obj = conjureBotPermissionsTip;
   }
-  return tmp;
+  return tmp5;
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureIdeasIntroTip.tsx");
 
 export { resolveIdeasIntroTip };
-export const CONJURE_IDEAS_INTRO_TIP_BASE = { id: "ideas_intro", priority: 1, resolve: resolveIdeasIntroTip, dismissal: "app" };
+export const CONJURE_IDEAS_INTRO_TIP_BASE = { id: "ideas_intro", priority: 1, resolve: resolveIdeasIntroTip, dismissal: "anchor" };

@@ -6,8 +6,8 @@ import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11830 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12278 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11832 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12280 */;
 import conjurePlanOverlayDesign from "conjurePlanOverlayDesign" /* 12443 */;
 import useConjureOverlayBackgroundDefault from "useConjureOverlayBackground" /* 12445 */;
 import _modDef12446 from "module_12446" /* 12446 */;
@@ -36,7 +36,7 @@ obj2.design = { width: "100%", aspectRatio: 1.5, backgroundColor: nativeDefault.
 let obj6 = { width: "100%", aspectRatio: 1.5, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center" };
 obj2.overlayDesign = { width: "100%", aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 let obj8 = { transform: null };
-let items = [{ scale: 1.1 }];
+let items = [{ scale: 1.04 }];
 obj8.transform = items;
 obj2.blurredBackground = obj8;
 let obj7 = { width: "100%", aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
@@ -142,7 +142,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanOv
     obj7.style = items2;
     let num3;
     if (tmp6Result.blurred) {
-      num3 = 12;
+      num3 = 4;
     }
     obj7.blurRadius = num3;
     obj7.onError = tmp6Result.handleError;
@@ -174,7 +174,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanOv
     obj4.style = items;
     let num;
     if (tmp4Result.blurred) {
-      num = 12;
+      num = 4;
     }
     obj4.blurRadius = num;
     obj4.onError = tmp4Result.handleError;

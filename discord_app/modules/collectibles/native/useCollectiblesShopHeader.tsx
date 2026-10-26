@@ -1,6 +1,6 @@
-// === Module 17238: useCollectiblesShopHeader ===
+// === Module 17237: useCollectiblesShopHeader ===
 
-// Module 17238 (useCollectiblesShopHeader)
+// Module 17237 (useCollectiblesShopHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,7 +11,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7230 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
-import ShopIcon from "ShopIcon" /* 12128 */;
+import ShopIcon from "ShopIcon" /* 12130 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

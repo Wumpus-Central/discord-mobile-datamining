@@ -1,12 +1,12 @@
-// === Module 16982: GameCommunityUpsellDevTools ===
+// === Module 16981: GameCommunityUpsellDevTools ===
 
-// Module 16982 (GameCommunityUpsellDevTools)
+// Module 16981 (GameCommunityUpsellDevTools)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15026 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 16983 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15025 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 16982 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -198,7 +198,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                   return;
                                 }
                               }
-                              const tmp65 = closure_8(tmp(11786).RefreshIcon, {});
+                              const tmp65 = closure_8(tmp(11788).RefreshIcon, {});
                               const tmp66 = closure_8(tmp(6912).TableRowArrow, {});
                               class T {
                                 constructor() {
@@ -271,7 +271,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                   return obj;
                                 }
                               }
-                              obj7.icon = closure_8(tmp(11786).RefreshIcon, {});
+                              obj7.icon = closure_8(tmp(11788).RefreshIcon, {});
                               obj7.trailing = closure_8(tmp(6912).TableRowArrow, {});
                               const tmp71 = closure_8(tmp70, obj7);
                               cResult[56] = tmp71;
@@ -402,7 +402,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
       }
     }
   }
-  const entries = Object.entries(tmp(16984).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
+  const entries = Object.entries(tmp(16983).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
   const mapped = entries.map((item) => {
     const tmp = _slicedToArray(item, 2);
     const first = tmp[0];

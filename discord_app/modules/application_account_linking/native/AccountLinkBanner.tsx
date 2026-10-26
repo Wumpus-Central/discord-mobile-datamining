@@ -1,10 +1,10 @@
-// === Module 17623: AccountLinkBanner ===
+// === Module 17622: AccountLinkBanner ===
 
-// Module 17623 (AccountLinkBanner)
+// Module 17622 (AccountLinkBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ButtonConstants from "ButtonConstants" /* 5250 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -210,7 +210,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     items3[2] = closure_6(View, obj9);
     obj6.children = items3;
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
     items2[2] = closure_6(require("native").Avatar, obj10);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);

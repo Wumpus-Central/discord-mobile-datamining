@@ -1,6 +1,6 @@
-// === Module 12918: QuickSwitcherActionCreators ===
+// === Module 12917: QuickSwitcherActionCreators ===
 
-// Module 12918 (QuickSwitcherActionCreators)
+// Module 12917 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
@@ -16,8 +16,8 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 
 import sortByMatchScore from "sortByMatchScore" /* 9067 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9251 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11220 */;
-import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 12919 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11222 */;
+import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 12918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -290,7 +290,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -328,7 +328,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[15]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -420,7 +420,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -452,9 +452,9 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(12920).openChannelTabActive(closure_128_0, null);
+                    tmp5(12919).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -475,7 +475,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -507,9 +507,9 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(12920).openChannelTabActive(closure_128_0, null);
+                    tmp5(12919).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -536,7 +536,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(12920).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(12920);
+    tmp(12919).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(12919);
   }
 };

@@ -1,6 +1,6 @@
-// === Module 12936: ShareFooterLayout ===
+// === Module 12935: ShareFooterLayout ===
 
-// Module 12936 (ShareFooterLayout)
+// Module 12935 (ShareFooterLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;

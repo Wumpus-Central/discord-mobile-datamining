@@ -1,6 +1,6 @@
-// === Module 13560: JoinRequestRejectionReasonActionSheet ===
+// === Module 13559: JoinRequestRejectionReasonActionSheet ===
 
-// Module 13560 (JoinRequestRejectionReasonActionSheet)
+// Module 13559 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ class JoinRequestRejectionReasonActionSheet {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

@@ -1,6 +1,6 @@
-// === Module 19136: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 19135: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 19136 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 19135 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,8 +14,8 @@ import TableRow from "TableRow" /* 6903 */;
 import Pressables from "Pressables" /* 6908 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11254 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19137 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11256 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 19136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -144,7 +144,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
     }
     if (cResult[0] !== bot) {
-      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
       const tmp26 = onChangeText(native.Avatar, obj3);
       cResult[0] = bot;
       cResult[1] = tmp26;
@@ -165,7 +165,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
             name1 = getOrFetchApplicationBatched.name;
           }
         } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
           const tmp20 = onChangeText(native.Avatar, obj4);
           cResult[2] = getOrFetchApplicationBatched.bot;
           cResult[3] = tmp20;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         tmp11 = onChangeText(native.Avatar, obj3);
       }
       let name1;
@@ -1365,7 +1365,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19137).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19136).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1373,9 +1373,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(19137);
-  const tmpResult = metadataField(19137);
-  str1 = metadataField(19137).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19136);
+  const tmpResult = metadataField(19136);
+  str1 = metadataField(19136).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1489,7 +1489,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
     };
     return onInputValueChange(metadataField(7295).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19137).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19136).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {

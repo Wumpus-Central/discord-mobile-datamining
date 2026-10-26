@@ -1,6 +1,6 @@
-// === Module 11785: conjureProjectActions ===
+// === Module 11787: conjureProjectActions ===
 
-// Module 11785 (conjureProjectActions)
+// Module 11787 (conjureProjectActions)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
@@ -10,9 +10,9 @@ import AlertModal from "AlertModal" /* 5914 */;
 import ChannelUtils from "ChannelUtils" /* 5994 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import conjureProjectMute from "conjureProjectMute" /* 10723 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 11758 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11794 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11799 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 11760 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11796 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10714 */;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11758).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
+          await tmp3(11760).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;

@@ -1,23 +1,23 @@
-// === Module 18721: DisguiseSpotIllustration ===
+// === Module 18720: DisguiseSpotIllustration ===
 
-// Module 18721 (DisguiseSpotIllustration)
+// Module 18720 (DisguiseSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef18721 from "module_18721" /* 18721 */;
 import _modDef18722 from "module_18722" /* 18722 */;
 import _modDef18723 from "module_18723" /* 18723 */;
-import _modDef18724 from "module_18724" /* 18724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18722 }, 3: null };
-let obj2 = { uri: _modDef18722 };
-obj[2] = { uri: _modDef18723 };
-const obj3 = { uri: _modDef18723 };
-obj[3] = { uri: _modDef18724 };
+let obj = { 1: null, 2: { uri: _modDef18721 }, 3: null };
+let obj2 = { uri: _modDef18721 };
+obj[2] = { uri: _modDef18722 };
+const obj3 = { uri: _modDef18722 };
+obj[3] = { uri: _modDef18723 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18724 };
+const obj4 = { uri: _modDef18723 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisguiseSpotIllustration.native.tsx");
 

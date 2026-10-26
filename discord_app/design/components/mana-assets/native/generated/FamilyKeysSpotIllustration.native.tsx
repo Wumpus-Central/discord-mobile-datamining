@@ -1,23 +1,23 @@
-// === Module 18921: FamilyKeysSpotIllustration ===
+// === Module 18920: FamilyKeysSpotIllustration ===
 
-// Module 18921 (FamilyKeysSpotIllustration)
+// Module 18920 (FamilyKeysSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef18921 from "module_18921" /* 18921 */;
 import _modDef18922 from "module_18922" /* 18922 */;
 import _modDef18923 from "module_18923" /* 18923 */;
-import _modDef18924 from "module_18924" /* 18924 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18922 }, 3: null };
-let obj2 = { uri: _modDef18922 };
-obj[2] = { uri: _modDef18923 };
-const obj3 = { uri: _modDef18923 };
-obj[3] = { uri: _modDef18924 };
+let obj = { 1: null, 2: { uri: _modDef18921 }, 3: null };
+let obj2 = { uri: _modDef18921 };
+obj[2] = { uri: _modDef18922 };
+const obj3 = { uri: _modDef18922 };
+obj[3] = { uri: _modDef18923 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18924 };
+const obj4 = { uri: _modDef18923 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyKeysSpotIllustration.native.tsx");
 

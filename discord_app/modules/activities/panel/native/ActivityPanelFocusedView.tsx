@@ -1,6 +1,6 @@
-// === Module 18464: ActivityPanelFocusedView ===
+// === Module 18463: ActivityPanelFocusedView ===
 
-// Module 18464 (ActivityPanelFocusedView)
+// Module 18463 (ActivityPanelFocusedView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,9 +9,9 @@ import native from "native" /* 5037 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
 import spring from "spring" /* 5247 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11457 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18457 */;
-import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 18465 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11459 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18456 */;
+import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 18464 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -23,10 +23,10 @@ require = fn;
 const ActivityLayoutMode = fn(2026).ActivityLayoutMode;
 const ActivityPanelConstants = fn(5609);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18366);
+const ActivityPanelNativeConstants = fn(18365);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1087).ThemeTypes;
-const IS_IOS = fn(10898).IS_IOS;
+const IS_IOS = fn(10900).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };

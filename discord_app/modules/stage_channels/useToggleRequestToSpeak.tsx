@@ -1,6 +1,6 @@
-// === Module 11551: useToggleRequestToSpeak ===
+// === Module 11553: useToggleRequestToSpeak ===
 
-// Module 11551 (useToggleRequestToSpeak)
+// Module 11553 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5996 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6687 */;

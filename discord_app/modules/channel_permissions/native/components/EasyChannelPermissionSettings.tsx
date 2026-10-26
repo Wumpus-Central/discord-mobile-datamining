@@ -1,17 +1,17 @@
-// === Module 18276: EasyChannelPermissionSettings ===
+// === Module 18275: EasyChannelPermissionSettings ===
 
-// Module 18276 (EasyChannelPermissionSettings)
+// Module 18275 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8972 */;
 import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8973 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8989 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11307 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 18277 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 18276 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 import GuildRoleStore from "GuildRoleStore" /* 4877 */;
@@ -162,7 +162,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -218,7 +218,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
         const items = [closure_128_0];
         v2 = 2;
@@ -242,7 +242,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
         const intl = tmp5(1128).intl;
         const string = intl.string;

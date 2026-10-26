@@ -1,10 +1,10 @@
-// === Module 11781: ConjureTemplateWizard ===
+// === Module 11783: ConjureTemplateWizard ===
 
-// Module 11781 (ConjureTemplateWizard)
+// Module 11783 (ConjureTemplateWizard)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 11782 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 11784 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -28,7 +28,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

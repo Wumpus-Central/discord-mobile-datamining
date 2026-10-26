@@ -1,8 +1,8 @@
-// === Module 16401: OrbsArcadeRewardUtils ===
+// === Module 16400: OrbsArcadeRewardUtils ===
 
-// Module 16401 (OrbsArcadeRewardUtils)
+// Module 16400 (OrbsArcadeRewardUtils)
 import util from "util" /* 1128 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16396 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16395 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");

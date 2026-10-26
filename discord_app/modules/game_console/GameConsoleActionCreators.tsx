@@ -1,11 +1,11 @@
-// === Module 11650: GameConsoleActionCreators ===
+// === Module 11652: GameConsoleActionCreators ===
 
-// Module 11650 (GameConsoleActionCreators)
+// Module 11652 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import AudioSettingsUtils from "AudioSettingsUtils" /* 5857 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11651 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 11653 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import SessionsStore from "SessionsStore" /* 5716 */;
@@ -91,7 +91,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_16 = async function _cancelCommand() {
           const obj11 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: closure_131_0, deviceId: closure_131_1, commandId: closure_131_2 };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp28) {
         closure_5 = tmp28;

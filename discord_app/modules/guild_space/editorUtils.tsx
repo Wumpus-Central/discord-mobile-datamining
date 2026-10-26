@@ -1,10 +1,10 @@
-// === Module 18994: editorUtils ===
+// === Module 18993: editorUtils ===
 
-// Module 18994 (editorUtils)
+// Module 18993 (editorUtils)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6374 */;
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 18995 */;
-import GuildSpaceTypes from "GuildSpaceTypes" /* 18996 */;
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 18994 */;
+import GuildSpaceTypes from "GuildSpaceTypes" /* 18995 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [fn(18996).GuildSpaceWidgetType.POPULAR_MUSIC, fn(18996).GuildSpaceWidgetType.LEADERBOARD];
+let items = [fn(18995).GuildSpaceWidgetType.POPULAR_MUSIC, fn(18995).GuildSpaceWidgetType.LEADERBOARD];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
 

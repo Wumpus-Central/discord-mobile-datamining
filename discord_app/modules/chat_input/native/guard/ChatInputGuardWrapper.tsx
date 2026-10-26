@@ -1,13 +1,13 @@
-// === Module 13341: ChatInputGuardWrapper ===
+// === Module 13340: ChatInputGuardWrapper ===
 
-// Module 13341 (ChatInputGuardWrapper)
+// Module 13340 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4890 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4909 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
 import MemberVerificationUtils from "MemberVerificationUtils" /* 6894 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7414 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11261 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13347 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11263 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13346 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4904 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;

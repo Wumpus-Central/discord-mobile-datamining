@@ -1,6 +1,6 @@
-// === Module 13172: MemberActionChatInputBanner ===
+// === Module 13171: MemberActionChatInputBanner ===
 
-// Module 13172 (MemberActionChatInputBanner)
+// Module 13171 (MemberActionChatInputBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,10 +14,10 @@ import useChannelNameDefault from "useChannelName" /* 5604 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import Pressables from "Pressables" /* 6908 */;
 import _modDef12750 from "module_12750" /* 12750 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13170 */;
-import _modDef13171 from "module_13171" /* 13171 */;
-import MemberActionUtils from "MemberActionUtils" /* 13173 */;
-import _modDef13174 from "module_13174" /* 13174 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 13169 */;
+import _modDef13170 from "module_13170" /* 13170 */;
+import MemberActionUtils from "MemberActionUtils" /* 13172 */;
+import _modDef13173 from "module_13173" /* 13173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -540,7 +540,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
                     items[1] = map1(View, obj3);
                     let tmp6Result = completed;
                     if (completed) {
-                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13174 };
+                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
                       tmp6Result = __initData(native.Icon, obj6);
                     }
                     items[2] = tmp6Result;
@@ -791,7 +791,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         items[1] = map1(View, obj3);
         let tmp6Result = completed;
         if (completed) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13174 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
           tmp6Result = __initData(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -838,7 +838,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
             obj3.children = items1;
             items[1] = map1(View, obj3);
             const obj7 = { style: closure_1.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13171 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13170 };
             obj7.children = __initData(native.Icon, obj8);
             items[2] = __initData(View, obj7);
             obj.children = items;

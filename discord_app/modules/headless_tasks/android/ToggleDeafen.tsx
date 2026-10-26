@@ -1,9 +1,9 @@
-// === Module 19496: ToggleDeafen ===
+// === Module 19495: ToggleDeafen ===
 
-// Module 19496 (ToggleDeafen)
-import VoiceActionUtils from "VoiceActionUtils" /* 11641 */;
-import useDeafStates from "useDeafStates" /* 11674 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 19493 */;
+// Module 19495 (ToggleDeafen)
+import VoiceActionUtils from "VoiceActionUtils" /* 11643 */;
+import useDeafStates from "useDeafStates" /* 11676 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 19492 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
 require = fn;

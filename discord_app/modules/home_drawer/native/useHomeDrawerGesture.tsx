@@ -1,21 +1,21 @@
-// === Module 17449: useHomeDrawerGesture ===
+// === Module 17448: useHomeDrawerGesture ===
 
-// Module 17449 (useHomeDrawerGesture)
+// Module 17448 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
 import timing from "timing" /* 5206 */;
 import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5208 */;
 import HapticUtils from "HapticUtils" /* 5212 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17445 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17444 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17450 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17443 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17449 */;
 
 require = fn;
-const computeMaxX = fn(17444).computeMaxX;
+const computeMaxX = fn(17443).computeMaxX;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const LaunchPadTypes = fn(11202).LaunchPadTypes;
+const LaunchPadTypes = fn(11204).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;

@@ -1,7 +1,7 @@
-// === Module 13863: useAppChannelRunningApp ===
+// === Module 13862: useAppChannelRunningApp ===
 
-// Module 13863 (useAppChannelRunningApp)
-import useFrameRunsInBackgroundDefault from "useFrameRunsInBackground" /* 13864 */;
+// Module 13862 (useAppChannelRunningApp)
+import useFrameRunsInBackgroundDefault from "useFrameRunsInBackground" /* 13863 */;
 import FramesStore from "FramesStore" /* 6775 */;
 
 const require = globalThis.__r;

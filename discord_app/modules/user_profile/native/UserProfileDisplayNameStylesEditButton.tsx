@@ -1,14 +1,14 @@
-// === Module 15864: UserProfileDisplayNameStylesEditButton ===
+// === Module 15863: UserProfileDisplayNameStylesEditButton ===
 
-// Module 15864 (UserProfileDisplayNameStylesEditButton)
+// Module 15863 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10661 */;
-import _modDef14497 from "module_14497" /* 14497 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15869 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15870 */;
+import _modDef14496 from "module_14496" /* 14496 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15868 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15869 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -715,8 +715,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 }
                 const fn = function $() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef14497, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef14497, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef14496, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef14496, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -843,8 +843,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items2);
   const tmp21 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef14497, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef14497, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14496, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14496, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

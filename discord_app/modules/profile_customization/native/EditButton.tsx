@@ -1,6 +1,6 @@
-// === Module 15852: EditButton ===
+// === Module 15851: EditButton ===
 
-// Module 15852 (EditButton)
+// Module 15851 (EditButton)
 import c from "c" /* 576 */;
 import IconButton from "IconButton" /* 7959 */;
 import _modDef8324 from "module_8324" /* 8324 */;

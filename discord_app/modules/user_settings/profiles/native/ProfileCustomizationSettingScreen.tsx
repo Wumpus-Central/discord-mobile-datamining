@@ -1,22 +1,22 @@
-// === Module 15833: ProfileCustomizationSettingScreen ===
+// === Module 15832: ProfileCustomizationSettingScreen ===
 
-// Module 15833 (ProfileCustomizationSettingScreen)
+// Module 15832 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7078 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11069 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11187 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15834 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15855 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15958 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15959 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15967 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11071 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11189 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15833 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15854 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15957 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15958 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11122 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11124 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
 
 const require = globalThis.__r;
@@ -402,7 +402,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -434,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   closure_128_3(true);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp9) {
               c2 = tmp;

@@ -1,12 +1,12 @@
-// === Module 16771: ToastDurationSetting ===
+// === Module 16770: ToastDurationSetting ===
 
-// Module 16771 (ToastDurationSetting)
+// Module 16770 (ToastDurationSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11154 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15687 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16671 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11156 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15686 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16670 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
@@ -18,7 +18,7 @@ function formatToastDuration(seconds) {
 const Accessibility = fn(1087).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDurationSettingProps() {
   const cResult = c.c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,6 +1,6 @@
-// === Module 17251: SettingsSecureFramesScreen ===
+// === Module 17250: SettingsSecureFramesScreen ===
 
-// Module 17251 (SettingsSecureFramesScreen)
+// Module 17250 (SettingsSecureFramesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -79,7 +79,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = { user: stateFromStores, guildId: "Array", size: -1 };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: "Array" };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {

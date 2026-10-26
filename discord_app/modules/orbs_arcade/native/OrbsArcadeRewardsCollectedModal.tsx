@@ -1,6 +1,6 @@
-// === Module 16417: OrbsArcadeRewardsCollectedModal ===
+// === Module 16416: OrbsArcadeRewardsCollectedModal ===
 
-// Module 16417 (OrbsArcadeRewardsCollectedModal)
+// Module 16416 (OrbsArcadeRewardsCollectedModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -10,11 +10,11 @@ import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7691 */;
 import useCurrentUser from "useCurrentUser" /* 8667 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9403 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9438 */;
-import useHandleUseNow from "useHandleUseNow" /* 11180 */;
-import useAvatarDecorationPreviewSizes from "useAvatarDecorationPreviewSizes" /* 13947 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16396 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16404 */;
-import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16416 */;
+import useHandleUseNow from "useHandleUseNow" /* 11182 */;
+import useAvatarDecorationPreviewSizes from "useAvatarDecorationPreviewSizes" /* 13946 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16395 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16403 */;
+import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16415 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -25,7 +25,7 @@ const initialize = nW6E3m(504);
 const util = nW6E3m(1128);
 const CollectiblesUtils = nW6E3m(7662);
 const useShopProductItems = nW6E3m(8660);
-const useFetchCollectiblesProduct = nW6E3m(11049);
+const useFetchCollectiblesProduct = nW6E3m(11051);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -758,7 +758,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     const obj8 = { variant: "tertiary", icon: tmp4(10658), accessibilityLabel: null, onPress: null };
     const intl3 = tmp2(1128).intl;
     obj8.accessibilityLabel = intl3.string(tmp2(1128).t.cpT0Cq);
-    obj8.onPress = tmp2(16416).closeOrbsArcadeRewardsCollectedModal;
+    obj8.onPress = tmp2(16415).closeOrbsArcadeRewardsCollectedModal;
     obj7.children = closure_10(tmp2(7959).IconButton, obj8);
     const items4 = [closure_10(page, obj7), , ];
     const obj9 = { style: tmp.pager, onLayout: callback, children: null };
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp28Result3 = closure_10(tmp27, obj12);
     }
     const items5 = [tmp28Result3, ];
-    if (tmp16.type === tmp2(16396).OrbsArcadeRewardType.COLLECTIBLE) {
+    if (tmp16.type === tmp2(16395).OrbsArcadeRewardType.COLLECTIBLE) {
       const obj15 = { reward: tmp16 };
       let tmp28Result4 = closure_10(closure_19, obj15, tmp16.id);
     } else {

@@ -1,6 +1,6 @@
-// === Module 12879: FamilyCenterModalRequestRouting ===
+// === Module 12878: FamilyCenterModalRequestRouting ===
 
-// Module 12879 (FamilyCenterModalRequestRouting)
+// Module 12878 (FamilyCenterModalRequestRouting)
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7647 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -37,7 +37,7 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

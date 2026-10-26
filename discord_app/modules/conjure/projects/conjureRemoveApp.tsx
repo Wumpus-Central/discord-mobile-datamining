@@ -1,6 +1,6 @@
-// === Module 11795: conjureRemoveApp ===
+// === Module 11797: conjureRemoveApp ===
 
-// Module 11795 (conjureRemoveApp)
+// Module 11797 (conjureRemoveApp)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import useChannelName from "useChannelName" /* 5604 */;

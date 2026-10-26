@@ -1,8 +1,8 @@
-// === Module 12246: EditPollCreationImageAltTextModal ===
+// === Module 12248: EditPollCreationImageAltTextModal ===
 
-// Module 12246 (EditPollCreationImageAltTextModal)
+// Module 12248 (EditPollCreationImageAltTextModal)
 import nativeDefault from "native" /* 587 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12245 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPoll
   imageSize = imageSize.imageSize;
   const tmp4 = closure_10();
   let obj = onSave(576);
-  ({ renderImage, upload } = value(12243)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize));
+  ({ renderImage, upload } = value(12245)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize));
   let str;
   if (upload != null) {
     str = upload.description;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPoll
   if (str == null) {
     str = "";
   }
-  const tmp6 = value(12243)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp6 = value(12245)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   value = _slicedToArray(noop.useState(str), 2)[0];
   if (cResult[0] === onSave) {
     if (cResult[1] === value) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPoll
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { onPress: onSave(12245).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      const obj2 = { onPress: onSave(12247).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
       const intl = onSave(1128).intl;
       obj2.accessibilityLabel = intl.string(onSave(1128).t.cpT0Cq);
       const obj3 = { source: tmp5(8115) };
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPoll
   imageSize = imageSize.imageSize;
   value = undefined;
   const tmp = closure_10();
-  const tmp4 = value(12243)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = value(12245)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let str;
   if (upload != null) {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPoll
   }, items);
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, children: null };
-  const obj4 = { onPress: onSave(12245).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj4 = { onPress: onSave(12247).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1128).intl;
   obj4.accessibilityLabel = intl.string(onSave(1128).t.cpT0Cq);
   obj4.children = closure_8(onSave(1202).Icon, { source: value(8115) });

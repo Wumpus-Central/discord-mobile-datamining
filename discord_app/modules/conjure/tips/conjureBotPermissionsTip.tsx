@@ -1,6 +1,6 @@
-// === Module 12334: conjureBotPermissionsTip ===
+// === Module 12347: conjureBotPermissionsTip ===
 
-// Module 12334 (conjureBotPermissionsTip)
+// Module 12347 (conjureBotPermissionsTip)
 import size from "module_2" /* 2 */;
 
 function resolveBotPermissionsTip(publish) {
@@ -20,10 +20,10 @@ function resolveBotPermissionsTip(publish) {
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureBotPermissionsTip.tsx");
 
-export const isBotPermissionsReviewPending = function isBotPermissionsReviewPending(publish) {
-  let tmp = null != publish && !publish.publishing;
+export const isBotPermissionsReviewPending = function isBotPermissionsReviewPending(publishing) {
+  let tmp = null != publishing && !publishing.publishing;
   if (tmp) {
-    tmp = "review_permissions" === publish.action;
+    tmp = "review_permissions" === publishing.action;
   }
   return tmp;
 };

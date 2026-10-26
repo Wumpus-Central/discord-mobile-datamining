@@ -1,6 +1,6 @@
-// === Module 18035: JoinRequestOtherApplications ===
+// === Module 18034: JoinRequestOtherApplications ===
 
-// Module 18035 (JoinRequestOtherApplications)
+// Module 18034 (JoinRequestOtherApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DateUtils from "DateUtils" /* 4796 */;
@@ -8,7 +8,7 @@ import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import CircleXIcon from "CircleXIcon" /* 7018 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18032 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18031 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[2] === userId) {
         let tmp5 = cResult[3];
       }
-      row = tmp(18036).useOtherGuildJoinRequestsForUser(tmp5);
+      row = tmp(18035).useOtherGuildJoinRequestsForUser(tmp5);
       if (0 === row.length) {
         return null;
       } else {
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[13] = fn;
         tmp13 = fn;
       }
-      const tmpResult = tmp(18036);
+      const tmpResult = tmp(18035);
     }
   }
   let obj5 = { guildId, userId, selectedJoinRequestId };

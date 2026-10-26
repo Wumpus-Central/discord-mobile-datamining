@@ -1,6 +1,6 @@
-// === Module 19257: useFetchHighlightedCreatorGuildDetails ===
+// === Module 19256: useFetchHighlightedCreatorGuildDetails ===
 
-// Module 19257 (useFetchHighlightedCreatorGuildDetails)
+// Module 19256 (useFetchHighlightedCreatorGuildDetails)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

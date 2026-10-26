@@ -1,6 +1,6 @@
-// === Module 16822: SaveCameraUploadsToDeviceSetting ===
+// === Module 16821: SaveCameraUploadsToDeviceSetting ===
 
-// Module 16822 (SaveCameraUploadsToDeviceSetting)
+// Module 16821 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSaveCameraUploadsToDeviceValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

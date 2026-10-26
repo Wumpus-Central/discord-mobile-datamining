@@ -1,9 +1,9 @@
-// === Module 11422: useVideoStreamError ===
+// === Module 11424: useVideoStreamError ===
 
-// Module 11422 (useVideoStreamError)
+// Module 11424 (useVideoStreamError)
 import AVError from "AVError" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11423 */;
+import AVErrorStore from "AVErrorStore" /* 11425 */;
 
 require = fn;
 const MediaEngineContextTypes = fn(5718).MediaEngineContextTypes;

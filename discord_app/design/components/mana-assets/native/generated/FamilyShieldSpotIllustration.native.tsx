@@ -1,23 +1,23 @@
-// === Module 12893: FamilyShieldSpotIllustration ===
+// === Module 12892: FamilyShieldSpotIllustration ===
 
-// Module 12893 (FamilyShieldSpotIllustration)
+// Module 12892 (FamilyShieldSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
+import _modDef12893 from "module_12893" /* 12893 */;
 import _modDef12894 from "module_12894" /* 12894 */;
 import _modDef12895 from "module_12895" /* 12895 */;
-import _modDef12896 from "module_12896" /* 12896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12894 }, 3: null };
-let obj2 = { uri: _modDef12894 };
-obj[2] = { uri: _modDef12895 };
-const obj3 = { uri: _modDef12895 };
-obj[3] = { uri: _modDef12896 };
+let obj = { 1: null, 2: { uri: _modDef12893 }, 3: null };
+let obj2 = { uri: _modDef12893 };
+obj[2] = { uri: _modDef12894 };
+const obj3 = { uri: _modDef12894 };
+obj[3] = { uri: _modDef12895 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12896 };
+const obj4 = { uri: _modDef12895 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 18151: ThreadMemberListHooks ===
+// === Module 18150: ThreadMemberListHooks ===
 
-// Module 18151 (ThreadMemberListHooks)
+// Module 18150 (ThreadMemberListHooks)
 import util from "util" /* 1128 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7375 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7377 */;

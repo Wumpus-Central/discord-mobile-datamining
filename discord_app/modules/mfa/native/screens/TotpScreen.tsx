@@ -1,7 +1,7 @@
-// === Module 17040: TotpScreen ===
+// === Module 17039: TotpScreen ===
 
-// Module 17040 (TotpScreen)
-import MFA from "MFA" /* 17041 */;
+// Module 17039 (TotpScreen)
+import MFA from "MFA" /* 17040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TotpScre
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TotpScre
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

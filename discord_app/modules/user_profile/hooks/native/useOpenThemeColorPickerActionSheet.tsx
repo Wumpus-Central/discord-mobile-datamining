@@ -1,7 +1,7 @@
-// === Module 15888: useOpenThemeColorPickerActionSheet ===
+// === Module 15887: useOpenThemeColorPickerActionSheet ===
 
-// Module 15888 (useOpenThemeColorPickerActionSheet)
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15842 */;
+// Module 15887 (useOpenThemeColorPickerActionSheet)
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15841 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

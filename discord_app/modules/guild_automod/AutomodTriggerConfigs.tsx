@@ -1,8 +1,8 @@
-// === Module 19006: AutomodTriggerConfigs ===
+// === Module 19005: AutomodTriggerConfigs ===
 
-// Module 19006 (AutomodTriggerConfigs)
+// Module 19005 (AutomodTriggerConfigs)
 import util from "util" /* 1128 */;
-import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 18288 */;
+import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 18287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -130,7 +130,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             P(currentlySelectedChannelId2, closure_129_0);
           }
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp63) {
         if (tmp4 === v0) {
@@ -291,7 +291,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -382,7 +382,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             closure_130_7(currentlySelectedChannelId2, closure_129_0);
           }
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp63) {
         if (tmp4 === c4) {

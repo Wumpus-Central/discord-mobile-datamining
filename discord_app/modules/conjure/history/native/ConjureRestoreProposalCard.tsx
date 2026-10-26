@@ -7,8 +7,8 @@ import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11817 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11877 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11819 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11879 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

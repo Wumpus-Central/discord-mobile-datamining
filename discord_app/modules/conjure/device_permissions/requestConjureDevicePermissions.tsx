@@ -19,7 +19,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -134,7 +134,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
           };
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

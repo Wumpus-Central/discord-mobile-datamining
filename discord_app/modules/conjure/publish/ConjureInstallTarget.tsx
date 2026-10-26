@@ -1,6 +1,6 @@
-// === Module 11872: ConjureInstallTarget ===
+// === Module 11874: ConjureInstallTarget ===
 
-// Module 11872 (ConjureInstallTarget)
+// Module 11874 (ConjureInstallTarget)
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -21,7 +21,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
           return obj;
         }
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp8) {
         c2 = tmp;
         throw tmp8;

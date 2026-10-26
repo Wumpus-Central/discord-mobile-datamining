@@ -1,25 +1,25 @@
-// === Module 14080: PlayStationLinkModal ===
+// === Module 14079: PlayStationLinkModal ===
 
-// Module 14080 (PlayStationLinkModal)
+// Module 14079 (PlayStationLinkModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Navigator from "Navigator" /* 7095 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
 import _modDef8115 from "module_8115" /* 8115 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9619 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 14078 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14079 */;
-import PlayStationLinkLanding from "PlayStationLinkLanding" /* 14082 */;
-import PlayStationLinkPreConnect from "PlayStationLinkPreConnect" /* 14084 */;
-import PlayStationLinkDiscordConsent from "PlayStationLinkDiscordConsent" /* 14086 */;
-import PlayStationLinkSuccess from "PlayStationLinkSuccess" /* 14088 */;
-import PlayStationLinkError from "PlayStationLinkError" /* 14089 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 14077 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14078 */;
+import PlayStationLinkLanding from "PlayStationLinkLanding" /* 14081 */;
+import PlayStationLinkPreConnect from "PlayStationLinkPreConnect" /* 14083 */;
+import PlayStationLinkDiscordConsent from "PlayStationLinkDiscordConsent" /* 14085 */;
+import PlayStationLinkSuccess from "PlayStationLinkSuccess" /* 14087 */;
+import PlayStationLinkError from "PlayStationLinkError" /* 14088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getScreens(platformType, headerStyle) {
   function onClose() {
-    return onClose(14079).hideModal();
+    return onClose(14078).hideModal();
   }
   function blank() {
     return null;
@@ -77,7 +77,7 @@ function getScreens(platformType, headerStyle) {
     }
   };
 }
-const constants = fn(14081).PlayStationLinkModalScenes;
+const constants = fn(14080).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseButton() {
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PlayStat
   const items = [platformType, twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(platformType, twoWayLinkStyles), items);
   const obj = platformType(9619);
-  const accountLinkStepTracking = platformType(14078).useAccountLinkStepTracking(platformType, platformType.locationStack);
+  const accountLinkStepTracking = platformType(14077).useAccountLinkStepTracking(platformType, platformType.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = platformType(1128).intl;
   obj3.headerBackTitle = intl.string(platformType(1128).t["13/7kX"]);

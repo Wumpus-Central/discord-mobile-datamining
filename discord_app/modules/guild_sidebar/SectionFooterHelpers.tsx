@@ -1,6 +1,6 @@
-// === Module 17671: SectionFooterHelpers ===
+// === Module 17670: SectionFooterHelpers ===
 
-// Module 17671 (SectionFooterHelpers)
+// Module 17670 (SectionFooterHelpers)
 import FavoritesUtils from "FavoritesUtils" /* 4848 */;
 import ChannelListState from "ChannelListState" /* 7637 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7213 */;

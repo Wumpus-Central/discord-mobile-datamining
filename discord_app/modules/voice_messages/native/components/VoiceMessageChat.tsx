@@ -1,6 +1,6 @@
-// === Module 13573: VoiceMessageChat ===
+// === Module 13572: VoiceMessageChat ===
 
-// Module 13573 (VoiceMessageChat)
+// Module 13572 (VoiceMessageChat)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5052 */;
@@ -16,8 +16,8 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(13060).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(13061);
+let useVoiceMessagesUIStore = fn(13059).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13060);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

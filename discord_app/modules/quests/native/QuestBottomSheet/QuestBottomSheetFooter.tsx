@@ -1,6 +1,6 @@
-// === Module 16470: QuestBottomSheetFooter ===
+// === Module 16469: QuestBottomSheetFooter ===
 
-// Module 16470 (QuestBottomSheetFooter)
+// Module 16469 (QuestBottomSheetFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -21,13 +21,13 @@ import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9594 */;
 import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 9605 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9607 */;
-import RefreshIcon from "RefreshIcon" /* 11786 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14128 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 14139 */;
-import QuestHooks from "QuestHooks" /* 16437 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16465 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 16467 */;
-import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 16471 */;
+import RefreshIcon from "RefreshIcon" /* 11788 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14127 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 14138 */;
+import QuestHooks from "QuestHooks" /* 16436 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16464 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 16466 */;
+import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 16470 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -974,16 +974,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
     return null != xboxAndPlaystationAccounts.find((type) => type.type === closure_0);
   }), items);
   const obj4 = quest(9570);
-  const hasWatchVideoOnMobileTasks = quest(16437).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(16437);
-  const mobileActivityQuest = quest(16437).useMobileActivityQuest(quest);
+  const hasWatchVideoOnMobileTasks = quest(16436).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(16436);
+  const mobileActivityQuest = quest(16436).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(16437);
-  const primaryCtaCopy = quest(14139).usePrimaryCtaCopy({ quest, application: questApplication });
-  const obj7 = quest(14139);
+  const obj6 = quest(16436);
+  const primaryCtaCopy = quest(14138).usePrimaryCtaCopy({ quest, application: questApplication });
+  const obj7 = quest(14138);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(16471);
+  const obj8 = quest(16470);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -993,19 +993,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(16471).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
+  const mobileActivityPressHandler = quest(16470).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
   const tmp11 = null != completedAt;
   const isQuestAccessSuspended = quest(9570).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16465) };
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16464) };
   let tmp40Result6 = null;
-  if (step !== quest(16467).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(16466).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(16467).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(16466).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(closure_16, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(16467).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(16466).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = { questId: quest.id, onPress: tmp.claim, disabled: tmp13, loading: null, sourceQuestContent: null };
           let isClaiming = tmp.isLoading;

@@ -1,12 +1,12 @@
-// === Module 18277: ChannelSettingsPermissionsStore ===
+// === Module 18276: ChannelSettingsPermissionsStore ===
 
-// Module 18277 (ChannelSettingsPermissionsStore)
+// Module 18276 (ChannelSettingsPermissionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11309 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11311 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 10094 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -88,7 +88,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = PermissionUtilsAll;
           tmp = null != guildId1 && null == obj2[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11309).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11311).getAppChannelBotUserId(channel));
           return true;
         }
       }

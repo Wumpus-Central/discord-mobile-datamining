@@ -1,15 +1,15 @@
-// === Module 17764: HomeDrawerGuildRow ===
+// === Module 17763: HomeDrawerGuildRow ===
 
-// Module 17764 (HomeDrawerGuildRow)
+// Module 17763 (HomeDrawerGuildRow)
 import Text_Text from "Text/Text" /* 5234 */;
 import useChannelName from "useChannelName" /* 5604 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10872 */;
-import BellZIcon from "BellZIcon" /* 13823 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 17769 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 17770 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 17771 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 17773 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 17774 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10874 */;
+import BellZIcon from "BellZIcon" /* 13822 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 17768 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 17769 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 17770 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 17772 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 17773 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -290,7 +290,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildR
     const tmp = unreadChannel.getMutableGuildStates()[guild.id];
     guild = tmp;
     if (null == tmp) {
-      return { mentionChannel: "duration", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
+      return { mentionChannel: "emoji", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
     } else {
       const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
       const found = keys.filter((item) => {

@@ -1,6 +1,6 @@
-// === Module 18973: PhoneVerificationStore ===
+// === Module 18972: PhoneVerificationStore ===
 
-// Module 18973 (PhoneVerificationStore)
+// Module 18972 (PhoneVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

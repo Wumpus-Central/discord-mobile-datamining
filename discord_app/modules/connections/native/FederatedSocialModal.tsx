@@ -1,6 +1,6 @@
-// === Module 14103: FederatedSocialModal ===
+// === Module 14102: FederatedSocialModal ===
 
-// Module 14103 (FederatedSocialModal)
+// Module 14102 (FederatedSocialModal)
 import PlatformsDefault from "Platforms" /* 6502 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

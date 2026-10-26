@@ -86,7 +86,7 @@ export default function ConjureSecretsSheet(projectId) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ export default function ConjureSecretsSheet(projectId) {
     tmp15Result = null;
     if ("" !== request.note) {
       let obj5 = { text: request.note, variant: "text-sm/normal", color: "text-default" };
-      tmp15Result = tmp15(tmp(11821), obj5);
+      tmp15Result = tmp15(tmp(11823), obj5);
     }
   }
   let items1 = [tmp15Result, , , , , , ];

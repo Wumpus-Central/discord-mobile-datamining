@@ -1,6 +1,6 @@
-// === Module 12163: AppLauncherAutocompleteActionSheet ===
+// === Module 12165: AppLauncherAutocompleteActionSheet ===
 
-// Module 12163 (AppLauncherAutocompleteActionSheet)
+// Module 12165 (AppLauncherAutocompleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,7 +10,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210
 import _mod6484 from "module_6484" /* 6484 */;
 import TableRow from "TableRow" /* 6903 */;
 import executeCommandDefault from "executeCommand" /* 10198 */;
-import _modDef12158 from "module_12158" /* 12158 */;
+import _modDef12160 from "module_12160" /* 12160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8306 */;
@@ -335,7 +335,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Autoco
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.emptyState) {
-    const obj2 = { style: tmp4.emptyState, lightSource: _modDef12158, darkSource: _modDef12158, title: first };
+    const obj2 = { style: tmp4.emptyState, lightSource: _modDef12160, darkSource: _modDef12160, title: first };
     const tmp10 = React6(native.EmptyState, obj2);
     cResult[1] = tmp4.emptyState;
     cResult[2] = tmp10;
@@ -345,7 +345,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Autoco
   }
   return tmp7;
 }) : (function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12158, darkSource: _modDef12158, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12160, darkSource: _modDef12160, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React6(native.EmptyState, obj);

@@ -5,7 +5,7 @@ import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import conjurePublishCard from "conjurePublishCard" /* 12305 */;
+import conjurePublishCard from "conjurePublishCard" /* 12307 */;
 import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12374 */;
 import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12381 */;
 import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12382 */;

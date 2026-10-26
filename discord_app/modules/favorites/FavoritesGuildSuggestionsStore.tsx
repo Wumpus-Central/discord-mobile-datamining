@@ -1,6 +1,6 @@
-// === Module 17631: FavoritesGuildSuggestionsStore ===
+// === Module 17630: FavoritesGuildSuggestionsStore ===
 
-// Module 17631 (FavoritesGuildSuggestionsStore)
+// Module 17630 (FavoritesGuildSuggestionsStore)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

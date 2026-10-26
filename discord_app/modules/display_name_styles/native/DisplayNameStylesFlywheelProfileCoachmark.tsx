@@ -1,10 +1,10 @@
-// === Module 18245: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 18244: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 18245 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 18244 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import _modDef2928 from "module_2928" /* 2928 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18246 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18245 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

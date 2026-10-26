@@ -1,6 +1,6 @@
-// === Module 17963: ICYMIServerRecommendationRow ===
+// === Module 17962: ICYMIServerRecommendationRow ===
 
-// Module 17963 (ICYMIServerRecommendationRow)
+// Module 17962 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,7 +12,7 @@ import FastImageDefault from "FastImage" /* 5669 */;
 import GuildIconDefault from "GuildIcon" /* 6883 */;
 import FastestListDefault from "FastestList" /* 7150 */;
 import ClipViewDefault from "ClipView" /* 9406 */;
-import ICYMIShared from "ICYMIShared" /* 17939 */;
+import ICYMIShared from "ICYMIShared" /* 17938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ function FeaturedServer(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ function FeaturedServer(guild) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -139,7 +139,7 @@ function FeaturedServer(guild) {
                   } else {
                     const recommendedGuilds = v2(8841).getRecommendedGuilds();
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp14) {
                   dependencyMap = tmp;
@@ -174,7 +174,7 @@ function FeaturedServer(guild) {
         } else {
           closure_129_1(false);
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp36) {
         c3 = tmp;
@@ -213,7 +213,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let c17 = 200;
-const createICYMIStyles = fn(17900);
+const createICYMIStyles = fn(17899);
 let closure_18 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginVertical: nativeDefault.space.PX_24 }, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   const obj2 = { marginVertical: nativeDefault.space.PX_24 };

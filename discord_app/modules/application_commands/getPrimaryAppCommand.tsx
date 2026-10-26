@@ -1,6 +1,6 @@
-// === Module 11401: getPrimaryAppCommand ===
+// === Module 11403: getPrimaryAppCommand ===
 
-// Module 11401 (getPrimaryAppCommand)
+// Module 11403 (getPrimaryAppCommand)
 import c from "c" /* 576 */;
 import Server from "Server" /* 2000 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;
@@ -27,7 +27,7 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

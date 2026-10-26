@@ -1,6 +1,6 @@
-// === Module 13896: GiftBadgePostPurchase ===
+// === Module 13895: GiftBadgePostPurchase ===
 
-// Module 13896 (GiftBadgePostPurchase)
+// Module 13895 (GiftBadgePostPurchase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -15,15 +15,15 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
 import BadgeId from "BadgeId" /* 8673 */;
 import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10502 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10505 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13898 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13899 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 13897 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 13898 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
 
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13897);
+const GiftingBadgeConstants = fn(13896);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -106,7 +106,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
       }
     }
     const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-    const tmp10 = closure_10(tmp(12886).GiftIcon, obj2);
+    const tmp10 = closure_10(tmp(12885).GiftIcon, obj2);
     const intl = tmp(1128).intl;
     const stringResult = intl.string(_modDef2632.g86YiI);
     cResult[3] = tmp10;
@@ -239,7 +239,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PostPu
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(12886).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(12885).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1128).intl;
   obj2.text = intl.string(_modDef2632.g86YiI);
   obj2.onPress = callback;

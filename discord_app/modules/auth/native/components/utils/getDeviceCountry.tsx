@@ -1,6 +1,6 @@
-// === Module 17381: getDeviceCountry ===
+// === Module 17380: getDeviceCountry ===
 
-// Module 17381 (getDeviceCountry)
+// Module 17380 (getDeviceCountry)
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1129 */;
 import size from "module_2" /* 2 */;
 

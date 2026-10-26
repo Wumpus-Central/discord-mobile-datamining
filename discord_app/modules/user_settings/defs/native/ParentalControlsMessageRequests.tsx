@@ -1,14 +1,14 @@
-// === Module 17298: ParentalControlsMessageRequests ===
+// === Module 17297: ParentalControlsMessageRequests ===
 
-// Module 17298 (ParentalControlsMessageRequests)
+// Module 17297 (ParentalControlsMessageRequests)
 import util from "util" /* 1128 */;
 import _modDef2536 from "module_2536" /* 2536 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7883 */;
 import useSelectedTeen from "useSelectedTeen" /* 8127 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16109 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16110 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17284 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16108 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16109 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17283 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
 
 require = fn;
@@ -18,7 +18,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 function useIsDisabled() {
   return useParentalControlSettings.useDefaultGuildsRestricted();
 }
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   if (typeof useIsDisabled === "function") {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();

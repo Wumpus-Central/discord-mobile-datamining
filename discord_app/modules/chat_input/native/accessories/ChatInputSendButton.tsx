@@ -1,6 +1,6 @@
-// === Module 13148: ChatInputSendButton ===
+// === Module 13147: ChatInputSendButton ===
 
-// Module 13148 (ChatInputSendButton)
+// Module 13147 (ChatInputSendButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import useToken from "useToken" /* 5252 */;
 import SendMessageIcon from "SendMessageIcon" /* 5680 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12525 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12528 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13149 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13153 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13148 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -381,7 +381,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputS
     obj7.style = size;
     if (canSendVoiceMessage) {
       const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = jsx(onSendMessage(13149), { disabled: stateFromStores1, channelId: channel.id });
+      let tmp15Result = jsx(onSendMessage(13148), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       const obj9 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
       ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);

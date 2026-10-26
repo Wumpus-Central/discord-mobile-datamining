@@ -1,7 +1,7 @@
-// === Module 11429: useStreamError ===
+// === Module 11431: useStreamError ===
 
-// Module 11429 (useStreamError)
-import AVErrorStore from "AVErrorStore" /* 11423 */;
+// Module 11431 (useStreamError)
+import AVErrorStore from "AVErrorStore" /* 11425 */;
 
 const require = fn;
 let closure_3 = { [fn(5897).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(5897).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(5897).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(5897).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(5897).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(5897).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };

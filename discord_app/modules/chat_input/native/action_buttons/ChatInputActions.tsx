@@ -1,6 +1,6 @@
-// === Module 13132: ChatInputActions ===
+// === Module 13131: ChatInputActions ===
 
-// Module 13132 (ChatInputActions)
+// Module 13131 (ChatInputActions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -11,10 +11,10 @@ import AppsIcon from "AppsIcon" /* 8577 */;
 import PollsIcon from "PollsIcon" /* 10421 */;
 import AttachmentIcon from "AttachmentIcon" /* 10423 */;
 import CameraIcon from "CameraIcon" /* 10438 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12238 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12240 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12525 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 13133 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13135 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 13132 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

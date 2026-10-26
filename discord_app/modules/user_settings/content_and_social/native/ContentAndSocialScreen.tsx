@@ -1,20 +1,20 @@
-// === Module 17270: ContentAndSocialScreen ===
+// === Module 17269: ContentAndSocialScreen ===
 
-// Module 17270 (ContentAndSocialScreen)
+// Module 17269 (ContentAndSocialScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7398 */;
-import SettingBuilders from "SettingBuilders" /* 11206 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13584 */;
-import SettingLayoutDefault from "SettingLayout" /* 15978 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 16105 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 16107 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17271 */;
-import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17276 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17277 */;
+import SettingBuilders from "SettingBuilders" /* 11208 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13583 */;
+import SettingLayoutDefault from "SettingLayout" /* 15977 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 16104 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 16106 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17270 */;
+import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17275 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17276 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -393,11 +393,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentA
   const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
   if (cResult[3] !== first1) {
     const obj2 = { defaultIndex: first1, settings: first };
-    const segmentedControl = route(11206).createSegmentedControl(obj2);
+    const segmentedControl = route(11208).createSegmentedControl(obj2);
     cResult[3] = first1;
     cResult[4] = segmentedControl;
     let tmp10 = segmentedControl;
-    const tmpResult = route(11206);
+    const tmpResult = route(11208);
   } else {
     tmp10 = cResult[4];
   }

@@ -37,7 +37,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
         c4 = 0;
         tmp3(false);
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp18) {
         closure_3 = tmp18;
         if (tmp4 === c4) {

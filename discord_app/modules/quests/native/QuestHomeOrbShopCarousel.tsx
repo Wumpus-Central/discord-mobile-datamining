@@ -1,6 +1,6 @@
-// === Module 16373: QuestHomeOrbShopCarousel ===
+// === Module 16372: QuestHomeOrbShopCarousel ===
 
-// Module 16373 (QuestHomeOrbShopCarousel)
+// Module 16372 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,8 +10,8 @@ import AnalyticsActions from "AnalyticsActions" /* 7792 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9360 */;
 import SkeletonCardDefault from "SkeletonCard" /* 9474 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16360 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16374 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16359 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -62,7 +62,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const obj = { style: { width: PX_12 } };
   return React6(View, obj);
 });
-const data = Array.from({ length: fn(16360).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(16359).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(4971);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
@@ -107,7 +107,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObt
   });
 });
 fn(558);
-let obj3 = { length: fn(16360).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+let obj3 = { length: fn(16359).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeOrbShopCarouselHeading(arg0) {
   const cResult = c.c(12);
@@ -431,15 +431,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   const tmp5 = undefined !== embedded && embedded;
   let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
   if (tmp5) {
-    ONYX = obtainableOrbRewards(15877).ThemeTypes.ONYX;
+    ONYX = obtainableOrbRewards(15876).ThemeTypes.ONYX;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16374).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16373).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
   } else {
     COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(9357).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16374).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16373).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
   } else {
     COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(9357).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }

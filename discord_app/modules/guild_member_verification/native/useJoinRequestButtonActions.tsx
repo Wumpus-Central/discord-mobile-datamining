@@ -1,6 +1,6 @@
-// === Module 13559: useJoinRequestButtonActions ===
+// === Module 13558: useJoinRequestButtonActions ===
 
-// Module 13559 (useJoinRequestButtonActions)
+// Module 13558 (useJoinRequestButtonActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -44,7 +44,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -259,8 +259,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(13560, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(13560, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(13559, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(13559, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

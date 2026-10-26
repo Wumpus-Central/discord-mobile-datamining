@@ -1,13 +1,13 @@
-// === Module 13141: ChatInputActionButtonGiftOrThread ===
+// === Module 13140: ChatInputActionButtonGiftOrThread ===
 
-// Module 13141 (ChatInputActionButtonGiftOrThread)
+// Module 13140 (ChatInputActionButtonGiftOrThread)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 5037 */;
 import useToken from "useToken" /* 5252 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12525 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12528 */;
-import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 13142 */;
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 13141 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanu
     const intl = onPress(1128).intl;
     obj2.accessibilityLabel = intl.string(onPress(1128).t["4WNcpu"]);
     obj2.disabled = !canStartThreads;
-    obj2.IconComponent = onPress(13133).ThreadPlusIcon;
+    obj2.IconComponent = onPress(13132).ThreadPlusIcon;
     obj2.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };

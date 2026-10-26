@@ -1,6 +1,6 @@
-// === Module 17619: GameClaimCoachmark ===
+// === Module 17618: GameClaimCoachmark ===
 
-// Module 17619 (GameClaimCoachmark)
+// Module 17618 (GameClaimCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -10,10 +10,10 @@ import Card from "Card" /* 6905 */;
 import Pressables from "Pressables" /* 6908 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8092 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14385 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 17620 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17621 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14384 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 17619 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17620 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ guild, markAsDismissed } = arg0);
   const tmp4 = closure_13();
   let obj = markAsDismissed(576);
-  let first = markAsDismissed(17621).useUnclaimedGameIdsForGuild(guild.id)[0];
+  let first = markAsDismissed(17620).useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first1 = cResult[0];
   }
-  const obj2 = markAsDismissed(17621);
+  const obj2 = markAsDismissed(17620);
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
   if (null == coverImageUrl) {
     return null;
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+352" };
                                 }
                               } else {
                                 try {
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     return obj;
                                   } else {
                                     v3 = 3;
-                                    return { value: "IconComponent", done: null };
+                                    return { value: "IconComponent", done: "+352" };
                                   }
                                 } catch (tmp12) {
                                   v3 = tmp;
@@ -339,7 +339,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp12) {
           v3 = tmp;

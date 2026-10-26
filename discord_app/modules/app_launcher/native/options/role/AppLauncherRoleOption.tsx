@@ -1,9 +1,9 @@
-// === Module 12193: AppLauncherRoleOption ===
+// === Module 12195: AppLauncherRoleOption ===
 
-// Module 12193 (AppLauncherRoleOption)
+// Module 12195 (AppLauncherRoleOption)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12189 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4877 */;
@@ -68,7 +68,7 @@ export default function AppLauncherRoleOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12189, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12191, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onRolePress(role) {

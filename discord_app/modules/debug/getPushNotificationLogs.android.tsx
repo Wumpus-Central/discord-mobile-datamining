@@ -1,6 +1,6 @@
-// === Module 13791: getPushNotificationLogs ===
+// === Module 13790: getPushNotificationLogs ===
 
-// Module 13791 (getPushNotificationLogs)
+// Module 13790 (getPushNotificationLogs)
 import NativePushNotificationMonitorModuleDefault from "NativePushNotificationMonitorModule" /* 10755 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

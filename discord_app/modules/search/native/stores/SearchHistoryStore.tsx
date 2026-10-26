@@ -1,6 +1,6 @@
-// === Module 18082: SearchHistoryStore ===
+// === Module 18081: SearchHistoryStore ===
 
-// Module 18082 (SearchHistoryStore)
+// Module 18081 (SearchHistoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

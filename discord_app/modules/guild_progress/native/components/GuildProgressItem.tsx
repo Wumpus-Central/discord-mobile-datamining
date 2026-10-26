@@ -1,9 +1,9 @@
-// === Module 13513: GuildProgressItem ===
+// === Module 13512: GuildProgressItem ===
 
-// Module 13513 (GuildProgressItem)
-import GuildProgressUtils from "GuildProgressUtils" /* 13395 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13398 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 13515 */;
+// Module 13512 (GuildProgressItem)
+import GuildProgressUtils from "GuildProgressUtils" /* 13394 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 13397 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 13514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

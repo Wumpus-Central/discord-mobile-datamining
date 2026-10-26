@@ -1,18 +1,18 @@
-// === Module 11752: conjureScopeSetup ===
+// === Module 11754: conjureScopeSetup ===
 
-// Module 11752 (conjureScopeSetup)
+// Module 11754 (conjureScopeSetup)
 import Storage6 from "Storage" /* 510 */;
 import util from "util" /* 1128 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import createNonce from "createNonce" /* 10203 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 11754 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 11755 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 11756 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 11757 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjureChatStore from "ConjureChatStore" /* 10699 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 11753 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 11755 */;
 import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10698 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
@@ -96,7 +96,7 @@ let closure_20 = async function _putInstallScope(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ let closure_20 = async function _putInstallScope(arg0) {
           const obj8 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_131_0.body };
           closure_132_1(closure_132_2[14]).dispatch(obj8);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp15) {
         c6 = tmp;
@@ -327,7 +327,7 @@ export const settleConjureInstallScope = function settleConjureInstallScope(arg0
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -382,7 +382,7 @@ export const settleConjureInstallScope = function settleConjureInstallScope(arg0
             return obj;
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp22) {
         if (tmp4 === c3) {
@@ -407,7 +407,7 @@ export const settleConjureInstallScope = function settleConjureInstallScope(arg0
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -444,7 +444,7 @@ export const settleConjureInstallScope = function settleConjureInstallScope(arg0
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp17) {
           closure_2 = tmp17;
@@ -478,7 +478,7 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -515,7 +515,7 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           const intl = tmp2(1128).intl;
           if (closure_1_8(closure_129_0, intl.string(closure_128_0))) {
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } else {
             const _Error = Error;
             const error = new Error("Not connected");
@@ -541,7 +541,7 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -578,7 +578,7 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp17) {
           closure_2 = tmp17;

@@ -1,15 +1,15 @@
-// === Module 11285: useMemberListAction ===
+// === Module 11287: useMemberListAction ===
 
-// Module 11285 (useMemberListAction)
+// Module 11287 (useMemberListAction)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9050 */;
-import useCanInviteToAnyLinkedGameOrganizationDefault from "useCanInviteToAnyLinkedGameOrganization" /* 11286 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11289 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11301 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11307 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11311 */;
+import useCanInviteToAnyLinkedGameOrganizationDefault from "useCanInviteToAnyLinkedGameOrganization" /* 11288 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11291 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11303 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11309 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11313 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -26,7 +26,7 @@ const Constants = fn(1087);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
+let closure_16 = { listActionRenderer: "dispatch", listActionHeight: "ix" };
 const createStyles = fn(4971);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);

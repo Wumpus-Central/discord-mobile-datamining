@@ -24,13 +24,13 @@ import handleMessagesTapLink from "handleMessagesTapLink" /* 10008 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10068 */;
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10073 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10074 */;
-import GuildNSFWDefault from "GuildNSFW" /* 10893 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 10895 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11237 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11238 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11276 */;
-import contentHandlers2 from "contentHandlers" /* 11277 */;
-import ChatDefault from "Chat" /* 12848 */;
+import GuildNSFWDefault from "GuildNSFW" /* 10895 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 10897 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11239 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11240 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11278 */;
+import contentHandlers2 from "contentHandlers" /* 11279 */;
+import ChatDefault from "Chat" /* 12847 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ActionSheetStore from "ActionSheetStore" /* 5211 */;
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Set", shouldInitialScroll: "Array", animated: 0, scrollPosition: 7, focusTargetId: 4 };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Set", shouldInitialScroll: "Array", animated: 82.192, scrollPosition: 128.192, focusTargetId: 0 };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -291,9 +291,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "2026-01-bug-reporter",
-        selectedChannelId: "user",
-        tapLinkData: null
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

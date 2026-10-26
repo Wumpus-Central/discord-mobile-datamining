@@ -5,7 +5,7 @@ import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import LightbulbIcon from "LightbulbIcon" /* 9961 */;
-import ConjureTipCallout from "ConjureTipCallout" /* 12350 */;
+import ConjureTipCallout from "ConjureTipCallout" /* 12351 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureTipCalloutDefault = ConjureTipCallout;
@@ -14,7 +14,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = {};
-const merged = Object.assign(fn(12333).CONJURE_IDEAS_INTRO_TIP_BASE);
+const merged = Object.assign(fn(12350).CONJURE_IDEAS_INTRO_TIP_BASE);
 obj.render = function render(arg0, context) {
   const onAskForIdeas = context.context.onAskForIdeas;
   const dismiss = context.dismiss;

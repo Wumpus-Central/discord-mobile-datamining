@@ -1,6 +1,6 @@
-// === Module 12977: CheckpointApngPlayer ===
+// === Module 12976: CheckpointApngPlayer ===
 
-// Module 12977 (CheckpointApngPlayer)
+// Module 12976 (CheckpointApngPlayer)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;

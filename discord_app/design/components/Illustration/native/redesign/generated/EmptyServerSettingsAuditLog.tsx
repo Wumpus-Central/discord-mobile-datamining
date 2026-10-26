@@ -1,6 +1,6 @@
-// === Module 19055: EmptyServerSettingsAuditLog ===
+// === Module 19054: EmptyServerSettingsAuditLog ===
 
-// Module 19055 (EmptyServerSettingsAuditLog)
+// Module 19054 (EmptyServerSettingsAuditLog)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmptyServ
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_19056");
+          return require("module_19055");
         },
       darker() {
-          return require("module_19057");
+          return require("module_19056");
         },
       light() {
-          return require("module_19058");
+          return require("module_19057");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmptyServ
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19056");
+      return require("module_19055");
     },
     darker() {
-      return require("module_19057");
+      return require("module_19056");
     },
     light() {
-      return require("module_19058");
+      return require("module_19057");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getEmptyServerSettingsAuditLogSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_19056");
+      return require("module_19055");
     },
     darker() {
-      return require("module_19057");
+      return require("module_19056");
     },
     light() {
-      return require("module_19058");
+      return require("module_19057");
     }
   });
 }

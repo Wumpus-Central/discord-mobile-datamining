@@ -1,6 +1,6 @@
-// === Module 13142: ChatInputActionButtonGift ===
+// === Module 13141: ChatInputActionButtonGift ===
 
-// Module 13142 (ChatInputActionButtonGift)
+// Module 13141 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;

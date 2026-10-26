@@ -1,6 +1,6 @@
-// === Module 14318: UserProfileActivityButtons ===
+// === Module 14317: UserProfileActivityButtons ===
 
-// Module 14318 (UserProfileActivityButtons)
+// Module 14317 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,10 +16,10 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7878 */;
 import isStreamingDefault from "isStreaming" /* 8749 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9609 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11358 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 14319 */;
-import getActivityJoinability from "getActivityJoinability" /* 14320 */;
-import getStreamURLDefault from "getStreamURL" /* 14322 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11360 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14318 */;
+import getActivityJoinability from "getActivityJoinability" /* 14319 */;
+import getStreamURLDefault from "getStreamURL" /* 14321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 4823 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
 import GuildStore from "GuildStore" /* 4845 */;
-import LocalActivityStore from "LocalActivityStore" /* 11192 */;
+import LocalActivityStore from "LocalActivityStore" /* 11194 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
@@ -488,7 +488,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -509,13 +509,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(11339).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(11341).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -526,7 +526,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(11339);
+              const obj7 = closure_0(11341);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {
@@ -589,7 +589,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -615,7 +615,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -1156,7 +1156,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -1199,13 +1199,13 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         } else {
                           closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
                           let protocol;
@@ -1238,7 +1238,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {
@@ -1265,7 +1265,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -1308,13 +1308,13 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         } else {
                           closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
                           let protocol;
@@ -1347,7 +1347,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {

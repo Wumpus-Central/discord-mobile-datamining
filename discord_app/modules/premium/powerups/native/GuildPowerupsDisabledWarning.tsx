@@ -1,6 +1,6 @@
-// === Module 13469: GuildPowerupsDisabledWarning ===
+// === Module 13468: GuildPowerupsDisabledWarning ===
 
-// Module 13469 (GuildPowerupsDisabledWarning)
+// Module 13468 (GuildPowerupsDisabledWarning)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

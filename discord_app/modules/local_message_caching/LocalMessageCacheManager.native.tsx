@@ -1,6 +1,6 @@
-// === Module 15817: LocalMessageCacheManager ===
+// === Module 15816: LocalMessageCacheManager ===
 
-// Module 15817 (LocalMessageCacheManager)
+// Module 15816 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -9,7 +9,7 @@ import _modDef2049 from "module_2049" /* 2049 */;
 import DateUtils from "DateUtils" /* 4796 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
 import createMessageDefault from "createMessage" /* 10207 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 11338 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4914 */;
@@ -113,7 +113,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -243,7 +243,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1087).MessageStates;
-const MutexUtils = fn(15818);
+const MutexUtils = fn(15817);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -320,7 +320,7 @@ class LocalMessageCacheManager extends tmp3 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -367,7 +367,7 @@ class LocalMessageCacheManager extends tmp3 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     } else {
                       try {
@@ -387,7 +387,7 @@ class LocalMessageCacheManager extends tmp3 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -400,7 +400,7 @@ class LocalMessageCacheManager extends tmp3 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -642,7 +642,7 @@ class LocalMessageCacheManager extends tmp3 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -683,7 +683,7 @@ class LocalMessageCacheManager extends tmp3 {
               return obj;
             }
             c1 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -908,7 +908,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       while (true) {
@@ -959,7 +959,7 @@ prototype["_initialize"] = function _initialize() {
                 let obj4 = values(584);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;

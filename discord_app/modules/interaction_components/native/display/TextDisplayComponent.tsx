@@ -1,11 +1,11 @@
-// === Module 17089: TextDisplayComponent ===
+// === Module 17088: TextDisplayComponent ===
 
-// Module 17089 (TextDisplayComponent)
+// Module 17088 (TextDisplayComponent)
 import _modDef38 from "module_38" /* 38 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 8482 */;
 import handleMessagesTapLink from "handleMessagesTapLink" /* 10008 */;
-import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 17090 */;
+import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 17089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -110,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextDisp
                   }
                   return tmp31;
                 }
-                const obj4 = { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11277).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11277).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11277).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11277).contentHandlers.onTapMention, onTapTimestamp: tmp(11277).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11277).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11277).contentHandlers.onTapEmoji, style: tmp30 };
-                const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11277).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11277).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11277).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11277).contentHandlers.onTapMention, onTapTimestamp: tmp(11277).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11277).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11277).contentHandlers.onTapEmoji, style: tmp30 });
+                const obj4 = { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11279).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11279).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11279).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11279).contentHandlers.onTapMention, onTapTimestamp: tmp(11279).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11279).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11279).contentHandlers.onTapEmoji, style: tmp30 };
+                const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11279).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11279).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11279).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11279).contentHandlers.onTapMention, onTapTimestamp: tmp(11279).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11279).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11279).contentHandlers.onTapEmoji, style: tmp30 });
                 cResult[18] = tmp10;
                 cResult[19] = tmp27;
                 cResult[20] = tmp34;

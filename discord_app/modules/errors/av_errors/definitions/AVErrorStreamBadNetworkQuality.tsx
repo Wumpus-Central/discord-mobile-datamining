@@ -1,9 +1,9 @@
-// === Module 19397: AVErrorStreamBadNetworkQuality ===
+// === Module 19396: AVErrorStreamBadNetworkQuality ===
 
-// Module 19397 (AVErrorStreamBadNetworkQuality)
+// Module 19396 (AVErrorStreamBadNetworkQuality)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AVError from "AVError" /* 5897 */;
-import AVErrorContext from "AVErrorContext" /* 19390 */;
+import AVErrorContext from "AVErrorContext" /* 19389 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
 
 require = fn;

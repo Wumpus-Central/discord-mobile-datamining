@@ -1,6 +1,6 @@
-// === Module 13659: AcceptInviteContainer ===
+// === Module 13658: AcceptInviteContainer ===
 
-// Module 13659 (AcceptInviteContainer)
+// Module 13658 (AcceptInviteContainer)
 import nativeDefault from "native" /* 587 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -102,7 +102,7 @@ export default function AcceptInviteContainer(code) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -164,7 +164,7 @@ export default function AcceptInviteContainer(code) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp14) {
         c3 = tmp;
         throw tmp14;
@@ -183,7 +183,7 @@ export default function AcceptInviteContainer(code) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -220,7 +220,7 @@ export default function AcceptInviteContainer(code) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -245,7 +245,7 @@ export default function AcceptInviteContainer(code) {
                             }
                             if (null == prop) {
                               c6 = 3;
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "+352" };
                             } else {
                               closure_1();
                               const result = v3(transitionToInviteChannel[17]).transitionToEventDetailsFromInvite(prop);
@@ -383,7 +383,7 @@ export default function AcceptInviteContainer(code) {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp5) {
         v3 = tmp;
         throw tmp5;

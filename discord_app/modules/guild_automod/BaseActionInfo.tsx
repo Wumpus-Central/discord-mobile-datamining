@@ -1,6 +1,6 @@
-// === Module 19013: BaseActionInfo ===
+// === Module 19012: BaseActionInfo ===
 
-// Module 19013 (BaseActionInfo)
+// Module 19012 (BaseActionInfo)
 import util from "util" /* 1128 */;
 import useChannelName from "useChannelName" /* 5604 */;
 import ChannelStore from "ChannelStore" /* 4823 */;

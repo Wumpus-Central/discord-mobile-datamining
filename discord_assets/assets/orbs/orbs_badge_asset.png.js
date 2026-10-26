@@ -1,6 +1,6 @@
-// === Module 11112: ? ===
+// === Module 11114: ? ===
 
-// Module 11112
+// Module 11114
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/orbs_badge_asset.png.js");

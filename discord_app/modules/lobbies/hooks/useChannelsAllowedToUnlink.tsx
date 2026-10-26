@@ -1,6 +1,6 @@
-// === Module 18988: useChannelsAllowedToUnlink ===
+// === Module 18987: useChannelsAllowedToUnlink ===
 
-// Module 18988 (useChannelsAllowedToUnlink)
+// Module 18987 (useChannelsAllowedToUnlink)
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
 

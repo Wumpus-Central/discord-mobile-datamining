@@ -1,6 +1,6 @@
-// === Module 18628: VoicePanelNoVideoPermissionsAlert ===
+// === Module 18627: VoicePanelNoVideoPermissionsAlert ===
 
-// Module 18628 (VoicePanelNoVideoPermissionsAlert)
+// Module 18627 (VoicePanelNoVideoPermissionsAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AlertModal from "AlertModal" /* 5914 */;

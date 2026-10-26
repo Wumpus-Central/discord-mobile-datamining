@@ -1,6 +1,6 @@
-// === Module 19149: GuildSettingsModalTemplate ===
+// === Module 19148: GuildSettingsModalTemplate ===
 
-// Module 19149 (GuildSettingsModalTemplate)
+// Module 19148 (GuildSettingsModalTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
@@ -16,7 +16,7 @@ import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
 import native from "native" /* 8913 */;
 import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12737 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19150 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -465,7 +465,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -758,7 +758,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -1486,7 +1486,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19151)(guildTemplate.code);
+  const tmp3 = guildTemplate(19150)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

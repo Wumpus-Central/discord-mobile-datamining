@@ -1,6 +1,6 @@
-// === Module 10944: MoreTipsModal ===
+// === Module 10946: MoreTipsModal ===
 
-// Module 10944 (MoreTipsModal)
+// Module 10946 (MoreTipsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,9 +10,9 @@ import MonitoringAgentDefault from "MonitoringAgent" /* 6468 */;
 import MetricEvents from "MetricEvents" /* 6473 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
 import _modDef8115 from "module_8115" /* 8115 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10937 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10945 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10950 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10939 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10947 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10952 */;
 import noop from "module_19" /* 19 */;
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10693 */;
 

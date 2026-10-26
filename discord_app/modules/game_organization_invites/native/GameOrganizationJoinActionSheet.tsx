@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(11027).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
+let closure_7 = fn(11029).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4971);

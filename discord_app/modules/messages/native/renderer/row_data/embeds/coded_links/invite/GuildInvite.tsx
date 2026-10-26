@@ -1,6 +1,6 @@
-// === Module 14534: invite/GuildInvite ===
+// === Module 14533: invite/GuildInvite ===
 
-// Module 14534 (invite/GuildInvite)
+// Module 14533 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -22,9 +22,9 @@ import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFro
 import GuestUtilsDefault from "GuestUtils" /* 10006 */;
 import _modDef12753 from "module_12753" /* 12753 */;
 import _modDef12754 from "module_12754" /* 12754 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13668 */;
-import _modDef13669 from "module_13669" /* 13669 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14535 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13667 */;
+import _modDef13668 from "module_13668" /* 13668 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14534 */;
 import GuildRecord from "GuildRecord" /* 4841 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13669);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13668);
   let tmp17;
   if (null == tmp11) {
     let tmp18;

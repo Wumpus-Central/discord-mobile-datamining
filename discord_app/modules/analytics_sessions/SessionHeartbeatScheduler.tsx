@@ -41,7 +41,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -355,161 +355,110 @@ function getSession() {
   return applyArgumentsResult;
 }
 let closure_39 = async function _getSession() {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  closure_3 = tmp3;
+  let flag = closure_0;
+  if (closure_0 === undefined) {
+    flag = true;
+  }
+  closure_130_0 = flag;
+  await "Reflect";
+  if (1 === tmp7) {
     if (arg0 === 1) {
+      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj5 = { value, done: true };
-      return obj5;
+      c7 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_3 = tmp3;
-          dependencyMap = tmp7;
-          closure_130_0 = undefined;
-          let flag = closure_0;
-          if (closure_0 === undefined) {
-            flag = true;
-          }
-          closure_130_0 = flag;
-          closure_130_1 = undefined;
-          let session2;
-          closure_130_3 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "Reflect", done: true };
+      let session2 = null;
+      let tmp21 = null;
+      if ("loaded" === closure_131_20.state) {
+        const session = closure_131_20.session;
+        let uuid1;
+        if (session != null) {
+          uuid1 = session.uuid;
         }
+        tmp21 = uuid1;
+      }
+      closure_130_3 = tmp21;
+      c4 = 1;
+      if ("uninitialized" === closure_131_20.state) {
+        importDefault = closure_131_29;
+        let Storage = closure_131_0(closure_131_2[16]).Storage;
+        c6 = 3;
+        c7 = 1;
+        return { value: Storage.getAfterRefresh(closure_131_13), done: false };
       } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            session2 = null;
-            let tmp21 = null;
-            if ("loaded" === closure_131_20.state) {
-              const session = closure_131_20.session;
-              let uuid1;
-              if (session != null) {
-                uuid1 = session.uuid;
-              }
-              tmp21 = uuid1;
-            }
-            closure_130_3 = tmp21;
-            c4 = 1;
-            if ("uninitialized" === closure_131_20.state) {
-              importDefault = closure_131_29;
-              let Storage = closure_131_0(closure_131_2[16]).Storage;
-              c6 = 3;
-              c7 = 1;
-              const obj9 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
-              return obj9;
-            } else {
-              session2 = closure_131_20.session;
-              c4 = 0;
-            }
-          }
-        } else if (2 === tmp7) {
-          c4 = 0;
-          closure_130_4 = closure_5;
-          closure_131_1(closure_131_2[11]).captureException(closure_130_4);
-          const _Date = Date;
-          closure_130_1 = Date.now();
-          if (closure_131_27()) {
-            let isSessionExpiredResult = null == tmp30;
-            if (!isSessionExpiredResult) {
-              isSessionExpiredResult = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
-              const obj4 = closure_131_0(closure_131_2[17]);
-            }
-            if (isSessionExpiredResult) {
-              const obj10 = { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
-              session2 = obj10;
-              closure_131_18 = 0;
-              obj6 = closure_131_0(closure_131_2[21]);
-            }
-            session2.lastUsedTimestamp = closure_130_1;
-            (function maybeFlushSessionToStorage(session2) {
-              monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
-              if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
-                try {
-                  const Storage = closure_1_0(dependencyMap[16]).Storage;
-                  const result = Storage.set(closure_1_13, session2);
-                } catch (tmp9) {
-                  closure_1_1(tmp2[11]).captureException(tmp9);
-                  const obj2 = closure_1_1(tmp2[11]);
-                }
-              }
-              const obj = closure_1_0(dependencyMap[10]);
-            })(session2);
-          } else {
-            let isSessionExpiredResult1 = null != tmp30;
-            if (isSessionExpiredResult1) {
-              isSessionExpiredResult1 = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
-              const obj3 = closure_131_0(closure_131_2[17]);
-            }
-            if (isSessionExpiredResult1) {
-              session2 = null;
-            }
-          }
-          const obj11 = { state: "loaded", session: session2 };
-          closure_131_20 = obj11;
-          let tmp61 = null != session2;
-          if (tmp61) {
-            tmp61 = closure_130_3 !== session2.uuid;
-          }
-          if (tmp61) {
-            tmp61 = closure_130_0;
-          }
-          if (tmp61) {
-            const socket = closure_131_4.getSocket();
-            if (socket != null) {
-              ({ createdAtTimestamp, uuid } = session2);
-              let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_131_0(closure_131_2[18]).clientLaunchId);
-            }
-          }
-          c7 = 3;
-          const obj12 = { value: session2, done: true };
-          return obj12;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          importDefault(value);
-        }
+        session2 = closure_131_20.session;
         c4 = 0;
-        c7 = 3;
-        let obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp81) {
-      closure_5 = tmp81;
-      if (tmp4 === c4) {
-        c7 = tmp2;
-        throw tmp81;
-      } else {
-        c6 = tmp;
       }
     }
+  } else if (2 === tmp7) {
+    c4 = 0;
+    closure_130_4 = closure_5;
+    closure_131_1(closure_131_2[11]).captureException(closure_130_4);
+    const _Date = Date;
+    closure_130_1 = Date.now();
+    if (closure_131_27()) {
+      let isSessionExpiredResult = null == tmp30;
+      if (!isSessionExpiredResult) {
+        isSessionExpiredResult = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+        closure_131_0(closure_131_2[17]);
+      }
+      if (isSessionExpiredResult) {
+        session2 = { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
+        closure_131_18 = 0;
+        closure_131_0(closure_131_2[21]);
+        { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
+      }
+      session2.lastUsedTimestamp = closure_130_1;
+      (function maybeFlushSessionToStorage(session2) {
+        monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
+        if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
+          try {
+            const Storage = closure_1_0(dependencyMap[16]).Storage;
+            const result = Storage.set(closure_1_13, session2);
+          } catch (tmp9) {
+            closure_1_1(tmp2[11]).captureException(tmp9);
+            const obj2 = closure_1_1(tmp2[11]);
+          }
+        }
+        const obj = closure_1_0(dependencyMap[10]);
+      })(session2);
+    } else {
+      let isSessionExpiredResult1 = null != tmp30;
+      if (isSessionExpiredResult1) {
+        isSessionExpiredResult1 = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+        closure_131_0(closure_131_2[17]);
+      }
+      if (isSessionExpiredResult1) {
+        session2 = null;
+      }
+    }
+    closure_131_20 = { state: "loaded", session: session2 };
+    let tmp61 = null != session2;
+    if (tmp61) {
+      tmp61 = closure_130_3 !== session2.uuid;
+    }
+    if (tmp61) {
+      tmp61 = closure_130_0;
+    }
+    if (tmp61) {
+      const socket = closure_131_4.getSocket();
+      if (socket != null) {
+        ({ createdAtTimestamp, uuid } = session2);
+        let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_131_0(closure_131_2[18]).clientLaunchId);
+      }
+    }
+    c7 = 3;
+    return { value: session2, done: true };
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    importDefault(value);
   }
+  return value;
 };
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);

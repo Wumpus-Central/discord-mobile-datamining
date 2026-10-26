@@ -1,11 +1,11 @@
-// === Module 18146: PeopleScreen ===
+// === Module 18145: PeopleScreen ===
 
-// Module 18146 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13244 */;
+// Module 18145 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13243 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13252 */;
-import SearchQueryStore from "SearchQueryStore" /* 13237 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13251 */;
+import SearchQueryStore from "SearchQueryStore" /* 13236 */;
 
 const require = globalThis.__r;
 
@@ -270,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -306,7 +306,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const result = closure_1(onPressGroupDMItem[14]).trackSearchResultClicked(obj7);
             tmp5(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp10) {
           c5 = tmp;
@@ -365,7 +365,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -402,7 +402,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const result = closure_1(stateFromStores[14]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp10) {
           c5 = tmp;

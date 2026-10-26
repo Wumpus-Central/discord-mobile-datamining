@@ -1,10 +1,10 @@
-// === Module 16305: BountiesScrollVideoItem ===
+// === Module 16304: BountiesScrollVideoItem ===
 
-// Module 16305 (BountiesScrollVideoItem)
+// Module 16304 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 6715 */;
 import AdCreativeType from "AdCreativeType" /* 6717 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14142 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16306 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14141 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16305 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -292,7 +292,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -348,7 +348,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
               });
             }
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp27) {
           closure_2 = tmp27;
@@ -471,7 +471,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -526,7 +526,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             });
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -731,7 +731,7 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14142).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14141).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6717).AdCreativeType.BOUNTY,
     questContent: bounty(6715).QuestContent.VIDEO_MODAL_MOBILE,

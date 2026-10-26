@@ -1,12 +1,12 @@
-// === Module 12985: CheckpointEmphasis ===
+// === Module 12984: CheckpointEmphasis ===
 
-// Module 12985 (CheckpointEmphasis)
+// Module 12984 (CheckpointEmphasis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import useFontScale from "useFontScale" /* 5253 */;
 import inlineStyles from "inlineStyles" /* 7962 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11057 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

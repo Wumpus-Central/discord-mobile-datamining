@@ -1,6 +1,6 @@
-// === Module 15850: ProfileGIFSelectActionSheet ===
+// === Module 15849: ProfileGIFSelectActionSheet ===
 
-// Module 15850 (ProfileGIFSelectActionSheet)
+// Module 15849 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

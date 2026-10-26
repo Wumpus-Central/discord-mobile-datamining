@@ -123,7 +123,7 @@ function ActionBar(channel) {
           }
           tmp4 = closure_1_7 !== channel(1631).KeyboardTypes.SYSTEM && closure_1_7 !== channel(1631).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11003, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11005, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
       tmp10 = closure_29(tmp2(7485).HeaderActionButton, obj6);
     }
@@ -174,7 +174,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(13976).KeyboardIcon;
+      let ImageIcon = tmp2(13975).KeyboardIcon;
     } else {
       ImageIcon = tmp2(8558).ImageIcon;
     }
@@ -572,7 +572,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -715,7 +715,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -736,7 +736,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else {
           if (1 === tmp8) {

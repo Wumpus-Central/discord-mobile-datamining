@@ -1,6 +1,6 @@
-// === Module 11722: AudienceTile ===
+// === Module 11724: AudienceTile ===
 
-// Module 11722 (AudienceTile)
+// Module 11724 (AudienceTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -61,7 +61,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const obj3 = { style: tmp4.raisedHand, source: tmp6(11558), color: PRIMARY_800 };
+    const obj3 = { style: tmp4.raisedHand, source: tmp6(11560), color: PRIMARY_800 };
     const tmp10 = hasOwnProperty(native.Icon, obj3);
     cResult[3] = PRIMARY_800;
     cResult[4] = tmp4.raisedHand;
@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11558), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11560), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 });
@@ -188,7 +188,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[38] !== blocked) {
                               let tmp41 = blocked;
                               if (blocked) {
-                                tmp41 = closure_5(tmp(11702).BlockedStatus, {});
+                                tmp41 = closure_5(tmp(11704).BlockedStatus, {});
                               }
                               cResult[38] = blocked;
                               cResult[39] = tmp41;
@@ -199,7 +199,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[40] !== ignored) {
                               let tmp44 = ignored;
                               if (ignored) {
-                                tmp44 = closure_5(tmp(11702).IgnoredStatus, {});
+                                tmp44 = closure_5(tmp(11704).IgnoredStatus, {});
                               }
                               cResult[40] = ignored;
                               cResult[41] = tmp44;
@@ -240,7 +240,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       if (cResult[55] !== stateFromStores) {
                                         let tmp58 = stateFromStores;
                                         if (stateFromStores) {
-                                          const obj3 = { source: tmp5(11723), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
+                                          const obj3 = { source: tmp5(11725), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
                                           tmp58 = closure_5(tmp(1202).Icon, obj3);
                                         }
                                         cResult[55] = stateFromStores;

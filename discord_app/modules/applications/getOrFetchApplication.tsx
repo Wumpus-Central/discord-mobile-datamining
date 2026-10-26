@@ -1,6 +1,6 @@
-// === Module 11359: getOrFetchApplication ===
+// === Module 11361: getOrFetchApplication ===
 
-// Module 11359 (getOrFetchApplication)
+// Module 11361 (getOrFetchApplication)
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _getOrFetchApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

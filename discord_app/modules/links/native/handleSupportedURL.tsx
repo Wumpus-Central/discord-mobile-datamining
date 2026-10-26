@@ -1,6 +1,6 @@
-// === Module 15093: handleSupportedURL ===
+// === Module 15092: handleSupportedURL ===
 
-// Module 15093 (handleSupportedURL)
+// Module 15092 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -24,17 +24,17 @@ import ApplicationUtils from "ApplicationUtils" /* 10744 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 10746 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 10768 */;
 import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12737 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12877 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13613 */;
-import BountyActionCreators from "BountyActionCreators" /* 14134 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15102 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15136 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15232 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12876 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13612 */;
+import BountyActionCreators from "BountyActionCreators" /* 14133 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15101 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15135 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14707 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14706 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -49,7 +49,7 @@ const NativePermissionTypes = fn(7868).NativePermissionTypes;
 let closure_22 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7646).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5698).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15094).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15093).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8332).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -204,7 +204,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: null };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[31])(obj21);
@@ -288,7 +288,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           remoteAuthFingerprint(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15106, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15105, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[41]);
             const tmp3 = payload(inviteCode[41]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;
@@ -345,7 +345,7 @@ export default function handleSupportedURL(payload) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -412,7 +412,7 @@ export default function handleSupportedURL(payload) {
                     const obj3 = payload(paths[49]);
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } catch (tmp35) {
                 c4 = tmp;
@@ -441,7 +441,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -495,7 +495,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = tmp4(paths[52]);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } catch (tmp37) {
                 c2 = tmp;
                 throw tmp37;
@@ -553,7 +553,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -717,7 +717,7 @@ export default function handleSupportedURL(payload) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } else {
                     try {
@@ -949,7 +949,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     } else {
                       try {
@@ -997,7 +997,7 @@ export default function handleSupportedURL(payload) {
                             openConjureProject(closure_129_4, closure_130_12);
                           }
                           c4 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         }
                       } catch (tmp17) {
                         c4 = tmp;

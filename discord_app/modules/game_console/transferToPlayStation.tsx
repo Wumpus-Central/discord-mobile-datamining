@@ -1,10 +1,10 @@
-// === Module 11653: transferToPlayStation ===
+// === Module 11655: transferToPlayStation ===
 
-// Module 11653 (transferToPlayStation)
+// Module 11655 (transferToPlayStation)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11654 */;
-import ConsoleCommands from "ConsoleCommands" /* 11658 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11656 */;
+import ConsoleCommands from "ConsoleCommands" /* 11660 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       } else {
         closure_132_1(closure_132_2[4])(closure_131_2.id, closure_131_0);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -134,7 +134,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 15720: ActivitySessionAnalytics ===
+// === Module 15719: ActivitySessionAnalytics ===
 
-// Module 15720 (ActivitySessionAnalytics)
+// Module 15719 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v1 from "v1" /* 1281 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -11,10 +11,10 @@ import MetricEvents from "MetricEvents" /* 6473 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9655 */;
 import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10778 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11398 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11399 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11406 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14130 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11400 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11401 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11408 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
@@ -22,7 +22,7 @@ import QuestStore from "QuestStore" /* 7776 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import UserStore from "UserStore" /* 1392 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15721 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15720 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 
 require = fn;
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 14479: FractionalNitroCollectedActionSheet ===
+// === Module 14478: FractionalNitroCollectedActionSheet ===
 
-// Module 14479 (FractionalNitroCollectedActionSheet)
+// Module 14478 (FractionalNitroCollectedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -20,8 +20,8 @@ import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7691 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9438 */;
 import _modDef10480 from "module_10480" /* 10480 */;
 import _modDef10481 from "module_10481" /* 10481 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 13964 */;
-import _modDef14480 from "module_14480" /* 14480 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 13963 */;
+import _modDef14479 from "module_14479" /* 14479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroA
   skuId = skuId.skuId;
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef14480 };
+    const obj2 = { source: _modDef14479 };
     const tmp9 = React6(FastImageDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -101,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroA
 }) : (function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef14480 };
+  const obj2 = { source: _modDef14479 };
   const items = [React6(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   const items2 = [tmp12Result, ];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(7691);
-  obj5.children = tmp15(skuId(13964).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(587).colors.WHITE });
+  obj5.children = tmp15(skuId(13963).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(587).colors.WHITE });
   items2[1] = tmp15(skuId(6908).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), , ];

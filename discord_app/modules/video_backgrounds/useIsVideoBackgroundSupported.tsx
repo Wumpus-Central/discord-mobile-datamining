@@ -1,6 +1,6 @@
-// === Module 11616: useIsVideoBackgroundSupported ===
+// === Module 11618: useIsVideoBackgroundSupported ===
 
-// Module 11616 (useIsVideoBackgroundSupported)
+// Module 11618 (useIsVideoBackgroundSupported)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 5876 */;

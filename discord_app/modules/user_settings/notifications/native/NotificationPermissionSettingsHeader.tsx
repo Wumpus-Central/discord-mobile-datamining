@@ -1,6 +1,6 @@
-// === Module 16842: NotificationPermissionSettingsHeader ===
+// === Module 16841: NotificationPermissionSettingsHeader ===
 
-// Module 16842 (NotificationPermissionSettingsHeader)
+// Module 16841 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(13311);
+const NotificationPermissionConstants = fn(13310);
 ({ EventActionLocation: closure_7, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: c10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const cResult = canSeePushNotificationNudge(576).c(20);
   const tmp4 = closure_13();
   let obj = canSeePushNotificationNudge(576);
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13312).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13311).useCanSeePushNotificationNudge();
   if (cResult[0] !== canSeePushNotificationNudge) {
     const fn = function o() {
       if (canSeePushNotificationNudge) {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
         }
       }
       const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-      const tmp12 = closure_11(tmp(10872).BellSlashIcon, obj3);
+      const tmp12 = closure_11(tmp(10874).BellSlashIcon, obj3);
       cResult[4] = tmp12;
       const tmp10 = tmp12;
     } else {
@@ -315,10 +315,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     }
     return null;
   }
-  let obj2 = canSeePushNotificationNudge(13312);
+  let obj2 = canSeePushNotificationNudge(13311);
 }) : (function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13312).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13311).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     const obj4 = { style: tmp.cardContent, children: null };
     const obj5 = { style: tmp.iconCircle, children: null };
     const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-    obj5.children = closure_11(tmp2(10872).BellSlashIcon, obj6);
+    obj5.children = closure_11(tmp2(10874).BellSlashIcon, obj6);
     const items1 = [closure_11(View, obj5), , , ];
     const obj7 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1128).intl;

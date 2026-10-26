@@ -1,6 +1,6 @@
-// === Module 11811: ConjureAppIdentity ===
+// === Module 11813: ConjureAppIdentity ===
 
-// Module 11811 (ConjureAppIdentity)
+// Module 11813 (ConjureAppIdentity)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ImagePickerDefault from "ImagePicker" /* 8155 */;
@@ -30,7 +30,7 @@ let closure_13 = async function _pickConjureAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
                               tmp22 = null;
                               if (!disabled) {
                                 let obj3 = { style: tmp4.editIcon };
-                                tmp22 = closure_7(onError(11814), obj3);
+                                tmp22 = closure_7(onError(11816), obj3);
                               }
                             }
                             cResult[23] = disabled;
@@ -267,7 +267,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
           }
           if (tmp5) {
             const obj5 = { size: "md", color: onError(587).colors.ICON_MUTED };
-            let tmp13Result = closure_7(tmp(11812).ImagePlusIcon, obj5);
+            let tmp13Result = closure_7(tmp(11814).ImagePlusIcon, obj5);
           } else {
             const obj6 = { source: null, style: null, resizeMode: "cover" };
             const obj7 = { uri: iconURL };
@@ -301,7 +301,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -327,7 +327,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
         } else if (1 === tmp7) {
           c2 = 0;
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -397,7 +397,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -423,7 +423,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
         } else if (1 === tmp7) {
           c2 = 0;
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -476,7 +476,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
   obj2.onPress = callback;
   if (null == iconURL) {
     let obj3 = { size: "md", color: onError(587).colors.ICON_MUTED };
-    let tmp6Result = closure_7(onChange(11812).ImagePlusIcon, obj3);
+    let tmp6Result = closure_7(onChange(11814).ImagePlusIcon, obj3);
     let tmp9 = onError;
   } else {
     tmp9 = onError;
@@ -493,7 +493,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppIc
     tmp6Result2 = null;
     if (!disabled) {
       const obj6 = { style: tmp.editIcon };
-      tmp6Result2 = closure_7(tmp9(11814), obj6);
+      tmp6Result2 = closure_7(tmp9(11816), obj6);
     }
   }
   items2[1] = tmp6Result2;

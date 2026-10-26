@@ -1,15 +1,15 @@
-// === Module 18048: conjureBackgroundFrameRules ===
+// === Module 18047: conjureBackgroundFrameRules ===
 
-// Module 18048 (conjureBackgroundFrameRules)
+// Module 18047 (conjureBackgroundFrameRules)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 10728 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13865 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15709 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 13864 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15708 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import FramesStore from "FramesStore" /* 6775 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18049 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15711 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18048 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15710 */;
 
 require = fn;
 const FrameIntent = fn(6776).FrameIntent;
@@ -47,11 +47,15 @@ export const shouldRunInBackgroundOnRelease = function shouldRunInBackgroundOnRe
 export const isBuilderPreviewFrame = function isBuilderPreviewFrame(frame) {
   let result = conjurePreviewSurface.isConjurePreviewSurface(frame.surface);
   if (!result) {
-    let tmp3 = frame.intent === FrameIntent.MAIN;
-    if (tmp3) {
-      tmp3 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
+    result = conjurePreviewSurface.isConjurePreviewOverlayFrame(frame);
+    const tmpResult = conjurePreviewSurface;
+  }
+  if (!result) {
+    let tmp5 = frame.intent === FrameIntent.MAIN;
+    if (tmp5) {
+      tmp5 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
     }
-    result = tmp3;
+    result = tmp5;
   }
   return result;
 };

@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

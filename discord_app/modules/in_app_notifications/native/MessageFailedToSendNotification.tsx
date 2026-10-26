@@ -1,6 +1,6 @@
-// === Module 13782: MessageFailedToSendNotification ===
+// === Module 13781: MessageFailedToSendNotification ===
 
-// Module 13782 (MessageFailedToSendNotification)
+// Module 13781 (MessageFailedToSendNotification)
 import nativeDefault from "native" /* 587 */;
 import Client from "Client" /* 5201 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
@@ -40,7 +40,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { size: "md", color: messageId(587).colors.ICON_SUBTLE };
-      const tmp10 = jsx(tmp(11788).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
+      const tmp10 = jsx(tmp(11790).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
       cResult[4] = tmp10;
       let tmp7 = tmp10;
     } else {
@@ -60,7 +60,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj5 = { text: null };
       const intl2 = tmp(1128).intl;
       obj5.text = intl2.string(tmp(1128).t.xxRPOT);
-      const tmp17 = jsx(tmp(13766).SystemMessageText, { text: null });
+      const tmp17 = jsx(tmp(13765).SystemMessageText, { text: null });
       cResult[7] = tmp17;
       let tmp15 = tmp17;
     } else {
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const obj6 = { icon: tmp11, children: tmp15, header: first, onPress: tmp6, notification };
-    const tmp20 = jsx(tmp(13777).NotificationPressable, { icon: tmp11, children: tmp15, header: first, onPress: tmp6, notification });
+    const tmp20 = jsx(tmp(13776).NotificationPressable, { icon: tmp11, children: tmp15, header: first, onPress: tmp6, notification });
     cResult[8] = notification;
     cResult[9] = tmp6;
     cResult[10] = tmp11;
@@ -107,14 +107,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
   const obj3 = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj3.children = jsx(channelId(11788).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
+  obj3.children = jsx(channelId(11790).RetryIcon, { size: "md", color: messageId(587).colors.ICON_SUBTLE });
   obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
   const obj5 = { text: null };
   const intl2 = channelId(1128).intl;
   obj5.text = intl2.string(channelId(1128).t.xxRPOT);
-  obj2.children = jsx(channelId(13766).SystemMessageText, { text: null });
+  obj2.children = jsx(channelId(13765).SystemMessageText, { text: null });
   obj2.header = obj;
   obj2.onPress = callback;
   obj2.notification = notification;
-  return jsx(channelId(13777).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
+  return jsx(channelId(13776).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
 }));

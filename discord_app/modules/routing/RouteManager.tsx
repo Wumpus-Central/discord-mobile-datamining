@@ -1,8 +1,8 @@
-// === Module 11737: RouteManager ===
+// === Module 11739: RouteManager ===
 
-// Module 11737 (RouteManager)
+// Module 11739 (RouteManager)
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import KeybindRouterStore from "KeybindRouterStore" /* 11738 */;
+import KeybindRouterStore from "KeybindRouterStore" /* 11740 */;
 
 let obj2 = fn;
 const Routes = fn(1087).Routes;
@@ -33,7 +33,7 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(11739);
+          obj = obj2(11741);
           if (!obj.convertRouteToNavigation(pathname)) {
             obj2(1114).replaceWith(Routes.ME);
             const tmp2Result = obj2(1114);
@@ -192,7 +192,7 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(11739);
+      obj = obj2(11741);
       if (!obj.convertRouteToNavigation(pathname)) {
         obj2(1114).replaceWith(Routes.ME);
         const tmp2Result = obj2(1114);

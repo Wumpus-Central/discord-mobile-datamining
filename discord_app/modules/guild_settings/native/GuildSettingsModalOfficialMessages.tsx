@@ -1,6 +1,6 @@
-// === Module 19334: GuildSettingsModalOfficialMessages ===
+// === Module 19333: GuildSettingsModalOfficialMessages ===
 
-// Module 19334 (GuildSettingsModalOfficialMessages)
+// Module 19333 (GuildSettingsModalOfficialMessages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -13,7 +13,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210
 import Text_Text from "Text/Text" /* 5234 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7367 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
-import _modDef16641 from "module_16641" /* 16641 */;
+import _modDef16640 from "module_16640" /* 16640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -108,7 +108,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
           }
           const _Symbol = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: _modDef16641 };
+            const obj3 = { source: _modDef16640 };
             const tmp24 = __initData(native.Avatar, obj3);
             cResult[15] = tmp24;
             let tmp21 = tmp24;
@@ -285,7 +285,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(v65535).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef683(selectedColor).alpha(v65535).hex();
-  const items2 = [__initData(native.Avatar, { source: _modDef16641 }), ];
+  const items2 = [__initData(native.Avatar, { source: _modDef16640 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -385,7 +385,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(17740, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(17739, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

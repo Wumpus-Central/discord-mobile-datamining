@@ -1,6 +1,6 @@
-// === Module 17946: ICYMICardInCard ===
+// === Module 17945: ICYMICardInCard ===
 
-// Module 17946 (ICYMICardInCard)
+// Module 17945 (ICYMICardInCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5234 */;
 import GuildIcon from "GuildIcon" /* 6883 */;
 import TextIcon2 from "TextIcon" /* 8551 */;
 import ClipView from "ClipView" /* 9406 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 17940 */;
-import getIconForChannel from "getIconForChannel" /* 17947 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 17939 */;
+import getIconForChannel from "getIconForChannel" /* 17946 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(17900);
+const createICYMIStyles = fn(17899);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin }, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };

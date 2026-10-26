@@ -1,13 +1,13 @@
-// === Module 17949: GamingLikeEntryRow ===
+// === Module 17948: GamingLikeEntryRow ===
 
-// Module 17949 (GamingLikeEntryRow)
+// Module 17948 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8613 */;
 import utils from "utils" /* 8617 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
-import BadgesAll from "Badges" /* 14294 */;
-import TrendingType from "TrendingType" /* 14299 */;
+import BadgesAll from "Badges" /* 14293 */;
+import TrendingType from "TrendingType" /* 14298 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -69,7 +69,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(17900);
+const createICYMIStyles = fn(17899);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -144,7 +144,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(17950, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(17949, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

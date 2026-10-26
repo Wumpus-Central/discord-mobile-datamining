@@ -1,11 +1,11 @@
-// === Module 16410: useOrbsArcadeRewardAccentColor ===
+// === Module 16409: useOrbsArcadeRewardAccentColor ===
 
-// Module 16410 (useOrbsArcadeRewardAccentColor)
+// Module 16409 (useOrbsArcadeRewardAccentColor)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11049 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 13945 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16396 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11051 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 13944 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16395 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

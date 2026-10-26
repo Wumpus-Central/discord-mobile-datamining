@@ -1,13 +1,13 @@
-// === Module 16400: OrbsArcadeActionCreators ===
+// === Module 16399: OrbsArcadeActionCreators ===
 
-// Module 16400 (OrbsArcadeActionCreators)
+// Module 16399 (OrbsArcadeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16401 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16400 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16394 */;
 import Backoff from "Backoff" /* 569 */;
 
 require = fn;
@@ -32,7 +32,7 @@ let closure_13 = async function _fetchOrbsArcadeGames() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_14 = async function _resetOrbsArcadeGame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_14 = async function _resetOrbsArcadeGame(arg0) {
           return obj6;
         } else {
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -201,7 +201,7 @@ let closure_15 = async function _ensureOrbsArcadeEnrollment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -248,7 +248,7 @@ let closure_15 = async function _ensureOrbsArcadeEnrollment(arg0) {
         const obj7 = { type: "ORBS_ARCADE_GAME_STATE_UPDATE", game_id: closure_129_0.id, game_state: body };
         closure_130_1(closure_130_2[6]).dispatch(obj7);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp27) {
       closure_3 = tmp27;
@@ -388,7 +388,7 @@ let closure_19 = async function _claimOrbsArcadeRewards() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

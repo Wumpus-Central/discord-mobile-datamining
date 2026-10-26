@@ -1,6 +1,6 @@
-// === Module 16360: usePopularOrbShopProducts ===
+// === Module 16359: usePopularOrbShopProducts ===
 
-// Module 16360 (usePopularOrbShopProducts)
+// Module 16359 (usePopularOrbShopProducts)
 import DurationsDefault from "Durations" /* 1104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -53,7 +53,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -70,11 +70,11 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 closure_1 = tmp8;
                 closure_129_0 = undefined;
                 let v0 = 2;
-                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(16362).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(1093).CollectibleSearchSortDirection.DESC };
+                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(16361).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(1093).CollectibleSearchSortDirection.DESC };
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(16361).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(16360).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -117,7 +117,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               sort_type = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp34) {
             closure_3 = tmp34;

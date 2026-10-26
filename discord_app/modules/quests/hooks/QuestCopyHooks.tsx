@@ -1,6 +1,6 @@
-// === Module 14139: QuestCopyHooks ===
+// === Module 14138: QuestCopyHooks ===
 
-// Module 14139 (QuestCopyHooks)
+// Module 14138 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
@@ -14,9 +14,9 @@ import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9246 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9570 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9589 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9594 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11454 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14128 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14141 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11456 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14127 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1128);
 const utils_QuestUtils = v1votF6(7796);
-const SponsoredQuestUtils = v1votF6(14140);
+const SponsoredQuestUtils = v1votF6(14139);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -1787,7 +1787,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1827,7 +1827,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = sourceQuestContent;
           tmp4(preCtaClick[27]).openGameLinkDirectly(tmp4, obj6);
           v3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -1867,7 +1867,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1907,7 +1907,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = closure_128_4;
           tmp4(9607).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

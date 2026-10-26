@@ -1,13 +1,13 @@
-// === Module 18997: AssetChooser ===
+// === Module 18996: AssetChooser ===
 
-// Module 18997 (AssetChooser)
+// Module 18996 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import Pressables from "Pressables" /* 6908 */;
+import _modDef18997 from "module_18997" /* 18997 */;
 import _modDef18998 from "module_18998" /* 18998 */;
-import _modDef18999 from "module_18999" /* 18999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ class AssetChooser extends PureComponent {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef18998;
+    tmp9Result = _modDef18997;
   }
   const items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef18999 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef18998 };
     obj4.children = React5(FastImageDefault, obj5);
     tmp5Result = React5(React4, obj4);
     const tmp9Result2 = FastImageDefault;

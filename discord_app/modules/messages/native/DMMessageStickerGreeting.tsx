@@ -1,6 +1,6 @@
-// === Module 13157: DMMessageStickerGreeting ===
+// === Module 13156: DMMessageStickerGreeting ===
 
-// Module 13157 (DMMessageStickerGreeting)
+// Module 13156 (DMMessageStickerGreeting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -146,7 +146,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
                 v2(false);
                 showErrorToast(tmp26);
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } else {
                 c3 = 1;
                 const obj4 = { channelId: closure_0.id, source: "In-channel greet" };
@@ -264,7 +264,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -296,7 +296,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
                 v2(false);
                 showErrorToast(tmp26);
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } else {
                 c3 = 1;
                 const obj4 = { channelId: id.id, source: "In-channel greet" };
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const intl2 = tmp(1128).intl;
   intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
   let obj5 = hasInputText(5025);
-  const showConvoStarterInDM = channel(13159).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = channel(13158).useShowConvoStarterInDM(channel);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [StickersStore];
     cResult[6] = items2;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     }
     tmp20 = cResult[9];
   }
-  const tmpResult7 = channel(13159);
+  const tmpResult7 = channel(13158);
   const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
   if (cResult[10] !== showConvoStarterInDM) {
     class U {

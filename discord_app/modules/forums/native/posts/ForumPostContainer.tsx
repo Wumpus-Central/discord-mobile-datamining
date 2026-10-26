@@ -1,11 +1,11 @@
-// === Module 13118: ForumPostContainer ===
+// === Module 13117: ForumPostContainer ===
 
-// Module 13118 (ForumPostContainer)
+// Module 13117 (ForumPostContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import Card from "Card" /* 6905 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10996 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

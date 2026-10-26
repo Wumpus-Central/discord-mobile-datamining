@@ -1,6 +1,6 @@
-// === Module 13356: ChatInputGuard ===
+// === Module 13355: ChatInputGuard ===
 
-// Module 13356 (ChatInputGuard)
+// Module 13355 (ChatInputGuard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Radius from "Radius" /* 681 */;
@@ -13,9 +13,9 @@ import native from "native" /* 8913 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9709 */;
 import CountDownDefault from "CountDown" /* 10036 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10625 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10822 */;
-import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 13154 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13160 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10824 */;
+import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 13153 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   ({ channelId, onJumpToPresent, children } = screenIndex);
   const tmp5 = useIsUsingClientThemeDefault();
   const obj = screenIndex(576);
-  const chatInputFloatingOverlayStyle = screenIndex(13155).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(13154).useChatInputFloatingOverlayStyle();
   const tmp7 = closure_9(tmp5);
   if (cResult[0] !== screenIndex) {
     const fn = function n(nativeEvent) {
@@ -89,7 +89,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
     tmp11 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp14 = closure_7(tmp(13155).ChatInputScrimGradient, {});
+    const tmp14 = closure_7(tmp(13154).ChatInputScrimGradient, {});
     cResult[5] = tmp14;
     let tmp12 = tmp14;
   } else {
@@ -193,13 +193,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   cResult[7] = tmp7.underlay;
   cResult[8] = tmp16;
   tmp15 = tmp16;
-  const obj2 = screenIndex(13155);
+  const obj2 = screenIndex(13154);
 }) : (function ChatInputGuardContainer(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  const chatInputFloatingOverlayStyle = screenIndex(13155).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(13154).useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   const items = [screenIndex];
   const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
@@ -209,7 +209,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj2.style = items1;
   obj2.onLayout = callback;
-  const items2 = [closure_7(screenIndex(13155).ChatInputScrimGradient, {}), ];
+  const items2 = [closure_7(screenIndex(13154).ChatInputScrimGradient, {}), ];
   const obj3 = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -225,7 +225,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   const items4 = [tmp10Result3, children];
   obj5.children = items4;
   items3[1] = closure_8(closure_5, obj5);
-  const obj = screenIndex(13155);
+  const obj = screenIndex(13154);
   let tmp10Result4 = null;
   if (tmp4Result.isIOS()) {
     tmp10Result4 = null;

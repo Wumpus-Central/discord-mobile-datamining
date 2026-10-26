@@ -395,7 +395,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         }
                       } else {
                         try {
@@ -710,7 +710,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

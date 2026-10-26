@@ -1,6 +1,6 @@
-// === Module 11116: BadgeManagementExperiment ===
+// === Module 11118: BadgeManagementExperiment ===
 
-// Module 11116 (BadgeManagementExperiment)
+// Module 11118 (BadgeManagementExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

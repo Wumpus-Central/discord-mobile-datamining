@@ -1,6 +1,6 @@
-// === Module 19284: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 19283: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 19284 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 19283 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,7 +12,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
 import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19285 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

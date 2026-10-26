@@ -1,7 +1,7 @@
-// === Module 13204: GuildDirectoryCreateOrAddDescription ===
+// === Module 13203: GuildDirectoryCreateOrAddDescription ===
 
-// Module 13204 (GuildDirectoryCreateOrAddDescription)
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13202 */;
+// Module 13203 (GuildDirectoryCreateOrAddDescription)
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 13201 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
               template = template.template;
               if (null == template) {
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } else {
                 c4 = 1;
                 c5 = 1;
@@ -88,7 +88,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
           return obj;
         }
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp29) {
         c5 = tmp;
         throw tmp29;
@@ -129,5 +129,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(directoryChannelId(13194).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(13193).GuildDirectoryAddModalScreen, obj);
 };

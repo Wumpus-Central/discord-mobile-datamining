@@ -1,8 +1,8 @@
-// === Module 19002: AutomodStore ===
+// === Module 19001: AutomodStore ===
 
-// Module 19002 (AutomodStore)
+// Module 19001 (AutomodStore)
 import _mod4886 from "module_4886" /* 4886 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 19003 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 19002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -233,7 +233,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -303,7 +303,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -331,7 +331,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
               return obj;
             } else {
               c0 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp6) {
             c0 = tmp;
@@ -393,7 +393,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -462,7 +462,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -490,7 +490,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp6) {
           c0 = tmp;
@@ -526,7 +526,7 @@ function useSyncAutomodRules(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

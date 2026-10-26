@@ -1,6 +1,6 @@
-// === Module 14240: useMediaViewerPanGesture ===
+// === Module 14239: useMediaViewerPanGesture ===
 
-// Module 14240 (useMediaViewerPanGesture)
+// Module 14239 (useMediaViewerPanGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import spring from "spring" /* 5247 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;

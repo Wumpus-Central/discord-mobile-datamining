@@ -1,12 +1,12 @@
-// === Module 11748: useConjureProjects ===
+// === Module 11750: useConjureProjects ===
 
-// Module 11748 (useConjureProjects)
+// Module 11750 (useConjureProjects)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6808 */;
 import conjureAppInServer from "conjureAppInServer" /* 10731 */;
-import ConjureActivity from "ConjureActivity" /* 11745 */;
+import ConjureActivity from "ConjureActivity" /* 11747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
