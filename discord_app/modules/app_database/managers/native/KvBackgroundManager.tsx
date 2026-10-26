@@ -1,12 +1,12 @@
-// === Module 18790: KvBackgroundManager ===
+// === Module 18800: KvBackgroundManager ===
 
-// Module 18790 (KvBackgroundManager)
+// Module 18800 (KvBackgroundManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18791 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18801 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 13313 */;
+import MultiAccountStore from "MultiAccountStore" /* 13316 */;
 import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7587 */;
 import FileSystemStore from "FileSystemStore" /* 7588 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
@@ -50,7 +50,7 @@ class KvBackgroundManager extends tmp4 {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -104,7 +104,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp5) {
                   c0 = tmp;
                   throw tmp5;
@@ -125,7 +125,7 @@ class KvBackgroundManager extends tmp4 {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -170,7 +170,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp6) {
                   c0 = tmp;
@@ -192,7 +192,7 @@ class KvBackgroundManager extends tmp4 {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -220,7 +220,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp7) {
                   c0 = tmp;
                   throw tmp7;
@@ -240,7 +240,7 @@ class KvBackgroundManager extends tmp4 {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 while (true) {
@@ -293,7 +293,7 @@ class KvBackgroundManager extends tmp4 {
                         continue;
                       }
                       c7 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     users = 0;
@@ -316,7 +316,7 @@ class KvBackgroundManager extends tmp4 {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -345,7 +345,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     v3 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp7) {
                   v3 = tmp;
@@ -392,7 +392,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -440,7 +440,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             if (obj10.isIOS()) {
               if (closure_128_2 === tmp3(tmp70[9]).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             }
             c3 = 1;
@@ -512,7 +512,7 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -572,7 +572,7 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
         const steps2 = closure_128_1.steps;
         v2 = 2;
@@ -601,7 +601,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 11540: useRequestToSpeakPermission ===
+// === Module 11541: useRequestToSpeakPermission ===
 
-// Module 11540 (useRequestToSpeakPermission)
+// Module 11541 (useRequestToSpeakPermission)
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

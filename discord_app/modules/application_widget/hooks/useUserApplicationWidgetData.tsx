@@ -1,10 +1,10 @@
-// === Module 11868: useUserApplicationWidgetData ===
+// === Module 11756: useUserApplicationWidgetData ===
 
-// Module 11868 (useUserApplicationWidgetData)
+// Module 11756 (useUserApplicationWidgetData)
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7708 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
 import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10791 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11869 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;

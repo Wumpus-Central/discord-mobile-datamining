@@ -1,23 +1,23 @@
-// === Module 17715: CheersSpotIllustration ===
+// === Module 17716: CheersSpotIllustration ===
 
-// Module 17715 (CheersSpotIllustration)
+// Module 17716 (CheersSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef17716 from "module_17716" /* 17716 */;
 import _modDef17717 from "module_17717" /* 17717 */;
 import _modDef17718 from "module_17718" /* 17718 */;
+import _modDef17719 from "module_17719" /* 17719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17716 }, 3: null };
-let obj2 = { uri: _modDef17716 };
-obj[2] = { uri: _modDef17717 };
-const obj3 = { uri: _modDef17717 };
-obj[3] = { uri: _modDef17718 };
+let obj = { 1: null, 2: { uri: _modDef17717 }, 3: null };
+let obj2 = { uri: _modDef17717 };
+obj[2] = { uri: _modDef17718 };
+const obj3 = { uri: _modDef17718 };
+obj[3] = { uri: _modDef17719 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17718 };
+const obj4 = { uri: _modDef17719 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CheersSpotIllustration.native.tsx");
 

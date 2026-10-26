@@ -1,6 +1,6 @@
-// === Module 15978: SettingListRenderer ===
+// === Module 15979: SettingListRenderer ===
 
-// Module 15978 (SettingListRenderer)
+// Module 15979 (SettingListRenderer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -8,15 +8,15 @@ import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import _mod7220 from "module_7220" /* 7220 */;
-import SettingRenderer from "SettingRenderer" /* 15980 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15981 */;
-import useAutoScrollToSetting from "useAutoScrollToSetting" /* 15986 */;
-import useSettingSearchResults from "useSettingSearchResults" /* 15987 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 15990 */;
-import SettingSearchBarDefault from "SettingSearchBar" /* 15991 */;
+import SettingRenderer from "SettingRenderer" /* 15981 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15982 */;
+import useAutoScrollToSetting from "useAutoScrollToSetting" /* 15987 */;
+import useSettingSearchResults from "useSettingSearchResults" /* 15988 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 15991 */;
+import SettingSearchBarDefault from "SettingSearchBar" /* 15992 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15979 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 15829 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15980 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 15830 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11209).ListItemType;
+const ListItemType = fn(11210).ListItemType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
@@ -241,7 +241,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(15986).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(15987).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};

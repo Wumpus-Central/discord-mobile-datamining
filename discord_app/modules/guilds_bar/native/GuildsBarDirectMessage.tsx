@@ -1,6 +1,6 @@
-// === Module 17786: GuildsBarDirectMessage ===
+// === Module 17787: GuildsBarDirectMessage ===
 
-// Module 17786 (GuildsBarDirectMessage)
+// Module 17787 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;

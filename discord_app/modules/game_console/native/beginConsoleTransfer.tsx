@@ -1,8 +1,8 @@
-// === Module 11651: beginConsoleTransfer ===
+// === Module 11652: beginConsoleTransfer ===
 
-// Module 11651 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11652 */;
-import transferToXboxDefault from "transferToXbox" /* 11664 */;
+// Module 11652 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11653 */;
+import transferToXboxDefault from "transferToXbox" /* 11665 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;

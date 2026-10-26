@@ -1,6 +1,6 @@
-// === Module 17150: UserSettingsDesignSystemContextMenu ===
+// === Module 17151: UserSettingsDesignSystemContextMenu ===
 
-// Module 17150 (UserSettingsDesignSystemContextMenu)
+// Module 17151 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,11 +10,11 @@ import _modDef5692 from "module_5692" /* 5692 */;
 import Card from "Card" /* 6905 */;
 import _modDef7189 from "module_7189" /* 7189 */;
 import _modDef8324 from "module_8324" /* 8324 */;
-import _modDef11257 from "module_11257" /* 11257 */;
-import _modDef11262 from "module_11262" /* 11262 */;
-import _modDef13721 from "module_13721" /* 13721 */;
-import _modDef17151 from "module_17151" /* 17151 */;
+import _modDef11258 from "module_11258" /* 11258 */;
+import _modDef11263 from "module_11263" /* 11263 */;
+import _modDef13723 from "module_13723" /* 13723 */;
 import _modDef17152 from "module_17152" /* 17152 */;
+import _modDef17153 from "module_17153" /* 17153 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [_modDef13721, _modDef7189, _modDef8324, _modDef11262, _modDef5692, _modDef17151, _modDef17152, _modDef11257];
+let items = [_modDef13723, _modDef7189, _modDef8324, _modDef11263, _modDef5692, _modDef17152, _modDef17153, _modDef11258];
 let closure_10 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 const createStyles = fn(4971);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
@@ -67,7 +67,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoCo
       closure_2 = _mod12.shuffle(items);
       const obj3 = { length: closure_1 };
       return Array.from({ length: closure_1 }).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "toCharArray$esjava$1", action: "top" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 1313996803, action: 1166877270 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoCo
       let obj3 = { length: num2 };
       const tmpResult2 = tmp(12);
       const mapped1 = Array.from(obj3).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "toCharArray$esjava$1", action: "top" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 1313996803, action: 1166877270 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoCo
         const obj2 = text(num[14]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "toCharArray$esjava$1", action: "top" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 1313996803, action: 1166877270 };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -212,7 +212,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoCo
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "toCharArray$esjava$1", action: "top" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 1313996803, action: 1166877270 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";

@@ -1,6 +1,6 @@
-// === Module 16257: ConnectedAccount ===
+// === Module 16258: ConnectedAccount ===
 
-// Module 16257 (ConnectedAccount)
+// Module 16258 (ConnectedAccount)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native2 from "native" /* 1202 */;
@@ -19,10 +19,10 @@ import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreat
 import TableSwitchRow from "TableSwitchRow" /* 7295 */;
 import IconButton from "IconButton" /* 7959 */;
 import XLargeBoldIcon from "XLargeBoldIcon" /* 9218 */;
-import InfoBoxDefault from "InfoBox" /* 11054 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 16258 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 16259 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 16262 */;
+import InfoBoxDefault from "InfoBox" /* 11055 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 16259 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 16260 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 16263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -668,36 +668,36 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = account(7275).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11270).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11270);
+    let redditMetadataItems = tmp2(11271).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11271);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11270).generateSteamMetadataItems(metadata);
-    const tmp2Result7 = tmp2(11270);
+    redditMetadataItems = tmp2(11271).generateSteamMetadataItems(metadata);
+    const tmp2Result7 = tmp2(11271);
   } else if (constants.LETTERBOXD === type) {
-    redditMetadataItems = tmp2(11270).generateLetterboxdMetadataItems(metadata);
-    const tmp2Result8 = tmp2(11270);
+    redditMetadataItems = tmp2(11271).generateLetterboxdMetadataItems(metadata);
+    const tmp2Result8 = tmp2(11271);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11270).generateEbayMetadataItems(metadata);
-            const tmp2Result9 = tmp2(11270);
+            redditMetadataItems = tmp2(11271).generateEbayMetadataItems(metadata);
+            const tmp2Result9 = tmp2(11271);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11270).generatePaypalMetadataItems(metadata);
-            const tmp2Result10 = tmp2(11270);
+            redditMetadataItems = tmp2(11271).generatePaypalMetadataItems(metadata);
+            const tmp2Result10 = tmp2(11271);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11270).generateTikTokMetadataItems(metadata);
-              const tmp2Result11 = tmp2(11270);
+              redditMetadataItems = tmp2(11271).generateTikTokMetadataItems(metadata);
+              const tmp2Result11 = tmp2(11271);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11270).generateTwitterMetadataItems(metadata);
-    const tmp2Result12 = tmp2(11270);
+    redditMetadataItems = tmp2(11271).generateTwitterMetadataItems(metadata);
+    const tmp2Result12 = tmp2(11271);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -775,7 +775,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp19Result = closure_14(tmp2(9216).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(11788).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(12270).RefreshIcon, { size: "sm" });
     }
     const obj12 = { size: "sm", variant: "icon-only", icon: tmp19Result, accessibilityLabel: null, onPress: null, disabled: null };
     const intl3 = tmp2(1128).intl;

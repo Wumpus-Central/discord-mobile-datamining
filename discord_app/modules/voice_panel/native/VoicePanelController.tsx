@@ -1,6 +1,6 @@
-// === Module 18652: VoicePanelController ===
+// === Module 18662: VoicePanelController ===
 
-// Module 18652 (VoicePanelController)
+// Module 18662 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1104 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
@@ -18,24 +18,24 @@ import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6780 */;
 import DeviceOrientation from "DeviceOrientation" /* 8820 */;
 import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9173 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9976 */;
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 10902 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10904 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11393 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14331 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 18450 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18491 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18506 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 18584 */;
-import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 18653 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 18654 */;
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 10903 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10905 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11394 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14332 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 18460 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18501 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18516 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 18594 */;
+import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 18663 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 18664 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
 import AppFreezeStore from "AppFreezeStore" /* 8781 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11514 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11371 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11515 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11372 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
@@ -399,16 +399,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(10900);
+const VoicePanelConstants = fn(10901);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(10898);
+const VoicePanelControlsConstants = fn(10899);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2026).OrientationLockState;
 const ActivityPanelModes = fn(5609).ActivityPanelModes;
 const isActivityParticipant = fn(5632).isActivityParticipant;
-const MorphablePanelModes = fn(10901).MorphablePanelModes;
+const MorphablePanelModes = fn(10902).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {

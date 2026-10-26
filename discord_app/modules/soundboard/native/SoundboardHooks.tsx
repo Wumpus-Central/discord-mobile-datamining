@@ -1,6 +1,6 @@
-// === Module 18520: SoundboardHooks ===
+// === Module 18530: SoundboardHooks ===
 
-// Module 18520 (SoundboardHooks)
+// Module 18530 (SoundboardHooks)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,7 +9,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(18513);
+const SoundboardStyleConstants = fn(18523);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
 const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
 fn(558);
@@ -81,7 +81,7 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -111,7 +111,7 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
               return obj;
             }
             c0 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;
@@ -179,7 +179,7 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -209,7 +209,7 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
             return obj;
           }
           c0 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } catch (tmp9) {
           c0 = tmp;
           throw tmp9;

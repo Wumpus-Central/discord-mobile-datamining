@@ -1,6 +1,6 @@
-// === Module 11759: ConjureAttachmentTypes ===
+// === Module 12162: ConjureAttachmentTypes ===
 
-// Module 11759 (ConjureAttachmentTypes)
+// Module 12162 (ConjureAttachmentTypes)
 import FileSizeUtils from "FileSizeUtils" /* 6379 */;
 import size from "module_2" /* 2 */;
 

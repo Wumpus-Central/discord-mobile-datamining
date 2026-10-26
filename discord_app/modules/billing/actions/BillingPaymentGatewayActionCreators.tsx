@@ -46,7 +46,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -267,13 +267,76 @@ let closure_23 = async function _submitElementsAndCreateStripePaymentMethod() {
   closure_130_2 = value;
   return { paymentMethod: closure_130_2.paymentMethod, error: closure_130_2.error };
 };
-let closure_24 = async function _createExpressCheckoutPaymentMethod() {
-  closure_1 = tmp2;
-  ({ stripePaymentMethodId: closure_129_0, billingAddress: closure_129_1, analyticsLocation: closure_129_2 } = closure_0);
-  await "Reflect";
-  await closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1);
-  closure_129_3 = value;
-  return closure_130_0(closure_130_3[6]).createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, { billingAddressToken: closure_129_3, analyticsLocation: closure_129_2 });
+let closure_24 = async function _createExpressCheckoutPaymentMethod(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ stripePaymentMethodId: closure_129_0, billingAddress: closure_129_1, analyticsLocation: closure_129_2 } = closure_0);
+          closure_129_3 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_129_3 = value;
+        const obj = closure_130_0(closure_130_3[6]);
+        const obj8 = { billingAddressToken: closure_129_3, analyticsLocation: closure_129_2 };
+        c4 = 3;
+        const obj9 = { value: obj.createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, obj8), done: true };
+        return obj9;
+      }
+    } catch (tmp23) {
+      c4 = tmp;
+      throw tmp23;
+    }
+  }
 };
 let closure_26 = async function _confirmPaymentElementSource() {
   dependencyMap = [...arguments];
@@ -291,7 +354,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -379,7 +442,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
               let billing_details;
               c12 = 3;
               c13 = 1;
-              return { value: "Reflect", done: null };
+              return { value: "Reflect", done: true };
             }
           break;
           case 1:
@@ -638,7 +701,7 @@ let closure_27 = async function _confirmCardPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -804,7 +867,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -837,7 +900,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
           let adyen_redirect_url;
           c12 = 1;
           c13 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -976,7 +1039,7 @@ let closure_32 = async function _createStripePaymentSourceToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

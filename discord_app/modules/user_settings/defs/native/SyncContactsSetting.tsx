@@ -1,17 +1,17 @@
-// === Module 16134: SyncContactsSetting ===
+// === Module 16135: SyncContactsSetting ===
 
-// Module 16134 (SyncContactsSetting)
+// Module 16135 (SyncContactsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13583 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 16135 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13585 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 16136 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const PlatformTypes = fn(1087).PlatformTypes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useContactSyncSettingValue() {
   const cResult = c.c(2);
   const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();

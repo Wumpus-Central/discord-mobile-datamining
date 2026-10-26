@@ -1,6 +1,6 @@
-// === Module 12557: ConjureDebugAgentTab ===
+// === Module 12560: ConjureDebugAgentTab ===
 
-// Module 12557 (ConjureDebugAgentTab)
+// Module 12560 (ConjureDebugAgentTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,12 +8,12 @@ import _modDef3830 from "module_3830" /* 3830 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import ConjureUsageTypes from "ConjureUsageTypes" /* 10706 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 12551 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12552 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12554 */;
-import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 12556 */;
-import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 12558 */;
-import ConjureDebugGitSection from "ConjureDebugGitSection" /* 12559 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 12554 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12555 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12557 */;
+import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 12559 */;
+import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 12561 */;
+import ConjureDebugGitSection from "ConjureDebugGitSection" /* 12562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

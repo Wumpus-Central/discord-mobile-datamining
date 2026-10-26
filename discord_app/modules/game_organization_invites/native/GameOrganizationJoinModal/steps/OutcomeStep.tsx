@@ -1,6 +1,6 @@
-// === Module 12730: OutcomeStep ===
+// === Module 12733: OutcomeStep ===
 
-// Module 12730 (OutcomeStep)
+// Module 12733 (OutcomeStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,9 +10,9 @@ import components_Button_Button from "components/Button/Button" /* 5244 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
 import ModalScreen from "ModalScreen" /* 7900 */;
 import ModalContent from "ModalContent" /* 7901 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12724 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12725 */;
-import ModalFooter from "ModalFooter" /* 12727 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12727 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12728 */;
+import ModalFooter from "ModalFooter" /* 12730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -100,9 +100,9 @@ function getOutcomeContent(joinStatus, failureReason, guildJoinStatus, noun, arg
     return obj19;
   }
 }
-const GameOrganizationInviteConstants = fn(11029);
+const GameOrganizationInviteConstants = fn(11030);
 ({ GameOrganizationInviteAcceptFailureReason: c3, GameOrganizationInviteAcceptStatus: closure_4, GameOrganizationLinkedGuildJoinStatus: hasOwnProperty } = GameOrganizationInviteConstants);
-let closure_6 = fn(12722).closeGameOrganizationJoinModal;
+let closure_6 = fn(12725).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4971);

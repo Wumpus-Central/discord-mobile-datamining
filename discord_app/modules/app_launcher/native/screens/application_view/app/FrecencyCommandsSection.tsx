@@ -1,11 +1,11 @@
-// === Module 12140: FrecencyCommandsSection ===
+// === Module 12031: FrecencyCommandsSection ===
 
-// Module 12140 (FrecencyCommandsSection)
+// Module 12031 (FrecencyCommandsSection)
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11169 */;
-import AppDetailContent from "AppDetailContent" /* 12121 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12141 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11170 */;
+import AppDetailContent from "AppDetailContent" /* 12012 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4971);
-let obj2 = { container: { marginBottom: fn(12121).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+let obj2 = { container: { marginBottom: fn(12012).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: fn(12121).BETWEEN_SECTIONS_MARGIN };
+let obj3 = { marginBottom: fn(12012).BETWEEN_SECTIONS_MARGIN };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
 

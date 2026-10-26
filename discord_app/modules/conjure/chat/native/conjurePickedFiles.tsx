@@ -1,11 +1,11 @@
-// === Module 12480: conjurePickedFiles ===
+// === Module 12463: conjurePickedFiles ===
 
-// Module 12480 (conjurePickedFiles)
+// Module 12463 (conjurePickedFiles)
 import UploadDefault from "Upload" /* 8144 */;
 import UploadPlatform from "UploadPlatform" /* 8145 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8154 */;
 import ImagePickerDefault from "ImagePicker" /* 8155 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 11757 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_4 = async function _pickConjurePhotos() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ let closure_7 = async function _uploadConjurePickedFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

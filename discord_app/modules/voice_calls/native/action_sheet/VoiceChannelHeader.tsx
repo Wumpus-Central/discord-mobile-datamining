@@ -1,6 +1,6 @@
-// === Module 14629: VoiceChannelHeader ===
+// === Module 14630: VoiceChannelHeader ===
 
-// Module 14629 (VoiceChannelHeader)
+// Module 14630 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,12 +10,12 @@ import useChannelNameDefault from "useChannelName" /* 5604 */;
 import Pressables from "Pressables" /* 6908 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9050 */;
-import _modDef10860 from "module_10860" /* 10860 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11291 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11561 */;
-import CallStateHooks from "CallStateHooks" /* 14630 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14631 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14632 */;
+import _modDef10861 from "module_10861" /* 10861 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11292 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11562 */;
+import CallStateHooks from "CallStateHooks" /* 14631 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14632 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 14633 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import GuildStore from "GuildStore" /* 4845 */;
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   }
   const obj = channel(576);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-  const tmp10 = stateFromStores1(11561)(channel);
+  const tmp10 = stateFromStores1(11562)(channel);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[3] = items1;
@@ -414,9 +414,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(14634);
+    let tmp5Result = tmp5(14635);
   } else {
-    tmp5Result = tmp5(11668);
+    tmp5Result = tmp5(11669);
   }
   obj6.source = tmp5Result;
   obj6.style = tmp.icons;
@@ -466,14 +466,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
     }
     return tmp7;
   }
-  const tmp8 = v65535(closure_15, { onPress, iconSource: _modDef10860, iconStyle: tmp4.icons, accessibilityLabel: first });
+  const tmp8 = v65535(closure_15, { onPress, iconSource: _modDef10861, iconStyle: tmp4.icons, accessibilityLabel: first });
   cResult[1] = onPress;
   cResult[2] = tmp4.icons;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { onPress, iconSource: _modDef10860, iconStyle: tmp4.icons, accessibilityLabel: first };
+  const obj2 = { onPress, iconSource: _modDef10861, iconStyle: tmp4.icons, accessibilityLabel: first };
 }) : (function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10860, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10861, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return v65535(closure_15, obj);

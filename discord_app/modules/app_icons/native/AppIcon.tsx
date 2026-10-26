@@ -1,6 +1,6 @@
-// === Module 16383: AppIcon ===
+// === Module 16384: AppIcon ===
 
-// Module 16383 (AppIcon)
+// Module 16384 (AppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import shared from "shared" /* 4978 */;

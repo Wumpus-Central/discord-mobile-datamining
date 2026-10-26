@@ -1,6 +1,6 @@
-// === Module 16527: QuestDockDragHandle ===
+// === Module 16528: QuestDockDragHandle ===
 
-// Module 16527 (QuestDockDragHandle)
+// Module 16528 (QuestDockDragHandle)
 import spring from "spring" /* 5247 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7168 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(6710).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16440).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16441).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4971);
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = activeQuestDockMode(576).c(23);
   isExpanded = isExpanded.isExpanded;
   const tmp4 = closure_8();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16441).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16442).QuestDockGestureContext).activeQuestDockMode;
   importDefault = tmp5;
   const obj = activeQuestDockMode(576);
   const fn = function c() {
@@ -168,7 +168,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tmp35 = tmp38;
             }
           }
-          const obj11 = { style: animatedStyle, layout: tmp(16439).dimensionsLayoutTransition, children: null };
+          const obj11 = { style: animatedStyle, layout: tmp(16440).dimensionsLayoutTransition, children: null };
           let items = [tmp17, tmp26];
           obj11.children = items;
           const tmp34 = closure_7(ReanimatedNativeViewDefault, obj11);
@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_8();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16441).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16442).QuestDockGestureContext).activeQuestDockMode;
   importDefault = tmp4;
   const fn = function c() {
     let num = 0;
@@ -260,7 +260,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj6 = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   const obj8 = { style: animatedStyle, layout: null, children: null };
   const tmp10 = ReanimatedNativeViewDefault;
-  obj8.layout = activeQuestDockMode(16439).dimensionsLayoutTransition;
+  obj8.layout = activeQuestDockMode(16440).dimensionsLayoutTransition;
   const obj9 = { style: null, children: null };
   let items = [tmp.dragHandleOverlay, animatedStyle2];
   obj9.style = items;

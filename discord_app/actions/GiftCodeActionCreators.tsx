@@ -1,10 +1,10 @@
-// === Module 11036: GiftCodeActionCreators ===
+// === Module 11037: GiftCodeActionCreators ===
 
-// Module 11036 (GiftCodeActionCreators)
+// Module 11037 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4795 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11037 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
@@ -31,7 +31,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -213,7 +213,7 @@ let closure_6 = fn(7658).isUnknownCollectiblesItemRecord;
 const Constants = fn(1087);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1394).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11038).default);
+const merged = Object.assign(fn(11039).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16131: AndroidViewNsfwDmCommandsSetting ===
+// === Module 16132: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 16131 (AndroidViewNsfwDmCommandsSetting)
+// Module 16132 (AndroidViewNsfwDmCommandsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
@@ -11,7 +11,7 @@ import useNSFWAllowed from "useNSFWAllowed" /* 7317 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7883 */;
 import SettingsConstants from "SettingsConstants" /* 8332 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11208 */;
+import SettingBuilders from "SettingBuilders" /* 11209 */;
 import size from "module_2" /* 2 */;
 
 const PlatformUtils = tmp(1384);

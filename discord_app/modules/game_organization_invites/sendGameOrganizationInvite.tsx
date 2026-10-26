@@ -1,9 +1,9 @@
-// === Module 11323: sendGameOrganizationInvite ===
+// === Module 11324: sendGameOrganizationInvite ===
 
-// Module 11323 (sendGameOrganizationInvite)
+// Module 11324 (sendGameOrganizationInvite)
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4978 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11324 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11325 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

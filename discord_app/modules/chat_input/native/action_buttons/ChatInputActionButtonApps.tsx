@@ -1,14 +1,14 @@
-// === Module 13136: ChatInputActionButtonApps ===
+// === Module 13139: ChatInputActionButtonApps ===
 
-// Module 13136 (ChatInputActionButtonApps)
+// Module 13139 (ChatInputActionButtonApps)
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5971 */;
-import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12090 */;
-import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 13137 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 11981 */;
+import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 13140 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12529).ChatInputActionType;
+const ChatInputActionType = fn(12512).ChatInputActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ReactCompilerGating = fn(558);

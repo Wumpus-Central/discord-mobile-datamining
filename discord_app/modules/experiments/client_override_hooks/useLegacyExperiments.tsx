@@ -1,6 +1,6 @@
-// === Module 11218: useLegacyExperiments ===
+// === Module 11219: useLegacyExperiments ===
 
-// Module 11218 (useLegacyExperiments)
+// Module 11219 (useLegacyExperiments)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ExperimentManager from "ExperimentManager" /* 5195 */;

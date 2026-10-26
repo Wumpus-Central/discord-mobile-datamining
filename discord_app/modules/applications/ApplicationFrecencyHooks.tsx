@@ -1,6 +1,6 @@
-// === Module 12112: ApplicationFrecencyHooks ===
+// === Module 12003: ApplicationFrecencyHooks ===
 
-// Module 12112 (ApplicationFrecencyHooks)
+// Module 12003 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9651 */;

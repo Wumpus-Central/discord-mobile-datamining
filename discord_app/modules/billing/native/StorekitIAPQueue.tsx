@@ -1,6 +1,6 @@
-// === Module 13933: StorekitIAPQueue ===
+// === Module 13935: StorekitIAPQueue ===
 
-// Module 13933 (StorekitIAPQueue)
+// Module 13935 (StorekitIAPQueue)
 import utils_PriceUtils from "utils/PriceUtils" /* 7340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

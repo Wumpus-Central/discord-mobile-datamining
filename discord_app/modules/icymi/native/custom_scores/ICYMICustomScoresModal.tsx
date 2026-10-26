@@ -1,6 +1,6 @@
-// === Module 17904: ICYMICustomScoresModal ===
+// === Module 17913: ICYMICustomScoresModal ===
 
-// Module 17904 (ICYMICustomScoresModal)
+// Module 17913 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
               return obj;
             },
         getComponent() {
-              return closure_0(17905).default;
+              return closure_0(17914).default;
             }
       };
       const tmp9 = closure_5(closure_7.Screen, obj3);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
               return obj;
             },
         getComponent() {
-              return closure_0(17906).default;
+              return closure_0(17915).default;
             }
       };
       const tmp13 = closure_5(closure_7.Screen, obj4);
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
         return obj;
       },
       getComponent() {
-        return closure_0(17905).default;
+        return closure_0(17914).default;
       }
     }),
     closure_5(closure_7.Screen, {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
         return obj;
       },
       getComponent() {
-        return closure_0(17906).default;
+        return closure_0(17915).default;
       }
     })
   ];

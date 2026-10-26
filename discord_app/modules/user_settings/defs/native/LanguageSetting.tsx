@@ -1,12 +1,12 @@
-// === Module 16777: LanguageSetting ===
+// === Module 16778: LanguageSetting ===
 
-// Module 16777 (LanguageSetting)
+// Module 16778 (LanguageSetting)
 import util from "util" /* 1128 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
   const cResult = stateFromStores(576).c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,6 +1,6 @@
-// === Module 12243: MessageBlock ===
+// === Module 12136: MessageBlock ===
 
-// Module 12243 (MessageBlock)
+// Module 12136 (MessageBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;

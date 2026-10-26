@@ -1,9 +1,9 @@
-// === Module 12348: ConjureLiveBehindTip ===
+// === Module 12331: ConjureLiveBehindTip ===
 
-// Module 12348 (ConjureLiveBehindTip)
+// Module 12331 (ConjureLiveBehindTip)
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12289 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12341 */;
+import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12239 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12326 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveBeh
   const cResult = projectId(576).c(6);
   projectId = projectId.projectId;
   const onDismiss = projectId.onDismiss;
-  const context = noop.useContext(projectId(11876).ConjurePublishActionContext);
+  const context = noop.useContext(projectId(11765).ConjurePublishActionContext);
   if (cResult[0] === context) {
     if (cResult[1] === projectId) {
       let tmp5 = cResult[2];
@@ -25,12 +25,12 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveBeh
       return tmp7;
     }
     const obj2 = { icon: tmp(9804).UploadIcon, onDismiss, children: tmp5 };
-    const tmp11 = jsx(context(12341), { icon: tmp(9804).UploadIcon, onDismiss, children: tmp5 });
+    const tmp11 = jsx(context(12326), { icon: tmp(9804).UploadIcon, onDismiss, children: tmp5 });
     cResult[3] = onDismiss;
     cResult[4] = tmp5;
     cResult[5] = tmp11;
     tmp7 = tmp11;
-    const tmp10 = context(12341);
+    const tmp10 = context(12326);
   }
   const intl = tmp(1128).intl;
   const formatResult = intl.format(context(3830).fWfeZ8, {
@@ -54,7 +54,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveBeh
   };
 }) : (function LiveBehindHint(projectId) {
   projectId = projectId.projectId;
-  importDefault = noop.useContext(projectId(11876).ConjurePublishActionContext);
+  importDefault = noop.useContext(projectId(11765).ConjurePublishActionContext);
   const obj = { icon: projectId(9804).UploadIcon, onDismiss: projectId.onDismiss, children: null };
   const intl = projectId(1128).intl;
   obj.children = intl.format(_modDef3830.fWfeZ8, {
@@ -67,7 +67,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveBeh
   return jsx(ConjureTipHintDefault, { icon: projectId(9804).UploadIcon, onDismiss: projectId.onDismiss, children: null });
 });
 let obj2 = {};
-const merged = Object.assign(fn(12332).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(12317).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj2.render = function render(arg0, context) {
   let tmp3 = null;
   if (null != context.context.publish) {

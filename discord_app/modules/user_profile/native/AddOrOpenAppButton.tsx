@@ -1,13 +1,13 @@
-// === Module 14278: AddOrOpenAppButton ===
+// === Module 14279: AddOrOpenAppButton ===
 
-// Module 14278 (AddOrOpenAppButton)
+// Module 14279 (AddOrOpenAppButton)
 import c from "c" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import ApplicationUtils from "ApplicationUtils" /* 10744 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12124 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12138 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12015 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12029 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -306,7 +306,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenAp
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -442,7 +442,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenAp
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

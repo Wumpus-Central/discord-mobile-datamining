@@ -1,6 +1,6 @@
-// === Module 11389: useCanSpeakInChannel ===
+// === Module 11390: useCanSpeakInChannel ===
 
-// Module 11389 (useCanSpeakInChannel)
+// Module 11390 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5996 */;

@@ -1,6 +1,6 @@
-// === Module 10904: updateSharedValueIfChanged ===
+// === Module 10905: updateSharedValueIfChanged ===
 
-// Module 10904 (updateSharedValueIfChanged)
+// Module 10905 (updateSharedValueIfChanged)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import size from "module_2" /* 2 */;
 

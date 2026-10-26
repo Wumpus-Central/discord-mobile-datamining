@@ -180,7 +180,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -250,7 +250,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           closure_129_4(false);
           v32 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp47) {
         if (tmp5 === c3) {
@@ -265,32 +265,91 @@ export default function Login(isMultiAccount) {
     }
   }), items1);
   _require = asyncGeneratorStep(async (isMultiAccount, arg1) => {
-    closure_131_0 = isMultiAccount;
-    closure_131_1 = closure_1;
-    let flag = closure_2;
-    if (closure_2 === undefined) {
-      flag = false;
-    }
-    closure_131_2 = flag;
-    await "Reflect";
-    tmp3(true);
-    tmp22({});
-    await navigation(ref[21]).login({ login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount });
-    if (2 === tmp7) {
-      c6 = 0;
-      closure_131_4 = tmp22;
-      tmp3(false);
-      const authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[25]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-      callback(authenticationErrorsFromV6OrEarlierAPIError);
+    if (c8 === 2) {
       c8 = 3;
-      isMultiAccount(ref[25]);
-    } else if (isMultiAccount === 1) {
-      c8 = 3;
-      throw value;
-    } else if (isMultiAccount !== 2) {
-      c6 = 0;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (isMultiAccount === 1) {
+        throw value;
+      } else if (isMultiAccount === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp7;
+            closure_131_2 = undefined;
+            closure_131_0 = isMultiAccount;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = false;
+            }
+            closure_131_2 = flag;
+            let authenticationErrorsFromV6OrEarlierAPIError;
+            c7 = 1;
+            c8 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            tmp3(true);
+            tmp22({});
+            c6 = 1;
+            const obj6 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
+            c7 = 3;
+            c8 = 1;
+            const obj8 = { value: navigation(ref[21]).login(obj6), done: false };
+            return obj8;
+          }
+        } else {
+          if (2 === tmp7) {
+            c6 = 0;
+            closure_131_4 = tmp22;
+            tmp3(false);
+            authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[25]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+            callback(authenticationErrorsFromV6OrEarlierAPIError);
+            c8 = 3;
+            const obj2 = isMultiAccount(ref[25]);
+          } else if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount !== 2) {
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp22;
+        } else {
+          c7 = tmp;
+        }
+      }
     }
-    return value;
   });
   const items2 = [callback, flag];
   const callback1 = noop.useCallback(function() {
@@ -315,7 +374,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

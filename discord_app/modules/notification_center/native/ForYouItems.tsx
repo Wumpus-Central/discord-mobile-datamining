@@ -1,6 +1,6 @@
-// === Module 17863: ForYouItems ===
+// === Module 17872: ForYouItems ===
 
-// Module 17863 (ForYouItems)
+// Module 17872 (ForYouItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _mod686 from "module_686" /* 686 */;
@@ -15,17 +15,17 @@ import CustomMarkupAll from "CustomMarkup" /* 5979 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6788 */;
 import PollsUtils from "PollsUtils" /* 8284 */;
 import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8413 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13552 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15092 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 17861 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 17878 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 17879 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 17880 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 17881 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 17882 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 17888 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 17889 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 17890 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13554 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15093 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 17870 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 17887 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 17888 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 17889 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 17890 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 17891 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 17897 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 17898 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 17899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,9 +34,9 @@ import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import UserStore from "UserStore" /* 1392 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 17857 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 17866 */;
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(17862);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(17871);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -509,7 +509,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
       } else {
         const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp35 = guild_id(13105);
+          let tmp35 = guild_id(13108);
           const obj9 = { source: tmp35, size: tmp(1202).IconSizes.SMALL, style: null };
           messagePreviewIconV2 = tmp3.messagePreviewIconV2;
           obj9.style = messagePreviewIconV2;
@@ -647,7 +647,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   } else {
     const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === iconType) {
-      let tmp15 = guild_id(13105);
+      let tmp15 = guild_id(13108);
       const obj10 = { source: tmp15, size: null, style: null };
       SMALL = tmp3(1202).IconSizes.SMALL;
       obj10.size = SMALL;
@@ -830,7 +830,7 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(17859).deleteNotificationCenterItem(tmp3);
+        yield tmp3(17868).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

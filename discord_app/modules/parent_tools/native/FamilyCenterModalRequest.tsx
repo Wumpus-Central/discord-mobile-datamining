@@ -1,6 +1,6 @@
-// === Module 12877: FamilyCenterModalRequest ===
+// === Module 12880: FamilyCenterModalRequest ===
 
-// Module 12877 (FamilyCenterModalRequest)
+// Module 12880 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
@@ -22,12 +22,12 @@ import ModalContent from "ModalContent" /* 7901 */;
 import _modDef8115 from "module_8115" /* 8115 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8126 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 8128 */;
-import Modal from "Modal" /* 11149 */;
-import _modDef11257 from "module_11257" /* 11257 */;
-import ModalFooter from "ModalFooter" /* 12727 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12878 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 12888 */;
-import FamilyShieldSpotIllustration from "FamilyShieldSpotIllustration" /* 12892 */;
+import Modal from "Modal" /* 11150 */;
+import _modDef11258 from "module_11258" /* 11258 */;
+import ModalFooter from "ModalFooter" /* 12730 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12881 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 12891 */;
+import FamilyShieldSpotIllustration from "FamilyShieldSpotIllustration" /* 12895 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -49,7 +49,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -944,7 +944,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenter
         }
         if (cResult[14] !== icon) {
           if (icon === constants2.CHECK) {
-            const obj2 = { source: _modDef11257, color: "#FFF" };
+            const obj2 = { source: _modDef11258, color: "#FFF" };
             let tmp26 = closure_1_11(native.Icon, obj2);
           } else {
             const obj3 = { source: _modDef8115, color: "#FFF" };
@@ -1081,7 +1081,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenter
   const obj6 = { style: items2, children: null };
   items2[1] = icon === constants2.CHECK ? tmp.positive : tmp.negative;
   if (icon === constants2.CHECK) {
-    const obj7 = { source: _modDef11257, color: "#FFF" };
+    const obj7 = { source: _modDef11258, color: "#FFF" };
     let tmp15Result = closure_1_11(native.Icon, obj7);
   } else {
     const obj8 = { source: _modDef8115, color: "#FFF" };
@@ -1828,10 +1828,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const linkCode = userId.linkCode;
   const items = [linkCode, userId];
   const memo = noop.useMemo(() => getScreens(userId, linkCode), items);
-  const obj = { initialRouteName: userId(12878).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  const obj = { initialRouteName: userId(12881).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1128).intl;
   obj.headerBackTitle = intl.string(userId(1128).t["13/7kX"]);
-  return closure_11(userId(11149).Modal, obj);
+  return closure_11(userId(11150).Modal, obj);
 });
 export const FamilyCenterModalRequestConfirm = tmp4;
 export const FamilyCenterModalRequestSuccess = tmp5;

@@ -1,26 +1,26 @@
-// === Module 11746: ConjureProjectList ===
+// === Module 12522: ConjureProjectList ===
 
-// Module 11746 (ConjureProjectList)
+// Module 12522 (ConjureProjectList)
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10696 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11745 */;
-import ConjureActivity from "ConjureActivity" /* 11747 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 11748 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11802 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11856 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 11858 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 11859 */;
+import ConjureActivity from "ConjureActivity" /* 11746 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11762 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12150 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12250 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 12280 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 12523 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 12540 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;
-const ConjureCreateSheetDefault = ConjureCreateSheet;
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
+const ConjureCreateSheetDefault = ConjureCreateSheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     if (cResult[11] === guildId) {
       if (cResult[15] !== stateFromStoresArray1) {
         const substr = stateFromStoresArray1.slice();
-        const sorted = substr.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
+        const sorted = substr.sort(tmp(11746).compareConjureProjectsByUpdatedAt);
         cResult[15] = stateFromStoresArray1;
         cResult[16] = sorted;
       }
@@ -477,11 +477,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         cResult[23] = tmp25;
         cResult[24] = tmp28;
       }
-      const projectOpenerResult = tmp(11745).projectOpener(guildId, U);
+      const projectOpenerResult = tmp(11762).projectOpener(guildId, U);
       cResult[19] = guildId;
       cResult[20] = U;
       cResult[21] = projectOpenerResult;
-      const tmpResult6 = tmp(11745);
+      const tmpResult6 = tmp(11762);
     }
   }
   if (cResult[13] !== guildId) {
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     }
   }
   const found = stateFromStoresArray.filter(M);
-  const sorted1 = found.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
+  const sorted1 = found.sort(tmp(11746).compareConjureProjectsByUpdatedAt);
   cResult[10] = stateFromStoresArray;
   cResult[11] = guildId;
   cResult[12] = sorted1;

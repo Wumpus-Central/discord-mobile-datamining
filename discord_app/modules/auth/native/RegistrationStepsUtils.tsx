@@ -1,25 +1,25 @@
-// === Module 17360: RegistrationStepsUtils ===
+// === Module 17361: RegistrationStepsUtils ===
 
-// Module 17360 (RegistrationStepsUtils)
+// Module 17361 (RegistrationStepsUtils)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import Link from "Link" /* 1506 */;
 import LoginDefault from "Login" /* 7034 */;
-import WelcomeDefault from "Welcome" /* 17363 */;
-import RegistrationUtils from "RegistrationUtils" /* 17369 */;
-import RegisterIdentity from "RegisterIdentity" /* 17370 */;
-import auth_register from "auth/register" /* 17372 */;
-import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17382 */;
-import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17383 */;
-import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17389 */;
-import components_MFADefault from "components/MFA" /* 17391 */;
-import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17392 */;
-import ExternalLinkDefault from "ExternalLink" /* 17396 */;
-import RegisterAgeGateDefault from "RegisterAgeGate" /* 17397 */;
-import AgeGateUnderageDefault from "AgeGateUnderage" /* 17403 */;
-import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17404 */;
+import WelcomeDefault from "Welcome" /* 17364 */;
+import RegistrationUtils from "RegistrationUtils" /* 17370 */;
+import RegisterIdentity from "RegisterIdentity" /* 17371 */;
+import auth_register from "auth/register" /* 17373 */;
+import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17383 */;
+import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17384 */;
+import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17390 */;
+import components_MFADefault from "components/MFA" /* 17392 */;
+import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17393 */;
+import ExternalLinkDefault from "ExternalLink" /* 17397 */;
+import RegisterAgeGateDefault from "RegisterAgeGate" /* 17398 */;
+import AgeGateUnderageDefault from "AgeGateUnderage" /* 17404 */;
+import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17405 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 15998 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 15999 */;
 
 require = fn;
 function headerTitle() {
@@ -44,7 +44,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -135,7 +135,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -149,9 +149,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6669).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(17361);
+const RegistrationUIStore = fn(17362);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17362);
+const RegistrationConstants = fn(17363);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1087).AuthStates;
 const jsx = fn(21).jsx;

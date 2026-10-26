@@ -1,6 +1,6 @@
-// === Module 18083: SearchNavigatorConstants ===
+// === Module 18092: SearchNavigatorConstants ===
 
-// Module 18083 (SearchNavigatorConstants)
+// Module 18092 (SearchNavigatorConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorConstants.tsx");

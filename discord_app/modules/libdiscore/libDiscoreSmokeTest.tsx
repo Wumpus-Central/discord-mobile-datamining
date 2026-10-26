@@ -1,6 +1,6 @@
-// === Module 19484: libDiscoreSmokeTest ===
+// === Module 19494: libDiscoreSmokeTest ===
 
-// Module 19484 (libDiscoreSmokeTest)
+// Module 19494 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import initLibdiscore from "initLibdiscore" /* 566 */;
@@ -29,7 +29,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

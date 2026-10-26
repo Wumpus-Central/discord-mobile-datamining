@@ -1,6 +1,6 @@
-// === Module 12199: MobileVisualRefreshExperiment ===
+// === Module 12092: MobileVisualRefreshExperiment ===
 
-// Module 12199 (MobileVisualRefreshExperiment)
+// Module 12092 (MobileVisualRefreshExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
 

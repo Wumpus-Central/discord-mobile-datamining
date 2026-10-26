@@ -1,6 +1,6 @@
-// === Module 11598: canUseStreamSetting ===
+// === Module 11599: canUseStreamSetting ===
 
-// Module 11598 (canUseStreamSetting)
+// Module 11599 (canUseStreamSetting)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 8366 */;

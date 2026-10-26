@@ -1,11 +1,11 @@
-// === Module 19019: GuildSettingsAutomodRule ===
+// === Module 19029: GuildSettingsAutomodRule ===
 
-// Module 19019 (GuildSettingsAutomodRule)
+// Module 19029 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 5662 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19004 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,10 +13,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(19001).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19003);
+const useAutomodRulesList = fn(19011).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19013);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12811).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12814).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -538,7 +538,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(12816).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(12819).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                       v0(closure_130_1, closure_0);
                       closure_1.pop();
                       c6 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp41) {
                     closure_3 = tmp41;

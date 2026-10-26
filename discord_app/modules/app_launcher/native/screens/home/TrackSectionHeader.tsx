@@ -1,10 +1,10 @@
-// === Module 12087: TrackSectionHeader ===
+// === Module 11978: TrackSectionHeader ===
 
-// Module 12087 (TrackSectionHeader)
+// Module 11978 (TrackSectionHeader)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 9361 */;
-import AppLauncherStore from "AppLauncherStore" /* 12078 */;
+import AppLauncherStore from "AppLauncherStore" /* 11969 */;
 
 require = fn;
 fn(558);

@@ -1,6 +1,6 @@
-// === Module 19214: formatDurationFromDays ===
+// === Module 19224: formatDurationFromDays ===
 
-// Module 19214 (formatDurationFromDays)
+// Module 19224 (formatDurationFromDays)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

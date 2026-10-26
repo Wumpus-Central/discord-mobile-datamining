@@ -1,6 +1,6 @@
-// === Module 16458: QuestDisclosureModalInner ===
+// === Module 16459: QuestDisclosureModalInner ===
 
-// Module 16458 (QuestDisclosureModalInner)
+// Module 16459 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1087 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
       const intl2 = tmp(1128).intl;
       obj2.text = intl2.string(tmp(1128).t.xQSdPv);
       items1 = [obj2, , ];
-      const obj3 = { icon: intl(tmp(11840).UserIcon, { size: "xs" }), text: null };
+      const obj3 = { icon: intl(tmp(12188).UserIcon, { size: "xs" }), text: null };
       const intl3 = tmp(1128).intl;
       obj3.text = intl3.string(tmp(1128).t.mYt7hQ);
       items1[1] = obj3;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
     const _Symbol = Symbol;
     ({ container, contentContainer } = tmp4);
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_6(tmp(16459).WumpusCouchSpotIllustration, {});
+      const tmp10 = closure_6(tmp(16460).WumpusCouchSpotIllustration, {});
       cResult[2] = tmp10;
       let tmp8 = tmp10;
     } else {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
     const intl = tmp2(1128).intl;
     obj.text = intl.string(tmp2(1128).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: closure_6(tmp2(11840).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(12188).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1128).intl;
     obj2.text = intl2.string(tmp2(1128).t.mYt7hQ);
     items1[1] = obj2;

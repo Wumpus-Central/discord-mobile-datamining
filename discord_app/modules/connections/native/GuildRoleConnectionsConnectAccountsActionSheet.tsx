@@ -1,6 +1,6 @@
-// === Module 11255: GuildRoleConnectionsConnectAccountsActionSheet ===
+// === Module 11256: GuildRoleConnectionsConnectAccountsActionSheet ===
 
-// Module 11255 (GuildRoleConnectionsConnectAccountsActionSheet)
+// Module 11256 (GuildRoleConnectionsConnectAccountsActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
@@ -28,11 +28,11 @@ import getConnectionsRolesDefault from "getConnectionsRoles" /* 7277 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
 import BotTagDefault from "BotTag" /* 9134 */;
-import _modDef11257 from "module_11257" /* 11257 */;
 import _modDef11258 from "module_11258" /* 11258 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11259 */;
-import _modDef11262 from "module_11262" /* 11262 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11268 */;
+import _modDef11259 from "module_11259" /* 11259 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11260 */;
+import _modDef11263 from "module_11263" /* 11263 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11269 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -2052,7 +2052,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11257, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11258, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1202).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -2062,7 +2062,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       tmp22Result = closure_1_29(tmp15(5234).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11258, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11259, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1202).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -2185,7 +2185,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
           },
         children: null
       };
-      const obj17 = { source: _modDef11262, size: tmp15(1202).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      const obj17 = { source: _modDef11263, size: tmp15(1202).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
       obj16.children = tmp24(tmp15(1202).Icon, obj17);
       tmp24Result8 = tmp24(c7, obj16);
     }
@@ -2591,7 +2591,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2620,7 +2620,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           c0 = tmp;
@@ -2881,7 +2881,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 const obj2 = { default: closure_1_40 };
                 const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11263).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11264).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -2889,7 +2889,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11263);
+                const obj3 = platformType(11264);
               },
               overrideUrl: null
             };

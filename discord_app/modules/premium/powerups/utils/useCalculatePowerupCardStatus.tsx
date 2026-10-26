@@ -1,6 +1,6 @@
-// === Module 13440: useCalculatePowerupCardStatus ===
+// === Module 13443: useCalculatePowerupCardStatus ===
 
-// Module 13440 (useCalculatePowerupCardStatus)
+// Module 13443 (useCalculatePowerupCardStatus)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2568 from "module_2568" /* 2568 */;

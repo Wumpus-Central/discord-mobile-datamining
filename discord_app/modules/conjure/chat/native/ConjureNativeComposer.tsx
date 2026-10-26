@@ -1,6 +1,6 @@
-// === Module 12513: ConjureNativeComposer ===
+// === Module 12496: ConjureNativeComposer ===
 
-// Module 12513 (ConjureNativeComposer)
+// Module 12496 (ConjureNativeComposer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,30 +11,30 @@ import SendMessageIcon from "SendMessageIcon" /* 5680 */;
 import WarningIcon from "WarningIcon" /* 7957 */;
 import ImageCarousel from "ImageCarousel" /* 10414 */;
 import MusicIcon from "MusicIcon" /* 10647 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10841 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 11756 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 11757 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11759 */;
-import FileUpIcon from "FileUpIcon" /* 11792 */;
-import conjureStoredAttachments2 from "conjureStoredAttachments" /* 11827 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 11850 */;
-import conjureMentions from "conjureMentions" /* 12357 */;
-import StopIcon from "StopIcon" /* 12386 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 12480 */;
-import conjureComposerPills from "conjureComposerPills" /* 12514 */;
-import ChatInputParser from "ChatInputParser" /* 12515 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12516 */;
-import ImagesIcon from "ImagesIcon" /* 12521 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 12523 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12525 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 12526 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12528 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10842 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12162 */;
+import conjureStoredAttachments2 from "conjureStoredAttachments" /* 12176 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 12198 */;
+import FileUpIcon from "FileUpIcon" /* 12272 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12292 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12293 */;
+import conjureMentions from "conjureMentions" /* 12340 */;
+import StopIcon from "StopIcon" /* 12369 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 12463 */;
+import conjureComposerPills from "conjureComposerPills" /* 12497 */;
+import ChatInputParser from "ChatInputParser" /* 12498 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12499 */;
+import ImagesIcon from "ImagesIcon" /* 12504 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 12506 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12508 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 12509 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12511 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10712 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 11755 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12291 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -510,7 +510,7 @@ export default function ConjureNativeComposer(projectId) {
       const diff = ConjureAttachmentTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1128).intl;
-        let obj = { count: obj2(11759).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(12162).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3830.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -542,7 +542,7 @@ export default function ConjureNativeComposer(projectId) {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(11757);
+      obj2 = obj2(12293);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items12);
@@ -560,7 +560,7 @@ export default function ConjureNativeComposer(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -577,7 +577,7 @@ export default function ConjureNativeComposer(projectId) {
             projectId = callback5;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(12480).pickConjurePhotos("mixed", projectId(11759).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(12463).pickConjurePhotos("mixed", projectId(12162).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -590,7 +590,7 @@ export default function ConjureNativeComposer(projectId) {
         } else {
           projectId(value);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         dependencyMap = tmp;
@@ -625,7 +625,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -674,7 +674,7 @@ export default function ConjureNativeComposer(projectId) {
               }));
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp17) {
           c4 = tmp;

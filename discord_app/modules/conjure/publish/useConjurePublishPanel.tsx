@@ -1,6 +1,6 @@
-// === Module 12294: useConjurePublishPanel ===
+// === Module 12246: useConjurePublishPanel ===
 
-// Module 12294 (useConjurePublishPanel)
+// Module 12246 (useConjurePublishPanel)
 import _modDef3830 from "module_3830" /* 3830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -35,7 +35,7 @@ export default function useConjurePublishPanel(id, guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

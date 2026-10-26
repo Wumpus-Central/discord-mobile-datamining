@@ -1,6 +1,6 @@
-// === Module 19152: GuildSettingsModalBans ===
+// === Module 19162: GuildSettingsModalBans ===
 
-// Module 19152 (GuildSettingsModalBans)
+// Module 19162 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6827 */;

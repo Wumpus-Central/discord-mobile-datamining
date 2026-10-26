@@ -1,6 +1,6 @@
-// === Module 16897: UploadIntlDataSetting ===
+// === Module 16898: UploadIntlDataSetting ===
 
-// Module 16897 (UploadIntlDataSetting)
+// Module 16898 (UploadIntlDataSetting)
 import c from "c" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
 import _mod1166 from "module_1166" /* 1166 */;
@@ -19,7 +19,7 @@ let closure_11 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
   const cResult = c.c(2);
   if (typeof useIsUploadingIntlData === "function") {
@@ -301,7 +301,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(11792).FileUpIcon,
+  IconComponent: fn(12272).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -312,7 +312,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16133).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16134).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
     const cResult = c.c(2);
     if (typeof useIsUploadingIntlData === "function") {

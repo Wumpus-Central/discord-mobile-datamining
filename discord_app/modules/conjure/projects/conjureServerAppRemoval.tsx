@@ -1,6 +1,6 @@
-// === Module 12797: conjureServerAppRemoval ===
+// === Module 12800: conjureServerAppRemoval ===
 
-// Module 12797 (conjureServerAppRemoval)
+// Module 12800 (conjureServerAppRemoval)
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
@@ -215,7 +215,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

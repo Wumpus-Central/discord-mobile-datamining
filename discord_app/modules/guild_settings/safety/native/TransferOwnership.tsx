@@ -1,6 +1,6 @@
-// === Module 12794: TransferOwnership ===
+// === Module 12797: TransferOwnership ===
 
-// Module 12794 (TransferOwnership)
+// Module 12797 (TransferOwnership)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(12793);
+const TransferOwnershipConstants = fn(12796);
 ({ TransferOwnershipModalScenes: closure_9, TransferOwnershipVerificationTypes: c10 } = TransferOwnershipConstants);
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
@@ -53,7 +53,7 @@ export default function TransferOwnership(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -82,8 +82,8 @@ export default function TransferOwnership(guild) {
             }
             const obj4 = v1(9005);
             v1(9005).transferOwnership(user.id, id.id, MFA).then(() => {
-              v1(12791).close();
-              const obj = v1(12791);
+              v1(12794).close();
+              const obj = v1(12794);
               v1(9005).close();
               const obj2 = v1(9005);
               const result = closure_1_0(5662).showTransferOwnershipSuccess();
@@ -161,7 +161,7 @@ export default function TransferOwnership(guild) {
   const obj9 = { source: null, style: null };
   const obj7 = { paddingTop: toUser(587).space.PX_16, paddingHorizontal: token };
   const tmp12 = c7;
-  obj9.source = toUser(12795);
+  obj9.source = toUser(12798);
   obj9.style = tmp5.arrow;
   const items1 = [closure_12(toUser(5669), obj9), , , ];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };

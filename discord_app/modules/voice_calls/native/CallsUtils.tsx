@@ -12,7 +12,7 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
 import _modDef9157 from "module_9157" /* 9157 */;
 import _modDef9158 from "module_9158" /* 9158 */;
 import _modDef9159 from "module_9159" /* 9159 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 11611 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 11612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -29,58 +29,102 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_16 = async function _handleToggleVideo(arg0) {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let flag3 = closure_1;
-  if (closure_1 === undefined) {
-    flag3 = true;
-  }
-  closure_130_1 = flag3;
-  await "Reflect";
-  if (1 === tmp5) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      closure_130_2 = closure_131_10.isVideoEnabled();
-      const channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
-      const reachedLimit = channelVideoLimit.reachedLimit;
-      const limit = channelVideoLimit.limit;
-      if (reachedLimit) {
-        if (closure_130_1) {
-          const obj5 = { title: null, body: null };
-          const intl = closure_131_0(closure_131_3[14]).intl;
-          obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
-          const intl2 = closure_131_0(closure_131_3[14]).intl;
-          obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, { limit: limit.toString() });
-          closure_131_1(closure_131_3[13]).show(obj5);
-          closure_131_1(closure_131_3[13]);
-          { limit: limit.toString() };
-        }
-      } else if (closure_130_2) {
-        closure_131_1(closure_131_3[16]).setVideoEnabled(false);
-        closure_131_1(closure_131_3[16]);
-      } else {
-        c4 = 2;
-        c5 = 1;
-        return { value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA), done: false };
-      }
-      c5 = 3;
-      closure_131_0(closure_131_3[12]);
+      return { value: "IconComponent", done: null };
     }
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    if (value) {
-      closure_131_1(closure_131_3[16]).setVideoEnabled(true);
-      closure_131_1(closure_131_3[16]);
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c3 = 0;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag3 = closure_1;
+          if (closure_1 === undefined) {
+            flag3 = true;
+          }
+          closure_130_1 = flag3;
+          closure_130_2 = undefined;
+          let channelVideoLimit;
+          let reachedLimit;
+          let limit;
+          c4 = 1;
+          c5 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_130_2 = closure_131_10.isVideoEnabled();
+            channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
+            reachedLimit = channelVideoLimit.reachedLimit;
+            limit = channelVideoLimit.limit;
+            if (reachedLimit) {
+              if (closure_130_1) {
+                const obj5 = { title: null, body: null };
+                const intl = closure_131_0(closure_131_3[14]).intl;
+                obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
+                const intl2 = closure_131_0(closure_131_3[14]).intl;
+                const obj7 = { limit: limit.toString() };
+                obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, obj7);
+                closure_131_1(closure_131_3[13]).show(obj5);
+                const obj6 = closure_131_1(closure_131_3[13]);
+              }
+            } else if (closure_130_2) {
+              closure_131_1(closure_131_3[16]).setVideoEnabled(false);
+              const tmp12Result = closure_131_1(closure_131_3[16]);
+            } else {
+              c4 = 2;
+              c5 = 1;
+              const obj8 = { value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA), done: false };
+              return obj8;
+            }
+            c5 = 3;
+            const obj12 = closure_131_0(closure_131_3[12]);
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          if (value) {
+            closure_131_1(closure_131_3[16]).setVideoEnabled(true);
+            const obj = closure_131_1(closure_131_3[16]);
+          }
+        }
+        c5 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      }
+    } catch (tmp31) {
+      c5 = tmp;
+      throw tmp31;
     }
   }
-  return value;
 };
 const NativeModules = fn(17).NativeModules;
 const NativePermissionTypes = fn(7868).NativePermissionTypes;
@@ -117,7 +161,7 @@ const tmp2 = PlatformUtils.isAndroid() ? (() => {
 }) : (() => {
   const items = [ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore, AudioRouteStore];
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(11611).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
+    isVideoMode = isEnabled(11612).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
     isEnabled = currentRouteType === isEnabled(5735).RouteTypes.SPEAKER;
     const isBluetoothRoute = currentRouteType === isEnabled(5735).RouteTypes.BLUETOOTH;

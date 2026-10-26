@@ -1,6 +1,6 @@
-// === Module 14105: AppStoreOverlayContent ===
+// === Module 14107: AppStoreOverlayContent ===
 
-// Module 14105 (AppStoreOverlayContent)
+// Module 14107 (AppStoreOverlayContent)
 import openURL from "openURL" /* 5656 */;
 import LinkingDefault from "Linking" /* 5660 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 17546: VoiceUserItem ===
+// === Module 17547: VoiceUserItem ===
 
-// Module 17546 (VoiceUserItem)
+// Module 17547 (VoiceUserItem)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -10,11 +10,11 @@ import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9167 */;
 import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9169 */;
 import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9171 */;
 import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9173 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
-import VideoIcon from "VideoIcon" /* 11327 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 14179 */;
-import getConsoleIcon from "getConsoleIcon" /* 14181 */;
-import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 17547 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11060 */;
+import VideoIcon from "VideoIcon" /* 11328 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 14180 */;
+import getConsoleIcon from "getConsoleIcon" /* 14182 */;
+import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 17548 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ const createStyles = fn(4971);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(12063);
+const ChannelListLayout = fn(11954);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

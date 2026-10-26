@@ -1,6 +1,6 @@
-// === Module 13880: CollectiblesShopGiftPurchaseSection ===
+// === Module 13882: CollectiblesShopGiftPurchaseSection ===
 
-// Module 13880 (CollectiblesShopGiftPurchaseSection)
+// Module 13882 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -180,7 +180,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

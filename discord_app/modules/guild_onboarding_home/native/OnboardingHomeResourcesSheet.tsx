@@ -1,14 +1,14 @@
-// === Module 18011: OnboardingHomeResourcesSheet ===
+// === Module 18020: OnboardingHomeResourcesSheet ===
 
-// Module 18011 (OnboardingHomeResourcesSheet)
+// Module 18020 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13168 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 18010 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13171 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 18019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(18009).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(18018).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Onboardi
   guildId = guildId.guildId;
   let obj = guildId(576);
   token = guildId(5252).useToken(token(587).modules.mobile.TABLE_ROW_ICON_SIZE);
-  const arr = token(18010)(guildId);
+  const arr = token(18019)(guildId);
   if (cResult[0] !== guildId) {
     function handleChannelPress(channelId) {
       const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId);

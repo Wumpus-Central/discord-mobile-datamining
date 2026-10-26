@@ -1,11 +1,11 @@
-// === Module 10936: useLikelyAtoWarning ===
+// === Module 10937: useLikelyAtoWarning ===
 
-// Module 10936 (useLikelyAtoWarning)
+// Module 10937 (useLikelyAtoWarning)
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10693 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10928 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 10929 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10930 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10931 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10929 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10930 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10931 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10932 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 18273: ChannelSettingsInstantInvites ===
+// === Module 18282: ChannelSettingsInstantInvites ===
 
-// Module 18273 (ChannelSettingsInstantInvites)
+// Module 18282 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import InstantInvite from "InstantInvite" /* 10821 */;
+import InstantInvite from "InstantInvite" /* 10822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelSettingsStore from "ChannelSettingsStore" /* 10094 */;
@@ -13,9 +13,9 @@ const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7150);
-const _modDef10839 = tmp2(10839);
 const _modDef10840 = tmp2(10840);
-const InstantInviteSelfMeasurerDefault = tmp2(18274);
+const _modDef10841 = tmp2(10841);
+const InstantInviteSelfMeasurerDefault = tmp2(18283);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1087).ChannelSettingsSections;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef10839, darkSource: _modDef10840, title: null, body: null };
+      const obj5 = { lightSource: _modDef10840, darkSource: _modDef10841, title: null, body: null };
       const intl = tmpResult(1128).intl;
       obj5.title = intl.string(tmpResult(1128).t["+nLJkZ"]);
       const intl2 = tmpResult(1128).intl;

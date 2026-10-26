@@ -23,13 +23,15 @@ function handleProjectUpsert(project) {
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
+let c8 = null;
+const map3 = new Map();
 let set = new Set();
-let c9 = false;
-let maxProjects = null;
 let c11 = false;
+let maxProjects = null;
+let c13 = false;
 let obj = null;
 const set1 = new Set();
-const map3 = new Map();
+const map4 = new Map();
 let error = "unattempted";
 const Store = initializeDefault.Store;
 class ConjureProjectStore extends Store {
@@ -42,13 +44,13 @@ prototype["getOwnedProjects"] = function getOwnedProjects() {
   return Array.from(map.values()).filter(isProjectOwner);
 };
 prototype["hasFetchedOwnedProjects"] = function hasFetchedOwnedProjects() {
-  return c9;
+  return c11;
 };
 prototype["getMaxProjects"] = function getMaxProjects() {
   return maxProjects;
 };
 prototype["hasFetchedProjectLimit"] = function hasFetchedProjectLimit() {
-  return c11;
+  return c13;
 };
 prototype["getProject"] = function getProject(arg0) {
   value = map.get(arg0);
@@ -97,6 +99,16 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
   }
   return value;
 };
+prototype["getGlobalSelectedProjectId"] = function getGlobalSelectedProjectId() {
+  return c8;
+};
+prototype["getProjectLoadStatus"] = function getProjectLoadStatus(projectId) {
+  value = map3.get(projectId);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
 prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return obj;
 };
@@ -104,7 +116,7 @@ prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(id) {
   return set1.has(id);
 };
 prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(arg0) {
-  let str = map3.get(arg0);
+  let str = map4.get(arg0);
   if (str == null) {
     str = "unattempted";
   }
@@ -127,12 +139,16 @@ obj = {
     if (0 === map.size) {
       if (0 === map1.size) {
         if (0 === map2.size) {
-          if (0 === set.size) {
-            if (0 === set1.size) {
-              if (null == obj) {
-                if (null == maxProjects) {
-                  if (!c11) {
-                    return false;
+          if (null == c8) {
+            if (0 === map3.size) {
+              if (0 === set.size) {
+                if (0 === set1.size) {
+                  if (null == obj) {
+                    if (null == maxProjects) {
+                      if (!c13) {
+                        return false;
+                      }
+                    }
                   }
                 }
               }
@@ -144,19 +160,21 @@ obj = {
     obj.clear();
     map1.clear();
     map2.clear();
+    c8 = null;
+    map3.clear();
     set.clear();
     set1.clear();
-    map3.clear();
+    map4.clear();
     obj = null;
-    c9 = false;
+    c11 = false;
     error = "unattempted";
     maxProjects = null;
-    c11 = false;
+    c13 = false;
   },
   CONJURE_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
     guildId = guildId.guildId;
     if (null != guildId) {
-      const result = map3.set(guildId, "loading");
+      const result = map4.set(guildId, "loading");
     } else {
       error = "loading";
     }
@@ -188,7 +206,7 @@ obj = {
     }
     if (null != guildId) {
       set1.add(guildId);
-      const result1 = map3.set(guildId, "success");
+      const result1 = map4.set(guildId, "success");
     }
     (function pruneProjectScopedState() {
       const keys = set2.keys();
@@ -208,7 +226,7 @@ obj = {
       }
       tmp8 = set3[Symbol.iterator]();
     })();
-    c9 = true;
+    c11 = true;
     error = "success";
     { type: "success", fetchedAt: Date.now() };
     tmp2 = map[Symbol.iterator]();
@@ -216,7 +234,7 @@ obj = {
   CONJURE_PROJECTS_FETCH_FAIL: function handleProjectsFetchFail(guildId) {
     guildId = guildId.guildId;
     if (null != guildId) {
-      const result = map3.set(guildId, "error");
+      const result = map4.set(guildId, "error");
     } else {
       error = "error";
     }
@@ -224,7 +242,7 @@ obj = {
   },
   CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function handleProjectLimitFetchSettle(maxProjects) {
     maxProjects = maxProjects.maxProjects;
-    c11 = true;
+    c13 = true;
   },
   CONJURE_PROJECT_CREATE_SUCCESS: handleProjectUpsert,
   CONJURE_PROJECT_UPDATE_SUCCESS: handleProjectUpsert,
@@ -247,6 +265,10 @@ obj = {
       }
       continue;
     }
+    if (c8 === projectId) {
+      c8 = null;
+    }
+    map3.delete(projectId);
     tmp5 = map2[Symbol.iterator]();
   },
   CONJURE_PROJECT_DELETE_FAIL: function handleProjectDeleteFail(projectId) {
@@ -264,6 +286,35 @@ obj = {
       map2.delete(guildId);
     } else {
       const result = map2.set(guildId, projectId);
+    }
+  },
+  CONJURE_PROJECT_GLOBAL_SELECT: function handleProjectGlobalSelect(projectId) {
+    projectId = projectId.projectId;
+    if (c8 === projectId) {
+      return false;
+    } else {
+      c8 = projectId;
+    }
+  },
+  CONJURE_PROJECT_GLOBAL_CLEAR: function handleProjectGlobalClear(projectId) {
+    if (c8 !== projectId.projectId) {
+      return false;
+    } else {
+      c8 = null;
+    }
+  },
+  CONJURE_PROJECT_LOAD_STATUS: function handleProjectLoadStatus(arg0) {
+    ({ projectId, status } = arg0);
+    value = map3.get(projectId);
+    if (value == null) {
+      value = null;
+    }
+    if (value === status) {
+      return false;
+    } else if (null == status) {
+      map3.delete(projectId);
+    } else {
+      const result = map3.set(projectId, status);
     }
   }
 };

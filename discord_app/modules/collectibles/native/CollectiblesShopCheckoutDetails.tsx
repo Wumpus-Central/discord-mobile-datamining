@@ -1,6 +1,6 @@
-// === Module 13877: CollectiblesShopCheckoutDetails ===
+// === Module 13879: CollectiblesShopCheckoutDetails ===
 
-// Module 13877 (CollectiblesShopCheckoutDetails)
+// Module 13879 (CollectiblesShopCheckoutDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1090 */;
@@ -23,8 +23,8 @@ import _modDef9437 from "module_9437" /* 9437 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9438 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9448 */;
 import getProductName from "getProductName" /* 9465 */;
-import _modDef13878 from "module_13878" /* 13878 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13879 */;
+import _modDef13880 from "module_13880" /* 13880 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(587).space.PX_16, backgroundColor: "application" } };
+  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(587).space.PX_16, backgroundColor: "__initData" } };
   return obj;
 });
 createStyles = fn(4971);
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef13878 };
+      const obj2 = { uri: _modDef13880 };
       cResult[0] = obj2;
       let first = obj2;
     } else {
@@ -142,7 +142,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef13878 };
+    const obj3 = { uri: _modDef13880 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;

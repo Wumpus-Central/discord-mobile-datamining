@@ -1,6 +1,6 @@
-// === Module 11281: PlaintextFilePreviewModal ===
+// === Module 11282: PlaintextFilePreviewModal ===
 
-// Module 11281 (PlaintextFilePreviewModal)
+// Module 11282 (PlaintextFilePreviewModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,9 +12,9 @@ import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7230 */;
 import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8610 */;
 import ContextMenu from "ContextMenu" /* 9761 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11280 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11282 */;
-import useDownloadedFile from "useDownloadedFile" /* 11284 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11281 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11283 */;
+import useDownloadedFile from "useDownloadedFile" /* 11285 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -404,5 +404,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11149).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11150).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 });

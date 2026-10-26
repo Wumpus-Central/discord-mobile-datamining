@@ -1,6 +1,6 @@
-// === Module 11801: openConjureUnpublishUserAppAlert ===
+// === Module 12278: openConjureUnpublishUserAppAlert ===
 
-// Module 11801 (openConjureUnpublishUserAppAlert)
+// Module 12278 (openConjureUnpublishUserAppAlert)
 import useAlertStore from "useAlertStore" /* 5910 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -146,7 +146,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -181,7 +181,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             obj7.text = intl2.formatToPlainString(require("module_3830").b8LN7N, obj8);
             require("ToastActionCreators").open("CONJURE_USER_APP_UNPUBLISHED", obj7);
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else {
             const intl = tmp5(stateFromStores[9]).intl;
             closure_128_0 = intl.string(require("module_3830")["rE/0SD"]);
@@ -249,7 +249,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -284,7 +284,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           obj7.text = intl2.formatToPlainString(tmp5(3830).b8LN7N, obj8);
           tmp5(5663).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } else {
           const intl = tmp2(1128).intl;
           closure_128_0 = intl.string(tmp5(3830)["rE/0SD"]);

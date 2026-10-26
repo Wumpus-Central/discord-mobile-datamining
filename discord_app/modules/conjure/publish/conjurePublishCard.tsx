@@ -1,6 +1,6 @@
-// === Module 12307: conjurePublishCard ===
+// === Module 12287: conjurePublishCard ===
 
-// Module 12307 (conjurePublishCard)
+// Module 12287 (conjurePublishCard)
 import _modDef3830 from "module_3830" /* 3830 */;
 import size from "module_2" /* 2 */;
 

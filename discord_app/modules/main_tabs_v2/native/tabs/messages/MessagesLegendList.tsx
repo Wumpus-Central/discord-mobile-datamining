@@ -1,15 +1,15 @@
-// === Module 17481: MessagesLegendList ===
+// === Module 17482: MessagesLegendList ===
 
-// Module 17481 (MessagesLegendList)
-import MessagesItemChannel from "MessagesItemChannel" /* 17456 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17466 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17467 */;
-import useMessagesData from "useMessagesData" /* 17470 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 17483 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 17520 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 17521 */;
-import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 17522 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 17523 */;
+// Module 17482 (MessagesLegendList)
+import MessagesItemChannel from "MessagesItemChannel" /* 17457 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 17467 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17468 */;
+import useMessagesData from "useMessagesData" /* 17471 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 17484 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 17521 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 17522 */;
+import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 17523 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 17524 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;

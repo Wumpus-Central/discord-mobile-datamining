@@ -1,6 +1,6 @@
-// === Module 18811: FrecencyUserSettingsManager ===
+// === Module 18821: FrecencyUserSettingsManager ===
 
-// Module 18811 (FrecencyUserSettingsManager)
+// Module 18821 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1104 */;
 import frecency_user_settings from "frecency_user_settings" /* 1247 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
@@ -66,7 +66,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_22 = async function _saveProtos(arg0) {
         const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
       });
       c4 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;

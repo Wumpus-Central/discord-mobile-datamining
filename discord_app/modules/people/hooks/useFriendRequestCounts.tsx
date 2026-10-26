@@ -1,6 +1,6 @@
-// === Module 18203: useFriendRequestCounts ===
+// === Module 18212: useFriendRequestCounts ===
 
-// Module 18203 (useFriendRequestCounts)
+// Module 18212 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;

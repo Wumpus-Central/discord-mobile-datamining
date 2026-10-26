@@ -1,9 +1,9 @@
-// === Module 15369: KeyboardLayoutMapUtils ===
+// === Module 15370: KeyboardLayoutMapUtils ===
 
-// Module 15369 (KeyboardLayoutMapUtils)
+// Module 15370 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15368 */;
+import keyCodeDefault from "keyCode" /* 15369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
@@ -37,7 +37,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_19 = async function _createKeyboardMapper() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_19 = async function _createKeyboardMapper() {
           }
         });
         c3 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -230,7 +230,7 @@ let closure_21 = async function _resetKeyboardMapper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -263,7 +263,7 @@ let closure_21 = async function _resetKeyboardMapper() {
           obj.reset();
         }
         c2 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp10) {
       c2 = tmp;

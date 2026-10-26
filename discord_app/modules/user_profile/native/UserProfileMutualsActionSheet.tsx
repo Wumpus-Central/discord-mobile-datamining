@@ -1,6 +1,6 @@
-// === Module 13536: UserProfileMutualsActionSheet ===
+// === Module 13538: UserProfileMutualsActionSheet ===
 
-// Module 13536 (UserProfileMutualsActionSheet)
+// Module 13538 (UserProfileMutualsActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -9,12 +9,12 @@ import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
 import GuildIcon from "GuildIcon" /* 6883 */;
 import TableRow from "TableRow" /* 6903 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10634 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11076 */;
-import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 13531 */;
-import NoMutualServers from "NoMutualServers" /* 13532 */;
-import NoMutualFriends from "NoMutualFriends" /* 13537 */;
-import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 13541 */;
-import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 13542 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11077 */;
+import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 13533 */;
+import NoMutualServers from "NoMutualServers" /* 13534 */;
+import NoMutualFriends from "NoMutualFriends" /* 13539 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 13543 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 13544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5712 */;
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(13537).NoMutualFriends, {}) };
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(13539).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
@@ -650,7 +650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           });
         }
     };
-    tmp10 = closure_9(tmp6(11076).UserProfileStackedActionSheetList, obj7);
+    tmp10 = closure_9(tmp6(11077).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp10;
   const items = [obj4, ];
@@ -664,7 +664,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(13532).NoMutualServers, {}) };
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(13534).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj10);
   } else {
     const obj11 = {
@@ -685,7 +685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           });
         }
     };
-    tmp9Result = tmp9(tmp6(11076).UserProfileStackedActionSheetList, obj11);
+    tmp9Result = tmp9(tmp6(11077).UserProfileStackedActionSheetList, obj11);
   }
   obj8.page = tmp9Result;
   items[1] = obj8;
@@ -700,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj12.title = intl.string(user(1128).t["l2/aLi"]);
   const obj13 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result4 = UserProfileStackedActionSheetDefault;
-  const items1 = [tmp9(closure_5, { children: tmp9(user(11852).Tabs, { state: segmentedControlState }) }), tmp9(user(11147).SegmentedControlPages, { state: segmentedControlState })];
+  const items1 = [tmp9(closure_5, { children: tmp9(user(12204).Tabs, { state: segmentedControlState }) }), tmp9(user(11148).SegmentedControlPages, { state: segmentedControlState })];
   obj13.children = items1;
   obj12.children = closure_10(closure_5, obj13);
   return tmp9(tmp3Result4, obj12);

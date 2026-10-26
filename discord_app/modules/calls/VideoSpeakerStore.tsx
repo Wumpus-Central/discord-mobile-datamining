@@ -1,6 +1,6 @@
-// === Module 11376: VideoSpeakerStore ===
+// === Module 11377: VideoSpeakerStore ===
 
-// Module 11376 (VideoSpeakerStore)
+// Module 11377 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6645 */;

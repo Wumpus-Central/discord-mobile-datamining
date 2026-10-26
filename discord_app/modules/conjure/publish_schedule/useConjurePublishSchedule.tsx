@@ -1,6 +1,6 @@
-// === Module 11846: useConjurePublishSchedule ===
+// === Module 12194: useConjurePublishSchedule ===
 
-// Module 11846 (useConjurePublishSchedule)
+// Module 12194 (useConjurePublishSchedule)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -96,7 +96,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -166,7 +166,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                   closure_129_7(false);
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } else {
                 closure_129_3(closure_128_1);
                 const intl = tmp6(tmp80[6]).intl;

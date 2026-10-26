@@ -1,7 +1,7 @@
-// === Module 13866: useConjureAppCreator ===
+// === Module 13868: useConjureAppCreator ===
 
-// Module 13866 (useConjureAppCreator)
-import ImagePreload from "ImagePreload" /* 13868 */;
+// Module 13868 (useConjureAppCreator)
+import ImagePreload from "ImagePreload" /* 13870 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (conjureProjectId == null) {
     conjureProjectId = null;
   }
-  const tmp4Result = owner_user_id(13867)(conjureProjectId, arg1, arg2);
+  const tmp4Result = owner_user_id(13869)(conjureProjectId, arg1, arg2);
   ({ project, remixProject } = tmp4Result);
   owner_user_id = undefined;
   if (project != null) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (owner_user_id == null) {
     owner_user_id = null;
   }
-  const tmp4 = owner_user_id(13867);
+  const tmp4 = owner_user_id(13869);
   dependencyMap = _slicedToArray(noop.useState(null), 2)[1];
   if (cResult[0] === owner_user_id) {
     if (cResult[1] === arg2) {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
                   closure_2_2(closure_129_0);
                 }
                 c4 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp20) {
               c4 = tmp;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
               closure_1_6(closure_129_0);
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

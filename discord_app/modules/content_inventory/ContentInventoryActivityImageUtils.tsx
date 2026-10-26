@@ -1,6 +1,6 @@
-// === Module 14280: ContentInventoryActivityImageUtils ===
+// === Module 14281: ContentInventoryActivityImageUtils ===
 
-// Module 14280 (ContentInventoryActivityImageUtils)
+// Module 14281 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -15,10 +15,10 @@ import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8832 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10646 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10652 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14281 */;
-import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 14283 */;
-import isOnXboxDefault from "isOnXbox" /* 14287 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 14288 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14282 */;
+import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 14284 */;
+import isOnXboxDefault from "isOnXbox" /* 14288 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 14289 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import Constants from "Constants" /* 1087 */;
 import "ReactCompilerGating";
@@ -576,7 +576,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRichImage
   if (null == application_id) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { largeImage: "dispatch", smallImage: "ix" };
+      const obj3 = { largeImage: "Array", smallImage: "Reflect" };
       cResult[2] = obj3;
       let tmp31 = obj3;
     } else {
@@ -746,7 +746,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRichImage
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == application_id) {
-    return { largeImage: "dispatch", smallImage: "ix" };
+    return { largeImage: "Array", smallImage: "Reflect" };
   } else {
     let large_image;
     if (application_id != null) {

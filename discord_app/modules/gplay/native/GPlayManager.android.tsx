@@ -55,7 +55,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -87,7 +87,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               closure_130_11 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Reflect", done: null };
+              return { value: "Reflect", done: true };
             }
           break;
           case 1:
@@ -100,7 +100,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               return obj6;
             } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
               c7 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
               giftOptionsForKey = closure_131_25[purchase2.productId];
@@ -146,7 +146,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
                 const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
                 closure_131_1(closure_131_2[17]).dispatch(obj17);
                 c7 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } else {
                 c6 = 7;
                 c7 = 1;
@@ -381,88 +381,47 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    if (1 === tmp4) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c4 = 3;
+        return { value, done: true };
+      } else if (closure_130_14.EXECUTE === downgradeCommand2) {
+        c3 = 2;
+        c4 = 1;
+        return {
+          value: (function executePendingDowngrade() {
+                const self = this;
+                const apply = closure_1_38.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+          done: false
+        };
+      } else if (closure_130_14.CLEAR === tmp26) {
+        closure_130_39();
       } else {
-        return { value: "IconComponent", done: "+352" };
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("Invalid downgrade state " + downgradeCommand2);
+        throw error;
       }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp4;
-            c1 = 0;
-            let downgradeCommand2;
-            downgradeCommand2 = downgradeCommand.downgradeCommand;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Reflect", done: null };
-          }
-        } else {
-          if (1 === tmp4) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else if (closure_130_14.EXECUTE === downgradeCommand2) {
-              c3 = 2;
-              c4 = 1;
-              const obj5 = {
-                value: (function executePendingDowngrade() {
-                            const self = this;
-                            const apply = closure_1_38.apply;
-                            if (typeof apply === "unknown") {
-                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                            } else {
-                              applyArgumentsResult = apply(self, arguments);
-                            }
-                            return applyArgumentsResult;
-                          })(),
-                done: false
-              };
-              return obj5;
-            } else if (closure_130_14.CLEAR === tmp26) {
-              closure_130_39();
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const error = new Error("Invalid downgrade state " + downgradeCommand2);
-              throw error;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c4 = 3;
-          return { value: "IconComponent", done: "+352" };
-        }
-      } catch (tmp19) {
-        c4 = tmp;
-        throw tmp19;
-      }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
     }
+    await "IconComponent";
+    downgradeCommand2 = downgradeCommand.downgradeCommand;
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -478,7 +437,7 @@ let closure_38 = async function _executePendingDowngrade() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -607,7 +566,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -664,7 +623,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
             });
           });
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       }
     } catch (tmp24) {
@@ -699,7 +658,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -719,7 +678,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
             state2 = state.state;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp8) {

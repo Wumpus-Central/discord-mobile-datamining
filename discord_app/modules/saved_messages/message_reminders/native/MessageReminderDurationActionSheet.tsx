@@ -1,6 +1,6 @@
-// === Module 13818: MessageReminderDurationActionSheet ===
+// === Module 13820: MessageReminderDurationActionSheet ===
 
-// Module 13818 (MessageReminderDurationActionSheet)
+// Module 13820 (MessageReminderDurationActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -8,7 +8,7 @@ import TableRow from "TableRow" /* 6903 */;
 import Pressables from "Pressables" /* 6908 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6928 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
-import MessageRemindersTypes from "MessageRemindersTypes" /* 13819 */;
+import MessageRemindersTypes from "MessageRemindersTypes" /* 13821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 10077 */;
@@ -46,8 +46,8 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  let obj3 = createReminder(13815);
-  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(13815).DueInStringTypes.SHORT });
+  let obj3 = createReminder(13817);
+  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(13817).DueInStringTypes.SHORT });
   dueInText = dueInString.dueInText;
   isOverdue = dueInString.isOverdue;
   const items1 = [onBack, dueInText, isOverdue];

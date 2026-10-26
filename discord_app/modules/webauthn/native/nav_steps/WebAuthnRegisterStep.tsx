@@ -1,6 +1,6 @@
-// === Module 16075: WebAuthnRegisterStep ===
+// === Module 16076: WebAuthnRegisterStep ===
 
-// Module 16075 (WebAuthnRegisterStep)
+// Module 16076 (WebAuthnRegisterStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -151,9 +151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   }
   dependencyMap = tmp18;
   const tmp6Result = _slicedToArray(noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
-  const announceError = navigation(16076).useAnnounceError(tmp10);
+  const announceError = navigation(16077).useAnnounceError(tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp22 = closure_7(tmp(16077).KeyImage, {});
+    const tmp22 = closure_7(tmp(16078).KeyImage, {});
     cResult[4] = tmp22;
     let tmp20 = tmp22;
   } else {
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
     cResult[9] = tmp27;
     tmp26 = tmp27;
   }
-  const tmpResult = navigation(16076);
+  const tmpResult = navigation(16077);
 }) : (function WebAuthnRegisterStep() {
   navigation = navigation(1505).useNavigation();
   const tmp4 = closure_9();
@@ -330,10 +330,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1384);
-  const announceError = navigation(16076).useAnnounceError(tmp10);
+  const announceError = navigation(16077).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(16077).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(16078).KeyImage, {}), , ];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1128).intl;
   const string = intl.string;

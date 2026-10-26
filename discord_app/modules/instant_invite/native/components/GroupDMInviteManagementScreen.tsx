@@ -1,15 +1,15 @@
-// === Module 10820: GroupDMInviteManagementScreen ===
+// === Module 10821: GroupDMInviteManagementScreen ===
 
-// Module 10820 (GroupDMInviteManagementScreen)
+// Module 10821 (GroupDMInviteManagementScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import useMountEffectDefault from "useMountEffect" /* 5263 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import InstantInviteDefault from "InstantInvite" /* 10821 */;
-import _modDef10839 from "module_10839" /* 10839 */;
+import InstantInviteDefault from "InstantInvite" /* 10822 */;
 import _modDef10840 from "module_10840" /* 10840 */;
+import _modDef10841 from "module_10841" /* 10841 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -95,7 +95,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
               tmp2(closure_128_0);
               v1(false);
               c3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -306,12 +306,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             return jsx(View, obj);
           }
         }
-        let obj3 = { lightSource: _modDef10839, darkSource: _modDef10840, title: null, body: null };
+        let obj3 = { lightSource: _modDef10840, darkSource: _modDef10841, title: null, body: null };
         const intl = SceneLoadingIndicator(1128).intl;
         obj3.title = intl.string(SceneLoadingIndicator(1128).t["+nLJkZ"]);
         const intl2 = SceneLoadingIndicator(1128).intl;
         obj3.body = intl2.string(SceneLoadingIndicator(1128).t.F53CAc);
-        tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, { lightSource: _modDef10839, darkSource: _modDef10840, title: null, body: null });
+        tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, { lightSource: _modDef10840, darkSource: _modDef10841, title: null, body: null });
       } else {
         class F {
           constructor(arg0) {
@@ -359,7 +359,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -401,7 +401,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             v1(closure_128_0);
             v3(false);
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           v3 = tmp;
@@ -440,12 +440,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7134).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10839), darkSource: tmp4(10840), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10840), darkSource: tmp4(10841), title: null, body: null };
     const intl = channelId(1128).intl;
     obj2.title = intl.string(channelId(1128).t["+nLJkZ"]);
     const intl2 = channelId(1128).intl;
     obj2.body = intl2.string(channelId(1128).t.F53CAc);
-    tmp12 = jsx(channelId(1202).EmptyState, { lightSource: tmp4(10839), darkSource: tmp4(10840), title: null, body: null });
+    tmp12 = jsx(channelId(1202).EmptyState, { lightSource: tmp4(10840), darkSource: tmp4(10841), title: null, body: null });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
     tmp12 = jsx(channelId(7220).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });

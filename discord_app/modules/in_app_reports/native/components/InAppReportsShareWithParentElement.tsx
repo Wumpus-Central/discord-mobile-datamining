@@ -1,8 +1,8 @@
-// === Module 14586: InAppReportsShareWithParentElement ===
+// === Module 14587: InAppReportsShareWithParentElement ===
 
-// Module 14586 (InAppReportsShareWithParentElement)
+// Module 14587 (InAppReportsShareWithParentElement)
 import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7647 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14585 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14586 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
                       }
                       const _Symbol = Symbol;
                       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp52 = jsx(tmp(14206).ShareIcon, {});
+                        const tmp52 = jsx(tmp(14207).ShareIcon, {});
                         const intl3 = tmp(1128).intl;
                         const stringResult = intl3.string(tmp(1128).t["5l/hlt"]);
                         cResult[15] = tmp52;
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
     }
     obj3.parent3 = username3;
     obj.disabledTitle = intl.formatToPlainString(parents(1128).t.BlAMme, obj3);
-    obj.icon = jsx(parents(14206).ShareIcon, {});
+    obj.icon = jsx(parents(14207).ShareIcon, {});
     const intl2 = tmp15(1128).intl;
     obj.description = intl2.string(parents(1128).t["5l/hlt"]);
     obj.disabled = tmp[0];

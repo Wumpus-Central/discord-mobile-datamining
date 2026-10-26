@@ -1,8 +1,8 @@
-// === Module 17557: RedesignVoiceUserSummary ===
+// === Module 17558: RedesignVoiceUserSummary ===
 
-// Module 17557 (RedesignVoiceUserSummary)
+// Module 17558 (RedesignVoiceUserSummary)
 import ChannelUtils from "ChannelUtils" /* 5994 */;
-import VoiceUserSummaryDefault from "VoiceUserSummary" /* 17553 */;
+import VoiceUserSummaryDefault from "VoiceUserSummary" /* 17554 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;

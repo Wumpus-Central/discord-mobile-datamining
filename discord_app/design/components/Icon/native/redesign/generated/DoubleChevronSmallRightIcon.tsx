@@ -1,10 +1,10 @@
-// === Module 12361: DoubleChevronSmallRightIcon ===
+// === Module 12344: DoubleChevronSmallRightIcon ===
 
-// Module 12361 (DoubleChevronSmallRightIcon)
+// Module 12344 (DoubleChevronSmallRightIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod12362 from "module_12362" /* 12362 */;
+import _mod12345 from "module_12345" /* 12345 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const DoubleChevronSmallRightIcon = ReactCompilerGating.isReactCompilerEn
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12362;
+    const tmpResult = _mod12345;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const DoubleChevronSmallRightIcon = ReactCompilerGating.isReactCompilerEn
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12362, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12345, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

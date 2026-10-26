@@ -1116,7 +1116,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result72 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "Set", hasSpoilerEmbeds: "icon", hasBailedAst: "unicodeEmoji" };
+    parseMessageMarkupResult = { content: "Set", hasSpoilerEmbeds: "\u0111\u1ED1m", hasBailedAst: "h\u01B0\u01A1u cao c\u1ED5" };
     const tmp13Result66 = tmp13(tmp3[42]);
   }
   const obj4 = message(tmp3[37]);

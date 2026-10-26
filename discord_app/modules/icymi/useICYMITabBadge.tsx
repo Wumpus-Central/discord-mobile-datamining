@@ -1,6 +1,6 @@
-// === Module 17837: useICYMITabBadge ===
+// === Module 17847: useICYMITabBadge ===
 
-// Module 17837 (useICYMITabBadge)
+// Module 17847 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ICYMIStore from "ICYMIStore" /* 8823 */;

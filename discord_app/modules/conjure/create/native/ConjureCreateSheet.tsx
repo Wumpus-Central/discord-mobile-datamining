@@ -1,11 +1,11 @@
-// === Module 11748: ConjureCreateSheet ===
+// === Module 12523: ConjureCreateSheet ===
 
-// Module 11748 (ConjureCreateSheet)
+// Module 12523 (ConjureCreateSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11751 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 11773 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11778 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 12200 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 12525 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 12529 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -94,7 +94,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -232,7 +232,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp12) {
         c3 = tmp;
         throw tmp12;
@@ -265,7 +265,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -443,7 +443,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -505,7 +505,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp15) {
         v3 = tmp;
         throw tmp15;
@@ -525,9 +525,9 @@ export default function ConjureCreateSheet(guildId) {
   const tmp4Result = require("ConjureLandingModelChoices");
   const tmp4Result4 = require("ConjureTemplates");
   const items5 = [onCreated];
-  callback3 = obj.useCallback((projectId, id) => {
+  callback3 = obj.useCallback((arg0, arg1) => {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureCreateSheet);
-    onCreated(projectId, id);
+    onCreated(arg0, arg1);
   }, items5);
   const items6 = [callback, guildId, callback3, CONJURE_DEFAULT_TIER_SETTINGS, tmp8, disabled];
   closure_17 = obj.useCallback((wizard) => {

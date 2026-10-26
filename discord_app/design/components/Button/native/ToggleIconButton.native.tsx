@@ -1,9 +1,9 @@
-// === Module 12501: ToggleIconButton ===
+// === Module 12484: ToggleIconButton ===
 
-// Module 12501 (ToggleIconButton)
+// Module 12484 (ToggleIconButton)
 import c from "c" /* 576 */;
 import BaseIconButton from "BaseIconButton" /* 7960 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 12502 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 12485 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13692: ChannelPrompt ===
+// === Module 13694: ChannelPrompt ===
 
-// Module 13692 (ChannelPrompt)
+// Module 13694 (ChannelPrompt)
 import util from "util" /* 1128 */;
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

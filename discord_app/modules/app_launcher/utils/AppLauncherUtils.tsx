@@ -10,13 +10,13 @@ import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import getPlatformDefault from "getPlatform" /* 5633 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7630 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11169 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11405 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11170 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11406 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9650 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import AppLauncherStore from "AppLauncherStore" /* 12078 */;
+import AppLauncherStore from "AppLauncherStore" /* 11969 */;
 
 const require = globalThis.__r;
 
@@ -155,7 +155,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

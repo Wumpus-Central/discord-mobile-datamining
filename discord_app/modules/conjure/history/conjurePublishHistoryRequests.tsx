@@ -1,6 +1,6 @@
-// === Module 12279: conjurePublishHistoryRequests ===
+// === Module 12228: conjurePublishHistoryRequests ===
 
-// Module 12279 (conjurePublishHistoryRequests)
+// Module 12228 (conjurePublishHistoryRequests)
 import conjureWorkerFetch from "conjureWorkerFetch" /* 10794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

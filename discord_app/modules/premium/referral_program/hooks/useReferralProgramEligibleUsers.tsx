@@ -1,6 +1,6 @@
-// === Module 14751: useReferralProgramEligibleUsers ===
+// === Module 14752: useReferralProgramEligibleUsers ===
 
-// Module 14751 (useReferralProgramEligibleUsers)
+// Module 14752 (useReferralProgramEligibleUsers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -59,7 +59,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               let _Array = Array;
               let tmp34 = closure_131_7(Array.from(closure_130_0.values()));
               c7 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               c5 = 1;
               closure_130_1 = tmp17;
@@ -118,7 +118,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {

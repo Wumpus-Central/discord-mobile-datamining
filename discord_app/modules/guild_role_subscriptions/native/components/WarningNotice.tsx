@@ -1,6 +1,6 @@
-// === Module 19207: WarningNotice ===
+// === Module 19217: WarningNotice ===
 
-// Module 19207 (WarningNotice)
+// Module 19217 (WarningNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;

@@ -1,14 +1,14 @@
-// === Module 13674: HubEmailConnectionContent ===
+// === Module 13676: HubEmailConnectionContent ===
 
-// Module 13674 (HubEmailConnectionContent)
+// Module 13676 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13670 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13676 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13672 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13678 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(13661);
+const HubConstants = fn(13663);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1087).MarketingURLs;
 const jsxProd = fn(21);
@@ -50,7 +50,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

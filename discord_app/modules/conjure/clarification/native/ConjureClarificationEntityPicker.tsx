@@ -1,6 +1,6 @@
-// === Module 12481: ConjureClarificationEntityPicker ===
+// === Module 12464: ConjureClarificationEntityPicker ===
 
-// Module 12481 (ConjureClarificationEntityPicker)
+// Module 12464 (ConjureClarificationEntityPicker)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -8,12 +8,12 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import TableRow from "TableRow" /* 6903 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11836 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11838 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12319 */;
-import ConjureClarification from "ConjureClarification" /* 12475 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12482 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12483 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12184 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12186 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12303 */;
+import ConjureClarification from "ConjureClarification" /* 12458 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12465 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12466 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4901 */;
 import GuildStore from "GuildStore" /* 4845 */;

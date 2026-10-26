@@ -6,7 +6,7 @@ import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import shared from "shared" /* 4978 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8966 */;
-import StylesheetUtils from "StylesheetUtils" /* 15385 */;
+import StylesheetUtils from "StylesheetUtils" /* 15386 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

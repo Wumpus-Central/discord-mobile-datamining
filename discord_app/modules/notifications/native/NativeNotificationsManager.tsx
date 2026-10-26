@@ -1,6 +1,6 @@
-// === Module 19361: NativeNotificationsManager ===
+// === Module 19371: NativeNotificationsManager ===
 
-// Module 19361 (NativeNotificationsManager)
+// Module 19371 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   const _Map = Map;
                   const map = new Map();

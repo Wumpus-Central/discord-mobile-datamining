@@ -1,6 +1,6 @@
-// === Module 12218: usePollDurationOptions ===
+// === Module 12111: usePollDurationOptions ===
 
-// Module 12218 (usePollDurationOptions)
+// Module 12111 (usePollDurationOptions)
 import util from "util" /* 1128 */;
 import PollsConstants from "PollsConstants" /* 8310 */;
 import size from "module_2" /* 2 */;

@@ -1,23 +1,23 @@
-// === Module 13619: ControllerIllocon ===
+// === Module 13621: ControllerIllocon ===
 
-// Module 13619 (ControllerIllocon)
+// Module 13621 (ControllerIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef13620 from "module_13620" /* 13620 */;
-import _modDef13621 from "module_13621" /* 13621 */;
 import _modDef13622 from "module_13622" /* 13622 */;
+import _modDef13623 from "module_13623" /* 13623 */;
+import _modDef13624 from "module_13624" /* 13624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13620 }, 3: null };
-const obj2 = { uri: _modDef13620 };
-obj[2] = { uri: _modDef13621 };
-const obj3 = { uri: _modDef13621 };
-obj[3] = { uri: _modDef13622 };
+let obj = { 1: null, 2: { uri: _modDef13622 }, 3: null };
+const obj2 = { uri: _modDef13622 };
+obj[2] = { uri: _modDef13623 };
+const obj3 = { uri: _modDef13623 };
+obj[3] = { uri: _modDef13624 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13622 };
+const obj4 = { uri: _modDef13624 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ControllerIllocon.native.tsx");
 

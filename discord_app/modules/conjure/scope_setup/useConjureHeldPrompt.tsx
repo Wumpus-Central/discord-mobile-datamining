@@ -1,7 +1,7 @@
-// === Module 12309: useConjureHeldPrompt ===
+// === Module 12289: useConjureHeldPrompt ===
 
-// Module 12309 (useConjureHeldPrompt)
-import conjureScopeSetup from "conjureScopeSetup" /* 11754 */;
+// Module 12289 (useConjureHeldPrompt)
+import conjureScopeSetup from "conjureScopeSetup" /* 12290 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 10699 */;

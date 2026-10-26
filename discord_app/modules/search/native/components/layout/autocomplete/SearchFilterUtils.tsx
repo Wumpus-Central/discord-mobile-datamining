@@ -1,19 +1,19 @@
-// === Module 18065: SearchFilterUtils ===
+// === Module 18074: SearchFilterUtils ===
 
-// Module 18065 (SearchFilterUtils)
+// Module 18074 (SearchFilterUtils)
 import util from "util" /* 1128 */;
 import AtIcon from "AtIcon" /* 8561 */;
 import CalendarIcon from "CalendarIcon" /* 9047 */;
 import TrackingConstants from "TrackingConstants" /* 9713 */;
 import AttachmentIcon from "AttachmentIcon" /* 10423 */;
-import RobotIcon from "RobotIcon" /* 11799 */;
-import UserIcon from "UserIcon" /* 11840 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12240 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13222 */;
-import SearchTokens from "SearchTokens" /* 13230 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13247 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15083 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 18066 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12133 */;
+import UserIcon from "UserIcon" /* 12188 */;
+import RobotIcon from "RobotIcon" /* 12240 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13225 */;
+import SearchTokens from "SearchTokens" /* 13233 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13250 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15084 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 18075 */;
 import SearchConstants from "SearchConstants" /* 9714 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
@@ -213,7 +213,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(13230));
+  const keys = Object.keys(items(13233));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

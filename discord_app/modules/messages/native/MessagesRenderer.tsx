@@ -1,6 +1,6 @@
-// === Module 11230: MessagesRenderer ===
+// === Module 11231: MessagesRenderer ===
 
-// Module 11230 (MessagesRenderer)
+// Module 11231 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
@@ -19,11 +19,11 @@ import NativeChatUtilsDefault from "NativeChatUtils" /* 9995 */;
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9997 */;
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9999 */;
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10073 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11231 */;
-import MessagesHandlers from "MessagesHandlers" /* 11237 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12850 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13053 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 13054 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11232 */;
+import MessagesHandlers from "MessagesHandlers" /* 11238 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12853 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13056 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 13057 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -127,7 +127,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);

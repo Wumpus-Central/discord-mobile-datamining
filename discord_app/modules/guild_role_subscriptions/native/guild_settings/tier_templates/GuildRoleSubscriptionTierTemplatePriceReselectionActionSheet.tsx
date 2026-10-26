@@ -1,6 +1,6 @@
-// === Module 19331: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19341: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 19331 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19341 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5234 */;
 import FormRadio from "FormRadio" /* 6988 */;
 import PriceUtils from "PriceUtils" /* 7339 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9041 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16587 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

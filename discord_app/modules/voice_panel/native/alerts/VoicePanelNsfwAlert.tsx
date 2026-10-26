@@ -1,6 +1,6 @@
-// === Module 18621: VoicePanelNsfwAlert ===
+// === Module 18631: VoicePanelNsfwAlert ===
 
-// Module 18621 (VoicePanelNsfwAlert)
+// Module 18631 (VoicePanelNsfwAlert)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;

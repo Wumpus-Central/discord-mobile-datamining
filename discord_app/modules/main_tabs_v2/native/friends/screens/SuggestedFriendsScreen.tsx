@@ -1,9 +1,9 @@
-// === Module 18225: SuggestedFriendsScreen ===
+// === Module 18234: SuggestedFriendsScreen ===
 
-// Module 18225 (SuggestedFriendsScreen)
+// Module 18234 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 18218 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 18227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

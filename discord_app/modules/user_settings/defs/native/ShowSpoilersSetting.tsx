@@ -1,6 +1,6 @@
-// === Module 16826: ShowSpoilersSetting ===
+// === Module 16827: ShowSpoilersSetting ===
 
-// Module 16826 (ShowSpoilersSetting)
+// Module 16827 (ShowSpoilersSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4799 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const SpoilerRenderSetting = fn(1087).SpoilerRenderSetting;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowSpoilersOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

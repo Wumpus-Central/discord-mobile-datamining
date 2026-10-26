@@ -1,13 +1,13 @@
-// === Module 18867: useGameOrganizationInviteFetch ===
+// === Module 18877: useGameOrganizationInviteFetch ===
 
-// Module 18867 (useGameOrganizationInviteFetch)
+// Module 18877 (useGameOrganizationInviteFetch)
 import DurationsDefault from "Durations" /* 1104 */;
-import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11319 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11320 */;
+import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11320 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11028 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11029 */;
 
-const constants = fn(11029).GameOrganizationInviteStates;
+const constants = fn(11030).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1087).QueryIds.GAME_ORGANIZATION_INVITE,
@@ -39,7 +39,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

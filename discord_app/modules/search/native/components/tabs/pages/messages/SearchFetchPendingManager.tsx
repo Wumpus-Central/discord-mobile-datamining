@@ -1,8 +1,8 @@
-// === Module 18158: SearchFetchPendingManager ===
+// === Module 18167: SearchFetchPendingManager ===
 
-// Module 18158 (SearchFetchPendingManager)
+// Module 18167 (SearchFetchPendingManager)
 import useInitialValueDefault from "useInitialValue" /* 5599 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13222 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13225 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

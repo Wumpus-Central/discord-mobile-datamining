@@ -1,6 +1,6 @@
-// === Module 16915: CopyClientInfoSetting ===
+// === Module 16916: CopyClientInfoSetting ===
 
-// Module 16915 (CopyClientInfoSetting)
+// Module 16916 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -13,8 +13,8 @@ import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import ActionSheetRow from "ActionSheetRow" /* 7294 */;
 import ActionSheet from "ActionSheet" /* 7298 */;
 import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7748 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12716 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11027 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12719 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11028 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1383 */;
 
 require = fn;
@@ -395,7 +395,7 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

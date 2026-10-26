@@ -1,8 +1,8 @@
-// === Module 18662: MediaPlaybackPanelController ===
+// === Module 18672: MediaPlaybackPanelController ===
 
-// Module 18662 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15801 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18663 */;
+// Module 18672 (MediaPlaybackPanelController)
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15802 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18673 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
@@ -51,15 +51,15 @@ function useCoreState() {
   const obj7 = sharedValue(5052);
   const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
   const tmp9 = sharedValue3(1633)();
-  const tmp10 = sharedValue3(18451)(sharedValue3(1633)());
+  const tmp10 = sharedValue3(18461)(sharedValue3(1633)());
   const sharedValue6 = sharedValue(5052).useSharedValue(false);
   const obj9 = sharedValue(5052);
   const obj10 = sharedValue(5052);
   return { mode: sharedValue, morphablePanelMode: derivedValue, wrapperDimensions: sharedValue1, useReducedMotion: sharedValue3, pipState: sharedValue2, pipAvoidanceSpecs: tmp10, scrollPosition: sharedValue5, canShowPIP: sharedValue4, lockScrolling: sharedValue6, wrapperOffset: sharedValue(5052).useSharedValue({ x: 0, y: 0, gestureActive: false }) };
 }
-const MediaPlaybackPanelModes = fn(15802).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(15803).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(5609).ActivityPanelModes;
-const MorphablePanelModes = fn(10901).MorphablePanelModes;
+const MorphablePanelModes = fn(10902).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = { code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}" };
 const ReactCompilerGating = fn(558);

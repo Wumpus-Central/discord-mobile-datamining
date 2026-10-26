@@ -1,6 +1,6 @@
-// === Module 10830: InstantInviteCode ===
+// === Module 10831: InstantInviteCode ===
 
-// Module 10830 (InstantInviteCode)
+// Module 10831 (InstantInviteCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

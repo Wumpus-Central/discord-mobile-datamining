@@ -1,23 +1,23 @@
-// === Module 18408: ShopIllocon ===
+// === Module 18418: ShopIllocon ===
 
-// Module 18408 (ShopIllocon)
+// Module 18418 (ShopIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef18409 from "module_18409" /* 18409 */;
-import _modDef18410 from "module_18410" /* 18410 */;
-import _modDef18411 from "module_18411" /* 18411 */;
+import _modDef18419 from "module_18419" /* 18419 */;
+import _modDef18420 from "module_18420" /* 18420 */;
+import _modDef18421 from "module_18421" /* 18421 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18409 }, 3: null };
-const obj2 = { uri: _modDef18409 };
-obj[2] = { uri: _modDef18410 };
-const obj3 = { uri: _modDef18410 };
-obj[3] = { uri: _modDef18411 };
+let obj = { 1: null, 2: { uri: _modDef18419 }, 3: null };
+const obj2 = { uri: _modDef18419 };
+obj[2] = { uri: _modDef18420 };
+const obj3 = { uri: _modDef18420 };
+obj[3] = { uri: _modDef18421 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18411 };
+const obj4 = { uri: _modDef18421 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");
 

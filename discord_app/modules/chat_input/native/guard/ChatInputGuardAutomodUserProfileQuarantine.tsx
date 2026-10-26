@@ -1,9 +1,9 @@
-// === Module 13384: ChatInputGuardAutomodUserProfileQuarantine ===
+// === Module 13387: ChatInputGuardAutomodUserProfileQuarantine ===
 
-// Module 13384 (ChatInputGuardAutomodUserProfileQuarantine)
+// Module 13387 (ChatInputGuardAutomodUserProfileQuarantine)
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4909 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12810 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13355 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12813 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13358 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
@@ -200,7 +200,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return;
           }
         }
-        const tmp20 = jsx(tmp(13385).ChatXIcon, {});
+        const tmp20 = jsx(tmp(13388).ChatXIcon, {});
         cResult[12] = tmp20;
         const tmp19 = tmp20;
       } else {
@@ -266,7 +266,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4909);
-  obj3.icon = jsx(guildId(13385).ChatXIcon, {});
+  obj3.icon = jsx(guildId(13388).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 }));

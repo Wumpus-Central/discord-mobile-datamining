@@ -1,12 +1,12 @@
-// === Module 13719: useCreateGameInvitePost ===
+// === Module 13721: useCreateGameInvitePost ===
 
-// Module 13719 (useCreateGameInvitePost)
+// Module 13721 (useCreateGameInvitePost)
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7379 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11355 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11356 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11194 */;
+import LocalActivityStore from "LocalActivityStore" /* 11195 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
 import SlowmodeStore from "SlowmodeStore" /* 7760 */;
 
@@ -466,7 +466,7 @@ export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnable
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

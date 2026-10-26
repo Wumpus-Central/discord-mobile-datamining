@@ -1,9 +1,9 @@
-// === Module 16495: VideoQuestModalReward ===
+// === Module 16496: VideoQuestModalReward ===
 
-// Module 16495 (VideoQuestModalReward)
+// Module 16496 (VideoQuestModalReward)
 import nativeDefault from "native" /* 587 */;
 import QuestUtils from "QuestUtils" /* 9567 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16478 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,8 +23,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   const obj = quest(576);
-  quest = quest(16473).useVideoQuestModalContext().quest;
-  const tmpResult = quest(16473);
+  quest = quest(16474).useVideoQuestModalContext().quest;
+  const tmpResult = quest(16474);
   const questTaskDetails = quest(9570).useQuestTaskDetails(quest);
   if (cResult[0] !== quest.id) {
     const fn = function s() {
@@ -139,8 +139,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(16473).useVideoQuestModalContext().quest;
-  const obj = quest(16473);
+  quest = quest(16474).useVideoQuestModalContext().quest;
+  const obj = quest(16474);
   const items = [quest.id];
   const questTaskDetails = quest(9570).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {

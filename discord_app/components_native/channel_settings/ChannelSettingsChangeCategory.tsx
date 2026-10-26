@@ -1,6 +1,6 @@
-// === Module 18307: ChannelSettingsChangeCategory ===
+// === Module 18316: ChannelSettingsChangeCategory ===
 
-// Module 18307 (ChannelSettingsChangeCategory)
+// Module 18316 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const tmpResult = channelId(504);
   const navigation = channelId(1505).useNavigation();
   const tmpResult3 = channelId(1505);
-  const appChannelBotUserId = channelId(11311).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11312).useAppChannelBotUserId(stateFromStores);
   _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   if (cResult[3] === appChannelBotUserId) {
     if (cResult[4] === stateFromStores) {
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   cResult[5] = navigation;
   cResult[6] = tmp12;
   tmp11 = tmp12;
-  const tmpResult4 = channelId(11311);
+  const tmpResult4 = channelId(11312);
 }) : (function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
   const items = [ChannelStore];
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const obj = channelId(504);
   const navigation = channelId(1505).useNavigation();
   const obj2 = channelId(1505);
-  const appChannelBotUserId = channelId(11311).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11312).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 });

@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 628, categoryWillUnpublishAt: 167, isCategoryReward: null, prices: "87dcaca9679ceb1e78d3b15aba4c2917", previewAssets: "img_account_sync_samsung_white", googleSkuIds: "svg", eligibleOffers: "embed", variants: false, bundledProducts: null, isFirstParty: null };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 256, categoryWillUnpublishAt: 256, isCategoryReward: null, prices: "08e89c7c23b84c36ce6ed8da12dbbbbb", previewAssets: "img_bungie_light", googleSkuIds: "png", eligibleOffers: "<string:2432697159>", variants: "<string:100663978>", bundledProducts: "<string:1493172907>", isFirstParty: "<string:2852127406>" };
               let str;
               if (first != null) {
                 str = first.optionValue;

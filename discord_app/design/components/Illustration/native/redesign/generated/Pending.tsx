@@ -1,6 +1,6 @@
-// === Module 18342: Pending ===
+// === Module 18351: Pending ===
 
-// Module 18342 (Pending)
+// Module 18351 (Pending)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePendingSo
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18343");
+          return require("module_18352");
         },
       darker() {
-          return require("module_18344");
+          return require("module_18353");
         },
       light() {
-          return require("module_18345");
+          return require("module_18354");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePendingSo
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18343");
+      return require("module_18352");
     },
     darker() {
-      return require("module_18344");
+      return require("module_18353");
     },
     light() {
-      return require("module_18345");
+      return require("module_18354");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getPendingSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_18343");
+      return require("module_18352");
     },
     darker() {
-      return require("module_18344");
+      return require("module_18353");
     },
     light() {
-      return require("module_18345");
+      return require("module_18354");
     }
   });
 }

@@ -1,6 +1,6 @@
-// === Module 13165: VoicePanelHeaderGlassBlur ===
+// === Module 13168: VoicePanelHeaderGlassBlur ===
 
-// Module 13165 (VoicePanelHeaderGlassBlur)
+// Module 13168 (VoicePanelHeaderGlassBlur)
 import useThemeDefault from "useTheme" /* 5205 */;
 import spring from "spring" /* 5247 */;
 import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5585 */;

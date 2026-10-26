@@ -1,6 +1,6 @@
-// === Module 13016: useFriendsAnimationState ===
+// === Module 13019: useFriendsAnimationState ===
 
-// Module 13016 (useFriendsAnimationState)
+// Module 13019 (useFriendsAnimationState)
 import c from "c" /* 576 */;
 import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,8 +1,8 @@
-// === Module 11435: useVideoReadyTimeout ===
+// === Module 11436: useVideoReadyTimeout ===
 
-// Module 11435 (useVideoReadyTimeout)
+// Module 11436 (useVideoReadyTimeout)
 import DurationsDefault from "Durations" /* 1104 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11436 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11437 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

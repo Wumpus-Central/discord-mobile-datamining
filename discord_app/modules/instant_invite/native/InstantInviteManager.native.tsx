@@ -1,6 +1,6 @@
-// === Module 18849: InstantInviteManager ===
+// === Module 18859: InstantInviteManager ===
 
-// Module 18849 (InstantInviteManager)
+// Module 18859 (InstantInviteManager)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 

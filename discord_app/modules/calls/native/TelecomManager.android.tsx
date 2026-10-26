@@ -1,25 +1,25 @@
-// === Module 18957: TelecomManager ===
+// === Module 18967: TelecomManager ===
 
-// Module 18957 (TelecomManager)
+// Module 18967 (TelecomManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 7413 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
-import SoundUtils from "SoundUtils" /* 11525 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 11588 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 11593 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15796 */;
-import NativeTelecomModuleDefault from "NativeTelecomModule" /* 18958 */;
+import SoundUtils from "SoundUtils" /* 11526 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 11589 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 11594 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15797 */;
+import NativeTelecomModuleDefault from "NativeTelecomModule" /* 18968 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundpackStore from "SoundpackStore" /* 11526 */;
+import SoundpackStore from "SoundpackStore" /* 11527 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 6497 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13745 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13747 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import StreamerModeStore from "StreamerModeStore" /* 5026 */;
@@ -360,9 +360,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(18958);
-    const reportIncomingCallResult = self(18958).reportIncomingCall(channelId, channelName, tmp19);
-    self(18958).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
+    const obj4 = self(18968);
+    const reportIncomingCallResult = self(18968).reportIncomingCall(channelId, channelName, tmp19);
+    self(18968).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
       if (!result) {
         obj.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -371,7 +371,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       obj.warn("Failed to report incoming call:", error);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(18958).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
+    const nextPromise = self(18968).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
       if (!result) {
         obj.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -385,7 +385,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(18958);
+  obj = self(18968);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -433,7 +433,7 @@ prototype["doReconcile"] = function doReconcile() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -614,7 +614,7 @@ prototype["doReconcile"] = function doReconcile() {
           channel2 = channel.getChannel(closure_129_0);
           if (null == channel2) {
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else {
             const obj18 = { channelId: closure_129_0, guildId: null, channelName: null, state: null };
             let guildId = RTCConnectionStore.getGuildId();
@@ -722,7 +722,7 @@ prototype["startCall"] = function startCall(channelId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -805,7 +805,7 @@ prototype["startCall"] = function startCall(channelId) {
 prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(18958);
+  obj = self(18968);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((result) => {
     self.clearCall(currentCall.channelId);
@@ -958,7 +958,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(18958);
+            obj = self(18968);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

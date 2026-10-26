@@ -1,12 +1,12 @@
-// === Module 19101: GuildSettingsModalRolesStore ===
+// === Module 19111: GuildSettingsModalRolesStore ===
 
-// Module 19101 (GuildSettingsModalRolesStore)
+// Module 19111 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4978 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13316 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13319 */;
 import GuildRoleStore from "GuildRoleStore" /* 4877 */;
 import GuildStore from "GuildStore" /* 4845 */;
 

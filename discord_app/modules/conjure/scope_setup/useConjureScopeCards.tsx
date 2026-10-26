@@ -1,9 +1,9 @@
-// === Module 12470: useConjureScopeCards ===
+// === Module 12453: useConjureScopeCards ===
 
-// Module 12470 (useConjureScopeCards)
+// Module 12453 (useConjureScopeCards)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureScopeSetup from "conjureScopeSetup" /* 11754 */;
+import conjureScopeSetup from "conjureScopeSetup" /* 12290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -255,11 +255,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureSc
             }
           }
           if (cResult[8] !== tmp19) {
-            const result = tmp(11754).ownerOnlyClarification(tmp19);
+            const result = tmp(12290).ownerOnlyClarification(tmp19);
             cResult[8] = tmp19;
             cResult[9] = result;
             let tmp35 = result;
-            const tmpResult4 = tmp(11754);
+            const tmpResult4 = tmp(12290);
           } else {
             tmp35 = cResult[9];
           }
@@ -419,7 +419,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureSc
         }
       }
     }
-    const obj5 = { clarification: tmp(11754).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
+    const obj5 = { clarification: tmp(12290).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
     return obj5;
   }
   const tmp9 = _slicedToArray(noop.useState(null), 2);
@@ -747,8 +747,8 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
   let items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(11750).useConjureEligibleGuilds(switchTo);
-  let obj2 = projectId(11750);
+  const conjureEligibleGuilds = projectId(12304).useConjureEligibleGuilds(switchTo);
+  let obj2 = projectId(12304);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -858,6 +858,6 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(11754).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12290).ownerOnlyClarification(memo);
   return obj5;
 });

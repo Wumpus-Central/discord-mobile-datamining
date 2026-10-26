@@ -1,9 +1,9 @@
-// === Module 13810: ForLaterMessageCard ===
+// === Module 13812: ForLaterMessageCard ===
 
-// Module 13810 (ForLaterMessageCard)
+// Module 13812 (ForLaterMessageCard)
 import nativeDefault from "native" /* 587 */;
 import _modDef5690 from "module_5690" /* 5690 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 13811 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 13813 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
@@ -322,7 +322,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -348,7 +348,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -364,7 +364,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: tmp4(13815).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: tmp4(13817).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -398,7 +398,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       obj8.due_duration = diffResult;
                       closure_2_1(1267).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                       c2 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp26) {
                     c2 = tmp;
@@ -433,7 +433,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return obj;
         }
         message = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp9) {
         message = tmp;
         throw tmp9;
@@ -458,7 +458,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
   const tmp = closure_12();
-  const savedMessageChannel = savedMessage(13815).useSavedMessageChannel(savedMessage);
+  const savedMessageChannel = savedMessage(13817).useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
@@ -471,7 +471,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -506,7 +506,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -522,7 +522,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(13815).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(13817).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -556,7 +556,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     obj8.due_duration = diffResult;
                     v1(1267).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                     c2 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp26) {
                   c2 = tmp;
@@ -580,14 +580,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp8) {
         c0 = tmp;
         throw tmp8;
       }
     }
   }), items);
-  let obj = savedMessage(13815);
+  let obj = savedMessage(13817);
   const items1 = [PermissionStore];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
@@ -611,12 +611,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return tmp2;
       })) {
         let obj3 = { savedMessage, jumpToMessage: callback, throttledNow };
-        const tmp8 = closure_10(savedMessageChannel(13817), obj3);
+        const tmp8 = closure_10(savedMessageChannel(13819), obj3);
         let obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp.card, onPress: callback, children: null };
         let tmp6Result = null;
         if (null != savedMessage.saveData.dueAt) {
           let obj5 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = closure_10(tmp2(13824).ForLaterCardReminderHeader, obj5);
+          tmp6Result = closure_10(tmp2(13826).ForLaterCardReminderHeader, obj5);
         }
         const items2 = [tmp6Result, , , ];
         let obj6 = { channel: savedMessageChannel, actions: null };
@@ -625,11 +625,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp12 = tmp8;
         }
         obj6.actions = tmp12;
-        items2[1] = closure_10(tmp2(13826).ForLaterCardHeader, obj6);
+        items2[1] = closure_10(tmp2(13828).ForLaterCardHeader, obj6);
         const obj7 = { style: tmp.cardDivider };
         items2[2] = closure_10(View, obj7);
         let obj8 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-        items2[3] = closure_10(tmp2(13827).ForLaterMessageRow, obj8);
+        items2[3] = closure_10(tmp2(13829).ForLaterMessageRow, obj8);
         obj4.children = items2;
         return closure_11(tmp2(6905).Card, obj4);
       }

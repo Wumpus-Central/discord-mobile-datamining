@@ -1,6 +1,6 @@
-// === Module 16931: CacheActionsStorageDiagnostics ===
+// === Module 16932: CacheActionsStorageDiagnostics ===
 
-// Module 16931 (CacheActionsStorageDiagnostics)
+// Module 16932 (CacheActionsStorageDiagnostics)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -31,7 +31,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

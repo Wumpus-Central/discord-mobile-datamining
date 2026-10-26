@@ -1,6 +1,6 @@
-// === Module 18277: ViewModerators ===
+// === Module 18286: ViewModerators ===
 
-// Module 18277 (ViewModerators)
+// Module 18286 (ViewModerators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -24,7 +24,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(18278, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
+  obj2.openLazy(asyncRequireImpl(18287, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/channel_permissions/ViewModerators.tsx");
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
                   const obj2 = tmp2(5662);
                   v1(5210).hideActionSheet();
                   c2 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp20) {
                 c2 = tmp;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
               const obj5 = { title: null, hasIcons: true, children: null };
               let intl = tmp(1128).intl;
               obj5.title = intl.string(tmp(1128).t.f7VbhF);
-              let obj6 = { icon: closure_10(tmp(11156).CirclePlusIcon, {}), label: null, onPress: null, disabled: null, arrow: true };
+              let obj6 = { icon: closure_10(tmp(11157).CirclePlusIcon, {}), label: null, onPress: null, disabled: null, arrow: true };
               let intl2 = tmp(1128).intl;
               obj6.label = intl2.string(tmp(1128).t.n3bcy8);
               obj6.onPress = function onPress() {
@@ -248,8 +248,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
                   const _HermesInternal = HermesInternal;
                   const obj2 = ActionSheetActionCreatorsDefault;
                   const obj3 = { channel, canSkip: false };
-                  obj2.openLazy(asyncRequireImpl(18278, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-                  const tmp7 = asyncRequireImpl(18278, dependencyMap.paths);
+                  obj2.openLazy(asyncRequireImpl(18287, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+                  const tmp7 = asyncRequireImpl(18287, dependencyMap.paths);
                 }
               };
               obj6.disabled = !canUpdateStageChannelModerators;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
             const obj2 = tmp2(5662);
             v1(5210).hideActionSheet();
             c2 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -447,8 +447,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewMode
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(18278, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(18278, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(18287, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(18287, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;

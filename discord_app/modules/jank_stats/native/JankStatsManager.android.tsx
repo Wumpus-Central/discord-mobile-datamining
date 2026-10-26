@@ -1,9 +1,9 @@
-// === Module 18854: JankStatsManager ===
+// === Module 18864: JankStatsManager ===
 
-// Module 18854 (JankStatsManager)
+// Module 18864 (JankStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7584 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 18855 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 18865 */;
 import Constants from "Constants" /* 1087 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
 import size from "module_2" /* 2 */;

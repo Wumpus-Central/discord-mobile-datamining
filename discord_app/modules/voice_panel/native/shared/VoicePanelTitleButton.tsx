@@ -1,6 +1,6 @@
-// === Module 18530: VoicePanelTitleButton ===
+// === Module 18540: VoicePanelTitleButton ===
 
-// Module 18530 (VoicePanelTitleButton)
+// Module 18540 (VoicePanelTitleButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,12 +11,12 @@ import _modDef7242 from "module_7242" /* 7242 */;
 import _modDef8507 from "module_8507" /* 8507 */;
 import _modDef8511 from "module_8511" /* 8511 */;
 import native from "native" /* 8913 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10899 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14177 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 18471 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 18504 */;
-import _modDef18531 from "module_18531" /* 18531 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18532 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10900 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14178 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 18481 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 18514 */;
+import _modDef18541 from "module_18541" /* 18541 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18542 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import StageInstanceStore from "StageInstanceStore" /* 4828 */;
@@ -198,13 +198,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
       return tmp11;
     }
   }
-  const tmp12 = React6(native.HeaderButton, { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef18531, iconPosition: "start", onPress });
+  const tmp12 = React6(native.HeaderButton, { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef18541, iconPosition: "start", onPress });
   cResult[3] = name;
   cResult[4] = onPress;
   cResult[5] = tmp9;
   cResult[6] = tmp12;
   tmp11 = tmp12;
-  const obj4 = { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef18531, iconPosition: "start", onPress };
+  const obj4 = { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef18541, iconPosition: "start", onPress };
 }) : (function StreamButton(arg0) {
   ({ participant, onPress } = arg0);
   const context = noop.useContext(VoicePanelStateContextDefault);
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef18531;
+  obj2.icon = _modDef18541;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 });
@@ -546,7 +546,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/shared/Voice
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelTitleButton() {
   const cResult = guildId(576).c(19);
-  const context = noop.useContext(channelId(10899));
+  const context = noop.useContext(channelId(10900));
   guildId = context.guildId;
   channelId = context.channelId;
   ({ channelType, focused } = context);
@@ -566,7 +566,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = guildId(576);
   const tmp4 = channelId;
   const derivedStateFromSharedValue = guildId(8759).useDerivedStateFromSharedValue(focused, first);
-  const tmp8 = tmp4(18503)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp8 = tmp4(18513)(derivedStateFromSharedValue, channelId, guildId);
   if (cResult[1] === channelId) {
     if (cResult[2] === guildId) {
       let tmp9 = cResult[3];
@@ -649,7 +649,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   tmp9 = S;
   const tmpResult = guildId(8759);
 }) : (function VoicePanelTitleButton() {
-  const context = noop.useContext(channelId(10899));
+  const context = noop.useContext(channelId(10900));
   const guildId = context.guildId;
   channelId = context.channelId;
   ({ channelType, focused } = context);
@@ -660,7 +660,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return id;
   });
-  const tmp3 = channelId(18503)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(18513)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

@@ -1,10 +1,10 @@
-// === Module 17745: useGuildsBarBottomRightBadge ===
+// === Module 17746: useGuildsBarBottomRightBadge ===
 
-// Module 17745 (useGuildsBarBottomRightBadge)
+// Module 17746 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1202 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17746 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17747 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17751 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17747 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17748 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(17746)(obj4);
+      const tmp23 = tmp8(17747)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(17747), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(17748), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "application" };
+      return { badge: null, cutout: "r", cutouts: "toCharArray$esjava$1" };
     }
   }, items1);
 });

@@ -1,6 +1,6 @@
-// === Module 12306: useConjureRemixNotice ===
+// === Module 12286: useConjureRemixNotice ===
 
-// Module 12306 (useConjureRemixNotice)
+// Module 12286 (useConjureRemixNotice)
 import _modDef3830 from "module_3830" /* 3830 */;
 import conjureRemixConnection from "conjureRemixConnection" /* 10808 */;
 import noop from "module_19" /* 19 */;

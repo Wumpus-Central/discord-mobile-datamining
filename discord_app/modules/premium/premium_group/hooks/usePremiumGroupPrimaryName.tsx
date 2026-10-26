@@ -1,10 +1,10 @@
-// === Module 14796: usePremiumGroupPrimaryName ===
+// === Module 14797: usePremiumGroupPrimaryName ===
 
-// Module 14796 (usePremiumGroupPrimaryName)
+// Module 14797 (usePremiumGroupPrimaryName)
 import c from "c" /* 576 */;
 import UserUtils from "UserUtils" /* 5025 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 14797 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 14801 */;
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 14798 */;
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 14802 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

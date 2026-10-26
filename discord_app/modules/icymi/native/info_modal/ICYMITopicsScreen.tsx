@@ -1,6 +1,6 @@
-// === Module 17925: ICYMITopicsScreen ===
+// === Module 17934: ICYMITopicsScreen ===
 
-// Module 17925 (ICYMITopicsScreen)
+// Module 17934 (ICYMITopicsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -13,18 +13,18 @@ import FoodIcon from "FoodIcon" /* 9965 */;
 import BicycleIcon from "BicycleIcon" /* 9967 */;
 import TvIcon from "TvIcon" /* 10641 */;
 import MusicIcon from "MusicIcon" /* 10647 */;
-import RobotIcon from "RobotIcon" /* 11799 */;
-import MedalIcon from "MedalIcon" /* 12763 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12886 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 13973 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15648 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 16618 */;
-import ScienceIcon from "ScienceIcon" /* 17927 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 17928 */;
+import RobotIcon from "RobotIcon" /* 12240 */;
+import MedalIcon from "MedalIcon" /* 12766 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12889 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 13975 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15649 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 16619 */;
+import ScienceIcon from "ScienceIcon" /* 17936 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 17937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17919 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17928 */;
 
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
@@ -60,7 +60,7 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(17926).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(17935).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4971);
@@ -191,7 +191,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

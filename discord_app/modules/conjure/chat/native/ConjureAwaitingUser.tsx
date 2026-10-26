@@ -1,6 +1,6 @@
-// === Module 11818: ConjureAwaitingUser ===
+// === Module 12167: ConjureAwaitingUser ===
 
-// Module 11818 (ConjureAwaitingUser)
+// Module 12167 (ConjureAwaitingUser)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const createStyles = fn(4971);
 let obj2 = { ring: null };
-const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(11819).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
+const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(12168).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function ConjureAwaitingUserTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };

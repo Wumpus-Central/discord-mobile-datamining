@@ -1,9 +1,9 @@
-// === Module 12343: ConjureNativeStatusLine ===
+// === Module 12328: ConjureNativeStatusLine ===
 
-// Module 12343 (ConjureNativeStatusLine)
+// Module 12328 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import MagicWandIcon from "MagicWandIcon" /* 12344 */;
+import MagicWandIcon from "MagicWandIcon" /* 12252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

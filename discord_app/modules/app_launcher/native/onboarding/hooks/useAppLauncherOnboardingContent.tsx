@@ -1,16 +1,16 @@
-// === Module 12017: useAppLauncherOnboardingContent ===
+// === Module 11908: useAppLauncherOnboardingContent ===
 
-// Module 12017 (useAppLauncherOnboardingContent)
+// Module 11908 (useAppLauncherOnboardingContent)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
-import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12023 */;
+import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 11914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9651 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
 const initialize = tmp(504);
-const useActivityApplications = tmp(12018);
+const useActivityApplications = tmp(11909);
 require = fn;
 const constants = fn(4820).DismissibleContentGroupName;
 let ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 15033: NoticeStore ===
+// === Module 15034: NoticeStore ===
 
-// Module 15033 (NoticeStore)
+// Module 15034 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

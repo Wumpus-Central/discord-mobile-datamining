@@ -1,6 +1,6 @@
-// === Module 19137: SelectConnectionActionSheet ===
+// === Module 19147: SelectConnectionActionSheet ===
 
-// Module 19137 (SelectConnectionActionSheet)
+// Module 19147 (SelectConnectionActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -15,7 +15,7 @@ import ActionSheet from "ActionSheet" /* 7298 */;
 import ConnectionsHooks from "ConnectionsHooks" /* 7612 */;
 import SegmentedControlState from "SegmentedControlState" /* 8901 */;
 import SegmentedControl from "SegmentedControl" /* 9146 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11256 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

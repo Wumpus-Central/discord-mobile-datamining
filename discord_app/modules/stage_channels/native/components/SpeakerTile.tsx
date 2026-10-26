@@ -1,9 +1,9 @@
-// === Module 11700: SpeakerTile ===
+// === Module 11701: SpeakerTile ===
 
-// Module 11700 (SpeakerTile)
+// Module 11701 (SpeakerTile)
 import nativeDefault from "native" /* 587 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7878 */;
-import StageTileTypes from "StageTileTypes" /* 11701 */;
+import StageTileTypes from "StageTileTypes" /* 11702 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
 

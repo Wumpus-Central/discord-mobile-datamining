@@ -1,10 +1,10 @@
-// === Module 13899: WishlistItemCard ===
+// === Module 13901: WishlistItemCard ===
 
-// Module 13899 (WishlistItemCard)
+// Module 13901 (WishlistItemCard)
 import c from "c" /* 576 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13900 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13902 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13903 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13902 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13904 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13905 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

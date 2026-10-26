@@ -1,6 +1,6 @@
-// === Module 13898: GiftingBadgeLevelUpProgress ===
+// === Module 13900: GiftingBadgeLevelUpProgress ===
 
-// Module 13898 (GiftingBadgeLevelUpProgress)
+// Module 13900 (GiftingBadgeLevelUpProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2632 from "module_2632" /* 2632 */;

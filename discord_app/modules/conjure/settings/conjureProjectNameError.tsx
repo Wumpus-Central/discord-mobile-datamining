@@ -1,6 +1,6 @@
-// === Module 11812: conjureProjectNameError ===
+// === Module 12160: conjureProjectNameError ===
 
-// Module 11812 (conjureProjectNameError)
+// Module 12160 (conjureProjectNameError)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;

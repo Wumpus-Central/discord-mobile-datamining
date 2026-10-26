@@ -1,12 +1,12 @@
-// === Module 12504: AIShimmer ===
+// === Module 12487: AIShimmer ===
 
-// Module 12504 (AIShimmer)
+// Module 12487 (AIShimmer)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 12505 */;
-import waveTransition2 from "waveTransition" /* 12506 */;
-import createWaveTransition from "createWaveTransition" /* 12507 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 12488 */;
+import waveTransition2 from "waveTransition" /* 12489 */;
+import createWaveTransition from "createWaveTransition" /* 12490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

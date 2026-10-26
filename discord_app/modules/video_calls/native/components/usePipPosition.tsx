@@ -1,9 +1,9 @@
-// === Module 11372: usePipPosition ===
+// === Module 11373: usePipPosition ===
 
-// Module 11372 (usePipPosition)
+// Module 11373 (usePipPosition)
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
-import PictureInPicture from "PictureInPicture" /* 11373 */;
+import PictureInPicture from "PictureInPicture" /* 11374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePipPo
 }) : (function usePipPosition() {
   const tmp = _slicedToArray(noop.useState(() => {
     const Storage = closure_0(510).Storage;
-    return Storage.get(CameraPreviewPosition, closure_0(11373).DEFAULT_PIP_POSITION);
+    return Storage.get(CameraPreviewPosition, closure_0(11374).DEFAULT_PIP_POSITION);
   }), 2);
   closure_0 = tmp[1];
   const items = [

@@ -1,6 +1,6 @@
-// === Module 13094: AddMediaToOriginalForumPostActionSheet ===
+// === Module 13097: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 13094 (AddMediaToOriginalForumPostActionSheet)
+// Module 13097 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -35,7 +35,7 @@ let closure_17 = async function _upload2(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_17 = async function _upload2(arg0) {
           closure_132_10 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

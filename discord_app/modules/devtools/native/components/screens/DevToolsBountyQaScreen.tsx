@@ -1,6 +1,6 @@
-// === Module 17027: DevToolsBountyQaScreen ===
+// === Module 17028: DevToolsBountyQaScreen ===
 
-// Module 17027 (DevToolsBountyQaScreen)
+// Module 17028 (DevToolsBountyQaScreen)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import AdCreativeType from "AdCreativeType" /* 6717 */;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
             }
             const _Symbol2 = Symbol;
             if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp31 = closure_8(tmp(12261).UndoIcon, {});
+              const tmp31 = closure_8(tmp(12210).UndoIcon, {});
               cResult[23] = tmp31;
               let tmp29 = tmp31;
             } else {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
             }
             const _Symbol3 = Symbol;
             if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-              let obj5 = { label: "Refresh Organic Serve", subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.", icon: closure_8(tmp(16452).RedoIcon, {}), onPress: tmp16 };
+              let obj5 = { label: "Refresh Organic Serve", subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.", icon: closure_8(tmp(16453).RedoIcon, {}), onPress: tmp16 };
               const tmp37 = closure_8(tmp(6903).TableRow, obj5);
               cResult[26] = tmp37;
               let tmp35 = tmp37;
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -272,11 +272,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
                     toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                     c2 = 0;
                     c3 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     c1 = 3;
                     c3 = 1;
-                    const obj7 = { value: tmp3(14133).resetCreativePreviewDeliveryState(tmp22, tmp3(6713).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
+                    const obj7 = { value: tmp3(14135).resetCreativePreviewDeliveryState(tmp22, tmp3(6713).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
                     return obj7;
                   }
                 } else {
@@ -284,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
                   const NumberResult = Number(tmp37);
                   c1 = 2;
                   c3 = 1;
-                  const obj8 = { value: tmp3(14133).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+                  const obj8 = { value: tmp3(14135).resetPreviewDeliveryStateLookback(NumberResult), done: false };
                   return obj8;
                 }
               }
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -391,11 +391,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
                 toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                 dependencyMap = 0;
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } else {
                 c1 = 3;
                 c3 = 1;
-                const obj7 = { value: tmp3(14133).resetCreativePreviewDeliveryState(tmp22, tmp3(6713).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
+                const obj7 = { value: tmp3(14135).resetCreativePreviewDeliveryState(tmp22, tmp3(6713).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
                 return obj7;
               }
             } else {
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
               const NumberResult = Number(tmp37);
               c1 = 2;
               c3 = 1;
-              const obj8 = { value: tmp3(14133).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+              const obj8 = { value: tmp3(14135).resetPreviewDeliveryStateLookback(NumberResult), done: false };
               return obj8;
             }
           }
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     closure_8(stateFromStores(6903).TableRow, {
       label: "Reset and re-serve",
       subLabel: "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-      icon: closure_8(stateFromStores(12261).UndoIcon, {}),
+      icon: closure_8(stateFromStores(12210).UndoIcon, {}),
       onPress: function handleResetAndRefresh() {
         const self = this;
         const apply = closure_2.apply;
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   let obj5 = {
     label: "Reset and re-serve",
     subLabel: "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-    icon: closure_8(stateFromStores(12261).UndoIcon, {}),
+    icon: closure_8(stateFromStores(12210).UndoIcon, {}),
     onPress: function handleResetAndRefresh() {
       const self = this;
       const apply = closure_2.apply;
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   items6[1] = closure_8(stateFromStores(6903).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(16452).RedoIcon, {}),
+    icon: closure_8(stateFromStores(16453).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
       const questToDeliver = stateFromStores(9571).fetchQuestToDeliver(stateFromStores(6713).AdPlacement.MOBILE_HOME_DOCK_AREA, "devTools-bountyQa");
       const obj = stateFromStores(9571);

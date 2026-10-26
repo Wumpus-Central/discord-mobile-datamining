@@ -1,6 +1,6 @@
-// === Module 12488: ConjureSecretsSheet ===
+// === Module 12471: ConjureSecretsSheet ===
 
-// Module 12488 (ConjureSecretsSheet)
+// Module 12471 (ConjureSecretsSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -86,7 +86,7 @@ export default function ConjureSecretsSheet(projectId) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ export default function ConjureSecretsSheet(projectId) {
     tmp15Result = null;
     if ("" !== request.note) {
       let obj5 = { text: request.note, variant: "text-sm/normal", color: "text-default" };
-      tmp15Result = tmp15(tmp(11823), obj5);
+      tmp15Result = tmp15(tmp(12172), obj5);
     }
   }
   let items1 = [tmp15Result, , , , , , ];

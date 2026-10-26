@@ -1,10 +1,10 @@
-// === Module 11344: SpotifyActionCreators ===
+// === Module 11345: SpotifyActionCreators ===
 
-// Module 11344 (SpotifyActionCreators)
+// Module 11345 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import GameUtilsDefault from "GameUtils" /* 9255 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11343 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11344 */;
 
 const require = globalThis.__r;
 

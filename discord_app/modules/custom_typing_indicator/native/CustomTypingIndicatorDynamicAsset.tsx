@@ -1,6 +1,6 @@
-// === Module 13073: CustomTypingIndicatorDynamicAsset ===
+// === Module 13076: CustomTypingIndicatorDynamicAsset ===
 
-// Module 13073 (CustomTypingIndicatorDynamicAsset)
+// Module 13076 (CustomTypingIndicatorDynamicAsset)
 import FastImageDefault from "FastImage" /* 5669 */;
 import noop from "module_19" /* 19 */;
 
@@ -84,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
           }
           const intl = tmp(1128).intl;
           const obj4 = { name };
-          const formatResult = intl.format(tmp(13067).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
+          const formatResult = intl.format(tmp(13070).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
           cResult[11] = name;
           cResult[12] = suggestion;
           cResult[13] = formatResult;
           tmp15 = formatResult;
-          const tmpResult = tmp(13067);
+          const tmpResult = tmp(13070);
         }
         const items1 = [tmp4Result.text, textStyle];
         cResult[8] = tmp4Result.text;

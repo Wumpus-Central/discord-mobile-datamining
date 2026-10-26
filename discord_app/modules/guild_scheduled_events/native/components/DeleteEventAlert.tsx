@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
           }
           guildId(recurrenceId[9]).hideActionSheet();
           c2 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         c2 = tmp;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
           }
           v1(5210).hideActionSheet();
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

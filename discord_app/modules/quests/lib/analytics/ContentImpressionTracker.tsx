@@ -1,6 +1,6 @@
-// === Module 14142: ContentImpressionTracker ===
+// === Module 14144: ContentImpressionTracker ===
 
-// Module 14142 (ContentImpressionTracker)
+// Module 14144 (ContentImpressionTracker)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6468 */;
 import AdCreativeType from "AdCreativeType" /* 6717 */;
 import QuestDataUtils from "QuestDataUtils" /* 7772 */;
@@ -9,10 +9,10 @@ import AnalyticsActions from "AnalyticsActions" /* 7792 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
 import captureAdUserAction from "captureAdUserAction" /* 9573 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
-import IosAttributionEligibility from "IosAttributionEligibility" /* 14119 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14120 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14122 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 14124 */;
+import IosAttributionEligibility from "IosAttributionEligibility" /* 14121 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14122 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14124 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 14126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7776 */;
@@ -98,7 +98,7 @@ class QuestContentImpression {
           let obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -310,7 +310,7 @@ class QuestContentImpression {
               onImpressionCallback();
             }
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp34) {
           c3 = tmp;

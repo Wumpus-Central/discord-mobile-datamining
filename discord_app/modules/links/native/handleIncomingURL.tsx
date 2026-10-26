@@ -1,12 +1,12 @@
-// === Module 19454: handleIncomingURL ===
+// === Module 19464: handleIncomingURL ===
 
-// Module 19454 (handleIncomingURL)
+// Module 19464 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7584 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15092 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 19453 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15093 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 19463 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
@@ -29,7 +29,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -145,17 +145,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     }
                   }
                   c8 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   const parts = url.split("voice/");
                   if (2 !== parts.length) {
                     c8 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     const parts1 = parts[1].split("/");
                     if (0 === parts1.length) {
                       c8 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     } else if ("user" !== parts1[0]) {
                       if ("invite" === parts1[0]) {
                         const obj15 = { payload: null, isAppStartupNavigation: null };

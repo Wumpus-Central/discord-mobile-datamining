@@ -1,6 +1,6 @@
-// === Module 16032: useShouldShowInitialGoogleWalletBanner ===
+// === Module 16033: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 16032 (useShouldShowInitialGoogleWalletBanner)
+// Module 16033 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

@@ -1,12 +1,12 @@
-// === Module 16414: OrbsArcadeClaimRewardButton ===
+// === Module 16415: OrbsArcadeClaimRewardButton ===
 
-// Module 16414 (OrbsArcadeClaimRewardButton)
+// Module 16415 (OrbsArcadeClaimRewardButton)
 import util from "util" /* 1128 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16400 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16401 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16394 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
 
 const require = globalThis.__r;
 
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -128,19 +128,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
               let orbsArcadeClaimableRewards;
               let gameState;
               closure_128_3 = undefined;
-              orbsArcadeClaimableRewards = tmp5(16400).getOrbsArcadeClaimableRewards(tmp5.rewards, gameStateForGame.getGameStateForGame(tmp5.id));
+              orbsArcadeClaimableRewards = tmp5(16401).getOrbsArcadeClaimableRewards(tmp5.rewards, gameStateForGame.getGameStateForGame(tmp5.id));
               c2 = 1;
-              const obj6 = tmp5(16400);
+              const obj6 = tmp5(16401);
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: tmp5(16399).claimOrbsArcadeRewards(tmp5.id), done: false };
+              const obj4 = { value: tmp5(16400).claimOrbsArcadeRewards(tmp5.id), done: false };
               return obj4;
             }
           } else if (1 === tmp8) {
             c2 = 0;
             showOrbsArcadeClaimRewardsError();
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -165,12 +165,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
                 showOrbsArcadeClaimRewardsError();
               }
               if (closure_128_3.length > 0) {
-                const result = tmp5(16415).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
-                const obj = tmp5(16415);
+                const result = tmp5(16416).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
+                const obj = tmp5(16416);
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp24) {
           if (tmp4 === c2) {
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -255,19 +255,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
             let orbsArcadeClaimableRewards;
             let gameState;
             closure_128_3 = undefined;
-            orbsArcadeClaimableRewards = tmp5(16400).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
+            orbsArcadeClaimableRewards = tmp5(16401).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
             dependencyMap = 1;
-            const obj6 = tmp5(16400);
+            const obj6 = tmp5(16401);
             c3 = 2;
             c4 = 1;
-            const obj4 = { value: tmp5(16399).claimOrbsArcadeRewards(game.id), done: false };
+            const obj4 = { value: tmp5(16400).claimOrbsArcadeRewards(game.id), done: false };
             return obj4;
           }
         } else if (1 === tmp8) {
           dependencyMap = 0;
           showOrbsArcadeClaimRewardsError();
           c4 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -292,12 +292,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
               showOrbsArcadeClaimRewardsError();
             }
             if (closure_128_3.length > 0) {
-              const result = tmp5(16415).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
-              const obj = tmp5(16415);
+              const result = tmp5(16416).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
+              const obj = tmp5(16416);
             }
           }
           c4 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp24) {
         if (tmp4 === dependencyMap) {

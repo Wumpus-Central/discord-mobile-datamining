@@ -1,6 +1,6 @@
-// === Module 18043: useFrameLifecycle ===
+// === Module 18052: useFrameLifecycle ===
 
-// Module 18043 (useFrameLifecycle)
+// Module 18052 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

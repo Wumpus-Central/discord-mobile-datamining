@@ -1,6 +1,6 @@
-// === Module 14061: WebhookGuildChannelSelector ===
+// === Module 14063: WebhookGuildChannelSelector ===
 
-// Module 14061 (WebhookGuildChannelSelector)
+// Module 14063 (WebhookGuildChannelSelector)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -76,7 +76,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
               ref.current = true;
             }
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           v3 = tmp;

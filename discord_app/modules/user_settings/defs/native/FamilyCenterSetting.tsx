@@ -1,11 +1,11 @@
-// === Module 16155: FamilyCenterSetting ===
+// === Module 16156: FamilyCenterSetting ===
 
-// Module 16155 (FamilyCenterSetting)
+// Module 16156 (FamilyCenterSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16156 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 16157 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16157 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16158 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1128);
@@ -13,7 +13,7 @@ const WarningIcon = intl(7957);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyCenterTrailing() {
   let intl = require;
   let stringResult = dependencyMap;

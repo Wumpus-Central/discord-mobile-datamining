@@ -1,13 +1,13 @@
-// === Module 17669: UnknownChannel ===
+// === Module 17670: UnknownChannel ===
 
-// Module 17669 (UnknownChannel)
+// Module 17670 (UnknownChannel)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useChannelNameDefault from "useChannelName" /* 5604 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import ChannelItemDefault from "ChannelItem" /* 17554 */;
+import ChannelItemDefault from "ChannelItem" /* 17555 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,10 +21,10 @@ function handlePress() {
 const UnreadSetting = fn(6705).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
-let obj = { container: { marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj = { container: { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 18089: Separators ===
+// === Module 18098: Separators ===
 
-// Module 18089 (Separators)
+// Module 18098 (Separators)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

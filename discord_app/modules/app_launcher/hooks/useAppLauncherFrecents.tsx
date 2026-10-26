@@ -1,16 +1,16 @@
-// === Module 12110: useAppLauncherFrecents ===
+// === Module 12001: useAppLauncherFrecents ===
 
-// Module 12110 (useAppLauncherFrecents)
+// Module 12001 (useAppLauncherFrecents)
 import c from "c" /* 576 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7259 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10204 */;
 import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10206 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11403 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11404 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
 import UserStore from "UserStore" /* 1392 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12111 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12002 */;
 
 require = fn;
 const FetchState = fn(7203).FetchState;
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(12112).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(12003).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -232,7 +232,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(12112);
+      const tmpResult5 = context(12003);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

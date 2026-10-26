@@ -1,6 +1,6 @@
-// === Module 15834: UserProfileEditForm ===
+// === Module 15835: UserProfileEditForm ===
 
-// Module 15834 (UserProfileEditForm)
+// Module 15835 (UserProfileEditForm)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
@@ -9,15 +9,15 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 7253 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8655 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8686 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14407 */;
-import _modDef15836 from "module_15836" /* 15836 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15837 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15850 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15852 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14408 */;
+import _modDef15837 from "module_15837" /* 15837 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15838 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15851 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15853 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11124 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11125 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -31,10 +31,10 @@ const Constants = fn(1087);
 const HexagonCampaignConstants = fn(4996);
 ({ HexagonCampaignPerk: map1, HexagonCampaignPerkAvailability: closure_14 } = HexagonCampaignConstants);
 let closure_15 = fn(1097).ProfileCustomizationScrollPositions;
-const constants3 = fn(15835).UserProfileEditAutoFocusElement;
+const constants3 = fn(15836).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let obj = { assetOrigin: fn(7086).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15836, staticImageUri: _modDef15836, description: "", originalAsset: "unicodeVersion" };
+let obj = { assetOrigin: fn(7086).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15837, staticImageUri: _modDef15837, description: "", originalAsset: "unicodeVersion" };
 let ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditUserProfileBanner(arg0) {
   obj = c;

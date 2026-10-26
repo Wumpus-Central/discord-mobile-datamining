@@ -1,6 +1,6 @@
-// === Module 11876: useConjurePublishAction ===
+// === Module 11765: useConjurePublishAction ===
 
-// Module 11876 (useConjurePublishAction)
+// Module 11765 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
@@ -8,7 +8,7 @@ import ConjureUtils from "ConjureUtils" /* 7345 */;
 import UserActionCreators from "UserActionCreators" /* 8670 */;
 import conjureAppInServer from "conjureAppInServer" /* 10731 */;
 import ConjurePublishTypes from "ConjurePublishTypes" /* 10805 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 11878 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 11767 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -116,7 +116,7 @@ let closure_19 = async function _requestConjureInstallConsent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -235,7 +235,7 @@ let closure_19 = async function _requestConjureInstallConsent(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp29) {
       c5 = tmp;
       throw tmp29;
@@ -270,7 +270,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -400,7 +400,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(11877).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(11766).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10720).getProject(projectId);
                     project.catch(() => {
 
@@ -408,7 +408,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     const tmp9Result = closure_0(10720);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(11877)(ok));
+                  const error = new Error(closure_1(11766)(ok));
                   throw error;
                 }
               }).then((result) => {
@@ -512,7 +512,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(11877).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(11766).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10720).getProject(projectId);
                     project.catch(() => {
 
@@ -520,7 +520,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     const tmp9Result = closure_0(10720);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(11877)(ok));
+                  const error = new Error(closure_1(11766)(ok));
                   throw error;
                 }
               });
@@ -557,7 +557,7 @@ let closure_23 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -639,7 +639,7 @@ let closure_26 = async function _runConjurePublishAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -786,7 +786,7 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -822,13 +822,13 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
                   set.add(closure_0);
                   c9 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f160209 = requestConsent;
+                  f160261 = requestConsent;
                   if (requestConsent == null) {
-                    f160209 = (arg0) => closure_2_18(arg0, closure_1_3);
+                    f160261 = (arg0) => closure_2_18(arg0, closure_1_3);
                   }
                   c10 = 3;
                   c11 = 1;
-                  const obj5 = { value: f160209(closure_0), done: false };
+                  const obj5 = { value: f160261(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -862,7 +862,7 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
             closure_135_24.delete(closure_134_0);
             if (closure_135_14.isProjectPublishing(closure_134_0)) {
               c11 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               closure_134_4 = closure_135_17(closure_134_0, closure_134_3);
               let integrationStatus;
@@ -904,7 +904,7 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
                 obj9 = closure_135_0(closure_135_2[31]);
               }
               c11 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           }
         } else if (arg0 === 1) {
@@ -916,7 +916,7 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
           return obj;
         }
         c11 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp45) {
         closure_8 = tmp45;
         if (tmp4 === c9) {

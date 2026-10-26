@@ -1,11 +1,11 @@
-// === Module 14083: PlayStationLinkPreConnect ===
+// === Module 14085: PlayStationLinkPreConnect ===
 
-// Module 14083 (PlayStationLinkPreConnect)
-import _modDef14084 from "module_14084" /* 14084 */;
+// Module 14085 (PlayStationLinkPreConnect)
+import _modDef14086 from "module_14086" /* 14086 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const constants = fn(14080).PlayStationLinkModalScenes;
+const constants = fn(14082).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
@@ -53,7 +53,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
         return;
       }
     }
-    tmp9[0] = _modDef14084;
+    tmp9[0] = _modDef14086;
     cResult[4] = tmp9;
   } else {
     class S {
@@ -113,7 +113,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14084 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14086 }), []);
   const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1128).intl;
   obj2.title = intl.string(navigation(1128).t["6n+UPR"]);

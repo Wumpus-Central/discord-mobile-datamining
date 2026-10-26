@@ -1,6 +1,6 @@
-// === Module 12111: AppLauncherLastUsedCommandStore ===
+// === Module 12002: AppLauncherLastUsedCommandStore ===
 
-// Module 12111 (AppLauncherLastUsedCommandStore)
+// Module 12002 (AppLauncherLastUsedCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

@@ -1,6 +1,6 @@
-// === Module 14346: UserCheckIcon ===
+// === Module 14347: UserCheckIcon ===
 
-// Module 14346 (UserCheckIcon)
+// Module 14347 (UserCheckIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5668 */;

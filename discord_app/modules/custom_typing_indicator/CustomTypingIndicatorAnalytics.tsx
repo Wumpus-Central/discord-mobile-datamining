@@ -1,6 +1,6 @@
-// === Module 13068: CustomTypingIndicatorAnalytics ===
+// === Module 13071: CustomTypingIndicatorAnalytics ===
 
-// Module 13068 (CustomTypingIndicatorAnalytics)
+// Module 13071 (CustomTypingIndicatorAnalytics)
 import user from "user" /* 1400 */;
 import size from "module_2" /* 2 */;
 

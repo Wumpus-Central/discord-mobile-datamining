@@ -1,10 +1,10 @@
-// === Module 11109: useTenureBadgeRequirementString ===
+// === Module 11110: useTenureBadgeRequirementString ===
 
-// Module 11109 (useTenureBadgeRequirementString)
+// Module 11110 (useTenureBadgeRequirementString)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import useTenureBadging from "useTenureBadging" /* 11110 */;
+import useTenureBadging from "useTenureBadging" /* 11111 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 17248: EncryptionSetting ===
+// === Module 17249: EncryptionSetting ===
 
-// Module 17248 (EncryptionSetting)
+// Module 17249 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 17249 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 17250 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5732 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureF
   const items = [SecureFramesPersistedStore];
   return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
 });
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesEncryptionDescription() {
   const cResult = c.c(2);
   const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();

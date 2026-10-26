@@ -1,6 +1,6 @@
-// === Module 18565: VoicePanelCTACardCallerDisconnected ===
+// === Module 18575: VoicePanelCTACardCallerDisconnected ===
 
-// Module 18565 (VoicePanelCTACardCallerDisconnected)
+// Module 18575 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 587 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/card/Voice
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelCTACardCallerDisconnected() {
   const cResult = channelId(576).c(35);
-  channelId = noop.useContext(first(10899)).channelId;
+  channelId = noop.useContext(first(10900)).channelId;
   const tmp5 = closure_10();
   if (cResult[0] !== channelId) {
     const channel = ChannelStore.getChannel(channelId);

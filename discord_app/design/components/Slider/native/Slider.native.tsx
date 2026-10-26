@@ -1,6 +1,6 @@
-// === Module 15277: Slider ===
+// === Module 15278: Slider ===
 
-// Module 15277 (Slider)
+// Module 15278 (Slider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import HapticUtils from "HapticUtils" /* 5212 */;

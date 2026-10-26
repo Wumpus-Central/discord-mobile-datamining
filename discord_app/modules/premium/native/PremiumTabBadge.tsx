@@ -1,6 +1,6 @@
-// === Module 16274: PremiumTabBadge ===
+// === Module 16275: PremiumTabBadge ===
 
-// Module 16274 (PremiumTabBadge)
+// Module 16275 (PremiumTabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -24,9 +24,9 @@ import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferra
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8431 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 9361 */;
 import MarketingComponentType from "MarketingComponentType" /* 10495 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 14730 */;
-import _modDef16275 from "module_16275" /* 16275 */;
-import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 16276 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 14731 */;
+import _modDef16276 from "module_16276" /* 16276 */;
+import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 16277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
@@ -159,7 +159,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
     useTrackImpressionDefault(tmp5, tmp8);
     if (acked) {
       if (cResult[5] !== acked2.icon) {
-        const obj4 = { source: _modDef16275, size: native.Icon.Sizes.EXTRA_SMALL, color: acked2.icon.color, style: acked2.icon };
+        const obj4 = { source: _modDef16276, size: native.Icon.Sizes.EXTRA_SMALL, color: acked2.icon.color, style: acked2.icon };
         const tmp17 = closure_1_8(native.Icon, obj4);
         cResult[5] = acked2.icon;
         cResult[6] = tmp17;
@@ -238,7 +238,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
   tmp6(obj2, { disableTrack: null == componentId });
   if (acked) {
     const obj5 = { style: tmp4.acked, children: null };
-    const obj6 = { source: _modDef16275, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
+    const obj6 = { source: _modDef16276, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
     const items = [closure_1_8(native.Icon, obj6), ];
     const obj7 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
     const items1 = [, ];
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
                     let tmp68 = cResult[50];
                   }
                   if (cResult[51] !== tmp5.icon) {
-                    const obj14 = { source: _modDef16275, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp5.icon.color, style: tmp5.icon };
+                    const obj14 = { source: _modDef16276, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp5.icon.color, style: tmp5.icon };
                     const tmp72 = closure_1_8(native.Icon, obj14);
                     cResult[51] = tmp5.icon;
                     cResult[52] = tmp72;
@@ -799,7 +799,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
           const items4 = [, ];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj11.style = items4;
-          const obj12 = { source: _modDef16275, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
+          const obj12 = { source: _modDef16276, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
           const items5 = [closure_1_8(native.Icon, obj12), ];
           const obj13 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
           const items6 = [, ];

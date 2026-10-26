@@ -1,12 +1,12 @@
-// === Module 12383: ConjurePublishNotesSheet ===
+// === Module 12366: ConjurePublishNotesSheet ===
 
-// Module 12383 (ConjurePublishNotesSheet)
+// Module 12366 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11836 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12184 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ import GuildStore from "GuildStore" /* 4845 */;
 import RelationshipStore from "RelationshipStore" /* 4913 */;
 import UserStore from "UserStore" /* 1392 */;
 
-const useConjurePatchNotesComposerDefault = tmp4(12384);
+const useConjurePatchNotesComposerDefault = tmp4(12367);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

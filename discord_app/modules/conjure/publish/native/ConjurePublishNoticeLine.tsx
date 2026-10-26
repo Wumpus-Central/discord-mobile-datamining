@@ -1,15 +1,15 @@
-// === Module 12380: ConjurePublishNoticeLine ===
+// === Module 12363: ConjurePublishNoticeLine ===
 
-// Module 12380 (ConjurePublishNoticeLine)
+// Module 12363 (ConjurePublishNoticeLine)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import conjurePublishCard from "conjurePublishCard" /* 12307 */;
-import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12374 */;
-import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12381 */;
-import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12382 */;
-import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12383 */;
+import conjurePublishCard from "conjurePublishCard" /* 12287 */;
+import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12357 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12364 */;
+import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12365 */;
+import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12366 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;

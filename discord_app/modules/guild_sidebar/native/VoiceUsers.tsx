@@ -1,14 +1,14 @@
-// === Module 17544: VoiceUsers ===
+// === Module 17545: VoiceUsers ===
 
-// Module 17544 (VoiceUsers)
+// Module 17545 (VoiceUsers)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9709 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
-import ChannelListLayout from "ChannelListLayout" /* 12063 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13451 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11060 */;
+import ChannelListLayout from "ChannelListLayout" /* 11954 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13454 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 
@@ -115,7 +115,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj4.sessionId = voiceState2.sessionId;
     obj4.channel = channel;
     obj4.isGuest = isGuest;
-    const tmp15 = closure_6(tmp4(17545), obj4, user.id);
+    const tmp15 = closure_6(tmp4(17546), obj4, user.id);
     cResult[5] = channel;
     cResult[6] = collapsed;
     cResult[7] = isGuest;
@@ -174,7 +174,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj5.sessionId = voiceState2.sessionId;
   obj5.channel = channel;
   obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(17545), obj5, user.id);
+  obj2.children = closure_6(tmp(17546), obj5, user.id);
   return closure_6(View, obj2);
 }));
 ReactCompilerGating = fn(558);
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
   if (cResult[0] === guild_id) {
     if (cResult[1] === voiceStates) {
       let tmp5 = channel;
-      const arr2 = channel(17549)(cResult[2]);
+      const arr2 = channel(17550)(cResult[2]);
       if (cResult[3] === guild_id) {
         if (cResult[4] === arr2) {
           const subscribeGuildMembers = tmp(7408).useSubscribeGuildMembers(cResult[5], "voice_channel_games");
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
                     if (cResult[16] === tmp13) {
                     }
                   }
-                  tmp5 = tmp5(17552);
+                  tmp5 = tmp5(17553);
                   const obj2 = { collapsed, children: null };
                   const items = [tmp13, tmp15];
                   obj2.children = items;

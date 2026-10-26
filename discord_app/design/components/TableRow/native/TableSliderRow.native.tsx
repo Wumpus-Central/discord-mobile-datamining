@@ -1,11 +1,11 @@
-// === Module 15276: TableSliderRow ===
+// === Module 15277: TableSliderRow ===
 
-// Module 15276 (TableSliderRow)
+// Module 15277 (TableSliderRow)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 6904 */;
 import Card from "Card" /* 6905 */;
-import Slider from "Slider" /* 15277 */;
+import Slider from "Slider" /* 15278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

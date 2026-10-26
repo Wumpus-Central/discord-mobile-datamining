@@ -1,6 +1,6 @@
-// === Module 11784: conjureTemplateIntakeRequests ===
+// === Module 12535: conjureTemplateIntakeRequests ===
 
-// Module 11784 (conjureTemplateIntakeRequests)
+// Module 12535 (conjureTemplateIntakeRequests)
 import util from "util" /* 1128 */;
 import conjureWorkerFetch from "conjureWorkerFetch" /* 10794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +22,7 @@ let closure_3 = async function _fetchStoredConjureIntake(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

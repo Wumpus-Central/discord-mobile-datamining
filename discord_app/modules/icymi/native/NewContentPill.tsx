@@ -1,6 +1,6 @@
-// === Module 17966: NewContentPill ===
+// === Module 17975: NewContentPill ===
 
-// Module 17966 (NewContentPill)
+// Module 17975 (NewContentPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5247 */;

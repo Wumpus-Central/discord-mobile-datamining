@@ -1,9 +1,9 @@
-// === Module 17243: CollectiblesShopViewAllCategoryItemsSetting ===
+// === Module 17244: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 17243 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 17244 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1087 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16133 */;
-import SettingBuilders from "SettingBuilders" /* 11208 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16134 */;
+import SettingBuilders from "SettingBuilders" /* 11209 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

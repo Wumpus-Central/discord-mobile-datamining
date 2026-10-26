@@ -1,6 +1,6 @@
-// === Module 11350: hasPartySize ===
+// === Module 11351: hasPartySize ===
 
-// Module 11350 (hasPartySize)
+// Module 11351 (hasPartySize)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/hasPartySize.tsx");

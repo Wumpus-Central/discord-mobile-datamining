@@ -1,6 +1,6 @@
-// === Module 16684: AccessibilitySetting ===
+// === Module 16685: AccessibilitySetting ===
 
-// Module 16684 (AccessibilitySetting)
+// Module 16685 (AccessibilitySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Badge from "Badge" /* 7233 */;
@@ -59,7 +59,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrailing(
   }
   return tmp5;
 });
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
   const cResult = first(576).c(3);
   const obj = first(576);
@@ -116,7 +116,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16685).AccessibilityIcon,
+  IconComponent: fn(16686).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
     const cResult = first(576).c(3);

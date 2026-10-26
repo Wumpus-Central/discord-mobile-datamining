@@ -1,6 +1,6 @@
-// === Module 13510: GuildPowerupsBoostButton ===
+// === Module 13513: GuildPowerupsBoostButton ===
 
-// Module 13510 (GuildPowerupsBoostButton)
+// Module 13513 (GuildPowerupsBoostButton)
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7505 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;

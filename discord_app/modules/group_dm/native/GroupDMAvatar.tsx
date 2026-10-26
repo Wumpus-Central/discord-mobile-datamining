@@ -204,7 +204,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGr
     obj.nativeCutouts = items;
     return obj;
   }, items1);
-  const obj3 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: memo1, animate };
   if (null == users) {
     const obj4 = { source: sources[0] };
     let obj5 = obj4;
@@ -212,7 +211,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGr
     obj5 = { user: users[0] };
   }
   const merged = Object.assign(obj5);
-  const items3 = [closure_5(require("native").Avatar, obj3), ];
+  const items3 = [closure_5(require("native").Avatar, { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: memo1, animate }), ];
   const obj6 = { status, statusSizeOverride: require("native").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate };
   if (null == users) {
     const obj7 = { source: sources[1] };

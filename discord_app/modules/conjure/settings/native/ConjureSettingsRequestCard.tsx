@@ -1,9 +1,9 @@
-// === Module 12377: ConjureSettingsRequestCard ===
+// === Module 12360: ConjureSettingsRequestCard ===
 
-// Module 12377 (ConjureSettingsRequestCard)
+// Module 12360 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11802 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12150 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;

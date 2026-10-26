@@ -1,6 +1,6 @@
-// === Module 13574: HubProgressBarUtils ===
+// === Module 13576: HubProgressBarUtils ===
 
-// Module 13574 (HubProgressBarUtils)
+// Module 13576 (HubProgressBarUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;

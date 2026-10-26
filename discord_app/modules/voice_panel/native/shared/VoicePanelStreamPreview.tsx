@@ -1,6 +1,6 @@
-// === Module 14323: VoicePanelStreamPreview ===
+// === Module 14324: VoicePanelStreamPreview ===
 
-// Module 14323 (VoicePanelStreamPreview)
+// Module 14324 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5206 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6645 */;
@@ -54,7 +54,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(11715)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(11716)(guildId, channelId, ownerId).previewUrl;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStreamingStore, AuthenticationStore];
     cResult[0] = items;
@@ -83,7 +83,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
     tmp13 = cResult[2];
     tmp14 = cResult[3];
   }
-  const tmp6 = stream(11715);
+  const tmp6 = stream(11716);
   ownStreamTextContainer = mode(504).useStateFromStores(first, tmp13, tmp14);
   const tmpResult = mode(504);
   class M {
@@ -238,8 +238,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(11715)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(11715);
+  const previewUrl = stream(11716)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(11716);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(items, () => {

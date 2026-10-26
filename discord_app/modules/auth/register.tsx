@@ -1,6 +1,6 @@
-// === Module 17372: auth/register ===
+// === Module 17373: auth/register ===
 
-// Module 17372 (auth/register)
+// Module 17373 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
@@ -8,9 +8,9 @@ import _modDef2049 from "module_2049" /* 2049 */;
 import APIErrorDefault from "APIError" /* 6375 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6466 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6676 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17374 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 17375 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17376 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17375 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 17376 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17377 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _scorePassword() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ let closure_12 = async function _registerPhone(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ let closure_12 = async function _registerPhone(arg0) {
             phone2 = phone.phone;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -278,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(17373);
+const ParentalConsentStore = fn(17374);
 const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1112);

@@ -1,6 +1,6 @@
-// === Module 15015: FriendGroupsStore ===
+// === Module 15016: FriendGroupsStore ===
 
-// Module 15015 (FriendGroupsStore)
+// Module 15016 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;

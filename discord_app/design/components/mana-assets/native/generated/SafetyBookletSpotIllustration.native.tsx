@@ -1,23 +1,23 @@
-// === Module 10948: SafetyBookletSpotIllustration ===
+// === Module 10949: SafetyBookletSpotIllustration ===
 
-// Module 10948 (SafetyBookletSpotIllustration)
+// Module 10949 (SafetyBookletSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef10949 from "module_10949" /* 10949 */;
 import _modDef10950 from "module_10950" /* 10950 */;
 import _modDef10951 from "module_10951" /* 10951 */;
+import _modDef10952 from "module_10952" /* 10952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10949 }, 3: null };
-let obj2 = { uri: _modDef10949 };
-obj[2] = { uri: _modDef10950 };
-const obj3 = { uri: _modDef10950 };
-obj[3] = { uri: _modDef10951 };
+let obj = { 1: null, 2: { uri: _modDef10950 }, 3: null };
+let obj2 = { uri: _modDef10950 };
+obj[2] = { uri: _modDef10951 };
+const obj3 = { uri: _modDef10951 };
+obj[3] = { uri: _modDef10952 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10951 };
+const obj4 = { uri: _modDef10952 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyBookletSpotIllustration.native.tsx");
 

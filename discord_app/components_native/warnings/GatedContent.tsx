@@ -1,6 +1,6 @@
-// === Module 10896: GatedContent ===
+// === Module 10897: GatedContent ===
 
-// Module 10896 (GatedContent)
+// Module 10897 (GatedContent)
 import nativeDefault from "native" /* 587 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
 import noop from "module_19" /* 19 */;

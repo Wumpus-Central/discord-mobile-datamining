@@ -1,11 +1,11 @@
-// === Module 13035: CheckpointButton ===
+// === Module 13038: CheckpointButton ===
 
-// Module 13035 (CheckpointButton)
+// Module 13038 (CheckpointButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 5252 */;
-import CheckpointTextDefault from "CheckpointText" /* 12971 */;
-import CheckpointPressable from "CheckpointPressable" /* 13010 */;
+import CheckpointTextDefault from "CheckpointText" /* 12974 */;
+import CheckpointPressable from "CheckpointPressable" /* 13013 */;
 import noop from "module_19" /* 19 */;
 
 const CheckpointPressableDefault = CheckpointPressable;
@@ -17,8 +17,8 @@ const CheckpointConstants = fn(6015);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4971);
-let obj2 = { container: { justifyContent: "center", marginRight: -fn(13010).SHADOW_OFFSET, marginBottom: -fn(13010).SHADOW_OFFSET }, button: null, label: null };
-let obj3 = { justifyContent: "center", marginRight: -fn(13010).SHADOW_OFFSET, marginBottom: -fn(13010).SHADOW_OFFSET };
+let obj2 = { container: { justifyContent: "center", marginRight: -fn(13013).SHADOW_OFFSET, marginBottom: -fn(13013).SHADOW_OFFSET }, button: null, label: null };
+let obj3 = { justifyContent: "center", marginRight: -fn(13013).SHADOW_OFFSET, marginBottom: -fn(13013).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
 let closure_9 = createStyles.createStyles(obj2);

@@ -1,6 +1,6 @@
-// === Module 18308: ChannelSettingsChangeRTCRegion ===
+// === Module 18317: ChannelSettingsChangeRTCRegion ===
 
-// Module 18308 (ChannelSettingsChangeRTCRegion)
+// Module 18317 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,7 +11,7 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
-import RegionStore from "RegionStore" /* 18258 */;
+import RegionStore from "RegionStore" /* 18267 */;
 
 require = fn;
 const jsx = fn(21).jsx;

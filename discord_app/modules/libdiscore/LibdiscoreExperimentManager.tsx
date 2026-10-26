@@ -1,6 +1,6 @@
-// === Module 19412: LibdiscoreExperimentManager ===
+// === Module 19422: LibdiscoreExperimentManager ===
 
-// Module 19412 (LibdiscoreExperimentManager)
+// Module 19422 (LibdiscoreExperimentManager)
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import js_shim_shim from "js_shim/shim" /* 562 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;

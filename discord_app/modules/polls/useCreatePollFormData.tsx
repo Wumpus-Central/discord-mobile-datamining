@@ -1,13 +1,13 @@
-// === Module 12220: useCreatePollFormData ===
+// === Module 12113: useCreatePollFormData ===
 
-// Module 12220 (useCreatePollFormData)
+// Module 12113 (useCreatePollFormData)
 import util from "util" /* 1128 */;
 import PollsUtils from "PollsUtils" /* 8284 */;
-import useRequestDefault from "useRequest" /* 12221 */;
-import PollsActionCreatorsDefault from "PollsActionCreators" /* 12222 */;
-import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12235 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12236 */;
-import PollTypes from "PollTypes" /* 12237 */;
+import useRequestDefault from "useRequest" /* 12114 */;
+import PollsActionCreatorsDefault from "PollsActionCreators" /* 12115 */;
+import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12128 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12129 */;
+import PollTypes from "PollTypes" /* 12130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "application" };
+  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
   return obj;
 }
 const PollsConstants = fn(8310);
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -370,17 +370,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "Array", stickerId: "application" };
+    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
     callback2(obj, arg1);
     const obj2 = { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     const result = PollUploadAttachmentActionCreatorsAll.handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
-    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "application" };
+    const obj4 = { mediaAttachmentState: null, emoji: "r", stickerId: "toCharArray$esjava$1" };
     obj4.mediaAttachmentState = { status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL };
     callback2(obj4, arg1);
   }, items2);
   const callback6 = obj.useCallback((emoji, arg1) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "application" }, arg1);
+    callback2({ emoji, stickerId: "r", mediaAttachmentState: "toCharArray$esjava$1" }, arg1);
   }, items3);
   const items4 = [answers.length < first1];
   const callback7 = obj.useCallback((arg0) => {
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -494,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
           return obj;
         } else {
           channel = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         channel = tmp;

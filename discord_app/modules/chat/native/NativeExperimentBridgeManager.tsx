@@ -1,15 +1,15 @@
-// === Module 19372: NativeExperimentBridgeManager ===
+// === Module 19382: NativeExperimentBridgeManager ===
 
-// Module 19372 (NativeExperimentBridgeManager)
+// Module 19382 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6494 */;
 import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7748 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19373 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19374 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19375 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19383 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19384 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19385 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaPlaybackExperiment_mod from "MediaPlaybackExperiment" /* 8792 */;

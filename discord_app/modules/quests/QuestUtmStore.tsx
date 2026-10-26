@@ -4,12 +4,12 @@
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
-let obj = module_570.create((arg0) => {
+const obj = module_570.create((arg0) => {
   const state = arg0;
-  obj = {
+  return {
     utmSourceCurrent: "r",
     utmMediumCurrent: "emoji",
-    utmCampaignCurrent: "pos",
+    utmCampaignCurrent: "sr",
     utmContentCurrent: "toCharArray$esjava$1",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
@@ -18,7 +18,6 @@ let obj = module_570.create((arg0) => {
       return state.getState();
     }
   };
-  return obj;
 });
 const result = size.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 

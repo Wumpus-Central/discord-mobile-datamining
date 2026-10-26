@@ -1,11 +1,11 @@
-// === Module 12792: TransferOwnershipModal ===
+// === Module 12795: TransferOwnershipModal ===
 
-// Module 12792 (TransferOwnershipModal)
+// Module 12795 (TransferOwnershipModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Navigator from "Navigator" /* 7095 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12791 */;
-import TransferOwnershipDefault from "TransferOwnership" /* 12794 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12794 */;
+import TransferOwnershipDefault from "TransferOwnership" /* 12797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,8 +56,8 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12791).close();
-      const obj = toUser(12791);
+      toUser(12794).close();
+      const obj = toUser(12794);
       toUser(9005).close();
       const obj2 = toUser(9005);
       const result = closure_0(5662).showTransferOwnershipSuccess();
@@ -73,7 +73,7 @@ function getScreens(guild, toUser) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ function getScreens(guild, toUser) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c0 = tmp;
@@ -118,7 +118,7 @@ function getScreens(guild, toUser) {
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12793);
+const TransferOwnershipConstants = fn(12796);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

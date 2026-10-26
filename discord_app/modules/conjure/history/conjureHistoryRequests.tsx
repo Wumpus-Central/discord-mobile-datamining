@@ -1,6 +1,6 @@
-// === Module 12263: conjureHistoryRequests ===
+// === Module 12212: conjureHistoryRequests ===
 
-// Module 12263 (conjureHistoryRequests)
+// Module 12212 (conjureHistoryRequests)
 import conjureWorkerFetch from "conjureWorkerFetch" /* 10794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -47,7 +47,7 @@ let closure_4 = async function _restoreSourceHistoryEntry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -266,7 +266,7 @@ let closure_7 = async function _createDatabaseRestorePoint(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_9 = async function _settleDatabaseRestore(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 11247: useBatchUpdateSelectOption ===
+// === Module 11248: useBatchUpdateSelectOption ===
 
-// Module 11247 (useBatchUpdateSelectOption)
+// Module 11248 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;

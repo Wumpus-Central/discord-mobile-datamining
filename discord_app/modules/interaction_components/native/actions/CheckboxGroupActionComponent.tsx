@@ -1,6 +1,6 @@
-// === Module 18841: CheckboxGroupActionComponent ===
+// === Module 18851: CheckboxGroupActionComponent ===
 
-// Module 18841 (CheckboxGroupActionComponent)
+// Module 18851 (CheckboxGroupActionComponent)
 import TableCheckboxRow from "TableCheckboxRow" /* 6900 */;
 import noop from "module_19" /* 19 */;
 

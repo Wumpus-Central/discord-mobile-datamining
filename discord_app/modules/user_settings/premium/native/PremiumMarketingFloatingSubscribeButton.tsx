@@ -1,6 +1,6 @@
-// === Module 14805: PremiumMarketingFloatingSubscribeButton ===
+// === Module 14806: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 14805 (PremiumMarketingFloatingSubscribeButton)
+// Module 14806 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import timing from "timing" /* 5206 */;
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   let obj = isVisible(576);
   const stateFromStores = isVisible(504).useStateFromStores(tmp6, tmp7);
   let tmpResult = isVisible(504);
-  const tmp5Result = stateFromStores(14803);
-  ({ openPayment, buttonText } = stateFromStores(14803)(stateFromStores(7278).PREMIUM_MARKETING_FLOATING_CTA));
+  const tmp5Result = stateFromStores(14804);
+  ({ openPayment, buttonText } = stateFromStores(14804)(stateFromStores(7278).PREMIUM_MARKETING_FLOATING_CTA));
   if (cResult[2] !== backgroundColor) {
     let obj3 = tmp5(683)(backgroundColor);
     const hexResult = tmp5(683)(backgroundColor).alpha(0).hex();
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   cResult[5] = tmp12;
   cResult[6] = items5;
   tmp14 = items5;
-  const tmp5ResultResult = stateFromStores(14803)(stateFromStores(7278).PREMIUM_MARKETING_FLOATING_CTA);
+  const tmp5ResultResult = stateFromStores(14804)(stateFromStores(7278).PREMIUM_MARKETING_FLOATING_CTA);
 }) : (function PremiumMarketingFloatingSubscribeButton(isVisible) {
   isVisible = isVisible.isVisible;
   const backgroundColor = isVisible.backgroundColor;

@@ -1,6 +1,6 @@
-// === Module 14495: CollectiblesEditUserProfileListItems ===
+// === Module 14496: CollectiblesEditUserProfileListItems ===
 
-// Module 14495 (CollectiblesEditUserProfileListItems)
+// Module 14496 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -16,7 +16,7 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7662 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8662 */;
 import CollectiblesBadges from "CollectiblesBadges" /* 9423 */;
-import _modDef14496 from "module_14496" /* 14496 */;
+import _modDef14497 from "module_14497" /* 14497 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -179,7 +179,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
   const cResult = c.c(10);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef14496, size: native.IconSizes.LARGE };
+    const obj2 = { source: _modDef14497, size: native.IconSizes.LARGE };
     const tmp8 = v65535(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -233,7 +233,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
   const tmp = closure_12();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [v65535(native.Icon, { source: _modDef14496, size: native.IconSizes.LARGE }), ];
+  const items = [v65535(native.Icon, { source: _modDef14497, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -271,7 +271,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2 = { source: tmp10(14497), size: tmp(1202).IconSizes.LARGE };
+      let obj2 = { source: tmp10(14498), size: tmp(1202).IconSizes.LARGE };
       const tmp15 = closure_10(tmp(1202).Icon, obj2);
       cResult[6] = tmp15;
       let tmp13 = tmp15;
@@ -358,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_10(analyticsSource(1202).Icon, { source: analyticsLocations(14497), size: analyticsSource(1202).IconSizes.LARGE }), , ];
+  const items1 = [closure_10(analyticsSource(1202).Icon, { source: analyticsLocations(14498), size: analyticsSource(1202).IconSizes.LARGE }), , ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1128).intl;
   obj3.children = intl.string(analyticsSource(1128).t.pWG4ze);

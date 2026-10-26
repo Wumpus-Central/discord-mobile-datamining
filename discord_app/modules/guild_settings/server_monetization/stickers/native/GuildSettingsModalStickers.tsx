@@ -1,13 +1,13 @@
-// === Module 19071: GuildSettingsModalStickers ===
+// === Module 19081: GuildSettingsModalStickers ===
 
-// Module 19071 (GuildSettingsModalStickers)
+// Module 19081 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import TableRow from "TableRow" /* 6903 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 8366 */;
 import LockIcon from "LockIcon" /* 8566 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19075 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19085 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import PermissionStore from "PermissionStore" /* 4903 */;
@@ -31,7 +31,7 @@ let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1128).intl;
 obj2.title = intl2.string(fn(1128).t.nzXtaS);
-obj2.IconComponent = fn(19072).BoostGemOutlineIcon;
+obj2.IconComponent = fn(19082).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1128).intl;
@@ -41,7 +41,7 @@ items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1128).intl;
 obj4.title = intl4.string(fn(1128).t.BfF6ED);
-obj4.IconComponent = fn(14834).BoostTier3Icon;
+obj4.IconComponent = fn(14835).BoostTier3Icon;
 items[3] = obj4;
 const createStyles = fn(4971);
 let closure_15 = createStyles.createStyles((arg0) => {

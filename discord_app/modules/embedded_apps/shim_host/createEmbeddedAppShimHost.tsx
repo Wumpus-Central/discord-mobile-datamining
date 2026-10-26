@@ -1,8 +1,8 @@
-// === Module 18783: createEmbeddedAppShimHost ===
+// === Module 18793: createEmbeddedAppShimHost ===
 
-// Module 18783 (createEmbeddedAppShimHost)
-import protocol from "protocol" /* 18784 */;
-import connection from "connection" /* 18785 */;
+// Module 18793 (createEmbeddedAppShimHost)
+import protocol from "protocol" /* 18794 */;
+import connection from "connection" /* 18795 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx");

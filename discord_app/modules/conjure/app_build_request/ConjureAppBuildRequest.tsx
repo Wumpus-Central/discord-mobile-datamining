@@ -1,12 +1,12 @@
-// === Module 12318: ConjureAppBuildRequest ===
+// === Module 12302: ConjureAppBuildRequest ===
 
-// Module 12318 (ConjureAppBuildRequest)
+// Module 12302 (ConjureAppBuildRequest)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import createNonce from "createNonce" /* 10203 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 11757 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12319 */;
-import conjureSendToProject from "conjureSendToProject" /* 12320 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12293 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12303 */;
+import conjureSendToProject from "conjureSendToProject" /* 12305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;

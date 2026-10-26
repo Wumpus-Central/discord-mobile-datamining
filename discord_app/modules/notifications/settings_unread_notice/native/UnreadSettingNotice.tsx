@@ -1,9 +1,9 @@
-// === Module 11018: UnreadSettingNotice ===
+// === Module 11019: UnreadSettingNotice ===
 
-// Module 11018 (UnreadSettingNotice)
+// Module 11019 (UnreadSettingNotice)
 import nativeDefault from "native" /* 587 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11019 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11020 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11020 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11021 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

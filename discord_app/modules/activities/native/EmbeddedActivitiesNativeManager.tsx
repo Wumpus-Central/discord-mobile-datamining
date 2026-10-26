@@ -1,6 +1,6 @@
-// === Module 15795: EmbeddedActivitiesNativeManager ===
+// === Module 15796: EmbeddedActivitiesNativeManager ===
 
-// Module 15795 (EmbeddedActivitiesNativeManager)
+// Module 15796 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
@@ -10,13 +10,13 @@ import ChatInputUtils from "ChatInputUtils" /* 5159 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 5904 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11393 */;
-import activityWebViewController from "activityWebViewController" /* 11463 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15796 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11394 */;
+import activityWebViewController from "activityWebViewController" /* 11464 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15797 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15797 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15798 */;
 
 require = fn;
 const Constants = fn(1087);

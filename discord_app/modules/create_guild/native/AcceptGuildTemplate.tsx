@@ -1,6 +1,6 @@
-// === Module 12741: AcceptGuildTemplate ===
+// === Module 12744: AcceptGuildTemplate ===
 
-// Module 12741 (AcceptGuildTemplate)
+// Module 12744 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
@@ -12,11 +12,11 @@ import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4879 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6880 */;
 import _modDef8928 from "module_8928" /* 8928 */;
 import FormDividerDefault from "FormDivider" /* 8955 */;
-import RolePillDefault from "RolePill" /* 10837 */;
-import InvalidLink from "InvalidLink" /* 12742 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 12744 */;
-import _modDef12749 from "module_12749" /* 12749 */;
-import _modDef12750 from "module_12750" /* 12750 */;
+import RolePillDefault from "RolePill" /* 10838 */;
+import InvalidLink from "InvalidLink" /* 12745 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 12747 */;
+import _modDef12752 from "module_12752" /* 12752 */;
+import _modDef12753 from "module_12753" /* 12753 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 6651 */;
 
@@ -655,9 +655,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     if (isGuildVocalChannelType(type)) {
       let tmp10Result = _modDef8928;
     } else if (type === constants2.GUILD_CATEGORY) {
-      tmp10Result = _modDef12749;
+      tmp10Result = _modDef12752;
     } else {
-      tmp10Result = _modDef12750;
+      tmp10Result = _modDef12753;
     }
     obj2.source = tmp10Result;
     const items1 = [closure_2_11(native.Icon, obj2), ];
@@ -717,9 +717,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       if (isGuildVocalChannelType(type)) {
         let tmp10Result = _modDef8928;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef12749;
+        tmp10Result = _modDef12752;
       } else {
-        tmp10Result = _modDef12750;
+        tmp10Result = _modDef12753;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];

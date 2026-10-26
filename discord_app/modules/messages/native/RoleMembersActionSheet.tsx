@@ -1,6 +1,6 @@
-// === Module 11285: RoleMembersActionSheet ===
+// === Module 11286: RoleMembersActionSheet ===
 
-// Module 11285 (RoleMembersActionSheet)
+// Module 11286 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -262,9 +262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11286), obj5);
+    obj4.children = closure_8(tmp9(11287), obj5);
     tmp16Result = closure_8(tmp3(5265).BottomSheet, obj4);
-    let tmp9Result = tmp9(11286);
+    let tmp9Result = tmp9(11287);
   }
   return tmp16Result;
 });

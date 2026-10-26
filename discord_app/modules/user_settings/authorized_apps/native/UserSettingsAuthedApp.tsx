@@ -1,6 +1,6 @@
-// === Module 16234: UserSettingsAuthedApp ===
+// === Module 16235: UserSettingsAuthedApp ===
 
-// Module 16234 (UserSettingsAuthedApp)
+// Module 16235 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,7 +16,7 @@ import NotificationSettingsModalActionCreatorsDefault from "NotificationSettings
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7259 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10771 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13522 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13525 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
@@ -31,7 +31,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1087);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
 let closure_15 = fn(10024).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10959).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_16 = fn(10960).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4971);

@@ -1,6 +1,6 @@
-// === Module 19209: CreatorMonetizationEligibilityActionCreators ===
+// === Module 19219: CreatorMonetizationEligibilityActionCreators ===
 
-// Module 19209 (CreatorMonetizationEligibilityActionCreators)
+// Module 19219 (CreatorMonetizationEligibilityActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -70,7 +70,7 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -119,7 +119,7 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -149,7 +149,7 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -191,7 +191,7 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -221,7 +221,7 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;

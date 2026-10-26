@@ -1,6 +1,6 @@
-// === Module 11432: VideoSpinnerTimer ===
+// === Module 11433: VideoSpinnerTimer ===
 
-// Module 11432 (VideoSpinnerTimer)
+// Module 11433 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import TimeUtils from "TimeUtils" /* 5722 */;

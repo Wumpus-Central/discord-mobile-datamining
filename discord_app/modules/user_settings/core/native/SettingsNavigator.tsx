@@ -1,6 +1,6 @@
-// === Module 18358: SettingsNavigator ===
+// === Module 18367: SettingsNavigator ===
 
-// Module 18358 (SettingsNavigator)
+// Module 18367 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,13 +9,13 @@ import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import Pressables from "Pressables" /* 6908 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15981 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17849 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 18359 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15982 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17858 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 18368 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15979 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15980 */;
 
 const require = globalThis.__r;
 

@@ -1,11 +1,11 @@
-// === Module 16929: DiskUsageManager ===
+// === Module 16930: DiskUsageManager ===
 
-// Module 16929 (DiskUsageManager)
+// Module 16930 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeClientInfoModule from "NativeClientInfoModule" /* 1369 */;
 import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10098 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16930 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16931 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
@@ -35,7 +35,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

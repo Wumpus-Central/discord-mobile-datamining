@@ -1,23 +1,23 @@
-// === Module 18245: DisplayNameLockeAbstractUI ===
+// === Module 18254: DisplayNameLockeAbstractUI ===
 
-// Module 18245 (DisplayNameLockeAbstractUI)
+// Module 18254 (DisplayNameLockeAbstractUI)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef18246 from "module_18246" /* 18246 */;
-import _modDef18247 from "module_18247" /* 18247 */;
-import _modDef18248 from "module_18248" /* 18248 */;
+import _modDef18255 from "module_18255" /* 18255 */;
+import _modDef18256 from "module_18256" /* 18256 */;
+import _modDef18257 from "module_18257" /* 18257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18246 }, 3: null };
-let obj2 = { uri: _modDef18246 };
-obj[2] = { uri: _modDef18247 };
-const obj3 = { uri: _modDef18247 };
-obj[3] = { uri: _modDef18248 };
+let obj = { 1: null, 2: { uri: _modDef18255 }, 3: null };
+let obj2 = { uri: _modDef18255 };
+obj[2] = { uri: _modDef18256 };
+const obj3 = { uri: _modDef18256 };
+obj[3] = { uri: _modDef18257 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18248 };
+const obj4 = { uri: _modDef18257 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx");
 

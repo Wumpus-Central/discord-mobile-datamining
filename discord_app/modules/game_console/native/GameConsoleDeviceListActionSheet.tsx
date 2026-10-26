@@ -1,6 +1,6 @@
-// === Module 11661: GameConsoleDeviceListActionSheet ===
+// === Module 11662: GameConsoleDeviceListActionSheet ===
 
-// Module 11661 (GameConsoleDeviceListActionSheet)
+// Module 11662 (GameConsoleDeviceListActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 5234 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11652 */;
-import _modDef11662 from "module_11662" /* 11662 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11653 */;
 import _modDef11663 from "module_11663" /* 11663 */;
+import _modDef11664 from "module_11664" /* 11664 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -101,7 +101,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Device
   const tmp4 = closure_14();
   ({ deviceOption, deviceIcon } = tmp4);
   if (cResult[0] !== platform) {
-    const tmp7 = _modDef11662;
+    const tmp7 = _modDef11663;
     cResult[0] = platform;
     cResult[1] = tmp7;
     let tmp5 = tmp7;
@@ -149,7 +149,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Device
 }) : (function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef11662 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef11663 };
   const items = [closure_1_11(FastImageDefault, obj2), closure_1_11(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name })];
   obj.children = items;
   return __initData(React5, obj);
@@ -159,7 +159,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyS
   const cResult = c.c(13);
   const tmp4 = closure_14();
   if (cResult[0] !== tmp4.emptyArt) {
-    const obj2 = { source: _modDef11663, style: tmp4.emptyArt };
+    const obj2 = { source: _modDef11664, style: tmp4.emptyArt };
     const tmp9 = closure_1_11(FastImageDefault, obj2);
     cResult[0] = tmp4.emptyArt;
     cResult[1] = tmp9;
@@ -224,7 +224,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyS
 }) : (function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef11663, style: tmp.emptyArt };
+  const obj2 = { source: _modDef11664, style: tmp.emptyArt };
   const items = [closure_1_11(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCons
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCons
             const ComponentDispatch = tmp4(stateFromStores[23]).ComponentDispatch;
             ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
             stateFromStores = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           stateFromStores = tmp;
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCons
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCons
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(11654).transferToPlaystationWithAlert(_require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(11655).transferToPlaystationWithAlert(_require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameCons
           const ComponentDispatch = tmp4(1123).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

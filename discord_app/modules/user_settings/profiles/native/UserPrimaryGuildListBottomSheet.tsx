@@ -1,6 +1,6 @@
-// === Module 15907: UserPrimaryGuildListBottomSheet ===
+// === Module 15908: UserPrimaryGuildListBottomSheet ===
 
-// Module 15907 (UserPrimaryGuildListBottomSheet)
+// Module 15908 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210
 import GuildIconDefault from "GuildIcon" /* 6883 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
 import Form from "Form" /* 8951 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14172 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
   const tmp5 = str(ref.useState(""), 2);
   ref = ref.useRef(null);
   let obj = selectedGuildId(576);
-  const guildTagCreationUpsell = selectedGuildId(14169).useGuildTagCreationUpsell("UserPrimaryGuildListBottomSheet");
+  const guildTagCreationUpsell = selectedGuildId(14170).useGuildTagCreationUpsell("UserPrimaryGuildListBottomSheet");
   const creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   const isUpsellVisible = guildTagCreationUpsell.isUpsellVisible;
   if (cResult[0] !== availableGuilds) {
@@ -634,7 +634,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
     cResult[5] = tmp16;
     const str3 = str.trim();
   }
-  const obj3 = selectedGuildId(14169);
+  const obj3 = selectedGuildId(14170);
 }) : (function UserPrimaryGuildListBottomSheet(availableGuilds) {
   availableGuilds = availableGuilds.availableGuilds;
   const selectedGuildId = availableGuilds.selectedGuildId;

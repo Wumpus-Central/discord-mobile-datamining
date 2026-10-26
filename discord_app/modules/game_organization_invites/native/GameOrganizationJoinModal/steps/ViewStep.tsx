@@ -1,17 +1,17 @@
-// === Module 12723: ViewStep ===
+// === Module 12726: ViewStep ===
 
-// Module 12723 (ViewStep)
+// Module 12726 (ViewStep)
 import nativeDefault from "native" /* 587 */;
 import _modDef2406 from "module_2406" /* 2406 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12724 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12725 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12726 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12727 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12728 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12729 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(12722).GameOrganizationJoinScenes;
+let closure_3 = fn(12725).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4971);
@@ -111,7 +111,7 @@ export const ViewStep = ReactCompilerGating.isReactCompilerEnabled() ? (function
                                                                                                 }
                                                 };
                                                 obj5.children = closure_4(tmp(5244).Button, obj6);
-                                                const tmp69 = closure_4(tmp(12727).ModalFooter, obj5);
+                                                const tmp69 = closure_4(tmp(12730).ModalFooter, obj5);
                                                 cResult[54] = navigation;
                                                 cResult[55] = tmp69;
                                                 let tmp67 = tmp69;
@@ -332,7 +332,7 @@ export const ViewStep = ReactCompilerGating.isReactCompilerEnabled() ? (function
       return navigation.navigate(constants.ACCEPT);
     };
     obj18.children = closure_4(tmp2(5244).Button, obj19);
-    items5[1] = closure_4(tmp2(12727).ModalFooter, obj18);
+    items5[1] = closure_4(tmp2(12730).ModalFooter, obj18);
     obj16.children = items5;
     return closure_5(tmp2(7900).ModalScreen, obj16);
   }

@@ -1,11 +1,11 @@
-// === Module 13032: TraitOptionDetails ===
+// === Module 13035: TraitOptionDetails ===
 
-// Module 13032 (TraitOptionDetails)
+// Module 13035 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import Text_Text from "Text/Text" /* 5234 */;
-import RarityBadgeDefault from "RarityBadge" /* 13033 */;
+import RarityBadgeDefault from "RarityBadge" /* 13036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

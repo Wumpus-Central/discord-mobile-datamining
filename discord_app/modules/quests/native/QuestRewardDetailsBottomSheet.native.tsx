@@ -13,7 +13,7 @@ import QuestRewardTypes from "QuestRewardTypes" /* 7781 */;
 import QuestUtils from "QuestUtils" /* 9567 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9570 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9589 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 14134 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 14136 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -250,7 +250,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
   const defaultRewardName = quest(9589).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: null };
-  const items3 = [closure_6(memo(14134), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(14136), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(587).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1128).intl;

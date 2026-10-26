@@ -1,6 +1,6 @@
-// === Module 16716: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 16717: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 16716 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 16717 (CustomTypingIndicatorAnimationPickerSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
@@ -240,12 +240,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj = onChange(576);
   obj10.typingSuggestion = map(1400).TypingSuggestion.UNSPECIFIED;
   obj9.config = obj10;
-  const tmp15 = closure_6(content(13080), obj9);
+  const tmp15 = closure_6(content(13083), obj9);
   cResult[13] = emojis;
   cResult[14] = content;
   cResult[15] = tmp15;
   tmp13 = tmp15;
-  const tmp10Result = content(13080);
+  const tmp10Result = content(13083);
 }) : (function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
   animation = undefined;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1400).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(13080), obj7);
+  obj6.children = closure_6(animation(13083), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];

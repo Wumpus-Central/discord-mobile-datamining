@@ -1,11 +1,11 @@
-// === Module 12995: CheckpointEmojiStatsScreen ===
+// === Module 12998: CheckpointEmojiStatsScreen ===
 
-// Module 12995 (CheckpointEmojiStatsScreen)
+// Module 12998 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import CheckpointStore from "CheckpointStore" /* 12953 */;
+import CheckpointStore from "CheckpointStore" /* 12956 */;
 
 const require = globalThis.__r;
 
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   [emoji, _slicedToArray] = noop.useState(tmp9 ? closure_11 : emojis[0]);
   let obj4 = require("initialize");
-  noop = require("useCheckpointSound")(require("module_12961"));
+  noop = require("useCheckpointSound")(require("module_12964"));
   let intl = tmp2(tmp3[16]).intl;
   const string = intl.string;
   if (tmp9) {

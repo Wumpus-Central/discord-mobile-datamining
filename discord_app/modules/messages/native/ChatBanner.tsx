@@ -1,6 +1,6 @@
-// === Module 11021: ChatBanner ===
+// === Module 11022: ChatBanner ===
 
-// Module 11021 (ChatBanner)
+// Module 11022 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -8,8 +8,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7209 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8287 */;
-import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11023 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11024 */;
+import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11024 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11025 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
 import ReadStateStore from "ReadStateStore" /* 6771 */;
@@ -17,7 +17,7 @@ import ReadStateStore from "ReadStateStore" /* 6771 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11022).ChatOverlays;
+const ChatOverlays = fn(11023).ChatOverlays;
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: c10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -613,7 +613,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
                   }
                 }
                 const obj3 = { size: "sm", color: nativeDefault.colors.WHITE };
-                const tmp25 = closure_12(tmp(11025).XSmallBoldIcon, obj3);
+                const tmp25 = closure_12(tmp(11026).XSmallBoldIcon, obj3);
                 cResult[16] = tmp25;
                 const tmp23 = tmp25;
               } else {
@@ -718,7 +718,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
       obj5.onPress = function onPress() {
         return ReadStateActionCreators.ack(channel.id, { section: constants4.NEW_MESSAGES_BANNER, object: constants2.MARK_CHANNEL_AS_READ_BUTTON, objectType: constants.ACK_MANUAL });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11025).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11026).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;

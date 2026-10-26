@@ -1,6 +1,6 @@
-// === Module 17422: MainTabs ===
+// === Module 17423: MainTabs ===
 
-// Module 17422 (MainTabs)
+// Module 17423 (MainTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -8,7 +8,7 @@ import native from "native" /* 5037 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5146 */;
 import useActiveTheme from "useActiveTheme" /* 9710 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10625 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 17423 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 17424 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

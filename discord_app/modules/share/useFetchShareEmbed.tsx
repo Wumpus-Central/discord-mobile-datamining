@@ -1,6 +1,6 @@
-// === Module 15147: useFetchShareEmbed ===
+// === Module 15148: useFetchShareEmbed ===
 
-// Module 15147 (useFetchShareEmbed)
+// Module 15148 (useFetchShareEmbed)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export default function useFetchShareEmbed(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -98,7 +98,7 @@ export default function useFetchShareEmbed(arg0) {
                     }
                   });
                   c5 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else if (0 === closure_128_1.embeds.length) {
                   tmp4(undefined);
                   c3 = 0;

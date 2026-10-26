@@ -1,10 +1,10 @@
-// === Module 12378: conjureSettingsAsks ===
+// === Module 12361: conjureSettingsAsks ===
 
-// Module 12378 (conjureSettingsAsks)
+// Module 12361 (conjureSettingsAsks)
 import c from "c" /* 576 */;
 import conjureChatTurns from "conjureChatTurns" /* 10700 */;
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12376 */;
-import conjureSettingsSummary from "conjureSettingsSummary" /* 12379 */;
+import conjureSettingsRequest from "conjureSettingsRequest" /* 12359 */;
+import conjureSettingsSummary from "conjureSettingsSummary" /* 12362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;

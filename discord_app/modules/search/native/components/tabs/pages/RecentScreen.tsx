@@ -1,31 +1,31 @@
-// === Module 18080: RecentScreen ===
+// === Module 18089: RecentScreen ===
 
-// Module 18080 (RecentScreen)
+// Module 18089 (RecentScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
 import Pressables from "Pressables" /* 6908 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7883 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13222 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13225 */;
-import SearchUtils from "SearchUtils" /* 13229 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13243 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13247 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16117 */;
-import MediaGridPlaceholder from "MediaGridPlaceholder" /* 18087 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13225 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13228 */;
+import SearchUtils from "SearchUtils" /* 13232 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13246 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13250 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16118 */;
+import MediaGridPlaceholder from "MediaGridPlaceholder" /* 18096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6792 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13249 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 18081 */;
-import SearchQueryStore from "SearchQueryStore" /* 13236 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13252 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 18090 */;
+import SearchQueryStore from "SearchQueryStore" /* 13239 */;
 
 require = fn;
 const SearchConstants = fn(9714);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13238).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13241).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1087).SearchTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -212,7 +212,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSug
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -246,7 +246,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSug
             const result = onPressDMItem(tmp5[20]).trackSuggestedSearchClicked(obj7);
             tmp2(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -292,7 +292,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSug
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -326,7 +326,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSug
             const result = tmp2(onPressDMItem[20]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -672,16 +672,16 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const messages = stateFromStoresObject.messages;
   ({ isLoadingMediaGrid, isInitialSearchQuery } = stateFromStoresObject);
   if (cResult[3] !== searchContext) {
-    const searchContextId = tmp2(13229).getSearchContextId(searchContext);
+    const searchContextId = tmp2(13232).getSearchContextId(searchContext);
     cResult[3] = searchContext;
     cResult[4] = searchContextId;
     let tmp11 = searchContextId;
-    const tmp2Result2 = tmp2(13229);
+    const tmp2Result2 = tmp2(13232);
   } else {
     tmp11 = cResult[4];
   }
   const arr3 = closure_21(tmp11);
-  const tmp15 = messages(18085)(searchContext.width);
+  const tmp15 = messages(18094)(searchContext.width);
   dependencyMap = tmp15;
   if (null != messages) {
     if (0 !== messages.length) {
@@ -693,7 +693,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       items1 = [];
       const obj4 = messages[Symbol.iterator]();
       while (obj4 !== undefined) {
-        let obj5 = searchContext(13222);
+        let obj5 = searchContext(13225);
         let items2 = [tmp19];
         let media = obj5.getMedia(searchContext, items2);
         let item = media.forEach((item) => items1.push(item));
@@ -714,7 +714,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp30 = cResult[10];
     }
     let num11 = searchContext;
-    const onPressMediaItem = searchContext(18082).useOnPressMediaItem(tmp30);
+    const onPressMediaItem = searchContext(18091).useOnPressMediaItem(tmp30);
     if (cResult[11] === messages) {
       if (cResult[12] === onPressMediaItem) {
         let tmp35 = cResult[13];
@@ -727,7 +727,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       } else {
         tmp36 = cResult[14];
       }
-      const fullscreenPlaceholderCount = num11(18086).useFullscreenPlaceholderCount(tmp36);
+      const fullscreenPlaceholderCount = num11(18095).useFullscreenPlaceholderCount(tmp36);
       if (cResult[15] === tmp35) {
         if (cResult[16] === isInitialSearchQuery) {
           if (cResult[17] === EMPTY_MEDIA_RESULTS) {
@@ -1053,7 +1053,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           arr8.push(element);
         });
       }
-      const num11Result = num11(18086);
+      const num11Result = num11(18095);
     }
     class G {
       constructor(arg0) {
@@ -1083,7 +1083,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[12] = onPressMediaItem;
     cResult[13] = G;
     tmp35 = G;
-    const obj7 = searchContext(18082);
+    const obj7 = searchContext(18091);
   }
   const obj13 = { searchContext, allMediaResults: EMPTY_MEDIA_RESULTS };
   cResult[8] = EMPTY_MEDIA_RESULTS;

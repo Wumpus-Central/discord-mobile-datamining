@@ -1,13 +1,13 @@
-// === Module 17171: UserSettingsDesignSystemTagGroup ===
+// === Module 17172: UserSettingsDesignSystemTagGroup ===
 
-// Module 17171 (UserSettingsDesignSystemTagGroup)
+// Module 17172 (UserSettingsDesignSystemTagGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import useToken from "useToken" /* 5252 */;
 import Stack_Stack from "Stack/Stack" /* 5977 */;
 import Card from "Card" /* 6905 */;
-import TagGroup from "TagGroup" /* 12268 */;
+import TagGroup from "TagGroup" /* 12217 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

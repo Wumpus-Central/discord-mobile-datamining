@@ -1,6 +1,6 @@
-// === Module 13020: CheckpointRecapCard ===
+// === Module 13023: CheckpointRecapCard ===
 
-// Module 13020 (CheckpointRecapCard)
+// Module 13023 (CheckpointRecapCard)
 import nativeDefault from "native" /* 587 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1900 */;
 import timing from "timing" /* 5206 */;
@@ -22,7 +22,7 @@ let c14 = "M0 40H30L40 30V0H10L0 10V40Z";
 let c15 = 240;
 let c16 = 150;
 let c17 = 2026;
-const CheckpointStatNumber = fn(12980);
+const CheckpointStatNumber = fn(12983);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
 const createStyles = fn(4971);
 let obj3 = { card: { width: 200, height: 268, overflow: "hidden", transformOrigin: "top left" }, container: { position: "absolute", top: 0, left: 0 }, year: null, logo: null, clyde: null, character: null };
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     }
                   }
                   const obj6 = { value, color: primaryBackgroundColor, size: 64 };
-                  const tmp54 = closure_7(first(12980), obj6);
+                  const tmp54 = closure_7(first(12983), obj6);
                   cResult[31] = primaryBackgroundColor;
                   cResult[32] = tmp54;
                 } else {

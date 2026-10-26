@@ -1,6 +1,6 @@
-// === Module 13778: MessageNotificationHeader ===
+// === Module 13780: MessageNotificationHeader ===
 
-// Module 13778 (MessageNotificationHeader)
+// Module 13780 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

@@ -1,14 +1,14 @@
-// === Module 17952: ReactActionSheet ===
+// === Module 17961: ReactActionSheet ===
 
-// Module 17952 (ReactActionSheet)
+// Module 17961 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5225 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9825 */;
-import ICYMIContext from "ICYMIContext" /* 17900 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13135 */;
+import ICYMIContext from "ICYMIContext" /* 17909 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13138 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -555,7 +555,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -589,7 +589,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
                   } else {
                     closure_1_6(false);
                     c3 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp9) {
                   c3 = tmp;
@@ -627,7 +627,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -663,7 +663,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             closure_1_6(false);
             closure_1_8("");
             c2 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           c2 = tmp;
@@ -736,7 +736,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -771,7 +771,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             closure_128_5(false);
             closure_128_8("");
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -794,7 +794,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -828,7 +828,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;

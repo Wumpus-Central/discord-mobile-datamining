@@ -1,6 +1,6 @@
-// === Module 13307: FloatingChatInputContainer ===
+// === Module 13310: FloatingChatInputContainer ===
 
-// Module 13307 (FloatingChatInputContainer)
+// Module 13310 (FloatingChatInputContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;

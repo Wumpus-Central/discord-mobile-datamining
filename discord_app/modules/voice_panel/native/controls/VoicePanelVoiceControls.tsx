@@ -1,20 +1,20 @@
-// === Module 18640: VoicePanelVoiceControls ===
+// === Module 18650: VoicePanelVoiceControls ===
 
-// Module 18640 (VoicePanelVoiceControls)
+// Module 18650 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10899 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11415 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11616 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11628 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 14628 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18476 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 18499 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 18641 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10900 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11416 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11617 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11629 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 14629 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18486 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 18509 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 18651 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
@@ -25,7 +25,7 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10898).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10899).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(4971);

@@ -1,6 +1,6 @@
-// === Module 11031: MediaPostEmbedStore ===
+// === Module 11032: MediaPostEmbedStore ===
 
-// Module 11031 (MediaPostEmbedStore)
+// Module 11032 (MediaPostEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

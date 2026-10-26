@@ -1,6 +1,6 @@
-// === Module 16715: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 16716: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 16715 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 16716 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3832 from "module_3832" /* 3832 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -49,16 +49,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
     tmp9 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const customTypingIndicatorSuggestionPresets = tmp(13067).getCustomTypingIndicatorSuggestionPresets();
+    const customTypingIndicatorSuggestionPresets = tmp(13070).getCustomTypingIndicatorSuggestionPresets();
     const mapped = customTypingIndicatorSuggestionPresets.map((value) => {
       const obj = { value, label: null };
       const intl = onChange(1128).intl;
-      obj.label = intl.string(onChange(13067).getCustomTypingIndicatorSuggestionMessage(value));
+      obj.label = intl.string(onChange(13070).getCustomTypingIndicatorSuggestionMessage(value));
       return jsx(onChange(6984).TableRadioRow, { value, label: null }, value);
     });
     cResult[4] = mapped;
     let tmp14 = mapped;
-    const tmpResult = tmp(13067);
+    const tmpResult = tmp(13070);
   } else {
     tmp14 = cResult[4];
   }
@@ -106,11 +106,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
     children: null
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(13067).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(13070).getCustomTypingIndicatorSuggestionPresets();
   obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1128).intl;
-    obj.label = intl.string(onChange(13067).getCustomTypingIndicatorSuggestionMessage(value));
+    obj.label = intl.string(onChange(13070).getCustomTypingIndicatorSuggestionMessage(value));
     return jsx(onChange(6984).TableRadioRow, { value, label: null }, value);
   });
   obj.children = jsx(onChange(6985).TableRadioGroup, {

@@ -1,6 +1,6 @@
-// === Module 11699: StageChannelListStore ===
+// === Module 11700: StageChannelListStore ===
 
-// Module 11699 (StageChannelListStore)
+// Module 11700 (StageChannelListStore)
 import c from "c" /* 576 */;
 import _mod4886 from "module_4886" /* 4886 */;
 import _slicedToArray from "module_32" /* 32 */;

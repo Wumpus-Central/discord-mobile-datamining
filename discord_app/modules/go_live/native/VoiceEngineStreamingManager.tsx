@@ -14,7 +14,7 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6645 */;
 import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 7828 */;
 import StreamActionCreators from "StreamActionCreators" /* 7829 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 11593 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 11594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -48,7 +48,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

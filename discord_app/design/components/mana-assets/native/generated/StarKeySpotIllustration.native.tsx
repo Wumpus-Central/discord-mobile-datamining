@@ -1,23 +1,23 @@
-// === Module 19246: StarKeySpotIllustration ===
+// === Module 19256: StarKeySpotIllustration ===
 
-// Module 19246 (StarKeySpotIllustration)
+// Module 19256 (StarKeySpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19247 from "module_19247" /* 19247 */;
-import _modDef19248 from "module_19248" /* 19248 */;
-import _modDef19249 from "module_19249" /* 19249 */;
+import _modDef19257 from "module_19257" /* 19257 */;
+import _modDef19258 from "module_19258" /* 19258 */;
+import _modDef19259 from "module_19259" /* 19259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19247 }, 3: null };
-let obj2 = { uri: _modDef19247 };
-obj[2] = { uri: _modDef19248 };
-const obj3 = { uri: _modDef19248 };
-obj[3] = { uri: _modDef19249 };
+let obj = { 1: null, 2: { uri: _modDef19257 }, 3: null };
+let obj2 = { uri: _modDef19257 };
+obj[2] = { uri: _modDef19258 };
+const obj3 = { uri: _modDef19258 };
+obj[3] = { uri: _modDef19259 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19249 };
+const obj4 = { uri: _modDef19259 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StarKeySpotIllustration.native.tsx");
 

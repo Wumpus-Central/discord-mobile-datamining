@@ -1,6 +1,6 @@
-// === Module 16126: updateDmSafetyAlertsSetting ===
+// === Module 16127: updateDmSafetyAlertsSetting ===
 
-// Module 16126 (updateDmSafetyAlertsSetting)
+// Module 16127 (updateDmSafetyAlertsSetting)
 import wrappers from "wrappers" /* 1242 */;
 import size from "module_2" /* 2 */;
 

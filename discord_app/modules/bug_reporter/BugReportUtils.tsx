@@ -1,12 +1,12 @@
-// === Module 13787: bug_reporter/BugReportUtils ===
+// === Module 13789: bug_reporter/BugReportUtils ===
 
-// Module 13787 (bug_reporter/BugReportUtils)
+// Module 13789 (bug_reporter/BugReportUtils)
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6676 */;
-import DebugUploadManager from "DebugUploadManager" /* 13788 */;
+import DebugUploadManager from "DebugUploadManager" /* 13790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -33,7 +33,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

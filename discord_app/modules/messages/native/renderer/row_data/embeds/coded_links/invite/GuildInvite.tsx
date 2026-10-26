@@ -1,6 +1,6 @@
-// === Module 14533: invite/GuildInvite ===
+// === Module 14534: invite/GuildInvite ===
 
-// Module 14533 (invite/GuildInvite)
+// Module 14534 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -20,11 +20,11 @@ import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9237 */;
 import CodedLinksConstants from "CodedLinksConstants" /* 10004 */;
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10005 */;
 import GuestUtilsDefault from "GuestUtils" /* 10006 */;
-import _modDef12753 from "module_12753" /* 12753 */;
-import _modDef12754 from "module_12754" /* 12754 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13667 */;
-import _modDef13668 from "module_13668" /* 13668 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14534 */;
+import _modDef12756 from "module_12756" /* 12756 */;
+import _modDef12757 from "module_12757" /* 12757 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13669 */;
+import _modDef13670 from "module_13670" /* 13670 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14535 */;
 import GuildRecord from "GuildRecord" /* 4841 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -96,9 +96,9 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.titleText = intl5.string(tmp6(1128).t["Jhx/ud"]);
   const tmp6Result = tmp6(8137);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef12753;
+    let tmpResult2 = _modDef12756;
   } else {
-    tmpResult2 = _modDef12754;
+    tmpResult2 = _modDef12757;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13668);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13670);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -209,9 +209,9 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef12753;
+    let tmpResult = _modDef12756;
   } else {
-    tmpResult = _modDef12754;
+    tmpResult = _modDef12757;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

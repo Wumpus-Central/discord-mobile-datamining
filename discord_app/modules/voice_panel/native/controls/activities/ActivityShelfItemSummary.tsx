@@ -1,6 +1,6 @@
-// === Module 18573: ActivityShelfItemSummary ===
+// === Module 18583: ActivityShelfItemSummary ===
 
-// Module 18573 (ActivityShelfItemSummary)
+// Module 18583 (ActivityShelfItemSummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -8,8 +8,8 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import ButtonPill from "ButtonPill" /* 5256 */;
 import ButtonEllipsis from "ButtonEllipsis" /* 5262 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11267 */;
-import useActivityUsersDefault from "useActivityUsers" /* 18574 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11268 */;
+import useActivityUsersDefault from "useActivityUsers" /* 18584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

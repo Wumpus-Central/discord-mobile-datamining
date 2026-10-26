@@ -1,6 +1,6 @@
-// === Module 11753: createConjureProject ===
+// === Module 12527: createConjureProject ===
 
-// Module 11753 (createConjureProject)
+// Module 12527 (createConjureProject)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _createConjureProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_5 = async function _createConjureProject(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

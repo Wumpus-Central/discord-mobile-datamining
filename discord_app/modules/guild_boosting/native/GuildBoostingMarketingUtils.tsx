@@ -1,6 +1,6 @@
-// === Module 13448: GuildBoostingMarketingUtils ===
+// === Module 13451: GuildBoostingMarketingUtils ===
 
-// Module 13448 (GuildBoostingMarketingUtils)
+// Module 13451 (GuildBoostingMarketingUtils)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import StageIcon from "StageIcon" /* 8568 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8990 */;
@@ -8,11 +8,11 @@ import ReactionIcon from "ReactionIcon" /* 9350 */;
 import UploadIcon from "UploadIcon" /* 9804 */;
 import StarIcon from "StarIcon" /* 9949 */;
 import GifIcon from "GifIcon" /* 10148 */;
-import ImagesIcon from "ImagesIcon" /* 12521 */;
-import SoundboardIcon from "SoundboardIcon" /* 13449 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13451 */;
-import ScreenArrowIcon from "ScreenArrowIcon" /* 13453 */;
-import StickerIcon from "StickerIcon" /* 13454 */;
+import ImagesIcon from "ImagesIcon" /* 12504 */;
+import SoundboardIcon from "SoundboardIcon" /* 13452 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13454 */;
+import ScreenArrowIcon from "ScreenArrowIcon" /* 13456 */;
+import StickerIcon from "StickerIcon" /* 13457 */;
 import size from "module_2" /* 2 */;
 
 const PerkIcons = PremiumConstants.PerkIcons;

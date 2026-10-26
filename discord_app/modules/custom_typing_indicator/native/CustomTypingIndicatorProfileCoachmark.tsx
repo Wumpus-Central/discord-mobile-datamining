@@ -1,15 +1,15 @@
-// === Module 18240: CustomTypingIndicatorProfileCoachmark ===
+// === Module 18249: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 18240 (CustomTypingIndicatorProfileCoachmark)
+// Module 18249 (CustomTypingIndicatorProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import user from "user" /* 1400 */;
 import _modDef3832 from "module_3832" /* 3832 */;
 import openUserSettings from "openUserSettings" /* 7490 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13073 */;
-import _modDef13074 from "module_13074" /* 13074 */;
-import _modDef13075 from "module_13075" /* 13075 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13076 */;
+import _modDef13077 from "module_13077" /* 13077 */;
+import _modDef13078 from "module_13078" /* 13078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const cResult = c.c(6);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [_modDef13074, _modDef13075, _modDef13074];
+    const items = [_modDef13077, _modDef13078, _modDef13077];
     cResult[0] = items;
     let first = items;
   } else {
@@ -58,7 +58,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef13074, _modDef13075, _modDef13074];
+  const items = [_modDef13077, _modDef13078, _modDef13077];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;

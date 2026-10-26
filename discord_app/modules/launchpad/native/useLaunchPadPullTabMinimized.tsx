@@ -1,8 +1,8 @@
-// === Module 18677: useLaunchPadPullTabMinimized ===
+// === Module 18687: useLaunchPadPullTabMinimized ===
 
-// Module 18677 (useLaunchPadPullTabMinimized)
+// Module 18687 (useLaunchPadPullTabMinimized)
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 11571 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 11572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

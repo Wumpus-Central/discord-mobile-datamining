@@ -1,6 +1,6 @@
-// === Module 13168: GuildOnboardingHomeActionCreators ===
+// === Module 13171: GuildOnboardingHomeActionCreators ===
 
-// Module 13168 (GuildOnboardingHomeActionCreators)
+// Module 13171 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

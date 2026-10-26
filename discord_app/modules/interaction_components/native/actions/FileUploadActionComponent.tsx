@@ -1,13 +1,13 @@
-// === Module 18838: FileUploadActionComponent ===
+// === Module 18848: FileUploadActionComponent ===
 
-// Module 18838 (FileUploadActionComponent)
+// Module 18848 (FileUploadActionComponent)
 import c from "c" /* 576 */;
 import XSmallIcon from "XSmallIcon" /* 6931 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
 import IconButton from "IconButton" /* 7959 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9665 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10418 */;
-import AttachmentPreview from "AttachmentPreview" /* 12171 */;
+import AttachmentPreview from "AttachmentPreview" /* 12064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -19,7 +19,7 @@ const util = obj(1128);
 const InteractionComponentUtils = obj(6014);
 const FileSizeUtils = obj(6379);
 const TableRow = obj(6903);
-const FileUpIcon = obj(11792);
+const FileUpIcon = obj(12272);
 require = fn;
 const View = fn(17).View;
 const DraftType = fn(7631).DraftType;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
               }
             }
             c8 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;
@@ -544,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
               }
             }
             c8 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;

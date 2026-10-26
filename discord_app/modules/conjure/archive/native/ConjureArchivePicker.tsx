@@ -1,11 +1,11 @@
-// === Module 11760: ConjureArchivePicker ===
+// === Module 12257: ConjureArchivePicker ===
 
-// Module 11760 (ConjureArchivePicker)
+// Module 12257 (ConjureArchivePicker)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11758 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11759 */;
-import FilePickerUtils from "FilePickerUtils" /* 11761 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12162 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12178 */;
+import FilePickerUtils from "FilePickerUtils" /* 12258 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -51,7 +51,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c6 = tmp;

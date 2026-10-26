@@ -1,18 +1,18 @@
-// === Module 14023: GroupDMNitroCapCoachmark ===
+// === Module 14025: GroupDMNitroCapCoachmark ===
 
-// Module 14023 (GroupDMNitroCapCoachmark)
+// Module 14025 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
-import _modDef10860 from "module_10860" /* 10860 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11291 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11292 */;
+import _modDef10861 from "module_10861" /* 10861 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11292 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let number = fn(11294).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let number = fn(11295).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
@@ -28,13 +28,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   const tmp4 = closure_9();
   noop.useRef(null);
   const obj = channelId(576);
-  const groupDMNitroAudience = channelId(11292).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11293).useGroupDMNitroAudience();
   dependencyMap = tmp7;
   if (cResult[0] === groupDMNitroAudience) {
     if (cResult[1] === _location) {
       let tmp8 = cResult[2];
     }
-    _slicedToArray = _location(11299)(tmp8);
+    _slicedToArray = _location(11300)(tmp8);
     if (cResult[3] !== _location) {
       const obj3 = { location: _location };
       cResult[3] = _location;
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     } else {
       tmp11 = cResult[4];
     }
-    const tmp10 = _location(11299)(tmp8);
-    const enabled = _location(11295).useConfig(tmp11).enabled;
+    const tmp10 = _location(11300)(tmp8);
+    const enabled = _location(11296).useConfig(tmp11).enabled;
     if (cResult[5] === enabled) {
       if (cResult[6] === tmp12) {
         const tmp15 = _slicedToArray(channelId(7496).useSelectedDismissibleContent(cResult[7]), 2);
@@ -97,10 +97,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
               return closure_4(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const stringResult1 = obj8.string(channelId(11292).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+          const stringResult1 = obj8.string(channelId(11293).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
           cResult[13] = groupDMNitroAudience;
           cResult[14] = stringResult1;
-          const tmpResult2 = channelId(11292);
+          const tmpResult2 = channelId(11293);
         } else {
           class P {
             constructor() {
@@ -147,14 +147,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       cResult[7] = items;
     }
     items = [];
-    const tmp9Result = _location(11295);
+    const tmp9Result = _location(11296);
   }
-  const obj6 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: channelId(11292).GroupDMNitroAcquisitionStrategy.MARKETING };
+  const obj6 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: channelId(11293).GroupDMNitroAcquisitionStrategy.MARKETING };
   cResult[0] = groupDMNitroAudience;
   cResult[1] = _location;
   cResult[2] = obj6;
   tmp8 = obj6;
-  const obj2 = channelId(11292);
+  const obj2 = channelId(11293);
 }) : (function GroupDMNitroCapCoachmark(channelId) {
   channelId = channelId.channelId;
   const _location = channelId.location;
@@ -164,15 +164,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11292).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11293).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11292);
-  obj3.acquisitionStrategy = channelId(11292).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11299)(obj3);
+  const obj2 = channelId(11293);
+  obj3.acquisitionStrategy = channelId(11293).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11300)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11299);
+  let tmp7 = _location(11300);
   channelId(7496);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       if (closure_4) {
-        let tmp7 = _modDef10860;
+        let tmp7 = _modDef10861;
       } else {
         const obj4 = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
         tmp7 = jsx(NitroWheelIcon.NitroWheelIcon, { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE });
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11291)(channelId, closure_1_1);
+          _location(11292)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -225,5 +225,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
-  obj4 = _location(11295);
+  obj4 = _location(11296);
 });

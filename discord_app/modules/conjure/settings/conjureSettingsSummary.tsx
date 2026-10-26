@@ -1,6 +1,6 @@
-// === Module 12379: conjureSettingsSummary ===
+// === Module 12362: conjureSettingsSummary ===
 
-// Module 12379 (conjureSettingsSummary)
+// Module 12362 (conjureSettingsSummary)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import size from "module_2" /* 2 */;
@@ -32,16 +32,16 @@ export const conjureSettingsSummary = function conjureSettingsSummary(settingsRe
       }
       const type = found.type;
       if ("secret" === type) {
-        const intl4 = util.intl;
-        let stringResult = intl4.string(_modDef3830.CJq1rY);
+        const intl6 = util.intl;
+        let stringResult = intl6.string(_modDef3830.CJq1rY);
       } else if ("checkbox" === type) {
-        const intl3 = util.intl;
+        const intl5 = util.intl;
         if (true === arr2) {
           let nXtpn3 = _modDef3830.nXtpn3;
         } else {
           nXtpn3 = _modDef3830["0vfaMW"];
         }
-        stringResult = intl3.string(nXtpn3);
+        stringResult = intl5.string(nXtpn3);
       } else if ("select" === type) {
         const mapped1 = mapped.map((item) => {
           closure_0 = item;
@@ -72,12 +72,19 @@ export const conjureSettingsSummary = function conjureSettingsSummary(settingsRe
           return combined;
         });
         stringResult = mapped2.join(", ");
+      } else if ("game" === type) {
+        if (0 === mapped.length) {
+          const intl4 = util.intl;
+          let stringResult1 = intl4.string(_modDef3830.nEv677);
+        } else {
+          const intl3 = util.intl;
+          stringResult1 = intl3.string(_modDef3830.Fw9G9A);
+        }
+        stringResult = stringResult1;
       } else {
         if ("role" !== type) {
           if ("user" !== type) {
-            if ("game" !== type) {
-              stringResult = mapped.join(", ");
-            }
+            stringResult = mapped.join(", ");
           }
         }
         const intl2 = util.intl;

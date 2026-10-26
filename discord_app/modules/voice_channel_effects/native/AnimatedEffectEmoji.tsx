@@ -1,6 +1,6 @@
-// === Module 11451: AnimatedEffectEmoji ===
+// === Module 11452: AnimatedEffectEmoji ===
 
-// Module 11451 (AnimatedEffectEmoji)
+// Module 11452 (AnimatedEffectEmoji)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;

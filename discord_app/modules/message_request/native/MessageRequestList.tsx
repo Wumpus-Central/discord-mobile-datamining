@@ -1,6 +1,6 @@
-// === Module 18330: MessageRequestList ===
+// === Module 18339: MessageRequestList ===
 
-// Module 18330 (MessageRequestList)
+// Module 18339 (MessageRequestList)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
@@ -710,17 +710,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   let data;
   const tmp = closure_9();
   const bottom = data(1633)().bottom;
-  data = data(18336)();
-  dependencyMap = goToMessageRequestPreview(18338).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(18338);
+  data = data(18345)();
+  dependencyMap = goToMessageRequestPreview(18347).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(18347);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(13348).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(13351).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1128).intl;
     obj3.bodyText = intl2.string(tmp4(1128).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(18341), obj3);
-    const tmp2Result = tmp2(18341);
+    let tmp9Result = closure_7(tmp2(18350), obj3);
+    const tmp2Result = tmp2(18350);
   } else {
     const items = [tmp.list, ];
     let num = 0;

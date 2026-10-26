@@ -1,10 +1,10 @@
-// === Module 10991: notficationSettingsChannelFlagUtils ===
+// === Module 10992: notficationSettingsChannelFlagUtils ===
 
-// Module 10991 (notficationSettingsChannelFlagUtils)
+// Module 10992 (notficationSettingsChannelFlagUtils)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
 import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8299 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10992 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10993 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
 
 const require = globalThis.__r;

@@ -1,20 +1,20 @@
-// === Module 12952: CheckpointModal ===
+// === Module 12955: CheckpointModal ===
 
-// Module 12952 (CheckpointModal)
+// Module 12955 (CheckpointModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 2000 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 6022 */;
 import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12899 */;
-import CheckpointFlows from "CheckpointFlows" /* 12957 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13036 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12902 */;
+import CheckpointFlows from "CheckpointFlows" /* 12960 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13039 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4914 */;
-import CheckpointStore from "CheckpointStore" /* 12953 */;
+import CheckpointStore from "CheckpointStore" /* 12956 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -67,7 +67,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               if (_undefined.fetchState !== constants.SUCCESS) {
                 if (_undefined.fetchState === tmp36.FETCHING) {
                   c5 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   c4 = 1;
                   c5 = 1;
@@ -407,7 +407,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12953).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12956).CheckpointFetchStates;
 const CheckpointConstants = fn(6015);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);

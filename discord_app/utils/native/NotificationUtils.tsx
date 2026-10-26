@@ -1,16 +1,16 @@
-// === Module 13318: NotificationUtils ===
+// === Module 13321: NotificationUtils ===
 
-// Module 13318 (NotificationUtils)
+// Module 13321 (NotificationUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7891 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import SoundUtils from "SoundUtils" /* 11525 */;
+import SoundUtils from "SoundUtils" /* 11526 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(13309).PermissionStateType;
+const PermissionStateType = fn(13312).PermissionStateType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp4) {
           c0 = tmp;

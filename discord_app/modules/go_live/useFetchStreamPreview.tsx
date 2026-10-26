@@ -1,6 +1,6 @@
-// === Module 11715: useFetchStreamPreview ===
+// === Module 11716: useFetchStreamPreview ===
 
-// Module 11715 (useFetchStreamPreview)
+// Module 11716 (useFetchStreamPreview)
 import StreamActionCreators from "StreamActionCreators" /* 7829 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7831 */;
@@ -197,5 +197,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     }
     return obj5;
   }
-  obj5 = { previewUrl: "Reflect", isLoading: null };
+  obj5 = { previewUrl: "Reflect", isLoading: true };
 });

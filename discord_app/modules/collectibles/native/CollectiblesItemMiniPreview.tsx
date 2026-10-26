@@ -1,6 +1,6 @@
-// === Module 14452: CollectiblesItemMiniPreview ===
+// === Module 14453: CollectiblesItemMiniPreview ===
 
-// Module 14452 (CollectiblesItemMiniPreview)
+// Module 14453 (CollectiblesItemMiniPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils from "utils" /* 1992 */;

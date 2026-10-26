@@ -1,6 +1,6 @@
-// === Module 18979: NewTermsModal ===
+// === Module 18989: NewTermsModal ===
 
-// Module 18979 (NewTermsModal)
+// Module 18989 (NewTermsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
             closure_128_0 = value;
             tmp5(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           closure_128_0 = value;
           closure_129_1(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;

@@ -1,12 +1,12 @@
-// === Module 16432: OrbsArcadeGameContextMenu ===
+// === Module 16433: OrbsArcadeGameContextMenu ===
 
-// Module 16432 (OrbsArcadeGameContextMenu)
+// Module 16433 (OrbsArcadeGameContextMenu)
 import util from "util" /* 1128 */;
 import _modDef9139 from "module_9139" /* 9139 */;
-import RefreshIcon from "RefreshIcon" /* 11788 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 13963 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16399 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16410 */;
+import RefreshIcon from "RefreshIcon" /* 12270 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 13965 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16400 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 16411 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   if (cResult[3] !== game.id) {
     const obj2 = {
       label: tmp8,
-      IconComponent: tmp(13963).CircleQuestionIcon,
+      IconComponent: tmp(13965).CircleQuestionIcon,
       action() {
           return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id);
         }
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   if (cResult[6] !== game.id) {
     const obj3 = {
       label: tmp11,
-      IconComponent: tmp(11788).RefreshIcon,
+      IconComponent: tmp(12270).RefreshIcon,
       variant: "destructive",
       action() {
           return handleResetGame(game.id);
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      return game(16410).openOrbsArcadeInfoSheet(id.id);
+      return game(16411).openOrbsArcadeInfoSheet(id.id);
     };
     const items = [obj];
     return items;

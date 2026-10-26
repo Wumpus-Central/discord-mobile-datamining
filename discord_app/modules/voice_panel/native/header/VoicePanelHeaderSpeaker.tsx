@@ -1,21 +1,21 @@
-// === Module 18541: VoicePanelHeaderSpeaker ===
+// === Module 18551: VoicePanelHeaderSpeaker ===
 
-// Module 18541 (VoicePanelHeaderSpeaker)
+// Module 18551 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
 import NativeViewDefault from "NativeView" /* 6886 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9160 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 14180 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14181 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18475 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18544 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 14181 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14182 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18485 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18554 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5715 */;
 import AudioRouteStore from "AudioRouteStore" /* 5734 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18543 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18553 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import SessionsStore from "SessionsStore" /* 5716 */;
 
@@ -23,7 +23,7 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(18542).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(18552).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 15289: CoachmarkConstants ===
+// === Module 15290: CoachmarkConstants ===
 
-// Module 15289 (CoachmarkConstants)
+// Module 15290 (CoachmarkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Coachmark/native/CoachmarkConstants.native.tsx");

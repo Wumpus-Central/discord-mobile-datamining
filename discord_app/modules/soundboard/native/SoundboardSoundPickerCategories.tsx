@@ -1,6 +1,6 @@
-// === Module 18529: SoundboardSoundPickerCategories ===
+// === Module 18539: SoundboardSoundPickerCategories ===
 
-// Module 18529 (SoundboardSoundPickerCategories)
+// Module 18539 (SoundboardSoundPickerCategories)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,7 +16,7 @@ import LockIcon from "LockIcon" /* 8566 */;
 import TrophyIcon from "TrophyIcon" /* 9308 */;
 import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9683 */;
 import _modDef10159 from "module_10159" /* 10159 */;
-import _modDef18527 from "module_18527" /* 18527 */;
+import _modDef18537 from "module_18537" /* 18537 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -26,7 +26,7 @@ let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(18512).setSearchQuery;
+const setSearchQuery = fn(18522).setSearchQuery;
 const Constants = fn(1087);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);
@@ -111,7 +111,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp20 = cResult[7];
       }
-      tmp12 = _modDef18527;
+      tmp12 = _modDef18537;
       tmp11 = null;
       tmp14 = tmp20;
       tmp13 = null;
@@ -125,7 +125,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp16 = cResult[8];
       }
-      tmp12 = _modDef18527;
+      tmp12 = _modDef18537;
       tmp11 = null;
       tmp14 = tmp16;
       tmp13 = null;
@@ -286,13 +286,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef18527;
+    tmp6 = _modDef18537;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef18527;
+    tmp6 = _modDef18537;
     tmp7 = null;
     tmp14Result = null;
   } else {

@@ -1,6 +1,6 @@
-// === Module 11593: useScreenshareUtils ===
+// === Module 11594: useScreenshareUtils ===
 
-// Module 11593 (useScreenshareUtils)
+// Module 11594 (useScreenshareUtils)
 import util from "util" /* 1128 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import inject from "inject" /* 2016 */;
@@ -10,8 +10,8 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
 import StreamActionCreators from "StreamActionCreators" /* 7829 */;
 import CallsUtils from "CallsUtils" /* 9153 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10099 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 11588 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11599 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 11589 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11600 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -125,7 +125,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenshareUtils(arg0) {
   const cResult = require("c").c(24);
-  const tmp5 = analyticsLocations(11588)(arg0);
+  const tmp5 = analyticsLocations(11589)(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[0] = closure_8 >= 12;
     let first = tmp8;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp13 = cResult[3];
   }
   const tmpResult = require("initialize");
-  const showMobileGoLiveUpsell = analyticsLocations(11599).useConfig(tmp13).showMobileGoLiveUpsell;
+  const showMobileGoLiveUpsell = analyticsLocations(11600).useConfig(tmp13).showMobileGoLiveUpsell;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationStreamingStore];
     class E {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp14 = cResult[4];
     tmp15 = cResult[5];
   }
-  const tmp4Result = analyticsLocations(11599);
+  const tmp4Result = analyticsLocations(11600);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
   analyticsLocations = tmp4(7253)().analyticsLocations;
   let tmp18 = null != stateFromStores1;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
                     return closure_1_4.getCurrentUserActiveStream();
                   }
                 }
-                tmp4(tmp18 ? 11604 : 11605);
+                tmp4(tmp18 ? 11605 : 11606);
               }
             }
           }

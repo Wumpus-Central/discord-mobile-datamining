@@ -1,10 +1,10 @@
-// === Module 11396: tryLaunchAsFrame ===
+// === Module 11397: tryLaunchAsFrame ===
 
-// Module 11396 (tryLaunchAsFrame)
+// Module 11397 (tryLaunchAsFrame)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11356 */;
-import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 11397 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11357 */;
+import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 11398 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;

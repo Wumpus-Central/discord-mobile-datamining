@@ -1,8 +1,8 @@
-// === Module 12119: AppLauncherApplicationViewScreen ===
+// === Module 12010: AppLauncherApplicationViewScreen ===
 
-// Module 12119 (AppLauncherApplicationViewScreen)
+// Module 12010 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import AppLauncherContext from "AppLauncherContext" /* 11168 */;
+import AppLauncherContext from "AppLauncherContext" /* 11169 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9650 */;
 

@@ -1,10 +1,10 @@
-// === Module 11506: EmbeddedActivityBackgroundImageWithOverlay ===
+// === Module 11507: EmbeddedActivityBackgroundImageWithOverlay ===
 
-// Module 11506 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 11507 (EmbeddedActivityBackgroundImageWithOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11507 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11508 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

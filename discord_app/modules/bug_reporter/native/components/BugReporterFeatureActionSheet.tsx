@@ -1,6 +1,6 @@
-// === Module 13796: BugReporterFeatureActionSheet ===
+// === Module 13798: BugReporterFeatureActionSheet ===
 
-// Module 13796 (BugReporterFeatureActionSheet)
+// Module 13798 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -80,29 +80,29 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ feature, setFeature } = item);
   ({ start, end } = item);
   if (cResult[0] !== item) {
-    const featureId = tmp(13787).getFeatureId(item);
+    const featureId = tmp(13789).getFeatureId(item);
     cResult[0] = item;
     cResult[1] = featureId;
     let tmp4 = featureId;
-    const tmpResult = tmp(13787);
+    const tmpResult = tmp(13789);
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== item) {
-    const featureId1 = tmp(13787).getFeatureId(item);
+    const featureId1 = tmp(13789).getFeatureId(item);
     cResult[2] = item;
     cResult[3] = featureId1;
     let tmp6 = featureId1;
-    const tmpResult3 = tmp(13787);
+    const tmpResult3 = tmp(13789);
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== feature) {
-    const featureId2 = tmp(13787).getFeatureId(feature);
+    const featureId2 = tmp(13789).getFeatureId(feature);
     cResult[4] = feature;
     cResult[5] = featureId2;
     let tmp8 = featureId2;
-    const tmpResult4 = tmp(13787);
+    const tmpResult4 = tmp(13789);
   } else {
     tmp8 = cResult[5];
   }
@@ -148,11 +148,11 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(13787).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(13787);
-  const featureId = item(13787).getFeatureId(item);
-  const obj3 = item(13787);
-  obj.legacyCompat_selected = featureId === item(13787).getFeatureId(feature);
+  const obj = { start, end, value: item(13789).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(13789);
+  const featureId = item(13789).getFeatureId(item);
+  const obj3 = item(13789);
+  obj.legacyCompat_selected = featureId === item(13789).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();

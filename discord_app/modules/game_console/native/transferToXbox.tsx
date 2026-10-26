@@ -1,7 +1,7 @@
-// === Module 11664: transferToXbox ===
+// === Module 11665: transferToXbox ===
 
-// Module 11664 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11656 */;
+// Module 11665 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11657 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let closure_8 = async function _transferToXbox(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_8 = async function _transferToXbox(arg0) {
         closure_130_2(closure_130_3[12]).stopOwnStream(false);
         closure_130_5.openURL(closure_129_2);
         c4 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } else {
         const obj17 = {
           importer() {

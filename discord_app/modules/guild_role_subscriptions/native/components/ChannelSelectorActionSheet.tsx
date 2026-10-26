@@ -1,6 +1,6 @@
-// === Module 19301: ChannelSelectorActionSheet ===
+// === Module 19311: ChannelSelectorActionSheet ===
 
-// Module 19301 (ChannelSelectorActionSheet)
+// Module 19311 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
@@ -86,7 +86,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     const obj5 = { style: tmp4.channelRow, onPress: tmp7, accessible: true, accessibilityLabel: tmp6, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-    const tmp13 = closure_11(tmp5(17554), obj5);
+    const tmp13 = closure_11(tmp5(17555), obj5);
     cResult[3] = channel;
     cResult[4] = tmp7;
     cResult[5] = selected;
@@ -120,7 +120,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(17554), obj), ];
+  const children = [closure_11(onChannelSelected(17555), obj), ];
   if (selected) {
     const obj2 = { style: tmp.selectedIcon, children: null };
     const obj3 = { size: "md", color: tmp2(587).colors.ICON_BRAND, secondaryColor: tmp2(587).colors.WHITE };

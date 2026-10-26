@@ -1,17 +1,17 @@
-// === Module 14816: BoostedGuildTierProgressCircle ===
+// === Module 14817: BoostedGuildTierProgressCircle ===
 
-// Module 14816 (BoostedGuildTierProgressCircle)
+// Module 14817 (BoostedGuildTierProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 8366 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8371 */;
-import ProgressCircleDefault from "ProgressCircle" /* 13515 */;
-import Tier048Px from "Tier048Px" /* 14817 */;
-import _modDef14821 from "module_14821" /* 14821 */;
+import ProgressCircleDefault from "ProgressCircle" /* 13518 */;
+import Tier048Px from "Tier048Px" /* 14818 */;
 import _modDef14822 from "module_14822" /* 14822 */;
 import _modDef14823 from "module_14823" /* 14823 */;
+import _modDef14824 from "module_14824" /* 14824 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -156,13 +156,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource1 = _modDef14821;
+          let tier048PxSource1 = _modDef14822;
         } else if (constants.TIER_2 !== premiumTier) {
           if (constants.TIER_3 === premiumTier) {
-            tier048PxSource1 = _modDef14823;
+            tier048PxSource1 = _modDef14824;
           }
         }
-        tier048PxSource1 = _modDef14822;
+        tier048PxSource1 = _modDef14823;
       }
       cResult[8] = guild;
       cResult[9] = theme;
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef14821;
+          let tmp2Result4 = _modDef14822;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef14822;
-        } else if (constants.TIER_3 === premiumTier) {
           tmp2Result4 = _modDef14823;
+        } else if (constants.TIER_3 === premiumTier) {
+          tmp2Result4 = _modDef14824;
         }
       }
       const obj5 = { source: tmp2Result4, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

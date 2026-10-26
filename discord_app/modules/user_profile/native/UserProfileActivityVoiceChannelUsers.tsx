@@ -1,9 +1,9 @@
-// === Module 14311: UserProfileActivityVoiceChannelUsers ===
+// === Module 14312: UserProfileActivityVoiceChannelUsers ===
 
-// Module 14311 (UserProfileActivityVoiceChannelUsers)
+// Module 14312 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1128 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11076 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11077 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5712 */;
 
@@ -153,14 +153,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         return tmp11;
       }
       const obj2 = { title: first, onBack, scrollable: true, children: tmp8 };
-      const tmp14 = jsx(onPressUser(11076), { title: first, onBack, scrollable: true, children: tmp8 });
+      const tmp14 = jsx(onPressUser(11077), { title: first, onBack, scrollable: true, children: tmp8 });
       cResult[8] = onBack;
       cResult[9] = tmp8;
       cResult[10] = tmp14;
       tmp11 = tmp14;
     }
     const obj3 = { data: users, keyExtractor: tmp6, renderItem: tmp7 };
-    const tmp10 = jsx(channel(11076).UserProfileStackedActionSheetList, { data: users, keyExtractor: tmp6, renderItem: tmp7 });
+    const tmp10 = jsx(channel(11077).UserProfileStackedActionSheetList, { data: users, keyExtractor: tmp6, renderItem: tmp7 });
     cResult[5] = tmp7;
     cResult[6] = users;
     cResult[7] = tmp10;

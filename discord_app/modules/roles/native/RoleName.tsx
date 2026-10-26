@@ -1,6 +1,6 @@
-// === Module 12784: RoleName ===
+// === Module 12787: RoleName ===
 
-// Module 12784 (RoleName)
+// Module 12787 (RoleName)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

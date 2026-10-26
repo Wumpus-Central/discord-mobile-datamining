@@ -1,6 +1,6 @@
-// === Module 15757: subscriptions ===
+// === Module 15758: subscriptions ===
 
-// Module 15757 (subscriptions)
+// Module 15758 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

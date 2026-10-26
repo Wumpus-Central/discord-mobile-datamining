@@ -1,6 +1,6 @@
-// === Module 17074: DevToolsGuildPowerupsScreen ===
+// === Module 17075: DevToolsGuildPowerupsScreen ===
 
-// Module 17074 (DevToolsGuildPowerupsScreen)
+// Module 17075 (DevToolsGuildPowerupsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
@@ -9,12 +9,12 @@ import _modDef2049 from "module_2049" /* 2049 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4804 */;
 import dismissible_content from "dismissible_content" /* 4807 */;
 import TableSwitchRow from "TableSwitchRow" /* 7295 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13417 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16978 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13420 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13485 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13488 */;
 import GuildStore from "GuildStore" /* 4845 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 
@@ -40,7 +40,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
         const obj = closure_132_0(closure_132_2[14]);
         const guildBoostEntitlements = closure_132_0(closure_132_2[15]).fetchGuildBoostEntitlements(closure_131_0, true);
         c6 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -113,7 +113,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -143,7 +143,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -153,7 +153,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(17075);
+const DevToolsGuildPowerupsConstants = fn(17076);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, getGuildDCString: closure_14, getUserDCString: closure_15 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1087).Endpoints;
 const jsxProd = fn(21);

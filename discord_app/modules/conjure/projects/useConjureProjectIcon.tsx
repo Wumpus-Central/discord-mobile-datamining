@@ -1,14 +1,14 @@
-// === Module 11857: useConjureProjectIcon ===
+// === Module 12251: useConjureProjectIcon ===
 
-// Module 11857 (useConjureProjectIcon)
+// Module 12251 (useConjureProjectIcon)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-function conjureProjectIconMetrics(arg0) {
-  return { glyphSize: Math.round(0.6 * arg0), radius: arg0 / 4 };
+function conjureProjectIconMetrics(dependencyMap) {
+  return { glyphSize: Math.round(0.6 * dependencyMap), radius: dependencyMap / 4 };
 }
 const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectIcon.tsx");
 

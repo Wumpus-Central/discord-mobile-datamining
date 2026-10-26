@@ -1,6 +1,6 @@
-// === Module 13101: ForumPostUsername ===
+// === Module 13104: ForumPostUsername ===
 
-// Module 13101 (ForumPostUsername)
+// Module 13104 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
@@ -8,14 +8,14 @@ import ForumLayout from "ForumLayout" /* 4833 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8319 */;
 import ForumHooks from "ForumHooks" /* 9725 */;
-import useChatWidthDefault from "useChatWidth" /* 11223 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 13102 */;
+import useChatWidthDefault from "useChatWidth" /* 11224 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 13105 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4972 */;
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(13097).useForumChannelStore;
+const useForumChannelStore = fn(13100).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4971);

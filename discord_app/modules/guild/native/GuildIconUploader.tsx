@@ -1,16 +1,16 @@
-// === Module 12744: GuildIconUploader ===
+// === Module 12747: GuildIconUploader ===
 
-// Module 12744 (GuildIconUploader)
+// Module 12747 (GuildIconUploader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4978 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import Pressables from "Pressables" /* 6908 */;
-import _modDef12745 from "module_12745" /* 12745 */;
-import _modDef12746 from "module_12746" /* 12746 */;
-import _modDef12747 from "module_12747" /* 12747 */;
 import _modDef12748 from "module_12748" /* 12748 */;
+import _modDef12749 from "module_12749" /* 12749 */;
+import _modDef12750 from "module_12750" /* 12750 */;
+import _modDef12751 from "module_12751" /* 12751 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12745;
+      let tmp10Result = _modDef12748;
     } else {
-      tmp10Result = _modDef12746;
+      tmp10Result = _modDef12749;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12747;
+    obj5.source = _modDef12750;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12748 };
+    const obj7 = { source: _modDef12751 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

@@ -1,6 +1,6 @@
-// === Module 16835: ClearWebBrowserDataSetting ===
+// === Module 16836: ClearWebBrowserDataSetting ===
 
-// Module 16835 (ClearWebBrowserDataSetting)
+// Module 16836 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,7 +8,7 @@ import BrowserManager from "BrowserManager" /* 5693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1128).t["zaEQz+"]);
             v1(5663).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

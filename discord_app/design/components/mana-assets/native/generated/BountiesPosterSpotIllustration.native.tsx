@@ -1,23 +1,23 @@
-// === Module 16355: BountiesPosterSpotIllustration ===
+// === Module 16356: BountiesPosterSpotIllustration ===
 
-// Module 16355 (BountiesPosterSpotIllustration)
+// Module 16356 (BountiesPosterSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef16356 from "module_16356" /* 16356 */;
 import _modDef16357 from "module_16357" /* 16357 */;
 import _modDef16358 from "module_16358" /* 16358 */;
+import _modDef16359 from "module_16359" /* 16359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16356 }, 3: null };
-let obj2 = { uri: _modDef16356 };
-obj[2] = { uri: _modDef16357 };
-const obj3 = { uri: _modDef16357 };
-obj[3] = { uri: _modDef16358 };
+let obj = { 1: null, 2: { uri: _modDef16357 }, 3: null };
+let obj2 = { uri: _modDef16357 };
+obj[2] = { uri: _modDef16358 };
+const obj3 = { uri: _modDef16358 };
+obj[3] = { uri: _modDef16359 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16358 };
+const obj4 = { uri: _modDef16359 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx");
 

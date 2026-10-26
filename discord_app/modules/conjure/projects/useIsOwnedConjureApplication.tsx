@@ -1,6 +1,6 @@
-// === Module 12006: useIsOwnedConjureApplication ===
+// === Module 11895: useIsOwnedConjureApplication ===
 
-// Module 12006 (useIsOwnedConjureApplication)
+// Module 11895 (useIsOwnedConjureApplication)
 import BackoffDefault from "Backoff" /* 569 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;

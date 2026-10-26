@@ -1,6 +1,6 @@
-// === Module 13158: useShowConvoStarterInDM ===
+// === Module 13161: useShowConvoStarterInDM ===
 
-// Module 13158 (useShowConvoStarterInDM)
+// Module 13161 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 4830 */;
 import MessageRequestStore from "MessageRequestStore" /* 6785 */;
@@ -42,7 +42,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
       let tmp6 = cResult[4];
     }
     MessageStore = tmp6;
-    const strangerDangerWarning = tmp(10927).useStrangerDangerWarning(id.id);
+    const strangerDangerWarning = tmp(10928).useStrangerDangerWarning(id.id);
     if (cResult[5] !== id) {
       const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
       cResult[5] = id;
@@ -161,7 +161,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
     cResult[14] = items1;
     tmp19 = items1;
     tmp18 = O;
-    const tmpResult = tmp(10927);
+    const tmpResult = tmp(10928);
   }
   let recipientId = null;
   if (tmp4) {

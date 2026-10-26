@@ -1,12 +1,12 @@
-// === Module 19084: GuildSettingsServerTagUpsellCard ===
+// === Module 19094: GuildSettingsServerTagUpsellCard ===
 
-// Module 19084 (GuildSettingsServerTagUpsellCard)
+// Module 19094 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 587 */;
 import Powerups from "Powerups" /* 5185 */;
 import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13411 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13441 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13444 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13414 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13444 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13447 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5181 */;
 
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1128).intl;
   obj12.text = intl3.string(guildId(1128).t.kMRDWs);
-  obj12.icon = closure_6(guildId(17649).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(17650).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
   items5[2] = closure_6(guildId(5244).Button, obj12);
   obj6.children = items5;

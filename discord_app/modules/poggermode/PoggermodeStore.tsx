@@ -1,10 +1,10 @@
-// === Module 14641: PoggermodeStore ===
+// === Module 14642: PoggermodeStore ===
 
-// Module 14641 (PoggermodeStore)
+// Module 14642 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 14642 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 14643 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7751 */;

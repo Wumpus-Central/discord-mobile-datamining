@@ -1,8 +1,8 @@
-// === Module 12369: ConjureAttachmentPills ===
+// === Module 12352: ConjureAttachmentPills ===
 
-// Module 12369 (ConjureAttachmentPills)
+// Module 12352 (ConjureAttachmentPills)
 import nativeDefault from "native" /* 587 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11758 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

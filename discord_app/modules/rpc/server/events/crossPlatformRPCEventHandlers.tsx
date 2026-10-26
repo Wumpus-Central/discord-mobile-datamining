@@ -1,6 +1,6 @@
-// === Module 15780: crossPlatformRPCEventHandlers ===
+// === Module 15781: crossPlatformRPCEventHandlers ===
 
-// Module 15780 (crossPlatformRPCEventHandlers)
+// Module 15781 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
@@ -9,12 +9,12 @@ import frameDeepLinks from "frameDeepLinks" /* 7434 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9257 */;
 import transformUserDefault from "transformUser" /* 9262 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11475 */;
-import RPCHelpers from "RPCHelpers" /* 11478 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15707 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15708 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 15781 */;
-import transformApplicationDefault from "transformApplication" /* 15782 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11476 */;
+import RPCHelpers from "RPCHelpers" /* 11479 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15708 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15709 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 15782 */;
+import transformApplicationDefault from "transformApplication" /* 15783 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
@@ -324,7 +324,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(15707).validateEventSubscription(socket, session_id);
+    const result = socket(15708).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription = ConjureVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
@@ -474,7 +474,7 @@ const obj36 = {
 const items13 = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj36.scope = { [RPC_SCOPE_CONFIG.ANY]: items13 };
 obj2[RPCEvents.FRAME_DEEP_LINK] = obj36;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(15714).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(15715).activityInstanceConnectedParticipantsUpdateEvent;
 const obj37 = {
   scope: null,
   handler() {

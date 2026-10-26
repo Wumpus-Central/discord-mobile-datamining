@@ -1,6 +1,6 @@
-// === Module 17720: FavoritesGuildChannelList ===
+// === Module 17721: FavoritesGuildChannelList ===
 
-// Module 17720 (FavoritesGuildChannelList)
+// Module 17721 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7410 */;
 import ChannelListState from "ChannelListState" /* 7637 */;
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10845).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10846).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;

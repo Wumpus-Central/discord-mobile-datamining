@@ -1,6 +1,6 @@
-// === Module 13349: useMessageRequestActions ===
+// === Module 13352: useMessageRequestActions ===
 
-// Module 13349 (useMessageRequestActions)
+// Module 13352 (useMessageRequestActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import ReportModals from "ReportModals" /* 8108 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7703 */;
 
 require = fn;
-const MessageRequestConstants = fn(13350);
+const MessageRequestConstants = fn(13353);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
@@ -57,7 +57,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -265,7 +265,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             closure_131_1 = undefined;
             if (isUserProfileLoading) {
               v3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               let tmp30 = _undefined(true);
               let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp58, closure_8);
@@ -347,7 +347,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         let obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -377,7 +377,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -427,7 +427,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp16) {
                     c1 = tmp;

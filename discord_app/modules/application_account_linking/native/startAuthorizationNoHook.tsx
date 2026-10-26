@@ -1,6 +1,6 @@
-// === Module 11359: startAuthorizationNoHook ===
+// === Module 11360: startAuthorizationNoHook ===
 
-// Module 11359 (startAuthorizationNoHook)
+// Module 11360 (startAuthorizationNoHook)
 import LinkingDefault from "Linking" /* 5660 */;
 import useAuthorizationApp from "useAuthorizationApp" /* 7256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

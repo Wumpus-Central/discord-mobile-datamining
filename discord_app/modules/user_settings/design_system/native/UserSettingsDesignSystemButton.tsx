@@ -1,6 +1,6 @@
-// === Module 17127: UserSettingsDesignSystemButton ===
+// === Module 17128: UserSettingsDesignSystemButton ===
 
-// Module 17127 (UserSettingsDesignSystemButton)
+// Module 17128 (UserSettingsDesignSystemButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
@@ -16,12 +16,12 @@ import _modDef9124 from "module_9124" /* 9124 */;
 import _modDef9125 from "module_9125" /* 9125 */;
 import _modDef9174 from "module_9174" /* 9174 */;
 import _modDef10437 from "module_10437" /* 10437 */;
-import _modDef10875 from "module_10875" /* 10875 */;
-import ToggleIconButton from "ToggleIconButton" /* 12501 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 12502 */;
-import ToggleButton from "ToggleButton" /* 15275 */;
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 17128 */;
-import _modDef17129 from "module_17129" /* 17129 */;
+import _modDef10876 from "module_10876" /* 10876 */;
+import ToggleIconButton from "ToggleIconButton" /* 12484 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 12485 */;
+import ToggleButton from "ToggleButton" /* 15276 */;
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 17129 */;
+import _modDef17130 from "module_17130" /* 17130 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -203,7 +203,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef17129;
+    tmpResult = _modDef17130;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;
@@ -590,14 +590,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
       }
     }
   }
-  const tmp9 = v65535(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10875, pressed, onPress: tmp7, variant, size: "md" });
+  const tmp9 = v65535(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10876, pressed, onPress: tmp7, variant, size: "md" });
   cResult[2] = pressed;
   cResult[3] = combined;
   cResult[4] = tmp7;
   cResult[5] = variant;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-  const obj2 = { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10875, pressed, onPress: tmp7, variant, size: "md" };
+  const obj2 = { accessibilityLabel: combined, icon: _modDef8280, selectedIcon: _modDef10876, pressed, onPress: tmp7, variant, size: "md" };
 }) : (function ExampleToggleIconButton(variant) {
   variant = variant.variant;
   pressed = undefined;
@@ -606,7 +606,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   return v65535(ToggleIconButton.ToggleIconButton, {
     accessibilityLabel: "" + variant + " notifications",
     icon: _modDef8280,
-    selectedIcon: _modDef10875,
+    selectedIcon: _modDef10876,
     pressed,
     onPress() {
       return closure_1(!first);

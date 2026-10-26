@@ -1,8 +1,8 @@
-// === Module 17260: PinotSettingsLazy ===
+// === Module 17261: PinotSettingsLazy ===
 
-// Module 17260 (PinotSettingsLazy)
+// Module 17261 (PinotSettingsLazy)
 import SettingsConstants from "SettingsConstants" /* 8332 */;
-import SettingBuilders from "SettingBuilders" /* 11208 */;
+import SettingBuilders from "SettingBuilders" /* 11209 */;
 import size from "module_2" /* 2 */;
 
 const obj2 = {};

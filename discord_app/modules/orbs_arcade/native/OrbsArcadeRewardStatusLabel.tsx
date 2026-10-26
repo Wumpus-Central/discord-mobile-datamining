@@ -1,12 +1,12 @@
-// === Module 16404: OrbsArcadeRewardStatusLabel ===
+// === Module 16405: OrbsArcadeRewardStatusLabel ===
 
-// Module 16404 (OrbsArcadeRewardStatusLabel)
+// Module 16405 (OrbsArcadeRewardStatusLabel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import LockIcon from "LockIcon" /* 8566 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16395 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16396 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

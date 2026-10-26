@@ -1,13 +1,13 @@
-// === Module 12779: ModerateUserActionSheet ===
+// === Module 12782: ModerateUserActionSheet ===
 
-// Module 12779 (ModerateUserActionSheet)
+// Module 12782 (ModerateUserActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 12780 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 12781 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12786 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 12804 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 12806 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 12783 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 12784 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12789 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 12807 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 12809 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
 import GuildStore from "GuildStore" /* 4845 */;
@@ -103,7 +103,7 @@ export default noop.memo(function ModerateUserActionSheet(user) {
         obj2.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj3);
         obj2.onPress = function onPress() {
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12782, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12785, dependencyMap.paths), {
             userId: user.id,
             guildId: guild.id,
             onClose() {

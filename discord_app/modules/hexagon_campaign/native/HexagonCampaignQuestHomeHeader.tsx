@@ -1,6 +1,6 @@
-// === Module 16375: HexagonCampaignQuestHomeHeader ===
+// === Module 16376: HexagonCampaignQuestHomeHeader ===
 
-// Module 16375 (HexagonCampaignQuestHomeHeader)
+// Module 16376 (HexagonCampaignQuestHomeHeader)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import QuestTypes from "QuestTypes" /* 6713 */;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           return;
         }
       }
-      const obj5 = { source: tmp6(16387), style: tmp4.bannerImage, resizeMode: "cover", accessible: false };
+      const obj5 = { source: tmp6(16388), style: tmp4.bannerImage, resizeMode: "cover", accessible: false };
       const tmp19 = closure_8(tmp6(5669), obj5);
       cResult[7] = tmp4.bannerImage;
       cResult[8] = tmp19;
@@ -479,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           return;
         }
       }
-      const obj7 = { source: tmp6(16388), style: tmp4.logo, resizeMode: "contain", accessible: false };
+      const obj7 = { source: tmp6(16389), style: tmp4.logo, resizeMode: "contain", accessible: false };
       const tmp27 = closure_8(tmp6(5669), obj7);
       cResult[12] = tmp4.logo;
       cResult[13] = tmp27;
@@ -739,13 +739,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
   if (isHexagonCampaignQuestHomeHeaderEnabled) {
     let obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.banner, children: null };
-    const obj6 = { source: tmp5(16387), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+    const obj6 = { source: tmp5(16388), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
     const items2 = [closure_8(tmp5(5669), obj6), , , ];
     const obj7 = { colors: memo, locations: [0.716, 0.823, 1], style: closure_4.absoluteFill, pointerEvents: "none" };
     items2[1] = closure_8(tmp5(5258), obj7);
     const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
     const tmp5Result = tmp5(5669);
-    obj8.source = tmp5(16388);
+    obj8.source = tmp5(16389);
     obj8.style = tmp.logo;
     items2[2] = closure_8(tmp5(5669), obj8);
     const obj9 = { style: tmp.sponsoredTag, children: null };
@@ -758,7 +758,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
     const items3 = [closure_9(closure_5, obj5), ];
     const obj11 = { style: tmp.cardShadow, children: null };
     const obj12 = { style: tmp.card, children: null };
-    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16389).BundleAbstractUI, { accessible: false }) };
+    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16390).BundleAbstractUI, { accessible: false }) };
     const items4 = [closure_8(closure_5, obj13), ];
     const obj14 = { direction: "vertical", spacing: tmp5(587).space.PX_12, style: tmp.cardContent, children: null };
     const obj15 = { direction: "vertical", spacing: tmp5(587).space.PX_8, children: null };
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
     const intl4 = tmp2(1128).intl;
     const obj20 = {
       learnMoreHook(children, arg1) {
-          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5234).Text, { variant: "text-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(15873).openHexagonCampaignLearnMore, children }, arg1);
+          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5234).Text, { variant: "text-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(15874).openHexagonCampaignLearnMore, children }, arg1);
         }
     };
     obj19.children = intl4.format(tmp5(4247).uL0TOA, obj20);

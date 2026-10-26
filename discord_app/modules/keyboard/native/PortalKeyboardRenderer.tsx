@@ -1,12 +1,12 @@
-// === Module 12013: PortalKeyboardRenderer ===
+// === Module 11904: PortalKeyboardRenderer ===
 
-// Module 12013 (PortalKeyboardRenderer)
+// Module 11904 (PortalKeyboardRenderer)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import native from "native" /* 5037 */;
 import useKeyboardType from "useKeyboardType" /* 5161 */;
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 5162 */;
-import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 12014 */;
+import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 11905 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 

@@ -1,14 +1,14 @@
-// === Module 17340: VEVOOPropTintColor ===
+// === Module 17341: VEVOOPropTintColor ===
 
-// Module 17340 (VEVOOPropTintColor)
+// Module 17341 (VEVOOPropTintColor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import ColorUtils from "ColorUtils" /* 4968 */;
 import FormSwitch from "FormSwitch" /* 7296 */;
 import Form from "Form" /* 8951 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15841 */;
-import VEVOO from "VEVOO" /* 17337 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15842 */;
+import VEVOO from "VEVOO" /* 17338 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -656,7 +656,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[28] = tmp45;
           }
           const obj5 = { disabled: !tmp8, initialValue: ref, onValueChange: Y, accessibilityLabel: "Blur Tint Opacity" };
-          const tmp42 = closure_8(first1(17339), obj5);
+          const tmp42 = closure_8(first1(17340), obj5);
           cResult[21] = !tmp8;
           cResult[22] = Y;
           cResult[23] = tmp42;
@@ -792,7 +792,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(17339), {
+  obj7.subLabel = closure_8(backgroundColor(17340), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

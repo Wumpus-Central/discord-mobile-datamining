@@ -1,6 +1,6 @@
-// === Module 11143: badgeDetailsCtas ===
+// === Module 11144: badgeDetailsCtas ===
 
-// Module 11143 (badgeDetailsCtas)
+// Module 11144 (badgeDetailsCtas)
 import Constants from "Constants" /* 1087 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
 import util from "util" /* 1128 */;

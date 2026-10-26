@@ -13,9 +13,9 @@ import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6667 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
 import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 7313 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 8880 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11037 */;
-import generateDynamicLinkDefault from "generateDynamicLink" /* 14189 */;
-import ProtocolUtilsDefault from "ProtocolUtils" /* 14191 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11038 */;
+import generateDynamicLinkDefault from "generateDynamicLink" /* 14190 */;
+import ProtocolUtilsDefault from "ProtocolUtils" /* 14192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -449,7 +449,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -483,7 +483,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -623,7 +623,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(584).dispatch(obj2);
       const tmpResult = tmp(584);
-      nextPromise = tmp(14183)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(14184)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -636,7 +636,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14183)(code, arg1, arg2);
+      const promise = tmp(14184)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -688,7 +688,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -795,7 +795,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1031,7 +1031,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1864,8 +1864,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14186).onOpenHubInvite(flags);
-        const obj6 = obj(14186);
+        obj(14187).onOpenHubInvite(flags);
+        const obj6 = obj(14187);
       }
     }
     let num = flags.flags;
@@ -1881,10 +1881,10 @@ export default {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14187).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14187);
+            const result1 = tmp6(14188).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14188);
           }
-          tmp6Result3 = tmp6(14187);
+          tmp6Result3 = tmp6(14188);
         }
       }
     }
@@ -2353,9 +2353,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14189).generateAttemptId();
+    const attemptId = tmp18(14190).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14189);
+    const tmp18Result = tmp18(14190);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

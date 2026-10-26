@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210
 import Text_Text from "Text/Text" /* 5234 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9246 */;
-import components_GameIconDefault from "components/GameIcon" /* 14161 */;
+import components_GameIconDefault from "components/GameIcon" /* 14162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

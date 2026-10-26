@@ -1,15 +1,15 @@
-// === Module 17206: ShopBlockItem ===
+// === Module 17207: ShopBlockItem ===
 
-// Module 17206 (ShopBlockItem)
+// Module 17207 (ShopBlockItem)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ShopBlockType from "ShopBlockType" /* 5640 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9360 */;
-import HeroBlockDefault from "HeroBlock" /* 17207 */;
-import FeaturedBlockDefault from "FeaturedBlock" /* 17228 */;
-import FeedBlockDefault from "FeedBlock" /* 17230 */;
-import ShelfBlockDefault from "ShelfBlock" /* 17236 */;
+import HeroBlockDefault from "HeroBlock" /* 17208 */;
+import FeaturedBlockDefault from "FeaturedBlock" /* 17229 */;
+import FeedBlockDefault from "FeedBlock" /* 17231 */;
+import ShelfBlockDefault from "ShelfBlock" /* 17237 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
 

@@ -1,9 +1,9 @@
-// === Module 11360: GamesActionCreators ===
+// === Module 11361: GamesActionCreators ===
 
-// Module 11360 (GamesActionCreators)
+// Module 11361 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LinkingDefault from "Linking" /* 5660 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11361 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11362 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -151,7 +151,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

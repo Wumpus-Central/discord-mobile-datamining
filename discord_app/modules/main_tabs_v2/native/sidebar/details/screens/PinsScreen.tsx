@@ -1,8 +1,8 @@
-// === Module 18316: PinsScreen ===
+// === Module 18325: PinsScreen ===
 
-// Module 18316 (PinsScreen)
+// Module 18325 (PinsScreen)
 import nativeDefault from "native" /* 587 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 18173 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 18182 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 
@@ -47,7 +47,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = channelId(1508);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
   const tmpResult = channelId(504);
-  const channelDetailsSearchContext = channelId(13183).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(13186).useChannelDetailsSearchContext(channelId, stateFromStores);
   const tmp9 = closure_7();
   if (cResult[3] !== channelDetailsSearchContext) {
     const obj3 = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
@@ -70,7 +70,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp16;
   tmp15 = tmp16;
   const obj4 = { style: tmp9.container, children: tmp10 };
-  const tmpResult2 = channelId(13183);
+  const tmpResult2 = channelId(13186);
 }) : (function PinsScreen() {
   channelId = channelId(1508).useRoute().params.channelId;
   const obj = channelId(1508);
@@ -84,7 +84,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(13183).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(13186).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = { style: closure_7().container, children: jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS }) };
   return <View style={closure_7().container}>{jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS })}</View>;
 }));

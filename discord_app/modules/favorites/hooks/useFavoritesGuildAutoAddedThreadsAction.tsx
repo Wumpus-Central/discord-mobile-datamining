@@ -1,7 +1,7 @@
-// === Module 17566: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 17567: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 17566 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10844 */;
+// Module 17567 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10845 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import FavoriteStore from "FavoriteStore" /* 4826 */;

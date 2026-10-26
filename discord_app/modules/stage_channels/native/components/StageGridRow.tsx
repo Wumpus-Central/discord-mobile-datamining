@@ -1,11 +1,11 @@
-// === Module 11708: StageGridRow ===
+// === Module 11709: StageGridRow ===
 
-// Module 11708 (StageGridRow)
+// Module 11709 (StageGridRow)
 import StageChannelParticipants from "StageChannelParticipants" /* 6688 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8691 */;
-import SpeakerTileDefault from "SpeakerTile" /* 11700 */;
-import StageTileTypes from "StageTileTypes" /* 11701 */;
-import MediaTileDefault from "MediaTile" /* 11709 */;
+import SpeakerTileDefault from "SpeakerTile" /* 11701 */;
+import StageTileTypes from "StageTileTypes" /* 11702 */;
+import MediaTileDefault from "MediaTile" /* 11710 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,14 +31,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[0] !== num) {
     if (1 === num) {
-      StageTileSize = tmp(11701).StageTileSize;
+      StageTileSize = tmp(11702).StageTileSize;
       let HALF = StageTileSize.FULL;
       cResult[0] = num;
       cResult[1] = HALF;
     } else if (2 !== num) {
-      HALF = tmp(11701).StageTileSize.THIRD;
+      HALF = tmp(11702).StageTileSize.THIRD;
     }
-    HALF = tmp(11701).StageTileSize.HALF;
+    HALF = tmp(11702).StageTileSize.HALF;
   } else {
     const size = tmp5;
     let containerLandscape = isScreenLandscape;

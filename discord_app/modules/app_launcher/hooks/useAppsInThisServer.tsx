@@ -1,6 +1,6 @@
-// === Module 12113: useAppsInThisServer ===
+// === Module 12004: useAppsInThisServer ===
 
-// Module 12113 (useAppsInThisServer)
+// Module 12004 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10204 */;
 import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10206 */;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppsI
           }
         }
       }
-      const sortApplicationsViaFrecency = tmp(12112).useSortApplicationsViaFrecency(tmp29);
+      const sortApplicationsViaFrecency = tmp(12003).useSortApplicationsViaFrecency(tmp29);
       if (cResult[14] === stateFromStores) {
         class I {
           constructor(arg0, arg1) {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppsI
           }
         }
       }
-      const tmpResult2 = tmp(12112);
+      const tmpResult2 = tmp(12003);
       const obj8 = stateFromStores(12);
       const found = stateFromStores(12).compact(sortApplicationsViaFrecency.map(R)).filter(tmp32);
       mapped = found.map(E);

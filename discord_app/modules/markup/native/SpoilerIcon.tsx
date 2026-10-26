@@ -1,6 +1,6 @@
-// === Module 13107: SpoilerIcon ===
+// === Module 13110: SpoilerIcon ===
 
-// Module 13107 (SpoilerIcon)
+// Module 13110 (SpoilerIcon)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7962 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

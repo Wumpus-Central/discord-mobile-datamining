@@ -1,6 +1,6 @@
-// === Module 13550: UserProfileConfirmThreadRemove ===
+// === Module 13552: UserProfileConfirmThreadRemove ===
 
-// Module 13550 (UserProfileConfirmThreadRemove)
+// Module 13552 (UserProfileConfirmThreadRemove)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5025 */;

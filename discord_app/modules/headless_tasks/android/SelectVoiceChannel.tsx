@@ -1,10 +1,10 @@
-// === Module 19499: SelectVoiceChannel ===
+// === Module 19509: SelectVoiceChannel ===
 
-// Module 19499 (SelectVoiceChannel)
+// Module 19509 (SelectVoiceChannel)
 import transitionToChannel from "transitionToChannel" /* 5707 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 19492 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 19502 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
 

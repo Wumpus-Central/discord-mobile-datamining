@@ -1,12 +1,12 @@
-// === Module 18679: LaunchPadUnreadServers ===
+// === Module 18689: LaunchPadUnreadServers ===
 
-// Module 18679 (LaunchPadUnreadServers)
+// Module 18689 (LaunchPadUnreadServers)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 5707 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
 import transitionToGuild from "transitionToGuild" /* 7449 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 18685 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 18695 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import ReadStateStore from "ReadStateStore" /* 6771 */;
@@ -70,7 +70,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj3 = { size: 48, borderRadius: 16, guildId, selected, onPress: tmp4, onLongPress: tmp5, backgroundColor: tmp3.maskStrokeStyle.backgroundColor };
-    const tmp9 = closure_10(onGuildSelect(18680), obj3);
+    const tmp9 = closure_10(onGuildSelect(18690), obj3);
     cResult[5] = guildId;
     cResult[6] = tmp5;
     cResult[7] = tmp4;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(18680), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
+  obj.children = closure_10(onGuildSelect(18690), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
   return closure_10(closure_5, obj);
 }));
 ReactCompilerGating = fn(558);

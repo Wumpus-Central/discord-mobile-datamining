@@ -1,6 +1,6 @@
-// === Module 15958: useGuildProfileEditForm ===
+// === Module 15959: useGuildProfileEditForm ===
 
-// Module 15958 (useGuildProfileEditForm)
+// Module 15959 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                 }
               }
               pendingThemeColors = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -617,7 +617,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -647,15 +647,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               if (!closure_15) {
                 if (null != stateFromStores) {
                   const obj5 = { pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles };
-                  const guildMemberChangesForUpdateRequest = stateFromStores(11185).getGuildMemberChangesForUpdateRequest(obj5);
+                  const guildMemberChangesForUpdateRequest = stateFromStores(11186).getGuildMemberChangesForUpdateRequest(obj5);
                   closure_131_0 = guildMemberChangesForUpdateRequest;
-                  const obj21 = stateFromStores(11185);
+                  const obj21 = stateFromStores(11186);
                   const obj7 = { pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame };
                   let id;
                   if (selectedGuild != null) {
                     id = selectedGuild.id;
                   }
-                  profileChangesForUpdateRequest = stateFromStores(11185).getProfileChangesForUpdateRequest(obj7, id);
+                  profileChangesForUpdateRequest = stateFromStores(11186).getProfileChangesForUpdateRequest(obj7, id);
                   let id1;
                   if (selectedGuild != null) {
                     id1 = selectedGuild.id;
@@ -685,7 +685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                     }
                     v2 = 1;
                     c6 = 1;
-                    const obj8 = { value: stateFromStores(11189).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
+                    const obj8 = { value: stateFromStores(11190).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
                     return obj8;
                   } else {
                     const _Object2 = Object;
@@ -702,11 +702,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                       return obj12;
                     }
                   }
-                  const obj23 = stateFromStores(11185);
+                  const obj23 = stateFromStores(11186);
                 }
               }
               c6 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -735,9 +735,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                   const items = [constants.DISPLAY_NAME_STYLE];
                   obj17.perks = items;
                   obj17.content = stateFromStores(6713).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj17.contentSurface = stateFromStores(15856).HexagonCampaignContentSurface.GUILD_PROFILE;
-                  const result2 = stateFromStores(15856).trackHexagonCampaignPerkAction(obj17);
-                  const obj6 = stateFromStores(15856);
+                  obj17.contentSurface = stateFromStores(15857).HexagonCampaignContentSurface.GUILD_PROFILE;
+                  const result2 = stateFromStores(15857).trackHexagonCampaignPerkAction(obj17);
+                  const obj6 = stateFromStores(15857);
                 }
               } else {
                 let avatar;
@@ -755,9 +755,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                     const intl = stateFromStores(1128).intl;
                     stateFromStores = intl.string(stateFromStores(1128).t.s35OuK);
                   }
-                  const result3 = stateFromStores(15857).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                  const result3 = stateFromStores(15858).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                   closure_131_4 = true;
-                  const obj19 = stateFromStores(15857);
+                  const obj19 = stateFromStores(15858);
                 }
               }
               let tmp61 = closure_131_3;
@@ -791,9 +791,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               const aPIError1 = new stateFromStores(6374).APIError(closure_131_9);
               firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage2) {
-                const result4 = stateFromStores(15857).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                const result4 = stateFromStores(15858).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                 closure_131_4 = true;
-                const obj2 = stateFromStores(15857);
+                const obj2 = stateFromStores(15858);
               }
             }
             let tmp24 = closure_131_3;
@@ -816,8 +816,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           }
           if (!tmp82) {
             const intl2 = stateFromStores(1128).intl;
-            const result5 = stateFromStores(15857).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
-            const obj11 = stateFromStores(15857);
+            const result5 = stateFromStores(15858).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
+            const obj11 = stateFromStores(15858);
           }
           if (closure_131_3) {
             closure_132_13.delay();

@@ -1,11 +1,11 @@
-// === Module 12549: ConjureDebugLogsTab ===
+// === Module 12552: ConjureDebugLogsTab ===
 
-// Module 12549 (ConjureDebugLogsTab)
+// Module 12552 (ConjureDebugLogsTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 12551 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 12554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugLogStore from "ConjureDebugLogStore" /* 10709 */;
@@ -15,9 +15,9 @@ const Text_Text = Text(5234);
 const Card = Text(6905);
 const Pressables = Text(6908);
 const ChevronSmallRightIcon2 = Text(7305);
-const ChevronSmallDownIcon = Text(11079);
-const ConjureTimeFormat = Text(12543);
-const ConjureDebugJson = Text(12550);
+const ChevronSmallDownIcon = Text(11080);
+const ConjureTimeFormat = Text(12546);
+const ConjureDebugJson = Text(12553);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -276,7 +276,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11079).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(11080).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
     ChevronSmallRightIcon = tmp3(7305).ChevronSmallRightIcon;
@@ -284,7 +284,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(12543).formatClockTime(entry.ts);
+  let ts = tmp6(12546).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   const first1 = tmp18[0];
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { pageWidth: 0, items: null, onSetActiveIndex: null };
-    const DEBUG_LOG_FILTERS = tmp(12551).DEBUG_LOG_FILTERS;
+    const DEBUG_LOG_FILTERS = tmp(12554).DEBUG_LOG_FILTERS;
     obj2.items = DEBUG_LOG_FILTERS.map((id) => {
       const obj = { id, label: projectId(showSource[20]).debugLogFilterLabel(id), page: null };
       return obj;
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
           cResult[27] = tmp41;
         }
         const obj7 = { state: stateFromStores1, hasRows: stateFromStores.length > 0 };
-        const tmp37 = closure_7(tmp(12553).ConjureHistoryNotice, obj7);
+        const tmp37 = closure_7(tmp(12556).ConjureHistoryNotice, obj7);
         cResult[21] = stateFromStores1;
         cResult[22] = stateFromStores.length > 0;
         cResult[23] = tmp37;
@@ -646,12 +646,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     }
   }
   const tmpResult5 = projectId(8901);
-  const tmpResult6 = projectId(12551);
+  const tmpResult6 = projectId(12554);
   cResult[9] = tmp17;
   cResult[10] = stateFromStores;
   cResult[11] = first1;
-  cResult[12] = projectId(12551).filterDebugLogs(stateFromStores, tmp17, first1);
-  const filterDebugLogsResult = projectId(12551).filterDebugLogs(stateFromStores, tmp17, first1);
+  cResult[12] = projectId(12554).filterDebugLogs(stateFromStores, tmp17, first1);
+  const filterDebugLogsResult = projectId(12554).filterDebugLogs(stateFromStores, tmp17, first1);
 }) : (function ConjureDebugLogsTab(projectId) {
   projectId = projectId.projectId;
   first = undefined;

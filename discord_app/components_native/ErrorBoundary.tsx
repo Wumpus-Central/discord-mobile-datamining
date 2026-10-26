@@ -1,6 +1,6 @@
-// === Module 17342: ErrorBoundary ===
+// === Module 17343: ErrorBoundary ===
 
-// Module 17342 (ErrorBoundary)
+// Module 17343 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -11,7 +11,7 @@ import AppCrash from "AppCrash" /* 9085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11027 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11028 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -31,7 +31,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
-        const tmp4 = overrides[closure_0(undefined, 12716).DEVICE_FIELD];
+        const tmp4 = overrides[closure_0(undefined, 12719).DEVICE_FIELD];
         if (tmp4 != null) {
           id = tmp4.id;
         }
@@ -53,7 +53,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       _require = asyncGeneratorStep(async () => {
         tmp3(true);
-        await tmp3(12716).clearBuildOverride();
+        await tmp3(12719).clearBuildOverride();
         if (1 === tmp7) {
           c3 = 0;
           tmp3(false);

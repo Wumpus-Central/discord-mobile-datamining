@@ -1,6 +1,6 @@
-// === Module 18973: generated/VerifyPhone ===
+// === Module 18983: generated/VerifyPhone ===
 
-// Module 18973 (generated/VerifyPhone)
+// Module 18983 (generated/VerifyPhone)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4978 */;
 import FastImageDefault from "FastImage" /* 5669 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVerifyPho
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18974");
+          return require("module_18984");
         },
       darker() {
-          return require("module_18975");
+          return require("module_18985");
         },
       light() {
-          return require("module_18976");
+          return require("module_18986");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVerifyPho
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18974");
+      return require("module_18984");
     },
     darker() {
-      return require("module_18975");
+      return require("module_18985");
     },
     light() {
-      return require("module_18976");
+      return require("module_18986");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getVerifyPhoneSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_18974");
+      return require("module_18984");
     },
     darker() {
-      return require("module_18975");
+      return require("module_18985");
     },
     light() {
-      return require("module_18976");
+      return require("module_18986");
     }
   });
 }

@@ -1,8 +1,8 @@
-// === Module 12738: AcceptGuildTemplateModal ===
+// === Module 12741: AcceptGuildTemplateModal ===
 
-// Module 12738 (AcceptGuildTemplateModal)
+// Module 12741 (AcceptGuildTemplateModal)
 import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12740 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12743 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   [first2, _slicedToArray] = noop.useState(null);
   const tmpResult = require("initialize");
   [tmp17, noop] = noop.useState(null);
-  stateFromStores(12739)(stateFromStores);
+  stateFromStores(12742)(stateFromStores);
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === first2) {
       if (cResult[6] === first1) {
@@ -90,7 +90,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -126,7 +126,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
                   closure_1_5(base64);
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp17) {
               c3 = tmp;
@@ -161,7 +161,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
         }
       }
       const obj2 = { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 };
-      const tmp25 = jsx(tmp18(12741), { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 });
+      const tmp25 = jsx(tmp18(12744), { code, guildTemplate: stateFromStores, name: first1, setName: F, icon: first2, errors: tmp17, chooseIcon: tmp22, createServer: tmp20 });
       cResult[10] = code;
       cResult[11] = tmp17;
       cResult[12] = stateFromStores;
@@ -199,7 +199,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12739)(stateFromStores);
+  stateFromStores(12742)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -225,7 +225,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -260,7 +260,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -274,7 +274,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(12741), {
+  obj3.children = jsx(stateFromStores(12744), {
     code,
     guildTemplate: stateFromStores,
     name,

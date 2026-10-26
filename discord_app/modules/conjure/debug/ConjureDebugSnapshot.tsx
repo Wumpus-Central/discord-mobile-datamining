@@ -1,6 +1,6 @@
-// === Module 12548: ConjureDebugSnapshot ===
+// === Module 12551: ConjureDebugSnapshot ===
 
-// Module 12548 (ConjureDebugSnapshot)
+// Module 12551 (ConjureDebugSnapshot)
 import ConjureDebugLogStore from "ConjureDebugLogStore" /* 10709 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 10704 */;
 

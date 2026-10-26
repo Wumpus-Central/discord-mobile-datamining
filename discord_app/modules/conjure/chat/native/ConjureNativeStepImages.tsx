@@ -1,11 +1,11 @@
-// === Module 12438: ConjureNativeStepImages ===
+// === Module 12421: ConjureNativeStepImages ===
 
-// Module 12438 (ConjureNativeStepImages)
+// Module 12421 (ConjureNativeStepImages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import openMediaModal from "openMediaModal" /* 8751 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11832 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

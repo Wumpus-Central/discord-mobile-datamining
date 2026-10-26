@@ -1,6 +1,6 @@
-// === Module 12934: ShareChatInput ===
+// === Module 12937: ShareChatInput ===
 
-// Module 12934 (ShareChatInput)
+// Module 12937 (ShareChatInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

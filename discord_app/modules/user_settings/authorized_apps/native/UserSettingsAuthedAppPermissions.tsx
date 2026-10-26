@@ -1,9 +1,9 @@
-// === Module 16237: UserSettingsAuthedAppPermissions ===
+// === Module 16238: UserSettingsAuthedAppPermissions ===
 
-// Module 16237 (UserSettingsAuthedAppPermissions)
+// Module 16238 (UserSettingsAuthedAppPermissions)
 import Text_Text from "Text/Text" /* 5234 */;
 import disclosures2 from "disclosures" /* 9633 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16231 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16232 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

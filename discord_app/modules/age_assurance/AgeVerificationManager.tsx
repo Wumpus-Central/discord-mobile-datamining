@@ -1,6 +1,6 @@
-// === Module 18742: AgeVerificationManager ===
+// === Module 18752: AgeVerificationManager ===
 
-// Module 18742 (AgeVerificationManager)
+// Module 18752 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
 import Server from "Server" /* 2000 */;
@@ -8,7 +8,7 @@ import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5644 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 6491 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 6659 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8103 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12872 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12875 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import MessageStore from "MessageStore" /* 6010 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;

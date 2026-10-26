@@ -1,8 +1,8 @@
-// === Module 12710: joinFrameActivity ===
+// === Module 12713: joinFrameActivity ===
 
-// Module 12710 (joinFrameActivity)
+// Module 12713 (joinFrameActivity)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11345 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11346 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -20,7 +20,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         break;
         case 1:
@@ -425,7 +425,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

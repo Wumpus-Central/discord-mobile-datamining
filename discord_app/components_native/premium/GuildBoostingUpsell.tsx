@@ -1,6 +1,6 @@
-// === Module 14832: GuildBoostingUpsell ===
+// === Module 14833: GuildBoostingUpsell ===
 
-// Module 14832 (GuildBoostingUpsell)
+// Module 14833 (GuildBoostingUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,25 +15,25 @@ import UploadIcon from "UploadIcon" /* 9804 */;
 import BoostGemIcon from "BoostGemIcon" /* 9808 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 9822 */;
 import StarIcon from "StarIcon" /* 9949 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13451 */;
-import StickerIcon from "StickerIcon" /* 13454 */;
-import _modDef14674 from "module_14674" /* 14674 */;
-import _modDef14683 from "module_14683" /* 14683 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13454 */;
+import StickerIcon from "StickerIcon" /* 13457 */;
+import _modDef14675 from "module_14675" /* 14675 */;
 import _modDef14684 from "module_14684" /* 14684 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14710 */;
-import _modDef14811 from "module_14811" /* 14811 */;
-import _modDef14833 from "module_14833" /* 14833 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 14834 */;
-import _modDef14836 from "module_14836" /* 14836 */;
+import _modDef14685 from "module_14685" /* 14685 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14711 */;
+import _modDef14812 from "module_14812" /* 14812 */;
+import _modDef14834 from "module_14834" /* 14834 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 14835 */;
 import _modDef14837 from "module_14837" /* 14837 */;
 import _modDef14838 from "module_14838" /* 14838 */;
 import _modDef14839 from "module_14839" /* 14839 */;
 import _modDef14840 from "module_14840" /* 14840 */;
 import _modDef14841 from "module_14841" /* 14841 */;
-import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 14842 */;
-import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 14846 */;
-import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 14847 */;
-import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 14848 */;
+import _modDef14842 from "module_14842" /* 14842 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 14843 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 14847 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 14848 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 14849 */;
 import noop from "module_19" /* 19 */;
 import SortedGuildStore from "SortedGuildStore" /* 6701 */;
 
@@ -75,30 +75,30 @@ class FEATURES_PREMIUM_GUILD_USER {
   }
 }
 function FEATURES_PREMIUM_GUILD() {
-  const obj = { icon: _modDef14837, label: null, IconComponent: null, color: null };
+  const obj = { icon: _modDef14838, label: null, IconComponent: null, color: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.Ts7BVI);
   obj.IconComponent = ReactionIcon.ReactionIcon;
   obj.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items = [obj, , , , ];
-  const obj2 = { icon: _modDef14838, label: null, IconComponent: null, color: null };
+  const obj2 = { icon: _modDef14839, label: null, IconComponent: null, color: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.QcJbt6);
   obj2.IconComponent = StickerIcon.StickerIcon;
   obj2.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items[1] = obj2;
-  const obj3 = { icon: _modDef14839, label: null, color: "#4173da", IconComponent: null };
+  const obj3 = { icon: _modDef14840, label: null, color: "#4173da", IconComponent: null };
   const intl3 = util.intl;
   obj3.label = intl3.string(util.t.rFNkf5);
   obj3.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items[2] = obj3;
-  const obj4 = { icon: _modDef14840, label: null, IconComponent: null, color: null };
+  const obj4 = { icon: _modDef14841, label: null, IconComponent: null, color: null };
   const intl4 = util.intl;
   obj4.label = intl4.string(util.t["BpjjS/"]);
   obj4.IconComponent = UploadIcon.UploadIcon;
   obj4.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items[3] = obj4;
-  const obj5 = { icon: _modDef14841, label: null, IconComponent: null, color: null };
+  const obj5 = { icon: _modDef14842, label: null, IconComponent: null, color: null };
   const intl5 = util.intl;
   obj5.label = intl5.string(util.t["9g5Lgb"]);
   obj5.IconComponent = StarIcon.StarIcon;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }
   ({ root, header } = tmp4);
   if (cResult[2] !== tmp4.imgPremiumGuild) {
-    const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef14674 };
+    const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef14675 };
     const tmp18 = timestampProducer(FastImageDefault, obj2);
     cResult[2] = tmp4.imgPremiumGuild;
     cResult[3] = tmp18;
@@ -153,9 +153,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }
   const tmp12 = useThemeDefault();
   if (tmpResult6.isThemeDark(tmp12)) {
-    let tmp11Result2 = _modDef14683;
+    let tmp11Result2 = _modDef14684;
   } else {
-    tmp11Result2 = _modDef14684;
+    tmp11Result2 = _modDef14685;
   }
   if (cResult[4] === tmp4.logoPremiumGuild) {
     if (cResult[5] === tmp11Result2) {
@@ -449,15 +449,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   const obj5 = { style: tmp.header, children: null };
   const obj6 = { style: tmp.imgPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
-  obj6.source = _modDef14674;
+  obj6.source = _modDef14675;
   const items1 = [timestampProducer(FastImageDefault, obj6), , , ];
   const obj7 = { style: tmp.logoPremiumGuild, source: null };
   const tmp7Result = FastImageDefault;
   const tmp7Result5 = FastImageDefault;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result6 = _modDef14683;
+    let tmp7Result6 = _modDef14684;
   } else {
-    tmp7Result6 = _modDef14684;
+    tmp7Result6 = _modDef14685;
   }
   obj7.source = tmp7Result6;
   items1[1] = timestampProducer(tmp7Result5, obj7);

@@ -1,6 +1,6 @@
-// === Module 18309: ChannelSettingsEditForumTag ===
+// === Module 18318: ChannelSettingsEditForumTag ===
 
-// Module 18309 (ChannelSettingsEditForumTag)
+// Module 18318 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "r" });
+      setOptions({ headerRight: "Array" });
     }
   }, items5);
   const obj5 = { style: tmp.container, children: null };

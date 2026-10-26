@@ -1,6 +1,6 @@
-// === Module 14059: AuthorizeScopes ===
+// === Module 14061: AuthorizeScopes ===
 
-// Module 14059 (AuthorizeScopes)
+// Module 14061 (AuthorizeScopes)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

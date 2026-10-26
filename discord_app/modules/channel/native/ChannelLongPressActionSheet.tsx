@@ -27,16 +27,17 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10025 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10093 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10696 */;
-import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 10843 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10863 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10864 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10867 */;
-import markChannelUnreadDefault from "markChannelUnread" /* 10872 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10878 */;
-import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10879 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 13844 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 13845 */;
-import closeFrameDefault from "closeFrame" /* 13846 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10818 */;
+import openFavoritesGuildMoveToCategoryActionSheetDefault from "openFavoritesGuildMoveToCategoryActionSheet" /* 10844 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10864 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10865 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10868 */;
+import markChannelUnreadDefault from "markChannelUnread" /* 10873 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10879 */;
+import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10880 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13846 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 13847 */;
+import closeFrameDefault from "closeFrame" /* 13848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6683 */;
@@ -60,7 +61,7 @@ const ConjureRemixSheetDefault = ConjureRemixSheet;
 require = fn;
 function handleVoiceOrStageChannelConnectPress() {
   const self = this;
-  const apply = closure_37.apply;
+  const apply = closure_35.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -68,7 +69,7 @@ function handleVoiceOrStageChannelConnectPress() {
   }
   return applyArgumentsResult;
 }
-let closure_37 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
+let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
   let guildStageVoice = arg0;
   c2 = 0;
   c3 = 0;
@@ -83,7 +84,7 @@ let closure_37 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -103,12 +104,12 @@ let closure_37 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             if (isGuildStageVoiceResult) {
               c2 = 2;
               c3 = 1;
-              const obj4 = { value: tmp21(dependencyMap[21], dependencyMap.paths), done: false };
+              const obj4 = { value: tmp21(dependencyMap[20], dependencyMap.paths), done: false };
               return obj4;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp21(dependencyMap[23], dependencyMap.paths), done: false };
+              const obj5 = { value: tmp21(dependencyMap[22], dependencyMap.paths), done: false };
               return obj5;
             }
             isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
@@ -159,17 +160,17 @@ function getActionSheetButtons(channel) {
   if (tmp2) {
     let obj = { sectionKey: "conjure-remix", buttons: null };
     let obj2 = { label: null, IconComponent: null, onPress: null };
-    let intl = channel(isOptedIn[24]).intl;
-    obj2.label = intl.string(isMuted(isOptedIn[25]).KMwCb7);
-    obj2.IconComponent = channel(isOptedIn[26]).RemixIcon;
+    let intl = channel(isOptedIn[23]).intl;
+    obj2.label = intl.string(isMuted(isOptedIn[24]).KMwCb7);
+    obj2.IconComponent = channel(isOptedIn[25]).RemixIcon;
     obj2.onPress = function onPress() {
       const obj2 = {
         key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY,
         content: jsx(ConjureRemixSheetDefault, {
           project: conjureRemixProject,
           currentGuildId: guildId,
-          onRemixed(arg0, arg1) {
-            return channel(isOptedIn[29]).transitionTo(closure_1_32.CHANNEL(arg1, constants.CONJURE, arg0));
+          onRemixed(arg0) {
+            return isMuted(isOptedIn[28])(arg0);
           }
         })
       };
@@ -183,9 +184,9 @@ function getActionSheetButtons(channel) {
   if (channel.isDM()) {
     const buttons = obj3.buttons;
     let obj4 = { label: null, IconComponent: null, onPress: null };
-    let intl2 = channel(isOptedIn[24]).intl;
-    obj4.label = intl2.string(channel(isOptedIn[24]).t.LYju5J);
-    obj4.IconComponent = channel(isOptedIn[30]).UserCircleIcon;
+    let intl2 = channel(isOptedIn[23]).intl;
+    obj4.label = intl2.string(channel(isOptedIn[23]).t.LYju5J);
+    obj4.IconComponent = channel(isOptedIn[29]).UserCircleIcon;
     obj4.onPress = function onPress() {
       const obj = { userId: channel.getRecipientId(), channelId: channel.id, sourceAnalyticsLocations };
       showUserProfileActionSheetDefault(obj);
@@ -194,9 +195,9 @@ function getActionSheetButtons(channel) {
     if (!isFavoritesGuild) {
       const buttons1 = obj3.buttons;
       let obj5 = { label: null, IconComponent: null, onPress: null };
-      let intl3 = tmp7(isOptedIn[24]).intl;
-      obj5.label = intl3.string(tmp7(isOptedIn[24]).t.jsvgc3);
-      obj5.IconComponent = tmp7(isOptedIn[32]).UserMinusIcon;
+      let intl3 = tmp7(isOptedIn[23]).intl;
+      obj5.label = intl3.string(tmp7(isOptedIn[23]).t.jsvgc3);
+      obj5.IconComponent = tmp7(isOptedIn[31]).UserMinusIcon;
       obj5.onPress = function onPress() {
         ChannelActionCreatorsDefault.closePrivateChannel(channel.id, SelectedChannelStore.getCurrentlySelectedChannelId() === channel.id);
       };
@@ -209,9 +210,9 @@ function getActionSheetButtons(channel) {
     if (!isFavoritesGuild) {
       const buttons2 = obj7.buttons;
       const obj8 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-      let intl4 = channel(isOptedIn[24]).intl;
-      obj8.label = intl4.string(channel(isOptedIn[24]).t["26C4oi"]);
-      obj8.IconComponent = channel(isOptedIn[32]).UserMinusIcon;
+      let intl4 = channel(isOptedIn[23]).intl;
+      obj8.label = intl4.string(channel(isOptedIn[23]).t["26C4oi"]);
+      obj8.IconComponent = channel(isOptedIn[31]).UserMinusIcon;
       obj8.onPress = function onPress() {
         const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
         const intl = util.intl;
@@ -233,7 +234,7 @@ function getActionSheetButtons(channel) {
         const intl6 = util.intl;
         obj5.cancelText = intl6.string(util.t.gm1Vej);
         obj5.onConfirm = function onConfirm() {
-          isMuted(isOptedIn[33]).closePrivateChannel(user.id, currentlySelectedChannelId.getCurrentlySelectedChannelId() === user.id);
+          isMuted(isOptedIn[32]).closePrivateChannel(user.id, currentlySelectedChannelId.getCurrentlySelectedChannelId() === user.id);
         };
         AlertActionCreatorsDefault.show(obj5);
       };
@@ -241,9 +242,9 @@ function getActionSheetButtons(channel) {
     }
     const buttons3 = obj6.buttons;
     const obj9 = { label: null, IconComponent: null, onPress: null };
-    let intl5 = channel(isOptedIn[24]).intl;
-    obj9.label = intl5.string(channel(isOptedIn[24]).t["1r5E+m"]);
-    obj9.IconComponent = channel(isOptedIn[36]).PencilIcon;
+    let intl5 = channel(isOptedIn[23]).intl;
+    obj9.label = intl5.string(channel(isOptedIn[23]).t["1r5E+m"]);
+    obj9.IconComponent = channel(isOptedIn[35]).PencilIcon;
     obj9.onPress = function onPress() {
       showChatGDMCustomizeActionSheetDefault({ channelId: channel.id });
     };
@@ -251,11 +252,11 @@ function getActionSheetButtons(channel) {
     if (isOwner) {
       const buttons4 = obj6.buttons;
       const obj10 = { label: null, IconComponent: null, onPress: null };
-      let intl6 = tmp14(isOptedIn[24]).intl;
-      obj10.label = intl6.string(tmp14(isOptedIn[24]).t.OQ9MKu);
-      obj10.IconComponent = tmp14(isOptedIn[38]).LinkIcon;
+      let intl6 = tmp14(isOptedIn[23]).intl;
+      obj10.label = intl6.string(tmp14(isOptedIn[23]).t.OQ9MKu);
+      obj10.IconComponent = tmp14(isOptedIn[37]).LinkIcon;
       obj10.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10820, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10821, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj10);
     }
@@ -273,9 +274,9 @@ function getActionSheetButtons(channel) {
   if (tmp19) {
     const obj11 = { sectionKey: "go-to-server", buttons: null };
     const obj12 = { label: null, IconComponent: null, onPress: null };
-    const intl7 = channel(isOptedIn[24]).intl;
-    obj12.label = intl7.string(isMuted(isOptedIn[41])["3KruG3"]);
-    obj12.IconComponent = channel(isOptedIn[42]).ServerIcon;
+    const intl7 = channel(isOptedIn[23]).intl;
+    obj12.label = intl7.string(isMuted(isOptedIn[40])["3KruG3"]);
+    obj12.IconComponent = channel(isOptedIn[41]).ServerIcon;
     obj12.onPress = function onPress() {
       router_utils.transitionToGuild(channel.guild_id, channel.id);
     };
@@ -312,11 +313,11 @@ function getActionSheetButtons(channel) {
   if (tmp35) {
     const obj17 = { sectionKey: "conjure", buttons: null };
     const obj18 = { label: null, IconComponent: null, onPress: null };
-    const intl8 = channel(isOptedIn[24]).intl;
-    obj18.label = intl8.string(isMuted(isOptedIn[25]).jMMrDM);
-    obj18.IconComponent = channel(isOptedIn[36]).PencilIcon;
+    const intl8 = channel(isOptedIn[23]).intl;
+    obj18.label = intl8.string(isMuted(isOptedIn[24]).jMMrDM);
+    obj18.IconComponent = channel(isOptedIn[35]).PencilIcon;
     obj18.onPress = function onPress() {
-      router_utils.transitionTo(__initData4.CHANNEL(guildId, StaticChannelRoute.CONJURE, conjureProjectId));
+      openConjureHomeScreenDefault(conjureProjectId);
     };
     const items5 = [obj18];
     obj17.buttons = items5;
@@ -329,8 +330,8 @@ function getActionSheetButtons(channel) {
   if (canCreateInstantInvite) {
     const buttons5 = obj19.buttons;
     const obj20 = { label: null, IconComponent: null, onPress: null };
-    const intl9 = channel(isOptedIn[24]).intl;
-    obj20.label = intl9.string(channel(isOptedIn[24]).t.VINpSK);
+    const intl9 = channel(isOptedIn[23]).intl;
+    obj20.label = intl9.string(channel(isOptedIn[23]).t.VINpSK);
     obj20.IconComponent = channel(isOptedIn[47]).GroupPlusIcon;
     obj20.onPress = function onPress() {
       const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, { source: constants6.CONTEXT_MENU });
@@ -350,9 +351,9 @@ function getActionSheetButtons(channel) {
         const buttons6 = obj19.buttons;
         const push = buttons6.push;
         const obj21 = { label: null, IconComponent: null, onPress: null };
-        const intl11 = channel(isOptedIn[24]).intl;
+        const intl11 = channel(isOptedIn[23]).intl;
         const string2 = intl11.string;
-        const t2 = channel(isOptedIn[24]).t;
+        const t2 = channel(isOptedIn[23]).t;
         if (isParentOptedIn) {
           obj21.label = string2(t2.jNphKT);
           obj21.IconComponent = tmp45(isOptedIn[52]).XSmallIcon;
@@ -387,9 +388,9 @@ function getActionSheetButtons(channel) {
       }
     } else {
       const buttons7 = obj19.buttons;
-      const intl10 = channel(isOptedIn[24]).intl;
+      const intl10 = channel(isOptedIn[23]).intl;
       const string = intl10.string;
-      let t = channel(isOptedIn[24]).t;
+      let t = channel(isOptedIn[23]).t;
       if (isPinned) {
         let stringResult = string(t.M5PWSf);
         let tmp44 = tmp42;
@@ -446,9 +447,9 @@ function getActionSheetButtons(channel) {
   if (isForumLikeChannelResult) {
     const buttons8 = obj19.buttons;
     const obj23 = { label: null, IconComponent: null, isDestructive: false, onPress: null };
-    const intl12 = channel(isOptedIn[24]).intl;
-    obj23.label = intl12.string(channel(isOptedIn[24]).t.WqhZss);
-    obj23.IconComponent = channel(isOptedIn[38]).LinkIcon;
+    const intl12 = channel(isOptedIn[23]).intl;
+    obj23.label = intl12.string(channel(isOptedIn[23]).t.WqhZss);
+    obj23.IconComponent = channel(isOptedIn[37]).LinkIcon;
     obj23.onPress = function onPress() {
       const result = ChannelActionSheetUtils.copyGuildChannelOrThreadLink(channel.guild_id, channel.id);
     };
@@ -463,8 +464,8 @@ function getActionSheetButtons(channel) {
     if (canMarkAsTier1InappropriateConversation) {
       const buttons9 = obj24.buttons;
       const obj25 = { label: null, IconComponent: null, onPress: null };
-      const intl14 = channel(isOptedIn[24]).intl;
-      obj25.label = intl14.string(channel(isOptedIn[24]).t.EuzCET);
+      const intl14 = channel(isOptedIn[23]).intl;
+      obj25.label = intl14.string(channel(isOptedIn[23]).t.EuzCET);
       obj25.IconComponent = channel(isOptedIn[54]).WarningIcon;
       obj25.onPress = function onPress() {
         const result = InappropriateConversationsActionCreators.markAsInappropriateConversation(channel.id, SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
@@ -474,8 +475,8 @@ function getActionSheetButtons(channel) {
     if (canMarkAsTier2InappropriateConversation) {
       const buttons10 = obj24.buttons;
       const obj26 = { label: null, IconComponent: null, onPress: null };
-      const intl15 = channel(isOptedIn[24]).intl;
-      obj26.label = intl15.string(channel(isOptedIn[24]).t["tBw/1i"]);
+      const intl15 = channel(isOptedIn[23]).intl;
+      obj26.label = intl15.string(channel(isOptedIn[23]).t["tBw/1i"]);
       obj26.IconComponent = channel(isOptedIn[54]).WarningIcon;
       obj26.onPress = function onPress() {
         const result = InappropriateConversationsActionCreators.markAsInappropriateConversation(channel.id, SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
@@ -492,8 +493,8 @@ function getActionSheetButtons(channel) {
           if (true !== channel.isMessageRequest) {
             const buttons11 = obj27.buttons;
             const obj28 = { label: null, IconComponent: null, onPress: null };
-            const intl16 = channel(isOptedIn[24]).intl;
-            obj28.label = intl16.string(channel(isOptedIn[24]).t.L6623r);
+            const intl16 = channel(isOptedIn[23]).intl;
+            obj28.label = intl16.string(channel(isOptedIn[23]).t.L6623r);
             obj28.IconComponent = channel(isOptedIn[56]).InboxIcon;
             obj28.onPress = function onPress() {
               MessageRequestActionCreators.markAsMessageRequest(channel.id);
@@ -502,8 +503,8 @@ function getActionSheetButtons(channel) {
           }
           const buttons12 = obj27.buttons;
           const obj29 = { label: null, IconComponent: null, onPress: null };
-          const intl17 = channel(isOptedIn[24]).intl;
-          obj29.label = intl17.string(channel(isOptedIn[24]).t["85YWlY"]);
+          const intl17 = channel(isOptedIn[23]).intl;
+          obj29.label = intl17.string(channel(isOptedIn[23]).t["85YWlY"]);
           obj29.IconComponent = channel(isOptedIn[56]).InboxIcon;
           obj29.onPress = function onPress() {
             const result = MessageRequestActionCreators.clearMessageRequestState(channel.id);
@@ -526,8 +527,8 @@ function getActionSheetButtons(channel) {
           if (canMarkUnread) {
             const buttons13 = obj30.buttons;
             const obj31 = { label: null, IconComponent: null, onPress: null };
-            const intl18 = tmp72(isOptedIn[24]).intl;
-            obj31.label = intl18.string(tmp72(isOptedIn[24]).t.RpE9k7);
+            const intl18 = tmp72(isOptedIn[23]).intl;
+            obj31.label = intl18.string(tmp72(isOptedIn[23]).t.RpE9k7);
             obj31.IconComponent = tmp72(isOptedIn[59]).ChatMarkUnreadIcon;
             obj31.onPress = function onPress() {
               markChannelUnreadDefault(channel.id);
@@ -538,8 +539,8 @@ function getActionSheetButtons(channel) {
       }
       const buttons14 = obj30.buttons;
       const obj32 = { label: null, IconComponent: null, onPress: null };
-      const intl19 = tmp72(isOptedIn[24]).intl;
-      obj32.label = intl19.string(channel(isOptedIn[24]).t.e6RscS);
+      const intl19 = tmp72(isOptedIn[23]).intl;
+      obj32.label = intl19.string(channel(isOptedIn[23]).t.e6RscS);
       obj32.IconComponent = channel(isOptedIn[61]).EyeIcon;
       obj32.onPress = function onPress() {
         ReadStateActionCreators.ackChannel(channel, { section: constants3.CHANNEL_ACTION_SHEET, object: constants2.MARK_CHANNEL_AS_READ_BUTTON, objectType: constants.ACK_MANUAL });
@@ -550,8 +551,8 @@ function getActionSheetButtons(channel) {
       if (tmp83) {
         const buttons15 = obj30.buttons;
         const obj33 = { label: null, IconComponent: null, disableColor: true, onPress: null };
-        const intl27 = channel(isOptedIn[24]).intl;
-        obj33.label = intl27.string(channel(isOptedIn[24]).t.h850Ss);
+        const intl27 = channel(isOptedIn[23]).intl;
+        obj33.label = intl27.string(channel(isOptedIn[23]).t.h850Ss);
         obj33.IconComponent = channel(isOptedIn[67]).ChannelNotificationIcon;
         obj33.onPress = function onPress() {
           ChannelSettingsActionCreatorsDefault.setSection(constants4.NOTIFICATIONS);
@@ -567,8 +568,8 @@ function getActionSheetButtons(channel) {
       if (!tmp87) {
         const buttons16 = obj34.buttons;
         const obj35 = { label: null, IconComponent: null, onPress: null };
-        const intl28 = channel(isOptedIn[24]).intl;
-        obj35.label = intl28.string(channel(isOptedIn[24]).t.B2panI);
+        const intl28 = channel(isOptedIn[23]).intl;
+        obj35.label = intl28.string(channel(isOptedIn[23]).t.B2panI);
         obj35.IconComponent = channel(isOptedIn[69]).ThreadIcon;
         obj35.onPress = function onPress() {
           showThreadBrowserModalDefault(channel);
@@ -585,9 +586,9 @@ function getActionSheetButtons(channel) {
           const buttons17 = obj36.buttons;
           const push2 = buttons17.push;
           const obj37 = { label: null, IconComponent: null, onPress: null };
-          const intl30 = channel(isOptedIn[24]).intl;
+          const intl30 = channel(isOptedIn[23]).intl;
           const string6 = intl30.string;
-          const t6 = channel(isOptedIn[24]).t;
+          const t6 = channel(isOptedIn[23]).t;
           if (isGuildStageVoiceResult) {
             obj37.label = string6(t6["7vb2cc"]);
             obj37.IconComponent = tmp97(isOptedIn[72]).StageIcon;
@@ -597,12 +598,12 @@ function getActionSheetButtons(channel) {
             push2(obj37);
             const buttons18 = obj36.buttons;
             const obj38 = { label: null, IconComponent: null, onPress: null };
-            const intl31 = tmp97(isOptedIn[24]).intl;
-            obj38.label = intl31.string(tmp97(isOptedIn[24]).t.ZXxLQg);
+            const intl31 = tmp97(isOptedIn[23]).intl;
+            obj38.label = intl31.string(tmp97(isOptedIn[23]).t.ZXxLQg);
             obj38.IconComponent = tmp97(isOptedIn[73]).ChatIcon;
             obj38.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10880, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10881, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj38);
@@ -621,8 +622,8 @@ function getActionSheetButtons(channel) {
         if (tmp101) {
           const buttons19 = obj36.buttons;
           const obj39 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-          const intl32 = channel(isOptedIn[24]).intl;
-          obj39.label = intl32.string(channel(isOptedIn[24]).t.saZaRb);
+          const intl32 = channel(isOptedIn[23]).intl;
+          obj39.label = intl32.string(channel(isOptedIn[23]).t.saZaRb);
           obj39.IconComponent = channel(isOptedIn[52]).XSmallIcon;
           obj39.onPress = function onPress() {
             return (async () => {
@@ -636,7 +637,7 @@ function getActionSheetButtons(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -652,7 +653,7 @@ function getActionSheetButtons(channel) {
                     } else {
                       c1 = 1;
                       paths = 1;
-                      const obj4 = { value: tmp4(paths[22])(paths[77], paths.paths), done: false };
+                      const obj4 = { value: tmp4(paths[21])(paths[77], paths.paths), done: false };
                       return obj4;
                     }
                   } else if (arg0 === 1) {
@@ -665,7 +666,7 @@ function getActionSheetButtons(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -680,8 +681,8 @@ function getActionSheetButtons(channel) {
         if (tmp104) {
           const buttons20 = obj36.buttons;
           const obj40 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-          const intl33 = channel(isOptedIn[24]).intl;
-          obj40.label = intl33.string(channel(isOptedIn[24]).t["+78Pfm"]);
+          const intl33 = channel(isOptedIn[23]).intl;
+          obj40.label = intl33.string(channel(isOptedIn[23]).t["+78Pfm"]);
           obj40.IconComponent = channel(isOptedIn[78]).FlagIcon;
           obj40.onPress = function onPress() {
             const result = ReportModals.showReportModalForStageChannel(channel);
@@ -695,8 +696,8 @@ function getActionSheetButtons(channel) {
           if (null != channel.application_id) {
             const obj41 = { sectionKey: "app-channel", buttons: null };
             const obj42 = { label: null, IconComponent: null, onPress: null };
-            const intl39 = channel(isOptedIn[24]).intl;
-            obj42.label = intl39.string(channel(isOptedIn[24]).t.ZXxLQg);
+            const intl39 = channel(isOptedIn[23]).intl;
+            obj42.label = intl39.string(channel(isOptedIn[23]).t.ZXxLQg);
             obj42.IconComponent = channel(isOptedIn[73]).ChatIcon;
             obj42.onPress = function onPress() {
               openAppChannelToChatDefault(channel);
@@ -707,8 +708,8 @@ function getActionSheetButtons(channel) {
             if (null != appFrameId) {
               const buttons21 = obj41.buttons;
               const obj43 = { label: null, IconComponent: null, onPress: null };
-              const intl34 = tmp128(isOptedIn[24]).intl;
-              obj43.label = intl34.string(tmp128(isOptedIn[24]).t.VkMnR2);
+              const intl34 = tmp128(isOptedIn[23]).intl;
+              obj43.label = intl34.string(tmp128(isOptedIn[23]).t.VkMnR2);
               obj43.IconComponent = tmp128(isOptedIn[81]).DoorExitIcon;
               obj43.onPress = function onPress() {
                 closeFrameDefault(appFrameId);
@@ -723,8 +724,8 @@ function getActionSheetButtons(channel) {
             const obj44 = { sectionKey: "spoiler", buttons: [] };
             const buttons22 = obj44.buttons;
             const obj45 = { label: null, IconComponent: null, onPress: null };
-            const intl35 = channel(isOptedIn[24]).intl;
-            obj45.label = intl35.string(channel(isOptedIn[24]).t.ix2UVZ);
+            const intl35 = channel(isOptedIn[23]).intl;
+            obj45.label = intl35.string(channel(isOptedIn[23]).t.ix2UVZ);
             obj45.IconComponent = channel(isOptedIn[83]).EyeSlashIcon;
             obj45.onPress = function onPress() {
               GuildActionCreatorsDefault.clearSpoilerAgree(channel.id);
@@ -736,9 +737,9 @@ function getActionSheetButtons(channel) {
         const obj46 = { sectionKey: "admin-actions", buttons: [] };
         if (canManageChannel) {
           const buttons23 = obj46.buttons;
-          const intl36 = channel(isOptedIn[24]).intl;
+          const intl36 = channel(isOptedIn[23]).intl;
           const string7 = intl36.string;
-          const t7 = channel(isOptedIn[24]).t;
+          const t7 = channel(isOptedIn[23]).t;
           if (isCategoryResult) {
             let string7Result = string7(t7.zdPFs9);
             let tmp117 = tmp115;
@@ -767,9 +768,9 @@ function getActionSheetButtons(channel) {
           }
           if (isForumLikeChannelResult1) {
             const buttons24 = obj46.buttons;
-            const intl37 = tmp117(isOptedIn[24]).intl;
+            const intl37 = tmp117(isOptedIn[23]).intl;
             const string8 = intl37.string;
-            const t8 = tmp117(isOptedIn[24]).t;
+            const t8 = tmp117(isOptedIn[23]).t;
             if (isCategoryResult1) {
               let string8Result = string8(t8["fUYU+j"]);
             } else {
@@ -804,8 +805,8 @@ function getActionSheetButtons(channel) {
         if (developerMode) {
           const buttons25 = obj46.buttons;
           const obj49 = { label: null, IconComponent: null, onPress: null };
-          const intl38 = channel(isOptedIn[24]).intl;
-          obj49.label = intl38.string(channel(isOptedIn[24]).t.gFHI3k);
+          const intl38 = channel(isOptedIn[23]).intl;
+          obj49.label = intl38.string(channel(isOptedIn[23]).t.gFHI3k);
           obj49.IconComponent = channel(isOptedIn[88]).IdIcon;
           obj49.onPress = function onPress() {
             ClipboardUtils.copy(channel.id);
@@ -825,9 +826,9 @@ function getActionSheetButtons(channel) {
         return items;
       } else {
         const buttons26 = obj36.buttons;
-        const intl29 = channel(isOptedIn[24]).intl;
+        const intl29 = channel(isOptedIn[23]).intl;
         const string5 = intl29.string;
-        let t5 = channel(isOptedIn[24]).t;
+        let t5 = channel(isOptedIn[23]).t;
         if (isCollapsedVoiceChannel) {
           let string5Result = string5(t5.JYF2Oa);
           let tmp95 = tmp93;
@@ -837,7 +838,7 @@ function getActionSheetButtons(channel) {
         }
         const obj50 = {
           label: string5Result,
-          IconComponent: tmp95(isOptedIn[30]).UserCircleIcon,
+          IconComponent: tmp95(isOptedIn[29]).UserCircleIcon,
           onPress() {
                   ChannelCollapseActionCreatorsDefault.update(channel.id);
                 }
@@ -846,13 +847,13 @@ function getActionSheetButtons(channel) {
       }
       tmp92 = guildId(channel.type) && !isInCollapsedCategory;
     }
-    const intl20 = channel(isOptedIn[24]).intl;
+    const intl20 = channel(isOptedIn[23]).intl;
     const string4 = intl20.string;
-    const t4 = channel(isOptedIn[24]).t;
+    const t4 = channel(isOptedIn[23]).t;
     if (isMuted) {
       if (channel.isCategory()) {
-        const intl26 = tmp76(isOptedIn[24]).intl;
-        let stringResult1 = intl26.string(tmp76(isOptedIn[24]).t.olaBeG);
+        const intl26 = tmp76(isOptedIn[23]).intl;
+        let stringResult1 = intl26.string(tmp76(isOptedIn[23]).t.olaBeG);
         const buttons27 = obj30.buttons;
         const obj51 = {
           label: stringResult1,
@@ -869,30 +870,30 @@ function getActionSheetButtons(channel) {
         if (!channel.isGroupDM()) {
           stringResult1 = string4Result;
           if (channel.isThread()) {
-            const intl24 = tmp76(isOptedIn[24]).intl;
-            stringResult1 = intl24.string(tmp76(isOptedIn[24]).t["Cq/TzF"]);
+            const intl24 = tmp76(isOptedIn[23]).intl;
+            stringResult1 = intl24.string(tmp76(isOptedIn[23]).t["Cq/TzF"]);
           }
         }
       }
-      const intl25 = tmp76(isOptedIn[24]).intl;
-      stringResult1 = intl25.string(tmp76(isOptedIn[24]).t["s5/5fm"]);
+      const intl25 = tmp76(isOptedIn[23]).intl;
+      stringResult1 = intl25.string(tmp76(isOptedIn[23]).t["s5/5fm"]);
       string4Result = string4(t4.OYefme);
     } else {
       if (channel.isCategory()) {
-        const intl23 = tmp76(isOptedIn[24]).intl;
-        let stringResult2 = intl23.string(tmp76(isOptedIn[24]).t.pNMCg2);
+        const intl23 = tmp76(isOptedIn[23]).intl;
+        let stringResult2 = intl23.string(tmp76(isOptedIn[23]).t.pNMCg2);
       } else {
         if (!channel.isDM()) {
           if (!channel.isGroupDM()) {
             stringResult2 = string4Result1;
             if (channel.isThread()) {
-              const intl21 = tmp76(isOptedIn[24]).intl;
-              stringResult2 = intl21.string(tmp76(isOptedIn[24]).t.bUUd8q);
+              const intl21 = tmp76(isOptedIn[23]).intl;
+              stringResult2 = intl21.string(tmp76(isOptedIn[23]).t.bUUd8q);
             }
           }
         }
-        const intl22 = tmp76(isOptedIn[24]).intl;
-        stringResult2 = intl22.string(tmp76(isOptedIn[24]).t.LO3kaK);
+        const intl22 = tmp76(isOptedIn[23]).intl;
+        stringResult2 = intl22.string(tmp76(isOptedIn[23]).t.LO3kaK);
       }
       const buttons28 = obj30.buttons;
       const obj52 = {
@@ -913,9 +914,9 @@ function getActionSheetButtons(channel) {
     tmp71 = closure_11(channel.type) || channel.isCategory() || channel.isForumLikeChannel();
   } else {
     const buttons29 = obj19.buttons;
-    const intl13 = channel(isOptedIn[24]).intl;
+    const intl13 = channel(isOptedIn[23]).intl;
     const string3 = intl13.string;
-    let t3 = channel(isOptedIn[24]).t;
+    let t3 = channel(isOptedIn[23]).t;
     if (isMessagesFavorited) {
       let string3Result = string3(t3.vDYmad);
       let tmp58 = tmp56;
@@ -938,13 +939,12 @@ function getActionSheetButtons(channel) {
 const SafetyWarningTypes = fn(10693).SafetyWarningTypes;
 const ChannelRecord = fn(4827);
 ({ isGuildTextChannelType: closure_9, isGuildVocalChannelType: c10, isReadableType: closure_11, isTextChannel: closure_12 } = ChannelRecord);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
 const Constants = fn(1087);
-({ AnalyticsObjectTypes: closure_24, AnalyticsObjects: closure_25, AnalyticsSections: closure_26, ChannelSettingsSections: closure_27, ChannelTypes: closure_28, InstantInviteSources: closure_29, NULL_STRING_GUILD_ID: closure_30, Permissions: closure_31, Routes: closure_32, ZERO_STRING_GUILD_ID: items } = Constants);
-let closure_34 = fn(10024).ChannelDetailsNavigatorScreens;
+({ AnalyticsObjectTypes: closure_23, AnalyticsObjects: closure_24, AnalyticsSections: closure_25, ChannelSettingsSections: closure_26, ChannelTypes: closure_27, InstantInviteSources: closure_28, NULL_STRING_GUILD_ID: closure_29, Permissions: closure_30, ZERO_STRING_GUILD_ID: closure_31 } = Constants);
+let closure_32 = fn(10024).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelLongPressActionSheetConnected(channel) {
+let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelLongPressActionSheetConnected(channel) {
   const cResult = channel(576).c(69);
   channel = channel.channel;
   const onClose = channel.onClose;
@@ -960,7 +960,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   }
   dependencyMap = tmp5;
   const tmp4 = onClose(7253);
-  const isFavoritesGuildSelected = channel(10845).useIsFavoritesGuildSelected();
+  const isFavoritesGuildSelected = channel(10846).useIsFavoritesGuildSelected();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[2] = items;
@@ -978,7 +978,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     tmp10 = cResult[4];
   }
-  const tmpResult = channel(10845);
+  const tmpResult = channel(10846);
   const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PermissionStore];
@@ -1042,7 +1042,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
   }
-  class R {
+  class F {
     constructor() {
       obj = { isOptedIn: closure_21.isChannelOptedIn(closure_2, channel.id), isParentOptedIn: null, isPinned: null };
       obj2 = closure_21;
@@ -1060,7 +1060,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   cResult[9] = channel.id;
   cResult[10] = channel.parent_id;
   cResult[11] = tmp5;
-  cResult[12] = R;
+  cResult[12] = F;
   const tmpResult6 = channel(6813);
 }) : (function ChannelLongPressActionSheetConnected(channel) {
   channel = channel.channel;
@@ -1081,7 +1081,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   ({ canManageChannel, canCreateInstantInvite, canConnect, canModerateStage } = stateFromStoresObject);
   const obj3 = channel(guildId[96]);
   if (guildId == null) {
-    guildId = closure_30;
+    guildId = closure_29;
   }
   const optInEnabledForGuild = channel(guildId[98]).useOptInEnabledForGuild(guildId);
   const obj4 = channel(guildId[98]);
@@ -1091,7 +1091,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     let tmp = guildId;
     obj.isParentOptedIn = null != channel.parent_id && UserGuildSettingsStore.isChannelOptedIn(tmp, channel.parent_id);
     if (tmp == null) {
-      tmp = __initData5;
+      tmp = __initData3;
     }
     obj.isPinned = UserGuildSettingsStore.isFavorite(tmp, channel.id);
     return obj;
@@ -1124,8 +1124,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const items8 = [StageInstanceStore];
   const stateFromStores6 = channel(guildId[96]).useStateFromStores(items8, () => StageInstanceStore.isLive(channel.id));
   const tmp5Result20 = channel(guildId[96]);
-  const tmpResult = onClose(guildId[34]);
-  const tmpResultResult = onClose(guildId[34])(channel, !channel.isThread());
+  const tmpResult = onClose(guildId[33]);
+  const tmpResultResult = onClose(guildId[33])(channel, !channel.isThread());
   const DeveloperMode = tmp5(tmp2[100]).DeveloperMode;
   setting = DeveloperMode.useSetting();
   if (null != stateFromStores) {
@@ -1220,9 +1220,9 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const tmp47Result = getActionSheetButtons(obj7);
   noop = tmp47Result;
   if (channel.isGroupDM()) {
-    const intl = tmp5(tmp2[24]).intl;
+    const intl = tmp5(tmp2[23]).intl;
     const obj8 = { members: channel.recipients.length + 1 };
-    const formatToPlainStringResult = intl.formatToPlainString(tmp5(tmp2[24]).t.ABMKx3, obj8);
+    const formatToPlainStringResult = intl.formatToPlainString(tmp5(tmp2[23]).t.ABMKx3, obj8);
   }
   const items12 = [tmp47Result.length, setting, onClose];
   const effect = noop.useEffect(() => {
@@ -1273,10 +1273,10 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       if (onPress.isDestructive) {
         str = "danger";
       }
-      return closure_1_35(channel(7294).ActionSheetRow, {
+      return closure_1_33(channel(7294).ActionSheetRow, {
         variant: str,
         label,
-        icon: closure_1_35(channel(7294).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
+        icon: closure_1_33(channel(7294).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
         trailing,
         onPress() {
           if (onPress != null) {
@@ -1333,7 +1333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
     let tmp13 = null;
     if (null != stateFromStores) {
       const obj2 = { channel: stateFromStores, onClose };
-      tmp13 = <closure_39 channel={stateFromStores} onClose={onClose} />;
+      tmp13 = <closure_37 channel={stateFromStores} onClose={onClose} />;
     }
     cResult[7] = stateFromStores;
     cResult[8] = onClose;
@@ -1367,7 +1367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
   let tmp3 = null;
   if (null != stateFromStores) {
     const obj2 = { channel: stateFromStores, onClose };
-    tmp3 = <closure_39 channel={stateFromStores} onClose={onClose} />;
+    tmp3 = <closure_37 channel={stateFromStores} onClose={onClose} />;
   }
   return tmp3;
 });

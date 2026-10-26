@@ -1,12 +1,12 @@
-// === Module 12082: RecommendationsBannerCard ===
+// === Module 11973: RecommendationsBannerCard ===
 
-// Module 12082 (RecommendationsBannerCard)
+// Module 11973 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12036 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12076 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 12083 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11927 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11967 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 11974 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
           }
         }
         if (isLandscape) {
-          BaseAppRow = BaseAppRow(12059).BaseAppRow;
+          BaseAppRow = BaseAppRow(11950).BaseAppRow;
           obj = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
           class T {
             constructor() {
@@ -368,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Recommen
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(12059).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(11950).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;

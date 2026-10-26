@@ -1,9 +1,9 @@
-// === Module 19416: NavigationTTIDispatcherManager ===
+// === Module 19426: NavigationTTIDispatcherManager ===
 
-// Module 19416 (NavigationTTIDispatcherManager)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12850 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13053 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17975 */;
+// Module 19426 (NavigationTTIDispatcherManager)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12853 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13056 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17984 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import MessageStore from "MessageStore" /* 6010 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;

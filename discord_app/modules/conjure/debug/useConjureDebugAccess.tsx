@@ -1,6 +1,6 @@
-// === Module 12285: useConjureDebugAccess ===
+// === Module 12234: useConjureDebugAccess ===
 
-// Module 12285 (useConjureDebugAccess)
+// Module 12234 (useConjureDebugAccess)
 import UserSettings from "UserSettings" /* 4799 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

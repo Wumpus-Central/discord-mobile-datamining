@@ -1,6 +1,6 @@
-// === Module 12122: application_view/Header ===
+// === Module 12013: application_view/Header ===
 
-// Module 12122 (application_view/Header)
+// Module 12013 (application_view/Header)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
@@ -8,11 +8,11 @@ import ToastUtils from "ToastUtils" /* 5662 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8614 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12123 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12124 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12014 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12015 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import AppLauncherStore from "AppLauncherStore" /* 12078 */;
+import AppLauncherStore from "AppLauncherStore" /* 11969 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -244,8 +244,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   if (cResult[2] !== application) {
     let appLauncherIconSource = null;
     if (null != application) {
-      appLauncherIconSource = tmp(12031).getAppLauncherIconSource(application);
-      const tmpResult6 = tmp(12031);
+      appLauncherIconSource = tmp(11922).getAppLauncherIconSource(application);
+      const tmpResult6 = tmp(11922);
     }
     cResult[2] = application;
     cResult[3] = appLauncherIconSource;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
                     }
                     if (cResult[41] !== onPressBack) {
                       const obj7 = { onPress: onPressBack };
-                      const tmp54 = closure_7(tmp10(12123), obj7);
+                      const tmp54 = closure_7(tmp10(12014), obj7);
                       cResult[41] = onPressBack;
                       cResult[42] = tmp54;
                       let tmp52 = tmp54;
@@ -480,7 +480,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
                                 obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
                                 const items2 = [closure_7(tmp(7959).IconButton, obj11), ];
                                 const obj12 = { application, onAddAppMenuClick };
-                                items2[1] = closure_7(tmp10(12125), obj12);
+                                items2[1] = closure_7(tmp10(12016), obj12);
                                 obj10.children = items2;
                                 tmp68 = closure_8(id, obj10);
                               }
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   }
   if (null != loadingIcon) {
     const obj18 = { iconSource: loadingIcon, iconBorderRadius: xl, iconSize: 72 };
-    let tmp18 = closure_7(tmp10(12036), obj18);
+    let tmp18 = closure_7(tmp10(11927), obj18);
   } else {
     const obj19 = { style: tmp8.loadingIcon };
     tmp18 = closure_7(id, obj19);
@@ -581,8 +581,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12031).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12031);
+    appLauncherIconSource = tmp(11922).getAppLauncherIconSource(application);
+    const tmpResult = tmp(11922);
   }
   let obj = application(504);
   let str = application(5252).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(12036), obj2);
+    let tmp12 = closure_7(tmp5(11927), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
       obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
       const items7 = [tmp13(tmp(7959).IconButton, obj11), ];
       const obj12 = { application, onAddAppMenuClick };
-      items7[1] = tmp13(tmp5(12125), obj12);
+      items7[1] = tmp13(tmp5(12016), obj12);
       obj10.children = items7;
       tmp20Result = closure_8(tmp21, obj10);
     }

@@ -1,6 +1,6 @@
-// === Module 13082: useCanPlayAnimatedEmoji ===
+// === Module 13085: useCanPlayAnimatedEmoji ===
 
-// Module 13082 (useCanPlayAnimatedEmoji)
+// Module 13085 (useCanPlayAnimatedEmoji)
 import UserSettings from "UserSettings" /* 4799 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4985 */;
 import noop from "module_19" /* 19 */;

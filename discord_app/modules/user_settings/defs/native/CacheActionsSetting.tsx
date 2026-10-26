@@ -1,6 +1,6 @@
-// === Module 16927: CacheActionsSetting ===
+// === Module 16928: CacheActionsSetting ===
 
-// Module 16927 (CacheActionsSetting)
+// Module 16928 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -13,11 +13,11 @@ import TableRow from "TableRow" /* 6903 */;
 import TableRowGroup from "TableRowGroup" /* 6987 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
 import ActionSheet from "ActionSheet" /* 7298 */;
-import FileUpIcon from "FileUpIcon" /* 11792 */;
-import FileIcon from "FileIcon" /* 11830 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 16928 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 16929 */;
-import FileWarningIcon from "FileWarningIcon" /* 16933 */;
+import FileIcon from "FileIcon" /* 12062 */;
+import FileUpIcon from "FileUpIcon" /* 12272 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 16929 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 16930 */;
+import FileWarningIcon from "FileWarningIcon" /* 16934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
@@ -62,7 +62,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
     [tmp7, tmp8] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp15 = closure_7(tmp(11792).FileUpIcon, {});
+    const tmp15 = closure_7(tmp(12272).FileUpIcon, {});
     const intl3 = tmp(1128).intl;
     const stringResult1 = intl3.string(tmp(1128).t["/GUaXh"]);
     cResult[2] = tmp15;
@@ -85,7 +85,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
             } else {
               c1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(16932).writeCaches(), done: false };
+              const obj5 = { value: tmp2(16933).writeCaches(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -115,7 +115,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
             const intl = tmp2(1128).intl;
             handleCacheActionPress(intl.string(tmp2(1128).t.GgUIfl));
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           dependencyMap = tmp;
@@ -154,7 +154,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
       }
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp29 = closure_7(tmp(16933).FileWarningIcon, { color: "text-feedback-critical" });
+        const tmp29 = closure_7(tmp(16934).FileWarningIcon, { color: "text-feedback-critical" });
         const intl5 = tmp(1128).intl;
         const stringResult2 = intl5.string(tmp(1128).t.tgwiMO);
         cResult[11] = tmp29;
@@ -178,7 +178,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -192,10 +192,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v1(16929).clearCaches();
-                  const obj5 = v1(16929);
-                  tmp2(16932).clearCaches();
-                  const obj6 = tmp2(16932);
+                  v1(16930).clearCaches();
+                  const obj5 = v1(16930);
+                  tmp2(16933).clearCaches();
+                  const obj6 = tmp2(16933);
                   v1 = 1;
                   dependencyMap = 1;
                   const obj4 = { value: tmp2(5693).browserManagerClearWebsiteData(), done: false };
@@ -212,7 +212,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
                 const intl = tmp2(1128).intl;
                 handleCacheActionPress(intl.string(tmp2(1128).t["23xR5w"]));
                 dependencyMap = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               dependencyMap = tmp;
@@ -290,7 +290,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
   }
   let tmp24Result2 = null != DiskUsageManagerDefault.calculateSize;
   if (tmp24Result2) {
-    const obj9 = { icon: closure_7(tmp(11830).FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
+    const obj9 = { icon: closure_7(tmp(12062).FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
     const intl4 = tmp(1128).intl;
     const t = tmp(1128).t;
     obj9.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
@@ -341,7 +341,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -372,7 +372,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t.GgUIfl));
           c2 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp15) {
         c2 = tmp;
@@ -415,7 +415,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -449,7 +449,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t["23xR5w"]));
           c2 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp21) {
         c2 = tmp;
@@ -469,7 +469,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheA
   obj2.children = items1;
   return closure_1_8(ActionSheet.ActionSheet, obj2);
 });
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCacheActionsPredicate() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -500,7 +500,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(16933).FileWarningIcon,
+  IconComponent: fn(16934).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), CacheActionsActionSheet);
   },

@@ -1,18 +1,18 @@
-// === Module 18592: VoiceChannelAppSurface ===
+// === Module 18602: VoiceChannelAppSurface ===
 
-// Module 18592 (VoiceChannelAppSurface)
+// Module 18602 (VoiceChannelAppSurface)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef3928 from "module_3928" /* 3928 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11888 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11889 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11890 */;
-import FrameStackLevel from "FrameStackLevel" /* 11894 */;
-import useFrameLifecycle from "useFrameLifecycle" /* 18043 */;
-import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 18046 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18053 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11777 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11778 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11779 */;
+import FrameStackLevel from "FrameStackLevel" /* 11783 */;
+import useFrameLifecycle from "useFrameLifecycle" /* 18052 */;
+import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 18055 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18062 */;
 import noop from "module_19" /* 19 */;
 
 const useFrameLifecycleDefault = useFrameLifecycle;

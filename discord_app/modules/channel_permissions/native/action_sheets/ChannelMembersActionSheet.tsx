@@ -1,6 +1,6 @@
-// === Module 11310: ChannelMembersActionSheet ===
+// === Module 11311: ChannelMembersActionSheet ===
 
-// Module 11310 (ChannelMembersActionSheet)
+// Module 11311 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -18,10 +18,10 @@ import RowButton from "RowButton" /* 8953 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8972 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8989 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10093 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10859 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11309 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11311 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11312 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10860 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11310 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11312 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11313 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
 import GuildMemberStore from "GuildMemberStore" /* 4883 */;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelM
   navigation = channelId(1505).useNavigation();
   tmp5(5604)(stateFromStores);
   const tmpResult7 = channelId(1505);
-  const appChannelBotUserId = channelId(11311).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11312).useAppChannelBotUserId(stateFromStores);
   if (null != stateFromStores) {
     class B {
       constructor() {

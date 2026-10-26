@@ -1,23 +1,23 @@
-// === Module 13616: PencilIllocon ===
+// === Module 13618: PencilIllocon ===
 
-// Module 13616 (PencilIllocon)
+// Module 13618 (PencilIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef13513 from "module_13513" /* 13513 */;
-import _modDef13617 from "module_13617" /* 13617 */;
-import _modDef13618 from "module_13618" /* 13618 */;
+import _modDef13516 from "module_13516" /* 13516 */;
+import _modDef13619 from "module_13619" /* 13619 */;
+import _modDef13620 from "module_13620" /* 13620 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13617 }, 3: null };
-const obj2 = { uri: _modDef13617 };
-obj[2] = { uri: _modDef13513 };
-const obj3 = { uri: _modDef13513 };
-obj[3] = { uri: _modDef13618 };
+let obj = { 1: null, 2: { uri: _modDef13619 }, 3: null };
+const obj2 = { uri: _modDef13619 };
+obj[2] = { uri: _modDef13516 };
+const obj3 = { uri: _modDef13516 };
+obj[3] = { uri: _modDef13620 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13618 };
+const obj4 = { uri: _modDef13620 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PencilIllocon.native.tsx");
 

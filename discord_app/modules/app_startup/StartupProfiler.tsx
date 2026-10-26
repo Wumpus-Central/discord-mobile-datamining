@@ -1,6 +1,6 @@
-// === Module 13056: StartupProfiler ===
+// === Module 13059: StartupProfiler ===
 
-// Module 13056 (StartupProfiler)
+// Module 13059 (StartupProfiler)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import noop from "module_19" /* 19 */;
 

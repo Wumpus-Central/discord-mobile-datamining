@@ -1,14 +1,14 @@
-// === Module 11575: GlobalStageChannelStatus ===
+// === Module 11576: GlobalStageChannelStatus ===
 
-// Module 11575 (GlobalStageChannelStatus)
+// Module 11576 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useChannelNameDefault from "useChannelName" /* 5604 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7873 */;
 import PushNotificationDefault from "PushNotification" /* 10753 */;
-import StatusBarDefault from "StatusBar" /* 10889 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11389 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11567 */;
+import StatusBarDefault from "StatusBar" /* 10890 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11390 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         }
       }
     }
-    const getStageRTCPanelHeight = tmp(11565).useGetStageRTCPanelHeight(tmp21);
+    const getStageRTCPanelHeight = tmp(11566).useGetStageRTCPanelHeight(tmp21);
     if (cResult[7] !== channel) {
       class S {
         constructor() {
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -365,7 +365,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
       cResult[14] = tmp26;
       cResult[15] = items2;
     }
-    const tmpResult6 = tmp(11565);
+    const tmpResult6 = tmp(11566);
   }
   cResult[4] = stringResult;
   if (stateFromStores != null) {
@@ -405,7 +405,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -502,7 +502,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
     id2 = channel.id;
   }
   let stageIgnoredUsersCount = channel(8106).useStageIgnoredUsersCount(id2);
-  channel(11565);
+  channel(11566);
   if (channel != null) {
     const id = channel.id;
   }

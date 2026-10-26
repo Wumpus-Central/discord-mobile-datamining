@@ -1,13 +1,13 @@
-// === Module 17247: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 17248: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 17247 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 17248 (CollectiblesShopViewAllCategoryItemsHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import HeaderShared from "HeaderShared" /* 9699 */;
 import _modDef9702 from "module_9702" /* 9702 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14770 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14771 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15773: AuthCommandsFactory ===
+// === Module 15774: AuthCommandsFactory ===
 
-// Module 15773 (AuthCommandsFactory)
+// Module 15774 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import UserStore from "UserStore" /* 1392 */;
-import LeakyBucket from "LeakyBucket" /* 11481 */;
+import LeakyBucket from "LeakyBucket" /* 11482 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
           closure_135_31 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp10) {
@@ -374,7 +374,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,23 +1,23 @@
-// === Module 13829: ReminderWatchSpotIllustration ===
+// === Module 13831: ReminderWatchSpotIllustration ===
 
-// Module 13829 (ReminderWatchSpotIllustration)
+// Module 13831 (ReminderWatchSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5669 */;
 import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef13830 from "module_13830" /* 13830 */;
-import _modDef13831 from "module_13831" /* 13831 */;
 import _modDef13832 from "module_13832" /* 13832 */;
+import _modDef13833 from "module_13833" /* 13833 */;
+import _modDef13834 from "module_13834" /* 13834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13830 }, 3: null };
-let obj2 = { uri: _modDef13830 };
-obj[2] = { uri: _modDef13831 };
-const obj3 = { uri: _modDef13831 };
-obj[3] = { uri: _modDef13832 };
+let obj = { 1: null, 2: { uri: _modDef13832 }, 3: null };
+let obj2 = { uri: _modDef13832 };
+obj[2] = { uri: _modDef13833 };
+const obj3 = { uri: _modDef13833 };
+obj[3] = { uri: _modDef13834 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13832 };
+const obj4 = { uri: _modDef13834 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx");
 

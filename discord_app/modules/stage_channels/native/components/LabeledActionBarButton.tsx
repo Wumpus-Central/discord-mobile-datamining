@@ -1,6 +1,6 @@
-// === Module 11669: LabeledActionBarButton ===
+// === Module 11670: LabeledActionBarButton ===
 
-// Module 11669 (LabeledActionBarButton)
+// Module 11670 (LabeledActionBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;

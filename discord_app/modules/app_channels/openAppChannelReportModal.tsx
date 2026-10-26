@@ -1,6 +1,6 @@
-// === Module 14002: openAppChannelReportModal ===
+// === Module 14004: openAppChannelReportModal ===
 
-// Module 14002 (openAppChannelReportModal)
+// Module 14004 (openAppChannelReportModal)
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _getApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_6 = async function _openAppChannelReportModal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

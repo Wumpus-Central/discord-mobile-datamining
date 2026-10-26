@@ -1,11 +1,11 @@
-// === Module 13411: GuildPowerupsActionCreators ===
+// === Module 13414: GuildPowerupsActionCreators ===
 
-// Module 13411 (GuildPowerupsActionCreators)
+// Module 13414 (GuildPowerupsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 13413 */;
+import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 13416 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5182 */;
 import size from "module_2" /* 2 */;
 

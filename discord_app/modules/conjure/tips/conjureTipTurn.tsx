@@ -1,6 +1,6 @@
-// === Module 12335: conjureTipTurn ===
+// === Module 12320: conjureTipTurn ===
 
-// Module 12335 (conjureTipTurn)
+// Module 12320 (conjureTipTurn)
 import conjureChatTurns from "conjureChatTurns" /* 10700 */;
 import size from "module_2" /* 2 */;
 

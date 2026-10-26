@@ -1,10 +1,10 @@
-// === Module 15772: auth ===
+// === Module 15773: auth ===
 
-// Module 15772 (auth)
+// Module 15773 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15773 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15774 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;

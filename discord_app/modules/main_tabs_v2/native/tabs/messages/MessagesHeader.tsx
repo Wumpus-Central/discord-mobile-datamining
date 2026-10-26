@@ -1,6 +1,6 @@
-// === Module 17453: MessagesHeader ===
+// === Module 17454: MessagesHeader ===
 
-// Module 17453 (MessagesHeader)
+// Module 17454 (MessagesHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import spring from "spring" /* 5247 */;
@@ -8,10 +8,10 @@ import ButtonConstants from "ButtonConstants" /* 5250 */;
 import _modDef5673 from "module_5673" /* 5673 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6925 */;
 import _modDef7147 from "module_7147" /* 7147 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11059 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12199 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13222 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17454 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11060 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12092 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13225 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,7 +72,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     fn.__initData = __initData;
     const animatedStyle = scrollPosition(5052).useAnimatedStyle(fn);
     const tmpResult = scrollPosition(5052);
-    const isHomeDrawerEnabled = scrollPosition(17448).useIsHomeDrawerEnabled();
+    const isHomeDrawerEnabled = scrollPosition(17449).useIsHomeDrawerEnabled();
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function f() {
@@ -211,7 +211,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const obj4 = { size: "sm", color: nativeDefault.colors.WHITE };
-      const tmp18 = closure_6(scrollPosition(10841).PlusLargeIcon, obj4);
+      const tmp18 = closure_6(scrollPosition(10842).PlusLargeIcon, obj4);
       cResult[9] = tmp18;
       const tmp17 = tmp18;
     } else {
@@ -593,7 +593,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[16] = tmp24;
       cResult[17] = tmp30;
     }
-    const tmpResult2 = scrollPosition(17448);
+    const tmpResult2 = scrollPosition(17449);
   }
   const items3 = [tmp4.headerPanel, tmp5];
   cResult[2] = tmp4.headerPanel;
@@ -624,7 +624,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = { withSpring: height(5247).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(17448).useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = height(17449).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[14]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -657,10 +657,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }, []);
-  let obj3 = height(17448);
+  let obj3 = height(17449);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp12 = scrollPosition(6925)("bespoke");
-  obj4.icon = closure_6(height(10841).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
+  obj4.icon = closure_6(height(10842).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
   const intl = height(1128).intl;
   obj4.accessibilityLabel = intl.string(height(1128).t.jD1qzM);
   obj4.onPress = callback3;
@@ -683,7 +683,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj10 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(7147), accessibilityLabel: null };
   const intl3 = tmp3(1128).intl;
   obj10.accessibilityLabel = intl3.string(height(1128).t["5h0QOP"]);
-  const items2 = [closure_6(height(7959).IconButton, obj10), closure_6(scrollPosition(17454), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [closure_6(height(7959).IconButton, obj10), closure_6(scrollPosition(17455), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   const obj11 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(5673), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1128).intl;
   obj11.text = intl4.string(height(1128).t.zIJnA6);

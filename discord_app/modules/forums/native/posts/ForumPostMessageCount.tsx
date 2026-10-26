@@ -1,13 +1,13 @@
-// === Module 13115: ForumPostMessageCount ===
+// === Module 13118: ForumPostMessageCount ===
 
-// Module 13115 (ForumPostMessageCount)
+// Module 13118 (ForumPostMessageCount)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
 import ForumHooks from "ForumHooks" /* 9725 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11014 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

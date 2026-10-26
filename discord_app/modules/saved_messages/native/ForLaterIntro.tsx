@@ -1,6 +1,6 @@
-// === Module 13828: ForLaterIntro ===
+// === Module 13830: ForLaterIntro ===
 
-// Module 13828 (ForLaterIntro)
+// Module 13830 (ForLaterIntro)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,10 +10,10 @@ import FastImageDefault from "FastImage" /* 5669 */;
 import ClockIcon from "ClockIcon" /* 5691 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7305 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 10078 */;
-import BookmarkIcon from "BookmarkIcon" /* 13813 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13829 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13833 */;
-import _modDef13837 from "module_13837" /* 13837 */;
+import BookmarkIcon from "BookmarkIcon" /* 13815 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13831 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13835 */;
+import _modDef13839 from "module_13839" /* 13839 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4971 */;
@@ -55,7 +55,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   isReminder = isReminder.isReminder;
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13837 };
+    const obj2 = { uri: _modDef13839 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -224,7 +224,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef13837 };
+  const obj4 = { uri: _modDef13839 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   const items = [hasOwnProperty(FastImageDefault, obj3), ];

@@ -1,8 +1,8 @@
-// === Module 12384: useConjurePatchNotesComposer ===
+// === Module 12367: useConjurePatchNotesComposer ===
 
-// Module 12384 (useConjurePatchNotesComposer)
+// Module 12367 (useConjurePatchNotesComposer)
 import ConjureUtils from "ConjureUtils" /* 7345 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12385 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12368 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -106,7 +106,7 @@ export default function useConjurePatchNotesComposer(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export default function useConjurePatchNotesComposer(projectId) {
             c2 = 0;
             if (closure_129_0.cancelled) {
               c4 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               closure_1_10(false);
               closure_1_11(true);
@@ -230,7 +230,7 @@ export default function useConjurePatchNotesComposer(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 12985: CheckpointMessagesStatsScreen ===
+// === Module 12988: CheckpointMessagesStatsScreen ===
 
-// Module 12985 (CheckpointMessagesStatsScreen)
+// Module 12988 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -10,9 +10,9 @@ import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12956 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12984 */;
-import CheckpointStore from "CheckpointStore" /* 12953 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12959 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12987 */;
+import CheckpointStore from "CheckpointStore" /* 12956 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4971 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -224,15 +224,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       const formatToPlainStringResult = intl2.formatToPlainString(tmp31(3088).TOMBAW, obj6);
     }
   }
-  const tmp31Result = tmp31(12973);
+  const tmp31Result = tmp31(12976);
   const container = tmp4.container;
   if (cResult[26] !== tmp4.image) {
-    const obj7 = { animatedUri: tmp31(12986), staticUri: tmp31(12987), style: tmp4.image };
-    const tmp38 = timestampProducer(tmp31(12976), obj7);
+    const obj7 = { animatedUri: tmp31(12989), staticUri: tmp31(12990), style: tmp4.image };
+    const tmp38 = timestampProducer(tmp31(12979), obj7);
     cResult[26] = tmp4.image;
     cResult[27] = tmp38;
     let tmp35 = tmp38;
-    const tmp31Result3 = tmp31(12976);
+    const tmp31Result3 = tmp31(12979);
   } else {
     tmp35 = cResult[27];
   }
@@ -261,17 +261,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         }
         if (tmp27) {
           const obj9 = { value: stateFromStores1 };
-          let tmp52Result = timestampProducer(tmp31(12979), obj9);
+          let tmp52Result = timestampProducer(tmp31(12982), obj9);
         } else {
           const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
           const _HermesInternal = HermesInternal;
           obj10.accessibilityLabel = "" + rounded + " " + stringResult;
           obj10.style = tmp4.number;
           const obj11 = { end: rounded };
-          obj10.children = timestampProducer(tmp31(12981), obj11);
+          obj10.children = timestampProducer(tmp31(12984), obj11);
           tmp52Result = timestampProducer(View, obj10);
         }
-        const tmp31Result4 = tmp31(12971);
+        const tmp31Result4 = tmp31(12974);
         if (tmp27) {
           const intl5 = util.intl;
           const obj12 = { numWords: null };
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       tmp49 = tmp51;
     }
     const obj16 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: toLocaleUpperCaseResult };
-    const tmp48 = timestampProducer(tmp31(12971), obj16);
+    const tmp48 = timestampProducer(tmp31(12974), obj16);
     cResult[32] = tmp4.titleText;
     cResult[33] = toLocaleUpperCaseResult;
     cResult[34] = tmp48;
@@ -423,37 +423,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = CheckpointStatsUtils;
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp11Result = tmp11(12973);
-  obj6.animatedUri = tmp11(12986);
-  obj6.staticUri = tmp11(12987);
+  const tmp11Result = tmp11(12976);
+  obj6.animatedUri = tmp11(12989);
+  obj6.staticUri = tmp11(12990);
   obj6.style = tmp.image;
-  obj5.children = timestampProducer(tmp11(12976), obj6);
+  obj5.children = timestampProducer(tmp11(12979), obj6);
   const items2 = [timestampProducer(View, obj5), ];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
   const items3 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
   const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp11Result4 = tmp11(12976);
+  const tmp11Result4 = tmp11(12979);
   obj10.children = stringResult.toLocaleUpperCase();
-  items3[1] = timestampProducer(tmp11(12971), obj10);
+  items3[1] = timestampProducer(tmp11(12974), obj10);
   obj8.children = items3;
   const items4 = [React5(View, obj8), , ];
   if (rounded <= 0 && null != stateFromStores1) {
     const obj11 = { value: stateFromStores1 };
-    let tmp13Result = timestampProducer(tmp11(12979), obj11);
+    let tmp13Result = timestampProducer(tmp11(12982), obj11);
   } else {
     const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
     const _HermesInternal = HermesInternal;
     obj12.accessibilityLabel = "" + rounded + " " + stringResult;
     obj12.style = tmp.number;
     const obj13 = { end: rounded };
-    obj12.children = timestampProducer(tmp11(12981), obj13);
+    obj12.children = timestampProducer(tmp11(12984), obj13);
     tmp13Result = timestampProducer(View, obj12);
   }
   items4[1] = tmp13Result;
   const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp11Result5 = tmp11(12971);
+  const tmp11Result5 = tmp11(12974);
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
     const obj15 = { numWords: null };
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   const obj18 = { children: null };
   obj14.children = formatToPlainStringResult1;
-  items4[2] = timestampProducer(tmp11(12971), obj14);
+  items4[2] = timestampProducer(tmp11(12974), obj14);
   obj7.children = items4;
   items2[1] = React5(View, obj7);
   obj4.children = items2;

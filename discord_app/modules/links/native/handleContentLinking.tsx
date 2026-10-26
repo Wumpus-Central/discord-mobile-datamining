@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           closure_129_12 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -134,7 +134,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             }
           }
           c4 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
         if (safe) {
           const obj10 = { navigationReplace: closure_129_8, openChannel: true, skipMessageFetch, isAppStartupNavigation: closure_129_12 };

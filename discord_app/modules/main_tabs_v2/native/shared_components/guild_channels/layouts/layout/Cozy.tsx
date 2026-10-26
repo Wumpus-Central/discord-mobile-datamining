@@ -1,8 +1,8 @@
-// === Module 12067: Cozy ===
+// === Module 11958: Cozy ===
 
-// Module 12067 (Cozy)
+// Module 11958 (Cozy)
 import nativeDefault from "native" /* 587 */;
-import deepmerge from "deepmerge" /* 12065 */;
+import deepmerge from "deepmerge" /* 11956 */;
 
 const obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: { borderRadius: nativeDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } }, category: { margin: { marginTop: 24 } }, voiceUsers: { height: 40, margin: { marginTop: -4, marginLeft: 80 } }, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 const obj2 = { borderRadius: nativeDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };
@@ -25,7 +25,7 @@ obj.threadSpine = obj8;
 obj.happeningNow = { margin: { marginBottom: 20 } };
 obj.typing = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
 obj.separator = { margin: { marginVertical: 20 } };
-const importDefaultResultResult = deepmerge(fn(12066).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(11957).CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj10 = { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } };
 const obj7 = { size: fn(1202).IconSizes.REFRESH_SMALL_16, gameSize: fn(7261).GameIconSizes.SMALL };
 const obj9 = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };

@@ -1,6 +1,6 @@
-// === Module 17857: NotificationCenterStore ===
+// === Module 17866: NotificationCenterStore ===
 
-// Module 17857 (NotificationCenterStore)
+// Module 17866 (NotificationCenterStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

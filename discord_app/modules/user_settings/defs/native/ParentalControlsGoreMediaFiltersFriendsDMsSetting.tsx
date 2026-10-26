@@ -1,10 +1,10 @@
-// === Module 17303: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
+// === Module 17304: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
 
-// Module 17303 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
+// Module 17304 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16108 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16112 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16109 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16113 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
 
 const ExplicitMediaRedactionUtils = obj(8586);
@@ -14,7 +14,7 @@ function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGoreContentFriendsDmSettingValue() {
   let obj = require;
   let tmp = dependencyMap;
@@ -81,7 +81,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: function onGoreContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const obj = selectedTeenId(16112);
+      const obj = selectedTeenId(16113);
       const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1128).intl;
       obj3.title = intl.string(selectedTeenId(1128).t["16/3Bi"]);
@@ -93,8 +93,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
       const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(16117).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(16117);
+      const result = selectedTeenId(16118).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(16118);
     }
   },
   unsearchable: true

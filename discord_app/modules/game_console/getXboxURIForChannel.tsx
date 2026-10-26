@@ -1,6 +1,6 @@
-// === Module 11665: getXboxURIForChannel ===
+// === Module 11666: getXboxURIForChannel ===
 
-// Module 11665 (getXboxURIForChannel)
+// Module 11666 (getXboxURIForChannel)
 import util from "util" /* 1128 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import useChannelName from "useChannelName" /* 5604 */;

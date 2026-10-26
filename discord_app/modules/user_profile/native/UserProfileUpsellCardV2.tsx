@@ -1,6 +1,6 @@
-// === Module 15941: UserProfileUpsellCardV2 ===
+// === Module 15942: UserProfileUpsellCardV2 ===
 
-// Module 15941 (UserProfileUpsellCardV2)
+// Module 15942 (UserProfileUpsellCardV2)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;

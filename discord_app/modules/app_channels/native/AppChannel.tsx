@@ -1,6 +1,6 @@
-// === Module 18042: AppChannel ===
+// === Module 18051: AppChannel ===
 
-// Module 18042 (AppChannel)
+// Module 18051 (AppChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,18 +14,18 @@ import transitionToChannel from "transitionToChannel" /* 5707 */;
 import conjureDMAppChannel from "conjureDMAppChannel" /* 6807 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6809 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9716 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11885 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11888 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11889 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11890 */;
-import useFrameLifecycleDefault from "useFrameLifecycle" /* 18043 */;
-import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 18046 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18053 */;
-import useAppChannelClosedDefault from "useAppChannelClosed" /* 18054 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18055 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11774 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11777 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11778 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11779 */;
+import useFrameLifecycleDefault from "useFrameLifecycle" /* 18052 */;
+import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 18055 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18062 */;
+import useAppChannelClosedDefault from "useAppChannelClosed" /* 18063 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18064 */;
 import noop from "module_19" /* 19 */;
 
-const useChannelContentGate = obj(10892);
+const useChannelContentGate = obj(10893);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -60,10 +60,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
             ({ frame, state } = useFrameLifecycleDefault(tmp9));
             conjureBackgroundFramesDefault(applicationId, surface);
             const tmp10 = useFrameLifecycleDefault(tmp9);
-            useEdgeOnlySwipeExitDefault(state === tmp(18043).FrameLifecycleState.Launched);
+            useEdgeOnlySwipeExitDefault(state === tmp(18052).FrameLifecycleState.Launched);
             const tmp5Result = useEdgeOnlySwipeExitDefault;
             let tmp15 = null;
-            if (state === tmp(18043).FrameLifecycleState.Launched) {
+            if (state === tmp(18052).FrameLifecycleState.Launched) {
               tmp15 = applicationId;
             }
             useInlineFrameOAuthNavigationDefault(tmp15);
@@ -89,7 +89,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                 }
               }
             }
-            if (tmp(18043).FrameLifecycleState.Launched === state) {
+            if (tmp(18052).FrameLifecycleState.Launched === state) {
               class M {
                 constructor(arg0) {
                   obj = closure_0(closure_2[15]);
@@ -97,7 +97,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                   return;
                 }
               }
-              const obj2 = { frameId: frame.id, level: tmp(11894).FrameStackLevel.WithinAppContent, presentation: tmp7 };
+              const obj2 = { frameId: frame.id, level: tmp(11783).FrameStackLevel.WithinAppContent, presentation: tmp7 };
               const tmp22 = closure_5(FrameRenderTargetDefault, obj2);
               cResult[11] = frame.id;
               cResult[12] = tmp7;

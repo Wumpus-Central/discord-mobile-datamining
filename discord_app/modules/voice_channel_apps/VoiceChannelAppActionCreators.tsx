@@ -1,9 +1,9 @@
-// === Module 13848: VoiceChannelAppActionCreators ===
+// === Module 13850: VoiceChannelAppActionCreators ===
 
-// Module 13848 (VoiceChannelAppActionCreators)
+// Module 13850 (VoiceChannelAppActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import leaveFrame from "leaveFrame" /* 10766 */;
-import voiceChannelAppSession from "voiceChannelAppSession" /* 12712 */;
+import voiceChannelAppSession from "voiceChannelAppSession" /* 12715 */;
 import FramesStore from "FramesStore" /* 6775 */;
 
 require = fn;

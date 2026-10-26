@@ -1,18 +1,18 @@
-// === Module 12528: ChatInputActionButtonTransitionItem ===
+// === Module 12511: ChatInputActionButtonTransitionItem ===
 
-// Module 12528 (ChatInputActionButtonTransitionItem)
+// Module 12511 (ChatInputActionButtonTransitionItem)
 import c from "c" /* 576 */;
 import native from "native" /* 5037 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
 import timing from "timing" /* 5206 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12530 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12513 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12529).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12512).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

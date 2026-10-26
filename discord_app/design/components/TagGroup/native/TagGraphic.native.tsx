@@ -1,10 +1,10 @@
-// === Module 12272: TagGraphic ===
+// === Module 12221: TagGraphic ===
 
-// Module 12272 (TagGraphic)
+// Module 12221 (TagGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5669 */;
-import TagGroupTypes from "TagGroupTypes" /* 12269 */;
+import TagGroupTypes from "TagGroupTypes" /* 12218 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

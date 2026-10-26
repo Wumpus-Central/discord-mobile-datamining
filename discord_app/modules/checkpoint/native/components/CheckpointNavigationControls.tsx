@@ -1,10 +1,10 @@
-// === Module 13034: CheckpointNavigationControls ===
+// === Module 13037: CheckpointNavigationControls ===
 
-// Module 13034 (CheckpointNavigationControls)
+// Module 13037 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1087 */;
-import CheckpointTextDefault from "CheckpointText" /* 12971 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13024 */;
+import CheckpointTextDefault from "CheckpointText" /* 12974 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13027 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import CheckpointConstants from "CheckpointConstants" /* 6015 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -48,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (cResult[0] !== nextBlockedTrait) {
     let nitroLockedMessage;
     if (null != nextBlockedTrait) {
-      nitroLockedMessage = onNext(13024).getNitroLockedMessage(nextBlockedTrait);
-      const tmpResult = onNext(13024);
+      nitroLockedMessage = onNext(13027).getNitroLockedMessage(nextBlockedTrait);
+      const tmpResult = onNext(13027);
     }
     cResult[0] = nextBlockedTrait;
     cResult[1] = nitroLockedMessage;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                       }
                       if (cResult[29] !== tmp76) {
                         const obj5 = { variant: "text-sm/medium", children: tmp76 };
-                        const tmp80 = closure_7(nextBlockedTrait(12971), obj5);
+                        const tmp80 = closure_7(nextBlockedTrait(12974), obj5);
                         cResult[29] = tmp76;
                         cResult[30] = tmp80;
                         let tmp78 = tmp80;
@@ -175,13 +175,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     }
                   }
                   const obj7 = { Icon: onNext(8765).PlayIcon, label: tmp69, onPress: tmp11, disabled: tmp6, accessibilityState: tmp71 };
-                  const tmp75 = closure_7(nextBlockedTrait(13035), obj7);
+                  const tmp75 = closure_7(nextBlockedTrait(13038), obj7);
                   cResult[23] = tmp11;
                   cResult[24] = tmp6;
                   cResult[25] = tmp71;
                   cResult[26] = tmp75;
                   tmp72 = tmp75;
-                  const tmp12Result = nextBlockedTrait(13035);
+                  const tmp12Result = nextBlockedTrait(13038);
                 }
                 const items1 = [tmp14, tmp7.homeContainer];
                 cResult[17] = tmp14;
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                               }
                             }
                             const obj10 = { label: tmp59, onPress: onShare, color, borderColor: color, shadowColor, style: tmp7.share };
-                            const tmp63 = closure_7(nextBlockedTrait(13035), obj10);
+                            const tmp63 = closure_7(nextBlockedTrait(13038), obj10);
                             cResult[53] = color;
                             cResult[54] = onShare;
                             cResult[55] = shadowColor;
@@ -398,8 +398,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                               }
                             }
                           }
-                          const obj17 = { Icon: onNext(10824).ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: tmp19, onPress: tmp11, disabled: tmp34, loading: tmp6, accessibilityHint: tmp35, accessibilityLabel: tmp37, accessibilityState: tmp38 };
-                          const tmp42 = closure_7(nextBlockedTrait(13035), obj17);
+                          const obj17 = { Icon: onNext(10825).ArrowSmallRightIcon, iconPosition: "end", iconSize: "md", label: tmp19, onPress: tmp11, disabled: tmp34, loading: tmp6, accessibilityHint: tmp35, accessibilityLabel: tmp37, accessibilityState: tmp38 };
+                          const tmp42 = closure_7(nextBlockedTrait(13038), obj17);
                           cResult[78] = tmp11;
                           cResult[79] = tmp19;
                           cResult[80] = tmp6;
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                           cResult[84] = tmp38;
                           cResult[85] = tmp42;
                           tmp39 = tmp42;
-                          const tmp12Result2 = nextBlockedTrait(13035);
+                          const tmp12Result2 = nextBlockedTrait(13038);
                         }
                       }
                     }

@@ -1,7 +1,7 @@
-// === Module 13529: useIsEmptyMessageRequestChat ===
+// === Module 13531: useIsEmptyMessageRequestChat ===
 
-// Module 13529 (useIsEmptyMessageRequestChat)
-import useIsMessageRequest from "useIsMessageRequest" /* 10929 */;
+// Module 13531 (useIsEmptyMessageRequestChat)
+import useIsMessageRequest from "useIsMessageRequest" /* 10930 */;
 import MessageStore from "MessageStore" /* 6010 */;
 
 require = fn;

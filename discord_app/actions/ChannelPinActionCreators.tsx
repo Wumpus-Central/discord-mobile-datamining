@@ -1,12 +1,12 @@
-// === Module 13980: ChannelPinActionCreators ===
+// === Module 13982: ChannelPinActionCreators ===
 
-// Module 13980 (ChannelPinActionCreators)
+// Module 13982 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 13981 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 13983 */;
 
 const require = fn;
-const FetchState = fn(13981).FetchState;
+const FetchState = fn(13983).FetchState;
 const Constants = fn(1087);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -24,7 +24,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ let obj = {
               const obj4 = channelName(5908);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -144,7 +144,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ let obj = {
               return closure_1(5908).show(obj2);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c3 = tmp;

@@ -1,12 +1,12 @@
-// === Module 18255: ChannelDetailsNavigator ===
+// === Module 18264: ChannelDetailsNavigator ===
 
-// Module 18255 (ChannelDetailsNavigator)
+// Module 18264 (ChannelDetailsNavigator)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HeaderShared from "HeaderShared" /* 9699 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13346 */;
-import _modDef13721 from "module_13721" /* 13721 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 18256 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13349 */;
+import _modDef13723 from "module_13723" /* 13723 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 18265 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4823 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const constants = fn(10024).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const SearchNavigatorScreens = fn(18083).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18092).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});
@@ -97,7 +97,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
     if (cResult[3] !== tmp4) {
       HeaderIconButton = HeaderIconButton(9699).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, onPress: tmp4, source: null };
-      tmp = _modDef13721;
+      tmp = _modDef13723;
       obj3.source = tmp;
       const tmp11 = closure_10(HeaderIconButton, obj3);
       cResult[3] = tmp4;
@@ -115,7 +115,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
     const intl = tmp(1128).intl;
     obj2.accessibilityLabel = intl.string(tmp(1128).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13721;
+    obj2.source = _modDef13723;
     tmp5 = closure_10(tmp(9699).HeaderIconButton, obj2);
   }
   return tmp5;

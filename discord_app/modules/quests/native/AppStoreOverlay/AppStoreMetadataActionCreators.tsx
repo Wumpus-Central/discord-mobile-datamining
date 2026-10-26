@@ -1,6 +1,6 @@
-// === Module 14106: AppStoreMetadataActionCreators ===
+// === Module 14108: AppStoreMetadataActionCreators ===
 
-// Module 14106 (AppStoreMetadataActionCreators)
+// Module 14108 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
@@ -65,7 +65,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

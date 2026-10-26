@@ -1,6 +1,6 @@
-// === Module 14153: YouScreenNavIcon ===
+// === Module 14154: YouScreenNavIcon ===
 
-// Module 14153 (YouScreenNavIcon)
+// Module 14154 (YouScreenNavIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,14 +8,14 @@ import mergeProps from "mergeProps" /* 5141 */;
 import Text_Text from "Text/Text" /* 5234 */;
 import native from "native" /* 8913 */;
 import ClipViewDefault from "ClipView" /* 9406 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14155 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14156 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(14154).ICON_SIZE.md;
+const md = fn(14155).ICON_SIZE.md;
 const padding = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 let c8 = "text-default";

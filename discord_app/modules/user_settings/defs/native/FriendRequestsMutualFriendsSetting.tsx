@@ -1,12 +1,12 @@
-// === Module 16270: FriendRequestsMutualFriendsSetting ===
+// === Module 16271: FriendRequestsMutualFriendsSetting ===
 
-// Module 16270 (FriendRequestsMutualFriendsSetting)
+// Module 16271 (FriendRequestsMutualFriendsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
 import UserSettings from "UserSettings" /* 4799 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16108 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualFriendsSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;

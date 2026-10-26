@@ -1,6 +1,6 @@
-// === Module 12303: ConjureModeTabBar ===
+// === Module 12283: ConjureModeTabBar ===
 
-// Module 12303 (ConjureModeTabBar)
+// Module 12283 (ConjureModeTabBar)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
 import spring from "spring" /* 5247 */;

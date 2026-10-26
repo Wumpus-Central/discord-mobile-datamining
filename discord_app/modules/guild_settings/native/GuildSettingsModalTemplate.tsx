@@ -1,6 +1,6 @@
-// === Module 19148: GuildSettingsModalTemplate ===
+// === Module 19158: GuildSettingsModalTemplate ===
 
-// Module 19148 (GuildSettingsModalTemplate)
+// Module 19158 (GuildSettingsModalTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5244 */;
@@ -15,8 +15,8 @@ import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
 import ClipboardUtils from "ClipboardUtils" /* 7285 */;
 import HeaderActionButton from "HeaderActionButton" /* 7485 */;
 import native from "native" /* 8913 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12737 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19149 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12740 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19159 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -465,7 +465,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -488,7 +488,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     closure_1_6(null);
                     closure_1_8(true);
                     c3 = 1;
-                    const obj2 = guildTemplate(12737);
+                    const obj2 = guildTemplate(12740);
                     c4 = 2;
                     c5 = 1;
                     const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -758,7 +758,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -780,7 +780,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12737);
+                const obj2 = guildTemplate(12740);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -1486,7 +1486,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19150)(guildTemplate.code);
+  const tmp3 = guildTemplate(19160)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

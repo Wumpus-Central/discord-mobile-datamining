@@ -1,6 +1,6 @@
-// === Module 11478: RPCHelpers ===
+// === Module 11479: RPCHelpers ===
 
-// Module 11478 (RPCHelpers)
+// Module 11479 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
@@ -12,8 +12,8 @@ import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
 import transformUserDefault from "transformUser" /* 9262 */;
 import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9263 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import transformMessage from "transformMessage" /* 11479 */;
-import LeakyBucketDefault from "LeakyBucket" /* 11481 */;
+import transformMessage from "transformMessage" /* 11480 */;
+import LeakyBucketDefault from "LeakyBucket" /* 11482 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
@@ -59,7 +59,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -229,7 +229,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;

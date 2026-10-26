@@ -1,15 +1,15 @@
-// === Module 18772: ConjureTurnNotificationManager ===
+// === Module 18782: ConjureTurnNotificationManager ===
 
-// Module 18772 (ConjureTurnNotificationManager)
+// Module 18782 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 4799 */;
 import ConjureUtils from "ConjureUtils" /* 7345 */;
 import conjureProjectMute from "conjureProjectMute" /* 10723 */;
 import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10742 */;
-import SoundUtils from "SoundUtils" /* 11525 */;
-import conjureMentions from "conjureMentions" /* 12357 */;
+import SoundUtils from "SoundUtils" /* 11526 */;
+import conjureMentions from "conjureMentions" /* 12340 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13745 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13747 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
@@ -62,39 +62,35 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
     if (!obj3.isConjureProjectMuted(UserSettingsProtoStore.settings, projectId)) {
       const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(message1);
       guildId = SelectedGuildStore.getGuildId();
-      if (null != guildId) {
-        if (ConjureProjectStore.getSelectedProjectId(guildId) === projectId) {
-          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
-            if (tmpResult.isWindowFocused()) {
-              if (!isSoundDisabledResult) {
-                SoundUtils.playSound(bit_message1, volume);
-                const tmp8Result = SoundUtils;
-              }
-            }
-            tmpResult = ConjurePlatformUtilsDefault;
+      if (ConjureProjectStore.getGlobalSelectedProjectId() === projectId) {
+        if (tmpResult.isWindowFocused()) {
+          if (!isSoundDisabledResult) {
+            SoundUtils.playSound(bit_message1, volume);
+            const tmp8Result = SoundUtils;
           }
         }
+        tmpResult = ConjurePlatformUtilsDefault;
       }
       let conjureWorkspaceGuildId = guildId;
       if (guildId == null) {
         conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(ConjureChatStore);
         const tmp8Result3 = ConjureUtils;
       }
-      const obj4 = { projectId, guildId: conjureWorkspaceGuildId, title, body: null, route: null, sound: null, volume: null };
+      const obj5 = { projectId, guildId: conjureWorkspaceGuildId, title, body: null, route: null, sound: null, volume: null };
       const tmpResult2 = ConjurePlatformUtilsDefault;
-      obj4.body = conjureMentions.withConjureMentionNames(body);
+      obj5.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
         CHANNELResult = v65535.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
-      obj4.route = CHANNELResult;
-      let tmp26;
+      obj5.route = CHANNELResult;
+      let tmp25;
       if (!isSoundDisabledResult) {
-        tmp26 = bit_message1;
+        tmp25 = bit_message1;
       }
-      obj4.sound = tmp26;
-      obj4.volume = volume;
-      const result1 = tmpResult2.presentTurnNotification(obj4);
+      obj5.sound = tmp25;
+      obj5.volume = volume;
+      const result1 = tmpResult2.presentTurnNotification(obj5);
       const tmp8Result4 = conjureMentions;
     }
     obj3 = conjureProjectMute;
