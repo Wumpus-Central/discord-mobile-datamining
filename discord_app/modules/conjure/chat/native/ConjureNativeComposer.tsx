@@ -10,12 +10,12 @@ import WarningIcon from "../../../../design/components/Icon/native/redesign/gene
 import ImageCarousel from "../../../../components_native/chat/ImageCarousel.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import PlusLargeIcon from "../../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
-import ConjureChatActionCreators from "../ConjureChatActionCreators.tsx";
-import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
 import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
-import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import conjureStoredAttachments2 from "../conjureStoredAttachments.tsx";
 import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
+import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
+import ConjureChatActionCreators from "../ConjureChatActionCreators.tsx";
+import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
 import conjureMentions from "../conjureMentions.tsx";
 import StopIcon from "../../../../design/components/Icon/native/redesign/generated/StopIcon.tsx";
 import conjurePickedFiles from "conjurePickedFiles.tsx";
@@ -610,7 +610,7 @@ export default function ConjureNativeComposer(projectId) {
         conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1128).intl;
-        let obj = { count: obj2(11759).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(12162).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3830.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -642,7 +642,7 @@ export default function ConjureNativeComposer(projectId) {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(11757);
+      obj2 = obj2(12293);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items12);
@@ -664,7 +664,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -682,9 +682,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12480).pickConjurePhotos(
+                value: projectId(12463).pickConjurePhotos(
                   "mixed",
-                  projectId(11759).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(12162).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };
@@ -700,7 +700,7 @@ export default function ConjureNativeComposer(projectId) {
           } else {
             projectId(value);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -737,7 +737,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -793,7 +793,7 @@ export default function ConjureNativeComposer(projectId) {
               );
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp17) {
           c4 = tmp;

@@ -2897,7 +2897,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

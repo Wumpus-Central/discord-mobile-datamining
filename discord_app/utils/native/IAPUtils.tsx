@@ -61,7 +61,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -94,7 +94,7 @@ let closure_16 = async function _makeIAPRequest() {
               };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("../../../_runtime/metro/13914__.js").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("../../../_runtime/metro/13916__.js").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -157,7 +157,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -184,7 +184,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("../../../_runtime/metro/13914__.js").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("../../../_runtime/metro/13916__.js").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -244,7 +244,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -267,7 +267,7 @@ let closure_18 = async function _restorePurchases(arg0) {
             closure_132_3 = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -471,7 +471,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -492,7 +492,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("../../../_runtime/metro/13914__.js").getStorefront(), done: false };
+            const obj6 = { value: require("../../../_runtime/metro/13916__.js").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -540,12 +540,12 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1384);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(13913).default;
+  _default = fn(13915).default;
 }
 let items = [
-  fn(13914).ErrorCode.E_USER_CANCELLED,
+  fn(13916).ErrorCode.E_USER_CANCELLED,
   Constants.StoreKitErrors.PAYMENT_CANCELED,
-  fn(13914).ErrorCode.E_UNKNOWN,
+  fn(13916).ErrorCode.E_UNKNOWN,
 ];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
@@ -646,7 +646,7 @@ if (PlatformUtils) {
   let obj6 = fn(1384);
 }
 if (PlatformUtils) {
-  obj = fn(13935).default;
+  obj = fn(13937).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

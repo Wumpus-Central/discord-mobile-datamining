@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GameOrganizationJoinModalConstants = fn(12722);
+const GameOrganizationJoinModalConstants = fn(12725);
 ({ closeGameOrganizationJoinModal: closure_7, GameOrganizationJoinScenes: closure_8 } =
   GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
@@ -122,7 +122,7 @@ export const AcceptStep = function AcceptStep(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -219,7 +219,7 @@ export const AcceptStep = function AcceptStep(code) {
     obj4.children = intl6.formatToPlainString(tmp2(2406).WmxMAI, obj7);
     const items = [closure_9(tmp5(5234).Text, obj4)];
     let obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_9(tmp2(12729), obj8);
+    items[1] = closure_9(tmp2(12732), obj8);
     obj3.children = items;
     const items1 = [closure_10(tmp5(5977).Stack, obj3)];
     const obj9 = { spacing: tmp2(587).space.PX_24, children: null };
@@ -269,7 +269,7 @@ export const AcceptStep = function AcceptStep(code) {
     items5[1] = closure_9(tmp5(5244).Button, obj17);
     obj15.children = items5;
     obj14.children = closure_10(tmp5(6696).ButtonGroup, obj15);
-    items4[1] = closure_9(tmp5(12727).ModalFooter, obj14);
+    items4[1] = closure_9(tmp5(12730).ModalFooter, obj14);
     obj5.children = items4;
     return closure_10(tmp5(7900).ModalScreen, obj5);
   }

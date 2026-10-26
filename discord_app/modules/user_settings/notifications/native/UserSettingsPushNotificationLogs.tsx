@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = undefined;
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp5(13790)(), done: false };
+                const obj4 = { value: tmp5(13792)(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -528,10 +528,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               return obj5;
             } else {
               closure_128_0 = value;
-              const obj6 = { message: tmp5(13791)(closure_128_0, false) };
+              const obj6 = { message: tmp5(13793)(closure_128_0, false) };
               tmp2(8851).showShareActionSheet(obj6, "push-notification-logs");
               c3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp16) {
             c3 = tmp;
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
         return applyArgumentsResult;
       }
-      const tmp28 = closure_7(tmp(14206).ShareIcon, {});
+      const tmp28 = closure_7(tmp(14207).ShareIcon, {});
       cResult[11] = stringResult;
       cResult[12] = t12;
       cResult[13] = tmp28;
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -603,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -674,7 +674,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -713,7 +713,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -746,7 +746,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -782,7 +782,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -815,7 +815,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -906,7 +906,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -939,7 +939,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -1011,7 +1011,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1028,7 +1028,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(13790)(), done: false };
+            const obj4 = { value: tmp5(13792)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -1040,10 +1040,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(13791)(closure_128_0, false) };
+          const obj6 = { message: tmp5(13793)(closure_128_0, false) };
           tmp2(8851).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -1051,7 +1051,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
   });
-  obj3.children = closure_7(defaultValue(14206).ShareIcon, {});
+  obj3.children = closure_7(defaultValue(14207).ShareIcon, {});
   items1[1] = closure_7(defaultValue(6908).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];

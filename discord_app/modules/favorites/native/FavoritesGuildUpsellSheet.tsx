@@ -21,12 +21,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = analyticsLocations(576).c(14);
       let FREE_FAVORITE_LIMIT = limit.limit;
       if (undefined === FREE_FAVORITE_LIMIT) {
-        FREE_FAVORITE_LIMIT = tmp(10846).FREE_FAVORITE_LIMIT;
+        FREE_FAVORITE_LIMIT = tmp(10847).FREE_FAVORITE_LIMIT;
       }
-      analyticsLocations = first(10849)().analyticsLocations;
+      analyticsLocations = first(10850)().analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          first(5210).hideActionSheet(analyticsLocations(10847).FAVORITES_UPSELL_SHEET_KEY);
+          first(5210).hideActionSheet(analyticsLocations(10848).FAVORITES_UPSELL_SHEET_KEY);
         };
         cResult[0] = fn;
         first = fn;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_6(tmp(10850).FavoritesSpotIllustration, {});
+        const tmp13 = closure_6(tmp(10851).FavoritesSpotIllustration, {});
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp25;
       }
-      const tmp26 = closure_6(analyticsLocations(10855).PromoSheet, {
+      const tmp26 = closure_6(analyticsLocations(10856).PromoSheet, {
         title: tmp6,
         description: tmp8,
         illustration: tmp11,
@@ -134,11 +134,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildUpsellSheet(limit) {
       let FREE_FAVORITE_LIMIT = limit.limit;
       if (FREE_FAVORITE_LIMIT === undefined) {
-        FREE_FAVORITE_LIMIT = analyticsLocations(10846).FREE_FAVORITE_LIMIT;
+        FREE_FAVORITE_LIMIT = analyticsLocations(10847).FREE_FAVORITE_LIMIT;
       }
       analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
       importDefault = noop.useCallback(() => {
-        closure_1(5210).hideActionSheet(analyticsLocations(10847).FAVORITES_UPSELL_SHEET_KEY);
+        closure_1(5210).hideActionSheet(analyticsLocations(10848).FAVORITES_UPSELL_SHEET_KEY);
       }, []);
       let obj = { title: null, description: null, illustration: null, actions: null };
       const intl = analyticsLocations(1128).intl;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         count: FREE_FAVORITE_LIMIT,
         maxCount: MAX_FAVORITE_CHANNELS,
       });
-      obj.illustration = closure_6(analyticsLocations(10850).FavoritesSpotIllustration, {});
+      obj.illustration = closure_6(analyticsLocations(10851).FavoritesSpotIllustration, {});
       const obj3 = { children: null };
       const obj4 = { size: "lg", variant: "primary", text: null, onPress: null };
       const intl3 = analyticsLocations(1128).intl;
@@ -173,5 +173,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[1] = closure_6(analyticsLocations(5244).Button, obj5);
       obj3.children = items;
       obj.actions = closure_7(analyticsLocations(6696).ButtonGroup, obj3);
-      return closure_6(analyticsLocations(10855).PromoSheet, obj);
+      return closure_6(analyticsLocations(10856).PromoSheet, obj);
     };

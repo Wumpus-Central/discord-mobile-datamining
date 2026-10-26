@@ -1070,9 +1070,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   dependencyMap = tmp;
   navigation = channelId(1506).useNavigation();
   const obj = channelId(1506);
-  const isSwipeToMemberListEnabled = channelId(11206).useIsSwipeToMemberListEnabled();
+  const isSwipeToMemberListEnabled = channelId(11207).useIsSwipeToMemberListEnabled();
   const needSubscriptionToAccess = frame(5993)(channelId).needSubscriptionToAccess;
-  const obj2 = channelId(11206);
+  const obj2 = channelId(11207);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_10;
@@ -1112,7 +1112,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items1);
   const ref = isChatBesideChannelList.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = channelId(14025).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(14027).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -1120,7 +1120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  const tmp2Result = channelId(14025);
+  const tmp2Result = channelId(14027);
   const items2 = [ChannelStore];
   const items3 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items2, () => {
@@ -1154,7 +1154,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             let tmp41Result = null;
             if (canSeeOnboardingHome) {
               const obj7 = { guildId };
-              tmp41Result = closure_14(frame(18002), obj7);
+              tmp41Result = closure_14(frame(18011), obj7);
             }
             obj6.children = tmp41Result;
             items4[1] = closure_14(closure_6, obj6);
@@ -1164,18 +1164,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const obj8 = { style: tmp.container, children: null };
             const items5 = [closure_14(frame(10625), { absolute: true }), ];
             const obj9 = { guildId };
-            items5[1] = closure_14(frame(18020), obj9);
+            items5[1] = closure_14(frame(18029), obj9);
             obj8.children = items5;
             return closure_15(closure_6, obj8);
           } else if (channelId === StaticChannelRoute.CONJURE) {
             const obj10 = { guildId, inline: true };
-            return closure_14(frame(11744), obj10);
+            return closure_14(frame(11745), obj10);
           } else if (showCreateThread) {
             const obj11 = { style: memo1, children: null };
             const obj12 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
             const items6 = [closure_14(closure_18, obj12), ];
             const obj13 = { channelId, screenIndex };
-            items6[1] = closure_14(channelId(18038).CreateThreadView, obj13);
+            items6[1] = closure_14(channelId(18047).CreateThreadView, obj13);
             obj11.children = items6;
             return closure_15(closure_6, obj11);
           } else {
@@ -1186,7 +1186,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const items7 = [closure_14(closure_18, obj15), ];
                 const obj16 = { style: memo1, children: null };
                 const obj17 = { channel: stateFromStores };
-                obj16.children = closure_14(frame(18042), obj17);
+                obj16.children = closure_14(frame(18051), obj17);
                 items7[1] = closure_14(closure_6, obj16);
                 obj14.children = items7;
                 return closure_15(closure_6, obj14);
@@ -1197,18 +1197,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const items8 = [closure_14(closure_18, obj19), ];
             const obj20 = { name: "chat_container", tracking: "include", style: memo1, children: null };
             const obj21 = { guildId, channelId, isActive: isActive.isActive, chatInputRef: ref, screenIndex };
-            obj20.children = closure_14(frame(10891), obj21);
-            items8[1] = closure_14(channelId(17980).NavTTIView, obj20);
+            obj20.children = closure_14(frame(10892), obj21);
+            items8[1] = closure_14(channelId(17989).NavTTIView, obj20);
             obj18.children = items8;
             const tmp25 = closure_15(closure_16, obj18);
             if (isSwipeToMemberListEnabled) {
               const obj22 = { style: memo, channelId, isNavigationTTIVisible, screenIndex, isBackEnabled: tmp14, children: tmp25 };
-              let tmp23Result = closure_14(frame(18056), obj22);
+              let tmp23Result = closure_14(frame(18065), obj22);
             } else {
               const obj23 = {
                 name: "channel_screen",
                 navigationKey: channelId,
-                definition: channelId(13053).CHANNEL_NAVIGATION_TTI,
+                definition: channelId(13056).CHANNEL_NAVIGATION_TTI,
                 visibilityMode: "prerendered",
                 isVisible: isNavigationTTIVisible,
                 descendantTracking: "included",
@@ -1221,7 +1221,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 style: memo,
                 children: tmp25
               };
-              tmp23Result = closure_14(channelId(18057).NavTTISurfaceProvider, obj23);
+              tmp23Result = closure_14(channelId(18066).NavTTISurfaceProvider, obj23);
             }
             return tmp23Result;
           }
@@ -1238,7 +1238,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         tmp49 = channelId;
       }
       obj27.gatedChannelId = tmp49;
-      items10[1] = closure_14(frame(17985), obj27);
+      items10[1] = closure_14(frame(17994), obj27);
       obj26.children = items10;
       items9[1] = closure_15(closure_6, obj26);
       obj24.children = items9;

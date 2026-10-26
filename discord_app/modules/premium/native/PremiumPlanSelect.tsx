@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef14857 from "../../../../_runtime/metro/14857__.js";
 import _modDef14858 from "../../../../_runtime/metro/14858__.js";
 import _modDef14859 from "../../../../_runtime/metro/14859__.js";
 import _modDef14860 from "../../../../_runtime/metro/14860__.js";
 import _modDef14861 from "../../../../_runtime/metro/14861__.js";
 import _modDef14862 from "../../../../_runtime/metro/14862__.js";
+import _modDef14863 from "../../../../_runtime/metro/14863__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -205,7 +205,7 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 let useNativeCheckoutStore = fn(7536).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(14852);
+const PremiumPlanSelectStore = fn(14853);
 ({ setIsPurchasing: map1, usePremiumPlanSelectStore: closure_14 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1394);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, PRICE_PLACEHOLDER: closure_17, PremiumSubscriptionSKUs: closure_18, PremiumTypes: closure_19, SubscriptionIntervalTypes: closure_20, SubscriptionPlans: closure_21 } = PremiumConstants);
@@ -355,7 +355,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   obj.children = items;
   return __initData3(Stack_Stack.Stack, obj);
 });
-let closure_36 = { [_modDef14860]: "imgWumpusNitro", [_modDef14862]: "imgWumpusNitroBoost", [_modDef14859]: "imgWumpusNitroClassic", [_modDef14861]: "imgWumpusNitroClassicBoost", [_modDef14858]: "imgWumpusNitroTier0", [_modDef14857]: "imgBoost" };
+let closure_36 = { [_modDef14861]: "imgWumpusNitro", [_modDef14863]: "imgWumpusNitroBoost", [_modDef14860]: "imgWumpusNitroClassic", [_modDef14862]: "imgWumpusNitroClassicBoost", [_modDef14859]: "imgWumpusNitroTier0", [_modDef14858]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
@@ -721,21 +721,21 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRo
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/14857__.js");
+    let tmp7Result = require("../../../../_runtime/metro/14858__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_19.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/14861__.js");
-    } else {
       tmp7Result = require("../../../../_runtime/metro/14862__.js");
+    } else {
+      tmp7Result = require("../../../../_runtime/metro/14863__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_19.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/14858__.js");
-    } else if (closure_19.TIER_1 === premiumTier) {
       tmp7Result = require("../../../../_runtime/metro/14859__.js");
-    } else if (closure_19.TIER_2 === premiumTier) {
+    } else if (closure_19.TIER_1 === premiumTier) {
       tmp7Result = require("../../../../_runtime/metro/14860__.js");
+    } else if (closure_19.TIER_2 === premiumTier) {
+      tmp7Result = require("../../../../_runtime/metro/14861__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1707,7 +1707,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

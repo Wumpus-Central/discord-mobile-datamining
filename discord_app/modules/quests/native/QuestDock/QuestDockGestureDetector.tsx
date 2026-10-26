@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const QuestDockMode = fn(6710).QuestDockMode;
-const QuestDockConstants = fn(16440);
+const QuestDockConstants = fn(16441);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,

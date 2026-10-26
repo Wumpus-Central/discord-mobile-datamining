@@ -32,7 +32,7 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           closure_140_25 = undefined;
           c16 = 1;
           c17 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -421,7 +421,7 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -458,7 +458,7 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
           let currentUser;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -708,7 +708,7 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -743,7 +743,7 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
           closure_130_15 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1007,7 +1007,7 @@ let closure_32 = async function _uploadImageAttachment(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1078,184 +1078,38 @@ let closure_32 = async function _uploadImageAttachment(arg0) {
     }
   })();
 };
-let closure_33 = async function _sendEmbeddedActivityInvite(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: "+352" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
-          closure_129_5 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          const obj6 = { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_2 };
-          c3 = 2;
-          c4 = 1;
-          const obj7 = { value: closure_130_1(closure_130_2[56]).createInvite(closure_129_0, obj6, closure_129_3), done: false };
-          return obj7;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        closure_129_5 = value;
-        if (null != closure_130_10.getChannel(closure_129_1)) {
-          const obj = closure_130_1(closure_130_2[57]);
-          obj.sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
-        }
-        c4 = 3;
-        return { value: "IconComponent", done: "+352" };
-      }
-    } catch (tmp30) {
-      c4 = tmp;
-      throw tmp30;
-    }
+let closure_33 = async function _sendEmbeddedActivityInvite() {
+  await closure_130_1(closure_130_2[56]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_2 }, closure_129_3);
+  closure_129_5 = value;
+  if (null != closure_130_10.getChannel(closure_129_1)) {
+    closure_130_1(closure_130_2[57]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
+    closure_130_1(closure_130_2[57]);
   }
+  await "IconComponent";
+  closure_1 = tmp2;
+  ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
+  return "Reflect";
 };
-let closure_34 = async function _sendEmbeddedActivityInviteUser(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
-    } else {
-      return { value: "IconComponent", done: "+352" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          let channel;
-          let content;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          const obj8 = { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_1 };
-          c3 = 2;
-          c4 = 1;
-          const obj9 = { value: closure_130_1(closure_130_2[56]).createInvite(closure_129_0, obj8, closure_129_3), done: false };
-          return obj9;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
-        } else {
-          closure_129_6 = value;
-          c3 = 3;
-          c4 = 1;
-          const obj11 = { value: closure_130_1(closure_130_2[58]).ensurePrivateChannel(closure_129_2), done: false };
-          return obj11;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj12 = { value, done: true };
-        return obj12;
-      } else {
-        closure_129_7 = value;
-        channel = closure_130_10.getChannel(closure_129_7);
-        if (null == channel) {
-          const _Error = Error;
-          const error = new Error("Private channel not found");
-          throw error;
-        } else {
-          content = undefined;
-          if (null != closure_129_5) {
-            content = closure_130_1(closure_130_2[59]).parse(channel, closure_129_5).content;
-            const obj = closure_130_1(closure_130_2[59]);
-          }
-          const obj2 = closure_130_1(closure_130_2[57]);
-          obj2.sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
-          c4 = 3;
-          return { value: "IconComponent", done: "+352" };
-        }
-      }
-    } catch (tmp41) {
-      c4 = tmp;
-      throw tmp41;
-    }
+let closure_34 = async function _sendEmbeddedActivityInviteUser() {
+  await closure_130_1(closure_130_2[56]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
+  closure_129_6 = value;
+  await closure_130_1(closure_130_2[58]).ensurePrivateChannel(closure_129_2);
+  closure_129_7 = value;
+  const channel = closure_130_10.getChannel(closure_129_7);
+  if (null == channel) {
+    const _Error = Error;
+    const error = new Error("Private channel not found");
+    throw error;
   }
+  if (null != closure_129_5) {
+    const content = closure_130_1(closure_130_2[59]).parse(channel, closure_129_5).content;
+    closure_130_1(closure_130_2[59]);
+  }
+  closure_130_1(closure_130_2[57]).sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
+  await "IconComponent";
+  closure_1 = tmp2;
+  ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
+  return "Reflect";
 };
 let closure_35 = async function _validateTestMode(arg0) {
   if (c1 === 2) {
@@ -1268,7 +1122,7 @@ let closure_35 = async function _validateTestMode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1334,7 +1188,7 @@ let closure_36 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

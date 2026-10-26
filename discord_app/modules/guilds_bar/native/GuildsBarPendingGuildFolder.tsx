@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(17742);
+        let obj = id(17743);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(17742).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(17743).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -244,10 +244,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "secondary",
-          config: "lg",
-          externalChildren: null,
-          children: null,
+          preventClipping: "ex",
+          config: "is",
+          externalChildren: "hm",
+          children: "RESORT_THREADS",
         };
         const obj3 = id(5052);
         obj4.id = "" + id;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(17741).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(17742).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(12011).HourglassIcon, {});
+        obj4.children = jsx(id(11902).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -278,10 +278,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "secondary",
-          config: "lg",
-          externalChildren: null,
-          children: null,
+          preventClipping: "ex",
+          config: "is",
+          externalChildren: "hm",
+          children: "RESORT_THREADS",
         });
       },
 );

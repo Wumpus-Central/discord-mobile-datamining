@@ -7,7 +7,7 @@ import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 require = fn;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

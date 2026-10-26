@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != todos) {
           const obj4 = { style: tmp.panel, children: null };
           const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-          obj4.children = closure_6(tmp11(12440), obj5);
+          obj4.children = closure_6(tmp11(12423), obj5);
           tmp12 = closure_6(View, obj4);
         }
       }
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.onPress = onJumpToActivity;
       const tmp7 = _slicedToArray(noop.useState(false), 2);
       const items3 = [
-        closure_6(sharedValue(12344).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }),
+        closure_6(sharedValue(12252).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }),
       ];
       const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
       items3[1] = closure_6(View, {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp2(1128).intl;
         obj11.accessibilityLabel = intl2.string(tmp11(3830).Qp2isI);
         obj11.onPress = callback;
-        obj10.children = closure_6(tmp2(12501).ToggleIconButton, obj11);
+        obj10.children = closure_6(tmp2(12484).ToggleIconButton, obj11);
         tmp16Result = closure_6(View, obj10);
       }
       items4[1] = tmp16Result;

@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp32;
                                 obj2.hideLabel = tmp33;
                                 obj2.children = tmp50;
-                                const tmp57 = closure_6(textCompleted(12441), obj2);
+                                const tmp57 = closure_6(textCompleted(12424), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -831,7 +831,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp30 = closure_6(tmp(12441).ConjureNativeCollapsibleMeta, obj5);
+        const tmp30 = closure_6(tmp(12424).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -857,11 +857,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp15 = cResult[9];
   }
   if (cResult[10] !== tmp15) {
-    const groupAgentsByTodoResult = tmp(12324).groupAgentsByTodo(tmp15);
+    const groupAgentsByTodoResult = tmp(12309).groupAgentsByTodo(tmp15);
     cResult[10] = tmp15;
     cResult[11] = groupAgentsByTodoResult;
     let tmp17 = groupAgentsByTodoResult;
-    const tmpResult2 = tmp(12324);
+    const tmpResult2 = tmp(12309);
   } else {
     tmp17 = cResult[11];
   }
@@ -956,8 +956,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12310);
-  ({ completed, total } = agents(12310).todoProgress(todos));
+  let obj = agents(12294);
+  ({ completed, total } = agents(12294).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -970,7 +970,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     return null;
   }
   const intl = agents(1128).intl;
-  const todoProgressResult = agents(12310).todoProgress(todos);
+  const todoProgressResult = agents(12294).todoProgress(todos);
   const intl2 = agents(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3830)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -984,7 +984,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12441).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12424).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -1039,5 +1039,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12441), obj2);
+  return closure_6(flag2(12424), obj2);
 });

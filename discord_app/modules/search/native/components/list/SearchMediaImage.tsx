@@ -19,7 +19,7 @@ import SearchMessageStore from "../../../SearchMessageStore.tsx";
 
 const ObscureMediaModels = SpoilerIcon(7394);
 const ImageWarningIcon = SpoilerIcon(8552);
-const generated_SpoilerIcon = SpoilerIcon(13971);
+const generated_SpoilerIcon = SpoilerIcon(13973);
 require = fn;
 let closure_3 = ["attachment", "channelId", "authorId"];
 let closure_4 = ["embed", "sources", "messageId", "channelId", "authorId"];
@@ -244,11 +244,11 @@ let closure_19 = noop.memo(
                         if (cResult[12] === mediaWidth) {
                           if (cResult[13] === scale) {
                             if (cResult[15] !== tmp11) {
-                              const obscuredAlt = tmp(13109).getObscuredAlt(tmp11);
+                              const obscuredAlt = tmp(13112).getObscuredAlt(tmp11);
                               cResult[15] = tmp11;
                               cResult[16] = obscuredAlt;
                               let tmp20 = obscuredAlt;
-                              const tmpResult6 = tmp(13109);
+                              const tmpResult6 = tmp(13112);
                             } else {
                               tmp20 = cResult[16];
                             }
@@ -670,9 +670,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
       dependencyMap = undefined;
       const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(
-        12827,
+        12830,
       ).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-      const obj = attachment(12827);
+      const obj = attachment(12830);
       let num = attachment.flags;
       if (num == null) {
         num = 0;
@@ -942,8 +942,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         embed,
         Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }),
       );
-      closure_3 = embed(12827).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-      const obj = embed(12827);
+      closure_3 = embed(12830).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+      const obj = embed(12830);
       const tmp2 = embed;
       closure_4 = embed(6682).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
       const obj2 = embed(6682);

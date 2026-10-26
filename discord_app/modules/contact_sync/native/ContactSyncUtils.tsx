@@ -15,44 +15,106 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-let closure_18 = async function _uploadContacts() {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let flag = closure_1;
-  if (closure_1 === undefined) {
-    flag = false;
+let closure_18 = async function _uploadContacts(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          let body;
+          c4 = 1;
+          c5 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const _JSON = JSON;
+          closure_130_2 = JSON.parse(closure_130_0);
+          const request = {
+            url: closure_131_12.CONNECTION_SYNC_CONTACTS,
+            body: null,
+            trackedActionData: null,
+            rejectWithError: false,
+          };
+          const obj5 = {
+            friend_list_entries: closure_130_2,
+            background: closure_130_1,
+            allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO,
+            include_mutual_friends_count: false,
+          };
+          request.body = obj5;
+          const obj6 = { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
+          request.trackedActionData = obj6;
+          c4 = 2;
+          c5 = 1;
+          const obj7 = { value: closure_131_1(closure_131_2[7]).put(request), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        body = value.body;
+        const obj10 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
+        closure_131_1(closure_131_2[9]).dispatch(obj10);
+        c5 = 3;
+        const obj11 = { value: body, done: true };
+        return obj11;
+      }
+    } catch (tmp13) {
+      c5 = tmp;
+      throw tmp13;
+    }
   }
-  closure_130_1 = flag;
-  await "Reflect";
-  const _JSON = JSON;
-  closure_130_2 = JSON.parse(closure_130_0);
-  const request = {
-    url: closure_131_12.CONNECTION_SYNC_CONTACTS,
-    body: {
-      friend_list_entries: closure_130_2,
-      background: closure_130_1,
-      allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO,
-      include_mutual_friends_count: false,
-    },
-    trackedActionData: { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC },
-    rejectWithError: false,
-  };
-  await closure_131_1(closure_131_2[7]).put(request);
-  const body = value.body;
-  closure_131_1(closure_131_2[9]).dispatch({
-    type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
-    suggestions: body.friend_suggestions,
-  });
-  return body;
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(13582);
+const ContactSyncPersistedStore = fn(13584);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13581);
+const ContactSyncConstants = fn(13583);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,

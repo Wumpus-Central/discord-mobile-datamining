@@ -47,7 +47,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(19301, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(19311, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null,
   };

@@ -27,7 +27,7 @@ let closure_11 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_17 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -131,7 +131,7 @@ let closure_17 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -230,7 +230,7 @@ let closure_17 = async function _getNextOnboardingStep() {
 };
 const Constants = fn(1087);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(13581).ContactPermissions;
+const ContactPermissions = fn(13583).ContactPermissions;
 let closure_10 = fn(7868).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {
@@ -244,7 +244,7 @@ let closure_12 = asyncGeneratorStep(async () => {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -307,7 +307,7 @@ let closure_13 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

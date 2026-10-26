@@ -225,10 +225,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp;
       });
       const obj = channelId(504);
-      const isVoicePanelMounted = channelId(11571).useIsVoicePanelMounted(channelId);
-      const obj2 = channelId(11571);
-      const isVoicePanelOpen = channelId(11571).useIsVoicePanelOpen(channelId);
-      const obj3 = channelId(11571);
+      const isVoicePanelMounted = channelId(11572).useIsVoicePanelMounted(channelId);
+      const obj2 = channelId(11572);
+      const isVoicePanelOpen = channelId(11572).useIsVoicePanelOpen(channelId);
+      const obj3 = channelId(11572);
       const items1 = [MessageStore];
       const stateFromStores = channelId(504).useStateFromStores(
         items1,
@@ -255,15 +255,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [tmp.container, tmp10];
       obj5.style = items3;
       if (tmp5) {
-        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13161), onPress: channelId.onJumpToPresent };
-        let tmp12Result = jsx(screenIndex(13160), {
+        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13164), onPress: channelId.onJumpToPresent };
+        let tmp12Result = jsx(screenIndex(13163), {
           accessibilityLabel: stringResult,
-          icon: screenIndex(13161),
+          icon: screenIndex(13164),
           onPress: channelId.onJumpToPresent,
         });
-        const tmp16 = screenIndex(13160);
+        const tmp16 = screenIndex(13163);
       } else {
-        tmp12Result = jsx(tmp3(13162).MemoedVoicePanelDismissChatButton, {});
+        tmp12Result = jsx(tmp3(13165).MemoedVoicePanelDismissChatButton, {});
       }
       obj5.children = tmp12Result;
       return <View style={null}>{null}</View>;

@@ -60,25 +60,21 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
     if (!obj3.isConjureProjectMuted(UserSettingsProtoStore.settings, projectId)) {
       const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(message1);
       guildId = SelectedGuildStore.getGuildId();
-      if (null != guildId) {
-        if (ConjureProjectStore.getSelectedProjectId(guildId) === projectId) {
-          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
-            if (tmpResult.isWindowFocused()) {
-              if (!isSoundDisabledResult) {
-                SoundUtils.playSound(bit_message1, volume);
-                const tmp8Result = SoundUtils;
-              }
-            }
-            tmpResult = ConjurePlatformUtilsDefault;
+      if (ConjureProjectStore.getGlobalSelectedProjectId() === projectId) {
+        if (tmpResult.isWindowFocused()) {
+          if (!isSoundDisabledResult) {
+            SoundUtils.playSound(bit_message1, volume);
+            const tmp8Result = SoundUtils;
           }
         }
+        tmpResult = ConjurePlatformUtilsDefault;
       }
       let conjureWorkspaceGuildId = guildId;
       if (guildId == null) {
         conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(ConjureChatStore);
         const tmp8Result3 = ConjureUtils;
       }
-      const obj4 = {
+      const obj5 = {
         projectId,
         guildId: conjureWorkspaceGuildId,
         title,
@@ -88,19 +84,19 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
         volume: null,
       };
       const tmpResult2 = ConjurePlatformUtilsDefault;
-      obj4.body = conjureMentions.withConjureMentionNames(body);
+      obj5.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
         CHANNELResult = v65535.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
-      obj4.route = CHANNELResult;
-      let tmp26;
+      obj5.route = CHANNELResult;
+      let tmp25;
       if (!isSoundDisabledResult) {
-        tmp26 = bit_message1;
+        tmp25 = bit_message1;
       }
-      obj4.sound = tmp26;
-      obj4.volume = volume;
-      const result1 = tmpResult2.presentTurnNotification(obj4);
+      obj5.sound = tmp25;
+      obj5.volume = volume;
+      const result1 = tmpResult2.presentTurnNotification(obj5);
       const tmp8Result4 = conjureMentions;
     }
     obj3 = conjureProjectMute;

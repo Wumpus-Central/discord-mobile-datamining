@@ -25,7 +25,7 @@ function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(12529).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12512).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -492,7 +492,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.style = size;
         if (canSendVoiceMessage) {
           const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-          let tmp15Result = jsx(onSendMessage(13148), { disabled: stateFromStores1, channelId: channel.id });
+          let tmp15Result = jsx(onSendMessage(13151), { disabled: stateFromStores1, channelId: channel.id });
         } else {
           const obj9 = {
             active: true,
@@ -510,7 +510,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj9.accessibilityLabel = intl.string(tmp(1128).t.TXNS7S);
           obj9.onPress = onSendMessage;
           obj9.disabled = !tmp12;
-          tmp15Result = jsx(onSendMessage(12525), {
+          tmp15Result = jsx(onSendMessage(12508), {
             active: true,
             style: null,
             activeStyle: null,
@@ -520,7 +520,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             onPress: null,
             disabled: null,
           });
-          const tmp3Result = onSendMessage(12525);
+          const tmp3Result = onSendMessage(12508);
         }
         obj7.children = tmp15Result;
         return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;

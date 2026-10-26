@@ -11,8 +11,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13313).MultiAccountTokenStatus;
-let Constants = fn(13314);
+const MultiAccountTokenStatus = fn(13316).MultiAccountTokenStatus;
+let Constants = fn(13317);
 ({ MAX_ACCOUNTS: closure_7, MultiAccountSwitchLocation: closure_8 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AuthStates: c10 } = Constants);
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = navigation(576);
       navigation = navigation(1505).useNavigation();
       let obj2 = navigation(1505);
-      const multiAccountUsers = navigation(17366).useMultiAccountUsers().multiAccountUsers;
+      const multiAccountUsers = navigation(17367).useMultiAccountUsers().multiAccountUsers;
       if (cResult[0] !== navigation) {
         function handlePressUser(tokenStatus) {
           if (tokenStatus.tokenStatus === MultiAccountTokenStatus.INVALID) {
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -159,11 +159,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (value) {
                     tmp2(5210).hideActionSheet();
                     const obj = tmp2(5210);
-                    tmp5(13317).removeAccount(closure_129_0.id);
-                    const obj2 = tmp5(13317);
+                    tmp5(13320).removeAccount(closure_129_0.id);
+                    const obj2 = tmp5(13320);
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp23) {
                 c4 = tmp;
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj5 = {
                   themedColor: multiAccountUsers(587).colors.TEXT_LINK,
                   size: tmp(1202).Icon.Sizes.SMALL_20,
-                  source: multiAccountUsers(17368),
+                  source: multiAccountUsers(17369),
                 };
                 const tmp28 = closure_11(tmp(8951).FormRow.Icon, obj5);
                 let intl3 = tmp(1128).intl;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let obj6 = {
                       headerText: tmp13,
                       subHeader: tmp15,
-                      backgroundImageSource: multiAccountUsers(15106),
+                      backgroundImageSource: multiAccountUsers(15107),
                       backgroundImageCover: true,
                       contentStyle: tmp18,
                       children: tmp33,
@@ -437,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = navigation;
       cResult[4] = tmp8;
       tmp7 = tmp8;
-      let obj3 = navigation(17366);
+      let obj3 = navigation(17367);
     }
   : function ChooseAccount() {
       closure_2 = async function _handlePressRemove2(arg0) {
@@ -451,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -511,11 +511,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (value) {
                 tmp2(5210).hideActionSheet();
                 const obj = tmp2(5210);
-                tmp5(13317).removeAccount(closure_129_0.id);
-                const obj2 = tmp5(13317);
+                tmp5(13320).removeAccount(closure_129_0.id);
+                const obj2 = tmp5(13320);
               }
               c4 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl2 = require("util").intl;
       obj4.children = intl2.string(require("util").t["0M5fN7"]);
       obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-      obj3.backgroundImageSource = multiAccountUsers(15106);
+      obj3.backgroundImageSource = multiAccountUsers(15107);
       obj3.contentStyle = tmp.container;
       let obj5 = { style: tmp.mainCard, children: null };
       let items = [
@@ -555,8 +555,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 multiAccountUsers(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
                 const obj2 = multiAccountUsers(1267);
               } else {
-                closure_1_2(13317).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-                const obj = closure_1_2(13317);
+                closure_1_2(13320).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+                const obj = closure_1_2(13320);
               }
               return tmp4;
             },
@@ -577,8 +577,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_1_1(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
                   const obj2 = closure_1_1(1267);
                 } else {
-                  closure_1_2(13317).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-                  const obj = closure_1_2(13317);
+                  closure_1_2(13320).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+                  const obj = closure_1_2(13320);
                 }
                 return tmp4;
               };
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
             children: null,
           };
-          const tmp = multiAccountUsers(17367);
+          const tmp = multiAccountUsers(17368);
           obj2.children = closure_1_11(user(1202).Icon, {
             size: user(1202).Icon.Sizes.SMALL_20,
             source: multiAccountUsers(9032),
@@ -619,7 +619,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.leading = closure_11(require("Form").FormRow.Icon, {
         themedColor: multiAccountUsers(587).colors.TEXT_LINK,
         size: require("native").Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(17368),
+        source: multiAccountUsers(17369),
       });
       let intl3 = require("util").intl;
       obj6.label = intl3.string(require("util").t.bPP34Q);

@@ -30,7 +30,7 @@ function formatVoiceActivityTitle(arr, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(16652).HappeningNowCardTrackingType;
+let closure_8 = fn(16653).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

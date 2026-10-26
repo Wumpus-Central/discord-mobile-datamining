@@ -31,7 +31,7 @@ let closure_4 = async function _importAttachmentFromUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ let closure_7 = async function _deleteStagedAttachment(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_7 = async function _deleteStagedAttachment(arg0) {
         closure_130_0 = value;
         if (closure_130_0.ok) {
           c4 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -222,32 +222,95 @@ function getAttachmentUrl() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _getAttachmentUrl() {
-  closure_3 = tmp2;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let obj5 = closure_2;
-  if (closure_2 === undefined) {
-    obj5 = {};
+let closure_9 = async function _getAttachmentUrl(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let obj5 = closure_2;
+          if (closure_2 === undefined) {
+            obj5 = {};
+          }
+          let flag = obj5.download;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_131_6 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c5 = 2;
+          c6 = 1;
+          const obj7 = { value: closure_132_0(closure_132_1[2]).getMediaTicket(closure_131_0), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_131_3 = value;
+        ticket = closure_131_3.ticket;
+        baseUrl = closure_131_3.baseUrl;
+        const _URLSearchParams = URLSearchParams;
+        const obj9 = { ticket };
+        const uRLSearchParams = new URLSearchParams(obj9);
+        closure_131_6 = uRLSearchParams;
+        if (closure_131_2) {
+          const result = closure_131_6.set("download", "1");
+        }
+        const _HermesInternal = HermesInternal;
+        c6 = 3;
+        const obj = { value: "" + baseUrl + closure_132_11(closure_131_1) + "?" + closure_131_6, done: true };
+        return obj;
+      }
+    } catch (tmp23) {
+      c6 = tmp;
+      throw tmp23;
+    }
   }
-  let flag = obj5.download;
-  if (flag === undefined) {
-    flag = false;
-  }
-  closure_131_2 = flag;
-  await "Reflect";
-  await closure_132_0(closure_132_1[2]).getMediaTicket(closure_131_0);
-  closure_131_3 = value;
-  const ticket = closure_131_3.ticket;
-  const baseUrl = closure_131_3.baseUrl;
-  const _URLSearchParams = URLSearchParams;
-  const uRLSearchParams = new URLSearchParams({ ticket });
-  closure_131_6 = uRLSearchParams;
-  if (closure_131_2) {
-    const result = closure_131_6.set("download", "1");
-  }
-  const _HermesInternal = HermesInternal;
-  return "" + baseUrl + closure_132_11(closure_131_1) + "?" + closure_131_6;
 };
 let closure_10 = async function _isAttachmentAvailable(arg0) {
   if (c5 === 2) {
@@ -260,7 +323,7 @@ let closure_10 = async function _isAttachmentAvailable(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -298,8 +298,8 @@ export const isConjureProjectUnread = function isConjureProjectUnread(item) {
   }
   return tmp3;
 };
-export const getConjureProjectMentionCount = function getConjureProjectMentionCount(arg0) {
-  return ReadStateStore.getMentionCount(arg0, ReadStateTypes.CONJURING_PROJECT);
+export const getConjureProjectMentionCount = function getConjureProjectMentionCount(id) {
+  return ReadStateStore.getMentionCount(id, ReadStateTypes.CONJURING_PROJECT);
 };
 export const useConjureProjectBadge = tmp2;
 export const useConjureUnreadSummary = tmp3;

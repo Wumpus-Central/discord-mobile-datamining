@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 v1 = 1;
                 dependencyMap = 1;
-                const obj5 = { value: v1(12789).setCommunicationDisabledDuration(guildId, userId), done: false };
+                const obj5 = { value: v1(12792).setCommunicationDisabledDuration(guildId, userId), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj7.text = intl.string(tmp4(1128).t["/Mmbfv"]);
               v1(5663).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp9) {
             dependencyMap = tmp;

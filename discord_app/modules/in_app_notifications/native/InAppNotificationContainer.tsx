@@ -20,7 +20,7 @@ import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(13757);
+const InAppNotificationConstants = fn(13759);
 ({
   DEFAULT_ANIMATION_TIMING: closure_7,
   extrapolateConfig: closure_8,

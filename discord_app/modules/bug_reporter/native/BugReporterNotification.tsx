@@ -29,9 +29,9 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   obj.children = jsx(FastImageDefault, { source: { uri: notification.imageUri }, style: tmp.preview });
   let obj2 = { source: { uri: notification.imageUri }, style: tmp.preview };
   const tmp3 = <View style={tmp.rightAccessoryContainer}>{null}</View>;
-  return jsx(notification(13776).NotificationPressable, {
+  return jsx(notification(13778).NotificationPressable, {
     header: memo,
-    children: jsx(notification(13765).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(13767).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <View style={tmp.rightAccessoryContainer}>{null}</View>,
     onPress() {
       if (!BugReportStore.getField("isReportOpen")) {
@@ -46,7 +46,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         InAppNotificationActionCreatorsDefault.clearNotification();
         BugReportStore.setState({ isReportOpen: true });
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13785, dependencyMap.paths), {
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13787, dependencyMap.paths), {
           screenshotUri: null,
           screenshot: null,
         });

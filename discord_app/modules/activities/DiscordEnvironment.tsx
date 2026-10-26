@@ -37,7 +37,7 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(11462);
+const UIDensityConstants = fn(11463);
 ({
   RESPONSIVE_DENSITY_FALLBACK: closure_4,
   RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,

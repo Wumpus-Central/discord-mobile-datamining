@@ -18,7 +18,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Sections = fn(13603).Sections;
+const Sections = fn(13605).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4971);
@@ -370,7 +370,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
         }
         if (cResult[6] !== messagesTabLayout) {
           const fn2 = function y(user) {
-            const obj = { user: user.user, guildId: "Array", size: "Array" };
+            const obj = { user: user.user, guildId: "Array", size: false };
             const AvatarSizes = native.AvatarSizes;
             obj.size = ChannelListLayout.isLayoutCompact(messagesTabLayout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
             return React5(native.Avatar, obj, user.user.id);
@@ -428,7 +428,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
         children: noop.useMemo(() => {
           const substr = suggestedFriends.slice(2, 4);
           return substr.map((user) => {
-            const obj = { user: user.user, guildId: "Array", size: "Array" };
+            const obj = { user: user.user, guildId: "Array", size: false };
             const obj2 = suggestedFriends(messagesTabLayout[6]);
             const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
             obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)

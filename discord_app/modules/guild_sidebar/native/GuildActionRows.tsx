@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj2 = {
   container: {
-    marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -49,11 +49,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
     () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW,
   );
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11242, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11243, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(13273).ChannelModes.DEFAULT;
+  let SELECTED = guild(13276).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(13273).ChannelModes.SELECTED;
+    SELECTED = tmp5(13276).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13175).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13175).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13178).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13178).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(13273).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(13273);
-  obj5.icon = jsx(guild(13273).BaseChannelIcon, {
+  obj5.name = jsx(guild(13276).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(13276);
+  obj5.icon = jsx(guild(13276).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(15083).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15084).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

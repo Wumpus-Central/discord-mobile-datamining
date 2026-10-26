@@ -9,20 +9,17 @@ const require = fn;
 const View = fn(17).View;
 const ConjureConnectionStore = fn(10698);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
-const Routes = fn(1087).Routes;
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const ConjureCustomWidgetSheet = "ConjureCustomWidgetSheet";
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
-let closure_14 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/custom_widget/native/ConjureCustomWidgetSheet.tsx");
 
 export default function ConjureCustomWidgetSheet() {
   [value, importDefault] = memo.useState("");
-  const tmp = closure_14();
+  const tmp = closure_11();
   [tmp5, dependencyMap] = memo.useState(null);
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
@@ -42,10 +39,10 @@ export default function ConjureCustomWidgetSheet() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
+          const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -56,19 +53,12 @@ export default function ConjureCustomWidgetSheet() {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               value = tmp8;
               closure_128_0 = undefined;
               closure_128_1 = undefined;
-              closure_128_2 = function open(arg0) {
-                closure_0(1114).transitionTo(closure_2_9.CHANNEL(closure_1_5, constants.CONJURE, arg0));
-                const obj = closure_0(1114);
-                closure_1(5210).hideActionSheet(closure_2_13);
-                const obj2 = closure_1(5210);
-                closure_1(5210).hideAllActionSheets();
-              };
               const trimmed = first.trim();
               closure_128_0 = trimmed;
               if ("" !== trimmed) {
@@ -79,16 +69,16 @@ export default function ConjureCustomWidgetSheet() {
                     dependencyMap(null);
                     closure_128_1 = null;
                     c3 = 2;
-                    const obj6 = { guild_id: tmp62, install_scope: "user" };
+                    const obj6 = { guild_id: tmp65, install_scope: "user" };
                     c4 = 3;
                     c5 = 1;
-                    const obj7 = { value: value(tmp70[15]).createProject(obj6), done: false };
+                    const obj7 = { value: value(tmp73[11]).createProject(obj6), done: false };
                     return obj7;
                   }
                 }
               } else {
-                const intl = value(tmp70[11]).intl;
-                dependencyMap(intl.string(tmp4(tmp70[12]).AuyDIq));
+                const intl = value(tmp73[9]).intl;
+                dependencyMap(intl.string(tmp4(tmp73[10]).AuyDIq));
               }
               c5 = 3;
             }
@@ -96,14 +86,14 @@ export default function ConjureCustomWidgetSheet() {
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
-            throw tmp70;
+            throw tmp73;
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              closure_128_3 = tmp70;
+              closure_128_2 = tmp73;
               if (null == closure_128_1) {
-                closure_129_2(value(tmp70[17]).getConjureCreateErrorMessage(closure_128_3));
-                const obj3 = value(tmp70[17]);
+                closure_129_2(value(tmp73[14]).getConjureCreateErrorMessage(closure_128_2));
+                const obj3 = value(tmp73[14]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -118,26 +108,27 @@ export default function ConjureCustomWidgetSheet() {
             } else {
               closure_128_1 = value;
               closure_1_7(closure_128_1);
-              closure_1_8(closure_128_1, value(tmp70[16]).composeConjureCustomWidgetPrompt(closure_128_0));
-              closure_128_2(closure_128_1);
+              closure_1_8(closure_128_1, value(tmp73[12]).composeConjureCustomWidgetPrompt(closure_128_0));
+              tmp4(tmp73[13])(closure_128_1);
               c3 = 1;
-              let obj = value(tmp70[16]);
+              const obj = value(tmp73[12]);
             }
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
           }
-          closure_128_2(closure_128_1);
+          tmp4(tmp73[13])(closure_128_1);
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
           c5 = 3;
-          return { value: "IconComponent", done: "+352" };
-        } catch (tmp70) {
+          const obj9 = { value: undefined, done: true };
+          return obj9;
+        } catch (tmp73) {
           if (tmp5 === c3) {
             c5 = tmp3;
-            throw tmp70;
-          } else if (tmp2 === tmp72) {
+            throw tmp73;
+          } else if (tmp2 === tmp75) {
             c4 = tmp2;
           } else {
             c4 = tmp;
@@ -151,9 +142,9 @@ export default function ConjureCustomWidgetSheet() {
   let obj2 = { title: null };
   let intl = value(1128).intl;
   obj2.title = intl.string(_modDef3830.yI85oV);
-  obj.header = closure_11(value(7248).BottomSheetTitleHeader, obj2);
+  obj.header = closure_9(value(7248).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
-  const obj4 = {
+  let obj4 = {
     label: null,
     placeholder: null,
     description: null,
@@ -172,18 +163,18 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(14376).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(14377).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_11(value(7180).TextArea, obj4)];
-  let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
+  const items1 = [closure_9(value(7180).TextArea, obj4)];
+  const obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1128).intl;
   obj5.text = intl5.string(_modDef3830.MDZXiK);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_11(value(5244).Button, obj5);
+  items1[1] = closure_9(value(5244).Button, obj5);
   obj3.children = items1;
-  obj.children = closure_12(View, obj3);
-  return closure_11(value(7298).ActionSheet, obj);
+  obj.children = closure_10(View, obj3);
+  return closure_9(value(7298).ActionSheet, obj);
 }
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "ConjureCustomWidgetSheet";

@@ -60,7 +60,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "application" },
+      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -470,7 +470,7 @@ export default {
     };
     const obj2 = {
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "application" },
+      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     };
     const tmpResult2 = DispatcherDefault;
@@ -640,7 +640,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -784,7 +784,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

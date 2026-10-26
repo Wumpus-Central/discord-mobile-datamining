@@ -82,11 +82,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = stats(576).c(25);
       stats = stats.stats;
       if (cResult[0] !== stats) {
-        const perfModelSummaryResult = tmp(12542).perfModelSummary(stats);
+        const perfModelSummaryResult = tmp(12545).perfModelSummary(stats);
         cResult[0] = stats;
         cResult[1] = perfModelSummaryResult;
         let tmp4 = perfModelSummaryResult;
-        const tmpResult = tmp(12542);
+        const tmpResult = tmp(12545);
       } else {
         tmp4 = cResult[1];
       }
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConjurePerfTraceStatsHeader(stats) {
       stats = stats.stats;
-      const perfModelSummaryResult = stats(12542).perfModelSummary(stats);
+      const perfModelSummaryResult = stats(12545).perfModelSummary(stats);
       const tmp4 = closure_6();
       dependencyMap = styles();
       let obj2 = { style: tmp4.header, children: null };

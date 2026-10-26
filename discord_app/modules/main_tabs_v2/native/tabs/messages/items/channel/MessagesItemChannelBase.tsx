@@ -203,7 +203,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -225,7 +225,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -249,7 +249,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -272,7 +272,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -293,7 +293,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -315,7 +315,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -325,7 +325,7 @@ export default noop.memo(
           const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
           ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
           const tmpResult9 = tmp(504);
-          ({ isIncomingCall, isOngoingCall } = setIsPressed(17458)(channel.id));
+          ({ isIncomingCall, isOngoingCall } = setIsPressed(17459)(channel.id));
           const _Symbol3 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             class B {
@@ -342,7 +342,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -365,7 +365,7 @@ export default noop.memo(
                   obj1.activities = activities;
                   obj4 = obj1;
                 } else {
-                  obj4 = { status: "dispatch", activities: "ix" };
+                  obj4 = { status: "Array", activities: "Reflect" };
                 }
                 return obj4;
               }
@@ -396,7 +396,7 @@ export default noop.memo(
               }
             }
           }
-          const tmp20 = setIsPressed(17458)(channel.id);
+          const tmp20 = setIsPressed(17459)(channel.id);
           const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
           ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
           const _Symbol4 = Symbol;
@@ -776,7 +776,7 @@ export default noop.memo(
             const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
             let obj3 = obj2;
           } else {
-            obj3 = { status: "dispatch", activities: "ix" };
+            obj3 = { status: "Array", activities: "Reflect" };
           }
           return obj3;
         });

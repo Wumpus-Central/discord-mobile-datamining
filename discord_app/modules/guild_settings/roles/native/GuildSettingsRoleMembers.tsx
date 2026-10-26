@@ -131,7 +131,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19112, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(19122, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });

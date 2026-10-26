@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef14082 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef14084 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14080).PlayStationLinkModalScenes;
+let closure_4 = fn(14082).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
@@ -61,7 +61,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
         tmp12 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj7 = { uri: _modDef14082 };
+        const obj7 = { uri: _modDef14084 };
         cResult[4] = obj7;
         let tmp13 = obj7;
       } else {
@@ -131,7 +131,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
       const callback = noop.useCallback(() => {
         navigation.push(constants.PRE_CONNECT);
       }, items);
-      const memo1 = noop.useMemo(() => ({ uri: _modDef14082 }), []);
+      const memo1 = noop.useMemo(() => ({ uri: _modDef14084 }), []);
       const obj3 = {
         platformType: platformType.platformType,
         img: memo1,

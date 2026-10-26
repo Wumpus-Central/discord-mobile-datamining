@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -267,7 +267,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       c2 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp22) {
                     c2 = tmp;
@@ -370,7 +370,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -432,7 +432,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 dependencyMap = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp22) {
               dependencyMap = tmp;
@@ -452,7 +452,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -525,7 +525,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } catch (tmp24) {
               dependencyMap = tmp;
               throw tmp24;

@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     c3 = 2;
                     c4 = 1;
-                    const obj9 = { value: stateFromStores(16378).applyHexagonCampaignPerks(obj7), done: false };
+                    const obj9 = { value: stateFromStores(16379).applyHexagonCampaignPerks(obj7), done: false };
                     return obj9;
                   }
                 }
@@ -323,9 +323,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj12.perks = values.filter((item) => closure_1_5[item]);
             obj12.content = stateFromStores(6713).QuestContent.AD_PERK_MODAL;
             obj12.sourceQuestContent = stateFromStores(6713).QuestContent.QUEST_HOME_MOBILE;
-            const result = stateFromStores(15856).trackHexagonCampaignPerkAction(obj12);
-            obj4 = stateFromStores(15856);
-            tmp3(5210).hideActionSheet(stateFromStores(16376).HEXAGON_CAMPAIGN_SHEET_KEY);
+            const result = stateFromStores(15857).trackHexagonCampaignPerkAction(obj12);
+            obj4 = stateFromStores(15857);
+            tmp3(5210).hideActionSheet(stateFromStores(16377).HEXAGON_CAMPAIGN_SHEET_KEY);
             const _Object2 = Object;
             const values2 = Object.values(closure_129_5);
             const _Boolean = Boolean;

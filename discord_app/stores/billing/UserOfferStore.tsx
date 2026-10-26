@@ -83,7 +83,7 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F472}\u{1F3FE}",
+  userDiscounts: "\u{1F472}\u{1F3FC}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,

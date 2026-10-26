@@ -58,7 +58,7 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(17926).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(17935).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4971);
@@ -233,7 +233,7 @@ export default function ICYMITopicsScreen() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

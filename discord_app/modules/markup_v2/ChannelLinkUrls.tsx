@@ -16,7 +16,7 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
       channelId: tmp6[3],
       messageId: tmp6[4],
       parentChannelId: tmp6[2],
-      conversationId: "gap",
+      conversationId: "Array",
     };
     return obj3;
   } else {

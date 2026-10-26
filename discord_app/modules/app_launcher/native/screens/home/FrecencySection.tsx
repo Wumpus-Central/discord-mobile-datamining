@@ -25,7 +25,7 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12033).FrecencySectionSelection;
+let FrecencySectionSelection = fn(11924).FrecencySectionSelection;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -532,7 +532,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if (cResult[0] !== app.section.application) {
-          const appLauncherIconSource = tmp(12031).getAppLauncherIconSource(app.section.application);
+          const appLauncherIconSource = tmp(11922).getAppLauncherIconSource(app.section.application);
           cResult[0] = app.section.application;
           cResult[1] = appLauncherIconSource;
           class A {
@@ -555,7 +555,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmpResult = tmp(12031);
+          const tmpResult = tmp(11922);
         }
         const tmp8 = disabled ? tmp5.appContainerDisabled : tmp5.appContainer;
         const application = app.section.application;
@@ -727,7 +727,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == app.section) {
         return null;
       } else {
-        const appLauncherIconSource = app(12031).getAppLauncherIconSource(app.section.application);
+        const appLauncherIconSource = app(11922).getAppLauncherIconSource(app.section.application);
         let obj = {
           style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
           disabled,
@@ -763,7 +763,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items = [tmp3];
         const obj3 = { submitting, style: tmp.submittingOverlay };
-        items[1] = closure_13(app(12040).SubmittingOverlay, obj3);
+        items[1] = closure_13(app(11931).SubmittingOverlay, obj3);
         obj.children = items;
         return closure_14(app(6908).PressableOpacity, obj, app.applicationId);
       }

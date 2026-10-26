@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = connection(576).c(24);
       const tmp4 = closure_7();
       let obj = connection(576);
-      const mcpConnectionPanel = connection(12258).useMcpConnectionPanel(projectId.projectId);
+      const mcpConnectionPanel = connection(12207).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, failed, mint } = mcpConnectionPanel);
       if (cResult[0] !== connection) {
@@ -212,12 +212,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2[2] = closure_6(View, obj15);
         const obj20 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp(1128).intl;
-        const obj21 = { time: tmp(12259).formatMcpConnectionExpiry(connection) };
+        const obj21 = { time: tmp(12208).formatMcpConnectionExpiry(connection) };
         obj20.children = intl7.format(mint(3830).EQ8k1i, obj21);
         items2[3] = closure_5(tmp(5234).Text, obj20);
         obj11.children = items2;
         let tmp16 = closure_6(View, obj11);
-        const tmpResult = tmp(12259);
+        const tmpResult = tmp(12208);
       } else {
         tmp16 = null;
         if (loading) {
@@ -235,13 +235,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ actions: tmp3[11], section } = tmp4);
       cResult[12] = section;
       cResult[13] = tmp16;
-      let obj2 = connection(12258);
+      let obj2 = connection(12207);
     }
   : function ConjureConnectToolSheet(projectId) {
       let connection;
       mint = undefined;
       const tmp = closure_7();
-      const mcpConnectionPanel = connection(12258).useMcpConnectionPanel(projectId.projectId);
+      const mcpConnectionPanel = connection(12207).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, mint } = mcpConnectionPanel);
       const items = [connection];
@@ -311,12 +311,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3[2] = closure_6(View, obj10);
         const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp2(1128).intl;
-        const obj16 = { time: tmp2(12259).formatMcpConnectionExpiry(connection) };
+        const obj16 = { time: tmp2(12208).formatMcpConnectionExpiry(connection) };
         obj15.children = intl7.format(tmp8(3830).EQ8k1i, obj16);
         items3[3] = closure_5(tmp2(5234).Text, obj15);
         obj6.children = items3;
         let tmp7Result = closure_6(View, obj6);
-        const tmp2Result = tmp2(12259);
+        const tmp2Result = tmp2(12208);
       } else {
         tmp7Result = null;
         if (loading) {

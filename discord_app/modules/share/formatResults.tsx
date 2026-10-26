@@ -34,7 +34,7 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -61,13 +61,13 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
             return obj6;
           } else {
             c1 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         }
       } else if (1 === tmp6) {
         c4 = 0;
         c1 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
@@ -156,7 +156,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(12905).isAllowedType;
+const isAllowedType = fn(12908).isAllowedType;
 const Constants = fn(1087);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const size = fn(2);

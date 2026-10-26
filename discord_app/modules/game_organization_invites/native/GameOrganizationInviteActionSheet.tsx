@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== stateFromStores) {
         let tmp8 = null;
         if (null != stateFromStores) {
-          tmp8 = stateFromStores(11316)(stateFromStores);
+          tmp8 = stateFromStores(11317)(stateFromStores);
         }
         cResult[3] = stateFromStores;
         cResult[4] = tmp8;
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       let tmp5 = null;
       if (null != stateFromStores) {
-        tmp5 = stateFromStores(11316)(stateFromStores);
+        tmp5 = stateFromStores(11317)(stateFromStores);
       }
       dependencyMap = tmp5;
       const tmp7 = closure_6((arg0) => {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp16Result = closure_10(closure_14, {});
       } else {
         const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp16Result = closure_10(stateFromStores(15211), obj8);
+        tmp16Result = closure_10(stateFromStores(15212), obj8);
       }
       obj2.children = tmp16Result;
       return closure_10(guildId(7298).ActionSheet, obj2);

@@ -115,8 +115,8 @@ import SegmentedControlPages from "components/SegmentedControl/native/SegmentedC
 import Modal from "components/Modal/native/Modal.native.tsx";
 import CameraLottie from "components/LottieIcon/native/generated/CameraLottie.tsx";
 import ThemeContextProvider_RootThemeContextProvider from "components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
-import Tabs_Tabs from "components/Tabs/native/Tabs.native.tsx";
 import AILoader from "visual-identities/ai/AILoader/AILoader.native.tsx";
+import Tabs_Tabs from "components/Tabs/native/Tabs.native.tsx";
 import TagGroup from "components/TagGroup/native/TagGroup.native.tsx";
 import ToggleIconButton from "components/Button/native/ToggleIconButton.native.tsx";
 import useToggleButtonProps from "components/Button/native/useToggleButtonProps.native.tsx";

@@ -51,10 +51,10 @@ export const compareConjureProjectsByUpdatedAt = function compareConjureProjects
   }
   return num;
 };
-export const conjureProjectGuildId = function conjureProjectGuildId(guild_id) {
-  guild_id = guild_id.guild_id;
+export const conjureProjectGuildId = function conjureProjectGuildId(project) {
+  let guild_id = project.guild_id;
   if (guild_id == null) {
-    guild_id = guild_id.preview_guild_id;
+    guild_id = project.preview_guild_id;
   }
   if (guild_id == null) {
     guild_id = null;

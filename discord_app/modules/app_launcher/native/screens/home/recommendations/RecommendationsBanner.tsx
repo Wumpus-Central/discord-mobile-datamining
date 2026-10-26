@@ -124,8 +124,8 @@ let closure_10 = noop.memo(
       }
     : function RecommendationBannerEmbedded(applicationId) {
         let heroMediaDimensions;
-        let obj = heroMediaDimensions(11168);
-        heroMediaDimensions = heroMediaDimensions(12074).useHeroMediaDimensions({
+        let obj = heroMediaDimensions(11169);
+        heroMediaDimensions = heroMediaDimensions(11965).useHeroMediaDimensions({
           width: obj.useRequiredAppLauncherContext().width,
         });
         const tmp4 = useEmbeddedActivityBackgroundDefault({

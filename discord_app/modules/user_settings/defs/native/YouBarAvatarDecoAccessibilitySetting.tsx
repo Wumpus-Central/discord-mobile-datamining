@@ -5,7 +5,7 @@ import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreato
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

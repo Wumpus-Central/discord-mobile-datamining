@@ -18,7 +18,7 @@ let closure_11 = async function _requestAndSyncContacts() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _requestAndSyncContacts() {
           if (null == phone) {
             c4 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else {
             c5 = 2;
             c6 = 1;
@@ -115,13 +115,13 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13582);
+const ContactSyncPersistedStore = fn(13584);
 ({
   setStoredContacts: hasOwnProperty,
   deleteStoredContacts: metroRequire,
   useContactSyncStore: closure_7,
 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(13581).ContactPermissions;
+const ContactPermissions = fn(13583).ContactPermissions;
 const PlatformTypes = fn(1087).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

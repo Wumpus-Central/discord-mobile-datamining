@@ -15,7 +15,7 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import FakePlaceholderPrivateChannel from "../../../../channel/FakePlaceholderPrivateChannel.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
-import _modDef10860 from "../../../../../../_runtime/metro/10860__.js";
+import _modDef10861 from "../../../../../../_runtime/metro/10861__.js";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
 import getGroupDMRecipientLimitDefault from "../../../../group_dm/getGroupDMRecipientLimit.tsx";
 import GroupDMNitroCapExperimentDefault from "../../../../group_dm/GroupDMNitroCapExperiment.tsx";
@@ -104,7 +104,7 @@ let closure_24 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -356,8 +356,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj = first(584);
                       obj2.channel = {
                         id: length(7323).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-                        guild_id: "Array",
-                        parent_id: "application",
+                        guild_id: "r",
+                        parent_id: "toCharArray$esjava$1",
                       };
                       obj.dispatch(obj2);
                     };
@@ -444,8 +444,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj = first(584);
                     obj2.channel = {
                       id: length(7323).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-                      guild_id: "Array",
-                      parent_id: "application",
+                      guild_id: "r",
+                      parent_id: "toCharArray$esjava$1",
                     };
                     obj.dispatch(obj2);
                   };
@@ -497,8 +497,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = first(584);
                   obj2.channel = {
                     id: length(7323).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-                    guild_id: "Array",
-                    parent_id: "application",
+                    guild_id: "r",
+                    parent_id: "toCharArray$esjava$1",
                   };
                   obj.dispatch(obj2);
                 };
@@ -546,7 +546,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -658,7 +658,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -756,8 +756,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = first(584);
               obj2.channel = {
                 id: length(7323).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-                guild_id: "Array",
-                parent_id: "application",
+                guild_id: "r",
+                parent_id: "toCharArray$esjava$1",
               };
               obj.dispatch(obj2);
             };
@@ -959,7 +959,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData2;
       if (recipientLimit.usePersonLimitCopy) {
         let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-        return closure_17(recipientLimit(18210), obj2);
+        return closure_17(recipientLimit(18219), obj2);
       } else {
         const obj3 = { style: tmp.header, children: null };
         const obj4 = { title };
@@ -1019,7 +1019,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { portal: tmp(1384).isAndroid() };
-          const tmp15 = closure_17(tmp(12013).PortalKeyboardRenderer, obj3);
+          const tmp15 = closure_17(tmp(11904).PortalKeyboardRenderer, obj3);
           cResult[6] = tmp15;
           let tmp13 = tmp15;
           const tmpResult = tmp(1384);
@@ -1112,7 +1112,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         secondaryTextFieldRef: tagListInputRef,
       };
       obj4.portal = channelId(1384).isAndroid();
-      items1[1] = closure_17(channelId(12013).PortalKeyboardRenderer, obj4);
+      items1[1] = closure_17(channelId(11904).PortalKeyboardRenderer, obj4);
       obj2.children = items1;
       obj.children = closure_18(View, obj2);
       return closure_17(View, obj);
@@ -1492,7 +1492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "+352" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -1661,8 +1661,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       require("GroupDMNitroUpsellModel");
       enabled = config.enabled;
       if (enabled) {
-        enabled = tmp15(11292).isGroupDMNitroUpsellAudience(tmp18);
-        const tmp15Result = tmp15(11292);
+        enabled = tmp15(11293).isGroupDMNitroUpsellAudience(tmp18);
+        const tmp15Result = tmp15(11293);
       }
       const items2 = [navigation, selectedUserIds.length, tmp11, tmp14, result];
       const layoutEffect = obj.useLayoutEffect(() => {
@@ -1704,7 +1704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -1826,7 +1826,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (constants) {
           if (stateFromStores) {
             const obj = {
-              icon: _modDef10860,
+              icon: _modDef10861,
               IconComponent: GroupPlusIcon.GroupPlusIcon,
               label: null,
               iconVariant: "default",

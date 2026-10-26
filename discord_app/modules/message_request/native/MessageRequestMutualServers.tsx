@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp3 = closure_6();
       const obj = iconSize(576);
-      const mutualGuildsForMessageRequests = PressableOpacity(18335).useMutualGuildsForMessageRequests(userId);
+      const mutualGuildsForMessageRequests = PressableOpacity(18344).useMutualGuildsForMessageRequests(userId);
       if (cResult[0] === mutualGuildsForMessageRequests.length) {
         if (cResult[1] === iconSize) {
           if (cResult[2] === mutualGuildsForMessageRequests) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               names: substr.map((name) => name.name),
               children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)),
             };
-            tmp13 = closure_4(PressableOpacity(13543).GuildIconPile, obj6);
+            tmp13 = closure_4(PressableOpacity(13545).GuildIconPile, obj6);
           }
           cResult[0] = length;
           cResult[1] = iconSize;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = items1;
         tmp12 = items1;
       }
-      const PressableOpacityResult = PressableOpacity(18335);
+      const PressableOpacityResult = PressableOpacity(18344);
     }
   : function MessageRequestMutualServers(textVariant) {
       ({ onPress, iconSize } = textVariant);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const suffix = textVariant.suffix;
       const tmp3 = closure_6();
-      const mutualGuildsForMessageRequests = iconSize(18335).useMutualGuildsForMessageRequests(userId);
+      const mutualGuildsForMessageRequests = iconSize(18344).useMutualGuildsForMessageRequests(userId);
       const substr = mutualGuildsForMessageRequests.slice(0, 3);
       if (mutualGuildsForMessageRequests.length > 0) {
         const intl2 = tmp4(1128).intl;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           names: substr.map((name) => name.name),
           children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)),
         };
-        tmp9 = closure_4(tmp4(13543).GuildIconPile, obj4);
+        tmp9 = closure_4(tmp4(13545).GuildIconPile, obj4);
       }
       const items1 = [tmp9];
       const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

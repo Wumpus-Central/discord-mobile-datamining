@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13513 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-2x.png.js";
-import _modDef13617 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-1x.png.js";
-import _modDef13618 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-3x.png.js";
+import _modDef13516 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-2x.png.js";
+import _modDef13619 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-1x.png.js";
+import _modDef13620 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PencilIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13617 }, 3: null };
-const obj2 = { uri: _modDef13617 };
-obj[2] = { uri: _modDef13513 };
-const obj3 = { uri: _modDef13513 };
-obj[3] = { uri: _modDef13618 };
+let obj = { 1: null, 2: { uri: _modDef13619 }, 3: null };
+const obj2 = { uri: _modDef13619 };
+obj[2] = { uri: _modDef13516 };
+const obj3 = { uri: _modDef13516 };
+obj[3] = { uri: _modDef13620 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13618 };
+const obj4 = { uri: _modDef13620 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PencilIllocon.native.tsx");
 

@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17361).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17362);
+let closure_6 = fn(17362).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17363);
 ({
   authStateToRegisterTransitionStep: closure_7,
   RegisterTransitionSteps: closure_8,
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_7 = noop.useRef(false);
       const context = noop.useContext(require("Auth").TrackRegistrationContext);
       const tmp4 = _slicedToArray(noop.useState(false), 2);
-      onPhoneTokenReceived(17378)(closure_7(sourceState));
+      onPhoneTokenReceived(17379)(closure_7(sourceState));
       const items = [context];
       const effect = noop.useEffect(() => {
         if (_undefined()) {
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               _undefined(false);
               c3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             c3 = tmp;
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading: null,
         disableKeyboardAvoidingView: true,
       };
-      const tmp7 = onPhoneTokenReceived(17378);
+      const tmp7 = onPhoneTokenReceived(17379);
       obj.codeType = require("CodeField").CodeType.NUMERIC;
       obj.footer = memo;
       obj.disabled = tmp5;

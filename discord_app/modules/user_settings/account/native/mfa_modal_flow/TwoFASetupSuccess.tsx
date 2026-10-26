@@ -7,7 +7,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod16057 from "../../../../../../_runtime/metro/16057__.js";
+import _mod16058 from "../../../../../../_runtime/metro/16058__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(16045).close();
+              setError(16046).close();
               c4 = 0;
-              setError(16045);
+              setError(16046);
             }
             return value;
           });
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[2];
       }
       if (cResult[3] !== tmp4.image) {
-        const obj3 = { source: _mod16057, style: tmp4.image };
+        const obj3 = { source: _mod16058, style: tmp4.image };
         const tmp18 = closure_7(FastImageDefault, obj3);
         cResult[3] = tmp4.image;
         cResult[4] = tmp18;
@@ -328,28 +328,88 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp5, importDefault] = noop.useState("");
       const callback = noop.useCallback(() => {
         setRegistering = async function _onRegisterSuccess2(arg0) {
-          closure_2 = tmp3;
-          ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
-          await "Reflect";
-          const intl = setRegistering(1128).intl;
-          await closure_2_0(6677).finishRegisterWebAuthnCredential(
-            intl.string(closure_2_0(1128).t["8H5RmH"]),
-            closure_129_0,
-            closure_129_1,
-          );
-          if (2 === tmp8) {
-            c4 = 0;
-            tmp5(tmp19.body.message);
+          if (c6 === 2) {
             c6 = 3;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            setError(16045).close();
-            c4 = 0;
-            setError(16045);
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp7 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_2 = tmp3;
+                  closure_129_0 = undefined;
+                  closure_129_1 = undefined;
+                  ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+                  c5 = 1;
+                  c6 = 1;
+                  return { value: "Reflect", done: true };
+                }
+              } else if (1 === tmp8) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
+                } else {
+                  c4 = 1;
+                  const intl = setRegistering(1128).intl;
+                  c5 = 3;
+                  c6 = 1;
+                  const obj5 = {
+                    value: setRegistering(6677).finishRegisterWebAuthnCredential(
+                      intl.string(setRegistering(1128).t["8H5RmH"]),
+                      closure_129_0,
+                      closure_129_1,
+                    ),
+                    done: false,
+                  };
+                  return obj5;
+                }
+              } else {
+                if (2 === tmp8) {
+                  c4 = 0;
+                  tmp5(tmp19.body.message);
+                  c6 = 3;
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 !== 2) {
+                  setError(16046).close();
+                  c4 = 0;
+                  const obj = setError(16046);
+                }
+                c4 = 0;
+                c6 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              }
+            } catch (tmp19) {
+              if (tmp4 === c4) {
+                c6 = tmp2;
+                throw tmp19;
+              } else {
+                c5 = tmp;
+              }
+            }
           }
-          return value;
         };
         setError("");
         setError(dependencyMap[12]).registerPasskey({
@@ -367,15 +427,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         });
       }, []);
-      const obj = { style: tmp.container, children: null };
+      let obj = { style: tmp.container, children: null };
       const items = [closure_7(View, { style: tmp.flex }), , , , , , ,];
-      const obj3 = { source: null, style: null };
-      const obj2 = { style: tmp.flex };
+      let obj3 = { source: null, style: null };
+      let obj2 = { style: tmp.flex };
       const tmp4 = _slicedToArray(noop.useState(""), 2);
-      obj3.source = _mod16057;
+      obj3.source = _mod16058;
       obj3.style = tmp.image;
       items[1] = closure_7(FastImageDefault, obj3);
-      const obj4 = {
+      let obj4 = {
         style: tmp.success,
         variant: "text-lg/semibold",
         color: "mobile-text-heading-primary",
@@ -384,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl = util.intl;
       obj4.children = intl.string(util.t.Awk3Gw);
       items[2] = closure_7(Text_Text.Text, obj4);
-      const obj5 = { style: tmp.successBody, children: null };
+      let obj5 = { style: tmp.successBody, children: null };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t["0d1bXM"]);
       items[3] = closure_7(native.LegacyText, obj5);

@@ -11,7 +11,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildFeedConstants = fn(18004);
+const GuildFeedConstants = fn(18013);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1087).GuildFeatures;
@@ -194,7 +194,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           ({ width, height } = tmp7(1499)());
           const tmp30 = tmp7(1499)();
           const _Math = Math;
-          const drawerWidth = tmp(11224).useDrawerWidth();
+          const drawerWidth = tmp(11225).useDrawerWidth();
           const bound1 = Math.min(width, height);
           if (tmp29) {
             const _Math2 = Math;
@@ -349,7 +349,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                             },
                                             children: null,
                                           };
-                                          const obj13 = { style: tmp4.publicIcon, source: tmp7(18007) };
+                                          const obj13 = { style: tmp4.publicIcon, source: tmp7(18016) };
                                           const items5 = [closure_10(tmp(1202).Icon, obj13)];
                                           const obj14 = {
                                             variant: "text-xs/medium",
@@ -506,9 +506,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               tmp37 = tmp18;
             } else {
               if (tmpResult7.isThemeDark(tmp9)) {
-                let tmp7Result5 = tmp7(18005);
+                let tmp7Result5 = tmp7(18014);
               } else {
-                tmp7Result5 = tmp7(18006);
+                tmp7Result5 = tmp7(18015);
               }
               tmpResult7 = tmp(4978);
             }
@@ -518,7 +518,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[23] = tmp35;
           cResult[24] = items11;
           tmp36 = items11;
-          const tmpResult6 = tmp(11224);
+          const tmpResult6 = tmp(11225);
         }
       }
       const features = guild.features;
@@ -608,7 +608,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       width = size.width;
       height = size.height;
       const tmp2Result4 = guild(504);
-      drawerWidth = guild(11224).useDrawerWidth();
+      drawerWidth = guild(11225).useDrawerWidth();
       const items4 = [width, height, tmp12, drawerWidth];
       let obj4 = { style: tmp.container, children: null };
       const memo1 = obj3.useMemo(() => {
@@ -690,7 +690,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               },
               children: null,
             };
-            const obj18 = { style: tmp.publicIcon, source: tmp6(18007) };
+            const obj18 = { style: tmp.publicIcon, source: tmp6(18016) };
             const items11 = [closure_10(tmp2(1202).Icon, obj18)];
             const obj19 = { variant: "text-xs/medium", color: "text-default", children: null };
             let intl = tmp2(1128).intl;
@@ -729,13 +729,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         return closure_11(tmp16, obj4);
       } else {
         if (tmp2Result6.isThemeDark(tmp8)) {
-          let tmp6Result2 = tmp6(18005);
+          let tmp6Result2 = tmp6(18014);
         } else {
-          tmp6Result2 = tmp6(18006);
+          tmp6Result2 = tmp6(18015);
         }
         tmp2Result6 = tmp2(4978);
       }
-      const tmp2Result5 = guild(11224);
+      const tmp2Result5 = guild(11225);
     };
 ReactCompilerGating = fn(558);
 let obj6 = {

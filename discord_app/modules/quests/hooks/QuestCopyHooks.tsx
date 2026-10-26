@@ -25,7 +25,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1128);
 const utils_QuestUtils = v1votF6(7796);
-const SponsoredQuestUtils = v1votF6(14139);
+const SponsoredQuestUtils = v1votF6(14141);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -1785,7 +1785,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1825,7 +1825,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = sourceQuestContent;
           tmp4(preCtaClick[27]).openGameLinkDirectly(tmp4, obj6);
           v3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -1865,7 +1865,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1905,7 +1905,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = closure_128_4;
           tmp4(9607).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

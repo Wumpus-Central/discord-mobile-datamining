@@ -32,7 +32,7 @@ let closure_10 = async function _persistPendingEdit() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Failed to take ownership of apply; current is", NotifSettingsProtoStore.applyingEdit);
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               const protoToB64Result = user_settings_UserSettingsUtils.protoToB64(
                 notification_settings.DeclarativeSettings,
@@ -95,7 +95,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Not persisting proto because there is nothing to change");
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             c7 = 3;
@@ -231,7 +231,7 @@ let closure_11 = async function _reload() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

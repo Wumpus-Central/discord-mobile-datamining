@@ -13,8 +13,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef15104 from "../../../../../_runtime/metro/15104__.js";
-import _modDef15106 from "../../../../../_runtime/metro/15106__.js";
+import _modDef15105 from "../../../../../_runtime/metro/15105__.js";
+import _modDef15107 from "../../../../../_runtime/metro/15107__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -321,7 +321,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { scale };
-          const tmp18 = closure_7(tmp(15107).QrLoginSpotIllustration, obj4);
+          const tmp18 = closure_7(tmp(15108).QrLoginSpotIllustration, obj4);
           cResult[7] = tmp18;
           let tmp15 = tmp18;
         } else {
@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_10();
       const top = useSafeAreaInsetsDefault().top;
       if (cResult[0] !== tmp3.imageStyle) {
-        const obj2 = { source: _modDef15106, style: tmp3.imageStyle };
+        const obj2 = { source: _modDef15107, style: tmp3.imageStyle };
         const tmp8 = React5(FastImageDefault, obj2);
         cResult[0] = tmp3.imageStyle;
         cResult[1] = tmp8;
@@ -870,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: null, source: null };
       const items1 = [tmp3.logo, tmp9];
       obj8.style = items1;
-      obj8.source = _modDef15104;
+      obj8.source = _modDef15105;
       const tmp12 = React5(FastImageDefault, obj8);
       cResult[4] = tmp3.logo;
       cResult[5] = tmp9;
@@ -881,12 +881,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function RemoteAuth(arg0) {
       const tmp = closure_10();
       const obj = { style: tmp.background, children: null };
-      const obj2 = { source: _modDef15106, style: tmp.imageStyle };
+      const obj2 = { source: _modDef15107, style: tmp.imageStyle };
       const items = [React5(FastImageDefault, obj2), ,];
       const obj3 = { style: null, source: null };
       const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
       obj3.style = items1;
-      obj3.source = _modDef15104;
+      obj3.source = _modDef15105;
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.mainCard, children: null };

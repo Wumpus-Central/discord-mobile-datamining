@@ -64,7 +64,7 @@ function LaunchpadChannelIcon(channel) {
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp36 = closure_8(tmp13(12203).ChannelIcon, obj3);
+        const tmp36 = closure_8(tmp13(12096).ChannelIcon, obj3);
         cResult[9] = channel2;
         cResult[10] = tmp36;
         let tmp34 = tmp36;
@@ -100,7 +100,7 @@ function LaunchpadChannelIcon(channel) {
     obj8.children = closure_8(GuildIconDefault, obj9);
     const items3 = [closure_8(View, obj8)];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
-    items3[1] = closure_8(channel(12203).ChannelIcon, obj10);
+    items3[1] = closure_8(channel(12096).ChannelIcon, obj10);
     obj7.children = items3;
     return closure_10(closure_9, obj7);
   }

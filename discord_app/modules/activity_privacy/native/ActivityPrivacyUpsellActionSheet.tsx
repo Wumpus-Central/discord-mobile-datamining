@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const settingName = direction.settingName;
-      const tmp4 = direction === direction(16142).ChangeDirection.RESTRICTING;
+      const tmp4 = direction === direction(16143).ChangeDirection.RESTRICTING;
       if (cResult[0] === tmp4) {
         if (cResult[1] === settingName) {
           let tmp5 = cResult[2];
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7 };
-          const tmp11 = jsx(affectedGuildIds(16144), {
+          const tmp11 = jsx(affectedGuildIds(16145), {
             direction,
             affectedGuildIds,
             title,
@@ -69,18 +69,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = fn;
       }
       const obj = direction(576);
-      const upsellStrings = direction(16142).getUpsellStrings(tmp4, settingName);
+      const upsellStrings = direction(16143).getUpsellStrings(tmp4, settingName);
       cResult[0] = tmp4;
       cResult[1] = settingName;
       cResult[2] = upsellStrings;
       tmp5 = upsellStrings;
-      const tmpResult = direction(16142);
+      const tmpResult = direction(16143);
     }
   : function ActivityPrivacyUpsellActionSheet(direction) {
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
-      const upsellStrings = direction(16142).getUpsellStrings(
-        direction === direction(16142).ChangeDirection.RESTRICTING,
+      const upsellStrings = direction(16143).getUpsellStrings(
+        direction === direction(16143).ChangeDirection.RESTRICTING,
         direction.settingName,
       );
       const items = [direction, affectedGuildIds];
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onConfirm = noop.useCallback(() => {
         const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
       }, items);
-      return jsx(affectedGuildIds(16144), {
+      return jsx(affectedGuildIds(16145), {
         direction,
         affectedGuildIds,
         title,

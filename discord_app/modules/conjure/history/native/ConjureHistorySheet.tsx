@@ -222,20 +222,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     tmp5 = cResult[6];
   }
   let obj = renderItem(576);
-  const tmpResult = renderItem(11879);
-  const mapped = renderItem(11879).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
+  const tmpResult = renderItem(11768);
+  const mapped = renderItem(11768).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
   cResult[0] = getMs;
   cResult[1] = items;
   cResult[2] = nowMs;
   cResult[3] = renderItem;
   cResult[4] = mapped;
-  const groupHistoryByDayResult = renderItem(11879).groupHistoryByDay(items, getMs, nowMs);
+  const groupHistoryByDayResult = renderItem(11768).groupHistoryByDay(items, getMs, nowMs);
 }) : (function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(11879);
-  obj.children = renderItem(11879).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(11768);
+  obj.children = renderItem(11768).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     const items = label.items;
@@ -1439,7 +1439,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
       }
       if (cResult[12] !== segmentedControlState) {
         const obj5 = { state: segmentedControlState };
-        const tmp24 = closure_7(onChange(11852).Tabs, obj5);
+        const tmp24 = closure_7(onChange(12204).Tabs, obj5);
         cResult[12] = segmentedControlState;
         cResult[13] = tmp24;
         let tmp22 = tmp24;
@@ -1501,7 +1501,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   });
   let intl = onChange(1128).intl;
   obj3.accessibilityLabel = intl.string(_modDef3830["/2GnYy"]);
-  obj3.children = closure_7(onChange(11852).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(12204).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 });
 const size = fn(2);
@@ -1519,14 +1519,14 @@ export default function ConjureHistorySheet(projectId) {
   let onSaveBackup;
   const tmp3 = onSaveBackup(onRestoreVersion(1633)().bottom + onRestoreVersion(587).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(12274)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(12223)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(11806)(projectId);
+  const tmp10 = onRestoreVersion(12154)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -1540,7 +1540,7 @@ export default function ConjureHistorySheet(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1584,7 +1584,7 @@ export default function ConjureHistorySheet(projectId) {
             tmp3();
           }
           v3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp32) {
         closure_4 = tmp32;
@@ -1630,7 +1630,7 @@ export default function ConjureHistorySheet(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1647,7 +1647,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(12265).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(12214).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -1743,7 +1743,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(12276, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(12225, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -1769,12 +1769,12 @@ export default function ConjureHistorySheet(projectId) {
     let tmp16Result = tmp15(closure_15, obj6);
   } else if ("publishes" === tmp5) {
     let obj7 = { projectId };
-    tmp16Result = tmp15(tmp(12277), obj7, projectId);
+    tmp16Result = tmp15(tmp(12226), obj7, projectId);
   } else {
     let obj8 = { children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1128).intl;
-    const obj10 = { days: tmp8(12275).RESTORE_WINDOW_DAYS };
+    const obj10 = { days: tmp8(12224).RESTORE_WINDOW_DAYS };
     obj9.children = intl2.formatToPlainString(tmp(3830).ptsHZu, obj10);
     const items6 = [tmp15(tmp8(5234).Text, obj9), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj8.children = items6;

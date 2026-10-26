@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const trackHexagonCampaignContentViewed =
         require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(
           tmp(6713).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
-          tmp(15856).HexagonCampaignContentSurface.NON_NITRO_CARD,
+          tmp(15857).HexagonCampaignContentSurface.NON_NITRO_CARD,
           true,
         );
       const tmpResult5 = require("HexagonCampaignAnalytics");
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           v2 = 2;
                           ref = 1;
                           const obj10 = {
-                            value: closure_0(15855).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE),
+                            value: closure_0(15856).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE),
                             done: false,
                           };
                           return obj10;
@@ -308,13 +308,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj2 = tmp52(5663);
                       }
                     }
-                    const result = closure_0(15855).saveHexagonCampaignPreviousDisplayNameStyles();
-                    const obj4 = closure_0(15855);
+                    const result = closure_0(15856).saveHexagonCampaignPreviousDisplayNameStyles();
+                    const obj4 = closure_0(15856);
                     const obj14 = { displayNameStyles };
                     closure_0(8653).setPendingChanges(obj14);
                     const obj5 = closure_0(8653);
-                    const result1 = closure_0(15855).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
-                    const obj7 = closure_0(15855);
+                    const result1 = closure_0(15856).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
+                    const obj7 = closure_0(15856);
                   }
                   ref = 3;
                 } catch (tmp51) {
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -640,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (availability.availability !== constants5.LOCKED) {
         let obj8 = { style: tmp.labelBadge, children: null };
         const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-        obj8.children = closure_15(tmp6(15879), obj9);
+        obj8.children = closure_15(tmp6(15880), obj9);
         tmp17Result = closure_15(closure_6, obj8);
       }
       obj7.labelTrailing = tmp17Result;

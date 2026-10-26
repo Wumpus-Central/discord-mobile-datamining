@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef17673 from "../../../../../_runtime/metro/17673__.js";
+import _modDef17674 from "../../../../../_runtime/metro/17674__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: markAsDismissed(17673) };
+          const obj2 = { source: markAsDismissed(17674) };
           const tmp12 = closure_6(markAsDismissed(5669), obj2);
           cResult[5] = tmp12;
           let tmp8 = tmp12;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const obj2 = { source: _modDef17673 };
+      const obj2 = { source: _modDef17674 };
       const items = [closure_6(FastImageDefault, obj2), , , ,];
       const obj3 = {
         style: tmp.title,

@@ -54,23 +54,26 @@ function updateActivity(withGracePeriod) {
         return flag3;
       }
     }
-    let tmp7 = null;
-    if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
-      const guildId = SelectedGuildStore.getGuildId();
-      tmp7 = null;
+    const guildId = SelectedGuildStore.getGuildId();
+    let globalSelectedProjectId = ConjureProjectStore.getGlobalSelectedProjectId();
+    if (globalSelectedProjectId == null) {
+      let selectedProjectId = null;
       if (null != guildId) {
-        const selectedProjectId = ConjureProjectStore.getSelectedProjectId(guildId);
-        let tmp11 = null;
-        if (null != selectedProjectId) {
-          tmp11 = null;
-          if (null != ConjureProjectStore.getProject(selectedProjectId)) {
-            tmp11 = selectedProjectId;
-          }
+        selectedProjectId = null;
+        if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
+          selectedProjectId = ConjureProjectStore.getSelectedProjectId(guildId);
         }
-        tmp7 = tmp11;
+      }
+      globalSelectedProjectId = selectedProjectId;
+    }
+    let tmp11 = null;
+    if (null != globalSelectedProjectId) {
+      tmp11 = null;
+      if (null != ConjureProjectStore.getProject(globalSelectedProjectId)) {
+        tmp11 = globalSelectedProjectId;
       }
     }
-    if (null == tmp7) {
+    if (null == tmp11) {
       if (null == c13) {
         if (null != timeout) {
           const _clearTimeout3 = clearTimeout;
@@ -117,12 +120,12 @@ function updateActivity(withGracePeriod) {
         clearTimeout(timeout);
         timeout = null;
       }
-      let flag = tmp7 !== c12;
+      let flag = tmp11 !== c12;
       if (!flag) {
         flag = null == c13;
       }
       if (flag) {
-        c12 = tmp7;
+        c12 = tmp11;
         const obj2 = { type: constants.PLAYING, name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME, details: null, timestamps: null };
         c0 = undefined;
         const prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
@@ -202,7 +205,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F109463 */ function() { ... });
+                        let found = prop.filter(/* F109522 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -243,7 +246,7 @@ let closure_18 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

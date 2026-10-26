@@ -1869,7 +1869,21 @@ export default {
       type,
       allowEmptyQueries: null,
     };
-    obj.channels = this.queryChannels(obj2).map((record) => record.record);
+    obj.channels = this.queryChannels({
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "IconComponent",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null,
+    }).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {

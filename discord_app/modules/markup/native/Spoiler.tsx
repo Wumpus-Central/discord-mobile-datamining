@@ -41,7 +41,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(12062).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(11953).MUTED_OPACITY_CONTENT };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 fn(558);

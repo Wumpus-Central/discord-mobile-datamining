@@ -25,7 +25,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_13 = async function _launchFrame(arg0) {
             closure_130_12 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -297,7 +297,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

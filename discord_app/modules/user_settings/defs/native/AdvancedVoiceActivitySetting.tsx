@@ -31,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported(),
       );
     };
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAdvancedVoiceActivitySettingValue() {
       const cResult = c.c(2);

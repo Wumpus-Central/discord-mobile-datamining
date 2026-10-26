@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp9 = tmp7[0] === tmp(4807).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
         dependencyMap = tmp9;
         const tmpResult = tmp(7496);
-        registerDismiss = tmp(17208).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+        registerDismiss = tmp(17209).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
         if (cResult[2] === tmp9) {
           if (cResult[3] === tmp8) {
             if (cResult[4] === registerDismiss) {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = items2;
         tmp11 = items2;
         tmp10 = fn;
-        const tmpResult3 = tmp(17208);
+        const tmpResult3 = tmp(17209);
       }
       const obj2 = require("useWishlistNUXActionSheet");
     }
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = tmp3[0] === hasNeverWishlisted(4807).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
       _slicedToArray = tmp5;
       const obj2 = hasNeverWishlisted(7496);
-      registerDismiss = hasNeverWishlisted(17208).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+      registerDismiss = hasNeverWishlisted(17209).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
       let items1 = [tmp5, registerDismiss, tmp3[1]];
       const effect = registerDismiss.useEffect(() => {
         if (closure_2) {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         return obj;
       }, items2);
-      const obj3 = hasNeverWishlisted(17208);
+      const obj3 = hasNeverWishlisted(17209);
       const coachmark = hasNeverWishlisted(9840).useCoachmark(anchorRef.anchorRef, memo1);
       return null;
     };

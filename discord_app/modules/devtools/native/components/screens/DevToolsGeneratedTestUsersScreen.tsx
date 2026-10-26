@@ -37,7 +37,7 @@ function PoolIdInput(onSubmit) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -139,24 +139,24 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(11840).UserIcon,
-  fn(10953).ShieldIcon,
-  fn(12885).GiftIcon,
-  fn(16951).AchievementsIcon,
-  fn(12886).PiggyBankIcon,
-  fn(16953).TreehouseIcon,
-  fn(11600).SpeedometerIcon,
-  fn(16955).CompassIcon,
-  fn(15081).SignPostIcon,
-  fn(16957).CarIcon,
-  fn(16959).TrainIcon,
-  fn(16961).TeacupIcon,
-  fn(16963).InventoryIcon,
+  fn(12188).UserIcon,
+  fn(10954).ShieldIcon,
+  fn(12888).GiftIcon,
+  fn(16952).AchievementsIcon,
+  fn(12889).PiggyBankIcon,
+  fn(16954).TreehouseIcon,
+  fn(11601).SpeedometerIcon,
+  fn(16956).CompassIcon,
+  fn(15082).SignPostIcon,
+  fn(16958).CarIcon,
+  fn(16960).TrainIcon,
+  fn(16962).TeacupIcon,
+  fn(16964).InventoryIcon,
   fn(9965).FoodIcon,
-  fn(16965).BurgerIcon,
-  fn(16967).MagicDoorIcon,
-  fn(16969).PawPrintIcon,
-  fn(16971).RecordPlayerIcon,
+  fn(16966).BurgerIcon,
+  fn(16968).MagicDoorIcon,
+  fn(16970).PawPrintIcon,
+  fn(16972).RecordPlayerIcon,
   fn(7488).SettingsIcon,
 ];
 let closure_13 = [
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           map = usersForPool.map;
           const mapped = map((id, arg1) => {
             const obj = {
-              icon: closure_1_10(str(11840).UserIcon, { size: "md" }),
+              icon: closure_1_10(str(12188).UserIcon, { size: "md" }),
               label: null,
               subLabel: null,
               onPress() {
@@ -340,7 +340,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: usersForPool.map((id, index) => {
           const obj = {
-            icon: closure_1_10(pool(11840).UserIcon, { size: "md" }),
+            icon: closure_1_10(pool(12188).UserIcon, { size: "md" }),
             label: null,
             subLabel: null,
             onPress() {
@@ -517,7 +517,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               } else {
                 c2 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;
@@ -693,7 +693,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -724,7 +724,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else {
               c2 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp9) {
             c2 = tmp;

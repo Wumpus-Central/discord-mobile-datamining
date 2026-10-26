@@ -304,7 +304,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -342,7 +342,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else {
             closure_132_12(closure_131_0, "failed");
             const _Error = Error;
@@ -445,7 +445,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp63) {
       closure_5 = tmp63;

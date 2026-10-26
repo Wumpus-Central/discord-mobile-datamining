@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const getStageRTCPanelHeight = tmp(11565).useGetStageRTCPanelHeight(tmp21);
+        const getStageRTCPanelHeight = tmp(11566).useGetStageRTCPanelHeight(tmp21);
         if (cResult[7] !== channel) {
           class S {
             constructor() {
@@ -187,7 +187,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -404,7 +404,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp26;
           cResult[15] = items2;
         }
-        const tmpResult6 = tmp(11565);
+        const tmpResult6 = tmp(11566);
       }
       cResult[4] = stringResult;
       if (stateFromStores != null) {
@@ -445,7 +445,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -546,7 +546,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         id2 = channel.id;
       }
       let stageIgnoredUsersCount = channel(8106).useStageIgnoredUsersCount(id2);
-      channel(11565);
+      channel(11566);
       if (channel != null) {
         const id = channel.id;
       }

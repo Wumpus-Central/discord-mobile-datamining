@@ -46,10 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_8();
       dependencyMap = tmp5;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const componentRenderStats = tmp(13793).getComponentRenderStats();
+        const componentRenderStats = tmp(13795).getComponentRenderStats();
         cResult[1] = componentRenderStats;
         let tmp6 = componentRenderStats;
-        const tmpResult = tmp(13793);
+        const tmpResult = tmp(13795);
       } else {
         tmp6 = cResult[1];
       }
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(17023).DevToolsProfilingUseStateFromStores, {});
+          const tmp19 = closure_5(tmp(17024).DevToolsProfilingUseStateFromStores, {});
           cResult[5] = tmp19;
           let tmp17 = tmp19;
         } else {

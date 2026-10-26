@@ -24,14 +24,14 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(10900);
+const VoicePanelConstants = fn(10901);
 ({ VoicePanelCTACard: c10, VoicePanelModes: closure_11, MODE_CHANGE_PHYSICS: closure_12, SPEAKING_PHYSICS: map1, VoicePanelCardItemType: closure_14 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10898).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18446).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(10903).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18456).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10904).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const ParticipantTypes = fn(5632).ParticipantTypes;
-const SCALE_PHYSICS = fn(10901).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(10902).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -2048,7 +2048,7 @@ let closure_60 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSha
   });
   return { sharedTransitionState, cardGestureEnabled: cardGestureEnabled[0] };
 });
-let closure_61 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_61 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
   if (flag === undefined) {
     flag = false;

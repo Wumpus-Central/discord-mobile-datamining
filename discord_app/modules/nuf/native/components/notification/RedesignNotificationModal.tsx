@@ -9,8 +9,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PermissionStateType = fn(13309).PermissionStateType;
-const NotificationPermissionConstants = fn(13310);
+const PermissionStateType = fn(13312).PermissionStateType;
+const NotificationPermissionConstants = fn(13313);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp8 = jsx(tmp(17417).BellSpotIllustration, { width: 245, accessible: false });
+        const tmp8 = jsx(tmp(17418).BellSpotIllustration, { width: 245, accessible: false });
         cResult[4] = tmp8;
         const tmp7 = tmp8;
       } else {
@@ -258,7 +258,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         subtitle: null,
       };
       const tmp = closure_10();
-      obj2.header = jsx(onComplete(17417).BellSpotIllustration, { width: 245, accessible: false });
+      obj2.header = jsx(onComplete(17418).BellSpotIllustration, { width: 245, accessible: false });
       const intl = onComplete(1128).intl;
       obj2.title = intl.string(onComplete(1128).t["3nx0b5"]);
       const intl2 = onComplete(1128).intl;

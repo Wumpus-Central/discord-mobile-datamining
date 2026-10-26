@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                     size: 102,
                                                                     style: tmp10.appIconTilted,
                                                                   };
-                                                                  tmp46 = closure_7(guildId(16383), obj3);
+                                                                  tmp46 = closure_7(guildId(16384), obj3);
                                                                 }
                                                                 cResult[49] = appIconId;
                                                                 cResult[50] = tmp10;
@@ -568,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 obj5.pendingAvatarSrc = stateFromStores;
                                                 obj5.pendingDisplayNameStyles = tmp18;
                                                 obj5.pendingGlobalName = displayName;
-                                                obj4.children = closure_7(tmp(11174).NameplatePreview, obj5);
+                                                obj4.children = closure_7(tmp(11175).NameplatePreview, obj5);
                                                 tmp39Result = closure_7(View, obj4);
                                               }
                                               cResult[38] = stateFromStores;
@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   style: profilePreviewTilted,
                   accessibilityLabel: tmp21,
                 };
-                const tmp27 = closure_7(guildId(11056), obj8);
+                const tmp27 = closure_7(guildId(11057), obj8);
                 cResult[15] = displayName;
                 cResult[16] = tmp18;
                 cResult[17] = guildId;

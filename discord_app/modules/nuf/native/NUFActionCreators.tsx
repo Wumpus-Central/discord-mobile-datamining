@@ -26,7 +26,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -93,14 +93,14 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(13580);
+const ContactSyncModalStore = fn(13582);
 ({
   setAllowEmail: closure_4,
   setAllowSync: hasOwnProperty,
   setName: metroRequire,
   useContactSyncModalStore: closure_7,
 } = ContactSyncModalStore);
-let closure_10 = fn(13609).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(13611).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1087).PlatformTypes;
 let closure_12 = fn(7073).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);

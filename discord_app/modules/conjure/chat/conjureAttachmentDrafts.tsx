@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
-import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
+import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
 

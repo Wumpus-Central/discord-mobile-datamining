@@ -1,8 +1,8 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15388 from "../../../../../_runtime/metro/15388__.js";
 import _modDef15389 from "../../../../../_runtime/metro/15389__.js";
+import _modDef15390 from "../../../../../_runtime/metro/15390__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (style.selected) {
         if (cResult[0] !== style) {
           const obj2 = { style, source: null };
-          tmp = _modDef15388;
+          tmp = _modDef15389;
           obj2.source = tmp;
           const tmp12 = jsx(FastImageDefault, { style, source: null });
           cResult[0] = style;
@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       } else {
         if (cResult[2] !== style) {
-          const obj3 = { style, source: _modDef15389 };
-          const tmp7 = jsx(FastImageDefault, { style, source: _modDef15389 });
+          const obj3 = { style, source: _modDef15390 };
+          const tmp7 = jsx(FastImageDefault, { style, source: _modDef15390 });
           cResult[2] = style;
           cResult[3] = tmp7;
           let tmp3 = tmp7;
@@ -42,10 +42,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ style, selected } = arg0);
       const obj = { style, source: null };
       if (selected) {
-        obj.source = _modDef15388;
+        obj.source = _modDef15389;
         let tmp5 = obj;
       } else {
-        obj.source = _modDef15389;
+        obj.source = _modDef15390;
         tmp5 = obj;
       }
       return jsx(FastImageDefault, tmp5);

@@ -123,7 +123,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -144,7 +144,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               c3 = 1;
               const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
               const obj2 = tmp3(9649);
-              obj6.optionValues = tmp3(12098).parseOptionValuesForSend(commandContext.channel, command, {});
+              obj6.optionValues = tmp3(11989).parseOptionValuesForSend(commandContext.channel, command, {});
               obj6.context = commandContext;
               obj6.sectionName = sectionName;
               obj6.commandOrigin = tmp3(5634).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
@@ -173,7 +173,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             c3 = 0;
             closure_128_5(false);
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp27) {
           closure_2 = tmp27;

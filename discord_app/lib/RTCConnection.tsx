@@ -1970,7 +1970,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -2008,7 +2008,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[52]);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

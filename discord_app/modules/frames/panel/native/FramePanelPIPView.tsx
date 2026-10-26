@@ -15,7 +15,7 @@ const FramesConstants = fn(6776);
   FrameLayoutModes: metroRequire,
   getPipOrientationLockStateForFrame: closure_7,
 } = FramesConstants);
-const portraitSafeAreasConfig = fn(18365).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(18375).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

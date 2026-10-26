@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = jsx(navigation(17035), {
+      const tmp8 = jsx(navigation(17036), {
         variant: "secondary",
         text: first,
         onPress() {

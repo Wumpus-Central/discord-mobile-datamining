@@ -349,7 +349,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -440,7 +440,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -538,7 +538,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useAllowFriendsFromMutualGuildsOnlyForTeen() {
       const selectedTeen = controlledSetting(8127).useSelectedTeen();
-      const ParentalControlledFriendSourceFlags = controlledSetting(16109).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(16110).ParentalControlledFriendSourceFlags;
       let id;
       if (selectedTeen != null) {
         id = selectedTeen.id;

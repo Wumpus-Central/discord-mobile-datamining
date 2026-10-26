@@ -19,7 +19,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11294).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11295).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;

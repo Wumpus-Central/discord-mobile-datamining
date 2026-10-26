@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                 return;
               }
             }
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                   return;
                 }
               }
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                   return;
                 }
               }
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                   return;
                 }
               }
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                   return;
                 }
               }
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
                   return;
                 }
               }
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "dispatch", headerRight: "ix" });
+          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Reflect" });
           return;
         }
       }
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "dispatch", headerRight: "ix" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "Reflect" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

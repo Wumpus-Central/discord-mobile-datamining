@@ -106,14 +106,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_4.getGame(gameId);
             }
           }
-          const orbsArcadeClaimableRewards = tmp(16400).getOrbsArcadeClaimableRewards(
+          const orbsArcadeClaimableRewards = tmp(16401).getOrbsArcadeClaimableRewards(
             stateFromStores.rewards,
             stateFromStores1,
           );
           cResult[11] = stateFromStores.rewards;
           cResult[12] = stateFromStores1;
           cResult[13] = orbsArcadeClaimableRewards;
-          const tmpResult4 = tmp(16400);
+          const tmpResult4 = tmp(16401);
         }
       }
       let everyResult;

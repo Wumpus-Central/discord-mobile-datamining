@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   function handleViewEntireTemplate() {
                                     ActionSheetActionCreatorsDefault.openLazy(
-                                      asyncRequireImpl(19327, dependencyMap.paths),
+                                      asyncRequireImpl(19337, dependencyMap.paths),
                                       "TierTemplateCard",
                                       { template, guildId, handleSelectTemplateInPreview },
                                     );
@@ -1095,7 +1095,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7) {
           const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(19331, dependencyMap.paths),
+            asyncRequireImpl(19341, dependencyMap.paths),
             "TierTemplatePriceReselectionCard",
             obj2,
           );
@@ -1117,7 +1117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.contentContainer,
         onPress: function handleViewEntireTemplate() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19327, dependencyMap.paths), "TierTemplateCard", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19337, dependencyMap.paths), "TierTemplateCard", {
             template,
             guildId,
             handleSelectTemplateInPreview: callback1,

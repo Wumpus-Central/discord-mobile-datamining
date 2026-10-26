@@ -13,7 +13,7 @@ const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12837, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12840, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -35,7 +35,7 @@ let obj = {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -83,8 +83,8 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(12834).resetAgeCheckStatus();
-                        obj = closure_2_0(12834);
+                        closure_2_0(12837).resetAgeCheckStatus();
+                        obj = closure_2_0(12837);
                         closure_2_1(584).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(584);
                         closure_2_1(584).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });

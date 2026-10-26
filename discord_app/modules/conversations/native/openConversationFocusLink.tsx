@@ -3,44 +3,94 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 const require = fn;
 let closure_3 = async function _openConversationFocusLink(arg0) {
-  closure_1 = tmp2;
-  ({
-    guildId: closure_129_0,
-    channelId: closure_129_1,
-    conversationId: closure_129_2,
-    messageId: closure_129_3,
-  } = closure_0);
-  await "Reflect";
-  await closure_130_0(closure_130_1[1]).resolveConversationFocusLink({
-    channelId: closure_129_1,
-    conversationId: closure_129_2,
-    messageId: closure_129_3,
-  });
-  if (2 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else if (value) {
-      c3 = 3;
-      c4 = 1;
-      return { value: closure_130_0(closure_130_1[3])(closure_130_1[2], closure_130_1.paths), done: false };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      c4 = 3;
+      return { value: "IconComponent", done: null };
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    const result = value.openConversationNavigator({
-      channelId: closure_129_1,
-      guildId: closure_129_0,
-      focusSelectedConversation: true,
-    });
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({
+            guildId: closure_129_0,
+            channelId: closure_129_1,
+            conversationId: closure_129_2,
+            messageId: closure_129_3,
+          } = closure_0);
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj6 = { channelId: closure_129_1, conversationId: closure_129_2, messageId: closure_129_3 };
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_0(closure_130_1[1]).resolveConversationFocusLink(obj6), done: false };
+          return obj7;
+        }
+      } else {
+        if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else if (value) {
+            c3 = 3;
+            c4 = 1;
+            const obj9 = { value: closure_130_0(closure_130_1[3])(closure_130_1[2], closure_130_1.paths), done: false };
+            return obj9;
+          } else {
+            c4 = 3;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const obj = { channelId: closure_129_1, guildId: closure_129_0, focusSelectedConversation: true };
+          const result = value.openConversationNavigator(obj);
+        }
+        c4 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
+      }
+    } catch (tmp23) {
+      c4 = tmp;
+      throw tmp23;
+    }
   }
-  return value;
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/native/openConversationFocusLink.tsx");

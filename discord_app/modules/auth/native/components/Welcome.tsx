@@ -14,8 +14,8 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef14544 from "../../../../../_runtime/metro/14544__.js";
-import _mod15104 from "../../../../../_runtime/metro/15104__.js";
+import _modDef14545 from "../../../../../_runtime/metro/14545__.js";
+import _mod15105 from "../../../../../_runtime/metro/15105__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -315,7 +315,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef14544 };
+          const obj2 = { source: _modDef14545 };
           const tmp11 = closure_1_20(FastImageDefault, obj2);
           cResult[3] = tmp11;
           let tmp7 = tmp11;
@@ -386,7 +386,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [tmp.container, style];
       obj.style = items;
-      const obj2 = { source: _modDef14544 };
+      const obj2 = { source: _modDef14545 };
       const items1 = [closure_1_20(FastImageDefault, obj2)];
       const obj3 = { style: tmp.text, children: null };
       const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -415,7 +415,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const typeConsolidationTextTransform =
         useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod15104;
+        const tmpResult = _mod15105;
         cResult[0] = tmpResult;
         let first = tmpResult;
       } else {
@@ -610,7 +610,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = { style: tmp4.centerpieceContainer, children: null };
       const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-      const items = [closure_1_20(FastImageDefault, { style: tmp4.logo, source: _mod15104 }), ,];
+      const items = [closure_1_20(FastImageDefault, { style: tmp4.logo, source: _mod15105 }), ,];
       const obj5 = {
         style: null,
         lineClamp: null,

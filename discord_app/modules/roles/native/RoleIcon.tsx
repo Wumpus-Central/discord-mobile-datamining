@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "ix",
-        textAlign: null,
+        textAlign: "<string:4268818750>",
         width: num,
-        marginBottom: null,
+        marginBottom: "PX_16",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -115,6 +115,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         size = 20;
       }
       const size1 = { height: size, width: size };
+      const obj = {
+        fontFamily: "System",
+        fontSize: size * num,
+        lineHeight: "ix",
+        textAlign: "<string:4268818750>",
+        width: size,
+        marginBottom: "PX_16",
+      };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };
         const obj3 = { uri: src };

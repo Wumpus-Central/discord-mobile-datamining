@@ -98,9 +98,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         "HexagonCampaignAppIconSection",
       );
       const tmpResult = onSelect(4999);
-      const trackHexagonCampaignContentViewed = onSelect(15856).useTrackHexagonCampaignContentViewed(
+      const trackHexagonCampaignContentViewed = onSelect(15857).useTrackHexagonCampaignContentViewed(
         onSelect(6713).QuestContent.APP_ICON_SETTINGS,
-        onSelect(15856).HexagonCampaignContentSurface.APP_ICON_PICKER,
+        onSelect(15857).HexagonCampaignContentSurface.APP_ICON_PICKER,
         true,
       );
       const tmp9 = currentAppIcon.currentAppIcon === onSelect(9866).LimitedTimeAppIconIds.HEXAGON;
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 variant: "text-xs/medium",
                 color: "text-link",
                 accessibilityRole: "link",
-                onPress: onSelect(15873).openHexagonCampaignLearnMore,
+                onPress: onSelect(15874).openHexagonCampaignLearnMore,
                 children,
               },
               arg1,
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp9;
       cResult[2] = obj7;
       tmp10 = obj7;
-      const tmpResult4 = onSelect(15856);
+      const tmpResult4 = onSelect(15857);
     }
   : function HexagonCampaignAppIconSection(isPending) {
       let flag = isPending.isPending;
@@ -284,13 +284,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         "HexagonCampaignAppIconSection",
       );
       const obj = onSelect(4999);
-      const trackHexagonCampaignContentViewed = onSelect(15856).useTrackHexagonCampaignContentViewed(
+      const trackHexagonCampaignContentViewed = onSelect(15857).useTrackHexagonCampaignContentViewed(
         onSelect(6713).QuestContent.APP_ICON_SETTINGS,
-        onSelect(15856).HexagonCampaignContentSurface.APP_ICON_PICKER,
+        onSelect(15857).HexagonCampaignContentSurface.APP_ICON_PICKER,
         true,
       );
       const tmp7 = isPending.currentAppIcon === onSelect(9866).LimitedTimeAppIconIds.HEXAGON;
-      const obj2 = onSelect(15856);
+      const obj2 = onSelect(15857);
       const radioA11yNative = onSelect(5039).useRadioA11yNative({ selected: tmp7, busy: flag });
       const intl = onSelect(1128).intl;
       const stringResult = intl.string(_modDef4247.JC4Pii);
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp14Result;
       obj6.children = items;
       const items1 = [closure_10(closure_4, obj6)];
-      const obj9 = { theme: onSelect(15876).ThemeTypes.DARK, children: null };
+      const obj9 = { theme: onSelect(15877).ThemeTypes.DARK, children: null };
       const obj10 = {
         onPress() {
           return onSelect(AppIconTypes.LimitedTimeAppIconIds.HEXAGON);
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-xs/medium",
               color: "text-link",
               accessibilityRole: "link",
-              onPress: onSelect(15873).openHexagonCampaignLearnMore,
+              onPress: onSelect(15874).openHexagonCampaignLearnMore,
               children,
             },
             arg1,

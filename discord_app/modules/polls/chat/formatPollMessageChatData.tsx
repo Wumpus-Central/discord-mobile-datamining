@@ -182,7 +182,7 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(11033).getPollState;
+const getPollState = fn(11034).getPollState;
 const Constants = fn(1087);
 ({ MessageStates: c10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1098).ThemeTypes;

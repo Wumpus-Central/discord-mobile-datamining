@@ -151,9 +151,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "itens",
-          externalChildren: "ter",
-          expandedChildren: false,
+          label: "describe",
+          externalChildren: "boolean",
+          expandedChildren: null,
           children: false,
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
@@ -171,9 +171,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "itens",
-          externalChildren: "ter",
-          expandedChildren: false,
+          label: "describe",
+          externalChildren: "boolean",
+          expandedChildren: null,
           children: false,
         });
       },

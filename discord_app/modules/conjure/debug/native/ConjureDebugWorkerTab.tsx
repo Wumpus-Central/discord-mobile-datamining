@@ -577,21 +577,21 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let schedules = env.runtime;
       if (cResult[0] !== env) {
         let intl = tmp(1128).intl;
-        const obj2 = { env: tmp(12551).debugEnvLabel(env) };
+        const obj2 = { env: tmp(12554).debugEnvLabel(env) };
         let formatToPlainStringResult = intl.formatToPlainString(_modDef3830["92gVTm"], obj2);
         cResult[0] = env;
         cResult[1] = formatToPlainStringResult;
         let tmp4 = formatToPlainStringResult;
-        const tmpResult = tmp(12551);
+        const tmpResult = tmp(12554);
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] !== schedules.connections) {
-        const formatCountResult = tmp(12552).formatCount(schedules.connections);
+        const formatCountResult = tmp(12555).formatCount(schedules.connections);
         cResult[2] = schedules.connections;
         cResult[3] = formatCountResult;
         let tmp7 = formatCountResult;
-        const tmpResult2 = tmp(12552);
+        const tmpResult2 = tmp(12555);
       } else {
         tmp7 = cResult[3];
       }
@@ -654,7 +654,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = schedules;
         cResult[9] = mapped;
       }
-      const tmp10 = closure_5(env(12554).DebugStatRow, { label: tmp4, value: tmp7 });
+      const tmp10 = closure_5(env(12557).DebugStatRow, { label: tmp4, value: tmp7 });
       cResult[4] = tmp4;
       cResult[5] = tmp7;
       cResult[6] = tmp10;
@@ -667,11 +667,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { children: null };
       const obj2 = { label: null, value: null };
       let intl = env(1128).intl;
-      let obj3 = { env: env(12551).debugEnvLabel(env) };
+      let obj3 = { env: env(12554).debugEnvLabel(env) };
       obj2.label = intl.formatToPlainString(_modDef3830["92gVTm"], obj3);
-      let obj4 = env(12551);
-      obj2.value = env(12552).formatCount(runtime.connections);
-      const items = [closure_5(env(12554).DebugStatRow, obj2)];
+      let obj4 = env(12554);
+      obj2.value = env(12555).formatCount(runtime.connections);
+      const items = [closure_5(env(12557).DebugStatRow, obj2)];
       const schedules = runtime.schedules;
       items[1] = schedules.map((id) => {
         const obj = { label: null, value: null, hint: null };
@@ -1185,14 +1185,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         let items = [obj2];
         let items1 = items;
       } else {
-        let obj3 = { key: "preview", label: DebugSection(12551).debugEnvLabel("preview"), metrics: preview };
+        let obj3 = { key: "preview", label: DebugSection(12554).debugEnvLabel("preview"), metrics: preview };
         items1 = [obj3];
         let obj4 = { key: "stable", label: null, metrics: null };
-        const DebugSectionResult = DebugSection(12551);
-        obj4.label = DebugSection(12551).debugEnvLabel("stable");
+        const DebugSectionResult = DebugSection(12554);
+        obj4.label = DebugSection(12554).debugEnvLabel("stable");
         obj4.metrics = stable;
         items1[1] = obj4;
-        const DebugSectionResult1 = DebugSection(12551);
+        const DebugSectionResult1 = DebugSection(12554);
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         let intl2 = DebugSection(1128).intl;
@@ -1202,7 +1202,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[5];
       }
-      DebugSection = DebugSection(12554).DebugSection;
+      DebugSection = DebugSection(12557).DebugSection;
       let obj = limits(576);
       tmp = closure_5(DebugSection, {
         title: tmp4,
@@ -1302,15 +1302,15 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp4 = limits;
         let items1 = items;
       } else {
-        let obj = { key: "preview", label: limits(12551).debugEnvLabel("preview"), metrics: tmp };
+        let obj = { key: "preview", label: limits(12554).debugEnvLabel("preview"), metrics: tmp };
         items1 = [obj];
         let obj5 = { key: "stable", label: null, metrics: null };
-        let obj2 = limits(12551);
-        obj5.label = limits(12551).debugEnvLabel("stable");
+        let obj2 = limits(12554);
+        obj5.label = limits(12554).debugEnvLabel("stable");
         obj5.metrics = stable;
         items1[1] = obj5;
         tmp4 = limits;
-        let obj4 = limits(12551);
+        let obj4 = limits(12554);
       }
       let obj6 = { title: null, children: null };
       let intl2 = tmp4(1128).intl;
@@ -1351,7 +1351,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp18Result;
       });
-      return closure_5(tmp4(12554).DebugSection, obj6);
+      return closure_5(tmp4(12557).DebugSection, obj6);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { gap: nativeDefault.space.PX_24 };

@@ -15,7 +15,7 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10882).resetFocusTimer;
+const resetFocusTimer = fn(10883).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ColorUtils = fn(4968);
@@ -218,15 +218,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         width: result1,
                                         height: result1,
                                         borderRadius: tmp11.badgeRadius,
-                                        top: onPress(11383).getBadgeTop(
+                                        top: onPress(11384).getBadgeTop(
                                           tmp11.badgeRadius,
                                           tmp11.buttonRadius,
                                           cutoutPositionInDegrees,
                                         ),
                                         left: null,
                                       };
-                                      const tmpResult = onPress(11383);
-                                      size1.left = onPress(11383).getBadgeLeft(
+                                      const tmpResult = onPress(11384);
+                                      size1.left = onPress(11384).getBadgeLeft(
                                         tmp11.badgeRadius,
                                         tmp11.buttonRadius,
                                         cutoutPositionInDegrees,
@@ -234,7 +234,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       items1[1] = size1;
                                       obj5.style = items1;
                                       tmp38 = closure_10(View, obj5);
-                                      const tmpResult2 = onPress(11383);
+                                      const tmpResult2 = onPress(11384);
                                     }
                                     cResult[34] = tmp11.badgeRadius;
                                     cResult[35] = tmp11.buttonRadius;

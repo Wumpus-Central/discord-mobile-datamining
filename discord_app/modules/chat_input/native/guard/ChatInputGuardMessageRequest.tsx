@@ -200,7 +200,7 @@ export default noop.memo(
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -229,7 +229,7 @@ export default noop.memo(
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp9) {
                   c1 = tmp;
@@ -263,7 +263,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -294,7 +294,7 @@ export default noop.memo(
                 } else {
                   closure_0(acceptMessageRequest[12]).transitionToChannel(closure_0.id, { navigationReplace: true });
                   c3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp14) {
                 c3 = tmp;
@@ -340,7 +340,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -371,7 +371,7 @@ export default noop.memo(
               } else {
                 channel(c2[12]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp14) {
               c3 = tmp;
@@ -390,7 +390,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -419,7 +419,7 @@ export default noop.memo(
                 return obj;
               } else {
                 c1 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c1 = tmp;
@@ -429,14 +429,14 @@ export default noop.memo(
         };
         importDefault = channel(1505).useNavigation();
         let obj = channel(1505);
-        const isMessageRequestRestrictedViewer = channel(13348).useIsMessageRequestRestrictedViewer();
-        let obj2 = channel(13348);
+        const isMessageRequestRestrictedViewer = channel(13351).useIsMessageRequestRestrictedViewer();
+        let obj2 = channel(13351);
         const items = [closure_4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj3 = channel(504);
-        const messageRequestActions = channel(13349).useMessageRequestActions({
+        const messageRequestActions = channel(13352).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
@@ -483,7 +483,7 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        let obj4 = channel(13349);
+        let obj4 = channel(13352);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {

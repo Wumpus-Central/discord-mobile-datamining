@@ -7,7 +7,7 @@ import _modDef3088 from "../../../../Checkpoint2026.messages.js";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
-import _modDef12982 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12985 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
 import GameStore from "../../../../../games/GameStore.tsx";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
@@ -18,10 +18,10 @@ import "ReactCompilerGating";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const CheckpointScreenDefault = tmp34(12973);
-const CheckpointApngPlayerDefault = tmp34(12976);
-const _modDef12983 = tmp34(12983);
-const CheckpointDisplayTextDefault = tmp34(12989);
+const CheckpointScreenDefault = tmp34(12976);
+const CheckpointApngPlayerDefault = tmp34(12979);
+const _modDef12986 = tmp34(12986);
+const CheckpointDisplayTextDefault = tmp34(12992);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -630,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return games;
                 }
               }
-              obj6.staticUri = _modDef12983;
+              obj6.staticUri = _modDef12986;
               obj6.style = tmp4.globe;
               const tmp39 = closure_7(CheckpointApngPlayerDefault, obj6);
               cResult[34] = tmp4.globe;
@@ -833,7 +833,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [CheckpointStore];
       let num;
       const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () =>
-        stateFromStores1(12956).hasCheckpointGames(CheckpointStore.stats),
+        stateFromStores1(12959).hasCheckpointGames(CheckpointStore.stats),
       );
       if (stateFromStores != null) {
         num = stateFromStores.totalGamesPlayed;
@@ -860,7 +860,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items3;
           const obj6 = { style: tmp.header, children: null };
           const obj7 = { style: tmp.globalHeading, children: null };
-          const obj8 = { animatedUri: _modDef12982, staticUri: _modDef12983, style: tmp.globe };
+          const obj8 = { animatedUri: _modDef12985, staticUri: _modDef12986, style: tmp.globe };
           const items4 = [closure_7(CheckpointApngPlayerDefault, obj8)];
           const obj9 = { children: null };
           const tmp8Result = CheckpointApngPlayerDefault;

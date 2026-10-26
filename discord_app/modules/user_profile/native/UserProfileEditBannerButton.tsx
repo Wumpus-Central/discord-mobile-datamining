@@ -8,7 +8,7 @@ import PencilIcon from "../../../design/components/Icon/native/redesign/generate
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const UserProfileBannerDefault = tmp5(8737);
-const EditButtonDefault = tmp5(15851);
+const EditButtonDefault = tmp5(15852);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

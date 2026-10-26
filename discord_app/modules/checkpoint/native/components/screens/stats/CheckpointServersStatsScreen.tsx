@@ -8,8 +8,8 @@ import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef12982 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12983 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef12985 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12986 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
@@ -604,8 +604,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp2(tmp3, obj, guild.id);
             }
           }
-          obj12.animatedUri = _modDef12982;
-          obj12.staticUri = _modDef12983;
+          obj12.animatedUri = _modDef12985;
+          obj12.staticUri = _modDef12986;
           obj12.style = tmp4.globe;
           const tmp60 = closure_6(tmp59, obj12);
           cResult[5] = tmp4.globe;
@@ -978,8 +978,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("initialize");
       const obj15 = { animatedUri: null, staticUri: null, style: null };
       const tmp6 = CheckpointScreenDefault;
-      obj15.animatedUri = _modDef12982;
-      obj15.staticUri = _modDef12983;
+      obj15.animatedUri = _modDef12985;
+      obj15.staticUri = _modDef12986;
       obj15.style = tmp.globe;
       const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
       const obj16 = { children: null };

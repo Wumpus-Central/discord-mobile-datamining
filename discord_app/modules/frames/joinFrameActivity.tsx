@@ -18,7 +18,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
           break;
         case 1:
@@ -448,7 +448,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

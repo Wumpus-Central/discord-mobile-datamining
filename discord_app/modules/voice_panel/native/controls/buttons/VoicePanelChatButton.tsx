@@ -42,12 +42,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ChatButton(wrapperSpecs) {
       const cResult = openTab(576).c(25);
       ({ props, openTab } = wrapperSpecs);
-      const context = noop.useContext(connected(10899));
+      const context = noop.useContext(connected(10900));
       connected = context.connected;
       const tmp6 = closure_7();
       let obj = openTab(576);
-      const voicePanelButtonStyles = openTab(18614).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
-      const tmp8 = connected(18554)(context.channelId);
+      const voicePanelButtonStyles = openTab(18624).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
+      const tmp8 = connected(18564)(context.channelId);
       const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
       if (cResult[0] === connected) {
         if (cResult[1] === openTab) {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const element = { onPress: tmp9, props, accessibilityLabel: tmp11, children: tmp28 };
-                      const tmp34 = closure_4(tmp4(18615), element);
+                      const tmp34 = closure_4(tmp4(18625), element);
                       cResult[21] = tmp9;
                       cResult[22] = props;
                       cResult[23] = tmp28;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           badgeRadius: 5,
           scaleToPixelDensity: true,
         };
-        const tmp18 = closure_4(tmp4(18623), obj7);
+        const tmp18 = closure_4(tmp4(18633), obj7);
         cResult[4] = backgroundColor;
         cResult[5] = result;
         cResult[6] = null != tmp8;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = openTab;
       cResult[2] = fn;
       tmp9 = fn;
-      const obj2 = openTab(18614);
+      const obj2 = openTab(18624);
     }
   : function ChatButton(props) {
       props = props.props;

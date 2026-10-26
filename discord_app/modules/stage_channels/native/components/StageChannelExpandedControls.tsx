@@ -29,10 +29,10 @@ export default noop.memo(
         const cResult = channel(576).c(38);
         channel = channel.channel;
         const tmp3 = closure_8();
-        const tmp5 = stateFromStores1(11389)(channel.id);
+        const tmp5 = stateFromStores1(11390)(channel.id);
         const obj = channel(576);
         const tmp4 = stateFromStores1;
-        const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
+        const isConnectedToVoiceChannel = channel(10887).useIsConnectedToVoiceChannel(channel);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildStore];
           cResult[0] = items;
@@ -54,7 +54,7 @@ export default noop.memo(
           tmp9 = cResult[2];
           tmp10 = cResult[3];
         }
-        const obj2 = channel(10886);
+        const obj2 = channel(10887);
         const stateFromStores = DeafenButton(504).useStateFromStores(first, tmp9, tmp10);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [ApplicationStreamingStore];
@@ -141,7 +141,7 @@ export default noop.memo(
           }
         }
         if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp23 = jsx(DeafenButton(11672).StreamVolumeItem, {});
+          const tmp23 = jsx(DeafenButton(11673).StreamVolumeItem, {});
           cResult[19] = tmp23;
           let tmp21 = tmp23;
         } else {
@@ -164,7 +164,7 @@ export default noop.memo(
                     items5.push(tmp28);
                   }
                   const obj4 = { channel, disabled: tmp25 };
-                  const tmp30 = jsx(DeafenButton(11672).ScreenshareButton, { channel, disabled: tmp25 });
+                  const tmp30 = jsx(DeafenButton(11673).ScreenshareButton, { channel, disabled: tmp25 });
                   cResult[25] = channel;
                   cResult[26] = tmp25;
                   cResult[27] = tmp30;
@@ -196,7 +196,7 @@ export default noop.memo(
           }
           items5.push(tmp32);
           if (cResult[31] !== channel) {
-            DeafenButton = DeafenButton(11672).DeafenButton;
+            DeafenButton = DeafenButton(11673).DeafenButton;
             const obj5 = { channel };
             const tmp37 = <DeafenButton channel={channel} />;
             cResult[31] = channel;
@@ -216,7 +216,7 @@ export default noop.memo(
           cResult[17] = stateFromStoresArray;
           cResult[18] = items5;
         }
-        const tmp33 = jsx(DeafenButton(11672).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel });
+        const tmp33 = jsx(DeafenButton(11673).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel });
         cResult[28] = channel.id;
         cResult[29] = isConnectedToVoiceChannel;
         cResult[30] = tmp33;
@@ -229,8 +229,8 @@ export default noop.memo(
         importDefault = undefined;
         const tmp = closure_8();
         const tmp4 = useCanSpeakInChannelDefault(channel.id);
-        const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
-        const obj = channel(10886);
+        const isConnectedToVoiceChannel = channel(10887).useIsConnectedToVoiceChannel(channel);
+        const obj = channel(10887);
         const items = [GuildStore];
         const items1 = [channel.guild_id];
         const stateFromStores = channel(504).useStateFromStores(
@@ -259,7 +259,7 @@ export default noop.memo(
         const obj4 = channel(504);
         const stageHasMedia = channel(6640).useStageHasMedia(channel.id);
         const items5 = [];
-        items5.push(jsx(channel(11672).StreamVolumeItem, {}));
+        items5.push(jsx(channel(11673).StreamVolumeItem, {}));
         if (tmp11) {
           const obj5 = { channel, disabled: null };
           let tmp12 = stateFromStoresArray.length > 0;
@@ -274,10 +274,10 @@ export default noop.memo(
             tmp12 = reachedLimit;
           }
           obj5.disabled = tmp12;
-          items5.push(jsx(tmp5(11672).ScreenshareButton, { channel, disabled: null }));
+          items5.push(jsx(tmp5(11673).ScreenshareButton, { channel, disabled: null }));
         }
-        items5.push(jsx(channel(11672).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-        items5.push(jsx(channel(11672).DeafenButton, { channel }));
+        items5.push(jsx(channel(11673).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+        items5.push(jsx(channel(11673).DeafenButton, { channel }));
         const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
         tmp11 = num > 0 && tmp4;
         const tmp5Result = channel(6640);

@@ -18,10 +18,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDismissSheetOrCollapseDock() {
       const cResult = setRestingQuestDockMode(576).c(3);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(16444).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(16445).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(16466).QuestBottomSheetContext,
+        setRestingQuestDockMode(16467).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -43,10 +43,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useDismissSheetOrCollapseDock() {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(16444).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(16445).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(16466).QuestBottomSheetContext,
+        setRestingQuestDockMode(16467).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return noop.useCallback(() => {
@@ -195,7 +195,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -246,7 +246,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
               obj7.questContentPosition = questContentPosition;
               adCreativeId(launchMobileActivity[10]).captureAdUserAction(obj7);
               v3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             v3 = tmp;
@@ -292,7 +292,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -342,7 +342,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                 obj7.questContentPosition = questContentPosition;
                 tmp4(9573).captureAdUserAction(obj7);
                 dependencyMap = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp12) {
               dependencyMap = tmp;

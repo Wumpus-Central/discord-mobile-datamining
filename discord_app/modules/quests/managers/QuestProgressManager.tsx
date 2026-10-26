@@ -344,77 +344,20 @@ class QuestProgressManager extends tmp4 {
     closure_129_0 = undefined;
     closure_129_1 = applyArgumentsResult;
     closure_129_0 = closure_3(async (arg0) => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: "+352" };
+      await closure_1_18(applicationId);
+      const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
+        let hasItem = null != config;
+        if (hasItem) {
+          const features = config.config.features;
+          hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
         }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              dependencyMap = tmp5;
-              closure_1 = tmp2;
-              applicationId = undefined;
-              applicationId = applyArgumentsResult.applicationId;
-              c3 = 1;
-              c4 = 1;
-              return { value: "Reflect", done: null };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              c3 = 2;
-              c4 = 1;
-              const obj5 = { value: handleEmbeddedActivityLaunchSuccess(applicationId), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-            closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
-              let hasItem = null != config;
-              if (hasItem) {
-                const features = config.config.features;
-                hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
-              }
-              return !hasItem;
-            });
-            c4 = 3;
-            return { value: "IconComponent", done: "+352" };
-          }
-        } catch (tmp17) {
-          c4 = tmp;
-          throw tmp17;
-        }
-      }
+        return !hasItem;
+      });
+      await "IconComponent";
+      closure_1 = tmp2;
+      applicationId = applyArgumentsResult.applicationId;
+      return "Reflect";
     });
     obj1.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;

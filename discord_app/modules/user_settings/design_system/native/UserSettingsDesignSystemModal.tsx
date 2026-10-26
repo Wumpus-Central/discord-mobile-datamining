@@ -579,7 +579,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           text: "Come on fhqwhgads",
           onPress: onAction,
         };
-        const tmp13 = closure_7(tmp(12936).ModalFloatingAction, obj3);
+        const tmp13 = closure_7(tmp(12939).ModalFloatingAction, obj3);
         cResult[4] = onAction;
         cResult[5] = tmp4.screen.backgroundColor;
         cResult[6] = tmp7;
@@ -594,7 +594,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       [arr2, c1] = noop.useState(parts.map(() => false));
       const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
       const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-      obj.footer = closure_7(parts(12936).ModalFloatingAction, {
+      obj.footer = closure_7(parts(12939).ModalFloatingAction, {
         isVisible: arr2.some((item) => item),
         floatingBackgroundColor: tmp.screen.backgroundColor,
         text: "Come on fhqwhgads",
@@ -633,7 +633,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }),
       });
-      const items = [closure_7(closure_5, obj3), closure_7(parts(12936).ModalFloatingActionSpacer, {})];
+      const items = [closure_7(closure_5, obj3), closure_7(parts(12939).ModalFloatingActionSpacer, {})];
       obj.children = items;
       return closure_8(closure_14, obj);
     };

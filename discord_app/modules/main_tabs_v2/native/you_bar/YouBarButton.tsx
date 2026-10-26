@@ -10,7 +10,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16443);
+const YouBarConstants = fn(16444);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -134,10 +134,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         position: "absolute",
         left: sum,
         top: sum1,
-        right: "ix",
-        bottom: "concat",
-        padding: "count",
-        minWidth: "Array",
+        right: "IconComponent",
+        bottom: "unicodeVersion",
+        padding: "toString",
+        minWidth: "alignItems",
       };
       cResult[0] = sum;
       cResult[1] = sum1;
@@ -161,10 +161,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           position: "absolute",
           left: size - badgeSize + num,
           top: size - badgeSize + num2,
-          right: "ix",
-          bottom: "concat",
-          padding: "count",
-          minWidth: "Array",
+          right: "IconComponent",
+          bottom: "unicodeVersion",
+          padding: "toString",
+          minWidth: "alignItems",
         };
         return rect;
       }, items);

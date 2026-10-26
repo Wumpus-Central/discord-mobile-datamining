@@ -93,9 +93,9 @@ export default function parseURL(ctaLink) {
     if (query == null) {
       str = "";
     }
-    const tmp145Result = parseQuery(str);
-    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp145Result);
-    ({ username, didRegister, custom_id, link_id, channel_id } = tmp145Result);
+    const tmp143Result = parseQuery(str);
+    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp143Result);
+    ({ username, didRegister, custom_id, link_id, channel_id } = tmp143Result);
     const tmpResult = UrlDefault;
     const findCodedLinkResult = findCodedLinks.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
@@ -261,12 +261,12 @@ export default function parseURL(ctaLink) {
             if (query == null) {
               query = "";
             }
-            const tmp145Result9 = parseQuery(query);
+            const tmp143Result8 = parseQuery(query);
             let castResult = null;
-            if (null != tmp145Result9[CONVERSATION_QUERY_PARAM]) {
+            if (null != tmp143Result8[CONVERSATION_QUERY_PARAM]) {
               castResult = null;
-              if (tmpResult11.isProbablyAValidSnowflake(tmp133)) {
-                castResult = SnowflakeUtilsDefault.cast(tmp133);
+              if (tmpResult11.isProbablyAValidSnowflake(tmp131)) {
+                castResult = SnowflakeUtilsDefault.cast(tmp131);
                 const tmpResult12 = SnowflakeUtilsDefault;
               }
               tmpResult11 = SnowflakeUtilsDefault;
@@ -290,7 +290,7 @@ export default function parseURL(ctaLink) {
               channelId: obj96.channelId,
               messageId: obj96.messageId,
             } = tryParseChannelPathResult);
-            obj31.summaryId = tmp145Result9.summaryId;
+            obj31.summaryId = tmp143Result8.summaryId;
             obj31.conversationId = castResult;
             obj30.payload = obj31;
             return obj30;
@@ -414,25 +414,25 @@ export default function parseURL(ctaLink) {
                 const match4 = pathname.match(re14);
                 if (null != match4) {
                   if (match4.length > 1) {
-                    let tmp29 = null;
+                    let tmp27 = null;
                     switch (match4[1]) {
                       case "composeMessage":
                         const obj55 = { type: React5.COMPOSE_MESSAGE };
-                        tmp29 = obj55;
+                        tmp27 = obj55;
                         while (true) {
-                          if (null != tmp29) {
-                            let obj56 = { fingerprint, attemptId, installationId, payload: tmp29 };
+                          if (null != tmp27) {
+                            let obj56 = { fingerprint, attemptId, installationId, payload: tmp27 };
                             return obj56;
                           }
                         }
                         break;
                       case "contactSync":
                         const obj57 = { type: React5.CONTACT_SYNC };
-                        tmp29 = obj57;
+                        tmp27 = obj57;
                         break;
                       case "addFriends":
                         const obj58 = { type: React5.ADD_FRIENDS };
-                        tmp29 = obj58;
+                        tmp27 = obj58;
                         break;
                       case "friends":
                         let str18 = query;
@@ -440,15 +440,15 @@ export default function parseURL(ctaLink) {
                           str18 = "";
                         }
                         const obj59 = { type: React5.FRIENDS, userId: parseQuery(str18).user_id };
-                        tmp29 = obj59;
+                        tmp27 = obj59;
                         break;
                       case "editProfile":
                         const obj60 = { type: React5.EDIT_PROFILE };
-                        tmp29 = obj60;
+                        tmp27 = obj60;
                         break;
                       case "badges":
                         const obj62 = { type: React5.BADGE_DIRECTORY };
-                        tmp29 = obj62;
+                        tmp27 = obj62;
                         break;
                       case "voiceChannel":
                         let str17 = query;
@@ -470,16 +470,16 @@ export default function parseURL(ctaLink) {
                           via: obj38.via,
                           action: obj38.action,
                         } = parseQuery(str17));
-                        tmp29 = obj63;
-                        const tmp145Result10 = parseQuery(str17);
+                        tmp27 = obj63;
+                        const tmp143Result9 = parseQuery(str17);
                         break;
                       case "sessionManagement":
                         const obj65 = { type: React5.SESSION_MANAGEMENT };
-                        tmp29 = obj65;
+                        tmp27 = obj65;
                         break;
                       case "messageRequests":
                         const obj66 = { type: React5.MESSAGE_REQUESTS };
-                        tmp29 = obj66;
+                        tmp27 = obj66;
                         break;
                       case "home":
                         let str16 = query;
@@ -497,12 +497,12 @@ export default function parseURL(ctaLink) {
                           highlight_channel_id: obj35.highlightChannelId,
                           highlight_message_id: obj35.highlightMessageId,
                         } = parseQuery(str16));
-                        tmp29 = obj67;
-                        const tmp145Result11 = parseQuery(str16);
+                        tmp27 = obj67;
+                        const tmp143Result10 = parseQuery(str16);
                         break;
                       case "icymi":
                         const obj68 = { type: React5.ICYMI };
-                        tmp29 = obj68;
+                        tmp27 = obj68;
                         break;
                       case "connections":
                         let str15 = query;
@@ -510,11 +510,11 @@ export default function parseURL(ctaLink) {
                           str15 = "";
                         }
                         const obj70 = { type: React5.CONNECTIONS, source: parseQuery(str15).source };
-                        tmp29 = obj70;
+                        tmp27 = obj70;
                         break;
                       case "family-center":
                         const obj71 = { type: React5.FAMILY_CENTER, pathname };
-                        tmp29 = obj71;
+                        tmp27 = obj71;
                         break;
                       case "promo-url":
                         let str14 = query;
@@ -522,15 +522,15 @@ export default function parseURL(ctaLink) {
                           str14 = "";
                         }
                         const promo_url = parseQuery(str14).promo_url;
-                        tmp29 = null;
+                        tmp27 = null;
                         if (undefined !== promo_url) {
                           const obj72 = { type: React5.FEATURE_PROMO_URL, promoUrl: promo_url };
-                          tmp29 = obj72;
+                          tmp27 = obj72;
                         }
                         break;
                       case "account-standing":
                         const obj73 = { type: React5.ACCOUNT_STANDING, pathname };
-                        tmp29 = obj73;
+                        tmp27 = obj73;
                         break;
                       case "mobile-web-redirect-checkout":
                         let result2 = MobileWebRedirectCheckoutUtils.isMobileWebRedirectCheckoutEnabled();
@@ -544,7 +544,7 @@ export default function parseURL(ctaLink) {
                         }
                         const tmp5Result13 = MobileWebRedirectCheckoutUtils;
                         let DEFAULT = parseQuery(str13)[constants5.DEEP_LINK_ACTION];
-                        tmp29 = null;
+                        tmp27 = null;
                         if (result2) {
                           const obj74 = {
                             type: React5.MOBILE_WEB_REDIRECT_CHECKOUT,
@@ -555,21 +555,21 @@ export default function parseURL(ctaLink) {
                             DEFAULT = constants4.DEFAULT;
                           }
                           obj74.deepLinkAction = DEFAULT;
-                          obj74.guildId = tmp52;
-                          tmp29 = obj74;
+                          obj74.guildId = tmp50;
+                          tmp27 = obj74;
                         }
-                        const tmp145Result12 = parseQuery(str13);
+                        const tmp143Result11 = parseQuery(str13);
                         break;
                       case "open-shop":
                         const obj75 = { type: React5.SHOP };
-                        tmp29 = obj75;
+                        tmp27 = obj75;
                         break;
                       case "authorized-apps":
                         const obj76 = { type: React5.AUTHORIZED_APPS };
-                        tmp29 = obj76;
+                        tmp27 = obj76;
                         break;
                       case "share":
-                        tmp29 = null;
+                        tmp27 = null;
                         if (tmp5Result15.isIOS()) {
                           let str12 = query;
                           if (query == null) {
@@ -599,7 +599,7 @@ export default function parseURL(ctaLink) {
                           const items4 = [];
                           items2 = items3;
                           items3[Symbol.iterator]();
-                          const tmp145Result13 = parseQuery(str12);
+                          const tmp143Result12 = parseQuery(str12);
                         }
                         tmp5Result15 = PlatformUtils;
                         break;
@@ -609,23 +609,23 @@ export default function parseURL(ctaLink) {
                           str11 = "";
                         }
                         ({ userId, fingerprint: fingerprint2 } = parseQuery(str11));
-                        tmp29 = null;
+                        tmp27 = null;
                         if (null != userId) {
-                          tmp29 = null;
+                          tmp27 = null;
                           if (null != fingerprint2) {
-                            tmp29 = null;
+                            tmp27 = null;
                             if (tmp5Result16.getSecureFramesDeeplinkExperiment({ location: "parseUrl" }).enabled) {
                               const obj77 = {
                                 type: React5.DAVE_PROTOCOL_VERIFICATION,
                                 userId,
                                 fingerprint: fingerprint2,
                               };
-                              tmp29 = obj77;
+                              tmp27 = obj77;
                             }
                             tmp5Result16 = SecureFramesDeeplinkExperiment;
                           }
                         }
-                        const tmp145Result14 = parseQuery(str11);
+                        const tmp143Result13 = parseQuery(str11);
                         break;
                       case "agekey-return":
                         let str10 = query;
@@ -643,12 +643,12 @@ export default function parseURL(ctaLink) {
                           ageKeySaved: obj22.ageKeySaved,
                           verificationId: obj22.verificationId,
                         } = parseQuery(str10));
-                        tmp29 = obj78;
-                        const tmp145Result15 = parseQuery(str10);
+                        tmp27 = obj78;
+                        const tmp143Result14 = parseQuery(str10);
                         break;
                       case "gift":
                         const obj79 = { type: React5.GIFT };
-                        tmp29 = obj79;
+                        tmp27 = obj79;
                         break;
                       case "store":
                         let str9 = query;
@@ -656,15 +656,15 @@ export default function parseURL(ctaLink) {
                           str9 = "";
                         }
                         const obj80 = { type: React5.NITRO_HOME, section: parseQuery(str9).section };
-                        tmp29 = obj80;
+                        tmp27 = obj80;
                         break;
                       case "connected-games":
                         const obj81 = { type: React5.CONNECTED_GAMES };
-                        tmp29 = obj81;
+                        tmp27 = obj81;
                         break;
                       case "boost-settings":
                         const obj82 = { type: React5.BOOST_SETTINGS };
-                        tmp29 = obj82;
+                        tmp27 = obj82;
                         break;
                       case "quest-preview-tool":
                         let str8 = query;
@@ -672,11 +672,11 @@ export default function parseURL(ctaLink) {
                           str8 = "";
                         }
                         const obj83 = { type: React5.QUEST_PREVIEW_TOOL, questId: parseQuery(str8).quest_id };
-                        tmp29 = obj83;
+                        tmp27 = obj83;
                         break;
                       case "subscription-settings":
                         const obj84 = { type: React5.SUBSCRIPTION_SETTINGS };
-                        tmp29 = obj84;
+                        tmp27 = obj84;
                         break;
                       case "conjure":
                         let str7 = query;
@@ -684,12 +684,11 @@ export default function parseURL(ctaLink) {
                           str7 = "";
                         }
                         const project_id = parseQuery(str7).project_id;
-                        tmp29 = null;
+                        tmp27 = null;
                         if (null != project_id) {
-                          const obj85 = { type: React5.CONJURE, projectId: project_id, guildId: tmp28 };
-                          tmp29 = obj85;
+                          const obj85 = { type: React5.CONJURE, projectId: project_id };
+                          tmp27 = obj85;
                         }
-                        const tmp145Result16 = parseQuery(str7);
                         break;
                     }
                   }
@@ -735,7 +734,7 @@ export default function parseURL(ctaLink) {
                       return obj88;
                     }
                   }
-                  const tmp106 = parseQuery(decodeURIComponent(query));
+                  const tmp104 = parseQuery(decodeURIComponent(query));
                   const obj90 = { reason: "invalid_query_params", fingerprint: null };
                   const obj64 = AnalyticsUtilsDefault;
                   obj90.fingerprint = FingerprintUtils.maybeExtractId(fingerprint3);
@@ -764,8 +763,8 @@ export default function parseURL(ctaLink) {
                   } else {
                     const match6 = pathname.match(re21);
                     if (null != match6) {
-                      const tmp95 = _slicedToArray(match6, 2);
-                      const first1 = tmp95[0];
+                      const tmp93 = _slicedToArray(match6, 2);
+                      const first1 = tmp93[0];
                       let str22 = query;
                       if (query == null) {
                         str22 = "";
@@ -773,7 +772,7 @@ export default function parseURL(ctaLink) {
                       const obj94 = { fingerprint, attemptId, installationId, payload: null };
                       const obj95 = {
                         type: React5.USER_CONNECTIONS_CALLBACK,
-                        provider: tmp95[1],
+                        provider: tmp93[1],
                         searchParams: parseQuery(decodeURIComponent(str22)),
                       };
                       obj94.payload = obj95;
@@ -781,20 +780,20 @@ export default function parseURL(ctaLink) {
                     } else {
                       const match7 = pathname.match(re22);
                       if (null != match7) {
-                        const tmp89 = _slicedToArray(match7, 4);
+                        const tmp87 = _slicedToArray(match7, 4);
                         const obj97 = { fingerprint, attemptId, installationId, payload: null };
                         const obj99 = {
                           type: React5.GUILD_SETTINGS,
-                          guildId: tmp89[1],
-                          settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp89[2]),
-                          settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp89[3]),
+                          guildId: tmp87[1],
+                          settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp87[2]),
+                          settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp87[3]),
                         };
                         obj97.payload = obj99;
                         return obj97;
                       } else {
                         const match8 = pathname.match(re23);
                         if (null != match8) {
-                          const tmp82 = _slicedToArray(match8, 3);
+                          const tmp80 = _slicedToArray(match8, 3);
                           let str21 = query;
                           if (query == null) {
                             str21 = "";
@@ -802,8 +801,8 @@ export default function parseURL(ctaLink) {
                           const obj100 = { fingerprint, attemptId, installationId, payload: null };
                           const obj101 = {
                             type: React5.GUILD_SETTINGS_PICKER,
-                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp82[1]),
-                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp82[2]),
+                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp80[1]),
+                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp80[2]),
                             feature: parseQuery(str21).feature,
                           };
                           obj100.payload = obj101;

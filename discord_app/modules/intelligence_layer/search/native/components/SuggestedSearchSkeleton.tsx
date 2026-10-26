@@ -30,7 +30,7 @@ let size = {
   marginRight: nativeDefault.space.PX_12,
 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13224).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13227).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = {
   height: 16,
   width: "72%",

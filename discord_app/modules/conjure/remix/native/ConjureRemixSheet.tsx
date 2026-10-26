@@ -470,7 +470,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -662,7 +662,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -17,7 +17,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadDebugLogsDisabled() {
   return closure_7().isDisabled;
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadDebugLogsTrailing() {
       const cResult = c.c(2);

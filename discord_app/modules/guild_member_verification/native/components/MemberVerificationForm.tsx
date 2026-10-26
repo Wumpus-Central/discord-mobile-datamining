@@ -384,7 +384,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -410,7 +410,7 @@ export default function MemberVerificationForm(guild) {
                   closure_1_1(5663).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);

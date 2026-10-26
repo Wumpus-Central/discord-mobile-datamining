@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === tmp8) {
         if (cResult[12] !== tmp15.leftIcon) {
           const obj2 = { style: tmp15.leftIcon };
-          const tmp20 = closure_7(tmp(11623).VoiceXIcon, obj2);
+          const tmp20 = closure_7(tmp(11624).VoiceXIcon, obj2);
           cResult[12] = tmp15.leftIcon;
           cResult[13] = tmp20;
         }

@@ -20,9 +20,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(10882);
+const ChannelCallStore = fn(10883);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10883);
+const ChannelCallConstants = fn(10884);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1087);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -227,11 +227,11 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       positionY = positionY.positionY;
       const tmp4 = closure_19();
       const obj = positionY(576);
-      const canShowTooltip = positionY(11577).useCanShowTooltip(
+      const canShowTooltip = positionY(11578).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );
-      const obj2 = positionY(11577);
+      const obj2 = positionY(11578);
       const fn = function o() {
         return { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
       };
@@ -294,7 +294,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   : function FocusedControlsBottomDrawerTooltip(positionY) {
       positionY = positionY.positionY;
       const tmp = closure_19();
-      const canShowTooltip = positionY(11577).useCanShowTooltip(
+      const canShowTooltip = positionY(11578).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );

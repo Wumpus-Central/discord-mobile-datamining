@@ -4,12 +4,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import FlashIcon from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
-import useICYMITabBadgeDefault from "../../../icymi/useICYMITabBadge.tsx";
 import YouBarButtonDefault from "YouBarButton.tsx";
+import useICYMITabBadgeDefault from "../../../icymi/useICYMITabBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16443).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16444).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj = {

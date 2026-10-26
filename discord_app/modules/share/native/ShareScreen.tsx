@@ -29,7 +29,7 @@ const ChannelRecord = fn(4827);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12903).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(12906).MAX_DESTINATION_COUNT;
 const UserRowModes = fn(10616).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
@@ -118,7 +118,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: "+352" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -233,7 +233,7 @@ export default function ShareScreen(appEntryKey) {
                                   let channel2;
                                   c5 = 1;
                                   c6 = 1;
-                                  return { value: "Reflect", done: null };
+                                  return { value: "Reflect", done: true };
                                 }
                               } else if (1 === tmp7) {
                                 if (arg0 === 1) {
@@ -383,7 +383,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_6(false);
               closure_129_7.current = false;
               React = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             React = 3;

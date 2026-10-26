@@ -11,11 +11,11 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12750 from "../../../../_runtime/metro/12750__.js";
+import _modDef12753 from "../../../../_runtime/metro/12753__.js";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef13170 from "../../../../_runtime/metro/13170__.js";
-import MemberActionUtils from "../MemberActionUtils.tsx";
 import _modDef13173 from "../../../../_runtime/metro/13173__.js";
+import MemberActionUtils from "../MemberActionUtils.tsx";
+import _modDef13176 from "../../../../_runtime/metro/13176__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -172,7 +172,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       emoji = emoji.emoji;
       const tmp3 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12750 };
+        const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12753 };
         const tmp7 = closure_12(Text(1202).Icon, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -284,7 +284,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_15();
       const obj = {
         style: tmp.emojiPlaceholder,
-        children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12750 }),
+        children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12753 }),
       };
       const tmp6 = closure_12(View, obj);
       id = undefined;
@@ -294,7 +294,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       if (emoji != null) {
         const name = emoji.name;
       }
-      const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12750 };
+      const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12753 };
       const items = [EmojiStore];
       const items1 = [id];
       const stateFromStores = id(573).useStateFromStores(
@@ -620,7 +620,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         items[1] = map1(View, obj3);
                         let tmp6Result = completed;
                         if (completed) {
-                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
+                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13176 };
                           tmp6Result = __initData(native.Icon, obj6);
                         }
                         items[2] = tmp6Result;
@@ -899,7 +899,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = map1(View, obj3);
             let tmp6Result = completed;
             if (completed) {
-              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
+              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13176 };
               tmp6Result = __initData(native.Icon, obj6);
             }
             items[2] = tmp6Result;
@@ -959,7 +959,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 obj3.children = items1;
                 items[1] = map1(View, obj3);
                 const obj7 = { style: closure_1.circle, children: null };
-                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13170 };
+                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13173 };
                 obj7.children = __initData(native.Icon, obj8);
                 items[2] = __initData(View, obj7);
                 obj.children = items;

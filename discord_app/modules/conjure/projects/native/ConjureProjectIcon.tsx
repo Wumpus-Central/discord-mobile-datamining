@@ -1,8 +1,13 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectIcon.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useConjureProjectIconDefault from "../useConjureProjectIcon.tsx";
+import _modDef683 from "../../../../../_runtime/metro/00683__.js";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
+import useConjureProjectIcon from "../useConjureProjectIcon.tsx";
+import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const useConjureProjectIconDefault = useConjureProjectIcon;
 
 const AvatarUtils = obj(1417);
 const FastImageDefault = tmp3(5669);
@@ -13,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40 };
-const createStyles = fn(4971);
+let createStyles = fn(4971);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = {
     frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" },
@@ -31,11 +36,14 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   obj.glyph = { width: width2, height: width2 };
   return obj;
 });
+fn(558);
+createStyles = fn(4971);
+let closure_9 = createStyles.createStyles((backgroundColor) => {
+  const obj = { tile: { backgroundColor } };
+  return obj;
+});
 const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureProjectIcon(project) {
       let obj = require;
       let image = dependencyMap;
@@ -129,4 +137,82 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp11, tmp10(React4, { style: tmp5.border, pointerEvents: "none" })];
       obj.children = items1;
       return timestampProducer(React4, obj);
+    };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectIcon.tsx");
+
+export default tmp5;
+export const ConjureNewProjectIcon = ReactCompilerGating.isReactCompilerEnabled()
+  ? function ConjureNewProjectIcon(arg0) {
+      const cResult = c.c(12);
+      if (cResult[0] !== dependencyMap[arg0.size]) {
+        const result = useConjureProjectIcon.conjureProjectIconMetrics(tmp4);
+        cResult[0] = tmp4;
+        cResult[1] = result;
+        let tmp5 = result;
+        const tmpResult = useConjureProjectIcon;
+      } else {
+        tmp5 = cResult[1];
+      }
+      const tmp7 = closure_8(dependencyMap[arg0.size], tmp5.radius, tmp5.glyphSize);
+      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+      if (cResult[2] !== token) {
+        const obj4 = _modDef683(token);
+        const cssResult = _modDef683(token).alpha(0.24).css();
+        cResult[2] = token;
+        cResult[3] = cssResult;
+        let tmp10 = cssResult;
+        const alphaResult = _modDef683(token).alpha(0.24);
+      } else {
+        tmp10 = cResult[3];
+      }
+      const tmp12 = closure_9(tmp10);
+      if (cResult[4] === tmp7.frame) {
+        if (cResult[5] === tmp12.tile) {
+          let tmp13 = cResult[6];
+        }
+        if (cResult[7] !== tmp7.glyph) {
+          const obj2 = { size: "custom", style: tmp7.glyph, color: nativeDefault.colors.ICON_BRAND };
+          const tmp16 = hasOwnProperty(MagicWandIcon.MagicWandIcon, obj2);
+          cResult[7] = tmp7.glyph;
+          cResult[8] = tmp16;
+          let tmp14 = tmp16;
+        } else {
+          tmp14 = cResult[8];
+        }
+        if (cResult[9] === tmp13) {
+          if (cResult[10] === tmp14) {
+            let tmp17 = cResult[11];
+          }
+          return tmp17;
+        }
+        const obj3 = { style: tmp13, children: tmp14 };
+        const tmp20 = hasOwnProperty(React4, obj3);
+        cResult[9] = tmp13;
+        cResult[10] = tmp14;
+        cResult[11] = tmp20;
+        tmp17 = tmp20;
+      }
+      const items = [tmp7.frame, tmp12.tile];
+      cResult[4] = tmp7.frame;
+      cResult[5] = tmp12.tile;
+      cResult[6] = items;
+      tmp13 = items;
+      const tmpResult2 = useToken;
+    }
+  : function ConjureNewProjectIcon(arg0) {
+      const result = useConjureProjectIcon.conjureProjectIconMetrics(tmp);
+      const tmp3 = closure_8(dependencyMap[arg0.size], result.radius, result.glyphSize);
+      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+      const obj3 = _modDef683(token);
+      const obj4 = { style: null, children: null };
+      const items = [tmp3.frame, closure_9(_modDef683(token).alpha(0.24).css()).tile];
+      obj4.style = items;
+      const alphaResult = _modDef683(token).alpha(0.24);
+      obj4.children = hasOwnProperty(MagicWandIcon.MagicWandIcon, {
+        size: "custom",
+        style: tmp3.glyph,
+        color: nativeDefault.colors.ICON_BRAND,
+      });
+      return hasOwnProperty(React4, obj4);
     };

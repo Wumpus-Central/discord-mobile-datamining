@@ -4,7 +4,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef1357 from "../../../../_runtime/metro/01357__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(10883).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(10884).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -16,8 +16,8 @@ let size = {
   width: "y",
   height: "IconComponent",
   screenOrientation: fn(8820).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: false,
-  isInitialized: null,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
   isVisible: null,
 };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
@@ -27,8 +27,8 @@ const size1 = {
   width: "y",
   height: "IconComponent",
   screenOrientation: fn(8820).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: false,
-  isInitialized: null,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
   isVisible: null,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;

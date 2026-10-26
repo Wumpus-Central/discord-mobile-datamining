@@ -1181,7 +1181,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const callback4 = notification_center_v2.useCallback(() => {
         const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
         dMChannel.then((channelId) => {
-          closure_1(15092)({
+          closure_1(15093)({
             payload: closure_1(5696)("https://discord.com/channels/@me/" + channelId).payload,
             safe: true,
             navigationReplace: false,
@@ -1223,7 +1223,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1265,7 +1265,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               closure_128_1();
               focusChatInput(closure_128_0.message_channel_id);
               navigation = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } catch (tmp18) {
               navigation = tmp;
               throw tmp18;

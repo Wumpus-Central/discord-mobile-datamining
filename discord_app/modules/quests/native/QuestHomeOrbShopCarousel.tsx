@@ -64,7 +64,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: { width: PX_12 } };
       return React6(View, obj);
     };
-const data = Array.from({ length: fn(16359).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(16360).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(4971);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
@@ -111,7 +111,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 fn(558);
-let obj3 = { length: fn(16359).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+let obj3 = { length: fn(16360).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? function QuestHomeOrbShopCarouselHeading(arg0) {
@@ -478,15 +478,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = undefined !== embedded && embedded;
       let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
       if (tmp5) {
-        ONYX = obtainableOrbRewards(15876).ThemeTypes.ONYX;
+        ONYX = obtainableOrbRewards(15877).ThemeTypes.ONYX;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16373).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+        let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16374).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
       } else {
         COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(9357).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16373).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16374).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
       } else {
         COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(9357).COLLECTIBLES_SHOP_CARD_HEIGHT;
       }

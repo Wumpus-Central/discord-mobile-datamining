@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Set",
           shouldInitialScroll: "Array",
-          animated: 82.192,
-          scrollPosition: 128.192,
-          focusTargetId: 0,
+          animated: "user",
+          scrollPosition: "2026-08-audio-fidelity",
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -362,9 +362,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
+        messageChannel: "System",
+        selectedChannelId: null,
+        tapLinkData: "ix",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

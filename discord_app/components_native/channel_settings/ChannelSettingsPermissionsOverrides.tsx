@@ -81,7 +81,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -204,7 +204,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           return obj;
         } else if (!value) {
           stateFromStores = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
         closure_130_3.deny = fromCreate(tmp5[21]).add(closure_130_3.deny, closure_130_0);
         const obj6 = fromCreate(tmp5[21]);
@@ -336,7 +336,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj5);
   if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10832), obj6);
+    let tmp12Result = closure_19(id(10833), obj6);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -380,7 +380,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         const obj = {
           variant: "text-xs/medium",
           color: "text-subtle",
-          children: closure_1_0(18288).renderDescription(description.description),
+          children: closure_1_0(18297).renderDescription(description.description),
         };
         const items = [closure_1_19(closure_1_0(5234).Text, obj)];
         let tmp5Result = null;
@@ -392,7 +392,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(18288);
+        const obj2 = closure_1_0(18297);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
         const tmp6Result = closure_1_0(1384);
         const obj4 = {
@@ -409,7 +409,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(18289), obj5);
+        obj4.trailing = closure_1_19(id(18298), obj5);
         return closure_1_19(closure_1_0(6903).TableRow, obj4, "row-" + index);
       }),
     });

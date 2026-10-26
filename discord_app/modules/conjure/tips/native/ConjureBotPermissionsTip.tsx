@@ -41,7 +41,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -72,7 +72,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } catch (tmp10) {
             v3 = tmp;
             throw tmp10;
@@ -98,8 +98,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function BotPermissionsHint(projectId) {
       projectId = projectId.projectId;
-      dependencyMap = noop.useContext(projectId(11876).ConjurePublishActionContext);
-      let obj = { icon: projectId(10953).ShieldIcon, children: null };
+      dependencyMap = noop.useContext(projectId(11765).ConjurePublishActionContext);
+      let obj = { icon: projectId(10954).ShieldIcon, children: null };
       const intl = projectId(1128).intl;
       const obj2 = { onReview: null };
       importDefault = asyncGeneratorStep(async () => {
@@ -113,7 +113,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -144,7 +144,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } catch (tmp10) {
             v3 = tmp;
             throw tmp10;
@@ -162,10 +162,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         return applyArgumentsResult;
       };
       obj.children = intl.format(_modDef3830["0S9HY8"], obj2);
-      return jsx(ConjureTipHintDefault, { icon: projectId(10953).ShieldIcon, children: null });
+      return jsx(ConjureTipHintDefault, { icon: projectId(10954).ShieldIcon, children: null });
     };
 let obj2 = {};
-const merged = Object.assign(fn(12347).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12330).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj2.render = function render(arg0, context) {
   return <closure_6 projectId={context.context.projectId} />;
 };

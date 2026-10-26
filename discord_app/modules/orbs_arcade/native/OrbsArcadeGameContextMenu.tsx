@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== game.id) {
         const obj2 = {
           label: tmp8,
-          IconComponent: tmp(13963).CircleQuestionIcon,
+          IconComponent: tmp(13965).CircleQuestionIcon,
           action() {
             return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id);
           },
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== game.id) {
         const obj3 = {
           label: tmp11,
-          IconComponent: tmp(11788).RefreshIcon,
+          IconComponent: tmp(12270).RefreshIcon,
           variant: "destructive",
           action() {
             return handleResetGame(game.id);
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.label = intl.string(util.t["3AT3DL"]);
         obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
         obj.action = function action() {
-          return game(16410).openOrbsArcadeInfoSheet(id.id);
+          return game(16411).openOrbsArcadeInfoSheet(id.id);
         };
         const items = [obj];
         return items;

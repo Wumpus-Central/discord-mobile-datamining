@@ -256,7 +256,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { children: null };
       const obj = rewards(504);
       const items2 = [
-        closure_9(rewards(12941).Pile, {
+        closure_9(rewards(12944).Pile, {
           "aria-label": memo,
           shape: rewards(9406).CutoutShape.Circle,
           size: v50,

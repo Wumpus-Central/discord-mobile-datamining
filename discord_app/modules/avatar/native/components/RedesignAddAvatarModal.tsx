@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 pendingImage = undefined;
                 if (null != base64) {
                   const obj11 = { imageUri: base64, description: null };
-                  const obj = tmp2(15839);
+                  const obj = tmp2(15840);
                   obj11.description = tmp2(8658).generateAvatarDescription();
                   pendingImage = obj.createPendingImage(obj11);
                   const obj3 = tmp2(8658);

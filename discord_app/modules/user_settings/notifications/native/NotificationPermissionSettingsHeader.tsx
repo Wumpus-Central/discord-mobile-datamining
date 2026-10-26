@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(13310);
+const NotificationPermissionConstants = fn(13313);
 ({
   EventActionLocation: closure_7,
   EventActionType: closure_8,
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = canSeePushNotificationNudge(576).c(20);
       const tmp4 = closure_13();
       let obj = canSeePushNotificationNudge(576);
-      canSeePushNotificationNudge = canSeePushNotificationNudge(13311).useCanSeePushNotificationNudge();
+      canSeePushNotificationNudge = canSeePushNotificationNudge(13314).useCanSeePushNotificationNudge();
       if (cResult[0] !== canSeePushNotificationNudge) {
         const fn = function o() {
           if (canSeePushNotificationNudge) {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-          const tmp12 = closure_11(tmp(10874).BellSlashIcon, obj3);
+          const tmp12 = closure_11(tmp(10875).BellSlashIcon, obj3);
           cResult[4] = tmp12;
           const tmp10 = tmp12;
         } else {
@@ -413,11 +413,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return null;
       }
-      let obj2 = canSeePushNotificationNudge(13311);
+      let obj2 = canSeePushNotificationNudge(13314);
     }
   : function NotificationPermissionSettingsHeader() {
       const tmp = closure_13();
-      canSeePushNotificationNudge = canSeePushNotificationNudge(13311).useCanSeePushNotificationNudge();
+      canSeePushNotificationNudge = canSeePushNotificationNudge(13314).useCanSeePushNotificationNudge();
       const items = [canSeePushNotificationNudge];
       const effect = noop.useEffect(() => {
         if (canSeePushNotificationNudge) {
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp.cardContent, children: null };
         const obj5 = { style: tmp.iconCircle, children: null };
         const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-        obj5.children = closure_11(tmp2(10874).BellSlashIcon, obj6);
+        obj5.children = closure_11(tmp2(10875).BellSlashIcon, obj6);
         const items1 = [closure_11(View, obj5), , ,];
         const obj7 = { variant: "heading-lg/bold", color: "text-default", children: null };
         const intl = tmp2(1128).intl;

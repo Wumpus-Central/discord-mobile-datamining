@@ -48,7 +48,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -89,7 +89,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(9714);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18083).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18092).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(9713).SearchFilterAddLocations;
 const Constants = fn(1087);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
@@ -305,7 +305,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         }
       } catch (tmp12) {
@@ -407,7 +407,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -468,7 +468,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         }
       } catch (tmp12) {
@@ -917,8 +917,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13222).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13222);
+        const result = searchContext(13225).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13225);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -950,8 +950,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13222).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13222);
+      const result = searchContext(13225).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13225);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

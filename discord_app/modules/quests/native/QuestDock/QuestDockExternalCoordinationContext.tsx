@@ -7,7 +7,7 @@ import QuestDockStore from "QuestDockStore.tsx";
 
 require = fn;
 let QuestDockMode = fn(6710).QuestDockMode;
-let closure_5 = fn(16440).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let closure_5 = fn(16441).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {

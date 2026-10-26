@@ -305,7 +305,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "Array" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

@@ -758,7 +758,7 @@ function GuildStickerDetail(sticker) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -791,7 +791,7 @@ function GuildStickerDetail(sticker) {
             v3(closure_128_0);
             closure_1_5(true);
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp16) {
           v3 = tmp;

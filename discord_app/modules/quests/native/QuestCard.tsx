@@ -224,7 +224,7 @@ let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = noop.memo(function QuestCard(questContent) {
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16466, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16467, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -710,7 +710,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -739,7 +739,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp9) {
                 v3 = tmp;
@@ -919,7 +919,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const obj43 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16511, dependencyMap.paths),
+                asyncRequireImpl(16512, dependencyMap.paths),
                 "QuestEnrollmentBlockedBottomSheet",
                 { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
               );
@@ -1094,7 +1094,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             } else {
               const obj5 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16466, dependencyMap.paths),
+                asyncRequireImpl(16467, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj5,
               );
@@ -1175,7 +1175,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 impressionId: getQuestImpressionId(),
               };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(16466, dependencyMap.paths),
+                asyncRequireImpl(16467, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );
@@ -1214,7 +1214,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

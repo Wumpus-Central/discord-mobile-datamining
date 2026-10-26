@@ -24,7 +24,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -59,9 +59,9 @@ function useHandleBuyNow(product) {
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(13942).open(obj8);
+          v1(13944).open(obj8);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(13881)({
+  const tmp3 = onBuySettled(13883)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -108,7 +108,7 @@ function useHandleBuyNow(product) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

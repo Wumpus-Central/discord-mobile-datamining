@@ -49,7 +49,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === arg0) {
           let tmp14 = cResult[6];
         }
-        historyLoad = tmp(12274).useHistoryLoad(tmp14);
+        historyLoad = tmp(12223).useHistoryLoad(tmp14);
         nextCursor = null;
         if ("loaded" === historyLoad.state.status) {
           nextCursor = historyLoad.state.data.nextCursor;
@@ -175,7 +175,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = C;
         cResult[17] = tmp23;
         cResult[18] = obj2;
-        const tmpResult = tmp(12274);
+        const tmpResult = tmp(12223);
       }
       const fn = function p() {
         return conjurePublishHistoryRequests.fetchPublishHistory(closure_0, closure_2);

@@ -22,7 +22,7 @@ import n from "../../../../../_runtime/metro/00683__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const NitroHomeSectionId = fn(14706).NitroHomeSectionId;
+const NitroHomeSectionId = fn(14707).NitroHomeSectionId;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_11,
@@ -116,7 +116,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       const obj2 = onClose(1505);
-      let backButtonWrapper = onClose(14707).useMobileNitroManageSubscriptionsSettingsExperiment(first);
+      let backButtonWrapper = onClose(14708).useMobileNitroManageSubscriptionsSettingsExperiment(first);
       if (cResult[1] === navigation) {
         if (cResult[2] === onClose) {
           let tmp7 = cResult[3];
@@ -194,7 +194,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
                       if (!tmp10) {
                         const obj6 = {
                           style: tmp4.pillParent,
-                          children: closure_17(onClose(14708).PremiumReferralTrialPill, { hasExtraMargin: true }),
+                          children: closure_17(onClose(14709).PremiumReferralTrialPill, { hasExtraMargin: true }),
                         };
                         tmp33 = closure_17(closure_5, obj6);
                       }
@@ -275,7 +275,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = onClose;
       cResult[3] = S;
       tmp7 = S;
-      const tmpResult = onClose(14707);
+      const tmpResult = onClose(14708);
     }
   : function NitroHomeHeader(arg0) {
       ({ subscription, onClose } = arg0);
@@ -284,7 +284,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = onClose(1505);
       const items = [navigation, onClose];
       const mobileNitroManageSubscriptionsSettingsExperiment = onClose(
-        14707,
+        14708,
       ).useMobileNitroManageSubscriptionsSettingsExperiment({ location: "NitroHomeHeader" });
       let hasActiveTrial;
       const callback = noop.useCallback(() => {
@@ -299,7 +299,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = { style: tmp.contentContainer, children: null };
       const obj4 = { style: tmp.headerContainer, children: null };
-      const obj2 = onClose(14707);
+      const obj2 = onClose(14708);
       const tmp8 = !hasActiveTrial;
       const items1 = [
         closure_17(onClose(6908).PressableOpacity, {
@@ -344,7 +344,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp11Result2) {
         const obj9 = {
           style: tmp.pillParent,
-          children: closure_17(onClose(14708).PremiumReferralTrialPill, { hasExtraMargin: true }),
+          children: closure_17(onClose(14709).PremiumReferralTrialPill, { hasExtraMargin: true }),
         };
         tmp11Result2 = closure_17(closure_5, obj9);
       }
@@ -415,7 +415,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp19 = closure_17(tmp(14738).TieredTenureBadgePerkCard, {});
+            const tmp19 = closure_17(tmp(14739).TieredTenureBadgePerkCard, {});
             cResult[9] = tmp19;
             let tmp17 = tmp19;
           } else {
@@ -511,7 +511,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           if (isEligibleSenderForReferralProgram) {
             const obj12 = {
               onLayout: createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM),
-              children: closure_17(tmp(14742).ReferralProgramPerkCard, {}),
+              children: closure_17(tmp(14743).ReferralProgramPerkCard, {}),
             };
             tmp21 = closure_17(closure_5, obj12);
           }
@@ -533,7 +533,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
             componentId: null,
             promotionId: null,
           };
-          const obj22 = { width: tmp(14709).PERK_CARD_SIZES[tmp(undefined, 14709).PerkCardVariant.WIDE].width };
+          const obj22 = { width: tmp(14710).PERK_CARD_SIZES[tmp(undefined, 14710).PerkCardVariant.WIDE].width };
           obj13.style = obj22;
           obj13.cardStyle = tmp4.marketingBannerCard;
           obj13.bannerFields = promotionMarketingComponent.properties.properties.marketingPageBanner;
@@ -600,7 +600,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           componentId: null,
           promotionId: null,
         };
-        const obj7 = { width: tmp2(14709).PERK_CARD_SIZES[tmp2(undefined, 14709).PerkCardVariant.WIDE].width };
+        const obj7 = { width: tmp2(14710).PERK_CARD_SIZES[tmp2(undefined, 14710).PerkCardVariant.WIDE].width };
         obj6.style = obj7;
         obj6.cardStyle = tmp.marketingBannerCard;
         obj6.bannerFields = promotionMarketingComponent.properties.properties.marketingPageBanner;
@@ -615,7 +615,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           onLayout: useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(
             NitroHomeSectionId.REFERRAL_PROGRAM,
           ),
-          children: closure_17(tmp2(14742).ReferralProgramPerkCard, {}),
+          children: closure_17(tmp2(14743).ReferralProgramPerkCard, {}),
         };
         tmp15Result = closure_17(closure_5, obj8);
       }
@@ -651,7 +651,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_29();
       const obj = first(576);
       const tmp = first;
-      const premiumPerkCard = first(14709).usePremiumPerkCard();
+      const premiumPerkCard = first(14710).usePremiumPerkCard();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(section_name) {
           hasTrackedScrolledToBottom(dependencyMap[21]).track(constants.MOBILE_NITRO_HOME_PERKS_CAROUSEL_SCROLLED, {
@@ -795,7 +795,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4.featureCardsContainer;
       cResult[5] = tmp9;
       cResult[6] = items;
-      const obj2 = first(14709);
+      const obj2 = first(14710);
     }
   : function PerksTab(extraBottomHeight) {
       ({ fractionalState, isInReverseTrial } = extraBottomHeight);
@@ -851,7 +851,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { title: null, perks: null, onItemChange: null };
         const intl2 = tmp2(1128).intl;
         obj4.title = intl2.string(tmp2(1128).t["+vt7w9"]);
-        const tmp9Result = tmp9(14765);
+        const tmp9Result = tmp9(14766);
         if (tmp2Result.isAppIconsSupported()) {
           const items5 = [premiumPerkCard.customAppIcons];
           let items6 = items5;
@@ -869,7 +869,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         };
         items4[1] = closure_17(tmp9Result, obj4);
         const obj5 = { title: null, perks: null, onItemChange: null };
-        tmp2Result = tmp2(14766);
+        tmp2Result = tmp2(14767);
         const intl3 = tmp2(1128).intl;
         obj5.title = intl3.string(tmp2(1128).t.LgHbnL);
         const items8 = [, , , ,];
@@ -884,9 +884,9 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.onItemChange = function onItemChange(arg0) {
           return closure_0(closure_22.CAROUSEL_SECTION_NAME_3, arg0);
         };
-        items4[2] = closure_17(tmp9(14765), obj5);
+        items4[2] = closure_17(tmp9(14766), obj5);
         const obj6 = { title: null, perks: null, onItemChange: null };
-        const tmp9Result3 = tmp9(14765);
+        const tmp9Result3 = tmp9(14766);
         const intl4 = tmp2(1128).intl;
         obj6.title = intl4.string(tmp2(1128).t.LTaxu9);
         if (fractionalState === tmp11.FP_ONLY) {
@@ -908,7 +908,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = items4;
           return closure_18(closure_6, obj2);
         }
-        tmp9Result4 = tmp9(14765);
+        tmp9Result4 = tmp9(14766);
       }
       tmp10 = PremiumPerkCarouselDefault;
     };
@@ -927,15 +927,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PremiumNitroHome(arg0) {
       const cResult = bottom(576).c(96);
       let obj = bottom(576);
-      const commonTriggerPoint = bottom(14768).useCommonTriggerPoint(bottom(14769).OpenNitroTriggerPoint);
-      let obj2 = bottom(14768);
+      const commonTriggerPoint = bottom(14769).useCommonTriggerPoint(bottom(14770).OpenNitroTriggerPoint);
+      let obj2 = bottom(14769);
       const giftCardMobileConsumptionHalfsheet = bottom(7493).useGiftCardMobileConsumptionHalfsheet();
       closure_24();
       bottom = navigation(1633)().bottom;
       let obj3 = bottom(7493);
       const tmp7 = navigation;
-      const youBarSettingsCustomHeaderPaddingTop = bottom(14770).useYouBarSettingsCustomHeaderPaddingTop();
-      let obj4 = bottom(14770);
+      const youBarSettingsCustomHeaderPaddingTop = bottom(14771).useYouBarSettingsCustomHeaderPaddingTop();
+      let obj4 = bottom(14771);
       navigation = bottom(1505).useNavigation();
       if (cResult[0] !== navigation) {
         class E {
@@ -1076,7 +1076,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmpResult4 = bottom(504);
       const isInReverseTrial = bottom(8436).useIsInReverseTrial();
       let tmpResult5 = bottom(8436);
-      const maybeFetchTieredTenureBadgeData = bottom(14771).useMaybeFetchTieredTenureBadgeData();
+      const maybeFetchTieredTenureBadgeData = bottom(14772).useMaybeFetchTieredTenureBadgeData();
       const field = PremiumNitroNavigationStore.useField("scrollToSectionId");
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class W {
@@ -1161,7 +1161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = sum1;
         cResult[22] = obj7;
       }
-      let tmpResult6 = bottom(14771);
+      let tmpResult6 = bottom(14772);
       cResult[14] = field;
       cResult[15] = sum;
       cResult[16] = {
@@ -1185,14 +1185,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       let isEligibleSenderForReferralProgram;
       let promotionMarketingComponent;
-      const commonTriggerPoint = bottom(14768).useCommonTriggerPoint(bottom(14769).OpenNitroTriggerPoint);
-      let obj = bottom(14768);
+      const commonTriggerPoint = bottom(14769).useCommonTriggerPoint(bottom(14770).OpenNitroTriggerPoint);
+      let obj = bottom(14769);
       const giftCardMobileConsumptionHalfsheet = bottom(7493).useGiftCardMobileConsumptionHalfsheet();
       const tmp5 = closure_24();
       bottom = navigation(1633)().bottom;
       let obj2 = bottom(7493);
-      const youBarSettingsCustomHeaderPaddingTop = bottom(14770).useYouBarSettingsCustomHeaderPaddingTop();
-      let obj3 = bottom(14770);
+      const youBarSettingsCustomHeaderPaddingTop = bottom(14771).useYouBarSettingsCustomHeaderPaddingTop();
+      let obj3 = bottom(14771);
       navigation = bottom(1505).useNavigation();
       const items = [navigation];
       const layoutEffect = stateFromStores.useLayoutEffect(() => {
@@ -1236,7 +1236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = bottom(504);
       const isInReverseTrial = bottom(8436).useIsInReverseTrial();
       const obj8 = bottom(8436);
-      const maybeFetchTieredTenureBadgeData = bottom(14771).useMaybeFetchTieredTenureBadgeData();
+      const maybeFetchTieredTenureBadgeData = bottom(14772).useMaybeFetchTieredTenureBadgeData();
       const field = PremiumNitroNavigationStore.useField("scrollToSectionId");
       const effect = stateFromStores.useEffect(
         () => () => {
@@ -1244,7 +1244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      const obj9 = bottom(14771);
+      const obj9 = bottom(14772);
       const obj11 = { items: null, pageWidth: null, onPageChange: null };
       const obj12 = { label: null, id: null, page: null };
       const intl = bottom(1128).intl;
@@ -1302,8 +1302,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmpResult6 = bottom(4978);
       const isThemeDarkResult = bottom(4978).isThemeDark(theme);
       const tmpResult7 = bottom(4978);
-      const tmp6Result = navigation(14772);
-      const tmp6ResultResult = navigation(14772)(tmp21.endsAt, bottom(14772).CountDownMessageTypes.ENDS_IN);
+      const tmp6Result = navigation(14773);
+      const tmp6ResultResult = navigation(14773)(tmp21.endsAt, bottom(14773).CountDownMessageTypes.ENDS_IN);
       isEligibleSenderForReferralProgram = bottom(8427).useIsEligibleSenderForReferralProgram();
       const items5 = [isEligibleSenderForReferralProgram];
       const effect2 = obj5.useEffect(() => {
@@ -1352,7 +1352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj = bottom(_undefined[50]);
       }, []);
       const tmpResult8 = bottom(8427);
-      promotionMarketingComponent = bottom(14730).usePromotionMarketingComponent(
+      promotionMarketingComponent = bottom(14731).usePromotionMarketingComponent(
         tmp(10495).MarketingComponentType.PREMIUM_TAB,
       );
       const items6 = [promotionMarketingComponent];
@@ -1380,8 +1380,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items7 = [tmp5.container, { paddingTop: youBarSettingsCustomHeaderPaddingTop }];
       obj17.style = items7;
       const obj18 = { style: tmp5.background, source: null };
-      const tmpResult9 = bottom(14730);
-      obj18.source = navigation(14773);
+      const tmpResult9 = bottom(14731);
+      obj18.source = navigation(14774);
       const items8 = [
         closure_17(navigation(5669), obj18),
         closure_17(closure_26, { onClose: onClose.onClose, subscription: stateFromStores1 }),
@@ -1391,12 +1391,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp26Result = tmp21.fractionalState !== FractionalPremiumStates.NONE && !isInReverseTrial;
       if (tmp26Result) {
         const obj19 = { countdownText: tmp6ResultResult };
-        tmp26Result = closure_17(tmp6(14774), obj19);
+        tmp26Result = closure_17(tmp6(14775), obj19);
       }
       items8[2] = tmp26Result;
       const obj20 = { style: tmp5.tabContent, children: null };
       const items9 = [
-        closure_17(bottom(11147).SegmentedControlPages, { state: segmentedControlState, nativeGesture: memo }),
+        closure_17(bottom(11148).SegmentedControlPages, { state: segmentedControlState, nativeGesture: memo }),
       ];
       if (tmp26Result4) {
         const obj21 = { style: tmp5.backSwipeSensor };

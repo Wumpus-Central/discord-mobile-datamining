@@ -13,7 +13,7 @@ function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10886).useIsConnectedToVoiceChannel(channel);
+  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10887).useIsConnectedToVoiceChannel(channel);
   const id = noop.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = noop.useEffect(() => {
@@ -24,7 +24,7 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(10886);
+  let obj = isConnectedToVoiceChannel(10887);
   const isChannelContentGated = isConnectedToVoiceChannel(6662).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
@@ -55,7 +55,7 @@ function MainCallScreen(channel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ function MainCallScreen(channel) {
           } else {
             closure_129_0 = true;
             c3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           c3 = tmp;
@@ -114,13 +114,13 @@ function MainCallScreen(channel) {
       }
     };
   }, []);
-  isConnectedToVoiceChannel(11561);
+  isConnectedToVoiceChannel(11562);
   if (isChannelContentGated) {
     let obj3 = { onReturnToSafety: id(6672).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(10895), obj3);
+    let tmp14Result2 = closure_12(id(10896), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(10895);
+    const tmp20 = id(10896);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -133,7 +133,7 @@ function MainCallScreen(channel) {
     let tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj7 = { channel };
-      tmp14Result = closure_12(id(11515), obj7);
+      tmp14Result = closure_12(id(11516), obj7);
     }
     obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
@@ -141,7 +141,7 @@ function MainCallScreen(channel) {
   }
   let obj2 = isConnectedToVoiceChannel(6662);
   const tmp21 = id(5146)();
-  const tmp22 = id(11573);
+  const tmp22 = id(11574);
   const tmp2Result = isConnectedToVoiceChannel(1384);
   const tmp23 = isConnectedToVoiceChannel(1384).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, {
@@ -152,7 +152,7 @@ function MainCallScreen(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(10883).ChannelCallScreens;
+const ChannelCallScreens = fn(10884).ChannelCallScreens;
 const ComponentActions = fn(1087).ComponentActions;
 let closure_11 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
 const jsxProd = fn(21);
@@ -303,7 +303,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18 = null;
           if (channel.isGuildStageVoice()) {
             const obj5 = { channel };
-            tmp18 = closure_12(tmp5(11515), obj5);
+            tmp18 = closure_12(tmp5(11516), obj5);
           }
           cResult[5] = channel;
           cResult[6] = tmp18;
@@ -363,7 +363,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp29 = null;
             if (tmp13) {
               const obj9 = { channel };
-              tmp29 = closure_12(tmp5(10881), obj9);
+              tmp29 = closure_12(tmp5(10882), obj9);
             }
             cResult[13] = channel;
             cResult[14] = tmp13;
@@ -481,7 +481,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp16 = null;
       if (channel.isGuildStageVoice()) {
         const obj6 = { channel };
-        tmp16 = closure_12(tmp2(11515), obj6);
+        tmp16 = closure_12(tmp2(11516), obj6);
       }
       const items1 = [tmp16];
       const obj7 = { pointerEvents: "box-none", style: null };
@@ -494,7 +494,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp18Result = null;
       if (tmp11[0]) {
         const obj9 = { channel };
-        tmp18Result = closure_12(tmp2(10881), obj9);
+        tmp18Result = closure_12(tmp2(10882), obj9);
       }
       obj8.children = tmp18Result;
       items3[1] = closure_12(closure_6, obj8);

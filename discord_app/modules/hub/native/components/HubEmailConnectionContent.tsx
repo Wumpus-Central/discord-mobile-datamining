@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(13661);
+const HubConstants = fn(13663);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1087).MarketingURLs;
 const jsxProd = fn(21);
@@ -58,7 +58,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

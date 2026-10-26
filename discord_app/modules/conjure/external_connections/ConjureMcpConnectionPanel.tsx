@@ -49,7 +49,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -89,7 +89,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           } else {
             let connection = null;
             if (!closure_129_0) {

@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -254,7 +254,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -274,7 +274,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     noop(null);
                     dependencyMap = 1;
                     c3 = 1;
-                    const obj4 = { value: tmp2(12798)(conjureServerApp), done: false };
+                    const obj4 = { value: tmp2(12801)(conjureServerApp), done: false };
                     return obj4;
                   }
                 }

@@ -10,10 +10,10 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17271);
+const UserSettingsSafetySelectedGuildStore = fn(17272);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11209).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11210).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -123,7 +123,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return stringResult;
       }
     };
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTitle() {
       const cResult = c.c(2);

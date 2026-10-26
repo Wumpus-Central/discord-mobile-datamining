@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.children = items;
         obj6.subLabel = closure_7(closure_6, obj7);
         obj5.children = closure_5(tmp(6903).TableRow, obj6);
-        const tmp30 = closure_5(tmp(11613).UserSettingsTableRowGroup, obj5);
+        const tmp30 = closure_5(tmp(11614).UserSettingsTableRowGroup, obj5);
         cResult[14] = tmp23;
         cResult[15] = tmp18;
         cResult[16] = tmp30;
@@ -156,5 +156,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = items;
       obj3.subLabel = closure_7(closure_6, obj4);
       obj2.children = closure_5(analyticsLocations(6903).TableRow, obj3);
-      return closure_5(analyticsLocations(11613).UserSettingsTableRowGroup, obj2);
+      return closure_5(analyticsLocations(11614).UserSettingsTableRowGroup, obj2);
     };

@@ -81,7 +81,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
   const result = AccessibilityActionCreators.setOfficialMessageStyle(officialMessageStyle);
 }
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

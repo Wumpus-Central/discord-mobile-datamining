@@ -98,13 +98,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if ("role" === channel_filter.type) {
           tmp8 = arg0;
         }
-        const conjureGuildRoles = result(11835).useConjureGuildRoles(tmp8);
-        const resultResult1 = result(11835);
+        const conjureGuildRoles = result(12183).useConjureGuildRoles(tmp8);
+        const resultResult1 = result(12183);
         let tmp9 = null;
         if ("user" === channel_filter.type) {
           tmp9 = arg0;
         }
-        const conjureGuildMemberUsers = result(11835).useConjureGuildMemberUsers(tmp9);
+        const conjureGuildMemberUsers = result(12183).useConjureGuildMemberUsers(tmp9);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [StreamerModeStore];
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[5];
           tmp12 = cResult[6];
         }
-        const resultResult2 = result(11835);
+        const resultResult2 = result(12183);
         const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
         const type = channel_filter.type;
         if ("channel" === type) {
@@ -267,9 +267,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
         } else if ("user" === type) {
           return conjureGuildMemberUsers.map((id) => {
-            const result = closure_0(11835).conjureMemberUsername(id, stateFromStores1);
+            const result = closure_0(12183).conjureMemberUsername(id, stateFromStores1);
             const obj2 = { id: id.id, label: null };
-            const obj = closure_0(11835);
+            const obj = closure_0(12183);
             obj2.label = closure_0(5989).getName(closure_1_0, null, id);
             if ("" === result) {
               let obj4 = {};

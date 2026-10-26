@@ -41,7 +41,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -154,7 +154,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             closure_129_5 = undefined;
             lastFetchTimestamp = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp7) {

@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(4971);
 let obj2 = {
-  headerSpacer: { height: fn(12122).EXPANDED_HEADER_HEIGHT - fn(12122).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12013).EXPANDED_HEADER_HEIGHT - fn(12013).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12122).EXPANDED_HEADER_HEIGHT - fn(12122).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12013).EXPANDED_HEADER_HEIGHT - fn(12013).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -405,7 +405,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -455,7 +455,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         closure_129_0();
                       }
                       c3 = 3;
-                      return { value: "IconComponent", done: "+352" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp13) {
                     c3 = tmp;
@@ -541,7 +541,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -591,7 +591,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_0();
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;

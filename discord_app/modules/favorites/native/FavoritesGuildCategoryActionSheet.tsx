@@ -15,7 +15,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       category = category.category;
       const onClose = category.onClose;
       const tmp4 = onClose(5604)(category, true);
-      const tmp5 = onClose(13850)(category);
+      const tmp5 = onClose(13852)(category);
       dependencyMap = tmp5;
       const DeveloperMode = category(4799).DeveloperMode;
       const setting = DeveloperMode.useSetting();
@@ -119,7 +119,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp5) {
         const obj10 = { hasIcons: true, children: null };
         const obj11 = { label: tmp5.label, icon: null, onPress: null };
-        const obj12 = { IconComponent: tmp(10841).PlusLargeIcon };
+        const obj12 = { IconComponent: tmp(10842).PlusLargeIcon };
         obj11.icon = closure_5(tmp(7294).ActionSheetRow.Icon, obj12);
         obj11.onPress = function onPress() {
           closure_2.perform();
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildCategoryActionSheetConnected(category) {
       category = category.category;
       const onClose = category.onClose;
-      const tmp3 = onClose(13850)(category);
+      const tmp3 = onClose(13852)(category);
       dependencyMap = tmp3;
       const DeveloperMode = category(4799).DeveloperMode;
       const setting = DeveloperMode.useSetting();
@@ -149,7 +149,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp3) {
         const obj2 = { hasIcons: true, children: null };
         const obj3 = { label: tmp3.label, icon: null, onPress: null };
-        const obj4 = { IconComponent: tmp4(10841).PlusLargeIcon };
+        const obj4 = { IconComponent: tmp4(10842).PlusLargeIcon };
         obj3.icon = closure_5(tmp4(7294).ActionSheetRow.Icon, obj4);
         obj3.onPress = function onPress() {
           closure_2.perform();

@@ -548,7 +548,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -571,7 +571,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         closure_1_6(null);
                         closure_1_8(true);
                         c3 = 1;
-                        const obj2 = guildTemplate(12737);
+                        const obj2 = guildTemplate(12740);
                         c4 = 2;
                         c5 = 1;
                         const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -858,7 +858,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -880,7 +880,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     closure_1_7(null);
                     closure_1_9(true);
                     c3 = 1;
-                    const obj2 = guildTemplate(12737);
+                    const obj2 = guildTemplate(12740);
                     c4 = 2;
                     c5 = 1;
                     const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -1627,7 +1627,7 @@ let closure_16 = noop.memo(
         };
         const tmp = _slicedToArray(noop.useState(false), 2);
         _slicedToArray = tmp[1];
-        const tmp3 = guildTemplate(19150)(guildTemplate.code);
+        const tmp3 = guildTemplate(19160)(guildTemplate.code);
         noop = tmp3;
         let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
         let obj2 = { label: null, children: null };

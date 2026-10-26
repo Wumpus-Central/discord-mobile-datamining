@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/archive/native/ConjureArchivePicker.tsx
 import util from "../../../../intl/index.native.tsx";
 import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
-import conjureAttachmentRequests from "../../chat/conjureAttachmentRequests.tsx";
 import ConjureAttachmentTypes from "../../chat/ConjureAttachmentTypes.tsx";
+import conjureAttachmentRequests from "../../chat/conjureAttachmentRequests.tsx";
 import FilePickerUtils from "../../../../utils/native/FilePickerUtils.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -49,7 +49,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c6 = tmp;

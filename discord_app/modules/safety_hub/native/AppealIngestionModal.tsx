@@ -408,7 +408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -612,7 +612,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -634,7 +634,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp27(12834).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                      value: tmp27(12837).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                       done: false,
                     };
                     return obj6;

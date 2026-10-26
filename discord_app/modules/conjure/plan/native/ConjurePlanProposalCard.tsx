@@ -8,7 +8,7 @@ import useConjureAttachmentImage from "../../chat/useConjureAttachmentImage.tsx"
 import ConjureNativeMarkdown from "../../chat/native/ConjureNativeMarkdown.tsx";
 import conjurePlanOverlayDesign from "../conjurePlanOverlayDesign.tsx";
 import useConjureOverlayBackgroundDefault from "../../preview/useConjureOverlayBackground.tsx";
-import _modDef12446 from "../../../../../_runtime/metro/12446__.js";
+import _modDef12429 from "../../../../../_runtime/metro/12429__.js";
 import conjurePlanBot from "../conjurePlanBot.tsx";
 import conjurePlanDesign from "../conjurePlanDesign.tsx";
 import ConjurePlanWidgetDefault from "ConjurePlanWidget.tsx";
@@ -76,7 +76,7 @@ let obj6 = {
 };
 obj2.overlayDesign = {
   width: "100%",
-  aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO,
+  aspectRatio: fn(12426).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   overflow: "hidden",
 };
@@ -86,14 +86,14 @@ obj8.transform = items;
 obj2.blurredBackground = obj8;
 let obj7 = {
   width: "100%",
-  aspectRatio: fn(12443).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO,
+  aspectRatio: fn(12426).CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   overflow: "hidden",
 };
 obj2.overlayWidget = {
   position: "absolute",
-  top: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_TOP,
-  end: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_END,
+  top: fn(12426).CONJURE_PLAN_OVERLAY_WIDGET_TOP,
+  end: fn(12426).CONJURE_PLAN_OVERLAY_WIDGET_END,
 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -102,7 +102,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(24);
       ({ src, alt, size, onError } = projectId);
       const tmp4 = closure_11();
-      const tmp6Result = useConjureOverlayBackgroundDefault(projectId.projectId, _modDef12446);
+      const tmp6Result = useConjureOverlayBackgroundDefault(projectId.projectId, _modDef12429);
       if (cResult[0] !== size) {
         const result = conjurePlanOverlayDesign.conjurePlanOverlayWidgetBox(size);
         cResult[0] = size;
@@ -230,7 +230,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   : function PlanOverlayWidget(arg0) {
       ({ projectId, src, alt, size, onError } = arg0);
       const tmp = closure_11();
-      const tmp4Result = useConjureOverlayBackgroundDefault(projectId, _modDef12446);
+      const tmp4Result = useConjureOverlayBackgroundDefault(projectId, _modDef12429);
       const size2 = conjurePlanOverlayDesign.conjurePlanOverlayWidgetBox(size);
       const obj2 = { style: tmp.overlayDesign, children: null };
       let tmp9Result = null;
@@ -390,8 +390,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj9 = {
   position: "absolute",
-  top: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_TOP,
-  end: fn(12443).CONJURE_PLAN_OVERLAY_WIDGET_END,
+  top: fn(12426).CONJURE_PLAN_OVERLAY_WIDGET_TOP,
+  end: fn(12426).CONJURE_PLAN_OVERLAY_WIDGET_END,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanProposalCard.tsx");

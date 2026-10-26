@@ -268,11 +268,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (cResult[8] !== tmp19) {
-                const result = tmp(11754).ownerOnlyClarification(tmp19);
+                const result = tmp(12290).ownerOnlyClarification(tmp19);
                 cResult[8] = tmp19;
                 cResult[9] = result;
                 let tmp35 = result;
-                const tmpResult4 = tmp(11754);
+                const tmpResult4 = tmp(12290);
               } else {
                 tmp35 = cResult[9];
               }
@@ -446,7 +446,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = {
-          clarification: tmp(11754).ownerOnlyClarification(memo),
+          clarification: tmp(12290).ownerOnlyClarification(memo),
           readOnly: true,
           hideSubmit: true,
           failure: null,
@@ -798,8 +798,8 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
         items1,
       );
       let obj = projectId(504);
-      const conjureEligibleGuilds = projectId(11750).useConjureEligibleGuilds(switchTo);
-      let obj2 = projectId(11750);
+      const conjureEligibleGuilds = projectId(12304).useConjureEligibleGuilds(switchTo);
+      let obj2 = projectId(12304);
       let obj3 = conjureEligibleGuilds;
       [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
       const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -918,6 +918,6 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
       }
       const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
       let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-      obj5.clarification = projectId(11754).ownerOnlyClarification(memo);
+      obj5.clarification = projectId(12290).ownerOnlyClarification(memo);
       return obj5;
     };

@@ -9,8 +9,8 @@ import _modDef7548 from "../../../_runtime/metro/07548__.js";
 import _modDef7549 from "../../../_runtime/metro/07549__.js";
 import _modDef8438 from "../../../_runtime/metro/08438__.js";
 import _modDef10472 from "../../../_runtime/metro/10472__.js";
-import _modDef14878 from "../../../_runtime/metro/14878__.js";
 import _modDef14879 from "../../../_runtime/metro/14879__.js";
+import _modDef14880 from "../../../_runtime/metro/14880__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -55,9 +55,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== premiumType) {
         function getTextLogo() {
           if (PremiumTypes.TIER_0 === premiumType) {
-            return _modDef14878;
-          } else if (PremiumTypes.TIER_1 === premiumType) {
             return _modDef14879;
+          } else if (PremiumTypes.TIER_1 === premiumType) {
+            return _modDef14880;
           } else if (PremiumTypes.TIER_2 === premiumType) {
             return _modDef8438;
           }
@@ -318,9 +318,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.style = textLogoTier2;
       if (PremiumTypes.TIER_0 === premiumType) {
-        let tmp5Result = _modDef14878;
+        let tmp5Result = _modDef14879;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        tmp5Result = _modDef14879;
+        tmp5Result = _modDef14880;
       } else if (PremiumTypes.TIER_2 === premiumType) {
         tmp5Result = _modDef8438;
       }

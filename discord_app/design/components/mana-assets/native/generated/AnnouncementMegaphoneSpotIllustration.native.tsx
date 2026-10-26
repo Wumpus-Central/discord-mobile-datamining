@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef19222 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-1x.png.js";
-import _modDef19223 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-2x.png.js";
-import _modDef19224 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-3x.png.js";
+import _modDef19232 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-1x.png.js";
+import _modDef19233 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-2x.png.js";
+import _modDef19234 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19222 }, 3: null };
-let obj2 = { uri: _modDef19222 };
-obj[2] = { uri: _modDef19223 };
-const obj3 = { uri: _modDef19223 };
-obj[3] = { uri: _modDef19224 };
+let obj = { 1: null, 2: { uri: _modDef19232 }, 3: null };
+let obj2 = { uri: _modDef19232 };
+obj[2] = { uri: _modDef19233 };
+const obj3 = { uri: _modDef19233 };
+obj[3] = { uri: _modDef19234 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19224 };
+const obj4 = { uri: _modDef19234 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/AnnouncementMegaphoneSpotIllustration.native.tsx",

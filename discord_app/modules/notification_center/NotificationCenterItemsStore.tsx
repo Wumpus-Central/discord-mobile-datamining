@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Set",
-  notifCenterActive: "icon",
-  notifCenterTabFocused: "unicodeEmoji",
+  notifCenterActive: "\u0111\u1ED1m",
+  notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "icon",
-      notifCenterTabFocused: "unicodeEmoji",
+      notifCenterActive: "\u0111\u1ED1m",
+      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "icon",
-      notifCenterTabFocused: "unicodeEmoji",
+      notifCenterActive: "\u0111\u1ED1m",
+      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "icon",
-      notifCenterTabFocused: "unicodeEmoji",
+      notifCenterActive: "\u0111\u1ED1m",
+      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

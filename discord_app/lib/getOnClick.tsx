@@ -57,7 +57,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -117,7 +117,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -256,7 +256,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -313,7 +313,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "dispatch", skuId: "ix" };
+            result = { applicationId: "Array", skuId: "Reflect" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -434,7 +434,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14196, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14197, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;

@@ -132,7 +132,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-            const tmp16 = jsx(tmp(16095).RestrictedUserRowLabel, {
+            const tmp16 = jsx(tmp(16096).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp13,
               onAccessibilityAction: tmp7,
@@ -213,7 +213,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(16095).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(16096).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

@@ -27,7 +27,7 @@ function useStateFromStores(items, cResult, items1) {
       areStatesEqual: tmp,
       getStateFromStores: cResult,
       prevDeps: "Boolean",
-      state: "__packager_asset",
+      state: "application",
     };
     tmp2.current = obj;
   }

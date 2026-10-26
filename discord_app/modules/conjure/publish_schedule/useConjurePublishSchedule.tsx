@@ -101,7 +101,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -171,7 +171,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                     closure_129_7(false);
                   }
                   c5 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   closure_129_3(closure_128_1);
                   const intl = tmp6(tmp80[6]).intl;

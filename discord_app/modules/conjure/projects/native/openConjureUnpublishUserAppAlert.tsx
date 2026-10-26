@@ -148,7 +148,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -186,7 +186,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 );
                 require("ToastActionCreators").open("CONJURE_USER_APP_UNPUBLISHED", obj7);
                 c3 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } else {
                 const intl = tmp5(stateFromStores[9]).intl;
                 closure_128_0 = intl.string(require("../../intl/ConjureUntranslated.messages.js")["rE/0SD"]);
@@ -255,7 +255,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -290,7 +290,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               obj7.text = intl2.formatToPlainString(tmp5(3830).b8LN7N, obj8);
               tmp5(5663).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
               c3 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             } else {
               const intl = tmp2(1128).intl;
               closure_128_0 = intl.string(tmp5(3830)["rE/0SD"]);

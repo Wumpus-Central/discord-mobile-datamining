@@ -5,9 +5,9 @@ import native from "../../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ForumPostMediaUtils from "../../../ForumPostMediaUtils.tsx";
-import _modDef13103 from "../../../../../../_runtime/metro/13103__.js";
-import _modDef13104 from "../../../../../../_runtime/metro/13104__.js";
-import _modDef13105 from "../../../../../../_runtime/metro/13105__.js";
+import _modDef13106 from "../../../../../../_runtime/metro/13106__.js";
+import _modDef13107 from "../../../../../../_runtime/metro/13107__.js";
+import _modDef13108 from "../../../../../../_runtime/metro/13108__.js";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -95,7 +95,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       const tmp4 = closure_10();
       if (cResult[0] !== tmp4.gifIcon) {
-        const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef13103, disableColor: true, style: tmp4.gifIcon };
+        const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef13106, disableColor: true, style: tmp4.gifIcon };
         const tmp8 = timestampProducer(native.Icon, obj2);
         cResult[0] = tmp4.gifIcon;
         cResult[1] = tmp8;
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       return timestampProducer(native.Icon, {
         size: native.Icon.Sizes.CUSTOM,
-        source: _modDef13103,
+        source: _modDef13106,
         disableColor: true,
         style: closure_10().gifIcon,
       });
@@ -119,7 +119,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function PlayIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef13104, disableColor: true };
+        const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef13107, disableColor: true };
         const tmp7 = timestampProducer(native.Icon, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -131,7 +131,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   : function PlayIcon() {
       return timestampProducer(native.Icon, {
         size: native.Icon.Sizes.SMALL_20,
-        source: _modDef13104,
+        source: _modDef13107,
         disableColor: true,
       });
     };
@@ -141,7 +141,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(9);
       const tmp4 = closure_10();
       if (cResult[0] !== tmp4.icon.color) {
-        const obj2 = { source: _modDef13105, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+        const obj2 = { source: _modDef13108, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
         const tmp8 = timestampProducer(native.Icon, obj2);
         cResult[0] = tmp4.icon.color;
         cResult[1] = tmp8;
@@ -196,12 +196,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: tmp.extraMediaCountContainer, children: null };
       items = [
         timestampProducer(native.Icon, {
-          source: _modDef13105,
+          source: _modDef13108,
           color: tmp.icon.color,
           size: native.Icon.Sizes.REFRESH_SMALL_16,
         }),
       ];
-      const obj2 = { source: _modDef13105, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+      const obj2 = { source: _modDef13108, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
       items[1] = timestampProducer(Text_Text.Text, {
         style: tmp.extraMediaCount,
         lineClamp: 1,
@@ -887,7 +887,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp12Result) {
         const obj4 = { style: tmp.footerLeftContainer, children: null };
         const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-        obj4.children = closure_6(tmp2(13110).ForumPostAppliedTagPills, obj5);
+        obj4.children = closure_6(tmp2(13113).ForumPostAppliedTagPills, obj5);
         tmp12Result = closure_6(View, obj4);
       }
       items4[1] = tmp12Result;

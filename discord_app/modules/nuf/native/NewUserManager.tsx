@@ -10,9 +10,9 @@ import NewUserStore from "../NewUserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const NewUserTypes = fn(13609).NewUserTypes;
+const NewUserTypes = fn(13611).NewUserTypes;
 const PlatformTypes = fn(1087).PlatformTypes;
-let closure_10 = fn(13661).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(13663).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = {
   REGISTRATION: "Registration",
   ADD_AVATAR: "Add Avatar",
@@ -33,7 +33,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(18882).openAddAvatarModal,
+  transitionToStep: fn(18892).openAddAvatarModal,
 };
 const items = [obj2, , , , ,];
 let obj3 = {
@@ -55,14 +55,14 @@ let obj3 = {
     }
     return tmp3;
   },
-  transitionToStep: fn(13579).openContactSyncModalOnboarding,
+  transitionToStep: fn(13581).openContactSyncModalOnboarding,
 };
 items[1] = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(13608).openDiscoverabilityModal,
+  transitionToStep: fn(13610).openDiscoverabilityModal,
 };
 items[2] = obj3;
 items[3] = {
@@ -97,7 +97,7 @@ let obj4 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(13608).openDiscoverabilityModal,
+  transitionToStep: fn(13610).openDiscoverabilityModal,
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
@@ -128,7 +128,7 @@ const prototype = function NewUserManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ const prototype = function NewUserManager() {
             let transitionToStep2;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

@@ -41,7 +41,7 @@ export default noop.memo(
     : function GuildSettingsModalMembersWrapper(guildId) {
         guildId = guildId.guildId;
         return jsx(
-          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18021 : 18023),
+          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18030 : 18032),
           { guildId },
         );
       },

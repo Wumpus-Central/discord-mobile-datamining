@@ -18,7 +18,7 @@ import NotificationCenterStore from "../NotificationCenterStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const MainTabsConstants = fn(11183);
+const MainTabsConstants = fn(11184);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
 const ReadStateTypes = fn(6705).ReadStateTypes;
 const jsx = fn(21).jsx;

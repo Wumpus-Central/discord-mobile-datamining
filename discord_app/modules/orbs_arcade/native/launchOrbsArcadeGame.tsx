@@ -28,7 +28,7 @@ let closure_10 = async function _ensureEnrollment(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_11 = async function _launchGame(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -148,13 +148,13 @@ let closure_11 = async function _launchGame(arg0, arg1) {
             closure_131_0(closure_131_2[15]).leaveFrame(closure_130_4);
             closure_131_9();
             c6 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp8) {
           c4 = 0;
           closure_131_9();
           c6 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
@@ -198,7 +198,7 @@ let closure_11 = async function _launchGame(arg0, arg1) {
         } else if (4 === tmp8) {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -277,7 +277,7 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

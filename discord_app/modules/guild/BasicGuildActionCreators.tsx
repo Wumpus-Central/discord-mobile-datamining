@@ -21,7 +21,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(32);
       guild = guild.guild;
       let obj = guild(576);
-      const canAccessSettings = guild(15209).useGuildActionSheetPermissions(guild).canAccessSettings;
+      const canAccessSettings = guild(15210).useGuildActionSheetPermissions(guild).canAccessSettings;
       const total = stateFromStores(8371)(guild.id).total;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildChannelStore];
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj2 = guild(15209);
+      let obj2 = guild(15210);
       stateFromStores = guild(504).useStateFromStores(first, S);
       if (cResult[3] === stateFromStores) {
         class S {
@@ -818,7 +818,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const intl = tmp(1128).intl;
                 obj8.label = intl.string(tmp(1128).t.VINpSK);
-                obj8.icon = tmp4(10860);
+                obj8.icon = tmp4(10861);
                 obj8.onPress = function onPress() {
                   ActionSheetActionCreatorsDefault.hideActionSheet();
                   tmp11();
@@ -879,9 +879,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GuildActionSheetTabItems(guild) {
       guild = guild.guild;
       let stateFromStores;
-      let canAccessSettings = guild(15209).useGuildActionSheetPermissions(guild).canAccessSettings;
+      let canAccessSettings = guild(15210).useGuildActionSheetPermissions(guild).canAccessSettings;
       const total = stateFromStores(8371)(guild.id).total;
-      let obj = guild(15209);
+      let obj = guild(15210);
       const items = [GuildChannelStore];
       stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
       let obj2 = guild(504);
@@ -929,7 +929,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
         const intl3 = tmp(1128).intl;
         obj8.label = intl3.string(tmp(1128).t.VINpSK);
-        obj8.icon = tmp3(10860);
+        obj8.icon = tmp3(10861);
         obj8.onPress = function onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           closure_2();

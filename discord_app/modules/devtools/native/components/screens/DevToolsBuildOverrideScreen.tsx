@@ -21,9 +21,9 @@ let closure_9 = createStyles.createStyles(obj);
 let obj4 = { padding: nativeDefault.space.PX_16 };
 let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(9463).TagIcon, {}) }];
 let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(9463).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16943).HashmarkIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16944).HashmarkIcon, {}) };
 const ReactCompilerGating = fn(558);
-let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16943).HashmarkIcon, {}) };
+let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16944).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -148,29 +148,29 @@ export default noop.memo(
                 ,
               ];
               const obj6 = {
-                icon: jsx(tmp(11788).RefreshIcon, {}),
+                icon: jsx(tmp(12270).RefreshIcon, {}),
                 label: "Refresh Override",
-                onPress: tmp(12716).refreshBuildOverride,
+                onPress: tmp(12719).refreshBuildOverride,
                 arrow: true,
               };
               items1[1] = jsx(tmp(6903).TableRow, {
-                icon: jsx(tmp(11788).RefreshIcon, {}),
+                icon: jsx(tmp(12270).RefreshIcon, {}),
                 label: "Refresh Override",
-                onPress: tmp(12716).refreshBuildOverride,
+                onPress: tmp(12719).refreshBuildOverride,
                 arrow: true,
               });
               const obj7 = {
                 icon: jsx(tmp(5689).TrashIcon, { color: "text-feedback-critical" }),
                 label: "Clear Override",
                 variant: "danger",
-                onPress: tmp(12716).clearBuildOverride,
+                onPress: tmp(12719).clearBuildOverride,
                 arrow: true,
               };
               items1[2] = jsx(tmp(6903).TableRow, {
                 icon: jsx(tmp(5689).TrashIcon, { color: "text-feedback-critical" }),
                 label: "Clear Override",
                 variant: "danger",
-                onPress: tmp(12716).clearBuildOverride,
+                onPress: tmp(12719).clearBuildOverride,
                 arrow: true,
               });
               obj4.children = items1;
@@ -615,7 +615,7 @@ export default noop.memo(
           const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
           let tmp;
           if (overrides != null) {
-            tmp = overrides[first(undefined, 12716).DEVICE_FIELD];
+            tmp = overrides[first(undefined, 12719).DEVICE_FIELD];
           }
           return tmp;
         });
@@ -652,29 +652,29 @@ export default noop.memo(
             ,
           ];
           const obj6 = {
-            icon: jsx(tmp3(11788).RefreshIcon, {}),
+            icon: jsx(tmp3(12270).RefreshIcon, {}),
             label: "Refresh Override",
-            onPress: tmp3(12716).refreshBuildOverride,
+            onPress: tmp3(12719).refreshBuildOverride,
             arrow: true,
           };
           items1[1] = jsx(tmp3(6903).TableRow, {
-            icon: jsx(tmp3(11788).RefreshIcon, {}),
+            icon: jsx(tmp3(12270).RefreshIcon, {}),
             label: "Refresh Override",
-            onPress: tmp3(12716).refreshBuildOverride,
+            onPress: tmp3(12719).refreshBuildOverride,
             arrow: true,
           });
           const obj7 = {
             icon: jsx(tmp3(5689).TrashIcon, { color: "text-feedback-critical" }),
             label: "Clear Override",
             variant: "danger",
-            onPress: tmp3(12716).clearBuildOverride,
+            onPress: tmp3(12719).clearBuildOverride,
             arrow: true,
           };
           items1[2] = jsx(tmp3(6903).TableRow, {
             icon: jsx(tmp3(5689).TrashIcon, { color: "text-feedback-critical" }),
             label: "Clear Override",
             variant: "danger",
-            onPress: tmp3(12716).clearBuildOverride,
+            onPress: tmp3(12719).clearBuildOverride,
             arrow: true,
           });
           obj5.children = items1;

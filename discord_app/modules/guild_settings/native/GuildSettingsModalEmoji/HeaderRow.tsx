@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/13135__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/13138__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -32,7 +32,7 @@ function HeaderRow(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -32,12 +32,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(18952).sendStageRequestToSpeakEphemeralMessage(
+                  const result = userId(18962).sendStageRequestToSpeakEphemeralMessage(
                     channelId,
                     user,
                     requestToSpeakTimestamp,
                   );
-                  const tmp11Result = userId(18952);
+                  const tmp11Result = userId(18962);
                 }
               } else {
                 messages = messages.getMessages(channelId);

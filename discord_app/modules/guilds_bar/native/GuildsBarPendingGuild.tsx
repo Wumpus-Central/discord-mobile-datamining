@@ -425,7 +425,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "gds",
+          children: "flag_dm",
         };
         let str = guildName;
         const tmp2Result2 = guildId(stateFromStores[21]);
@@ -471,7 +471,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "gds",
+          children: "flag_dm",
         });
       },
 );

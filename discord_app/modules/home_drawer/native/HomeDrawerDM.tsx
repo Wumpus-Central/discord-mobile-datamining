@@ -62,7 +62,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp12);
         const tmpResult4 = tmp(504);
-        const unread = tmp(17788).useBaseChannelUnreadBadgeState(channel, false).unread;
+        const unread = tmp(17789).useBaseChannelUnreadBadgeState(channel, false).unread;
         if (cResult[7] !== unread) {
           const obj2 = { unread };
           cResult[7] = unread;
@@ -71,7 +71,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp14 = cResult[8];
         }
-        const tmp16 = stateFromStores(16675)(channel, tmp14);
+        const tmp16 = stateFromStores(16676)(channel, tmp14);
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [UserGuildSettingsStore];
@@ -126,9 +126,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 isTemporary = tmp22.isTemporary;
               }
               if (isTemporary) {
-                let BellSlashIcon = tmp(13822).BellZIcon;
+                let BellSlashIcon = tmp(13824).BellZIcon;
               } else {
-                BellSlashIcon = tmp(10874).BellSlashIcon;
+                BellSlashIcon = tmp(10875).BellSlashIcon;
               }
             } else {
               if (cResult[19] === stateFromStores1) {
@@ -153,7 +153,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         return tmp55;
                       }
                       const obj5 = { title: tmp46, subtitle: null };
-                      const tmp57 = closure_10(tmp(17754).HomeDrawerSharedItem, obj5);
+                      const tmp57 = closure_10(tmp(17755).HomeDrawerSharedItem, obj5);
                       cResult[32] = null;
                       cResult[33] = tmp46;
                       cResult[34] = tmp57;
@@ -171,7 +171,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         layout: tmp(5643).ChannelListLayoutTypes.COZY,
                         muted: tmp22.isMuted,
                       };
-                      const tmp53 = closure_10(tmp(13767).ChannelRowPreview, obj6);
+                      const tmp53 = closure_10(tmp(13769).ChannelRowPreview, obj6);
                       cResult[28] = channel;
                       cResult[29] = tmp16;
                       class B {
@@ -227,7 +227,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = channel.id;
         cResult[12] = B;
         tmp19 = B;
-        const tmpResult5 = tmp(17788);
+        const tmpResult5 = tmp(17789);
       }
       const fn2 = function f() {
         let tmp2 = null;
@@ -270,10 +270,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       });
       let obj2 = channel(504);
       const tmp3 = useMessagePreviewsDefault(channel, {
-        unread: channel(17788).useBaseChannelUnreadBadgeState(channel, false).unread,
+        unread: channel(17789).useBaseChannelUnreadBadgeState(channel, false).unread,
       });
       closure_4 = tmp3;
-      const obj3 = channel(17788);
+      const obj3 = channel(17789);
       const items2 = [UserGuildSettingsStore];
       const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
         UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -344,7 +344,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       }, items5);
-      return closure_10(channel(17754).HomeDrawerSharedItem, { title, subtitle });
+      return closure_10(channel(17755).HomeDrawerSharedItem, { title, subtitle });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

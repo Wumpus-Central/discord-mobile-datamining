@@ -18,7 +18,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -127,10 +127,10 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 };
 const identity = fn(1269);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "registerAsset",
-  isVibrationsEnabled: "unicodeVersion",
-  isSoundsEnabled: "httpServerLocation",
-  isNotifyEveryTime: "call",
+  isLightsEnabled: "Array",
+  isVibrationsEnabled: "test",
+  isSoundsEnabled: "y",
+  isNotifyEveryTime: "IconComponent",
 }));
 fn(558);
 let ReactCompilerGating = fn(558);

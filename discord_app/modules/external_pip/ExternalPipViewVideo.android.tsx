@@ -301,7 +301,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === userId) {
               let tmp15 = cResult[12];
             }
-            ({ gradientStops, backgroundColor } = channelId(18442)(tmp15));
+            ({ gradientStops, backgroundColor } = channelId(18452)(tmp15));
             if (cResult[13] !== backgroundColor) {
               const obj2 = { backgroundColor };
               cResult[13] = backgroundColor;
@@ -382,7 +382,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = items3;
             tmp19 = items3;
             tmp16 = channelId;
-            const tmp17 = channelId(18442)(tmp15);
+            const tmp17 = channelId(18452)(tmp15);
           }
         }
         const obj6 = { userId, guildId: stateFromStores1, avatarURI: tmp13, location: "ExternalPipViewVideo-native" };
@@ -430,8 +430,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
       }
       obj2.avatarURI = avatarURL;
-      const tmp7 = channelId(18442);
-      ({ gradientStops, backgroundColor } = channelId(18442)(obj2));
+      const tmp7 = channelId(18452);
+      ({ gradientStops, backgroundColor } = channelId(18452)(obj2));
       const items2 = [tmp.user, backgroundColor];
       const obj5 = {
         style: noop.useMemo(() => {
@@ -588,7 +588,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           onReady: streamReadyCallback,
           onLayout: tmp16,
         };
-        const tmp19 = closure_11(streamReady(11438), obj7);
+        const tmp19 = closure_11(streamReady(11439), obj7);
         cResult[11] = tmp16;
         cResult[12] = streamId;
         cResult[13] = streamReadyCallback;
@@ -644,7 +644,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const children = [
-        closure_11(streamReady(11438), {
+        closure_11(streamReady(11439), {
           useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
           style: memo,
           streamId,

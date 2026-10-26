@@ -12,8 +12,8 @@ import LinearGradientDefault from "../../../_runtime/05258_LinearGradient.js";
 import FastImageDefault from "../common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef14849 from "../../../_runtime/metro/14849__.js";
 import _modDef14850 from "../../../_runtime/metro/14850__.js";
+import _modDef14851 from "../../../_runtime/metro/14851__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp4.subtitle) {
               if (cResult[7] === tmp4.title) {
                 if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14849 };
+                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14850 };
                   const tmp22 = React6(FastImageDefault, obj2);
                   cResult[9] = tmp4.upsellFeatureSubLogo;
                   cResult[10] = tmp22;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp19 = cResult[10];
                 }
                 if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14850 };
+                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14851 };
                   const tmp26 = React6(FastImageDefault, obj4);
                   cResult[11] = tmp4.upsellFeatureLogoTier2;
                   cResult[12] = tmp26;
@@ -379,11 +379,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { style: tmp.upsellFeatures, children: null };
         const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
         intlResult1 = PremiumUtilsDefault;
-        obj11.source = _modDef14849;
+        obj11.source = _modDef14850;
         const items4 = [React6(FastImageDefault, obj11), ,];
         const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
         const intlResult2 = FastImageDefault;
-        obj12.source = _modDef14850;
+        obj12.source = _modDef14851;
         items4[1] = React6(FastImageDefault, obj12);
         const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
         const intlResult3 = FastImageDefault;

@@ -256,8 +256,8 @@ prototype["hasPendingSettingsRequest"] = function hasPendingSettingsRequest(arg0
   }
   return tmp2;
 };
-prototype["isThinking"] = function isThinking(projectId) {
-  return conjureChatTurns.hasOpenTurn(map.get(projectId));
+prototype["isThinking"] = function isThinking(id) {
+  return conjureChatTurns.hasOpenTurn(map.get(id));
 };
 prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
   return map5.has(projectId);

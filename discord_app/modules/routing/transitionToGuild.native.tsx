@@ -14,8 +14,8 @@ export const transitionToGuild = function transitionToGuild(id, arg1) {
   const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({
     duration: 0,
     create: "r",
-    update: "__packager_asset",
-    delete: "formatToPlainString",
+    update: "end",
+    delete: "toCharArray$esjava$1",
   });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };

@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           obj4.onTapImage = tmp36;
-                          const tmp47 = closure_18(reactTag(12847), obj4);
+                          const tmp47 = closure_18(reactTag(12850), obj4);
                           cResult[38] = tmp36;
                           cResult[39] = tmp47;
                           let tmp44 = tmp47;
@@ -450,10 +450,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [id];
       const resolveAssetSource = first3.resolveAssetSource;
       if (obj3.useStateFromStores(items1, () => ref(4978).isThemeLight(id.theme))) {
-        let assetSource = resolveAssetSource(tmp11(12845));
+        let assetSource = resolveAssetSource(tmp11(12848));
         let tmp13 = tmp11;
       } else {
-        assetSource = resolveAssetSource(tmp11(12846));
+        assetSource = resolveAssetSource(tmp11(12849));
         tmp13 = tmp11;
       }
       let first2 = arg0.flaggedContent[0];
@@ -663,7 +663,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj10 = obj4;
       } else {
         const obj6 = { ref, onTapImage: callback, inverted: false };
-        const items9 = [closure_18(tmp13(12847), obj6)];
+        const items9 = [closure_18(tmp13(12850), obj6)];
         const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
         const tmp13Result = tmp13(9772);
         const obj8 = {

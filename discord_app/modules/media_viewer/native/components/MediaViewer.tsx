@@ -25,7 +25,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14244)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14245)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -250,7 +250,7 @@ function MediaViewer(arg0) {
   });
   const obj17 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const items6 = [
-    dismiss(height(10889), { barStyle: "light-content", hidden: !tmp5 }),
+    dismiss(height(10890), { barStyle: "light-content", hidden: !tmp5 }),
     dismiss(height(5052).View, { style: animatedStyle }),
     ,
     ,
@@ -275,7 +275,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp29Result = tmp29(tmp(14246), obj20);
+    tmp29Result = tmp29(tmp(14247), obj20);
   }
   obj19.children = tmp29Result;
   items6[2] = dismiss(height(5053), obj19);
@@ -290,7 +290,7 @@ function MediaViewer(arg0) {
   obj21.pointerEvents = str;
   obj21.children = renderOverlay(dismiss, overlayEnabled);
   items6[3] = dismiss(height(5053), obj21);
-  items6[4] = dismiss(height(11369), {});
+  items6[4] = dismiss(height(11370), {});
   obj17.children = items6;
   const children = tmp31(tmp32, obj17);
   return dismiss(tmp7(7253).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });

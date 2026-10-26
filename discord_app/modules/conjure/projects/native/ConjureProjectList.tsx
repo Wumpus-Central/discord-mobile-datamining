@@ -5,20 +5,20 @@ import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetA
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
-import conjureStandaloneScenes from "../../builder/native/conjureStandaloneScenes.tsx";
 import ConjureActivity from "../ConjureActivity.tsx";
-import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
+import conjureStandaloneScenes from "../../builder/native/conjureStandaloneScenes.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
 import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
-import MentionsBadgeDefault from "../../../guild_sidebar/native/MentionsBadge.tsx";
 import ConjureHeaderIconButtonDefault from "../../shared/native/ConjureHeaderIconButton.tsx";
+import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
+import MentionsBadgeDefault from "../../../guild_sidebar/native/MentionsBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
 import ConjureProjectStore from "../ConjureProjectStore.tsx";
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;
-const ConjureCreateSheetDefault = ConjureCreateSheet;
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
+const ConjureCreateSheetDefault = ConjureCreateSheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === guildId) {
           if (cResult[15] !== stateFromStoresArray1) {
             const substr = stateFromStoresArray1.slice();
-            const sorted = substr.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
+            const sorted = substr.sort(tmp(11746).compareConjureProjectsByUpdatedAt);
             cResult[15] = stateFromStoresArray1;
             cResult[16] = sorted;
           }
@@ -555,11 +555,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[23] = tmp25;
             cResult[24] = tmp28;
           }
-          const projectOpenerResult = tmp(11745).projectOpener(guildId, U);
+          const projectOpenerResult = tmp(11762).projectOpener(guildId, U);
           cResult[19] = guildId;
           cResult[20] = U;
           cResult[21] = projectOpenerResult;
-          const tmpResult6 = tmp(11745);
+          const tmpResult6 = tmp(11762);
         }
       }
       if (cResult[13] !== guildId) {
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const found = stateFromStoresArray.filter(M);
-      const sorted1 = found.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
+      const sorted1 = found.sort(tmp(11746).compareConjureProjectsByUpdatedAt);
       cResult[10] = stateFromStoresArray;
       cResult[11] = guildId;
       cResult[12] = sorted1;

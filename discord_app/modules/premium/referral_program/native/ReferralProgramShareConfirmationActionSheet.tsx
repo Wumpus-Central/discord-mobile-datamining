@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol5 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(14754).FistBumpSpotIllustration, {});
+          const tmp19 = closure_5(tmp(14755).FistBumpSpotIllustration, {});
           cResult[4] = tmp19;
           let tmp17 = tmp19;
         } else {
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: null };
       const formatResult = intl3.format(tmp5(1128).t.AwGSWl, obj);
       const items = [
-        closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14754).FistBumpSpotIllustration, {}) }),
+        closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14755).FistBumpSpotIllustration, {}) }),
         closure_5(tmp5(5234).Text, {
           variant: "heading-lg/bold",
           color: "mobile-text-heading-primary",
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       const obj8 = { style: tmp.recipientContainer, children: null };
-      const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14754).FistBumpSpotIllustration, {}) };
+      const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14755).FistBumpSpotIllustration, {}) };
       const obj6 = {
         variant: "heading-lg/bold",
         color: "mobile-text-heading-primary",

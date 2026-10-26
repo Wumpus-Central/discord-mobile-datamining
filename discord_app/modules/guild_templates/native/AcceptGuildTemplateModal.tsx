@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       [first2, _slicedToArray] = noop.useState(null);
       const tmpResult = require("initialize");
       [tmp17, noop] = noop.useState(null);
-      stateFromStores(12739)(stateFromStores);
+      stateFromStores(12742)(stateFromStores);
       if (cResult[4] === stateFromStores) {
         if (cResult[5] === first2) {
           if (cResult[6] === first1) {
@@ -89,7 +89,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -125,7 +125,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       closure_1_5(base64);
                     }
                     c3 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp17) {
                   c3 = tmp;
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             chooseIcon: tmp22,
             createServer: tmp20,
           };
-          const tmp25 = jsx(tmp18(12741), {
+          const tmp25 = jsx(tmp18(12744), {
             code,
             guildTemplate: stateFromStores,
             name: first1,
@@ -224,7 +224,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       [first1, _slicedToArray] = noop.useState(null);
       const tmp7 = _slicedToArray(noop.useState(null), 2);
       noop = tmp7[1];
-      stateFromStores(12739)(stateFromStores);
+      stateFromStores(12742)(stateFromStores);
       let obj3 = { top: true, style: tmp.container, children: null };
       let obj4 = {
         code,
@@ -250,7 +250,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -285,7 +285,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_5(base64);
               }
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp17) {
             dependencyMap = tmp;
@@ -306,7 +306,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }
       };
-      obj3.children = jsx(stateFromStores(12741), {
+      obj3.children = jsx(stateFromStores(12744), {
         code,
         guildTemplate: stateFromStores,
         name,

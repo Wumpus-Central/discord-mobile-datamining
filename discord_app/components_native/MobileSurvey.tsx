@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef11667 from "../../_runtime/metro/11667__.js";
+import _modDef11668 from "../../_runtime/metro/11668__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp9) {
                   c0 = tmp;
                   throw tmp9;
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
                 c0 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } catch (tmp9) {
                 c0 = tmp;
                 throw tmp9;
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: confirmIcon.confirmIcon,
             color: nativeDefault.unsafe_rawColors.WHITE,
             size: native.Icon.Sizes.SMALL,
-            source: _modDef11667,
+            source: _modDef11668,
           });
         };
         tmp5 = jsx(stateFromStores(5978), {

@@ -10,7 +10,7 @@ import UserProfileSharedStylesDefault from "../../../user_profile/native/UserPro
 import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfilePersonalWidgetCardDefault = tmp5(14393);
+const UserProfilePersonalWidgetCardDefault = tmp5(14394);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

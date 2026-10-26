@@ -527,7 +527,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         size: "sm",
                                                         color: tmp7(587).unsafe_rawColors.WHITE,
                                                       };
-                                                      const tmp83 = closure_9(tmp(12885).GiftIcon, obj3);
+                                                      const tmp83 = closure_9(tmp(12888).GiftIcon, obj3);
                                                       const intl4 = tmp(1128).intl;
                                                       const stringResult = intl4.string(tmp7(2632).DZnomS);
                                                       cResult[84] = tmp83;
@@ -578,9 +578,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                       }
                                                       if (cResult[93] !== tmp6) {
                                                         if (tmp6) {
-                                                          let ChevronSmallDownIcon = tmp(14884).ChevronSmallUpIcon;
+                                                          let ChevronSmallDownIcon = tmp(14885).ChevronSmallUpIcon;
                                                         } else {
-                                                          ChevronSmallDownIcon = tmp(11079).ChevronSmallDownIcon;
+                                                          ChevronSmallDownIcon = tmp(11080).ChevronSmallDownIcon;
                                                         }
                                                         const obj6 = {
                                                           color: tmp7(587).colors.INTERACTIVE_ICON_DEFAULT,
@@ -1218,7 +1218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items5 = [closure_10(closure_6, obj6), , , ,];
         const obj18 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
         const obj19 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-        obj18.icon = closure_9(tmp7(12885).GiftIcon, obj19);
+        obj18.icon = closure_9(tmp7(12888).GiftIcon, obj19);
         const intl4 = tmp7(1128).intl;
         obj18.text = intl4.string(tmp4(2632).DZnomS);
         obj18.onPress = function onPress() {
@@ -1239,9 +1239,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj22.children = intl5.string(tmp4(2632).WZ4cXA);
         const items6 = [closure_9(tmp7(5234).Text, obj22)];
         if (tmp11Result) {
-          let ChevronSmallDownIcon = tmp7(14884).ChevronSmallUpIcon;
+          let ChevronSmallDownIcon = tmp7(14885).ChevronSmallUpIcon;
         } else {
-          ChevronSmallDownIcon = tmp7(11079).ChevronSmallDownIcon;
+          ChevronSmallDownIcon = tmp7(11080).ChevronSmallDownIcon;
         }
         const obj23 = { color: tmp4(587).colors.INTERACTIVE_ICON_DEFAULT };
         items6[1] = closure_9(ChevronSmallDownIcon, obj23);

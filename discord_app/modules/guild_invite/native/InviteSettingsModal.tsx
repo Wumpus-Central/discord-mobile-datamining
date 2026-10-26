@@ -432,7 +432,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(19351), {
+      obj4.children = jsx(channel(19361), {
         style: tmp.formContent,
         channel: first,
         guild,

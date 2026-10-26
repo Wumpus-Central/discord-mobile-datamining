@@ -55,7 +55,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -247,7 +247,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15724);
+let CONTEXT_MENU_ICON_NAMES = fn(15725);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -264,7 +264,7 @@ let obj3 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -379,16 +379,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15724);
+CONTEXT_MENU_ICON_NAMES = fn(15725);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(11478).validatePostMessageTransport(socket.transport);
-    let obj = socket(11478);
+    let result = socket(11479).validatePostMessageTransport(socket.transport);
+    let obj = socket(11479);
     let tmp = socket;
-    const validateApplicationResult = socket(11478).validateApplication(socket.application);
+    const validateApplicationResult = socket(11479).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -421,7 +421,7 @@ let obj6 = {
       }
       tmpResult = tmp(2031);
     }
-    let obj2 = socket(11478);
+    let obj2 = socket(11479);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

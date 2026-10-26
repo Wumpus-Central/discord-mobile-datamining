@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const obj = {
   name: "2025-12-connection-indicator",
   kind: "user",
-  defaultConfig: { timeoutMs: "IconComponent", hidden: "+352" },
+  defaultConfig: { timeoutMs: "IconComponent", hidden: null },
   variations: null,
 };
 const obj2 = {

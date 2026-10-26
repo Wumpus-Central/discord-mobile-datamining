@@ -8,7 +8,7 @@ let _default = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1384);
 if (PlatformUtils.isIOS()) {
-  _default = fn(13561).default;
+  _default = fn(13563).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

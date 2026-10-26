@@ -14,7 +14,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
         closure_130_1(closure_130_2[2]).dispatch(obj8);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp24) {
       closure_3 = tmp24;

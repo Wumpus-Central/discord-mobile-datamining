@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
 import FileIcon2 from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
+import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
 import useConjureAttachmentImage from "../useConjureAttachmentImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

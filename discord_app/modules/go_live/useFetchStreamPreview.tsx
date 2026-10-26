@@ -200,5 +200,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj5;
       }
-      obj5 = { previewUrl: "Reflect", isLoading: null };
+      obj5 = { previewUrl: "Reflect", isLoading: true };
     };

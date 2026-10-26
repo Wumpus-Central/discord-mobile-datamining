@@ -65,7 +65,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               if (_undefined.fetchState !== constants.SUCCESS) {
                 if (_undefined.fetchState === tmp36.FETCHING) {
                   c5 = 3;
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   c4 = 1;
                   c5 = 1;
@@ -437,7 +437,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12953).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12956).CheckpointFetchStates;
 const CheckpointConstants = fn(6015);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);

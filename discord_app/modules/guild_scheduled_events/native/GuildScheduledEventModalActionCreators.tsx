@@ -54,7 +54,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
           const obj = closure_131_0(closure_131_2[32]);
         }
         c5 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -379,7 +379,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 "stack",
               );
             },
-            onRsvp: "application",
+            onRsvp: "k",
           });
         },
       };

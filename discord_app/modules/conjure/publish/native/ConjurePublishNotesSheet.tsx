@@ -12,7 +12,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const useConjurePatchNotesComposerDefault = tmp4(12384);
+const useConjurePatchNotesComposerDefault = tmp4(12367);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

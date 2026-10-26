@@ -13,18 +13,18 @@ import useEmbeddedActivityBackgroundDefault from "../../../../activities/utils/u
 import useActivityShelfItem from "../../../../activities/utils/useActivityShelfItem.tsx";
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
-import _modDef13739 from "../../../../../../_runtime/metro/13739__.js";
+import _modDef13741 from "../../../../../../_runtime/metro/13741__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef18576 from "../../../../../../_runtime/metro/18576__.js";
+import _modDef18586 from "../../../../../../_runtime/metro/18586__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
 
 const util = getItemSubtitleForMaxPlayersShort(1128);
 const Text_Text = getItemSubtitleForMaxPlayersShort(5234);
-const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(12139);
+const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(12030);
 require = fn;
 const ThemeTypes = fn(1087).ThemeTypes;
 const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
@@ -287,7 +287,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { source: _modDef13739, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
+          const obj4 = { source: _modDef13741, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
           const tmp19 = timestampProducer(native.Icon, obj4);
           cResult[20] = tmp19;
           let tmp17 = tmp19;
@@ -357,7 +357,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const tmp2Result = NativeViewDefault;
       const items1 = [
-        timestampProducer(native.Icon, { source: _modDef13739, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+        timestampProducer(native.Icon, { source: _modDef13741, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
       ];
       const obj4 = {
         lineClamp: 1,
@@ -565,7 +565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj5 = { style: tmp5.developerIconContainer, children: null };
                                             const obj6 = {
                                               size: native.Icon.Sizes.REFRESH_SMALL_16,
-                                              source: _modDef18576,
+                                              source: _modDef18586,
                                               color: tmp5.developerIconColor.color,
                                             };
                                             obj5.children = timestampProducer(native.Icon, obj6);
@@ -776,7 +776,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: tmp.developerIconContainer, children: null };
           const obj10 = {
             size: native.Icon.Sizes.REFRESH_SMALL_16,
-            source: _modDef18576,
+            source: _modDef18586,
             color: tmp.developerIconColor.color,
           };
           obj9.children = timestampProducer(native.Icon, obj10);

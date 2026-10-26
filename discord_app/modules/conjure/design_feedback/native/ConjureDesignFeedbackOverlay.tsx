@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return () => {
             closure_1_9.current = false;
             if (ref.current) {
-              first(5210).hideActionSheet(projectId(11897).CONJURE_DESIGN_REMARK_SHEET_KEY);
+              first(5210).hideActionSheet(projectId(11786).CONJURE_DESIGN_REMARK_SHEET_KEY);
               const obj = first(5210);
             }
           };
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return () => {
           closure_1_9.current = false;
           if (ref.current) {
-            size(5210).hideActionSheet(projectId(11897).CONJURE_DESIGN_REMARK_SHEET_KEY);
+            size(5210).hideActionSheet(projectId(11786).CONJURE_DESIGN_REMARK_SHEET_KEY);
             const obj = size(5210);
           }
         };

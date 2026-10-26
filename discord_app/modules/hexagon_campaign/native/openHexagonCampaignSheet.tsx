@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/hexagon_campaign/native/openH
 
 export const HEXAGON_CAMPAIGN_SHEET_KEY = "HexagonCampaignSheet";
 export const openHexagonCampaignSheet = function openHexagonCampaignSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16377, dependencyMap.paths), HexagonCampaignSheet);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16378, dependencyMap.paths), HexagonCampaignSheet);
 };

@@ -925,7 +925,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled()
                 const result = pressed.set(-1);
               };
               obj.variant = variant;
-              return variant(state(11853).TabItem, obj, id);
+              return variant(state(12205).TabItem, obj, id);
             }),
           }),
         items3,

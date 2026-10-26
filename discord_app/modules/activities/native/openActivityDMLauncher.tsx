@@ -13,7 +13,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

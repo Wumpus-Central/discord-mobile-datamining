@@ -23,12 +23,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onChange = onChange.onChange;
       ({ emojiId, emojiName } = emoji);
       const tmp4 = closure_6();
-      const tmp6 = onChange(15144)();
+      const tmp6 = onChange(15145)();
       if (cResult[0] === emojiId) {
         if (cResult[1] === emojiName) {
           let tmp7 = cResult[2];
         }
-        const emojiByIdOrName = guildId(16597).useEmojiByIdOrName(guildId, tmp7);
+        const emojiByIdOrName = guildId(16598).useEmojiByIdOrName(guildId, tmp7);
         let emojiPickerIcon = tmp7;
         if (cResult[3] === tmp7) {
           if (cResult[4] === guildId) {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != emojiPickerIcon) {
           const obj4 = { guildId, id: emojiPickerIcon };
-          let tmp13 = closure_4(tmp5(16596), obj4);
+          let tmp13 = closure_4(tmp5(16597), obj4);
         } else {
           const obj5 = { size: "custom", style: tmp4.emojiPickerIcon };
           tmp13 = closure_4(guildId(9350).ReactionIcon, obj5);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         emojiPickerIcon = tmp4.emojiPickerIcon;
         cResult[5] = emojiPickerIcon;
         cResult[6] = tmp13;
-        const tmpResult = guildId(16597);
+        const tmpResult = guildId(16598);
       }
       let result = emojiId;
       if (emojiId == null) {
@@ -173,11 +173,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         emojiId = tmp2(4917).convertSurrogateToName(emojiName, false);
         const tmp2Result = tmp2(4917);
       }
-      const tmp4 = onChange(15144)();
-      const emojiByIdOrName = guildId(16597).useEmojiByIdOrName(guildId, emojiId);
+      const tmp4 = onChange(15145)();
+      const emojiByIdOrName = guildId(16598).useEmojiByIdOrName(guildId, emojiId);
       if (null != emojiId) {
         let obj = { guildId, id: emojiId };
-        let tmp8 = closure_4(tmp2(16596), obj);
+        let tmp8 = closure_4(tmp2(16597), obj);
         let tmp7 = closure_4;
       } else {
         tmp7 = closure_4;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.container, tmp4.textInput];
       obj4.style = items;
       const items1 = [tmp8, ,];
-      let obj2 = guildId(16597);
+      let obj2 = guildId(16598);
       const obj5 = { style: tmp.content, variant: "text-md/medium", color: null, children: null };
       let str = "text-muted";
       if (null != emojiByIdOrName) {

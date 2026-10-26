@@ -552,11 +552,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
       const tmp = closure_11();
       const detail = tmp;
-      const perfCategoryColors = node(12541).usePerfCategoryColors();
+      const perfCategoryColors = node(12544).usePerfCategoryColors();
       if (collapsed) {
         let ChevronSmallDownIcon = tmp2(7305).ChevronSmallRightIcon;
       } else {
-        ChevronSmallDownIcon = tmp2(11079).ChevronSmallDownIcon;
+        ChevronSmallDownIcon = tmp2(11080).ChevronSmallDownIcon;
       }
       if (node.failed) {
         let running = tmp.failed;
@@ -596,7 +596,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.accessibilityState = obj3;
       const obj4 = { style: null, children: null };
       const items1 = [tmp.rowTop];
-      let obj = node(12541);
+      let obj = node(12544);
       items1[1] = { paddingLeft: node.depth * selected(587).space.PX_12 };
       obj4.style = items1;
       if (node.children.length > 0) {
@@ -668,7 +668,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         children: node.operation,
       };
       const obj5 = { paddingLeft: node.depth * selected(587).space.PX_12 };
-      obj16.children = node(12542).perfNodeDuration(node);
+      obj16.children = node(12545).perfNodeDuration(node);
       items2[7] = tmp13(node(5234).Text, obj16);
       obj4.children = items2;
       const items4 = [closure_9(closure_6, obj4), ,];
@@ -689,8 +689,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj21 = { paddingLeft: node.depth * selected(587).space.PX_12 };
         items6[1] = obj21;
         obj20.style = items6;
-        const tmp2Result2 = tmp2(12542);
-        obj20.children = tmp2(12542)
+        const tmp2Result2 = tmp2(12545);
+        obj20.children = tmp2(12545)
           .perfNodeSections(node)
           .map((item) => {
             ({ title, rows } = item);
@@ -733,7 +733,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             return React6(timestampProducer, obj, title);
           });
         tmp13Result6 = tmp13(closure_6, obj20);
-        const perfNodeSectionsResult = tmp2(12542).perfNodeSections(node);
+        const perfNodeSectionsResult = tmp2(12545).perfNodeSections(node);
       }
       items4[2] = tmp13Result6;
       obj2.children = items4;
@@ -1044,7 +1044,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = toggle(576).c(64);
       trace = trace.trace;
       const tmp4 = closure_11();
-      toggle = selectedKey(12545)(trace);
+      toggle = selectedKey(12548)(trace);
       if (cResult[0] !== trace) {
         const perfTraceExtentResult = tmp(10734).perfTraceExtent(trace);
         cResult[0] = trace;
@@ -1068,11 +1068,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp9 = cResult[6];
         }
         if (cResult[7] !== trace) {
-          const perfTraceDurationResult = tmp(12542).perfTraceDuration(trace);
+          const perfTraceDurationResult = tmp(12545).perfTraceDuration(trace);
           cResult[7] = trace;
           cResult[8] = perfTraceDurationResult;
           let tmp10 = perfTraceDurationResult;
-          const tmpResult4 = tmp(12542);
+          const tmpResult4 = tmp(12545);
         } else {
           tmp10 = cResult[8];
         }
@@ -1086,11 +1086,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[10];
         }
         if (cResult[11] !== trace) {
-          const perfTraceSummaryResult = tmp(12542).perfTraceSummary(trace);
+          const perfTraceSummaryResult = tmp(12545).perfTraceSummary(trace);
           cResult[11] = trace;
           cResult[12] = perfTraceSummaryResult;
           let tmp15 = perfTraceSummaryResult;
-          const tmpResult5 = tmp(12542);
+          const tmpResult5 = tmp(12545);
         } else {
           tmp15 = cResult[12];
         }
@@ -1122,9 +1122,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           if (0 !== trace.dropped) {
             const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
             const _HermesInternal2 = HermesInternal;
-            obj6.children = "" + tmp(12542).formatSpanCount(trace.dropped) + " not recorded";
+            obj6.children = "" + tmp(12545).formatSpanCount(trace.dropped) + " not recorded";
             tmp25 = closure_8(tmp(5234).Text, obj6);
-            const tmpResult6 = tmp(12542);
+            const tmpResult6 = tmp(12545);
           }
           cResult[17] = trace.dropped;
           cResult[18] = tmp25;
@@ -1511,9 +1511,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== trace.dropped) {
         const obj10 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
         const _HermesInternal2 = HermesInternal;
-        obj10.children = "" + tmp4(12542).formatSpanCount(trace.dropped) + " not recorded";
+        obj10.children = "" + tmp4(12545).formatSpanCount(trace.dropped) + " not recorded";
         tmp8Result2 = closure_8(tmp4(5234).Text, obj10);
-        const tmp4Result = tmp4(12542);
+        const tmp4Result = tmp4(12545);
       }
       items1[3] = tmp8Result2;
       obj4.children = items1;
@@ -1696,7 +1696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[12] !== tmp12) {
               const obj2 = { initialRouteName: perf_trace, screens: tmp12 };
-              const tmp17 = closure_8(tmp(11149).Modal, obj2);
+              const tmp17 = closure_8(tmp(11150).Modal, obj2);
               cResult[12] = tmp12;
               cResult[13] = tmp17;
               let tmp14 = tmp17;

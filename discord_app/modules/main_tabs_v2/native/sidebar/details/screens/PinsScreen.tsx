@@ -47,7 +47,7 @@ export default noop.memo(
         const obj2 = channelId(1508);
         const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
         const tmpResult = channelId(504);
-        const channelDetailsSearchContext = channelId(13183).useChannelDetailsSearchContext(channelId, stateFromStores);
+        const channelDetailsSearchContext = channelId(13186).useChannelDetailsSearchContext(channelId, stateFromStores);
         const tmp9 = closure_7();
         if (cResult[3] !== channelDetailsSearchContext) {
           const obj3 = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
@@ -74,7 +74,7 @@ export default noop.memo(
         cResult[7] = tmp16;
         tmp15 = tmp16;
         const obj4 = { style: tmp9.container, children: tmp10 };
-        const tmpResult2 = channelId(13183);
+        const tmpResult2 = channelId(13186);
       }
     : function PinsScreen() {
         channelId = channelId(1508).useRoute().params.channelId;
@@ -89,7 +89,7 @@ export default noop.memo(
           return guild_id;
         });
         const obj2 = channelId(504);
-        const channelDetailsSearchContext = channelId(13183).useChannelDetailsSearchContext(channelId, stateFromStores);
+        const channelDetailsSearchContext = channelId(13186).useChannelDetailsSearchContext(channelId, stateFromStores);
         const obj4 = {
           style: closure_7().container,
           children: jsx(messages_PinsScreenDefault, {

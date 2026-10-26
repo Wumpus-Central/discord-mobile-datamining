@@ -73,217 +73,165 @@ function handlePressJoinActivity(arg0) {
   }
 }
 let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
+      c4 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: "+352" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          ({
-            channelId: closure_129_0,
-            applicationId: closure_129_1,
-            launchId: closure_129_2,
-            inputApplication: closure_129_3,
-            analyticsLocations: closure_129_4,
-            launchingComponentId: closure_129_5,
-            sectionName: closure_129_6,
-            inviterUserId: closure_129_7,
-          } = closure_0);
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          let currentUser;
-          let channel;
-          closure_129_13 = function _handleCanJoin() {
-            const self = this;
-            const tmp = c3(function* () {
-              if (c0 === 2) {
-                c0 = 3;
-                throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
-                if (arg0 === 1) {
-                  throw value;
-                } else if (arg0 === 2) {
-                  const obj2 = { value, done: true };
-                  return obj2;
-                } else {
-                  return { value: "IconComponent", done: "+352" };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === v1) {
-                    if (arg0 === 1) {
-                      c0 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else if (null != applicationId) {
-                      const obj4 = {
-                        applicationId: applicationId.applicationId,
-                        activityChannelId,
-                        locationObject: {},
-                        analyticsLocations,
-                        componentId,
-                        sectionName,
-                        inviterUserId,
-                      };
-                      v1 = 1;
-                      c0 = 1;
-                      const obj5 = { value: v1(closure_1_2[15])(obj4), done: false };
-                      return obj5;
-                    }
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    const obj = { value, done: true };
-                    return obj;
-                  }
-                  c0 = 3;
-                  return { value: "IconComponent", done: "+352" };
-                } catch (tmp13) {
-                  c0 = tmp;
-                  throw tmp13;
-                }
-              }
-            });
-            closure_13 = tmp;
-            const apply = tmp.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          };
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: null };
+      const embeddedActivitiesForChannel = closure_130_10.getEmbeddedActivitiesForChannel(closure_129_0);
+      closure_129_8 = embeddedActivitiesForChannel.find((applicationId) => {
+        let tmp = applicationId.applicationId === closure_1_1;
+        if (tmp) {
+          tmp = null == closure_1_2 || applicationId.launchId === tmp2;
+          const tmp4 = null == closure_1_2 || applicationId.launchId === tmp2;
         }
-      } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            const embeddedActivitiesForChannel = closure_130_10.getEmbeddedActivitiesForChannel(closure_129_0);
-            closure_129_8 = embeddedActivitiesForChannel.find((applicationId) => {
-              let tmp = applicationId.applicationId === closure_1_1;
-              if (tmp) {
-                tmp = null == closure_1_2 || applicationId.launchId === tmp2;
-                const tmp4 = null == closure_1_2 || applicationId.launchId === tmp2;
-              }
-              return tmp;
-            });
-            closure_129_9 = closure_129_3;
-            if (null == closure_129_9) {
-              c3 = 2;
-              c4 = 1;
-              const obj8 = { value: closure_130_1(closure_130_2[12]).fetchApplication(closure_129_1), done: false };
-              return obj8;
-            }
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          closure_129_10 = value;
-          closure_129_9 = closure_130_4.createFromServer(closure_129_10);
-        }
-        if (null != closure_129_8) {
-          if (null != closure_129_9) {
-            currentUser = closure_130_8.getCurrentUser();
-            channel = closure_130_5.getChannel(closure_129_0);
-            let id;
-            if (currentUser != null) {
-              id = currentUser.id;
-            }
-            const obj9 = { embeddedActivityJoinability: null, handleCanJoin: null };
-            const obj10 = {
-              userId: id,
-              application: closure_129_9,
-              channelId: closure_129_0,
-              currentUser,
-              isContentGated: null,
-              isActivitiesEnabledForCurrentPlatform: null,
-              ChannelStore: null,
-              VoiceStateStore: null,
-              PermissionStore: null,
-              GuildStore: null,
-            };
-            const tmp55 = closure_130_1(closure_130_2[8]);
-            obj10.isContentGated = closure_130_0(closure_130_2[13]).isChannelContentGated(channel);
-            let obj4 = closure_130_0(closure_130_2[13]);
-            obj10.isActivitiesEnabledForCurrentPlatform = closure_130_0(
-              closure_130_2[14],
-            ).getIsActivitiesEnabledForCurrentPlatform();
-            obj10.ChannelStore = closure_130_5;
-            obj10.VoiceStateStore = closure_130_9;
-            obj10.PermissionStore = closure_130_7;
-            obj10.GuildStore = closure_130_6;
-            obj9.embeddedActivityJoinability = tmp55(obj10);
-            obj9.handleCanJoin = function handleCanJoin() {
-              const self = this;
-              const apply = closure_13.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            closure_130_11(obj9);
-            let obj5 = closure_130_0(closure_130_2[14]);
-          }
-        }
-        c4 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return tmp;
+      });
+      closure_129_9 = closure_129_3;
+      if (null == closure_129_9) {
+        c3 = 2;
+        c4 = 1;
+        return { value: closure_130_1(closure_130_2[12]).fetchApplication(closure_129_1), done: false };
       }
-    } catch (tmp33) {
-      c4 = tmp;
-      throw tmp33;
+    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
+  } else {
+    closure_129_10 = value;
+    closure_129_9 = closure_130_4.createFromServer(closure_129_10);
+  }
+  if (null != closure_129_8) {
+    if (null != closure_129_9) {
+      const currentUser = closure_130_8.getCurrentUser();
+      const channel = closure_130_5.getChannel(closure_129_0);
+      let id;
+      if (currentUser != null) {
+        id = currentUser.id;
+      }
+      const obj9 = { embeddedActivityJoinability: null, handleCanJoin: null };
+      const obj10 = {
+        userId: id,
+        application: closure_129_9,
+        channelId: closure_129_0,
+        currentUser,
+        isContentGated: null,
+        isActivitiesEnabledForCurrentPlatform: null,
+        ChannelStore: null,
+        VoiceStateStore: null,
+        PermissionStore: null,
+        GuildStore: null,
+      };
+      obj10.isContentGated = closure_130_0(closure_130_2[13]).isChannelContentGated(channel);
+      closure_130_0(closure_130_2[13]);
+      obj10.isActivitiesEnabledForCurrentPlatform = closure_130_0(
+        closure_130_2[14],
+      ).getIsActivitiesEnabledForCurrentPlatform();
+      obj10.ChannelStore = closure_130_5;
+      obj10.VoiceStateStore = closure_130_9;
+      obj10.PermissionStore = closure_130_7;
+      obj10.GuildStore = closure_130_6;
+      obj9.embeddedActivityJoinability = closure_130_1(closure_130_2[8])(obj10);
+      obj9.handleCanJoin = function handleCanJoin() {
+        const self = this;
+        const apply = closure_13.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      closure_130_11(obj9);
+      closure_130_0(closure_130_2[14]);
+      closure_130_1(closure_130_2[8]);
     }
   }
+  await "IconComponent";
+  closure_1 = tmp2;
+  ({
+    channelId: closure_129_0,
+    applicationId: closure_129_1,
+    launchId: closure_129_2,
+    inputApplication: closure_129_3,
+    analyticsLocations: closure_129_4,
+    launchingComponentId: closure_129_5,
+    sectionName: closure_129_6,
+    inviterUserId: closure_129_7,
+  } = closure_0);
+  closure_129_13 = function _handleCanJoin() {
+    const self = this;
+    const tmp = c3(function* () {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else if (null != applicationId) {
+              const obj4 = {
+                applicationId: applicationId.applicationId,
+                activityChannelId,
+                locationObject: {},
+                analyticsLocations,
+                componentId,
+                sectionName,
+                inviterUserId,
+              };
+              v1 = 1;
+              c0 = 1;
+              const obj5 = { value: v1(closure_1_2[15])(obj4), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+          c0 = 3;
+          return { value: "IconComponent", done: null };
+        } catch (tmp13) {
+          c0 = tmp;
+          throw tmp13;
+        }
+      }
+    });
+    closure_13 = tmp;
+    const apply = tmp.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  return "Reflect";
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");

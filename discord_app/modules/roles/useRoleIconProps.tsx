@@ -243,7 +243,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
                 name: null,
                 roleId: null,
                 size: "Array",
-                unicodeEmoji: "onAskForIdeas",
+                unicodeEmoji: 0,
               };
               ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
               obj2.unicodeEmoji = roleIconData.unicodeEmoji;
@@ -343,13 +343,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
         if (null != stateFromStores) {
           const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
           if (null != roleIconData) {
-            const obj3 = {
-              src: roleIconData.customIconSrc,
-              name: null,
-              roleId: null,
-              size: "Array",
-              unicodeEmoji: "onAskForIdeas",
-            };
+            const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
             ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
             obj3.unicodeEmoji = roleIconData.unicodeEmoji;
             tmp2 = obj3;

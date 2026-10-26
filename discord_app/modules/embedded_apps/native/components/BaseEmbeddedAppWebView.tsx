@@ -557,7 +557,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                   } else {
                                                                                     return {
                                                                                       value: "IconComponent",
-                                                                                      done: "+352",
+                                                                                      done: null,
                                                                                     };
                                                                                   }
                                                                                 } else {
@@ -672,7 +672,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                       c5 = 3;
                                                                                       return {
                                                                                         value: "IconComponent",
-                                                                                        done: "+352",
+                                                                                        done: null,
                                                                                       };
                                                                                     }
                                                                                   } catch (tmp10) {
@@ -732,7 +732,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                   } else {
                                                                                     return {
                                                                                       value: "IconComponent",
-                                                                                      done: "+352",
+                                                                                      done: null,
                                                                                     };
                                                                                   }
                                                                                 } else {
@@ -1019,7 +1019,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                                             } else {
                                                                               return {
                                                                                 value: "IconComponent",
-                                                                                done: "+352",
+                                                                                done: null,
                                                                               };
                                                                             }
                                                                           } else {
@@ -1123,7 +1123,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 c5 = 3;
                                                                                 return {
                                                                                   value: "IconComponent",
-                                                                                  done: "+352",
+                                                                                  done: null,
                                                                                 };
                                                                               }
                                                                             } catch (tmp10) {
@@ -1601,7 +1601,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1765,7 +1765,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1951,7 +1951,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+352" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -2007,7 +2007,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     );
                     closure_1_27(true);
                     c5 = 3;
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp10) {
                   c5 = tmp;
@@ -2099,7 +2099,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+352" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {

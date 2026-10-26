@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(13);
       guild = guild.guild;
       const tmp4 = closure_7();
-      arr = arr(14888)(guild.id);
+      arr = arr(14889)(guild.id);
       if (cResult[0] !== guild.id) {
         const fn = function s() {
           if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      if (arr(13434)(guild.id)) {
+      if (arr(13437)(guild.id)) {
         let num4;
         if (arr != null) {
           num4 = arr.length;

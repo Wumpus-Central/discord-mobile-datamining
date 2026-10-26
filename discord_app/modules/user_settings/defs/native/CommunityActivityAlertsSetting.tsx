@@ -6,7 +6,7 @@ import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasCommunityActivityAlertsSetting() {
       const cResult = c.c(2);

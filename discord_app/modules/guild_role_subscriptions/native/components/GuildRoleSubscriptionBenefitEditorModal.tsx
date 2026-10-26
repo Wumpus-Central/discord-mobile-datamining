@@ -15,7 +15,7 @@ import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscrip
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(16561);
+const GuildRoleSubscriptionsConstants = fn(16562);
 ({
   GuildRoleSubscriptionBenefitTypes: c10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -121,7 +121,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -199,7 +199,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     return value;
   };
   const tmp2 = closure_15();
-  const tmp5 = value(15144)();
+  const tmp5 = value(15145)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp7;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -259,7 +259,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      let tmp27 = closure_13(tmp3(19300), obj2);
+      let tmp27 = closure_13(tmp3(19310), obj2);
       let tmp28 = closure_13;
     } else {
       let obj = {
@@ -296,7 +296,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       },
       listingId: merged.listingId,
     };
-    const items = [tmp28(tmp3(19302), obj4)];
+    const items = [tmp28(tmp3(19312), obj4)];
     let obj5 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
@@ -322,7 +322,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp28(tmp3(19303), obj9);
+    items2[3] = tmp28(tmp3(19313), obj9);
     const obj11 = { style: tmp5.header, children: null };
     const tmp31 = first2;
     const tmp32 = closure_6;

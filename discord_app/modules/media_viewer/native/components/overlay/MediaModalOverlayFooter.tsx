@@ -16,7 +16,7 @@ const createStyles = fn(4971);
 let obj2 = {
   drawerContainer: { overflow: "hidden", backgroundColor: "unicodeVersion" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "r" },
+  drawerHeader: { backgroundColor: "Array" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };

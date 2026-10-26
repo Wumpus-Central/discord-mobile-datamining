@@ -96,11 +96,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult9 = tmp(9565);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(16447).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(16448).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(16447);
+        const tmpResult10 = tmp(16448);
       } else {
         tmp16 = cResult[5];
       }
@@ -857,7 +857,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -892,7 +892,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   return obj;
                 }
                 c0 = 3;
-                return { value: "IconComponent", done: "+352" };
+                return { value: "IconComponent", done: null };
               } catch (tmp12) {
                 c0 = tmp;
                 throw tmp12;

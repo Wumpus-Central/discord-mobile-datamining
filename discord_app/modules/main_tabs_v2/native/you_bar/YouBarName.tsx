@@ -113,8 +113,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(tmp5, C);
   const tmpResult = userId(504);
-  const customStatusActivity = userId(11057).useCustomStatusActivity();
-  const tmpResult4 = userId(11057);
+  const customStatusActivity = userId(11058).useCustomStatusActivity();
+  const tmpResult4 = userId(11058);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
@@ -181,8 +181,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11057).useCustomStatusActivity();
-  let obj2 = userId(11057);
+  const customStatusActivity = userId(11058).useCustomStatusActivity();
+  let obj2 = userId(11058);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;

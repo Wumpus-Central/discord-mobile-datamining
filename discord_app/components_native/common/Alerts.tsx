@@ -851,7 +851,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" });
+let closure_26 = Object.freeze({ renderAlert: "children", renderKey: "k", props: "borderRadius" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -889,7 +889,7 @@ export default noop.memo(
                   return <openModal.component />;
                 };
               } else {
-                return { renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" };
+                return { renderAlert: "children", renderKey: "k", props: "borderRadius" };
               }
             }
           };
@@ -1000,7 +1000,7 @@ export default noop.memo(
                 return <openModal.component />;
               };
             } else {
-              return { renderAlert: "toCharArray$esjava$1", renderKey: "test", props: "ix" };
+              return { renderAlert: "children", renderKey: "k", props: "borderRadius" };
             }
           }
         });

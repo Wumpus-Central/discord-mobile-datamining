@@ -102,14 +102,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16715, dependencyMap.paths),
+      asyncRequireImpl(16716, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16716, dependencyMap.paths),
+      asyncRequireImpl(16717, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -150,7 +150,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
                 }
               }
               c4 = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             c4 = 3;

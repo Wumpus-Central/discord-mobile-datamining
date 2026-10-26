@@ -17,7 +17,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -96,7 +96,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
   }
 };
 const FetchState = fn(7203).FetchState;
-let closure_8 = fn(11029).GameOrganizationInviteStates;
+let closure_8 = fn(11030).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/prefetchGameOrganizationAccountLinkState.tsx",

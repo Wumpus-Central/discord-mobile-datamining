@@ -409,8 +409,8 @@ export default noop.memo(
         const first3 = tmp13[0];
         let obj = resizeMode(5838);
         [tmp17, c9] = first1(noop.useState(true), 2);
-        width(11434)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-        onReady = width(11435)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+        width(11435)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+        onReady = width(11436)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
         noop.useRef(null);
         const ref1 = noop.useRef(null);
         ref = noop.useRef({ width: 0, height: 0 });
@@ -574,7 +574,7 @@ export default noop.memo(
         }, items9);
         if (tmp17) {
           const obj3 = { animate: true, style: tmp2.spinner };
-          tmp35 = ref(tmp18(11437), obj3);
+          tmp35 = ref(tmp18(11438), obj3);
         }
         const tmp37 = store === resizeMode(8820).OrientationType.PORTRAIT;
         const obj2 = resizeMode(8820);
@@ -599,10 +599,10 @@ export default noop.memo(
             onReady: callback1,
             style: memo2,
           };
-          const items11 = [ref(tmp18(11438), obj7), tmp35];
+          const items11 = [ref(tmp18(11439), obj7), tmp35];
           obj6.children = items11;
           obj5.children = c9(first2, obj6);
-          const items12 = [ref(tmp18(11440), obj5)];
+          const items12 = [ref(tmp18(11441), obj5)];
           const obj8 = { style: memo5, children: null };
           let tmp56 = null;
           if (!tmp17) {
@@ -622,7 +622,7 @@ export default noop.memo(
           items12[1] = ref(first2, obj8);
           obj4.children = items12;
           let tmp43Result1 = c9(tmp52, obj4);
-          const tmp18Result = tmp18(11440);
+          const tmp18Result = tmp18(11441);
         } else if (flag) {
           const obj9 = {
             ref,
@@ -647,7 +647,7 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items13 = [ref(tmp18(11438), obj12)];
+          const items13 = [ref(tmp18(11439), obj12)];
           let tmp48 = null;
           if (tmp37) {
             let renderTagResult1;
@@ -683,7 +683,7 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items17 = [ref(tmp18(11438), obj15), tmp35];
+          const items17 = [ref(tmp18(11439), obj15), tmp35];
           obj14.children = items17;
           tmp43Result1 = c9(first2, obj14);
         }

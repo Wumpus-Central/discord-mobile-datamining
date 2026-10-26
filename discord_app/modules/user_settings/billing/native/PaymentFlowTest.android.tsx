@@ -189,7 +189,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
           ActionSheetActionCreatorsDefault.hideActionSheet();
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(17066, dependencyMap.paths),
+            asyncRequireImpl(17067, dependencyMap.paths),
             "SimpleRequestOTPActionSheet",
             obj,
           );
@@ -267,7 +267,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
             ActionSheetActionCreatorsDefault.hideActionSheet();
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(17066, dependencyMap.paths),
+              asyncRequireImpl(17067, dependencyMap.paths),
               "SimpleRequestOTPActionSheet",
               obj,
             );

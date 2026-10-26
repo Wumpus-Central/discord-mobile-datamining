@@ -56,7 +56,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const derivedValue = reveal(5052).useDerivedValue(fn);
       let obj2 = reveal(5052);
       const tmp6 = derivedValue;
-      const tmp7 = derivedValue(11567)();
+      const tmp7 = derivedValue(11568)();
       const fn2 = function o() {
         const obj = { transform: null };
         const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
@@ -124,7 +124,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData3;
       const derivedValue = TIMING_CONFIG.useDerivedValue(fn);
       const tmp = closure_9();
-      const tmp3 = derivedValue(11567)();
+      const tmp3 = derivedValue(11568)();
       const fn2 = function c() {
         const obj = { transform: null };
         const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
@@ -283,15 +283,15 @@ export default noop.memo(
           channel,
         } = isTouchingLeftScreenEdge);
         isTouchingLeftScreenEdge = isTouchingLeftScreenEdge.isTouchingLeftScreenEdge;
-        const globalStatusIndicatorState = channel(11568).useGlobalStatusIndicatorState();
+        const globalStatusIndicatorState = channel(11569).useGlobalStatusIndicatorState();
         const tmp4 = undefined !== forceReveal && forceReveal;
-        const tmpResult = channel(11568);
+        const tmpResult = channel(11569);
         const globalStatusIndicatorHeightSharedValue =
-          channel(11573).useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp9 = globalStatusIndicatorHeightSharedValue(11567)();
+          channel(11574).useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
+        const tmp9 = globalStatusIndicatorHeightSharedValue(11568)();
         dependencyMap = tmp9;
-        reveal = reveal.useContext(channel(11367).RevealContext).reveal;
-        const tmpResult6 = channel(11573);
+        reveal = reveal.useContext(channel(11368).RevealContext).reveal;
+        const tmpResult6 = channel(11574);
         const isScreenReaderEnabled = channel(5267).useIsScreenReaderEnabled();
         if (!reveal) {
           reveal = tmp4;
@@ -348,7 +348,7 @@ export default noop.memo(
         const analyticsLocations = globalStatusIndicatorHeightSharedValue(7253)(
           tmp8(7278).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
-        const tmp15 = globalStatusIndicatorHeightSharedValue(11454)();
+        const tmp15 = globalStatusIndicatorHeightSharedValue(11455)();
         closure_7 = tmp15;
         if (cResult[0] === analyticsLocations) {
           if (cResult[1] === channel.guild_id) {
@@ -446,7 +446,7 @@ export default noop.memo(
                             reveal,
                             children,
                           };
-                          tmp34 = closure_7(tmp8(11576), obj4);
+                          tmp34 = closure_7(tmp8(11577), obj4);
                         }
                       }
                       cResult[15] = actionBar;
@@ -537,7 +537,7 @@ export default noop.memo(
         const globalStatusIndicatorState = TIMING_CONFIG.useGlobalStatusIndicatorState();
         const globalStatusIndicatorHeightSharedValue =
           GlobalStatusIndicator.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp6 = globalStatusIndicatorHeightSharedValue(11567)();
+        const tmp6 = globalStatusIndicatorHeightSharedValue(11568)();
         dependencyMap = tmp6;
         reveal = reveal.useContext(RevealProvider.RevealContext).reveal;
         const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
@@ -595,7 +595,7 @@ export default noop.memo(
         analyticsLocations = globalStatusIndicatorHeightSharedValue(7253)(
           tmp5(7278).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
-        closure_7 = tmp5(11454)();
+        closure_7 = tmp5(11455)();
         if (containerStyle == null) {
           containerStyle = derivedValue.absoluteFill;
         }
@@ -646,7 +646,7 @@ export default noop.memo(
               reveal,
               children,
             };
-            tmp17Result = closure_7(tmp5(11576), obj6);
+            tmp17Result = closure_7(tmp5(11577), obj6);
           }
         }
         items1[2] = tmp17Result;

@@ -21,7 +21,7 @@ import _modDef8115 from "../../../../_runtime/metro/08115__.js";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
-import _modDef11257 from "../../../../_runtime/metro/11257__.js";
+import _modDef11258 from "../../../../_runtime/metro/11258__.js";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import FamilyCenterModalRequestRouting from "../FamilyCenterModalRequestRouting.tsx";
 import EnvelopeSpotIllustration from "../../../design/components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx";
@@ -47,7 +47,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1114,7 +1114,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[14] !== icon) {
               if (icon === constants2.CHECK) {
-                const obj2 = { source: _modDef11257, color: "#FFF" };
+                const obj2 = { source: _modDef11258, color: "#FFF" };
                 let tmp26 = closure_1_11(native.Icon, obj2);
               } else {
                 const obj3 = { source: _modDef8115, color: "#FFF" };
@@ -1262,7 +1262,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: items2, children: null };
       items2[1] = icon === constants2.CHECK ? tmp.positive : tmp.negative;
       if (icon === constants2.CHECK) {
-        const obj7 = { source: _modDef11257, color: "#FFF" };
+        const obj7 = { source: _modDef11258, color: "#FFF" };
         let tmp15Result = closure_1_11(native.Icon, obj7);
       } else {
         const obj8 = { source: _modDef8115, color: "#FFF" };
@@ -2150,13 +2150,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [linkCode, userId];
       const memo = noop.useMemo(() => getScreens(userId, linkCode), items);
       const obj = {
-        initialRouteName: userId(12878).FamilyCenterModalRequestSections.PREREQ_LOADING,
+        initialRouteName: userId(12881).FamilyCenterModalRequestSections.PREREQ_LOADING,
         screens: memo,
         headerBackTitle: null,
       };
       const intl = userId(1128).intl;
       obj.headerBackTitle = intl.string(userId(1128).t["13/7kX"]);
-      return closure_11(userId(11149).Modal, obj);
+      return closure_11(userId(11150).Modal, obj);
     };
 export const FamilyCenterModalRequestConfirm = tmp4;
 export const FamilyCenterModalRequestSuccess = tmp5;

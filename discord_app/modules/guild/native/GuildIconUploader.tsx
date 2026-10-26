@@ -5,10 +5,10 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12745 from "../../../../_runtime/metro/12745__.js";
-import _modDef12746 from "../../../../_runtime/metro/12746__.js";
-import _modDef12747 from "../../../../_runtime/metro/12747__.js";
 import _modDef12748 from "../../../../_runtime/metro/12748__.js";
+import _modDef12749 from "../../../../_runtime/metro/12749__.js";
+import _modDef12750 from "../../../../_runtime/metro/12750__.js";
+import _modDef12751 from "../../../../_runtime/metro/12751__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -90,9 +90,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12745;
+      let tmp10Result = _modDef12748;
     } else {
-      tmp10Result = _modDef12746;
+      tmp10Result = _modDef12749;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj)];
@@ -123,13 +123,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12747;
+    obj5.source = _modDef12750;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12748 };
+    const obj7 = { source: _modDef12751 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

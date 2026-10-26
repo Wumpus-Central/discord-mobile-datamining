@@ -28,7 +28,7 @@ let closure_11 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11760).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
+          await tmp3(12257).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;

@@ -9,7 +9,7 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 require = fn;
 const VideoQualitySettings = fn(1209).VideoQualitySettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVideoUploadQualitySettingValue() {
       const cResult = c.c(2);

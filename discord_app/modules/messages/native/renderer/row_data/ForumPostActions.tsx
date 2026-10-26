@@ -28,8 +28,8 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
           id: emojiId,
           name: "a",
           animated: customGuildEmoji.animated,
-          src: "toCharArray$esjava$1",
-          displayName: "top",
+          src: 1313996803,
+          displayName: 1166877270,
         };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
@@ -59,7 +59,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         name: emojiName,
         animated: null,
         src: emojiId(str2[13]).getURL(emojiName),
-        displayName: 0,
+        displayName: "list",
       };
       let obj2 = emojiId(str2[13]);
       const obj9 = {

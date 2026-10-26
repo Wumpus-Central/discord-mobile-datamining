@@ -144,7 +144,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18800, dependencyMap.paths), "UploadLogs", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18810, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
@@ -156,7 +156,7 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(18798), {
+  return jsx(tmp10(18808), {
     headerLabel: stringResult,
     showHeaderCloseButton: true,
     ratingBody: null,

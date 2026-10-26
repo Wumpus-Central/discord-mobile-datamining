@@ -1,5 +1,4 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod16780 from "../../../../../_runtime/metro/16780__.js";
 import _mod16781 from "../../../../../_runtime/metro/16781__.js";
 import _mod16782 from "../../../../../_runtime/metro/16782__.js";
 import _mod16783 from "../../../../../_runtime/metro/16783__.js";
@@ -30,40 +29,41 @@ import _mod16807 from "../../../../../_runtime/metro/16807__.js";
 import _mod16808 from "../../../../../_runtime/metro/16808__.js";
 import _mod16809 from "../../../../../_runtime/metro/16809__.js";
 import _mod16810 from "../../../../../_runtime/metro/16810__.js";
+import _mod16811 from "../../../../../_runtime/metro/16811__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod16780,
-  cs: _mod16781,
-  da: _mod16782,
-  de: _mod16783,
-  el: _mod16784,
-  "en-GB": _mod16785,
-  "en-US": _mod16786,
-  "es-ES": _mod16787,
-  "es-419": _mod16788,
-  fi: _mod16789,
-  fr: _mod16790,
-  hi: _mod16791,
-  hr: _mod16792,
-  hu: _mod16793,
-  it: _mod16794,
-  ja: _mod16795,
-  ko: _mod16796,
-  lt: _mod16797,
-  nl: _mod16798,
-  no: _mod16799,
-  pl: _mod16800,
-  "pt-BR": _mod16801,
-  ro: _mod16802,
-  ru: _mod16803,
-  "sv-SE": _mod16804,
-  th: _mod16805,
-  tr: _mod16806,
-  uk: _mod16807,
-  vi: _mod16808,
-  "zh-CN": _mod16809,
-  "zh-TW": _mod16810,
+  bg: _mod16781,
+  cs: _mod16782,
+  da: _mod16783,
+  de: _mod16784,
+  el: _mod16785,
+  "en-GB": _mod16786,
+  "en-US": _mod16787,
+  "es-ES": _mod16788,
+  "es-419": _mod16789,
+  fi: _mod16790,
+  fr: _mod16791,
+  hi: _mod16792,
+  hr: _mod16793,
+  hu: _mod16794,
+  it: _mod16795,
+  ja: _mod16796,
+  ko: _mod16797,
+  lt: _mod16798,
+  nl: _mod16799,
+  no: _mod16800,
+  pl: _mod16801,
+  "pt-BR": _mod16802,
+  ro: _mod16803,
+  ru: _mod16804,
+  "sv-SE": _mod16805,
+  th: _mod16806,
+  tr: _mod16807,
+  uk: _mod16808,
+  vi: _mod16809,
+  "zh-CN": _mod16810,
+  "zh-TW": _mod16811,
 };

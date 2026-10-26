@@ -92,7 +92,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -104,7 +104,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -114,7 +114,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -122,7 +122,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -130,7 +130,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -138,7 +138,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
             return;
           }
         }
@@ -172,7 +172,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -231,7 +231,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else {
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
             const items = [closure_128_0];
             v2 = 2;
@@ -255,7 +255,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -296,7 +296,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else if (!value) {
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
             const intl = tmp5(1128).intl;
             const string = intl.string;
@@ -371,7 +371,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-        navigation.setOptions({ headerRight: "r" });
+        navigation.setOptions({ headerRight: "Array" });
       }, items1);
       const items2 = [guild, sortedGuildRoles, channel];
       const memo = togglePrivateChannel.useMemo(() => {

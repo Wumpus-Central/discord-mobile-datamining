@@ -94,17 +94,17 @@ class StrangerDangerWarningBanner {
         };
         obj2.onIgnore = function onIgnore() {
           closure_1_4();
-          const obj = channelId(10939);
+          const obj = channelId(10940);
           obj.trackCtaEvent({
             channelId,
             warningId,
             senderId,
             warningType: constants.STRANGER_DANGER,
-            cta: channelId(10939).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
+            cta: channelId(10940).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
           });
         };
         obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj.openLazy(asyncRequireImpl(10960, dependencyMap.paths), closure_9, obj2);
+        obj.openLazy(asyncRequireImpl(10961, dependencyMap.paths), closure_9, obj2);
       };
     }, items5);
     closure_6 = callback2;
@@ -142,7 +142,7 @@ class StrangerDangerWarningBanner {
       const obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(10946, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10947, dependencyMap.paths);
       obj2.safetyTips = React5().map((children, index) =>
         closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index),
       );
@@ -183,10 +183,10 @@ class StrangerDangerWarningBanner {
   }
 }
 const SafetyWarningTypes = fn(10693).SafetyWarningTypes;
-const Constants = fn(10926);
+const Constants = fn(10927);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: metroRequire, getStrangerDangerSafetyTips: closure_7 } = Constants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_9 = fn(10959).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_9 = fn(10960).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj2 = {

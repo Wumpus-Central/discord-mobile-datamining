@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS));
       const tmp7 = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(15945).useMobileNitroPreviewDirectCheckoutEnabled();
+        analyticsLocations(15946).useMobileNitroPreviewDirectCheckoutEnabled();
       if (cResult[2] !== tmp6) {
         const intl = tmp(1128).intl;
         const obj3 = { onClick: tmp6 };
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp6;
       cResult[11] = tmp16;
       tmp15 = tmp16;
-      const tmpResult = analyticsLocations(15945);
+      const tmpResult = analyticsLocations(15946);
     }
   : function UserProfileTryItOutGetPremiumUpsell(onLayout) {
       let analyticsLocations;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS));
       const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(15945).useMobileNitroPreviewDirectCheckoutEnabled();
+        analyticsLocations(15946).useMobileNitroPreviewDirectCheckoutEnabled();
       const obj3 = {
         text: null,
         buttonText: null,
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onButtonPress: null,
         onLayout: null,
       };
-      const obj2 = analyticsLocations(15945);
+      const obj2 = analyticsLocations(15946);
       const intl = analyticsLocations(1128).intl;
       obj3.text = intl.format(analyticsLocations(1128).t.TmfgI2, { onClick: callback });
       if (nitroTrialCtaOverride == null) {

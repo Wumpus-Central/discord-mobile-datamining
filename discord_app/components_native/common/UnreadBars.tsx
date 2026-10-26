@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp20[0] = noop.Fragment;
                       const items1 = [tmp11, tmp16];
                       tmp20[1] = items1;
-                      const tmp22 = closure_9(tmp(13323).TransitionGroup, tmp20);
+                      const tmp22 = closure_9(tmp(13326).TransitionGroup, tmp20);
                       cResult[18] = tmp11;
                       cResult[19] = tmp16;
                       cResult[20] = tmp22;

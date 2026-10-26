@@ -99,7 +99,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
         GuildProfileStore.getProfile(closure_0),
       );
-      const obj = require("initialize");
+      let obj = require("initialize");
       const items1 = [GuildProfileStore];
       const obj3 = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
       const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
@@ -108,14 +108,72 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [arg0];
       obj3.fetchGuildProfile = noop.useCallback(
         asyncGeneratorStep(async () => {
-          let flag = closure_0;
-          if (closure_0 === undefined) {
-            flag = false;
+          if (c4 === 2) {
+            c4 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            try {
+              c4 = 2;
+              if (0 === c3) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
+                } else {
+                  closure_2 = tmp5;
+                  closure_129_0 = undefined;
+                  let flag = closure_0;
+                  if (closure_0 === undefined) {
+                    flag = false;
+                  }
+                  closure_129_0 = flag;
+                  c3 = 1;
+                  c4 = 1;
+                  return { value: "Reflect", done: true };
+                }
+              } else if (1 === tmp5) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  c3 = 2;
+                  c4 = 1;
+                  const obj6 = { value: closure_0(tmp2[6]).getGuildProfile(closure_130_0, closure_129_0), done: false };
+                  return obj6;
+                }
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj7 = { value, done: true };
+                return obj7;
+              } else {
+                c4 = 3;
+                const obj = { value, done: true };
+                return obj;
+              }
+            } catch (tmp12) {
+              c4 = tmp;
+              throw tmp12;
+            }
           }
-          closure_129_0 = flag;
-          await "Reflect";
-          await closure_0(tmp2[6]).getGuildProfile(closure_130_0, closure_129_0);
-          return value;
         }),
         items2,
       );

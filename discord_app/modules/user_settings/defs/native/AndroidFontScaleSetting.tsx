@@ -9,11 +9,11 @@ require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(16621).useFontScaleStore;
+const useFontScaleStore = fn(16622).useFontScaleStore;
 const FontScales = fn(1097).FontScales;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11208);
+const SettingBuilders = fn(11209);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFontScaleSliderProps() {
       const cResult = c.c(9);

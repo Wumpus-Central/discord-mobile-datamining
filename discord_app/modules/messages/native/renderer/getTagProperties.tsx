@@ -65,12 +65,12 @@ export default function getTagProperties(arg0) {
         tagAccessibilityLabel: null,
         tagVerified: flag,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "__packager_asset",
+        tagBackgroundColor: "application",
         tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
         tagIconUrl: tmp5,
         opTagText: stringResult2,
-        opTagTextColor: 7552916,
-        opTagBackgroundColor: 16777216,
+        opTagTextColor: null,
+        opTagBackgroundColor: null,
       };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;

@@ -585,8 +585,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         status: null,
-        streaming: "ca42cf9b8ff6ee78851fa60f6332ac97",
-        style: "tr.messages.ca42cf9b8ff6ee78851fa60f6332ac97.compiled.messages",
+        streaming: "4ecde9f453430a871f023c36d5fc8249",
+        style: "zh-TW.messages.4ecde9f453430a871f023c36d5fc8249.compiled.messages",
         size: "jsona",
         animate: "Mobile NUX Post Reg",
         typing: "Skip avatar modal",
@@ -640,7 +640,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             muted: flag,
             layout: tmp6(5643).ChannelListLayoutTypes.COMPACT,
           };
-          tmp14Result = closure_12(tmp6(13767).ChannelRowPreview, obj9);
+          tmp14Result = closure_12(tmp6(13769).ChannelRowPreview, obj9);
         }
       }
       const obj10 = { children: null };
@@ -682,7 +682,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = user(576);
       const stateFromStores = user(504).useStateFromStores(first, tmp6);
       const tmpResult = user(504);
-      const baseChannelUnreadBadgeState = user(17788).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+      const baseChannelUnreadBadgeState = user(17789).useBaseChannelUnreadBadgeState(channel, stateFromStores);
       ({ unread, mentionCount } = baseChannelUnreadBadgeState);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [TypingStore];
@@ -704,7 +704,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[8];
         }
-        const tmp15 = channel(16675)(channel, tmp13);
+        const tmp15 = channel(16676)(channel, tmp13);
         if (cResult[9] === channel) {
           if (cResult[10] === stateFromStores1) {
             if (cResult[11] === tmp15) {
@@ -748,7 +748,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn2;
       tmp11 = fn2;
-      const tmpResult3 = user(17788);
+      const tmpResult3 = user(17789);
     }
   : function UserResultWithChannel(arg0) {
       ({ user: require, channel } = arg0);
@@ -766,7 +766,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {};
       const merged = Object.assign(arg0);
       obj4.channel = channel;
-      obj4.lastMessage = channel(16675)(channel, { unread });
+      obj4.lastMessage = channel(16676)(channel, { unread });
       obj4.unread = unread;
       obj4.mentionCount = mentionCount;
       obj4.muted = stateFromStores;

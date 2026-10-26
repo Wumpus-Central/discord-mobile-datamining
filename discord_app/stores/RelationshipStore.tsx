@@ -94,12 +94,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = {
-  friends: "registerAsset",
-  blocked: "unicodeVersion",
-  ignored: "httpServerLocation",
-  blockedOrIgnored: "call",
-};
+let closure_20 = { friends: "Array", blocked: "test", ignored: "y", blockedOrIgnored: "IconComponent" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

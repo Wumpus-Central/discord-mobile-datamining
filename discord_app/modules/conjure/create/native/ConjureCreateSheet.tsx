@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/create/native/ConjureCreateSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ConjureLandingModelChoices from "../ConjureLandingModelChoices.tsx";
 import ConjureEffortPicker from "../../model_settings/native/ConjureEffortPicker.tsx";
+import ConjureLandingModelChoices from "../ConjureLandingModelChoices.tsx";
 import ConjureTemplateWizardSheet from "../../templates/native/ConjureTemplateWizardSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -95,7 +95,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -189,7 +189,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -236,7 +236,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       } catch (tmp12) {
         c3 = tmp;
         throw tmp12;
@@ -269,7 +269,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -455,7 +455,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -523,7 +523,7 @@ export default function ConjureCreateSheet(guildId) {
             return obj;
           }
           v3 = 3;
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         } catch (tmp15) {
           v3 = tmp;
           throw tmp15;
@@ -550,9 +550,9 @@ export default function ConjureCreateSheet(guildId) {
   const tmp4Result = require("ConjureLandingModelChoices");
   const tmp4Result4 = require("ConjureTemplates");
   const items5 = [onCreated];
-  callback3 = obj.useCallback((projectId, id) => {
+  callback3 = obj.useCallback((arg0, arg1) => {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureCreateSheet);
-    onCreated(projectId, id);
+    onCreated(arg0, arg1);
   }, items5);
   const items6 = [callback, guildId, callback3, CONJURE_DEFAULT_TIER_SETTINGS, tmp8, disabled];
   closure_17 = obj.useCallback((wizard) => {

@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           name: "icymi-screen",
           getComponent() {
-            return accessibilityNativeStackOptions(17897).ICYMITab;
+            return accessibilityNativeStackOptions(17906).ICYMITab;
           },
         };
         const tmp7 = closure_2(closure_4.Screen, obj3);
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           name: "notifications-screen",
           getComponent() {
-            return accessibilityNativeStackOptions(17847).ThemedNotificationsModal;
+            return accessibilityNativeStackOptions(17856).ThemedNotificationsModal;
           },
         };
         const tmp11 = closure_2(closure_4.Screen, obj4);
@@ -79,13 +79,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_2(closure_4.Screen, {
           name: "icymi-screen",
           getComponent() {
-            return closure_0(17897).ICYMITab;
+            return closure_0(17906).ICYMITab;
           },
         }),
         closure_2(closure_4.Screen, {
           name: "notifications-screen",
           getComponent() {
-            return closure_0(17847).ThemedNotificationsModal;
+            return closure_0(17856).ThemedNotificationsModal;
           },
         }),
       ];

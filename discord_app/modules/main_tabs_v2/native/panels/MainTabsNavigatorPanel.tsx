@@ -58,7 +58,7 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17424);
+                obj = obj(17425);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
                 obj(5159).dismissKeyboard();
@@ -522,7 +522,7 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17424);
+              obj = obj(17425);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
               obj(5159).dismissKeyboard();

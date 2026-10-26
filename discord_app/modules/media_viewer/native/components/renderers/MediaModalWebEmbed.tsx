@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import URLUtilsDefault from "../../../../../utils/URLUtils.tsx";
 import MediaModalWebViewBase from "MediaModalWebViewBase.tsx";
-import escapeDefault from "../../../../../../_runtime/14228_escape.js";
+import escapeDefault from "../../../../../../_runtime/14229_escape.js";
 import EmbedIFrameConfig from "../../../../chat/EmbedIFrameConfig.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -61,7 +61,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
           tmp9 +
           '" allow="autoplay" sandbox="' +
-          onLoad(14231).EMBED_IFRAME_SANDBOX +
+          onLoad(14232).EMBED_IFRAME_SANDBOX +
           '" scrolling="no"></iframe>\n  </body>\n</html>\n';
         cResult[3] = src;
         cResult[4] = combined;
@@ -167,7 +167,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
         escapeDefault(src) +
         '" allow="autoplay" sandbox="' +
-        onLoad(14231).EMBED_IFRAME_SANDBOX +
+        onLoad(14232).EMBED_IFRAME_SANDBOX +
         '" scrolling="no"></iframe>\n  </body>\n</html>\n';
       obj2.baseUrl = baseURL;
       obj.source = obj2;

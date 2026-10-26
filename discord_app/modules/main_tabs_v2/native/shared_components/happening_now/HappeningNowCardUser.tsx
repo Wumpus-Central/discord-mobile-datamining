@@ -7,7 +7,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16652).HappeningNowCardTrackingType;
+let closure_7 = fn(16653).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1202).AvatarSizes.LARGE;

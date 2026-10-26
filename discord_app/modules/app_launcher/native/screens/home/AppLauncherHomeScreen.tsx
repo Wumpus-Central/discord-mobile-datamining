@@ -113,7 +113,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 12;
 let c23 = 1.7777777777777777;
-const APP_LAUNCHER_IN_TEXT = fn(12056).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(11947).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 const createStyles = fn(4971);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 }, topBackgroundFill: null, sectionHeader: null, list: null, searchBarContainer: null, divider: null, appRowLabelWithPromotedContainer: null, appRowLabelWithPromotedTextContainer: null, promotedLabel: null, activityItemContainer: null, activityImageContainer: null, activityDetailsContainer: null, activityItemTupleContainer: null, activityItemTupleShelfItemContainer: null, activityItemImage: null, submittingOverlay: null };
 let rect = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
@@ -570,7 +570,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     const obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12036), obj3);
+    tmp5 = closure_19(onPress(11927), obj3);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -616,7 +616,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const size2 = { width: "dispatch", height: "ix" };
+      const size2 = { width: "Array", height: "Reflect" };
       cResult[0] = size2;
       let size = size2;
     } else {
@@ -754,7 +754,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   const items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "dispatch", height: "ix" };
+      return { width: "Array", height: "Reflect" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c23) };
@@ -792,7 +792,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   dependencyMap = tmp4;
   closure_26();
   const obj = context(576);
-  const heroMediaDimensions = context(12074).useHeroMediaDimensions();
+  const heroMediaDimensions = context(11965).useHeroMediaDimensions();
   [, _slicedToArray] = handleActivityItemSelected.useState(false);
   let width = imageWidth;
   if (imageWidth == null) {
@@ -809,7 +809,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
     if (cResult[2] === width) {
       let tmp10 = cResult[3];
     }
-    const tmp12 = shelfItem(11507)(tmp10);
+    const tmp12 = shelfItem(11508)(tmp10);
     let id = obj3.useId();
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -840,7 +840,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                   if (cResult[16] === shelfItem.application.id) {
                     let tmp22 = cResult[17];
                   }
-                  handleActivityItemSelected = tmp(12031).useHandleActivityItemSelected(tmp22).handleActivityItemSelected;
+                  handleActivityItemSelected = tmp(11922).useHandleActivityItemSelected(tmp22).handleActivityItemSelected;
                   if (cResult[18] === handleActivityItemSelected) {
                     if (cResult[19] === onPress) {
                       if (cResult[20] === shelfItem) {
@@ -885,7 +885,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                   cResult[20] = shelfItem;
                   cResult[21] = tmp4;
                   cResult[22] = X;
-                  const tmpResult6 = tmp(12031);
+                  const tmpResult6 = tmp(11922);
                 }
               }
             }
@@ -948,7 +948,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   tmp10 = obj2;
   obj3 = handleActivityItemSelected;
   tmp7 = _slicedToArray;
-  const tmpResult = context(12074);
+  const tmpResult = context(11965);
 }) : (function ActivityItem(context) {
   context = context.context;
   const shelfItem = context.shelfItem;
@@ -1081,7 +1081,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function Recomm
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const size1 = { width: "dispatch", height: "ix" };
+      const size1 = { width: "Array", height: "Reflect" };
       cResult[0] = size1;
       let first = size1;
     } else {
@@ -1218,7 +1218,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function Recomm
   const items1 = [containerWidth, num];
   styles = height.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "dispatch", height: "ix" };
+      return { width: "Array", height: "Reflect" };
     } else {
       const tmp7 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - c22 * (2 - 1)) / 2);
       const size = { width: tmp7, height: roundToNearestPixelDefault(tmp7 / c23) };
@@ -1740,26 +1740,26 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
   closure_15 = undefined;
   let memo6;
   let memo7;
-  const fetchDeveloperActivityShelfItems = context(12109).useFetchDeveloperActivityShelfItems();
+  const fetchDeveloperActivityShelfItems = context(12000).useFetchDeveloperActivityShelfItems();
   let num = 2;
   if (entrypoint(7038)()) {
     num = 4;
   }
   let guild_id;
-  let obj = context(12109);
+  let obj = context(12000);
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
-  const tmp4ResultResult = entrypoint(12019)({ guildId: guild_id });
+  const tmp4ResultResult = entrypoint(11910)({ guildId: guild_id });
   dependencyMap = tmp4ResultResult;
-  let tmp7 = entrypoint === context(11169).AppLauncherEntrypoint.VOICE;
+  let tmp7 = entrypoint === context(11170).AppLauncherEntrypoint.VOICE;
   closure_4 = tmp7;
-  let tmp8 = entrypoint(12110)({ context, onlyActivityApps: tmp7 });
+  let tmp8 = entrypoint(12001)({ context, onlyActivityApps: tmp7 });
   frecentApps = tmp8.frecentApps;
   ({ frecencyCommands, sectionDescriptors, loading } = tmp8);
-  const tmp9 = entrypoint === context(11169).AppLauncherEntrypoint.TEXT;
+  const tmp9 = entrypoint === context(11170).AppLauncherEntrypoint.TEXT;
   closure_6 = tmp9;
-  appsInThisServer = tmp4(12113)({ context }).appsInThisServer;
+  appsInThisServer = tmp4(12004)({ context }).appsInThisServer;
   let items = [appsInThisServer, tmp9];
   let items1 = [frecentApps];
   const memo = frecentApps.useMemo(() => {
@@ -1776,7 +1776,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
     }
     return tmp;
   }, items2);
-  const tmp4Result = entrypoint(12019);
+  const tmp4Result = entrypoint(11910);
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
@@ -1843,7 +1843,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
         if (arr.length % 2 === 1) {
           const obj2 = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12079).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(11970).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -1851,7 +1851,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
           items.push(obj2);
         }
         items[items.length - 1].isLastTuple = true;
-        const obj5 = { type: tmp8(12079).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
+        const obj5 = { type: tmp8(11970).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
         const intl = tmp8(1128).intl;
         obj5.section = intl.string(tmp8(1128).t.aeuOoh);
         ({ length: obj3.numItems, length: obj3.numVisibleItems } = arr);
@@ -2004,15 +2004,15 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(12114).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(12005).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12116).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(12007).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12116);
+                const tmpResult = found1(12007);
               }
-              const obj3 = { application: type.application, showsPromoted: found1(1405).hasFlag(type.flags, found1(12117).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
+              const obj3 = { application: type.application, showsPromoted: found1(1405).hasFlag(type.flags, found1(12008).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
               return obj3;
             }
           });
@@ -2032,8 +2032,8 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHom
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(12114).ApplicationDirectoryCollectionItemType.APPLICATION) {
-              const obj = { application: type.application, showsPromoted: found1(1405).hasFlag(type.flags, found1(12117).ApplicationCollectionItemFlags.PROMOTED) };
+            if (type.type === found1(12005).ApplicationDirectoryCollectionItemType.APPLICATION) {
+              const obj = { application: type.application, showsPromoted: found1(1405).hasFlag(type.flags, found1(12008).ApplicationCollectionItemFlags.PROMOTED) };
               return obj;
             }
           });
@@ -2080,7 +2080,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   const context = params.context;
   const initialSearchQuery = params.initialSearchQuery;
   let obj = navigation(576);
-  const viewableAppLauncherHomeItems = navigation(12077).useViewableAppLauncherHomeItems();
+  const viewableAppLauncherHomeItems = navigation(11968).useViewableAppLauncherHomeItems();
   const handleViewableItemsChanged = viewableAppLauncherHomeItems.handleViewableItemsChanged;
   ({ hasViewedActivityItem, hasViewedLearnMoreItem } = viewableAppLauncherHomeItems);
   const tmp6 = context(8759)(hasViewedActivityItem);
@@ -2090,8 +2090,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   _slicedToArray = tmp8;
   const tmp9 = context(7144)();
   height = tmp9;
-  let obj2 = navigation(12077);
-  const requiredAppLauncherContext = navigation(11168).useRequiredAppLauncherContext();
+  let obj2 = navigation(11968);
+  const requiredAppLauncherContext = navigation(11169).useRequiredAppLauncherContext();
   const chatInputRef = requiredAppLauncherContext.chatInputRef;
   const keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
   const width = requiredAppLauncherContext.width;
@@ -2156,7 +2156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                   if (cResult[33] === context) {
                                     if (cResult[34] === entrypoint) {
                                       if (cResult[35] === navigation) {
-                                        const clickOnHomeActivityOpensAppDetails = tmp(12080).useClickOnHomeActivityOpensAppDetails();
+                                        const clickOnHomeActivityOpensAppDetails = tmp(11971).useClickOnHomeActivityOpensAppDetails();
                                         if (cResult[38] === clickOnHomeActivityOpensAppDetails) {
                                           if (cResult[39] === context) {
                                             if (cResult[40] === entrypoint) {
@@ -3507,8 +3507,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                     }
                                                                   }
                                                                   ref2 = obj4.useRef(tmp38);
-                                                                  const pinnedSearchBarBottomBorder = tmp(12088).usePinnedSearchBarBottomBorder(tmp45);
-                                                                  const tmpResult6 = tmp(12088);
+                                                                  const pinnedSearchBarBottomBorder = tmp(11979).usePinnedSearchBarBottomBorder(tmp45);
+                                                                  const tmpResult6 = tmp(11979);
                                                                   if (cResult[66] !== initialSearchQuery) {
                                                                     class Ve {
                                                                       constructor() {
@@ -3704,7 +3704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                   const layoutEffect = obj4.useLayoutEffect(tmp50, tmp49);
                                                                   const sum = context(1633)().bottom + list;
                                                                   const ref1 = obj4.useRef(null);
-                                                                  const bottomSheetFlashListBottomViewabilityInset = tmp(12089).useBottomSheetFlashListBottomViewabilityInset();
+                                                                  const bottomSheetFlashListBottomViewabilityInset = tmp(11980).useBottomSheetFlashListBottomViewabilityInset();
                                                                   ({ flashListRef, bottomVisibilityInsetRef } = bottomSheetFlashListBottomViewabilityInset);
                                                                   const _Symbol2 = Symbol;
                                                                   if (cResult[69] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4273,7 +4273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                     }
                                                                   }
                                                                   tmp5(9361)(tmp55, tmp59, tmp61);
-                                                                  const tmpResult7 = tmp(12089);
+                                                                  const tmpResult7 = tmp(11980);
                                                                   [r10312, closure_30] = tmp29(obj4.useState(false), 2);
                                                                   const _Symbol3 = Symbol;
                                                                   if (cResult[74] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4853,7 +4853,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                     }
                                                                   }
                                                                   const tmpResult8 = tmp(504);
-                                                                  const trackAppLauncherHomeItemImpression = tmp(12091).useTrackAppLauncherHomeItemImpression().trackAppLauncherHomeItemImpression;
+                                                                  const trackAppLauncherHomeItemImpression = tmp(11982).useTrackAppLauncherHomeItemImpression().trackAppLauncherHomeItemImpression;
                                                                   if (cResult[80] === sum) {
                                                                     class Ve {
                                                                       constructor() {
@@ -5615,7 +5615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                         }
                                                                       }
                                                                     }
-                                                                    const appLauncherFlashListProps = tmp(12093).useAppLauncherFlashListProps(tmp82);
+                                                                    const appLauncherFlashListProps = tmp(11984).useAppLauncherFlashListProps(tmp82);
                                                                     const _Symbol6 = Symbol;
                                                                     if (cResult[92] === Symbol.for("react.memo_cache_sentinel")) {
                                                                       class Ct {
@@ -6777,7 +6777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                     cResult[97] = tmp87;
                                                                     cResult[98] = tmp89;
                                                                     cResult[99] = items6;
-                                                                    const tmpResult10 = tmp(12093);
+                                                                    const tmpResult10 = tmp(11984);
                                                                   }
                                                                   let obj7 = {};
                                                                   let merged = Object.assign(tmp8.list);
@@ -6785,7 +6785,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                                                   cResult[80] = sum;
                                                                   cResult[81] = tmp8.list;
                                                                   cResult[82] = obj7;
-                                                                  const tmpResult9 = tmp(12091);
+                                                                  const tmpResult9 = tmp(11982);
                                                                 }
                                                               }
                                                             }
@@ -6981,7 +6981,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                         cResult[50] = tmp8.sectionHeader;
                                         cResult[51] = width;
                                         cResult[52] = Ce;
-                                        let tmpResult = tmp(12080);
+                                        let tmpResult = tmp(11971);
                                       }
                                     }
                                   }
@@ -6997,7 +6997,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                                 }
                               }
                               function onViewAllInThisServer() {
-                                const found = inThisServerItems.find((type) => type.type === navigation(12079).AppLauncherHomeListItemType.VIEW_ALL);
+                                const found = inThisServerItems.find((type) => type.type === navigation(11970).AppLauncherHomeListItemType.VIEW_ALL);
                                 let mapped;
                                 if (found != null) {
                                   const applications = found.applications;
@@ -7132,7 +7132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   cResult[3] = chatInputRef;
   cResult[4] = keyboardCloseReasonRef;
   cResult[5] = fn2;
-  let obj3 = navigation(11168);
+  let obj3 = navigation(11169);
 }) : (function AppLauncherHomeScreen(route) {
   const params = route.route.params;
   const context = params.context;
@@ -7556,7 +7556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
       items: inThisServerItems,
       onAppSelected: callback3,
       onViewAllSelected: function onViewAllInThisServer() {
-          const found = inThisServerItems.find((type) => type.type === context(12079).AppLauncherHomeListItemType.VIEW_ALL);
+          const found = inThisServerItems.find((type) => type.type === context(11970).AppLauncherHomeListItemType.VIEW_ALL);
           let mapped;
           if (found != null) {
             const applications = found.applications;
