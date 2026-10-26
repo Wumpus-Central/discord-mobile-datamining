@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 64,
   height: 64,
   scales: [1],
-  hash: "cfc308b460ac1d3ba90f4c87676a03fe",
-  name: "game-empty-state",
+  hash: "99c427c3b3ea910fa2d3aeb72dd0f935",
+  name: "game-empty-state-controller",
   type: "png",
 });

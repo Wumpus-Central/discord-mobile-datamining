@@ -235,7 +235,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -264,8 +264,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 responseId: "",
                 responseModel: "",
                 promptTokens: "r",
-                completionTokens: "__initData",
-                cacheCreationInputTokens: "toCharArray$esjava$1",
+                completionTokens: "emoji",
+                cacheCreationInputTokens: "pos",
                 cacheReadInputTokens: "toCharArray$esjava$1",
                 toolCalls: [],
                 activeToolBlocks: {},
@@ -481,7 +481,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
             break;
@@ -1173,8 +1173,8 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     responseId: "",
     responseModel: "",
     promptTokens: "r",
-    completionTokens: "__initData",
-    cacheCreationInputTokens: "toCharArray$esjava$1",
+    completionTokens: "emoji",
+    cacheCreationInputTokens: "pos",
     cacheReadInputTokens: "toCharArray$esjava$1",
     toolCalls: [],
     activeToolBlocks: {},

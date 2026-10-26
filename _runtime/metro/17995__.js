@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 18,
-  height: 18,
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ac1d1ee38d369222a757b30c5d2c8ed6",
-  name: "arrow",
+  hash: "e831387e9387034c87c9b5bc784cf6eb",
+  name: "partner_icon",
   type: "png",
 });

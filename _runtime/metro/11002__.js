@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15",
-  name: "TagsIcon",
+  hash: "faa248a786366f008b1ac80b3ae581a2",
+  name: "LockUnlockedIcon",
   type: "png",
 });

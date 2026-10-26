@@ -1,13 +1,14 @@
 // _runtime/metro/18669__.js
+import _modDef9112 from "09112__.js";
+import _modDef18668 from "18668__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
-import emptyFunction_mod from "09112__.js";
 
-const CircularProgress = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,223 +27,144 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+const AnimatedCircularProgress = ["fill", "prefill"];
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Animated } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-class CircularProgress {
-  constructor() {
+const Animated = get_ActivityIndicator.Animated;
+const Easing = get_ActivityIndicator.Easing;
+const jsx = fn(21).jsx;
+_isNativeReflectConstruct = Animated.createAnimatedComponent(_modDef18668);
+class AnimatedCircularProgress {
+  constructor(arg0) {
     self = this;
-    items = [...arguments];
-    tmp = c2(this, CircularProgress);
-    items1 = [...items];
+    closure_0 = global;
+    tmp = c2(this, AnimatedCircularProgress);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(CircularProgress);
+    obj = closure_4(AnimatedCircularProgress);
     tmp3 = closure_3;
-    if (closure_8()) {
+    if (closure_7()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.clampFill = (arg0) => Math.min(100, Math.max(0, arg0));
+    obj1 = { fillAnimation: null };
+    value = new hasOwnProperty.Value(global.prefill);
+    obj1.fillAnimation = value;
+    tmp3Result.state = obj1;
+    if (global.onFillChange) {
+      fillAnimation = tmp3Result.state.fillAnimation;
+      addListenerResult = fillAnimation.addListener((value) => prefill.onFillChange(value.value));
+    }
     return tmp3Result;
   }
 }
-_inherits(CircularProgress, noop.PureComponent);
+_inherits(AnimatedCircularProgress, noop.PureComponent);
 const entry = {
-  key: "polarToCartesian",
-  value: function polarToCartesian(sum, sum2, diff, result5) {
-    const result = ((result5 - 90) * Math.PI) / 180;
-    const point = { x: sum + diff * Math.cos(result), y: sum2 + diff * Math.sin(result) };
-    return point;
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    this.animate();
   },
 };
 let items = [
   entry,
   {
-    key: "circlePath",
-    value: function circlePath(sum, sum2, diff, result5, arcSweepAngle) {
-      const polarToCartesianResult = this.polarToCartesian(sum, sum2, diff, 0.9999999 * arcSweepAngle);
-      let str = "1";
-      if (arcSweepAngle - result5 <= 180) {
-        str = "0";
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(arg0) {
+      const self = this;
+      if (arg0.fill !== this.props.fill) {
+        self.animate();
       }
-      const items = ["M"];
-      ({ x: arr[1], y: arr[2] } = polarToCartesianResult);
-      items[3] = "A";
-      items[4] = diff;
-      items[5] = diff;
-      items[6] = 0;
-      items[7] = str;
-      items[8] = 0;
-      ({ x: arr[9], y: arr[10] } = this.polarToCartesian(sum, sum2, diff, result5));
-      return items.join(" ");
+    },
+  },
+  {
+    key: "reAnimate",
+    value: function reAnimate(arg0, arg1, arg2, arg3) {
+      const self = this;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      closure_0 = arg3;
+      const obj = { fillAnimation: null };
+      value = new Animated.Value(arg0);
+      obj.fillAnimation = value;
+      this.setState(obj, () => self.animate(closure_1, closure_2, closure_0));
+    },
+  },
+  {
+    key: "animate",
+    value: function animate(arg0, arg1, arg2) {
+      const self = this;
+      let fill = arg0;
+      if (arg0 < 0) {
+        fill = self.props.fill;
+      }
+      let duration = arg1;
+      if (!arg1) {
+        duration = self.props.duration;
+      }
+      let easing = arg2;
+      if (!arg2) {
+        easing = self.props.easing;
+      }
+      const timingResult = Animated.timing(self.state.fillAnimation, {
+        useNativeDriver: self.props.useNativeDriver,
+        toValue: fill,
+        easing,
+        duration,
+        delay: self.props.delay,
+      });
+      timingResult.start(self.props.onAnimationComplete);
+      return timingResult;
+    },
+  },
+  {
+    key: "animateColor",
+    value: function animateColor() {
+      const self = this;
+      if (this.props.tintColorSecondary) {
+        const fillAnimation = self.state.fillAnimation;
+        const obj = { inputRange: [0, 100], outputRange: null };
+        const items = [self.props.tintColor, self.props.tintColorSecondary];
+        obj.outputRange = items;
+        let tintColor = fillAnimation.interpolate(obj);
+      } else {
+        tintColor = self.props.tintColor;
+      }
+      return tintColor;
     },
   },
   {
     key: "render",
     value: function render() {
-      const self = this;
       const props = this.props;
-      ({ size, width, backgroundWidth, backgroundColor, lineCap, fillLineCap } = props);
-      ({ tintColor, tintTransparency, style, rotation } = props);
-      if (undefined === fillLineCap) {
-        fillLineCap = lineCap;
-      }
-      ({ arcSweepAngle, fill, children, childrenContainerStyle, padding, renderCap, dashedBackground, dashedTint } =
-        props);
-      let bound = width;
-      if (backgroundWidth) {
-        const _Math = Math;
-        bound = Math.max(width, backgroundWidth);
-      }
-      const result = size / 2;
-      const result1 = padding / 2;
-      const result2 = size / 2;
-      const result3 = bound / 2;
-      const result4 = padding / 2;
-      const result5 = (arcSweepAngle * self.clampFill(fill)) / 100;
-      let num = 0;
-      if (!tintTransparency) {
-        num = result5;
-      }
-      const sum = result + result1;
-      const diff = result2 - result3 - result4;
-      const circlePathResult = self.circlePath(sum, sum, diff, num, arcSweepAngle);
-      let renderCapResult = null;
-      if (self.props.renderCap) {
-        const props2 = self.props;
-        const obj = { center: tmp13 };
-        renderCapResult = props2.renderCap(obj);
-      }
-      const diff1 = size - 2 * bound;
-      const size1 = {
-        position: "absolute",
-        left: bound + padding / 2,
-        top: bound + padding / 2,
-        width: diff1,
-        height: diff1,
-        borderRadius: diff1 / 2,
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-      };
-      const merged = Object.assign(childrenContainerStyle);
-      let mapped = null;
-      if (dashedTint.gap > 0) {
-        const _Object = Object;
-        const values = Object.values(dashedTint);
-        mapped = values.map((item) => parseInt(item));
-      }
-      let mapped1 = null;
-      if (dashedBackground.gap > 0) {
-        const _Object2 = Object;
-        const values2 = Object.values(dashedBackground);
-        mapped1 = values2.map((item) => parseInt(item));
-      }
-      const obj2 = { style, children: null };
-      const size2 = { width: size + padding, height: size + padding, children: null };
-      const obj3 = { rotation, originX: (size + padding) / 2, originY: (size + padding) / 2, children: null };
-      let tmp23Result = backgroundColor;
-      if (backgroundColor) {
-        const obj4 = {
-          d: circlePathResult,
-          stroke: backgroundColor,
-          strokeWidth: null,
-          strokeLinecap: null,
-          strokeDasharray: null,
-          fill: "transparent",
-        };
-        if (!backgroundWidth) {
-          backgroundWidth = width;
-        }
-        obj4.strokeWidth = backgroundWidth;
-        obj4.strokeLinecap = lineCap;
-        obj4.strokeDasharray = mapped1;
-        tmp23Result = timestampProducer(CircularProgress(7962).Path, obj4);
-      }
-      const items = [tmp23Result, ,];
-      let tmp23Result3 = fill > 0;
-      if (tmp23Result3) {
-        const obj5 = {
-          d: circlePathResult1,
-          stroke: tintColor,
-          strokeWidth: width,
-          strokeLinecap: fillLineCap,
-          strokeDasharray: mapped,
-          fill: "transparent",
-        };
-        tmp23Result3 = timestampProducer(CircularProgress(7962).Path, obj5);
-      }
-      items[1] = tmp23Result3;
-      items[2] = renderCapResult;
-      obj3.children = items;
-      size2.children = React5(CircularProgress(7962).G, obj3);
-      const items1 = [timestampProducer(CircularProgress(7962).Svg, size2)];
-      let tmp23Result4 = children;
-      if (children) {
-        const obj6 = { style: size1, children: children(fill) };
-        tmp23Result4 = timestampProducer(hasOwnProperty, obj6);
-      }
-      items1[1] = tmp23Result4;
-      obj2.children = items1;
-      return React5(hasOwnProperty, obj2);
+      ({ fill, prefill } = props);
+      const obj = {};
+      const merged = Object.assign(_objectWithoutProperties(props, AnimatedCircularProgress));
+      obj.fill = this.state.fillAnimation;
+      obj.tintColor = this.animateColor();
+      return <_isNativeReflectConstruct />;
     },
   },
 ];
-const importDefaultResultResult = _createClass(CircularProgress, items);
-let obj = {
-  style: emptyFunction.object,
-  size: null,
-  fill: null,
-  width: null,
-  backgroundWidth: null,
-  tintColor: null,
-  tintTransparency: null,
-  backgroundColor: null,
-  rotation: null,
-  lineCap: null,
-  arcSweepAngle: null,
-  children: null,
-  childrenContainerStyle: null,
-  padding: null,
-  renderCap: null,
-  dashedBackground: null,
-  dashedTint: null,
-};
-let emptyFunction = emptyFunction_mod;
-let items1 = [emptyFunction.number];
-let emptyFunction = emptyFunction_mod;
-items1[1] = emptyFunction.instanceOf(Animated.Value);
-obj.size = emptyFunction.oneOfType(items1).isRequired;
-obj.fill = emptyFunction.number.isRequired;
-obj.width = emptyFunction.number.isRequired;
-obj.backgroundWidth = emptyFunction.number;
-obj.tintColor = emptyFunction.string;
-obj.tintTransparency = emptyFunction.bool;
-obj.backgroundColor = emptyFunction.string;
-obj.rotation = emptyFunction.number;
-obj.lineCap = emptyFunction.string;
-obj.arcSweepAngle = emptyFunction.number;
-obj.children = emptyFunction.func;
-obj.childrenContainerStyle = emptyFunction.object;
-obj.padding = emptyFunction.number;
-obj.renderCap = emptyFunction.func;
-obj.dashedBackground = emptyFunction.object;
-obj.dashedTint = emptyFunction.object;
+const importDefaultResultResult = _createClass(AnimatedCircularProgress, items);
+let obj = {};
+let merged = Object.assign(_modDef18668.propTypes);
+obj.prefill = _modDef9112.number;
+obj.duration = _modDef9112.number;
+obj.easing = _modDef9112.func;
+obj.onAnimationComplete = _modDef9112.func;
+obj.useNativeDriver = _modDef9112.bool;
+obj.delay = _modDef9112.number;
 importDefaultResultResult.propTypes = obj;
 importDefaultResultResult.defaultProps = {
-  tintColor: "black",
-  tintTransparency: true,
-  rotation: 90,
-  lineCap: "butt",
-  arcSweepAngle: 360,
-  padding: 0,
-  dashedBackground: { width: 0, gap: 0 },
-  dashedTint: { width: 0, gap: 0 },
+  duration: 500,
+  easing: Easing.out(Easing.ease),
+  prefill: 0,
+  useNativeDriver: false,
+  delay: 0,
 };
 
 export default importDefaultResultResult;

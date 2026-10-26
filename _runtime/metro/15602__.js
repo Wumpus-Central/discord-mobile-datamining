@@ -1,45 +1,105 @@
 // _runtime/metro/15602__.js
-import _mod15546 from "15546__.js";
-import _mod15571 from "15571__.js";
-import _mod15599 from "15599__.js";
-import _mod15603 from "15603__.js";
+import _mod15547 from "15547__.js";
+import _mod15548 from "15548__.js";
+import _mod15551 from "15551__.js";
+import _mod15567 from "15567__.js";
+import _mod15570 from "15570__.js";
+import _mod15604 from "15604__.js";
+import state from "../15605_state.js";
+import prop from "15603__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
+let closure_5 = _mod15551("".slice);
+let closure_6 = _mod15551("".replace);
+let closure_7 = _mod15551([].join);
+let closure_8 = _mod15547 && !_mod15548(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = _mod15547 && !_mod15548(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
   }
-  if (_mod15571(value)) {
-    _mod15603(value, name, obj);
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
   }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod15567(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod15604.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod15604.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod15547) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
     } else {
-      _mod15546(arg1, value);
+      toString.name = text2;
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod15599.f(arg0, arg1, obj2);
-        const tmp3Result = _mod15599;
-      }
-    } catch (err) {}
   }
-  return arg0;
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod15567(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod15567(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod15547) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
+        }
+        const enforceResult = state.enforce(toString);
+        if (!_mod15567(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
+        }
+        return toString;
+      }
+    }
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {}
 };
+function toString() {
+  const self = this;
+  let source = _mod15570(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
+}
+fn(toString, "toString");
+Function.prototype.toString = toString;
+
+export default fn;

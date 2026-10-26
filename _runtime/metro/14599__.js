@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/chat_sidebar",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f15a8eea867ca31909b0a1cf49c6c7d8",
-  name: "ic_notif",
+  hash: "aa9c26c29990ba7a6584e51ab5c56efa",
+  name: "debug",
   type: "png",
 });

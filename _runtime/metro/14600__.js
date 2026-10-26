@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa9c26c29990ba7a6584e51ab5c56efa",
-  name: "debug",
+  hash: "fe638ed5adb730b6284af1a6c528af46",
+  name: "ic_report_message",
   type: "png",
 });

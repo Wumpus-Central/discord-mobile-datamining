@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0182b31d51043571e01025e7bba542aa",
-  name: "FileUpIcon",
+  hash: "8b4b2bddd719de3088e180cf9d96ecec",
+  name: "RetryIcon",
   type: "png",
 });

@@ -269,7 +269,7 @@ let closure_8 = async function _instrumentStream(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 responseTimestamp: 0,
                 promptTokens: "r",
                 completionTokens: "__packager_asset",
-                totalTokens: "Reflect",
+                totalTokens: "formatToPlainString",
                 chatCompletionToolCalls: {},
                 responsesApiToolCalls: [],
               };
@@ -514,7 +514,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 }
                 closure_146_0.end();
                 c22 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
             break;

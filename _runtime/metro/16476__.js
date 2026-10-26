@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/quests/native/images",
-  width: 375,
-  height: 58,
+  width: 345,
+  height: 82,
   scales: [1, 2, 3],
-  hash: "e5d497e242dfffadb8102108e8df2b1a",
-  name: "clouds_background",
+  hash: "91248bc802fa2159ae23ab96ddaf91db",
+  name: "clouds_light_background",
   type: "png",
 });

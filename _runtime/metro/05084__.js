@@ -6,10 +6,10 @@ require = fn;
 const noop = fn(19);
 ({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export const useRiveProperty = function useRiveProperty(arg0, arg1, f33561) {
+export const useRiveProperty = function useRiveProperty(arg0, arg1, f33560) {
   closure_0 = arg0;
   closure_1 = arg1;
-  closure_2 = f33561;
+  closure_2 = f33560;
   let tmp = hasOwnProperty(undefined);
   const items = [arg0, arg1];
   const disposableMemo = _mod5085.useDisposableMemo(

@@ -23,7 +23,7 @@ fn = function n(toValue, userConfig, callback) {
       duration: 2000,
       dampingRatio: 0.5,
       reduceMotion: "concat",
-      clamp: "Date",
+      clamp: "ref",
     };
     const merged = Object.assign(dependencyMap);
     let duration;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 84.5,
   height: 90.5,
   scales: [2, 3],
-  hash: "89e957c2ca19c43cdc74008a47a75acc",
-  name: "money_birb_placeholder_light",
+  hash: "e0ca5aec7f428c808429bc2700a4d1c2",
+  name: "money_birb_placeholder_dark",
   type: "png",
 });

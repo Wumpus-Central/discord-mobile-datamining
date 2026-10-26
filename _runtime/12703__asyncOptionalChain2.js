@@ -12,7 +12,7 @@ let closure_1 = async function _asyncOptionalChain2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_1 = async function _asyncOptionalChain2(arg0) {
             if ("optionalAccess" === closure_129_4) {
               if (null == closure_129_2) {
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
             if ("access" !== closure_129_4) {

@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/guild_role_subscription",
-  width: 67.5,
-  height: 92.5,
+  width: 55,
+  height: 128,
   scales: [2, 3],
-  hash: "1da146fe37f3351b22cf5b5c1c44b1cf",
-  name: "image_role_subscription_badge",
+  hash: "3ad934bc4ddf8afa206b19b9a38876a2",
+  name: "image_role_subscription_lanyard",
   type: "png",
 });

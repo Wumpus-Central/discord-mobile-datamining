@@ -1,5 +1,5 @@
 // _runtime/metro/13002__.js
-import ANGLE_ORDER from "../13001_ANGLE_ORDER.js";
+import ANGLE_ORDER from "../13000_ANGLE_ORDER.js";
 
 let fn = function _typeof(ANGLE_ORDER) {
   if (typeof Symbol === "function") {
@@ -26,11 +26,13 @@ let fn = function _typeof(ANGLE_ORDER) {
 };
 function multiply(arg0, arg1, arg2) {
   [tmp, tmp2, tmp3, tmp4] = arg1;
-  [tmp5, tmp6, tmp7, tmp8] = arg2;
+  [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = arg2;
   arg0[0] = tmp * tmp5 + tmp3 * tmp6;
   arg0[1] = tmp2 * tmp5 + tmp4 * tmp6;
   arg0[2] = tmp * tmp7 + tmp3 * tmp8;
   arg0[3] = tmp2 * tmp7 + tmp4 * tmp8;
+  arg0[4] = tmp * tmp9 + tmp3 * tmp10 + arg1[4];
+  arg0[5] = tmp2 * tmp9 + tmp4 * tmp10 + arg1[5];
   return arg0;
 }
 function subtract(arg0, arg1, arg2) {
@@ -38,6 +40,8 @@ function subtract(arg0, arg1, arg2) {
   arg0[1] = arg1[1] - arg2[1];
   arg0[2] = arg1[2] - arg2[2];
   arg0[3] = arg1[3] - arg2[3];
+  arg0[4] = arg1[4] - arg2[4];
+  arg0[5] = arg1[5] - arg2[5];
   return arg0;
 }
 if (typeof WeakMap === "function") {
@@ -100,34 +104,23 @@ if (!ANGLE_ORDER) {
 }
 let closure_1 = value;
 
-export const LDU = function LDU(arg0, arg1, arg2, arg3) {
-  arg0[2] = arg3[2] / arg3[0];
-  arg2[0] = arg3[0];
-  arg2[1] = arg3[1];
-  arg2[3] = arg3[3] - arg0[2] * arg2[1];
-  const items = [arg0, arg1, arg2];
-  return items;
-};
 export const add = function add(arg0, arg1, arg2) {
   arg0[0] = arg1[0] + arg2[0];
   arg0[1] = arg1[1] + arg2[1];
   arg0[2] = arg1[2] + arg2[2];
   arg0[3] = arg1[3] + arg2[3];
-  return arg0;
-};
-export const adjoint = function adjoint(arg0, arg1) {
-  arg0[0] = arg1[3];
-  arg0[1] = -arg1[1];
-  arg0[2] = -arg1[2];
-  arg0[3] = arg1[0];
+  arg0[4] = arg1[4] + arg2[4];
+  arg0[5] = arg1[5] + arg2[5];
   return arg0;
 };
 export const clone = function clone(arg0) {
-  const aRRAY_TYPE = new value.ARRAY_TYPE(4);
+  const aRRAY_TYPE = new value.ARRAY_TYPE(6);
   aRRAY_TYPE[0] = arg0[0];
   aRRAY_TYPE[1] = arg0[1];
   aRRAY_TYPE[2] = arg0[2];
   aRRAY_TYPE[3] = arg0[3];
+  aRRAY_TYPE[4] = arg0[4];
+  aRRAY_TYPE[5] = arg0[5];
   return aRRAY_TYPE;
 };
 export const copy = function copy(arg0, arg1) {
@@ -135,61 +128,98 @@ export const copy = function copy(arg0, arg1) {
   arg0[1] = arg1[1];
   arg0[2] = arg1[2];
   arg0[3] = arg1[3];
+  arg0[4] = arg1[4];
+  arg0[5] = arg1[5];
   return arg0;
 };
 export const create = function create() {
-  const aRRAY_TYPE = new value.ARRAY_TYPE(4);
+  const aRRAY_TYPE = new value.ARRAY_TYPE(6);
   if (value.ARRAY_TYPE != Float32Array) {
     aRRAY_TYPE[1] = 0;
     aRRAY_TYPE[2] = 0;
+    aRRAY_TYPE[4] = 0;
+    aRRAY_TYPE[5] = 0;
   }
   aRRAY_TYPE[0] = 1;
   aRRAY_TYPE[3] = 1;
   return aRRAY_TYPE;
 };
 export const determinant = function determinant(arg0) {
-  return arg0[0] * arg0[3] - arg0[2] * arg0[1];
+  return arg0[0] * arg0[3] - arg0[1] * arg0[2];
 };
 export const equals = function equals(arg0, arg1) {
-  [tmp, tmp2, tmp3, tmp4] = arg0;
-  [tmp5, tmp6, tmp7, tmp8] = arg1;
-  const absolute = Math.abs(tmp - tmp5);
+  [tmp, tmp2, tmp3, tmp4, tmp5, tmp6] = arg0;
+  [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = arg1;
+  const absolute = Math.abs(tmp - tmp7);
   const absolute1 = Math.abs(tmp);
-  let tmp12 = absolute <= value.EPSILON * Math.max(1, absolute1, Math.abs(tmp5));
-  if (tmp12) {
+  let tmp16 = absolute <= value.EPSILON * Math.max(1, absolute1, Math.abs(tmp7));
+  if (tmp16) {
     const _Math = Math;
     const _Math2 = Math;
     const _Math3 = Math;
-    const absolute2 = Math.abs(tmp2 - tmp6);
+    const absolute2 = Math.abs(tmp2 - tmp8);
     const _Math4 = Math;
     const absolute3 = Math.abs(tmp2);
-    tmp12 = absolute2 <= value.EPSILON * Math.max(1, absolute3, Math.abs(tmp6));
+    tmp16 = absolute2 <= value.EPSILON * Math.max(1, absolute3, Math.abs(tmp8));
   }
-  if (tmp12) {
+  if (tmp16) {
     const _Math5 = Math;
     const _Math6 = Math;
     const _Math7 = Math;
-    const absolute4 = Math.abs(tmp3 - tmp7);
+    const absolute4 = Math.abs(tmp3 - tmp9);
     const _Math8 = Math;
     const absolute5 = Math.abs(tmp3);
-    tmp12 = absolute4 <= value.EPSILON * Math.max(1, absolute5, Math.abs(tmp7));
+    tmp16 = absolute4 <= value.EPSILON * Math.max(1, absolute5, Math.abs(tmp9));
   }
-  if (tmp12) {
+  if (tmp16) {
     const _Math9 = Math;
     const _Math10 = Math;
     const _Math11 = Math;
-    const absolute6 = Math.abs(tmp4 - tmp8);
+    const absolute6 = Math.abs(tmp4 - tmp10);
     const _Math12 = Math;
     const absolute7 = Math.abs(tmp4);
-    tmp12 = absolute6 <= value.EPSILON * Math.max(1, absolute7, Math.abs(tmp8));
+    tmp16 = absolute6 <= value.EPSILON * Math.max(1, absolute7, Math.abs(tmp10));
   }
-  return tmp12;
+  if (tmp16) {
+    const _Math13 = Math;
+    const _Math14 = Math;
+    const _Math15 = Math;
+    const absolute8 = Math.abs(tmp5 - tmp11);
+    const _Math16 = Math;
+    const absolute9 = Math.abs(tmp5);
+    tmp16 = absolute8 <= value.EPSILON * Math.max(1, absolute9, Math.abs(tmp11));
+  }
+  if (tmp16) {
+    const _Math17 = Math;
+    const _Math18 = Math;
+    const _Math19 = Math;
+    const absolute10 = Math.abs(tmp6 - tmp12);
+    const _Math20 = Math;
+    const absolute11 = Math.abs(tmp6);
+    tmp16 = absolute10 <= value.EPSILON * Math.max(1, absolute11, Math.abs(tmp12));
+  }
+  return tmp16;
 };
 export const exactEquals = function exactEquals(arg0, arg1) {
-  return arg0[0] === arg1[0] && arg0[1] === arg1[1] && arg0[2] === arg1[2] && arg0[3] === arg1[3];
+  return (
+    arg0[0] === arg1[0] &&
+    arg0[1] === arg1[1] &&
+    arg0[2] === arg1[2] &&
+    arg0[3] === arg1[3] &&
+    arg0[4] === arg1[4] &&
+    arg0[5] === arg1[5]
+  );
 };
 export const frob = function frob(arg0) {
-  return Math.sqrt(arg0[0] * arg0[0] + arg0[1] * arg0[1] + arg0[2] * arg0[2] + arg0[3] * arg0[3]);
+  return Math.sqrt(
+    arg0[0] * arg0[0] +
+      arg0[1] * arg0[1] +
+      arg0[2] * arg0[2] +
+      arg0[3] * arg0[3] +
+      arg0[4] * arg0[4] +
+      arg0[5] * arg0[5] +
+      1,
+  );
 };
 export const fromRotation = function fromRotation(arg0, sharedValue) {
   const sinResult = Math.sin(sharedValue);
@@ -198,6 +228,8 @@ export const fromRotation = function fromRotation(arg0, sharedValue) {
   arg0[1] = sinResult;
   arg0[2] = -sinResult;
   arg0[3] = cosResult;
+  arg0[4] = 0;
+  arg0[5] = 0;
   return arg0;
 };
 export const fromScaling = function fromScaling(arg0, arg1) {
@@ -205,14 +237,27 @@ export const fromScaling = function fromScaling(arg0, arg1) {
   arg0[1] = 0;
   arg0[2] = 0;
   arg0[3] = arg1[1];
+  arg0[4] = 0;
+  arg0[5] = 0;
   return arg0;
 };
-export const fromValues = function fromValues(arg0, arg1, arg2, arg3) {
-  const aRRAY_TYPE = new value.ARRAY_TYPE(4);
+export const fromTranslation = function fromTranslation(arg0, arg1) {
+  arg0[0] = 1;
+  arg0[1] = 0;
+  arg0[2] = 0;
+  arg0[3] = 1;
+  arg0[4] = arg1[0];
+  arg0[5] = arg1[1];
+  return arg0;
+};
+export const fromValues = function fromValues(arg0, arg1, arg2, arg3, arg4, arg5) {
+  const aRRAY_TYPE = new value.ARRAY_TYPE(6);
   aRRAY_TYPE[0] = arg0;
   aRRAY_TYPE[1] = arg1;
   aRRAY_TYPE[2] = arg2;
   aRRAY_TYPE[3] = arg3;
+  aRRAY_TYPE[4] = arg4;
+  aRRAY_TYPE[5] = arg5;
   return aRRAY_TYPE;
 };
 export const identity = function identity(arg0) {
@@ -220,17 +265,21 @@ export const identity = function identity(arg0) {
   arg0[1] = 0;
   arg0[2] = 0;
   arg0[3] = 1;
+  arg0[4] = 0;
+  arg0[5] = 0;
   return arg0;
 };
 export const invert = function invert(arg0, arg1) {
-  [tmp, tmp2, tmp3, tmp4] = arg1;
-  const diff = tmp * tmp4 - tmp3 * tmp2;
+  [tmp, tmp2, tmp3, tmp4, tmp5, tmp6] = arg1;
+  const diff = tmp * tmp4 - tmp2 * tmp3;
   if (diff) {
     const result = 1 / diff;
     arg0[0] = tmp4 * result;
     arg0[1] = -tmp2 * result;
     arg0[2] = -tmp3 * result;
     arg0[3] = tmp * result;
+    arg0[4] = (tmp3 * tmp6 - tmp4 * tmp5) * result;
+    arg0[5] = (tmp2 * tmp5 - tmp * tmp6) * result;
     return arg0;
   } else {
     return null;
@@ -242,6 +291,8 @@ export const multiplyScalar = function multiplyScalar(arg0, arg1, arg2) {
   arg0[1] = arg1[1] * arg2;
   arg0[2] = arg1[2] * arg2;
   arg0[3] = arg1[3] * arg2;
+  arg0[4] = arg1[4] * arg2;
+  arg0[5] = arg1[5] * arg2;
   return arg0;
 };
 export const multiplyScalarAndAdd = function multiplyScalarAndAdd(arg0, arg1, arg2, arg3) {
@@ -249,6 +300,8 @@ export const multiplyScalarAndAdd = function multiplyScalarAndAdd(arg0, arg1, ar
   arg0[1] = arg1[1] + arg2[1] * arg3;
   arg0[2] = arg1[2] + arg2[2] * arg3;
   arg0[3] = arg1[3] + arg2[3] * arg3;
+  arg0[4] = arg1[4] + arg2[4] * arg3;
+  arg0[5] = arg1[5] + arg2[5] * arg3;
   return arg0;
 };
 export const rotate = function rotate(arg0, arg1, sharedValue) {
@@ -259,6 +312,8 @@ export const rotate = function rotate(arg0, arg1, sharedValue) {
   arg0[1] = tmp2 * cosResult + tmp4 * sinResult;
   arg0[2] = tmp * -sinResult + tmp3 * cosResult;
   arg0[3] = tmp2 * -sinResult + tmp4 * cosResult;
+  arg0[4] = arg1[4];
+  arg0[5] = arg1[5];
   return arg0;
 };
 export const scale = function scale(arg0, arg1, arg2) {
@@ -267,29 +322,32 @@ export const scale = function scale(arg0, arg1, arg2) {
   arg0[1] = arg1[1] * tmp;
   arg0[2] = arg1[2] * tmp2;
   arg0[3] = arg1[3] * tmp2;
+  arg0[4] = arg1[4];
+  arg0[5] = arg1[5];
   return arg0;
 };
-export const set = function set(arg0, arg1, arg2, arg3, arg4) {
+export const set = function set(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
   arg0[0] = arg1;
   arg0[1] = arg2;
   arg0[2] = arg3;
   arg0[3] = arg4;
+  arg0[4] = arg5;
+  arg0[5] = arg6;
   return arg0;
 };
 export const str = function str(arg0) {
-  return "mat2(" + arg0[0] + ", " + arg0[1] + ", " + arg0[2] + ", " + arg0[3] + ")";
+  return "mat2d(" + arg0[0] + ", " + arg0[1] + ", " + arg0[2] + ", " + arg0[3] + ", " + arg0[4] + ", " + arg0[5] + ")";
 };
 export { subtract };
-export const transpose = function transpose(arg0, arg1) {
-  if (arg0 === arg1) {
-    arg0[1] = arg1[2];
-    arg0[2] = arg1[1];
-  } else {
-    arg0[0] = arg1[0];
-    arg0[1] = arg1[2];
-    arg0[2] = arg1[1];
-    arg0[3] = arg1[3];
-  }
+export const translate = function translate(arg0, arg1, arg2) {
+  [tmp, tmp2, tmp3, tmp4] = arg1;
+  [tmp5, tmp6] = arg2;
+  arg0[0] = tmp;
+  arg0[1] = tmp2;
+  arg0[2] = tmp3;
+  arg0[3] = tmp4;
+  arg0[4] = tmp * tmp5 + tmp3 * tmp6 + arg1[4];
+  arg0[5] = tmp2 * tmp5 + tmp4 * tmp6 + arg1[5];
   return arg0;
 };
 export const mul = multiply;

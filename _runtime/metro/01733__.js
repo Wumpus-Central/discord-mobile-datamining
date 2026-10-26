@@ -90,9 +90,9 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "emoji",
+      current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+      startTimestamp: "set_live_reload",
       reduceMotion: null,
     };
     let num = obj.velocity;

@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_8, processColor: closure_9 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let obj = {
-  source: "emoji",
+  source: "enabled",
   progress: null,
   speed: true,
   loop: false,

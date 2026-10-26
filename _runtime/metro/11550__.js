@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "2b05b694fba9643d8f0981005b85363f",
-  name: "HandRequestSpeakListIcon",
+  scales: [1, 2, 3],
+  hash: "bb061f50f0c26bcf1817896eee7a9443",
+  name: "ic_raised_hand_list",
   type: "png",
 });

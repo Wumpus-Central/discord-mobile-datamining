@@ -1,16 +1,7 @@
 // _runtime/metro/18385__.js
-import baseFlatten from "../05795_baseFlatten.js";
-import baseRest from "../08873_baseRest.js";
-import _mod18386 from "18386__.js";
-import baseDifference from "../18387_baseDifference.js";
+import _mod518 from "00518__.js";
+import _mod535 from "00535__.js";
 
-export default baseRest((arg0, arg1) => {
-  if (_mod18386(arg0)) {
-    const tmpResult = baseDifference;
-    let tmpResultResult = tmpResult(arg0, baseFlatten(arg1, 1, _mod18386, true));
-    const tmpResult2 = baseFlatten;
-  } else {
-    tmpResultResult = [];
-  }
-  return tmpResultResult;
-});
+export default function isArrayLikeObject(arg0) {
+  return _mod535(arg0) && _mod518(arg0);
+}

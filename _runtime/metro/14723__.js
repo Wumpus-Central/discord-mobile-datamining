@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "b10c11253ea31418fc5b5f03e59f065a",
-  name: "hd_video",
+  hash: "7e68c2960201e89a20761843ca26d40b",
+  name: "super_reaction",
   type: "png",
 });

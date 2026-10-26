@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9418ce18a45ac2ccf91c54293677973d",
-  name: "ic_friend_wave_24px",
+  hash: "55929208ca176923ba23d97478360818",
+  name: "ic_guild_grid_24px",
   type: "png",
 });

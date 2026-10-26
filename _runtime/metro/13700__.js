@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 32,
   height: 32,
   scales: [2, 3],
-  hash: "9a47d778a0b93e08af7ca2a5a0e14da1",
-  name: "add_friend_32px",
+  hash: "2a77a373d0891300f53f455e7a8b0efa",
+  name: "personalize_32px",
   type: "png",
 });

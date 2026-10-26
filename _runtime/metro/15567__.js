@@ -1,16 +1,10 @@
 // _runtime/metro/15567__.js
-import _mod15552 from "15552__.js";
+import _mod15551 from "15551__.js";
+import _mod15568 from "15568__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod15552(1.toString);
+let closure_2 = _mod15551({}.hasOwnProperty);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15568(arg0), arg1);
+  };

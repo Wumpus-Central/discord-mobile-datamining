@@ -1,12 +1,11 @@
 // _runtime/metro/15596__.js
-import _mod15594 from "15594__.js";
+import _mod15569 from "15569__.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod15594(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
+export default (arg0) => {
+  if (_mod15569(arg0)) {
+    return arg0;
   } else {
-    tmp3 = min(tmp, arg1);
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
   }
-  return tmp3;
 };

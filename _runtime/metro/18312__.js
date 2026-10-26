@@ -5,9 +5,9 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/forum_channels",
   width: 343,
-  height: 180,
+  height: 236,
   scales: [1],
-  hash: "4344770a7977c211fcddc04a38055e0c",
-  name: "channel_settings_grid_view_example_post",
+  hash: "6e9bbbae1088530d5ab3c52a383f127c",
+  name: "channel_settings_list_view_example_post",
   type: "png",
 });
