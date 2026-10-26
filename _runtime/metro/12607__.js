@@ -1,17 +1,19 @@
 // _runtime/metro/12607__.js
-import _mod12584 from "12584__.js";
+import _mod12582 from "12582__.js";
+import ScopeClass from "../12602_ScopeClass.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+  return _mod12582.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod12584.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod12584.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
-  }
+export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+  return _mod12582.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };

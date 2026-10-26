@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 148,
-  height: 107,
+  width: 32,
+  height: 32,
   scales: [2, 3, 4],
-  hash: "0068bea3a7b26b1d06c599bf3096c534",
-  name: "channels-empty",
+  hash: "c33937cb1ecf8da1cf6ed34f37467be9",
+  name: "ic-customize",
   type: "png",
 });

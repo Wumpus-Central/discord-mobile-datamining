@@ -4,38 +4,131 @@ import "asyncGeneratorStep";
 fn(17).Image;
 const NitroModules = fn(5049).NitroModules;
 NitroModules.createHybridObject("RiveFileFactory");
-const obj = {};
-let closure_0 = async function _fromURL() {
-  closure_4 = tmp5;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let flag = closure_2;
-  if (closure_2 === undefined) {
-    flag = true;
+let obj = {};
+let closure_0 = async function _fromURL(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        let tmp12;
+        if (closure_131_1) {
+          const obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj5 = { value: tmp2.fromURL(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
   }
-  closure_131_2 = flag;
-  await "Reflect";
-  if (closure_131_1) {
-    const tmp12 = { data: closure_131_1 };
-  }
-  return tmp2.fromURL(closure_131_0, closure_131_2, tmp12);
 };
 let asyncGeneratorStep = function _fromFileURL() {
   const self = this;
   const tmp = asyncGeneratorStep(async (arg0) => {
-    closure_4 = tmp5;
-    closure_131_0 = closure_0;
-    closure_131_1 = closure_1;
-    let flag = closure_2;
-    if (closure_2 === undefined) {
-      flag = true;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_4 = tmp5;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_0 = closure_0;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = true;
+            }
+            closure_131_2 = flag;
+            c5 = 1;
+            c6 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          let tmp12;
+          if (closure_131_1) {
+            const obj = { data: closure_131_1 };
+            tmp12 = obj;
+          }
+          c6 = 3;
+          const obj5 = { value: tmp2.fromFileURL(closure_131_0, closure_131_2, tmp12), done: true };
+          return obj5;
+        }
+      } catch (tmp17) {
+        c6 = tmp;
+        throw tmp17;
+      }
     }
-    closure_131_2 = flag;
-    await "Reflect";
-    if (closure_131_1) {
-      const tmp12 = { data: closure_131_1 };
-    }
-    return tmp2.fromFileURL(closure_131_0, closure_131_2, tmp12);
   });
   asyncGeneratorStep = tmp;
   const apply = tmp.apply;
@@ -46,35 +139,127 @@ let asyncGeneratorStep = function _fromFileURL() {
   }
   return applyArgumentsResult;
 };
-const Image = async function _fromResource() {
-  closure_4 = tmp5;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let flag = closure_2;
-  if (closure_2 === undefined) {
-    flag = true;
+const Image = async function _fromResource(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        let tmp12;
+        if (closure_131_1) {
+          const obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj5 = { value: tmp2.fromResource(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
   }
-  closure_131_2 = flag;
-  await "Reflect";
-  if (closure_131_1) {
-    const tmp12 = { data: closure_131_1 };
-  }
-  return tmp2.fromResource(closure_131_0, closure_131_2, tmp12);
 };
-let closure_3 = async function _fromBytes() {
-  closure_4 = tmp5;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let flag = closure_2;
-  if (closure_2 === undefined) {
-    flag = true;
+let closure_3 = async function _fromBytes(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        let tmp12;
+        if (closure_131_1) {
+          const obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj5 = { value: tmp2.fromBytes(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
   }
-  closure_131_2 = flag;
-  await "Reflect";
-  if (closure_131_1) {
-    const tmp12 = { data: closure_131_1 };
-  }
-  return tmp2.fromBytes(closure_131_0, closure_131_2, tmp12);
 };
 let closure_4 = async function _fromSource(arg0) {
   if (c8 === 2) {
@@ -87,7 +272,7 @@ let closure_4 = async function _fromSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+352" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -117,7 +302,7 @@ let closure_4 = async function _fromSource(arg0) {
           closure_131_6 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,15 +1,12 @@
 // _runtime/metro/15607__.js
-import _mod15559 from "15559__.js";
-import _mod15566 from "15566__.js";
+import _mod15545 from "15545__.js";
+import all from "15571__.js";
 
-let closure_2 = _mod15559("keys");
+let _moduleResult = all(_mod15545.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod15545.WeakMap));
+  const obj = /native code/;
+}
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod15566(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _moduleResult;

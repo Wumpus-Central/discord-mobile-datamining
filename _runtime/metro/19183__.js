@@ -1,12 +1,13 @@
 // _runtime/metro/19183__.js
-import _mod19184 from "19184__.js";
-import capitalize from "../19191_capitalize.js";
+import registerAsset from "01134__.js";
 
-export default _mod19184((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "6d22576d9f7927048034966be0fe9d4c",
+  name: "channel_setup_darker",
+  type: "png",
 });

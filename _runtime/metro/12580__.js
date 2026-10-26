@@ -1,3 +1,7 @@
 // _runtime/metro/12580__.js
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-export const SDK_VERSION = "8.55.0";
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

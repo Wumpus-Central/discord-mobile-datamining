@@ -1,19 +1,11 @@
 // _runtime/metro/15570__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod15571 from "15571__.js";
+
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod15571(obj);
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+  return tmp2;
+};

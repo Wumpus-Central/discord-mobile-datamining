@@ -1,24 +1,55 @@
 // _runtime/metro/12579__.js
 import _mod12580 from "12580__.js";
+import _mod12581 from "12581__.js";
+import stackParserFromStackParserOptions from "../12584_stackParserFromStackParserOptions.js";
 
 require = arg1;
-const dependencyMap = arg6;
+const dependencyMap = {};
+let closure_3 = {};
 
-export const GLOBAL_OBJ = globalThis;
-export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  dependencyMap[console].push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
+};
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
+    try {
+      fn();
+    } catch (tmp5) {
+      if (_mod12580.DEBUG_BUILD) {
+        const logger = _mod12581.logger;
+        const _HermesInternal = HermesInternal;
+        logger.error("Error while instrumenting " + tmp, tmp5);
+      }
+    }
   }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod12580.SDK_VERSION] || {};
-  tmp2[_mod12580.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[globalMetricsAggregators];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[globalMetricsAggregators] = tmp6;
-    tmp4 = tmp6;
+};
+export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
+  const keys = Object.keys(closure_2);
+  const item = keys.forEach((item) => {
+    dependencyMap[item] = undefined;
+  });
+};
+export const triggerHandlers = function triggerHandlers(arg0, arg1) {
+  let tmp8 = arg0;
+  if (arg0) {
+    tmp8 = dependencyMap[arg0];
   }
-  return tmp4;
+  if (tmp8) {
+    const iter = tmp8[Symbol.iterator]();
+    if (iter !== undefined) {
+      try {
+        tmp15(arg1);
+      } catch (tmp18) {
+        if (_mod12580.DEBUG_BUILD) {
+          const logger = _mod12581.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = stackParserFromStackParserOptions;
+        }
+      }
+    }
+    const nextResult = iter.next();
+  }
 };

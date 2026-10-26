@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c9f854c83b9079fe0ab040df65e3caf2",
-  name: "nav_header_disconnect",
+  hash: "897ada03fe806525383ec1a77806ad61",
+  name: "screenshare_end",
   type: "png",
 });

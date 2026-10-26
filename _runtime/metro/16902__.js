@@ -1,28 +1,11 @@
 // _runtime/metro/16902__.js
-import _regeneratorRuntime2 from "../16903__regeneratorRuntime.js";
+import _mod16907 from "16907__.js";
 import 08770__ from "08770__.js";
 
-let _regeneratorRuntime = module_8770(_regeneratorRuntime2);
+const require = globalThis.__r;
 
-export const getYoutubeMeta = function getYoutubeMeta(arg0) {
-  _regeneratorRuntime = arg0;
-  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
-    next = next.next;
-    next.prev = next;
-    while (0 !== next) {
-      if (2 === next) {
-        sent = next.sent;
-        next.next = 5;
-        let _default = _regeneratorRuntime.default;
-        return _default.awrap(sent.json());
-      } else if (5 === next) {
-        let str = "return";
-        return next.abrupt("return", next.sent);
-      } else {
-        return next.stop();
-      }
-    }
-    next.next = 2;
-    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
-  }, null, null, null, Promise);
-};
+
+export const getYoutubeMeta = require("16903__.js").getYoutubeMeta;
+export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
+export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
+export default module_8770(_mod16907).default;

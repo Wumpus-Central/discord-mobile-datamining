@@ -1,15 +1,13 @@
 // _runtime/metro/19184__.js
-import arrayReduce from "../05807_arrayReduce.js";
-import words from "../19185_words.js";
-import deburr from "../19189_deburr.js";
+import registerAsset from "01134__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "0b8a6fa235bbde823695fe5cdeccf7e4",
+  name: "channel_setup_light",
+  type: "png",
+});

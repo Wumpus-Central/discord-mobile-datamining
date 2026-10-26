@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f32d9237628628dc39ab04879ac15862",
-  name: "ScreenArrowIcon",
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
   type: "png",
 });

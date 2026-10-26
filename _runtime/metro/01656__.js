@@ -85,7 +85,7 @@ export const KeyboardProvider = (enabled) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -122,7 +122,7 @@ export const KeyboardProvider = (enabled) => {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+352" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp14) {
           v3 = tmp;
@@ -290,7 +290,7 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "nl-BE",
+    onKeyboardMove: "nl-CW",
     onKeyboardMoveInteractive: "nl",
     onKeyboardMoveEnd: 0,
     onFocusedInputLayoutChangedReanimated: null,

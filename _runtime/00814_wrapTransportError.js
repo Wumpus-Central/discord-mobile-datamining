@@ -134,7 +134,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              return { value: "IconComponent", done: "+352" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -157,7 +157,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                   closure_130_0 = undefined;
                   c6 = 1;
                   c7 = 1;
-                  return { value: "Reflect", done: null };
+                  return { value: "Reflect", done: true };
                 }
               } else {
                 if (1 === tmp7) {

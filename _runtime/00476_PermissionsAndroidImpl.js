@@ -126,7 +126,7 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+352" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -102,7 +102,7 @@ export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, re
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find(/* F143741 */ function() { ... });
+          tmp = !items.find(/* F143831 */ function() { ... });
         }
         return !tmp;
       }

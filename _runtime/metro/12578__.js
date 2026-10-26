@@ -1,72 +1,31 @@
 // _runtime/metro/12578__.js
-import GLOBAL_OBJ from "12579__.js";
+import _mod12579 from "12579__.js";
+import _mod12582 from "12582__.js";
 
-const require = globalThis.__r;
-
-function consoleSandbox(fn) {
-  if ("console" in console(12579).GLOBAL_OBJ) {
-    console = tmp(12579).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
-    try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
+require = arg1;
+const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12582.GLOBAL_OBJ.onerror;
+  _mod12582.GLOBAL_OBJ.onerror = function (msg, url, line, column, error) {
+    _mod12579.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
     }
-  } else {
-    return fn();
-  }
-  tmp = console;
-}
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
+    const obj = { column, error, line, msg, url };
   };
-  const forEach = items.forEach;
-  if (require("12577__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
-        }
-      };
-    });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
-  }
-  return obj;
-});
-export { originalConsoleMethods };
+  _mod12582.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
+
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12579.addHandler("error", errorCallback);
+  _mod12579.maybeInstrument("error", instrumentError);
+};

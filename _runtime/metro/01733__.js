@@ -92,8 +92,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "set_live_reload",
-      reduceMotion: null,
+      startTimestamp: 5.817,
+      reduceMotion: -6.308,
     };
     let num = obj.velocity;
     if (num == null) {

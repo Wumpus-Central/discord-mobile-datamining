@@ -1,62 +1,82 @@
 // _runtime/metro/12676__.js
-import _mod12578 from "12578__.js";
-import _mod12605 from "12605__.js";
-import _mod12606 from "12606__.js";
+import stackParserFromStackParserOptions from "../12584_stackParserFromStackParserOptions.js";
+import setupIntegration from "12637__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+let c2 = "_sentryBundlerPluginAppKey:";
 
-export const profiler = {
-  startProfiler() {
-    const client = _mod12605.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod12606.DEBUG_BUILD) {
-          const logger3 = _mod12578.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
+  const behaviour = arg0;
+  return {
+    name: "ThirdPartyErrorsFilter",
+    setup(on) {
+      const options = on;
+      on.on("beforeEnvelope", (arg0) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp3;
+            if (Array.isArray(arg0)) {
+              tmp3 = arg0[1];
+            }
+            if (tmp3) {
+              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+              arg0[1] = tmp3;
+              const obj = options(dependencyMap[2]);
+            }
+          }
+        });
+      });
+      on.on("applyFrameMetadata", (type) => {
+        if (!type.type) {
+          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(dependencyMap[2]);
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12606.DEBUG_BUILD) {
-        const logger2 = _mod12578.logger;
-        logger2.warn("ProfilingIntegration is not available");
+      });
+    },
+    processEvent(tags) {
+      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
+      let mapped;
+      if (framesFromEvent) {
+        let found = framesFromEvent.filter((filename) => filename.filename);
+        mapped = found.map((module_metadata) => {
+          if (module_metadata.module_metadata) {
+            const _Object = Object;
+            const keys = Object.keys(module_metadata.module_metadata);
+            const found = keys.filter((item) => item.startsWith(length));
+            let mapped = found.map((arr) => arr.slice(length.length));
+          } else {
+            mapped = [];
+          }
+          return mapped;
+        });
       }
-    } else if (_mod12606.DEBUG_BUILD) {
-      const logger = _mod12578.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod12605.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod12606.DEBUG_BUILD) {
-          const logger3 = _mod12578.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+      if (mapped) {
+        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
+          let str2 = "some";
+        } else {
+          str2 = "every";
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12606.DEBUG_BUILD) {
-        const logger2 = _mod12578.logger;
-        logger2.warn("ProfilingIntegration is not available");
+        if (
+          mapped[str2](
+            (arr) =>
+              !arr.some((item) => {
+                filterKeys = filterKeys.filterKeys;
+                return filterKeys.includes(item);
+              }),
+          )
+        ) {
+          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
+              const obj2 = {};
+              const merged = Object.assign(tags.tags);
+              obj2.third_party_code = true;
+              tags.tags = obj2;
+            }
+          }
+          return null;
+        }
       }
-    } else if (_mod12606.DEBUG_BUILD) {
-      const logger = _mod12578.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-};
+      return tags;
+    },
+  };
+});

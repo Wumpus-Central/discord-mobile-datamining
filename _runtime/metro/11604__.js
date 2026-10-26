@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4e9d569d897ff379f07644deddf6baf5",
-  name: "ScreenXIcon",
+  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
+  name: "ImageSparkleIcon",
   type: "png",
 });

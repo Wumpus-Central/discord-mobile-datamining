@@ -1,12 +1,11 @@
 // _runtime/metro/15325__.js
-import _mod15317 from "15317__.js";
+import _mod15318 from "15318__.js";
 
-export default (str, arg1) => {
-  str = str.trim();
-  const tmpResult = _mod15317(str.replace(/^[=v]+/, ""), arg1);
+export default (arg0, arg1) => {
+  const tmp = _mod15318(arg0, arg1);
   let version = null;
-  if (tmpResult) {
-    version = tmpResult.version;
+  if (tmp) {
+    version = tmp.version;
   }
   return version;
 };

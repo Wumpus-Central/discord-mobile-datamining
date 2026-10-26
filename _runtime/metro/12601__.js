@@ -1,172 +1,235 @@
 // _runtime/metro/12601__.js
-import _mod12584 from "12584__.js";
-import _mod12589 from "12589__.js";
-import _mod12592 from "12592__.js";
-import _mod12602 from "12602__.js";
-import __SENTRY_DEBUG__ from "12577__.js";
-import consoleSandbox from "12578__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-function updateSession(ipAddress) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+  const obj = AsyncContextStack(12599);
+  const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12607);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12607);
   }
-  if (obj.user) {
-    ipAddress = ipAddress.ipAddress;
-    let ip_address = !ipAddress;
-    if (!ipAddress) {
-      ip_address = obj.user.ip_address;
-    }
-    if (ip_address) {
-      ipAddress.ipAddress = obj.user.ip_address;
-    }
-    if (!tmp) {
-      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
-    }
-    tmp = ipAddress.did || obj.did;
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
+}
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+  const obj = AsyncContextStack(12599);
+  const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12607);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12607);
   }
-  let timestamp = obj.timestamp;
-  if (!timestamp) {
-    timestamp = _mod12592.timestampInSeconds();
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+  const obj = AsyncContextStack(12599);
+  const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12607).getDefaultCurrentScope();
+    const tmpResult = tmp(12607);
+    stack = new closure_3(defaultCurrentScope, tmp(12607).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12607);
   }
-  ipAddress.timestamp = timestamp;
-  if (obj.abnormal_mechanism) {
-    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
-  }
-  if (obj.ignoreDuration) {
-    ipAddress.ignoreDuration = obj.ignoreDuration;
-  }
-  if (!obj.sid) {
-    if (undefined !== obj.init) {
-      ipAddress.init = obj.init;
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+    const obj = AsyncContextStack(12599);
+    const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+      const tmp2Result = AsyncContextStack(12607);
+      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+      const tmp2Result2 = AsyncContextStack(12607);
     }
-    const did = ipAddress.did;
-    let did2 = !did;
-    if (!did) {
-      did2 = obj.did;
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
     }
-    if (did2) {
-      const _HermesInternal = HermesInternal;
-      ipAddress.did = "" + obj.did;
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
     }
-    if (typeof obj.started === "number") {
-      ipAddress.started = obj.started;
-    }
-    if (ipAddress.ignoreDuration) {
-      ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
-      ipAddress.duration = obj.duration;
-    } else {
-      const diff = ipAddress.timestamp - ipAddress.started;
-      let num2 = 0;
-      if (diff >= 0) {
-        num2 = diff;
-      }
-      ipAddress.duration = num2;
-    }
-    if (obj.release) {
-      ipAddress.release = obj.release;
-    }
-    if (obj.environment) {
-      ipAddress.environment = obj.environment;
-    }
-    const ipAddress2 = ipAddress.ipAddress;
-    let ipAddress3 = !ipAddress2;
-    if (!ipAddress2) {
-      ipAddress3 = obj.ipAddress;
-    }
-    if (ipAddress3) {
-      ipAddress.ipAddress = obj.ipAddress;
-    }
-    const userAgent = ipAddress.userAgent;
-    let userAgent2 = !userAgent;
-    if (!userAgent) {
-      userAgent2 = obj.userAgent;
-    }
-    if (userAgent2) {
-      ipAddress.userAgent = obj.userAgent;
-    }
-    if (typeof obj.errors === "number") {
-      ipAddress.errors = obj.errors;
-    }
-    if (obj.status) {
-      ipAddress.status = obj.status;
-    }
-  } else {
-    if (32 === obj.sid.length) {
-      let sid = obj.sid;
-    } else {
-      sid = _mod12589.uuid4();
-    }
-    ipAddress.sid = sid;
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
   }
 }
-_mod12602;
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then(
+          (result) => {
+            self._popScope();
+            return result;
+          },
+          (arg0) => {
+            self._popScope();
+            throw arg0;
+          },
+        );
+      } else {
+        self._popScope();
+        nextPromise = promise;
+      }
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
+    }
+  },
+};
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
+    },
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
+    },
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
+    },
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    },
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    },
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    },
+  },
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
 
-export const closeSession = function closeSession(status, status2) {
-  if (status2) {
-    const obj2 = { status: status2 };
-    let obj = obj2;
-  } else {
-    obj = {};
-    if ("ok" === status.status) {
-      obj = { status: "exited" };
-    }
-  }
-  updateSession(status, obj);
-};
-export const makeSession = function makeSession(arg0) {
-  const timestampInSecondsResult = obj2(12592).timestampInSeconds();
-  obj2 = {
-    sid: null,
-    init: true,
-    timestamp: null,
-    started: null,
-    duration: 0,
-    status: "ok",
-    errors: 0,
-    ignoreDuration: false,
-    toJSON: null,
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12599).getMainCarrier();
+      let obj = closure_0(12599);
+      let sentryCarrier = closure_0(12599).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let defaultCurrentScope = tmp(12607).getDefaultCurrentScope();
+        const tmpResult = tmp(12607);
+        stack = new closure_3(defaultCurrentScope, tmp(12607).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12607);
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+        const obj = AsyncContextStack(12599);
+        const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+          const tmp2Result = AsyncContextStack(12607);
+          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+          const tmp2Result2 = AsyncContextStack(12607);
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+      const obj = AsyncContextStack(12599);
+      const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12607);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12607);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12599).getMainCarrier();
+      const obj = AsyncContextStack(12599);
+      const sentryCarrier = AsyncContextStack(12599).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12607).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12607);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12607).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12607);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    },
   };
-  let obj = obj2(12592);
-  obj2.sid = obj2(12589).uuid4();
-  obj2.timestamp = timestampInSecondsResult;
-  obj2.started = timestampInSecondsResult;
-  obj2.toJSON = function toJSON() {
-    const obj3 = {
-      sid: "" + obj2.sid,
-      init: obj2.init,
-      started: null,
-      timestamp: null,
-      status: null,
-      errors: null,
-      did: null,
-      duration: null,
-      abnormal_mechanism: null,
-      attrs: null,
-    };
-    const obj = _mod12584;
-    obj3.started = new Date(1000 * obj2.started).toISOString();
-    const date = new Date(1000 * obj2.started);
-    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
-    ({ status: obj2.status, errors: obj2.errors } = obj2);
-    if (typeof obj2.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + obj2.did;
-    }
-    obj3.did = combined;
-    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
-    obj3.attrs = {
-      release: obj2.release,
-      environment: obj2.environment,
-      ip_address: obj2.ipAddress,
-      user_agent: obj2.userAgent,
-    };
-    return obj.dropUndefinedKeys(obj3);
-  };
-  if (arg0) {
-    updateSession(obj2, arg0);
-  }
-  return obj2;
-};
-export { updateSession };
+}

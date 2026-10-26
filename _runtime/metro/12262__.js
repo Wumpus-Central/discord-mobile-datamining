@@ -1,13 +1,10 @@
 // _runtime/metro/12262__.js
-import registerAsset from "01134__.js";
+import _mod12261 from "12261__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "6572d140954790b36ebb034e8accf006",
-  name: "UndoIcon",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const keepLocalCopy = function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod12261.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+};

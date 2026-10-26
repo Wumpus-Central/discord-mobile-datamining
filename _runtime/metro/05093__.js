@@ -17,7 +17,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   let str2;
   let uri;
   let riveFile;
-  [tmp2, c1] = str2({ riveFile: "IconComponent", isLoading: null, error: "primary" });
+  [tmp2, c1] = str2({ riveFile: "IconComponent", isLoading: null, error: true });
   const items = [obj.referencedAssets];
   let tmp3 = riveFile(() => {
     const referencedAssets = obj.referencedAssets;
@@ -116,7 +116,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+352" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

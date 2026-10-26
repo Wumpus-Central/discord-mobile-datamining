@@ -6,8 +6,8 @@ export default registerAsset.registerAsset({
   httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "bd1486d1560b353007e677fb6cc6f8f2",
-  name: "ic_upload",
+  scales: [1, 3],
+  hash: "a7612bc39c46be7d197676beec9cb4bf",
+  name: "ic_browse_channel",
   type: "png",
 });

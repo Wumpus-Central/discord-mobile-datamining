@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/preview/images",
-  width: 1920,
-  height: 1018,
-  scales: [1],
-  hash: "7411b537f8491be980e9ec41477a904b",
-  name: "overlay-frame-bg",
-  type: "webp",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4efa5140d546996fe7cb2ba013410d48",
+  name: "ArrowAngleLeftUpIcon",
+  type: "png",
 });

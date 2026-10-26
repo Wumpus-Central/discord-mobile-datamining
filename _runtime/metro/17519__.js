@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native",
-  width: 21,
-  height: 18,
+  width: 24,
+  height: 24,
   scales: [1, 2, 3],
-  hash: "f19353ccef9be27782bf69aac76f0908",
-  name: "ic_invite",
+  hash: "bd1486d1560b353007e677fb6cc6f8f2",
+  name: "ic_upload",
   type: "png",
 });

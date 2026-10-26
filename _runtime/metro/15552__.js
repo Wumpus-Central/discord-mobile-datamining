@@ -1,12 +1,25 @@
 // _runtime/metro/15552__.js
-import _mod15548 from "15548__.js";
+import module_15553_mod from "15553__.js";
 
-export default !_mod15548(() => {
-  const fn = () => {};
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+const call = prototype.call;
+let module_15553 = module_15553_mod;
+if (module_15553) {
+  const bind = prototype.bind;
+  module_15553 = bind.bind(call, call);
+}
+if (!module_15553) {
+  module_15553 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_15553;

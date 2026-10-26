@@ -1,36 +1,18 @@
 // _runtime/metro/15578__.js
-import _mod15569 from "15569__.js";
-import _mod15570 from "15570__.js";
-import _mod15577 from "15577__.js";
+import _mod15553 from "15553__.js";
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod15570(toString)) {
-      const tmp4 = _mod15577(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = _mod15569;
+if (_mod15553) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+    } else {
+      applyArgumentsResult = apply(call, arguments);
     }
-  }
-  const valueOf = arg0.valueOf;
-  if (_mod15570(valueOf)) {
-    const tmp8 = _mod15577(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod15569;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod15570(toString2)) {
-      const tmp10 = _mod15577(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod15569;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
-};
+    return applyArgumentsResult;
+  };
+}
+
+export default fn;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d8c1977b6a087b3b59e64fe8d7b24249",
-  name: "ic_mic_muted_light_24px",
+  hash: "81937e526a0dd862a80691425a7cb222",
+  name: "ic_mic_muted_dark_24px",
   type: "png",
 });
