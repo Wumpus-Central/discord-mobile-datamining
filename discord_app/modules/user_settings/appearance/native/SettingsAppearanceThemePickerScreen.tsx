@@ -455,7 +455,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -571,7 +571,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -611,7 +611,7 @@ function ThemePicker(defaultIndex) {
                   callback1(tmp12);
                   close();
                   c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               }
             }
@@ -687,7 +687,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

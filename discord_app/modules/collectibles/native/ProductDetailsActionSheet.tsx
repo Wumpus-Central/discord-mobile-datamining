@@ -1643,7 +1643,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = closure_15(tmp(5244).Button, obj6);
         closure_15(tmp(1202).EmptyState, obj5);
       } else {
-        closure_15(initialVariantIndex(14487), {});
+        closure_15(initialVariantIndex(14486), {});
       }
       ref = noop.useRef(null);
     };

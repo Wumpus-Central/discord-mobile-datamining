@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ThemeStore];
       return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     };
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncThemeAcrossClientsValue() {
       const cResult = c.c(2);

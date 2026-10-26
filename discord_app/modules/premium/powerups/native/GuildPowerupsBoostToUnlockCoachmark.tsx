@@ -43,6 +43,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      markAsDismissed(17600)(targetRef, guildId, memo);
+      markAsDismissed(17599)(targetRef, guildId, memo);
       return null;
     };

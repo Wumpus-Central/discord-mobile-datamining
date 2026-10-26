@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef19244 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-1x.png.js";
-import _modDef19245 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-2x.png.js";
-import _modDef19246 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-3x.png.js";
+import _modDef19243 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-1x.png.js";
+import _modDef19244 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-2x.png.js";
+import _modDef19245 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19244 }, 3: null };
-let obj2 = { uri: _modDef19244 };
-obj[2] = { uri: _modDef19245 };
-const obj3 = { uri: _modDef19245 };
-obj[3] = { uri: _modDef19246 };
+let obj = { 1: null, 2: { uri: _modDef19243 }, 3: null };
+let obj2 = { uri: _modDef19243 };
+obj[2] = { uri: _modDef19244 };
+const obj3 = { uri: _modDef19244 };
+obj[3] = { uri: _modDef19245 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19246 };
+const obj4 = { uri: _modDef19245 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx",

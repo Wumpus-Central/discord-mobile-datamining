@@ -362,7 +362,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     if (cResult[28] !== tmp15) {
                                       let obj2 = { color: tmp15, size: "xs" };
-                                      const tmp35 = closure_7(tmp(11077).ChevronSmallDownIcon, obj2);
+                                      const tmp35 = closure_7(tmp(11079).ChevronSmallDownIcon, obj2);
                                       cResult[28] = tmp15;
                                       cResult[29] = tmp35;
                                       let tmp33 = tmp35;
@@ -500,7 +500,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                     } else {
                       const obj = { selectedOption: activeCustomizationOption, onSelectOption };
                       ActionSheetActionCreatorsDefault.openLazy(
-                        asyncRequireImpl(13024, dependencyMap.paths),
+                        asyncRequireImpl(13023, dependencyMap.paths),
                         "CheckpointFinalizeTraitPicker",
                         obj,
                       );
@@ -538,8 +538,8 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
       let nitroLockedMessage;
       if (tmp4) {
         if (!tmp5) {
-          nitroLockedMessage = tmp(13025).getNitroLockedMessage(tmp7);
-          const tmpResult8 = tmp(13025);
+          nitroLockedMessage = tmp(13024).getNitroLockedMessage(tmp7);
+          const tmpResult8 = tmp(13024);
         }
       }
       cResult[0] = tmp7;
@@ -670,7 +670,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj = { selectedOption: activeCustomizationOption, onSelectOption };
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(13024, dependencyMap.paths),
+              asyncRequireImpl(13023, dependencyMap.paths),
               "CheckpointFinalizeTraitPicker",
               obj,
             );

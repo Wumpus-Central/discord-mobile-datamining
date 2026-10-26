@@ -33,7 +33,7 @@ function RegisterIdentityBase(inputMode) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -55,7 +55,7 @@ function RegisterIdentityBase(inputMode) {
             obj4.actionType = constants2.SUBMITTED;
             React6(obj4);
             if (inputMode === tmp3(tmp31[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-              const obj5 = { email, phoneToken: "a" };
+              const obj5 = { email, phoneToken: "Array" };
               closure_1_10(obj5);
               const tmp26 = React5();
               if (null != tmp26) {
@@ -108,7 +108,7 @@ function RegisterIdentityBase(inputMode) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp31) {
         if (tmp4 === c3) {
@@ -128,7 +128,7 @@ function RegisterIdentityBase(inputMode) {
   const tmp5 = closure_11((errors) => errors.errors);
   let message = tmp5;
   let obj2 = inputMode(1505);
-  const identityRegistrationStep = inputMode(17372).useIdentityRegistrationStep(
+  const identityRegistrationStep = inputMode(17371).useIdentityRegistrationStep(
     inputMode(1107).AuthStates.REGISTER_IDENTITY,
     inputMode,
   );
@@ -136,9 +136,9 @@ function RegisterIdentityBase(inputMode) {
   const identityErrorMessage = identityRegistrationStep.identityErrorMessage;
   ({ registerAndVerifyPhone: c6, validateEmail: c7 } = identityRegistrationStep);
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
-  let obj3 = inputMode(17372);
+  let obj3 = inputMode(17371);
   [tmp8, c8] = loginEmail(identityErrorMessage.useState(false), 2);
-  closure_9 = identityErrorMessage.useContext(inputMode(17359).TrackRegistrationContext);
+  closure_9 = identityErrorMessage.useContext(inputMode(17358).TrackRegistrationContext);
   let items = [tmp5.message, identityErrorMessage];
   const memo = identityErrorMessage.useMemo(() => {
     message = identityErrorMessage;
@@ -148,10 +148,10 @@ function RegisterIdentityBase(inputMode) {
     return message;
   }, items);
   const tmp7 = loginEmail(identityErrorMessage.useState(false), 2);
-  setInputMode(17378)(inputMode(1107).AuthStates.REGISTER_IDENTITY);
-  const tmp10 = setInputMode(17378);
-  const tmp12 = setInputMode(17379);
-  tmp12(inputMode(17361).getPreviousRegistrationTransitionStep(inputMode(1107).AuthStates.REGISTER_IDENTITY));
+  setInputMode(17377)(inputMode(1107).AuthStates.REGISTER_IDENTITY);
+  const tmp10 = setInputMode(17377);
+  const tmp12 = setInputMode(17378);
+  tmp12(inputMode(17360).getPreviousRegistrationTransitionStep(inputMode(1107).AuthStates.REGISTER_IDENTITY));
   setInputMode(5263)(() => {
     closure_9({ step: constants.ACCOUNT_IDENTITY, actionType: constants2.VIEWED });
   });
@@ -163,8 +163,8 @@ function RegisterIdentityBase(inputMode) {
     children: null,
   };
   const items1 = [controlComponent, , ,];
-  let obj4 = inputMode(17361);
-  items1[1] = closure_14(inputMode(17380).RegisterPhoneOrEmailInput, {
+  let obj4 = inputMode(17360);
+  items1[1] = closure_14(inputMode(17379).RegisterPhoneOrEmailInput, {
     loginPhone,
     loginEmail,
     setLoginPhone: updateLoginPhone,
@@ -203,14 +203,14 @@ function RegisterIdentityBase(inputMode) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const RegistrationUIStore = fn(17362);
+const RegistrationUIStore = fn(17361);
 ({
   clearRegistrationErrorMessage: closure_8,
   setRegistrationErrors: closure_9,
   updateRegistrationOptions: c10,
   useRegistrationUIStore: closure_11,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(17363);
+const RegistrationConstants = fn(17362);
 ({ RegisterTransitionSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -418,10 +418,10 @@ export const RegisterIdentity = ReactCompilerGating.isReactCompilerEnabled()
   : function RegisterIdentity() {
       let obj = hasItem(5253);
       const tmp3 = closure_16(45 * Math.min(2, hasItem(5253).useFontScale()));
-      const deviceCountry = hasItem(17381).getDeviceCountry();
+      const deviceCountry = hasItem(17380).getDeviceCountry();
       hasItem = null != deviceCountry;
       if (hasItem) {
-        const EMAIL_FIRST_COUNTRIES = tmp(17382).EMAIL_FIRST_COUNTRIES;
+        const EMAIL_FIRST_COUNTRIES = tmp(17381).EMAIL_FIRST_COUNTRIES;
         hasItem = EMAIL_FIRST_COUNTRIES.has(deviceCountry);
       }
       let items = [hasItem];
@@ -451,7 +451,7 @@ export const RegisterIdentity = ReactCompilerGating.isReactCompilerEnabled()
         closure_2_8();
         dependencyMap(memo[arg0].mode);
       }, items1);
-      let obj2 = hasItem(17381);
+      let obj2 = hasItem(17380);
       const tmpResult = hasItem(8901);
       const segmentedControlState = tmpResult.useSegmentedControlState({
         pageWidth: 0,

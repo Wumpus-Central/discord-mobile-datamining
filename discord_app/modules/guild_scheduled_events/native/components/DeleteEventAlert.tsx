@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               guildId(recurrenceId[9]).hideActionSheet();
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp17) {
             c2 = tmp;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               v1(5210).hideActionSheet();
               dependencyMap = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp16) {
             dependencyMap = tmp;

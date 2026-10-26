@@ -753,7 +753,7 @@ export default noop.memo(
           const intl11 = tmp2(1128).intl;
           obj2.buttonPrimaryText = intl11.string(tmp2(1128).t.RLch70);
           obj2.buttonPrimaryOnPress = callback2;
-          let tmp15Result = jsx(guildId(13356), {
+          let tmp15Result = jsx(guildId(13355), {
             type: "button-action",
             message: null,
             buttonSecondaryText: null,
@@ -761,7 +761,7 @@ export default noop.memo(
             buttonPrimaryText: null,
             buttonPrimaryOnPress: null,
           });
-          const tmp14 = guildId(13356);
+          const tmp14 = guildId(13355);
         } else {
           if (null != pendingGameProfileReturn) {
             let obj3 = {
@@ -817,8 +817,8 @@ export default noop.memo(
             obj9.buttonPrimaryText = intl2.string(tmp2(1128).t.RLch70);
             obj9.buttonPrimaryOnPress = callback2;
           }
-          tmp15Result = jsx(guildId(13356), obj9);
-          const tmp17 = guildId(13356);
+          tmp15Result = jsx(guildId(13355), obj9);
+          const tmp17 = guildId(13355);
         }
         return tmp15Result;
       },

@@ -556,7 +556,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (collapsed) {
         let ChevronSmallDownIcon = tmp2(7305).ChevronSmallRightIcon;
       } else {
-        ChevronSmallDownIcon = tmp2(11077).ChevronSmallDownIcon;
+        ChevronSmallDownIcon = tmp2(11079).ChevronSmallDownIcon;
       }
       if (node.failed) {
         let running = tmp.failed;
@@ -1696,7 +1696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[12] !== tmp12) {
               const obj2 = { initialRouteName: perf_trace, screens: tmp12 };
-              const tmp17 = closure_8(tmp(11147).Modal, obj2);
+              const tmp17 = closure_8(tmp(11149).Modal, obj2);
               cResult[12] = tmp12;
               cResult[13] = tmp17;
               let tmp14 = tmp17;

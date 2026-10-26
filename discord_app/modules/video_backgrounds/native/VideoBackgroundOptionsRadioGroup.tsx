@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = analyticsContext(9935);
       const lastUsedVideoBackgroundOption = analyticsContext(5866).useLastUsedVideoBackgroundOption();
       let obj3 = analyticsContext(5866);
-      const videoBackgroundRadioOptions = analyticsContext(11635).useVideoBackgroundRadioOptions();
+      const videoBackgroundRadioOptions = analyticsContext(11637).useVideoBackgroundRadioOptions();
       if (cResult[0] !== analyticsContext.location) {
         function handleChange(arg0) {
           const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
@@ -41,11 +41,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== lastUsedVideoBackgroundOption) {
-        let result = tmp(11635).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+        let result = tmp(11637).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
         cResult[2] = lastUsedVideoBackgroundOption;
         cResult[3] = result;
         let tmp7 = result;
-        const tmpResult = tmp(11635);
+        const tmpResult = tmp(11637);
       } else {
         tmp7 = cResult[3];
       }
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = title;
         cResult[12] = tmp17;
       }
-      const obj4 = analyticsContext(11635);
+      const obj4 = analyticsContext(11637);
     }
   : function VideoBackgroundOptionsRadioGroup(title) {
       _require = undefined;

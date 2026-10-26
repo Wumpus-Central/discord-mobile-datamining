@@ -46,7 +46,7 @@ function keyExtractor(type, arg1) {
 }
 const View = fn(17).View;
 const getSection = fn(9650).getSection;
-const FetchState = fn(12045).FetchState;
+const FetchState = fn(12047).FetchState;
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -287,20 +287,20 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let hasOptions;
       let onPressSend;
       ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-      const appLauncherIconSource = hasOptions(12029).getAppLauncherIconSource(application);
+      const appLauncherIconSource = hasOptions(12031).getAppLauncherIconSource(application);
       let tmp4 = null != appLauncherIconSource;
       if (tmp4) {
         const obj2 = { iconSource: appLauncherIconSource };
-        tmp4 = closure_10(onPressSend(12034), obj2);
+        tmp4 = closure_10(onPressSend(12036), obj2);
       }
-      obj = hasOptions(12029);
-      const tmpResult = hasOptions(12094);
+      obj = hasOptions(12031);
+      const tmpResult = hasOptions(12096);
       const commandRowSend = tmpResult.useCommandRowSend({
         command,
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(11167).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(11169).AppLauncherSectionName.SEARCH,
       });
       hasOptions = commandRowSend.hasOptions;
       onPressSend = commandRowSend.onPressSend;
@@ -339,7 +339,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(11167).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(11169).AppLauncherSectionName.SEARCH,
       };
       obj4.subLabel = hasOptions(9649).getSectionName(application);
       obj4.start = isFirstRow;
@@ -347,7 +347,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.onPress = onPress;
       obj4.accessibilityActions = memo;
       obj4.onAccessibilityAction = callback;
-      obj4.trailing = closure_10(onPressSend(12094), { hasOptions, sending: commandRowSend.sending, onPressSend });
+      obj4.trailing = closure_10(onPressSend(12096), { hasOptions, sending: commandRowSend.sending, onPressSend });
       return closure_10(hasOptions(6903).TableRow, obj4);
     };
 ReactCompilerGating = fn(558);

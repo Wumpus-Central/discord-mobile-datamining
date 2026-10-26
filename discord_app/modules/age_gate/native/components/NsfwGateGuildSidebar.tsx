@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[11] !== stateFromStores) {
               let obj2 = { guild: stateFromStores, showExtraButtons: false };
-              const tmp21 = closure_12(stateFromStores(17562), obj2);
+              const tmp21 = closure_12(stateFromStores(17561), obj2);
               cResult[11] = stateFromStores;
               cResult[12] = tmp21;
               let tmp18 = tmp21;

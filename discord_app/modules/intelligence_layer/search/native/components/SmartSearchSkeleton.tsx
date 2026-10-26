@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(11899);
+const AILoaderConstants = fn(11901);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroRequire } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -230,7 +230,7 @@ export default noop.memo(
         let obj = { style: tmp.block, children: null };
         let obj2 = { style: tmp.header, children: null };
         const items1 = [
-          closure_7(reducedMotion(11898).AILoader, { size: 12, color: "interactive-text-default" }),
+          closure_7(reducedMotion(11900).AILoader, { size: 12, color: "interactive-text-default" }),
           closure_7(reducedMotion(12504).AIShimmer, {
             text: memo,
             variant: "text-sm/semibold",

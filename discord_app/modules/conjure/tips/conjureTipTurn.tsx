@@ -34,6 +34,40 @@ export const newestSettledTurn = function newestSettledTurn(arr) {
   }
   return null;
 };
+export const newestPublish = function newestPublish(arr) {
+  let tmp2;
+  let diff = arr.length - 1;
+  if (0 <= diff) {
+    while (true) {
+      tmp2 = arr[diff];
+      if ("publish_notice" === tmp2.kind) {
+        let publishNotice = tmp2.publishNotice;
+        let commands_failed;
+        if (publishNotice != null) {
+          commands_failed = publishNotice.commands_failed;
+        }
+        if (true !== commands_failed) {
+          break;
+        }
+      }
+      diff = diff - 1;
+    }
+    return tmp2;
+  }
+  return null;
+};
+export const hasNoTurns = function hasNoTurns(arr) {
+  return arr.every((kind) => {
+    let tmp = "publish_notice" === kind.kind;
+    if (!tmp) {
+      tmp = "project_event" === kind.kind;
+    }
+    if (!tmp) {
+      tmp = "context_boundary" === kind.kind;
+    }
+    return tmp;
+  });
+};
 export const hasOpenAsk = function hasOpenAsk(newestSettledTurnResult) {
   let tmp =
     null != newestSettledTurnResult.awaitingUser ||

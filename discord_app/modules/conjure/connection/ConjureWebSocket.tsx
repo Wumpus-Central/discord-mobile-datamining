@@ -81,6 +81,7 @@ prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachme
         template_id: tmp,
         remix: tmp2,
         clarification_answers: tmp3,
+        link_embeds: tmp4,
       };
       socket.send(JSON.stringify(obj2));
     }

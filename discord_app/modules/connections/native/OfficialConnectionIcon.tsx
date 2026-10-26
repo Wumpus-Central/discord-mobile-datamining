@@ -5,8 +5,8 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import useRoleIconProps from "../../roles/useRoleIconProps.tsx";
 import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
-import _modDef11258 from "../../../../_runtime/metro/11258__.js";
-import _modDef11259 from "../../../../_runtime/metro/11259__.js";
+import _modDef11260 from "../../../../_runtime/metro/11260__.js";
+import _modDef11261 from "../../../../_runtime/metro/11261__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj5 = {
                     style: tmp18,
                     size: native.Icon.Sizes.CUSTOM,
-                    source: _modDef11259,
+                    source: _modDef11261,
                     color: PRIMARY_630,
                   };
                   const tmp21 = timestampProducer(native.Icon, obj5);
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[25] = items2;
                 tmp18 = items2;
               }
-              const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11258, color: roleColor };
+              const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11260, color: roleColor };
               const tmp17 = timestampProducer(native.Icon, obj6);
               cResult[20] = roleColor;
               cResult[21] = tmp14;
@@ -236,11 +236,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: null, children: null };
       const items1 = [style, size1];
       obj5.style = items1;
-      const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11258, color: roleColor };
+      const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11260, color: roleColor };
       const items2 = [tmp.verifiedCheck, size1];
       obj6.style = items2;
       const items3 = [timestampProducer(native.Icon, obj6)];
-      const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11259, color: PRIMARY_630 };
+      const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11261, color: PRIMARY_630 };
       const items4 = [tmp.verifiedCheck, size1];
       obj7.style = items4;
       items3[1] = timestampProducer(native.Icon, obj7);

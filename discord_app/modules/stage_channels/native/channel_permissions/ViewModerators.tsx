@@ -22,7 +22,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(18278, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = { value, done: true };
                     return obj4;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = tmp2(5662);
                       v1(5210).hideActionSheet();
                       c2 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } catch (tmp20) {
                     c2 = tmp;
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let intl = tmp(1128).intl;
                   obj5.title = intl.string(tmp(1128).t.f7VbhF);
                   let obj6 = {
-                    icon: closure_10(tmp(11154).CirclePlusIcon, {}),
+                    icon: closure_10(tmp(11156).CirclePlusIcon, {}),
                     label: null,
                     onPress: null,
                     disabled: null,
@@ -275,11 +275,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj3 = { channel, canSkip: false };
                       obj2.openLazy(
-                        asyncRequireImpl(18279, dependencyMap.paths),
+                        asyncRequireImpl(18278, dependencyMap.paths),
                         "channel-add-moderators-" + channel.id,
                         obj3,
                       );
-                      const tmp7 = asyncRequireImpl(18279, dependencyMap.paths);
+                      const tmp7 = asyncRequireImpl(18278, dependencyMap.paths);
                     }
                   };
                   obj6.disabled = !canUpdateStageChannelModerators;
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = tmp2(5662);
                 v1(5210).hideActionSheet();
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp20) {
               c2 = tmp;
@@ -520,11 +520,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = ActionSheetActionCreatorsDefault;
                 const obj3 = { channel, canSkip: false };
                 obj2.openLazy(
-                  asyncRequireImpl(18279, dependencyMap.paths),
+                  asyncRequireImpl(18278, dependencyMap.paths),
                   "channel-add-moderators-" + channel.id,
                   obj3,
                 );
-                const tmp7 = asyncRequireImpl(18279, dependencyMap.paths);
+                const tmp7 = asyncRequireImpl(18278, dependencyMap.paths);
               }
             };
             obj9.disabled = !canUpdateStageChannelModerators;

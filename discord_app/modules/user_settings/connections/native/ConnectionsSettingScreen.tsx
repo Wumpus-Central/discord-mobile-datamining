@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16252, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16251, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -51,7 +51,7 @@ export default noop.memo(
         const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
         if (cResult[3] !== selectedPlatformType) {
           const obj4 = { selectedPlatformType };
-          const tmp11 = jsx(tmp(16253).UserSettingsConnections, { selectedPlatformType });
+          const tmp11 = jsx(tmp(16252).UserSettingsConnections, { selectedPlatformType });
           cResult[3] = selectedPlatformType;
           cResult[4] = tmp11;
           let tmp9 = tmp11;
@@ -82,6 +82,6 @@ export default noop.memo(
             },
           });
         }, items);
-        return jsx(tmp(16253).UserSettingsConnections, { selectedPlatformType });
+        return jsx(tmp(16252).UserSettingsConnections, { selectedPlatformType });
       },
 );

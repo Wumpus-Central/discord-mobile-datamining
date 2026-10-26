@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const children = formSwitchDisabled.children;
       let obj = formSwitchDisabled(576);
       const tmp = formSwitchDisabled;
-      const enableCommunitySharedStyles = formSwitchDisabled(19168).useEnableCommunitySharedStyles();
+      const enableCommunitySharedStyles = formSwitchDisabled(19167).useEnableCommunitySharedStyles();
       if (cResult[0] === enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable) {
         if (cResult[1] === formSwitchDisabled) {
           let tmp5 = cResult[2];
@@ -59,11 +59,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = formSwitchDisabled;
       cResult[2] = tmp6;
       tmp5 = tmp6;
-      const obj2 = formSwitchDisabled(19168);
+      const obj2 = formSwitchDisabled(19167);
     }
   : function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
       formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-      const enableCommunitySharedStyles = formSwitchDisabled(19168).useEnableCommunitySharedStyles();
+      const enableCommunitySharedStyles = formSwitchDisabled(19167).useEnableCommunitySharedStyles();
       const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
       const items = [formSwitchDisabled.children];
       let tmp6 = null;

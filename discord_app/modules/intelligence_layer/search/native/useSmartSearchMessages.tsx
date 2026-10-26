@@ -21,14 +21,14 @@ export const useSmartSearchMessages = ReactCompilerGating.isReactCompilerEnabled
           let tmp5 = cResult[2];
         }
         _require = tmp5;
-        const smartSearchStatus = tmp(18073).useSmartSearchStatus(tmp5);
-        const tmpResult = tmp(18073);
+        const smartSearchStatus = tmp(18072).useSmartSearchStatus(tmp5);
+        const tmpResult = tmp(18072);
         let guildId;
         if (tmp5 != null) {
           guildId = tmp5.guildId;
         }
         const _Symbol = Symbol;
-        const isNlpSearchEnabled = tmp(13263).useIsNlpSearchEnabled(guildId, "fetch_answer");
+        const isNlpSearchEnabled = tmp(13262).useIsNlpSearchEnabled(guildId, "fetch_answer");
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SuggestedSearchStore];
           cResult[3] = items;
@@ -54,7 +54,7 @@ export const useSmartSearchMessages = ReactCompilerGating.isReactCompilerEnabled
             tmp19 = null;
             if (!tmp4) {
               tmp19 = null;
-              if (smartSearchStatus !== tmp(13228).SmartSearchStatus.NOT_QUALIFIED) {
+              if (smartSearchStatus !== tmp(13227).SmartSearchStatus.NOT_QUALIFIED) {
                 if (tmpResult7.isSmartSearchEmptyOrErrored(smartSearchStatus)) {
                   tmp19 = null;
                 }
@@ -66,7 +66,7 @@ export const useSmartSearchMessages = ReactCompilerGating.isReactCompilerEnabled
                 cResult[7] = hasKeywordResults;
                 cResult[8] = tmp5;
                 cResult[9] = element;
-                tmpResult7 = tmp(13226);
+                tmpResult7 = tmp(13225);
               }
             }
           }
@@ -82,7 +82,7 @@ export const useSmartSearchMessages = ReactCompilerGating.isReactCompilerEnabled
         cResult[11] = smartSearchStatus;
         cResult[12] = obj3;
         tmp23 = obj3;
-        const tmpResult5 = tmp(13263);
+        const tmpResult5 = tmp(13262);
       }
       const obj = require("c");
       const smartSearchQuery = require("SmartSearchUtils").getSmartSearchQuery(searchContext, searchQueryString);

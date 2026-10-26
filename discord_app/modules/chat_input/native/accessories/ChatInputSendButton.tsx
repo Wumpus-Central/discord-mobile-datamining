@@ -492,7 +492,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.style = size;
         if (canSendVoiceMessage) {
           const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-          let tmp15Result = jsx(onSendMessage(13149), { disabled: stateFromStores1, channelId: channel.id });
+          let tmp15Result = jsx(onSendMessage(13148), { disabled: stateFromStores1, channelId: channel.id });
         } else {
           const obj9 = {
             active: true,

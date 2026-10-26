@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

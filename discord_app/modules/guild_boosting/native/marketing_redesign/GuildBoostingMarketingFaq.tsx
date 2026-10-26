@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14919 from "../../../../../_runtime/metro/14919__.js";
+import _modDef14918 from "../../../../../_runtime/metro/14918__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -382,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               children: getQuestion.getQuestion(),
             }),
           ];
-          const obj4 = { source: _modDef14919, style: null };
+          const obj4 = { source: _modDef14918, style: null };
           const items2 = [closure_0.questionIcon];
           let questionIconExpanded = tmp;
           if (tmp) {

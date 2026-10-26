@@ -649,11 +649,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = flatMapResult;
       } else {
         if (cResult[3] !== node) {
-          const describeNodeResult = node(12309).describeNode(node);
+          const describeNodeResult = node(12311).describeNode(node);
           cResult[3] = node;
           cResult[4] = describeNodeResult;
           let tmp11 = describeNodeResult;
-          let tmpResult = node(12309);
+          let tmpResult = node(12311);
         } else {
           tmp11 = cResult[4];
         }
@@ -671,10 +671,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = {
               variant: "text-xs/normal",
               color: "text-subtle",
-              children: node(11879).describeDuration(node.durationMs),
+              children: node(11881).describeDuration(node.durationMs),
             };
             tmp15 = closure_6(node(5234).Text, obj2);
-            const tmpResult2 = node(11879);
+            const tmpResult2 = node(11881);
           }
           cResult[5] = node.durationMs;
           cResult[6] = tmp15;
@@ -857,7 +857,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         trailing: null,
       };
       let tmp7 = ConjureNativeStatusLineDefault;
-      obj.line = node(12309).describeNode(node);
+      obj.line = node(12311).describeNode(node);
       obj.live = flag2;
       let tmp9 = !flag2;
       if (!flag2) {
@@ -878,10 +878,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: node(11879).describeDuration(node.durationMs),
+          children: node(11881).describeDuration(node.durationMs),
         };
         tmp4Result = closure_6(node(5234).Text, obj3);
-        const tmp8Result = node(11879);
+        const tmp8Result = node(11881);
       }
       obj.trailing = tmp4Result;
       const children = [closure_6(tmp7, obj), ,];

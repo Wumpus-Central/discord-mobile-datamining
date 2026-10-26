@@ -19,7 +19,7 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsFindYourFriendsDeletionTrailing() {
       const cResult = c.c(2);
@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16134).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16133).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);

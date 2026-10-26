@@ -16,7 +16,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -45,7 +45,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
           closure_129_5 = undefined;
           c2 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -101,94 +101,31 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
     }
   }
 };
-let closure_7 = async function _getEmojiDominantColors(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let closure_7 = async function _getEmojiDominantColors() {
+  closure_2 = tmp2;
+  ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
+  await "Reflect";
+  await (function _getFromCacheOrFallback() {
+    const self = this;
+    const apply = closure_1_6.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
-      return { value: "IconComponent", done: null };
+      applyArgumentsResult = apply(self, arguments);
     }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const obj5 = {
-            cache: closure_131_4,
-            cacheKey: closure_131_5(closure_130_0),
-            fallbackParam: closure_130_1,
-            fallbackFunc(source) {
-              return closure_1_0(closure_1_1[3]).getDominantColors(closure_1_3.resolveAssetSource(source));
-            },
-          };
-          c4 = 2;
-          c5 = 1;
-          const obj6 = {
-            value: (function _getFromCacheOrFallback() {
-              const self = this;
-              const apply = closure_1_6.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })(obj5),
-            done: false,
-          };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        if (value == null) {
-          value = [];
-        }
-        c5 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp14) {
-      c5 = tmp;
-      throw tmp14;
-    }
+    return applyArgumentsResult;
+  })({
+    cache: closure_131_4,
+    cacheKey: closure_131_5(closure_130_0),
+    fallbackParam: closure_130_1,
+    fallbackFunc(source) {
+      return closure_1_0(closure_1_1[3]).getDominantColors(closure_1_3.resolveAssetSource(source));
+    },
+  });
+  if (value == null) {
+    value = [];
   }
+  return value;
 };
 const Image = fn(17).Image;
 let closure_4 = new privDefault(100);

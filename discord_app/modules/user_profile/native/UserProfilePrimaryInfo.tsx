@@ -372,7 +372,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
         const items1 = [closure_13(UsernameWithEffectsDefault, obj8), renderBotTag()];
         if (showChevron) {
-          showChevron = closure_13(tmp13(11077).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+          showChevron = closure_13(tmp13(11079).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
         }
         items1[2] = showChevron;
         obj7.children = items1;

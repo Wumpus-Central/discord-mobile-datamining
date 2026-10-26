@@ -18,12 +18,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(12344).MESSAGE_EDGE_INSET + fn(12344).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(12344).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(12343).MESSAGE_EDGE_INSET + fn(12343).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12343).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(4971);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(12344).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(12343).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -52,7 +52,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(12344).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(12343).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",

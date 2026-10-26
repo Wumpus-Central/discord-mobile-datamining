@@ -232,7 +232,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     } else {
                       try {
@@ -300,7 +300,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               const obj3 = tmp2(first[7]);
                             }
                             v3 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "+352" };
                           }
                         }
                       } catch (tmp40) {
@@ -378,7 +378,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -440,12 +440,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 if (!closure_129_4) {
                   const obj7 = { text: null, variant: "success" };
                   const obj = tmp2(5663);
-                  obj7.text = tmp3(11795).conjureRemoveAppSuccess(closure_129_1);
+                  obj7.text = tmp3(11797).conjureRemoveAppSuccess(closure_129_1);
                   obj.open("CONJURE_APP_REMOVED", obj7);
-                  const obj3 = tmp3(11795);
+                  const obj3 = tmp3(11797);
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
           } catch (tmp40) {

@@ -7,7 +7,7 @@ import asyncRequireImpl from "../../../../../../../_runtime/02002_asyncRequireIm
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _mod7220 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod13873 from "../../../../../../../_runtime/metro/13873__.js";
+import _mod13872 from "../../../../../../../_runtime/metro/13872__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -34,7 +34,7 @@ obj.pressable = {
   alignItems: "center",
   padding: nativeDefault.space.PX_8,
 };
-let obj4 = {
+const obj4 = {
   borderRadius: nativeDefault.radii.md,
   flexDirection: "row",
   alignItems: "center",
@@ -139,13 +139,16 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     setAddedPressed(true);
   }, items4);
   let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  const obj4 = {
-    style: tmp.avatar,
-    user: suggestedFriend.user,
-    guildId: "Array",
-    size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
-  };
-  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), ,];
+  obj2 = height(suggestedFriend[11]);
+  const items5 = [
+    closure_9(height(suggestedFriend[18]).Avatar, {
+      style: tmp.avatar,
+      user: suggestedFriend.user,
+      guildId: "Array",
+      size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
+    }),
+    ,
+  ];
   let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [
     closure_9(height(suggestedFriend[19]).Text, {
@@ -280,7 +283,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function MessagesItemSuggestedFriendLegend(arg0) {
         const cResult = c.c(4);
-        [tmp3, tmp4] = _mod13873.useRecyclingState(false);
+        [tmp3, tmp4] = _mod13872.useRecyclingState(false);
         if (cResult[0] === tmp3) {
           if (cResult[1] === arg0) {
             if (cResult[2] === tmp4) {
@@ -302,7 +305,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(
       }
     : function MessagesItemSuggestedFriendLegend(arg0) {
         const obj2 = {};
-        [tmp2, tmp3] = _mod13873.useRecyclingState(false);
+        [tmp2, tmp3] = _mod13872.useRecyclingState(false);
         const merged = Object.assign(arg0);
         obj2.addedPressed = tmp2;
         obj2.setAddedPressed = tmp3;

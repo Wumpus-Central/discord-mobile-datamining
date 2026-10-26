@@ -13,9 +13,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import _modDef12750 from "../../../../_runtime/metro/12750__.js";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef13171 from "../../../../_runtime/metro/13171__.js";
+import _modDef13170 from "../../../../_runtime/metro/13170__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef13174 from "../../../../_runtime/metro/13174__.js";
+import _modDef13173 from "../../../../_runtime/metro/13173__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -620,7 +620,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         items[1] = map1(View, obj3);
                         let tmp6Result = completed;
                         if (completed) {
-                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13174 };
+                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
                           tmp6Result = __initData(native.Icon, obj6);
                         }
                         items[2] = tmp6Result;
@@ -899,7 +899,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = map1(View, obj3);
             let tmp6Result = completed;
             if (completed) {
-              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13174 };
+              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13173 };
               tmp6Result = __initData(native.Icon, obj6);
             }
             items[2] = tmp6Result;
@@ -959,7 +959,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 obj3.children = items1;
                 items[1] = map1(View, obj3);
                 const obj7 = { style: closure_1.circle, children: null };
-                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13171 };
+                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13170 };
                 obj7.children = __initData(native.Icon, obj8);
                 items[2] = __initData(View, obj7);
                 obj.children = items;

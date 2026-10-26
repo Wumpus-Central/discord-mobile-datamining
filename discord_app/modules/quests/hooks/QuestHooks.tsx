@@ -1765,11 +1765,11 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] !== id) {
-        const result = tmp(14127).isVideoQuestProgressing(id);
+        const result = tmp(14126).isVideoQuestProgressing(id);
         cResult[3] = id;
         cResult[4] = result;
         let tmp8 = result;
-        const tmpResult2 = tmp(14127);
+        const tmpResult2 = tmp(14126);
       } else {
         tmp8 = cResult[4];
       }
@@ -4832,7 +4832,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
           obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -4977,7 +4977,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -5000,7 +5000,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties() {
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(14134).fetchBountyPreview(
+                    value: previewAdCreativeIds(14133).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(6713).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -5012,7 +5012,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties() {
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(14134).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(14133).fetchQuestHomeBounties(
                   previewAdCreativeIds(6713).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,
@@ -5056,7 +5056,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties() {
               v0(false);
             }
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

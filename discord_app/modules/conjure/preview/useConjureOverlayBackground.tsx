@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp26;
                 }
               }
-              const obj2 = { src: tmp23, blurred: null, handleError: null };
+              const obj2 = { src: tmp23, blurred: false !== blur, handleError: null };
               class M {
                 constructor() {
                   if (closure_8 === closure_7) {
@@ -122,10 +122,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              obj2.handleError = tmp22;
               cResult[14] = tmp22;
               cResult[15] = tmp23;
-              cResult[16] = true === blur;
+              cResult[16] = false !== blur;
               cResult[17] = obj2;
               tmp26 = obj2;
             }
@@ -160,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -206,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       noop(closure_130_0);
                     }
                     c6 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } catch (tmp22) {
                   if (tmp4 === c4) {
@@ -289,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -335,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   v0(closure_130_0);
                 }
                 c6 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp22) {
               if (tmp4 === v0) {
@@ -390,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           blur = stateFromStores.blur;
         }
-        obj2.blurred = true === blur;
+        obj2.blurred = false !== blur;
         obj2.handleError = tmp11;
         return obj2;
       }

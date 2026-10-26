@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 
 const VisualEffectViewDefault = tmp5(5586);
-const NUFChannelsManagerDefault = tmp5(14605);
-const NUFVoiceChannelsTemplateDefault = tmp5(14612);
-const GuildEventVoiceBannerDefault = tmp5(14615);
-const VoiceEmptyStateDefault = tmp5(14616);
-const VoiceMemberListDefault = tmp5(14619);
+const NUFChannelsManagerDefault = tmp5(14604);
+const NUFVoiceChannelsTemplateDefault = tmp5(14611);
+const GuildEventVoiceBannerDefault = tmp5(14614);
+const VoiceEmptyStateDefault = tmp5(14615);
+const VoiceMemberListDefault = tmp5(14618);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);

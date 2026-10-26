@@ -14,6 +14,7 @@ import conjurePublishConnection from "../publish/conjurePublishConnection.tsx";
 import conjurePublishScheduleRequests from "../publish_schedule/conjurePublishScheduleRequests.tsx";
 import conjureKnownStepKinds from "conjureKnownStepKinds.tsx";
 import ConjureWebSocket from "ConjureWebSocket.tsx";
+import conjureLinkEmbeds from "../chat/conjureLinkEmbeds.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
@@ -73,7 +74,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "duration",
+    held: "emoji",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -192,8 +193,13 @@ function handleEvent(projectId, pendingEvents, type) {
           if (attachments != null) {
             mapped = attachments.map((id) => id.id);
           }
-          obj = { templateId: null, remix: null, clarificationAnswers: null };
-          ({ templateId: obj.templateId, remix: obj.remix, clarificationAnswers: obj.clarificationAnswers } = tmp6);
+          obj = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
+          ({
+            templateId: obj.templateId,
+            remix: obj.remix,
+            clarificationAnswers: obj.clarificationAnswers,
+            linkEmbeds: obj.linkEmbeds,
+          } = tmp6);
           ws.sendUserMessage(content, nonce, mapped, obj);
         } catch (tmp18) {
           let message = tmp2;
@@ -298,7 +304,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -336,7 +342,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } else {
             closure_132_12(closure_131_0, "failed");
             const _Error = Error;
@@ -439,7 +445,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -568,7 +574,7 @@ const set = new Set();
 const map2 = new Map();
 let obj = {};
 let merged = Object.assign(fn(10732).browserSessionsFrameHandlers);
-const merged1 = Object.assign(fn(10717).chatFrameHandlers);
+let merged1 = Object.assign(fn(10717).chatFrameHandlers);
 const merged2 = Object.assign(fn(10733).debugFrameHandlers);
 const merged3 = Object.assign(fn(10735).hostAccessFrameHandlers);
 const merged4 = Object.assign(fn(10737).liveReloadFrameHandlers);
@@ -724,33 +730,35 @@ export const ensureConnection = function ensureConnection(arg0) {
     connect(arg0, templateId);
   }
 };
-export const sendUserMessage = function sendUserMessage(projectId, str, arg2) {
+export const sendUserMessage = function sendUserMessage(projectId, trimmed, arg2) {
   obj = arg3;
   if (arg3 === undefined) {
     obj = {};
   }
   ({ clarificationAnswers, nonce, templateId, remix } = obj);
-  const trimmed = str.trim();
-  let tmp6;
+  trimmed = trimmed.trim();
+  let tmp8;
   if (null != arg2) {
     if (arg2.length > 0) {
-      tmp6 = arg2;
+      tmp8 = arg2;
     }
   }
   if ("" === trimmed) {
-    if (null == tmp6) {
+    if (null == tmp8) {
       return false;
     }
   }
-  obj2 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null };
+  const result = conjureLinkEmbeds.readyConjureLinkEmbeds(trimmed);
+  const obj3 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null };
   let nonce1 = nonce;
   if (nonce == null) {
     nonce1 = createNonce.createNonce();
+    const tmp9Result = createNonce;
   }
-  obj2.nonce = nonce1;
-  obj2.attachments = tmp6;
-  obj2.templateId = templateId;
-  obj2.remix = remix;
+  obj3.nonce = nonce1;
+  obj3.attachments = tmp8;
+  obj3.templateId = templateId;
+  obj3.remix = remix;
   if (null != clarificationAnswers) {
     const obj4 = { clarificationAnswers };
     let obj5 = obj4;
@@ -758,13 +766,20 @@ export const sendUserMessage = function sendUserMessage(projectId, str, arg2) {
     obj5 = {};
   }
   const merged = Object.assign(obj5);
+  if (null != result) {
+    const obj6 = { linkEmbeds: result };
+    let obj7 = obj6;
+  } else {
+    obj7 = {};
+  }
+  const merged1 = Object.assign(obj7);
   value = map.get(projectId);
   if (null != value) {
     const pendingSends = value.pendingSends;
-    pendingSends.push(obj2);
+    pendingSends.push(obj3);
     return true;
   }
-  appendLocalUserMessage(projectId, obj2);
+  appendLocalUserMessage(projectId, obj3);
   try {
     if (null == value) {
       const _Error = Error;
@@ -772,24 +787,30 @@ export const sendUserMessage = function sendUserMessage(projectId, str, arg2) {
       throw error;
     } else {
       const ws = value.ws;
-      ({ content, nonce: nonce2, attachments } = obj2);
+      ({ content, nonce: nonce2, attachments } = obj3);
       let mapped;
       if (attachments != null) {
         mapped = attachments.map((id) => id.id);
       }
-      const obj11 = { templateId: null, remix: null, clarificationAnswers: null };
-      ({ templateId: obj6.templateId, remix: obj6.remix, clarificationAnswers: obj6.clarificationAnswers } = obj2);
-      ws.sendUserMessage(content, nonce2, mapped, obj11);
+      const obj8 = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
+      ({
+        templateId: obj9.templateId,
+        remix: obj9.remix,
+        clarificationAnswers: obj9.clarificationAnswers,
+        linkEmbeds: obj9.linkEmbeds,
+      } = obj3);
+      ws.sendUserMessage(content, nonce2, mapped, obj8);
       return true;
     }
-  } catch (tmp26) {
+  } catch (tmp30) {
     const _Error2 = Error;
     let str3 = "send failed";
-    if (tmp26 instanceof Error) {
-      str3 = tmp26.message;
+    if (tmp30 instanceof Error) {
+      str3 = tmp30.message;
     }
-    if (tmp == tmp4) {
-      conjureChatConnection.sendFailedStep(tmp2, str3);
+    if (tmp5 == tmp6) {
+      tmp2(tmp[15]).sendFailedStep(tmp3, str3);
+      const tmp2Result = tmp2(tmp[15]);
     }
     return false;
   }

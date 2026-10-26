@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(18993).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18992).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(18993).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18992).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-          settingType: tmp2(18993).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+          settingType: tmp2(18992).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,

@@ -410,8 +410,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(11832).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(11832);
+  const conjureSettingsGuildId = def(11834).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(11834);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -432,9 +432,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       let obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp6Result;
       if (null != hint) {
-        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(11821).conjureLinkedNodes(hint, "text-xs/medium") };
+        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(11823).conjureLinkedNodes(hint, "text-xs/medium") };
         tmp6Result = closure_12(tmp(5234).Text, obj4);
-        const tmpResult3 = tmp(11821);
+        const tmpResult3 = tmp(11823);
       }
       obj3.subLabel = tmp6Result;
       obj3.disabled = disabled;
@@ -1373,7 +1373,7 @@ export default function useConjureAppSettingsForm(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

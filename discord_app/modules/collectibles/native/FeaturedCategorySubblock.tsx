@@ -150,14 +150,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         date = new Date(unpublishedAt);
       }
       let obj5 = {
-        onChange: subblock(17210).useTrackProductCardImpression(
+        onChange: subblock(17209).useTrackProductCardImpression(
           subblock.categoryStoreListingId,
           "mobile_home",
           "featured_block",
         ).handleCardVisibilityChange,
         children: null,
       };
-      let obj4 = subblock(17210);
+      let obj4 = subblock(17209);
       const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: null,

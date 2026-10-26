@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 let closure_4 = fn(7138).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountPhoneSettingTrailing() {
       const cResult = c.c(2);

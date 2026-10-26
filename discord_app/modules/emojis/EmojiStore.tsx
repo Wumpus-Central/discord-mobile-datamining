@@ -67,7 +67,7 @@ let closure_39 = async function _loadSavedEmojis() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {

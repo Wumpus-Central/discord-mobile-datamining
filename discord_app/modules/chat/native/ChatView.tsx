@@ -713,14 +713,14 @@ export default noop.memo(
         if (stateFromStores == null) {
           stateFromStores = null;
         }
-        const channelContentGate = flag(10890).useChannelContentGate(guildId, stateFromStores);
+        const channelContentGate = flag(10892).useChannelContentGate(guildId, stateFromStores);
         closure_11 = chatInputRef.useRef(channelId);
         chatInputRef.useRef(null);
         ref = chatInputRef.useRef(null);
         channelId(5599)(() => new channelId(isActive[16])());
-        const tmp10 = channelId(10908)(channelId);
+        const tmp10 = channelId(10910)(channelId);
         isResourceChannel = tmp10;
-        let obj3 = flag(10890);
+        let obj3 = flag(10892);
         const items3 = [MessageStore];
         const items4 = [channelId, tmp10];
         const stateFromStoresObject = flag(504).useStateFromStoresObject(
@@ -790,17 +790,17 @@ export default noop.memo(
         let obj4 = { profile: null, children: null };
         const tmp16 = channel;
         const tmp3Result = flag(504);
-        obj4.profile = flag(13057).Profiles.ChatView;
+        obj4.profile = flag(13056).Profiles.ChatView;
         let setInterstitial = stateFromStores;
-        const items10 = [stateFromStores(channelId(13723), { channelId, guildId }), ,];
+        const items10 = [stateFromStores(channelId(13722), { channelId, guildId }), ,];
         let setInterstitialResult = null;
         if (!flag2) {
           setInterstitialResult = setInterstitial(tmp9(10625), { absolute: true });
         }
         items10[1] = setInterstitialResult;
         if (null != channelContentGate) {
-          let result = tmp3(10890).renderChannelContentGate(channelContentGate);
-          const tmp3Result2 = tmp3(10890);
+          let result = tmp3(10892).renderChannelContentGate(channelContentGate);
+          const tmp3Result2 = tmp3(10892);
           tmp9(9).setInterstitial(channelContentGate.kind);
           const tmp9Result = tmp9(9);
         } else {
@@ -901,12 +901,12 @@ export default noop.memo(
             setInterstitial("EmptyState");
           } else if (channel.isDirectory()) {
             let obj6 = { channel, guildId };
-            setInterstitialResult2 = setInterstitial(tmp9(13574), obj6);
+            setInterstitialResult2 = setInterstitial(tmp9(13573), obj6);
             tmp9(9).setInterstitial("GuildDirectory");
             const tmp9Result3 = tmp9(9);
           } else if (channel.isForumLikeChannel()) {
             let obj7 = { channel };
-            setInterstitialResult2 = setInterstitial(tmp9(13709), obj7);
+            setInterstitialResult2 = setInterstitial(tmp9(13708), obj7);
             tmp9(9).setInterstitial("ForumChannel");
             const tmp9Result4 = tmp9(9);
           } else {
@@ -915,6 +915,6 @@ export default noop.memo(
         }
         items10[2] = result;
         obj4.children = items10;
-        return tmp16(channelId(13057), obj4);
+        return tmp16(channelId(13056), obj4);
       },
 );

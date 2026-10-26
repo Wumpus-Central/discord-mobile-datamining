@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp16 = untilAtLeast(7554)(tmp13, closure_15);
       const tmpResult4 = navigateToPremium(7557);
-      shouldShowExpiringTrialOfferCard = navigateToPremium(18252).useShouldShowExpiringTrialOfferCard();
+      shouldShowExpiringTrialOfferCard = navigateToPremium(18251).useShouldShowExpiringTrialOfferCard();
       if (cResult[5] === stateFromStores) {
         if (cResult[6] === shouldShowExpiringTrialOfferCard) {
           if (cResult[7] === premiumTrialOffer) {
@@ -650,7 +650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items1;
       tmp19 = items1;
       tmp18 = O;
-      const tmpResult5 = navigateToPremium(18252);
+      const tmpResult5 = navigateToPremium(18251);
     }
   : function YouExpiringTrialOfferCard(navigateToPremium) {
       navigateToPremium = navigateToPremium.navigateToPremium;
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp7Result = useCountdownDefault(num, closure_15);
-      shouldShowExpiringTrialOfferCard = navigateToPremium(18252).useShouldShowExpiringTrialOfferCard();
+      shouldShowExpiringTrialOfferCard = navigateToPremium(18251).useShouldShowExpiringTrialOfferCard();
       const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
       const effect = stateFromStores.useEffect(() => {
         let tmp = shouldShowExpiringTrialOfferCard;
@@ -791,5 +791,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const tmp4Result = navigateToPremium(18252);
+      const tmp4Result = navigateToPremium(18251);
     };

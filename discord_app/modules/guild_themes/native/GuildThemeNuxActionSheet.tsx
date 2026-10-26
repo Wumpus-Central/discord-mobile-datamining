@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj5 = {
-                      value: closure_0(17590).saveGuildThemeNuxPreference(tmp48, closure_1_6),
+                      value: closure_0(17589).saveGuildThemeNuxPreference(tmp48, closure_1_6),
                       done: false,
                     };
                     return obj5;
@@ -306,8 +306,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       let callback1;
       const tmp = closure_14();
-      [tmp5, c2] = noop.useState(guildId(17590).getInitialGuildThemeNuxSelection);
-      const tmp4 = _slicedToArray(noop.useState(guildId(17590).getInitialGuildThemeNuxSelection), 2);
+      [tmp5, c2] = noop.useState(guildId(17589).getInitialGuildThemeNuxSelection);
+      const tmp4 = _slicedToArray(noop.useState(guildId(17589).getInitialGuildThemeNuxSelection), 2);
       [tmp7, c3] = noop.useState(null);
       const tmp6 = _slicedToArray(noop.useState(null), 2);
       [tmp9, c4] = noop.useState(false);
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.onDismiss = callback3;
       obj3.contentStyles = tmp.container;
       const items7 = [
-        closure_10(markAsDismissed(17591), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+        closure_10(markAsDismissed(17590), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
         ,
         ,
         ,

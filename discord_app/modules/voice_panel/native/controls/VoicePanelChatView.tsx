@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(10896).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(10898).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1087);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

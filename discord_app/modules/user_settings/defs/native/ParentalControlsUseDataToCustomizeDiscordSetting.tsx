@@ -8,7 +8,7 @@ require = fn;
 const Consents = fn(1087).Consents;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

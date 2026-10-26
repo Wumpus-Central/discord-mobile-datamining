@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import _modDef19050 from "../../../../_runtime/metro/19050__.js";
 import _modDef19051 from "../../../../_runtime/metro/19051__.js";
 import _modDef19052 from "../../../../_runtime/metro/19052__.js";
-import _modDef19053 from "../../../../_runtime/metro/19053__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AuditLogRecord = fn(19041);
+const AuditLogRecord = fn(19040);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1087);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
@@ -37,32 +37,32 @@ obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
 let obj3 = {
-  [ALL]: fn(19047).ListBulletsIcon,
-  [CHANNEL]: fn(18983).ChannelListIcon,
-  [CHANNEL_OVERWRITE]: fn(18983).ChannelListIcon,
+  [ALL]: fn(19046).ListBulletsIcon,
+  [CHANNEL]: fn(18982).ChannelListIcon,
+  [CHANNEL_OVERWRITE]: fn(18982).ChannelListIcon,
   [EMOJI]: fn(9350).ReactionIcon,
   [GUILD]: fn(5686).CircleInformationIcon,
   [GUILD_PROFILE]: fn(5686).CircleInformationIcon,
-  [INTEGRATION]: fn(16249).PuzzlePieceIcon,
+  [INTEGRATION]: fn(16248).PuzzlePieceIcon,
   [INVITE]: fn(5678).LinkIcon,
   [ROLE]: fn(9971).FlagIcon,
   [USER]: fn(8560).GroupIcon,
-  [WEBHOOK]: fn(18185).WebhookIcon,
+  [WEBHOOK]: fn(18184).WebhookIcon,
   [STAGE_INSTANCE]: fn(8568).StageIcon,
   [GUILD_SCHEDULED_EVENT]: fn(9047).CalendarIcon,
   [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(9047).CalendarIcon,
   [THREAD]: fn(8544).ThreadIcon,
-  [STICKER]: fn(13455).StickerIcon,
-  [APPLICATION_COMMAND]: fn(11164).SlashBoxIcon,
-  [AUTO_MODERATION_RULE]: fn(18185).WebhookIcon,
-  [GUILD_SOUNDBOARD]: fn(13450).SoundboardIcon,
+  [STICKER]: fn(13454).StickerIcon,
+  [APPLICATION_COMMAND]: fn(11166).SlashBoxIcon,
+  [AUTO_MODERATION_RULE]: fn(18184).WebhookIcon,
+  [GUILD_SOUNDBOARD]: fn(13449).SoundboardIcon,
   [ONBOARDING_PROMPT]: fn(8560).GroupIcon,
   [GUILD_ONBOARDING]: fn(8560).GroupIcon,
   [HOME_SETTINGS]: fn(8560).GroupIcon,
   [GUILD_MEMBER_VERIFICATION]: fn(8560).GroupIcon,
-  [VOICE_CHANNEL_STATUS]: fn(18983).ChannelListIcon,
-  [GUILD_HOME]: fn(19049).HomeIcon,
-  [UNKNOWN]: fn(13964).CircleQuestionIcon,
+  [VOICE_CHANNEL_STATUS]: fn(18982).ChannelListIcon,
+  [GUILD_HOME]: fn(19048).HomeIcon,
+  [UNKNOWN]: fn(13963).CircleQuestionIcon,
 };
 ({
   ALL,
@@ -101,16 +101,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== action) {
         const tmp7 = hasOwnProperty(action);
         if (constants.CREATE === tmp7) {
-          let tmp9 = _modDef19051;
+          let tmp9 = _modDef19050;
           cResult[0] = action;
           cResult[1] = tmp9;
         } else if (constants.UPDATE !== tmp7) {
           tmp9 = null;
           if (constants.DELETE === tmp7) {
-            tmp9 = _modDef19053;
+            tmp9 = _modDef19052;
           }
         }
-        tmp9 = _modDef19052;
+        tmp9 = _modDef19051;
       } else if (cResult[2] !== action) {
         if (action === constants2.MESSAGE_DELETE) {
           let RobotIcon = ChatIcon.ChatIcon;
@@ -192,13 +192,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       const tmp2 = hasOwnProperty(action);
       if (constants.CREATE === tmp2) {
-        let tmp4 = _modDef19051;
+        let tmp4 = _modDef19050;
       } else if (constants.UPDATE === tmp2) {
-        tmp4 = _modDef19052;
+        tmp4 = _modDef19051;
       } else {
         tmp4 = null;
         if (constants.DELETE === tmp2) {
-          tmp4 = _modDef19053;
+          tmp4 = _modDef19052;
         }
       }
       if (action === constants2.MESSAGE_DELETE) {

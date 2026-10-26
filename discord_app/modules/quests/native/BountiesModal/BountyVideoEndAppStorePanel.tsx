@@ -205,7 +205,7 @@ let obj3 = {
   overflow: "hidden",
   flexDirection: "column",
 };
-obj2.scrollContent = { paddingBottom: fn(14110).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(14109).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}",
@@ -220,7 +220,7 @@ let closure_13 = {
   code: "function BountyVideoEndAppStorePanelTsx4(){const{dragStartProgress,revealProgress}=this.__closure;dragStartProgress.set(revealProgress.get());}",
 };
 const ReactCompilerGating = fn(558);
-let obj4 = { paddingBottom: fn(14110).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+let obj4 = { paddingBottom: fn(14109).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx");
 

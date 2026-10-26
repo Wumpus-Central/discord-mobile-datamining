@@ -296,7 +296,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                         if ("attachment" === sourceType) {
                           let obj3 = { message, attachment: selectedMedia.source };
                           tmp131(5210).openLazy(
-                            channel(2002)(13984, dependencyMap.paths),
+                            channel(2002)(13983, dependencyMap.paths),
                             "EditAttachmentActionSheet",
                             obj3,
                           );
@@ -323,7 +323,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                           const intl23 = channel(1128).intl;
                           obj4.title = intl23.string(channel(1128).t.aIz1oV);
                           let obj5 = { channelId: id };
-                          obj4.children = jsx(tmp131(13977), { channelId: id });
+                          obj4.children = jsx(tmp131(13976), { channelId: id });
                           const intl24 = channel(1128).intl;
                           obj4.cancelText = intl24.string(channel(1128).t["ETE/oC"]);
                           const intl25 = channel(1128).intl;
@@ -357,7 +357,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                             const intl20 = channel(1128).intl;
                             obj6.body = intl20.string(channel(1128).t.WG5dyo);
                             const obj7 = { message };
-                            obj6.children = jsx(tmp131(13980), { message });
+                            obj6.children = jsx(tmp131(13979), { message });
                             const intl21 = channel(1128).intl;
                             obj6.cancelText = intl21.string(channel(1128).t.gm1Vej);
                             const intl22 = channel(1128).intl;
@@ -394,7 +394,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                               const intl16 = channel(1128).intl;
                               obj8.body = intl16.string(channel(1128).t.NjEPp7);
                               const obj10 = { message };
-                              obj8.children = jsx(tmp131(13980), { message });
+                              obj8.children = jsx(tmp131(13979), { message });
                               const intl17 = channel(1128).intl;
                               obj8.cancelText = intl17.string(channel(1128).t.gm1Vej);
                               const intl18 = channel(1128).intl;
@@ -447,7 +447,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                       const intl12 = channel(1128).intl;
                                       obj11.body = intl12.string(channel(1128).t.AMvpS4);
                                       const obj13 = { message };
-                                      obj11.children = jsx(tmp131(13980), { message });
+                                      obj11.children = jsx(tmp131(13979), { message });
                                       const intl13 = channel(1128).intl;
                                       obj11.cancelText = intl13.string(channel(1128).t.gm1Vej);
                                       const intl14 = channel(1128).intl;
@@ -479,13 +479,13 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                       if (uploaderFileForMessageId != null) {
                                         items = uploaderFileForMessageId.items;
                                       }
-                                      tmp131(13983)(
+                                      tmp131(13982)(
                                         channel,
                                         message,
                                         items,
                                         SendMessageOptionsStore.getOptions(message.id),
                                       );
-                                      const tmp131Result41 = tmp131(13983);
+                                      const tmp131Result41 = tmp131(13982);
                                       const obj17 = {
                                         channel_id: id,
                                         guild_id,
@@ -566,7 +566,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                 } else {
                                                   const intl48 = channel(1128).intl;
                                                   if (intl48.string(channel(1128).t.RpE9k7) === label) {
-                                                    tmp131(10871)(id, id2);
+                                                    tmp131(10873)(id, id2);
                                                   } else {
                                                     const intl49 = channel(1128).intl;
                                                     if (intl49.string(channel(1128).t["S/xNKV"]) === label) {
@@ -734,7 +734,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                   chatInputRef,
                                                                   actionSource: "action_sheet",
                                                                 };
-                                                                tmp131(11336)(obj23);
+                                                                tmp131(11338)(obj23);
                                                                 if ("Preview" === actionSheetSource) {
                                                                   channel(5707).transitionToMessage(
                                                                     channel.id,
@@ -755,8 +755,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                 const intl55 = channel(1128).intl;
                                                                 if (intl55.string(channel(1128).t.I3ltXO) === label) {
                                                                   const obj24 = { message, source: "long-press-sheet" };
-                                                                  channel(12900).openForwardModal(obj24);
-                                                                  const tmpResult54 = channel(12900);
+                                                                  channel(12899).openForwardModal(obj24);
+                                                                  const tmpResult54 = channel(12899);
                                                                 } else {
                                                                   const intl56 = channel(1128).intl;
                                                                   if (intl56.string(channel(1128).t.rBIGBL) === label) {
@@ -830,14 +830,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                             messageId: id2,
                                                                             displayToast: true,
                                                                             source:
-                                                                              channel(13822).SavedMessageSources
+                                                                              channel(13821).SavedMessageSources
                                                                                 .LONG_PRESS_ACTION_SHEET,
                                                                           };
                                                                           const result12 =
-                                                                            channel(13812).addOrUpdateSavedMessage(
+                                                                            channel(13811).addOrUpdateSavedMessage(
                                                                               obj26,
                                                                             );
-                                                                          const tmpResult59 = channel(13812);
+                                                                          const tmpResult59 = channel(13811);
                                                                         } else {
                                                                           const intl60 = channel(1128).intl;
                                                                           if (
@@ -849,8 +849,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                               messageId: id2,
                                                                               displayToast: true,
                                                                             };
-                                                                            channel(13812).removeSavedMessage(obj27);
-                                                                            const tmpResult60 = channel(13812);
+                                                                            channel(13811).removeSavedMessage(obj27);
+                                                                            const tmpResult60 = channel(13811);
                                                                           } else {
                                                                             const intl61 = channel(1128).intl;
                                                                             if (
@@ -882,7 +882,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                               obj28.onBack = onBack;
                                                                               tmp131(5210).openLazy(
                                                                                 channel(2002)(
-                                                                                  13819,
+                                                                                  13818,
                                                                                   dependencyMap.paths,
                                                                                 ),
                                                                                 "MessageReminderDurationActionSheet",
@@ -931,7 +931,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                 obj29.onBack = onBack;
                                                                                 tmp131(5210).openLazy(
                                                                                   channel(2002)(
-                                                                                    13819,
+                                                                                    13818,
                                                                                     dependencyMap.paths,
                                                                                   ),
                                                                                   "MessageReminderDurationActionSheet",
@@ -987,7 +987,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       obj30.embedId = id3;
                                                                                       tmp131(5210).openLazy(
                                                                                         channel(2002)(
-                                                                                          12826,
+                                                                                          12825,
                                                                                           dependencyMap.paths,
                                                                                         ),
                                                                                         closure_20,
@@ -1008,7 +1008,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       channel_id: obj9.channelId,
                                                                                       id: obj9.messageId,
                                                                                     } = message);
-                                                                                    tmp131(12220).endPollEarly({
+                                                                                    tmp131(12222).endPollEarly({
                                                                                       channelId: null,
                                                                                       messageId: null,
                                                                                     });
@@ -1017,7 +1017,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       messageId: null,
                                                                                     };
                                                                                     const tmp131Result54 =
-                                                                                      tmp131(12220);
+                                                                                      tmp131(12222);
                                                                                   } else {
                                                                                     const intl65 = channel(1128).intl;
                                                                                     if (
@@ -1032,7 +1032,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       };
                                                                                       tmp131(5210).openLazy(
                                                                                         channel(2002)(
-                                                                                          13985,
+                                                                                          13984,
                                                                                           dependencyMap.paths,
                                                                                         ),
                                                                                         "AppInteractionInfoActionSheet",

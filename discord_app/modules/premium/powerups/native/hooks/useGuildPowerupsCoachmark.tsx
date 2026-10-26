@@ -6,13 +6,13 @@ import useHasAllocateBoostPermissionDefault from "../../hooks/useHasAllocateBoos
 import useGetGuildPowerupBannerImage from "../../hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsBoostGemDefault from "../GuildPowerupsBoostGem.tsx";
 import GuildPowerupsImageDefault from "../GuildPowerupsImage.tsx";
-import _modDef13475 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
-import _modDef17598 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
+import _modDef13474 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef17597 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
 import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction.tsx";
-import _modDef17602 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
-import _modDef17603 from "../../../../../../discord_assets/assets/premium/powerups/vanity_url_powerup_2x.gif.js";
-import _modDef17604 from "../../../../../../discord_assets/assets/premium/powerups/guild_tag_badge_packs_wave_two_powerup_2x.png.js";
-import _modDef17605 from "../../../../../../discord_assets/assets/powerups/file-upload-static-2x.png.js";
+import _modDef17601 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
+import _modDef17602 from "../../../../../../discord_assets/assets/premium/powerups/vanity_url_powerup_2x.gif.js";
+import _modDef17603 from "../../../../../../discord_assets/assets/premium/powerups/guild_tag_badge_packs_wave_two_powerup_2x.png.js";
+import _modDef17604 from "../../../../../../discord_assets/assets/powerups/file-upload-static-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj9.visible = true;
               obj9.renderImgComponent = function renderImgComponent() {
                 if (powerups.length > 1) {
-                  let str = _modDef17602;
+                  let str = _modDef17601;
                 } else {
                   str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
                   if (str == null) {
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   true,
                 );
                 if (guildPowerupBannerImage == null) {
-                  guildPowerupBannerImage = _modDef17598;
+                  guildPowerupBannerImage = _modDef17597;
                 }
                 const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
                 const items = [,];

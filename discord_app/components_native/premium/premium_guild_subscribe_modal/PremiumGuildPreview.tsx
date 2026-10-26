@@ -6,6 +6,7 @@ import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
+import _modDef14923 from "../../../../_runtime/metro/14923__.js";
 import _modDef14924 from "../../../../_runtime/metro/14924__.js";
 import _modDef14925 from "../../../../_runtime/metro/14925__.js";
 import _modDef14926 from "../../../../_runtime/metro/14926__.js";
@@ -13,7 +14,6 @@ import _modDef14927 from "../../../../_runtime/metro/14927__.js";
 import _modDef14928 from "../../../../_runtime/metro/14928__.js";
 import _modDef14929 from "../../../../_runtime/metro/14929__.js";
 import _modDef14930 from "../../../../_runtime/metro/14930__.js";
-import _modDef14931 from "../../../../_runtime/metro/14931__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -22,29 +22,29 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef14925;
-    const tmp19 = _modDef14924;
+    let tmp20 = _modDef14924;
+    const tmp19 = _modDef14923;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef14927;
-    const tmp14 = _modDef14926;
+    let tmp15 = _modDef14926;
+    const tmp14 = _modDef14925;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef14929;
-    const tmp9 = _modDef14928;
+    let tmp10 = _modDef14928;
+    const tmp9 = _modDef14927;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef14931;
-    const tmp4 = _modDef14930;
+    let tmp5 = _modDef14930;
+    const tmp4 = _modDef14929;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }

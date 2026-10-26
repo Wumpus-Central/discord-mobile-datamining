@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         sensitiveContentFilterHelpArticle(7398).useSensitiveContentFilterHelpArticle();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const result = sensitiveContentFilterHelpArticle(15977).trackSafetySettingsNoticeAnalytics(
+          const result = sensitiveContentFilterHelpArticle(15976).trackSafetySettingsNoticeAnalytics(
             constants2.AGE_CONFIRMATION_NOTICE,
             constants.VIEWED,
           );
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       sensitiveContentFilterHelpArticle =
         sensitiveContentFilterHelpArticle(7398).useSensitiveContentFilterHelpArticle();
       const effect = noop.useEffect(() => {
-        const result = sensitiveContentFilterHelpArticle(15977).trackSafetySettingsNoticeAnalytics(
+        const result = sensitiveContentFilterHelpArticle(15976).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.VIEWED,
         );
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           entryPoint: sensitiveContentFilterHelpArticle(6657).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         };
-        const result1 = sensitiveContentFilterHelpArticle(15977).trackSafetySettingsNoticeAnalytics(
+        const result1 = sensitiveContentFilterHelpArticle(15976).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.CONFIRM_AGE,
         );

@@ -18,7 +18,7 @@ export default function openGuildPowerupsModal(navigationParams) {
     tmp2 = obj;
   }
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(13404, dependencyMap.paths),
+    asyncRequireImpl(13403, dependencyMap.paths),
     tmp2,
     "guild_powerups_modal_key",
     navigationParams.navigationParams,

@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = projectId(576).c(33);
       projectId = projectId.projectId;
       const obj = projectId(576);
-      const iter = projectId(12276).useConjurePublishHistory(projectId);
+      const iter = projectId(12278).useConjurePublishHistory(projectId);
       let entries = iter.state;
       if ("loading" === entries.status) {
         const _Symbol6 = Symbol;
@@ -542,11 +542,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = fn;
         tmp9 = fn;
       }
-      const obj2 = projectId(12276);
+      const obj2 = projectId(12278);
     }
   : function ConjurePublishHistoryPanel(projectId) {
       projectId = projectId.projectId;
-      const iter = projectId(12276).useConjurePublishHistory(projectId);
+      const iter = projectId(12278).useConjurePublishHistory(projectId);
       const state = iter.state;
       if ("loading" === state.status) {
         const obj2 = { variant: "text-sm/normal", children: null };

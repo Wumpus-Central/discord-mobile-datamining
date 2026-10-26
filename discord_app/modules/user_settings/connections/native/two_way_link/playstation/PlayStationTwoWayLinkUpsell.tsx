@@ -6,7 +6,7 @@ import dismissible_content from "../../../../../../../discord_common/js/packages
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell2 from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef16264 from "../../../../../../../_runtime/metro/16264__.js";
+import _modDef16263 from "../../../../../../../_runtime/metro/16263__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,8 +42,8 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.upsellImage) {
-        const obj4 = { style: tmp4.upsellImage, source: _modDef16264, resizeMode: "contain" };
-        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef16264, resizeMode: "contain" });
+        const obj4 = { style: tmp4.upsellImage, source: _modDef16263, resizeMode: "contain" };
+        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef16263, resizeMode: "contain" });
         cResult[3] = tmp4.upsellImage;
         cResult[4] = tmp17;
         let tmp13 = tmp17;
@@ -119,7 +119,7 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
       const intl2 = util.intl;
       obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
       const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-      obj3.source = _modDef16264;
+      obj3.source = _modDef16263;
       obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
       obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
       obj2.onPress = function onPress() {

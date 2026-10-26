@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }, items)}
         >
-          {jsx(num2(12981), { value: closure_10(end, num), size: num2 })}
+          {jsx(num2(12980), { value: closure_10(end, num), size: num2 })}
         </View>
       );
     };

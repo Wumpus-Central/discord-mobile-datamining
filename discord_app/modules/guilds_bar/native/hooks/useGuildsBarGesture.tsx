@@ -241,7 +241,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "duration", positionPercentage: false };
+    sectionItemFromPosition = { item: "emoji", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -274,7 +274,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6701).GuildsNodeType;
-const GuildsBarConstants = fn(17731);
+const GuildsBarConstants = fn(17730);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -658,7 +658,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Reflect" });
+    state1.setStateShallow({ dragSpecs: "dispatch", overSpecs: "ix" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};

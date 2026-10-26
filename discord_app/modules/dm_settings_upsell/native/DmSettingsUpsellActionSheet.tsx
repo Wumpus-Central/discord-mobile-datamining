@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = cResult[12];
           }
           if (cResult[13] !== tmp4.headerImage) {
-            let obj2 = { source: stateFromStores(10943), style: tmp4.headerImage };
+            let obj2 = { source: stateFromStores(10945), style: tmp4.headerImage };
             const tmp19 = closure_6(stateFromStores(5669), obj2);
             cResult[13] = tmp4.headerImage;
             cResult[14] = tmp19;
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores) {
         let obj2 = { startExpanded: true, children: null };
         let obj3 = { style: tmp.container, children: null };
-        const obj4 = { source: stateFromStores(10943), style: tmp.headerImage };
+        const obj4 = { source: stateFromStores(10945), style: tmp.headerImage };
         const items2 = [closure_6(stateFromStores(5669), obj4), , , , , ,];
         const obj5 = {
           variant: "heading-lg/bold",

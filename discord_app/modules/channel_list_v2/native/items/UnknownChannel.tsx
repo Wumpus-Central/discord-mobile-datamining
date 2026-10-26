@@ -21,7 +21,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let obj = {
   container: {
-    marginVertical: fn(12060).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(12060).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

@@ -300,7 +300,7 @@ class MediaEngineNative extends tmp4 {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -771,7 +771,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -812,7 +812,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
           closure_128_1 = id;
           if (closure_128_1 === closure_129_1.videoInputDeviceId) {
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } else {
             closure_129_1.videoInputDeviceId = closure_128_1;
             if (!obj9.supportsFeature(constants.SET_VIDEO_DEVICE_BY_ID)) {
@@ -1009,7 +1009,7 @@ prototype["startSnapshotCapture"] = function startSnapshotCapture(width, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -1096,7 +1096,7 @@ prototype["startSnapshotCapture"] = function startSnapshotCapture(width, arg1) {
                 const result3 = signalSnapshotProcessed3(closure_133_0);
               }
               c10 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp51) {
             closure_7 = tmp51;
@@ -1642,7 +1642,7 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             guildId(onClose[12])();
           });
           return () => {
-            guildId(13687).terminate();
+            guildId(13686).terminate();
           };
         };
         const items = [onClose];
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           require("navigateToLastChannel")();
         });
         return () => {
-          closure_1_1(13687).terminate();
+          closure_1_1(13686).terminate();
         };
       }, items);
       const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { source: null };
       const tmp5 = _slicedToArray(noop.useState(null), 2);
       const tmp7 = email;
-      obj4.source = require("../../../../../_runtime/metro/13688__.js");
+      obj4.source = require("../../../../../_runtime/metro/13687__.js");
       const items1 = [closure_8(require("FastImage"), obj4), , , , ,];
       const obj5 = {
         style: tmp.title,

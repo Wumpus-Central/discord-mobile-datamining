@@ -20,18 +20,18 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const callback = noop.useCallback(
     () =>
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13819, dependencyMap.paths),
+        asyncRequireImpl(13818, dependencyMap.paths),
         "MessageReminderDurationActionSheet",
         {
           createReminder(dueAt) {
             const obj2 = {};
             const merged = Object.assign(closure_1_0.saveData);
             obj2.dueAt = dueAt;
-            obj2.source = savedMessage(13822).SavedMessageSources.FOR_LATER_LIST;
-            return savedMessage(13812).addOrUpdateSavedMessage(obj2);
+            obj2.source = savedMessage(13821).SavedMessageSources.FOR_LATER_LIST;
+            return savedMessage(13811).addOrUpdateSavedMessage(obj2);
           },
           removeReminder() {
-            return savedMessage(13812).removeSavedMessage({
+            return savedMessage(13811).removeSavedMessage({
               channelId: closure_1_0.saveData.channelId,
               messageId: closure_1_0.saveData.messageId,
               displayToast: true,
@@ -110,7 +110,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13823).BellZIcon;
+      let PencilIcon = tmp3(13822).BellZIcon;
     } else {
       PencilIcon = tmp3(10120).PencilIcon;
     }

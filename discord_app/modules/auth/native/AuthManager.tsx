@@ -10,10 +10,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(13310).PermissionStateType;
+const PermissionStateType = fn(13309).PermissionStateType;
 const ME = fn(1087).ME;
 let closure_8 = fn(7868).NotificationAuthorizationStatus;
-const NewUserTypes = fn(13610).NewUserTypes;
+const NewUserTypes = fn(13609).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -38,7 +38,7 @@ class AuthManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -76,8 +76,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17416).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17416);
+          const result = applyArgumentsResult(17415).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17415);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -104,12 +104,12 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13694).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13694);
+        applyArgumentsResult(13693).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13693);
       }
       obj = applyArgumentsResult(9050);
-      applyArgumentsResult(13609).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(13609);
+      applyArgumentsResult(13608).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13608);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

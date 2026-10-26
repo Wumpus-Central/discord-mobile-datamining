@@ -19,7 +19,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "duration",
+    overSpecs: "emoji",
     dropSpecs: "toCharArray$esjava$1",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
@@ -131,7 +131,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "duration",
+              dragState: "emoji",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,
@@ -239,7 +239,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "duration",
+              dragState: "emoji",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,

@@ -7,7 +7,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountEmailSettingTrailing() {
       const cResult = c.c(2);

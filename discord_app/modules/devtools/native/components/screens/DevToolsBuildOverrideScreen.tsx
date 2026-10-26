@@ -21,9 +21,9 @@ let closure_9 = createStyles.createStyles(obj);
 let obj4 = { padding: nativeDefault.space.PX_16 };
 let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(9463).TagIcon, {}) }];
 let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(9463).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16944).HashmarkIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16943).HashmarkIcon, {}) };
 const ReactCompilerGating = fn(558);
-let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16944).HashmarkIcon, {}) };
+let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16943).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -148,13 +148,13 @@ export default noop.memo(
                 ,
               ];
               const obj6 = {
-                icon: jsx(tmp(11786).RefreshIcon, {}),
+                icon: jsx(tmp(11788).RefreshIcon, {}),
                 label: "Refresh Override",
                 onPress: tmp(12716).refreshBuildOverride,
                 arrow: true,
               };
               items1[1] = jsx(tmp(6903).TableRow, {
-                icon: jsx(tmp(11786).RefreshIcon, {}),
+                icon: jsx(tmp(11788).RefreshIcon, {}),
                 label: "Refresh Override",
                 onPress: tmp(12716).refreshBuildOverride,
                 arrow: true,
@@ -652,13 +652,13 @@ export default noop.memo(
             ,
           ];
           const obj6 = {
-            icon: jsx(tmp3(11786).RefreshIcon, {}),
+            icon: jsx(tmp3(11788).RefreshIcon, {}),
             label: "Refresh Override",
             onPress: tmp3(12716).refreshBuildOverride,
             arrow: true,
           };
           items1[1] = jsx(tmp3(6903).TableRow, {
-            icon: jsx(tmp3(11786).RefreshIcon, {}),
+            icon: jsx(tmp3(11788).RefreshIcon, {}),
             label: "Refresh Override",
             onPress: tmp3(12716).refreshBuildOverride,
             arrow: true,

@@ -2,11 +2,11 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "enabled",
+  id: "end",
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: "box-none",
+  containerHeight: "sku",
   showSecondaryPIP: null,
   scale: null,
 };

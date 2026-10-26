@@ -17,7 +17,7 @@ const util = obj(1128);
 const InteractionComponentUtils = obj(6014);
 const FileSizeUtils = obj(6379);
 const TableRow = obj(6903);
-const FileUpIcon = obj(11790);
+const FileUpIcon = obj(11792);
 require = fn;
 const View = fn(17).View;
 const DraftType = fn(7631).DraftType;
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           while (true) {
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else if (1 === tmp5) {
               let v1 = 0;
@@ -620,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           while (true) {
@@ -656,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else if (1 === tmp5) {
               let v1 = 0;

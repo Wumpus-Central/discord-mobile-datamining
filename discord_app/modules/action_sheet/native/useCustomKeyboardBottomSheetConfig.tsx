@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = minimum(1499)(first);
       _require = tmp8;
-      const tmp9 = minimum(10917)();
+      const tmp9 = minimum(10919)();
       minimum = tmp9.minimum;
       const maximum = tmp9.maximum;
       if (cResult[1] === minimum) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj3.containerHeight = tmp8.height;
               obj3.initialPosition = initialPosition;
               let str;
-              if (tmp(10916).IS_SYSTEM_KEYBOARD_EXTERNAL) {
+              if (tmp(10918).IS_SYSTEM_KEYBOARD_EXTERNAL) {
                 str = "adjustResize";
               }
               obj3.android_keyboardInputMode = str;

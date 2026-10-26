@@ -266,8 +266,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let obj = selectedTab(576);
-      const isGameProfileCommunitiesMobileEnabled = selectedTab(14161).useIsGameProfileCommunitiesMobileEnabled(first);
-      const tmpResult = selectedTab(14161);
+      const isGameProfileCommunitiesMobileEnabled = selectedTab(14160).useIsGameProfileCommunitiesMobileEnabled(first);
+      const tmpResult = selectedTab(14160);
       const token = selectedTab(5252).useToken(tmp4(587).colors.BACKGROUND_BASE_LOWEST);
       if (cResult[1] !== token) {
         let obj5 = tmp4(683)(token);
@@ -770,7 +770,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[20] = selectedTab;
               cResult[21] = tmp5.item;
               cResult[22] = tmp5.label;
-              cResult[23] = closure_9(tmp(14156).YouScreenNavIconMeasurer, obj8);
+              cResult[23] = closure_9(tmp(14155).YouScreenNavIconMeasurer, obj8);
               class A {
                 constructor() {
                   tmp = closure_5;
@@ -800,7 +800,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              const tmp37 = closure_9(tmp(14156).YouScreenNavIconMeasurer, obj8);
+              const tmp37 = closure_9(tmp(14155).YouScreenNavIconMeasurer, obj8);
             }
             const obj9 = { style: null, pointerEvents: "none" };
             let items = [tmp5.selection, animatedStyle];
@@ -918,10 +918,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const selectTab = navigation.selectTab;
       const tmp3 = closure_17(selectTab(1633)().bottom);
       dependencyMap = tmp3;
-      const isGameProfileCommunitiesMobileEnabled = selectedTab(14161).useIsGameProfileCommunitiesMobileEnabled({
+      const isGameProfileCommunitiesMobileEnabled = selectedTab(14160).useIsGameProfileCommunitiesMobileEnabled({
         location: "GameProfileFloatingNav",
       });
-      let obj = selectedTab(14161);
+      let obj = selectedTab(14160);
       const token = selectedTab(5252).useToken(selectTab(587).colors.BACKGROUND_BASE_LOWEST);
       let items = [token];
       const memo = noop.useMemo(() => {
@@ -1030,7 +1030,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             );
           }),
         };
-        items5[1] = closure_9(tmp4(14156).YouScreenNavIconMeasurer, obj12);
+        items5[1] = closure_9(tmp4(14155).YouScreenNavIconMeasurer, obj12);
         obj10.children = items5;
         items3[1] = closure_10(closure_7, obj10);
         obj8.children = items3;

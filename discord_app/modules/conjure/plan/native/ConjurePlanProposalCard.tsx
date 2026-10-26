@@ -81,7 +81,7 @@ obj2.overlayDesign = {
   overflow: "hidden",
 };
 let obj8 = { transform: null };
-let items = [{ scale: 1.1 }];
+let items = [{ scale: 1.04 }];
 obj8.transform = items;
 obj2.blurredBackground = obj8;
 let obj7 = {
@@ -213,7 +213,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.style = items2;
         let num3;
         if (tmp6Result.blurred) {
-          num3 = 12;
+          num3 = 4;
         }
         obj7.blurRadius = num3;
         obj7.onError = tmp6Result.handleError;
@@ -254,7 +254,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.style = items;
         let num;
         if (tmp4Result.blurred) {
-          num = 12;
+          num = 4;
         }
         obj4.blurRadius = num;
         obj4.onError = tmp4Result.handleError;

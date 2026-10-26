@@ -181,7 +181,7 @@ let closure_14 = noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -279,7 +279,7 @@ let closure_14 = noop.memo(
                   P(currentlySelectedChannelId2, closure_129_0);
                 }
                 c6 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp63) {
               if (tmp4 === v0) {
@@ -359,7 +359,7 @@ let closure_14 = noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -461,7 +461,7 @@ let closure_14 = noop.memo(
                     closure_130_7(currentlySelectedChannelId2, closure_129_0);
                   }
                   c6 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } catch (tmp63) {
                 if (tmp4 === c4) {

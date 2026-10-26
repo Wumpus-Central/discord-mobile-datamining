@@ -6,7 +6,7 @@ import BrowserManager from "../../../links/native/BrowserManager.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
@@ -33,7 +33,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1128).t["zaEQz+"]);
             v1(5663).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

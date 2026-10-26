@@ -6,8 +6,8 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
-import _modDef11689 from "../../../../../_runtime/metro/11689__.js";
-import _modDef11690 from "../../../../../_runtime/metro/11690__.js";
+import _modDef11691 from "../../../../../_runtime/metro/11691__.js";
+import _modDef11692 from "../../../../../_runtime/metro/11692__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
@@ -53,15 +53,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
           const intl = videoDeviceId(1128).intl;
           obj2.accessibilityLabel = intl.string(videoDeviceId(1128).t["t9eQ/g"]);
-          obj2.source = videoDevices(11689);
+          obj2.source = videoDevices(11691);
           obj2.onPress = tmp8;
-          tmp10 = jsx(videoDevices(11546), {
+          tmp10 = jsx(videoDevices(11548), {
             accessibilityLabel: null,
             source: null,
             onPress: null,
             disableBackground: true,
           });
-          const tmp13 = videoDevices(11546);
+          const tmp13 = videoDevices(11548);
         }
         cResult[5] = tmp8;
         cResult[6] = isVideoEnabled;
@@ -94,7 +94,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-        obj2.source = _modDef11689;
+        obj2.source = _modDef11691;
         obj2.onPress = function handleCamera() {
           const keys = Object.keys(closure_1_1);
           const found = keys.find((item) => item !== closure_1_0);
@@ -136,7 +136,7 @@ export const GridButton = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
           const intl = tmp(1128).intl;
           obj2.accessibilityLabel = intl.string(tmp(1128).t.HK4JIu);
-          obj2.source = _modDef11690;
+          obj2.source = _modDef11692;
           obj2.onPress = function onPress() {
             return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
           };
@@ -165,7 +165,7 @@ export const GridButton = ReactCompilerGating.isReactCompilerEnabled()
           const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
           const intl = channel(1128).intl;
           obj.accessibilityLabel = intl.string(channel(1128).t.HK4JIu);
-          obj.source = _modDef11690;
+          obj.source = _modDef11692;
           obj.onPress = function onPress() {
             return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
           };

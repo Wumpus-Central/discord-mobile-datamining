@@ -1259,7 +1259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = {
-          context: connectedActivityInTextChannelId(18457),
+          context: connectedActivityInTextChannelId(18456),
           orientationLockStateForApp,
           mode,
           hasConnectedActivity,
@@ -1270,7 +1270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp19 = (
           <closure_24
-            context={connectedActivityInTextChannelId(18457)}
+            context={connectedActivityInTextChannelId(18456)}
             orientationLockStateForApp={orientationLockStateForApp}
             mode={mode}
             hasConnectedActivity={hasConnectedActivity}
@@ -1373,7 +1373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = mode(504);
       return (
         <closure_24
-          context={connectedActivityInTextChannelId(18457)}
+          context={connectedActivityInTextChannelId(18456)}
           orientationLockStateForApp={orientationLockStateForApp}
           mode={mode}
           hasConnectedActivity={hasConnectedActivity}

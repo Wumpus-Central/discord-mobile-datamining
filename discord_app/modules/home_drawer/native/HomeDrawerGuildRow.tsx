@@ -334,11 +334,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp = unreadChannel.getMutableGuildStates()[guild.id];
           guild = tmp;
           if (null == tmp) {
-            return {
-              mentionChannel: "duration",
-              mentionChannelName: "toCharArray$esjava$1",
-              mentionChannelCount: null,
-            };
+            return { mentionChannel: "emoji", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
           } else {
             const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
             const found = keys.filter((item) => {

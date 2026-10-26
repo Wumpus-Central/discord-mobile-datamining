@@ -659,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -699,7 +699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   mediaEngine.on(auto(5739).MediaEngineEvent.VoiceActivity, callback);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp17) {
               c2 = tmp;

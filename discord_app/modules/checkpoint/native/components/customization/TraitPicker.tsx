@@ -20,11 +20,11 @@ const jsxProd = fn(21);
 let c10 = 600;
 const PX_12 = nativeDefault.space.PX_12;
 const createStyles = fn(4971);
-let obj2 = { container: { gap: fn(13029).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(13029).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13029).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13029).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(13029).CONTENT_INSET };
+let obj2 = { container: { gap: fn(13028).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(13028).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13028).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13028).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13028).CONTENT_INSET };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -165,7 +165,7 @@ const __initData2 = {
   code: "function TraitPickerTsx2(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}",
 };
 ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: fn(13029).CONTENT_INSET };
+let obj5 = { paddingHorizontal: fn(13028).CONTENT_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = customizationOption(504);
       _slicedToArray = customizationOption(5267).useIsScreenReaderEnabled();
       let obj3 = customizationOption(5267);
-      const traitPickerOptions = customizationOption(13031).useTraitPickerOptions({
+      const traitPickerOptions = customizationOption(13030).useTraitPickerOptions({
         customizationOption,
         optionIds,
         savedOptionId,
@@ -698,7 +698,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = 0 === tmp8;
       }
       useReducedMotion = tmp9;
-      const obj4 = customizationOption(13031);
+      const obj4 = customizationOption(13030);
       const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
       const fn = function f() {
         const obj = { duration, easing: null };
@@ -748,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp15;
       }
       obj7.paused = tmp14;
-      const autoSelectTraitOption = customizationOption(13032).useAutoSelectTraitOption(obj7);
+      const autoSelectTraitOption = customizationOption(13031).useAutoSelectTraitOption(obj7);
       let diff = earnedCount;
       if (null == selectedOptionId) {
         diff = earnedCount - tmp12;
@@ -766,7 +766,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [
         showEarnedCount,
-        closure_8(selectedOptionId(13029), {
+        closure_8(selectedOptionId(13028), {
           customizationOption,
           options: availableTraitOptions,
           selectedOptionId,
@@ -783,7 +783,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items3 = [tmp.details, animatedStyle];
         obj10.style = items3;
         const obj11 = { asset: found, hideDescriptionAndRarity: tmp4 };
-        obj10.children = closure_8(tmp7(13033), obj11);
+        obj10.children = closure_8(tmp7(13032), obj11);
         tmp23Result = closure_8(tmp7(5052).View, obj10);
       }
       items2[2] = tmp23Result;

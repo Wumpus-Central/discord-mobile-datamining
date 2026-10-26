@@ -429,7 +429,7 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

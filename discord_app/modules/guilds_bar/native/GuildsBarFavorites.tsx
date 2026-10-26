@@ -178,10 +178,10 @@ export default noop.memo(
         const memo = noop.useMemo(
           () => ({
             onPress() {
-              closure_1_1(17758)(closure_1_5);
+              closure_1_1(17757)(closure_1_5);
             },
             onLongPress() {
-              closure_1_1(17563)();
+              closure_1_1(17562)();
             },
           }),
           [],

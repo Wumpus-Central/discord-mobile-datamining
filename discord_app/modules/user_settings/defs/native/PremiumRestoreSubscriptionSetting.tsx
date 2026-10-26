@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasPremiumRestoreSubscriptionSetting() {
       const cResult = c.c(4);

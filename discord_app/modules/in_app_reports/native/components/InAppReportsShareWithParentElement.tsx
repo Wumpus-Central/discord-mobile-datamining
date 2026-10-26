@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                           const _Symbol = Symbol;
                           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                            const tmp52 = jsx(tmp(14207).ShareIcon, {});
+                            const tmp52 = jsx(tmp(14206).ShareIcon, {});
                             const intl3 = tmp(1128).intl;
                             const stringResult = intl3.string(tmp(1128).t["5l/hlt"]);
                             cResult[15] = tmp52;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj3.parent3 = username3;
         obj.disabledTitle = intl.formatToPlainString(parents(1128).t.BlAMme, obj3);
-        obj.icon = jsx(parents(14207).ShareIcon, {});
+        obj.icon = jsx(parents(14206).ShareIcon, {});
         const intl2 = tmp15(1128).intl;
         obj.description = intl2.string(parents(1128).t["5l/hlt"]);
         obj.disabled = tmp[0];

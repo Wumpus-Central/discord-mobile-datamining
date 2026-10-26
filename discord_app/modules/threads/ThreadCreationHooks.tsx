@@ -531,7 +531,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -626,7 +626,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -681,7 +681,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -776,7 +776,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -863,7 +863,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -1109,7 +1109,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

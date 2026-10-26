@@ -33,7 +33,7 @@ let closure_15 = async function _fetchCurrentAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_17 = async function _setAppIcon(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -129,7 +129,7 @@ let closure_17 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -222,7 +222,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -254,7 +254,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = value;
                 tmp2(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp12) {
               c3 = tmp;
@@ -308,7 +308,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -341,7 +341,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = value;
                 closure_129_0(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp12) {
               c3 = tmp;

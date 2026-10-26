@@ -70,13 +70,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             game: stateFromStores,
             sheetKey: OrbsArcadeHowToPlaySheet,
-            secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+            secondaryAction: tmp(16413).OrbsArcadeSheetSecondaryAction.CLOSE,
             direction: "vertical",
           };
           const tmp20 = jsx(OrbsArcadeSheetActionsDefault, {
             game: stateFromStores,
             sheetKey: OrbsArcadeHowToPlaySheet,
-            secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+            secondaryAction: tmp(16413).OrbsArcadeSheetSecondaryAction.CLOSE,
             direction: "vertical",
           });
           cResult[7] = stateFromStores;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { illustration: tmp9, title: tmp13, description: str, actions: tmp15 };
-        const tmp23 = jsx(tmp(10853).PromoSheet, {
+        const tmp23 = jsx(tmp(10855).PromoSheet, {
           illustration: tmp9,
           title: tmp13,
           description: str,
@@ -131,16 +131,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           game: stateFromStores,
           sheetKey: OrbsArcadeHowToPlaySheet,
-          secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+          secondaryAction: tmp(16413).OrbsArcadeSheetSecondaryAction.CLOSE,
           direction: "vertical",
         };
         obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
           game: stateFromStores,
           sheetKey: OrbsArcadeHowToPlaySheet,
-          secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+          secondaryAction: tmp(16413).OrbsArcadeSheetSecondaryAction.CLOSE,
           direction: "vertical",
         });
-        tmp5Result2 = jsx(tmp(10853).PromoSheet, {
+        tmp5Result2 = jsx(tmp(10855).PromoSheet, {
           illustration: tmp5Result,
           title: null,
           description: null,

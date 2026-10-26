@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN",
-          externalChildren: null,
-          expandedChildren: "text-xs/semibold",
-          children: "text-strong",
+          label: "itens",
+          externalChildren: "ter",
+          expandedChildren: false,
+          children: false,
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN",
-          externalChildren: null,
-          expandedChildren: "text-xs/semibold",
-          children: "text-strong",
+          label: "itens",
+          externalChildren: "ter",
+          expandedChildren: false,
+          children: false,
         });
       },
 );

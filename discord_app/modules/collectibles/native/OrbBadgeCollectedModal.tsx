@@ -141,7 +141,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { source: null, style: null };
-        const obj3 = { uri: onPressViewBadge(14150) };
+        const obj3 = { uri: onPressViewBadge(14149) };
         obj2.source = obj3;
         obj2.style = tmp4.background;
         let tmp10Result = closure_6(onPressViewBadge(5669), obj2);
@@ -154,9 +154,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const obj4 = { uri: onPressViewBadge(14151) };
+        const obj4 = { uri: onPressViewBadge(14150) };
         tmp11[0] = obj4;
-        tmp11[1] = onPressViewBadge(14150);
+        tmp11[1] = onPressViewBadge(14149);
         tmp11[2] = tmp4.background;
         tmp10Result = closure_6(tmp(8790).VideoComponent, tmp11);
       }
@@ -183,7 +183,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       if (stateFromStores) {
         const obj3 = { source: null, style: null };
-        const obj4 = { uri: onPressViewBadge(14150) };
+        const obj4 = { uri: onPressViewBadge(14149) };
         obj3.source = obj4;
         obj3.style = tmp.background;
         let tmp9Result = closure_6(onPressViewBadge(5669), obj3);
@@ -200,9 +200,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           pauseWhileAppInactive: true,
           paused: false,
         };
-        const obj6 = { uri: onPressViewBadge(14151) };
+        const obj6 = { uri: onPressViewBadge(14150) };
         obj5.source = obj6;
-        obj5.poster = onPressViewBadge(14150);
+        obj5.poster = onPressViewBadge(14149);
         obj5.style = tmp.background;
         tmp9Result = closure_6(tmp2(8790).VideoComponent, obj5);
         tmp12 = onPressViewBadge;

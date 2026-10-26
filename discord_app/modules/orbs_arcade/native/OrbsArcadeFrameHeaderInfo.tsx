@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[8] !== balance) {
             const obj2 = { balance };
-            const tmp17 = closure_5(tmp(13949).BalanceWidgetPill, obj2);
+            const tmp17 = closure_5(tmp(13948).BalanceWidgetPill, obj2);
             cResult[8] = balance;
             cResult[9] = tmp17;
             let tmp15 = tmp17;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [
         tmp7,
-        closure_5(applicationId(13949).BalanceWidgetPill, {
+        closure_5(applicationId(13948).BalanceWidgetPill, {
           balance: applicationId(9451).useFetchVirtualCurrencyBalance().balance,
         }),
       ];

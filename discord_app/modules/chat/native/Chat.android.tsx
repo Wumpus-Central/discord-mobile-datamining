@@ -78,7 +78,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function DCDChatList() {
       const tmp = closure_9();
-      navigationTTIContentPainted = navigationTTIContentPainted(12849).useNavigationTTIContentPainted();
+      navigationTTIContentPainted = navigationTTIContentPainted(12848).useNavigationTTIContentPainted();
       const items = [navigationTTIContentPainted];
       const memo = noop.useMemo(() => {
         const Gesture = navigationTTIContentPainted(dependencyMap[8]).Gesture;
@@ -93,8 +93,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         onContentPaintStateChange: callback,
         children: null,
       };
-      const obj = navigationTTIContentPainted(12849);
-      obj3.children = closure_7(navigationTTIContentPainted(12855).TTIFirstContentfulPaint, {
+      const obj = navigationTTIContentPainted(12848);
+      obj3.children = closure_7(navigationTTIContentPainted(12854).TTIFirstContentfulPaint, {
         label: "chat_list_android",
       });
       obj2.children = closure_7(ChatListNativeComponentDefault, obj3);

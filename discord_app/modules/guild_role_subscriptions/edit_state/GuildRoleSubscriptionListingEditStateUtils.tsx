@@ -16,7 +16,7 @@ import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 const utils_ColorUtils = obj(1105);
-const Contants = obj(16587);
+const Contants = obj(16586);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -56,7 +56,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
           closure_129_16 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp5) {
@@ -215,7 +215,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
             return obj;
           }
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
         subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
         let tmp25 = null != trialLimit;
@@ -247,178 +247,107 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
   }
 };
 let closure_23 = async function _createListingFromEditState(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  ({
+    guildId: closure_132_0,
+    editStateId: closure_132_1,
+    groupListingId: closure_132_2,
+    onBeforeDispatchNewListing: closure_132_3,
+  } = closure_0);
+  await "Reflect";
+  if (1 === tmp4) {
     if (arg0 === 1) {
+      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c7 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_5 = tmp4;
-          c4 = 0;
-          closure_132_0 = undefined;
-          closure_132_1 = undefined;
-          closure_132_2 = undefined;
-          closure_132_3 = undefined;
-          ({
-            guildId: closure_132_0,
-            editStateId: closure_132_1,
-            groupListingId: closure_132_2,
-            onBeforeDispatchNewListing: closure_132_3,
-          } = closure_0);
-          closure_132_4 = undefined;
-          let name;
-          let description;
-          let channelBenefits;
-          let intangibleBenefits;
-          let priceTier;
-          let image;
-          let channelAccessFormat;
-          closure_132_12 = undefined;
-          let id;
-          closure_132_14 = undefined;
-          let templateTierCreationAnalyticsContext;
-          c6 = 1;
-          c7 = 1;
-          return { value: "Reflect", done: true };
-        }
+      closure_132_4 = closure_133_10.getState().listings[closure_132_1];
+      closure_133_1(closure_133_3[22])(null != closure_132_4, "edit state does not exist");
+      const name = closure_132_4.name;
+      const description = closure_132_4.description;
+      const channelBenefits = closure_132_4.channelBenefits;
+      const intangibleBenefits = closure_132_4.intangibleBenefits;
+      const priceTier = closure_132_4.priceTier;
+      const image = closure_132_4.image;
+      const channelAccessFormat = closure_132_4.channelAccessFormat;
+      closure_133_1(closure_133_3[22])(null != name, "no name provided");
+      closure_133_1(closure_133_3[22])(null != description, "no description provided");
+      closure_133_1(closure_133_3[22])(null != priceTier, "no priceTier provided");
+      closure_133_1(closure_133_3[22])(null != image, "no image provided");
+      closure_132_12 = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
+      let id = closure_132_2;
+      if (null == id) {
+        c6 = 2;
+        c7 = 1;
+        return {
+          value: closure_133_2(closure_133_3[24]).createSubscriptionGroupListing(closure_132_0, {}),
+          done: false,
+        };
       } else {
-        if (1 === tmp4) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            closure_132_4 = closure_133_10.getState().listings[closure_132_1];
-            closure_133_1(closure_133_3[22])(null != closure_132_4, "edit state does not exist");
-            name = closure_132_4.name;
-            description = closure_132_4.description;
-            channelBenefits = closure_132_4.channelBenefits;
-            intangibleBenefits = closure_132_4.intangibleBenefits;
-            priceTier = closure_132_4.priceTier;
-            image = closure_132_4.image;
-            channelAccessFormat = closure_132_4.channelAccessFormat;
-            closure_133_1(closure_133_3[22])(null != name, "no name provided");
-            closure_133_1(closure_133_3[22])(null != description, "no description provided");
-            closure_133_1(closure_133_3[22])(null != priceTier, "no priceTier provided");
-            closure_133_1(closure_133_3[22])(null != image, "no image provided");
-            closure_132_12 = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
-            id = closure_132_2;
-            if (null == id) {
-              c6 = 2;
-              c7 = 1;
-              const obj7 = {
-                value: closure_133_2(closure_133_3[24]).createSubscriptionGroupListing(closure_132_0, {}),
-                done: false,
-              };
-              return obj7;
-            } else {
-              let tmp9 = null != channelBenefits;
-              if (tmp9) {
-                tmp9 = channelBenefits.length > 0;
-              }
-              if (tmp9) {
-                c6 = 3;
-                c7 = 1;
-                const obj9 = {
-                  value: closure_133_0(closure_133_3[27]).createChannelsFromTemplateTierBenefits(
-                    closure_132_0,
-                    channelBenefits,
-                  ),
-                  done: false,
-                };
-                return obj9;
-              }
-            }
-          }
-        } else if (2 === tmp4) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            id = value.id;
-          }
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj = { value, done: true };
-          return obj;
+        let tmp9 = null != channelBenefits;
+        if (tmp9) {
+          tmp9 = channelBenefits.length > 0;
         }
-        closure_1 = 0;
-        closure_2 = channelBenefits;
-        if (channelBenefits == null) {
-          closure_2 = [];
+        if (tmp9) {
+          c6 = 3;
+          c7 = 1;
+          return {
+            value: closure_133_0(closure_133_3[27]).createChannelsFromTemplateTierBenefits(
+              closure_132_0,
+              channelBenefits,
+            ),
+            done: false,
+          };
         }
-        const items = [];
-        closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
-        closure_3 = intangibleBenefits;
-        if (intangibleBenefits == null) {
-          closure_3 = [];
-        }
-        closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
-        closure_132_14 = items;
-        templateTierCreationAnalyticsContext = closure_133_0(closure_133_3[27]).getTemplateTierCreationAnalyticsContext(
-          closure_132_1,
-          closure_132_0,
-        );
-        const obj3 = closure_133_0(closure_133_3[27]);
-        const obj12 = {
-          guildId: closure_132_0,
-          groupListingId: id,
-          data: null,
-          analyticsContext: null,
-          onBeforeDispatchNewListing: null,
-        };
-        const obj13 = {
-          can_access_all_channels: closure_132_12,
-          image,
-          name,
-          description,
-          benefits: closure_132_14,
-          priceTier,
-        };
-        obj12.data = obj13;
-        obj12.analyticsContext = templateTierCreationAnalyticsContext;
-        obj12.onBeforeDispatchNewListing = closure_132_3;
-        c7 = 3;
-        const obj14 = { value: closure_133_2(closure_133_3[24]).createSubscriptionListing(obj12), done: true };
-        return obj14;
       }
-    } catch (tmp52) {
-      c7 = tmp;
-      throw tmp52;
     }
+  } else if (2 === tmp4) {
+    if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c7 = 3;
+      return { value, done: true };
+    } else {
+      id = value.id;
+    }
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c7 = 3;
+    return { value, done: true };
   }
+  closure_1 = 0;
+  closure_2 = channelBenefits;
+  if (channelBenefits == null) {
+    closure_2 = [];
+  }
+  const items = [];
+  closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
+  closure_3 = intangibleBenefits;
+  if (intangibleBenefits == null) {
+    closure_3 = [];
+  }
+  closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
+  closure_132_14 = items;
+  const templateTierCreationAnalyticsContext = closure_133_0(closure_133_3[27]).getTemplateTierCreationAnalyticsContext(
+    closure_132_1,
+    closure_132_0,
+  );
+  closure_133_0(closure_133_3[27]);
+  return closure_133_2(closure_133_3[24]).createSubscriptionListing({
+    guildId: closure_132_0,
+    groupListingId: id,
+    data: { can_access_all_channels: closure_132_12, image, name, description, benefits: closure_132_14, priceTier },
+    analyticsContext: templateTierCreationAnalyticsContext,
+    onBeforeDispatchNewListing: closure_132_3,
+  });
 };
-const GuildRoleSubscriptionEditStore = fn(16585);
+const GuildRoleSubscriptionEditStore = fn(16584);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(16562).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(16561).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1087);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
@@ -1541,7 +1470,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1574,7 +1503,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             closure_129_7 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1629,8 +1558,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(16588).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(16588).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(16587).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(16587).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1689,7 +1618,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             c4 = 0;
             closure_0(false);
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           } else {
             throw closure_129_8;
           }

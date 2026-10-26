@@ -8,16 +8,16 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import JoinedThreadsStore from "../../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-const PostReactionPermissionNudgeExperimentDefault = tmp9(13321);
+const PostReactionPermissionNudgeExperimentDefault = tmp9(13320);
 require = fn;
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(13310).PermissionPromptType;
+const PermissionPromptType = fn(13309).PermissionPromptType;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13311);
+const NotificationPermissionConstants = fn(13310);
 ({
   EventActionLocation: map1,
   EventActionType: closure_14,
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = channel(504);
       let CHANNEL_BANNER = PermissionPromptType;
-      const shouldShowPushNotificationNudgeByPromptType = channel(13312).useShouldShowPushNotificationNudgeByPromptType(
+      const shouldShowPushNotificationNudgeByPromptType = channel(13311).useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.CHANNEL_BANNER,
       );
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -395,10 +395,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[3];
       }
-      const tmpResult5 = channel(13312);
+      const tmpResult5 = channel(13311);
       const tmp9Result = PostReactionPermissionNudgeExperimentDefault;
       const shouldShowPushNotificationNudgeByPromptType1 = channel(
-        13312,
+        13311,
       ).useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER.POST_REACTION_BANNER);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { cooldownDurationMs };
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[4];
       }
-      const tmpResult6 = channel(13312);
+      const tmpResult6 = channel(13311);
       let prop = null;
       if (tmp10) {
         prop = null;
@@ -607,15 +607,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = !useIsAppDMDefault(channel);
       }
       const obj = channel(504);
-      const shouldShowPushNotificationNudgeByPromptType = channel(13312).useShouldShowPushNotificationNudgeByPromptType(
+      const shouldShowPushNotificationNudgeByPromptType = channel(13311).useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.CHANNEL_BANNER,
       );
-      const tmpResult = channel(13312);
+      const tmpResult = channel(13311);
       const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
       const shouldShowPushNotificationNudgeByPromptType1 = channel(
-        13312,
+        13311,
       ).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
-      const tmpResult4 = channel(13312);
+      const tmpResult4 = channel(13311);
       let prop = null;
       if (tmp5) {
         prop = null;

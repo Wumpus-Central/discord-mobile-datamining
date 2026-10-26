@@ -248,7 +248,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
         const tmp15 = map1(native.Avatar, obj3);
         cResult[4] = stateFromStores;
         cResult[5] = tmp15;
@@ -282,7 +282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       const items1 = [map1(View, { style: tmp.avatarInnerBorder })];
       const obj3 = { style: tmp.avatarInnerBorder };
-      items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
+      items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
       obj2.children = items1;
       return closure_1_14(View, obj2);
     };
@@ -427,7 +427,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = tmp(1128).intl;
             const stringResult2 = intl3.string(tmp(1128).t.ItuabN);
             const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-            const tmp43 = closure_13(tmp(14031).WindowLaunchIcon, obj10);
+            const tmp43 = closure_13(tmp(14030).WindowLaunchIcon, obj10);
             cResult[26] = stringResult2;
             cResult[27] = tmp43;
             let tmp40 = tmp43;
@@ -582,7 +582,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         title: null,
         leading: closure_13(markAsDismissed(7293).ActionSheetCloseButton, { onPress: handleCancel }),
       };
-      obj10.icon = closure_13(markAsDismissed(14031).WindowLaunchIcon, {
+      obj10.icon = closure_13(markAsDismissed(14030).WindowLaunchIcon, {
         size: "sm",
         color: nativeDefault.colors.WHITE,
       });
@@ -622,7 +622,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocalAppDetectionStore];
         const fn = function s() {
-          return appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX);
+          return appInstalled.isAppInstalled(stateFromStores(15026).DetectableAppNames.ROBLOX);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -734,7 +734,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   : function useShouldShowRobloxConnectionCoachmark() {
       const items = [LocalAppDetectionStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-        appInstalled.isAppInstalled(stateFromStores(15027).DetectableAppNames.ROBLOX),
+        appInstalled.isAppInstalled(stateFromStores(15026).DetectableAppNames.ROBLOX),
       );
       const tmp2 = hasRoloxAccount(noop.useState(false), 2);
       const first = tmp2[0];

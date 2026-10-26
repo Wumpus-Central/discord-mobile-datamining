@@ -421,8 +421,8 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: "6fdce3d9195ea0b36363d1d85d3fe1ac",
-          children: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages",
+          expandedChildren: true,
+          children: null,
         };
         let tmp11Result = null;
         if (null != channel) {
@@ -466,8 +466,8 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: "6fdce3d9195ea0b36363d1d85d3fe1ac",
-          children: "hi.messages.6fdce3d9195ea0b36363d1d85d3fe1ac.compiled.messages",
+          expandedChildren: true,
+          children: null,
         });
       },
 );

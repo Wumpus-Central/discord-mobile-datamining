@@ -4,7 +4,7 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod7220 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod13873 from "../../../../../../../_runtime/metro/13873__.js";
+import _mod13872 from "../../../../../../../_runtime/metro/13872__.js";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -221,7 +221,7 @@ export const MessagesItemChannelLegend = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function MessagesItemChannelLegend(arg0) {
         const cResult = c.c(4);
-        [tmp3, tmp4] = _mod13873.useRecyclingState(false);
+        [tmp3, tmp4] = _mod13872.useRecyclingState(false);
         if (cResult[0] === tmp3) {
           if (cResult[1] === arg0) {
             if (cResult[2] === tmp4) {
@@ -243,7 +243,7 @@ export const MessagesItemChannelLegend = noop.memo(
       }
     : function MessagesItemChannelLegend(arg0) {
         const obj2 = {};
-        [tmp2, tmp3] = _mod13873.useRecyclingState(false);
+        [tmp2, tmp3] = _mod13872.useRecyclingState(false);
         const merged = Object.assign(arg0);
         obj2.isPressed = tmp2;
         obj2.setIsPressed = tmp3;

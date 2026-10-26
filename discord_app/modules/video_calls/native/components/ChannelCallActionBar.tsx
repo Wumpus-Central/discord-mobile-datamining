@@ -14,9 +14,9 @@ import useIsFiveButtonLayout from "../useIsFiveButtonLayout.tsx";
 import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import _modDef11606 from "../../../../../_runtime/metro/11606__.js";
-import _modDef11607 from "../../../../../_runtime/metro/11607__.js";
 import _modDef11608 from "../../../../../_runtime/metro/11608__.js";
+import _modDef11609 from "../../../../../_runtime/metro/11609__.js";
+import _modDef11610 from "../../../../../_runtime/metro/11610__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -40,7 +40,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4971);
 let obj2 = {
   container: {
-    height: fn(11378).CALL_ACTION_BAR_HEIGHT,
+    height: fn(11380).CALL_ACTION_BAR_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -48,16 +48,16 @@ let obj2 = {
   containerForFiveButtonLayout: null,
 };
 let obj3 = {
-  height: fn(11378).CALL_ACTION_BAR_HEIGHT,
+  height: fn(11380).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
 obj2.containerForFiveButtonLayout = {
-  height: fn(11378).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(11380).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(11378).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(11378).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(11380).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(11380).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };
@@ -494,7 +494,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channel(576);
       const tmp8 = closure_15(CallBarActionAll.PrimaryActionButton, {
-        source: _modDef11606,
+        source: _modDef11608,
         accessibilityLabel: first,
         isSmallSize,
         onPress: tmp6,
@@ -503,11 +503,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       cResult[5] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { source: _modDef11606, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
+      const obj2 = { source: _modDef11608, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
     }
   : function DisconnectCallButton(channel) {
       channel = channel.channel;
-      const obj = { source: _modDef11606, accessibilityLabel: null, isSmallSize: null, onPress: null };
+      const obj = { source: _modDef11608, accessibilityLabel: null, isSmallSize: null, onPress: null };
       const intl = channel(1128).intl;
       obj.accessibilityLabel = intl.string(channel(1128).t["6vrfgt"]);
       obj.isSmallSize = channel.isSmallSize;
@@ -678,12 +678,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          tmp2 = stateFromStores(11607);
+          tmp2 = stateFromStores(11609);
           tmp19[0] = tmp2;
           tmp19[1] = tmp13;
           tmp19[2] = isSmallSize;
           tmp19[3] = N;
-          const tmp21 = closure_15(stateFromStores1(11379).PrimaryActionButton, tmp19);
+          const tmp21 = closure_15(stateFromStores1(11381).PrimaryActionButton, tmp19);
           cResult[10] = isSmallSize;
           cResult[11] = N;
           cResult[12] = tmp21;
@@ -732,7 +732,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       });
       let tmp4 = null;
       if (null != stateFromStores) {
-        const obj3 = { source: _modDef11607, accessibilityLabel: null, isSmallSize: null, onPress: null };
+        const obj3 = { source: _modDef11609, accessibilityLabel: null, isSmallSize: null, onPress: null };
         const intl = tmp(1128).intl;
         obj3.accessibilityLabel = intl.string(tmp(1128).t.q3O3J8);
         obj3.isSmallSize = channel.isSmallSize;
@@ -741,7 +741,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = StreamActionCreators;
           obj2.stopStream(StreamKeyUtils.encodeStreamKey(stateFromStores));
         };
-        tmp4 = closure_15(stateFromStores(11379).PrimaryActionButton, obj3);
+        tmp4 = closure_15(stateFromStores(11381).PrimaryActionButton, obj3);
       }
       return tmp4;
     };
@@ -780,7 +780,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] !== isSmallSize) {
-        let obj2 = { accessibilityLabel: tmp5, onPress: first, source: _modDef11608, isSmallSize };
+        let obj2 = { accessibilityLabel: tmp5, onPress: first, source: _modDef11610, isSmallSize };
         const tmp11 = value2(CallBarActionAll.PrimaryActionButton, obj2);
         cResult[2] = isSmallSize;
         cResult[3] = tmp11;
@@ -808,7 +808,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.applicationId = applicationId;
         const result = require("leaveEmbeddedActivity").leaveEmbeddedActivity(obj2);
       };
-      obj.source = _modDef11608;
+      obj.source = _modDef11610;
       obj.isSmallSize = isSmallSize.isSmallSize;
       return value2(CallBarActionAll.PrimaryActionButton, obj);
     };
@@ -943,7 +943,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(15);
       channel = channel.channel;
       const obj = channel(576);
-      const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
+      const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
         cResult[0] = items;
@@ -994,7 +994,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj2 = channel(10884);
+      const obj2 = channel(10886);
       const stateFromStores = channel(504).useStateFromStores(first, S);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
@@ -1176,8 +1176,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useActionBarPrimaryButtons(channel) {
       channel = channel.channel;
-      const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
-      const obj = channel(10884);
+      const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
+      const obj = channel(10886);
       const items = [ChannelRTCStore, AuthenticationStore];
       closure_1 = channel(504).useStateFromStores(items, () => {
         const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
@@ -1261,10 +1261,10 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_30 = tmp11;
 ReactCompilerGating = fn(558);
 let obj4 = {
-  height: fn(11378).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(11380).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(11378).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(11378).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(11380).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(11380).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };

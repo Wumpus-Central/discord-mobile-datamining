@@ -6,7 +6,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10858 from "../../../../../_runtime/metro/10858__.js";
+import _modDef10860 from "../../../../../_runtime/metro/10860__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -130,9 +130,9 @@ let closure_28 = noop.memo(
               let obj2 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
               const intl = FormRow(1128).intl;
               obj2.accessibilityLabel = intl.string(FormRow(1128).t["6Qgrev"]);
-              obj2.source = _modDef10858;
-              obj2.size = FormRow(14620).CircularIconButton.Sizes.MEDIUM_32;
-              const tmp19 = closure_23(FormRow(14620).CircularIconButton, obj2);
+              obj2.source = _modDef10860;
+              obj2.size = FormRow(14619).CircularIconButton.Sizes.MEDIUM_32;
+              const tmp19 = closure_23(FormRow(14619).CircularIconButton, obj2);
               const intl2 = FormRow(1128).intl;
               const stringResult = intl2.string(FormRow(1128).t["6Qgrev"]);
               cResult[5] = tmp19;
@@ -184,9 +184,9 @@ let closure_28 = noop.memo(
             const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
             const intl = tmp4(1128).intl;
             obj3.accessibilityLabel = intl.string(tmp4(1128).t["6Qgrev"]);
-            obj3.source = _modDef10858;
-            obj3.size = tmp4(14620).CircularIconButton.Sizes.MEDIUM_32;
-            obj2.leading = closure_23(tmp4(14620).CircularIconButton, obj3);
+            obj3.source = _modDef10860;
+            obj3.size = tmp4(14619).CircularIconButton.Sizes.MEDIUM_32;
+            obj2.leading = closure_23(tmp4(14619).CircularIconButton, obj3);
             const intl2 = tmp4(1128).intl;
             obj2.label = intl2.string(tmp4(1128).t["6Qgrev"]);
             obj2.onPress = function onPress() {
@@ -307,7 +307,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-            const tmp17 = closure_23(tmp4(14621), obj3);
+            const tmp17 = closure_23(tmp4(14620), obj3);
             cResult[4] = channelId;
             cResult[5] = isActionSheet;
             cResult[6] = tmp13;
@@ -332,7 +332,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } else {
               try {
@@ -368,7 +368,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
                       };
                       c5 = 1;
                       c6 = 1;
-                      const obj7 = { value: analyticsContext(11361)(obj6), done: false };
+                      const obj7 = { value: analyticsContext(11363)(obj6), done: false };
                       return obj7;
                     } else {
                       c6 = 3;
@@ -421,13 +421,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
         const merged = Object.assign(item);
         obj4.onPress = onPressUser;
         obj4.isActionSheet = isActionSheet;
-        const tmp12 = closure_23(tmp4(14622), obj4);
+        const tmp12 = closure_23(tmp4(14621), obj4);
         cResult[9] = isActionSheet;
         cResult[10] = onPressUser;
         cResult[11] = item;
         cResult[12] = tmp12;
         tmp6 = tmp12;
-        const tmp4Result = tmp4(14622);
+        const tmp4Result = tmp4(14621);
       }
       let obj2 = require("analytics");
       tmp5 = undefined !== item.url && undefined !== item.applicationId;
@@ -449,7 +449,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -523,13 +523,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           },
           isActionSheet,
         };
-        return closure_23(tmp2(14621), obj2);
+        return closure_23(tmp2(14620), obj2);
       } else {
         let obj3 = {};
         const merged = Object.assign(item);
         obj3.onPress = onPressUser;
         obj3.isActionSheet = isActionSheet;
-        return closure_23(tmp2(14622), obj3);
+        return closure_23(tmp2(14621), obj3);
       }
       let obj = isActionSheet(9935);
       tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -923,7 +923,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return sum;
                 } else {
                   if (tmp) {
-                    tmp4 = tmp4(14621);
+                    tmp4 = tmp4(14620);
                     calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                     let result = calculateActivityRowHeight(closure_4);
                   } else {

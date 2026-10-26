@@ -205,7 +205,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "a" };
+            let obj6 = { beforeItem: null, afterItem: "Array" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -218,17 +218,17 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
 }
 const View = fn(17).View;
 const GuildsNodeType = fn(6701).GuildsNodeType;
-const GuildsBarConstants = fn(17731);
+const GuildsBarConstants = fn(17730);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16443);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4971);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "Array", afterItem: "Reflect" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
+let closure_17 = { beforeItem: "dispatch", afterItem: "ix" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUnreadBarWrapperStyles() {
@@ -611,7 +611,7 @@ export default noop.memo(
           obj.orientation = "visible";
           fastList.scrollToLocation(obj);
         }, items2);
-        obj3.children = jsx(top(17800), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+        obj3.children = jsx(top(17799), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
         return (
           <scrollPosValue
             style={tmp7.style}

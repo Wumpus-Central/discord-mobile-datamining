@@ -333,7 +333,7 @@ let closure_22 = noop.memo(
           };
           obj4.start = start;
           obj4.end = end;
-          return closure_17(guildMember(10830), obj4);
+          return closure_17(guildMember(10832), obj4);
         }
         const obj = guild(1505);
       },

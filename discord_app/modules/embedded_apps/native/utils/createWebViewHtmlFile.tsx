@@ -2,7 +2,7 @@
 import NativeFileModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
-import _modDef11484 from "../../../../../_runtime/metro/11484__.js";
+import _modDef11486 from "../../../../../_runtime/metro/11486__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -18,7 +18,7 @@ function generateWebViewHtml(arg0) {
     str2 = ' csp="' + iframeCsp + '"';
   }
   if (null != shimBridgeSecret) {
-    const tmp4 = _modDef11484;
+    const tmp4 = _modDef11486;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
@@ -61,7 +61,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

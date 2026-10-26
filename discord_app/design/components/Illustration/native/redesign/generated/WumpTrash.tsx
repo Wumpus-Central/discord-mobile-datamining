@@ -15,10 +15,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== theme) {
         const obj3 = {
           dark() {
-            return require("../../../../../../../_runtime/metro/17395__.js");
+            return require("../../../../../../../_runtime/metro/17394__.js");
           },
           darker() {
-            return require("../../../../../../../_runtime/metro/17396__.js");
+            return require("../../../../../../../_runtime/metro/17395__.js");
           },
         };
         const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -35,10 +35,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = shared;
       return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
         dark() {
-          return require("../../../../../../../_runtime/metro/17395__.js");
+          return require("../../../../../../../_runtime/metro/17394__.js");
         },
         darker() {
-          return require("../../../../../../../_runtime/metro/17396__.js");
+          return require("../../../../../../../_runtime/metro/17395__.js");
         },
       });
     };
@@ -47,10 +47,10 @@ ReactCompilerGating = fn(558);
 function getWumpTrashSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/17395__.js");
+      return require("../../../../../../../_runtime/metro/17394__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/17396__.js");
+      return require("../../../../../../../_runtime/metro/17395__.js");
     },
   });
 }

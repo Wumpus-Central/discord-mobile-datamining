@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.onPress = onJumpToActivity;
       const tmp7 = _slicedToArray(noop.useState(false), 2);
       const items3 = [
-        closure_6(sharedValue(12345).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }),
+        closure_6(sharedValue(12344).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }),
       ];
       const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
       items3[1] = closure_6(View, {

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef12968 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef12967 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef12968 };
+          const obj2 = { uri: _modDef12967 };
           cResult[5] = obj2;
           let tmp10 = obj2;
         } else {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       const obj3 = { source: null, style: null, resizeMode: "cover" };
-      const obj4 = { uri: _modDef12968 };
+      const obj4 = { uri: _modDef12967 };
       obj3.source = obj4;
       obj3.style = tmp2.background;
       items1[1] = closure_6(FastImageDefault, obj3);

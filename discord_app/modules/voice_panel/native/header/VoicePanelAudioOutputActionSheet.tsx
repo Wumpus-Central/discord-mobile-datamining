@@ -177,8 +177,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(19);
       channel = channel.channel;
       const tmp4 = closure_13();
-      arr = arr(11647)();
-      let tmp5 = arr(11568)();
+      arr = arr(11649)();
+      let tmp5 = arr(11570)();
       dependencyMap = tmp5;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameConsoleStore];
@@ -441,8 +441,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       let arr;
       let awaitingRemoteSessionInfo;
-      arr = arr(11647)();
-      dependencyMap = arr(11568)();
+      arr = arr(11649)();
+      dependencyMap = arr(11570)();
       let tmp = closure_13();
       const items = [awaitingRemoteSessionInfo];
       const stateFromStores = channel(573).useStateFromStores(items, () =>

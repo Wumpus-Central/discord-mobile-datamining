@@ -857,11 +857,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp15 = cResult[9];
   }
   if (cResult[10] !== tmp15) {
-    const groupAgentsByTodoResult = tmp(12322).groupAgentsByTodo(tmp15);
+    const groupAgentsByTodoResult = tmp(12324).groupAgentsByTodo(tmp15);
     cResult[10] = tmp15;
     cResult[11] = groupAgentsByTodoResult;
     let tmp17 = groupAgentsByTodoResult;
-    const tmpResult2 = tmp(12322);
+    const tmpResult2 = tmp(12324);
   } else {
     tmp17 = cResult[11];
   }
@@ -956,8 +956,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12308);
-  ({ completed, total } = agents(12308).todoProgress(todos));
+  let obj = agents(12310);
+  ({ completed, total } = agents(12310).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -970,7 +970,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     return null;
   }
   const intl = agents(1128).intl;
-  const todoProgressResult = agents(12308).todoProgress(todos);
+  const todoProgressResult = agents(12310).todoProgress(todos);
   const intl2 = agents(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3830)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };

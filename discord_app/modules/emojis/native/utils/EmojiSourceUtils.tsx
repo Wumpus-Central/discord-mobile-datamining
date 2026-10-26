@@ -13,7 +13,7 @@ let closure_4 = async function _getEmojiSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_4 = async function _getEmojiSource(arg0) {
           closure_133_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

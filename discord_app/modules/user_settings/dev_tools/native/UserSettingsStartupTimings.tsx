@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -157,11 +157,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13793)(closure_128_0);
+                closure_128_1 = tmp5(13792)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
                 tmp2(8851).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp17) {
               c3 = tmp;
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13793)(useResult, !checked, first1).split("\n");
+  const parts = checked(13792)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -474,7 +474,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -504,11 +504,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13793)(closure_128_0);
+          closure_128_1 = tmp5(13792)(closure_128_0);
           const obj7 = { message: closure_128_1 };
           tmp2(8851).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp17) {
         c3 = tmp;

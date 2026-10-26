@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.headerText = intl.string(navigation(1128).t.YEOwDM);
       obj7.headerTextStyle = tmp.headerText;
       obj7.ref = ref;
-      obj5.children = closure_8(ref(15098), obj7);
+      obj5.children = closure_8(ref(15097), obj7);
       items2[1] = closure_8(closure_4, obj5);
       obj4.children = items2;
       obj3.children = closure_9(tmp3Result, obj4);

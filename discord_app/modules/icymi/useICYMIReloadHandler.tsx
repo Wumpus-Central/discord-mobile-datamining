@@ -26,7 +26,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -40,7 +40,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(15649).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(15648).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";
@@ -93,7 +93,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               } else {
                 const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp19) {
               c2 = tmp;
@@ -134,7 +134,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -148,7 +148,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(15649).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(15648).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";
@@ -198,7 +198,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               } else {
                 const recommendedGuilds = v3(8841).getRecommendedGuilds();
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp19) {
               dependencyMap = tmp;

@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ReduceMotion = option(5052).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj = option(504);
-      const optionEnteringAnimation = option(12153).useOptionEnteringAnimation();
+      const optionEnteringAnimation = option(12155).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
@@ -184,8 +184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           collapsable: false,
           entering: optionEnteringAnimation.EnteringAnimation,
-          exiting: tmp2(12153).ExitingAnimation,
-          layout: tmp2(12153).LayoutAnimation,
+          exiting: tmp2(12155).ExitingAnimation,
+          layout: tmp2(12155).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
@@ -259,10 +259,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items2;
         obj5.children = closure_6(View, obj6);
         obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-        obj3.children = closure_5(tmp2(12161).AwaitAnimationContext, obj4);
+        obj3.children = closure_5(tmp2(12163).AwaitAnimationContext, obj4);
         return closure_5(tmp2(5052).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
-      const tmp2Result = option(12153);
+      const tmp2Result = option(12155);
     };

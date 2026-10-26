@@ -8,7 +8,7 @@ import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import _modDef12753 from "../../../../../../../../_runtime/metro/12753__.js";
 import _modDef12754 from "../../../../../../../../_runtime/metro/12754__.js";
-import _modDef14545 from "../../../../../../../../_runtime/metro/14545__.js";
+import _modDef14544 from "../../../../../../../../_runtime/metro/14544__.js";
 import GuildTemplateStore from "../../../../../../guild_templates/GuildTemplateStore.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -63,7 +63,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef14545).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef14544).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,

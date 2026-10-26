@@ -7,8 +7,6 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef12170 from "../../../../_runtime/metro/12170__.js";
-import _modDef12171 from "../../../../_runtime/metro/12171__.js";
 import _modDef12172 from "../../../../_runtime/metro/12172__.js";
 import _modDef12173 from "../../../../_runtime/metro/12173__.js";
 import _modDef12174 from "../../../../_runtime/metro/12174__.js";
@@ -21,6 +19,8 @@ import _modDef12180 from "../../../../_runtime/metro/12180__.js";
 import _modDef12181 from "../../../../_runtime/metro/12181__.js";
 import _modDef12182 from "../../../../_runtime/metro/12182__.js";
 import _modDef12183 from "../../../../_runtime/metro/12183__.js";
+import _modDef12184 from "../../../../_runtime/metro/12184__.js";
+import _modDef12185 from "../../../../_runtime/metro/12185__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -53,20 +53,20 @@ let obj = {
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef12170,
-  acrobat: _modDef12171,
-  ae: _modDef12172,
-  ai: _modDef12173,
-  audio: _modDef12174,
-  code: _modDef12175,
-  document: _modDef12176,
-  image: _modDef12177,
-  photoshop: _modDef12178,
-  sketch: _modDef12179,
-  spreadsheet: _modDef12180,
-  unknown: _modDef12181,
-  video: _modDef12182,
-  webcode: _modDef12183,
+  archive: _modDef12172,
+  acrobat: _modDef12173,
+  ae: _modDef12174,
+  ai: _modDef12175,
+  audio: _modDef12176,
+  code: _modDef12177,
+  document: _modDef12178,
+  image: _modDef12179,
+  photoshop: _modDef12180,
+  sketch: _modDef12181,
+  spreadsheet: _modDef12182,
+  unknown: _modDef12183,
+  video: _modDef12184,
+  webcode: _modDef12185,
 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
       if (tmp4 == null) {
-        tmp4 = _modDef12181;
+        tmp4 = _modDef12183;
       }
       if (cResult[0] === tmp4) {
         if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -106,7 +106,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef12181;
+          tmp2 = _modDef12183;
         }
         return tmp2;
       }, items);

@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === guildId) {
           if (cResult[15] !== stateFromStoresArray1) {
             const substr = stateFromStoresArray1.slice();
-            const sorted = substr.sort(tmp(11745).compareConjureProjectsByUpdatedAt);
+            const sorted = substr.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
             cResult[15] = stateFromStoresArray1;
             cResult[16] = sorted;
           }
@@ -555,11 +555,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[23] = tmp25;
             cResult[24] = tmp28;
           }
-          const projectOpenerResult = tmp(11743).projectOpener(guildId, U);
+          const projectOpenerResult = tmp(11745).projectOpener(guildId, U);
           cResult[19] = guildId;
           cResult[20] = U;
           cResult[21] = projectOpenerResult;
-          const tmpResult6 = tmp(11743);
+          const tmpResult6 = tmp(11745);
         }
       }
       if (cResult[13] !== guildId) {
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const found = stateFromStoresArray.filter(M);
-      const sorted1 = found.sort(tmp(11745).compareConjureProjectsByUpdatedAt);
+      const sorted1 = found.sort(tmp(11747).compareConjureProjectsByUpdatedAt);
       cResult[10] = stateFromStoresArray;
       cResult[11] = guildId;
       cResult[12] = sorted1;

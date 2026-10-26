@@ -10,7 +10,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const useForumChannelStore = fn(13098).useForumChannelStore;
+const useForumChannelStore = fn(13097).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -168,7 +168,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[15] === style) {
                   }
-                  ForumPostDisabledContainer = ForumPostDisabledContainer(13118).ForumPostDisabledContainer;
+                  ForumPostDisabledContainer = ForumPostDisabledContainer(13117).ForumPostDisabledContainer;
                   const obj3 = { style, children: tmp15 };
                   tmp = closure_6(ForumPostDisabledContainer, obj3);
                   cResult[15] = style;
@@ -190,7 +190,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           firstMessageLoaded: loaded,
           isLocalDeviceMedia: true,
         };
-        const tmp17 = closure_6(tmp7(13119), obj4);
+        const tmp17 = closure_6(tmp7(13118), obj4);
         cResult[8] = content;
         cResult[9] = firstMessage;
         cResult[10] = loaded;
@@ -237,8 +237,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           firstMessageLoaded: loaded,
           isLocalDeviceMedia: true,
         };
-        obj4.children = closure_6(tmp4(13119), obj5);
-        tmp5 = closure_6(tmp(13118).ForumPostDisabledContainer, obj4);
+        obj4.children = closure_6(tmp4(13118), obj5);
+        tmp5 = closure_6(tmp(13117).ForumPostDisabledContainer, obj4);
       }
       return tmp5;
     };

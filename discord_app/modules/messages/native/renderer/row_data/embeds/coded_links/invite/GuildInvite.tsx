@@ -21,7 +21,7 @@ import GuestUtilsDefault from "../../../../../../../guests/GuestUtils.tsx";
 import _modDef12753 from "../../../../../../../../../_runtime/metro/12753__.js";
 import _modDef12754 from "../../../../../../../../../_runtime/metro/12754__.js";
 import InviteErrorUtils from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import _modDef13669 from "../../../../../../../../../_runtime/metro/13669__.js";
+import _modDef13668 from "../../../../../../../../../_runtime/metro/13668__.js";
 import getHeaderTextForInvite from "../../../../../../getHeaderTextForInvite.tsx";
 import GuildRecord from "../../../../../../../../records/GuildRecord.tsx";
 import ApplicationStreamingStore from "../../../../../../../../stores/ApplicationStreamingStore.tsx";
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13669);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13668);
   let tmp17;
   if (null == tmp11) {
     let tmp18;

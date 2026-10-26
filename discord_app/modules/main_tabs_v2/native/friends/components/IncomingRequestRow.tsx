@@ -309,7 +309,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             const tmp42 = jsx(
-                              tmp33(13553),
+                              tmp33(13552),
                               { application: null, textVariant: "text-xs/medium", iconSize: 12 },
                               stateFromStores1.id,
                             );
@@ -424,7 +424,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                     acceptRequestAccessibilityLabel: tmp4,
                                     ignoreRequestAccessibilityLabel: tmp10,
                                   };
-                                  const tmp51 = jsx(tmp(18218).IncomingRequestRowActions, {
+                                  const tmp51 = jsx(tmp(18217).IncomingRequestRowActions, {
                                     user: tmp14,
                                     pressed: sharedValue,
                                     applicationId: tmp9,
@@ -454,7 +454,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                             actionStatusAccessibilityLabel: tmp6,
                             animate: tmp44,
                           };
-                          const tmp47 = jsx(tmp(17886).ActionStatusSubLabel, {
+                          const tmp47 = jsx(tmp(17885).ActionStatusSubLabel, {
                             actioned: sharedValue,
                             label: str,
                             actionStatus: tmp7,

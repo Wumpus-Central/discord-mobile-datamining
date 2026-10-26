@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       navigation = channelId(1505).useNavigation();
       tmp5(5604)(stateFromStores);
       const tmpResult7 = channelId(1505);
-      const appChannelBotUserId = channelId(11309).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(11311).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
         class B {
           constructor() {

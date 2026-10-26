@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import keyCodeDefault from "../../../_runtime/15369_keyCode.js";
+import keyCodeDefault from "../../../_runtime/15368_keyCode.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import DeveloperOptionsStore from "../../stores/DeveloperOptionsStore.tsx";
@@ -35,7 +35,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -146,7 +146,7 @@ let closure_19 = async function _createKeyboardMapper() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -188,7 +188,7 @@ let closure_19 = async function _createKeyboardMapper() {
           }
         });
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -228,7 +228,7 @@ let closure_21 = async function _resetKeyboardMapper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -261,7 +261,7 @@ let closure_21 = async function _resetKeyboardMapper() {
           obj.reset();
         }
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp10) {
       c2 = tmp;

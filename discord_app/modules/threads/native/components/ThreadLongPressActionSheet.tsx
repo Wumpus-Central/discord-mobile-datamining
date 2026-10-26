@@ -27,7 +27,7 @@ function getActionSheetButtons(channel) {
   ({ isForumPost, handleJoinThreadVoice } = channel);
   let obj = { sectionKey: "mark-as-read", buttons: [] };
   ({ canManageThread, canUnarchiveThread, hasUnread, canMarkUnread, hasJoined, hasActiveThreadVoice, favorites } = channel);
-  const MarkChannelUnreadExperiment = channel(10867).MarkChannelUnreadExperiment;
+  const MarkChannelUnreadExperiment = channel(10869).MarkChannelUnreadExperiment;
   if (MarkChannelUnreadExperiment.getConfig({ location: "thread_action_sheet" }).enabled) {
     if (!hasUnread) {
       if (canMarkUnread) {
@@ -35,7 +35,7 @@ function getActionSheetButtons(channel) {
         let obj2 = { label: null, IconComponent: null, onPress: null };
         const intl = tmp(1128).intl;
         obj2.label = intl.string(tmp(1128).t.RpE9k7);
-        obj2.IconComponent = tmp(10868).ChatMarkUnreadIcon;
+        obj2.IconComponent = tmp(10870).ChatMarkUnreadIcon;
         obj2.onPress = function onPress() {
           markChannelUnreadDefault(channel.id);
         };
@@ -43,7 +43,7 @@ function getActionSheetButtons(channel) {
       }
       const items = [];
       items.push(obj);
-      const tmp7 = isMuted(10856)(favorites);
+      const tmp7 = isMuted(10858)(favorites);
       if (null != tmp7) {
         const obj3 = { sectionKey: "favorites", buttons: null };
         const items1 = [tmp7];
@@ -82,7 +82,7 @@ function getActionSheetButtons(channel) {
         }
         const obj6 = {
           label: stringResult,
-          IconComponent: tmp(10857).GroupPlusIcon,
+          IconComponent: tmp(10859).GroupPlusIcon,
           onPress() {
                   ThreadActionCreatorsDefault.joinThread(channel, "Context Menu");
                 }
@@ -148,7 +148,7 @@ function getActionSheetButtons(channel) {
                 string6Result = string6(t1["jeyb/W"]);
               }
               obj9.label = string6Result;
-              obj9.IconComponent = tmp(10999).LockUnlockedIcon;
+              obj9.IconComponent = tmp(11001).LockUnlockedIcon;
               obj9.onPress = function onPress() {
                 ThreadActionCreatorsDefault.unlockThread(channel);
               };
@@ -206,21 +206,21 @@ function getActionSheetButtons(channel) {
                 string8Result1 = string8(t7.bUUd8q);
               }
               obj12[0] = string8Result1;
-              obj12[1] = tmp(10872).BellSlashIcon;
+              obj12[1] = tmp(10874).BellSlashIcon;
               obj12[2] = function onPress() {
                 const obj = ActionSheetActionCreatorsDefault;
                 const obj2 = { guildId: null, channelId: null };
                 const combined = "muteSettings" + channel.id;
                 obj2.guildId = channel.getGuildId();
                 obj2.channelId = channel.id;
-                obj.openLazy(asyncRequireImpl(11005, dependencyMap.paths), combined, obj2);
+                obj.openLazy(asyncRequireImpl(11007, dependencyMap.paths), combined, obj2);
               };
               push3(obj12);
               const buttons7 = obj11.buttons;
               const obj13 = { label: null, IconComponent: null, onPress: null, disableColor: true };
               const intl12 = tmp(1128).intl;
               obj13.label = intl12.string(tmp(1128).t.h850Ss);
-              obj13.IconComponent = tmp(10874).ChannelNotificationIcon;
+              obj13.IconComponent = tmp(10876).ChannelNotificationIcon;
               obj13.onPress = function onPress() {
                 const result = threadActionSheets.showThreadNotificationsBottomSheet(channel);
               };
@@ -390,8 +390,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   const tmpResult10 = channel(504);
   const stateFromStores1 = channel(504).useStateFromStores(tmp13, tmp15);
   const tmpResult11 = channel(504);
-  const canMarkChannelUnread = channel(10870).useCanMarkChannelUnread(channel);
-  const tmpResult12 = channel(10870);
+  const canMarkChannelUnread = channel(10872).useCanMarkChannelUnread(channel);
+  const tmpResult12 = channel(10872);
   const canManageThread = channel(7369).useCanManageThread(channel);
   const tmpResult13 = channel(7369);
   const isThreadModerator = channel(7369).useIsThreadModerator(channel);
@@ -637,7 +637,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
       cResult[29] = tmp45;
     }
     const obj6 = { title: tmp29, icon: tmp32 };
-    const tmp41 = closure_13(tmp(11011).ActionSheetIconHeader, obj6);
+    const tmp41 = closure_13(tmp(11013).ActionSheetIconHeader, obj6);
     cResult[21] = tmp29;
     cResult[22] = tmp32;
     cResult[23] = tmp41;
@@ -657,8 +657,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   const items2 = [ReadStateStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => ReadStateStore.hasUnreadOrMentions(channel.id));
   const obj3 = channel(504);
-  const canMarkChannelUnread = channel(10870).useCanMarkChannelUnread(channel);
-  const obj4 = channel(10870);
+  const canMarkChannelUnread = channel(10872).useCanMarkChannelUnread(channel);
+  const obj4 = channel(10872);
   const canManageThread = channel(7369).useCanManageThread(channel);
   const obj5 = channel(7369);
   const isThreadModerator = channel(7369).useIsThreadModerator(channel);
@@ -698,7 +698,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   }
   obj13.handleJoinThreadVoice = tmp24;
   obj13.hasActiveThreadVoice = stateFromStores3;
-  obj13.favorites = onClose(11010)(channel);
+  obj13.favorites = onClose(11012)(channel);
   const tmp23Result = getActionSheetButtons(obj13);
   const items5 = [tmp23Result.length, setting, onClose];
   const effect = setting.useEffect(() => {
@@ -707,7 +707,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
     }
     tmp = 0 !== length.length || setting;
   }, items5);
-  const obj14 = { header: tmp20(channel(11011).ActionSheetIconHeader, { title: tmp15, icon: tmp19 }), children: null };
+  const obj14 = { header: tmp20(channel(11013).ActionSheetIconHeader, { title: tmp15, icon: tmp19 }), children: null };
   const items6 = [
     tmp23Result.map((buttons) => {
       let obj = { hasIcons: true, children: null };

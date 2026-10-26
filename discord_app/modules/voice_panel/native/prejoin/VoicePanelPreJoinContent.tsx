@@ -42,18 +42,18 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
 }
 let closure_3 = ["transitionState", "transitionCleanUp"];
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(10898).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(10901).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(10900).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(10903).EDGE_GUTTER;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_22, AnalyticsSections: closure_23, Permissions: closure_24 } = Constants);
-const constants4 = fn(15048).VoiceChannelWarningSurfaces;
+const constants4 = fn(15047).VoiceChannelWarningSurfaces;
 const Features = fn(5718).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28, Fragment: closure_29 } = jsxProd);
 const createStyles = fn(4971);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(10904).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(10906).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -69,7 +69,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(10904).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(10906).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -525,7 +525,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+352" };
                                 }
                               } else {
                                 try {
@@ -549,7 +549,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           analyticsLocations: num3,
                                         };
                                         v3 = num3;
-                                        const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                                        const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                                         return obj7;
                                       }
                                     } else {
@@ -615,7 +615,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj4 = { value, done: true };
                                     return obj4;
                                   } else {
-                                    return { value: "IconComponent", done: null };
+                                    return { value: "IconComponent", done: "+352" };
                                   }
                                 } else {
                                   try {
@@ -640,7 +640,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           v3 = num3;
                                           const obj7 = {
-                                            value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                            value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                             done: false,
                                           };
                                           return obj7;
@@ -715,7 +715,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: null };
+                                      return { value: "IconComponent", done: "+352" };
                                     }
                                   } else {
                                     try {
@@ -740,7 +740,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                             };
                                             v3 = num3;
                                             const obj7 = {
-                                              value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                              value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                               done: false,
                                             };
                                             return obj7;
@@ -807,7 +807,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: null };
+                                      return { value: "IconComponent", done: "+352" };
                                     }
                                   } else {
                                     try {
@@ -832,7 +832,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                             };
                                             v3 = num3;
                                             const obj7 = {
-                                              value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                              value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                               done: false,
                                             };
                                             return obj7;
@@ -896,7 +896,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: null };
+                                      return { value: "IconComponent", done: "+352" };
                                     }
                                   } else {
                                     try {
@@ -921,7 +921,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                             };
                                             v3 = num3;
                                             const obj7 = {
-                                              value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                              value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                               done: false,
                                             };
                                             return obj7;
@@ -1009,7 +1009,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj4 = { value, done: true };
                                                 return obj4;
                                               } else {
-                                                return { value: "IconComponent", done: null };
+                                                return { value: "IconComponent", done: "+352" };
                                               }
                                             } else {
                                               try {
@@ -1034,7 +1034,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                                       };
                                                       v3 = num3;
                                                       const obj7 = {
-                                                        value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                                        value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                                         done: false,
                                                       };
                                                       return obj7;
@@ -1111,7 +1111,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           const obj4 = { value, done: true };
                                           return obj4;
                                         } else {
-                                          return { value: "IconComponent", done: null };
+                                          return { value: "IconComponent", done: "+352" };
                                         }
                                       } else {
                                         try {
@@ -1136,7 +1136,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                                 };
                                                 v3 = num3;
                                                 const obj7 = {
-                                                  value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                                  value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                                   done: false,
                                                 };
                                                 return obj7;
@@ -1207,7 +1207,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                         const obj4 = { value, done: true };
                                         return obj4;
                                       } else {
-                                        return { value: "IconComponent", done: null };
+                                        return { value: "IconComponent", done: "+352" };
                                       }
                                     } else {
                                       try {
@@ -1232,7 +1232,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                               };
                                               v3 = num3;
                                               const obj7 = {
-                                                value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                                value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                                 done: false,
                                               };
                                               return obj7;
@@ -1294,7 +1294,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj4 = { value, done: true };
                                     return obj4;
                                   } else {
-                                    return { value: "IconComponent", done: null };
+                                    return { value: "IconComponent", done: "+352" };
                                   }
                                 } else {
                                   try {
@@ -1319,7 +1319,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           v3 = num3;
                                           const obj7 = {
-                                            value: v3(11456).maybeJoinEmbeddedActivity(obj6),
+                                            value: v3(11458).maybeJoinEmbeddedActivity(obj6),
                                             done: false,
                                           };
                                           return obj7;
@@ -1386,7 +1386,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+352" };
                                 }
                               } else {
                                 try {
@@ -1410,7 +1410,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           analyticsLocations: num3,
                                         };
                                         v3 = num3;
-                                        const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                                        const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                                         return obj7;
                                       }
                                     } else {
@@ -1476,7 +1476,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                 const obj4 = { value, done: true };
                                 return obj4;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "+352" };
                               }
                             } else {
                               try {
@@ -1500,7 +1500,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                         analyticsLocations: num3,
                                       };
                                       v3 = num3;
-                                      const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                                      const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                                       return obj7;
                                     }
                                   } else {
@@ -1562,7 +1562,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj4 = { value, done: true };
                             return obj4;
                           } else {
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "+352" };
                           }
                         } else {
                           try {
@@ -1586,7 +1586,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                     analyticsLocations: num3,
                                   };
                                   v3 = num3;
-                                  const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                                  const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                                   return obj7;
                                 }
                               } else {
@@ -1650,7 +1650,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -1674,7 +1674,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                           analyticsLocations: num3,
                         };
                         v3 = num3;
-                        const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                        const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                         return obj7;
                       }
                     } else {
@@ -1799,7 +1799,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -1823,7 +1823,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                       analyticsLocations: num3,
                     };
                     v3 = num3;
-                    const obj7 = { value: v3(11456).maybeJoinEmbeddedActivity(obj6), done: false };
+                    const obj7 = { value: v3(11458).maybeJoinEmbeddedActivity(obj6), done: false };
                     return obj7;
                   }
                 } else {
@@ -3225,10 +3225,10 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelPreJoinWrapper() {
         const cResult = channelId(576).c(8);
-        const context = noop.useContext(guildId(10897));
+        const context = noop.useContext(guildId(10899));
         channelId = context.channelId;
         guildId = context.guildId;
-        const tmp5 = guildId(18477)(channelId);
+        const tmp5 = guildId(18476)(channelId);
         dependencyMap = tmp5;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [
@@ -3254,7 +3254,7 @@ export default noop.memo(
               first,
               tmp12,
               tmp13,
-              tmp(18590).areVoicePanelPreJoinContentPropsEqual,
+              tmp(18589).areVoicePanelPreJoinContentPropsEqual,
             );
             if (cResult[6] !== stateFromStores) {
               const obj2 = { item: stateFromStores, renderItem };
@@ -3316,10 +3316,10 @@ export default noop.memo(
         let obj = channelId(576);
       }
     : function VoicePanelPreJoinWrapper() {
-        const context = noop.useContext(guildId(10897));
+        const context = noop.useContext(guildId(10899));
         const channelId = context.channelId;
         guildId = context.guildId;
-        const tmp2 = guildId(18477)(channelId);
+        const tmp2 = guildId(18476)(channelId);
         dependencyMap = tmp2;
         let items = [
           SortedVoiceStateStore,
@@ -3369,7 +3369,7 @@ export default noop.memo(
             }
           },
           items1,
-          channelId(18590).areVoicePanelPreJoinContentPropsEqual,
+          channelId(18589).areVoicePanelPreJoinContentPropsEqual,
         );
         return closure_27(channelId(5037).TransitionItem, { item: stateFromStores, renderItem });
       },

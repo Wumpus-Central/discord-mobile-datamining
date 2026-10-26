@@ -119,12 +119,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(13748).getScheduleRuleDateRange(rule);
-      let obj = rule(13748);
-      const obj2 = rule(13748);
+      const scheduleRuleDateRange = rule(13747).getScheduleRuleDateRange(rule);
+      let obj = rule(13747);
+      const obj2 = rule(13747);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(13748).formatDays(rule.days),
+        subLabel: rule(13747).formatDays(rule.days),
         trailing: null,
         arrow: null,
         onPress: null,

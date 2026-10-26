@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
           return obj;
         } else {
           channel = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp5) {
         channel = tmp;

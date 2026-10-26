@@ -243,7 +243,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
                 name: null,
                 roleId: null,
                 size: "Array",
-                unicodeEmoji: "alwaysShowAddReaction",
+                unicodeEmoji: "onAskForIdeas",
               };
               ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
               obj2.unicodeEmoji = roleIconData.unicodeEmoji;
@@ -348,7 +348,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
               name: null,
               roleId: null,
               size: "Array",
-              unicodeEmoji: "alwaysShowAddReaction",
+              unicodeEmoji: "onAskForIdeas",
             };
             ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
             obj3.unicodeEmoji = roleIconData.unicodeEmoji;

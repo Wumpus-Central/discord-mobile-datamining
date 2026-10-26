@@ -9,8 +9,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo from "KrispLogo.tsx";
-import _modDef11632 from "../../../../../_runtime/metro/11632__.js";
-import _modDef11633 from "../../../../../_runtime/metro/11633__.js";
+import _modDef11634 from "../../../../../_runtime/metro/11634__.js";
+import _modDef11635 from "../../../../../_runtime/metro/11635__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -108,9 +108,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_12();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeLight(tmp6)) {
-        let tmp5Result = _modDef11632;
+        let tmp5Result = _modDef11634;
       } else {
-        tmp5Result = _modDef11633;
+        tmp5Result = _modDef11635;
       }
       ({ krisp, logo } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,9 +178,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const tmp4 = useThemeDefault();
       if (obj.isThemeLight(tmp4)) {
-        let tmp2Result = _modDef11632;
+        let tmp2Result = _modDef11634;
       } else {
-        tmp2Result = _modDef11633;
+        tmp2Result = _modDef11635;
       }
       const obj2 = { style: tmp.krisp, children: null };
       const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

@@ -78,7 +78,7 @@ export const useReplyActions = function useReplyActions(cResult) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17953, dependencyMap.paths),
+          asyncRequireImpl(17952, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

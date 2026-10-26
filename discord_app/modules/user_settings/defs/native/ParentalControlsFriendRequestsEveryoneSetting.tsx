@@ -11,7 +11,7 @@ require = fn;
 const Constants = fn(1087);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsEveryoneSettingValue() {
       const cResult = c.c(2);
@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useFriendRequestsEveryoneSettingValue() {
       const selectedTeenId = controlledSetting(8127).useSelectedTeenId();
-      const ParentalControlledFriendSourceFlags = controlledSetting(16110).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(16109).ParentalControlledFriendSourceFlags;
       controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       const items = [controlledSetting];
       return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
@@ -61,7 +61,7 @@ const toggle = SettingBuilders.createToggle({
       }
     : function useFriendRequestsEveryoneSettingValue() {
         const selectedTeenId = controlledSetting(8127).useSelectedTeenId();
-        const ParentalControlledFriendSourceFlags = controlledSetting(16110).ParentalControlledFriendSourceFlags;
+        const ParentalControlledFriendSourceFlags = controlledSetting(16109).ParentalControlledFriendSourceFlags;
         controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
         const items = [controlledSetting];
         return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

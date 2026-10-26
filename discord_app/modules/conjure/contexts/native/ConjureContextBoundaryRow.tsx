@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ projectId, contextSwitch } = arg0);
       const tmp4 = closure_7();
       const obj = action(576);
-      const conjureContextSwitchRow = action(11808).useConjureContextSwitchRow(projectId, contextSwitch);
+      const conjureContextSwitchRow = action(11810).useConjureContextSwitchRow(projectId, contextSwitch);
       if (null == conjureContextSwitchRow) {
         return null;
       } else {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-          const tmp14 = closure_4(tmp(11299).ChatPlusIcon, obj4);
+          const tmp14 = closure_4(tmp(11301).ChatPlusIcon, obj4);
           cResult[2] = tmp14;
           let tmp11 = tmp14;
         } else {
@@ -271,13 +271,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp21;
         tmp18 = tmp21;
       }
-      const obj2 = action(11808);
+      const obj2 = action(11810);
     }
   : function ConjureContextBoundaryRow(arg0) {
       let action;
       ({ projectId, contextSwitch } = arg0);
       const tmp = closure_7();
-      const conjureContextSwitchRow = action(11808).useConjureContextSwitchRow(projectId, contextSwitch);
+      const conjureContextSwitchRow = action(11810).useConjureContextSwitchRow(projectId, contextSwitch);
       if (null == conjureContextSwitchRow) {
         return null;
       } else {
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [closure_4(View, obj4), ,];
         const obj5 = { style: tmp.contextLabel, accessible: true, accessibilityRole: "header", children: null };
         const obj6 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-        const items1 = [closure_4(tmp2(11299).ChatPlusIcon, obj6)];
+        const items1 = [closure_4(tmp2(11301).ChatPlusIcon, obj6)];
         const obj7 = { variant: "text-xs/semibold", color: "text-default", children: conjureContextSwitchRow.label };
         items1[1] = closure_4(tmp2(5234).Text, obj7);
         obj5.children = items1;
@@ -352,5 +352,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.children = items2;
         return closure_5(View, obj2);
       }
-      const obj = action(11808);
+      const obj = action(11810);
     };

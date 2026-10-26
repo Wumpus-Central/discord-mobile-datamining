@@ -21,7 +21,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = projectId(576).c(7);
       projectId = projectId.projectId;
       const publish = projectId.publish;
-      const context = noop.useContext(projectId(11874).ConjurePublishActionContext);
+      const context = noop.useContext(projectId(11876).ConjurePublishActionContext);
       if (cResult[0] === context) {
         if (cResult[1] === projectId) {
           let tmp6 = cResult[2];

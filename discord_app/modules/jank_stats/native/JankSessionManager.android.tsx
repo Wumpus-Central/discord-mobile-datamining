@@ -55,8 +55,8 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
     tmp._isDelivering = true;
-    const pendingReports = self(17437).getPendingReports();
-    let obj = self(17437);
+    const pendingReports = self(17436).getPendingReports();
+    let obj = self(17436);
     const nextPromise = pendingReports.then((arr) => {
       closure_0 = arr;
       if (0 !== arr.length) {

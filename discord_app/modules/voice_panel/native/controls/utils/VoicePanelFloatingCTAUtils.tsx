@@ -105,7 +105,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       stateFromStores(5205)();
       let obj = imminentUpcomingGuildEvents(576);
       const tmp4 = stateFromStores;
-      const tmp6 = stateFromStores(18477)(noop.useContext(stateFromStores(10897)).channelId);
+      const tmp6 = stateFromStores(18476)(noop.useContext(stateFromStores(10899)).channelId);
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -382,9 +382,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               obj2.label = intl.string(tmp(1128).t.N4nebq);
               const intl2 = tmp(1128).intl;
               obj2.subLabel = intl2.string(tmp(1128).t.o2XPr2);
-              const obj3 = { IconComponent: tmp(10857).GroupPlusIcon, variant: "translucent" };
+              const obj3 = { IconComponent: tmp(10859).GroupPlusIcon, variant: "translucent" };
               obj2.icon = jsx(tmp(8953).RowButton.Icon, {
-                IconComponent: tmp(10857).GroupPlusIcon,
+                IconComponent: tmp(10859).GroupPlusIcon,
                 variant: "translucent",
               });
               obj2.onPress = inviteMembersCallback;
@@ -430,9 +430,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               obj2.label = intl.string(tmp3(1128).t.N4nebq);
               const intl2 = tmp3(1128).intl;
               obj2.subLabel = intl2.string(tmp3(1128).t.o2XPr2);
-              const obj3 = { IconComponent: tmp3(10857).GroupPlusIcon, variant: "translucent" };
+              const obj3 = { IconComponent: tmp3(10859).GroupPlusIcon, variant: "translucent" };
               obj2.icon = jsx(tmp3(8953).RowButton.Icon, {
-                IconComponent: tmp3(10857).GroupPlusIcon,
+                IconComponent: tmp3(10859).GroupPlusIcon,
                 variant: "translucent",
               });
               obj2.onPress = tmp6;
@@ -489,7 +489,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useOverrideFloatingCTAProps(arg0) {
       closure_0 = arg0;
-      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(10897)).setShowFloatingCTA;
+      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(10899)).setShowFloatingCTA;
       const items = [setShowFloatingCTA, arg0];
       return noop.useMemo(() => {
         let tmp = null;

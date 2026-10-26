@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   obj2.description = ref.current;
                   id(9665).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
                   const obj = id(9665);
-                  id(13970).close();
+                  id(13969).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -234,7 +234,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 obj2.description = ref.current;
                 id(9665).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
                 const obj = id(9665);
-                id(13970).close();
+                id(13969).close();
               },
             );
             let merged = Object.assign(arg0);

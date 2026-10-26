@@ -19,7 +19,7 @@ let closure_5 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_5 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
         throw tmp262;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     } catch (tmp18) {
       c4 = tmp;
       throw tmp18;

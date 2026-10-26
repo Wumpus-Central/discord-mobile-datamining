@@ -6,8 +6,8 @@ import util from "../../../../intl/index.native.tsx";
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
 import CheckpointStatNumber from "CheckpointStatNumber.tsx";
 import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber.tsx";
-import _modDef12983 from "../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12984 from "../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef12982 from "../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12983 from "../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp30 = cResult[13];
                 }
                 if (cResult[14] !== iter.globe) {
-                  const obj3 = { animatedUri: _modDef12983, staticUri: _modDef12984, style: iter.globe };
+                  const obj3 = { animatedUri: _modDef12982, staticUri: _modDef12983, style: iter.globe };
                   const tmp38 = React4(CheckpointApngPlayerDefault, obj3);
                   cResult[14] = iter.globe;
                   cResult[15] = tmp38;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = cResult[25];
             }
             if (cResult[26] !== iter.globe) {
-              const obj8 = { animatedUri: _modDef12983, staticUri: _modDef12984, style: iter.globe };
+              const obj8 = { animatedUri: _modDef12982, staticUri: _modDef12983, style: iter.globe };
               const tmp16 = React4(CheckpointApngPlayerDefault, obj8);
               cResult[26] = iter.globe;
               cResult[27] = tmp16;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.children = React4(closure_7, obj5);
         obj3.children = React4(View, obj4);
         const items1 = [React4(View, obj3)];
-        const obj6 = { animatedUri: _modDef12983, staticUri: _modDef12984, style: iter.globe };
+        const obj6 = { animatedUri: _modDef12982, staticUri: _modDef12983, style: iter.globe };
         items1[1] = React4(CheckpointApngPlayerDefault, obj6);
         obj2.children = items1;
         let tmp3Result = hasOwnProperty(View, obj2);
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.style = items;
         const obj7 = { value };
         const items2 = [React4(closure_7, obj7)];
-        const obj8 = { animatedUri: _modDef12983, staticUri: _modDef12984, style: iter.globe };
+        const obj8 = { animatedUri: _modDef12982, staticUri: _modDef12983, style: iter.globe };
         items2[1] = React4(CheckpointApngPlayerDefault, obj8);
         obj2.children = items2;
         tmp3Result = hasOwnProperty(View, obj2);

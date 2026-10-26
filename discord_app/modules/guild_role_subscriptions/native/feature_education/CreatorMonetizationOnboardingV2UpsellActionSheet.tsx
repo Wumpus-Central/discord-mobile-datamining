@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef17679 from "../../../../../_runtime/metro/17679__.js";
+import _modDef17678 from "../../../../../_runtime/metro/17678__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17679) };
+          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17678) };
           const tmp19 = closure_6(markAsDismissed(5669), obj6);
           cResult[11] = tmp4.image;
           cResult[12] = tmp19;
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.kUUFbG);
       items[1] = closure_6(Text_Text.Text, obj4);
-      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17679 };
+      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17678 };
       items[2] = closure_6(FastImageDefault, obj5);
       const obj6 = {
         onPress: function handleCheckItOut() {

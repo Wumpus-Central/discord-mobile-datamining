@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/community/GuildSettingsAnalyticsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef19184 from "../../../../_runtime/metro/19184__.js";
+import _modDef19183 from "../../../../_runtime/metro/19183__.js";
 
 function handleFetchSuccess(arg0) {
   ({ guildId, stats } = arg0);
@@ -13,7 +13,7 @@ function handleFetchSuccess(arg0) {
   if (null != first) {
     const item = first.forEach((item) => {
       if (null != first[item]) {
-        const tmp8 = _modDef19184(item);
+        const tmp8 = _modDef19183(item);
         let tmp2 = null != dependencyMap;
         if (tmp2) {
           tmp2 = 0 !== dependencyMap[item];

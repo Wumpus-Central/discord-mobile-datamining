@@ -146,7 +146,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       }
       return tmp14;
     }
-    const obj3 = { userPrice: "r", pricesForPurchaseType: "duration", purchaseType: cResult[4], storeHasPrice: null != stateFromStores };
+    const obj3 = { userPrice: "r", pricesForPurchaseType: "toCharArray$esjava$1", purchaseType: cResult[4], storeHasPrice: null != stateFromStores };
     cResult[5] = cResult[4];
     cResult[6] = null != stateFromStores;
     cResult[7] = obj3;
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "duration", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "toCharArray$esjava$1", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores };
     return obj2;
   }, items1);
 });

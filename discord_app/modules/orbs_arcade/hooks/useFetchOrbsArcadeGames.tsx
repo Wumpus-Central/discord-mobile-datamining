@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const OrbsArcadeExperiment = enabled(16399).OrbsArcadeExperiment;
+      const OrbsArcadeExperiment = enabled(16398).OrbsArcadeExperiment;
       enabled = OrbsArcadeExperiment.useConfig(tmp4).enabled;
       if (cResult[2] !== enabled) {
         const fn = function o() {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return enabled;
     }
   : function useFetchOrbsArcadeGames(location) {
-      const OrbsArcadeExperiment = enabled(16399).OrbsArcadeExperiment;
+      const OrbsArcadeExperiment = enabled(16398).OrbsArcadeExperiment;
       enabled = OrbsArcadeExperiment.useConfig({ location }).enabled;
       const items = [enabled];
       const effect = noop.useEffect(() => {

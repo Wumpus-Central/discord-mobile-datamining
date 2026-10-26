@@ -69,7 +69,7 @@ let closure_28 = async function _transcodeImageToPng(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -759,7 +759,7 @@ obj2.bounceDock = function bounceDock(arg0) {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -793,7 +793,7 @@ obj2.bounceDock = function bounceDock(arg0) {
               const dock = closure_129_0.dock;
               dock.cancelBounce(closure_128_0);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -868,7 +868,7 @@ obj2.copy = function copy(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -897,7 +897,7 @@ obj2.copy = function copy(arg0) {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -919,7 +919,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1032,7 +1032,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
           return obj;
         } else {
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp41) {
         c4 = tmp;
@@ -1055,7 +1055,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1102,7 +1102,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -1139,7 +1139,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1320,7 +1320,7 @@ obj2.saveFile = function saveFile(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1637,7 +1637,7 @@ obj2.waitForIPCReady = function waitForIPCReady() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -1781,7 +1781,7 @@ obj2.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -2203,7 +2203,7 @@ obj2.stopCPUProfiling = function stopCPUProfiling() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -2967,7 +2967,7 @@ obj2.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

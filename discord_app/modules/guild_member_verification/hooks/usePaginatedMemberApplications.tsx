@@ -37,7 +37,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {

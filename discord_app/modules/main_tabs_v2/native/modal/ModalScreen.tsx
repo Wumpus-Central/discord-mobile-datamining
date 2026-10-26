@@ -322,10 +322,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.transitionState = null;
       obj5.onClose = callback;
       const items2 = [<modal.modal />];
-      tmp7Result = modal(18328);
+      tmp7Result = modal(18327);
       let isIOSResult = modal(1384).isIOS();
       if (isIOSResult) {
-        isIOSResult = closure_10(tmp7(12011).PortalKeyboardRenderer, { portal: false });
+        isIOSResult = closure_10(tmp7(12013).PortalKeyboardRenderer, { portal: false });
       }
       items2[1] = isIOSResult;
       obj4.children = items2;

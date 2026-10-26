@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { action: null, detail: null };
         const intl2 = formatElapsed(1128).intl;
         obj2.action = intl2.string(obj[stageStartedAt.stage]);
-        formatElapsed = formatElapsed(11879).formatElapsed;
+        formatElapsed = formatElapsed(11881).formatElapsed;
         formatElapsedResult2 = formatElapsed(stage - stageStartedAt.stageStartedAt);
         obj2.detail = formatElapsedResult2;
         const formatToPlainStringResult = intl.formatToPlainString(stageStartedAt(3830)["ndkR+x"], obj2);
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stageStartedAt = stageStartedAt.stageStartedAt;
         cResult[9] = stageStartedAt;
         cResult[10] = formatToPlainStringResult;
-        const formatElapsedResult1 = formatElapsed(11879);
+        const formatElapsedResult1 = formatElapsed(11881);
       }
       const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
     }
@@ -186,9 +186,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { action: null, detail: null };
         const intl2 = tmp(1128).intl;
         obj2.action = intl2.string(obj[stateFromStores.stage]);
-        obj2.detail = tmp(11879).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+        obj2.detail = tmp(11881).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
         formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3830)["ndkR+x"], obj2);
-        const tmpResult = tmp(11879);
+        const tmpResult = tmp(11881);
       }
       return formatToPlainStringResult;
     };

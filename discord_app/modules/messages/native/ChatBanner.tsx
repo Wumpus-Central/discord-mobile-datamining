@@ -15,7 +15,7 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11020).ChatOverlays;
+const ChatOverlays = fn(11022).ChatOverlays;
 const Constants = fn(1087);
 ({
   AnalyticsObjectTypes: closure_8,
@@ -734,7 +734,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     const obj3 = { size: "sm", color: nativeDefault.colors.WHITE };
-                    const tmp25 = closure_12(tmp(11023).XSmallBoldIcon, obj3);
+                    const tmp25 = closure_12(tmp(11025).XSmallBoldIcon, obj3);
                     cResult[16] = tmp25;
                     const tmp23 = tmp25;
                   } else {
@@ -882,7 +882,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               objectType: constants.ACK_MANUAL,
             });
           };
-          XSmallBoldIcon = XSmallBoldIcon(11023).XSmallBoldIcon;
+          XSmallBoldIcon = XSmallBoldIcon(11025).XSmallBoldIcon;
           const obj6 = { size: "sm", color: null };
           WHITE = nativeDefault.colors.WHITE;
           obj6.color = WHITE;

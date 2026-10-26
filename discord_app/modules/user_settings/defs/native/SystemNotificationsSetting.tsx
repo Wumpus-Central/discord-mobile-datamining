@@ -15,7 +15,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -89,9 +89,9 @@ let closure_8 = async function _handleEnableSystemNotification() {
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_5 = fn(7868).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13311);
+const NotificationPermissionConstants = fn(13310);
 ({ EventActionType: metroRequire, EventActionLocation: closure_7 } = NotificationPermissionConstants);
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

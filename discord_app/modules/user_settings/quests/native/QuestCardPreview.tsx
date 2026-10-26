@@ -40,7 +40,7 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled()
         return tmp5;
       }
       let obj = quest(576);
-      const tmp6 = jsx(quest(14142).QuestContentImpressionTrackerNative, {
+      const tmp6 = jsx(quest(14141).QuestContentImpressionTrackerNative, {
         questOrQuests: quest,
         questContent: quest(6713).QuestContent.INTERNAL_PREVIEW_TOOL,
         sourceQuestContent: quest(6713).QuestContent.INTERNAL_PREVIEW_TOOL,
@@ -61,7 +61,7 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function QuestCardPreview(quest) {
       quest = quest.quest;
-      return jsx(quest(14142).QuestContentImpressionTrackerNative, {
+      return jsx(quest(14141).QuestContentImpressionTrackerNative, {
         questOrQuests: quest,
         questContent: quest(6713).QuestContent.INTERNAL_PREVIEW_TOOL,
         sourceQuestContent: quest(6713).QuestContent.INTERNAL_PREVIEW_TOOL,

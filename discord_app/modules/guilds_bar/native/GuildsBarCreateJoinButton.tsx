@@ -36,7 +36,7 @@ let closure_15 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17743), {
+        const tmp22 = jsx(tmp17(17742), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,9 +265,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: null,
-          expandedChildren: "guilds-bar-drag-preview",
-          children: null,
+          label: "endere\u00E7o de e-mail",
+          expandedChildren: "URL",
+          children: "emoji",
         };
         const intl = util.intl;
         obj4.label = intl.string(util.t.l5WIbf);
@@ -284,9 +284,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: null,
-          expandedChildren: "guilds-bar-drag-preview",
-          children: null,
+          label: "endere\u00E7o de e-mail",
+          expandedChildren: "URL",
+          children: "emoji",
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

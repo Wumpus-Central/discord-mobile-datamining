@@ -15,7 +15,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       } else {
         closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -54,7 +54,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

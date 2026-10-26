@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         arr = closure_4();
       }
       let obj = onSelectDuration(576);
-      const actionInfo = onSelectDuration(19012).getActionInfo(
+      const actionInfo = onSelectDuration(19011).getActionInfo(
         AutomodActionType.USER_COMMUNICATION_DISABLED,
         action,
         triggerType,
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = triggerType;
       cResult[2] = actionInfo;
       tmp4 = actionInfo;
-      const tmpResult = onSelectDuration(19012);
+      const tmpResult = onSelectDuration(19011);
     }
   : function TimeoutDurationActionSheet(triggerType) {
       ({ action, onSelectDuration: require, onRemove: importDefault } = triggerType);

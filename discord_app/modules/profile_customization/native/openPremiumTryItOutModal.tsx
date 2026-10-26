@@ -21,7 +21,7 @@ export const openPremiumTryItOutModal = function openPremiumTryItOutModal(avatar
   });
   const obj2 = { userId: id, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(15939, dependencyMap.paths),
+    asyncRequireImpl(15938, dependencyMap.paths),
     { initialTarget: avatar },
     undefined,
     { presentation: "fullScreenModal", fullScreenGestureEnabled: true },

@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     if (cResult[14] !== legalWithLogo.logo) {
                       const obj3 = {
-                        source: legalWithLogo(16387),
+                        source: legalWithLogo(16386),
                         style: legalWithLogo.logo,
                         resizeMode: "contain",
                         accessible: false,
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp9 = tmp3Result;
       if (flag) {
         const obj3 = { style: tmp.legalWithLogo, children: null };
-        const obj4 = { source: tmp7(16387), style: tmp.logo, resizeMode: "contain", accessible: false };
+        const obj4 = { source: tmp7(16386), style: tmp.logo, resizeMode: "contain", accessible: false };
         const items1 = [closure_6(tmp7(5669), obj4), tmp3Result];
         obj3.children = items1;
         tmp9 = closure_7(View, obj3);

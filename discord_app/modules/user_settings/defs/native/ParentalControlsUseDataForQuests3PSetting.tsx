@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
       return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
     };
-const SettingBuilders = fn(11206);
+const SettingBuilders = fn(11208);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDataToSupportQuests3PSettingIsDisabled() {
       const selectedTeenId = useSelectedTeen.useSelectedTeenId();

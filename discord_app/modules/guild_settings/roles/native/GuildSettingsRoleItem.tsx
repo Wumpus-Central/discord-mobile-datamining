@@ -1003,7 +1003,7 @@ export default noop.memo(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
               } else {
                 try {
@@ -1020,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11266).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11268).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1035,7 +1035,7 @@ export default noop.memo(
                   }
                   onPress(6830).deleteRole(guildId, tmp2.id);
                   c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 } catch (tmp16) {
                   c2 = tmp;
                   throw tmp16;
@@ -1165,7 +1165,7 @@ export default noop.memo(
                       const obj4 = { value, done: true };
                       return obj4;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     }
                   } else {
                     try {
@@ -1182,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11266).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11268).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1197,7 +1197,7 @@ export default noop.memo(
                       }
                       GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                       c2 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     } catch (tmp16) {
                       c2 = tmp;
                       throw tmp16;

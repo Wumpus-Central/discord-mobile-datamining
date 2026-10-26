@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     dependencyMap = 1;
                     c3 = 1;
                     let obj4 = {
-                      value: Promise.all(first1.map(tmp2(12905).getOrResolveChannelIdFromDestinationId)),
+                      value: Promise.all(first1.map(tmp2(12904).getOrResolveChannelIdFromDestinationId)),
                       done: false,
                     };
                     return obj4;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-                closure_128_1 = tmp2(15743).resolveActivityShareMessageContent(
+                closure_128_1 = tmp2(15742).resolveActivityShareMessageContent(
                   closure_129_4,
                   closure_129_15,
                   closure_129_13,
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj4 = { value, done: true };
                           return obj4;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         }
                       } else {
                         try {
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             return obj;
                           }
                           c1 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+352" };
                         } catch (tmp12) {
                           c1 = tmp;
                           throw tmp12;
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                   })(),
                 );
-                let obj5 = tmp2(15743);
+                let obj5 = tmp2(15742);
                 let obj7 = { text: null };
                 const intl = tmp2(1128).intl;
                 const obj8 = { applicationName: closure_129_15.name };
@@ -356,8 +356,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3(5663).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
                 closure_129_5(true, closure_129_8);
                 let obj6 = tmp3(5663);
-                const result = tmp2(15741).closeActivityShareLinkModal();
-                const obj9 = tmp2(15741);
+                const result = tmp2(15740).closeActivityShareLinkModal();
+                const obj9 = tmp2(15740);
               }
               c3 = 3;
               let obj = { value, done: true };

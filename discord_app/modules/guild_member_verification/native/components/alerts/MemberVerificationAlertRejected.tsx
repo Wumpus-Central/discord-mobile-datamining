@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const result = tmp2(stateFromStores[13]).openMemberVerificationModal(tmp2);
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp20) {
               c2 = tmp;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const result = guildId(6871).openMemberVerificationModal(closure_128_0);
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp19) {
               dependencyMap = tmp;
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -520,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const result = guildId(6871).openMemberVerificationModal(closure_128_0);
               dependencyMap = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp19) {
             dependencyMap = tmp;

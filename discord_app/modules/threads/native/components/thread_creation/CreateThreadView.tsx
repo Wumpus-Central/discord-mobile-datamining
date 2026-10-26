@@ -88,7 +88,7 @@ function useSubmitForm(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ function useSubmitForm(parentChannel) {
                   tmp60.current = false;
                   c5 = 0;
                   c7 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+352" };
                 }
                 v2 = 2;
                 c7 = 1;
@@ -403,7 +403,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                               }
                                               if (cResult[54] !== parentChannel.id) {
                                                 const obj8 = { channelId: parentChannel.id };
-                                                const tmp75 = closure_13(tmp15(13568), obj8);
+                                                const tmp75 = closure_13(tmp15(13567), obj8);
                                                 cResult[54] = parentChannel.id;
                                                 cResult[55] = tmp75;
                                                 let tmp73 = tmp75;
@@ -462,7 +462,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             secondaryTextFieldRef: ref1,
                                             threadCreationCallback: tmp14,
                                           };
-                                          const tmp72 = closure_13(tmp15(13058), obj11);
+                                          const tmp72 = closure_13(tmp15(13057), obj11);
                                           cResult[50] = tmp14;
                                           cResult[51] = parentChannel;
                                           cResult[52] = screenIndex;
@@ -477,7 +477,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             hasTypingText: false,
                                             slowmodeType: SlowmodeType.CreateThread,
                                           };
-                                          obj12.children = closure_13(tmp15(13084), obj13);
+                                          obj12.children = closure_13(tmp15(13083), obj13);
                                           tmp65 = closure_13(closure_6, obj12);
                                         }
                                         cResult[47] = parentChannel;
@@ -514,7 +514,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                 channelId: parentChannel.id,
                                 messageId: threadSettingsDraft.parentMessageId,
                               };
-                              items4[1] = closure_13(tmp(18042).ThreadCreationStarterMessage, obj18);
+                              items4[1] = closure_13(tmp(18041).ThreadCreationStarterMessage, obj18);
                               obj16.children = items4;
                               tmp52 = closure_14(closure_6, obj16);
                             }
@@ -589,7 +589,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               threadNameError: tmp10,
               optional: tmp24,
             };
-            const tmp44 = closure_13(tmp15(18040), obj22);
+            const tmp44 = closure_13(tmp15(18039), obj22);
             cResult[21] = tmp24;
             cResult[22] = tmp10;
             cResult[23] = threadSettingsDraft;
@@ -658,7 +658,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.threadIconContainer,
           children: closure_13(threadSettingsDraft(8544).ThreadIcon, { size: "lg" }),
         }),
-        closure_13(parentChannel(18040), {
+        closure_13(parentChannel(18039), {
           ref: ref1,
           chatInputRef: ref,
           threadSettingsDraft,
@@ -709,7 +709,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj13 = { style: tmp.border };
         const items6 = [closure_13(closure_6, obj13)];
         const obj14 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-        items6[1] = closure_13(tmp2(18042).ThreadCreationStarterMessage, obj14);
+        items6[1] = closure_13(tmp2(18041).ThreadCreationStarterMessage, obj14);
         obj12.children = items6;
         tmp15Result = closure_14(closure_6, obj12);
       }
@@ -721,11 +721,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (parentChannel.rateLimitPerUser > 0) {
         const obj15 = { style: tmp.typingWrapper, children: null };
         const obj16 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-        obj15.children = closure_13(tmp8(13084), obj16);
+        obj15.children = closure_13(tmp8(13083), obj16);
         tmp16Result2 = closure_13(closure_6, obj15);
       }
       items3[2] = tmp16Result2;
-      items3[3] = closure_13(parentChannel(13058), {
+      items3[3] = closure_13(parentChannel(13057), {
         ref,
         channel: parentChannel,
         onJumpToPresent,
@@ -733,7 +733,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         secondaryTextFieldRef: ref1,
         threadCreationCallback: tmp7,
       });
-      items3[4] = closure_13(parentChannel(13568), { channelId: parentChannel.id });
+      items3[4] = closure_13(parentChannel(13567), { channelId: parentChannel.id });
       obj4.children = items3;
       items1[1] = closure_14(closure_6, obj4);
       obj3.children = items1;

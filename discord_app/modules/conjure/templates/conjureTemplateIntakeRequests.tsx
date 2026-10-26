@@ -20,7 +20,7 @@ let closure_3 = async function _fetchStoredConjureIntake(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {

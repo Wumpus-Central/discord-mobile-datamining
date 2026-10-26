@@ -3,7 +3,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
 const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15725);
+const CONTEXT_MENU_ICON_NAMES = fn(15724);
 obj[RPCCommands.USER_SETTINGS_GET_LOCALE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.USER_SETTINGS_GET_LOCALE,
   {

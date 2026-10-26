@@ -6,8 +6,8 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import ChannelActionSheetUtils from "../../../channel/native/ChannelActionSheetUtils.tsx";
-import _modDef13741 from "../../../../../_runtime/metro/13741__.js";
-import _modDef17525 from "../../../../../_runtime/metro/17525__.js";
+import _modDef13740 from "../../../../../_runtime/metro/13740__.js";
+import _modDef17524 from "../../../../../_runtime/metro/17524__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onClose = guildId.onClose;
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { disableColor: true, source: onClose(13741) };
+        const obj2 = { disableColor: true, source: onClose(13740) };
         const tmp8 = closure_5(tmp(1202).Icon, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { source: onClose(17525) };
+        const obj5 = { source: onClose(17524) };
         const tmp21 = closure_5(tmp(1202).Icon, obj5);
         cResult[6] = tmp21;
         let tmp18 = tmp21;
@@ -137,14 +137,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { leading: null, title: null };
       const obj3 = { style: closure_7().headerIcon, children: null };
       const tmp = closure_7();
-      obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13741 });
+      obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13740 });
       obj2.leading = closure_5(View, obj3);
       const intl = util.intl;
       obj2.title = intl.string(util.t["KzCF/6"]);
       const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2)];
       const obj5 = { leading: null, label: null, onPress: null };
-      const obj4 = { disableColor: true, source: _modDef13741 };
-      obj5.leading = closure_5(native.Icon, { source: _modDef17525 });
+      const obj4 = { disableColor: true, source: _modDef13740 };
+      obj5.leading = closure_5(native.Icon, { source: _modDef17524 });
       const obj7 = { text: null };
       const intl2 = util.intl;
       obj7.text = intl2.string(util.t.WqhZss);

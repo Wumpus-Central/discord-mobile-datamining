@@ -55,7 +55,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ export default function GuildProfileEmptyState() {
         } else {
           value.default.openCreateGuildModal();
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp8) {
         c0 = tmp;
@@ -108,7 +108,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+352" };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ export default function GuildProfileEmptyState() {
         } else {
           const result = value.default.openGuildJoinServerScreen();
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } catch (tmp8) {
         c0 = tmp;

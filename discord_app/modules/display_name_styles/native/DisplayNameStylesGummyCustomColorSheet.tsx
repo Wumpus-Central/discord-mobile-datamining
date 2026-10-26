@@ -88,17 +88,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { title: tmp8, trailing: null };
           const obj6 = { variant: "primary", size: "sm", text: tmp10, onPress: tmp7 };
           obj5.trailing = closure_7(tmp(5244).Button, obj6);
-          const tmp16 = closure_7(sharedValue(16699), obj5);
+          const tmp16 = closure_7(sharedValue(16698), obj5);
           cResult[6] = tmp7;
           cResult[7] = tmp16;
           let tmp12 = tmp16;
-          const tmp15 = sharedValue(16699);
+          const tmp15 = sharedValue(16698);
         } else {
           tmp12 = cResult[7];
         }
         if (cResult[8] !== sharedValue) {
           const obj7 = { hue: sharedValue };
-          const tmp20 = closure_7(sharedValue(16706), obj7);
+          const tmp20 = closure_7(sharedValue(16705), obj7);
           cResult[8] = sharedValue;
           cResult[9] = tmp20;
           let tmp17 = tmp20;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[16] !== sharedValue) {
               const obj8 = { hue: sharedValue, onPanFinalize: first, saturation, lightness, fullWidth: true };
-              const tmp34 = closure_7(sharedValue(15848), obj8);
+              const tmp34 = closure_7(sharedValue(15847), obj8);
               cResult[16] = sharedValue;
               cResult[17] = tmp34;
               let tmp29 = tmp34;
@@ -218,18 +218,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.text = intl2.string(onSelect(1128).t.XqMe3N);
       obj6.onPress = callback1;
       obj5.trailing = closure_7(onSelect(5244).Button, obj6);
-      obj4.header = closure_7(sharedValue(16699), obj5);
+      obj4.header = closure_7(sharedValue(16698), obj5);
       const obj7 = { style: tmp.body, children: null };
       const obj8 = { style: tmp.previewWrapper, children: null };
-      const tmp5 = sharedValue(16699);
+      const tmp5 = sharedValue(16698);
       obj8.children = closure_7(View, {
         style: tmp.preview,
-        children: closure_7(sharedValue(16706), { hue: sharedValue }),
+        children: closure_7(sharedValue(16705), { hue: sharedValue }),
       });
       const items1 = [closure_7(View, obj8)];
       const obj10 = {
         style: tmp.huePickerInset,
-        children: closure_7(sharedValue(15848), {
+        children: closure_7(sharedValue(15847), {
           hue: sharedValue,
           onPanFinalize: callback,
           saturation,

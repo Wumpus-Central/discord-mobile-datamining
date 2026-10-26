@@ -49,10 +49,10 @@ const jsxProd = fn(21);
 let obj = {
   frame: fn(9616).GameControllerIcon,
   overlay_widget: fn(12466).WindowTopIcon,
-  user_widget: fn(10816).UserCircleIcon,
-  bot: fn(11797).RobotIcon,
-  commands: fn(11797).RobotIcon,
-  automod: fn(10951).ShieldIcon,
+  user_widget: fn(10818).UserCircleIcon,
+  bot: fn(11799).RobotIcon,
+  commands: fn(11799).RobotIcon,
+  automod: fn(10953).ShieldIcon,
 };
 const createStyles = fn(4971);
 let obj3 = {

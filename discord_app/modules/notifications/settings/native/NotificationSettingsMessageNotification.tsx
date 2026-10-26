@@ -267,7 +267,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19342, dependencyMap.paths),
+        asyncRequireImpl(19341, dependencyMap.paths),
         "MessageNotificationGuildActionSheet",
         { guildId: style.guildId },
       );

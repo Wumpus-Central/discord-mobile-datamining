@@ -53,7 +53,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       ({ fetched, hasAlreadyLinked } = tmp7);
       ({ connectionApp, canStartAuthorization, startAuthorization } = tmp7);
       const tmpResult4 = guildId(6809);
-      const defaultAuthorizationNotifiers = guildId(17699).useDefaultAuthorizationNotifiers(
+      const defaultAuthorizationNotifiers = guildId(17698).useDefaultAuthorizationNotifiers(
         startAuthorization,
         hasAlreadyLinked,
       );
@@ -137,7 +137,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         tmp25 = items3;
         tmp24 = fn2;
       }
-      const tmpResult5 = guildId(17699);
+      const tmpResult5 = guildId(17698);
     }
   : function useMobileAccountLinkRow(guildId) {
       guildId = guildId.guildId;
@@ -162,7 +162,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       ({ fetched, hasAlreadyLinked } = tmp3);
       ({ connectionApp, canStartAuthorization, startAuthorization } = tmp3);
       let obj2 = guildId(6809);
-      const defaultAuthorizationNotifiers = guildId(17699).useDefaultAuthorizationNotifiers(
+      const defaultAuthorizationNotifiers = guildId(17698).useDefaultAuthorizationNotifiers(
         startAuthorization,
         hasAlreadyLinked,
       );
@@ -184,7 +184,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (fetched) {
         fetched = null != connectionApp.applicationAccountLinkBenefitConfig.reward_image;
       }
-      const obj3 = guildId(17699);
+      const obj3 = guildId(17698);
       if (fetched) {
         const items1 = [tmp(4807).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER];
         let items2 = items1;
@@ -266,9 +266,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores1 = tmp(573).useStateFromStores(tmp11, tmp13, tmp14);
         const tmpResult5 = tmp(573);
-        const guildHasLiveChannelNotice = tmp(17613).useGuildHasLiveChannelNotice(id);
-        const tmpResult6 = tmp(17613);
-        const canShowGameClaimCoachmark = tmp(17700).useCanShowGameClaimCoachmark(id);
+        const guildHasLiveChannelNotice = tmp(17612).useGuildHasLiveChannelNotice(id);
+        const tmpResult6 = tmp(17612);
+        const canShowGameClaimCoachmark = tmp(17699).useCanShowGameClaimCoachmark(id);
         if (cResult[9] !== canShowGameClaimCoachmark) {
           if (canShowGameClaimCoachmark) {
             const items2 = [tmp(4807).DismissibleContent.GAME_CLAIM_COACHMARK];
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp32 = items4;
           const tmp31 = closure_13(tmp29);
         }
-        const tmpResult7 = tmp(17700);
+        const tmpResult7 = tmp(17699);
       }
       const fn2 = function k() {
         let result = null != mfaEnabled;

@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const items2 = [first, tmp2[1], stateFromStores];
       obj2 = stateFromStores(573);
-      return first(14489)(
+      return first(14488)(
         useMemo(() => {
           let obj = CollectiblesUtils;
           const profileEffects = obj.getProfileEffects(stateFromStores, first);

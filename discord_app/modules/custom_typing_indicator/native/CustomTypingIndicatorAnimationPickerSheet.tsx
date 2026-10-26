@@ -278,12 +278,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = onChange(576);
       obj10.typingSuggestion = map(1400).TypingSuggestion.UNSPECIFIED;
       obj9.config = obj10;
-      const tmp15 = closure_6(content(13081), obj9);
+      const tmp15 = closure_6(content(13080), obj9);
       cResult[13] = emojis;
       cResult[14] = content;
       cResult[15] = tmp15;
       tmp13 = tmp15;
-      const tmp10Result = content(13081);
+      const tmp10Result = content(13080);
     }
   : function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       onChange = onChange.onChange;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { config: null, size: 54 };
       const obj8 = { emojis, animation, typingSuggestion: onChange(1400).TypingSuggestion.UNSPECIFIED };
       obj7.config = obj8;
-      obj6.children = closure_6(animation(13081), obj7);
+      obj6.children = closure_6(animation(13080), obj7);
       const items1 = [closure_6(View, obj6)];
       const obj9 = { spacing: 8, children: null };
       const items2 = [items.slice(0, 2), items.slice(2, 4)];

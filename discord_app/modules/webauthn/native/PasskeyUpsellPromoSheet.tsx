@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PasswordlessUpsellPromoSheet() {
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp(17048), style: { height: 190, width: 220, resizeMode: "contain" } };
+        let obj2 = { source: tmp(17047), style: { height: 190, width: 220, resizeMode: "contain" } };
         const tmp8 = closure_6(FastImageDefault, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           items[1] = closure_6(tmp(5244).Button, obj6);
           obj5.children = items;
           obj4.actions = closure_7(tmp(6696).ButtonGroup, obj5);
-          const tmp23 = closure_6(tmp(10853).PromoSheet, obj4);
+          const tmp23 = closure_6(tmp(10855).PromoSheet, obj4);
           cResult[7] = tmp23;
           let tmp20 = tmp23;
         } else {
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function PasswordlessUpsellPromoSheet() {
       let obj = {
-        source: require("../../../../_runtime/metro/17048__.js"),
+        source: require("../../../../_runtime/metro/17047__.js"),
         style: { height: 190, width: 220, resizeMode: "contain" },
       };
       _require = noop.useRef(false);

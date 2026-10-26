@@ -27,105 +27,60 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_16 = async function _handleToggleVideo(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag3 = closure_1;
+  if (closure_1 === undefined) {
+    flag3 = true;
+  }
+  closure_130_1 = flag3;
+  await "Reflect";
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c5 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          c3 = 0;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag3 = closure_1;
-          if (closure_1 === undefined) {
-            flag3 = true;
+      closure_130_2 = closure_131_10.isVideoEnabled();
+      const channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
+      const reachedLimit = channelVideoLimit.reachedLimit;
+      const limit = channelVideoLimit.limit;
+      if (reachedLimit) {
+        if (closure_130_1) {
+          const obj5 = { title: null, body: null };
+          const intl = closure_131_0(closure_131_3[14]).intl;
+          obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
+          const intl2 = closure_131_0(closure_131_3[14]).intl;
+          obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, { limit: limit.toString() });
+          closure_131_1(closure_131_3[13]).show(obj5);
+          closure_131_1(closure_131_3[13]);
+          {
+            limit: limit.toString();
           }
-          closure_130_1 = flag3;
-          closure_130_2 = undefined;
-          let channelVideoLimit;
-          let reachedLimit;
-          let limit;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
         }
+      } else if (closure_130_2) {
+        closure_131_1(closure_131_3[16]).setVideoEnabled(false);
+        closure_131_1(closure_131_3[16]);
       } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_130_2 = closure_131_10.isVideoEnabled();
-            channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
-            reachedLimit = channelVideoLimit.reachedLimit;
-            limit = channelVideoLimit.limit;
-            if (reachedLimit) {
-              if (closure_130_1) {
-                const obj5 = { title: null, body: null };
-                const intl = closure_131_0(closure_131_3[14]).intl;
-                obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
-                const intl2 = closure_131_0(closure_131_3[14]).intl;
-                const obj7 = { limit: limit.toString() };
-                obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, obj7);
-                closure_131_1(closure_131_3[13]).show(obj5);
-                const obj6 = closure_131_1(closure_131_3[13]);
-              }
-            } else if (closure_130_2) {
-              closure_131_1(closure_131_3[16]).setVideoEnabled(false);
-              const tmp12Result = closure_131_1(closure_131_3[16]);
-            } else {
-              c4 = 2;
-              c5 = 1;
-              const obj8 = {
-                value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA),
-                done: false,
-              };
-              return obj8;
-            }
-            c5 = 3;
-            const obj12 = closure_131_0(closure_131_3[12]);
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          if (value) {
-            closure_131_1(closure_131_3[16]).setVideoEnabled(true);
-            const obj = closure_131_1(closure_131_3[16]);
-          }
-        }
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        c4 = 2;
+        c5 = 1;
+        return { value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA), done: false };
       }
-    } catch (tmp31) {
-      c5 = tmp;
-      throw tmp31;
+      c5 = 3;
+      closure_131_0(closure_131_3[12]);
+    }
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    if (value) {
+      closure_131_1(closure_131_3[16]).setVideoEnabled(true);
+      closure_131_1(closure_131_3[16]);
     }
   }
+  return value;
 };
 const NativeModules = fn(17).NativeModules;
 const NativePermissionTypes = fn(7868).NativePermissionTypes;
@@ -246,7 +201,7 @@ const tmp2 = PlatformUtils.isAndroid()
         AudioRouteStore,
       ];
       const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-        isVideoMode = isEnabled(11609).isVideoMode(
+        isVideoMode = isEnabled(11611).isVideoMode(
           ChannelStore,
           SelectedChannelStore,
           ApplicationStreamingStore,

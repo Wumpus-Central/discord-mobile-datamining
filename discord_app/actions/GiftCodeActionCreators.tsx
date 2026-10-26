@@ -29,7 +29,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -227,7 +227,7 @@ let closure_6 = fn(7658).isUnknownCollectiblesItemRecord;
 const Constants = fn(1087);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1394).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11036).default);
+const merged = Object.assign(fn(11038).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

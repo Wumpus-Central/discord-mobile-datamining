@@ -118,13 +118,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(11283, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(11285, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(11283, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(11285, dependencyMap.paths);
           const obj8 = {
             guildId: node.guildId,
             roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId),
@@ -979,7 +979,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
                 size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
               }
               obj2.style = size;
-              obj2.source = node(11256);
+              obj2.source = node(11258);
               obj2.size = tmp(1202).Icon.Sizes.CUSTOM;
               closure_14(tmp(1202).ThemedIcon, obj2);
             }
@@ -1237,7 +1237,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
         }
         obj5.style = size;
-        obj5.source = node(11256);
+        obj5.source = node(11258);
         obj5.size = tmp3(1202).Icon.Sizes.CUSTOM;
         closure_14(tmp3(1202).ThemedIcon, obj5);
       }
@@ -1252,7 +1252,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const output = state.output;
       ({ styles, variants } = state);
       const tmp4 = closure_18();
-      let SignPostIcon = state(15082).SignPostIcon;
+      let SignPostIcon = state(15081).SignPostIcon;
       const channelId = node.channelId;
       if (StaticChannelId.GUILD_HOME !== channelId) {
         if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -1263,7 +1263,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          SignPostIcon = tmp(15084).ChannelListMagnifyingGlassIcon;
+          SignPostIcon = tmp(15083).ChannelListMagnifyingGlassIcon;
         }
         let str = "button";
         if (state.noStyleAndInteraction) {
@@ -1466,14 +1466,14 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = smartOutputResult;
         const tmpResult = tmp(8471);
       }
-      SignPostIcon = tmp(15082).SignPostIcon;
+      SignPostIcon = tmp(15081).SignPostIcon;
     }
   : function MarkupStaticRouteLink(state) {
       state = state.state;
       const node = state.node;
       ({ output, styles, variants } = state);
       let tmp = closure_18();
-      let SignPostIcon = state(15082).SignPostIcon;
+      let SignPostIcon = state(15081).SignPostIcon;
       const channelId = node.channelId;
       if (StaticChannelId.GUILD_HOME !== channelId) {
         if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -1484,7 +1484,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          SignPostIcon = tmp2(15084).ChannelListMagnifyingGlassIcon;
+          SignPostIcon = tmp2(15083).ChannelListMagnifyingGlassIcon;
         }
         let str = "button";
         if (state.noStyleAndInteraction) {
@@ -1554,7 +1554,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp2Result = tmp2(8471);
       }
-      SignPostIcon = tmp2(15082).SignPostIcon;
+      SignPostIcon = tmp2(15081).SignPostIcon;
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1574,7 +1574,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "text-xs/medium";
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(15086), size: null };
+        let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(15085), size: null };
         const fontScale = closure_6.getFontScale();
         if (fontScale < 1) {
           let SMALL = tmp(1202).Icon.Sizes.EXTRA_SMALL_10;
@@ -1719,7 +1719,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "text-xs/medium";
       }
       let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(15086), size: null };
+      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(15085), size: null };
       const fontScale = closure_6.getFontScale();
       if (fontScale < 1) {
         let SMALL = tmp3(1202).Icon.Sizes.EXTRA_SMALL_10;
@@ -2145,7 +2145,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[48]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_14(obj2(15087), { node, state }, state.key);
+        return closure_1_14(obj2(15086), { node, state }, state.key);
       },
     },
     [closure_0(closure_2[48]).AST_KEY.TIMESTAMP]: {
@@ -2356,4 +2356,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(15087).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(15086).createFetchingGameMentionRule;

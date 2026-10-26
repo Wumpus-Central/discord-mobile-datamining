@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj2 = { style: tmp4.reactionRow, children: null };
             const obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp20 };
-            obj2.children = closure_10(tmp(10992).ForumPostActionBarReactions, obj3);
+            obj2.children = closure_10(tmp(10994).ForumPostActionBarReactions, obj3);
             tmp30 = closure_10(View, obj2);
           }
           cResult[23] = channel;
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp11) {
         const obj7 = { style: tmp.reactionRow, children: null };
         const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-        obj7.children = closure_10(tmp2(10992).ForumPostActionBarReactions, obj8);
+        obj7.children = closure_10(tmp2(10994).ForumPostActionBarReactions, obj8);
         tmp11 = closure_10(View, obj7);
       }
       const items5 = [tmp11];
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.jumpType = Client.JumpType.ANIMATED;
           obj.jumpToMessage(obj2);
         };
-        obj11.children = closure_10(tmp2(11014).ArrowLargeUpIcon, { size: "xs" });
+        obj11.children = closure_10(tmp2(11016).ArrowLargeUpIcon, { size: "xs" });
         items7[2] = closure_10(tmp2(6908).PressableOpacity, obj11);
         obj9.children = items7;
         items5[1] = closure_11(View, obj9);

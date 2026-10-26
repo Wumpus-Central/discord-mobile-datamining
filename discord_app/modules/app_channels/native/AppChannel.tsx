@@ -23,7 +23,7 @@ import useAppChannelClosedDefault from "../useAppChannelClosed.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const useChannelContentGate = obj(10890);
+const useChannelContentGate = obj(10892);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -59,10 +59,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 ({ frame, state } = useFrameLifecycleDefault(tmp9));
                 conjureBackgroundFramesDefault(applicationId, surface);
                 const tmp10 = useFrameLifecycleDefault(tmp9);
-                useEdgeOnlySwipeExitDefault(state === tmp(18044).FrameLifecycleState.Launched);
+                useEdgeOnlySwipeExitDefault(state === tmp(18043).FrameLifecycleState.Launched);
                 const tmp5Result = useEdgeOnlySwipeExitDefault;
                 let tmp15 = null;
-                if (state === tmp(18044).FrameLifecycleState.Launched) {
+                if (state === tmp(18043).FrameLifecycleState.Launched) {
                   tmp15 = applicationId;
                 }
                 useInlineFrameOAuthNavigationDefault(tmp15);
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                if (tmp(18044).FrameLifecycleState.Launched === state) {
+                if (tmp(18043).FrameLifecycleState.Launched === state) {
                   class M {
                     constructor(arg0) {
                       obj = closure_0(closure_2[15]);
@@ -98,7 +98,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const obj2 = {
                     frameId: frame.id,
-                    level: tmp(11892).FrameStackLevel.WithinAppContent,
+                    level: tmp(11894).FrameStackLevel.WithinAppContent,
                     presentation: tmp7,
                   };
                   const tmp22 = closure_5(FrameRenderTargetDefault, obj2);

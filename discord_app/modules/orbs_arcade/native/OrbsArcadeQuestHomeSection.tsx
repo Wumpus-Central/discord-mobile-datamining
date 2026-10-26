@@ -21,7 +21,7 @@ let obj2 = {
   sectionHeader: { gap: 2, paddingHorizontal: 4, paddingBottom: 2 },
   skeletonTile: null,
 };
-let size = { width: "100%", height: fn(16397).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
+let size = { width: "100%", height: fn(16396).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
 obj2.skeletonTile = size;
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

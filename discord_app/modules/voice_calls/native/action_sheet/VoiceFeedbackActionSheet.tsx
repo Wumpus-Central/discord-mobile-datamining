@@ -137,7 +137,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18801, dependencyMap.paths), "UploadLogs", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18800, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });

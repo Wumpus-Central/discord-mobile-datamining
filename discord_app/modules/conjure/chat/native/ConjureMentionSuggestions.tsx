@@ -105,13 +105,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               icon: closure_1_3(projectId(fileThumbnail[10]).Avatar, {
                 user: user.user,
                 size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL,
-                guildId: "r",
+                guildId: "Array",
               }),
               label: null,
               subLabel: null,
               onPress: null,
             };
-            const obj2 = { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "r" };
+            const obj2 = { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "Array" };
             obj.label = projectId(fileThumbnail[11]).getName(user.user);
             obj.subLabel = user.user.username;
             obj.onPress = function onPress() {
@@ -182,13 +182,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               icon: closure_1_3(projectId(fileThumbnail[10]).Avatar, {
                 user: user.user,
                 size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL,
-                guildId: "r",
+                guildId: "Array",
               }),
               label: null,
               subLabel: null,
               onPress: null,
             };
-            const obj2 = { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "r" };
+            const obj2 = { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "Array" };
             obj.label = projectId(fileThumbnail[11]).getName(user.user);
             obj.subLabel = user.user.username;
             obj.onPress = function onPress() {

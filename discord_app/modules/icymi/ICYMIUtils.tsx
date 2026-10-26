@@ -25,7 +25,7 @@ let closure_12 = async function _hydrateItems(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_12 = async function _hydrateItems(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+352" };
     } catch (tmp17) {
       c4 = tmp;
       throw tmp17;

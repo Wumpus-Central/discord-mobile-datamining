@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3.goBack();
                 c2 = 0;
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp29) {
               if (tmp4 === c2) {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               closure_128_0.goBack();
               dependencyMap = 0;
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp29) {
             if (tmp4 === dependencyMap) {

@@ -20,7 +20,7 @@ let obj2 = {
     paddingBottom: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   },
-  searchBar: { height: "duration", minHeight: false },
+  searchBar: { height: "emoji", minHeight: false },
   searchBarRowContainer: null,
   noResults: null,
 };

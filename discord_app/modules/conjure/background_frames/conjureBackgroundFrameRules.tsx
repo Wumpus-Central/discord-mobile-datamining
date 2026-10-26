@@ -45,11 +45,15 @@ export const shouldRunInBackgroundOnRelease = function shouldRunInBackgroundOnRe
 export const isBuilderPreviewFrame = function isBuilderPreviewFrame(frame) {
   let result = conjurePreviewSurface.isConjurePreviewSurface(frame.surface);
   if (!result) {
-    let tmp3 = frame.intent === FrameIntent.MAIN;
-    if (tmp3) {
-      tmp3 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
+    result = conjurePreviewSurface.isConjurePreviewOverlayFrame(frame);
+    const tmpResult = conjurePreviewSurface;
+  }
+  if (!result) {
+    let tmp5 = frame.intent === FrameIntent.MAIN;
+    if (tmp5) {
+      tmp5 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
     }
-    result = tmp3;
+    result = tmp5;
   }
   return result;
 };

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   showModal(locationStack, platformType) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(14080, dependencyMap.paths),
+      asyncRequireImpl(14079, dependencyMap.paths),
       { locationStack, platformType },
       c3,
     );

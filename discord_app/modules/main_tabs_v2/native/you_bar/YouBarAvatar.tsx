@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16443);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -519,7 +519,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           status: null,
           statusSizeOverride: null,
           cutout: null,
-          statusStyle: "2026-05-noisier-notif-settings-defaults",
+          statusStyle: "2025-08-browser-hevc",
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;
@@ -962,7 +962,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -993,7 +993,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
             value.openUserSettings();
             closure_128_3(false);
             paths = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp12) {
           paths = tmp;

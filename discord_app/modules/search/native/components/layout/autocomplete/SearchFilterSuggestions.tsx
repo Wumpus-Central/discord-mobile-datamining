@@ -507,12 +507,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(18060).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18059).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(18060);
-  const validFilterTokens = searchContext(18069).useValidFilterTokens(searchContext);
+  let obj = searchContext(18059);
+  const validFilterTokens = searchContext(18068).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -550,7 +550,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(18069);
+  let obj2 = searchContext(18068);
   const fn = function _() {
     return dismissed.get();
   };

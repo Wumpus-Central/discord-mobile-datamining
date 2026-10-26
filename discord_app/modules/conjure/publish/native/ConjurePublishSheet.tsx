@@ -22,10 +22,10 @@ const jsxProd = fn(21);
 const ConjurePublishSheet = "ConjurePublishSheet";
 let obj = { screen_capture: fn(9483).ScreenIcon, connect_user_to_voice: fn(8572).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6774).ConjureSupportedSurface.BOT] = fn(11797).RobotIcon;
-obj2[fn(6774).ConjureSupportedSurface.ACTIVITY] = fn(12288).ActivitiesIcon;
-obj2[fn(6774).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12290).BadgeIcon;
-obj2[fn(6774).ConjureSupportedSurface.AUTOMOD] = fn(10951).ShieldIcon;
+obj2[fn(6774).ConjureSupportedSurface.BOT] = fn(11799).RobotIcon;
+obj2[fn(6774).ConjureSupportedSurface.ACTIVITY] = fn(12290).ActivitiesIcon;
+obj2[fn(6774).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12292).BadgeIcon;
+obj2[fn(6774).ConjureSupportedSurface.AUTOMOD] = fn(10953).ShieldIcon;
 let closure_12 = { initial: "initialDot", notPublished: "pendingRing", published: "publishedDot" };
 const createStyles = fn(4971);
 let obj4 = {
@@ -201,7 +201,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       _require = publish;
       entryPoint = entryPoint.entryPoint;
       const tmp4 = closure_13();
-      const tmp6 = entryPoint(12292)(project, publish);
+      const tmp6 = entryPoint(12294)(project, publish);
       dependencyMap = tmp6;
       ({ initial: initialChannelNames, editable, identity, sharing } = tmp6);
       if (cResult[0] === initialChannelNames) {
@@ -372,7 +372,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     }
                                                     tmp55[0] = tmp4.onlyMeIcon;
                                                     const obj7 = { size: "xs", color: tmp5(587).colors.ICON_DEFAULT };
-                                                    tmp55[1] = closure_6(tmp(11838).UserIcon, obj7);
+                                                    tmp55[1] = closure_6(tmp(11840).UserIcon, obj7);
                                                     tmp53Result = closure_6(View, tmp55);
                                                   }
                                                   const items1 = [tmp53Result];
@@ -591,7 +591,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                         obj = entryPoint(5663);
                       }
                     };
-                    let tmp13Result = closure_6(tmp(11811).ConjureAppIconTile, tmp16);
+                    let tmp13Result = closure_6(tmp(11813).ConjureAppIconTile, tmp16);
                   } else {
                     class V {
                       constructor(arg0) {
@@ -602,7 +602,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     tmp14[0] = project;
-                    tmp13Result = closure_6(tmp5(11854), tmp14);
+                    tmp13Result = closure_6(tmp5(11856), tmp14);
                   }
                   cResult[10] = editable;
                   cResult[11] = identity;
@@ -622,7 +622,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+352" };
                   }
                 } else {
                   try {
@@ -647,7 +647,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = tmp3(dependencyMap[22]).intl;
                       showCriticalToast(intl.string(entryPoint(dependencyMap[23]).Fi7boI));
                       c3 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+352" };
                     } else if (arg0 === 1) {
                       c3 = 3;
                       throw value;
@@ -662,10 +662,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                         entryPoint(dependencyMap[24]).hideActionSheet(ConjurePublishSheet);
                         tmp3.run(c1);
                         c3 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       } else {
                         c3 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     }
                   } catch (tmp24) {
@@ -760,7 +760,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -785,7 +785,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               const intl = tmp3(1128).intl;
               showCriticalToast(intl.string(v2(3830).Fi7boI));
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             } else if (arg0 === 1) {
               c3 = 3;
               throw value;
@@ -800,10 +800,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 v2(5210).hideActionSheet(ConjurePublishSheet);
                 closure_128_0.run(closure_128_1);
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               } else {
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             }
           } catch (tmp24) {
@@ -817,7 +817,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       const tmp = closure_13();
-      const tmp4 = entryPoint(12292)(project, publish);
+      const tmp4 = entryPoint(12294)(project, publish);
       dependencyMap = tmp4;
       ({ editable, identity, sharing } = tmp4);
       if (tmp4.initial) {
@@ -859,10 +859,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
           },
         };
-        let tmp6Result = closure_6(publish(11811).ConjureAppIconTile, obj3);
+        let tmp6Result = closure_6(publish(11813).ConjureAppIconTile, obj3);
       } else {
         let obj4 = { project, size: "card" };
-        tmp6Result = closure_6(tmp2(11854), obj4);
+        tmp6Result = closure_6(tmp2(11856), obj4);
       }
       const items1 = [tmp6Result, , , , ,];
       if (editable) {
@@ -919,7 +919,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj14.rows = devicePermissions.map((item) => {
         obj = { icon: closure_1_10[item], label: null };
         const intl = publish(1128).intl;
-        obj.label = intl.string(publish(12292).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+        obj.label = intl.string(publish(12294).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
         return closure_1_6(closure_1_19, obj, item);
       });
       items1[3] = closure_6(closure_18, obj14);
@@ -937,7 +937,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const obj18 = { style: tmp.onlyMeIcon, children: null };
           const obj19 = { size: "xs", color: tmp2(587).colors.ICON_DEFAULT };
-          obj18.children = closure_6(publish(11838).UserIcon, obj19);
+          obj18.children = closure_6(publish(11840).UserIcon, obj19);
           tmp6Result6 = closure_6(View, obj18);
         }
         const items5 = [tmp6Result6];

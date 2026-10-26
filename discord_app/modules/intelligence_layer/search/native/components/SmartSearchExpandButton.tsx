@@ -45,11 +45,11 @@ export default noop.memo(
         const cResult = onPress(576).c(17);
         ({ isCollapsed, onPress } = arg0);
         const obj = onPress(576);
-        const tmp4 = closure_10(onPress(18142).useSearchHostSurfaceColor());
+        const tmp4 = closure_10(onPress(18141).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11077).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11079).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14884).ChevronSmallUpIcon;
         }
         if (cResult[0] !== onPress) {
           const fn = function l() {
@@ -129,15 +129,15 @@ export default noop.memo(
           cResult[13] = tmp25;
           tmp21 = tmp25;
         }
-        const obj2 = onPress(18142);
+        const obj2 = onPress(18141);
       }
     : function SmartSearchExpandButton(arg0) {
         ({ isCollapsed, onPress } = arg0);
-        const tmp3 = closure_10(onPress(18142).useSearchHostSurfaceColor());
+        const tmp3 = closure_10(onPress(18141).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11077).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11079).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14884).ChevronSmallUpIcon;
         }
         const items = [onPress];
         const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -165,7 +165,7 @@ export default noop.memo(
         obj3.accessibilityLabel = intl.string(FKLBbW);
         obj3.onPress = callback;
         const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-        const obj = onPress(18142);
+        const obj = onPress(18141);
         const obj4 = { style: tmp3.surface, pointerEvents: "none" };
         items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(587).colors.INTERACTIVE_ICON_DEFAULT });
         obj3.children = items1;

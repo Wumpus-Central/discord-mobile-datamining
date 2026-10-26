@@ -868,17 +868,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let data;
       const tmp = closure_9();
       const bottom = data(1633)().bottom;
-      data = data(18337)();
-      dependencyMap = goToMessageRequestPreview(18339).useListHasSingleMessageRequest();
-      let obj = goToMessageRequestPreview(18339);
+      data = data(18336)();
+      dependencyMap = goToMessageRequestPreview(18338).useListHasSingleMessageRequest();
+      let obj = goToMessageRequestPreview(18338);
       const tmp2 = data;
-      const isRestricted = goToMessageRequestPreview(13349).useIsMessageRequestRestrictedViewer();
+      const isRestricted = goToMessageRequestPreview(13348).useIsMessageRequestRestrictedViewer();
       if (0 === data.length) {
         const obj3 = { bodyText: null };
         const intl2 = tmp4(1128).intl;
         obj3.bodyText = intl2.string(tmp4(1128).t.SXrqTf);
-        let tmp9Result = closure_7(tmp2(18342), obj3);
-        const tmp2Result = tmp2(18342);
+        let tmp9Result = closure_7(tmp2(18341), obj3);
+        const tmp2Result = tmp2(18341);
       } else {
         const items = [tmp.list];
         let num = 0;

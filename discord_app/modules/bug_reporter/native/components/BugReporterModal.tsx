@@ -64,7 +64,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -205,7 +205,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
@@ -259,7 +259,7 @@ class BugCreateScreen {
               });
             }
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } catch (tmp19) {
           c3 = tmp;
@@ -400,7 +400,7 @@ class BugCreateScreen {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -432,7 +432,7 @@ class BugCreateScreen {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     } else {
                       try {
@@ -519,7 +519,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(13788).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(13787).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -564,7 +564,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13787).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13786).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -699,7 +699,7 @@ class BugCreateScreen {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -732,7 +732,7 @@ class BugCreateScreen {
               closure_128_0 = value;
               closure_1_18(closure_128_0);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -918,7 +918,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13797, dependencyMap.paths),
+          asyncRequireImpl(13796, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );

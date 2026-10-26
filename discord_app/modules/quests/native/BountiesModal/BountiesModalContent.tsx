@@ -60,7 +60,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(6710);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16298);
+const BountiesModalConstants = fn(16297);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -305,7 +305,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj3 = { value, done: true };
                                     return obj3;
                                   } else {
-                                    return { value: "IconComponent", done: null };
+                                    return { value: "IconComponent", done: "+352" };
                                   }
                                 } else {
                                   try {
@@ -375,7 +375,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                       }
                                       ref = 3;
-                                      return { value: "IconComponent", done: null };
+                                      return { value: "IconComponent", done: "+352" };
                                     }
                                   } catch (tmp40) {
                                     if (tmp4 === c3) {
@@ -544,7 +544,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+352" };
             }
           } else {
             try {
@@ -608,7 +608,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+352" };
               }
             } catch (tmp40) {
               if (tmp4 === c3) {

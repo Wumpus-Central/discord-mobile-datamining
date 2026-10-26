@@ -19,7 +19,7 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16562).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16561).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1087).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -252,7 +252,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[10] !== tmp8) {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "a" };
+            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
             return closure_0(obj);
           }
         }
@@ -261,7 +261,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "a" };
+            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
             return closure_0(obj);
           }
         }
@@ -269,7 +269,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[12] === tmp12) {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "a" };
+            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
             return closure_0(obj);
           }
         }
@@ -295,7 +295,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp29 = React6(FormImagePickerDefault, obj9);
     }
   : function Content() {
-      const tmp3 = role(15145)();
+      const tmp3 = role(15144)();
       const editStateContext = require("EditStateContextProvider").useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
       const obj = require("EditStateContextProvider");
@@ -341,16 +341,16 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
       obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
       obj8.setImage = function setImage(icon) {
-        return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
+        return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
       };
       obj8.disabled = roleSubscriptionSettingsDisabled;
-      items1[2] = closure_9(role(19280), obj8);
+      items1[2] = closure_9(role(19279), obj8);
       const obj9 = { style: tmp3.header, children: null };
-      const tmpResult3 = role(19280);
+      const tmpResult3 = role(19279);
       const intl3 = tmp4(1128).intl;
       obj9.children = intl3.string(require("util").t["W7hH+z"]);
       items1[3] = closure_9(role(9044), obj9);
-      items1[4] = closure_9(role(19314), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+      items1[4] = closure_9(role(19313), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
       obj6.children = items1;
       return closure_10(closure_11, obj6);
     };

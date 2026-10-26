@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
-const obj5 = module_570.create(() => ({ controls: "Reflect", paused: true }));
+const obj5 = module_570.create(() => ({ controls: "Reflect", paused: null }));
 const createStyles = fn(4971);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
 export const useVideoStateStore = obj5;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "Reflect", paused: true });
+    state.setState({ controls: "Reflect", paused: null });
   });
 };
 export const setMuted = function setMuted(isMuted) {

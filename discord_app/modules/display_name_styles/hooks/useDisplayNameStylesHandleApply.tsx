@@ -58,7 +58,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+352" };
           }
         } else {
           try {
@@ -100,7 +100,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       }
                     } else {
                       try {
@@ -118,8 +118,8 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                             closure_0 = tmp8;
                             closure_128_0 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(15856).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj4 = displayNameStyles(15856);
+                              const result = displayNameStyles(15855).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj4 = displayNameStyles(15855);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -192,16 +192,16 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                         };
                         closure_2_1(1267).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                         if (closure_129_1) {
-                          const result2 = displayNameStyles(15856).markHexagonCampaignPerkApplied(
+                          const result2 = displayNameStyles(15855).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj10 = displayNameStyles(15856);
+                          const obj10 = displayNameStyles(15855);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();
                         }
                         c5 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+352" };
                       } catch (tmp63) {
                         closure_2 = tmp63;
                         if (tmp5 === c3) {

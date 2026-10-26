@@ -57,7 +57,7 @@ const createStyles = fn(4971);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(12060).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -65,7 +65,7 @@ let obj = {
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(12060).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(12062).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -229,7 +229,7 @@ export default noop.memo(
         }
         const tmp21 = useChannelNameDefault(channel, false);
         const tmpResult3 = channel(6694);
-        const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
+        const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           class N {
             constructor() {
@@ -278,7 +278,7 @@ export default noop.memo(
             }
           }
         }
-        const tmpResult4 = channel(10884);
+        const tmpResult4 = channel(10886);
         cResult[8] = channel;
         cResult[9] = tmp21;
         cResult[10] = sum;
@@ -345,12 +345,12 @@ export default noop.memo(
         const tmp2Result = channel(6694);
         const tmp10 = useChannelNameDefault(channel, false);
         let topic;
-        const isConnectedToVoiceChannel = channel(10884).useIsConnectedToVoiceChannel(channel);
+        const isConnectedToVoiceChannel = channel(10886).useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           topic = stageInstance.topic;
         }
         let obj2 = {};
-        const tmp2Result2 = channel(10884);
+        const tmp2Result2 = channel(10886);
         const merged = Object.assign(
           getStageChannelAccessibilityProps({ channel, channelName: tmp10, userCount: sum }),
         );

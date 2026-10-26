@@ -65,8 +65,8 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(10898).VoicePanelModes;
-const VoicePanelPIPModes = fn(18447).VoicePanelPIPModes;
+const VoicePanelModes = fn(10900).VoicePanelModes;
+const VoicePanelPIPModes = fn(18446).VoicePanelPIPModes;
 let Constants = fn(1087);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2026);
@@ -1229,7 +1229,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         layoutManager.setTargetDimensions(participantId, nativeEvent.width, nativeEvent.height);
       }, items4);
       const tmp6Result8 = participantId(573);
-      canRenderParticipantVideo = participantId(10903).useCanRenderParticipantVideo(stateFromStores);
+      canRenderParticipantVideo = participantId(10905).useCanRenderParticipantVideo(stateFromStores);
       if (canRenderParticipantVideo) {
         let tmp25 = tmp16;
         if (tmp16) {
@@ -1245,7 +1245,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items5);
       const obj6 = { style: null, children: null };
-      const tmp6Result9 = participantId(10903);
+      const tmp6Result9 = participantId(10905);
       if (canRenderParticipantVideo) {
         const items6 = [,];
         ({ blackBackground: arr8[0], user: arr8[1] } = tmp);
@@ -1308,7 +1308,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
           tmp33Result2 = null;
           if (consumedRequestToRespondToSeriousThermalState) {
             const obj13 = { style: tmp.thermalAlertIconContainer, children: null };
-            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11443), color: tmp.thermalAlertIcon.color };
+            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11445), color: tmp.thermalAlertIcon.color };
             obj13.children = closure_22(tmp6(1202).Icon, obj14);
             tmp33Result2 = closure_22(tmp3(6886), obj13);
             const tmp3Result6 = tmp3(6886);
@@ -1879,11 +1879,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       let callback2;
       ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
       const tmp = closure_24();
-      const mode = participantId(18492).usePIPState().mode;
+      const mode = participantId(18491).usePIPState().mode;
       let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
-      const context = video.useContext(mode(10897));
+      const context = video.useContext(mode(10899));
       ({ channelId: c2, layoutManager } = context);
-      let obj = participantId(18492);
+      let obj = participantId(18491);
       let tmp2 = participantId;
       const items = [callback2];
       const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {
@@ -1985,7 +1985,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       }, items6);
       if (stateFromStores === constants.ENDED) {
         const obj5 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-        let tmp23 = closure_22(tmp2(11425).StreamEnded, obj5);
+        let tmp23 = closure_22(tmp2(11427).StreamEnded, obj5);
       } else {
         tmp23 = null;
         if (stateFromStores !== tmp16.FAILED) {

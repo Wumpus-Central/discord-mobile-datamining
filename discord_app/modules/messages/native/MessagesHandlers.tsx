@@ -67,6 +67,7 @@ import autocompleter_AutocompleteUtils from "../../autocompleter/native/Autocomp
 import showStickerDetailActionSheet from "../../stickers/native/showStickerDetailActionSheet.tsx";
 import utils_openGiftModal from "../../premium/native/utils/openGiftModal.tsx";
 import ApplicationUtils from "../../../utils/native/ApplicationUtils.tsx";
+import MediaChannelActionCreatorsAll from "../../media_channel/MediaChannelActionCreators.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import MarkupReactCommandRule from "../../markup/native/MarkupReactCommandRule.tsx";
 import navigateToLastChannelDefault from "../../main_tabs_v2/native/navigateToLastChannel.tsx";
@@ -90,7 +91,6 @@ import showModerateUserActionSheetDefault from "../../guild_automod/native/showM
 import GuildAutomodActionActionCreators from "../../guild_automod/GuildAutomodActionActionCreators.native.tsx";
 import VoiceMessageAnalytics from "../../voice_messages/VoiceMessageAnalytics.tsx";
 import MediaAnalytics from "../../media/MediaAnalytics.tsx";
-import MediaChannelActionCreatorsAll from "../../media_channel/MediaChannelActionCreators.tsx";
 import jumpToReferencedMessageDefault from "jumpToReferencedMessage.tsx";
 import handleForwardBreadcrumbDefault from "../../forwarding/handleForwardBreadcrumb.tsx";
 import getInlineForwardOptions from "../../forwarding/getInlineForwardOptions.tsx";
@@ -169,7 +169,7 @@ const Constants = fn(1087);
   UserSettingsSections: closure_57,
   WebBrowserType: closure_58,
 } = Constants);
-const GameOrganizationInviteConstants = fn(11027);
+const GameOrganizationInviteConstants = fn(11029);
 ({ GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY: closure_59, GameOrganizationInviteStates: closure_60 } =
   GameOrganizationInviteConstants);
 const InviteTypes = fn(7809).InviteTypes;
@@ -247,10 +247,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const data = obj.getNativeSyntheticEventData(nativeEvent).data;
-        asyncRequireImpl(11276, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
+        asyncRequireImpl(11278, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
           const result = handleMessagesLongPressChannel.handleMessagesLongPressChannel({ data });
         });
-        const promise = asyncRequireImpl(11276, dependencyMap.paths);
+        const promise = asyncRequireImpl(11278, dependencyMap.paths);
       }
     };
     obj.handleTapAttachmentLink = function handleTapAttachmentLink(arg0) {
@@ -378,10 +378,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const gameId = obj.getNativeSyntheticEventData(nativeEvent);
-        asyncRequireImpl(11327, dependencyMap.paths).then((handleMessagesTapGameMention) => {
+        asyncRequireImpl(11329, dependencyMap.paths).then((handleMessagesTapGameMention) => {
           const result = handleMessagesTapGameMention.handleMessagesTapGameMention({ gameId: gameId.gameId });
         });
-        const promise = asyncRequireImpl(11327, dependencyMap.paths);
+        const promise = asyncRequireImpl(11329, dependencyMap.paths);
       }
     };
     obj.handleTapGuildEventLink = function handleTapGuildEventLink(node) {
@@ -594,7 +594,7 @@ class MessagesHandlers {
         if (null != messageId) {
           if (tmpResult.isPublicSystemMessage(message)) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(11328, dependencyMap.paths),
+              asyncRequireImpl(11330, dependencyMap.paths),
               "PublicGuildAnnouncementProfile",
             );
           } else {
@@ -712,7 +712,7 @@ class MessagesHandlers {
         if (null != findSummaryResult) {
           const obj3 = { summary: findSummaryResult };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(11331, dependencyMap.paths),
+            asyncRequireImpl(11333, dependencyMap.paths),
             "SummaryActionSheet",
             obj3,
           );
@@ -1898,8 +1898,8 @@ class MessagesHandlers {
                 }
               }
               obj3.emojiName = name;
-              tmp12Result2.pushLazy(asyncRequireImpl(11042, dependencyMap.paths), obj3);
-              const tmp15 = asyncRequireImpl(11042, dependencyMap.paths);
+              tmp12Result2.pushLazy(asyncRequireImpl(11044, dependencyMap.paths), obj3);
+              const tmp15 = asyncRequireImpl(11044, dependencyMap.paths);
             }
           }
         } else {
@@ -2572,7 +2572,7 @@ class MessagesHandlers {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+352" };
         }
       } else {
         try {
