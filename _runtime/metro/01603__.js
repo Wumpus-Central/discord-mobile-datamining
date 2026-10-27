@@ -1,92 +1,37 @@
 // _runtime/metro/01603__.js
-import BaseNavigationContainer from "../01508_BaseNavigationContainer.js";
-import _mod1604 from "01604__.js";
-import _mod1606 from "01606__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
-const require = globalThis.__r;
-
-require = fn;
-let closure_2 = [
-  "children",
-  "id",
-  "initialRouteName",
-  "layout",
-  "screenLayout",
-  "screenListeners",
-  "screenOptions",
-  "UNSTABLE_routeNamesChangeBehavior",
-  "UNSTABLE_router",
-];
-const jsx = fn(21).jsx;
-
-export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
-  _require = arg1;
-  dependencyMap = arg2;
-  ({ type, version, NavigatorContent: closure_2 } = arg0);
-  if ("standard" !== type) {
-    let str3 = "unknown type.";
-    if (typeof type === "string") {
-      const _HermesInternal2 = HermesInternal;
-      str3 = 'type "' + type + '".';
+export const useMemoArray = function useMemoArray(arr) {
+  const ref = noop.useRef(undefined);
+  const current = ref.current;
+  const mapped = arr.map((item, index) => {
+    [tmp, arr] = item;
+    let tmp3;
+    if (current != null) {
+      tmp3 = tmp2.entries[index];
     }
-    const error = new Error(
-      "createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3,
-    );
-    throw error;
-  } else if (1 !== version) {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error1 = new Error(
-      "createStandardNavigationFactories only works with version 1 of standard navigator objects, but got version " +
-        version +
-        ".",
-    );
-    throw error1;
-  } else {
-    let obj = {
-      createNavigator: require("BaseNavigationContainer").createNavigatorFactory(
-        function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
-          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(
-            closure_0,
-            UNSTABLE_routeNamesChangeBehavior,
-          );
-          closure_1 = _mod1604.useBuildHref();
-          let tmp2 = _mod1606;
-          let flag = tmp2.useMemoArray;
-          if (!("preloadedRoutes" in navigationBuilder.state)) {
-            let routes1 = navigationBuilder.state.routes;
-            const flagResult = flag(
-              routes1.map((key) => {
-                const tmp = closure_1(key.name, key.params);
-                const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }];
-                const items1 = [, , ,];
-                ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
-                items1[3] = tmp;
-                items[1] = items1;
-                return items;
-              }),
-            );
-            closure_2 = flagResult;
-            let items = [navigationBuilder.state.index, flagResult];
-            const routes2 = noop.useMemo(
-              () => ({ index: navigationBuilder.state.index, routes: flagResult }),
-              items,
-            ).routes;
-            tmp2 = routes2[Symbol.iterator]();
-            flag = true;
-          } else {
-            const _Array = Array;
-          }
-          const routes = navigationBuilder.state.routes;
-          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
-        },
-      ),
-      createScreen: null,
-    };
-    let obj2 = require("BaseNavigationContainer");
-    obj.createScreen = require("BaseNavigationContainer").createScreenFactory();
-    return obj;
+    let everyResult = tmp3;
+    if (tmp3) {
+      everyResult = tmp3.deps.length === arr.length;
+    }
+    if (everyResult) {
+      const deps = tmp3.deps;
+      everyResult = deps.every((item, index) => Object.is(item, current[index]));
+    }
+    if (!everyResult) {
+      const obj = { item: tmp, deps: arr };
+      tmp3 = obj;
+    }
+    return tmp3;
+  });
+  if (current) {
+    if (current.entries.length === mapped.length) {
+      if (mapped.every((item, index) => item === current.entries[index])) {
+        return current.items;
+      }
+    }
   }
+  const mapped1 = mapped.map((item) => item.item);
+  ref.current = { entries: mapped, items: mapped1 };
+  return mapped1;
 };

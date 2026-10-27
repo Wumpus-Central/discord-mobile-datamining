@@ -1,22 +1,9 @@
 // _runtime/metro/00980__.js
-import registerSpanErrorInstrumentation from "00693__.js";
+import _mod693 from "00693__.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function buildLaunchDarklyFlagUsedHandler() {
-  return {
-    name: "sentry-flag-auditor",
-    type: "flag-used",
-    synchronous: true,
-    method(flagKey, arg1, arg2) {
-      const result = registerSpanErrorInstrumentation._INTERNAL_insertFlagToScope(flagKey, arg1.value);
-      const result1 = registerSpanErrorInstrumentation._INTERNAL_addFeatureFlagToActiveSpan(flagKey, arg1.value);
-    },
-  };
-}
-export const launchDarklyIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
-  name: "LaunchDarkly",
-  processEvent(contexts, arg1, arg2) {
-    return registerSpanErrorInstrumentation._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-  },
-}));
+export const growthbookIntegration = (growthbookClass) =>
+  _mod693.growthbookIntegration({ growthbookClass: growthbookClass.growthbookClass });

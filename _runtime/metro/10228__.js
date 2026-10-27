@@ -1,13 +1,14 @@
 // _runtime/metro/10228__.js
-import AbstractTimeExpressionParser from "../10229_AbstractTimeExpressionParser.js";
+import _mod10216 from "10216__.js";
+import repeatedTimeunitPattern from "../10217_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10224_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeExpressionParser = require;
+const ENYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,121 +27,82 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENTimeExpressionParser {
+const regExp = new RegExp(
+  "([0-9]{4})[-\\.\\/\\s](?:(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10216.MONTH_DICTIONARY) +
+    ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
+  "i",
+);
+class ENYearMonthDayParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, ENTimeExpressionParser);
-    items = [];
-    items[0] = global;
+    tmp = c2(this, ENYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeExpressionParser);
+    obj = closure_4(ENYearMonthDayParser);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = global;
+    return tmp3Result;
   }
 }
-_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "followingPhase",
-  value: function followingPhase() {
-    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 let items = [
   entry,
   {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:at|from)\\s*)??";
-    },
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractPrimaryTimeComponents",
-        this,
-      );
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => fn.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      const parsed = parseInt(arg1[1]);
+      const parsed1 = parseInt(arg1[4]);
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed2 = parseInt(arg1[3]);
+      } else {
+        parsed2 = ENYearMonthDayParser(10216).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("night")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", ENTimeExpressionParser(10220).Meridiem.PM);
+      if (parsed2 < 1) {
+        const self = this;
+        if (this.strictMonthDateOrder) {
+          return null;
+        } else {
+          tmp6 = parsed2;
+          tmp7 = parsed1;
+          if (parsed1 >= 1) {
+            tmp6 = parsed2;
+            tmp7 = parsed1;
+            if (parsed1 <= 12) {
+              const items = [parsed1, parsed2];
+              [tmp6, tmp7] = items;
             }
           }
-          if (value < 6) {
-            fnResult.assign("meridiem", ENTimeExpressionParser(10220).Meridiem.AM);
-          }
         }
-        const first1 = arg1[0];
-        if (first1.endsWith("afternoon")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10220).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("morning")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10220).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-        return fnResult.addTag("parser/ENTimeExpressionParser");
       } else {
-        return fnResult;
+        tmp6 = parsed2;
+        tmp7 = parsed1;
       }
-    },
-  },
-  {
-    key: "extractFollowingTimeComponents",
-    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
-      const self = this;
-      let fn = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractFollowingTimeComponents",
-        this,
-      );
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+      let tmp8 = null;
+      if (tmp7 >= 1) {
+        tmp8 = null;
+        if (tmp7 <= 31) {
+          const date = { day: tmp7, month: tmp6, year: parsed };
+          tmp8 = date;
+        }
       }
-      const items = [arg0, arg1, arg2];
-      const fnResult = fn(items);
-      if (fnResult) {
-        fnResult.addTag("parser/ENTimeExpressionParser");
-      }
-      return fnResult;
+      return tmp8;
     },
   },
 ];
 
-export default _createClass(ENTimeExpressionParser, items);
+export default _createClass(ENYearMonthDayParser, items);

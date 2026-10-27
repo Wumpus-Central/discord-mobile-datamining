@@ -1,16 +1,16 @@
 // _runtime/metro/04676__.js
-import module_4258_mod from "04258__.js";
-import _typeof_mod from "04254__.js";
-import requiredArgs_mod from "../04255_requiredArgs.js";
+import module_4259_mod from "04259__.js";
+import _typeof_mod from "04255__.js";
+import requiredArgs_mod from "../04256_requiredArgs.js";
 
-let module_4258 = module_4258_mod;
-if (!module_4258) {
-  const obj = { default: module_4258 };
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  const obj = { default: module_4259 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4258;
+  tmp3 = module_4259;
 }
-module_4258 = tmp3;
+module_4259 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -28,10 +28,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setMinutes(module_4258, arg1) {
+export default function setMilliseconds(module_4259, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4258);
-  defaultResult1.setMinutes(module_4258.default(arg1));
+  const defaultResult1 = _typeof.default(module_4259);
+  defaultResult1.setMilliseconds(module_4259.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

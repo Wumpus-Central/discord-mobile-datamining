@@ -1,49 +1,67 @@
 // _runtime/metro/15660__.js
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
-  }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
+export default {
+  isASCIIDigit(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
+    }
+    return tmp;
+  },
+  isASCIIAlpha(input) {
+    let tmp = input >= 65;
+    if (tmp) {
+      tmp = input <= 90;
+    }
+    if (!tmp) {
+      let tmp2 = input >= 97;
+      if (tmp2) {
+        tmp2 = input <= 122;
       }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
-        } else {
-          const result = map.set(arg0, []);
-        }
+      tmp = tmp2;
+    }
+    return tmp;
+  },
+  isASCIIAlphanumeric(arg0) {
+    let tmp = arg0 >= 65;
+    if (tmp) {
+      tmp = arg0 <= 90;
+    }
+    if (!tmp) {
+      let tmp2 = arg0 >= 97;
+      if (tmp2) {
+        tmp2 = arg0 <= 122;
       }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = arg0 >= 48;
+      if (tmp3) {
+        tmp3 = arg0 <= 57;
       }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
+      tmp = tmp3;
+    }
+    return tmp;
+  },
+  isASCIIHex(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
+    }
+    if (!tmp) {
+      let tmp2 = decodeResult >= 65;
+      if (tmp2) {
+        tmp2 = decodeResult <= 70;
       }
-    },
-  };
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = decodeResult >= 97;
+      if (tmp3) {
+        tmp3 = decodeResult <= 102;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  },
 };

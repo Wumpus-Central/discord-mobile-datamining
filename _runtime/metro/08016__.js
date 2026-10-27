@@ -1,7 +1,6 @@
 // _runtime/metro/08016__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8000 from "08000__.js";
-import _modDef8001 from "08001__.js";
+import _modDef7999 from "07999__.js";
 import _modDef8017 from "08017__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -9,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeFlood = fn;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeFlood {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeFlood);
+    tmp = closure_3(this, FeMerge);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeFlood);
+    obj = hasOwnProperty(FeMerge);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -50,7 +49,7 @@ class FeFlood {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeFlood, _modDef8001);
+_inherits(FeMerge, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
@@ -60,8 +59,9 @@ const entry = {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeFlood(8000).extractFilter(this.props));
-    const merged1 = Object.assign(_modDef8000(this.props));
+    const merged = Object.assign(FeMerge(7998).extractFilter(this.props));
+    const obj2 = FeMerge(7998);
+    const merged1 = Object.assign(FeMerge(7998).extractFeMerge(this.props, this));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -72,12 +72,9 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeFlood, items);
-importDefaultResultResult.displayName = "FeFlood";
-let obj = {};
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.floodColor = "black";
-obj.floodOpacity = 1;
-importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

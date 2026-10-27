@@ -1,55 +1,147 @@
 // _runtime/metro/01176__.js
-import WHITE_SPACE_REGEX from "../01177_WHITE_SPACE_REGEX.js";
+import _mod1168 from "01168__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c2 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const re2 = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g;
-const re3 = /^(@+)?(\+|#+)?[rs]?$/g;
-const re4 = /(\*)(0+)|(#+)(0+)|(0+)/g;
-const re5 = /^(0+)$/;
-
-export const parseNumberSkeletonFromString = function parseNumberSkeletonFromString(str) {
-  if (0 === str.length) {
-    const _Error3 = Error;
-    const error = new Error("Number skeleton cannot be empty");
-    throw error;
-  } else {
-    const items = [];
-    const parts = str.split(WHITE_SPACE_REGEX.WHITE_SPACE_REGEX);
-    const found = parts.filter((item) => item.length > 0);
-    let num2 = 0;
-    if (0 < found.length) {
-      const parts1 = str.split("/");
-      while (0 !== parts1.length) {
-        let substr = parts1.slice(1);
-        let num = 0;
-        if (0 < substr.length) {
-          while (0 !== substr[num].length) {
-            num = num + 1;
-            continue;
-          }
-          let tmp4 = globalThis;
-          let _Error = Error;
-          let tmp5 = new.target;
-          let str2 = "Invalid number skeleton";
-          let tmp6 = new.target;
-          let error1 = new Error("Invalid number skeleton");
-          throw error1;
-        }
-        let obj = { stem: parts1[0], options: substr };
-        let arr = items.push(obj);
-        num2 = num2 + 1;
-      }
-      const _Error2 = Error;
-      const error2 = new Error("Invalid number skeleton");
-      throw error2;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return items;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+function formatToAst(content, arg1) {
+  if (typeof content === "string") {
+    const obj = { type: AstBuilder.Text, content };
+    const items = [obj];
+    let bindFormatValuesResult = items;
+  } else {
+    const self = this;
+    bindFormatValuesResult = this.bindFormatValues(_moduleResult, content, arg1);
   }
+  return bindFormatValuesResult;
+}
+let obj = {};
+const AstBuilder = obj;
+obj.Text = "text";
+obj.Strong = "strong";
+obj.Emphasis = "em";
+obj.Strikethrough = "s";
+obj.Code = "inlineCode";
+obj.Link = "link";
+obj.Paragraph = "paragraph";
+const dependencyMap = {
+  $b(content) {
+    return { type: AstBuilder.Strong, content };
+  },
+  $i(content) {
+    return { type: AstBuilder.Emphasis, content };
+  },
+  $del(content) {
+    return { type: AstBuilder.Strikethrough, content };
+  },
+  $code(content) {
+    return { type: AstBuilder.Code, content };
+  },
+  $link(content, arg1, arg2) {
+    [tmp] = arg2;
+    return { type: AstBuilder.Link, target: tmp, content };
+  },
+  $p(content) {
+    return { type: AstBuilder.Paragraph, content };
+  },
 };
-export const parseNumberSkeleton = function parseNumberSkeleton(arg0) {
-  if (0 < arg0.length) {
-    const stem = arg0[num].stem;
+class AstBuilder {
+  constructor() {
+    self = this;
+    tmp = closure_1(this, AstBuilder);
+    tmp2 = closure_3;
+    obj = closure_3(AstBuilder);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.result = [];
+    return tmp3Result;
   }
-  return {};
+}
+_inherits(AstBuilder, _mod1168.FormatBuilder);
+const entry = {
+  key: "pushRichTextTag",
+  value: function pushRichTextTag(formatting, arg1, arg2) {
+    if (formatting in dependencyMap) {
+      const self = this;
+      const tmp4 = dependencyMap[formatting](arg1, "", arg2);
+      const _Array = Array;
+      const result = this.result;
+      const push = result.push;
+      if (Array.isArray(tmp4)) {
+        const items = [];
+        HermesBuiltin.arraySpread(tmp4, 0);
+        HermesBuiltin.apply(items, result);
+      } else {
+        push(tmp4);
+      }
+    } else {
+      const _HermesInternal = HermesInternal;
+      throw "" + formatting + " is not a known rich text formatting tag";
+    }
+  },
 };
+let items = [
+  entry,
+  {
+    key: "pushLiteralText",
+    value: function pushLiteralText(content) {
+      if (null != this.result[this.result.length - 1]) {
+        if (tmp.type === AstBuilder.Text) {
+          tmp.content = tmp.content + content;
+        }
+      }
+      const result = this.result;
+      result.push({ type: AstBuilder.Text, content });
+      const obj = { type: AstBuilder.Text, content };
+    },
+  },
+  {
+    key: "pushObject",
+    value: function pushObject(arg0) {
+      const result = this.result;
+      result.push(arg0);
+    },
+  },
+  {
+    key: "finish",
+    value: function finish() {
+      return this.result;
+    },
+  },
+];
+const _moduleResult = _createClass(AstBuilder, items);
+const metroRequire = _moduleResult;
+
+export { formatToAst };
+export const RichTextNodeType = obj;
+export const astFormatter = { format: formatToAst, builder: _moduleResult };

@@ -1,13 +1,13 @@
 // _runtime/metro/11534__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "44d2aa5379438547523c3d419e9ade52",
-  name: "MusicSlashIcon",
+  scales: [1, 2, 3],
+  hash: "1f11c88bfa9d7d98913e00d032cd6bd3",
+  name: "ic_stage_music",
   type: "png",
 });

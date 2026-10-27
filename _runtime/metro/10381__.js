@@ -1,12 +1,12 @@
 // _runtime/metro/10381__.js
-import _mod10371 from "10371__.js";
+import _mod10373 from "10373__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitCasualRelativeFormatParser = require;
+const UKWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitCasualRelativeFormatParser {
+class UKWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, UKWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(UKWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,14 +45,14 @@ class UKTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10371.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(UKWeekdayParser, _mod10373.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
     return (
-      "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
-      UKTimeUnitCasualRelativeFormatParser(10369).TIME_UNITS_PATTERN +
-      ")"
+      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:\u0443\\s*?)?(?:(\u0446\u0435\u0439|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043C\u0438\u043D\u0443\u043B\u0438\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*)?(" +
+      UKWeekdayParser(10217).matchAnyPattern(UKWeekdayParser(10371).WEEKDAY_DICTIONARY) +
+      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*(\u043D\u0430|\u0443|\u0432)\\s*(\u0446\u044C\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*\u0442\u0438\u0436\u043D\u0456)?"
     );
   },
 };
@@ -61,18 +61,52 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10369).parseDuration(arg1[3]);
-      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
-        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(10218).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      let str = arg1[1];
+      if (!str) {
+        str = arg1[3];
       }
-      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(10217).reverseDuration(parseDurationResult);
+      if (!str) {
+        str = "";
+      }
+      const toLocaleLowerCaseResult1 = str.toLocaleLowerCase();
+      let str2 = "last";
+      if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
+        str2 = "last";
+        if ("\u043C\u0438\u043D\u0443\u043B\u0438\u0439" != toLocaleLowerCaseResult1) {
+          str2 = "last";
+          if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439" != toLocaleLowerCaseResult1) {
+            str2 = "last";
+            if (
+              "\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1
+            ) {
+              str2 = "next";
+              if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
+                str2 = "next";
+                if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439" != toLocaleLowerCaseResult1) {
+                  let tmp5 = "\u0446\u0435\u0439" != toLocaleLowerCaseResult1;
+                  if (tmp5) {
+                    tmp5 = "\u0446\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1;
+                  }
+                  if (tmp5) {
+                    tmp5 = "\u0446\u044C\u043E\u043C\u0443" != toLocaleLowerCaseResult1;
+                  }
+                  str2 = null;
+                  if (!tmp5) {
+                    str2 = "this";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      return UKWeekdayParser(10244).createParsingComponentsAtWeekday(
+        reference.reference,
+        UKWeekdayParser(10371).WEEKDAY_DICTIONARY[arg1[2].toLocaleLowerCase()],
+        str2,
+      );
     },
   },
 ];
 
-export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(UKWeekdayParser, items);

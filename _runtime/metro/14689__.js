@@ -1,13 +1,13 @@
 // _runtime/metro/14689__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 180,
-  height: 108,
-  scales: [2, 3],
-  hash: "2ef493c972c2da0faa0f370d1feb763b",
-  name: "img_what_you_lose_profile_tier1_dark",
+  httpServerLocation: "/assets/modules/virtual_currency/images/native",
+  width: 576,
+  height: 324,
+  scales: [1],
+  hash: "83d6f52e41f68a6a0f493020b6be93e9",
+  name: "hero-orbs",
   type: "png",
 });

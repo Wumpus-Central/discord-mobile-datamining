@@ -1,19 +1,9 @@
 // _runtime/metro/08241__.js
-import _mod8239 from "08239__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-const obj = {
-  1: "InteroperabilityIndex",
-  2: null,
-  4096: "RelatedImageFileFormat",
-  4097: "RelatedImageWidth",
-  4098: "RelatedImageHeight",
-};
-obj[2] = {
-  name: "InteroperabilityVersion",
-  description(value) {
-    return _mod8239.getStringValue(value);
+const obj = { 4: null };
+obj[4] = {
+  name: "ShotInfo",
+  description(arg0) {
+    return arg0;
   },
 };
 

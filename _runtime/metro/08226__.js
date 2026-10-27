@@ -1,26 +1,20 @@
 // _runtime/metro/08226__.js
-import findOffsets from "../08223_findOffsets.js";
+import _mod8212 from "08212__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+let c2 = 6;
+let closure_3 = ["GIF87a", "GIF89a"];
 
 export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      hasItem = closure_3.includes(_mod8212.getStringFromDataView(dataView, 0, c2));
     }
+    return hasItem;
   },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
   },
 };

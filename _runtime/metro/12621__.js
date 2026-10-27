@@ -1,43 +1,34 @@
 // _runtime/metro/12621__.js
-import _mod12581 from "12581__.js";
-import _mod12609 from "12609__.js";
+import _mod12616 from "12616__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod12609.DEBUG_BUILD) {
-      const logger = _mod12581.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
-          json +
-          " of type " +
-          JSON.stringify(typeof flag) +
-          ".",
-      );
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
+      return false;
     }
   }
+  let tmp = tracesSampler;
+  const client = _mod12616.getClient();
+  if (!tracesSampler) {
+    let options = client;
+    if (client) {
+      options = client.getOptions();
+    }
+    tmp = options;
+  }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
 };

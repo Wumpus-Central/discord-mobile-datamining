@@ -1,10 +1,13 @@
 // _runtime/metro/14967__.js
-import _mod14981 from "14981__.js";
-import assign from "14968__.js";
-import Deflate from "../14969_Deflate.js";
-import Inflate from "../14977_Inflate.js";
+import registerAsset from "01131__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14981);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
+  width: 24,
+  height: 23,
+  scales: [2, 3],
+  hash: "0e23713e9cb6c9f18c86b80cbd5851e5",
+  name: "tier_3_24px",
+  type: "png",
+});

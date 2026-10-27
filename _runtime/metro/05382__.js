@@ -1,37 +1,37 @@
 // _runtime/metro/05382__.js
-import _mod19 from "00019__.js";
+import _mod5341 from "05341__.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05366_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5383 from "05383__.js";
+import _mod5385 from "05385__.js";
 
-let useMemo = _mod19.useMemo;
+require = arg1;
+const dependencyMap = arg6;
 
-export const useGestureEventHandler = function useGestureEventHandler(
-  handlerTag,
-  memoizedGestureCallbacks,
-  disableReanimated,
-) {
-  closure_0 = handlerTag;
-  closure_1 = memoizedGestureCallbacks;
-  useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
-  closure_3 = tmp;
-  const items = [handlerTag, memoizedGestureCallbacks, , , ,];
-  ({
-    changeEventCalculator: arr[2],
-    dispatchesAnimatedEvents: arr[3],
-    fillInDefaultValues: arr[4],
-  } = disableReanimated);
-  items[5] = tmp;
-  return useMemo(
-    () => (arg0) => {
-      closure_0(closure_1[1]).eventHandler(
-        handlerTag,
-        arg0,
-        memoizedGestureCallbacks,
-        disableReanimated.changeEventCalculator,
-        closure_1_3,
-        disableReanimated.dispatchesAnimatedEvents,
-        disableReanimated.fillInDefaultValues,
-      );
-    },
-    items,
-  );
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = _mod5341.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = _mod5385;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
+  }
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return {
+    jsEventHandler: _mod5383.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated),
+    reanimatedEventHandler,
+    animatedEventHandler,
+  };
 };

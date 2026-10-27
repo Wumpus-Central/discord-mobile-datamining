@@ -1,11 +1,33 @@
 // _runtime/metro/01166__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/intl/messages",
-  scales: [1],
-  hash: "02a0261f9e21ed1d1f4d7835d0ba8f14",
-  name: "en-US.compiled.messages",
-  type: "jsona",
-});
+export const resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
+  format = undefined;
+  if (null != format) {
+    format = format.format;
+  }
+  if (typeof format === "string") {
+    const _Object = Object;
+    const _Object2 = Object;
+    return Object.assign(Object.assign({}, list[format.format]), format);
+  } else {
+    return format;
+  }
+};
+export const DEFAULT_FORMAT_CONFIG = {
+  duration: {},
+  list: {},
+  relativeTime: {},
+  number: { integer: { maximumFractionDigits: 0 }, currency: { style: "currency" }, percent: { style: "percent" } },
+  date: {
+    short: { month: "numeric", day: "numeric", year: "2-digit" },
+    medium: { month: "short", day: "numeric", year: "numeric" },
+    long: { month: "long", day: "numeric", year: "numeric" },
+    full: { weekday: "long", month: "long", day: "numeric", year: "numeric" },
+  },
+  time: {
+    short: { hour: "numeric", minute: "numeric" },
+    medium: { hour: "numeric", minute: "numeric", second: "numeric" },
+    long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
+    full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
+  },
+};

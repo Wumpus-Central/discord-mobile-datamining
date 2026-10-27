@@ -1,5 +1,5 @@
 // _runtime/metro/10424__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c5c262e40462204afd9dba1d0529e9ea",
-  name: "AttachmentIcon",
+  hash: "651f23c3c753462d68eac15857d95d39",
+  name: "PollsIcon",
   type: "png",
 });

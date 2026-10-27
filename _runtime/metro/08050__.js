@@ -1,5 +1,5 @@
 // _runtime/metro/08050__.js
-import _modDef7986 from "07986__.js";
+import _modDef7984 from "07984__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Polygon = importDefault;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,15 +27,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const jsx = fn(21).jsx;
-class Polygon {
+class Polyline {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, Polygon);
+    tmp = c2(this, Polyline);
     items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(Polygon);
+    obj = closure_4(Polyline);
     tmp3 = closure_3;
     if (metroRequire()) {
       tmp5 = globalThis;
@@ -50,7 +50,7 @@ class Polygon {
       points = points.points;
       if (points) {
         const _HermesInternal = HermesInternal;
-        points.d = "M" + Polygon(8051)(points) + "z";
+        points.d = "M" + Polyline(8049)(points);
       }
       if (closure_0.root) {
         const root = closure_0.root;
@@ -60,7 +60,7 @@ class Polygon {
     return tmp3Result;
   }
 }
-_inherits(Polygon, _modDef7986);
+_inherits(Polyline, _modDef7984);
 const entry = {
   key: "render",
   value: function render() {
@@ -70,16 +70,16 @@ const entry = {
     let combined = points;
     if (points) {
       const _HermesInternal = HermesInternal;
-      combined = "M" + Polygon(8051)(points) + "z";
+      combined = "M" + Polyline(8049)(points);
     }
     obj.d = combined;
     const merged = Object.assign(props);
-    return jsx(Polygon(8046), { ref: this.refMethod, d: null });
+    return jsx(Polyline(8044), { ref: this.refMethod, d: null });
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(Polygon, items);
-importDefaultResultResult.displayName = "Polygon";
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
 importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

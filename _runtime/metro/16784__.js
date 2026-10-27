@@ -1,13 +1,13 @@
 // _runtime/metro/16784__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "7fa2adf98f26db34178bb30a63dabe8c",
-  name: "de",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2c9d6b044e5ee68661cb6d6e33d3d458",
+  name: "EmojiPartyingFaceIcon",
   type: "png",
 });

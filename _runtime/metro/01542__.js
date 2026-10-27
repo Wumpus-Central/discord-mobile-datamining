@@ -1,7 +1,16 @@
 // _runtime/metro/01542__.js
+import _mod1543 from "01543__.js";
 import noop from "00019__.js";
 
-const context = noop.createContext(undefined);
-context.displayName = "ThemeContext";
+require = arg1;
 
-export const ThemeContext = context;
+export const useRoute = function useRoute() {
+  const context = noop.useContext(_mod1543.NavigationRouteContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+};

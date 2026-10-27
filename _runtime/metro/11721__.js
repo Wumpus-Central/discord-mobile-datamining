@@ -1,5 +1,5 @@
 // _runtime/metro/11721__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "436501dcf3af209f85edbd0cde1cf184",
-  name: "ic_vr_headset_24px",
+  hash: "4550be26e4ce88ab0a8f2d917df660a6",
+  name: "ic_xbox_24px",
   type: "png",
 });

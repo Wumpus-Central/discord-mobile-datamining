@@ -1,13 +1,13 @@
 // _runtime/metro/11095__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 61,
-  height: 61,
+  width: 59.666666666666664,
+  height: 59.666666666666664,
   scales: [3],
-  hash: "a162bb51b9ed292f4f10e545ed35e2e3",
-  name: "asset_platinum_badge_small",
+  hash: "98f28dd3128f04f38057757d2f825a42",
+  name: "asset_gold_badge_small",
   type: "png",
 });

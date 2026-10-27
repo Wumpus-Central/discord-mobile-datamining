@@ -1,13 +1,13 @@
 // _runtime/metro/01446__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/group_dms",
-  width: 96,
-  height: 96,
+  httpServerLocation: "/assets/images",
+  width: 400,
+  height: 400,
   scales: [1],
-  hash: "3cb840d03313467838d658bbec801fcd",
-  name: "icon7",
+  hash: "212a10d1e3da5ff0492c97f7e14e9d29",
+  name: "nitro_wumpus_avatar",
   type: "png",
 });

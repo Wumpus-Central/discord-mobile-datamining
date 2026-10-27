@@ -1,13 +1,13 @@
 // _runtime/metro/14875__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 141,
-  height: 96,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "417f63594df34390f8816db66b0c9b6a",
-  name: "img_outbound_promotion_error",
+  hash: "4f7f3933dfbb31e71ae1545e9b3d82b6",
+  name: "sticker",
   type: "png",
 });

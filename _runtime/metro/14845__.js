@@ -1,13 +1,13 @@
 // _runtime/metro/14845__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 177,
-  height: 112,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 351,
+  height: 100,
   scales: [2, 3],
-  hash: "ca47b5bc4b94bd1dd969b5ea6e31ef36",
-  name: "guild_subscription_no_guilds_darker",
+  hash: "4890b29f84548b0e4f661e3894e1136c",
+  name: "img_subheader_error_mobile_v2",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/15119__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/build_overrides/native/images",
-  width: 60,
-  height: 46,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "43446a28e1d529de720e6c778c814b1c",
-  name: "code-illustration-dark",
+  hash: "ebf39623cd7d642af1c5756d58046968",
+  name: "SignPostIcon",
   type: "png",
 });

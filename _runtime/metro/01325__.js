@@ -1,3 +1,3 @@
 // _runtime/metro/01325__.js
 
-export default Error;
+export default ReferenceError;

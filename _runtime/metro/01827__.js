@@ -1,182 +1,177 @@
 // _runtime/metro/01827__.js
-import _mod1669 from "01669__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-const Extrapolation = { IDENTITY: "identity", CLAMP: "clamp", EXTEND: "extend" };
-function getVal(arg0, arg1, arg2, arg3, arg4, arg5) {
-  if (obj.IDENTITY === arg0) {
-    return arg5;
-  } else if (obj.CLAMP === arg0) {
-    let tmp5 = arg4;
-    if (arg1 * arg2 < arg1 * arg3) {
-      tmp5 = arg3;
-    }
-    return tmp5;
-  } else {
-    const EXTEND = obj.EXTEND;
-    return arg2;
+const channelFromLrgb = function r() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
   }
-}
-getVal.__closure = { Extrapolation };
-getVal.__workletHash = 15103214376416;
-getVal.__initData = {
-  code: "function getVal_Pnpm_interpolationTs1(type,coef,val,leftEdgeOutput,rightEdgeOutput,x){const{Extrapolation}=this.__closure;switch(type){case Extrapolation.IDENTITY:return x;case Extrapolation.CLAMP:if(coef*val<coef*leftEdgeOutput){return leftEdgeOutput;}return rightEdgeOutput;case Extrapolation.EXTEND:default:return val;}}",
+  const absolute = Math.abs(num);
+  if (absolute > 0.0031308) {
+    const _Math = Math;
+    const _Math2 = Math;
+    let result = (Math.sign(num) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+    const tmp3 = Math.sign(num) || 1;
+  } else {
+    result = 12.92 * num;
+  }
+  return result;
 };
-function isExtrapolate(arg0) {
-  return arg0 === obj.EXTEND || arg0 === obj.CLAMP || arg0 === obj.IDENTITY;
-}
-isExtrapolate.__closure = { Extrapolation };
-isExtrapolate.__workletHash = 1560831703072;
-isExtrapolate.__initData = {
-  code: "function isExtrapolate_Pnpm_interpolationTs2(value){const{Extrapolation}=this.__closure;return value===Extrapolation.EXTEND||value===Extrapolation.CLAMP||value===Extrapolation.IDENTITY;}",
+channelFromLrgb.__closure = {};
+channelFromLrgb.__workletHash = 9046778946531;
+channelFromLrgb.__initData = {
+  code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}",
 };
-function validateType(extrapolateLeft) {
-  obj = { extrapolateLeft: obj.EXTEND, extrapolateRight: obj.EXTEND };
-  if (extrapolateLeft) {
-    if (typeof extrapolateLeft === "string") {
-      if (typeof isExtrapolate === "function") {
-        if (tmp15) {
-          obj.extrapolateLeft = extrapolateLeft;
-          obj.extrapolateRight = extrapolateLeft;
-          return obj;
-        } else {
-          const reanimatedError = new _mod1669.ReanimatedError(
-            'Unsupported value for "interpolate" \nSupported values: ["extend", "clamp", "identity", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], "clamp")',
-          );
-          throw reanimatedError;
-        }
-        tmp15 = extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
+const fn2 = function n(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn === "function") {
+    if (r === undefined) {
+      r = 0;
+    }
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute > 0.0031308) {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      let result = (Math.sign(r) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+      const tmp7 = Math.sign(r) || 1;
     } else {
-      if (!extrapolateLeft.extrapolateLeft) {
-        if (extrapolateLeft.extrapolateRight) {
-          const extrapolateRight = extrapolateLeft.extrapolateRight;
-          if (typeof isExtrapolate !== "function") {
-            throw new TypeError("Trying to call a non-function");
-          }
+      result = 12.92 * r;
+    }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn === "function") {
+      if (g === undefined) {
+        g = 0;
+      }
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 > 0.0031308) {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        let result1 = (Math.sign(g) || 1) * (1.055 * Math.pow(absolute1, 0.4166666666666667) - 0.055);
+        const tmp11 = Math.sign(g) || 1;
+      } else {
+        result1 = 12.92 * g;
+      }
+      obj.g = result1;
+      if (typeof fn === "function") {
+        if (b === undefined) {
+          b = 0;
         }
-        const _Object = Object;
-        const merged = Object.assign(obj, extrapolateLeft);
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 > 0.0031308) {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          let result2 = (Math.sign(b) || 1) * (1.055 * Math.pow(absolute2, 0.4166666666666667) - 0.055);
+          const tmp15 = Math.sign(b) || 1;
+        } else {
+          result2 = 12.92 * b;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
         return obj;
       } else {
-        extrapolateLeft = extrapolateLeft.extrapolateLeft;
-        if (typeof isExtrapolate !== "function") {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      const reanimatedError1 = new _mod1669.ReanimatedError(
-        'Unsupported value for "interpolate" \nSupported values: ["extend", "clamp", "identity", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})',
-      );
-      throw reanimatedError1;
-    }
-  } else {
-    return obj;
-  }
-}
-validateType.__closure = { Extrapolation, isExtrapolate };
-validateType.__workletHash = 9722315466599;
-validateType.__initData = {
-  code: 'function validateType_Pnpm_interpolationTs3(type){const{Extrapolation,isExtrapolate}=this.__closure;const extrapolationConfig={extrapolateLeft:Extrapolation.EXTEND,extrapolateRight:Extrapolation.EXTEND};if(!type){return extrapolationConfig;}if(typeof type===\'string\'){if(!isExtrapolate(type)){throw new ReanimatedError("Unsupported value for \\"interpolate\\" \\nSupported values: [\\"extend\\", \\"clamp\\", \\"identity\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n        interpolate(value, [inputRange], [outputRange], \\"clamp\\")");}extrapolationConfig.extrapolateLeft=type;extrapolationConfig.extrapolateRight=type;return extrapolationConfig;}if(type.extrapolateLeft&&!isExtrapolate(type.extrapolateLeft)||type.extrapolateRight&&!isExtrapolate(type.extrapolateRight)){throw new ReanimatedError("Unsupported value for \\"interpolate\\" \\nSupported values: [\\"extend\\", \\"clamp\\", \\"identity\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n      interpolate(value, [inputRange], [outputRange], {\\n        extrapolateLeft: Extrapolation.CLAMP,\\n        extrapolateRight: Extrapolation.IDENTITY\\n      }})");}Object.assign(extrapolationConfig,type);return extrapolationConfig;}',
-};
-function internalInterpolate(arg0, arg1, extrapolateLeft) {
-  ({ leftEdgeInput, rightEdgeInput, leftEdgeOutput, rightEdgeOutput } = arg1);
-  if (rightEdgeInput - leftEdgeInput == 0) {
-    return leftEdgeOutput;
-  } else {
-    const sum =
-      leftEdgeOutput + ((arg0 - leftEdgeInput) / (rightEdgeInput - leftEdgeInput)) * (rightEdgeOutput - leftEdgeOutput);
-    let num = -1;
-    if (rightEdgeOutput >= leftEdgeOutput) {
-      num = 1;
-    }
-    if (num * sum < num * leftEdgeOutput) {
-      extrapolateLeft = extrapolateLeft.extrapolateLeft;
-      if (typeof getVal === "function") {
-        if (obj.IDENTITY !== extrapolateLeft) {
-          if (obj.CLAMP !== extrapolateLeft) {
-            const EXTEND2 = obj.EXTEND;
-          }
-        }
-        const result = num * sum;
-        num = num * leftEdgeOutput;
-        if (result < num) {
-          rightEdgeOutput = leftEdgeOutput;
-        }
-      } else {
         throw new TypeError("Trying to call a non-function");
       }
-    } else if (num * rightEdgeOutput >= num * sum) {
-      return sum;
     } else {
-      const extrapolateRight = extrapolateLeft.extrapolateRight;
-      if (typeof getVal === "function") {
-        if (obj.IDENTITY !== extrapolateRight) {
-          if (obj.CLAMP !== extrapolateRight) {
-            const EXTEND = obj.EXTEND;
-          }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+fn2.__closure = { channelFromLrgb };
+fn2.__workletHash = 2514333579516;
+fn2.__initData = {
+  code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}",
+};
+const fn3 = function t() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
+  }
+  const absolute = Math.abs(num);
+  if (absolute <= 0.04045) {
+    let result = num / 12.92;
+  } else {
+    const _Math = Math;
+    const _Math2 = Math;
+    result = (Math.sign(num) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+    const tmp2 = Math.sign(num) || 1;
+  }
+  return result;
+};
+fn3.__closure = {};
+fn3.__workletHash = 7878321042954;
+fn3.__initData = {
+  code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}",
+};
+let obj = { convert: null };
+const obj2 = { fromRgb: null, toRgb: fn2 };
+const fn4 = function o(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn3 === "function") {
+    if (r === undefined) {
+      r = 0;
+    }
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute <= 0.04045) {
+      let result = r / 12.92;
+    } else {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      result = (Math.sign(r) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+      const tmp5 = Math.sign(r) || 1;
+    }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn3 === "function") {
+      if (g === undefined) {
+        g = 0;
+      }
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 <= 0.04045) {
+        let result1 = g / 12.92;
+      } else {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        result1 = (Math.sign(g) || 1) * Math.pow((absolute1 + 0.055) / 1.055, 2.4);
+        const tmp9 = Math.sign(g) || 1;
+      }
+      obj.g = result1;
+      if (typeof fn3 === "function") {
+        if (b === undefined) {
+          b = 0;
         }
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 <= 0.04045) {
+          let result2 = b / 12.92;
+        } else {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          result2 = (Math.sign(b) || 1) * Math.pow((absolute2 + 0.055) / 1.055, 2.4);
+          const tmp12 = Math.sign(b) || 1;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
+        return obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-}
-internalInterpolate.__closure = { getVal };
-internalInterpolate.__workletHash = 16257995045856;
-internalInterpolate.__initData = {
-  code: "function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){const{getVal}=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;}",
 };
-function interpolate(arg0, items, alpha, extrapolateLeft) {
-  if (items.length >= 2) {
-    if (alpha.length >= 2) {
-      const obj = { leftEdgeInput: null, rightEdgeInput: null, leftEdgeOutput: null, rightEdgeOutput: null };
-      [obj.leftEdgeInput, obj.rightEdgeInput] = items;
-      [obj.leftEdgeOutput, obj.rightEdgeOutput] = alpha;
-      if (items.length > 2) {
-        if (arg0 > items[length - 1]) {
-          obj.leftEdgeInput = items[length - 2];
-          obj.rightEdgeInput = items[length - 1];
-          obj.leftEdgeOutput = alpha[length - 2];
-          obj.rightEdgeOutput = alpha[length - 1];
-        } else {
-          let num = 1;
-          if (1 < length) {
-            while (arg0 > items[num]) {
-              num = num + 1;
-            }
-            const diff = num - 1;
-            obj.leftEdgeInput = items[diff];
-            obj.rightEdgeInput = items[num];
-            obj.leftEdgeOutput = alpha[diff];
-            obj.rightEdgeOutput = alpha[num];
-          }
-        }
-      }
-      return internalInterpolate(arg0, obj, validateType(extrapolateLeft));
-    }
-  }
-  const reanimatedError = new _mod1669.ReanimatedError(
-    "Interpolation input and output ranges should contain at least two values.",
-  );
-  throw reanimatedError;
-}
-interpolate.__closure = { validateType, internalInterpolate };
-interpolate.__workletHash = 16263308339935;
-interpolate.__initData = {
-  code: "function interpolate_Pnpm_interpolationTs5(x,inputRange,outputRange,type){const{validateType,internalInterpolate}=this.__closure;if(inputRange.length<2||outputRange.length<2){throw new ReanimatedError('Interpolation input and output ranges should contain at least two values.');}const extrapolationConfig=validateType(type);const length=inputRange.length;const narrowedInput={leftEdgeInput:inputRange[0],rightEdgeInput:inputRange[1],leftEdgeOutput:outputRange[0],rightEdgeOutput:outputRange[1]};if(length>2){if(x>inputRange[length-1]){narrowedInput.leftEdgeInput=inputRange[length-2];narrowedInput.rightEdgeInput=inputRange[length-1];narrowedInput.leftEdgeOutput=outputRange[length-2];narrowedInput.rightEdgeOutput=outputRange[length-1];}else{for(let i=1;i<length;++i){if(x<=inputRange[i]){narrowedInput.leftEdgeInput=inputRange[i-1];narrowedInput.rightEdgeInput=inputRange[i];narrowedInput.leftEdgeOutput=outputRange[i-1];narrowedInput.rightEdgeOutput=outputRange[i];break;}}}}return internalInterpolate(x,narrowedInput,extrapolationConfig);}",
+fn4.__closure = { channelToLrgb: fn3 };
+fn4.__workletHash = 7438857771706;
+fn4.__initData = {
+  code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}",
 };
-function clamp(arg0, arg1, arg2) {
-  return Math.min(Math.max(arg0, arg1), arg2);
-}
-clamp.__closure = {};
-clamp.__workletHash = 13846341562950;
-clamp.__initData = {
-  code: "function clamp_Pnpm_interpolationTs6(value,min,max){return Math.min(Math.max(value,min),max);}",
-};
+obj2.fromRgb = fn4;
+obj.convert = obj2;
 
-export { Extrapolation };
-export { interpolate };
-export { clamp };
+export default obj;

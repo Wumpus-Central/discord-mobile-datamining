@@ -1,13 +1,13 @@
 // _runtime/metro/11539__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "2deb3f64961131491b7db6bb10903f69",
-  name: "DoorExitIcon",
+  scales: [1, 2, 3],
+  hash: "adb011bbeb7f189fa87848559cc4fbc7",
+  name: "ic_leave_stage",
   type: "png",
 });

@@ -1,7 +1,7 @@
 // _runtime/08873_baseRest.js
 import identity from "00549_identity.js";
-import shortOut from "05788_shortOut.js";
-import overRest from "05792_overRest.js";
+import shortOut from "05789_shortOut.js";
+import overRest from "05793_overRest.js";
 
 export default function baseRest(arg0, arg1) {
   const tmp = shortOut;

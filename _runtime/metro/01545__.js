@@ -1,16 +1,22 @@
 // _runtime/metro/01545__.js
-import _mod1546 from "01546__.js";
+import NavigationContainerRefContext from "../01533_NavigationContainerRefContext.js";
+import NavigationContext from "../01546_NavigationContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export const useRoute = function useRoute() {
-  const context = noop.useContext(_mod1546.NavigationRouteContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
-    throw error;
-  } else {
-    return context;
+export const useNavigation = function useNavigation() {
+  const context = noop.useContext(NavigationContainerRefContext.NavigationContainerRefContext);
+  let context1 = noop.useContext(NavigationContext.NavigationContext);
+  if (undefined === context1) {
+    if (undefined === context) {
+      const _Error = Error;
+      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+      throw error;
+    }
   }
+  if (context1 == null) {
+    context1 = context;
+  }
+  return context1;
 };

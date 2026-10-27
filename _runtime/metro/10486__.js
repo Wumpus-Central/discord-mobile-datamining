@@ -1,13 +1,13 @@
 // _runtime/metro/10486__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/activated",
-  width: 277,
-  height: 44,
+  width: 279,
+  height: 48,
   scales: [2, 3],
-  hash: "80b2b0d70a370a3545b5c6b85cfa62d7",
-  name: "img_boost_activated_border",
+  hash: "e03e83c5ddeddb7941bbe7457ccf1a98",
+  name: "img_nitro_tier_2_activated_light",
   type: "png",
 });

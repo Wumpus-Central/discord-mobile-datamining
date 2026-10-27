@@ -1,13 +1,13 @@
 // _runtime/metro/09678__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 49,
-  height: 48.5,
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "6922badb2f007833b3becc6f00bcb5a4",
-  name: "img_custom_app_icons",
+  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
+  name: "img_nitro_file_upload",
   type: "png",
 });

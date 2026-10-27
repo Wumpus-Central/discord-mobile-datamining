@@ -1,5 +1,5 @@
 // _runtime/metro/11604__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
-  name: "ImageSparkleIcon",
+  hash: "623eff85d27fd4ffd7a4c28c327682e8",
+  name: "SpeedometerIcon",
   type: "png",
 });

@@ -1,14 +1,12 @@
 // _runtime/metro/10358__.js
-import repeatedTimeunitPattern from "../10215_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10222_AbstractParserWithWordBoundaryChecking.js";
-import _mod10359 from "10359__.js";
+import _mod10348 from "10348__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ESWeekdayParser = require;
+const RUTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,18 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|pasado|pr[o\u00F3]ximo)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10359.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|pasado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)",
-  "i",
-);
-class ESWeekdayParser {
+class RUTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESWeekdayParser);
+    tmp = c2(this, RUTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ESWeekdayParser);
+    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,11 +45,15 @@ class ESWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitCasualRelativeFormatParser, _mod10348.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
+      RUTimeUnitCasualRelativeFormatParser(10346).TIME_UNITS_PATTERN +
+      ")"
+    );
   },
 };
 const items = [
@@ -65,29 +61,18 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = ESWeekdayParser(10359).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("pasado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
-            }
-          }
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(10346).parseDuration(arg1[2]);
+      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
+        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
-        return ESWeekdayParser(10242).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
+        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(10220).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
+      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(10219).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(ESWeekdayParser, items);
+export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);

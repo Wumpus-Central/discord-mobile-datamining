@@ -1,13 +1,13 @@
 // _runtime/metro/14664__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "f6149fc51c6f815b5a58a1e50a88555c",
-  name: "img_subheader_resub_mobile",
+  hash: "e75d6cb3291053e29f69fac93519aa0b",
+  name: "spectator",
   type: "png",
 });

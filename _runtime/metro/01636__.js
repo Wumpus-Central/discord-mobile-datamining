@@ -1,19 +1,10 @@
 // _runtime/metro/01636__.js
-const require = globalThis.__r;
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-for (const key10013 in require("01637__.js")) {
-  arg5[key10013] = require("01637__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("SafeAreaView")) {
-  arg5[key10017] = require("SafeAreaView")[key10017];
-  continue;
-}
-for (const key10021 in require("initialWindowMetrics")) {
-  arg5[key10021] = require("initialWindowMetrics")[key10021];
-  continue;
-}
-for (const key10025 in require("01644__.js")) {
-  arg5[key10025] = require("01644__.js")[key10025];
-  continue;
-}
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaProvider", directEventTypes: { topInsetsChange: { registrationName: "onInsetsChange" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onInsetsChange: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
+
+export default module_65.get("RNCSafeAreaProvider", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

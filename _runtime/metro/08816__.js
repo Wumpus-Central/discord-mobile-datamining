@@ -2,8 +2,8 @@
 import colorPropType from "../08802_colorPropType.js";
 import _mod8806 from "08806__.js";
 import _mod8817 from "08817__.js";
-import emptyFunction_mod from "05010__.js";
-import "module_5010";
+import emptyFunction_mod from "05011__.js";
+import "module_5011";
 
 const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
 const obj = {};

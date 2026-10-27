@@ -1,11 +1,11 @@
 // _runtime/metro/02598__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Bvd2VydXBz",
+  httpServerLocation: "/assets/modules/premium/powerups",
   scales: [1],
-  hash: "b6889908d4ad391ebe0bbf4d13956031",
-  name: "zh-TW.messages.b6889908d4ad391ebe0bbf4d13956031.compiled.messages",
+  hash: "ddd86817da2beab12455866b3868a66e",
+  name: "GuildPowerups.compiled.messages",
   type: "jsona",
 });

@@ -1,3 +1,6 @@
 // _runtime/metro/01337__.js
+import bind from "../01318_bind.js";
 
-export default Math.round;
+const call2 = bind.call;
+
+export default typeof call2 === "unknown" ? bind(hasOwnProperty) : call2(call, hasOwnProperty);

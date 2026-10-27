@@ -1,13 +1,13 @@
 // _runtime/metro/14726__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 180,
+  height: 108,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "b78926d791a6ae551c895470cfd808a1",
+  name: "img_what_you_lose_profile_tier1_darker",
   type: "png",
 });

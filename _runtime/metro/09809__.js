@@ -1,5 +1,5 @@
 // _runtime/metro/09809__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a55e771de04b13c26603a57cb2527fa8",
-  name: "BoostGemIcon",
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
   type: "png",
 });

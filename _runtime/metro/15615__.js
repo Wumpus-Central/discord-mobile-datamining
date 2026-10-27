@@ -1,37 +1,36 @@
 // _runtime/metro/15615__.js
+import _mod15606 from "15606__.js";
+import _mod15607 from "15607__.js";
+import _mod15614 from "15614__.js";
 
-export default {
-  name: "react-native-url-polyfill",
-  version: "2.0.0",
-  description: "A lightweight and trustworthy URL polyfill for React Native",
-  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
-  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
-  homepage: "https://github.com/charpeni/react-native-url-polyfill",
-  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
-  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
-  main: "index.js",
-  types: "index.d.ts",
-  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
-  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
-  license: "MIT",
-  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
-  devDependencies: {
-    "@react-native-community/eslint-config": "3.2.0",
-    detox: "20.9.1",
-    eslint: "8.44.0",
-    "eslint-plugin-prettier": "4.2.1",
-    husky: "8.0.3",
-    jest: "29.5.0",
-    "lint-staged": "13.2.3",
-    "metro-react-native-babel-preset": "0.76.7",
-    nanoid: "3.3.6",
-    prettier: "2.8.8",
-    react: "18.2.0",
-    "react-native": "0.72.1",
-    "react-native-bundle-scale": "1.1.0",
-    typescript: "5.1.6",
-  },
-  peerDependencies: { "react-native": "*" },
-  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
-  "lint-staged": { "*.js": ["eslint --fix"] },
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15607(toString)) {
+      const tmp4 = _mod15614(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod15606;
+    }
+  }
+  const valueOf = arg0.valueOf;
+  if (_mod15607(valueOf)) {
+    const tmp8 = _mod15614(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15606;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15607(toString2)) {
+      const tmp10 = _mod15614(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15606;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
 };

@@ -1,11 +1,14 @@
 // _runtime/metro/10227__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10222_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10216 from "10216__.js";
+import repeatedTimeunitPattern from "../10217_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10224_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,17 +27,22 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
-class ENSlashMonthFormatParser {
+const regExp = new RegExp(
+  "((?:in)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10216.MONTH_DICTIONARY) +
+    ")\\s*(?:(?:,|-|of)?\\s*(" +
+    _mod10216.YEAR_PATTERN +
+    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "i",
+);
+class ENMonthNameParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENSlashMonthFormatParser);
-    tmp2 = c2;
-    obj = c2(ENSlashMonthFormatParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,8 +55,7 @@ class ENSlashMonthFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENSlashMonthFormatParser;
-_inherits(ENSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -59,14 +66,38 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsed = parseInt(arg1[2]);
-      const parsed1 = parseInt(arg1[1]);
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const implyResult = parsingComponents.imply("day", 1);
-      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10216).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
+      }
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(
+        index.index + str2.length,
+        index.index + index[0].length,
+      );
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const start2 = parsingResult.start;
+      start2.addTag("parser/ENMonthNameParser");
+      const tmp10 = ENMonthNameParser(10216).MONTH_DICTIONARY[formatted];
+      const start3 = parsingResult.start;
+      start3.assign("month", tmp10);
+      if (index[3]) {
+        const start5 = parsingResult.start;
+        start5.assign("year", ENMonthNameParser(10216).parseYear(index[3]));
+      } else {
+        const start4 = parsingResult.start;
+        start4.imply("year", ENMonthNameParser(10218).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(ENSlashMonthFormatParser, items);
+export default _createClass(ENMonthNameParser, items);

@@ -5,7 +5,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FadingTransition = fn;
+const SequencedTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,17 +25,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_6 = {
-  code: "function pnpm_FadingTransitionTs1(values){const{delayFunction,delay,withSequence,withTiming,halfDuration,withDelay,callback}=this.__closure;return{initialValues:{opacity:1,originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{opacity:delayFunction(delay,withSequence(withTiming(0,{duration:halfDuration}),withTiming(1,{duration:halfDuration}))),originX:withDelay(delay+halfDuration,withTiming(values.targetOriginX,{duration:0})),originY:withDelay(delay+halfDuration,withTiming(values.targetOriginY,{duration:0})),width:withDelay(delay+halfDuration,withTiming(values.targetWidth,{duration:0})),height:withDelay(delay+halfDuration,withTiming(values.targetHeight,{duration:0}))},callback:callback};}",
+  code: "function pnpm_SequencedTransitionTs1(values){const{delayFunction,delay,withSequence,withTiming,reverse,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withSequence(withTiming(reverse?values.currentOriginX:values.targetOriginX,config),withTiming(values.targetOriginX,config))),originY:delayFunction(delay,withSequence(withTiming(reverse?values.targetOriginY:values.currentOriginY,config),withTiming(values.targetOriginY,config))),width:delayFunction(delay,withSequence(withTiming(reverse?values.currentWidth:values.targetWidth,config),withTiming(values.targetWidth,config))),height:delayFunction(delay,withSequence(withTiming(reverse?values.targetHeight:values.currentHeight,config),withTiming(values.targetHeight,config)))},callback:callback};}",
 };
-class FadingTransition {
+class SequencedTransition {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, FadingTransition);
+    tmp = c2(this, SequencedTransition);
     items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(FadingTransition);
+    obj = closure_4(SequencedTransition);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -46,6 +46,7 @@ class FadingTransition {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
+    tmp3Result.reversed = false;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
       const callbackV = delayFunction.callbackV;
@@ -54,12 +55,11 @@ class FadingTransition {
       if (num == null) {
         num = 500;
       }
-      const result = num / 2;
-      closure_3 = result;
-      const fn = function t(originX) {
+      const config = { duration: num / 2 };
+      const reversed = delayFunction.reversed;
+      const fn = function e(originX) {
         const obj = {
           initialValues: {
-            opacity: 1,
             originX: originX.currentOriginX,
             originY: originX.currentOriginY,
             width: originX.currentWidth,
@@ -68,32 +68,50 @@ class FadingTransition {
           animations: null,
           callback: null,
         };
-        const size = { opacity: null, originX: null, originY: null, width: null, height: null };
-        const obj3 = delayFunction(1730);
-        const obj2 = { duration: result };
-        const obj4 = delayFunction(1730);
-        const withTimingResult = delayFunction(1730).withTiming(0, { duration: result });
-        size.opacity = delayFunction(
-          delay,
-          obj3.withSequence(withTimingResult, delayFunction(1730).withTiming(1, { duration: result })),
+        const obj2 = delayFunction(1727);
+        const size = { originX: null, originY: null, width: null, height: null };
+        const obj3 = delayFunction(1727);
+        const withTimingResult = delayFunction(1727).withTiming(
+          reversed ? originX.currentOriginX : originX.targetOriginX,
+          obj,
         );
-        const obj5 = { duration: result };
-        const obj6 = delayFunction(1730);
-        const sum = delay + result;
-        const obj8 = delayFunction(1730);
-        size.originX = obj8.withDelay(sum, delayFunction(1730).withTiming(originX.targetOriginX, { duration: 0 }));
-        const obj9 = delayFunction(1730);
-        const sum1 = delay + result;
-        const obj10 = delayFunction(1730);
-        size.originY = obj10.withDelay(sum1, delayFunction(1730).withTiming(originX.targetOriginY, { duration: 0 }));
-        const obj11 = delayFunction(1730);
-        const sum2 = delay + result;
-        const obj12 = delayFunction(1730);
-        size.width = obj12.withDelay(sum2, delayFunction(1730).withTiming(originX.targetWidth, { duration: 0 }));
-        const obj13 = delayFunction(1730);
-        const sum3 = delay + result;
-        const obj14 = delayFunction(1730);
-        size.height = obj14.withDelay(sum3, delayFunction(1730).withTiming(originX.targetHeight, { duration: 0 }));
+        size.originX = delayFunction(
+          delay,
+          obj2.withSequence(withTimingResult, delayFunction(1727).withTiming(originX.targetOriginX, obj)),
+        );
+        const tmp3Result = delayFunction(1727);
+        const tmp3Result10 = delayFunction(1727);
+        const tmp3Result11 = delayFunction(1727);
+        const withTimingResult1 = delayFunction(1727).withTiming(
+          reversed ? originX.targetOriginY : originX.currentOriginY,
+          obj,
+        );
+        size.originY = delayFunction(
+          delay,
+          tmp3Result10.withSequence(withTimingResult1, delayFunction(1727).withTiming(originX.targetOriginY, obj)),
+        );
+        const tmp3Result12 = delayFunction(1727);
+        const tmp3Result13 = delayFunction(1727);
+        const tmp3Result14 = delayFunction(1727);
+        const withTimingResult2 = delayFunction(1727).withTiming(
+          reversed ? originX.currentWidth : originX.targetWidth,
+          obj,
+        );
+        size.width = delayFunction(
+          delay,
+          tmp3Result13.withSequence(withTimingResult2, delayFunction(1727).withTiming(originX.targetWidth, obj)),
+        );
+        const tmp3Result15 = delayFunction(1727);
+        const tmp3Result16 = delayFunction(1727);
+        const tmp3Result17 = delayFunction(1727);
+        const withTimingResult3 = delayFunction(1727).withTiming(
+          reversed ? originX.targetHeight : originX.currentHeight,
+          obj,
+        );
+        size.height = delayFunction(
+          delay,
+          tmp3Result16.withSequence(withTimingResult3, delayFunction(1727).withTiming(originX.targetHeight, obj)),
+        );
         obj.animations = size;
         obj.callback = callbackV;
         return obj;
@@ -101,28 +119,45 @@ class FadingTransition {
       fn.__closure = {
         delayFunction,
         delay,
-        withSequence: FadingTransition(1730).withSequence,
-        withTiming: FadingTransition(1730).withTiming,
-        halfDuration: result,
-        withDelay: FadingTransition(1730).withDelay,
+        withSequence: SequencedTransition(1727).withSequence,
+        withTiming: SequencedTransition(1727).withTiming,
+        reverse: reversed,
+        config,
         callback: callbackV,
       };
-      fn.__workletHash = 3440645628303;
+      fn.__workletHash = 255577740024;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_inherits(FadingTransition, fn(1728).BaseAnimationBuilder);
+_inherits(SequencedTransition, fn(1725).BaseAnimationBuilder);
 const entry = {
-  key: "createInstance",
-  value: function createInstance() {
-    return FadingTransition();
+  key: "reverse",
+  value: function reverse() {
+    this.reversed = !this.reversed;
+    return this;
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(FadingTransition, null, items);
-importDefaultResultResult.presetName = "FadingTransition";
+const entry1 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return SequencedTransition();
+  },
+};
+let items1 = [
+  entry1,
+  {
+    key: "reverse",
+    value: function reverse() {
+      const instance = SequencedTransition.createInstance();
+      return instance.reverse();
+    },
+  },
+];
+const importDefaultResultResult = _createClass(SequencedTransition, items, items1);
+importDefaultResultResult.presetName = "SequencedTransition";
 
-export const FadingTransition = importDefaultResultResult;
+export const SequencedTransition = importDefaultResultResult;

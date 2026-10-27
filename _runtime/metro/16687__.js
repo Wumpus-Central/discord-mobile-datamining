@@ -1,13 +1,13 @@
 // _runtime/metro/16687__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "30252dd38aca1d861a91a71b38c8a502",
-  name: "AccessibilityIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
+  name: "graggle_2",
   type: "png",
 });

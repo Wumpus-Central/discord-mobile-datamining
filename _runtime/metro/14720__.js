@@ -1,13 +1,13 @@
 // _runtime/metro/14720__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 320.5,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 184,
+  height: 17,
   scales: [2, 3],
-  hash: "d422ef91f74da1b3cc395d635485063d",
-  name: "early_access",
+  hash: "dc6e9b555a9114d9845b29b8de00cc4e",
+  name: "server_boost_logo_dark",
   type: "png",
 });

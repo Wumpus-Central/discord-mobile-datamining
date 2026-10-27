@@ -1,11 +1,13 @@
 // _runtime/metro/15267__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "5f77547974eb8f3f02aedbb78b4b73bc",
-  name: "NitroGem12",
-  type: "lottie",
+  httpServerLocation: "/assets/images/native/premium/nitro_icons",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "e31ee2ef368806b54cff2e8c81e8cd97",
+  name: "img_nitro_icon_filled",
+  type: "png",
 });

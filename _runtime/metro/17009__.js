@@ -1,11 +1,13 @@
 // _runtime/metro/17009__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "b3f43505f18e3302ea6ed767bf1d70ec",
-  name: "ru.messages.b3f43505f18e3302ea6ed767bf1d70ec.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9e0f7ca920e7d55418409ccf322d663c",
+  name: "BurgerIcon",
+  type: "png",
 });

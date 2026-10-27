@@ -1,5 +1,5 @@
 // _runtime/metro/06590__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -8,6 +8,6 @@ export default registerAsset.registerAsset({
   height: 267,
   scales: [1],
   hash: "898dc79e0285b8e9855531eeca36bf84",
-  name: "img_roblox_white",
+  name: "img_roblox_dark",
   type: "svg",
 });

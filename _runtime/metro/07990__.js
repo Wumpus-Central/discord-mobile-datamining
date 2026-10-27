@@ -1,6 +1,6 @@
 // _runtime/metro/07990__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7986 from "07986__.js";
+import _modDef7984 from "07984__.js";
 import _modDef7991 from "07991__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Circle = fn;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Circle {
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, Circle);
+    tmp = closure_3(this, ClipPath);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Circle);
+    obj = hasOwnProperty(ClipPath);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,35 +49,19 @@ class Circle {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Circle, _modDef7986);
+_inherits(ClipPath, _modDef7984);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    const obj = {};
-    ({ cx, cy, r } = props);
-    const merged = Object.assign(Circle(7977).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.r = r;
-    const obj2 = Circle(7977);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7991, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(7975).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Circle, items);
-importDefaultResultResult.displayName = "Circle";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

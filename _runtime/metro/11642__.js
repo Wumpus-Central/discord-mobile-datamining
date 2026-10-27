@@ -1,13 +1,13 @@
 // _runtime/metro/11642__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "db76c9ef21a10a502ae95ae16e345521",
-  name: "add",
+  hash: "ac381080e803b7da0a8a3822cdf80aee",
+  name: "BlurBackgroundIcon",
   type: "png",
 });

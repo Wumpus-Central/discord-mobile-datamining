@@ -1,12 +1,11 @@
 // _runtime/metro/08022__.js
-import _modDef8001 from "08001__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeImage = arg1;
+const FePointLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +24,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeImage {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
+    tmp = c2(this, FePointLight);
     tmp2 = closure_4;
-    obj = closure_4(FeImage);
+    obj = closure_4(FePointLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,18 +44,17 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef8001);
+_inherits(FePointLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(7978).warnUnimplementedFilter();
+    const result = FePointLight(7976).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

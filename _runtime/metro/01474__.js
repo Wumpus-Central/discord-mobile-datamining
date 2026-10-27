@@ -1,83 +1,69 @@
 // _runtime/metro/01474__.js
+import _mod1304 from "01304__.js";
+import _mod1305 from "01305__.js";
+import _mod1306 from "01306__.js";
 import _mod1475 from "01475__.js";
+import defineDataProperty from "../01476_defineDataProperty.js";
 
-export default function forEach(str, call, arg2) {
-  if (_mod1475(call)) {
-    call = toString.call;
-    if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
-      let num4 = 0;
-      if (0 < str.length) {
-        do {
-          let call4 = hasOwnProperty.call;
-          let tmp20 = num4;
-          if (typeof call4 === "unknown" ? hasOwnProperty(num4) : call4(str, num4)) {
-            if (null == tmp6) {
-              let tmp23 = call(str[num4], num4, str);
-            } else {
-              let call5 = call.call;
-              let tmp21 = str[num4];
-              if (typeof call5 === "unknown") {
-                let tmp22 = call(tmp21, num4, str);
-              } else {
-                let call5Result = call5(tmp6, tmp21, tmp20, str);
+let closure_2 = _mod1475();
+let closure_3 = _mod1304("%Math.floor%");
+
+export default function setFunctionLength(fn, num) {
+  if (typeof fn !== "function") {
+    const tmp25 = new _mod1305("`fn` is not a function");
+    throw tmp25;
+  } else {
+    if (typeof num === "number") {
+      if (0 >= 0) {
+        if (num <= 4294967295) {
+          if (closure_3(num) === num) {
+            let flag = true;
+            let flag2 = true;
+            if ("length" in fn) {
+              flag = true;
+              flag2 = true;
+              if (_mod1306) {
+                const tmp4 = _mod1306(fn, "length");
+                let tmp5 = tmp4;
+                if (tmp4) {
+                  tmp5 = !tmp4.configurable;
+                }
+                let flag3 = true;
+                if (tmp5) {
+                  flag3 = false;
+                }
+                let tmp6 = tmp4;
+                if (tmp4) {
+                  tmp6 = !tmp4.writable;
+                }
+                flag = true;
+                flag2 = flag3;
+                if (tmp6) {
+                  flag = false;
+                  flag2 = flag3;
+                }
               }
             }
-          }
-          num4 = num4 + 1;
-        } while (num4 < length2);
-      }
-    } else if (typeof str === "string") {
-      let num2 = 0;
-      if (0 < str.length) {
-        do {
-          if (null == tmp6) {
-            let tmp17 = call(str.charAt(num2), num2, str);
-          } else {
-            let call3 = call.call;
-            let charAtResult = str.charAt(num2);
-            if (typeof call3 === "unknown") {
-              let tmp16 = call(charAtResult, num2, str);
-            } else {
-              let call3Result = call3(tmp6, charAtResult, tmp14, str);
+            if (!flag2) {
+              flag2 = flag;
             }
-          }
-          num2 = num2 + 1;
-        } while (num2 < length);
-      }
-    } else {
-      for (const key10024 in arg0) {
-        let call6 = hasOwnProperty.call;
-        if (typeof call6 === "unknown") {
-          let call6Result = hasOwnProperty(key10024);
-        } else {
-          call6Result = call6(arg0, key10024);
-        }
-        if (!call6Result) {
-          continue;
-        } else {
-          if (null == tmp6) {
-            let tmp12 = arg1(arg0[key10024], key10024, arg0);
-            continue;
-          } else {
-            let call2 = arg1.call;
-            let tmp10 = arg0[key10024];
-            if (typeof call2 === "unknown") {
-              let tmp11 = arg1(tmp10, key10024, arg0);
-              continue;
-            } else {
-              let call2Result = call2(tmp6, tmp10, key10024, arg0);
-              continue;
+            if (!flag2) {
+              flag2 = !tmp;
             }
-            continue;
+            if (flag2) {
+              const tmp10 = defineDataProperty;
+              if (closure_2) {
+                tmp10(fn, "length", num, true, true);
+              } else {
+                tmp10(fn, "length", num);
+              }
+            }
+            return fn;
           }
-          continue;
         }
-        continue;
       }
     }
-  } else {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("iterator must be a function");
-    throw typeError;
+    const tmp19 = new _mod1305("`length` must be a positive 32-bit integer");
+    throw tmp19;
   }
 }

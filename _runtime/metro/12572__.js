@@ -1,5 +1,5 @@
 // _runtime/metro/12572__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d6f5a76861191f4dd121da59ef71950f",
-  name: "ArrowSmallUpIcon",
+  hash: "01cd25a11a733a16463d72c98cca83b7",
+  name: "CloudIcon",
   type: "png",
 });

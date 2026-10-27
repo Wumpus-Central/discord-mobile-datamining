@@ -1,5 +1,5 @@
 // _runtime/09115_QRCodeSvg.js
-import inlineStyles from "07962_inlineStyles.js";
+import inlineStyles from "07960_inlineStyles.js";
 import emptyFunction from "metro/09112__.js";
 import noop_mod from "metro/00019__.js";
 

@@ -26,17 +26,17 @@ function _isNativeReflectConstruct() {
 }
 let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
-  code: "function pnpm_RollTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{rotate:'-180deg'}],...initialValues},callback:callback};}",
+  code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}",
 };
-class RollInLeft {
+class StretchInX {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -55,32 +55,30 @@ class RollInLeft {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(translateX) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        const items = [{ scaleX: delayFunction(delay, first(1, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: -translateX.windowWidth }, { rotate: "-180deg" }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleX: 0 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 16303599954051;
+      fn.__workletHash = 8236429657427;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = RollInLeft;
-_inherits(RollInLeft, fn(1728).ComplexAnimationBuilder);
+_slicedToArray = StretchInX;
+_inherits(StretchInX, fn(1725).ComplexAnimationBuilder);
 const entry = {
   key: "createInstance",
   value: function createInstance() {
@@ -88,20 +86,20 @@ const entry = {
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(RollInLeft, null, items);
-importDefaultResultResult.presetName = "RollInLeft";
+const importDefaultResultResult = _createClass(StretchInX, null, items);
+importDefaultResultResult.presetName = "StretchInX";
 let closure_6 = {
-  code: "function pnpm_RollTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:values.windowWidth},{rotate:'180deg'}],...initialValues},callback:callback};}",
+  code: "function pnpm_StretchTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleY:0}],...initialValues},callback:callback};}",
 };
-class RollInRight {
+class StretchInY {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -120,32 +118,30 @@ class RollInRight {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(translateX) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        const items = [{ scaleY: delayFunction(delay, first(1, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: translateX.windowWidth }, { rotate: "180deg" }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleY: 0 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 514820713152;
+      fn.__workletHash = 15758510181808;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = RollInRight;
-_inherits(RollInRight, fn(1728).ComplexAnimationBuilder);
+_slicedToArray = StretchInY;
+_inherits(StretchInY, fn(1725).ComplexAnimationBuilder);
 const entry1 = {
   key: "createInstance",
   value: function createInstance() {
@@ -153,20 +149,20 @@ const entry1 = {
   },
 };
 let items1 = [entry1];
-const importDefaultResultResult1 = _createClass(RollInRight, null, items1);
-importDefaultResultResult1.presetName = "RollInRight";
+const importDefaultResultResult1 = _createClass(StretchInY, null, items1);
+importDefaultResultResult1.presetName = "StretchInY";
 let closure_7 = {
-  code: "function pnpm_RollTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{rotate:delayFunction(delay,animation('-180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}",
+  code: "function pnpm_StretchTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleX:1}],...initialValues},callback:callback};}",
 };
-class RollOutLeft {
+class StretchOutX {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -185,32 +181,30 @@ class RollOutLeft {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("-180deg", closure_2)) };
+        const items = [{ scaleX: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleX: 1 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 1569061887041;
+      fn.__workletHash = 2374207350737;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = RollOutLeft;
-_inherits(RollOutLeft, fn(1728).ComplexAnimationBuilder);
+_slicedToArray = StretchOutX;
+_inherits(StretchOutX, fn(1725).ComplexAnimationBuilder);
 const entry2 = {
   key: "createInstance",
   value: function createInstance() {
@@ -218,20 +212,20 @@ const entry2 = {
   },
 };
 const items2 = [entry2];
-const importDefaultResultResult2 = _createClass(RollOutLeft, null, items2);
-importDefaultResultResult2.presetName = "RollOutLeft";
+const importDefaultResultResult2 = _createClass(StretchOutX, null, items2);
+importDefaultResultResult2.presetName = "StretchOutX";
 let closure_8 = {
-  code: "function pnpm_RollTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{rotate:delayFunction(delay,animation('180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}",
+  code: "function pnpm_StretchTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleY:1}],...initialValues},callback:callback};}",
 };
-class RollOutRight {
+class StretchOutY {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -250,32 +244,30 @@ class RollOutRight {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("180deg", closure_2)) };
+        const items = [{ scaleY: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleY: 1 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9663216530406;
+      fn.__workletHash = 3228047902646;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = RollOutRight;
-_inherits(RollOutRight, fn(1728).ComplexAnimationBuilder);
+_slicedToArray = StretchOutY;
+_inherits(StretchOutY, fn(1725).ComplexAnimationBuilder);
 const entry3 = {
   key: "createInstance",
   value: function createInstance() {
@@ -283,10 +275,10 @@ const entry3 = {
   },
 };
 const items3 = [entry3];
-const importDefaultResultResult3 = _createClass(RollOutRight, null, items3);
-importDefaultResultResult3.presetName = "RollOutRight";
+const importDefaultResultResult3 = _createClass(StretchOutY, null, items3);
+importDefaultResultResult3.presetName = "StretchOutY";
 
-export const RollInLeft = importDefaultResultResult;
-export const RollInRight = importDefaultResultResult1;
-export const RollOutLeft = importDefaultResultResult2;
-export const RollOutRight = importDefaultResultResult3;
+export const StretchInX = importDefaultResultResult;
+export const StretchInY = importDefaultResultResult1;
+export const StretchOutX = importDefaultResultResult2;
+export const StretchOutY = importDefaultResultResult3;

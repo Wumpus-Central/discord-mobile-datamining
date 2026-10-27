@@ -1,12 +1,14 @@
 // _runtime/metro/10400__.js
-import Filter from "../10234_Filter.js";
+import repeatedTimeunitPattern from "../10217_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10224_AbstractParserWithWordBoundaryChecking.js";
+import _mod10386 from "10386__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMergeRelativeDateRefiner = require;
+const ITRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENMergeRelativeDateRefiner {
+const regExp = new RegExp(
+  "(questo|ultimo|scorso|prossimo|dopo\\s*questo|questa|ultima|scorsa|prossima\\s*questa)\\s*(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10386.TIME_UNIT_DICTIONARY) +
+    ")(?=\\s*)(?=\\W|$)",
+  "i",
+);
+class ITRelativeDateFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeDateRefiner);
+    tmp = c2(this, ITRelativeDateFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeDateRefiner);
+    obj = closure_4(ITRelativeDateFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,67 +53,60 @@ class ENMergeRelativeDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
+_inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ITRelativeDateFormatParser(10386).TIME_UNIT_DICTIONARY[str3];
+      if ("prossimo" != formatted) {
+        if (!formatted.startsWith("dopo")) {
+          if ("prima" != formatted) {
+            if ("precedente" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/settimana/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/mese/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/anno/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
+            }
           }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
+          const obj4 = {};
+          obj4[tmp3] = -1;
+          const ParsingComponents = ITRelativeDateFormatParser(10220).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
         }
-        match = tmp6;
       }
-      return match;
-    },
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeDateRefiner(10384).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(prima|dal)$/i)) {
-        reverseDurationResult = ENMergeRelativeDateRefiner(10217).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeDateRefiner(10218).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10218).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(
-        ReferenceWithTimezone.fromDate(start.date()),
-        reverseDurationResult,
-      );
-      return new ENMergeRelativeDateRefiner(10218).ParsingResult(
-        start.reference,
-        text.index,
-        "" + text.text + arg0 + start.text,
-        relativeFromReference,
-      );
+      const ParsingComponents2 = ITRelativeDateFormatParser(10220).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
     },
   },
 ];
 
-export default _createClass(ENMergeRelativeDateRefiner, items);
+export default _createClass(ITRelativeDateFormatParser, items);

@@ -1,13 +1,13 @@
 // _runtime/metro/01445__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/group_dms",
-  width: 96,
-  height: 96,
+  httpServerLocation: "/assets/images",
+  width: 498,
+  height: 498,
   scales: [1],
-  hash: "f7e38ac976a2a696161c923502a8345b",
-  name: "icon6",
+  hash: "df3228db1e67e406cba743551d2b055e",
+  name: "clyde-avatar",
   type: "png",
 });

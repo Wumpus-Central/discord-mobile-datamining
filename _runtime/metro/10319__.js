@@ -1,13 +1,13 @@
 // _runtime/metro/10319__.js
-import AbstractParserWithWordBoundaryChecking from "../10222_AbstractParserWithWordBoundaryChecking.js";
-import _mod10309 from "10309__.js";
+import AbstractParserWithWordBoundaryChecking from "../10224_AbstractParserWithWordBoundaryChecking.js";
+import _mod10311 from "10311__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitAgoFormatParser = require;
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,32 +26,38 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp("(" + _mod10309.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod10309.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
-class NLTimeUnitAgoFormatParser {
-  constructor(arg0) {
+const regExp = new RegExp(
+  "(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod10311.TIME_UNITS_PATTERN + ")(?=\\W|$)",
+  "i",
+);
+class NLTimeUnitCasualRelativeFormatParser {
+  constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitAgoFormatParser);
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(
+  NLTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+    return regExp;
   },
 };
 const items = [
@@ -59,14 +65,18 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = NLTimeUnitAgoFormatParser(10309).parseDuration(arg1[1]);
-      const ParsingComponents = NLTimeUnitAgoFormatParser(10218).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitAgoFormatParser(10217).reverseDuration(NLTimeUnitAgoFormatParser(10309).parseDuration(arg1[1])),
-      );
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10311).parseDuration(arg1[2]);
+      if ("vorig" !== formatted) {
+        if ("afgelopen" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
+        }
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10220).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10219).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(NLTimeUnitAgoFormatParser, items);
+export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);

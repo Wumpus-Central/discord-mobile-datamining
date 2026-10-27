@@ -3,11 +3,11 @@ const obj = {
   v: "4.8.0",
   meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
   fr: 60,
-  ip: 13,
-  op: 89,
+  ip: 11,
+  op: 87,
   w: 1280,
   h: 720,
-  nm: "FrameEffect_09-4_Out",
+  nm: "FrameEffect_09-3_Out",
   ddd: 0,
   assets: null,
   layers: null,
@@ -41,7 +41,7 @@ items[1] = obj2;
 obj.assets = items;
 const obj5 = {
   ddd: 0,
-  ind: 1,
+  ind: 2,
   ty: 0,
   nm: "particle",
   refId: "comp_0",
@@ -50,9 +50,9 @@ const obj5 = {
   ao: 0,
   w: 40,
   h: 40,
-  ip: 18,
-  op: 109,
-  st: 16,
+  ip: 22,
+  op: 113,
+  st: 20,
   bm: 0,
 };
 const obj6 = {
@@ -64,8 +64,8 @@ const obj6 = {
 };
 const obj7 = { a: 1, k: null, ix: 2 };
 const items2 = [
-  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 18, s: [1520, 156, 0], to: [0, 0, 0], ti: [0, 0, 0] },
-  { t: 76, s: [-280, 152, 0] },
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 22, s: [-280, 152, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 87, s: [1520, 156, 0] },
 ];
 obj7.k = items2;
 obj6.p = obj7;
@@ -73,7 +73,7 @@ obj5.ks = obj6;
 const items3 = [obj5, , , ,];
 const obj8 = {
   ddd: 0,
-  ind: 2,
+  ind: 3,
   ty: 0,
   nm: "particle",
   refId: "comp_0",
@@ -82,9 +82,9 @@ const obj8 = {
   ao: 0,
   w: 40,
   h: 40,
-  ip: 9,
-  op: 103,
-  st: 7,
+  ip: 10,
+  op: 104,
+  st: 8,
   bm: 0,
 };
 const obj9 = {
@@ -96,8 +96,8 @@ const obj9 = {
 };
 const obj10 = { a: 1, k: null, ix: 2 };
 const items4 = [
-  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 9, s: [1520, 588, 0], to: [0, 0, 0], ti: [0, 0, 0] },
-  { t: 73, s: [-280, 584, 0] },
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 10, s: [-280, 584, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 78, s: [1520, 588, 0] },
 ];
 obj10.k = items4;
 obj9.p = obj10;
@@ -105,7 +105,7 @@ obj8.ks = obj9;
 items3[1] = obj8;
 const obj11 = {
   ddd: 0,
-  ind: 3,
+  ind: 4,
   ty: 0,
   nm: "particle",
   refId: "comp_0",
@@ -114,9 +114,9 @@ const obj11 = {
   ao: 0,
   w: 40,
   h: 40,
-  ip: 29,
-  op: 113,
-  st: 27,
+  ip: 14,
+  op: 98,
+  st: 12,
   bm: 0,
 };
 const obj12 = {
@@ -128,8 +128,8 @@ const obj12 = {
 };
 const obj13 = { a: 1, k: null, ix: 2 };
 const items5 = [
-  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 29, s: [1520, 496, 0], to: [0, 0, 0], ti: [0, 0, 0] },
-  { t: 78, s: [-280, 492, 0] },
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 14, s: [-280, 184, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 67, s: [1520, 188, 0] },
 ];
 obj13.k = items5;
 obj12.p = obj13;
@@ -137,7 +137,7 @@ obj11.ks = obj12;
 items3[2] = obj11;
 const obj14 = {
   ddd: 0,
-  ind: 4,
+  ind: 5,
   ty: 0,
   nm: "particle",
   refId: "comp_0",
@@ -146,9 +146,9 @@ const obj14 = {
   ao: 0,
   w: 40,
   h: 40,
-  ip: 41,
-  op: 118,
-  st: 39,
+  ip: 29,
+  op: 106,
+  st: 27,
   bm: 0,
 };
 const obj15 = {
@@ -160,8 +160,8 @@ const obj15 = {
 };
 const obj16 = { a: 1, k: null, ix: 2 };
 const items6 = [
-  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 41, s: [1520, 264, 0], to: [0, 0, 0], ti: [0, 0, 0] },
-  { t: 79, s: [-280, 260, 0] },
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 28, s: [-280, 344, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 71, s: [1520, 348, 0] },
 ];
 obj16.k = items6;
 obj15.p = obj16;
@@ -169,7 +169,7 @@ obj14.ks = obj15;
 items3[3] = obj14;
 const obj17 = {
   ddd: 0,
-  ind: 5,
+  ind: 6,
   ty: 0,
   nm: "particle",
   refId: "comp_0",
@@ -178,9 +178,9 @@ const obj17 = {
   ao: 0,
   w: 40,
   h: 40,
-  ip: 3,
-  op: 104,
-  st: 1,
+  ip: 19,
+  op: 120,
+  st: 17,
   bm: 0,
 };
 const obj18 = {
@@ -192,8 +192,8 @@ const obj18 = {
 };
 const obj19 = { a: 1, k: null, ix: 2 };
 const items7 = [
-  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 17, s: [1520, 200, 0], to: [0, 0, 0], ti: [0, 0, 0] },
-  { t: 59, s: [-280, 196, 0] },
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 34, s: [-280, 472, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 87, s: [1520, 476, 0] },
 ];
 obj19.k = items7;
 obj18.p = obj19;

@@ -1,5 +1,5 @@
 // _runtime/metro/06600__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "c79a547370020e3c89b0c02086f0c3fe",
-  name: "img_account_sync_tiktok_dark",
+  hash: "924c5a5eda5a5885b3a2345095a2f59c",
+  name: "img_account_sync_tiktok_light",
   type: "png",
 });

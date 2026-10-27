@@ -1,13 +1,23 @@
 // _runtime/metro/01807__.js
-import _mod1808 from "01808__.js";
-import 01661__ from "01661__.js";
+import runOnRuntime from "../01699_runOnRuntime.js";
+import _slicedToArray from "00032__.js";
 
-if (module_1661.shouldBeUseWeb()) {
-  function useAnimatedPropsJS(fn, items, arg2) {
-    return _mod1808.useAnimatedStyle(fn, items, arg2, true);
-  }
-} else {
-  useAnimatedPropsJS = _mod1808.useAnimatedStyle;
-}
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
 
-export const useAnimatedProps = useAnimatedPropsJS;
+export const useSharedValue = function useSharedValue(point) {
+  closure_0 = point;
+  const first = _slicedToArray(
+    closure_4(() => runOnRuntime.makeMutable(closure_0)),
+    1,
+  )[0];
+  const items = [first];
+  closure_3(
+    () => () => {
+      closure_0(first[3]).cancelAnimation(closure_1_1);
+    },
+    items,
+  );
+  return first;
+};

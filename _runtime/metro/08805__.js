@@ -2,8 +2,8 @@
 import _mod8806 from "08806__.js";
 import _mod8814 from "08814__.js";
 import flattenStyle from "08807__.js";
-import "module_5010";
-import emptyFunction_mod from "05010__.js";
+import "module_5011";
+import emptyFunction_mod from "05011__.js";
 
 const obj = {};
 const module_8806 = Object.assign(_mod8806);

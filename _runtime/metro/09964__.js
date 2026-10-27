@@ -1,5 +1,5 @@
 // _runtime/metro/09964__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa86e9bedf9e29074b68adcd3222cf32",
-  name: "NatureIcon",
+  hash: "137c8d60debe14e8345280ef0c17818d",
+  name: "LightbulbIcon",
   type: "png",
 });

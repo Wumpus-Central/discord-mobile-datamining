@@ -1,12 +1,43 @@
 // _runtime/metro/12696__.js
+import _mod12595 from "12595__.js";
+import _mod12616 from "12616__.js";
 
-export function getSDKSource() {
-  return "npm";
-}
-export const isBrowserBundle = function isBrowserBundle() {
-  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
-  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
-    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
+require = arg1;
+const dependencyMap = arg6;
+
+export const captureFeedback = function captureFeedback(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  return prop;
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod12616.getCurrentScope();
+  }
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = {
+    feedback: _mod12595.dropUndefinedKeys({
+      contact_email: email,
+      name,
+      message,
+      url,
+      source,
+      associated_event_id: associatedEventId,
+    }),
+  };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod12616.getClient();
+    const tmp3Result = _mod12616;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 };

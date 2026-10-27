@@ -1,14 +1,12 @@
 // _runtime/metro/07992__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7986 from "07986__.js";
-import _modDef7993 from "07993__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const ClipPath = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ClipPath {
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, ClipPath);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ClipPath);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,19 +46,15 @@ class ClipPath {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ClipPath, _modDef7986);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const props = this.props;
-    const obj = { ref: this.refMethod };
-    const merged = Object.assign(ClipPath(7977).extract(this, props));
-    obj.children = props.children;
-    return <tmp ref={this.refMethod} />;
+    return jsx(Defs(7993), { children: this.props.children });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ClipPath, items);
-importDefaultResultResult.displayName = "ClipPath";
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

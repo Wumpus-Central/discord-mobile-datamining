@@ -1,5 +1,5 @@
 // _runtime/metro/08804__.js
-import emptyFunction from "05010__.js";
+import emptyFunction from "05011__.js";
 
 const rect = {
   top: emptyFunction.number,

@@ -1,5 +1,5 @@
 // _runtime/metro/09811__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "26d707b294c340a6d911d79614dfcf77",
-  name: "UserSquareIcon",
+  hash: "a55e771de04b13c26603a57cb2527fa8",
+  name: "BoostGemIcon",
   type: "png",
 });

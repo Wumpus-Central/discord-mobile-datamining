@@ -1,23 +1,23 @@
 // _runtime/metro/00894__.js
+import _mod176 from "../00176_finally.js";
 import RN_GLOBAL_OBJ from "../00692_RN_GLOBAL_OBJ.js";
 import _mod693 from "00693__.js";
 import TurboModuleRegistry from "../00874_TurboModuleRegistry.js";
 import done from "../00895_done.js";
-import _mod897 from "00897__.js";
 
 const require = globalThis.__r;
 
 require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {
-  return require("00898__.js");
+  return require("00178__.js");
 }
 
 export const polyfillPromise = function polyfillPromise() {
   if (TurboModuleRegistry.ReactNativeLibraries.Utilities) {
-    closure_0 = require("00898__.js");
+    closure_0 = require("00178__.js");
     done;
-    _mod897;
+    _mod176;
     const Utilities = TurboModuleRegistry.ReactNativeLibraries.Utilities;
     Utilities.polyfillGlobal("Promise", () => closure_0);
   } else {
@@ -47,7 +47,7 @@ export const checkPromiseAndWarn = function checkPromiseAndWarn() {
       const debug2 = _mod693.debug;
       debug2.log("Unhandled promise rejections will be caught by Sentry.");
     }
-    tmp6 = require("00898__.js");
+    tmp6 = require("00178__.js");
   } catch (err) {
     const debug4 = _mod693.debug;
     debug4.warn(

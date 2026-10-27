@@ -1,17 +1,70 @@
 // _runtime/metro/01881__.js
-import TEST_ID_KEYBOARD_TOOLBAR from "../01876_TEST_ID_KEYBOARD_TOOLBAR.js";
+import _mod1847 from "01847__.js";
+import disabledDefault from "../01874_disabled.js";
+import _modDef1875 from "01875__.js";
 import noop from "00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: c2 } = get_ActivityIndicator);
+fn(19).useCallback;
 const jsx = fn(21).jsx;
-const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export default function _default(children) {
+export default function _default(icon) {
+  ({ children, onPress } = icon);
+  ({ disabled, button } = icon);
+  ({ rippleRadius, style } = icon);
+  if (button === undefined) {
+    button = disabledDefault;
+  }
+  icon = icon.icon;
+  if (icon === undefined) {
+    icon = _modDef1875;
+  }
+  const toolbarContext = onPress(1880).useToolbarContext();
+  const theme = toolbarContext.theme;
+  if (disabled == null) {
+    disabled = toolbarContext.isNextDisabled;
+  }
+  const items = [onPress];
+  const obj2 = {
+    accessibilityHint: "Moves focus to the next field",
+    accessibilityLabel: "Next",
+    disabled,
+    rippleRadius,
+    style,
+    testID: null,
+    theme: null,
+    onPress: null,
+    children: null,
+  };
+  const obj = onPress(1880);
+  obj2.testID = onPress(1873).TEST_ID_KEYBOARD_TOOLBAR_NEXT;
+  obj2.theme = theme;
+  obj2.onPress = useCallback((isDefaultPrevented) => {
+    if (onPress != null) {
+      tmp(isDefaultPrevented);
+    }
+    if (!isDefaultPrevented.isDefaultPrevented()) {
+      const KeyboardController = _mod1847.KeyboardController;
+      KeyboardController.setFocusTo("next");
+    }
+  }, items);
+  if (children == null) {
+    const obj3 = { disabled, theme, type: "next" };
+    children = <icon disabled={disabled} theme={theme} type="next" />;
+  }
+  obj2.children = children;
   return (
-    <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>
-      {children.children}
-    </React2>
+    <button
+      accessibilityHint="Moves focus to the next field"
+      accessibilityLabel="Next"
+      disabled={disabled}
+      rippleRadius={rippleRadius}
+      style={style}
+      testID={null}
+      theme={null}
+      onPress={null}
+    >
+      {null}
+    </button>
   );
 }

@@ -1,7 +1,6 @@
 // _runtime/metro/15654__.js
 import _mod15655 from "15655__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod15662 from "15662__.js";
 
-export default function getReactNativeVersion() {
-  return _mod15655.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-}
+export const URL = _mod15655;
+export const URLSearchParams = _mod15662;

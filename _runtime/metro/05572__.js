@@ -1,4 +1,6 @@
 // _runtime/metro/05572__.js
-import _modDef5573 from "05573__.js";
+import _mod17 from "00017__.js";
 
-export default _modDef5573;
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: {} });

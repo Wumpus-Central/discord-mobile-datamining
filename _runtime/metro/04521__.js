@@ -1,6 +1,7 @@
 // _runtime/metro/04521__.js
-import _typeof_mod from "04254__.js";
-import requiredArgs_mod from "../04255_requiredArgs.js";
+import _typeof_mod from "04255__.js";
+import module_4522_mod from "04522__.js";
+import requiredArgs_mod from "../04256_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -10,28 +11,35 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let module_4522 = module_4522_mod;
+if (!module_4522) {
+  const obj2 = { default: module_4522 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4522;
 }
-requiredArgs = tmp5;
+module_4522 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isLeapYear(arg0) {
+export default function getDaysInYear(arg0) {
   requiredArgs.default(1, arguments);
-  const fullYear = _typeof.default(arg0).getFullYear();
-  const result = fullYear % 400;
-  let tmp4 = result === 0;
-  if (result !== 0) {
-    const result1 = fullYear % 4;
-    let tmp6 = result1 === 0;
-    if (result1 === 0) {
-      tmp6 = fullYear % 100 !== 0;
+  const defaultResult1 = _typeof.default(arg0);
+  if ("Invalid Date" === String(date)) {
+    return NaN;
+  } else {
+    let num = 365;
+    if (module_4522.default(defaultResult1)) {
+      num = 366;
     }
-    tmp4 = tmp6;
+    return num;
   }
-  return tmp4;
+  date = new Date(defaultResult1);
 };
 export default exports.default;

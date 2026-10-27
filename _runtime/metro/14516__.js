@@ -1,13 +1,13 @@
 // _runtime/metro/14516__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 120,
-  height: 125,
-  scales: [1, 2, 3],
-  hash: "c43124de927c4f7db7d60a63938625a8",
-  name: "wumpus_cup_premium120",
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 435,
+  height: 218,
+  scales: [1],
+  hash: "92f827adadc1f86811fd4e36c86fdf27",
+  name: "nitro_modal_header_background",
   type: "png",
 });

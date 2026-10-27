@@ -1,13 +1,13 @@
 // _runtime/metro/16788__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "10bb7b2e55f0a34f23d903121de6b9bc",
-  name: "es-ES",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "de398aa4b5d51823872a90561f246715",
+  name: "EmojiSkullIcon",
   type: "png",
 });

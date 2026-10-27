@@ -15341,8 +15341,8 @@ let fn = () => {
             if (exports) {
               str = "undefined";
               if (undefined !== exports) {
-                tmp2 = f146372;
-                str = f146372(exports);
+                tmp2 = f146704;
+                str = f146704(exports);
               }
               str2 = "object";
               tmp = "object" === str;
@@ -16610,13 +16610,13 @@ let fn = () => {
                       tmp8 = num2;
                       str2 = "undefined";
                       if (undefined !== arg0) {
-                        tmp9 = f159698;
-                        str2 = f159698(arg0);
+                        tmp9 = f160047;
+                        str2 = f160047(arg0);
                       }
                       str3 = "undefined";
                       if (undefined !== str) {
-                        tmp10 = f159698;
-                        str3 = f159698(str);
+                        tmp10 = f160047;
+                        str3 = f160047(str);
                       }
                       if (str2 === str3) {
                         if (arg0 === str) {
@@ -16861,13 +16861,13 @@ let fn = () => {
                       tmp8 = num2;
                       str2 = "undefined";
                       if (undefined !== module) {
-                        tmp9 = f159698;
-                        str2 = f159698(module);
+                        tmp9 = f160047;
+                        str2 = f160047(module);
                       }
                       str3 = "undefined";
                       if (undefined !== str) {
-                        tmp10 = f159698;
-                        str3 = f159698(str);
+                        tmp10 = f160047;
+                        str3 = f160047(str);
                       }
                       if (str2 === str3) {
                         if (module === str) {

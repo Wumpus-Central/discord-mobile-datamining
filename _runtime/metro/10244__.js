@@ -1,98 +1,117 @@
 // _runtime/metro/10244__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import ReferenceWithTimezone from "../10220_ReferenceWithTimezone.js";
+import Meridiem from "../10222_Meridiem.js";
 
-const SlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
-  "i",
-);
-class SlashDateFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, SlashDateFormatParser);
-    num = 2;
-    if (global) {
-      num = 3;
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
     }
-    self.groupNumberMonth = num;
-    num2 = 3;
-    if (global) {
-      num2 = 2;
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
     }
-    self.groupNumberDay = num2;
-    return;
-  }
-}
-const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(text, index) {
-      const sum = index.index + index[1].length;
-      const diff = index.index + index[0].length - index[5].length;
-      if (sum > 0) {
-        text.text.substring(0, sum);
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
       }
-      if (diff < text.text.length) {
-        text.text.substring(diff);
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
+        }
+        num9 = num10;
       }
-      const str8 = text.text.substring(sum, diff);
-      if (!str8.match(/^\d\.\d$/)) {
-        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
-          const self = this;
-          const parsingResult = text.createParsingResult(sum, str8);
-          const _parseInt = parseInt;
-          const parsed = parseInt(index[this.groupNumberMonth]);
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(index[this.groupNumberDay]);
-          if (parsed < 1) {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-            if (parsed > 12) {
-              if (parsed1 >= 1) {
-                if (parsed1 <= 12) {
-                  if (parsed <= 31) {
-                    const items = [parsed, parsed1];
-                    [tmp6, tmp7] = items;
-                  }
-                }
-              }
-              return null;
-            }
-          } else {
-            tmp6 = parsed1;
-            tmp7 = parsed;
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
           }
-          if (tmp6 >= 1) {
-            if (tmp6 <= 31) {
-              const start3 = parsingResult.start;
-              start3.assign("day", tmp6);
-              const start4 = parsingResult.start;
-              start4.assign("month", tmp7);
-              if (index[4]) {
-                const _parseInt3 = parseInt;
-                const parsed2 = parseInt(index[4]);
-                const start2 = parsingResult.start;
-                start2.assign("year", SlashDateFormatParser(10216).findMostLikelyADYear(parsed2));
-              } else {
-                const start = parsingResult.start;
-                start.imply("year", SlashDateFormatParser(10216).findYearClosestToRef(text.refDate, tmp6, tmp7));
-              }
-              return parsingResult.addTag("parser/SlashDateFormatParser");
-            }
-          }
-          return null;
+          sum3 = sum1;
         }
       }
-    },
-  },
-];
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
+    }
+    return sum3;
+  } else {
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
+  }
+}
 
-export default _createClass(SlashDateFormatParser, items);
+export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
+    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
+  });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+};
+export { getDaysToWeekday };
+export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+};
+export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+};
+export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+};

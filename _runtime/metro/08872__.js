@@ -1,5 +1,5 @@
 // _runtime/metro/08872__.js
-import baseFlatten from "../05795_baseFlatten.js";
+import baseFlatten from "../05796_baseFlatten.js";
 import baseRest from "../08873_baseRest.js";
 import _mod8874 from "08874__.js";
 import baseOrderBy from "../08875_baseOrderBy.js";

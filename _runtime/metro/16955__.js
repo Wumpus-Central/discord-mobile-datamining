@@ -1,13 +1,7 @@
 // _runtime/metro/16955__.js
-import registerAsset from "01134__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "84a1e2a3b13ea7ae45e68f1bb8755810",
-  name: "TreehouseIcon",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const WebView = require("WebView").WebView;

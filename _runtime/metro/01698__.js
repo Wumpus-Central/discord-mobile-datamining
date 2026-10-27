@@ -1,1282 +1,612 @@
 // _runtime/metro/01698__.js
-import runWorkletOnJS from "../01665_runWorkletOnJS.js";
-import _mod1669 from "01669__.js";
-import _mod1683 from "01683__.js";
-import _mod1699 from "01699__.js";
-import _mod1700 from "01700__.js";
-import _mod1701 from "01701__.js";
-import module_1661_mod from "01661__.js";
+import runOnRuntime_mod from "../01699_runOnRuntime.js";
+import module_1658_mod from "01658__.js";
 
-const React2 = false;
-let module_1661 = module_1661_mod;
-module_1661 = module_1661.shouldBeUseWeb();
-const size = {
-  originX: true,
-  originY: true,
-  width: true,
-  height: true,
-  borderRadius: true,
-  globalOriginX: true,
-  globalOriginY: true,
-  opacity: true,
-  transform: true,
-  backgroundColor: true,
-};
-function isValidLayoutAnimationProp(arg0) {
-  return arg0 in size;
+function call() {
+  const items = [...arguments];
+  return "\\(\\s*(" + items.join(")\\s*,?\\s*(") + ")\\s*\\)";
 }
-isValidLayoutAnimationProp.__closure = { LAYOUT_ANIMATION_SUPPORTED_PROPS: size };
-isValidLayoutAnimationProp.__workletHash = 13235833688548;
-isValidLayoutAnimationProp.__initData = {
-  code: "function isValidLayoutAnimationProp_Pnpm_utilTs1(prop){const{LAYOUT_ANIMATION_SUPPORTED_PROPS}=this.__closure;return prop in LAYOUT_ANIMATION_SUPPORTED_PROPS;}",
+function callWithSlashSeparator() {
+  const items = [...arguments];
+  const substr = items.slice(0, items.length - 1);
+  return "\\(\\s*(" + substr.join(")\\s*,?\\s*(") + ")\\s*/\\s*(" + items[items.length - 1] + ")\\s*\\)";
+}
+function commaSeparatedCall() {
+  const items = [...arguments];
+  return "\\(\\s*(" + items.join(")\\s*,\\s*(") + ")\\s*\\)";
+}
+const MATCHERS = {
+  rgb: null,
+  rgba: null,
+  hsl: null,
+  hsla: null,
+  hwb: null,
+  hex3: null,
+  hex4: null,
+  hex6: null,
+  hex8: null,
 };
-function assertEasingIsWorklet(factory) {
-  if (!globalThis._WORKLET) {
-    if (!module_1661) {
-      factory = undefined;
-      if (factory != null) {
-        factory = factory.factory;
+const regExp = new RegExp("rgb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+"));
+MATCHERS.rgb = regExp;
+const regExp1 = new RegExp(
+  "rgba(" +
+    commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") +
+    "|" +
+    callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") +
+    ")",
+);
+MATCHERS.rgba = regExp1;
+const regExp2 = new RegExp("hsl" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
+MATCHERS.hsl = regExp2;
+const commaSeparatedCallResult = commaSeparatedCall(
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+);
+const regExp3 = new RegExp(
+  "hsla(" +
+    commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") +
+    "|" +
+    callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") +
+    ")",
+);
+MATCHERS.hsla = regExp3;
+const regExp4 = new RegExp("hwb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
+MATCHERS.hwb = regExp4;
+MATCHERS.hex3 = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+MATCHERS.hex4 = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+MATCHERS.hex6 = /^#([0-9a-fA-F]{6})$/;
+MATCHERS.hex8 = /^#([0-9a-fA-F]{8})$/;
+function hue2rgb(arg0, arg1, arg2) {
+  let sum = arg2;
+  if (arg2 < 0) {
+    sum = arg2 + 1;
+  }
+  let diff = sum;
+  if (sum > 1) {
+    diff = sum - 1;
+  }
+  if (diff < 0.16666666666666666) {
+    let sum1 = arg0 + 6 * (arg1 - arg0) * diff;
+  } else {
+    sum1 = arg1;
+    if (diff >= 0.5) {
+      let sum2 = arg0;
+      if (diff < 0.6666666666666666) {
+        sum2 = arg0 + (arg1 - arg0) * (0.6666666666666666 - diff) * 6;
       }
-      if (!factory) {
-        if (!obj.isWorkletFunction(factory)) {
-          const reanimatedError = new _mod1669.ReanimatedError(
-            "The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.",
-          );
-          throw reanimatedError;
-        }
-        obj = _mod1683;
-      }
+      sum1 = sum2;
     }
   }
+  return sum1;
 }
-assertEasingIsWorklet.__closure = { SHOULD_BE_USE_WEB: module_1661, isWorkletFunction: _mod1683.isWorkletFunction };
-assertEasingIsWorklet.__workletHash = 8431488219943;
-assertEasingIsWorklet.__initData = {
-  code: "function assertEasingIsWorklet_Pnpm_utilTs2(easing){const{SHOULD_BE_USE_WEB,isWorkletFunction}=this.__closure;if(_WORKLET){return;}if(SHOULD_BE_USE_WEB){return;}if(easing!==null&&easing!==void 0&&easing.factory){return;}if(!isWorkletFunction(easing)){throw new ReanimatedError('The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.');}}",
+hue2rgb.__closure = {};
+hue2rgb.__workletHash = 13577481829661;
+hue2rgb.__initData = {
+  code: "function hue2rgb_Pnpm_ColorsTs1(p,q,t){if(t<0){t+=1;}if(t>1){t-=1;}if(t<1/6){return p+(q-p)*6*t;}if(t<1/2){return q;}if(t<2/3){return p+(q-p)*(2/3-t)*6;}return p;}",
 };
-function recognizePrefixSuffix(current) {
-  if (typeof current === "string") {
-    const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-    if (match) {
-      let str2 = match[3];
-      if (str2 == null) {
-        str2 = "";
-      }
-      const obj = { prefix: match[1], suffix: match[4], strippedValue: null };
-      const _parseFloat = parseFloat;
-      obj.strippedValue = parseFloat(match[2] + str2);
-      return obj;
+function hslToRgb(arg0, arg1, arg2) {
+  if (arg2 < 0.5) {
+    let result = arg2 * (1 + arg1);
+  } else {
+    result = arg2 + arg1 - arg2 * arg1;
+  }
+  const diff = 2 * arg2 - result;
+  const sum = arg0 + 0.3333333333333333;
+  if (typeof hue2rgb === "function") {
+    let sum1 = sum;
+    if (sum < 0) {
+      sum1 = sum + 1;
+    }
+    let diff1 = sum1;
+    if (sum1 > 1) {
+      diff1 = sum1 - 1;
+    }
+    if (diff1 < 0.16666666666666666) {
+      let sum2 = diff + 6 * (result - diff) * diff1;
     } else {
-      const reanimatedError = new _mod1669.ReanimatedError("Couldn't parse animation value.");
-      throw reanimatedError;
+      sum2 = result;
+      if (diff1 >= 0.5) {
+        let sum3 = diff;
+        if (diff1 < 0.6666666666666666) {
+          sum3 = diff + (result - diff) * (0.6666666666666666 - diff1) * 6;
+        }
+        sum2 = sum3;
+      }
+    }
+    if (typeof hue2rgb === "function") {
+      let sum4 = arg0;
+      if (arg0 < 0) {
+        sum4 = arg0 + 1;
+      }
+      let diff2 = sum4;
+      if (sum4 > 1) {
+        diff2 = sum4 - 1;
+      }
+      if (diff2 < 0.16666666666666666) {
+        let sum5 = diff + 6 * (result - diff) * diff2;
+      } else {
+        sum5 = result;
+        if (diff2 >= 0.5) {
+          let sum6 = diff;
+          if (diff2 < 0.6666666666666666) {
+            sum6 = diff + (result - diff) * (0.6666666666666666 - diff2) * 6;
+          }
+          sum5 = sum6;
+        }
+      }
+      const diff3 = arg0 - 0.3333333333333333;
+      if (typeof hue2rgb === "function") {
+        let sum7 = diff3;
+        if (diff3 < 0) {
+          sum7 = diff3 + 1;
+        }
+        let diff4 = sum7;
+        if (1 < sum7) {
+          diff4 = sum7 - 1;
+        }
+        if (diff4 < 0.16666666666666666) {
+          let sum8 = diff + 6 * (result - diff) * diff4;
+        } else {
+          sum8 = result;
+          if (diff4 >= 0.5) {
+            let sum9 = diff;
+            if (diff4 < 0.6666666666666666) {
+              sum9 = diff + (result - diff) * (0.6666666666666666 - diff4) * 6;
+            }
+            sum8 = sum9;
+          }
+        }
+        const _Math = Math;
+        const _Math2 = Math;
+        const _Math3 = Math;
+        const tmp19 = Math.round(255 * sum2) << 24;
+        return tmp19 | (Math.round(255 * sum5) << 16) | (Math.round(255 * sum8) << 8);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   } else {
-    const obj2 = { strippedValue: current };
-    return obj2;
+    throw new TypeError("Trying to call a non-function");
   }
 }
-recognizePrefixSuffix.__closure = {};
-recognizePrefixSuffix.__workletHash = 11076682371077;
-recognizePrefixSuffix.__initData = {
-  code: "function recognizePrefixSuffix_Pnpm_utilTs3(value){if(typeof value==='string'){var _match$;const match=value.match(/([A-Za-z]*)(-?\\d*\\.?\\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);if(!match){throw new ReanimatedError(\"Couldn't parse animation value.\");}const prefix=match[1];const suffix=match[4];const number=match[2]+((_match$=match[3])!==null&&_match$!==void 0?_match$:'');return{prefix:prefix,suffix:suffix,strippedValue:parseFloat(number)};}else{return{strippedValue:value};}}",
+hslToRgb.__closure = { hue2rgb };
+hslToRgb.__workletHash = 1406907784351;
+hslToRgb.__initData = {
+  code: "function hslToRgb_Pnpm_ColorsTs2(h,s,l){const{hue2rgb}=this.__closure;const q=l<0.5?l*(1+s):l+s-l*s;const p=2*l-q;const r=hue2rgb(p,q,h+1/3);const g=hue2rgb(p,q,h);const b=hue2rgb(p,q,h-1/3);return Math.round(r*255)<<24|Math.round(g*255)<<16|Math.round(b*255)<<8;}",
 };
-const uiValue = _mod1699.ReducedMotionManager.uiValue;
-function getReduceMotionFromConfig(reduceMotion) {
-  if (reduceMotion) {
-    if (reduceMotion !== _mod1683.ReduceMotion.System) {
-      value = reduceMotion === _mod1683.ReduceMotion.Always;
-    }
-    return value;
-  }
-  value = uiValue.value;
-}
-let obj = { SHOULD_BE_USE_WEB: module_1661, isWorkletFunction: _mod1683.isWorkletFunction };
-getReduceMotionFromConfig.__closure = { ReduceMotion: _mod1683.ReduceMotion, isReduceMotionOnUI: uiValue };
-getReduceMotionFromConfig.__workletHash = 7977910521960;
-getReduceMotionFromConfig.__initData = {
-  code: "function getReduceMotionFromConfig_Pnpm_utilTs4(config){const{ReduceMotion,isReduceMotionOnUI}=this.__closure;return!config||config===ReduceMotion.System?isReduceMotionOnUI.value:config===ReduceMotion.Always;}",
-};
-function getReduceMotionForAnimation(reduceMotion) {
-  if (reduceMotion) {
-    if (typeof getReduceMotionFromConfig === "function") {
-      if (reduceMotion) {
-        if (reduceMotion !== _mod1683.ReduceMotion.System) {
-          value = reduceMotion === _mod1683.ReduceMotion.Always;
-        }
-        return value;
+function hwbToRgb(arg0, arg1, arg2) {
+  if (arg1 + arg2 >= 1) {
+    const _Math4 = Math;
+    const rounded = Math.round((255 * arg1) / (arg1 + arg2));
+    return (rounded << 24) | (rounded << 16) | (rounded << 8);
+  } else {
+    const sum = arg0 + 0.3333333333333333;
+    if (typeof hue2rgb === "function") {
+      let sum1 = sum;
+      if (sum < 0) {
+        sum1 = sum + 1;
       }
-      value = uiValue.value;
+      let diff = sum1;
+      if (sum1 > 1) {
+        diff = sum1 - 1;
+      }
+      if (diff >= 0.16666666666666666) {
+        if (diff >= 0.5) {
+          if (diff < 0.6666666666666666) {
+            const num6 = (0.6666666666666666 - diff) * 6;
+          }
+        }
+      }
+      if (typeof hue2rgb === "function") {
+        let sum2 = arg0;
+        if (arg0 < 0) {
+          sum2 = arg0 + 1;
+        }
+        let diff1 = sum2;
+        if (sum2 > 1) {
+          diff1 = sum2 - 1;
+        }
+        if (diff1 >= 0.16666666666666666) {
+          if (diff1 >= 0.5) {
+            if (diff1 < 0.6666666666666666) {
+              const num12 = (0.6666666666666666 - diff1) * 6;
+            }
+          }
+        }
+        const diff2 = arg0 - 0.3333333333333333;
+        if (typeof hue2rgb === "function") {
+          let sum3 = diff2;
+          if (diff2 < 0) {
+            sum3 = diff2 + 1;
+          }
+          let diff3 = sum3;
+          if (1 < sum3) {
+            diff3 = sum3 - 1;
+          }
+          if (diff3 < 0.16666666666666666) {
+            let num16 = 6 * diff3;
+          } else {
+            num16 = 1;
+            if (diff3 >= 0.5) {
+              let num18 = 0;
+              if (diff3 < 0.6666666666666666) {
+                num18 = (0.6666666666666666 - diff3) * 6;
+              }
+              num16 = num18;
+            }
+          }
+          const _Math = Math;
+          const sum4 = num16 * (1 - arg1 - arg2) + arg1;
+          const _Math2 = Math;
+          const _Math3 = Math;
+          const tmp12 = Math.round(255 * tmp3) << 24;
+          return tmp12 | (Math.round(255 * tmp6) << 16) | (Math.round(255 * sum4) << 8);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
 }
-getReduceMotionForAnimation.__closure = { getReduceMotionFromConfig };
-getReduceMotionForAnimation.__workletHash = 10866808344662;
-getReduceMotionForAnimation.__initData = {
-  code: "function getReduceMotionForAnimation_Pnpm_utilTs5(config){const{getReduceMotionFromConfig}=this.__closure;if(!config){return undefined;}return getReduceMotionFromConfig(config);}",
+hwbToRgb.__closure = { hue2rgb };
+hwbToRgb.__workletHash = 16684751503669;
+hwbToRgb.__initData = {
+  code: "function hwbToRgb_Pnpm_ColorsTs3(h,w,b){const{hue2rgb}=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;}",
 };
-function applyProgressToMatrix(arg0, arr, arr) {
-  const obj = _mod1700;
-  const obj2 = _mod1700;
-  return obj.addMatrices(arr, obj2.scaleMatrix(_mod1700.subtractMatrices(arr, arr), arg0));
-}
-let obj2 = { ReduceMotion: _mod1683.ReduceMotion, isReduceMotionOnUI: uiValue };
-applyProgressToMatrix.__closure = {
-  addMatrices: _mod1700.addMatrices,
-  scaleMatrix: _mod1700.scaleMatrix,
-  subtractMatrices: _mod1700.subtractMatrices,
-};
-applyProgressToMatrix.__workletHash = 4822273347900;
-applyProgressToMatrix.__initData = {
-  code: "function applyProgressToMatrix_Pnpm_utilTs6(progress,a,b){const{addMatrices,scaleMatrix,subtractMatrices}=this.__closure;return addMatrices(a,scaleMatrix(subtractMatrices(b,a),progress));}",
-};
-function applyProgressToNumber(arg0, arg1, arg2) {
-  return arg1 + arg0 * (arg2 - arg1);
-}
-applyProgressToNumber.__closure = {};
-applyProgressToNumber.__workletHash = 954128472665;
-applyProgressToNumber.__initData = {
-  code: "function applyProgressToNumber_Pnpm_utilTs7(progress,a,b){return a+progress*(b-a);}",
-};
-function decorateAnimation(isHigherOrder) {
-  ({ onStart: require, onFrame: dependencyMap } = isHigherOrder);
-  if (isHigherOrder.isHigherOrder) {
-    isHigherOrder.onStart = (reduceMotion, keys, length, height) => {
-      if (undefined === reduceMotion.reduceMotion) {
-        if (typeof getReduceMotionFromConfig === "function") {
-          reduceMotion.reduceMotion = value.value;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      return fn(reduceMotion, keys, length, height);
-    };
-  } else {
-    const _Object = Object;
-    closure_2 = Object.assign({}, isHigherOrder);
-    delete tmp2[tmp];
-    function prefNumberSuffOnFrame(strippedCurrent, arg1) {
-      strippedCurrent.current = strippedCurrent.strippedCurrent;
-      ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
-      if (__prefix == null) {
-        __prefix = "";
-      }
-      let str = strippedCurrent.__suffix;
-      const sum = __prefix + strippedCurrent.current;
-      if (str == null) {
-        str = "";
-      }
-      strippedCurrent.current = sum + str;
-      return dependencyMap(strippedCurrent, arg1);
+function parse255(match) {
+  const parsed = Number.parseInt(match, 10);
+  let num = 0;
+  if (parsed >= 0) {
+    let num2 = 255;
+    if (parsed <= 255) {
+      num2 = parsed;
     }
-    closure_4 = ["R", "G", "B", "A"];
-    function colorOnFrame(nonscaledCurrent, arg1) {
-      closure_1 = arg1;
-      const items = [];
-      c3 = true;
-      nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
-      const item = closure_4.forEach((item) => {
-        let onFrameResult = c3;
-        if (c3) {
-          onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
-        }
-        c3 = onFrameResult;
-        items.push(nonscaledCurrent[item].current);
-        obj = nonscaledCurrent[item];
-      });
-      nonscaledCurrent(1701).clampRGBA(items);
-      nonscaledCurrent.nonscaledCurrent = items;
-      let obj = nonscaledCurrent(1701);
-      const obj2 = nonscaledCurrent(1701);
-      nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
-      return c3;
-    }
-    function transformationMatrixOnFrame(arg0, arg1) {
-      const stopMatrices = arg0;
-      const first = arg0[0];
-      dependencyMap = arg0[0].current / 100;
-      const items = [];
-      const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
-      const item = items1.forEach((item, index) => {
-        if (typeof objectOnFrame === "function") {
-          const obj = fn(1700);
-          const obj2 = fn(1700);
-          return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      });
-      const items2 = [];
-      const items3 = ["x", "y", "z"];
-      [tmp3, tmp4, tmp5] = items;
-      const item1 = items3.forEach((item, index) => {
-        if (typeof closure_2_9 === "function") {
-          const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
-          items2.push(fn(1700).getRotationMatrix(sum, item));
-          const obj = fn(1700);
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      });
-      [tmp7, tmp8, tmp9] = items2;
-      const onFrameResult = first.onFrame(arg0[0], arg1);
-      let obj2 = stopMatrices(1700);
-      const obj3 = stopMatrices(1700);
-      const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
-      const obj4 = stopMatrices(1700);
-      const obj5 = stopMatrices(1700);
-      const obj6 = stopMatrices(1700);
-      arg0.current = obj4.flatten(
-        obj5.multiplyMatrices(
-          obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
-          tmp3,
-        ),
-      );
-      return onFrameResult;
-    }
-    function arrayOnFrame(current, arg1) {
-      dependencyMap = current;
-      closure_1 = arg1;
-      c2 = true;
-      current = current.current;
-      const item = current.forEach((item, index) => {
-        let onFrameResult = c2;
-        if (c2) {
-          onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
-        }
-        c2 = onFrameResult;
-        dependencyMap.current[index] = dependencyMap[index].current;
-        obj = dependencyMap[index];
-      });
-      return c2;
-    }
-    function objectOnFrame(current, arg1) {
-      const obj = {};
-      let flag = true;
-      let flag2 = true;
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        flag2 = flag;
-        while (keys[tmp] !== undefined) {
-          let obj2 = current[tmp4];
-          let onFrameResult = flag;
-          if (flag) {
-            onFrameResult = obj2.onFrame(current[tmp4], arg1);
-          }
-          obj[tmp4] = current[tmp4].current;
-          flag = onFrameResult;
-          continue;
-        }
-      }
-      current.current = obj;
-      return flag2;
-    }
-    isHigherOrder.onStart = (reduceMotion, current, arg2, current2) => {
-      if (undefined === reduceMotion.reduceMotion) {
-        if (typeof arrayOnFrame === "function") {
-          reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if (reduceMotion.reduceMotion) {
-        if (undefined !== reduceMotion.toValue) {
-          reduceMotion.current = reduceMotion.toValue;
-        } else {
-          toValue(reduceMotion, current, arg2, current2);
-        }
-        reduceMotion.startTime = 0;
-        reduceMotion.onFrame = () => true;
-      } else {
-        if (obj.isColor(current)) {
-          closure_129_0 = reduceMotion;
-          closure_129_1 = arg2;
-          closure_129_2 = current2;
-          const items = [];
-          closure_129_6 = items;
-          if (tmp3Result.isColor(current)) {
-            const tmp3Result13 = fn(1701);
-            closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
-            const tmp3Result14 = fn(1701);
-            const tmp3Result15 = fn(1701);
-            closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
-            if (reduceMotion.toValue) {
-              const tmp3Result17 = fn(1701);
-              closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
-              const tmp3Result18 = fn(1701);
-            }
-            const tmp3Result16 = fn(1701);
-          }
-          const item = closure_4.forEach((item, index) => {
-            toValue[item] = Object.assign({}, dependencyMap);
-            toValue[item].current = closure_1_4[index];
-            let tmp2;
-            if (colorOnFrame) {
-              tmp2 = colorOnFrame[index];
-            }
-            toValue[item].toValue = tmp2;
-            let tmp4;
-            if (dependencyMap) {
-              tmp4 = dependencyMap[item];
-            }
-            toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
-            transformationMatrixOnFrame.push(toValue[item].current);
-          });
-          reduceMotion.unroundedCurrent = items;
-          tmp3Result = fn(1701);
-          fn(1701).clampRGBA(items);
-          const tmp3Result19 = fn(1701);
-          const tmp3Result20 = fn(1701);
-          reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
-          reduceMotion.onFrame = colorOnFrame;
-          const tmp3Result21 = fn(1701);
-        } else {
-          if (tmp3Result22.isAffineMatrixFlat(current)) {
-            reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
-            const tmp3Result23 = fn(1700);
-            reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
-            const _Object = Object;
-            reduceMotion[0] = Object.assign({}, dependencyMap);
-            reduceMotion[0].current = 0;
-            reduceMotion[0].toValue = 100;
-            const first = reduceMotion[0];
-            const first1 = reduceMotion[0];
-            let first2;
-            if (current2) {
-              first2 = current2[0];
-            }
-            first.onStart(first1, 0, arg2, first2);
-            reduceMotion.current = current;
-            reduceMotion.onFrame = transformationMatrixOnFrame;
-            const tmp3Result24 = fn(1700);
-          } else {
-            prefix = globalThis;
-            const _Array = Array;
-            if (Array.isArray(current)) {
-              toValue = reduceMotion;
-              closure_1 = arg2;
-              dependencyMap = current2;
-              const item1 = current.forEach((current, index) => {
-                toValue[index] = Object.assign({}, dependencyMap);
-                toValue[index].current = current;
-                toValue[index].toValue = toValue.toValue[index];
-                let tmp2;
-                if (dependencyMap) {
-                  tmp2 = dependencyMap[index];
-                }
-                toValue[index].onStart(toValue[index], current, closure_1, tmp2);
-              });
-              const items1 = [];
-              HermesBuiltin.arraySpread(current, 0);
-              reduceMotion.current = items1;
-              reduceMotion.onFrame = arrayOnFrame;
-            } else if (typeof current === "string") {
-              if (typeof colorOnFrame === "function") {
-                if (typeof current === "string") {
-                  const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                  if (match) {
-                    let str2 = match[3];
-                    if (str2 == null) {
-                      str2 = "";
-                    }
-                    const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
-                    const _parseFloat = parseFloat;
-                    obj2.strippedValue = parseFloat(match[2] + str2);
-                    let obj3 = obj2;
-                  } else {
-                    const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                    throw reanimatedError;
-                  }
-                } else {
-                  obj3 = { strippedValue: current };
-                }
-                ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
-                reduceMotion.strippedCurrent = strippedValue;
-                if (typeof colorOnFrame === "function") {
-                  if (typeof str3 === "string") {
-                    const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                    if (match1) {
-                      let str5 = match1[3];
-                      if (str5 == null) {
-                        str5 = "";
-                      }
-                      const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
-                      const _parseFloat2 = parseFloat;
-                      obj4.strippedValue = parseFloat(match1[2] + str5);
-                      let obj5 = obj4;
-                    } else {
-                      const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                      throw reanimatedError1;
-                    }
-                  } else {
-                    obj5 = { strippedValue: str3 };
-                  }
-                  reduceMotion.current = strippedValue;
-                  reduceMotion.startValue = strippedValue;
-                  reduceMotion.toValue = obj5.strippedValue;
-                  if (current2) {
-                    if (current2 !== reduceMotion) {
-                      if (typeof colorOnFrame === "function") {
-                        if (typeof str7 === "string") {
-                          const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                          if (match2) {
-                            let str8 = match2[3];
-                            if (str8 == null) {
-                              str8 = "";
-                            }
-                            const obj6 = {
-                              prefix: match2[1],
-                              suffix: match2[4],
-                              strippedValue: prefix.parseFloat(match2[2] + str8),
-                            };
-                            let obj7 = obj6;
-                          } else {
-                            const reanimatedError2 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                            throw reanimatedError2;
-                          }
-                        } else {
-                          obj7 = { strippedValue: str7 };
-                        }
-                        ({ prefix, strippedValue: current2.current } = obj7);
-                        current2.__prefix = prefix;
-                        current2.__suffix = obj7.suffix;
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    }
-                  }
-                  toValue(reduceMotion, strippedValue, arg2, current2);
-                  let str9 = reduceMotion.__prefix;
-                  if (str9 == null) {
-                    str9 = "";
-                  }
-                  let str10 = reduceMotion.__suffix;
-                  const sum = str9 + reduceMotion.current;
-                  if (str10 == null) {
-                    str10 = "";
-                  }
-                  reduceMotion.current = sum + str10;
-                  let tmp48 = current2;
-                  if (current2) {
-                    tmp48 = current2 !== reduceMotion;
-                  }
-                  if (tmp48) {
-                    let str11 = current2.__prefix;
-                    if (str11 == null) {
-                      str11 = "";
-                    }
-                    let str12 = current2.__suffix;
-                    const sum1 = str11 + current2.current;
-                    if (str12 == null) {
-                      str12 = "";
-                    }
-                    current2.current = sum1 + str12;
-                  }
-                  reduceMotion.onFrame = prefNumberSuffOnFrame;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              if (typeof current === "object") {
-                if (null !== current) {
-                  for (const key10034 in arg1) {
-                    let _Object2 = Object;
-                    arg0[key10034] = Object.assign({}, dependencyMap);
-                    arg0[key10034].onStart = arg0.onStart;
-                    arg0[key10034].current = arg1[key10034];
-                    arg0[key10034].toValue = arg0.toValue[key10034];
-                    let obj22 = arg0[key10034];
-                    let tmp79 = arg0[key10034];
-                    let tmp80 = arg1[key10034];
-                    let tmp13;
-                    if (arg3) {
-                      tmp13 = arg3[key10034];
-                    }
-                    let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
-                    continue;
-                  }
-                  reduceMotion.current = current;
-                  reduceMotion.onFrame = objectOnFrame;
-                }
-              }
-              toValue(reduceMotion, current, arg2, current2);
-            }
-          }
-          tmp3Result22 = fn(1700);
-        }
-        return tmp11;
-      }
-    };
+    num = num2;
   }
+  return num;
 }
-let obj3 = {
-  addMatrices: _mod1700.addMatrices,
-  scaleMatrix: _mod1700.scaleMatrix,
-  subtractMatrices: _mod1700.subtractMatrices,
+parse255.__closure = {};
+parse255.__workletHash = 1908258547020;
+parse255.__initData = {
+  code: "function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;}",
 };
-decorateAnimation.__closure = {
-  getReduceMotionFromConfig,
-  recognizePrefixSuffix,
-  isColor: _mod1701.isColor,
-  toLinearSpace: _mod1701.toLinearSpace,
-  convertToRGBA: _mod1701.convertToRGBA,
-  clampRGBA: _mod1701.clampRGBA,
-  rgbaArrayToRGBAColor: _mod1701.rgbaArrayToRGBAColor,
-  toGammaSpace: _mod1701.toGammaSpace,
-  decomposeMatrixIntoMatricesAndAngles: _mod1700.decomposeMatrixIntoMatricesAndAngles,
-  applyProgressToMatrix,
-  applyProgressToNumber,
-  getRotationMatrix: _mod1700.getRotationMatrix,
-  multiplyMatrices: _mod1700.multiplyMatrices,
-  flatten: _mod1700.flatten,
-  isAffineMatrixFlat: _mod1700.isAffineMatrixFlat,
+function parse360(arg0) {
+  return (((Number.parseFloat(arg0) % 360) + 360) % 360) / 360;
+}
+parse360.__closure = {};
+parse360.__workletHash = 15674458953827;
+parse360.__initData = {
+  code: "function parse360_Pnpm_ColorsTs5(str){const int=Number.parseFloat(str);return(int%360+360)%360/360;}",
 };
-decorateAnimation.__workletHash = 6240615473022;
-decorateAnimation.__initData = {
-  code: "function decorateAnimation_Pnpm_utilTs8(animation){const{getReduceMotionFromConfig,recognizePrefixSuffix,isColor,toLinearSpace,convertToRGBA,clampRGBA,rgbaArrayToRGBAColor,toGammaSpace,decomposeMatrixIntoMatricesAndAngles,applyProgressToMatrix,applyProgressToNumber,getRotationMatrix,multiplyMatrices,flatten,isAffineMatrixFlat}=this.__closure;const baseOnStart=animation.onStart;const baseOnFrame=animation.onFrame;if(animation.isHigherOrder){animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}return baseOnStart(animation,value,timestamp,previousAnimation);};return;}const animationCopy=Object.assign({},animation);delete animationCopy.callback;const prefNumberSuffOnStart=function(animation,value,timestamp,previousAnimation){var _animation$__prefix,_animation$__suffix;const{prefix:prefix,suffix:suffix,strippedValue:strippedValue}=recognizePrefixSuffix(value);animation.__prefix=prefix;animation.__suffix=suffix;animation.strippedCurrent=strippedValue;const{strippedValue:strippedToValue}=recognizePrefixSuffix(animation.toValue);animation.current=strippedValue;animation.startValue=strippedValue;animation.toValue=strippedToValue;if(previousAnimation&&previousAnimation!==animation){const{prefix:paPrefix,suffix:paSuffix,strippedValue:paStrippedValue}=recognizePrefixSuffix(previousAnimation.current);previousAnimation.current=paStrippedValue;previousAnimation.__prefix=paPrefix;previousAnimation.__suffix=paSuffix;}baseOnStart(animation,strippedValue,timestamp,previousAnimation);animation.current=((_animation$__prefix=animation.__prefix)!==null&&_animation$__prefix!==void 0?_animation$__prefix:'')+animation.current+((_animation$__suffix=animation.__suffix)!==null&&_animation$__suffix!==void 0?_animation$__suffix:'');if(previousAnimation&&previousAnimation!==animation){var _previousAnimation$__,_previousAnimation$__2;previousAnimation.current=((_previousAnimation$__=previousAnimation.__prefix)!==null&&_previousAnimation$__!==void 0?_previousAnimation$__:'')+previousAnimation.current+((_previousAnimation$__2=previousAnimation.__suffix)!==null&&_previousAnimation$__2!==void 0?_previousAnimation$__2:'');}};const prefNumberSuffOnFrame=function(animation,timestamp){var _animation$__prefix2,_animation$__suffix2;animation.current=animation.strippedCurrent;const res=baseOnFrame(animation,timestamp);animation.strippedCurrent=animation.current;animation.current=((_animation$__prefix2=animation.__prefix)!==null&&_animation$__prefix2!==void 0?_animation$__prefix2:'')+animation.current+((_animation$__suffix2=animation.__suffix)!==null&&_animation$__suffix2!==void 0?_animation$__suffix2:'');return res;};const tab=['R','G','B','A'];const colorOnStart=function(animation,value,timestamp,previousAnimation){let RGBAValue;let RGBACurrent;let RGBAToValue;const res=[];if(isColor(value)){RGBACurrent=toLinearSpace(convertToRGBA(animation.current));RGBAValue=toLinearSpace(convertToRGBA(value));if(animation.toValue){RGBAToValue=toLinearSpace(convertToRGBA(animation.toValue));}}tab.forEach(function(i,index){animation[i]=Object.assign({},animationCopy);animation[i].current=RGBACurrent[index];animation[i].toValue=RGBAToValue?RGBAToValue[index]:undefined;animation[i].onStart(animation[i],RGBAValue[index],timestamp,previousAnimation?previousAnimation[i]:undefined);res.push(animation[i].current);});animation.unroundedCurrent=res;clampRGBA(res);animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));};const colorOnFrame=function(animation,timestamp){const res=[];let finished=true;animation.current=animation.nonscaledCurrent;tab.forEach(function(i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;res.push(animation[i].current);});clampRGBA(res);animation.nonscaledCurrent=res;animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));return finished;};const transformationMatrixOnStart=function(animation,value,timestamp,previousAnimation){const toValue=animation.toValue;animation.startMatrices=decomposeMatrixIntoMatricesAndAngles(value);animation.stopMatrices=decomposeMatrixIntoMatricesAndAngles(toValue);animation[0]=Object.assign({},animationCopy);animation[0].current=0;animation[0].toValue=100;animation[0].onStart(animation[0],0,timestamp,previousAnimation?previousAnimation[0]:undefined);animation.current=value;};const transformationMatrixOnFrame=function(animation,timestamp){let finished=true;const result=animation[0].onFrame(animation[0],timestamp);finished=finished&&result;const progress=animation[0].current/100;const transforms=['translationMatrix','scaleMatrix','skewMatrix'];const mappedTransforms=[];transforms.forEach(function(key,_){return mappedTransforms.push(applyProgressToMatrix(progress,animation.startMatrices[key],animation.stopMatrices[key]));});const[currentTranslation,currentScale,skewMatrix]=mappedTransforms;const rotations=['x','y','z'];const mappedRotations=[];rotations.forEach(function(key,_){const angle=applyProgressToNumber(progress,animation.startMatrices['r'+key],animation.stopMatrices['r'+key]);mappedRotations.push(getRotationMatrix(angle,key));});const[rotationMatrixX,rotationMatrixY,rotationMatrixZ]=mappedRotations;const rotationMatrix=multiplyMatrices(rotationMatrixX,multiplyMatrices(rotationMatrixY,rotationMatrixZ));const updated=flatten(multiplyMatrices(multiplyMatrices(currentScale,multiplyMatrices(skewMatrix,rotationMatrix)),currentTranslation));animation.current=updated;return finished;};const arrayOnStart=function(animation,value,timestamp,previousAnimation){value.forEach(function(v,i){animation[i]=Object.assign({},animationCopy);animation[i].current=v;animation[i].toValue=animation.toValue[i];animation[i].onStart(animation[i],v,timestamp,previousAnimation?previousAnimation[i]:undefined);});animation.current=[...value];};const arrayOnFrame=function(animation,timestamp){let finished=true;animation.current.forEach(function(_,i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;animation.current[i]=animation[i].current;});return finished;};const objectOnStart=function(animation,value,timestamp,previousAnimation){for(const key in value){animation[key]=Object.assign({},animationCopy);animation[key].onStart=animation.onStart;animation[key].current=value[key];animation[key].toValue=animation.toValue[key];animation[key].onStart(animation[key],value[key],timestamp,previousAnimation?previousAnimation[key]:undefined);}animation.current=value;};const objectOnFrame=function(animation,timestamp){let finished=true;const newObject={};for(const key in animation.current){const result=animation[key].onFrame(animation[key],timestamp);finished=finished&&result;newObject[key]=animation[key].current;}animation.current=newObject;return finished;};animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}if(animation.reduceMotion){if(animation.toValue!==undefined){animation.current=animation.toValue;}else{baseOnStart(animation,value,timestamp,previousAnimation);}animation.startTime=0;animation.onFrame=function(){return true;};return;}if(isColor(value)){colorOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=colorOnFrame;return;}else if(isAffineMatrixFlat(value)){transformationMatrixOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=transformationMatrixOnFrame;return;}else if(Array.isArray(value)){arrayOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=arrayOnFrame;return;}else if(typeof value==='string'){prefNumberSuffOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=prefNumberSuffOnFrame;return;}else if(typeof value==='object'&&value!==null){objectOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=objectOnFrame;return;}baseOnStart(animation,value,timestamp,previousAnimation);};}",
-};
-const __initData = {
-  code: "function pnpm_utilTs10(){const{factory,decorateAnimation}=this.__closure;const animation=factory();decorateAnimation(animation);return animation;}",
-};
-function defineAnimation(substr, fn) {
-  if (c2) {
-    return substr;
-  } else {
-    let factory = function o() {
-      const tmp3 = closure_0();
-      if (typeof decorateAnimation === "function") {
-        ({ onStart: closure_0, onFrame: closure_1 } = tmp3);
-        if (tmp3.isHigherOrder) {
-          tmp3.onStart = (reduceMotion, keys, length, height) => {
-            if (undefined === reduceMotion.reduceMotion) {
-              if (typeof getReduceMotionFromConfig === "function") {
-                reduceMotion.reduceMotion = value.value;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            return fn(reduceMotion, keys, length, height);
-          };
-        } else {
-          let _Object = Object;
-          closure_2 = Object.assign({}, tmp3);
-          delete tmp2[tmp];
-          function prefNumberSuffOnFrame(strippedCurrent, arg1) {
-            strippedCurrent.current = strippedCurrent.strippedCurrent;
-            ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
-            if (__prefix == null) {
-              __prefix = "";
-            }
-            let str = strippedCurrent.__suffix;
-            const sum = __prefix + strippedCurrent.current;
-            if (str == null) {
-              str = "";
-            }
-            strippedCurrent.current = sum + str;
-            return dependencyMap(strippedCurrent, arg1);
-          }
-          closure_4 = ["R", "G", "B", "A"];
-          function colorOnFrame(nonscaledCurrent, arg1) {
-            closure_1 = arg1;
-            const items = [];
-            c3 = true;
-            nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
-            const item = closure_4.forEach((item) => {
-              let onFrameResult = c3;
-              if (c3) {
-                onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
-              }
-              c3 = onFrameResult;
-              items.push(nonscaledCurrent[item].current);
-              obj = nonscaledCurrent[item];
-            });
-            nonscaledCurrent(1701).clampRGBA(items);
-            nonscaledCurrent.nonscaledCurrent = items;
-            let obj = nonscaledCurrent(1701);
-            const obj2 = nonscaledCurrent(1701);
-            nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
-            return c3;
-          }
-          function transformationMatrixOnFrame(arg0, arg1) {
-            const stopMatrices = arg0;
-            const first = arg0[0];
-            dependencyMap = arg0[0].current / 100;
-            const items = [];
-            const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
-            const item = items1.forEach((item, index) => {
-              if (typeof objectOnFrame === "function") {
-                const obj = fn(1700);
-                const obj2 = fn(1700);
-                return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            });
-            const items2 = [];
-            const items3 = ["x", "y", "z"];
-            [tmp3, tmp4, tmp5] = items;
-            const item1 = items3.forEach((item, index) => {
-              if (typeof closure_2_9 === "function") {
-                const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
-                items2.push(fn(1700).getRotationMatrix(sum, item));
-                const obj = fn(1700);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            });
-            [tmp7, tmp8, tmp9] = items2;
-            const onFrameResult = first.onFrame(arg0[0], arg1);
-            let obj2 = stopMatrices(1700);
-            const obj3 = stopMatrices(1700);
-            const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
-            const obj4 = stopMatrices(1700);
-            const obj5 = stopMatrices(1700);
-            const obj6 = stopMatrices(1700);
-            arg0.current = obj4.flatten(
-              obj5.multiplyMatrices(
-                obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
-                tmp3,
-              ),
-            );
-            return onFrameResult;
-          }
-          function arrayOnFrame(current, arg1) {
-            dependencyMap = current;
-            closure_1 = arg1;
-            c2 = true;
-            current = current.current;
-            const item = current.forEach((item, index) => {
-              let onFrameResult = c2;
-              if (c2) {
-                onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
-              }
-              c2 = onFrameResult;
-              dependencyMap.current[index] = dependencyMap[index].current;
-              obj = dependencyMap[index];
-            });
-            return c2;
-          }
-          function objectOnFrame(current, arg1) {
-            const obj = {};
-            let flag = true;
-            let flag2 = true;
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              flag2 = flag;
-              while (keys[tmp] !== undefined) {
-                let obj2 = current[tmp4];
-                let onFrameResult = flag;
-                if (flag) {
-                  onFrameResult = obj2.onFrame(current[tmp4], arg1);
-                }
-                obj[tmp4] = current[tmp4].current;
-                flag = onFrameResult;
-                continue;
-              }
-            }
-            current.current = obj;
-            return flag2;
-          }
-          tmp3.onStart = (reduceMotion, current, arg2, current2) => {
-            if (undefined === reduceMotion.reduceMotion) {
-              if (typeof arrayOnFrame === "function") {
-                reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            if (reduceMotion.reduceMotion) {
-              if (undefined !== reduceMotion.toValue) {
-                reduceMotion.current = reduceMotion.toValue;
-              } else {
-                toValue(reduceMotion, current, arg2, current2);
-              }
-              reduceMotion.startTime = 0;
-              reduceMotion.onFrame = () => true;
-            } else {
-              if (obj.isColor(current)) {
-                closure_129_0 = reduceMotion;
-                closure_129_1 = arg2;
-                closure_129_2 = current2;
-                const items = [];
-                closure_129_6 = items;
-                if (tmp3Result.isColor(current)) {
-                  const tmp3Result13 = fn(1701);
-                  closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
-                  const tmp3Result14 = fn(1701);
-                  const tmp3Result15 = fn(1701);
-                  closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
-                  if (reduceMotion.toValue) {
-                    const tmp3Result17 = fn(1701);
-                    closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
-                    const tmp3Result18 = fn(1701);
-                  }
-                  const tmp3Result16 = fn(1701);
-                }
-                const item = closure_4.forEach((item, index) => {
-                  toValue[item] = Object.assign({}, dependencyMap);
-                  toValue[item].current = closure_1_4[index];
-                  let tmp2;
-                  if (colorOnFrame) {
-                    tmp2 = colorOnFrame[index];
-                  }
-                  toValue[item].toValue = tmp2;
-                  let tmp4;
-                  if (dependencyMap) {
-                    tmp4 = dependencyMap[item];
-                  }
-                  toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
-                  transformationMatrixOnFrame.push(toValue[item].current);
-                });
-                reduceMotion.unroundedCurrent = items;
-                tmp3Result = fn(1701);
-                fn(1701).clampRGBA(items);
-                const tmp3Result19 = fn(1701);
-                const tmp3Result20 = fn(1701);
-                reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
-                reduceMotion.onFrame = colorOnFrame;
-                const tmp3Result21 = fn(1701);
-              } else {
-                if (tmp3Result22.isAffineMatrixFlat(current)) {
-                  reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
-                  const tmp3Result23 = fn(1700);
-                  reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
-                  const _Object = Object;
-                  reduceMotion[0] = Object.assign({}, dependencyMap);
-                  reduceMotion[0].current = 0;
-                  reduceMotion[0].toValue = 100;
-                  const first = reduceMotion[0];
-                  const first1 = reduceMotion[0];
-                  let first2;
-                  if (current2) {
-                    first2 = current2[0];
-                  }
-                  first.onStart(first1, 0, arg2, first2);
-                  reduceMotion.current = current;
-                  reduceMotion.onFrame = transformationMatrixOnFrame;
-                  const tmp3Result24 = fn(1700);
-                } else {
-                  prefix = globalThis;
-                  const _Array = Array;
-                  if (Array.isArray(current)) {
-                    toValue = reduceMotion;
-                    closure_1 = arg2;
-                    dependencyMap = current2;
-                    const item1 = current.forEach((current, index) => {
-                      toValue[index] = Object.assign({}, dependencyMap);
-                      toValue[index].current = current;
-                      toValue[index].toValue = toValue.toValue[index];
-                      let tmp2;
-                      if (dependencyMap) {
-                        tmp2 = dependencyMap[index];
-                      }
-                      toValue[index].onStart(toValue[index], current, closure_1, tmp2);
-                    });
-                    const items1 = [];
-                    HermesBuiltin.arraySpread(current, 0);
-                    reduceMotion.current = items1;
-                    reduceMotion.onFrame = arrayOnFrame;
-                  } else if (typeof current === "string") {
-                    if (typeof colorOnFrame === "function") {
-                      if (typeof current === "string") {
-                        const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                        if (match) {
-                          let str2 = match[3];
-                          if (str2 == null) {
-                            str2 = "";
-                          }
-                          const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
-                          const _parseFloat = parseFloat;
-                          obj2.strippedValue = parseFloat(match[2] + str2);
-                          let obj3 = obj2;
-                        } else {
-                          const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                          throw reanimatedError;
-                        }
-                      } else {
-                        obj3 = { strippedValue: current };
-                      }
-                      ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
-                      reduceMotion.strippedCurrent = strippedValue;
-                      if (typeof colorOnFrame === "function") {
-                        if (typeof str3 === "string") {
-                          const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                          if (match1) {
-                            let str5 = match1[3];
-                            if (str5 == null) {
-                              str5 = "";
-                            }
-                            const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
-                            const _parseFloat2 = parseFloat;
-                            obj4.strippedValue = parseFloat(match1[2] + str5);
-                            let obj5 = obj4;
-                          } else {
-                            const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                            throw reanimatedError1;
-                          }
-                        } else {
-                          obj5 = { strippedValue: str3 };
-                        }
-                        reduceMotion.current = strippedValue;
-                        reduceMotion.startValue = strippedValue;
-                        reduceMotion.toValue = obj5.strippedValue;
-                        if (current2) {
-                          if (current2 !== reduceMotion) {
-                            if (typeof colorOnFrame === "function") {
-                              if (typeof str7 === "string") {
-                                const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                                if (match2) {
-                                  let str8 = match2[3];
-                                  if (str8 == null) {
-                                    str8 = "";
-                                  }
-                                  const obj6 = {
-                                    prefix: match2[1],
-                                    suffix: match2[4],
-                                    strippedValue: prefix.parseFloat(match2[2] + str8),
-                                  };
-                                  let obj7 = obj6;
-                                } else {
-                                  const reanimatedError2 = new fn(1669).ReanimatedError(
-                                    "Couldn't parse animation value.",
-                                  );
-                                  throw reanimatedError2;
-                                }
-                              } else {
-                                obj7 = { strippedValue: str7 };
-                              }
-                              ({ prefix, strippedValue: current2.current } = obj7);
-                              current2.__prefix = prefix;
-                              current2.__suffix = obj7.suffix;
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          }
-                        }
-                        toValue(reduceMotion, strippedValue, arg2, current2);
-                        let str9 = reduceMotion.__prefix;
-                        if (str9 == null) {
-                          str9 = "";
-                        }
-                        let str10 = reduceMotion.__suffix;
-                        const sum = str9 + reduceMotion.current;
-                        if (str10 == null) {
-                          str10 = "";
-                        }
-                        reduceMotion.current = sum + str10;
-                        let tmp48 = current2;
-                        if (current2) {
-                          tmp48 = current2 !== reduceMotion;
-                        }
-                        if (tmp48) {
-                          let str11 = current2.__prefix;
-                          if (str11 == null) {
-                            str11 = "";
-                          }
-                          let str12 = current2.__suffix;
-                          const sum1 = str11 + current2.current;
-                          if (str12 == null) {
-                            str12 = "";
-                          }
-                          current2.current = sum1 + str12;
-                        }
-                        reduceMotion.onFrame = prefNumberSuffOnFrame;
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    if (typeof current === "object") {
-                      if (null !== current) {
-                        for (const key10034 in arg1) {
-                          let _Object2 = Object;
-                          arg0[key10034] = Object.assign({}, dependencyMap);
-                          arg0[key10034].onStart = arg0.onStart;
-                          arg0[key10034].current = arg1[key10034];
-                          arg0[key10034].toValue = arg0.toValue[key10034];
-                          let obj22 = arg0[key10034];
-                          let tmp79 = arg0[key10034];
-                          let tmp80 = arg1[key10034];
-                          let tmp13;
-                          if (arg3) {
-                            tmp13 = arg3[key10034];
-                          }
-                          let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
-                          continue;
-                        }
-                        reduceMotion.current = current;
-                        reduceMotion.onFrame = objectOnFrame;
-                      }
-                    }
-                    toValue(reduceMotion, current, arg2, current2);
-                  }
-                }
-                tmp3Result22 = fn(1700);
-              }
-              return tmp11;
-            }
-          };
-        }
-        return tmp3;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    };
-    let obj = { factory, decorateAnimation };
-    factory.__closure = obj;
-    factory.__workletHash = 9825023081203;
-    factory.__initData = __initData;
-    if (!globalThis._WORKLET) {
-      if (!module_1661) {
-        factory.__isAnimationDefinition = true;
-      }
-      return factory;
+function parse1(arg0) {
+  const parsed = Number.parseFloat(arg0);
+  let num = 0;
+  if (parsed >= 0) {
+    let num4 = 255;
+    if (parsed <= 1) {
+      const _Math = Math;
+      num4 = Math.round(255 * parsed);
     }
-    const tmp7 = factory();
-    if (typeof decorateAnimation === "function") {
-      ({ onStart: closure_129_0, onFrame: closure_129_1 } = tmp7);
-      if (tmp7.isHigherOrder) {
-        tmp7.onStart = (reduceMotion, keys, length, height) => {
-          if (undefined === reduceMotion.reduceMotion) {
-            if (typeof getReduceMotionFromConfig === "function") {
-              reduceMotion.reduceMotion = value.value;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-          return fn(reduceMotion, keys, length, height);
-        };
-        factory = tmp7;
+    num = num4;
+  }
+  return num;
+}
+parse1.__closure = {};
+parse1.__workletHash = 1305446443589;
+parse1.__initData = {
+  code: "function parse1_Pnpm_ColorsTs6(str){const num=Number.parseFloat(str);if(num<0){return 0;}if(num>1){return 255;}return Math.round(num*255);}",
+};
+function parsePercentage(arg0) {
+  const parsed = Number.parseFloat(arg0);
+  let num = 0;
+  if (parsed >= 0) {
+    let num3 = 1;
+    if (parsed <= 100) {
+      num3 = parsed / 100;
+    }
+    num = num3;
+  }
+  return num;
+}
+parsePercentage.__closure = {};
+parsePercentage.__workletHash = 3056354218613;
+parsePercentage.__initData = {
+  code: "function parsePercentage_Pnpm_ColorsTs7(str){const int=Number.parseFloat(str);if(int<0){return 0;}if(int>100){return 1;}return int/100;}",
+};
+function clampRGBA(items) {
+  let num = 0;
+  do {
+    let _Math = Math;
+    let _Math2 = Math;
+    items[num] = Math.max(0, Math.min(items[num], 1));
+    num = num + 1;
+  } while (num < 4);
+}
+clampRGBA.__closure = {};
+clampRGBA.__workletHash = 13575809516663;
+clampRGBA.__initData = {
+  code: "function clampRGBA_Pnpm_ColorsTs8(RGBA){for(let i=0;i<4;i++){RGBA[i]=Math.max(0,Math.min(RGBA[i],1));}}",
+};
+let runOnRuntime = runOnRuntime_mod;
+const shareable = runOnRuntime.makeShareable({
+  transparent: 0,
+  aliceblue: 4042850303,
+  antiquewhite: 4209760255,
+  aqua: 16777215,
+  aquamarine: 2147472639,
+  azure: 4043309055,
+  beige: 4126530815,
+  bisque: 4293182719,
+  black: 255,
+  blanchedalmond: 4293643775,
+  blue: 65535,
+  blueviolet: 2318131967,
+  brown: 2771004159,
+  burlywood: 3736635391,
+  burntsienna: 3934150143,
+  cadetblue: 1604231423,
+  chartreuse: 2147418367,
+  chocolate: 3530104575,
+  coral: 4286533887,
+  cornflowerblue: 1687547391,
+  cornsilk: 4294499583,
+  crimson: 3692313855,
+  cyan: 16777215,
+  darkblue: 35839,
+  darkcyan: 9145343,
+  darkgoldenrod: 3095792639,
+  darkgray: 2846468607,
+  darkgreen: 6553855,
+  darkgrey: 2846468607,
+  darkkhaki: 3182914559,
+  darkmagenta: 2332068863,
+  darkolivegreen: 1433087999,
+  darkorange: 4287365375,
+  darkorchid: 2570243327,
+  darkred: 2332033279,
+  darksalmon: 3918953215,
+  darkseagreen: 2411499519,
+  darkslateblue: 1211993087,
+  darkslategray: 793726975,
+  darkslategrey: 793726975,
+  darkturquoise: 13554175,
+  darkviolet: 2483082239,
+  deeppink: 4279538687,
+  deepskyblue: 12582911,
+  dimgray: 1768516095,
+  dimgrey: 1768516095,
+  dodgerblue: 512819199,
+  firebrick: 2988581631,
+  floralwhite: 4294635775,
+  forestgreen: 579543807,
+  fuchsia: 4278255615,
+  gainsboro: 3705462015,
+  ghostwhite: 4177068031,
+  gold: 4292280575,
+  goldenrod: 3668254975,
+  gray: 2155905279,
+  green: 8388863,
+  greenyellow: 2919182335,
+  grey: 2155905279,
+  honeydew: 4043305215,
+  hotpink: 4285117695,
+  indianred: 3445382399,
+  indigo: 1258324735,
+  ivory: 4294963455,
+  khaki: 4041641215,
+  lavender: 3873897215,
+  lavenderblush: 4293981695,
+  lawngreen: 2096890111,
+  lemonchiffon: 4294626815,
+  lightblue: 2916673279,
+  lightcoral: 4034953471,
+  lightcyan: 3774873599,
+  lightgoldenrodyellow: 4210742015,
+  lightgray: 3553874943,
+  lightgreen: 2431553791,
+  lightgrey: 3553874943,
+  lightpink: 4290167295,
+  lightsalmon: 4288707327,
+  lightseagreen: 548580095,
+  lightskyblue: 2278488831,
+  lightslategray: 2005441023,
+  lightslategrey: 2005441023,
+  lightsteelblue: 2965692159,
+  lightyellow: 4294959359,
+  lime: 16711935,
+  limegreen: 852308735,
+  linen: 4210091775,
+  magenta: 4278255615,
+  maroon: 2147483903,
+  mediumaquamarine: 1724754687,
+  mediumblue: 52735,
+  mediumorchid: 3126187007,
+  mediumpurple: 2473647103,
+  mediumseagreen: 1018393087,
+  mediumslateblue: 2070474495,
+  mediumspringgreen: 16423679,
+  mediumturquoise: 1221709055,
+  mediumvioletred: 3340076543,
+  midnightblue: 421097727,
+  mintcream: 4127193855,
+  mistyrose: 4293190143,
+  moccasin: 4293178879,
+  navajowhite: 4292783615,
+  navy: 33023,
+  oldlace: 4260751103,
+  olive: 2155872511,
+  olivedrab: 1804477439,
+  orange: 4289003775,
+  orangered: 4282712319,
+  orchid: 3664828159,
+  palegoldenrod: 4008225535,
+  palegreen: 2566625535,
+  paleturquoise: 2951671551,
+  palevioletred: 3681588223,
+  papayawhip: 4293907967,
+  peachpuff: 4292524543,
+  peru: 3448061951,
+  pink: 4290825215,
+  plum: 3718307327,
+  powderblue: 2967529215,
+  purple: 2147516671,
+  rebeccapurple: 1714657791,
+  red: 4278190335,
+  rosybrown: 3163525119,
+  royalblue: 1097458175,
+  saddlebrown: 2336560127,
+  salmon: 4202722047,
+  sandybrown: 4104413439,
+  seagreen: 780883967,
+  seashell: 4294307583,
+  sienna: 2689740287,
+  silver: 3233857791,
+  skyblue: 2278484991,
+  slateblue: 1784335871,
+  slategray: 1887473919,
+  slategrey: 1887473919,
+  snow: 4294638335,
+  springgreen: 16744447,
+  steelblue: 1182971135,
+  tan: 3535047935,
+  teal: 8421631,
+  thistle: 3636451583,
+  tomato: 4284696575,
+  turquoise: 1088475391,
+  violet: 4001558271,
+  wheat: 4125012991,
+  white: 4294967295,
+  whitesmoke: 4126537215,
+  yellow: 4294902015,
+  yellowgreen: 2597139199,
+});
+let runOnRuntime = runOnRuntime_mod;
+const shareable1 = runOnRuntime.makeShareable([
+  "backgroundColor",
+  "borderBottomColor",
+  "borderColor",
+  "borderLeftColor",
+  "borderRightColor",
+  "borderTopColor",
+  "borderStartColor",
+  "borderEndColor",
+  "borderBlockColor",
+  "borderBlockEndColor",
+  "borderBlockStartColor",
+  "color",
+  "outlineColor",
+  "shadowColor",
+  "textDecorationColor",
+  "tintColor",
+  "textShadowColor",
+  "overlayColor",
+  "fill",
+  "floodColor",
+  "lightingColor",
+  "stopColor",
+  "stroke",
+]);
+let runOnRuntime = runOnRuntime_mod;
+const shareable2 = runOnRuntime.makeShareable({ boxShadow: "color" });
+function normalizeColor(num) {
+  if (typeof num === "number") {
+    let tmp92 = null;
+    if (num >>> 0 === num) {
+      tmp92 = null;
+      if (num >= 0) {
+        tmp92 = null;
+        if (num <= 4294967295) {
+          tmp92 = num;
+        }
+      }
+    }
+    let tmp93 = tmp92;
+  } else {
+    tmp93 = null;
+    if (typeof num === "string") {
+      const hex6 = obj.hex6;
+      let match = hex6.exec(num);
+      if (match) {
+        const _Number27 = Number;
+        match = Number.parseInt(`${tmp90[1]}ff`, 16);
+        let tmp6 = match >>> 0;
+      } else if (undefined !== shareable[num]) {
       } else {
-        let _Object = Object;
-        closure_129_2 = Object.assign({}, tmp7);
-        delete tmp2[tmp];
-        closure_129_3 = function prefNumberSuffOnFrame(strippedCurrent, arg1) {
-          strippedCurrent.current = strippedCurrent.strippedCurrent;
-          ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
-          if (__prefix == null) {
-            __prefix = "";
-          }
-          let str = strippedCurrent.__suffix;
-          const sum = __prefix + strippedCurrent.current;
-          if (str == null) {
-            str = "";
-          }
-          strippedCurrent.current = sum + str;
-          return dependencyMap(strippedCurrent, arg1);
-        };
-        closure_129_4 = ["R", "G", "B", "A"];
-        closure_129_5 = function colorOnFrame(nonscaledCurrent, arg1) {
-          closure_1 = arg1;
-          const items = [];
-          c3 = true;
-          nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
-          const item = closure_4.forEach((item) => {
-            let onFrameResult = c3;
-            if (c3) {
-              onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
+        const rgb = obj.rgb;
+        const match1 = rgb.exec(num);
+        if (match1) {
+          if (typeof parse255 === "function") {
+            const _Number24 = Number;
+            const parsed = Number.parseInt(tmp80, 10);
+            if (parsed >= 0) {
             }
-            c3 = onFrameResult;
-            items.push(nonscaledCurrent[item].current);
-            obj = nonscaledCurrent[item];
-          });
-          nonscaledCurrent(1701).clampRGBA(items);
-          nonscaledCurrent.nonscaledCurrent = items;
-          let obj = nonscaledCurrent(1701);
-          const obj2 = nonscaledCurrent(1701);
-          nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
-          return c3;
-        };
-        closure_129_6 = function transformationMatrixOnFrame(arg0, arg1) {
-          const stopMatrices = arg0;
-          const first = arg0[0];
-          dependencyMap = arg0[0].current / 100;
-          const items = [];
-          const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
-          const item = items1.forEach((item, index) => {
-            if (typeof objectOnFrame === "function") {
-              const obj = fn(1700);
-              const obj2 = fn(1700);
-              return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-          const items2 = [];
-          const items3 = ["x", "y", "z"];
-          [tmp3, tmp4, tmp5] = items;
-          const item1 = items3.forEach((item, index) => {
-            if (typeof closure_2_9 === "function") {
-              const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
-              items2.push(fn(1700).getRotationMatrix(sum, item));
-              const obj = fn(1700);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-          [tmp7, tmp8, tmp9] = items2;
-          const onFrameResult = first.onFrame(arg0[0], arg1);
-          let obj2 = stopMatrices(1700);
-          const obj3 = stopMatrices(1700);
-          const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
-          const obj4 = stopMatrices(1700);
-          const obj5 = stopMatrices(1700);
-          const obj6 = stopMatrices(1700);
-          arg0.current = obj4.flatten(
-            obj5.multiplyMatrices(
-              obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
-              tmp3,
-            ),
-          );
-          return onFrameResult;
-        };
-        closure_129_7 = function arrayOnFrame(current, arg1) {
-          dependencyMap = current;
-          closure_1 = arg1;
-          c2 = true;
-          current = current.current;
-          const item = current.forEach((item, index) => {
-            let onFrameResult = c2;
-            if (c2) {
-              onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
-            }
-            c2 = onFrameResult;
-            dependencyMap.current[index] = dependencyMap[index].current;
-            obj = dependencyMap[index];
-          });
-          return c2;
-        };
-        closure_129_8 = function objectOnFrame(current, arg1) {
-          const obj = {};
-          let flag = true;
-          let flag2 = true;
-          const keys = Object.keys();
-          if (keys !== undefined) {
-            flag2 = flag;
-            while (keys[tmp] !== undefined) {
-              let obj2 = current[tmp4];
-              let onFrameResult = flag;
-              if (flag) {
-                onFrameResult = obj2.onFrame(current[tmp4], arg1);
+            if (typeof parse255 === "function") {
+              const _Number25 = Number;
+              const parsed1 = Number.parseInt(tmp84, 10);
+              if (parsed1 >= 0) {
               }
-              obj[tmp4] = current[tmp4].current;
-              flag = onFrameResult;
-              continue;
-            }
-          }
-          current.current = obj;
-          return flag2;
-        };
-        tmp7.onStart = (reduceMotion, current, arg2, current2) => {
-          if (undefined === reduceMotion.reduceMotion) {
-            if (typeof arrayOnFrame === "function") {
-              reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-          if (reduceMotion.reduceMotion) {
-            if (undefined !== reduceMotion.toValue) {
-              reduceMotion.current = reduceMotion.toValue;
-            } else {
-              toValue(reduceMotion, current, arg2, current2);
-            }
-            reduceMotion.startTime = 0;
-            reduceMotion.onFrame = () => true;
-          } else {
-            if (obj.isColor(current)) {
-              closure_129_0 = reduceMotion;
-              closure_129_1 = arg2;
-              closure_129_2 = current2;
-              const items = [];
-              closure_129_6 = items;
-              if (tmp3Result.isColor(current)) {
-                const tmp3Result13 = fn(1701);
-                closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
-                const tmp3Result14 = fn(1701);
-                const tmp3Result15 = fn(1701);
-                closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
-                if (reduceMotion.toValue) {
-                  const tmp3Result17 = fn(1701);
-                  closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
-                  const tmp3Result18 = fn(1701);
+              if (typeof parse255 === "function") {
+                const _Number26 = Number;
+                const parsed2 = Number.parseInt(tmp87, 10);
+                let num87 = 0;
+                if (parsed2 >= 0) {
+                  let num88 = 255;
+                  if (parsed2 <= 255) {
+                    num88 = parsed2;
+                  }
+                  num87 = num88;
                 }
-                const tmp3Result16 = fn(1701);
-              }
-              const item = closure_4.forEach((item, index) => {
-                toValue[item] = Object.assign({}, dependencyMap);
-                toValue[item].current = closure_1_4[index];
-                let tmp2;
-                if (colorOnFrame) {
-                  tmp2 = colorOnFrame[index];
-                }
-                toValue[item].toValue = tmp2;
-                let tmp4;
-                if (dependencyMap) {
-                  tmp4 = dependencyMap[item];
-                }
-                toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
-                transformationMatrixOnFrame.push(toValue[item].current);
-              });
-              reduceMotion.unroundedCurrent = items;
-              tmp3Result = fn(1701);
-              fn(1701).clampRGBA(items);
-              const tmp3Result19 = fn(1701);
-              const tmp3Result20 = fn(1701);
-              reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
-              reduceMotion.onFrame = colorOnFrame;
-              const tmp3Result21 = fn(1701);
-            } else {
-              if (tmp3Result22.isAffineMatrixFlat(current)) {
-                reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
-                const tmp3Result23 = fn(1700);
-                reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
-                const _Object = Object;
-                reduceMotion[0] = Object.assign({}, dependencyMap);
-                reduceMotion[0].current = 0;
-                reduceMotion[0].toValue = 100;
-                const first = reduceMotion[0];
-                const first1 = reduceMotion[0];
-                let first2;
-                if (current2) {
-                  first2 = current2[0];
-                }
-                first.onStart(first1, 0, arg2, first2);
-                reduceMotion.current = current;
-                reduceMotion.onFrame = transformationMatrixOnFrame;
-                const tmp3Result24 = fn(1700);
+                tmp6 = (tmp83 | tmp86 | (num87 << 8) | 255) >>> 0;
               } else {
-                prefix = globalThis;
-                const _Array = Array;
-                if (Array.isArray(current)) {
-                  toValue = reduceMotion;
-                  closure_1 = arg2;
-                  dependencyMap = current2;
-                  const item1 = current.forEach((current, index) => {
-                    toValue[index] = Object.assign({}, dependencyMap);
-                    toValue[index].current = current;
-                    toValue[index].toValue = toValue.toValue[index];
-                    let tmp2;
-                    if (dependencyMap) {
-                      tmp2 = dependencyMap[index];
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          const rgba = obj.rgba;
+          num = rgba.exec(num);
+          if (num) {
+            if (undefined !== num[6]) {
+              if (typeof parse255 === "function") {
+                const _Number21 = Number;
+                const parsed3 = Number.parseInt(tmp65, 10);
+                if (parsed3 >= 0) {
+                }
+                if (typeof parse255 === "function") {
+                  const _Number22 = Number;
+                  const parsed4 = Number.parseInt(tmp69, 10);
+                  if (parsed4 >= 0) {
+                  }
+                  if (typeof parse255 === "function") {
+                    const _Number23 = Number;
+                    const parsed5 = Number.parseInt(tmp72, 10);
+                    if (parsed5 >= 0) {
                     }
-                    toValue[index].onStart(toValue[index], current, closure_1, tmp2);
-                  });
-                  const items1 = [];
-                  HermesBuiltin.arraySpread(current, 0);
-                  reduceMotion.current = items1;
-                  reduceMotion.onFrame = arrayOnFrame;
-                } else if (typeof current === "string") {
-                  if (typeof colorOnFrame === "function") {
-                    if (typeof current === "string") {
-                      const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                      if (match) {
-                        let str2 = match[3];
-                        if (str2 == null) {
-                          str2 = "";
+                    if (typeof parse1 === "function") {
+                      num = Number;
+                      const parsed6 = Number.parseFloat(tmp76);
+                      let num76 = 0;
+                      if (parsed6 >= 0) {
+                        num = 255;
+                        if (parsed6 <= 1) {
+                          const _Math4 = Math;
+                          num = Math.round(255 * parsed6);
                         }
-                        const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
-                        const _parseFloat = parseFloat;
-                        obj2.strippedValue = parseFloat(match[2] + str2);
-                        let obj3 = obj2;
-                      } else {
-                        const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                        throw reanimatedError;
+                        num76 = num;
                       }
-                    } else {
-                      obj3 = { strippedValue: current };
-                    }
-                    ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
-                    reduceMotion.strippedCurrent = strippedValue;
-                    if (typeof colorOnFrame === "function") {
-                      if (typeof str3 === "string") {
-                        const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                        if (match1) {
-                          let str5 = match1[3];
-                          if (str5 == null) {
-                            str5 = "";
-                          }
-                          const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
-                          const _parseFloat2 = parseFloat;
-                          obj4.strippedValue = parseFloat(match1[2] + str5);
-                          let obj5 = obj4;
-                        } else {
-                          const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
-                          throw reanimatedError1;
-                        }
-                      } else {
-                        obj5 = { strippedValue: str3 };
-                      }
-                      reduceMotion.current = strippedValue;
-                      reduceMotion.startValue = strippedValue;
-                      reduceMotion.toValue = obj5.strippedValue;
-                      if (current2) {
-                        if (current2 !== reduceMotion) {
-                          if (typeof colorOnFrame === "function") {
-                            if (typeof str7 === "string") {
-                              const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
-                              if (match2) {
-                                let str8 = match2[3];
-                                if (str8 == null) {
-                                  str8 = "";
-                                }
-                                const obj6 = {
-                                  prefix: match2[1],
-                                  suffix: match2[4],
-                                  strippedValue: prefix.parseFloat(match2[2] + str8),
-                                };
-                                let obj7 = obj6;
-                              } else {
-                                const reanimatedError2 = new fn(1669).ReanimatedError(
-                                  "Couldn't parse animation value.",
-                                );
-                                throw reanimatedError2;
-                              }
-                            } else {
-                              obj7 = { strippedValue: str7 };
-                            }
-                            ({ prefix, strippedValue: current2.current } = obj7);
-                            current2.__prefix = prefix;
-                            current2.__suffix = obj7.suffix;
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        }
-                      }
-                      toValue(reduceMotion, strippedValue, arg2, current2);
-                      let str9 = reduceMotion.__prefix;
-                      if (str9 == null) {
-                        str9 = "";
-                      }
-                      let str10 = reduceMotion.__suffix;
-                      const sum = str9 + reduceMotion.current;
-                      if (str10 == null) {
-                        str10 = "";
-                      }
-                      reduceMotion.current = sum + str10;
-                      let tmp48 = current2;
-                      if (current2) {
-                        tmp48 = current2 !== reduceMotion;
-                      }
-                      if (tmp48) {
-                        let str11 = current2.__prefix;
-                        if (str11 == null) {
-                          str11 = "";
-                        }
-                        let str12 = current2.__suffix;
-                        const sum1 = str11 + current2.current;
-                        if (str12 == null) {
-                          str12 = "";
-                        }
-                        current2.current = sum1 + str12;
-                      }
-                      reduceMotion.onFrame = prefNumberSuffOnFrame;
+                      let tmp63 = (tmp68 | tmp71 | tmp74 | num76) >>> 0;
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
@@ -1284,102 +614,726 @@ function defineAnimation(substr, fn) {
                     throw new TypeError("Trying to call a non-function");
                   }
                 } else {
-                  if (typeof current === "object") {
-                    if (null !== current) {
-                      for (const key10034 in arg1) {
-                        let _Object2 = Object;
-                        arg0[key10034] = Object.assign({}, dependencyMap);
-                        arg0[key10034].onStart = arg0.onStart;
-                        arg0[key10034].current = arg1[key10034];
-                        arg0[key10034].toValue = arg0.toValue[key10034];
-                        let obj22 = arg0[key10034];
-                        let tmp79 = arg0[key10034];
-                        let tmp80 = arg1[key10034];
-                        let tmp13;
-                        if (arg3) {
-                          tmp13 = arg3[key10034];
-                        }
-                        let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
-                        continue;
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else if (typeof parse255 === "function") {
+              const _Number17 = Number;
+              const parsed7 = Number.parseInt(tmp98, 10);
+              if (parsed7 >= 0) {
+              }
+              if (typeof parse255 === "function") {
+                const _Number18 = Number;
+                const parsed8 = Number.parseInt(tmp54, 10);
+                if (parsed8 >= 0) {
+                }
+                if (typeof parse255 === "function") {
+                  const _Number19 = Number;
+                  const parsed9 = Number.parseInt(tmp57, 10);
+                  if (parsed9 >= 0) {
+                  }
+                  if (typeof parse1 === "function") {
+                    const _Number20 = Number;
+                    const parsed10 = Number.parseFloat(tmp61);
+                    let num61 = 0;
+                    if (parsed10 >= 0) {
+                      let num64 = 255;
+                      if (parsed10 <= 1) {
+                        const _Math3 = Math;
+                        num64 = Math.round(255 * parsed10);
                       }
-                      reduceMotion.current = current;
-                      reduceMotion.onFrame = objectOnFrame;
+                      num61 = num64;
+                    }
+                    tmp63 = (tmp53 | tmp56 | tmp59 | num61) >>> 0;
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            const hex3 = obj.hex3;
+            const match2 = hex3.exec(num);
+            if (match2) {
+              const _Number16 = Number;
+              tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
+            } else {
+              const hex8 = obj.hex8;
+              const match3 = hex8.exec(num);
+              if (match3) {
+                const _Number15 = Number;
+                tmp6 = Number.parseInt(match3[1], 16) >>> 0;
+              } else {
+                const hex4 = obj.hex4;
+                const match4 = hex4.exec(num);
+                if (match4) {
+                  const _Number14 = Number;
+                  tmp6 =
+                    Number.parseInt(
+                      match4[1] + match4[1] + match4[2] + match4[2] + match4[3] + match4[3] + match4[4] + match4[4],
+                      16,
+                    ) >>> 0;
+                } else {
+                  const hsl = obj.hsl;
+                  const match5 = hsl.exec(num);
+                  if (match5) {
+                    if (typeof parse360 === "function") {
+                      const _Number11 = Number;
+                      if (typeof parsePercentage === "function") {
+                        const _Number12 = Number;
+                        const parsed11 = Number.parseFloat(tmp44);
+                        let num37 = 0;
+                        if (parsed11 >= 0) {
+                          let num39 = 1;
+                          if (parsed11 <= 100) {
+                            num39 = parsed11 / 100;
+                          }
+                          num37 = num39;
+                        }
+                        if (typeof tmp43 === "function") {
+                          const _Number13 = Number;
+                          const parsed12 = Number.parseFloat(tmp46);
+                          let num40 = 0;
+                          if (parsed12 >= 0) {
+                            let num42 = 1;
+                            if (parsed12 <= 100) {
+                              num42 = parsed12 / 100;
+                            }
+                            num40 = num42;
+                          }
+                          tmp6 = (255 | tmp39(((tmp42 + 360) % 360) / 360, num37, num40)) >>> 0;
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    const hsla = obj.hsla;
+                    let num2 = hsla.exec(num);
+                    if (num2) {
+                      if (undefined !== num2[6]) {
+                        if (typeof parse360 === "function") {
+                          const _Number8 = Number;
+                          if (typeof parsePercentage === "function") {
+                            const _Number9 = Number;
+                            const parsed13 = Number.parseFloat(tmp30);
+                            if (parsed13 >= 0) {
+                              if (parsed13 <= 100) {
+                                const num28 = parsed13 / 100;
+                              }
+                            }
+                            if (typeof tmp29 === "function") {
+                              const _Number10 = Number;
+                              const parsed14 = Number.parseFloat(tmp32);
+                              if (parsed14 >= 0) {
+                                if (parsed14 <= 100) {
+                                  const num31 = parsed14 / 100;
+                                }
+                              }
+                              if (typeof parse1 === "function") {
+                                num2 = Number;
+                                const parsed15 = Number.parseFloat(tmp36);
+                                let num32 = 0;
+                                if (parsed15 >= 0) {
+                                  num2 = 255;
+                                  if (parsed15 <= 1) {
+                                    const _Math2 = Math;
+                                    num2 = Math.round(255 * parsed15);
+                                  }
+                                  num32 = num2;
+                                }
+                                let tmp26 = (tmp34 | num32) >>> 0;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else if (typeof parse360 === "function") {
+                        const _Number4 = Number;
+                        if (typeof parsePercentage === "function") {
+                          const _Number5 = Number;
+                          const parsed16 = Number.parseFloat(tmp18);
+                          if (parsed16 >= 0) {
+                            if (parsed16 <= 100) {
+                              const num16 = parsed16 / 100;
+                            }
+                          }
+                          if (typeof tmp17 === "function") {
+                            const _Number6 = Number;
+                            const parsed17 = Number.parseFloat(tmp20);
+                            if (parsed17 >= 0) {
+                              if (parsed17 <= 100) {
+                                const num19 = parsed17 / 100;
+                              }
+                            }
+                            if (typeof parse1 === "function") {
+                              const _Number7 = Number;
+                              const parsed18 = Number.parseFloat(tmp24);
+                              let num20 = 0;
+                              if (parsed18 >= 0) {
+                                let num23 = 255;
+                                if (parsed18 <= 1) {
+                                  const _Math = Math;
+                                  num23 = Math.round(255 * parsed18);
+                                }
+                                num20 = num23;
+                              }
+                              tmp26 = (tmp22 | num20) >>> 0;
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      const hwb = obj.hwb;
+                      const match6 = hwb.exec(num);
+                      if (match6) {
+                        if (typeof parse360 === "function") {
+                          const _Number = Number;
+                          if (typeof parsePercentage === "function") {
+                            const _Number2 = Number;
+                            const parsed19 = Number.parseFloat(tmp12);
+                            let num5 = 0;
+                            if (parsed19 >= 0) {
+                              let num7 = 1;
+                              if (parsed19 <= 100) {
+                                num7 = parsed19 / 100;
+                              }
+                              num5 = num7;
+                            }
+                            if (typeof tmp11 === "function") {
+                              const _Number3 = Number;
+                              const parsed20 = Number.parseFloat(tmp14);
+                              let num8 = 0;
+                              if (parsed20 >= 0) {
+                                let num10 = 1;
+                                if (parsed20 <= 100) {
+                                  num10 = parsed20 / 100;
+                                }
+                                num8 = num10;
+                              }
+                              tmp6 = (255 | tmp7(((tmp10 + 360) % 360) / 360, num5, num8)) >>> 0;
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      }
                     }
                   }
-                  toValue(reduceMotion, current, arg2, current2);
                 }
               }
-              tmp3Result22 = fn(1700);
             }
-            return tmp11;
           }
-        };
-        factory = tmp7;
+        }
       }
+    }
+  }
+  return tmp93;
+}
+normalizeColor.__closure = {
+  MATCHERS,
+  names: shareable,
+  parse255,
+  parse1,
+  hslToRgb,
+  parse360,
+  parsePercentage,
+  hwbToRgb,
+};
+normalizeColor.__workletHash = 13656798455904;
+normalizeColor.__initData = {
+  code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}",
+};
+const fn = function t(dependencyMap) {
+  return ((dependencyMap >> 24) & 255) / 255;
+};
+fn.__closure = {};
+fn.__workletHash = 5651263271273;
+fn.__initData = { code: "function pnpm_ColorsTs10(c){return(c>>24&255)/255;}" };
+const fn2 = function n(processColorResult) {
+  return (processColorResult >> 16) & 255;
+};
+fn2.__closure = {};
+fn2.__workletHash = 10831766115157;
+fn2.__initData = { code: "function pnpm_ColorsTs11(c){return c>>16&255;}" };
+const fn3 = function a(processColorResult) {
+  return (processColorResult >> 8) & 255;
+};
+fn3.__closure = {};
+fn3.__workletHash = 3551227549865;
+fn3.__initData = { code: "function pnpm_ColorsTs12(c){return c>>8&255;}" };
+const fn4 = function l(processColorResult) {
+  return 255 & processColorResult;
+};
+fn4.__closure = {};
+fn4.__workletHash = 8634480727248;
+fn4.__initData = { code: "function pnpm_ColorsTs13(c){return c&255;}" };
+const fn5 = function s(arg0, arg1, arg2) {
+  let num = arg3;
+  if (arg3 === undefined) {
+    num = 1;
+  }
+  let num2 = 0;
+  if (num >= 0.001) {
+    num2 = num;
+  }
+  return "rgba(" + arg0 + ", " + arg1 + ", " + arg2 + ", " + num2 + ")";
+};
+fn5.__closure = {};
+fn5.__workletHash = 14577013878569;
+fn5.__initData = {
+  code: 'function pnpm_ColorsTs14(r,g,b,alpha=1){const safeAlpha=alpha<0.001?0:alpha;return"rgba("+r+", "+g+", "+b+", "+safeAlpha+")";}',
+};
+class RGBtoHSV {
+  constructor(arg0, arg1, arg2) {
+    bound = Math.max(global, require, importDefault);
+    bound1 = Math.min(global, require, importDefault);
+    diff = bound - bound1;
+    s = 0;
+    if (0 !== bound) {
+      s = diff / bound;
+    }
+    h = 0;
+    result = bound / 255;
+    if (bound1 !== bound) {
+      if (global === bound) {
+        num7 = 0;
+        diff1 = require - importDefault;
+        if (require < importDefault) {
+          num7 = 6;
+        }
+        num8 = 6;
+        h = (diff1 + diff * num7) / (6 * diff);
+      } else if (require === bound) {
+        num5 = 2;
+        num6 = 6;
+        h = (importDefault - global + 2 * diff) / (6 * diff);
+      } else {
+        h = 0;
+        if (importDefault === bound) {
+          num3 = 4;
+          num4 = 6;
+          h = (global - require + 4 * diff) / (6 * diff);
+        }
+      }
+    }
+    return { h, s, v: result };
+  }
+}
+RGBtoHSV.__closure = {};
+RGBtoHSV.__workletHash = 13961093508129;
+RGBtoHSV.__initData = {
+  code: "function RGBtoHSV_Pnpm_ColorsTs15(r,g,b){const max=Math.max(r,g,b);const min=Math.min(r,g,b);const d=max-min;const s=max===0?0:d/max;const v=max/255;let h=0;switch(max){case min:break;case r:h=g-b+d*(g<b?6:0);h/=6*d;break;case g:h=b-r+d*2;h/=6*d;break;case b:h=r-g+d*4;h/=6*d;break;}return{h:h,s:s,v:v};}",
+};
+class HSVtoRGB {
+  constructor(arg0, arg1, arg2) {
+    rounded = Math.floor(6 * global);
+    diff = 6 * global - rounded;
+    result = importDefault * (1 - require);
+    result1 = importDefault * (1 - diff * require);
+    result2 = importDefault * (1 - (1 - diff) * require);
+    result3 = rounded % 6;
+    if (0 === result3) {
+      tmp7 = result;
+      tmp8 = result2;
+      tmp9 = importDefault;
+    } else if (1 === result3) {
+      tmp7 = result;
+      tmp8 = importDefault;
+      tmp9 = result1;
+    } else {
+      num = 2;
+      if (2 === result3) {
+        tmp7 = result2;
+        tmp8 = importDefault;
+        tmp9 = result;
+      } else {
+        num2 = 3;
+        if (3 === result3) {
+          tmp7 = importDefault;
+          tmp8 = result1;
+          tmp9 = result;
+        } else {
+          num3 = 4;
+          if (4 === result3) {
+            tmp7 = importDefault;
+            tmp8 = result;
+            tmp9 = result2;
+          } else {
+            num4 = 5;
+            if (5 === result3) {
+              tmp7 = result1;
+              tmp8 = result;
+              tmp9 = importDefault;
+            }
+          }
+        }
+      }
+    }
+    obj = { r: Math.round(255 * tmp9), g: Math.round(255 * tmp8), b: Math.round(255 * tmp7) };
+    return obj;
+  }
+}
+HSVtoRGB.__closure = {};
+HSVtoRGB.__workletHash = 5232397720804;
+HSVtoRGB.__initData = {
+  code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}",
+};
+const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3) {
+  if (typeof HSVtoRGB === "function") {
+    const _Math = Math;
+    const rounded = Math.floor(6 * interpolateResult);
+    const diff = 6 * interpolateResult - rounded;
+    const result = interpolateResult2 * (1 - interpolateResult1);
+    const result1 = interpolateResult2 * (1 - diff * interpolateResult1);
+    const result2 = interpolateResult2 * (1 - (1 - diff) * interpolateResult1);
+    const result3 = rounded % 6;
+    if (0 === result3) {
+      let tmp11 = result;
+      let tmp12 = result2;
+      let tmp13 = interpolateResult2;
+    } else if (1 === result3) {
+      tmp11 = result;
+      tmp12 = interpolateResult2;
+      tmp13 = result1;
+    } else if (2 === result3) {
+      tmp11 = result2;
+      tmp12 = interpolateResult2;
+      tmp13 = result;
+    } else if (3 === result3) {
+      tmp11 = interpolateResult2;
+      tmp12 = result1;
+      tmp13 = result;
+    } else if (4 === result3) {
+      tmp11 = interpolateResult2;
+      tmp12 = result;
+      tmp13 = result2;
+    } else if (5 === result3) {
+      tmp11 = result1;
+      tmp12 = result;
+      tmp13 = interpolateResult2;
+    }
+    const _Math2 = Math;
+    const rounded1 = Math.round(255 * tmp13);
+    const _Math3 = Math;
+    const rounded2 = Math.round(255 * tmp12);
+    const _Math4 = Math;
+    const rounded3 = Math.round(255 * tmp11);
+    if (typeof fn5 === "function") {
+      let num9 = interpolateResult3;
+      if (interpolateResult3 === undefined) {
+        num9 = 1;
+      }
+      let num11 = 0;
+      if (num9 >= 0.001) {
+        num11 = num9;
+      }
+      const _HermesInternal = HermesInternal;
+      return "rgba(" + rounded1 + ", " + rounded2 + ", " + rounded3 + ", " + num11 + ")";
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+fn6.__closure = { HSVtoRGB, rgbaColor: fn5 };
+fn6.__workletHash = 16564231422584;
+fn6.__initData = {
+  code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}",
+};
+function processColorInitially(semantic) {
+  if (null == semantic) {
+    return semantic;
+  } else {
+    let tmp = semantic;
+    if (typeof semantic !== "number") {
+      const tmp3 = normalizeColor(semantic);
+      if (null != tmp3) {
+        tmp = tmp3;
+        if (typeof tmp3 !== "number") {
+          return null;
+        }
+      }
+    }
+    return ((tmp << 24) | (tmp >>> 8)) >>> 0;
+  }
+}
+processColorInitially.__closure = { normalizeColor };
+processColorInitially.__workletHash = 7970244905356;
+processColorInitially.__initData = {
+  code: "function processColorInitially_Pnpm_ColorsTs18(color){const{normalizeColor}=this.__closure;if(color===null||color===undefined){return color;}let colorNumber;if(typeof color==='number'){colorNumber=color;}else{const normalizedColor=normalizeColor(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}colorNumber=normalizedColor;}return(colorNumber<<24|colorNumber>>>8)>>>0;}",
+};
+function isColor(current) {
+  let tmp = typeof current === "string";
+  if (typeof current === "string") {
+    if (typeof processColorInitially === "function") {
+      let tmp3 = current;
+      if (null != current) {
+        let tmp4 = current;
+        if (typeof current === "number") {
+          tmp3 = ((tmp4 << 24) | (tmp4 >>> 8)) >>> 0;
+        } else {
+          const tmp7 = normalizeColor(current);
+          if (null != tmp7) {
+            tmp3 = null;
+            tmp4 = tmp7;
+          }
+        }
+      }
+      tmp = null != tmp3;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
+  return tmp;
 }
-defineAnimation.__closure = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1661 };
-defineAnimation.__workletHash = 8998026617746;
-defineAnimation.__initData = {
-  code: "function defineAnimation_Pnpm_utilTs9(starting,factory){const{IN_STYLE_UPDATER,decorateAnimation,SHOULD_BE_USE_WEB}=this.__closure;if(IN_STYLE_UPDATER){return starting;}const create=function(){'worklet';const animation=factory();decorateAnimation(animation);return animation;};if(_WORKLET||SHOULD_BE_USE_WEB){return create();}create.__isAnimationDefinition=true;return create;}",
+isColor.__closure = { processColorInitially };
+isColor.__workletHash = 13504829084422;
+isColor.__initData = {
+  code: "function isColor_Pnpm_ColorsTs19(value){const{processColorInitially}=this.__closure;if(typeof value!=='string'){return false;}return processColorInitially(value)!=null;}",
 };
-const __initData2 = {
-  code: "function pnpm_utilTs12(){const{sharedValue}=this.__closure;sharedValue.value=sharedValue.value;}",
-};
-let cancelAnimationWeb = function cancelAnimationNative(sharedValue) {
-  if (globalThis._WORKLET) {
-    sharedValue.value = sharedValue.value;
+let module_1658 = module_1658_mod;
+module_1658 = module_1658.isAndroid();
+function processColor(num) {
+  if (typeof processColorInitially === "function") {
+    let tmp3 = num;
+    if (null != num) {
+      let tmp4 = num;
+      if (typeof num === "number") {
+        tmp3 = ((tmp4 << 24) | (tmp4 >>> 8)) >>> 0;
+      } else {
+        const tmp8 = normalizeColor(num);
+        if (null != tmp8) {
+          tmp3 = null;
+          tmp4 = tmp8;
+        }
+      }
+    }
+    if (null != tmp3) {
+      let tmp5 = null;
+      if (typeof tmp3 === "number") {
+        let tmp6 = tmp3;
+        if (module_1658) {
+          tmp6 = tmp3 | 0;
+        }
+        tmp5 = tmp6;
+      }
+      return tmp5;
+    }
   } else {
-    const fn = function n() {
-      sharedValue.value = sharedValue.value;
-    };
-    const obj2 = { sharedValue };
-    fn.__closure = obj2;
-    fn.__workletHash = 14261344384038;
-    fn.__initData = __initData2;
-    runWorkletOnJS.runOnUI(fn)();
+    throw new TypeError("Trying to call a non-function");
   }
-};
-let obj4 = {
-  getReduceMotionFromConfig,
-  recognizePrefixSuffix,
-  isColor: _mod1701.isColor,
-  toLinearSpace: _mod1701.toLinearSpace,
-  convertToRGBA: _mod1701.convertToRGBA,
-  clampRGBA: _mod1701.clampRGBA,
-  rgbaArrayToRGBAColor: _mod1701.rgbaArrayToRGBAColor,
-  toGammaSpace: _mod1701.toGammaSpace,
-  decomposeMatrixIntoMatricesAndAngles: _mod1700.decomposeMatrixIntoMatricesAndAngles,
-  applyProgressToMatrix,
-  applyProgressToNumber,
-  getRotationMatrix: _mod1700.getRotationMatrix,
-  multiplyMatrices: _mod1700.multiplyMatrices,
-  flatten: _mod1700.flatten,
-  isAffineMatrixFlat: _mod1700.isAffineMatrixFlat,
-};
-let obj5 = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1661 };
-cancelAnimationWeb.__closure = { runOnUI: runWorkletOnJS.runOnUI };
-cancelAnimationWeb.__workletHash = 796831326214;
-cancelAnimationWeb.__initData = {
-  code: "function cancelAnimationNative_Pnpm_utilTs11(sharedValue){const{runOnUI}=this.__closure;if(_WORKLET){sharedValue.value=sharedValue.value;}else{runOnUI(function(){'worklet';sharedValue.value=sharedValue.value;})();}}",
-};
-if (module_1661) {
-  cancelAnimationWeb = function cancelAnimationWeb(value) {
-    value.value = value.value;
-  };
 }
-
-export { isValidLayoutAnimationProp };
-export { assertEasingIsWorklet };
-export const initialUpdaterRun = function initialUpdaterRun(updater) {
-  c2 = false;
-  return updater();
+processColor.__closure = { processColorInitially, IS_ANDROID: module_1658 };
+processColor.__workletHash = 850613387330;
+processColor.__initData = {
+  code: "function processColor_Pnpm_ColorsTs20(color){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}if(IS_ANDROID){normalizedColor=normalizedColor|0x0;}return normalizedColor;}",
 };
-export { recognizePrefixSuffix };
-export { getReduceMotionFromConfig };
-export { getReduceMotionForAnimation };
-export { defineAnimation };
-export const cancelAnimation = cancelAnimationWeb;
+function processColorsInProps(obj) {
+  for (const key10007 in arg0) {
+    if (shareable1.includes(key10007)) {
+      let _Array = Array;
+      if (Array.isArray(arg0[key10007])) {
+        let arr = arg0[key10007];
+        arg0[key10007] = arr.map((item) => {
+          if (typeof processColor === "function") {
+            if (typeof processColorInitially === "function") {
+              let tmp4 = item;
+              if (null != item) {
+                let tmp5 = item;
+                if (typeof item === "number") {
+                  tmp4 = ((tmp5 << 24) | (tmp5 >>> 8)) >>> 0;
+                } else {
+                  const tmp10 = normalizeColor(item);
+                  if (null != tmp10) {
+                    tmp4 = null;
+                    tmp5 = tmp10;
+                  }
+                }
+              }
+              let tmp6;
+              if (null != tmp4) {
+                let tmp7 = null;
+                if (typeof tmp4 === "number") {
+                  let tmp8 = tmp4;
+                  if (module_1658) {
+                    tmp8 = tmp4 | 0;
+                  }
+                  tmp7 = tmp8;
+                }
+                tmp6 = tmp7;
+              }
+              return tmp6;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        });
+        continue;
+      } else {
+        arg0[key10007] = processColor(arg0[key10007]);
+        continue;
+      }
+      continue;
+    } else {
+      if (!shareable2[key10007]) {
+        continue;
+      } else {
+        let tmp2 = arg0[key10007];
+        for (const item10014 of tmp2) {
+          let tmp7 = shareable2[key10007];
+          let tmp8 = tmp7;
+          if (undefined !== item10014[tmp7]) {
+            item10014[tmp8] = processColor(item10014[tmp8]);
+          }
+          continue;
+        }
+      }
+      continue;
+    }
+    continue;
+  }
+}
+processColorsInProps.__closure = { ColorProperties: shareable1, processColor, NestedColorProperties: shareable2 };
+processColorsInProps.__workletHash = 978448002474;
+processColorsInProps.__initData = {
+  code: "function processColorsInProps_Pnpm_ColorsTs21(props){const{ColorProperties,processColor,NestedColorProperties}=this.__closure;for(const key in props){if(ColorProperties.includes(key)){if(Array.isArray(props[key])){props[key]=props[key].map(function(color){return processColor(color);});}else{props[key]=processColor(props[key]);}}else if(NestedColorProperties[key]){const propGroupList=props[key];for(const propGroup of propGroupList){const nestedPropertyName=NestedColorProperties[key];if(propGroup[nestedPropertyName]!==undefined){propGroup[nestedPropertyName]=processColor(propGroup[nestedPropertyName]);}}}}}",
+};
+function convertToRGBA(current) {
+  if (typeof processColorInitially === "function") {
+    let tmp3 = current;
+    if (null != current) {
+      let tmp4 = current;
+      if (typeof current === "number") {
+        tmp3 = ((tmp4 << 24) | (tmp4 >>> 8)) >>> 0;
+      } else {
+        const tmp6 = normalizeColor(current);
+        if (null != tmp6) {
+          tmp3 = null;
+          tmp4 = tmp6;
+        }
+      }
+    }
+    const items = [
+      ((tmp3 << 8) >>> 24) / 255,
+      ((tmp3 << 16) >>> 24) / 255,
+      ((tmp3 << 24) >>> 24) / 255,
+      (tmp3 >>> 24) / 255,
+    ];
+    return items;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+convertToRGBA.__closure = { processColorInitially };
+convertToRGBA.__workletHash = 15503083969849;
+convertToRGBA.__initData = {
+  code: "function convertToRGBA_Pnpm_ColorsTs22(color){const{processColorInitially}=this.__closure;const processedColor=processColorInitially(color);const a=(processedColor>>>24)/255;const r=(processedColor<<8>>>24)/255;const g=(processedColor<<16>>>24)/255;const b=(processedColor<<24>>>24)/255;return[r,g,b,a];}",
+};
+function rgbaArrayToRGBAColor(tmp3Result21) {
+  let num = 0;
+  if (tmp3Result21[3] >= 0.001) {
+    num = tmp3Result21[3];
+  }
+  const rounded = Math.round(255 * tmp3Result21[0]);
+  const rounded1 = Math.round(255 * tmp3Result21[1]);
+  return "rgba(" + rounded + ", " + rounded1 + ", " + Math.round(255 * tmp3Result21[2]) + ", " + num + ")";
+}
+rgbaArrayToRGBAColor.__closure = {};
+rgbaArrayToRGBAColor.__workletHash = 9717764015913;
+rgbaArrayToRGBAColor.__initData = {
+  code: 'function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return"rgba("+Math.round(RGBA[0]*255)+", "+Math.round(RGBA[1]*255)+", "+Math.round(RGBA[2]*255)+", "+alpha+")";}',
+};
+function toLinearSpace(tmp3Result14) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 2.2;
+  }
+  const items = [];
+  let num2 = 0;
+  do {
+    let _Math = Math;
+    let arr = items.push(Math.pow(tmp3Result14[num2], num));
+    num2 = num2 + 1;
+  } while (num2 < 3);
+  items.push(tmp3Result14[3]);
+  return items;
+}
+toLinearSpace.__closure = {};
+toLinearSpace.__workletHash = 2672100143834;
+toLinearSpace.__initData = {
+  code: "function toLinearSpace_Pnpm_ColorsTs24(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],gamma));}res.push(RGBA[3]);return res;}",
+};
+function toGammaSpace(items) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 2.2;
+  }
+  items = [];
+  let num2 = 0;
+  do {
+    let _Math = Math;
+    let arr = items.push(Math.pow(items[num2], 1 / num));
+    num2 = num2 + 1;
+  } while (num2 < 3);
+  items.push(items[3]);
+  return items;
+}
+toGammaSpace.__closure = {};
+toGammaSpace.__workletHash = 1726439203743;
+toGammaSpace.__initData = {
+  code: "function toGammaSpace_Pnpm_ColorsTs25(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],1/gamma));}res.push(RGBA[3]);return res;}",
+};
+
+export { clampRGBA };
+export const ColorProperties = shareable1;
+export { normalizeColor };
+export const opacity = fn;
+export const red = fn2;
+export const green = fn3;
+export const blue = fn4;
+export const rgbaColor = fn5;
+export { RGBtoHSV };
+export const hsvToColor = fn6;
+export { processColorInitially };
+export { isColor };
+export { processColor };
+export { processColorsInProps };
+export { convertToRGBA };
+export { rgbaArrayToRGBAColor };
+export { toLinearSpace };
+export { toGammaSpace };

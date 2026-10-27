@@ -1,13 +1,13 @@
 // _runtime/metro/14635__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "76ffb1082b31aab78c81ab7517722ab5",
-  name: "ic_volume_locked",
+  hash: "f15a8eea867ca31909b0a1cf49c6c7d8",
+  name: "ic_notif",
   type: "png",
 });

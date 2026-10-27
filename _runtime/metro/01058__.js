@@ -1,68 +1,36 @@
 // _runtime/metro/01058__.js
-import _createClassDefault from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import RN_GLOBAL_OBJ from "../00692_RN_GLOBAL_OBJ.js";
+import _mod879 from "00879__.js";
 
-const NativeTransport = arg1;
-function makeNativeTransport() {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  return new closure_3(obj);
-}
-class NativeTransport {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export const createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
+  const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+  if (SENTRY_RELEASE) {
+    ({ name, version } = SENTRY_RELEASE);
+    if (name) {
+      if (version) {
+        const _HermesInternal = HermesInternal;
+        return "" + name + "@" + version;
+      }
     }
-    tmp = c2(this, NativeTransport);
-    obj2 = closure_0(closure_1[2]);
-    num = obj.bufferSize;
-    if (!num) {
-      num = 30;
-    }
-    this._buffer = obj2.makePromiseBuffer(num);
-    return;
   }
-}
-const entry = {
-  key: "send",
-  value: function send(arg0) {
-    closure_0 = arg0;
-    const _buffer = this._buffer;
-    return _buffer
-      .add(() => {
-        const NATIVE = NativeTransport(878).NATIVE;
-        return NATIVE.sendEnvelope(closure_0);
-      })
-      .then(() => ({}));
-  },
 };
-const items = [
-  entry,
-  {
-    key: "flush",
-    value: function flush(arg0) {
-      const _buffer = this._buffer;
-      return _buffer.drain(arg0);
-    },
-  },
-];
-const tmp2 = _createClassDefault(NativeTransport, items);
-let closure_3 = tmp2;
-
-export const DEFAULT_BUFFER_SIZE = 30;
-export const NativeTransport = tmp2;
-export { makeNativeTransport };
-export const makeNativeTransportFactory = function makeNativeTransportFactory(enableNative) {
-  let tmp = null;
-  if (enableNative.enableNative) {
-    const NATIVE = NativeTransport(878).NATIVE;
-    tmp = null;
-    if (NATIVE.isNativeAvailable()) {
-      tmp = makeNativeTransport;
+export const getDefaultRelease = function getDefaultRelease() {
+  if (!obj.notWeb()) {
+    const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+    let combined;
+    if (SENTRY_RELEASE) {
+      ({ name, version } = SENTRY_RELEASE);
+      if (name) {
+        if (version) {
+          const _HermesInternal = HermesInternal;
+          combined = "" + name + "@" + version;
+        }
+      }
     }
+    return combined;
   }
-  return tmp;
+  obj = _mod879;
 };

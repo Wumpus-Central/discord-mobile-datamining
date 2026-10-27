@@ -1,4 +1,13 @@
 // _runtime/metro/19202__.js
-import _mod19203 from "19203__.js";
+import registerAsset from "01131__.js";
 
-export default _mod19203("toUpperCase");
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
+  scales: [2, 3],
+  hash: "a58504e7154ded917c4b5c349c82a3a7",
+  name: "img_bans_empty_dark",
+  type: "png",
+});

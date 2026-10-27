@@ -1,12 +1,12 @@
 // _runtime/metro/10349__.js
-import _mod10346 from "10346__.js";
+import _mod10348 from "10348__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitAgoFormatParser = require;
+const RUMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeUnitAgoFormatParser {
+class RUMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp = c2(this, RUMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
+    obj = closure_4(RUMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,12 +45,16 @@ class RUTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10346.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUMonthNameParser, _mod10348.AbstractParserWithLeftBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
     return (
-      "(" + RUTimeUnitAgoFormatParser(10344).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
+      "((?:\u0432)\\s*)?(" +
+      RUMonthNameParser(10217).matchAnyPattern(RUMonthNameParser(10346).MONTH_DICTIONARY) +
+      ")\\s*(?:[,-]?\\s*(" +
+      RUMonthNameParser(10346).YEAR_PATTERN +
+      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
     );
   },
 };
@@ -58,15 +62,29 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10344).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10218).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitAgoFormatParser(10217).reverseDuration(RUTimeUnitAgoFormatParser(10344).parseDuration(arg1[1])),
-      );
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!RUMonthNameParser(10346).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = RUMonthNameParser(10346).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", RUMonthNameParser(10346).parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", RUMonthNameParser(10218).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export default _createClass(RUMonthNameParser, items);

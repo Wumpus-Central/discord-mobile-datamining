@@ -1,11 +1,13 @@
 // _runtime/metro/16987__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "1a2ed221615ffab4e022949f6b12481c",
-  name: "bg.messages.1a2ed221615ffab4e022949f6b12481c.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ec58bf96c6588d5215316bd58185df8c",
+  name: "HashmarkIcon",
+  type: "png",
 });

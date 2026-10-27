@@ -1,7 +1,11 @@
 // _runtime/metro/01616__.js
+import equalDefault from "../01578_equal.js";
 import noop from "00019__.js";
 
-const context = noop.createContext("ltr");
-context.displayName = "LocaleDirContext";
-
-export const LocaleDirContext = context;
+export const useDeepStableValue = function useDeepStableValue(current) {
+  const ref = noop.useRef(current);
+  if (!equalDefault(ref.current, current)) {
+    ref.current = current;
+  }
+  return ref.current;
+};

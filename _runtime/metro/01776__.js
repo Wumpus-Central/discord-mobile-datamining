@@ -1,11 +1,12 @@
 // _runtime/metro/01776__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let BounceOutRight = fn;
+let LightSpeedOutLeft = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,20 +25,21 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_6 = {
-  code: "function pnpm_BounceTs1(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.2,{duration:duration*0.55}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.1,{duration:duration*0.15}),withTiming(1,{duration:duration*0.15})))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}",
+_possibleConstructorReturnDefault;
+let closure_7 = {
+  code: "function pnpm_LightspeedTs1(values){const{delayFunction,delay,withTiming,duration,animation,config,withSequence,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,withTiming(1,{duration:duration})),transform:[{translateX:delayFunction(delay,animation(0,{...config,duration:duration*0.7}))},{skewX:delayFunction(delay,withSequence(withTiming('10deg',{duration:duration*0.7}),withTiming('-5deg',{duration:duration*0.15}),withTiming('0deg',{duration:duration*0.15})))}]},initialValues:{opacity:0,transform:[{translateX:values.windowWidth},{skewX:'-45deg'}],...initialValues},callback:callback};}",
 };
-class BounceIn {
+class LightSpeedInRight {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
+    tmp = closure_3(this, LightSpeedOutLeft);
     items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(LightSpeedOutLeft);
+    tmp3 = closure_4;
+    if (metroRequire()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -48,104 +50,198 @@ class BounceIn {
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
+      const tmp2 = _slicedToArray(delayFunction.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
       const delay = delayFunction.getDelay();
       const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function n() {
+      const fn = function n(translateX) {
         const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { scale: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.55 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(1.2, { duration: 0.55 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(0.9, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(1.1, { duration: 0.15 * duration });
-        obj3.scale = delayFunction(
+        const obj2 = {
+          opacity: delayFunction(delay, delayFunction(1727).withTiming(1, { duration })),
+          transform: null,
+        };
+        const obj5 = { translateX: null };
+        const obj6 = {};
+        const merged = Object.assign(closure_2);
+        obj6.duration = 0.7 * duration;
+        obj5.translateX = delayFunction(delay, first(0, obj6));
+        const items = [obj5];
+        const obj7 = { skewX: null };
+        const obj3 = delayFunction(1727);
+        const obj4 = { duration };
+        const obj8 = delayFunction(1727);
+        const obj10 = { duration: 0.7 * duration };
+        const obj9 = delayFunction(1727);
+        const withTimingResult = delayFunction(1727).withTiming("10deg", { duration: 0.7 * duration });
+        const obj11 = delayFunction(1727);
+        const obj12 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1727).withTiming("-5deg", { duration: 0.15 * duration });
+        obj7.skewX = delayFunction(
           delay,
-          obj4.withSequence(
+          obj8.withSequence(
             withTimingResult,
             withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(1, { duration: 0.15 * duration }),
+            delayFunction(1727).withTiming("0deg", { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj3];
+        items[1] = obj7;
         obj2.transform = items;
         obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ scale: 0 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
+        const obj15 = { opacity: 0, transform: null };
+        const items1 = [{ translateX: translateX.windowWidth }, { skewX: "-45deg" }];
+        obj15.transform = items1;
+        const merged1 = Object.assign(initialValues);
+        obj.initialValues = obj15;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = {
         delayFunction,
         delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
+        withTiming: LightSpeedOutLeft(1727).withTiming,
         duration,
+        animation,
+        config: tmp2[1],
+        withSequence: LightSpeedOutLeft(1727).withSequence,
         initialValues,
         callback: callbackV,
       };
-      fn.__workletHash = 6814288411244;
+      fn.__workletHash = 14533434616043;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-BounceOutRight = BounceIn;
-_inherits(BounceIn, fn(1728).ComplexAnimationBuilder);
+LightSpeedOutLeft = LightSpeedInRight;
+_inherits(LightSpeedInRight, fn(1725).ComplexAnimationBuilder);
 const entry = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
+  key: "createInstance",
+  value: function createInstance() {
+    return LightSpeedOutLeft();
   },
 };
 let items = [entry];
+const importDefaultResultResult = _createClass(LightSpeedInRight, null, items);
+importDefaultResultResult.presetName = "LightSpeedInRight";
+let closure_8 = {
+  code: "function pnpm_LightspeedTs2(values){const{delayFunction,delay,withTiming,duration,animation,config,withSequence,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,withTiming(1,{duration:duration})),transform:[{translateX:delayFunction(delay,animation(0,{...config,duration:duration*0.7}))},{skewX:delayFunction(delay,withSequence(withTiming('-10deg',{duration:duration*0.7}),withTiming('5deg',{duration:duration*0.15}),withTiming('0deg',{duration:duration*0.15})))}]},initialValues:{opacity:0,transform:[{translateX:-values.windowWidth},{skewX:'45deg'}],...initialValues},callback:callback};}",
+};
+class LightSpeedInLeft {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, LightSpeedOutLeft);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(LightSpeedOutLeft);
+    tmp3 = closure_4;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      delayFunction = delayFunction.getDelayFunction();
+      const tmp2 = _slicedToArray(delayFunction.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
+      const callbackV = delayFunction.callbackV;
+      const initialValues = delayFunction.initialValues;
+      const fn = function n(translateX) {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = {
+          opacity: delayFunction(delay, delayFunction(1727).withTiming(1, { duration })),
+          transform: null,
+        };
+        const obj5 = { translateX: null };
+        const obj6 = {};
+        const merged = Object.assign(closure_2);
+        obj6.duration = 0.7 * duration;
+        obj5.translateX = delayFunction(delay, first(0, obj6));
+        const items = [obj5];
+        const obj7 = { skewX: null };
+        const obj3 = delayFunction(1727);
+        const obj4 = { duration };
+        const obj8 = delayFunction(1727);
+        const obj10 = { duration: 0.7 * duration };
+        const obj9 = delayFunction(1727);
+        const withTimingResult = delayFunction(1727).withTiming("-10deg", { duration: 0.7 * duration });
+        const obj11 = delayFunction(1727);
+        const obj12 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1727).withTiming("5deg", { duration: 0.15 * duration });
+        obj7.skewX = delayFunction(
+          delay,
+          obj8.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            delayFunction(1727).withTiming("0deg", { duration: 0.15 * duration }),
+          ),
+        );
+        items[1] = obj7;
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj15 = { opacity: 0, transform: null };
+        const items1 = [{ translateX: -translateX.windowWidth }, { skewX: "45deg" }];
+        obj15.transform = items1;
+        const merged1 = Object.assign(initialValues);
+        obj.initialValues = obj15;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withTiming: LightSpeedOutLeft(1727).withTiming,
+        duration,
+        animation,
+        config: tmp2[1],
+        withSequence: LightSpeedOutLeft(1727).withSequence,
+        initialValues,
+        callback: callbackV,
+      };
+      fn.__workletHash = 7816705328872;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+LightSpeedOutLeft = LightSpeedInLeft;
+_inherits(LightSpeedInLeft, fn(1725).ComplexAnimationBuilder);
 const entry1 = {
   key: "createInstance",
   value: function createInstance() {
-    return BounceOutRight();
+    return LightSpeedOutLeft();
   },
 };
-let items1 = [
-  entry1,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult = _createClass(BounceIn, items, items1);
-importDefaultResultResult.presetName = "BounceIn";
-let closure_7 = {
-  code: "function pnpm_BounceTs2(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:values.windowHeight}],...initialValues},callback:callback};}",
+let items1 = [entry1];
+const importDefaultResultResult1 = _createClass(LightSpeedInLeft, null, items1);
+importDefaultResultResult1.presetName = "LightSpeedInLeft";
+let closure_9 = {
+  code: "function pnpm_LightspeedTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{skewX:delayFunction(delay,animation('-45deg',config))}]},initialValues:{opacity:1,transform:[{translateX:0},{skewX:'0deg'}],...initialValues},callback:callback};}",
 };
-class BounceInDown {
+class LightSpeedOutRight {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
+    tmp = closure_3(this, LightSpeedOutLeft);
     items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(LightSpeedOutLeft);
+    tmp3 = closure_4;
+    if (metroRequire()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -155,962 +251,114 @@ class BounceInDown {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateY) {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const delay = closure_0.getDelay();
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const fn = function n(windowWidth) {
         const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateY: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.55 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(-20, { duration: 0.55 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        obj3.translateY = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(0, { duration: 0.15 * duration }),
-          ),
-        );
-        const items = [obj3];
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        items[1] = { skewX: delayFunction(delay, first("-45deg", closure_2)) };
         obj2.transform = items;
         obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateY: translateY.windowHeight }];
-        obj13.transform = items1;
+        const obj5 = { opacity: 1, transform: null };
+        const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 4551292686981;
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 222611120175;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-BounceOutRight = BounceInDown;
-_inherits(BounceInDown, fn(1728).ComplexAnimationBuilder);
+LightSpeedOutLeft = LightSpeedOutRight;
+_inherits(LightSpeedOutRight, fn(1725).ComplexAnimationBuilder);
 const entry2 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
+  key: "createInstance",
+  value: function createInstance() {
+    return LightSpeedOutLeft();
   },
 };
 const items2 = [entry2];
+const importDefaultResultResult2 = _createClass(LightSpeedOutRight, null, items2);
+importDefaultResultResult2.presetName = "LightSpeedOutRight";
+let closure_10 = {
+  code: "function pnpm_LightspeedTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{skewX:delayFunction(delay,animation('45deg',config))}]},initialValues:{opacity:1,transform:[{translateX:0},{skewX:'0deg'}],...initialValues},callback:callback};}",
+};
+class LightSpeedOutLeft {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, LightSpeedOutLeft);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(LightSpeedOutLeft);
+    tmp3 = closure_4;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const delay = closure_0.getDelay();
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const fn = function n(windowWidth) {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        items[1] = { skewX: delayFunction(delay, first("45deg", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { opacity: 1, transform: null };
+        const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
+        obj5.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj5;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 766058259752;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(LightSpeedOutLeft, fn(1725).ComplexAnimationBuilder);
 const entry3 = {
   key: "createInstance",
   value: function createInstance() {
-    return BounceOutRight();
+    return LightSpeedOutLeft();
   },
 };
-const items3 = [
-  entry3,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult1 = _createClass(BounceInDown, items2, items3);
-importDefaultResultResult1.presetName = "BounceInDown";
-let closure_8 = {
-  code: "function pnpm_BounceTs3(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:-values.windowHeight}],...initialValues},callback:callback};}",
-};
-class BounceInUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateY) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateY: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.55 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(20, { duration: 0.55 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        obj3.translateY = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(0, { duration: 0.15 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateY: -translateY.windowHeight }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 11333943352836;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceInUp;
-_inherits(BounceInUp, fn(1728).ComplexAnimationBuilder);
-const entry4 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items4 = [entry4];
-const entry5 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items5 = [
-  entry5,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult2 = _createClass(BounceInUp, items4, items5);
-importDefaultResultResult2.presetName = "BounceInUp";
-let closure_9 = {
-  code: "function pnpm_BounceTs4(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:-values.windowWidth}],...initialValues},callback:callback};}",
-};
-class BounceInLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateX: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.55 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(20, { duration: 0.55 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        obj3.translateX = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(0, { duration: 0.15 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateX: -translateX.windowWidth }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 10162410157050;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceInLeft;
-_inherits(BounceInLeft, fn(1728).ComplexAnimationBuilder);
-const entry6 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items6 = [entry6];
-const entry7 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items7 = [
-  entry7,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult3 = _createClass(BounceInLeft, items6, items7);
-importDefaultResultResult3.presetName = "BounceInLeft";
-let closure_10 = {
-  code: "function pnpm_BounceTs5(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:values.windowWidth}],...initialValues},callback:callback};}",
-};
-class BounceInRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateX: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.55 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(-20, { duration: 0.55 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        obj3.translateX = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(0, { duration: 0.15 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateX: translateX.windowWidth }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 4134237895259;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceInRight;
-_inherits(BounceInRight, fn(1728).ComplexAnimationBuilder);
-const entry8 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items8 = [entry8];
-const entry9 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items9 = [
-  entry9,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult4 = _createClass(BounceInRight, items8, items9);
-importDefaultResultResult4.presetName = "BounceInRight";
-let closure_11 = {
-  code: "function pnpm_BounceTs6(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.1,{duration:duration*0.15}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.2,{duration:duration*0.15}),withTiming(0,{duration:duration*0.55})))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}",
-};
-class BounceOut {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { scale: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.15 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(1.1, { duration: 0.15 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(0.9, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(1.2, { duration: 0.15 * duration });
-        obj3.scale = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(0, { duration: 0.55 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ scale: 1 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 15864962046507;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceOut;
-_inherits(BounceOut, fn(1728).ComplexAnimationBuilder);
-const entry10 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items10 = [entry10];
-const entry11 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items11 = [
-  entry11,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult5 = _createClass(BounceOut, items10, items11);
-importDefaultResultResult5.presetName = "BounceOut";
-let closure_12 = {
-  code: "function pnpm_BounceTs7(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}",
-};
-class BounceOutDown {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(windowHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateY: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.15 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(-20, { duration: 0.15 * duration });
-        obj3.translateY = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(windowHeight.windowHeight, { duration: 0.55 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateY: 0 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 4170057933312;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceOutDown;
-_inherits(BounceOutDown, fn(1728).ComplexAnimationBuilder);
-const entry12 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items12 = [entry12];
-const entry13 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items13 = [
-  entry13,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult6 = _createClass(BounceOutDown, items12, items13);
-importDefaultResultResult6.presetName = "BounceOutDown";
-let closure_13 = {
-  code: "function pnpm_BounceTs8(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}",
-};
-class BounceOutUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(windowHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateY: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.15 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(20, { duration: 0.15 * duration });
-        obj3.translateY = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(-windowHeight.windowHeight, { duration: 0.55 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateY: 0 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 8059944917039;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceOutUp;
-_inherits(BounceOutUp, fn(1728).ComplexAnimationBuilder);
-const entry14 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items14 = [entry14];
-const entry15 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items15 = [
-  entry15,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult7 = _createClass(BounceOutUp, items14, items15);
-importDefaultResultResult7.presetName = "BounceOutUp";
-let closure_14 = {
-  code: "function pnpm_BounceTs9(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}",
-};
-class BounceOutLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(windowWidth) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateX: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.15 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(20, { duration: 0.15 * duration });
-        obj3.translateX = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(-windowWidth.windowWidth, { duration: 0.55 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateX: 0 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 6930767645815;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-BounceOutRight = BounceOutLeft;
-_inherits(BounceOutLeft, fn(1728).ComplexAnimationBuilder);
-const entry16 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items16 = [entry16];
-const entry17 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items17 = [
-  entry17,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult8 = _createClass(BounceOutLeft, items16, items17);
-importDefaultResultResult8.presetName = "BounceOutLeft";
-let closure_15 = {
-  code: "function pnpm_BounceTs10(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}",
-};
-class BounceOutRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BounceOutRight);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BounceOutRight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(windowWidth) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const obj3 = { translateX: null };
-        const obj4 = delayFunction(1730);
-        const obj5 = delayFunction(1730);
-        const obj6 = { duration: 0.15 * duration };
-        const withTimingResult = delayFunction(1730).withTiming(-10, { duration: 0.15 * duration });
-        const obj7 = delayFunction(1730);
-        const obj8 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1730).withTiming(10, { duration: 0.15 * duration });
-        const obj10 = { duration: 0.15 * duration };
-        const obj9 = delayFunction(1730);
-        const withTimingResult2 = delayFunction(1730).withTiming(-20, { duration: 0.15 * duration });
-        obj3.translateX = delayFunction(
-          delay,
-          obj4.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            withTimingResult2,
-            delayFunction(1730).withTiming(windowWidth.windowWidth, { duration: 0.55 * duration }),
-          ),
-        );
-        const items = [obj3];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj13 = { transform: null };
-        const items1 = [{ translateX: 0 }];
-        obj13.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj13;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withSequence: BounceOutRight(1730).withSequence,
-        withTiming: BounceOutRight(1730).withTiming,
-        duration,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 11465945086863;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_inherits(BounceOutRight, fn(1728).ComplexAnimationBuilder);
-const entry18 = {
-  key: "getDuration",
-  value: function getDuration() {
-    let num = this.durationV;
-    if (num == null) {
-      num = 600;
-    }
-    return num;
-  },
-};
-const items18 = [entry18];
-const entry19 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return BounceOutRight();
-  },
-};
-const items19 = [
-  entry19,
-  {
-    key: "getDuration",
-    value: function getDuration() {
-      return 600;
-    },
-  },
-];
-const importDefaultResultResult9 = _createClass(BounceOutRight, items18, items19);
-importDefaultResultResult9.presetName = "BounceOutRight";
+const items3 = [entry3];
+const importDefaultResultResult3 = _createClass(LightSpeedOutLeft, null, items3);
+importDefaultResultResult3.presetName = "LightSpeedOutLeft";
 
-export const BounceIn = importDefaultResultResult;
-export const BounceInDown = importDefaultResultResult1;
-export const BounceInUp = importDefaultResultResult2;
-export const BounceInLeft = importDefaultResultResult3;
-export const BounceInRight = importDefaultResultResult4;
-export const BounceOut = importDefaultResultResult5;
-export const BounceOutDown = importDefaultResultResult6;
-export const BounceOutUp = importDefaultResultResult7;
-export const BounceOutLeft = importDefaultResultResult8;
-export const BounceOutRight = importDefaultResultResult9;
+export const LightSpeedInRight = importDefaultResultResult;
+export const LightSpeedInLeft = importDefaultResultResult1;
+export const LightSpeedOutRight = importDefaultResultResult2;
+export const LightSpeedOutLeft = importDefaultResultResult3;

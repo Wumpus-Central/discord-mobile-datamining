@@ -1,13 +1,11 @@
 // _runtime/metro/17048__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/mfa/native/images",
-  width: 762,
-  height: 525,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
   scales: [1],
-  hash: "685e4a9eb5133a148de7ce27d400a483",
-  name: "img_register_header",
-  type: "png",
+  hash: "99ca2b0cb6c6ab32f98726cbd8d2cd48",
+  name: "pl.messages.99ca2b0cb6c6ab32f98726cbd8d2cd48.compiled.messages",
+  type: "jsona",
 });

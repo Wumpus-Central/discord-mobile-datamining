@@ -1,5 +1,5 @@
 // _runtime/metro/12574__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3b7bd4c82e3e8c361f5983d530550253",
-  name: "ArrowSmallDownIcon",
+  hash: "e605304dde4d78202fb1f94d6df2847d",
+  name: "ListNumberedIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/10843__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 256,
+  height: 128,
   scales: [2, 3],
-  hash: "925ba669dce4508a3d121b3e5d7504b9",
-  name: "PlusLargeIcon",
+  hash: "766abd1bba5c776641397ceaa2b62b88",
+  name: "img_invite_empty_light",
   type: "png",
 });

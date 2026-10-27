@@ -1,4 +1,11 @@
 // _runtime/metro/06425__.js
-import _mod1475 from "01475__.js";
+import _mod1330 from "01330__.js";
 
-export default _mod1475;
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
+  }
+  return _mod1330(sum);
+}

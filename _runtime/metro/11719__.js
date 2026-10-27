@@ -1,13 +1,13 @@
 // _runtime/metro/11719__.js
-import registerAsset from "01134__.js";
+import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "4550be26e4ce88ab0a8f2d917df660a6",
-  name: "ic_xbox_24px",
+  hash: "ade8732f10573e5215aa029a138cb853",
+  name: "watch",
   type: "png",
 });
